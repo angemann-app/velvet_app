@@ -134,6 +134,10 @@ class Lesson {
   final String reflectionQuestion;
   final String? image;
 
+  /// "giver": Text spricht die gebende Person an; Rollen wie „sie“ meinen dann immer das Gegenüber
+  /// (wichtig für gleichgeschlechtliche Paare, siehe lib/services/personalize.dart).
+  final String? perspective;
+
   Lesson({
     required this.id,
     required this.title,
@@ -144,6 +148,7 @@ class Lesson {
     required this.content,
     required this.reflectionQuestion,
     this.image,
+    this.perspective,
   });
 
   bool get isAudioExercise => type == 'audio_exercise';
@@ -159,6 +164,7 @@ class Lesson {
       content: json['content'] as String? ?? '',
       reflectionQuestion: json['reflection_question'] as String? ?? '',
       image: json['image'] as String?,
+      perspective: json['perspective'] as String?,
     );
   }
 
@@ -172,6 +178,7 @@ class Lesson {
         'content': content,
         'reflection_question': reflectionQuestion,
         'image': image,
+        'perspective': perspective,
       };
 }
 

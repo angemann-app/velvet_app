@@ -9,9 +9,14 @@
 /// Hinter dem Doppelpunkt steht der neutrale Text; er wird angezeigt, wenn nichts bekannt ist,
 /// und er ist genau das, was eingesprochen wurde (tools/generate_audio.py).
 ///
-/// Ersetzt wird nur, wenn klar ist, dass die Person das Gegenüber ist: {W:…} nur, wenn das
-/// Gegenüber eine Frau ist und man selbst nicht. Damit der Text nicht holprig wird, nennt
-/// {W}/{M} den Namen nur beim ersten Vorkommen je Absatz; danach bleibt das Pronomen.
+/// Ersetzt wird nur, wenn klar ist, dass die Person das Gegenüber ist:
+/// - Lektionen aus Sicht der gebenden Person (Lektionsfeld "perspective": "giver", z. B. die
+///   Yoni-Massage): „sie“ ist immer die empfangende Person, also das Gegenüber, sobald es eine
+///   Frau ist – auch wenn man selbst eine Frau ist.
+/// - Alle anderen: nur wenn das Gegenüber eine Frau ist und man selbst nicht, sonst wäre offen,
+///   wer gemeint ist (z. B. „Wenn Sex wehtut“ bei zwei Frauen).
+/// Für {M:…} entsprechend. Damit der Text nicht holprig wird, nennt {W}/{M} den Namen nur beim
+/// ersten Vorkommen je Absatz; danach bleibt das Pronomen.
 class PersonalizeContext {
   final String? partnerName;
 
@@ -19,14 +24,29 @@ class PersonalizeContext {
   final String? partnerGender;
   final String? myGender;
   final bool english;
+  final bool giverPerspective;
 
-  const PersonalizeContext({this.partnerName, this.partnerGender, this.myGender, this.english = false});
+  const PersonalizeContext({
+    this.partnerName,
+    this.partnerGender,
+    this.myGender,
+    this.english = false,
+    this.giverPerspective = false,
+  });
 
   static const none = PersonalizeContext();
 
+  PersonalizeContext forPerspective(String? perspective) => PersonalizeContext(
+        partnerName: partnerName,
+        partnerGender: partnerGender,
+        myGender: myGender,
+        english: english,
+        giverPerspective: perspective == 'giver',
+      );
+
   bool get _hasName => partnerName != null && partnerName!.trim().isNotEmpty && partnerName != 'Partner';
-  bool get womanIsPartner => _hasName && partnerGender == 'female' && myGender != 'female';
-  bool get manIsPartner => _hasName && partnerGender == 'male' && myGender != 'male';
+  bool get womanIsPartner => _hasName && partnerGender == 'female' && (giverPerspective || myGender != 'female');
+  bool get manIsPartner => _hasName && partnerGender == 'male' && (giverPerspective || myGender != 'male');
 }
 
 final RegExp _token = RegExp(r'\{(W2|M2|W|M|P):([^{}]*)\}');

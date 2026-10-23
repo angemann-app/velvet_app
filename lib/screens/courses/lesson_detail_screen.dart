@@ -372,7 +372,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                 border: Border.all(color: AppTheme.border),
               ),
               child: SelectableText(
-                personalize(lesson.content, _personalizeContext),
+                personalize(lesson.content, _personalizeContext.forPerspective(lesson.perspective)),
                 style: const TextStyle(
                   fontSize: 16,
                   height: 1.65,

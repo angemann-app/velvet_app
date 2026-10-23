@@ -149,6 +149,12 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
   „Name & Geschlecht des Gegenübers“. Fehlt es, fragt der Paar-Kanal einmal nach.
   Speicherort `velvet_partner_gender`, ist Teil der Sicherung.
 - **Abschaltbar** unter „Profil & Einstellungen“.
+- **Wer gemeint ist:**
+  - Lektionen, die die gebende Person ansprechen, tragen `"perspective": "giver"`, zum Beispiel die
+    Yoni- und die Lingam-Massage. Dort ist „sie“ bzw. „er“ immer das Gegenüber, auch bei
+    gleichgeschlechtlichen Paaren.
+  - In allen anderen Lektionen wird nur ersetzt, wenn das eigene Geschlecht ein anderes ist.
+  - Neue Lektionen mit Rollen entsprechend kennzeichnen, in DE und EN gleich.
 - **Regel für neue Texte:** Wer neue Lektionen mit Rollen schreibt, setzt die Platzhalter, auch in der
   englischen Fassung mit denselben Arten. `test/personalize_test.dart` prüft das.
 

@@ -26,6 +26,33 @@ void main() {
     expect(stripPersonalization(text), neutral);
   });
 
+  test('Gleichgeschlechtliche Paare: aus Sicht der gebenden Person ist „sie“ das Gegenüber', () {
+    const mia = PersonalizeContext(partnerName: 'Mia', partnerGender: 'female', myGender: 'female');
+    const tom = PersonalizeContext(partnerName: 'Tom', partnerGender: 'male', myGender: 'male');
+    // Yoni-Massage (giver): die Partnerin wird genannt.
+    expect(personalize('{W:Sie} liegt auf dem Rücken.', mia.forPerspective('giver')), 'Mia liegt auf dem Rücken.');
+    // Lingam-Massage (giver) bei zwei Männern.
+    expect(personalize('Wenn {M2:sein} Atem schneller wird', tom.forPerspective('giver')), 'Wenn Toms Atem schneller wird');
+    // „Wenn Sex wehtut“ spricht die Frau selbst an: bei zwei Frauen bleibt es offen.
+    expect(personalize('bestimmt {W:die Frau} alles', mia.forPerspective(null)), 'bestimmt die Frau alles');
+    // Das Gegenüber ist ein Mann: in der Yoni-Massage gibt es keine Frau, die er sein könnte.
+    expect(personalize('{W:Sie} liegt', tom.forPerspective('giver')), 'Sie liegt');
+  });
+
+  test('Lektionen aus Sicht der gebenden Person sind in DE und EN gleich gekennzeichnet', () {
+    Map<String, String?> perspectives(String path) {
+      final data = jsonDecode(File(path).readAsStringSync()) as Map<String, dynamic>;
+      return {
+        for (final c in data['courses'] as List)
+          for (final l in c['lessons'] as List) l['id'] as String: l['perspective'] as String?,
+      };
+    }
+
+    final de = perspectives('assets/data/velvet_content.json');
+    expect(de['mass_2'], 'giver');
+    expect(perspectives('translations/en/velvet_content.json'), de);
+  });
+
   test('Besitzform', () {
     expect(personalize('{M2:Sein} Atem', lukas), "Lukas' Atem");
     expect(personalize('{W2:ihr} Atem', anna), 'Annas Atem');
