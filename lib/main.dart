@@ -5,6 +5,8 @@ import 'services/data_service.dart';
 import 'services/storage_service.dart';
 import 'services/auto_backup_service.dart';
 import 'services/nostr_service.dart';
+import 'services/privacy_service.dart';
+import 'widgets/app_lock.dart';
 import 'theme/app_theme.dart';
 import 'screens/main_navigation_screen.dart';
 import 'screens/onboarding/onboarding_screen.dart';
@@ -39,6 +41,7 @@ class VelvetPulseApp extends StatefulWidget {
 class _VelvetPulseAppState extends State<VelvetPulseApp> {
   bool _isInitialized = false;
   bool _hasOnboarded = false;
+  bool _lockEnabled = false;
 
   @override
   void initState() {
@@ -47,6 +50,12 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
   }
 
   Future<void> _initApp() async {
+    try {
+      _lockEnabled = await PrivacyService.isLockEnabled();
+    } catch (e) {
+      debugPrint('Privacy init error: $e');
+    }
+
     try {
       await StorageService.init();
       await AutoBackupService.checkAndAutoRestore();
@@ -85,6 +94,9 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
       scrollBehavior: const MaterialScrollBehavior().copyWith(
         dragDevices: PointerDeviceKind.values.toSet(),
       ),
+      builder: (context, child) => _isInitialized
+          ? AppLock(initiallyLocked: _lockEnabled, child: child!)
+          : child!,
       home: !_isInitialized
           ? const Scaffold(
               backgroundColor: AppTheme.background,

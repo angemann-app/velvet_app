@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Vordergrund des unauffälligen App-Symbols: schlichte Pulslinie (sichere Zone: 66dp Mitte). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M30,56 L44,56 L49,44 L56,68 L62,50 L66,56 L78,56"
+        android:strokeColor="#E2E8F0"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+</vector>

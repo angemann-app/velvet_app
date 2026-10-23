@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <!-- Nur lesend, um alte Sicherungen aus Download/Documents wiederherzustellen -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
 
@@ -27,11 +28,33 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
+        </activity>
+        <!-- Zwei Starter-Einträge: normal und unauffällig. MainActivity schaltet per
+             PackageManager um, welcher aktiv ist (Einstellung "Unauffälliges App-Symbol"). -->
+        <activity-alias
+            android:name=".LauncherDefault"
+            android:targetActivity=".MainActivity"
+            android:label="VelvetPulse"
+            android:icon="@mipmap/ic_launcher"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
+        </activity-alias>
+        <activity-alias
+            android:name=".LauncherDiscreet"
+            android:targetActivity=".MainActivity"
+            android:label="Pulse"
+            android:icon="@mipmap/ic_discreet"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />

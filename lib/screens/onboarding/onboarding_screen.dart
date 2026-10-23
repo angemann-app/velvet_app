@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import '../../models/user_profile.dart';
 import '../../services/storage_service.dart';
 import '../../services/auto_backup_service.dart';
+import '../../services/privacy_service.dart';
 import '../../theme/app_theme.dart';
 import '../main_navigation_screen.dart';
 
@@ -28,10 +29,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   String _selectedRelationship = 'relationship';
   String _selectedGoal = 'performance_anxiety';
   bool _isSubmitting = false;
+  bool _lockEnabled = false;
+  bool _discreetIcon = false;
+  bool _lockSupported = false;
 
   @override
   void initState() {
     super.initState();
+    if (widget.isEditing) _loadPrivacySettings();
     final existing = StorageService.getUserProfile();
     if (existing != null) {
       _nameController.text = existing.name;
@@ -782,6 +787,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 const SizedBox(height: 24),
                 const Divider(color: AppTheme.border),
                 const SizedBox(height: 16),
+                _buildPrivacySection(),
+                const SizedBox(height: 16),
                 _buildBackupSection(),
               ],
 
@@ -934,6 +941,85 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Future<void> _loadPrivacySettings() async {
+    final lock = await PrivacyService.isLockEnabled();
+    final discreet = await PrivacyService.isDiscreetIcon();
+    final supported = await PrivacyService.isSupported();
+    if (mounted) {
+      setState(() {
+        _lockEnabled = lock;
+        _discreetIcon = discreet;
+        _lockSupported = supported;
+      });
+    }
+  }
+
+  Widget _buildPrivacySection() {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 16, 8, 8),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Row(
+            children: [
+              Icon(Icons.visibility_off_rounded, color: AppTheme.sageGreen, size: 20),
+              SizedBox(width: 8),
+              Text(
+                'Diskretion',
+                style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5, fontWeight: FontWeight.w700),
+              ),
+            ],
+          ),
+          SwitchListTile(
+            contentPadding: const EdgeInsets.only(right: 8),
+            value: _lockEnabled,
+            activeColor: AppTheme.sageGreen,
+            onChanged: _lockSupported
+                ? (value) async {
+                    final ok = await PrivacyService.setLockEnabled(value);
+                    if (ok && mounted) setState(() => _lockEnabled = value);
+                  }
+                : null,
+            title: const Text('Mit Fingerabdruck sperren', style: TextStyle(fontSize: 14)),
+            subtitle: Text(
+              _lockSupported
+                  ? 'Beim Öffnen und nach einer Minute im Hintergrund. Inhalte sind in der App-Übersicht verborgen, Screenshots gesperrt.'
+                  : 'Auf diesem Gerät ist keine Displaysperre eingerichtet.',
+              style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+            ),
+          ),
+          SwitchListTile(
+            contentPadding: const EdgeInsets.only(right: 8),
+            value: _discreetIcon,
+            activeColor: AppTheme.sageGreen,
+            onChanged: (value) async {
+              await PrivacyService.setDiscreetIcon(value);
+              if (!mounted) return;
+              setState(() => _discreetIcon = value);
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(value
+                      ? 'Die App heißt jetzt „Pulse“. Der Startbildschirm braucht dafür ein paar Sekunden.'
+                      : 'Die App heißt wieder „VelvetPulse“.'),
+                ),
+              );
+            },
+            title: const Text('Unauffälliges App-Symbol', style: TextStyle(fontSize: 14)),
+            subtitle: const Text(
+              'Zeigt „Pulse“ mit neutralem Symbol auf dem Startbildschirm.',
+              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+            ),
+          ),
+        ],
       ),
     );
   }
