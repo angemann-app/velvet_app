@@ -171,6 +171,16 @@ void main() {
     await tester.pumpWidget(_app(LessonDetailScreen(lesson: self.lessons[1], courseTitle: self.title)));
     await _shot(tester, '08_selbst_vulva', errors);
 
+    // Gemeinsam lernen: Anna hat ihre Reflexion geteilt, die eigene Antwort steht noch aus.
+    final neuro = DataService.getCourses().first;
+    NostrService().partnerReflectionsNotifier.value = {
+      neuro.lessons.first.id: 'Mir hilft es, wenn wir abends zuerst zehn Minuten nur reden.'
+    };
+    await tester.pumpWidget(_app(LessonDetailScreen(lesson: neuro.lessons.first, courseTitle: neuro.title)));
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, -3000));
+    await _shot(tester, '10_gemeinsam_reflexion', errors);
+    await tester.pumpWidget(const SizedBox());
+
     final course = DataService.getCourses().firstWhere((c) => c.id == 'course_sacred_massage');
     await tester.pumpWidget(_app(LessonDetailScreen(lesson: course.lessons[1], courseTitle: course.title)));
     await _shot(tester, '06_lektion', errors);

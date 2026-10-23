@@ -22,6 +22,9 @@ class CoupleMessage {
   final String? emoji;
   final String? fantasyId;
   final String? fantasyVote;
+
+  /// Lektion, auf die sich die Nachricht bezieht (geteilte Lektion oder Reflexion).
+  final String? lessonId;
   final DateTime createdAt;
 
   const CoupleMessage({
@@ -33,6 +36,7 @@ class CoupleMessage {
     this.emoji,
     this.fantasyId,
     this.fantasyVote,
+    this.lessonId,
     required this.createdAt,
   });
 
@@ -46,6 +50,7 @@ class CoupleMessage {
       'emoji': emoji,
       'fantasyId': fantasyId,
       'fantasyVote': fantasyVote,
+      'lessonId': lessonId,
       'createdAt': createdAt.toIso8601String(),
     };
   }
@@ -63,6 +68,7 @@ class CoupleMessage {
       emoji: map['emoji'] as String?,
       fantasyId: map['fantasyId'] as String?,
       fantasyVote: map['fantasyVote'] as String?,
+      lessonId: map['lessonId'] as String?,
       createdAt: map['createdAt'] != null
           ? DateTime.tryParse(map['createdAt'] as String) ?? DateTime.now()
           : DateTime.now(),

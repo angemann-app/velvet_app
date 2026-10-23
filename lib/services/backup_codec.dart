@@ -37,6 +37,7 @@ class BackupCodec {
     'nostrPartnerName': String,
     'myFantasyVotes': String,
     'partnerFantasyVotes': String,
+    'partnerReflections': String,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.

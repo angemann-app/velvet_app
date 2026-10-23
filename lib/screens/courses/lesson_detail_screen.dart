@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/content_models.dart';
+import '../../services/nostr_service.dart';
 import '../../services/storage_service.dart';
 import '../../services/audio_service.dart';
 import '../../services/tts_service.dart';
@@ -77,7 +78,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     );
     setState(() {
       _isSavingReflection = false;
-      _reflectionSavedMessage = true;
+      _reflectionSavedMessage = true; // macht auch eine geteilte Antwort des Gegenübers sichtbar
     });
     Future.delayed(const Duration(seconds: 3), () {
       if (mounted) {
@@ -86,6 +87,80 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
         });
       }
     });
+  }
+
+  final NostrService _nostr = NostrService();
+
+  Future<void> _shareLesson() async {
+    final ok = await _nostr.sendLessonShare(widget.lesson.id, widget.lesson.title, widget.courseTitle);
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(ok
+          ? 'Lektion an ${_nostr.partnerName} geschickt.'
+          : 'Senden hat nicht geklappt. Bitte gleich noch einmal versuchen.'),
+      backgroundColor: ok ? AppTheme.sageGreen : AppTheme.rose,
+    ));
+  }
+
+  /// Die Antwort geht verschlüsselt an das Gegenüber. Dort wird sie erst sichtbar,
+  /// wenn es die Frage selbst beantwortet hat – und umgekehrt.
+  Future<void> _shareReflection() async {
+    final answer = _reflectionController.text.trim();
+    if (answer.isEmpty) return;
+    await StorageService.saveReflectionAnswer(widget.lesson.id, answer);
+    final ok = await _nostr.sendReflection(widget.lesson.id, widget.lesson.title, answer);
+    if (!mounted) return;
+    setState(() {});
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(ok
+          ? 'Deine Gedanken sind bei ${_nostr.partnerName}. Sichtbar werden sie, wenn auch dort eine Antwort steht.'
+          : 'Senden hat nicht geklappt. Bitte gleich noch einmal versuchen.'),
+      backgroundColor: ok ? AppTheme.sageGreen : AppTheme.rose,
+    ));
+  }
+
+  Widget _buildPartnerReflection() {
+    return ValueListenableBuilder<Map<String, String>>(
+      valueListenable: _nostr.partnerReflectionsNotifier,
+      builder: (context, reflections, _) {
+        final theirs = reflections[widget.lesson.id];
+        if (theirs == null || !_nostr.isPaired) return const SizedBox.shrink();
+        final mine = StorageService.getReflectionAnswer(widget.lesson.id)?.trim() ?? '';
+        final name = _nostr.partnerName;
+        return Container(
+          margin: const EdgeInsets.only(top: 14),
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: AppTheme.rose.withOpacity(0.08),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: AppTheme.rose.withOpacity(0.35)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(mine.isEmpty ? Icons.lock_outline_rounded : Icons.favorite_rounded,
+                      color: AppTheme.rose, size: 16),
+                  const SizedBox(width: 6),
+                  Text(mine.isEmpty ? '$name hat schon geantwortet' : 'Die Gedanken von $name',
+                      style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13.5, fontWeight: FontWeight.w700)),
+                ],
+              ),
+              const SizedBox(height: 6),
+              Text(
+                mine.isEmpty ? 'Schreib und speichere zuerst deine eigene Antwort, dann siehst du die von $name.' : theirs,
+                style: TextStyle(
+                  color: mine.isEmpty ? AppTheme.textMuted : AppTheme.textPrimary,
+                  fontSize: 13.5,
+                  height: 1.45,
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 
   void _triggerSmartTool() {
@@ -135,6 +210,12 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           style: const TextStyle(fontSize: 16, color: AppTheme.textSecondary),
         ),
         actions: [
+          if (_nostr.isPaired)
+            IconButton(
+              onPressed: _shareLesson,
+              icon: const Icon(Icons.favorite_border_rounded, color: AppTheme.rose),
+              tooltip: 'Mit ${_nostr.partnerName} teilen',
+            ),
           IconButton(
             onPressed: _toggleCompleted,
             icon: Icon(
@@ -473,7 +554,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             maxLines: 4,
             style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
             decoration: const InputDecoration(
-              hintText: 'Schreibe hier deine ehrlichen Gedanken auf (wird nur lokal auf deinem Gerät gespeichert)...',
+              hintText: 'Schreibe hier deine ehrlichen Gedanken auf. Sie bleiben auf deinem Gerät, außer du teilst sie.',
             ),
           ),
           const SizedBox(height: 12),
@@ -511,6 +592,19 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               ),
             ],
           ),
+          if (_nostr.isPaired) ...[
+            const SizedBox(height: 8),
+            Align(
+              alignment: Alignment.centerRight,
+              child: TextButton.icon(
+                onPressed: _shareReflection,
+                icon: const Icon(Icons.favorite_border_rounded, size: 16, color: AppTheme.rose),
+                label: Text('Mit ${_nostr.partnerName} teilen',
+                    style: const TextStyle(color: AppTheme.rose, fontSize: 13, fontWeight: FontWeight.w600)),
+              ),
+            ),
+          ],
+          _buildPartnerReflection(),
         ],
       ),
     );

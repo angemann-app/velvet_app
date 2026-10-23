@@ -21,6 +21,7 @@ class NostrService {
   static const String _keyMyFantasyVotes = 'velvet_my_fantasy_votes';
   static const String _keyPartnerFantasyVotes = 'velvet_partner_fantasy_votes';
   static const String _keyInviteName = 'velvet_invite_name';
+  static const String _keyPartnerReflections = 'velvet_partner_reflections';
 
   static const List<String> fallbackRelays = [
     'wss://relay.primal.net',
@@ -72,6 +73,11 @@ class NostrService {
       ValueNotifier<Map<String, String>>({});
 
   final ValueNotifier<Map<String, String>> partnerFantasyVotesNotifier =
+      ValueNotifier<Map<String, String>>({});
+
+  /// Reflexionen, die das Gegenüber geteilt hat: Lektion → Antwort.
+  /// Angezeigt werden sie erst, wenn man selbst geantwortet hat (lesson_detail_screen.dart).
+  final ValueNotifier<Map<String, String>> partnerReflectionsNotifier =
       ValueNotifier<Map<String, String>>({});
 
   final ValueNotifier<List<String>> matchesNotifier =
@@ -232,6 +238,14 @@ class NostrService {
       try {
         myFantasyVotesNotifier.value = Map<String, String>.from(jsonDecode(myVotesJson));
       } catch (_) {}
+    }
+
+    try {
+      final reflections = prefs.getString(_keyPartnerReflections);
+      partnerReflectionsNotifier.value =
+          reflections == null ? {} : Map<String, String>.from(jsonDecode(reflections) as Map);
+    } catch (_) {
+      partnerReflectionsNotifier.value = {};
     }
 
     final partnerVotesJson = prefs.getString(_keyPartnerFantasyVotes);
@@ -442,6 +456,7 @@ class NostrService {
     String? emoji;
     String? fantasyId;
     String? fantasyVote;
+    String? lessonId;
 
     try {
       final data = jsonDecode(decryptedText);
@@ -459,6 +474,15 @@ class NostrService {
         } else if (t == 'chat') {
           type = CoupleMessageType.chat;
           text = data['text'] as String?;
+          // Gemeinsam lernen: als normale Chat-Nachricht verschickt, damit ältere Versionen
+          // den lesbaren Text zeigen. Die Antwort selbst steckt nur im Zusatzfeld.
+          final lesson = data['lesson'];
+          if (lesson is String && lesson.length <= 64) lessonId = lesson;
+          final reflection = data['reflection'];
+          if (!isMe && lessonId != null && reflection is String && reflection.length <= 5000) {
+            partnerReflectionsNotifier.value = {...partnerReflectionsNotifier.value, lessonId: reflection};
+            _savePartnerReflections();
+          }
         }
       }
     } catch (_) {
@@ -476,6 +500,7 @@ class NostrService {
       emoji: emoji,
       fantasyId: fantasyId,
       fantasyVote: fantasyVote,
+      lessonId: lessonId,
       createdAt: timestamp,
     );
 
@@ -595,6 +620,40 @@ class NostrService {
 
     partnerPubKeyNotifier.value = null;
     partnerNameNotifier.value = 'Partner';
+    partnerReflectionsNotifier.value = {};
+    await prefs.remove(_keyPartnerReflections);
+  }
+
+  /// Lektion empfehlen. Ältere Versionen zeigen nur den Text.
+  Future<bool> sendLessonShare(String lessonId, String lessonTitle, String courseTitle) =>
+      _sendLearning({'text': '📖 Lies mal: „$lessonTitle“ ($courseTitle)', 'lesson': lessonId});
+
+  /// Eigene Reflexion teilen. Der lesbare Text verrät die Antwort nicht.
+  Future<bool> sendReflection(String lessonId, String lessonTitle, String answer) => _sendLearning({
+        'text': '💭 Ich habe meine Gedanken zu „$lessonTitle“ geteilt. Du siehst sie, sobald du selbst geantwortet hast.',
+        'lesson': lessonId,
+        'reflection': answer.trim(),
+      });
+
+  Future<bool> _sendLearning(Map<String, String> fields) async {
+    if (!isPaired) return false;
+    final payload = jsonEncode({'type': 'chat', ...fields, 'timestamp': DateTime.now().millisecondsSinceEpoch});
+    return _sendKind4(payload, (eventId) {
+      _parseAndAddMessage(
+        eventId: eventId,
+        senderPubkey: _myPublicKey!,
+        isMe: true,
+        decryptedText: payload,
+        timestamp: DateTime.now(),
+      );
+    });
+  }
+
+  Future<void> _savePartnerReflections() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_keyPartnerReflections, jsonEncode(partnerReflectionsNotifier.value));
+    } catch (_) {}
   }
 
   Future<bool> sendQuickPing(String emoji, String label) async {

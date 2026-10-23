@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/couple_channel_models.dart';
+import '../../services/data_service.dart';
 import '../../services/nostr_service.dart';
+import '../courses/lesson_detail_screen.dart';
 import '../../theme/app_theme.dart';
 import '../yes_no_maybe/yes_no_maybe_screen.dart';
 import 'invite_partner.dart';
@@ -249,6 +251,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         ],
       ),
     );
+  }
+
+  void _openLesson(String lessonId) {
+    final course = DataService.getCourses().firstWhere((c) => c.lessons.any((l) => l.id == lessonId));
+    final lesson = course.lessons.firstWhere((l) => l.id == lessonId);
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => LessonDetailScreen(lesson: lesson, courseTitle: course.title),
+    ));
   }
 
   void _openAbend() {
@@ -609,6 +619,33 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 height: 1.35,
               ),
             ),
+            if (msg.lessonId != null && DataService.getLessonById(msg.lessonId!) != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: InkWell(
+                  onTap: () => _openLesson(msg.lessonId!),
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    decoration: BoxDecoration(
+                      color: (isMe ? Colors.black : AppTheme.amber).withOpacity(0.12),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.menu_book_rounded, size: 15, color: isMe ? textColor : AppTheme.amberLight),
+                        const SizedBox(width: 6),
+                        Text('Lektion öffnen',
+                            style: TextStyle(
+                                fontSize: 12.5,
+                                fontWeight: FontWeight.w700,
+                                color: isMe ? textColor : AppTheme.amberLight)),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             const SizedBox(height: 4),
             Text(
               _formatTime(msg.createdAt),

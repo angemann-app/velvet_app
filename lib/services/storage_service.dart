@@ -27,6 +27,7 @@ class StorageService {
   static const String _keyPartnerName = 'velvet_partner_name';
   static const String _keyMyVotes = 'velvet_my_fantasy_votes';
   static const String _keyPartnerVotes = 'velvet_partner_fantasy_votes';
+  static const String _keyPartnerReflections = 'velvet_partner_reflections';
 
   static SharedPreferences? _prefs;
   static UserProfile? _inMemoryProfile;
@@ -340,6 +341,7 @@ class StorageService {
       'nostrPartnerName': _prefs?.getString(_keyPartnerName),
       'myFantasyVotes': _prefs?.getString(_keyMyVotes),
       'partnerFantasyVotes': _prefs?.getString(_keyPartnerVotes),
+      'partnerReflections': _prefs?.getString(_keyPartnerReflections),
     };
   }
 
@@ -433,6 +435,7 @@ class StorageService {
         ('nostrPartnerName', _keyPartnerName),
         ('myFantasyVotes', _keyMyVotes),
         ('partnerFantasyVotes', _keyPartnerVotes),
+        ('partnerReflections', _keyPartnerReflections),
       ]) {
         final value = d[field];
         if (value is String && value.isNotEmpty) writes[key] = value;
