@@ -5,13 +5,15 @@ import 'package:flutter/foundation.dart';
 import 'package:nostr_tools/nostr_tools.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/couple_channel_models.dart';
+import 'nostr_event_check.dart';
+import 'nostr_keys.dart';
+import 'secret_store.dart';
 
 class NostrService {
   static final NostrService _instance = NostrService._internal();
   factory NostrService() => _instance;
   NostrService._internal();
 
-  static const String _keyPrivKey = 'velvet_nostr_privkey';
   static const String _keyPubKey = 'velvet_nostr_pubkey';
   static const String _keyPartnerPubKey = 'velvet_partner_pubkey';
   static const String _keyPartnerName = 'velvet_partner_name';
@@ -183,21 +185,19 @@ class NostrService {
 
     final prefs = await SharedPreferences.getInstance();
 
-    // 1. Initialize or load keys
-    final storedPriv = prefs.getString(_keyPrivKey);
-    final storedPub = prefs.getString(_keyPubKey);
+    // 1. Schlüssel laden. Der private liegt im SecretStore; der öffentliche wird immer
+    // daraus abgeleitet, nie einem gespeicherten Wert geglaubt.
+    await SecretStore.init(prefs);
+    final storedPriv = SecretStore.read(SecretStore.nostrPrivKey);
 
-    if (storedPriv != null && storedPriv.length == 64) {
+    if (isValidPrivateKeyHex(storedPriv)) {
       _myPrivateKey = storedPriv;
-      _myPublicKey = (storedPub != null && storedPub.length == 64)
-          ? storedPub
-          : _keyApi.getPublicKey(_myPrivateKey!);
+      _myPublicKey = _keyApi.getPublicKey(_myPrivateKey!);
     } else {
       _myPrivateKey = null;
       _ensureKeysInMemory();
+      await SecretStore.write(SecretStore.nostrPrivKey, _myPrivateKey);
     }
-
-    await prefs.setString(_keyPrivKey, _myPrivateKey!);
     await prefs.setString(_keyPubKey, _myPublicKey!);
 
     try {
@@ -367,6 +367,7 @@ class NostrService {
   void _handleIncomingRawMessage(dynamic raw) {
     try {
       final String text = raw is List<int> ? utf8.decode(raw) : raw.toString();
+      if (text.length > 256 * 1024) return; // übergroße Relay-Nachrichten gar nicht erst parsen
       final dynamic decoded = jsonDecode(text);
       if (decoded is! List || decoded.isEmpty) return;
 
@@ -402,21 +403,32 @@ class NostrService {
     }
   }
 
+  /// Verarbeitet ein Direktnachrichten-Event. Erst wird geprüft (Format, ID, Signatur,
+  /// Empfänger, Absender), erst danach als verarbeitet gemerkt und entschlüsselt.
+  /// So kann ein gefälschtes Event mit fremder ID keine echte Nachricht blockieren.
+  @visibleForTesting
+  Future<void> handleIncomingKind4Map(Map<String, dynamic> ev) => _handleIncomingKind4Map(ev);
+
   Future<void> _handleIncomingKind4Map(Map<String, dynamic> ev) async {
-    final String id = ev['id'] as String? ?? '';
-    final String senderPubkey = ev['pubkey'] as String? ?? '';
-    final String content = ev['content'] as String? ?? '';
-    final int createdAt = ev['created_at'] as int? ?? (DateTime.now().millisecondsSinceEpoch ~/ 1000);
+    if (_myPublicKey == null || _myPrivateKey == null) return;
+    final Object? rawId = ev['id'];
+    if (rawId is! String || _processedEventIds.contains(rawId)) return;
+    if (!NostrEventCheck.isValidDirectMessage(ev, recipient: _myPublicKey!)) {
+      debugPrint('Nostr: ungültiges Event verworfen');
+      return;
+    }
+    final String id = rawId;
+    final String senderPubkey = ev['pubkey'] as String;
+    final String content = ev['content'] as String;
+    final int createdAt = ev['created_at'] as int;
 
-    if (id.isEmpty || _processedEventIds.contains(id)) return;
-    _processedEventIds.add(id);
-
-    // If we have a partner set, only accept events from that partner
+    // Ist ein Partner gesetzt, zählen nur seine Nachrichten.
     if (_partnerPublicKey != null && _partnerPublicKey!.isNotEmpty) {
       if (senderPubkey != _partnerPublicKey) {
         return;
       }
     }
+    _processedEventIds.add(id);
 
     try {
       final decrypted = _nip04.decrypt(_myPrivateKey!, senderPubkey, content);
@@ -431,7 +443,7 @@ class NostrService {
         timestamp: DateTime.fromMillisecondsSinceEpoch(createdAt * 1000),
       );
     } catch (e) {
-      debugPrint('Could not decrypt Kind 4 from ${senderPubkey.isNotEmpty ? senderPubkey.substring(0, 8) : "?"}: $e');
+      debugPrint('Nostr: Nachricht von ${senderPubkey.substring(0, 8)}… nicht entschlüsselbar (${e.runtimeType})');
     }
   }
 

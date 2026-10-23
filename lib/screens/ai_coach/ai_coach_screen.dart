@@ -195,7 +195,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                     const SizedBox(height: 12),
                   ],
                   const Text(
-                    'Für das private Coaching wird Google Gemini verwendet. Der Key wird ausschließlich lokal auf deinem Smartphone gespeichert.',
+                    'Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google.',
                     style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4),
                   ),
                   const SizedBox(height: 16),

@@ -16,6 +16,7 @@ class AiService {
       "5. Format: Antworte stets kompakt (2-3 prägnante, atmosphärische Absätze) und beende JEDE Antwort mit genau EINER offenen, leicht herausfordernden oder spür-orientierten Reflexionsfrage.";
 
   static List<String>? _cachedWorkingModels;
+  static String? _cachedModelsKey;
 
   /// Dynamically queries Google Generative Language API to discover which models
   /// are active, authorized, and support generateContent for this exact API key.
@@ -25,10 +26,10 @@ class AiService {
 
     final client = HttpClient();
     try {
-      final uri = Uri.parse(
-        'https://generativelanguage.googleapis.com/v1beta/models?key=$cleanKey',
-      );
+      // Key im Header statt in der URL, damit er nicht in Logs oder Fehlermeldungen landet.
+      final uri = Uri.parse('https://generativelanguage.googleapis.com/v1beta/models');
       final req = await client.getUrl(uri);
+      req.headers.set('x-goog-api-key', cleanKey);
       final resp = await req.close().timeout(const Duration(seconds: 6));
       final body = await resp.transform(utf8.decoder).join();
 
@@ -60,7 +61,8 @@ class AiService {
         });
 
         _cachedWorkingModels = found;
-        debugPrint('AiService: Discovered ${found.length} active models for API key: $found');
+        _cachedModelsKey = cleanKey;
+        debugPrint('AiService: ${found.length} Modelle verfügbar');
         return found;
       } else {
         // If Google returned a non-200 error, inspect error message
@@ -85,7 +87,8 @@ class AiService {
       client.close();
     }
 
-    return _cachedWorkingModels ?? [];
+    // Die Liste gilt nur für den Key, mit dem sie abgefragt wurde.
+    return _cachedModelsKey == cleanKey ? (_cachedWorkingModels ?? []) : [];
   }
 
   /// Public test helper for UI to verify API key immediately
@@ -146,7 +149,8 @@ class AiService {
     contents.add(Content.text(userMessage));
 
     // Discover real models or use robust candidate list
-    List<String> candidateModels = _cachedWorkingModels ?? [];
+    List<String> candidateModels =
+        _cachedModelsKey == effectiveKey ? (_cachedWorkingModels ?? []) : [];
     if (candidateModels.isEmpty) {
       try {
         candidateModels = await fetchAvailableModels(effectiveKey);

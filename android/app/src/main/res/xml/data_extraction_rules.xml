@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12 und neuer. Wie backup_rules.xml: Nutzerdaten ja, Geheimnisse nein.
+     Für einen Umzug mit Paar-Verbindung und API-Key gibt es den Export mit Passwort. -->
 <data-extraction-rules>
     <cloud-backup>
-        <!-- Automatic Google Drive Backup for Android 12+ -->
         <include domain="sharedpref" path="." />
         <include domain="database" path="." />
         <include domain="file" path="." />
+        <exclude domain="sharedpref" path="FlutterSecureStorage.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureKeyStorage.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration:FlutterSecureStorage.xml" />
     </cloud-backup>
     <device-transfer>
-        <!-- Direct phone-to-phone migration -->
         <include domain="sharedpref" path="." />
         <include domain="database" path="." />
         <include domain="file" path="." />
+        <exclude domain="sharedpref" path="FlutterSecureStorage.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureKeyStorage.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration.xml" />
+        <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration:FlutterSecureStorage.xml" />
     </device-transfer>
 </data-extraction-rules>

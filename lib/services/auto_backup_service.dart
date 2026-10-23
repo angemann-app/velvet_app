@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
+import 'backup_codec.dart';
 import 'storage_service.dart';
 
 class AutoBackupService {
@@ -18,77 +19,46 @@ class AutoBackupService {
     return 'org.velvetpulse.app';
   }
 
-  /// Einziger Schreibort: der private App-Speicher. Andere Apps können ihn
-  /// nicht lesen, und Androids Cloud-Backup (backup_rules.xml) sichert ihn mit.
-  /// Das Backup enthält API-Key und privaten Nostr-Schlüssel, darum nie öffentlich.
+  /// Einziger Ort, an dem Sicherungen automatisch geschrieben und gelesen werden:
+  /// der private App-Speicher. Andere Apps können ihn nicht lesen. Die Sicherung
+  /// enthält keine Geheimnisse (siehe BackupCodec, SecretStore).
+  /// Dateien aus Download oder Documents werden nie automatisch eingelesen, nur
+  /// über den Import im Onboarding, nach Prüfung und auf ausdrücklichen Wunsch.
   static String? get _privateBackupPath {
     if (!Platform.isAndroid) return null;
     return '/data/user/0/$_packageName/files/$backupFileName';
   }
 
-  /// Leseorte für die Wiederherstellung: privater Speicher zuerst, danach
-  /// Altdateien früherer Versionen und manuell abgelegte Sicherungen.
-  static List<String> get _restorePaths {
-    if (!Platform.isAndroid) return [];
-    final pkg = _packageName;
-    final paths = <String>[
-      _privateBackupPath!,
-      '/storage/emulated/0/Android/data/$pkg/files/$backupFileName',
-      '/storage/emulated/0/Documents/VelvetPulse/$backupFileName',
-      '/storage/emulated/0/Documents/$backupFileName',
-      '/storage/emulated/0/Download/$backupFileName',
-    ];
-    return paths.toSet().toList();
-  }
-
-  /// Automatically called on app launch to detect and restore any existing backup file
+  /// Beim App-Start: Ist die App eingerichtet, wird nur gesichert. Sonst wird
+  /// eine vorhandene private Sicherung geprüft und eingespielt.
   static Future<bool> checkAndAutoRestore() async {
     if (StorageService.hasCompletedOnboarding() &&
         StorageService.getUserProfile() != null) {
-      debugPrint('AutoBackupService: User already initialized, keeping local storage active.');
       saveAutoBackup();
       return true;
     }
 
-    debugPrint('AutoBackupService: Checking for autarkic backup file...');
-
-    for (final path in _restorePaths) {
-      try {
-        final file = File(path);
-        if (file.existsSync()) {
-          final content = file.readAsStringSync();
-          if (content.trim().isNotEmpty) {
-            final dynamic parsed = jsonDecode(content);
-            if (parsed is Map<String, dynamic> &&
-                parsed['app'] == 'VelvetPulse') {
-              final success = await StorageService.importUserData(parsed);
-              if (success) {
-                debugPrint('AutoBackupService: Successfully auto-restored backup from: $path');
-                return true;
-              }
-            }
-          }
-        }
-      } catch (e) {
-        debugPrint('AutoBackupService: Could not read backup at $path: $e');
-      }
+    final text = await readBackupText();
+    if (text == null) return false;
+    try {
+      final backup = BackupCodec.validate(text);
+      await StorageService.importBackup(backup, secrets: backup.plaintextSecrets);
+      debugPrint('AutoBackupService: private Sicherung eingespielt.');
+      return true;
+    } catch (e) {
+      debugPrint('AutoBackupService: private Sicherung nicht verwendet: ${e is BackupException ? e.message : e.runtimeType}');
+      return false;
     }
-
-    return false;
   }
 
-  /// Silently writes the current state to the persistent device backup files
+  /// Schreibt den aktuellen Stand still in den privaten Speicher.
   static Future<bool> saveAutoBackup() async {
     try {
       final data = StorageService.exportAllUserData();
 
       final profile = data['userProfile'];
       final lessons = data['completedLessons'] as List?;
-      final apiKey = data['apiKey'] as String?;
-
-      if (profile == null &&
-          (lessons == null || lessons.isEmpty) &&
-          (apiKey == null || apiKey.isEmpty)) {
+      if (profile == null && (lessons == null || lessons.isEmpty)) {
         return false;
       }
 
@@ -103,40 +73,22 @@ class AutoBackupService {
       file.writeAsStringSync(jsonString, flush: true);
       return true;
     } catch (e) {
-      debugPrint('AutoBackupService saveAutoBackup global error: $e');
+      debugPrint('AutoBackupService saveAutoBackup error: ${e.runtimeType}');
       return false;
     }
   }
 
-  static Future<String?> findExistingBackupPath() async {
-    for (final path in _restorePaths) {
-      try {
-        final file = File(path);
-        if (file.existsSync()) {
-          final content = file.readAsStringSync();
-          if (content.trim().isNotEmpty) {
-            final dynamic parsed = jsonDecode(content);
-            if (parsed is Map<String, dynamic> &&
-                parsed['app'] == 'VelvetPulse') {
-              return path;
-            }
-          }
-        }
-      } catch (_) {}
-    }
-    return null;
-  }
-
-  static Future<Map<String, dynamic>?> readBackupFromFile(String path) async {
+  /// Inhalt der privaten Sicherung, falls vorhanden und nicht übergroß.
+  static Future<String?> readBackupText() async {
+    final path = _privateBackupPath;
+    if (path == null) return null;
     try {
       final file = File(path);
-      if (file.existsSync()) {
-        final content = file.readAsStringSync();
-        return jsonDecode(content) as Map<String, dynamic>?;
+      if (file.existsSync() && file.lengthSync() <= BackupCodec.maxBackupChars) {
+        final text = file.readAsStringSync();
+        return text.trim().isEmpty ? null : text;
       }
-    } catch (e) {
-      debugPrint('Error reading backup from file: $e');
-    }
+    } catch (_) {}
     return null;
   }
 }

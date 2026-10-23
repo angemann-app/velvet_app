@@ -30,6 +30,13 @@ Entscheidungen dahinterstehen und welche Stolperfallen man kennen muss, bevor ma
     (Voraussetzung für `local_auth`).
   - `lib/main.dart` liest den Sperr-Status vor dem ersten Frame und legt `AppLock` über die ganze App.
 
+- **Sicherheits-Audit (ab 4.3.0):** Details stehen in `docs/SICHERHEIT_AUDIT_BASELINE.md`.
+  - API-Key und Nostr-Schlüssel liegen im Keystore (`SecretStore`). Sie dürfen nie wieder in die
+    SharedPreferences oder in ein unverschlüsseltes Backup.
+  - Sicherungen laufen nur über `BackupCodec` (Schema 2, Geheimnisse nur mit Passwort).
+  - Eingehende Nostr-Events laufen immer durch `NostrEventCheck`.
+  - `test/security_test.dart` muss grün bleiben.
+
 ## 3. Technik und Build
 
 - **Werkzeuge:** AGP 8.11.1, Gradle 8.14.3, Kotlin 2.2.20, Flutter 3.47.

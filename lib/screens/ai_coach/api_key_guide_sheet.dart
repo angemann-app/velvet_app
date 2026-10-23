@@ -115,7 +115,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                               ),
                               TextSpan(
                                 text:
-                                    'Google AI Studio bietet ein kostenloses Kontingent für Privatnutzer. Dein Key und deine Chats bleiben ausschließlich lokal auf deinem Smartphone.',
+                                    'Google AI Studio bietet ein kostenloses Kontingent für Privatnutzer. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google.',
                               ),
                             ],
                           ),

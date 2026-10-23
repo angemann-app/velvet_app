@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Android 11 und älter. Nutzerdaten gehen ins Cloud-Backup, Geheimnisse nicht:
+     API-Key und privater Nostr-Schlüssel liegen Keystore-verschlüsselt in den
+     FlutterSecureStorage-Dateien (lib/services/secret_store.dart). -->
 <full-backup-content>
-    <!-- Include all shared preferences for Google Drive cloud backup -->
     <include domain="sharedpref" path="." />
     <include domain="database" path="." />
     <include domain="file" path="." />
+    <exclude domain="sharedpref" path="FlutterSecureStorage.xml" />
+    <exclude domain="sharedpref" path="FlutterSecureKeyStorage.xml" />
+    <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration.xml" />
+    <exclude domain="sharedpref" path="FlutterSecureStorageConfiguration:FlutterSecureStorage.xml" />
 </full-backup-content>

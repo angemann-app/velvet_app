@@ -1,11 +1,12 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../models/user_profile.dart';
 import '../../services/storage_service.dart';
 import '../../services/auto_backup_service.dart';
+import '../../services/backup_codec.dart';
 import '../../services/privacy_service.dart';
 import '../../services/update_service.dart';
+import '../../widgets/backup_dialogs.dart';
 import '../../widgets/update_dialog.dart';
 import '../../theme/app_theme.dart';
 import '../main_navigation_screen.dart';
@@ -119,23 +120,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Future<void> _promptRestoreBackup() async {
     HapticFeedback.lightImpact();
 
-    // 1. Check if an autarkic file exists on the phone
-    final filePath = await AutoBackupService.findExistingBackupPath();
-    Map<String, dynamic>? fileData;
-    if (filePath != null) {
-      fileData = await AutoBackupService.readBackupFromFile(filePath);
-    }
+    // 1. Sicherung im privaten App-Speicher
+    final fileText = await AutoBackupService.readBackupText();
+    ValidatedBackup? fileData;
+    try {
+      if (fileText != null) fileData = BackupCodec.validate(fileText);
+    } catch (_) {}
 
-    // 2. Check if clipboard contains valid JSON
-    Map<String, dynamic>? clipData;
+    // 2. Sicherung in der Zwischenablage
+    ValidatedBackup? clipData;
     try {
       final clip = await Clipboard.getData('text/plain');
-      if (clip?.text != null && clip!.text!.trim().isNotEmpty) {
-        final decoded = jsonDecode(clip.text!);
-        if (decoded is Map<String, dynamic> &&
-            decoded['app'] == 'VelvetPulse') {
-          clipData = decoded;
-        }
+      if (clip?.text != null && clip!.text!.trim().startsWith('{')) {
+        clipData = BackupCodec.validate(clip.text!);
       }
     } catch (_) {}
 
@@ -229,7 +226,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            'Profil: ${fileData['userProfile']?['name'] ?? "Nutzer"} • Datei: ${filePath != null ? filePath.split("/").last : "velvetpulse_backup.json"}',
+                            'Profil: ${fileData.profileName}',
                             style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 10),
@@ -238,7 +235,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             child: ElevatedButton.icon(
                               onPressed: () async {
                                 Navigator.of(ctx).pop();
-                                await _applyRestoreData(fileData!);
+                                await _applyRestore(fileData!);
                               },
                               icon: const Icon(Icons.flash_on_rounded, size: 16),
                               label: const Text('Automatische Sicherung jetzt einspielen', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -283,7 +280,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            'Sicherung für: „${clipData['userProfile']?['name'] ?? "Nutzer"}“',
+                            'Sicherung für: „${clipData.profileName}“',
                             style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 10),
@@ -292,7 +289,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             child: ElevatedButton.icon(
                               onPressed: () async {
                                 Navigator.of(ctx).pop();
-                                await _applyRestoreData(clipData!);
+                                await _applyRestore(clipData!);
                               },
                               icon: const Icon(Icons.done_all_rounded, size: 16),
                               label: const Text('Aus Zwischenablage einspielen', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -355,12 +352,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           return;
                         }
                         try {
-                          final map = jsonDecode(raw) as Map<String, dynamic>;
+                          final backup = BackupCodec.validate(raw);
                           Navigator.of(ctx).pop();
-                          await _applyRestoreData(map);
-                        } catch (e) {
+                          await _applyRestore(backup);
+                        } on BackupException catch (e) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text('Ungültiges Backup-Format. Bitte JSON prüfen.'), backgroundColor: AppTheme.rose),
+                            SnackBar(content: Text(e.message), backgroundColor: AppTheme.rose),
                           );
                         }
                       },
@@ -382,11 +379,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  Future<void> _applyRestoreData(Map<String, dynamic> data) async {
-    final success = await StorageService.importUserData(data);
+  Future<void> _applyRestore(ValidatedBackup backup) async {
+    final secrets = await resolveBackupSecrets(context, backup);
+    if (secrets == null || !mounted) return;
+    String? error;
+    try {
+      await StorageService.importBackup(backup, secrets: secrets);
+    } on BackupException catch (e) {
+      error = e.message;
+    } catch (_) {
+      error = 'Die Sicherung konnte nicht eingespielt werden.';
+    }
     if (!mounted) return;
 
-    if (success) {
+    if (error == null) {
       HapticFeedback.mediumImpact();
       final profile = StorageService.getUserProfile();
       final name = profile?.name ?? 'Nutzer';
@@ -415,10 +421,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       }
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Fehler beim Wiederherstellen der Daten.'),
-          backgroundColor: AppTheme.rose,
-        ),
+        SnackBar(content: Text(error), backgroundColor: AppTheme.rose),
       );
     }
   }
@@ -1111,7 +1114,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
           const SizedBox(height: 8),
           const Text(
-            'Dein Fortschritt, dein Profil, dein API-Key und dein Paar-Kanal sind lokal auf deinem Gerät gespeichert und überstehen App-Updates automatisch.',
+            'Alles bleibt lokal auf deinem Gerät und übersteht Updates. API-Key und Paar-Verbindung liegen verschlüsselt im Android-Schlüsselspeicher und gehen nur mit Passwort in eine Sicherung.',
             style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
           ),
           const SizedBox(height: 14),
@@ -1119,67 +1122,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               Expanded(
                 child: OutlinedButton.icon(
-                  onPressed: () async {
-                    final data = StorageService.exportAllUserData();
-                    final jsonString = jsonEncode(data);
-                    await Clipboard.setData(ClipboardData(text: jsonString));
-                    final savedToDisk = await AutoBackupService.saveAutoBackup();
-                    HapticFeedback.lightImpact();
-                    if (mounted) {
-                      showDialog(
-                        context: context,
-                        builder: (ctx) => AlertDialog(
-                          backgroundColor: AppTheme.surface,
-                          title: const Row(
-                            children: [
-                              Icon(Icons.shield_rounded, color: AppTheme.sageGreen),
-                              SizedBox(width: 8),
-                              Text('Backup exportiert'),
-                            ],
-                          ),
-                          content: SingleChildScrollView(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  savedToDisk
-                                      ? '✅ Backup wurde in die Zwischenablage kopiert und als Datei auf deinem Gerät gespeichert.'
-                                      : '✅ Backup wurde in deine Zwischenablage kopiert.',
-                                  style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13.5),
-                                ),
-                                const SizedBox(height: 12),
-                                const Text(
-                                  'Du kannst diesen Sicherungs-Code als Notiz oder in Google Drive abspeichern:',
-                                  style: TextStyle(color: AppTheme.textSecondary, fontSize: 12),
-                                ),
-                                const SizedBox(height: 8),
-                                Container(
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: BoxDecoration(
-                                    color: AppTheme.background,
-                                    borderRadius: BorderRadius.circular(8),
-                                    border: Border.all(color: AppTheme.border),
-                                  ),
-                                  child: SelectableText(
-                                    jsonString,
-                                    maxLines: 4,
-                                    style: const TextStyle(fontFamily: 'monospace', fontSize: 10.5, color: AppTheme.amberLight),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          actions: [
-                            TextButton(
-                              onPressed: () => Navigator.of(ctx).pop(),
-                              child: const Text('OK', style: TextStyle(color: AppTheme.sageGreen, fontWeight: FontWeight.bold)),
-                            ),
-                          ],
-                        ),
-                      );
-                    }
-                  },
+                  onPressed: () => showExportBackupDialog(context),
                   icon: const Icon(Icons.copy_rounded, size: 16),
                   label: const Text('Backup exportieren', style: TextStyle(fontSize: 12)),
                   style: OutlinedButton.styleFrom(

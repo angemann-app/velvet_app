@@ -1,19 +1,21 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
+import 'package:nostr_tools/nostr_tools.dart' show KeyApi;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/journal_entry.dart';
 import '../models/chat_message.dart';
 import '../models/daily_checkin.dart';
 import '../models/user_profile.dart';
 import 'auto_backup_service.dart';
+import 'backup_codec.dart';
 import 'nostr_service.dart';
+import 'secret_store.dart';
 
 class StorageService {
   static const String _keyCompletedLessons = 'completed_lessons';
   static const String _keyReflectionAnswers = 'reflection_answers';
   static const String _keyCbtEntries = 'cbt_journal_entries';
-  static const String _keyApiKey = 'gemini_api_key';
   static const String _keyChatHistory = 'ai_chat_history';
   static const String _keyStreakCount = 'streak_count';
   static const String _keyLastActiveDate = 'last_active_date';
@@ -21,18 +23,18 @@ class StorageService {
   static const String _keyUserProfile = 'user_profile';
   static const String _keyHasCompletedOnboarding = 'has_completed_onboarding';
   static const String _keyYesNoMaybe = 'yes_no_maybe_answers';
+  static const String _keyPartnerPubKey = 'velvet_partner_pubkey';
+  static const String _keyPartnerName = 'velvet_partner_name';
+  static const String _keyMyVotes = 'velvet_my_fantasy_votes';
+  static const String _keyPartnerVotes = 'velvet_partner_fantasy_votes';
 
   static SharedPreferences? _prefs;
-  static String? _inMemoryApiKey;
   static UserProfile? _inMemoryProfile;
 
   static Future<void> init() async {
     try {
       _prefs ??= await SharedPreferences.getInstance();
-      final key = _prefs?.getString(_keyApiKey);
-      if (key != null && key.trim().isNotEmpty) {
-        _inMemoryApiKey = key.trim();
-      }
+      await SecretStore.init(_prefs!);
       final profStr = _prefs?.getString(_keyUserProfile);
       if (profStr != null && profStr.isNotEmpty) {
         _inMemoryProfile = UserProfile.fromJson(
@@ -42,6 +44,12 @@ class StorageService {
     } catch (e) {
       debugPrint('StorageService init error: $e');
     }
+  }
+
+  @visibleForTesting
+  static void resetForTest() {
+    _prefs = null;
+    _inMemoryProfile = null;
   }
 
   static Future<SharedPreferences> _ensurePrefs() async {
@@ -143,36 +151,14 @@ class StorageService {
     await AutoBackupService.saveAutoBackup();
   }
 
-  // Gemini API Key
-  static String? getApiKey() {
-    if (_inMemoryApiKey != null && _inMemoryApiKey!.trim().isNotEmpty) {
-      return _inMemoryApiKey!.trim();
-    }
-    try {
-      final fromPrefs = _prefs?.getString(_keyApiKey);
-      if (fromPrefs != null && fromPrefs.trim().isNotEmpty) {
-        _inMemoryApiKey = fromPrefs.trim();
-        return _inMemoryApiKey;
-      }
-    } catch (_) {}
-    return null;
-  }
+  // Gemini API Key – liegt im SecretStore, nie in den SharedPreferences oder im Backup.
+  static String? getApiKey() => SecretStore.read(SecretStore.apiKey);
 
   static Future<void> saveApiKey(String key, {bool triggerBackup = true}) async {
     final trimmed = key.trim();
-    _inMemoryApiKey = trimmed.isEmpty ? null : trimmed;
-    try {
-      final prefs = await _ensurePrefs();
-      if (trimmed.isEmpty) {
-        await prefs.remove(_keyApiKey);
-      } else {
-        await prefs.setString(_keyApiKey, trimmed);
-      }
-      if (triggerBackup) {
-        await AutoBackupService.saveAutoBackup();
-      }
-    } catch (e) {
-      debugPrint('Error saving API key: $e');
+    await SecretStore.write(SecretStore.apiKey, trimmed);
+    if (triggerBackup) {
+      await AutoBackupService.saveAutoBackup();
     }
   }
 
@@ -331,14 +317,17 @@ class StorageService {
     }
   }
 
-  // Complete User Data Export & Import (Backup Resilience)
+  // Sicherung: Export und Import (Format siehe BackupCodec)
+
+  /// Normale Sicherung (Auto-Backup, „Backup exportieren“): alle Nutzerdaten,
+  /// aber keine Geheimnisse. Der eigene öffentliche Nostr-Schlüssel ist dabei,
+  /// damit beim Import erkennbar ist, ob die Paar-Verbindung noch passt.
   static Map<String, dynamic> exportAllUserData() {
     return {
       'app': 'VelvetPulse',
-      'version': '4.0.0',
+      'schema': BackupCodec.schema,
       'exportedAt': DateTime.now().toIso8601String(),
       'userProfile': getUserProfile()?.toJson(),
-      'apiKey': getApiKey(),
       'completedLessons': getCompletedLessons().toList(),
       'reflectionAnswers': _prefs?.getString(_keyReflectionAnswers),
       'cbtEntries': getCbtEntries().map((e) => e.toJson()).toList(),
@@ -346,144 +335,152 @@ class StorageService {
       'yesNoMaybe': _prefs?.getString(_keyYesNoMaybe),
       'streakCount': getStreakCount(),
       'lastActiveDate': _prefs?.getString(_keyLastActiveDate),
-      'hasCompletedOnboarding': true,
-      'nostrPrivKey': _prefs?.getString('velvet_nostr_privkey') ??
-          NostrService().myPrivateKey,
-      'nostrPubKey': _prefs?.getString('velvet_nostr_pubkey') ??
-          NostrService().myPublicKey,
-      'nostrPartnerPubKey': _prefs?.getString('velvet_partner_pubkey') ??
-          NostrService().partnerPublicKey,
-      'nostrPartnerName': _prefs?.getString('velvet_partner_name') ??
-          NostrService().partnerName,
-      'myFantasyVotes': _prefs?.getString('velvet_my_fantasy_votes'),
-      'partnerFantasyVotes': _prefs?.getString('velvet_partner_fantasy_votes'),
+      'nostrPubKey': NostrService().myPublicKey,
+      'nostrPartnerPubKey': _prefs?.getString(_keyPartnerPubKey),
+      'nostrPartnerName': _prefs?.getString(_keyPartnerName),
+      'myFantasyVotes': _prefs?.getString(_keyMyVotes),
+      'partnerFantasyVotes': _prefs?.getString(_keyPartnerVotes),
     };
   }
 
+  /// Sicherung für den Umzug auf ein anderes Gerät: zusätzlich API-Key und
+  /// privater Nostr-Schlüssel, verschlüsselt mit dem Passwort des Nutzers.
+  static Future<Map<String, dynamic>> exportWithSecrets(String password) async {
+    final data = exportAllUserData();
+    final secrets = <String, String>{
+      'nostrPrivKey': NostrService().myPrivateKey,
+      if (getApiKey() != null) 'apiKey': getApiKey()!,
+    };
+    data['secrets'] = await BackupCodec.encryptSecrets(secrets, password);
+    return data;
+  }
+
+  /// Bequemer Weg für bereits geprüfte Klartext-Sicherungen ohne Passwort.
   static Future<bool> importUserData(Map<String, dynamic> data) async {
     try {
-      final prefs = await _ensurePrefs();
-
-      // 1. User Profile (OHNE vorzeitiges saveAutoBackup!)
-      if (data['userProfile'] != null && data['userProfile'] is Map) {
-        final profMap = Map<String, dynamic>.from(data['userProfile'] as Map);
-        await saveUserProfile(
-          UserProfile.fromJson(profMap),
-          triggerBackup: false,
-        );
-      }
-
-      // 2. API Key (OHNE vorzeitiges saveAutoBackup!)
-      if (data['apiKey'] != null &&
-          data['apiKey'].toString().trim().isNotEmpty) {
-        await saveApiKey(data['apiKey'].toString().trim(), triggerBackup: false);
-      }
-
-      // 3. Completed Lessons
-      if (data['completedLessons'] is List) {
-        final List<dynamic> importedLessons = data['completedLessons'];
-        final current = getCompletedLessons();
-        current.addAll(importedLessons.map((e) => e.toString()));
-        await prefs.setStringList(_keyCompletedLessons, current.toList());
-      }
-
-      // 4. Reflection Answers
-      if (data['reflectionAnswers'] != null &&
-          data['reflectionAnswers'].toString().isNotEmpty) {
-        try {
-          final Map<String, dynamic> importedReflections =
-              Map<String, dynamic>.from(
-            jsonDecode(data['reflectionAnswers'].toString()) as Map,
-          );
-          final currentStr = prefs.getString(_keyReflectionAnswers);
-          Map<String, dynamic> current = {};
-          if (currentStr != null && currentStr.isNotEmpty) {
-            current = Map<String, dynamic>.from(jsonDecode(currentStr) as Map);
-          }
-          current.addAll(importedReflections);
-          await prefs.setString(_keyReflectionAnswers, jsonEncode(current));
-        } catch (_) {}
-      }
-
-      // 5. CBT Entries
-      if (data['cbtEntries'] is List) {
-        final List<dynamic> importedCbt = data['cbtEntries'];
-        for (final item in importedCbt) {
-          if (item is Map) {
-            try {
-              final entry = CbtJournalEntry.fromJson(
-                Map<String, dynamic>.from(item),
-              );
-              await saveCbtEntry(entry, triggerBackup: false);
-            } catch (_) {}
-          }
-        }
-      }
-
-      // 6. Daily Check-Ins & Yes/No/Maybe
-      if (data['dailyCheckIns'] is List) {
-        final list =
-            (data['dailyCheckIns'] as List).map((e) => e.toString()).toList();
-        await prefs.setStringList(_keyDailyCheckIns, list);
-      }
-      if (data['yesNoMaybe'] != null &&
-          data['yesNoMaybe'].toString().isNotEmpty) {
-        await prefs.setString(_keyYesNoMaybe, data['yesNoMaybe'].toString());
-      }
-
-      // 7. Streaks
-      if (data['streakCount'] is num) {
-        final importedStreak = (data['streakCount'] as num).toInt();
-        if (importedStreak > getStreakCount()) {
-          await prefs.setInt(_keyStreakCount, importedStreak);
-        }
-      }
-
-      // 8. Nostr Keys & Partner
-      if (data['nostrPrivKey'] != null &&
-          data['nostrPrivKey'].toString().length == 64) {
-        final pk = data['nostrPrivKey'].toString();
-        await prefs.setString('velvet_nostr_privkey', pk);
-      }
-      if (data['nostrPubKey'] != null &&
-          data['nostrPubKey'].toString().length == 64) {
-        final pub = data['nostrPubKey'].toString();
-        await prefs.setString('velvet_nostr_pubkey', pub);
-      }
-      if (data['nostrPartnerPubKey'] != null &&
-          data['nostrPartnerPubKey'].toString().isNotEmpty) {
-        final ppub = data['nostrPartnerPubKey'].toString();
-        await prefs.setString('velvet_partner_pubkey', ppub);
-      }
-      if (data['nostrPartnerName'] != null &&
-          data['nostrPartnerName'].toString().isNotEmpty) {
-        final pname = data['nostrPartnerName'].toString();
-        await prefs.setString('velvet_partner_name', pname);
-      }
-      if (data['myFantasyVotes'] != null) {
-        await prefs.setString(
-          'velvet_my_fantasy_votes',
-          data['myFantasyVotes'].toString(),
-        );
-      }
-      if (data['partnerFantasyVotes'] != null) {
-        await prefs.setString(
-          'velvet_partner_fantasy_votes',
-          data['partnerFantasyVotes'].toString(),
-        );
-      }
-
-      await prefs.setBool(_keyHasCompletedOnboarding, true);
-
-      // WICHTIG: NostrService zwingen, die neu importierten Keys in den RAM zu übernehmen!
-      await NostrService().reloadKeysFromPrefs();
-
-      // Jetzt am Ende einmalig das vollständige Backup auf Disk sichern
-      await AutoBackupService.saveAutoBackup();
+      final backup = BackupCodec.validate(data);
+      await importBackup(backup, secrets: backup.plaintextSecrets);
       return true;
     } catch (e) {
-      debugPrint('importUserData error: $e');
+      debugPrint('importUserData abgelehnt: ${e is BackupException ? e.message : e.runtimeType}');
       return false;
+    }
+  }
+
+  /// Spielt eine geprüfte Sicherung ein. Alles wird erst vorbereitet und dann
+  /// geschrieben; scheitert ein Schreibvorgang, wird der vorherige Stand
+  /// wiederhergestellt. [secrets] sind die entschlüsselten bzw. Klartext-Geheimnisse.
+  static Future<void> importBackup(ValidatedBackup backup, {Map<String, String> secrets = const {}}) async {
+    final prefs = await _ensurePrefs();
+    final d = backup.data;
+
+    // 1. Vorbereiten, ohne etwas zu schreiben.
+    final writes = <String, Object>{};
+    UserProfile? profile;
+    if (d['userProfile'] is Map) {
+      try {
+        profile = UserProfile.fromJson(Map<String, dynamic>.from(d['userProfile'] as Map));
+      } catch (_) {
+        throw const BackupException('Die Sicherung ist beschädigt (Profil).');
+      }
+      writes[_keyUserProfile] = jsonEncode(profile.toJson());
+    }
+    if (d['completedLessons'] is List) {
+      writes[_keyCompletedLessons] =
+          {...getCompletedLessons(), ...(d['completedLessons'] as List).map((e) => e.toString())}.toList();
+    }
+    if (d['reflectionAnswers'] is String && (d['reflectionAnswers'] as String).isNotEmpty) {
+      final imported = jsonDecode(d['reflectionAnswers'] as String);
+      if (imported is! Map) throw const BackupException('Die Sicherung ist beschädigt (Reflexionen).');
+      final currentStr = prefs.getString(_keyReflectionAnswers);
+      final current = currentStr == null || currentStr.isEmpty
+          ? <String, dynamic>{}
+          : Map<String, dynamic>.from(jsonDecode(currentStr) as Map);
+      writes[_keyReflectionAnswers] = jsonEncode({...current, ...imported});
+    }
+    if (d['cbtEntries'] is List) {
+      final entries = {for (final e in getCbtEntries()) e.id: e};
+      for (final item in d['cbtEntries'] as List) {
+        if (item is! Map) continue;
+        try {
+          final entry = CbtJournalEntry.fromJson(Map<String, dynamic>.from(item));
+          entries[entry.id] = entry;
+        } catch (_) {}
+      }
+      final sorted = entries.values.toList()..sort((a, b) => b.timestamp.compareTo(a.timestamp));
+      writes[_keyCbtEntries] = sorted.map((e) => jsonEncode(e.toJson())).toList();
+    }
+    if (d['dailyCheckIns'] is List) {
+      writes[_keyDailyCheckIns] = (d['dailyCheckIns'] as List).map((e) => e.toString()).toList();
+    }
+    if (d['yesNoMaybe'] is String && (d['yesNoMaybe'] as String).isNotEmpty) {
+      writes[_keyYesNoMaybe] = d['yesNoMaybe'] as String;
+    }
+    if (d['streakCount'] is int && (d['streakCount'] as int) > getStreakCount()) {
+      writes[_keyStreakCount] = d['streakCount'] as int;
+    }
+
+    // Paar-Kanal: Der Partner passt nur, wenn auch der eigene Schlüssel mitkommt oder
+    // die Sicherung von genau diesem Schlüssel stammt. Sonst wäre die Verbindung nur scheinbar da.
+    final newPriv = secrets['nostrPrivKey'];
+    if (newPriv != null && d['nostrPubKey'] != null && KeyApi().getPublicKey(newPriv) != d['nostrPubKey']) {
+      throw const BackupException('Die Schlüssel in der Sicherung passen nicht zusammen.');
+    }
+    final sameIdentity = d['nostrPubKey'] == null || d['nostrPubKey'] == NostrService().myPublicKey;
+    if (newPriv != null || sameIdentity) {
+      for (final (field, key) in [
+        ('nostrPartnerPubKey', _keyPartnerPubKey),
+        ('nostrPartnerName', _keyPartnerName),
+        ('myFantasyVotes', _keyMyVotes),
+        ('partnerFantasyVotes', _keyPartnerVotes),
+      ]) {
+        final value = d[field];
+        if (value is String && value.isNotEmpty) writes[key] = value;
+      }
+    }
+    writes[_keyHasCompletedOnboarding] = true;
+
+    // 2. Schreiben, bei Fehler alles zurück.
+    final before = {for (final key in writes.keys) key: prefs.get(key)};
+    final secretsBefore = {
+      SecretStore.apiKey: SecretStore.read(SecretStore.apiKey),
+      SecretStore.nostrPrivKey: SecretStore.read(SecretStore.nostrPrivKey),
+    };
+    try {
+      for (final entry in writes.entries) {
+        await _put(prefs, entry.key, entry.value);
+      }
+      if (secrets['apiKey'] != null) await SecretStore.write(SecretStore.apiKey, secrets['apiKey']);
+      if (newPriv != null) await SecretStore.write(SecretStore.nostrPrivKey, newPriv);
+    } catch (e) {
+      for (final entry in before.entries) {
+        await _put(prefs, entry.key, entry.value);
+      }
+      for (final entry in secretsBefore.entries) {
+        await SecretStore.write(entry.key, entry.value);
+      }
+      throw const BackupException('Die Sicherung konnte nicht eingespielt werden. Es wurde nichts verändert.');
+    }
+
+    if (profile != null) _inMemoryProfile = profile;
+    await NostrService().reloadKeysFromPrefs();
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  static Future<void> _put(SharedPreferences prefs, String key, Object? value) async {
+    switch (value) {
+      case null:
+        await prefs.remove(key);
+      case String v:
+        await prefs.setString(key, v);
+      case bool v:
+        await prefs.setBool(key, v);
+      case int v:
+        await prefs.setInt(key, v);
+      case List v:
+        await prefs.setStringList(key, v.map((e) => e.toString()).toList());
+      default:
+        throw ArgumentError('Typ ${value.runtimeType} für $key');
     }
   }
 }

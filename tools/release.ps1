@@ -34,6 +34,10 @@ if ($highest -and $Build -le $highest) {
     throw "Build $Build ist nicht höher als das bisher höchste Release (Build $highest)."
 }
 
+# Gate: ohne grüne Tests (u. a. test/security_test.dart) kein Release.
+flutter test
+if ($LASTEXITCODE -ne 0) { throw "Tests fehlgeschlagen – kein Release." }
+
 flutter build apk --release --split-per-abi --build-name $Version --build-number $Build
 if ($LASTEXITCODE -ne 0) { throw "Build fehlgeschlagen." }
 

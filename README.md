@@ -66,13 +66,19 @@ Atmung und Berührung den Fuß von der Bremse nehmen – allein oder zu zweit.
 
 | Was | Wo |
 |---|---|
-| Profil, Fortschritt, Tagebuch, Check-ins | nur auf dem Gerät (`SharedPreferences`) |
-| Automatisches Backup | privater App-Speicher (für andere Apps nicht lesbar), über Androids Cloud-Backup gesichert |
-| Paar-Kanal | NIP-04-verschlüsselt über öffentliche Nostr-Server; diese sehen, *dass* zwei anonyme Schlüssel schreiben, nicht *was* |
-| KI-Coach | Nachrichten gehen an Google Gemini – nur wenn du einen eigenen API-Key hinterlegst |
+| Profil, Fortschritt, Tagebuch, Check-ins | nur auf dem Gerät (`SharedPreferences`), unverschlüsselt im privaten App-Speicher |
+| API-Key, privater Schlüssel des Paar-Kanals | im Android-Keystore verschlüsselt, nicht im Cloud-Backup und nicht im normalen Backup |
+| Automatisches Backup | privater App-Speicher (für andere Apps nicht lesbar), ohne Geheimnisse, über Androids Cloud-Backup gesichert |
+| Paar-Kanal | NIP-04-verschlüsselt über öffentliche Nostr-Server; diese sehen, *dass* zwei anonyme Schlüssel schreiben, nicht *was*. Eingehende Nachrichten werden auf Signatur und Absender geprüft. |
+| KI-Coach | Nachrichten, Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen an Google Gemini – nur wenn du einen eigenen API-Key hinterlegst |
 
 Es gibt keine Benutzerkonten, kein Tracking und keinen eigenen Server.
-Ein manuelles Backup lässt sich unter *Profil → Backup exportieren* in die Zwischenablage kopieren.
+Die Fingerabdruck-Sperre schützt den Zugang zur App, sie verschlüsselt keine gespeicherten Daten.
+
+**Sicherungen** (*Profil → Backup exportieren*): „Nur Daten“ enthält keine Geheimnisse. „Mit Passwort“ nimmt
+zusätzlich Paar-Verbindung und API-Key mit, verschlüsselt mit PBKDF2-SHA256 und AES-256-GCM. Das Passwort
+steht nicht in der Sicherung. Dateien in Download oder Documents werden nie automatisch eingelesen.
+Nach einer Wiederherstellung aus Googles Cloud-Backup muss der Paar-Kanal neu gekoppelt werden.
 
 ## Gemini-API-Key hinterlegen (optional)
 
