@@ -114,6 +114,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
         return Icons.touch_app_rounded;
       case 'favorite':
         return Icons.favorite_rounded;
+      case 'self_improvement':
+        return Icons.self_improvement_rounded;
+      case 'healing':
+        return Icons.healing_rounded;
       default:
         return Icons.menu_book_rounded;
     }

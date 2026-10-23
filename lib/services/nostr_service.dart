@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:nostr_tools/nostr_tools.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/couple_channel_models.dart';
+import 'message_notifier.dart';
 import 'nostr_event_check.dart';
 import 'nostr_keys.dart';
 import 'secret_store.dart';
@@ -506,6 +507,9 @@ class NostrService {
 
     if (type == CoupleMessageType.ping && !isMe) {
       lastPingNotifier.value = newMsg;
+    }
+    if (!isMe && type != CoupleMessageType.fantasyVote) {
+      unawaited(MessageNotifier.notifyIfInBackground(timestamp.millisecondsSinceEpoch ~/ 1000));
     }
 
     if (type == CoupleMessageType.fantasyVote) {

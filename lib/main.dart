@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'services/data_service.dart';
 import 'services/storage_service.dart';
 import 'services/auto_backup_service.dart';
+import 'services/message_notifier.dart';
 import 'services/nostr_service.dart';
 import 'services/privacy_service.dart';
 import 'widgets/app_lock.dart';
@@ -62,6 +63,12 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
       await NostrService().init();
     } catch (e) {
       debugPrint('Init error: $e');
+    }
+
+    try {
+      await MessageNotifier.init();
+    } catch (e) {
+      debugPrint('Notification init error: $e');
     }
 
     try {

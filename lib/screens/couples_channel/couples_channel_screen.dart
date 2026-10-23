@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/couple_channel_models.dart';
 import '../../services/data_service.dart';
+import '../../services/message_notifier.dart';
 import '../../services/nostr_service.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../../theme/app_theme.dart';
@@ -40,6 +41,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     super.initState();
     _subTabController = TabController(length: 2, vsync: this);
     _nostr.init();
+    MessageNotifier.clear();
   }
 
   @override

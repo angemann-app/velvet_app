@@ -4,6 +4,7 @@ import '../../models/user_profile.dart';
 import '../../services/storage_service.dart';
 import '../../services/auto_backup_service.dart';
 import '../../services/backup_codec.dart';
+import '../../services/message_notifier.dart';
 import '../../services/privacy_service.dart';
 import '../../services/update_service.dart';
 import '../../widgets/backup_dialogs.dart';
@@ -35,6 +36,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   bool _lockEnabled = false;
   bool _discreetIcon = false;
   UpdateChannel _updateChannel = UpdateChannel.stable;
+  bool _notifyMessages = false;
   bool _lockSupported = false;
 
   @override
@@ -958,9 +960,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final discreet = await PrivacyService.isDiscreetIcon();
     final supported = await PrivacyService.isSupported();
     final channel = await UpdateService.channel();
+    final notify = await MessageNotifier.isEnabled();
     if (mounted) {
       setState(() {
         _updateChannel = channel;
+        _notifyMessages = notify;
         _lockEnabled = lock;
         _discreetIcon = discreet;
         _lockSupported = supported;
@@ -1079,6 +1083,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             title: const Text('Unauffälliges App-Symbol', style: TextStyle(fontSize: 14)),
             subtitle: const Text(
               'Zeigt „Pulse“ mit neutralem Symbol auf dem Startbildschirm.',
+              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+            ),
+          ),
+          SwitchListTile(
+            contentPadding: const EdgeInsets.only(right: 8),
+            value: _notifyMessages,
+            activeColor: AppTheme.sageGreen,
+            onChanged: (value) async {
+              final ok = await MessageNotifier.setEnabled(value);
+              if (!mounted) return;
+              if (ok) {
+                setState(() => _notifyMessages = value);
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text('Android hat Mitteilungen für die App nicht erlaubt. Das lässt sich in den Android-Einstellungen ändern.'),
+                ));
+              }
+            },
+            title: const Text('Hinweis bei neuen Nachrichten', style: TextStyle(fontSize: 14)),
+            subtitle: const Text(
+              'Auch wenn die App geschlossen ist: nur „Neue Nachricht“, ohne Inhalt und Namen. '
+              'Bei geschlossener App kann es bis zu 15 Minuten dauern.',
               style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),

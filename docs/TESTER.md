@@ -31,6 +31,14 @@ Danke, dass du VelvetPulse ausprobierst! Hier steht alles, was du dafür brauchs
 Verbindungscode. Sobald dein Gegenüber den Code eingibt und dir einen Funken schickt, erscheint bei dir
 „… möchte sich verbinden“. Mit **Annehmen** seid ihr verbunden. Der Link führt immer zur stabilen Version.
 
+**Hinweis bei neuen Nachrichten:** Unter **Profil → Hinweis bei neuen Nachrichten** einschalten. Die
+Mitteilung zeigt nur „Neue Nachricht“, ohne Inhalt und ohne Namen. Ist die App geschlossen, prüft sie etwa
+alle 15 Minuten. Auf manchen Handys (z. B. Xiaomi) muss dafür in den Android-Einstellungen „Autostart“ für die
+App erlaubt sein.
+
+**Gemeinsam lernen:** In jeder Lektion oben das Herz antippen, um sie deinem Gegenüber zu schicken. Unter der
+Reflexionsfrage kannst du deine Antwort teilen. Sie wird erst sichtbar, wenn dein Gegenüber selbst geantwortet hat.
+
 ## 3. Updates
 
 Neue Versionen bekommst du direkt in der App: Beim Start erscheint dann ein Hinweis
