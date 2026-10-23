@@ -1,6 +1,7 @@
 package org.velvetpulse.app
 
 import android.content.ComponentName
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.view.WindowManager
 import io.flutter.embedding.android.FlutterFragmentActivity
@@ -31,6 +32,21 @@ class MainActivity : FlutterFragmentActivity() {
                         result.success(null)
                     }
                     else -> result.notImplemented()
+                }
+            }
+        // Öffnet das Android-Teilen-Menü (Messenger, Mail …) mit einem fertigen Text.
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "velvetpulse/share")
+            .setMethodCallHandler { call, result ->
+                if (call.method == "shareText") {
+                    val send = Intent(Intent.ACTION_SEND).apply {
+                        type = "text/plain"
+                        putExtra(Intent.EXTRA_TEXT, call.argument<String>("text"))
+                        putExtra(Intent.EXTRA_SUBJECT, call.argument<String>("subject"))
+                    }
+                    startActivity(Intent.createChooser(send, call.argument<String>("subject")))
+                    result.success(null)
+                } else {
+                    result.notImplemented()
                 }
             }
     }

@@ -5,6 +5,7 @@ import '../../models/couple_channel_models.dart';
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
 import '../yes_no_maybe/yes_no_maybe_screen.dart';
+import 'invite_partner.dart';
 import 'paar_abend_screen.dart';
 import 'pairing_modal.dart';
 
@@ -177,6 +178,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           'Ende-zu-Ende-verschlüsselt, ohne Konto und ohne Telefonnummer.',
         ),
         const SizedBox(height: 12),
+        const InviteStatusCard(),
         SizedBox(
           height: 52,
           child: ElevatedButton.icon(
@@ -187,6 +189,20 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             style: ElevatedButton.styleFrom(
               backgroundColor: AppTheme.amber,
               foregroundColor: AppTheme.background,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+            ),
+          ),
+        ),
+        const SizedBox(height: 10),
+        SizedBox(
+          height: 48,
+          child: OutlinedButton.icon(
+            onPressed: () => invitePartner(context),
+            icon: const Icon(Icons.send_rounded, size: 18),
+            label: const Text('Partner einladen', style: TextStyle(fontWeight: FontWeight.w700)),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: AppTheme.amberLight,
+              side: BorderSide(color: AppTheme.amber.withOpacity(0.6)),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
           ),

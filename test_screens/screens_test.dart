@@ -104,6 +104,14 @@ void main() {
       await _shot(tester, entry.value, errors);
     }
 
+    // Offene Einladung, auf die sich jemand gemeldet hat.
+    await tester.runAsync(() => NostrService().startInvite('Anna'));
+    NostrService().joinRequestNotifier.value = 'b' * 64;
+    await tester.pumpWidget(_app(const MainNavigationScreen()));
+    await tester.tap(find.text('Paar-Kanal').last);
+    await _shot(tester, '04_paarkanal_anfrage', errors);
+    await tester.runAsync(() => NostrService().cancelInvite());
+
     // Paar-Kanal im verbundenen Zustand, mit Beispielnachrichten und einem Match.
     await tester.runAsync(() async {
       final prefs = await SharedPreferences.getInstance();

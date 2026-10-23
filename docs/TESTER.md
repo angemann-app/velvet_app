@@ -26,6 +26,11 @@ Danke, dass du VelvetPulse ausprobierst! Hier steht alles, was du dafür brauchs
   - **Unauffälliges App-Symbol** – die App heißt dann „Pulse“.
   - **Backup exportieren** – eine Sicherung deiner Einträge in die Zwischenablage.
 
+**Partner einladen:** Im **Paar-Kanal** auf **„Partner einladen“** tippen und einen Namen eingeben. Die App schickt
+über deinen Messenger zwei Nachrichten: zuerst den Link zur App mit einer kurzen Anleitung, danach deinen
+Verbindungscode. Sobald dein Gegenüber den Code eingibt und dir einen Funken schickt, erscheint bei dir
+„… möchte sich verbinden“. Mit **Annehmen** seid ihr verbunden. Der Link führt immer zur stabilen Version.
+
 ## 3. Updates
 
 Neue Versionen bekommst du direkt in der App: Beim Start erscheint dann ein Hinweis

@@ -61,6 +61,8 @@ class _PairingModalState extends State<PairingModal>
 
       if (success) {
         HapticFeedback.mediumImpact();
+        // Meldet sich beim Gegenüber, damit eine offene Einladung dort sofort als Anfrage erscheint.
+        nostr.sendChatMessage('👋 Hallo, ich bin jetzt verbunden.');
         Navigator.of(context).pop(true);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(

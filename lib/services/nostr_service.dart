@@ -18,7 +18,7 @@ class NostrService {
   static const String _keyCachedMessages = 'velvet_couple_messages_cache';
   static const String _keyMyFantasyVotes = 'velvet_my_fantasy_votes';
   static const String _keyPartnerFantasyVotes = 'velvet_partner_fantasy_votes';
-
+  static const String _keyInviteName = 'velvet_invite_name';
 
   static const List<String> fallbackRelays = [
     'wss://relay.primal.net',
@@ -80,7 +80,42 @@ class NostrService {
   final ValueNotifier<List<String>> matchesNotifier =
       ValueNotifier<List<String>>([]);
 
+  /// Name der eingeladenen Person, solange eine Einladung offen ist.
+  final ValueNotifier<String?> inviteNameNotifier = ValueNotifier<String?>(null);
+
+  /// Öffentlicher Schlüssel (hex), der sich auf eine offene Einladung hin gemeldet hat.
+  final ValueNotifier<String?> joinRequestNotifier = ValueNotifier<String?>(null);
+
   final Set<String> _processedEventIds = {};
+
+  /// Merkt sich eine verschickte Einladung. Die erste Nachricht, die danach von
+  /// einem unbekannten Absender kommt, wird als Verbindungsanfrage angezeigt.
+  Future<void> startInvite(String name) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_keyInviteName, name);
+    inviteNameNotifier.value = name;
+  }
+
+  Future<void> cancelInvite() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(_keyInviteName);
+    inviteNameNotifier.value = null;
+    joinRequestNotifier.value = null;
+  }
+
+  Future<bool> acceptJoinRequest() async {
+    final sender = joinRequestNotifier.value;
+    if (sender == null) return false;
+    final ok = await setPartner(sender, name: inviteNameNotifier.value);
+    if (ok) {
+      await cancelInvite();
+      // Als normale Chat-Nachricht, damit auch ältere Versionen sie anzeigen können.
+      await sendChatMessage('💛 Wir sind verbunden!');
+    }
+    return ok;
+  }
+
+  void declineJoinRequest() => joinRequestNotifier.value = null;
 
   void _ensureKeysInMemory() {
     if (_myPrivateKey == null || _myPrivateKey!.length != 64) {
@@ -177,6 +212,7 @@ class NostrService {
     // 2. Load partner info
     _partnerPublicKey = prefs.getString(_keyPartnerPubKey);
     _partnerName = prefs.getString(_keyPartnerName) ?? 'Partner';
+    inviteNameNotifier.value = prefs.getString(_keyInviteName);
     partnerPubKeyNotifier.value = _partnerPublicKey;
     partnerNameNotifier.value = _partnerName;
 
@@ -384,6 +420,9 @@ class NostrService {
 
     try {
       final decrypted = _nip04.decrypt(_myPrivateKey!, senderPubkey, content);
+      if (!isPaired && inviteNameNotifier.value != null && senderPubkey.length == 64) {
+        joinRequestNotifier.value = senderPubkey;
+      }
       _parseAndAddMessage(
         eventId: id,
         senderPubkey: senderPubkey,
@@ -495,6 +534,9 @@ class NostrService {
   Future<bool> setPartner(String inputKey, {String? name}) async {
     String cleanKey = inputKey.trim();
     if (cleanKey.isEmpty) return false;
+    // Wer die ganze Einladungsnachricht einfügt, soll trotzdem verbunden werden.
+    final npubInText = RegExp(r'npub1[02-9ac-hj-np-z]{20,}').firstMatch(cleanKey);
+    if (npubInText != null) cleanKey = npubInText.group(0)!;
 
     // Handle npub format
     if (cleanKey.startsWith('npub1')) {
