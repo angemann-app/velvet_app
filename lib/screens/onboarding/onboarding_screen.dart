@@ -5,6 +5,8 @@ import '../../models/user_profile.dart';
 import '../../services/storage_service.dart';
 import '../../services/auto_backup_service.dart';
 import '../../services/privacy_service.dart';
+import '../../services/update_service.dart';
+import '../../widgets/update_dialog.dart';
 import '../../theme/app_theme.dart';
 import '../main_navigation_screen.dart';
 
@@ -130,7 +132,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       if (clip?.text != null && clip!.text!.trim().isNotEmpty) {
         final decoded = jsonDecode(clip.text!);
         if (decoded is Map<String, dynamic> &&
-            (decoded['app'] == 'VelvetPulse' || decoded['app'] == 'mojoCraft')) {
+            decoded['app'] == 'VelvetPulse') {
           clipData = decoded;
         }
       }
@@ -790,6 +792,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 _buildPrivacySection(),
                 const SizedBox(height: 16),
                 _buildBackupSection(),
+                const SizedBox(height: 16),
+                _buildVersionSection(),
               ],
 
               const SizedBox(height: 20),
@@ -956,6 +960,36 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         _lockSupported = supported;
       });
     }
+  }
+
+  Widget _buildVersionSection() {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 10, 8, 10),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: Row(
+        children: [
+          const Icon(Icons.system_update_rounded, color: AppTheme.sageGreen, size: 20),
+          const SizedBox(width: 10),
+          Expanded(
+            child: FutureBuilder<String>(
+              future: UpdateService.installedVersion(),
+              builder: (context, snap) => Text(
+                'Version ${snap.data ?? '…'}',
+                style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: () => checkForUpdateAndPrompt(context, force: true),
+            child: const Text('Nach Updates suchen', style: TextStyle(color: AppTheme.sageGreen)),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildPrivacySection() {

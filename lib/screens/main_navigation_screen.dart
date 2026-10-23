@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import '../widgets/sos_button.dart';
+import '../widgets/update_dialog.dart';
 import 'courses/courses_screen.dart';
 import 'training/training_screen.dart';
 import 'cbt/cbt_journal_screen.dart';
@@ -17,6 +18,15 @@ class MainNavigationScreen extends StatefulWidget {
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
   int _currentIndex = 0;
   final GlobalKey<TrainingScreenState> _trainingKey = GlobalKey<TrainingScreenState>();
+
+  @override
+  void initState() {
+    super.initState();
+    // Höchstens einmal täglich nach einer neuen Version auf GitHub schauen.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) checkForUpdateAndPrompt(context);
+    });
+  }
 
   void _navigateToTab(int index, {String? subTab}) {
     setState(() {

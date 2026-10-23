@@ -5,7 +5,6 @@ import 'storage_service.dart';
 
 class AutoBackupService {
   static const String backupFileName = 'velvetpulse_backup.json';
-  static const String legacyBackupFileName = 'mojoCraft_backup.json';
 
   static String get _packageName {
     try {
@@ -34,15 +33,10 @@ class AutoBackupService {
     final pkg = _packageName;
     final paths = <String>[
       _privateBackupPath!,
-      '/data/user/0/$pkg/files/$legacyBackupFileName',
       '/storage/emulated/0/Android/data/$pkg/files/$backupFileName',
-      '/storage/emulated/0/Android/data/$pkg/files/$legacyBackupFileName',
-      '/storage/emulated/0/Android/data/com.example.mojo/files/$backupFileName',
-      '/storage/emulated/0/Android/data/com.example.mojo/files/$legacyBackupFileName',
       '/storage/emulated/0/Documents/VelvetPulse/$backupFileName',
       '/storage/emulated/0/Documents/$backupFileName',
       '/storage/emulated/0/Download/$backupFileName',
-      '/storage/emulated/0/Download/$legacyBackupFileName',
     ];
     return paths.toSet().toList();
   }
@@ -66,7 +60,7 @@ class AutoBackupService {
           if (content.trim().isNotEmpty) {
             final dynamic parsed = jsonDecode(content);
             if (parsed is Map<String, dynamic> &&
-                (parsed['app'] == 'VelvetPulse' || parsed['app'] == 'mojoCraft')) {
+                parsed['app'] == 'VelvetPulse') {
               final success = await StorageService.importUserData(parsed);
               if (success) {
                 debugPrint('AutoBackupService: Successfully auto-restored backup from: $path');
@@ -123,7 +117,7 @@ class AutoBackupService {
           if (content.trim().isNotEmpty) {
             final dynamic parsed = jsonDecode(content);
             if (parsed is Map<String, dynamic> &&
-                (parsed['app'] == 'VelvetPulse' || parsed['app'] == 'mojoCraft')) {
+                parsed['app'] == 'VelvetPulse') {
               return path;
             }
           }

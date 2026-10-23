@@ -1,0 +1,9 @@
+{
+  "_hinweis": "Lautschrift-Korrekturen für Kokoro (Victoria/Martin). Schlüssel = Wort (Groß-/Kleinschreibung egal), Wert = Lautschrift im misaki/Kokoro-Format. Betonung mit ˈ vor der betonten Silbe, Nebenbetonung mit ˌ. Lautschrift eines Wortes prüfen: tools/generate_audio.py --zeige 'Wort'.",
+  "pedal": "pedˈaːl",
+  "pedale": "pedˈaːlə",
+  "gaspedal": "ɡˈaːspedˌaːl",
+  "bremspedal": "bɾˈɛmspedˌaːl",
+  "zwei-pedale-modell": "ʦvˈI pedˈaːlə modˈɛl",
+  "etwas": "ˈɛtvas"
+}

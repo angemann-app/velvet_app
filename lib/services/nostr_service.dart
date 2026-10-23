@@ -19,13 +19,6 @@ class NostrService {
   static const String _keyMyFantasyVotes = 'velvet_my_fantasy_votes';
   static const String _keyPartnerFantasyVotes = 'velvet_partner_fantasy_votes';
 
-  static const String _legacyKeyPrivKey = 'mojo_nostr_privkey';
-  static const String _legacyKeyPubKey = 'mojo_nostr_pubkey';
-  static const String _legacyKeyPartnerPubKey = 'mojo_partner_pubkey';
-  static const String _legacyKeyPartnerName = 'mojo_partner_name';
-  static const String _legacyKeyCachedMessages = 'mojo_couple_messages_cache';
-  static const String _legacyKeyMyFantasyVotes = 'mojo_my_fantasy_votes';
-  static const String _legacyKeyPartnerFantasyVotes = 'mojo_partner_fantasy_votes';
 
   static const List<String> fallbackRelays = [
     'wss://relay.primal.net',
@@ -156,8 +149,8 @@ class NostrService {
     final prefs = await SharedPreferences.getInstance();
 
     // 1. Initialize or load keys
-    final storedPriv = prefs.getString(_keyPrivKey) ?? prefs.getString(_legacyKeyPrivKey);
-    final storedPub = prefs.getString(_keyPubKey) ?? prefs.getString(_legacyKeyPubKey);
+    final storedPriv = prefs.getString(_keyPrivKey);
+    final storedPub = prefs.getString(_keyPubKey);
 
     if (storedPriv != null && storedPriv.length == 64) {
       _myPrivateKey = storedPriv;
@@ -182,8 +175,8 @@ class NostrService {
     myNpubNotifier.value = _myNpub ?? '';
 
     // 2. Load partner info
-    _partnerPublicKey = prefs.getString(_keyPartnerPubKey) ?? prefs.getString(_legacyKeyPartnerPubKey);
-    _partnerName = prefs.getString(_keyPartnerName) ?? prefs.getString(_legacyKeyPartnerName) ?? 'Partner';
+    _partnerPublicKey = prefs.getString(_keyPartnerPubKey);
+    _partnerName = prefs.getString(_keyPartnerName) ?? 'Partner';
     partnerPubKeyNotifier.value = _partnerPublicKey;
     partnerNameNotifier.value = _partnerName;
 
@@ -196,7 +189,7 @@ class NostrService {
     }
 
     // 3. Load cached messages
-    final cachedMsgJson = prefs.getString(_keyCachedMessages) ?? prefs.getString(_legacyKeyCachedMessages);
+    final cachedMsgJson = prefs.getString(_keyCachedMessages);
     if (cachedMsgJson != null && cachedMsgJson.isNotEmpty) {
       try {
         final List<dynamic> list = jsonDecode(cachedMsgJson);
@@ -214,14 +207,14 @@ class NostrService {
     }
 
     // 4. Load fantasy votes
-    final myVotesJson = prefs.getString(_keyMyFantasyVotes) ?? prefs.getString(_legacyKeyMyFantasyVotes);
+    final myVotesJson = prefs.getString(_keyMyFantasyVotes);
     if (myVotesJson != null) {
       try {
         myFantasyVotesNotifier.value = Map<String, String>.from(jsonDecode(myVotesJson));
       } catch (_) {}
     }
 
-    final partnerVotesJson = prefs.getString(_keyPartnerFantasyVotes) ?? prefs.getString(_legacyKeyPartnerFantasyVotes);
+    final partnerVotesJson = prefs.getString(_keyPartnerFantasyVotes);
     if (partnerVotesJson != null) {
       try {
         partnerFantasyVotesNotifier.value = Map<String, String>.from(jsonDecode(partnerVotesJson));

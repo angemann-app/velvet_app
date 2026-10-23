@@ -348,21 +348,15 @@ class StorageService {
       'lastActiveDate': _prefs?.getString(_keyLastActiveDate),
       'hasCompletedOnboarding': true,
       'nostrPrivKey': _prefs?.getString('velvet_nostr_privkey') ??
-          _prefs?.getString('mojo_nostr_privkey') ??
           NostrService().myPrivateKey,
       'nostrPubKey': _prefs?.getString('velvet_nostr_pubkey') ??
-          _prefs?.getString('mojo_nostr_pubkey') ??
           NostrService().myPublicKey,
       'nostrPartnerPubKey': _prefs?.getString('velvet_partner_pubkey') ??
-          _prefs?.getString('mojo_partner_pubkey') ??
           NostrService().partnerPublicKey,
       'nostrPartnerName': _prefs?.getString('velvet_partner_name') ??
-          _prefs?.getString('mojo_partner_name') ??
           NostrService().partnerName,
-      'myFantasyVotes': _prefs?.getString('velvet_my_fantasy_votes') ??
-          _prefs?.getString('mojo_my_fantasy_votes'),
-      'partnerFantasyVotes': _prefs?.getString('velvet_partner_fantasy_votes') ??
-          _prefs?.getString('mojo_partner_fantasy_votes'),
+      'myFantasyVotes': _prefs?.getString('velvet_my_fantasy_votes'),
+      'partnerFantasyVotes': _prefs?.getString('velvet_partner_fantasy_votes'),
     };
   }
 
