@@ -10,6 +10,7 @@ import '../../theme/app_theme.dart';
 import '../yes_no_maybe/yes_no_maybe_screen.dart';
 import 'invite_partner.dart';
 import 'paar_abend_screen.dart';
+import 'partner_profile_dialog.dart';
 import 'pairing_modal.dart';
 
 /// Schnelle Funken: ein Tippen sagt, worauf man heute Lust hat – oder eben nicht.
@@ -344,6 +345,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     return Column(
       children: [
         _buildHeader(),
+        const PartnerProfilePrompt(),
         Container(
           margin: const EdgeInsets.fromLTRB(16, 10, 16, 6),
           decoration: BoxDecoration(
@@ -477,11 +479,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                       _showInfoDialog();
                     case 'pair':
                       _openPairingModal();
+                    case 'profile':
+                      editPartnerProfile(context);
                     case 'reconnect':
                       _nostr.reconnectNextRelay();
                   }
                 },
                 itemBuilder: (_) => const [
+                  PopupMenuItem(value: 'profile', child: Text('Name & Geschlecht des Gegenübers')),
                   PopupMenuItem(value: 'info', child: Text('Verschlüsselung & Details')),
                   PopupMenuItem(value: 'pair', child: Text('Verbindung verwalten')),
                   PopupMenuItem(value: 'reconnect', child: Text('Neu verbinden')),

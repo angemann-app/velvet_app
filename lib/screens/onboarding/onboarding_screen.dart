@@ -37,6 +37,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   bool _discreetIcon = false;
   UpdateChannel _updateChannel = UpdateChannel.stable;
   bool _notifyMessages = false;
+  bool _personalizeNames = StorageService.personalizeNames();
   bool _lockSupported = false;
 
   @override
@@ -1083,6 +1084,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             title: const Text('Unauffälliges App-Symbol', style: TextStyle(fontSize: 14)),
             subtitle: const Text(
               'Zeigt „Pulse“ mit neutralem Symbol auf dem Startbildschirm.',
+              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+            ),
+          ),
+          SwitchListTile(
+            contentPadding: const EdgeInsets.only(right: 8),
+            value: _personalizeNames,
+            activeColor: AppTheme.sageGreen,
+            onChanged: (value) async {
+              await StorageService.setPersonalizeNames(value);
+              if (mounted) setState(() => _personalizeNames = value);
+            },
+            title: const Text('Gegenüber in Lektionen beim Namen nennen', style: TextStyle(fontSize: 14)),
+            subtitle: const Text(
+              'Zum Beispiel „Anna liegt auf dem Rücken“ statt „sie liegt“. Aus, wenn öfter jemand mitliest.',
               style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),

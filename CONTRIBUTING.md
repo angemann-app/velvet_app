@@ -31,6 +31,10 @@ You don't need to be a developer. If you can edit a text file, you can help.
 - **IDs must never change.** Saved answers and partner matching depend on them.
 - **Keep the section headings** inside lessons on their own line (in English: “Why it works”, “The exercise”,
   “Consent and safety”, “When to see a doctor”) – translated into your language.
+- **Keep the name placeholders.** Some lessons contain `{W:she}`, `{W2:her}`, `{M:he}`, `{M2:his}` or
+  `{P:your partner}`. The app replaces them with the partner's name (e.g. “Anna lies on her back”). Translate
+  only the text after the colon and keep the letter before it: `{W:elle}`, `{P:ton/ta partenaire}`. `W2`/`M2`
+  mark possessives (“her”, “his”), which become “Anna's”.
 - **Plain text only**, no Markdown: the app shows the text as is and reads it aloud.
 - **Adapt country-specific details:** crisis lines, emergency numbers and legal remarks should fit your
   country. If unsure, phrase them neutrally (“a crisis line in your country”).

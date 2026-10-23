@@ -50,8 +50,11 @@ def voice_for(course, lesson=None):
 
 
 def speech_text(lesson):
+    # Platzhalter für den Namen des Gegenübers ({W:sie}, {P:dein Gegenüber} …) werden neutral
+    # eingesprochen; personalisiert wird nur der angezeigte Text (lib/services/personalize.dart).
+    content = re.sub(r"\{(?:W2|M2|W|M|P):([^{}]*)\}", r"\1", lesson["content"])
     lines = []
-    for line in lesson["content"].split("\n"):
+    for line in content.split("\n"):
         line = line.strip()
         # Zwischenüberschriften ("Warum das wirkt") bekommen einen Punkt, damit die Stimme absetzt.
         if line and not re.search(r"[.!?:…“”\"')]$", line):

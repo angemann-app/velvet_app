@@ -23,6 +23,8 @@ class NostrService {
   static const String _keyPartnerFantasyVotes = 'velvet_partner_fantasy_votes';
   static const String _keyInviteName = 'velvet_invite_name';
   static const String _keyPartnerReflections = 'velvet_partner_reflections';
+  static const String _keyPartnerGender = 'velvet_partner_gender';
+  static const String _keyProfilePromptDismissed = 'velvet_partner_profile_prompt_dismissed';
 
   static const List<String> fallbackRelays = [
     'wss://relay.primal.net',
@@ -63,6 +65,10 @@ class NostrService {
 
   final ValueNotifier<String> partnerNameNotifier =
       ValueNotifier<String>('Partner');
+
+  /// Geschlecht des Gegenübers ('female', 'male', 'other'), nur lokal vom Nutzer angegeben.
+  /// Dient der Personalisierung der Lektionstexte (lib/services/personalize.dart).
+  final ValueNotifier<String?> partnerGenderNotifier = ValueNotifier<String?>(null);
 
   final ValueNotifier<List<CoupleMessage>> messagesNotifier =
       ValueNotifier<List<CoupleMessage>>([]);
@@ -204,6 +210,7 @@ class NostrService {
     _partnerPublicKey = prefs.getString(_keyPartnerPubKey);
     _partnerName = prefs.getString(_keyPartnerName) ?? 'Partner';
     inviteNameNotifier.value = prefs.getString(_keyInviteName);
+    partnerGenderNotifier.value = prefs.getString(_keyPartnerGender);
     partnerPubKeyNotifier.value = _partnerPublicKey;
     partnerNameNotifier.value = _partnerName;
 
@@ -626,6 +633,36 @@ class NostrService {
     partnerNameNotifier.value = 'Partner';
     partnerReflectionsNotifier.value = {};
     await prefs.remove(_keyPartnerReflections);
+    partnerGenderNotifier.value = null;
+    await prefs.remove(_keyPartnerGender);
+    await prefs.remove(_keyProfilePromptDismissed);
+  }
+
+  /// Fehlen Name oder Geschlecht des Gegenübers, fragt der Paar-Kanal einmal nach.
+  bool get partnerProfileIncomplete =>
+      isPaired && (_partnerName.trim().isEmpty || _partnerName == 'Partner' || partnerGenderNotifier.value == null);
+
+  Future<bool> partnerProfilePromptDismissed() async =>
+      (await SharedPreferences.getInstance()).getBool(_keyProfilePromptDismissed) ?? false;
+
+  Future<void> dismissPartnerProfilePrompt() async {
+    await (await SharedPreferences.getInstance()).setBool(_keyProfilePromptDismissed, true);
+    partnerNameNotifier.value = _partnerName; // Anzeige aktualisieren
+  }
+
+  Future<void> setPartnerProfile({required String name, String? gender}) async {
+    final prefs = await SharedPreferences.getInstance();
+    if (name.trim().isNotEmpty) {
+      _partnerName = name.trim();
+      await prefs.setString(_keyPartnerName, _partnerName);
+      partnerNameNotifier.value = _partnerName;
+    }
+    if (gender == null) {
+      await prefs.remove(_keyPartnerGender);
+    } else {
+      await prefs.setString(_keyPartnerGender, gender);
+    }
+    partnerGenderNotifier.value = gender;
   }
 
   /// Lektion empfehlen. Ältere Versionen zeigen nur den Text.

@@ -135,6 +135,23 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
 - Nach dem Übersetzen: lutter test test/translation_test.dart --dart-define=STAMP=<schlüssel,…>.
   Nie stempeln, ohne vorher wirklich übersetzt zu haben.
 
+## 5b. Persönliche Ansprache in Lektionen
+
+- Lektionen mit festen Rollen (z. B. Massagen, Stellungen) enthalten Platzhalter:
+  - `{W:sie}` und `{W2:ihr}` für die Frau der Lektion, als Pronomen bzw. besitzanzeigend.
+  - `{M:er}` und `{M2:sein}` für den Mann der Lektion, ebenso.
+  - `{P:dein Gegenüber}` für das Gegenüber, unabhängig vom Geschlecht.
+- **Ersetzung durch den Namen:** Wenn gekoppelt und Name sowie Geschlecht angegeben sind, setzt
+  `lib/services/personalize.dart` den Namen ein, je Absatz nur beim ersten Vorkommen.
+- **Ohne Angaben:** Es bleibt der Text hinter dem Doppelpunkt. Er entspricht exakt dem, was eingesprochen
+  ist; `generate_audio.py` entfernt die Platzhalter beim Einsprechen.
+- **Geschlecht des Gegenübers:** wird nur lokal angegeben, beim Koppeln oder über das Menü
+  „Name & Geschlecht des Gegenübers“. Fehlt es, fragt der Paar-Kanal einmal nach.
+  Speicherort `velvet_partner_gender`, ist Teil der Sicherung.
+- **Abschaltbar** unter „Profil & Einstellungen“.
+- **Regel für neue Texte:** Wer neue Lektionen mit Rollen schreibt, setzt die Platzhalter, auch in der
+  englischen Fassung mit denselben Arten. `test/personalize_test.dart` prüft das.
+
 ## 6. Stimmen und Audio
 
 - **Engine:** Alle Lektionen sind mit **Kokoro** neu eingesprochen, lokal und ohne Cloud.

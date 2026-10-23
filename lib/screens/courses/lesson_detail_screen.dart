@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/content_models.dart';
 import '../../services/nostr_service.dart';
+import '../../services/personalize.dart';
 import '../../services/storage_service.dart';
 import '../../services/audio_service.dart';
 import '../../services/tts_service.dart';
@@ -90,6 +91,16 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
   }
 
   final NostrService _nostr = NostrService();
+
+  /// Name und Geschlecht des Gegenübers für die persönliche Ansprache, sofern gekoppelt und eingeschaltet.
+  PersonalizeContext get _personalizeContext {
+    if (!_nostr.isPaired || !StorageService.personalizeNames()) return PersonalizeContext.none;
+    return PersonalizeContext(
+      partnerName: _nostr.partnerName,
+      partnerGender: _nostr.partnerGenderNotifier.value,
+      myGender: StorageService.getUserProfile()?.gender,
+    );
+  }
 
   Future<void> _shareLesson() async {
     final ok = await _nostr.sendLessonShare(widget.lesson.id, widget.lesson.title, widget.courseTitle);
@@ -346,7 +357,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
 
             // Audio Player Card
             AudioPlayerCard(
-              textToRead: lesson.content,
+              textToRead: stripPersonalization(lesson.content),
               contextId: lesson.id,
               durationMin: lesson.durationMin,
               isAudioExercise: lesson.isAudioExercise,
@@ -361,7 +372,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                 border: Border.all(color: AppTheme.border),
               ),
               child: SelectableText(
-                lesson.content,
+                personalize(lesson.content, _personalizeContext),
                 style: const TextStyle(
                   fontSize: 16,
                   height: 1.65,

@@ -4,6 +4,7 @@ import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
+import 'partner_profile_dialog.dart';
 
 class PairingModal extends StatefulWidget {
   const PairingModal({super.key});
@@ -23,6 +24,7 @@ class _PairingModalState extends State<PairingModal>
   );
 
   bool _isProcessingScan = false;
+  String? _gender;
   String? _errorMessage;
 
   @override
@@ -61,6 +63,7 @@ class _PairingModalState extends State<PairingModal>
 
       if (success) {
         HapticFeedback.mediumImpact();
+        if (_gender != null) await nostr.setPartnerProfile(name: name, gender: _gender);
         // Meldet sich beim Gegenüber, damit eine offene Einladung dort sofort als Anfrage erscheint.
         nostr.sendChatMessage('👋 Hallo, ich bin jetzt verbunden.');
         Navigator.of(context).pop(true);
@@ -355,6 +358,22 @@ class _PairingModalState extends State<PairingModal>
                             borderSide: const BorderSide(color: AppTheme.border),
                           ),
                         ),
+                      ),
+
+                      const SizedBox(height: 10),
+                      // Geschlecht, nur für die persönliche Ansprache in Lektionen (bleibt lokal)
+                      Wrap(
+                        spacing: 8,
+                        children: [
+                          for (final entry in partnerGenderLabels.entries)
+                            ChoiceChip(
+                              label: Text(entry.value, style: const TextStyle(fontSize: 12.5)),
+                              selected: _gender == entry.key,
+                              onSelected: (_) => setState(() => _gender = entry.key),
+                              selectedColor: AppTheme.rose.withOpacity(0.25),
+                              showCheckmark: false,
+                            ),
+                        ],
                       ),
 
                       const SizedBox(height: 12),

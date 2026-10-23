@@ -205,6 +205,14 @@ void main() {
     await _shot(tester, '10_gemeinsam_reflexion', errors);
     await tester.pumpWidget(const SizedBox());
 
+    // Persönliche Ansprache: Anna ist als Frau angegeben, die Lektion nennt sie beim Namen.
+    await tester.runAsync(() => NostrService().setPartnerProfile(name: 'Anna', gender: 'female'));
+    final massage = DataService.getCourses().firstWhere((c) => c.id == 'course_sacred_massage');
+    await tester.pumpWidget(_app(LessonDetailScreen(lesson: massage.lessons[1], courseTitle: massage.title)));
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, -700));
+    await _shot(tester, '11_personalisiert', errors);
+    await tester.pumpWidget(const SizedBox());
+
     final course = DataService.getCourses().firstWhere((c) => c.id == 'course_sacred_massage');
     await tester.pumpWidget(_app(LessonDetailScreen(lesson: course.lessons[1], courseTitle: course.title)));
     await _shot(tester, '06_lektion', errors);

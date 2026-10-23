@@ -28,6 +28,7 @@ class StorageService {
   static const String _keyMyVotes = 'velvet_my_fantasy_votes';
   static const String _keyPartnerVotes = 'velvet_partner_fantasy_votes';
   static const String _keyPartnerReflections = 'velvet_partner_reflections';
+  static const String _keyPartnerGender = 'velvet_partner_gender';
 
   static SharedPreferences? _prefs;
   static UserProfile? _inMemoryProfile;
@@ -161,6 +162,16 @@ class StorageService {
     if (triggerBackup) {
       await AutoBackupService.saveAutoBackup();
     }
+  }
+
+  // Persönliche Ansprache: Name des Gegenübers in Lektionstexten (Standard: an)
+  static const String _keyPersonalizeNames = 'personalize_names';
+
+  static bool personalizeNames() => _prefs?.getBool(_keyPersonalizeNames) ?? true;
+
+  static Future<void> setPersonalizeNames(bool value) async {
+    final prefs = await _ensurePrefs();
+    await prefs.setBool(_keyPersonalizeNames, value);
   }
 
   // AI Chat Messages
@@ -342,6 +353,7 @@ class StorageService {
       'myFantasyVotes': _prefs?.getString(_keyMyVotes),
       'partnerFantasyVotes': _prefs?.getString(_keyPartnerVotes),
       'partnerReflections': _prefs?.getString(_keyPartnerReflections),
+      'nostrPartnerGender': _prefs?.getString(_keyPartnerGender),
     };
   }
 
@@ -436,6 +448,7 @@ class StorageService {
         ('myFantasyVotes', _keyMyVotes),
         ('partnerFantasyVotes', _keyPartnerVotes),
         ('partnerReflections', _keyPartnerReflections),
+        ('nostrPartnerGender', _keyPartnerGender),
       ]) {
         final value = d[field];
         if (value is String && value.isNotEmpty) writes[key] = value;
