@@ -125,6 +125,16 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
   - Paar-Kanal neu gestaltet (Funken, Nachrichten, Wünsche).
   - Layout-Fehler behoben, Texte durchgehend auf Deutsch.
 
+## 5a. Englische Fassung (Pflicht)
+
+- Alle Inhalte liegen zusätzlich auf Englisch in 	ranslations/en/ (nicht Teil des App-Releases).
+- **Regel:** Jeder neue oder geänderte Inhalt wird im selben Arbeitsgang übersetzt. Das gilt für Lektionen,
+  Kurse, SOS-Karten, Glaubenssätze, Bausteine des gemeinsamen Abends und die Ja/Nein/Vielleicht-Liste.
+- 	est/translation_test.dart vergleicht Prüfsummen der deutschen Texte mit den eingetragenen Werten in
+  _source. Fehlt eine Übersetzung oder ist sie veraltet, scheitert der Test und damit jedes Release.
+- Nach dem Übersetzen: lutter test test/translation_test.dart --dart-define=STAMP=<schlüssel,…>.
+  Nie stempeln, ohne vorher wirklich übersetzt zu haben.
+
 ## 6. Stimmen und Audio
 
 - **Engine:** Alle Lektionen sind mit **Kokoro** neu eingesprochen, lokal und ohne Cloud.

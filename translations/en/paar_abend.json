@@ -1,0 +1,430 @@
+{
+  "_hinweis": "Englische Fassung der Bausteine des gemeinsamen Abends (nicht Teil des App-Releases). Struktur wie assets/data/paar_abend.json.",
+  "bausteine": [
+    {
+      "id": "ankommen_1",
+      "phase": "ankommen",
+      "text": "Welcome to your evening together. Place the phone so you can hear me well, and dim the light. Sit or lie close to each other. Look into each other's eyes for a moment. You don't have to say anything. Just breathe. Tonight there is no goal. You're giving each other time and touch, nothing else."
+    },
+    {
+      "id": "ankommen_2",
+      "phase": "ankommen",
+      "text": "Lovely that you're here. Make yourselves comfortable, somewhere warm where nobody will disturb you. Hold hands. Feel the warmth of the other hand. Breathe in deeply together. And slowly out again. Leave the day outside. Everything that comes now is an invitation, not an instruction."
+    },
+    {
+      "id": "ankommen_3",
+      "phase": "ankommen",
+      "text": "Welcome. Lie down next to each other so that your bodies touch somewhere. Perhaps just your shoulders, perhaps your hands. Close your eyes. Breathe in deeply three times and out slowly. Remember your agreement: one word is enough, and everything stops. Nothing has to happen. You may simply enjoy."
+    },
+    {
+      "id": "runde_start_1",
+      "phase": "runde_start",
+      "text": "Now the first round begins. Whoever gives sits comfortably next to the receiving person. Whoever receives lies down however feels comfortable and closes their eyes. From now on you, the receiving person, don't have to do anything at all. Just feel. And you, the giving person, may take all the time in the world."
+    },
+    {
+      "id": "runde_start_2",
+      "phase": "runde_start",
+      "text": "A new round begins. Find your places. Whoever receives lies warm and comfortable and may hand over all responsibility from now on. Whoever gives rubs their hands together until they're warm. First simply rest them calmly on your partner's body. No movement yet. Just arriving."
+    },
+    {
+      "id": "zone_ruecken_1",
+      "phase": "beruehren",
+      "zone": "ruecken",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Place your hands flat on your partner's back. Begin with long, slow strokes, from the shoulders down to the small of the back. Imagine your hands moving through warm honey. I'll be quiet for a while now."
+    },
+    {
+      "id": "zone_ruecken_2",
+      "phase": "beruehren",
+      "zone": "ruecken",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Let both hands wander over the back. Circles that grow larger and smaller again. Feel where the body softens and where it's still holding on. Stay there a little longer. Take your time."
+    },
+    {
+      "id": "zone_schultern_1",
+      "phase": "beruehren",
+      "zone": "schultern",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Now turn to the shoulders and neck. This is where the day often collects. Stroke with warm hands from the centre outwards, as if lifting something heavy away. At your own pace."
+    },
+    {
+      "id": "zone_schultern_2",
+      "phase": "beruehren",
+      "zone": "schultern",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Place your hands on the shoulders and simply let their weight work. Then begin slowly stroking out the neck with your fingertips, up to the hairline. Whoever receives may sigh if it feels good."
+    },
+    {
+      "id": "zone_arme_1",
+      "phase": "beruehren",
+      "zone": "arme",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Now take one arm in your hands. Stroke from the shoulder to the fingertips, slowly, centimetre by centimetre. When you arrive at the hand, hold it for a moment. Then the other arm."
+    },
+    {
+      "id": "zone_haende_1",
+      "phase": "beruehren",
+      "zone": "haende",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Now devote yourself to the hands. Massage the palm with your thumb in small circles. Stroke out each finger one by one. Hands carry so much through the day. Now they may receive."
+    },
+    {
+      "id": "zone_kopf_1",
+      "phase": "beruehren",
+      "zone": "kopf",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Move to the head. Slowly run your fingers through the hair, as if combing it. Massage the scalp with gentle circles. Stroke over the forehead, the temples, the eyebrows. Very lightly."
+    },
+    {
+      "id": "zone_kopf_2",
+      "phase": "beruehren",
+      "zone": "kopf",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Place your fingertips on your partner's face. Trace its lines: forehead, cheekbones, chin, lips. As slowly as if you were discovering this face for the first time."
+    },
+    {
+      "id": "zone_beine_1",
+      "phase": "beruehren",
+      "zone": "beine",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Now turn to the legs. Long, calm strokes from the thighs down to the ankles. Sometimes with light, sometimes with slightly firmer pressure. Notice how your partner is breathing."
+    },
+    {
+      "id": "zone_fuesse_1",
+      "phase": "beruehren",
+      "zone": "fuesse",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Take one foot in both hands. Keep it warm. Then stroke with your thumbs over the sole, from the heel to the toes. Feet carry us all day. Now they are carried."
+    },
+    {
+      "id": "zone_ruecken_oel_1",
+      "phase": "beruehren",
+      "zone": "ruecken_oel",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Now take some warm oil in your hands and rub them together. Place them on the bare back. Glide over the skin with long, flowing movements, along the spine and down the sides. Let your hands become heavy."
+    },
+    {
+      "id": "zone_ruecken_oel_2",
+      "phase": "beruehren",
+      "zone": "ruecken_oel",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "With oil on the skin you can now glide with your whole forearm, from the small of the back up to the shoulders. Alternate between firm and feather-light. Notice where your partner breathes more deeply."
+    },
+    {
+      "id": "zone_bauch_1",
+      "phase": "beruehren",
+      "zone": "bauch",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Place a warm hand on the belly. No movement yet. Feel how it rises and falls with the breath. Then begin large, slow circles clockwise around the navel."
+    },
+    {
+      "id": "zone_bauch_2",
+      "phase": "beruehren",
+      "zone": "bauch",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Stroke over the belly with both hands, from the centre to the sides, like waves on a beach. For many, the belly is a vulnerable place. Go gently, and let it soften."
+    },
+    {
+      "id": "zone_huefte_1",
+      "phase": "beruehren",
+      "zone": "huefte",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Move to the hips and the sides of the body. Follow the curves with your hands, slowly, as if exploring a landscape. The skin above the pelvis is often more sensitive than you'd think."
+    },
+    {
+      "id": "zone_brust_1",
+      "phase": "beruehren",
+      "zone": "brust",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "If it feels right for both of you, now turn to the chest. Begin on the outside, with large, soft circles, and slowly approach the centre. Without a goal. Just warmth and skin."
+    },
+    {
+      "id": "zone_brust_2",
+      "phase": "beruehren",
+      "zone": "brust",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "Stroke over the chest and nipples, with your fingertips or a flat hand. Sometimes very lightly, sometimes with a little more pressure. Pay attention to every sign from your partner and let it guide you."
+    },
+    {
+      "id": "zone_innenschenkel_1",
+      "phase": "beruehren",
+      "zone": "innenschenkel",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "Move to the insides of the thighs. Stroke slowly upwards, approach the centre without touching it, and glide back again. Let the anticipation grow."
+    },
+    {
+      "id": "zone_innenschenkel_2",
+      "phase": "beruehren",
+      "zone": "innenschenkel",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "Place your hands on the inner thighs and let them rest there. Feel the warmth coming from the centre. Then stroke with your thumbs in small circles, a little further each time, and back again."
+    },
+    {
+      "id": "zone_geschlecht_1",
+      "phase": "beruehren",
+      "zone": "geschlecht",
+      "stufe": 5,
+      "tiefe": "intim",
+      "text": "If your partner wants it, now place one hand very calmly on their genitals. No movement. Just holding, warming, being there. Both of you, feel how much this touch alone sets off."
+    },
+    {
+      "id": "zone_geschlecht_2",
+      "phase": "beruehren",
+      "zone": "geschlecht",
+      "stufe": 5,
+      "tiefe": "intim",
+      "text": "Now begin to stroke the genitals slowly with plenty of lubricant. All around, flat, without hurry. Use what you learned in the course. And remember: there's nothing to achieve. Only to enjoy."
+    },
+    {
+      "id": "zone_geschlecht_3",
+      "phase": "beruehren",
+      "zone": "geschlecht",
+      "stufe": 5,
+      "tiefe": "intim",
+      "text": "Now let your hands wander freely, from the genitals over the belly and thighs and back again. Very slowly. Whoever receives may show with their own hand how it feels best."
+    },
+    {
+      "id": "zone_ruecken_3",
+      "phase": "beruehren",
+      "zone": "ruecken",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Now use only your fingertips. Let them dance over the back like feathers, barely noticeable. Draw lines, circles, perhaps a word. Whoever receives may guess, or simply enjoy."
+    },
+    {
+      "id": "zone_arme_2",
+      "phase": "beruehren",
+      "zone": "arme",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Stroke along the inside of the arms with your fingertips, from the wrist into the crook of the elbow and beyond. The skin there is thin and sensitive. The slower, the lovelier."
+    },
+    {
+      "id": "zone_haende_2",
+      "phase": "beruehren",
+      "zone": "haende",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Place your palms against each other. Feel the warmth. Then let your fingers slide between your partner's fingers, slowly, and out again. A small touch that says a lot."
+    },
+    {
+      "id": "zone_beine_2",
+      "phase": "beruehren",
+      "zone": "beine",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Hold a calf with both hands and slowly stroke it out towards the knee. Then the hollow of the knee, very lightly, only with your fingertips. Many people feel more there than they expect."
+    },
+    {
+      "id": "zone_fuesse_2",
+      "phase": "beruehren",
+      "zone": "fuesse",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Hold both feet in your hands and simply let them get warm. Then massage the ankles in small circles and stroke out each toe one by one. Calmly and thoroughly."
+    },
+    {
+      "id": "zone_po_1",
+      "phase": "beruehren",
+      "zone": "po",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Now move to the buttocks. Knead the muscles with your whole hand, firmly and slowly, like warm dough. A lot of tension sits here. Then stroke softly over them and feel the body let go."
+    },
+    {
+      "id": "zone_po_2",
+      "phase": "beruehren",
+      "zone": "po",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Place both hands flat on the buttocks and let them become heavy. Then trace large figures of eight with your fingertips over the curves and down the thighs. Once firm, once as light as a breath."
+    },
+    {
+      "id": "zone_huefte_2",
+      "phase": "beruehren",
+      "zone": "huefte",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Place your hands on the right and left of the pelvis and rock it very gently back and forth. Then glide along the groin, slowly, with flat hands. A place that is often overlooked."
+    },
+    {
+      "id": "zone_ganzkoerper_1",
+      "phase": "beruehren",
+      "zone": "ganzkoerper",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Now connect everything. Long strokes over the whole body, from the neck to the feet, and back again. Leave no spot out. You're painting your partner a picture of themselves."
+    },
+    {
+      "id": "zone_brust_3",
+      "phase": "beruehren",
+      "zone": "brust",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "Now try something different: your breath. Breathe warmly over the chest, then cool. Let your lips just brush the skin. Both of you, feel how the tension changes."
+    },
+    {
+      "id": "zone_geschlecht_4",
+      "phase": "beruehren",
+      "zone": "geschlecht",
+      "stufe": 5,
+      "tiefe": "intim",
+      "text": "Now slow down again. Stroke the genitals so lightly that it can hardly be felt any more, and stay with this slowness for a while. Often this is exactly where the loveliest arousal arises."
+    },
+    {
+      "id": "erinnerung_1",
+      "phase": "erinnerung",
+      "text": "Keep breathing as you do. Calmly and deeply."
+    },
+    {
+      "id": "erinnerung_2",
+      "phase": "erinnerung",
+      "text": "You have all the time in the world. Feel free to go even slower."
+    },
+    {
+      "id": "erinnerung_3",
+      "phase": "erinnerung",
+      "text": "Keep your attention fully in your hands."
+    },
+    {
+      "id": "erinnerung_4",
+      "phase": "erinnerung",
+      "text": "Whoever receives: let every thought drift away. Just feel."
+    },
+    {
+      "id": "erinnerung_5",
+      "phase": "erinnerung",
+      "text": "Notice your partner's breath. It shows you the way."
+    },
+    {
+      "id": "erinnerung_6",
+      "phase": "erinnerung",
+      "text": "There's nothing to achieve. Only this moment."
+    },
+    {
+      "id": "check_in_1",
+      "phase": "check_in",
+      "text": "Pause for a moment. Whoever receives, say in one word how you're doing right now. Green, yellow or red. Then we'll continue."
+    },
+    {
+      "id": "check_in_2",
+      "phase": "check_in",
+      "text": "A short pause. Both of you breathe in deeply once and out slowly. Whoever receives may ask for something: slower, firmer, a different spot. One sentence is enough."
+    },
+    {
+      "id": "check_in_3",
+      "phase": "check_in",
+      "text": "How does it feel? You don't have to explain anything. A smile, a nod, a sigh is enough. And if something isn't right, just say so."
+    },
+    {
+      "id": "runde_ende_1",
+      "phase": "runde_ende",
+      "text": "Now let your hands slow down. Finally rest them calmly on your partner's body and breathe together. Then release them very gently."
+    },
+    {
+      "id": "runde_ende_2",
+      "phase": "runde_ende",
+      "text": "This round is coming to an end. Let your movements become slower and slower until your hands lie still. Both of you, feel what's there. Whoever received may take a moment longer before opening their eyes."
+    },
+    {
+      "id": "wechsel_1",
+      "phase": "wechsel",
+      "text": "Now you swap roles. Take a moment to arrive. Perhaps a kiss, perhaps a look. Whoever just received may now give."
+    },
+    {
+      "id": "wechsel_2",
+      "phase": "wechsel",
+      "text": "Time to switch roles. Take a breath, stretch if you like. Whoever just gave now lies down and may receive."
+    },
+    {
+      "id": "ausklang_1",
+      "phase": "ausklang",
+      "text": "Your evening is drawing to a close. Lie close together. Breathe together. You don't have to do anything more. If you like, tell each other what was most beautiful. And if it turns into more, that's wonderful. If not, it was exactly right as it was."
+    },
+    {
+      "id": "ausklang_2",
+      "phase": "ausklang",
+      "text": "Slowly come to rest. Simply hold each other. Feel each other's warmth and breath. Thank you for this time together."
+    },
+    {
+      "id": "ausklang_3",
+      "phase": "ausklang",
+      "text": "To finish: place a hand on each other's heart. Feel the heartbeat. If you like, say one word for this evening. And stay lying like this for as long as it feels good."
+    }
+  ],
+  "_source": {
+    "block:ankommen_1": "72788190f0138c99",
+    "block:ankommen_2": "cf65be2a5e1f3b8a",
+    "block:ankommen_3": "b77cf0473d310170",
+    "block:ausklang_1": "6766d5778aefdbcb",
+    "block:ausklang_2": "b12eaa4ee41cec69",
+    "block:ausklang_3": "7f2abe093562d352",
+    "block:check_in_1": "2e44f89f1e120d61",
+    "block:check_in_2": "2b9a9c22a29ed657",
+    "block:check_in_3": "db93dbee8a45bb20",
+    "block:erinnerung_1": "d3dd0c2377a83d27",
+    "block:erinnerung_2": "9754e9fd21aacae7",
+    "block:erinnerung_3": "fa3e264c449d5e12",
+    "block:erinnerung_4": "b72b1be9ef394fa8",
+    "block:erinnerung_5": "649c287c8a400938",
+    "block:erinnerung_6": "7bb4375ed3cc8c84",
+    "block:runde_ende_1": "82ca8a28a6652184",
+    "block:runde_ende_2": "ca2539c94f86ce00",
+    "block:runde_start_1": "f34530ac7b94f403",
+    "block:runde_start_2": "b87dc77c45493ded",
+    "block:wechsel_1": "ef15dd01bddacd1f",
+    "block:wechsel_2": "cbc3fdca904898f4",
+    "block:zone_arme_1": "58ef5dfee2422cc6",
+    "block:zone_arme_2": "66222b0fd2454a06",
+    "block:zone_bauch_1": "91b1b784670c2f83",
+    "block:zone_bauch_2": "53e087821acf0a20",
+    "block:zone_beine_1": "125d2ab7d7b2815e",
+    "block:zone_beine_2": "bef685d34772ac6e",
+    "block:zone_brust_1": "d3a74456be1789f5",
+    "block:zone_brust_2": "fbe369a3599f0f0f",
+    "block:zone_brust_3": "f733d710051f50cd",
+    "block:zone_fuesse_1": "da08ce375592748b",
+    "block:zone_fuesse_2": "6f18d18841057b37",
+    "block:zone_ganzkoerper_1": "b6883fd694c9add4",
+    "block:zone_geschlecht_1": "ec15cb2a1d4320ed",
+    "block:zone_geschlecht_2": "682a7d86d896a6a1",
+    "block:zone_geschlecht_3": "65cbd272496e7ea0",
+    "block:zone_geschlecht_4": "39b0a778e4484af5",
+    "block:zone_haende_1": "f137b333643ab634",
+    "block:zone_haende_2": "8ce378720f66174e",
+    "block:zone_huefte_1": "296f5676f4137dd6",
+    "block:zone_huefte_2": "82b1890509dafa48",
+    "block:zone_innenschenkel_1": "c6b3c360a8e22999",
+    "block:zone_innenschenkel_2": "68ca5991494a45b3",
+    "block:zone_kopf_1": "946227920541ffc6",
+    "block:zone_kopf_2": "b646d22c45cdac24",
+    "block:zone_po_1": "bb63fb0fd3534794",
+    "block:zone_po_2": "abafa6b319eebf67",
+    "block:zone_ruecken_1": "e49d571d5a1543d0",
+    "block:zone_ruecken_2": "fcb04f1adc6b1c46",
+    "block:zone_ruecken_3": "41608a35c7ae4d64",
+    "block:zone_ruecken_oel_1": "68d808a3371ea5b6",
+    "block:zone_ruecken_oel_2": "ea585e2c90dc8a9a",
+    "block:zone_schultern_1": "84b87c2ef3bd39a7",
+    "block:zone_schultern_2": "bd3c413b8e5c9506"
+  }
+}

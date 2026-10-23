@@ -47,6 +47,9 @@ sex education:
   lock and discreet app icon, password-encrypted backups.
 
 Built with Flutter. Code under MIT, content under CC BY-NC-SA 4.0.
+
+**English content:** all courses, lessons, guided session texts and lists are available in English in
+[translations/en](translations/en/) – ready for anyone who wants to build an English version.
 </details>
 
 ## Funktionen
@@ -183,6 +186,8 @@ liegen in `test_live/` und laufen nicht automatisch mit.
 | `assets/audio/<lektions-id>.opus` | Audio je Lektion (fehlt sie, liest die Geräte-Sprachausgabe vor) |
 | `tools/generate_audio.py` | Lektionen neu einsprechen, z. B. `tease_1` oder `--courses 8-17` (siehe unten) |
 | `tools/aussprache.json` | Aussprache-Wörterbuch für einzelne Wörter |
+| `translations/en/` | englische Fassung aller Inhalte (nicht im App-Release); jede Änderung am deutschen Text muss dort nachgezogen werden, sonst schlägt `test/translation_test.dart` fehl |
+| `tools/translations.py` | Hilfe beim Übersetzen: Gerüst, Textauszug, Einspielen |
 | `tools/generate_covers.py` | Kursbilder `assets/images/cover_NN.svg` neu erzeugen |
 | `assets/images/diagram_*.svg` | Anleitungsgrafiken (800×600) |
 
