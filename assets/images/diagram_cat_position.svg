@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_diagram" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <radialGradient id="glow_cat" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg_diagram)" />
+
+  <!-- Diagram Header -->
+  <text x="400" y="45" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" letter-spacing="0.5">SCHEMATISCHE ANATOMIE: DIE COITAL ALIGNMENT TECHNIQUE (CAT)</text>
+  <text x="400" y="68" text-anchor="middle" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Warum Schambein-Kontakt und horizontales Wiegen (Grinding) den Stoß-Stress auflösen</text>
+
+  <!-- Divider Line -->
+  <line x1="400" y1="95" x2="400" y2="390" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 6" />
+
+  <!-- LEFT PANEL: Klassisch (Missionar / Rein-Raus) -->
+  <g transform="translate(60, 100)">
+    <!-- Box Header -->
+    <rect x="0" y="0" width="280" height="28" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1" />
+    <text x="140" y="18" text-anchor="middle" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="700">KLASSISCH (Rein-Raus Stoßen)</text>
+
+    <!-- Schematic Silhouette Curve -->
+    <path d="M 40 180 Q 140 160, 240 180" fill="none" stroke="#475569" stroke-width="2" />
+    <path d="M 60 120 Q 140 145, 220 120" fill="none" stroke="#64748B" stroke-width="2" />
+
+    <!-- Discontinuous Thrust Arrow -->
+    <line x1="100" y1="150" x2="180" y2="150" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" />
+    <polyline points="165,142 180,150 165,158" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <polyline points="115,142 100,150 115,158" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <circle cx="140" cy="150" r="12" fill="none" stroke="#EF4444" stroke-width="1" stroke-dasharray="2 3" />
+
+    <!-- Bullet Points -->
+    <text x="10" y="225" fill="#EF4444" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">✕ Geringer Klitoriskontakt:</text>
+    <text x="20" y="243" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Reibung nur an der Scheidenöffnung</text>
+    <text x="10" y="265" fill="#EF4444" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">✕ Sympathikus-Stress für den Mann:</text>
+    <text x="20" y="283" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Hohe Muskelspannung in Oberschenkeln &amp; Po</text>
+  </g>
+
+  <!-- RIGHT PANEL: CAT (Hohe Reit-Verschmelzung) -->
+  <g transform="translate(460, 100)">
+    <!-- Box Header -->
+    <rect x="0" y="0" width="280" height="28" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="1" />
+    <text x="140" y="18" text-anchor="middle" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="12" font-weight="800">CAT (Schambein-Verschmelzung)</text>
+
+    <!-- Upward Shift Vector (5-8 cm) -->
+    <text x="140" y="55" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="11" font-weight="700">▲ 5 bis 8 cm weiter nach oben rutschen</text>
+
+    <!-- Glowing Contact Nexus -->
+    <circle cx="140" cy="150" r="28" fill="url(#glow_cat)" />
+    
+    <!-- Heavy Constant Pelvic Contact Arc -->
+    <path d="M 40 160 C 100 135, 180 135, 240 160" fill="none" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 40 150 C 100 135, 180 135, 240 150" fill="none" stroke="#FB7185" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Focal Point Node (Klitoriswurzel-Pressung) -->
+    <circle cx="140" cy="142" r="7" fill="#FBBF24" stroke="#0F172A" stroke-width="2" />
+    <circle cx="140" cy="142" r="14" fill="none" stroke="#FBBF24" stroke-width="1.2" opacity="0.8" />
+
+    <!-- Horizontal Rhythmic Wave Arrows (Grinding / Wiegen) -->
+    <path d="M 100 180 Q 140 195, 180 180" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" />
+    <polyline points="105,174 98,180 106,186" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <polyline points="175,174 182,180 174,186" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+    <text x="140" y="210" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-size="10.5" font-weight="700">Horizontales Wiegen (Zero-Thrust)</text>
+
+    <!-- Bullet Points -->
+    <text x="10" y="240" fill="#10B981" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">✓ 100% Klitorale Consistency:</text>
+    <text x="20" y="258" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11">Ununterbrochener Schambein-Druck auf Schwellkörper</text>
+    <text x="10" y="280" fill="#10B981" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">✓ Welle 7 Dauer-Surfen für den Mann:</text>
+    <text x="20" y="298" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="11">Eichel ruht tief, kein Stoß-Reflex, 20+ Min. Ausdauer</text>
+  </g>
+
+  <!-- Bottom Summary Footer -->
+  <rect x="150" y="405" width="500" height="32" rx="10" fill="#1E293B" stroke="#334155" stroke-width="1" />
+  <text x="400" y="425" text-anchor="middle" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600">Ergebnis: Verdoppelte Orgasmus-Wahrscheinlichkeit beim Verkehr &amp; volle Entspannung</text>
+</svg>
