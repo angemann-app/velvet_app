@@ -14,6 +14,9 @@
 > 🇬🇧 **English:** All content – 21 courses, 75 lessons, guided couple sessions and lists – is also available in
 > English in [translations/en](translations/en/), ready for anyone who wants to build an English version.
 > See the [English summary](#english-summary) below.
+>
+> 🌍 **Help translate:** we'd love to add more languages. You don't need to be a developer –
+> see [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
 VelvetPulse ist eine deutschsprachige Android-App für erfüllte Sexualität und Nähe. Sie verbindet
 **Kognitive Verhaltenstherapie (KVT)**, **Körperarbeit (Somatik)** und **Sexualaufklärung**:

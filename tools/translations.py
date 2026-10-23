@@ -1,7 +1,8 @@
-"""Pflege der englischen Übersetzungen in translations/en/.
+"""Pflege der Übersetzungen in translations/<sprache>/ (Standard: en).
 
 Regel: Jeder neue oder geänderte Inhalt wird auch ins Englische übersetzt.
 test/translation_test.dart prüft das über Prüfsummen der deutschen Ausgangstexte.
+Weitere Sprachen (Beiträge der Community) mit --lang fr usw.; siehe CONTRIBUTING.md.
 
   python tools/translations.py --skelett          englisches Grundgerüst anlegen bzw. um neue Einträge ergänzen
   python tools/translations.py --dump 1-7         deutsche Lektionen der Kurse 1–7 als Text ausgeben
@@ -93,10 +94,12 @@ def merge(path):
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
     p = argparse.ArgumentParser()
+    p.add_argument("--lang", default="en", help="Sprachcode der Übersetzung, z. B. fr, es, nl (Ordner translations/<lang>/)")
     p.add_argument("--skelett", action="store_true")
     p.add_argument("--dump")
     p.add_argument("--einspielen")
     a = p.parse_args()
+    EN = ROOT / "translations" / a.lang / "velvet_content.json"  # Modulvariable für die gewählte Sprache
     if a.skelett:
         skeleton()
     if a.dump:

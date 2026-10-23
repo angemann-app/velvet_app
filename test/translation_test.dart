@@ -14,7 +14,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:velvetpulse/models/couple_channel_models.dart';
 import 'package:velvetpulse/models/yes_no_maybe_models.dart';
 
-const _enDir = 'translations/en';
+// Englisch ist Pflicht und wird bei jedem Testlauf geprüft. Weitere Sprachen (Beiträge der Community)
+// lassen sich mit --dart-define=LANG=fr usw. prüfen und stempeln, blockieren aber keine Releases.
+const _lang = String.fromEnvironment('LANG', defaultValue: 'en');
+const _enDir = 'translations/$_lang';
 const _stamp = String.fromEnvironment('STAMP');
 
 String _hash(Object value) => sha256.convert(utf8.encode(jsonEncode(value))).toString().substring(0, 16);

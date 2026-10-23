@@ -34,4 +34,9 @@ After translating, record the checksums of the translated entries:
 flutter test test/translation_test.dart --dart-define=STAMP=lesson:desire_1,block:ankommen_1
 ```
 
+## Other languages
+
+Want to translate VelvetPulse into your language? Copy this folder to `translations/<code>/` and see
+[CONTRIBUTING.md](../../CONTRIBUTING.md) – contributions are very welcome.
+
 Content license: [CC BY-NC-SA 4.0](../../LICENSE-CONTENT.md), like the German original.
