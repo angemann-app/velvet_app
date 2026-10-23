@@ -472,7 +472,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 itemBuilder: (_) => const [
                   PopupMenuItem(value: 'info', child: Text('Verschlüsselung & Details')),
                   PopupMenuItem(value: 'pair', child: Text('Verbindung verwalten')),
-                  PopupMenuItem(value: 'reconnect', child: Text('Anderen Server versuchen')),
+                  PopupMenuItem(value: 'reconnect', child: Text('Neu verbinden')),
                 ],
               ),
             ],
@@ -818,7 +818,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               ),
               const SizedBox(height: 16),
               _buildInfoRow('Verschlüsselung', 'Nostr NIP-04'),
-              _buildInfoRow('Server', _nostr.activeRelayUrl.replaceFirst('wss://', '')),
+              _buildInfoRow('Server', _nostr.connectedRelaysLabel),
+              for (final relay in _nostr.connectedRelays) _buildInfoRow('', relay),
               const SizedBox(height: 10),
               const Text('Dein Verbindungscode', style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
               const SizedBox(height: 4),

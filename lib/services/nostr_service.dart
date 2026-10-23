@@ -37,12 +37,8 @@ class NostrService {
   final Nip04 _nip04 = Nip04();
   final Nip19 _nip19 = Nip19();
 
-  WebSocket? _webSocket;
-  StreamSubscription? _socketSub;
-  Timer? _reconnectTimer;
-  int _currentRelayIndex = 0;
-  String _activeRelayUrl = fallbackRelays[0];
-  int _connectionEpoch = 0;
+  final Map<String, _RelayConnection> _relays = {};
+  bool _disposed = false;
 
   String? _myPrivateKey;
   String? _myPublicKey;
@@ -58,8 +54,7 @@ class NostrService {
   final ValueNotifier<NostrConnectionStatus> statusNotifier =
       ValueNotifier<NostrConnectionStatus>(NostrConnectionStatus.disconnected);
 
-  final ValueNotifier<String> activeRelayNotifier =
-      ValueNotifier<String>(fallbackRelays[0]);
+  final ValueNotifier<String> activeRelayNotifier = ValueNotifier<String>('');
 
   final ValueNotifier<String?> partnerPubKeyNotifier =
       ValueNotifier<String?>(null);
@@ -151,20 +146,10 @@ class NostrService {
   String? get partnerPublicKey => _partnerPublicKey;
   String? get partnerNpub => _partnerNpub;
   String get partnerName => _partnerName;
-  String get activeRelayUrl => _activeRelayUrl;
   bool get isConnected => statusNotifier.value == NostrConnectionStatus.connected;
   bool get isPaired => _partnerPublicKey != null && _partnerPublicKey!.isNotEmpty;
 
   bool _isInitialized = false;
-
-  void reconnectNextRelay() {
-    _currentRelayIndex = (_currentRelayIndex + 1) % fallbackRelays.length;
-    connectRelay(force: true);
-  }
-
-  Future<void> retryConnection() async {
-    await connectRelay(force: true);
-  }
 
   Future<void> reloadKeysFromPrefs() async {
     _isInitialized = false;
@@ -176,9 +161,8 @@ class NostrService {
 
   Future<void> init() async {
     if (_isInitialized) {
-      if (_webSocket == null || statusNotifier.value != NostrConnectionStatus.connected) {
-        connectRelay();
-      }
+      _disposed = false;
+      connectRelay();
       return;
     }
     _isInitialized = true;
@@ -260,111 +244,116 @@ class NostrService {
     _calculateMatches();
 
     // 5. Connect to Nostr Relay in background without blocking app startup
-    unawaited(connectRelay());
+    _disposed = false;
+    unawaited(connectRelay(force: true));
   }
 
-  Future<void> connectRelay({String? relayUrl, bool force = false}) async {
-    if (!force && _webSocket != null && statusNotifier.value == NostrConnectionStatus.connected) {
-      debugPrint('Nostr: Already connected to $_activeRelayUrl');
-      return;
+  /// Verbindet mit ALLEN Relays gleichzeitig. Jede Nachricht geht an alle,
+  /// gelesen wird auf allen. So finden zwei Geräte immer zusammen, auch wenn
+  /// ein älteres Gerät (bis 4.3.0-beta.2) nur mit einem einzigen Relay spricht.
+  /// Doppelte Events fängt die Prüfung per Event-ID ab.
+  Future<void> connectRelay({bool force = false}) async {
+    for (final url in fallbackRelays) {
+      final relay = _relays.putIfAbsent(url, () => _RelayConnection(url));
+      if (force || relay.socket == null) {
+        unawaited(_connect(relay));
+      }
     }
+  }
 
-    final int epoch = ++_connectionEpoch;
-    _reconnectTimer?.cancel();
-    _socketSub?.cancel();
-    _socketSub = null;
+  /// Baut alle Verbindungen neu auf (Menüpunkt „Neu verbinden“).
+  void reconnectNextRelay() => connectRelay(force: true);
 
-    try {
-      _webSocket?.close();
-    } catch (_) {}
-    _webSocket = null;
+  Future<void> retryConnection() => connectRelay(force: true);
 
-    final targetRelay = relayUrl ?? fallbackRelays[_currentRelayIndex % fallbackRelays.length];
-    _activeRelayUrl = targetRelay;
-    activeRelayNotifier.value = targetRelay;
-    statusNotifier.value = NostrConnectionStatus.connecting;
-
-    debugPrint('Nostr: Connecting to $targetRelay (epoch: $epoch)...');
+  Future<void> _connect(_RelayConnection relay) async {
+    final int epoch = ++relay.epoch;
+    relay.close();
+    relay.connecting = true;
+    _updateStatus();
 
     try {
-      // 1. Direct WebSocket connection with 5-second timeout and keepalive ping
-      final ws = await WebSocket.connect(
-        targetRelay,
-      ).timeout(const Duration(seconds: 5));
-
-      if (_connectionEpoch != epoch) {
+      final ws = await WebSocket.connect(relay.url).timeout(const Duration(seconds: 8));
+      if (relay.epoch != epoch || _disposed) {
         ws.close();
         return;
       }
-
-      ws.pingInterval = const Duration(seconds: 15);
-      _webSocket = ws;
-      // Sobald connect erfolgreich auflöst: sofort Status auf connected setzen
-      statusNotifier.value = NostrConnectionStatus.connected;
-      debugPrint('Nostr: Connected successfully to $targetRelay');
-
-      // Listen to incoming messages
-      _socketSub = ws.listen(
-        (data) {
-          _handleIncomingRawMessage(data);
-        },
-        onError: (err) {
-          debugPrint('Nostr WebSocket error on $targetRelay: $err');
-          _onConnectionDropped(epoch);
-        },
-        onDone: () {
-          debugPrint('Nostr WebSocket closed on $targetRelay');
-          _onConnectionDropped(epoch);
-        },
+      ws.pingInterval = const Duration(seconds: 30);
+      relay.socket = ws;
+      relay.connecting = false;
+      relay.failures = 0;
+      relay.sub = ws.listen(
+        (data) => _handleIncomingRawMessage(data, relay),
+        onError: (_) => _onConnectionDropped(relay, epoch),
+        onDone: () => _onConnectionDropped(relay, epoch),
         cancelOnError: true,
       );
-
-      // 2. Sofortige Nostr-Subscription (REQ Handshake) senden
-      _subscribeToInbox();
+      debugPrint('Nostr: verbunden mit ${relay.url}');
+      _subscribeToInbox(relay);
     } catch (e) {
-      debugPrint('Nostr: Connection to $targetRelay failed: $e');
-      if (_connectionEpoch == epoch) {
-        _scheduleRelayFallback();
+      debugPrint('Nostr: ${relay.url} nicht erreichbar (${e.runtimeType})');
+      if (relay.epoch == epoch) _scheduleReconnect(relay);
+    }
+    _updateStatus();
+  }
+
+  void _onConnectionDropped(_RelayConnection relay, int epoch) {
+    if (relay.epoch != epoch) return;
+    relay.close();
+    _scheduleReconnect(relay);
+    _updateStatus();
+  }
+
+  /// Nur dieses eine Relay später erneut versuchen; die anderen bleiben verbunden.
+  void _scheduleReconnect(_RelayConnection relay) {
+    if (_disposed) return;
+    relay.connecting = false;
+    relay.failures++;
+    final seconds = (5 * relay.failures).clamp(5, 120);
+    relay.timer?.cancel();
+    relay.timer = Timer(Duration(seconds: seconds), () => _connect(relay));
+  }
+
+  void _updateStatus() {
+    final connected = _relays.values.where((r) => r.socket != null).toList();
+    statusNotifier.value = connected.isNotEmpty
+        ? NostrConnectionStatus.connected
+        : (_relays.values.any((r) => r.connecting)
+            ? NostrConnectionStatus.connecting
+            : NostrConnectionStatus.disconnected);
+    activeRelayNotifier.value = connectedRelaysLabel;
+  }
+
+  /// Für die Anzeige, z. B. „3 von 5 Servern“.
+  String get connectedRelaysLabel {
+    final count = _relays.values.where((r) => r.socket != null).length;
+    return '$count von ${fallbackRelays.length} Servern';
+  }
+
+  List<String> get connectedRelays =>
+      [for (final r in _relays.values) if (r.socket != null) r.url.replaceFirst('wss://', '')];
+
+  void _subscribeToInbox([_RelayConnection? only]) {
+    if (_myPublicKey == null) return;
+    final reqMessage = jsonEncode([
+      'REQ',
+      'velvet_sub',
+      {
+        'kinds': [4],
+        '#p': [_myPublicKey!],
+        'limit': 20,
+      }
+    ]);
+    for (final relay in only == null ? _relays.values : [only]) {
+      try {
+        relay.socket?.add(reqMessage);
+      } catch (e) {
+        debugPrint('Nostr: Abo bei ${relay.url} fehlgeschlagen (${e.runtimeType})');
       }
     }
   }
 
-  void _onConnectionDropped(int epoch) {
-    if (_connectionEpoch != epoch) return;
-    statusNotifier.value = NostrConnectionStatus.disconnected;
-    _scheduleRelayFallback();
-  }
-
-  void _scheduleRelayFallback() {
-    _reconnectTimer?.cancel();
-    _currentRelayIndex = (_currentRelayIndex + 1) % fallbackRelays.length;
-    final nextRelay = fallbackRelays[_currentRelayIndex];
-    debugPrint('Nostr: Fallback triggered, switching to next relay: $nextRelay');
-    _reconnectTimer = Timer(const Duration(seconds: 3), () {
-      connectRelay(force: true);
-    });
-  }
-
-  void _subscribeToInbox() {
-    if (_myPublicKey == null || _webSocket == null) return;
-    try {
-      final reqMessage = jsonEncode([
-        'REQ',
-        'velvet_sub',
-        {
-          'kinds': [4],
-          '#p': [_myPublicKey!],
-          'limit': 20,
-        }
-      ]);
-      _webSocket!.add(reqMessage);
-      debugPrint('Nostr: Sent REQ subscription to $_activeRelayUrl for public key ${_myPublicKey!.substring(0, 8)}...');
-    } catch (e) {
-      debugPrint('Error sending REQ subscription: $e');
-    }
-  }
-
-  void _handleIncomingRawMessage(dynamic raw) {
+  void _handleIncomingRawMessage(dynamic raw, _RelayConnection relay) {
     try {
       final String text = raw is List<int> ? utf8.decode(raw) : raw.toString();
       if (text.length > 256 * 1024) return; // übergroße Relay-Nachrichten gar nicht erst parsen
@@ -372,34 +361,28 @@ class NostrService {
       if (decoded is! List || decoded.isEmpty) return;
 
       final String type = decoded[0].toString();
-
-      // Jede empfangene Nachricht vom Relay (EOSE, EVENT, OK, NOTICE) bestätigt aktive Verbindung
-      if (statusNotifier.value != NostrConnectionStatus.connected) {
-        statusNotifier.value = NostrConnectionStatus.connected;
-      }
-
       if (type == 'EVENT') {
         // Format: ["EVENT", subscription_id, event_map]
         if (decoded.length >= 3 && decoded[2] is Map<String, dynamic>) {
           final eventMap = decoded[2] as Map<String, dynamic>;
-          final kind = eventMap['kind'];
-          if (kind == 4) {
+          if (eventMap['kind'] == 4) {
             _handleIncomingKind4Map(eventMap);
           }
         }
-      } else if (type == 'EOSE') {
-        debugPrint('Nostr: Received EOSE from $_activeRelayUrl');
       } else if (type == 'OK') {
-        debugPrint('Nostr: Received OK response from $_activeRelayUrl');
+        // ["OK", event_id, accepted, message]
+        if (decoded.length >= 3 && decoded[2] == false) {
+          debugPrint('Nostr: ${relay.url} hat ein Event abgelehnt: ${decoded.length > 3 ? decoded[3] : ""}');
+        }
       } else if (type == 'CLOSED') {
-        debugPrint('Nostr: Subscription closed by $_activeRelayUrl: ${decoded.length > 2 ? decoded[2] : ""}');
-        // Switch to the next relay if the current one closed the subscription (e.g. auth required)
-        _scheduleRelayFallback();
-      } else if (type == 'NOTICE') {
-        debugPrint('Nostr: Notice from $_activeRelayUrl: ${decoded.length > 1 ? decoded[1] : ""}');
+        // Abo beendet (z. B. Anmeldung verlangt): dieses Relay später neu versuchen.
+        debugPrint('Nostr: ${relay.url} hat das Abo beendet');
+        relay.close();
+        _scheduleReconnect(relay);
+        _updateStatus();
       }
     } catch (e) {
-      debugPrint('Error parsing raw Nostr message: $e');
+      debugPrint('Nostr: unlesbare Relay-Nachricht (${e.runtimeType})');
     }
   }
 
@@ -688,8 +671,9 @@ class NostrService {
 
   Future<bool> _sendKind4(String plaintext, void Function(String eventId) onSuccess) async {
     if (_myPrivateKey == null || _partnerPublicKey == null) return false;
-    if (_webSocket == null || statusNotifier.value != NostrConnectionStatus.connected) {
-      debugPrint('Cannot send Nostr event: WebSocket is not connected');
+    final sockets = [for (final r in _relays.values) if (r.socket != null) r.socket!];
+    if (sockets.isEmpty) {
+      debugPrint('Nostr: kein Server verbunden, Nachricht nicht gesendet');
       return false;
     }
 
@@ -719,7 +703,14 @@ class NostrService {
       };
 
       final message = jsonEncode(['EVENT', eventMap]);
-      _webSocket!.add(message);
+      var sent = 0;
+      for (final socket in sockets) {
+        try {
+          socket.add(message);
+          sent++;
+        } catch (_) {}
+      }
+      if (sent == 0) return false;
       onSuccess(signedEvent.id);
       return true;
     } catch (e) {
@@ -757,13 +748,34 @@ class NostrService {
   }
 
   void dispose() {
-    // Laufende Verbindungsversuche verwerfen, damit sie keinen Fallback mehr planen.
-    _connectionEpoch++;
-    _reconnectTimer?.cancel();
-    _socketSub?.cancel();
+    // Laufende Verbindungsversuche verwerfen, damit sie keine neuen mehr planen.
+    _disposed = true;
+    for (final relay in _relays.values) {
+      relay.epoch++;
+      relay.timer?.cancel();
+      relay.close();
+    }
+    _updateStatus();
+  }
+}
+
+class _RelayConnection {
+  final String url;
+  WebSocket? socket;
+  StreamSubscription? sub;
+  Timer? timer;
+  int epoch = 0;
+  int failures = 0;
+  bool connecting = false;
+
+  _RelayConnection(this.url);
+
+  void close() {
+    sub?.cancel();
+    sub = null;
     try {
-      _webSocket?.close();
+      socket?.close();
     } catch (_) {}
-    _webSocket = null;
+    socket = null;
   }
 }
