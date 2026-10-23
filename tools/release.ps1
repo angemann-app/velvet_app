@@ -1,13 +1,17 @@
 ﻿# Baut VelvetPulse und veröffentlicht ein GitHub-Release, das die App als Update findet.
 #
-#   powershell -ExecutionPolicy Bypass -File tools\release.ps1 -Version 4.1.0 -Build 13 -Notes "Neu: …"
+#   Stabil: powershell -ExecutionPolicy Bypass -File tools\release.ps1 -Version 4.2.0 -Build 18 -Notes "Neu: …"
+#   Beta:   powershell -ExecutionPolicy Bypass -File tools\release.ps1 -Version 4.2.0-beta.1 -Build 17 -Notes "…" -Beta
 #
-# Die Build-Nummer muss höher sein als die aller bisherigen Releases.
+# Beta und Stabil sind immer kompatibel: gleicher Schlüssel, gleicher Paketname und EINE gemeinsame
+# Build-Nummer, die mit jedem Release steigt, egal in welchem Kanal. Deshalb prüft das Skript,
+# dass die Build-Nummer höher ist als die aller bisherigen Releases.
 # Tag-Format v<Version>+<Build> und Asset-Namen erwartet lib/services/update_service.dart.
 param(
     [Parameter(Mandatory)] [string] $Version,
     [Parameter(Mandatory)] [int] $Build,
-    [Parameter(Mandatory)] [string] $Notes
+    [Parameter(Mandatory)] [string] $Notes,
+    [switch] $Beta
 )
 $ErrorActionPreference = "Stop"
 $root = Split-Path $PSScriptRoot
@@ -20,6 +24,15 @@ if (-not (Test-Path android\key.properties)) {
     throw "android\key.properties fehlt – ohne Release-Schlüssel wird nichts veröffentlicht (tools\schluessel_erstellen.ps1)."
 }
 if (git status --porcelain) { throw "Es gibt nicht committete Änderungen. Bitte erst committen." }
+if ($Beta -and $Version -notmatch '-beta\.\d+$') { throw "Beta-Versionen heißen z. B. 4.2.0-beta.1." }
+if (-not $Beta -and $Version -match '-') { throw "Stabile Versionen haben keinen Zusatz wie -beta. Für eine Beta -Beta angeben." }
+
+$builds = & $gh release list --limit 200 --json tagName --jq '.[].tagName' |
+    ForEach-Object { if ($_ -match '\+(\d+)$') { [int]$Matches[1] } }
+$highest = ($builds | Measure-Object -Maximum).Maximum
+if ($highest -and $Build -le $highest) {
+    throw "Build $Build ist nicht höher als das bisher höchste Release (Build $highest)."
+}
 
 flutter build apk --release --split-per-abi --build-name $Version --build-number $Build
 if ($LASTEXITCODE -ne 0) { throw "Build fehlgeschlagen." }
@@ -36,6 +49,10 @@ foreach ($abi in "arm64-v8a", "armeabi-v7a", "x86_64") {
 }
 
 $tag = "v$Version+$Build"
-& $gh release create $tag @files --title "VelvetPulse $Version" --notes $Notes --target main
+if ($Beta) {
+    & $gh release create $tag @files --title "VelvetPulse $Version" --notes $Notes --target main --prerelease
+} else {
+    & $gh release create $tag @files --title "VelvetPulse $Version" --notes $Notes --target main --latest
+}
 if ($LASTEXITCODE -ne 0) { throw "Release konnte nicht angelegt werden." }
-Write-Host "Veröffentlicht: $tag"
+Write-Host "Veröffentlicht: $tag$(if ($Beta) { ' (Beta)' })"

@@ -33,6 +33,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   bool _isSubmitting = false;
   bool _lockEnabled = false;
   bool _discreetIcon = false;
+  UpdateChannel _updateChannel = UpdateChannel.stable;
   bool _lockSupported = false;
 
   @override
@@ -953,8 +954,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final lock = await PrivacyService.isLockEnabled();
     final discreet = await PrivacyService.isDiscreetIcon();
     final supported = await PrivacyService.isSupported();
+    final channel = await UpdateService.channel();
     if (mounted) {
       setState(() {
+        _updateChannel = channel;
         _lockEnabled = lock;
         _discreetIcon = discreet;
         _lockSupported = supported;
@@ -970,22 +973,45 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: AppTheme.border),
       ),
-      child: Row(
+      child: Column(
         children: [
-          const Icon(Icons.system_update_rounded, color: AppTheme.sageGreen, size: 20),
-          const SizedBox(width: 10),
-          Expanded(
-            child: FutureBuilder<String>(
-              future: UpdateService.installedVersion(),
-              builder: (context, snap) => Text(
-                'Version ${snap.data ?? '…'}',
-                style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+          Row(
+            children: [
+              const Icon(Icons.system_update_rounded, color: AppTheme.sageGreen, size: 20),
+              const SizedBox(width: 10),
+              Expanded(
+                child: FutureBuilder<String>(
+                  future: UpdateService.installedVersion(),
+                  builder: (context, snap) => Text(
+                    'Version ${snap.data ?? '…'}',
+                    style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+                  ),
+                ),
               ),
-            ),
+              TextButton(
+                onPressed: () => checkForUpdateAndPrompt(context, force: true),
+                child: const Text('Nach Updates suchen', style: TextStyle(color: AppTheme.sageGreen)),
+              ),
+            ],
           ),
-          TextButton(
-            onPressed: () => checkForUpdateAndPrompt(context, force: true),
-            child: const Text('Nach Updates suchen', style: TextStyle(color: AppTheme.sageGreen)),
+          SwitchListTile(
+            contentPadding: const EdgeInsets.only(left: 30, right: 4),
+            value: _updateChannel == UpdateChannel.beta,
+            activeColor: AppTheme.amber,
+            title: const Text('Beta-Versionen erhalten',
+                style: TextStyle(color: AppTheme.textPrimary, fontSize: 14)),
+            subtitle: Text(
+              _updateChannel == UpdateChannel.beta
+                  ? 'Du bekommst neue Funktionen früher, dafür vielleicht mit kleinen Fehlern.'
+                  : 'Nur geprüfte Versionen. Beim Zurückwechseln von Beta bleibt deine Version, '
+                      'bis eine neuere stabile erscheint.',
+              style: const TextStyle(color: AppTheme.textMuted, fontSize: 12, height: 1.35),
+            ),
+            onChanged: (beta) async {
+              final channel = beta ? UpdateChannel.beta : UpdateChannel.stable;
+              await UpdateService.setChannel(channel);
+              if (mounted) setState(() => _updateChannel = channel);
+            },
           ),
         ],
       ),

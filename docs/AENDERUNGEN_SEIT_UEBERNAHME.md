@@ -49,6 +49,19 @@ Entscheidungen dahinterstehen und welche Stolperfallen man kennen muss, bevor ma
   - Im Manifest: `REQUEST_INSTALL_PACKAGES` und ein FileProvider (`res/xml/filepaths.xml`).
 - **Release-Skript:** `tools/release.ps1 -Version x.y.z -Build N -Notes "..."` baut, legt die Prüfsummen an
   und veröffentlicht das Release. Es braucht `key.properties` und einen sauberen Git-Stand.
+- **Update-Kanäle Beta und Stabil:**
+  - Eine Beta ist ein GitHub-„Pre-release“: `release.ps1 -Version 4.2.0-beta.1 -Build N -Beta`.
+  - Der Stabil-Kanal sieht nur normale Releases. Der Beta-Kanal sieht beide und nimmt die höchste Build-Nummer.
+  - Die Nutzer schalten das in „Profil & Einstellungen“ um, gespeichert als `update_channel`.
+- **Regeln, damit Beta und Stabil immer kompatibel bleiben:**
+  - Gleicher Schlüssel und gleicher Paketname in beiden Kanälen.
+  - Eine gemeinsame Build-Nummer, die mit jedem Release steigt, egal in welchem Kanal. Das Skript bricht ab,
+    wenn sie nicht höher ist als die aller bisherigen Releases.
+  - Releases nur von `main`. Eine stabile Version enthält damit immer alles aus den Betas davor.
+  - Gespeicherte Daten (SharedPreferences, Backup-Format, Paar-Kanal-Nachrichten, Item-IDs) nur abwärtskompatibel
+    erweitern: neue Felder optional, nichts umbenennen oder entfernen. Eine Beta darf nichts speichern,
+    das eine stabile Version nicht lesen kann. So funktionieren auch Backups und der Paar-Kanal zwischen
+    einem Partner auf Beta und einem auf Stabil.
 - **Screenshot-Test:** `flutter test test_screens/screens_test.dart` rendert die Hauptscreens als PNG
   nach `build/screens/` und protokolliert Layout-Fehler.
   - Er meldet immer „failed“, weil das audioplayers-Plugin im Test fehlt. Das ist harmlos.

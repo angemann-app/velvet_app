@@ -34,6 +34,15 @@ dabei erhalten. Beim ersten Update fragt Android, ob VelvetPulse Apps installier
 
 Selbst nachsehen kannst du unter **Profil → Nach Updates suchen**.
 
+**Beta oder Stabil:** Unter **Profil → Beta-Versionen erhalten** wählst du deinen Update-Kanal.
+- **Stabil** (Standard) bekommt nur geprüfte Versionen.
+- **Beta** bekommt neue Funktionen früher, dafür vielleicht noch mit kleinen Fehlern. Beta-Updates erkennst du
+  am Hinweis **„Neue Beta …“**.
+
+Du kannst jederzeit wechseln, ohne neu zu installieren und ohne Daten zu verlieren. Wechselst du von Beta zurück
+auf Stabil, bleibt deine Version installiert, bis eine neuere stabile Version erscheint. Android kann Apps nicht
+auf eine ältere Version zurücksetzen.
+
 ## 4. Datenschutz in Kürze
 
 - Profil, Fortschritt und Tagebuch bleiben **nur auf deinem Handy**.

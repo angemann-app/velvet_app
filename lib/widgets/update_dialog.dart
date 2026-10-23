@@ -84,7 +84,10 @@ class _UpdateDialogState extends State<UpdateDialog> {
 
     return AlertDialog(
       backgroundColor: AppTheme.surface,
-      title: Text('Neue Version ${update.version}', style: const TextStyle(fontSize: 18)),
+      title: Text(
+        update.prerelease ? 'Neue Beta ${update.version}' : 'Neue Version ${update.version}',
+        style: const TextStyle(fontSize: 18),
+      ),
       content: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
