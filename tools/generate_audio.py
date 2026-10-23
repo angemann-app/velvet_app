@@ -56,11 +56,20 @@ def speech_text(lesson):
     return text.replace("&", "und")
 
 
+def _demote_extra_stress(token: str) -> str:
+    # espeak betont "-ität"-Wörter doppelt ("aktˈiːviːtˈɛːt"); nur die letzte Silbe trägt den Hauptakzent.
+    if token.rstrip(".,!?;:)").endswith("ˈɛːt") and token.count("ˈ") > 1:
+        last = token.rfind("ˈ")
+        token = token[:last].replace("ˈ", "ˌ") + token[last:]
+    return token
+
+
 def fix_phonemes(ps: str) -> str:
     # Die deutschen Kokoro-Modelle bekommen von misaki englisch gefärbte Vokale:
     # "-er" als ɜ statt ɐ und "a" als ɑ. Im Hörtest klang die Korrektur deutlich natürlicher.
     # ʏ kennt Kokoros Vokabular nicht.
-    return ps.replace("ɜ", "ɐ").replace("ɑ", "a").replace("ʏ", "y")
+    ps = ps.replace("ɜ", "ɐ").replace("ɑ", "a").replace("ʏ", "y")
+    return re.sub(r"\S+", lambda m: _demote_extra_stress(m.group()), ps)
 
 
 MAX_PHONEMES = 400  # Kokoro verarbeitet höchstens 510 Lautzeichen pro Durchgang
@@ -120,6 +129,8 @@ class Kokoro:
 
     def phonemes(self, text, name="martin"):
         pipeline, _ = self._load(name)
+        # Bindestrich-Wörter in Teile zerlegen, damit das Wörterbuch auch "Prostata-Stimulation" erfasst.
+        text = re.sub(r"(?<=\w)-(?=\w)", " ", text)
         ps, _ = pipeline.g2p(text)
         return fix_phonemes(ps)
 
@@ -152,6 +163,34 @@ def to_opus(src, out):
     )
 
 
+SUSPICIOUS = [
+    (re.compile(r"ˈ.*ˈ"), "zwei Hauptbetonungen"),
+    (re.compile(r"tj[ˈˌ]?oːn"), "-tion als „tjon“ statt „tsjon“"),
+    (re.compile(r"[ðθæʌɹ]"), "englischer Laut"),
+    (re.compile(r"^[^ˈ]*$"), "keine Betonung"),
+]
+
+
+def check_pronunciation(data):
+    """Listet Wörter mit verdächtiger Lautschrift, damit sie in aussprache.json korrigiert werden können."""
+    sys.stdout.reconfigure(encoding="utf-8")
+    words = {}
+    for course in data["courses"]:
+        for lesson in course["lessons"]:
+            for word in re.findall(r"[A-Za-zÄÖÜäöüß]+(?:-[A-Za-zÄÖÜäöüß]+)*", speech_text(lesson)):
+                if len(word) >= 7:  # kurze Wörter sind praktisch immer richtig
+                    words.setdefault(word.lower(), (word, lesson["id"]))
+    engine = Kokoro()
+    hits = 0
+    for word, lesson_id in sorted(words.values()):
+        ps = engine.phonemes(word)
+        reasons = [label for pattern, label in SUSPICIOUS if pattern.search(ps)]
+        if reasons:
+            hits += 1
+            print(f"{word:32} {ps:36} {', '.join(reasons)}  ({lesson_id})")
+    print(f"\n{hits} verdächtige von {len(words)} geprüften Wörtern.")
+
+
 def select(data, args):
     picked = []
     for course in data["courses"]:
@@ -171,6 +210,8 @@ def main():
     parser.add_argument("--all", action="store_true")
     parser.add_argument("--engine", choices=["kokoro", "edge"], default="kokoro")
     parser.add_argument("--zeige", nargs="+", metavar="WORT", help="nur die Lautschrift anzeigen")
+    parser.add_argument("--pruefe", action="store_true",
+                        help="alle Wörter aller Lektionen auf verdächtige Lautschrift prüfen")
     args = parser.parse_args()
     if args.courses and len(args.courses) == 1:
         args.courses = (args.courses[0], args.courses[0])
@@ -183,6 +224,11 @@ def main():
         return
 
     data = json.loads(CONTENT_JSON.read_text(encoding="utf-8"))
+
+    if args.pruefe:
+        check_pronunciation(data)
+        return
+
     picked = select(data, args)
     unknown = set(args.ids) - {l["id"] for _, l in picked}
     if unknown or not picked:
