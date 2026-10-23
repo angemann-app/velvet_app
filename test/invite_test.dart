@@ -10,7 +10,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     final nostr = NostrService();
     final einladender = nostr.myNpub;
-    final ok = await nostr.setPartner('Mein Code:\n$einladender\nBis gleich!', name: 'Holger');
+    final ok = await nostr.setPartner('Mein Code:\n$einladender\nBis gleich!', name: 'Alex');
     expect(ok, isTrue);
     expect(nostr.partnerNpub, einladender);
   });

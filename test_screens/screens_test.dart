@@ -38,16 +38,40 @@ Future<void> _loadFonts() async {
     ..addFont(load('roboto-black.ttf'))
     ..addFont(load('roboto-italic.ttf'));
   await roboto.load();
+  // Emojis (Funken im Paar-Kanal): unter Windows liegt eine Farb-Emoji-Schrift bei.
+  const emojiFont = 'C:/Windows/Fonts/seguiemj.ttf';
+  if (File(emojiFont).existsSync()) {
+    await (FontLoader('Emoji')
+          ..addFont(Future.value(ByteData.view(Uint8List.fromList(await File(emojiFont).readAsBytes()).buffer))))
+        .load();
+  }
   await (FontLoader('MaterialIcons')..addFont(load('materialicons-regular.otf'))).load();
+}
+
+/// Im Test gibt es keine Systemschrift: Stile ohne Schriftfamilie (AppBar, Knöpfe)
+/// würden als Kästchen gezeichnet. Darum überall Roboto eintragen.
+ThemeData _testTheme() {
+  final base = AppTheme.darkTheme;
+  ButtonStyle? withRoboto(ButtonStyle? style) => style?.copyWith(
+        textStyle: WidgetStatePropertyAll(
+            (style.textStyle?.resolve({}) ?? const TextStyle()).copyWith(fontFamily: 'Roboto')),
+      );
+  return base.copyWith(
+    textTheme: base.textTheme.apply(fontFamily: 'Roboto', fontFamilyFallback: ['Emoji']),
+    appBarTheme: base.appBarTheme.copyWith(
+      titleTextStyle: (base.appBarTheme.titleTextStyle ?? const TextStyle()).copyWith(fontFamily: 'Roboto'),
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(style: withRoboto(base.elevatedButtonTheme.style)),
+    outlinedButtonTheme: OutlinedButtonThemeData(style: withRoboto(base.outlinedButtonTheme.style)),
+    textButtonTheme: TextButtonThemeData(style: withRoboto(base.textButtonTheme.style)),
+  );
 }
 
 Widget _app(Widget home) => RepaintBoundary(
       key: _boundary,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: AppTheme.darkTheme.copyWith(
-          textTheme: AppTheme.darkTheme.textTheme.apply(fontFamily: 'Roboto'),
-        ),
+        theme: _testTheme(),
         home: home,
       ),
     );
@@ -58,7 +82,7 @@ Future<void> _shot(WidgetTester tester, String name, List<String> errors) async 
   }
   await tester.runAsync(() async {
     final boundary = _boundary.currentContext!.findRenderObject()! as RenderRepaintBoundary;
-    final image = await boundary.toImage(pixelRatio: 1);
+    final image = await boundary.toImage(pixelRatio: const int.fromEnvironment('SCALE', defaultValue: 1).toDouble());
     final png = await image.toByteData(format: ui.ImageByteFormat.png);
     _outDir.createSync(recursive: true);
     File('${_outDir.path}/$name.png').writeAsBytesSync(png!.buffer.asUint8List());
@@ -83,7 +107,7 @@ void main() {
       await _loadFonts();
       await StorageService.init();
       await StorageService.saveUserProfile(
-        UserProfile(name: 'Holger', gender: 'male', age: 45, relationshipStatus: 'relationship',
+        UserProfile(name: 'Alex', gender: 'other', age: 35, relationshipStatus: 'relationship',
             primaryGoal: 'performance_anxiety'),
         triggerBackup: false,
       );

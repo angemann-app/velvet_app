@@ -257,6 +257,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
       backgroundColor: AppTheme.background,
       appBar: AppBar(
         title: const Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(

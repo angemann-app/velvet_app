@@ -1,63 +1,94 @@
 # VelvetPulse
 
-> **KVT, Somatik und Intimität ohne Leistungsdruck – für Sie, für Ihn und für Paare**
-> Private Flutter-App für Android · Daten bleiben auf dem Gerät · Ende-zu-Ende-verschlüsselter Paar-Kanal über Nostr
+> **Intimität ohne Leistungsdruck – Kurse, Körperübungen und ein verschlüsselter Paar-Kanal.**
+> Für Sie, für Ihn und für Paare · Open Source · ohne Konto, ohne Tracking, ohne eigenen Server
 
+[![Download](https://img.shields.io/github/v/release/angemann-app/velvet_app?label=Download%20APK&color=f59e0b)](https://github.com/angemann-app/velvet_app/releases/latest)
+[![Tests](https://github.com/angemann-app/velvet_app/actions/workflows/tests.yml/badge.svg)](https://github.com/angemann-app/velvet_app/actions/workflows/tests.yml)
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-emerald.svg)](LICENSE)
 [![Inhalte: CC BY-NC-SA 4.0](https://img.shields.io/badge/Inhalte-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE-CONTENT.md)
-[![Platform](https://img.shields.io/badge/Platform-Android-blue.svg)](https://flutter.dev)
+[![Android](https://img.shields.io/badge/Android-7%2B-3ddc84.svg)](https://github.com/angemann-app/velvet_app/releases/latest)
 [![Nostr](https://img.shields.io/badge/Nostr-NIP--04-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/04.md)
+
+VelvetPulse ist eine deutschsprachige Android-App für erfüllte Sexualität und Nähe. Sie verbindet
+**Kognitive Verhaltenstherapie (KVT)**, **Körperarbeit (Somatik)** und **Sexualaufklärung**:
+erst verstehen, warum der Körper bremst, dann mit Übungen, Atmung und Berührung den Fuß von der
+Bremse nehmen – allein oder zu zweit.
+
+<p align="center">
+  <img src="docs/screenshots/kurse.png" width="19%" alt="Kursübersicht">
+  <img src="docs/screenshots/gemeinsamer-abend.png" width="19%" alt="Gemeinsamer Abend: geführtes Paar-Audio">
+  <img src="docs/screenshots/paar-kanal.png" width="19%" alt="Verschlüsselter Paar-Kanal">
+  <img src="docs/screenshots/gemeinsam-lernen.png" width="19%" alt="Gemeinsam reflektieren">
+  <img src="docs/screenshots/beckenboden.png" width="19%" alt="Beckenboden-Training">
+</p>
+
+**[⬇ Neueste Version herunterladen](https://github.com/angemann-app/velvet_app/releases/latest)** ·
+[Anleitung zum Installieren](docs/TESTER.md)
 
 > **Hinweis:** Die App richtet sich an Erwachsene und enthält offene Aufklärungsinhalte zu Sexualität.
 > Sie ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es medizinisch sinnvoll ist,
 > weisen die Lektionen ausdrücklich darauf hin, wann eine Abklärung ratsam ist.
 
----
+<details>
+<summary><b>English summary</b></summary>
 
-## Worum es geht
+**VelvetPulse** is a free, open-source Android app (German language) for sexual wellbeing and intimacy
+without performance pressure. It combines cognitive behavioural therapy (CBT), somatic body work and
+sex education:
 
-Leistungsdruck, Kopfkino und angespannte Körper sind die häufigsten Bremsen für erfüllte Intimität.
-VelvetPulse verbindet Methoden der **Kognitiven Verhaltenstherapie (KVT)** mit **Körperarbeit (Somatik)**
-und praktischem **Ratgeberwissen**: erst verstehen, warum der Körper bremst, dann mit Übungen,
-Atmung und Berührung den Fuß von der Bremse nehmen – allein oder zu zweit.
+- **21 courses, 75 lessons** with offline audio – desire and arousal, performance anxiety, pelvic floor,
+  communication, touch techniques, mismatched desire, life phases, pain and shame.
+- **Guided couple sessions** (20–45 min) assembled from audio building blocks, different every time.
+- **End-to-end encrypted couple channel** over [Nostr](https://nostr.com) (NIP-04): send sparks,
+  match wishes privately, share lessons and reflections – no account, no phone number, no server.
+- **Pelvic floor trainer**, breathing pacer, CBT thought journal, SOS help.
+- **Privacy first:** data stays on the device, secrets in the Android Keystore, optional fingerprint
+  lock and discreet app icon, password-encrypted backups.
 
-**Ausprobieren:** [Anleitung für Tester](docs/TESTER.md) · [Neueste Version](https://github.com/angemann-app/velvet_app/releases/latest)
+Built with Flutter. Code under MIT, content under CC BY-NC-SA 4.0.
+</details>
 
 ## Funktionen
 
 ### Kurse und Lektionen
-- **17 Kurse mit 53 Lektionen** in zwei Teilen:
+- **21 Kurse mit 75 Lektionen**:
   - *Grundlagen* (Kurse 1–7): Zwei-Pedale-Modell, Beobachter-Falle, Beckenboden, Kommunikation, Sensate Focus.
   - *Praxis* (Kurse 8–17): Berührung für Sie und Ihn, Stimme und Atem, Vorfreude und Langsamkeit, Fantasien,
     Intim-Massage, Prostata und Damm, entspannte Stellungen, Szenarien für zwei.
-- Jede Praxis-Lektion folgt demselben Aufbau: **Warum das wirkt** · **Die Übung** ·
+  - *Vertiefung* (Kurse 18–21): Sich selbst erkunden, unterschiedliche Lust, Lebensphasen
+    (Geburt, Wechseljahre, Älterwerden, Krankheit), Schmerz, Scham und Leistungsdruck.
+- Jede Lektion folgt demselben Aufbau: **Warum das wirkt** · **Die Übung** ·
   **Einvernehmen und Sicherheit** · bei Bedarf **Wann ärztlich abklären**.
-- **Audio zu jeder Lektion** (offline, eingesprochen von den Stimmen Victoria und Martin), mit Play/Pause,
-  10-Sekunden-Sprüngen und Fortschrittsbalken.
-- **Anleitungsgrafiken** (z. B. Yoni- und Lingam-Massage) – antippen öffnet sie im Vollbild mit Zoom.
-- Kursfilter nach *Für Sie*, *Für Ihn*, *Für Paare* und *Berührung*.
+- **Audio zu jeder Lektion** (offline, eingesprochen von den Stimmen Victoria und Martin).
+- **Anleitungsgrafiken** – antippen öffnet sie im Vollbild mit Zoom.
+- **Mein Lust-Profil:** festhalten, was gefällt, und es auf Wunsch dem Gegenüber schicken.
+
+### Gemeinsamer Abend
+- Geführte Berührung für zwei, **20, 30 oder 45 Minuten**, bekleidet, Haut an Haut oder intim.
+- Jeder Abend wird neu aus über 50 gesprochenen Bausteinen zusammengestellt: Ankommen, zwei Runden mit
+  Rollenwechsel, Ausklang – mit Klangschale und leisem Klangteppich in den Stillen.
 
 ### Training und Akuthilfe
+- **Beckenboden-Timer** mit vier Übungsarten (Loslassen, Kräftigen, Impulse, Wellen) und Sprachansagen.
 - **Atem-Taktgeber** (u. a. 4-7-8-Atmung, physiologischer Seufzer).
-- **Beckenboden-Timer** für Loslassen und Kräftigen.
 - **SOS-Knopf** mit Checklisten für *vorher*, *im Moment* und *danach*.
-
-### Reframing-Tagebuch
-- Gedankenprotokolle nach KVT: automatischer Gedanke, Realitätscheck, neue Perspektive.
-- Baukasten mit typischen Glaubenssätzen zum Übernehmen.
-- Täglicher 30-Sekunden-Check-in zu Stress und Leistungsdruck.
+- **Reframing-Tagebuch** nach KVT und ein täglicher 30-Sekunden-Check-in.
 
 ### Paar-Kanal
-- Verbinden per **QR-Code** – ohne Konto, ohne Telefonnummer.
-- **Funken:** ein Tippen sagt, worauf man heute Lust hat – oder eben nicht („Heute lieber nicht“).
-- **Wünsche heimlich abgleichen:** Beide stimmen getrennt ab; sichtbar wird nur, was beide wollen.
-- **Fantasie-Landkarte:** 22 Fragen in 5 Bereichen, auch allein ausfüllbar.
+- **Partner einladen** direkt aus der App oder per **QR-Code** verbinden – ohne Konto, ohne Telefonnummer.
+- **Funken:** ein Tippen sagt, worauf man heute Lust hat – oder eben nicht.
+- **Wünsche heimlich abgleichen:** 63 Ideen in 10 Bereichen; sichtbar wird nur, was beide wollen.
+- **Gemeinsam lernen:** Lektionen teilen und Reflexionen austauschen – die Antwort des anderen wird erst
+  sichtbar, wenn man selbst geantwortet hat.
+- **Hinweis bei neuen Nachrichten**, auch bei geschlossener App – ohne Inhalt und ohne Namen.
+- Verbindung über alle Nostr-Server gleichzeitig; jede Nachricht wird auf Signatur und Absender geprüft.
 
 ### Diskretion und Updates
-- **App-Sperre per Fingerabdruck** (beim Start und nach einer Minute im Hintergrund); Inhalte sind in der
-  App-Übersicht verborgen.
+- **App-Sperre per Fingerabdruck**; Inhalte sind in der App-Übersicht verborgen.
 - **Unauffälliges App-Symbol** „Pulse“ auf Wunsch.
-- **Updates direkt in der App** aus den GitHub-Releases, mit Prüfsummen-Kontrolle.
+- **Updates direkt in der App** aus den GitHub-Releases, mit Prüfsummen-Kontrolle;
+  wahlweise **stabil** oder **Beta**.
 
 ### KI-Coach (optional)
 - Vertraulicher Gesprächspartner über **Google Gemini** mit eigenem API-Key (*bring your own key*).
@@ -111,11 +142,13 @@ Die APKs liegen danach unter `build/app/outputs/flutter-apk/`.
 Die App prüft beim Start einmal täglich die [GitHub-Releases](https://github.com/angemann-app/velvet_app/releases)
 und bietet neue Versionen zum Installieren an (`lib/services/update_service.dart`).
 ```bash
-powershell -ExecutionPolicy Bypass -File tools\release.ps1 -Version 4.1.0 -Build 13 -Notes "Neu: …"
+powershell -ExecutionPolicy Bypass -File tools\release.ps1 -Version 4.5.0 -Build 30 -Notes "Neu: …"          # stabil
+powershell -ExecutionPolicy Bypass -File tools\release.ps1 -Version 4.5.0-beta.1 -Build 29 -Notes "…" -Beta  # Beta
 ```
 Das Skript baut die App, legt je Architektur `velvetpulse-<abi>.apk` samt `.sha256`-Prüfsumme an und
 erstellt das Release mit dem Tag `v<Version>+<Build>` über die [GitHub CLI](https://cli.github.com/).
-Die Build-Nummer muss bei jedem Release steigen.
+Die Build-Nummer muss bei jedem Release steigen, über Beta und Stabil hinweg; das Skript prüft das und
+führt vorher alle Tests aus.
 
 ### Signierschlüssel
 Releases werden mit einem eigenen Schlüssel signiert. Er wird einmalig mit `tools\schluessel_erstellen.ps1`
@@ -135,11 +168,12 @@ dem Debug-Schlüssel – das Release-Skript bricht dann ab.
 
 ### Tests
 ```bash
-flutter test                                   # Startablauf: Onboarding → alle Tabs
+flutter test                                   # Startablauf, Sicherheit, Paar-Kanal, Planer
 flutter test test_screens/screens_test.dart    # rendert alle Screens als PNG nach build/screens/
+flutter test test_screens/screens_test.dart --dart-define=SCALE=2   # in doppelter Auflösung (README)
 ```
-Der Screenshot-Test meldet außerdem Layout-Überläufe pro Screen. Graue Balken in Titeln und Buttons
-auf den PNGs sind ein Schriftartefakt der Testumgebung, kein Fehler der App.
+Der Screenshot-Test meldet außerdem Layout-Überläufe pro Screen. Live-Tests gegen echte Nostr-Server
+liegen in `test_live/` und laufen nicht automatisch mit.
 
 ### Inhalte und Medien
 
