@@ -90,6 +90,12 @@ class _CoursesScreenState extends State<CoursesScreen> {
     });
   }
 
+  /// "#RRGGBB" aus velvet_content.json (Feld title_color) in eine Farbe umwandeln.
+  Color? _parseColor(String? hex) {
+    if (hex == null || !RegExp(r'^#[0-9a-fA-F]{6}$').hasMatch(hex)) return null;
+    return Color(int.parse('FF${hex.substring(1)}', radix: 16));
+  }
+
   IconData _getIconForCourse(String iconName) {
     switch (iconName) {
       case 'psychology':
@@ -146,7 +152,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
         return c.isForMen || c.category == 'all' || (showCouples && c.isForCouples);
       }
       if (_selectedCategory == 'couples') return c.isForCouples || c.category == 'all';
-      if (_selectedCategory == 'touch') return c.id.contains('touch') || c.id.contains('omgyes');
+      if (_selectedCategory == 'touch') return c.id.contains('touch') || c.id == 'course_self_exploration';
       return true;
     }).toList();
 
@@ -610,10 +616,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 ),
                 title: Text(
                   course.title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
-                    color: AppTheme.textPrimary,
+                    color: _parseColor(course.titleColor) ?? AppTheme.textPrimary,
                   ),
                 ),
                 subtitle: Column(

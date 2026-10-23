@@ -69,7 +69,7 @@ class KegelGuideSheet extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              'Technik, Neurobiologie & Praxistipps',
+                              'Muskel finden, Übungen, Plan',
                               style: TextStyle(
                                 fontSize: 12,
                                 color: AppTheme.textSecondary,
@@ -95,132 +95,152 @@ class KegelGuideSheet extends StatelessWidget {
                   controller: scrollController,
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                   children: [
-                    // Section 1: Muskel finden
                     _buildSectionCard(
-                      title: '1. Wie finde ich den Muskel?',
+                      title: '1. Den Muskel finden',
                       badge: 'GRUNDLAGEN',
                       badgeColor: AppTheme.sageGreen,
                       children: [
                         const Text(
-                          'Der Beckenboden spannt sich bei Frau und Mann gleichermaßen wie eine elastische, tragende Hängematte zwischen Schambein und Steißbein.',
+                          'Der Beckenboden spannt sich wie eine Hängematte zwischen Schambein und Steißbein – bei allen Menschen. '
+                          'Er kann zwei Dinge: heben und halten, und weit werden und loslassen. Beides gehört zum Training.',
                           style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.5),
                         ),
                         const SizedBox(height: 12),
                         _buildMethodBox(
                           icon: Icons.vertical_align_top_rounded,
-                          title: 'Klassisches Heben (Anspannen / Kräftigen):',
-                          text: '• Für Sie: Die Vagina und das Perineum sanft nach oben-innen einziehen, wie das Schließen einer Knospe.\n• Für Ihn: Die Peniswurzel sanft nach innen-oben heben oder den Urinstrahl kurz gedanklich anhalten.',
+                          title: 'Anspannen und heben',
+                          text: 'Stell dir vor, du hältst einen Wind zurück und stoppst gleichzeitig den Urinstrahl – nur in der Vorstellung.\n'
+                              '• Mit Vulva: Scheideneingang und Damm ziehen sich sanft nach innen und oben.\n'
+                              '• Mit Penis: Die Peniswurzel hebt sich ein kleines Stück, die Hoden ziehen leicht nach oben.',
                           accentColor: AppTheme.sageGreen,
                         ),
                         const SizedBox(height: 8),
                         _buildMethodBox(
                           icon: Icons.vertical_align_bottom_rounded,
-                          title: 'Reverse Absenken (Öffnen / Entspannen):',
-                          text: '• Für Sie: Den Scheideneingang und Damm wie ein Erblühen weich nach unten-außen nachgeben lassen – der Schlüssel gegen Vaginismus und Schmerzen!\n• Für Ihn: Den Beckenboden wie eine weite Hängematte nach unten sinken lassen – beendet vorzeitiges Kommen und Nervosität.',
+                          title: 'Loslassen und weit werden',
+                          text: 'Atme tief in den Bauch. Während sich der Bauch wölbt, lass den Beckenboden sanft nach unten nachgeben – '
+                              'wie beim Beginn des Wasserlassens, aber ohne zu pressen. Der Bereich zwischen Schambein und Steißbein wird weich und warm.',
                           accentColor: AppTheme.amber,
                         ),
                         const SizedBox(height: 10),
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: AppTheme.surfaceLight.withOpacity(0.5),
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: AppTheme.border),
-                          ),
-                          child: const Row(
-                            children: [
-                              Icon(Icons.lightbulb_outline_rounded, color: AppTheme.amber, size: 18),
-                              SizedBox(width: 8),
-                              Expanded(
-                                child: Text(
-                                  'Wichtig: Gesäß (Po-Backen), Oberschenkel und Bauchdecke bleiben völlig entspannt!',
-                                  style: TextStyle(color: AppTheme.textPrimary, fontSize: 12, fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                        _buildTip('Po, Oberschenkel und Bauch bleiben locker. Eine Hand auf dem Po verrät, ob er mitarbeitet.'),
                       ],
                     ),
 
                     const SizedBox(height: 16),
 
-                    // Section 2: Die beiden Trainingsmodi
                     _buildSectionCard(
-                      title: '2. Wann nutze ich welchen Modus?',
-                      badge: 'STRATEGIE',
+                      title: '2. Welche Übung wofür?',
+                      badge: 'ÜBUNGEN',
                       badgeColor: AppTheme.amber,
                       children: [
                         _buildModeComparison(
-                          title: 'Reverse Kegel (Entspannung & Weite)',
-                          subtitle: 'Der wichtigste Modus bei Leistungsangst, PE & Vaginismus',
-                          description:
-                              'Über 80% der Menschen mit intimen Beschwerden haben einen chronisch verkrampften Beckenboden (Hypertonie). Bei Frauen führt dies zu Schmerzen beim Verkehr und Vaginismus, bei Männern zu vorzeitiger Ejakulation oder schwankender Erektion. Der Reverse Kegel schaltet das vegetative Nervensystem sofort in den Parasympathikus (Regeneration, Weite & maximale Durchblutung aller Schwellkörper).',
+                          title: 'Loslassen',
+                          subtitle: 'bei Anspannung, Schmerzen beim Eindringen, frühem Samenerguss',
+                          description: 'Für alle, deren Beckenboden eher zu viel festhält. Das ist bei Stress, viel Sitzen und Leistungsdruck häufig. '
+                              'Fang hier an, wenn du unsicher bist.',
                           color: AppTheme.amber,
                         ),
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 10),
                         _buildModeComparison(
-                          title: 'Klassischer Kegel (Kräftigung & Stabilität)',
-                          subtitle: 'Für Halt, Schließkraft & Stabilität',
-                          description:
-                              'Stärkt die Muskulatur, verbessert den venösen Rückhalt und die Schließmuskelkontrolle. Wichtig: Die Entspannungsphase immer doppelt so lang halten wie das Anspannen!',
+                          title: 'Kräftigen',
+                          subtitle: 'für Halt, Kontrolle und Stabilität',
+                          description: 'Stärkt die Muskulatur, etwa nach einer Geburt, bei leichter Blasenschwäche oder für mehr Kontrolle. '
+                              'Mit halber Kraft üben, das Loslassen danach ist genauso wichtig wie das Halten.',
                           color: AppTheme.sageGreen,
+                        ),
+                        const SizedBox(height: 10),
+                        _buildModeComparison(
+                          title: 'Schnelle Impulse',
+                          subtitle: 'für Reaktionsfähigkeit',
+                          description: 'Kurzes An und sofortiges Los trainiert die schnellen Muskelfasern – zum Beispiel für den Moment beim Husten oder Niesen.',
+                          color: AppTheme.sageGreen,
+                        ),
+                        const SizedBox(height: 10),
+                        _buildModeComparison(
+                          title: 'Wellen',
+                          subtitle: 'locker bleiben, wenn es spannend wird',
+                          description: 'Langes, hörbares Ausatmen mit weichem Damm und Po. Genau das hilft beim Wellen-Surfen aus den Kursen 8 und 9, '
+                              'die Erregung hoch zu halten, ohne dass sie überläuft.',
+                          color: AppTheme.rose,
                         ),
                       ],
                     ),
 
                     const SizedBox(height: 16),
 
-                    // Section 3: Die 4 goldenen Regeln / Typische Fehler
                     _buildSectionCard(
-                      title: '3. Typische Fehler vermeiden',
-                      badge: 'DON\'TS',
+                      title: '3. Typische Fehler',
+                      badge: 'ACHTUNG',
                       badgeColor: AppTheme.rose,
                       children: [
                         _buildRuleItem(
                           isWarning: true,
-                          title: 'Po-Backen zusammenkneifen',
-                          description: 'Der Gluteus-Muskel ist groß und stark – er schummelt sich gerne ein. Der Po muss weich wie Knete bleiben.',
+                          title: 'Den Po zusammenkneifen',
+                          description: 'Der große Gesäßmuskel mogelt sich gern hinein. Der Po bleibt weich.',
                         ),
                         _buildRuleItem(
                           isWarning: true,
-                          title: 'Luft anhalten',
-                          description: 'Wenn du den Atem blockierst, steigt der Druck im Brustkorb. Atme während des Haltens ruhig durch die Nase weiter.',
+                          title: 'Die Luft anhalten',
+                          description: 'Atme beim Halten ruhig weiter. Angehaltener Atem erhöht den Druck im Bauch.',
                         ),
                         _buildRuleItem(
                           isWarning: true,
-                          title: 'Zu viel Krafteinsatz (Pressen)',
-                          description: 'Beckenbodentraining ist Neuro-Koordination, kein Powerlifting. 50 bis 70% der Maximalkraft sind ideal.',
+                          title: 'Pressen statt loslassen',
+                          description: 'Beim Loslassen wird nichts nach unten gedrückt. Es ist ein Nachgeben, kein Schieben.',
+                        ),
+                        _buildRuleItem(
+                          isWarning: true,
+                          title: 'Beim echten Wasserlassen üben',
+                          description: 'Den Urinstrahl regelmäßig zu stoppen kann die Blasenentleerung stören. Nur in der Vorstellung üben.',
                         ),
                         _buildRuleItem(
                           isWarning: false,
-                          title: 'Regelmäßigkeit schlägt Dauer',
-                          description: '5 bis 10 saubere Runden pro Tag sind 10-mal effektiver als ein langes Workout einmal im Monat.',
+                          title: 'Lieber kurz und regelmäßig',
+                          description: 'Ein paar Minuten an den meisten Tagen bringen mehr als selten eine lange Einheit.',
                         ),
                       ],
                     ),
 
                     const SizedBox(height: 16),
 
-                    // Section 4: Transfer in die Praxis
                     _buildSectionCard(
-                      title: '4. Praxistipp für die Intimität',
-                      badge: 'IM MOMENT',
+                      title: '4. Ein Plan für sechs Wochen',
+                      badge: 'PLAN',
                       badgeColor: AppTheme.sageGreen,
                       children: [
+                        _buildPlanRow('Woche 1–2', 'Täglich Loslassen, 5 Runden, Stufe leicht. Ziel: das Weitwerden sicher spüren.'),
+                        _buildPlanRow('Woche 3–4', 'Loslassen 5 Runden, danach Kräftigen 5 Runden, Stufe leicht. An zwei Tagen Wellen.'),
+                        _buildPlanRow('Woche 5–6', '10 Runden in deiner Hauptübung, Stufe mittel. Dazu ein paar Schnelle Impulse.'),
+                        const SizedBox(height: 6),
                         const Text(
-                          'Wenn du im Bett merkst, dass die Erregung zu schnell steigt oder Nervosität einsetzt:\n\n'
-                          '1. Verlangsame die Bewegung oder mache eine kurze Atempause.\n'
-                          '2. Atme tief in den Bauch ein.\n'
-                          '3. Setze einen bewussten Reverse Kegel ein: Lass den Beckenboden nach unten sinken, als wolltest du Raum im Becken schaffen.\n\n'
-                          'Du wirst spüren, wie die Erregungswelle sich glättet und dein Herzschlag sich beruhigt.',
+                          'Danach: Behalte zwei, drei kurze Einheiten pro Woche bei. Und nutze das Loslassen bewusst in intimen Momenten – '
+                          'tief in den Bauch atmen, den Beckenboden sinken lassen.',
+                          style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.45),
+                        ),
+                      ],
+                    ),
+
+                    const SizedBox(height: 16),
+
+                    _buildSectionCard(
+                      title: '5. Wann zur Physiotherapie?',
+                      badge: 'GESUNDHEIT',
+                      badgeColor: AppTheme.amber,
+                      children: [
+                        const Text(
+                          'Eine spezialisierte Beckenboden-Physiotherapie kann genau untersuchen, ob dein Beckenboden eher zu schwach oder zu fest ist, '
+                          'und dich gezielt anleiten. Lass dich beraten bei:\n'
+                          '• Schmerzen im Becken, beim Sex oder beim Training\n'
+                          '• Blasen- oder Darmschwäche\n'
+                          '• Beschwerden nach einer Geburt oder einer Operation im Becken\n'
+                          '• dem Gefühl, den Muskel gar nicht ansteuern zu können',
                           style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.5),
                         ),
                       ],
                     ),
 
                     const SizedBox(height: 24),
-
                     // Close Button
                     SizedBox(
                       width: double.infinity,
@@ -232,7 +252,7 @@ class KegelGuideSheet extends StatelessWidget {
                           foregroundColor: Colors.black,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                         ),
-                        child: const Text('Verstanden, zurück zum Timer', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                        child: const Text('Zurück zum Training', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                       ),
                     ),
 
@@ -244,6 +264,44 @@ class KegelGuideSheet extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+
+  Widget _buildTip(String text) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: AppTheme.surfaceLight.withOpacity(0.5),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: Row(
+        children: [
+          const Icon(Icons.lightbulb_outline_rounded, color: AppTheme.amber, size: 18),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(text, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 12, fontWeight: FontWeight.w600)),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPlanRow(String when, String what) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 82,
+            child: Text(when, style: const TextStyle(color: AppTheme.sageGreen, fontSize: 12.5, fontWeight: FontWeight.w700)),
+          ),
+          Expanded(
+            child: Text(what, style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4)),
+          ),
+        ],
+      ),
     );
   }
 

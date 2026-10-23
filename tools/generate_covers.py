@@ -188,10 +188,29 @@ COVERS = {
     15: ("back_m", "violet"),
     16: ("forehead", "amber"),
     17: ("blindfold", "crimson"),
+    18: ("bust_single_f", "rose"),
+}
+
+# Bereiche der Ja/Nein/Vielleicht-Liste (lib/models/yes_no_maybe_models.dart) -> (Motiv, Farbstimmung)
+YES_NO_MAYBE = {
+    "sensory_basics": ("back_f", "sunset"),
+    "communication_mind": ("talk", "teal"),
+    "touch_techniques": ("massage", "rose"),
+    "mouth_kissing": ("near_kiss", "crimson"),
+    "positions_movement": ("forehead", "violet"),
+    "power_dynamics": ("blindfold", "amber"),
+    "deep_somatics": ("massage", "gold"),
+    "toys_aids": ("back_m", "teal"),
+    "roles_settings": ("talk", "violet"),
+    "fantasy_watching": ("bust_single_f", "crimson"),
 }
 
 if __name__ == "__main__":
     for nr, (kind, pal) in COVERS.items():
         path = OUT / f"cover_{nr:02d}.svg"
+        path.write_text(scene(kind, pal), encoding="utf-8")
+        print(path.name, kind, pal)
+    for category, (kind, pal) in YES_NO_MAYBE.items():
+        path = OUT / f"ynm_{category}.svg"
         path.write_text(scene(kind, pal), encoding="utf-8")
         print(path.name, kind, pal)

@@ -6,6 +6,7 @@ import '../../services/audio_service.dart';
 import '../../services/tts_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/audio_player_card.dart';
+import '../self_exploration/lust_profile_screen.dart';
 
 class LessonDetailScreen extends StatefulWidget {
   final Lesson lesson;
@@ -89,6 +90,10 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
 
   void _triggerSmartTool() {
     final tool = widget.lesson.linkedTool;
+    if (tool == 'lust_profil') {
+      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LustProfileScreen()));
+      return;
+    }
     if (widget.onNavigateToTool != null) {
       if (tool == 'kegel_timer') {
         Navigator.of(context).pop();
@@ -345,6 +350,11 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       toolSubtitle = 'Vagusnerv aktivieren & Adrenalin senken mit 4-7-8 oder Seufzer';
       toolIcon = Icons.air_rounded;
       accentColor = AppTheme.sageGreen;
+    } else if (tool == 'lust_profil') {
+      toolTitle = 'Mein Lust-Profil';
+      toolSubtitle = 'Ankreuzen, was dir gefällt – und auf Wunsch deinem Gegenüber schicken';
+      toolIcon = Icons.favorite_rounded;
+      accentColor = AppTheme.rose;
     } else if (tool == 'cbt_journal') {
       toolTitle = 'KVT-Gedankenprotokoll starten';
       toolSubtitle = 'Erwartungsangst und innere Katastrophengedanken reframen';

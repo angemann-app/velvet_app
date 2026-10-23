@@ -40,7 +40,10 @@ KOKORO_VOICES = {
 EDGE_VOICES = {"victoria": "de-DE-SeraphinaMultilingualNeural", "martin": "de-DE-FlorianMultilingualNeural"}
 
 
-def voice_for(course):
+def voice_for(course, lesson=None):
+    # Eine Lektion kann ihre Stimme selbst festlegen (Feld "voice"), sonst entscheidet der Kurs.
+    if lesson and lesson.get("voice") in KOKORO_VOICES:
+        return lesson["voice"]
     return "victoria" if course.get("category") == "women" else "martin"
 
 
@@ -134,18 +137,19 @@ class Kokoro:
         ps, _ = pipeline.g2p(text)
         return fix_phonemes(ps)
 
-    def synthesize_wav(self, text, name, wav_path):
+    def synthesize_wav(self, text, name, wav_path, pause=True):
         import numpy as np
         import soundfile as sf
 
         pipeline, pack = self._load(name)
-        pause = np.zeros(int(PARAGRAPH_PAUSE_S * SAMPLE_RATE), dtype=np.float32)
+        silence = np.zeros(int(PARAGRAPH_PAUSE_S * SAMPLE_RATE), dtype=np.float32)
         pieces = []
         for paragraph in [p for p in text.split("\n") if p.strip()]:
             for chunk in _chunks(self.phonemes(paragraph, name)):
                 for result in pipeline.generate_from_tokens(chunk, voice=pack, speed=SPEED):
                     pieces.append(result.audio.numpy())
-            pieces.append(pause)
+            if pause:
+                pieces.append(silence)
         sf.write(wav_path, np.concatenate(pieces), SAMPLE_RATE)
 
 
@@ -191,6 +195,37 @@ def check_pronunciation(data):
     print(f"\n{hits} verdächtige von {len(words)} geprüften Wörtern.")
 
 
+# Ansagen für den Beckenboden-Timer (lib/screens/training/kegel_timer_view.dart, Feld "cue").
+CUES = {
+    "einatmen_weit": "Einatmen. Und weit werden.",
+    "weich_bleiben": "Weich bleiben.",
+    "anspannen": "Anspannen. Und sanft heben.",
+    "halten": "Halten. Weiter atmen.",
+    "loslassen": "Und ganz loslassen.",
+    "nachspueren": "Nachspüren.",
+    "an": "An.",
+    "los": "Los.",
+    "welle": "Einatmen. Damm und Po weich.",
+    "seufzen": "Ausatmen. Lang und hörbar.",
+    "start": "Wir beginnen.",
+    "fertig": "Geschafft. Spür noch einen Moment nach.",
+}
+
+
+def generate_cues():
+    out_dir = AUDIO_DIR / "cues"
+    out_dir.mkdir(exist_ok=True)
+    engine = Kokoro()
+    for name in KOKORO_VOICES:
+        for cue, text in CUES.items():
+            out = out_dir / f"{name}_{cue}.opus"
+            with tempfile.TemporaryDirectory() as tmp:
+                wav = Path(tmp) / "cue.wav"
+                engine.synthesize_wav(text, name, wav, pause=False)
+                to_opus(wav, out)
+            print(f"{out.name} -> {out.stat().st_size // 1024} KB", flush=True)
+
+
 def select(data, args):
     picked = []
     for course in data["courses"]:
@@ -212,6 +247,8 @@ def main():
     parser.add_argument("--zeige", nargs="+", metavar="WORT", help="nur die Lautschrift anzeigen")
     parser.add_argument("--pruefe", action="store_true",
                         help="alle Wörter aller Lektionen auf verdächtige Lautschrift prüfen")
+    parser.add_argument("--ansagen", action="store_true",
+                        help="kurze Ansagen für den Beckenboden-Timer erzeugen (assets/audio/cues/)")
     args = parser.parse_args()
     if args.courses and len(args.courses) == 1:
         args.courses = (args.courses[0], args.courses[0])
@@ -221,6 +258,10 @@ def main():
         engine = Kokoro()
         for word in args.zeige:
             print(f"{word:30} {engine.phonemes(word)}")
+        return
+
+    if args.ansagen:
+        generate_cues()
         return
 
     data = json.loads(CONTENT_JSON.read_text(encoding="utf-8"))
@@ -236,7 +277,7 @@ def main():
 
     engine = Kokoro() if args.engine == "kokoro" else None
     for i, (course, lesson) in enumerate(picked, 1):
-        name = voice_for(course)
+        name = voice_for(course, lesson)
         out = AUDIO_DIR / f"{lesson['id']}.opus"
         with tempfile.TemporaryDirectory() as tmp:
             if engine:

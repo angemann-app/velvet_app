@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../models/content_models.dart';
 import '../../models/yes_no_maybe_models.dart';
@@ -108,7 +109,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
 
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text('Synchronisiere Antworten verschlüsselt über Nostr...'),
+        content: Text('Antworten werden verschlüsselt abgeglichen …'),
         backgroundColor: AppTheme.amber,
         duration: Duration(seconds: 1),
       ),
@@ -134,159 +135,114 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
     );
   }
 
-  Course? _resolveLinkedCourse(String linkedCourseId) {
-    if (_db == null) return null;
-    String id = linkedCourseId;
-    if (id == 'course_omgyes_women') id = 'course_touch_women';
-    if (id == 'course_omgyes_men') id = 'course_touch_men';
-
-    return _db!.courses.cast<Course?>().firstWhere(
-          (c) => c?.id == id,
-          orElse: () => null,
-        );
+  /// Lektion und zugehöriger Kurs für „Mehr erfahren“.
+  (Lesson, Course)? _resolveLesson(String? lessonId) {
+    if (_db == null || lessonId == null) return null;
+    for (final course in _db!.courses) {
+      for (final lesson in course.lessons) {
+        if (lesson.id == lessonId) return (lesson, course);
+      }
+    }
+    return null;
   }
 
-  void _openCourseModal(YesNoMaybeItem item) {
+  void _openDetails(YesNoMaybeItem item) {
     HapticFeedback.selectionClick();
-    final course = _resolveLinkedCourse(item.linkedCourseId);
+    final linked = _resolveLesson(item.lessonId);
 
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
-      builder: (ctx) => Container(
-        padding: const EdgeInsets.all(24),
-        decoration: const BoxDecoration(
-          color: AppTheme.surface,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-          border: Border(top: BorderSide(color: AppTheme.border, width: 1.5)),
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Center(
-              child: Container(
-                width: 40,
-                height: 4,
-                decoration: BoxDecoration(
-                  color: AppTheme.border,
-                  borderRadius: BorderRadius.circular(2),
+      builder: (ctx) => DraggableScrollableSheet(
+        initialChildSize: item.image != null ? 0.85 : 0.6,
+        minChildSize: 0.4,
+        maxChildSize: 0.95,
+        expand: false,
+        builder: (ctx, scrollController) => Container(
+          decoration: const BoxDecoration(
+            color: AppTheme.surface,
+            borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+            border: Border(top: BorderSide(color: AppTheme.border, width: 1.5)),
+          ),
+          child: ListView(
+            controller: scrollController,
+            padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
+            children: [
+              Center(
+                child: Container(
+                  width: 40,
+                  height: 4,
+                  decoration: BoxDecoration(color: AppTheme.border, borderRadius: BorderRadius.circular(2)),
                 ),
               ),
-            ),
-            const SizedBox(height: 18),
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: AppTheme.amber.withOpacity(0.15),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Icon(Icons.school_rounded, color: AppTheme.amber, size: 24),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'VERKNÜPFTES TRAINING',
-                        style: TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.w800,
-                          color: AppTheme.amber.withOpacity(0.9),
-                          letterSpacing: 0.8,
-                        ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        course != null ? course.title : 'Vertiefender Somatik-Kurs',
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: AppTheme.textPrimary,
-                        ),
-                      ),
-                    ],
+              const SizedBox(height: 18),
+              Text(
+                item.text,
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.textPrimary, height: 1.3),
+              ),
+              if (item.image != null) ...[
+                const SizedBox(height: 16),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(14),
+                  child: AspectRatio(
+                    aspectRatio: 4 / 3,
+                    child: SvgPicture.asset(item.image!, fit: BoxFit.contain),
                   ),
                 ),
               ],
-            ),
-            const SizedBox(height: 16),
-            Container(
-              padding: const EdgeInsets.all(14),
-              decoration: BoxDecoration(
-                color: AppTheme.background,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppTheme.border),
+              const SizedBox(height: 16),
+              Text(
+                item.explanation,
+                style: const TextStyle(fontSize: 14.5, color: AppTheme.textSecondary, height: 1.55),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'Thematischer Bezug:',
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700,
-                      color: AppTheme.textSecondary,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    '„${item.text}“',
-                    style: const TextStyle(
-                      fontSize: 13,
-                      fontStyle: FontStyle.italic,
-                      color: AppTheme.amberLight,
-                      height: 1.4,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 14),
-            Text(
-              course != null ? course.subtitle : 'Lerne die somatische Methodik und Ausführung Schritt für Schritt.',
-              style: const TextStyle(
-                fontSize: 13,
-                color: AppTheme.textSecondary,
-                height: 1.45,
-              ),
-            ),
-            const SizedBox(height: 24),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.of(ctx).pop();
-                  if (course != null && course.lessons.isNotEmpty) {
+              if (linked != null) ...[
+                const SizedBox(height: 22),
+                InkWell(
+                  borderRadius: BorderRadius.circular(14),
+                  onTap: () {
+                    Navigator.of(ctx).pop();
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => LessonDetailScreen(
-                          lesson: course.lessons.first,
-                          courseTitle: course.title,
-                        ),
+                        builder: (_) => LessonDetailScreen(lesson: linked.$1, courseTitle: linked.$2.title),
                       ),
                     );
-                  }
-                },
-                icon: const Icon(Icons.play_arrow_rounded, size: 20),
-                label: const Text(
-                  'Jetzt Training in VelvetPulse starten',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(
+                      color: AppTheme.amber.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: AppTheme.amber.withOpacity(0.4)),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(Icons.menu_book_rounded, color: AppTheme.amber),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('WEITERLESEN',
+                                  style: TextStyle(
+                                      fontSize: 11, fontWeight: FontWeight.w800, color: AppTheme.amber, letterSpacing: 0.6)),
+                              const SizedBox(height: 2),
+                              Text(linked.$1.title,
+                                  style: const TextStyle(
+                                      fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                              Text(linked.$2.title,
+                                  style: const TextStyle(fontSize: 12, color: AppTheme.textMuted)),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.chevron_right_rounded, color: AppTheme.textMuted),
+                      ],
+                    ),
+                  ),
                 ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppTheme.amber,
-                  foregroundColor: const Color(0xFF0F172A),
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-                ),
-              ),
-            ),
-            const SizedBox(height: 8),
-          ],
+              ],
+            ],
+          ),
         ),
       ),
     );
@@ -308,7 +264,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800),
             ),
             Text(
-              'Interaktives Yes / No / Maybe Inventar',
+              'Ja / Vielleicht / Nein',
               style: TextStyle(fontSize: 11, color: AppTheme.amberLight, fontWeight: FontWeight.w500),
             ),
           ],
@@ -444,7 +400,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               ),
               const SizedBox(height: 8),
               const Text(
-                'Lote deine Neigungen, Wünsche und Grenzen schamfrei aus. Wenn du mit deinem Partner über Nostr gekoppelt bist, werden nur gemeinsame Treffer enthüllt – ohne Risiko der Zurückweisung.',
+                'Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar.',
                 style: TextStyle(
                   color: AppTheme.textSecondary,
                   fontSize: 13,
@@ -454,11 +410,11 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               const SizedBox(height: 14),
               Row(
                 children: [
-                  _buildStatPill('🟢 Yes', '$yesCount', const Color(0xFF10B981)),
+                  _buildStatPill('Ja', '$yesCount', const Color(0xFF10B981)),
                   const SizedBox(width: 8),
-                  _buildStatPill('🟡 Maybe', '$maybeCount', const Color(0xFFF59E0B)),
+                  _buildStatPill('Vielleicht', '$maybeCount', const Color(0xFFF59E0B)),
                   const SizedBox(width: 8),
-                  _buildStatPill('🔴 No', '$noCount', const Color(0xFFF43F5E)),
+                  _buildStatPill('Nein', '$noCount', const Color(0xFFF43F5E)),
                 ],
               ),
             ],
@@ -472,15 +428,15 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              _buildFilterChip('all', 'Alle (22)'),
+              _buildFilterChip('all', 'Alle (${allYesNoMaybeItems.length})'),
               const SizedBox(width: 8),
               _buildFilterChip('open', 'Offen'),
               const SizedBox(width: 8),
-              _buildFilterChip('yes', '🟢 Yes ($yesCount)'),
+              _buildFilterChip('yes', 'Ja ($yesCount)'),
               const SizedBox(width: 8),
-              _buildFilterChip('maybe', '🟡 Maybe ($maybeCount)'),
+              _buildFilterChip('maybe', 'Vielleicht ($maybeCount)'),
               const SizedBox(width: 8),
-              _buildFilterChip('no', '🔴 No ($noCount)'),
+              _buildFilterChip('no', 'Nein ($noCount)'),
             ],
           ),
         ),
@@ -504,6 +460,17 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Category Header
+              Padding(
+                padding: const EdgeInsets.only(top: 12),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(14),
+                  child: SizedBox(
+                    height: 96,
+                    width: double.infinity,
+                    child: SvgPicture.asset(category.image, fit: BoxFit.cover),
+                  ),
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.only(top: 12, bottom: 8, left: 4),
                 child: Row(
@@ -644,7 +611,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               const SizedBox(width: 8),
               // Info Button for linked training
               InkWell(
-                onTap: () => _openCourseModal(item),
+                onTap: () => _openDetails(item),
                 borderRadius: BorderRadius.circular(8),
                 child: Container(
                   padding: const EdgeInsets.all(6),
@@ -654,7 +621,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     border: Border.all(color: AppTheme.border),
                   ),
                   child: const Icon(
-                    Icons.school_outlined,
+                    Icons.info_outline_rounded,
                     size: 16,
                     color: AppTheme.amber,
                   ),
@@ -777,7 +744,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    'Kopple dich über den Nostr-Paar-Kanal per QR-Code mit deinem Partner. Eure Antworten werden dann Ende-zu-Ende verschlüsselt abgeglichen – ohne fremde Server.',
+                    'Verbinde dich im Paar-Kanal per QR-Code mit deinem Gegenüber. Eure Antworten werden dann Ende-zu-Ende-verschlüsselt abgeglichen.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.45),
                   ),
@@ -935,7 +902,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     ),
                     SizedBox(height: 6),
                     Text(
-                      'Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Yes oder Maybe bewertet habt, leuchtet er hier auf.',
+                      'Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Ja oder Vielleicht bewertet habt, leuchtet er hier auf.',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4),
                     ),
@@ -990,7 +957,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  isDirectYes ? 'Beide: 🟢 Yes' : 'Erkundung: 🟡 Offen & Neugierig',
+                  isDirectYes ? 'Ihr beide: Ja' : 'Gemeinsam neugierig',
                   style: TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w600,
@@ -1002,7 +969,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           ),
           const SizedBox(width: 8),
           ElevatedButton(
-            onPressed: () => _openCourseModal(item),
+            onPressed: () => _openDetails(item),
             style: ElevatedButton.styleFrom(
               backgroundColor: color.withOpacity(0.2),
               foregroundColor: color,

@@ -44,6 +44,9 @@ class Course {
   final String icon;
   final String category; // "all" | "men" | "women" | "couples"
   final String? image;
+
+  /// Optionale Hervorhebungsfarbe für den Titel, z. B. "#F43F5E".
+  final String? titleColor;
   final List<Lesson> lessons;
 
   Course({
@@ -53,6 +56,7 @@ class Course {
     required this.icon,
     this.category = 'all',
     this.image,
+    this.titleColor,
     required this.lessons,
   });
 
@@ -63,6 +67,9 @@ class Course {
   String get targetBadgeLabel {
     if (id.contains('touch') || id.contains('omgyes')) {
       return isForWomen ? 'BERÜHRUNGSKUNST • FÜR SIE' : 'TAST-LABOR • FÜR IHN';
+    }
+    if (id == 'course_self_exploration') {
+      return 'SELBST ERKUNDEN';
     }
     if (id == 'course_vocal_pelvic') {
       return 'STIMME & SOMATIK';
@@ -96,6 +103,7 @@ class Course {
       icon: json['icon'] as String? ?? 'psychology',
       category: json['category'] as String? ?? 'all',
       image: json['image'] as String?,
+      titleColor: json['title_color'] as String?,
       lessons: (json['lessons'] as List<dynamic>?)
               ?.map((e) => Lesson.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -110,6 +118,7 @@ class Course {
         'icon': icon,
         'category': category,
         'image': image,
+        if (titleColor != null) 'title_color': titleColor,
         'lessons': lessons.map((e) => e.toJson()).toList(),
       };
 }

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 300" width="840" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C1A1C"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FDE68A" stop-opacity="0.95"/>
+      <stop offset="0.4" stop-color="#2DD4BF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skinR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#120A16"/>
+      <stop offset="0.75" stop-color="#14262A"/>
+      <stop offset="1" stop-color="#3F6F5E"/>
+    </linearGradient>
+    <linearGradient id="skinT" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#120A16"/>
+      <stop offset="0.7" stop-color="#14262A"/>
+      <stop offset="1" stop-color="#3F6F5E"/>
+    </linearGradient>
+    <linearGradient id="rimR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.45" stop-color="#FDE68A" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FDE68A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="rimT" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0.5" stop-color="#FDE68A" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FDE68A" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="840" height="300" fill="url(#bg)"/>
+  <ellipse cx="420" cy="110" rx="300" ry="190" fill="url(#light)"/>
+  <g transform="translate(300 128) scale(1.2 1.2) rotate(-4)"><path d="M-5 -58 C-62 -62 -84 20 -80 112 C-66 98 -46 64 -36 28 Z" fill="#170D16"/><path d="M-100 175 C-96 135 -82 112 -42 100 C-33 80 -30 55 -34 30 C-52 0 -40 -50 -5 -56 C22 -58 36 -40 38 -20 C40 -12 42 -6 46 0 C52 8 56 12 50 15 L45 17 C47 21 48 24 45 27 C47 30 47 33 44 36 C44 42 42 47 34 50 C26 53 20 54 18 62 C16 74 20 90 40 108 C62 124 78 150 82 175 Z" fill="url(#skinR)" stroke="url(#rimR)" stroke-width="2"/></g>
+  <g transform="translate(545 122) scale(-1.28 1.28) rotate(-4)"><path d="M-8 -57 C-40 -60 -52 -30 -46 2 C-40 -18 -24 -40 -8 -44 Z" fill="#170D16"/><path d="M-100 175 C-96 135 -82 112 -42 100 C-33 80 -30 55 -34 30 C-52 0 -40 -50 -5 -56 C22 -58 36 -40 38 -20 C40 -12 42 -6 46 0 C52 8 56 12 50 15 L45 17 C47 21 48 24 45 27 C47 30 47 33 44 36 C44 42 42 47 34 50 C26 53 20 54 18 62 C16 74 20 90 40 108 C62 124 78 150 82 175 Z" fill="url(#skinR)" stroke="url(#rimR)" stroke-width="2"/></g>
+</svg>

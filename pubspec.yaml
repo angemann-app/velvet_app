@@ -37,3 +37,4 @@ flutter:
     - assets/data/velvet_content.json
     - assets/images/
     - assets/audio/
+    - assets/audio/cues/

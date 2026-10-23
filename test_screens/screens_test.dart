@@ -16,6 +16,8 @@ import 'package:velvetpulse/screens/couples_channel/pairing_modal.dart';
 import 'package:velvetpulse/screens/courses/lesson_detail_screen.dart';
 import 'package:velvetpulse/screens/main_navigation_screen.dart';
 import 'package:velvetpulse/screens/onboarding/onboarding_screen.dart';
+import 'package:velvetpulse/screens/self_exploration/lust_profile_screen.dart';
+import 'package:velvetpulse/screens/yes_no_maybe/yes_no_maybe_screen.dart';
 import 'package:velvetpulse/services/data_service.dart';
 import 'package:velvetpulse/services/nostr_service.dart';
 import 'package:velvetpulse/services/storage_service.dart';
@@ -124,6 +126,25 @@ void main() {
 
     await tester.pumpWidget(_app(const Scaffold(body: PairingModal())));
     await _shot(tester, '04_paarkanal_koppeln', errors);
+
+    await tester.pumpWidget(_app(const YesNoMaybeScreen()));
+    await _shot(tester, '07_ja_nein_vielleicht', errors);
+    await tester.tap(find.byIcon(Icons.info_outline_rounded).first);
+    await _shot(tester, '07_mehr_erfahren', errors);
+    await tester.pumpWidget(const SizedBox());
+    await tester.pumpWidget(_app(const YesNoMaybeScreen()));
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, -2600));
+    await _shot(tester, '07_ja_nein_vielleicht_unten', errors);
+    await tester.tap(find.byIcon(Icons.info_outline_rounded).hitTestable().first);
+    await _shot(tester, '07_mehr_erfahren_grafik', errors);
+
+    await tester.pumpWidget(const SizedBox());
+    await tester.pumpWidget(_app(const LustProfileScreen()));
+    await _shot(tester, '08_lust_profil', errors);
+
+    final self = DataService.getCourses().firstWhere((c) => c.id == 'course_self_exploration');
+    await tester.pumpWidget(_app(LessonDetailScreen(lesson: self.lessons[1], courseTitle: self.title)));
+    await _shot(tester, '08_selbst_vulva', errors);
 
     final course = DataService.getCourses().firstWhere((c) => c.id == 'course_sacred_massage');
     await tester.pumpWidget(_app(LessonDetailScreen(lesson: course.lessons[1], courseTitle: course.title)));

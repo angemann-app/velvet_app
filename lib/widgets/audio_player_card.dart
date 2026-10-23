@@ -131,8 +131,8 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                     const SizedBox(width: 6),
                     Text(
                       isUsingFallback
-                          ? 'OFFLINE-TTS FALLBACK'
-                          : (widget.isAudioExercise ? 'STUDIO AUDIO-PRAXIS' : 'NEURAL VOICE SESSION'),
+                          ? 'GERÄTE-STIMME'
+                          : (widget.isAudioExercise ? 'GEFÜHRTE ÜBUNG' : 'ZUM ANHÖREN'),
                       style: TextStyle(
                         color: isPlaying ? accentColor : AppTheme.textSecondary,
                         fontSize: 10.5,
@@ -162,13 +162,13 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
           Text(
             isPlaying
                 ? (widget.isAudioExercise
-                    ? 'Sinnliche Führung aktiv • Folge der Stimme...'
-                    : 'Neural-Voice Wiedergabe läuft...')
+                    ? 'Folge einfach der Stimme …'
+                    : 'Wird vorgelesen …')
                 : (isPaused
                     ? 'Pausiert • Tippe zum Fortsetzen'
                     : (widget.isAudioExercise
-                        ? 'Geführte Audio-Übung • Schließe die Augen & lausche'
-                        : 'Lektion als Studio-Audio anhören (~${widget.durationMin} Min.)')),
+                        ? 'Schließ die Augen und lausche'
+                        : 'Lektion anhören (ca. ${widget.durationMin} Min.)')),
             style: TextStyle(
               color: isPlaying ? AppTheme.textPrimary : AppTheme.textMuted,
               fontSize: 13,

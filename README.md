@@ -3,7 +3,8 @@
 > **KVT, Somatik und Intimität ohne Leistungsdruck – für Sie, für Ihn und für Paare**
 > Private Flutter-App für Android · Daten bleiben auf dem Gerät · Ende-zu-Ende-verschlüsselter Paar-Kanal über Nostr
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
+[![Code: MIT](https://img.shields.io/badge/Code-MIT-emerald.svg)](LICENSE)
+[![Inhalte: CC BY-NC-SA 4.0](https://img.shields.io/badge/Inhalte-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE-CONTENT.md)
 [![Platform](https://img.shields.io/badge/Platform-Android-blue.svg)](https://flutter.dev)
 [![Nostr](https://img.shields.io/badge/Nostr-NIP--04-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/04.md)
 
@@ -167,4 +168,6 @@ Microsoft Edge TTS genutzt; der Text geht dann an Microsofts Dienst.
 
 ## Lizenz
 
-[MIT](LICENSE)
+- **Code:** [MIT](LICENSE)
+- **Inhalte** (Texte, Audios, Bilder, Dokumentation): [CC BY-NC-SA 4.0](LICENSE-CONTENT.md) –
+  teilen und bearbeiten erlaubt, mit Namensnennung, nicht kommerziell und unter gleichen Bedingungen.
