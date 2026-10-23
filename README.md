@@ -9,6 +9,11 @@
 [![Inhalte: CC BY-NC-SA 4.0](https://img.shields.io/badge/Inhalte-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE-CONTENT.md)
 [![Android](https://img.shields.io/badge/Android-7%2B-3ddc84.svg)](https://github.com/angemann-app/velvet_app/releases/latest)
 [![Nostr](https://img.shields.io/badge/Nostr-NIP--04-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/04.md)
+[![English content](https://img.shields.io/badge/Content-English%20available-blue.svg)](translations/en/)
+
+> 🇬🇧 **English:** All content – 21 courses, 75 lessons, guided couple sessions and lists – is also available in
+> English in [translations/en](translations/en/), ready for anyone who wants to build an English version.
+> See the [English summary](#english-summary) below.
 
 VelvetPulse ist eine deutschsprachige Android-App für erfüllte Sexualität und Nähe. Sie verbindet
 **Kognitive Verhaltenstherapie (KVT)**, **Körperarbeit (Somatik)** und **Sexualaufklärung**:
@@ -30,6 +35,7 @@ Bremse nehmen – allein oder zu zweit.
 > Sie ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es medizinisch sinnvoll ist,
 > weisen die Lektionen ausdrücklich darauf hin, wann eine Abklärung ratsam ist.
 
+<a id="english-summary"></a>
 <details>
 <summary><b>English summary</b></summary>
 
