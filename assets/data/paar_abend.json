@@ -1,0 +1,374 @@
+{
+  "_hinweis": "Bausteine für den geführten Paar-Abend. phase: ankommen | runde_start | beruehren | erinnerung (kurz, mitten in langen Stillen) | check_in | runde_ende | wechsel | ausklang. Bei beruehren: zone, stufe (1 = neutral … 5 = intim) und tiefe (bekleidet | haut | intim). Audio: assets/audio/paar/<stimme>_<id>.opus, erzeugt mit tools/generate_audio.py --paar.",
+  "bausteine": [
+    {
+      "id": "ankommen_1",
+      "phase": "ankommen",
+      "text": "Willkommen zu eurem gemeinsamen Abend. Legt das Handy so hin, dass ihr mich gut hören könnt, und dimmt das Licht. Setzt oder legt euch nah zueinander. Schaut euch einen Moment in die Augen. Ihr müsst nichts sagen. Atmet einfach. Heute gibt es kein Ziel. Ihr schenkt euch Zeit und Berührung, sonst nichts."
+    },
+    {
+      "id": "ankommen_2",
+      "phase": "ankommen",
+      "text": "Schön, dass ihr hier seid. Macht es euch bequem, an einem warmen Ort, an dem euch niemand stört. Nehmt euch an den Händen. Spürt die Wärme der anderen Hand. Atmet gemeinsam tief ein. Und langsam wieder aus. Lasst den Tag draußen. Alles, was jetzt kommt, ist eine Einladung, kein Auftrag."
+    },
+    {
+      "id": "ankommen_3",
+      "phase": "ankommen",
+      "text": "Willkommen. Legt euch nebeneinander, so dass sich eure Körper irgendwo berühren. Vielleicht nur die Schultern, vielleicht die Hände. Schließt die Augen. Atmet dreimal tief ein und lang aus. Erinnert euch an eure Abmachung: Ein Wort genügt, und alles hält an. Nichts muss passieren. Ihr dürft einfach genießen."
+    },
+    {
+      "id": "runde_start_1",
+      "phase": "runde_start",
+      "text": "Jetzt beginnt die erste Runde. Wer gibt, setzt sich bequem neben die empfangende Person. Wer empfängt, legt sich hin, wie es angenehm ist, und schließt die Augen. Ab jetzt musst du, die empfangende Person, gar nichts tun. Nur spüren. Und du, die gebende Person, darfst dir alle Zeit der Welt lassen."
+    },
+    {
+      "id": "runde_start_2",
+      "phase": "runde_start",
+      "text": "Eine neue Runde beginnt. Findet eure Plätze. Wer empfängt, liegt warm und bequem und darf ab jetzt jede Verantwortung abgeben. Wer gibt, reibt die Hände aneinander, bis sie warm werden. Lege sie zuerst einfach ruhig auf den Körper deines Gegenübers. Noch keine Bewegung. Nur ankommen."
+    },
+    {
+      "id": "zone_ruecken_1",
+      "phase": "beruehren",
+      "zone": "ruecken",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Lege deine Hände flach auf den Rücken deines Gegenübers. Beginne mit langen, langsamen Strichen, von den Schultern bis zum Kreuz. Stell dir vor, deine Hände bewegen sich durch warmen Honig. Ich bin jetzt eine Weile still."
+    },
+    {
+      "id": "zone_ruecken_2",
+      "phase": "beruehren",
+      "zone": "ruecken",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Wandere mit beiden Händen über den Rücken. Kreise, die größer und wieder kleiner werden. Spüre, wo der Körper weich wird und wo er noch festhält. Bleib dort ein wenig länger. Lass dir Zeit."
+    },
+    {
+      "id": "zone_schultern_1",
+      "phase": "beruehren",
+      "zone": "schultern",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Wende dich jetzt den Schultern und dem Nacken zu. Hier sammelt sich oft der Tag. Streiche mit warmen Händen von der Mitte nach außen, als würdest du etwas Schweres abnehmen. Ganz in deinem Tempo."
+    },
+    {
+      "id": "zone_schultern_2",
+      "phase": "beruehren",
+      "zone": "schultern",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Lege deine Hände auf die Schultern und lass einfach ihr Gewicht wirken. Dann beginne, den Nacken mit den Fingerspitzen langsam auszustreichen, bis hinauf zum Haaransatz. Wer empfängt, darf seufzen, wenn es guttut."
+    },
+    {
+      "id": "zone_arme_1",
+      "phase": "beruehren",
+      "zone": "arme",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Nimm jetzt einen Arm in deine Hände. Streiche von der Schulter bis zu den Fingerspitzen, langsam, Zentimeter für Zentimeter. Wenn du an der Hand ankommst, halte sie einen Moment. Dann der andere Arm."
+    },
+    {
+      "id": "zone_haende_1",
+      "phase": "beruehren",
+      "zone": "haende",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Widme dich jetzt den Händen. Massiere die Handfläche mit dem Daumen in kleinen Kreisen. Streiche jeden Finger einzeln aus. Hände tragen so viel durch den Tag. Jetzt dürfen sie empfangen."
+    },
+    {
+      "id": "zone_kopf_1",
+      "phase": "beruehren",
+      "zone": "kopf",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Wandere zum Kopf. Fahre mit den Fingern langsam durch das Haar, als würdest du es kämmen. Massiere die Kopfhaut mit sanften Kreisen. Streiche über die Stirn, die Schläfen, die Augenbrauen. Ganz leicht."
+    },
+    {
+      "id": "zone_kopf_2",
+      "phase": "beruehren",
+      "zone": "kopf",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Lege die Fingerspitzen auf das Gesicht deines Gegenübers. Zeichne die Linien nach: Stirn, Wangenknochen, Kinn, die Lippen. So langsam, als würdest du dieses Gesicht zum ersten Mal entdecken."
+    },
+    {
+      "id": "zone_beine_1",
+      "phase": "beruehren",
+      "zone": "beine",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Wende dich jetzt den Beinen zu. Lange, ruhige Striche von den Oberschenkeln bis zu den Knöcheln. Mal mit leichtem, mal mit etwas festerem Druck. Achte darauf, wie dein Gegenüber atmet."
+    },
+    {
+      "id": "zone_fuesse_1",
+      "phase": "beruehren",
+      "zone": "fuesse",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Nimm einen Fuß in beide Hände. Halte ihn warm. Dann streiche mit den Daumen über die Fußsohle, von der Ferse zu den Zehen. Füße tragen uns den ganzen Tag. Jetzt werden sie getragen."
+    },
+    {
+      "id": "zone_ruecken_oel_1",
+      "phase": "beruehren",
+      "zone": "ruecken_oel",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Nimm jetzt etwas warmes Öl in die Hände und reibe sie aneinander. Lege sie auf den nackten Rücken. Gleite mit langen, fließenden Bewegungen über die Haut, die Wirbelsäule entlang und die Seiten hinunter. Lass die Hände schwer werden."
+    },
+    {
+      "id": "zone_ruecken_oel_2",
+      "phase": "beruehren",
+      "zone": "ruecken_oel",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Mit Öl auf der Haut kannst du jetzt mit dem ganzen Unterarm gleiten, vom Kreuz bis zu den Schultern. Wechsle zwischen fest und federleicht. Achte darauf, wo dein Gegenüber tiefer atmet."
+    },
+    {
+      "id": "zone_bauch_1",
+      "phase": "beruehren",
+      "zone": "bauch",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Lege eine warme Hand auf den Bauch. Noch keine Bewegung. Spüre, wie er sich mit dem Atem hebt und senkt. Dann beginne mit großen, langsamen Kreisen im Uhrzeigersinn um den Nabel."
+    },
+    {
+      "id": "zone_bauch_2",
+      "phase": "beruehren",
+      "zone": "bauch",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Streiche mit beiden Händen über den Bauch, von der Mitte zu den Seiten, wie Wellen am Strand. Der Bauch ist für viele ein verletzlicher Ort. Geh behutsam vor, und lass ihn weich werden."
+    },
+    {
+      "id": "zone_huefte_1",
+      "phase": "beruehren",
+      "zone": "huefte",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Wandere zu den Hüften und den Seiten des Körpers. Folge mit den Händen den Rundungen, langsam, als würdest du eine Landschaft erkunden. Die Haut über dem Becken ist oft empfindsamer, als man denkt."
+    },
+    {
+      "id": "zone_brust_1",
+      "phase": "beruehren",
+      "zone": "brust",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "Wenn es für euch beide stimmt, wende dich jetzt der Brust zu. Beginne außen, mit großen, weichen Kreisen, und nähere dich langsam der Mitte. Ohne Ziel. Nur Wärme und Haut."
+    },
+    {
+      "id": "zone_brust_2",
+      "phase": "beruehren",
+      "zone": "brust",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "Streiche über Brust und Brustwarzen, mit den Fingerspitzen oder der flachen Hand. Mal ganz leicht, mal mit etwas mehr Druck. Achte auf jedes Zeichen deines Gegenübers und lass dich davon leiten."
+    },
+    {
+      "id": "zone_innenschenkel_1",
+      "phase": "beruehren",
+      "zone": "innenschenkel",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "Wandere zu den Innenseiten der Oberschenkel. Streiche langsam nach oben, nähere dich der Mitte, ohne sie zu berühren, und gleite wieder zurück. Lass die Vorfreude wachsen."
+    },
+    {
+      "id": "zone_innenschenkel_2",
+      "phase": "beruehren",
+      "zone": "innenschenkel",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "Lege deine Hände auf die Innenschenkel und lass sie dort ruhen. Spüre die Wärme, die von der Mitte ausgeht. Dann streiche mit den Daumen in kleinen Kreisen, immer ein Stück weiter, und wieder zurück."
+    },
+    {
+      "id": "zone_geschlecht_1",
+      "phase": "beruehren",
+      "zone": "geschlecht",
+      "stufe": 5,
+      "tiefe": "intim",
+      "text": "Wenn dein Gegenüber es möchte, lege jetzt eine Hand ganz ruhig auf das Geschlecht. Keine Bewegung. Nur halten, wärmen, da sein. Spürt beide, wie viel allein diese Berührung auslöst."
+    },
+    {
+      "id": "zone_geschlecht_2",
+      "phase": "beruehren",
+      "zone": "geschlecht",
+      "stufe": 5,
+      "tiefe": "intim",
+      "text": "Beginne jetzt, das Geschlecht mit viel Gleitmittel langsam zu streicheln. Rundherum, flach, ohne Eile. Nimm, was du im Kurs gelernt hast. Und denk daran: Es gibt nichts zu erreichen. Nur zu genießen."
+    },
+    {
+      "id": "zone_geschlecht_3",
+      "phase": "beruehren",
+      "zone": "geschlecht",
+      "stufe": 5,
+      "tiefe": "intim",
+      "text": "Lass deine Hände jetzt frei wandern, vom Geschlecht über den Bauch und die Schenkel und wieder zurück. Ganz langsam. Wer empfängt, darf mit der eigenen Hand zeigen, wie es am schönsten ist."
+    },
+    {
+      "id": "zone_ruecken_3",
+      "phase": "beruehren",
+      "zone": "ruecken",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Nimm jetzt nur noch die Fingerspitzen. Lass sie wie Federn über den Rücken tanzen, kaum spürbar. Male Linien, Kreise, vielleicht ein Wort. Wer empfängt, darf raten, oder einfach nur genießen."
+    },
+    {
+      "id": "zone_arme_2",
+      "phase": "beruehren",
+      "zone": "arme",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Streiche mit den Fingerspitzen die Innenseite der Arme entlang, vom Handgelenk bis in die Armbeuge und weiter. Die Haut dort ist dünn und empfindsam. Je langsamer, desto schöner."
+    },
+    {
+      "id": "zone_haende_2",
+      "phase": "beruehren",
+      "zone": "haende",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Legt eure Handflächen aneinander. Spürt die Wärme. Dann lass deine Finger zwischen die Finger deines Gegenübers gleiten, langsam, und wieder hinaus. Eine kleine Berührung, die viel erzählt."
+    },
+    {
+      "id": "zone_beine_2",
+      "phase": "beruehren",
+      "zone": "beine",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Umfasse eine Wade mit beiden Händen und streiche sie langsam aus, Richtung Knie. Dann die Kniekehle, ganz leicht, nur mit den Fingerspitzen. Viele Menschen spüren dort mehr, als sie erwarten."
+    },
+    {
+      "id": "zone_fuesse_2",
+      "phase": "beruehren",
+      "zone": "fuesse",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Halte beide Füße in deinen Händen und lass sie einfach warm werden. Dann massiere die Knöchel in kleinen Kreisen und streiche jeden Zeh einzeln aus. Ruhig und gründlich."
+    },
+    {
+      "id": "zone_po_1",
+      "phase": "beruehren",
+      "zone": "po",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Wandere jetzt zum Po. Knete die Muskeln mit der ganzen Hand, kräftig und langsam, wie warmen Teig. Hier sitzt viel Spannung. Dann streiche weich darüber und spüre, wie der Körper loslässt."
+    },
+    {
+      "id": "zone_po_2",
+      "phase": "beruehren",
+      "zone": "po",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Lege beide Hände flach auf den Po und lass sie schwer werden. Dann zeichne mit den Fingerspitzen große Achten über die Rundungen und die Oberschenkel hinab. Einmal fest, einmal hauchzart."
+    },
+    {
+      "id": "zone_huefte_2",
+      "phase": "beruehren",
+      "zone": "huefte",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Lege deine Hände rechts und links auf das Becken und wiege es ganz sanft hin und her. Dann gleite die Leisten entlang, langsam, mit flachen Händen. Ein Ort, der oft übersehen wird."
+    },
+    {
+      "id": "zone_ganzkoerper_1",
+      "phase": "beruehren",
+      "zone": "ganzkoerper",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Verbinde jetzt alles. Lange Striche über den ganzen Körper, vom Nacken bis zu den Füßen, und wieder zurück. Lass keine Stelle aus. Du malst deinem Gegenüber ein Bild von sich selbst."
+    },
+    {
+      "id": "zone_brust_3",
+      "phase": "beruehren",
+      "zone": "brust",
+      "stufe": 4,
+      "tiefe": "intim",
+      "text": "Probiere jetzt etwas anderes: deinen Atem. Hauche warm über die Brust, dann kühl. Lass deine Lippen die Haut nur streifen. Spürt beide, wie sich die Spannung verändert."
+    },
+    {
+      "id": "zone_geschlecht_4",
+      "phase": "beruehren",
+      "zone": "geschlecht",
+      "stufe": 5,
+      "tiefe": "intim",
+      "text": "Werde jetzt wieder langsamer. Streichle das Geschlecht so leicht, dass es fast nicht mehr zu spüren ist, und bleib eine Weile bei dieser Langsamkeit. Oft entsteht genau hier die schönste Erregung."
+    },
+    {
+      "id": "erinnerung_1",
+      "phase": "erinnerung",
+      "text": "Atme dabei weiter. Ruhig und tief."
+    },
+    {
+      "id": "erinnerung_2",
+      "phase": "erinnerung",
+      "text": "Du hast alle Zeit der Welt. Werde ruhig noch langsamer."
+    },
+    {
+      "id": "erinnerung_3",
+      "phase": "erinnerung",
+      "text": "Bleib mit deiner Aufmerksamkeit ganz in deinen Händen."
+    },
+    {
+      "id": "erinnerung_4",
+      "phase": "erinnerung",
+      "text": "Wer empfängt: Lass jeden Gedanken ziehen. Nur spüren."
+    },
+    {
+      "id": "erinnerung_5",
+      "phase": "erinnerung",
+      "text": "Achte auf den Atem deines Gegenübers. Er zeigt dir den Weg."
+    },
+    {
+      "id": "erinnerung_6",
+      "phase": "erinnerung",
+      "text": "Es gibt nichts zu erreichen. Nur diesen Moment."
+    },
+    {
+      "id": "check_in_1",
+      "phase": "check_in",
+      "text": "Halte einen Moment inne. Wer empfängt, sag mit einem Wort, wie es dir gerade geht. Grün, gelb oder rot. Dann geht es weiter."
+    },
+    {
+      "id": "check_in_2",
+      "phase": "check_in",
+      "text": "Kurze Pause. Atmet beide einmal tief ein und lang aus. Wer empfängt, darf sich etwas wünschen: langsamer, fester, eine andere Stelle. Ein Satz genügt."
+    },
+    {
+      "id": "check_in_3",
+      "phase": "check_in",
+      "text": "Wie fühlt es sich an? Ihr müsst nichts erklären. Ein Lächeln, ein Nicken, ein Seufzer reicht. Und wenn etwas nicht stimmt, sagt es einfach."
+    },
+    {
+      "id": "runde_ende_1",
+      "phase": "runde_ende",
+      "text": "Lass deine Hände jetzt langsamer werden. Lege sie zum Schluss ruhig auf den Körper deines Gegenübers und atmet gemeinsam. Dann löse sie ganz behutsam."
+    },
+    {
+      "id": "runde_ende_2",
+      "phase": "runde_ende",
+      "text": "Diese Runde geht zu Ende. Werde mit deinen Bewegungen immer langsamer, bis deine Hände still liegen. Spürt beide nach. Wer empfangen hat, darf sich noch einen Moment Zeit lassen, bevor sich die Augen öffnen."
+    },
+    {
+      "id": "wechsel_1",
+      "phase": "wechsel",
+      "text": "Jetzt tauscht ihr die Rollen. Nehmt euch einen Moment, um anzukommen. Vielleicht ein Kuss, vielleicht ein Blick. Wer eben empfangen hat, darf jetzt geben."
+    },
+    {
+      "id": "wechsel_2",
+      "phase": "wechsel",
+      "text": "Zeit, die Rollen zu wechseln. Atmet kurz durch, streckt euch, wenn ihr mögt. Wer eben gegeben hat, legt sich jetzt hin und darf empfangen."
+    },
+    {
+      "id": "ausklang_1",
+      "phase": "ausklang",
+      "text": "Euer Abend neigt sich dem Ende zu. Legt euch eng aneinander. Atmet gemeinsam. Ihr müsst nichts mehr tun. Wenn ihr mögt, erzählt euch, was am schönsten war. Und wenn mehr daraus wird, ist das wunderbar. Wenn nicht, war es genau richtig so."
+    },
+    {
+      "id": "ausklang_2",
+      "phase": "ausklang",
+      "text": "Kommt langsam zur Ruhe. Haltet euch einfach im Arm. Spürt die Wärme und den Atem des anderen. Danke euch für diese Zeit miteinander."
+    },
+    {
+      "id": "ausklang_3",
+      "phase": "ausklang",
+      "text": "Zum Schluss: Legt eine Hand auf das Herz des anderen. Spürt den Herzschlag. Sagt euch, wenn ihr mögt, ein Wort für diesen Abend. Und bleibt so lange liegen, wie es sich gut anfühlt."
+    }
+  ]
+}

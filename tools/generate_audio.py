@@ -10,6 +10,8 @@ Kokoro braucht die deutschen Forks von kokoro/misaki, darum mit dieser Umgebung 
   C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --courses 8-17
   C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --all
   C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --zeige "liefern" "Pedal"
+  C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --paar      (Paar-Abend, beide Stimmen)
+  C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --klang     (Klangschale, Klangteppich)
 
 Aussprache-Fehler einzelner Wörter korrigiert tools/aussprache.json.
 Mit --engine edge wird stattdessen Microsoft Edge TTS genutzt (Text geht an Microsoft).
@@ -226,6 +228,78 @@ def generate_cues():
             print(f"{out.name} -> {out.stat().st_size // 1024} KB", flush=True)
 
 
+PAAR_JSON = ROOT / "assets" / "data" / "paar_abend.json"
+
+
+def generate_paar(only=None):
+    # Bausteine für den geführten Paar-Abend (lib/screens/couples_channel/paar_abend_screen.dart).
+    out_dir = AUDIO_DIR / "paar"
+    out_dir.mkdir(exist_ok=True)
+    blocks = json.loads(PAAR_JSON.read_text(encoding="utf-8"))["bausteine"]
+    if only:
+        blocks = [b for b in blocks if b["id"] in only]
+    import soundfile as sf
+
+    # Die App plant die Stillen anhand der echten Längen, darum landen sie in dauer.json (Millisekunden).
+    durations_json = out_dir / "dauer.json"
+    durations = json.loads(durations_json.read_text(encoding="utf-8")) if durations_json.exists() else {}
+    engine = Kokoro()
+    total = len(blocks) * len(KOKORO_VOICES)
+    i = 0
+    for name in KOKORO_VOICES:
+        for block in blocks:
+            i += 1
+            out = out_dir / f"{name}_{block['id']}.opus"
+            with tempfile.TemporaryDirectory() as tmp:
+                wav = Path(tmp) / "block.wav"
+                engine.synthesize_wav(block["text"], name, wav, pause=False)
+                durations[out.stem] = int(sf.info(str(wav)).duration * 1000)
+                to_opus(wav, out)
+            durations_json.write_text(json.dumps(dict(sorted(durations.items())), indent=1), encoding="utf-8")
+            print(f"[{i}/{total}] {out.name} -> {out.stat().st_size // 1024} KB", flush=True)
+
+
+def generate_sounds():
+    """Klangschale für Übergänge und ein ruhiger, nahtlos loopender Klangteppich für die Stillen."""
+    import numpy as np
+    import soundfile as sf
+
+    out_dir = AUDIO_DIR / "paar"
+    out_dir.mkdir(exist_ok=True)
+    rng = np.random.default_rng(7)
+    sr = 48000
+
+    # Klangschale: leicht unharmonische Teiltöne mit langem Ausklang.
+    t = np.arange(int(sr * 6)) / sr
+    bowl = sum(a * np.sin(2 * np.pi * f * t) * np.exp(-t / d)
+               for f, a, d in [(220, 1.0, 2.6), (221.6, 0.6, 2.4), (598, 0.45, 1.6), (1131, 0.22, 0.9), (1795, 0.1, 0.5)])
+    bowl *= np.minimum(1, t / 0.004)  # weicher Anschlag ohne Knacken
+    bowl = 0.5 * bowl / np.abs(bowl).max()
+
+    # Klangteppich: 60 s, alle Frequenzen mit ganzzahligen Perioden, damit die Schleife nahtlos ist.
+    n = sr * 60
+    t = np.arange(n) / sr
+    pad = np.zeros(n)
+    for f, a, lfo in [(55, 0.5, 2), (110, 0.35, 3), (164, 0.18, 5), (220, 0.12, 4), (277, 0.06, 7)]:
+        pad += a * np.sin(2 * np.pi * f * t) * (0.6 + 0.4 * np.sin(2 * np.pi * lfo * t / 60))
+    # Weiches Rauschen wie fernes Meer, periodisch erzeugt über das Spektrum.
+    spec = np.zeros(n // 2 + 1, dtype=complex)
+    freqs = np.fft.rfftfreq(n, 1 / sr)
+    band = (freqs > 40) & (freqs < 900)
+    spec[band] = (rng.normal(size=band.sum()) + 1j * rng.normal(size=band.sum())) / np.sqrt(freqs[band])
+    noise = np.fft.irfft(spec, n)
+    noise *= 0.25 / np.abs(noise).max() * (0.55 + 0.45 * np.sin(2 * np.pi * 6 * t / 60))
+    pad = pad / np.abs(pad).max() * 0.22 + noise
+
+    with tempfile.TemporaryDirectory() as tmp:
+        for name, audio in [("klangschale", bowl), ("klangteppich", pad)]:
+            wav = Path(tmp) / f"{name}.wav"
+            sf.write(wav, audio.astype(np.float32), sr)
+            out = out_dir / f"{name}.opus"
+            to_opus(wav, out)
+            print(f"{out.name} -> {out.stat().st_size // 1024} KB", flush=True)
+
+
 def select(data, args):
     picked = []
     for course in data["courses"]:
@@ -249,7 +323,16 @@ def main():
                         help="alle Wörter aller Lektionen auf verdächtige Lautschrift prüfen")
     parser.add_argument("--ansagen", action="store_true",
                         help="kurze Ansagen für den Beckenboden-Timer erzeugen (assets/audio/cues/)")
+    parser.add_argument("--paar", action="store_true",
+                        help="Bausteine des Paar-Abends erzeugen (assets/audio/paar/), optional nur die genannten ids")
+    parser.add_argument("--klang", action="store_true", help="Klangschale und Klangteppich erzeugen")
     args = parser.parse_args()
+    if args.klang:
+        generate_sounds()
+        return
+    if args.paar:
+        generate_paar(set(args.ids))
+        return
     if args.courses and len(args.courses) == 1:
         args.courses = (args.courses[0], args.courses[0])
 

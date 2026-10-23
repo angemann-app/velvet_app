@@ -12,6 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velvetpulse/models/user_profile.dart';
+import 'package:velvetpulse/screens/couples_channel/paar_abend_screen.dart';
 import 'package:velvetpulse/screens/couples_channel/pairing_modal.dart';
 import 'package:velvetpulse/screens/courses/lesson_detail_screen.dart';
 import 'package:velvetpulse/screens/main_navigation_screen.dart';
@@ -123,6 +124,22 @@ void main() {
     await _shot(tester, '04_paarkanal_verbunden', errors);
     await tester.tap(find.text('Wünsche'));
     await _shot(tester, '04_paarkanal_wuensche', errors);
+
+    await tester.pumpWidget(const SizedBox());
+    await tester.pumpWidget(_app(const PaarAbendScreen()));
+    await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 500)));
+    await _shot(tester, '09_paar_abend', errors);
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, -700));
+    await _shot(tester, '09_paar_abend_unten', errors);
+    await tester.tap(find.text('Abend beginnen'));
+    await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 500)));
+    await _shot(tester, '09_paar_abend_laeuft', errors);
+    await tester.tap(find.byIcon(Icons.skip_next_rounded));
+    await tester.tap(find.byIcon(Icons.skip_next_rounded));
+    await tester.tap(find.byIcon(Icons.skip_next_rounded));
+    await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 1500)));
+    await _shot(tester, '09_paar_abend_runde', errors);
+    await tester.pumpWidget(const SizedBox());
 
     await tester.pumpWidget(_app(const Scaffold(body: PairingModal())));
     await _shot(tester, '04_paarkanal_koppeln', errors);

@@ -5,6 +5,7 @@ import '../../models/couple_channel_models.dart';
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
 import '../yes_no_maybe/yes_no_maybe_screen.dart';
+import 'paar_abend_screen.dart';
 import 'pairing_modal.dart';
 
 /// Schnelle Funken: ein Tippen sagt, worauf man heute Lust hat – oder eben nicht.
@@ -198,6 +199,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           ),
         ),
         const SizedBox(height: 12),
+        _buildAbendCard(),
+        const SizedBox(height: 10),
         _buildFantasyMapCard(subtitle: 'Kannst du auch allein ausfüllen – und später mit deinem Gegenüber abgleichen.'),
       ],
     );
@@ -228,6 +231,47 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  void _openAbend() {
+    HapticFeedback.lightImpact();
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PaarAbendScreen()));
+  }
+
+  Widget _buildAbendCard() {
+    return InkWell(
+      onTap: _openAbend,
+      borderRadius: BorderRadius.circular(16),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [AppTheme.rose.withOpacity(0.16), AppTheme.amber.withOpacity(0.10)],
+          ),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: AppTheme.rose.withOpacity(0.45)),
+        ),
+        child: const Row(
+          children: [
+            Icon(Icons.spa_rounded, color: AppTheme.rose, size: 26),
+            SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Gemeinsamer Abend',
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                  SizedBox(height: 2),
+                  Text('Geführte Berührung für euch beide, 20 bis 45 Minuten. Jedes Mal anders.',
+                      style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
+                ],
+              ),
+            ),
+            Icon(Icons.chevron_right_rounded, color: AppTheme.textMuted),
+          ],
+        ),
       ),
     );
   }
@@ -385,6 +429,11 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                     ],
                   ),
                 ),
+              ),
+              IconButton(
+                onPressed: _openAbend,
+                icon: const Icon(Icons.spa_outlined, color: AppTheme.rose, size: 22),
+                tooltip: 'Gemeinsamer Abend',
               ),
               IconButton(
                 onPressed: _openFantasyMap,

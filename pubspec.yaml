@@ -35,6 +35,8 @@ flutter:
 
   assets:
     - assets/data/velvet_content.json
+    - assets/data/paar_abend.json
     - assets/images/
     - assets/audio/
     - assets/audio/cues/
+    - assets/audio/paar/
