@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../models/journal_entry.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import '../../l10n/t.dart';
 
 class CbtNewEntryScreen extends StatefulWidget {
   final CbtJournalEntry? existingEntry;
@@ -66,8 +67,8 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
     if (!_formKey.currentState!.validate()) return;
     if (_selectedDistortions.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Bitte wähle mindestens ein Denkmuster / eine Verzerrung aus.'),
+        SnackBar(
+          content: Text(t.cbtNewEntryPleaseChooseAtLeastOne),
           backgroundColor: AppTheme.amber,
         ),
       );
@@ -100,15 +101,15 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
       backgroundColor: AppTheme.background,
       appBar: AppBar(
         title: Text(
-          widget.existingEntry == null ? 'Neues Gedankenprotokoll' : 'Eintrag bearbeiten',
+          widget.existingEntry == null ? t.cbtNewEntryNewThoughtRecord : t.cbtNewEntryEditEntry,
           style: const TextStyle(fontSize: 18),
         ),
         actions: [
           TextButton.icon(
             onPressed: _isSaving ? null : _save,
             icon: const Icon(Icons.check, color: AppTheme.sageGreen),
-            label: const Text(
-              'Speichern',
+            label: Text(
+              t.partnerProfileDialogSave,
               style: TextStyle(
                 color: AppTheme.sageGreen,
                 fontWeight: FontWeight.bold,
@@ -131,13 +132,13 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: AppTheme.border),
               ),
-              child: const Row(
+              child: Row(
                 children: [
                   Icon(Icons.psychology_outlined, color: AppTheme.amber, size: 22),
                   SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      'Kognitive Umstrukturierung: Enttarne irrationale Alarmgedanken und formuliere eine biologisch realistische Antwort.',
+                      t.cbtNewEntryCognitiveRestructuringUnmaskIrrationalAlarm,
                       style: TextStyle(
                         color: AppTheme.textSecondary,
                         fontSize: 12,
@@ -154,19 +155,19 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             // Step 1: Situation
             _buildStepHeader(
               stepNumber: 1,
-              title: 'Auslöser / Situation',
-              hint: 'Wann oder wobei trat die Anspannung auf? (z.B. „Als wir ins Bett gingen“, „Als sie mich berührte“)',
+              title: t.cbtNewEntryTriggerSituation,
+              hint: t.cbtNewEntryWhenOrDuringWhatDid,
             ),
             TextFormField(
               controller: _situationController,
               maxLines: 2,
               style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
-              decoration: const InputDecoration(
-                hintText: 'Konkrete Situation beschreiben...',
+              decoration: InputDecoration(
+                hintText: t.cbtNewEntryDescribeTheSpecificSituation,
               ),
               validator: (val) {
                 if (val == null || val.trim().isEmpty) {
-                  return 'Bitte gib eine Situation an.';
+                  return t.cbtNewEntryPleaseDescribeASituation;
                 }
                 return null;
               },
@@ -177,19 +178,19 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             // Step 2: Automatic Thought
             _buildStepHeader(
               stepNumber: 2,
-              title: 'Automatischer Gedanke (Kopfkino)',
-              hint: 'Was schoss dir sofort durch den Kopf? Was sagte der innere Kritiker? (z.B. „Ich werde gleich wieder versagen“)',
+              title: t.cbtNewEntryAutomaticThoughtMentalMovie,
+              hint: t.cbtNewEntryWhatShotThroughYourHead,
             ),
             TextFormField(
               controller: _thoughtController,
               maxLines: 2,
               style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
-              decoration: const InputDecoration(
-                hintText: 'Den ungefilterten Gedanken notieren...',
+              decoration: InputDecoration(
+                hintText: t.cbtNewEntryNoteTheUnfilteredThought,
               ),
               validator: (val) {
                 if (val == null || val.trim().isEmpty) {
-                  return 'Bitte notiere deinen Gedanken.';
+                  return t.cbtNewEntryPleaseNoteYourThought;
                 }
                 return null;
               },
@@ -200,8 +201,8 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             // Step 3: Distortions Chips
             _buildStepHeader(
               stepNumber: 3,
-              title: 'Kognitive Verzerrung entlarven',
-              hint: 'Welche Denkfalle liegt hier vor? (Wähle mindestens eine aus)',
+              title: t.cbtNewEntryExposeTheCognitiveDistortion,
+              hint: t.cbtNewEntryWhichThinkingTrapIsThis,
             ),
             Wrap(
               spacing: 8,
@@ -210,7 +211,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                 final isSelected = _selectedDistortions.contains(distortion);
 
                 return FilterChip(
-                  label: Text(distortion),
+                  label: Text(CbtJournalEntry.anzeige(distortion)),
                   selected: isSelected,
                   onSelected: (_) => _toggleDistortion(distortion),
                   selectedColor: AppTheme.amber.withValues(alpha: 0.25),
@@ -233,19 +234,19 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             // Step 4: Reframe / Reality Check
             _buildStepHeader(
               stepNumber: 4,
-              title: 'Neubewertung / Realitätscheck',
-              hint: 'Was ist die biologische Wahrheit? Was würde ein empathischer Coach oder Freund dazu sagen?',
+              title: t.cbtNewEntryReappraisalRealityCheck,
+              hint: t.cbtNewEntryWhatSTheRealisticView,
             ),
             TextFormField(
               controller: _reframeController,
               maxLines: 4,
               style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
-              decoration: const InputDecoration(
-                hintText: 'z.B.: „Mein Körper reagiert nur auf Adrenalin. Ich muss heute niemanden beeindrucken. Wenn ich den Fokus auf Hautkontakt und Atmung lenke, fällt der Druck ab.“',
+              decoration: InputDecoration(
+                hintText: t.cbtNewEntryEGMyBodyIs,
               ),
               validator: (val) {
                 if (val == null || val.trim().isEmpty) {
-                  return 'Bitte formuliere eine Neubewertung.';
+                  return t.cbtNewEntryPleasePhraseAReappraisal;
                 }
                 return null;
               },
@@ -261,7 +262,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                 onPressed: _isSaving ? null : _save,
                 icon: const Icon(Icons.check_circle_outline_rounded, size: 20),
                 label: Text(
-                  _isSaving ? 'Wird gespeichert...' : 'Gedankenprotokoll speichern',
+                  _isSaving ? t.cbtNewEntrySaving : t.cbtNewEntrySaveThoughtRecord,
                   style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(

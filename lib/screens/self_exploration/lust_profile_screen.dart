@@ -7,33 +7,34 @@ import '../../services/nostr_service.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../couples_channel/pairing_modal.dart';
+import '../../l10n/t.dart';
 
 /// Techniken aus dem Kurs „Sich selbst erkunden“ (Lektionen self_2 und self_3).
-const List<(String, String)> _vulvaTechniques = [
-  ('v_kreisen', 'Kreisen'),
-  ('v_aufab', 'Auf und ab'),
-  ('v_seitwaerts', 'Seitwärts'),
-  ('v_druecken', 'Drücken und halten'),
-  ('v_rahmen', 'Rahmen – zwei Finger links und rechts'),
-  ('v_klopfen', 'Leichtes Klopfen'),
-  ('v_innen_aussen', 'Innen und außen zugleich'),
+List<(String, String)> _vulvaTechniques = [
+  ('v_kreisen', t.lustProfileCircling),
+  ('v_aufab', t.lustProfileUpAndDown),
+  ('v_seitwaerts', t.lustProfileSideToSide),
+  ('v_druecken', t.lustProfilePressAndHold),
+  ('v_rahmen', t.lustProfileFramingTwoFingersLeftAnd),
+  ('v_klopfen', t.lustProfileLightTapping),
+  ('v_innen_aussen', t.lustProfileInsideAndOutsideAtOnce),
 ];
 
-const List<(String, String)> _penisTechniques = [
-  ('p_offen', 'Offene, eingeölte Hand'),
-  ('p_zweihand', 'Zweihand-Gleiten'),
-  ('p_drehen', 'Drehen'),
-  ('p_ring', 'Ring an der Wurzel'),
-  ('p_baendchen', 'Das Bändchen umkreisen'),
-  ('p_hoden_damm', 'Hoden und Damm einbeziehen'),
-  ('p_wellen', 'Wellen – kurz vor dem Höhepunkt innehalten'),
+List<(String, String)> _penisTechniques = [
+  ('p_offen', t.lustProfileOpenOiledHand),
+  ('p_zweihand', t.lustProfileTwoHandedGliding),
+  ('p_drehen', t.lustProfileTwisting),
+  ('p_ring', t.lustProfileRingAtTheBase),
+  ('p_baendchen', t.lustProfileCirclingTheFrenulum),
+  ('p_hoden_damm', t.lustProfileIncludingTesticlesAndPerineum),
+  ('p_wellen', t.lustProfileWavesPausingJustBeforeClimax),
 ];
 
-const List<(String, String)> _general = [
-  ('g_langsam', 'Langsam beginnen, rundherum statt direkt'),
-  ('g_gleich', 'Wenn es gut ist: genau so weitermachen'),
-  ('g_gleitmittel', 'Mit viel Gleitmittel'),
-  ('g_zeit', 'Viel Zeit, ohne Ziel'),
+List<(String, String)> _general = [
+  ('g_langsam', t.lustProfileStartSlowlyAroundRatherThan),
+  ('g_gleich', t.lustProfileWhenItSGoodKeep),
+  ('g_gleitmittel', t.lustProfileWithPlentyOfLubricant),
+  ('g_zeit', t.lustProfileLotsOfTimeNoGoal),
 ];
 
 /// „Mein Lust-Profil“: angekreuzte Vorlieben plus Notiz, teilbar über den Paar-Kanal.
@@ -85,11 +86,11 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
   String _composeMessage() {
     final all = [..._general, ..._vulvaTechniques, ..._penisTechniques];
     final liked = all.where((t) => _selected.contains(t.$1)).map((t) => '• ${t.$2}').toList();
-    final buffer = StringBuffer('💛 Mein Lust-Profil – das habe ich über mich entdeckt:\n');
+    final buffer = StringBuffer(t.lustProfileMyDesireProfileThisIs);
     if (liked.isNotEmpty) buffer.writeln(liked.join('\n'));
     final note = _note.text.trim();
     if (note.isNotEmpty) buffer.writeln('\n$note');
-    buffer.write('\nMagst du es mit mir ausprobieren?');
+    buffer.write(t.lustProfileWouldYouLikeToTry);
     return buffer.toString();
   }
 
@@ -113,7 +114,7 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
     setState(() => _sending = false);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(ok ? 'Dein Lust-Profil ist verschlüsselt unterwegs 💛' : 'Senden hat nicht geklappt. Bitte gleich noch einmal.'),
+        content: Text(ok ? t.lustProfileYourDesireProfileIsOn : t.lustProfileSendingDidnTWorkPlease),
         backgroundColor: ok ? AppTheme.sageGreen : AppTheme.rose,
       ),
     );
@@ -123,28 +124,27 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
     await _save();
     await Clipboard.setData(ClipboardData(text: _composeMessage()));
     if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Text kopiert.')));
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.lustProfileTextCopied)));
   }
 
   @override
   Widget build(BuildContext context) {
     final isFemale = StorageService.getUserProfile()?.isFemale == true;
-    final first = isFemale ? ('Mit Vulva', _vulvaTechniques) : ('Mit Penis', _penisTechniques);
-    final second = isFemale ? ('Mit Penis', _penisTechniques) : ('Mit Vulva', _vulvaTechniques);
+    final first = isFemale ? (t.lustProfileWithVulva, _vulvaTechniques) : (t.lustProfileWithPenis, _penisTechniques);
+    final second = isFemale ? (t.lustProfileWithPenis, _penisTechniques) : (t.lustProfileWithVulva, _vulvaTechniques);
 
     return Scaffold(
       backgroundColor: AppTheme.background,
-      appBar: AppBar(title: const Text('Mein Lust-Profil')),
+      appBar: AppBar(title: Text(t.lessonDetailMyDesireProfile)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
         children: [
-          const Text(
-            'Hake an, was dir beim Erkunden gefallen hat. Nur du entscheidest, ob und wann du es teilst – '
-            'gesendet wird ausschließlich, was du hier auswählst.',
+          Text(
+            t.lustProfileTickWhatYouEnjoyedWhile,
             style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
           ),
           const SizedBox(height: 16),
-          _buildSection('Allgemein', _general),
+          _buildSection(t.lustProfileGeneral, _general),
           _buildSection(first.$1, first.$2),
           _buildSection(second.$1, second.$2, initiallyExpanded: false),
           const SizedBox(height: 8),
@@ -154,9 +154,9 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
             maxLines: 6,
             onChanged: (_) => setState(() {}),
             textCapitalization: TextCapitalization.sentences,
-            decoration: const InputDecoration(
-              labelText: 'Eigene Notiz',
-              hintText: 'Zum Beispiel: Am Anfang mag ich große, langsame Kreise …',
+            decoration: InputDecoration(
+              labelText: t.lustProfilePersonalNote,
+              hintText: t.lustProfileForExampleAtTheBeginning,
               alignLabelWithHint: true,
             ),
           ),
@@ -166,7 +166,7 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
             child: ElevatedButton.icon(
               onPressed: _hasContent && !_sending ? _send : null,
               icon: const Icon(Icons.favorite_rounded),
-              label: Text(_nostr.isPaired ? 'An mein Gegenüber senden' : 'Paar-Kanal verbinden und senden'),
+              label: Text(_nostr.isPaired ? t.lustProfileSendToMyPartner : t.lustProfileConnectCoupleChannelAndSend),
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppTheme.rose,
                 foregroundColor: Colors.white,
@@ -178,13 +178,12 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
             child: TextButton.icon(
               onPressed: _hasContent ? _copy : null,
               icon: const Icon(Icons.copy_rounded, size: 18),
-              label: const Text('Nur als Text kopieren'),
+              label: Text(t.lustProfileJustCopyAsText),
             ),
           ),
           const SizedBox(height: 8),
-          const Text(
-            'Tipp: Noch schöner als jede Nachricht ist es, die Hand deines Gegenübers zu führen oder es dir zeigen zu lassen. '
-            'Die Nachricht kann der Anstoß dafür sein.',
+          Text(
+            t.lustProfileTipEvenNicerThanAny,
             style: TextStyle(color: AppTheme.textMuted, fontSize: 12, height: 1.4),
           ),
         ],

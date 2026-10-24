@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../models/content_models.dart';
+import '../../models/journal_entry.dart';
 import '../../services/data_service.dart';
 import '../../theme/app_theme.dart';
 import 'cbt_new_entry_screen.dart';
+import '../../l10n/t.dart';
 
 class BeliefLibraryView extends StatelessWidget {
   final VoidCallback? onEntryAdded;
@@ -10,22 +12,14 @@ class BeliefLibraryView extends StatelessWidget {
   const BeliefLibraryView({super.key, this.onEntryAdded});
 
   void _transferToJournal(BuildContext context, BeliefCard card) async {
-    // Map category to nearest available distortion
-    String distortion = 'Alles-oder-Nichts-Denken';
-    if (card.category.contains('Spectatoring')) {
-      distortion = 'Spectatoring / Selbstbeobachtung';
-    } else if (card.category.contains('Vergleich')) {
-      distortion = 'Katastrophisieren';
-    } else if (card.category.contains('Verantwortung') || card.category.contains('Identität')) {
-      distortion = 'Leistungsdruck';
-    }
+    final distortion = CbtJournalEntry.fuerGlaubenssatz(card.id);
 
     final result = await Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => CbtNewEntryScreen(
           presetThought: card.irrationalThought,
           presetDistortion: distortion,
-          presetReframe: '${card.realityCheck}\n\nPraktischer Shift: ${card.practicalShift}',
+          presetReframe: t.beliefLibraryViewRealitycheckPracticalShiftPracticalshift(card.realityCheck, card.practicalShift),
         ),
       ),
     );
@@ -50,7 +44,7 @@ class BeliefLibraryView extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             border: Border.all(color: AppTheme.border),
           ),
-          child: const Row(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Icon(Icons.library_books_rounded, color: AppTheme.amber, size: 24),
@@ -60,7 +54,7 @@ class BeliefLibraryView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Glaubenssätze-Baukasten',
+                      t.beliefLibraryViewBeliefToolkit,
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
@@ -69,7 +63,7 @@ class BeliefLibraryView extends StatelessWidget {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      'Die häufigsten mentalen Fallen bei Leistungsangst – und die biologische Wahrheit dahinter. Tippe auf eine Karte, um sie direkt in dein eigenes Journal zu übernehmen.',
+                      t.beliefLibraryViewTheMostCommonMentalTraps,
                       style: TextStyle(
                         fontSize: 12,
                         color: AppTheme.textSecondary,
@@ -139,7 +133,7 @@ class BeliefLibraryView extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      belief.target == 'women' ? 'FÜR SIE 🌸' : 'FÜR IHN 🌿',
+                      belief.target == 'women' ? t.beliefLibraryViewForHer : t.beliefLibraryViewForHim,
                       style: TextStyle(
                         color: belief.target == 'women'
                             ? const Color(0xFFFB7185)
@@ -169,8 +163,8 @@ class BeliefLibraryView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'TYPISCHER IRRGLAUBE (KOPFKINO)',
+                  Text(
+                    t.beliefLibraryViewTypicalMisbeliefMentalMovie,
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w800,
@@ -180,7 +174,7 @@ class BeliefLibraryView extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    '„${belief.irrationalThought}“',
+                    t.beliefLibraryViewIrrationalthought(belief.irrationalThought),
                     style: const TextStyle(
                       fontSize: 14,
                       fontStyle: FontStyle.italic,
@@ -207,8 +201,8 @@ class BeliefLibraryView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'BIOLOGISCHER REALITÄTSCHECK',
+                  Text(
+                    t.beliefLibraryViewRealityCheck,
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w800,
@@ -258,8 +252,8 @@ class BeliefLibraryView extends StatelessWidget {
               child: OutlinedButton.icon(
                 onPressed: () => _transferToJournal(context, belief),
                 icon: const Icon(Icons.edit_note_rounded, size: 18, color: AppTheme.amberLight),
-                label: const Text(
-                  'In eigenes Journal übernehmen',
+                label: Text(
+                  t.beliefLibraryViewTakeIntoMyJournal,
                   style: TextStyle(fontSize: 13, color: AppTheme.textPrimary),
                 ),
                 style: OutlinedButton.styleFrom(

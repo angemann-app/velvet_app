@@ -1,3 +1,5 @@
+import '../l10n/t.dart';
+
 class CbtJournalEntry {
   final String id;
   final DateTime timestamp;
@@ -38,6 +40,8 @@ class CbtJournalEntry {
         'reality_check_reframe': realityCheckReframe,
       };
 
+  /// Die deutschen Bezeichnungen sind zugleich die gespeicherte Kennung (in Einträgen und
+  /// Sicherungen) – nie ändern. Angezeigt wird die Übersetzung über [anzeige].
   static const List<String> availableDistortions = [
     'Spectatoring / Selbstbeobachtung',
     'Katastrophisieren',
@@ -46,4 +50,24 @@ class CbtJournalEntry {
     'Leistungsdruck',
     'Tunnelblick auf Körpersignale',
   ];
+
+  static String anzeige(String gespeichert) => switch (gespeichert) {
+        'Spectatoring / Selbstbeobachtung' => t.distortionSpectatoring,
+        'Katastrophisieren' => t.distortionCatastrophizing,
+        'Alles-oder-Nichts-Denken' => t.distortionAllOrNothing,
+        'Gedankenlesen' => t.distortionMindReading,
+        'Leistungsdruck' => t.distortionPerformancePressure,
+        'Tunnelblick auf Körpersignale' => t.distortionTunnelVision,
+        _ => gespeichert,
+      };
+
+  /// Passende Denkfalle zu einem Glaubenssatz aus der Bibliothek (nach dessen fester id).
+  static String fuerGlaubenssatz(String beliefId) => switch (beliefId) {
+        'belief_spectatoring' || 'belief_female_body' => 'Spectatoring / Selbstbeobachtung',
+        'belief_comparison' => 'Katastrophisieren',
+        'belief_responsibility' || 'belief_masculinity' || 'belief_female_orgasm' || 'belief_duty_sex' =>
+          'Leistungsdruck',
+        'belief_non_concordance' => 'Tunnelblick auf Körpersignale',
+        _ => 'Alles-oder-Nichts-Denken',
+      };
 }

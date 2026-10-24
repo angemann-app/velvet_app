@@ -11,6 +11,7 @@ import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
 import '../../widgets/player_steuerung.dart';
+import '../../l10n/t.dart';
 
 /// Geführte Selbsterkundung: eine Stimme begleitet durch Ankommen, Atem, eine Körperreise
 /// und – wenn gewählt – intime Berührung mit Wellen. Jede Reise wird neu zusammengestellt
@@ -197,7 +198,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
       },
       child: Scaffold(
         backgroundColor: AppTheme.background,
-        appBar: AppBar(backgroundColor: AppTheme.background, title: const Text('Geführte Selbsterkundung')),
+        appBar: AppBar(backgroundColor: AppTheme.background, title: Text(t.lessonDetailGuidedSelfExploration)),
         body: SafeArea(
           child: _daten == null
               ? const Center(child: CircularProgressIndicator(color: AppTheme.rose))
@@ -212,11 +213,11 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Reise beenden?'),
-        content: const Text('Die Begleitung hört dann auf. Du kannst jederzeit neu beginnen.'),
+        title: Text(t.selbstReiseEndTheJourney),
+        content: Text(t.selbstReiseTheGuidanceStopsThenYou),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Weitermachen')),
-          TextButton(onPressed: () => Navigator.pop(context, true), child: const Text('Beenden')),
+          TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.paarAbendContinue)),
+          TextButton(onPressed: () => Navigator.pop(context, true), child: Text(t.playerSteuerungStop)),
         ],
       ),
     );
@@ -227,10 +228,8 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
       children: [
-        const Text(
-          'Eine Stimme begleitet dich durch Ankommen, Atem und eine Reise über deinen Körper. '
-          'Die meiste Zeit ist Stille, damit du ganz bei dir bist. Jede Reise wird neu zusammengestellt, '
-          'und es gibt kein Ziel.',
+        Text(
+          t.selbstReiseAVoiceGuidesYouThrough,
           style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5),
         ),
         const SizedBox(height: 14),
@@ -241,33 +240,31 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
             borderRadius: BorderRadius.circular(14),
             border: Border.all(color: AppTheme.border),
           ),
-          child: const Text(
-            'Du bestimmst. Pausieren, einen Schritt überspringen oder aufhören geht jederzeit über die Knöpfe unten. '
-            'Es muss nichts passieren: Bei einer angenehmen, nicht sexuellen Berührung zu bleiben ist genauso richtig. '
-            'Wird etwas unangenehm oder kommen schwierige Erinnerungen hoch, darfst du jederzeit aufhören.',
+          child: Text(
+            t.selbstReiseYouDecideYouCanPause,
             style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.5),
           ),
         ),
         const SizedBox(height: 22),
-        _titel('Dauer'),
+        _titel(t.paarAbendDuration),
         Wrap(spacing: 8, children: [
-          for (final m in _minutenOptionen) _chip('$m Min.', _minuten == m, () => setState(() => _minuten = m)),
+          for (final m in _minutenOptionen) _chip(t.selbstReiseMMin(m), _minuten == m, () => setState(() => _minuten = m)),
         ]),
         const SizedBox(height: 20),
-        _titel('Wie nah möchtest du dir heute kommen?'),
-        _tiefeOption(PaarTiefe.bekleidet, 'Sanft', 'Gesicht, Kopfhaut, Ohren, Hals, Arme, Hände, Brust, Bauch, Beine und Füße, gern bekleidet.'),
-        _tiefeOption(PaarTiefe.haut, 'Haut', 'Dazu nackte Haut mit Öl, Hüften und Innenschenkel.'),
-        _tiefeOption(PaarTiefe.intim, 'Intim', 'Dazu Damm und Geschlecht, mit Wellen statt Ziel.'),
+        _titel(t.selbstReiseHowCloseWouldYouLike),
+        _tiefeOption(PaarTiefe.bekleidet, t.selbstReiseGentle, t.selbstReiseFaceScalpEarsNeckArms),
+        _tiefeOption(PaarTiefe.haut, t.selbstReiseSkin, t.selbstReisePlusBareSkinWithOil),
+        _tiefeOption(PaarTiefe.intim, t.paarAbendIntimate, t.selbstReisePlusPerineumAndGenitalsWith),
         if (_tiefe == PaarTiefe.intim) ...[
           const SizedBox(height: 12),
-          _titel('Dein Körper'),
+          _titel(t.selbstReiseYourBody),
           Wrap(spacing: 8, children: [
-            _chip('Vulva', _koerper == 'vulva', () => setState(() => _koerper = 'vulva')),
-            _chip('Penis', _koerper == 'penis', () => setState(() => _koerper = 'penis')),
+            _chip(t.selbstReiseVulva, _koerper == 'vulva', () => setState(() => _koerper = 'vulva')),
+            _chip(t.selbstReisePenis, _koerper == 'penis', () => setState(() => _koerper = 'penis')),
           ]),
         ],
         const SizedBox(height: 20),
-        _titel('Stimme'),
+        _titel(t.paarAbendVoice),
         Wrap(spacing: 8, children: [
           _chip('Victoria', _stimme == 'victoria', () => setState(() => _stimme = 'victoria')),
           _chip('Martin', _stimme == 'martin', () => setState(() => _stimme = 'martin')),
@@ -278,8 +275,8 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           value: _teppich,
           activeThumbColor: AppTheme.rose,
           onChanged: (v) => setState(() => _teppich = v),
-          title: const Text('Leiser Klangteppich', style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
-          subtitle: const Text('Ruhiger Hintergrund in den Stillen',
+          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+          subtitle: Text(t.paarAbendCalmBackgroundDuringTheSilences,
               style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5)),
         ),
         const SizedBox(height: 22),
@@ -288,7 +285,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           child: ElevatedButton.icon(
             onPressed: _starten,
             icon: const Icon(Icons.play_arrow_rounded),
-            label: const Text('Reise beginnen', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
+            label: Text(t.selbstReiseBeginTheJourney, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppTheme.rose,
               foregroundColor: Colors.white,
@@ -359,8 +356,8 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
     final ersteReise = ablauf.indexWhere((s) => s.runde == 1);
     final letzteReise = ablauf.lastIndexWhere((s) => s.runde == 1);
     final phase = _fertig || schritt == null
-        ? 'Danke dir'
-        : (schritt.runde == 1 ? 'Körperreise' : (_index < ersteReise ? 'Ankommen' : (_index > letzteReise ? 'Ausklang' : 'Körperreise')));
+        ? t.selbstReiseThankYou
+        : (schritt.runde == 1 ? t.selbstReiseBodyJourney : (_index < ersteReise ? t.paarAbendArriving : (_index > letzteReise ? t.paarAbendEnding : t.selbstReiseBodyJourney)));
     final spricht = schritt?.baustein != null;
     final gesamt = _gesamt;
     final fortschritt = gesamt.inMilliseconds == 0 ? 0.0 : _vergangen.inMilliseconds / gesamt.inMilliseconds;
@@ -405,11 +402,11 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         const SizedBox(height: 10),
         if (!_fertig && schritt != null)
           Text(
-            _pausiert ? 'Pausiert' : (spricht ? 'Die Stimme spricht …' : 'Stille · noch ${_fmt(stilleRest)}'),
+            _pausiert ? t.paarAbendPaused : (spricht ? t.paarAbendTheVoiceIsSpeaking : t.selbstReiseSilenceStillerestLeft(_fmt(stilleRest))),
             style: const TextStyle(fontSize: 13, color: AppTheme.textMuted),
           )
         else
-          const Text('Bleib liegen, solange es sich gut anfühlt.',
+          Text(t.selbstReiseStayLyingDownAsLong,
               style: TextStyle(fontSize: 15, color: AppTheme.textSecondary)),
         const Spacer(),
         if (_fertig)
@@ -423,7 +420,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
                 side: const BorderSide(color: AppTheme.rose),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
               ),
-              child: const Text('Schließen', style: TextStyle(fontWeight: FontWeight.w700)),
+              child: Text(t.couplesChannelClose, style: TextStyle(fontWeight: FontWeight.w700)),
             ),
           )
         else

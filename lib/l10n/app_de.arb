@@ -583,5 +583,260 @@
         "type": "int"
       }
     }
-  }
+  },
+  "distortionSpectatoring": "Spectatoring / Selbstbeobachtung",
+  "distortionCatastrophizing": "Katastrophisieren",
+  "distortionAllOrNothing": "Alles-oder-Nichts-Denken",
+  "distortionMindReading": "Gedankenlesen",
+  "distortionPerformancePressure": "Leistungsdruck",
+  "distortionTunnelVision": "Tunnelblick auf Körpersignale",
+  "cbtJournalProtocolsSaved": "{count, plural, =1{1 Gedankenprotokoll lokal gesichert} other{{count} Gedankenprotokolle lokal gesichert}}",
+  "@cbtJournalProtocolsSaved": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selbstReiseEndTheJourney": "Reise beenden?",
+  "selbstReiseTheGuidanceStopsThenYou": "Die Begleitung hört dann auf. Du kannst jederzeit neu beginnen.",
+  "selbstReiseAVoiceGuidesYouThrough": "Eine Stimme begleitet dich durch Ankommen, Atem und eine Reise über deinen Körper. Die meiste Zeit ist Stille, damit du ganz bei dir bist. Jede Reise wird neu zusammengestellt, und es gibt kein Ziel.",
+  "selbstReiseYouDecideYouCanPause": "Du bestimmst. Pausieren, einen Schritt überspringen oder aufhören geht jederzeit über die Knöpfe unten. Es muss nichts passieren: Bei einer angenehmen, nicht sexuellen Berührung zu bleiben ist genauso richtig. Wird etwas unangenehm oder kommen schwierige Erinnerungen hoch, darfst du jederzeit aufhören.",
+  "selbstReiseMMin": "{m} Min.",
+  "@selbstReiseMMin": {
+    "placeholders": {
+      "m": {
+        "type": "Object"
+      }
+    }
+  },
+  "selbstReiseHowCloseWouldYouLike": "Wie nah möchtest du dir heute kommen?",
+  "selbstReiseGentle": "Sanft",
+  "selbstReiseFaceScalpEarsNeckArms": "Gesicht, Kopfhaut, Ohren, Hals, Arme, Hände, Brust, Bauch, Beine und Füße, gern bekleidet.",
+  "selbstReiseSkin": "Haut",
+  "selbstReisePlusBareSkinWithOil": "Dazu nackte Haut mit Öl, Hüften und Innenschenkel.",
+  "selbstReisePlusPerineumAndGenitalsWith": "Dazu Damm und Geschlecht, mit Wellen statt Ziel.",
+  "selbstReiseYourBody": "Dein Körper",
+  "selbstReiseVulva": "Vulva",
+  "selbstReisePenis": "Penis",
+  "selbstReiseBeginTheJourney": "Reise beginnen",
+  "selbstReiseThankYou": "Danke dir",
+  "selbstReiseBodyJourney": "Körperreise",
+  "selbstReiseSilenceStillerestLeft": "Stille · noch {stilleRest}",
+  "@selbstReiseSilenceStillerestLeft": {
+    "placeholders": {
+      "stilleRest": {
+        "type": "Object"
+      }
+    }
+  },
+  "selbstReiseStayLyingDownAsLong": "Bleib liegen, solange es sich gut anfühlt.",
+  "lustProfileCircling": "Kreisen",
+  "lustProfileUpAndDown": "Auf und ab",
+  "lustProfileSideToSide": "Seitwärts",
+  "lustProfilePressAndHold": "Drücken und halten",
+  "lustProfileFramingTwoFingersLeftAnd": "Rahmen – zwei Finger links und rechts",
+  "lustProfileLightTapping": "Leichtes Klopfen",
+  "lustProfileInsideAndOutsideAtOnce": "Innen und außen zugleich",
+  "lustProfileOpenOiledHand": "Offene, eingeölte Hand",
+  "lustProfileTwoHandedGliding": "Zweihand-Gleiten",
+  "lustProfileTwisting": "Drehen",
+  "lustProfileRingAtTheBase": "Ring an der Wurzel",
+  "lustProfileCirclingTheFrenulum": "Das Bändchen umkreisen",
+  "lustProfileIncludingTesticlesAndPerineum": "Hoden und Damm einbeziehen",
+  "lustProfileWavesPausingJustBeforeClimax": "Wellen – kurz vor dem Höhepunkt innehalten",
+  "lustProfileStartSlowlyAroundRatherThan": "Langsam beginnen, rundherum statt direkt",
+  "lustProfileWhenItSGoodKeep": "Wenn es gut ist: genau so weitermachen",
+  "lustProfileWithPlentyOfLubricant": "Mit viel Gleitmittel",
+  "lustProfileLotsOfTimeNoGoal": "Viel Zeit, ohne Ziel",
+  "lustProfileMyDesireProfileThisIs": "💛 Mein Lust-Profil – das habe ich über mich entdeckt:\n",
+  "lustProfileWouldYouLikeToTry": "\nMagst du es mit mir ausprobieren?",
+  "lustProfileYourDesireProfileIsOn": "Dein Lust-Profil ist verschlüsselt unterwegs 💛",
+  "lustProfileSendingDidnTWorkPlease": "Senden hat nicht geklappt. Bitte gleich noch einmal.",
+  "lustProfileTextCopied": "Text kopiert.",
+  "lustProfileWithVulva": "Mit Vulva",
+  "lustProfileWithPenis": "Mit Penis",
+  "lustProfileTickWhatYouEnjoyedWhile": "Hake an, was dir beim Erkunden gefallen hat. Nur du entscheidest, ob und wann du es teilst – gesendet wird ausschließlich, was du hier auswählst.",
+  "lustProfileGeneral": "Allgemein",
+  "lustProfilePersonalNote": "Eigene Notiz",
+  "lustProfileForExampleAtTheBeginning": "Zum Beispiel: Am Anfang mag ich große, langsame Kreise …",
+  "lustProfileSendToMyPartner": "An mein Gegenüber senden",
+  "lustProfileConnectCoupleChannelAndSend": "Paar-Kanal verbinden und senden",
+  "lustProfileJustCopyAsText": "Nur als Text kopieren",
+  "lustProfileTipEvenNicerThanAny": "Tipp: Noch schöner als jede Nachricht ist es, die Hand deines Gegenübers zu führen oder es dir zeigen zu lassen. Die Nachricht kann der Anstoß dafür sein.",
+  "yesNoMaybeMatchingAnswersEncrypted": "Antworten werden verschlüsselt abgeglichen …",
+  "yesNoMaybeCountAnswersMatched": "{count} Antworten erfolgreich abgeglichen! ✨",
+  "@yesNoMaybeCountAnswersMatched": {
+    "placeholders": {
+      "count": {
+        "type": "Object"
+      }
+    }
+  },
+  "yesNoMaybeReadMore": "WEITERLESEN",
+  "yesNoMaybeYesMaybeNo": "Ja / Vielleicht / Nein",
+  "yesNoMaybeSyncWithPartner": "Mit Partner synchronisieren",
+  "yesNoMaybePairingRequired": "Koppeln erforderlich",
+  "yesNoMaybeQuestionsAnsweredcountTotalitems": "Fragenkatalog ({answeredCount}/{totalItems})",
+  "@yesNoMaybeQuestionsAnsweredcountTotalitems": {
+    "placeholders": {
+      "answeredCount": {
+        "type": "Object"
+      },
+      "totalItems": {
+        "type": "Object"
+      }
+    }
+  },
+  "yesNoMaybeMatchesMatchcount": "Matches ({matchCount})",
+  "@yesNoMaybeMatchesMatchcount": {
+    "placeholders": {
+      "matchCount": {
+        "type": "Object"
+      }
+    }
+  },
+  "yesNoMaybeDigitalSafeSpace": "DIGITALER SAFE SPACE",
+  "yesNoMaybeFindOutWhatExcitesYou": "Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar.",
+  "yesNoMaybeYes": "Ja",
+  "yesNoMaybeMaybe": "Vielleicht",
+  "yesNoMaybeNo": "Nein",
+  "yesNoMaybeAllEintraegelength": "Alle ({eintraegeLength})",
+  "@yesNoMaybeAllEintraegelength": {
+    "placeholders": {
+      "eintraegeLength": {
+        "type": "Object"
+      }
+    }
+  },
+  "yesNoMaybeOpen": "Offen",
+  "yesNoMaybeYesYescount": "Ja ({yesCount})",
+  "@yesNoMaybeYesYescount": {
+    "placeholders": {
+      "yesCount": {
+        "type": "Object"
+      }
+    }
+  },
+  "yesNoMaybeMaybeMaybecount": "Vielleicht ({maybeCount})",
+  "@yesNoMaybeMaybeMaybecount": {
+    "placeholders": {
+      "maybeCount": {
+        "type": "Object"
+      }
+    }
+  },
+  "yesNoMaybeNoNocount": "Nein ({noCount})",
+  "@yesNoMaybeNoNocount": {
+    "placeholders": {
+      "noCount": {
+        "type": "Object"
+      }
+    }
+  },
+  "yesNoMaybePairingRequired2": "Kopplung erforderlich",
+  "yesNoMaybeConnectWithYourPartnerIn": "Verbinde dich im Paar-Kanal per QR-Code mit deinem Gegenüber. Eure Antworten werden dann Ende-zu-Ende-verschlüsselt abgeglichen.",
+  "yesNoMaybePairViaQrCodeNow": "Jetzt per QR-Code koppeln",
+  "yesNoMaybePerfectMatchWithPartnername": "VOLLTREFFER MIT {partnerName}",
+  "@yesNoMaybePerfectMatchWithPartnername": {
+    "placeholders": {
+      "partnerName": {
+        "type": "Object"
+      }
+    }
+  },
+  "yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints": "{yesMatchesLength} gemeinsame Ja-Übereinstimmungen & {curiosityMatchesLength} Neugier-Punkte entdeckt!",
+  "@yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints": {
+    "placeholders": {
+      "yesMatchesLength": {
+        "type": "Object"
+      },
+      "curiosityMatchesLength": {
+        "type": "Object"
+      }
+    }
+  },
+  "yesNoMaybeNoRejectionAllLimitsWere": "Keine Zurückweisung: Alle Grenzen wurden diskret gewahrt. Nur echte gemeinsame Lust wird enthüllt.",
+  "yesNoMaybePerfectMatchBothSaidYes": "Volltreffer (Beide haben JA gesagt)",
+  "yesNoMaybeSharedCuriosityOpenToExploring": "Gemeinsame Neugier (Offen für Erkundung)",
+  "yesNoMaybeNoMatchesYet": "Noch keine Übereinstimmungen",
+  "yesNoMaybeBothKeepVotingInThe": "Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Ja oder Vielleicht bewertet habt, leuchtet er hier auf.",
+  "yesNoMaybeYouBothYes": "Ihr beide: Ja",
+  "yesNoMaybeCuriousTogether": "Gemeinsam neugierig",
+  "yesNoMaybeCourse": "Kurs ▶",
+  "cbtNewEntryPleaseChooseAtLeastOne": "Bitte wähle mindestens ein Denkmuster / eine Verzerrung aus.",
+  "cbtNewEntryNewThoughtRecord": "Neues Gedankenprotokoll",
+  "cbtNewEntryEditEntry": "Eintrag bearbeiten",
+  "cbtNewEntryCognitiveRestructuringUnmaskIrrationalAlarm": "Kognitive Umstrukturierung: Enttarne irrationale Alarmgedanken und formuliere eine biologisch realistische Antwort.",
+  "cbtNewEntryTriggerSituation": "Auslöser / Situation",
+  "cbtNewEntryWhenOrDuringWhatDid": "Wann oder wobei trat die Anspannung auf? (z.B. „Als wir ins Bett gingen“, „Als sie mich berührte“)",
+  "cbtNewEntryDescribeTheSpecificSituation": "Konkrete Situation beschreiben...",
+  "cbtNewEntryPleaseDescribeASituation": "Bitte gib eine Situation an.",
+  "cbtNewEntryAutomaticThoughtMentalMovie": "Automatischer Gedanke (Kopfkino)",
+  "cbtNewEntryWhatShotThroughYourHead": "Was schoss dir sofort durch den Kopf? Was sagte der innere Kritiker? (z.B. „Ich werde gleich wieder versagen“)",
+  "cbtNewEntryNoteTheUnfilteredThought": "Den ungefilterten Gedanken notieren...",
+  "cbtNewEntryPleaseNoteYourThought": "Bitte notiere deinen Gedanken.",
+  "cbtNewEntryExposeTheCognitiveDistortion": "Kognitive Verzerrung entlarven",
+  "cbtNewEntryWhichThinkingTrapIsThis": "Welche Denkfalle liegt hier vor? (Wähle mindestens eine aus)",
+  "cbtNewEntryReappraisalRealityCheck": "Neubewertung / Realitätscheck",
+  "cbtNewEntryWhatSTheRealisticView": "Was ist die biologische Wahrheit? Was würde ein empathischer Coach oder Freund dazu sagen?",
+  "cbtNewEntryEGMyBodyIs": "z.B.: „Mein Körper reagiert nur auf Adrenalin. Ich muss heute niemanden beeindrucken. Wenn ich den Fokus auf Hautkontakt und Atmung lenke, fällt der Druck ab.“",
+  "cbtNewEntryPleasePhraseAReappraisal": "Bitte formuliere eine Neubewertung.",
+  "cbtNewEntrySaving": "Wird gespeichert...",
+  "cbtNewEntrySaveThoughtRecord": "Gedankenprotokoll speichern",
+  "cbtJournalDeleteEntry": "Eintrag löschen?",
+  "cbtJournalDoYouReallyWantTo": "Möchtest du dieses Gedankenprotokoll wirklich von deinem Gerät entfernen?",
+  "cbtJournalDelete": "Löschen",
+  "cbtJournalNewEntry": "Neuer Eintrag",
+  "cbtJournalMyRecordsEntrieslength": "Meine Protokolle ({entriesLength})",
+  "@cbtJournalMyRecordsEntrieslength": {
+    "placeholders": {
+      "entriesLength": {
+        "type": "Object"
+      }
+    }
+  },
+  "cbtJournalBeliefs": "Glaubenssätze",
+  "cbtJournalNoThoughtRecordsYet": "Noch keine Gedankenprotokolle",
+  "cbtJournalWhenYourHeadBlocksBefore": "Wenn der Kopf vor oder bei der Intimität blockiert, hilft es ungemein, den automatischen Gedanken aufzuschreiben und die kognitive Verzerrung schwarz auf weiß zu entlarven.",
+  "cbtJournalNewRecord": "Neues Protokoll",
+  "cbtJournalStartWithABelief": "Mit einem Glaubenssatz starten",
+  "cbtJournalCognitiveRestructuring": "Kognitive Umstrukturierung",
+  "cbtJournalEdit": "Bearbeiten",
+  "cbtJournalAutomaticThoughtAlarm": "AUTOMATISCHER GEDANKE (ALARM)",
+  "cbtJournalAutomaticthought": "„{automaticThought}“",
+  "@cbtJournalAutomaticthought": {
+    "placeholders": {
+      "automaticThought": {
+        "type": "Object"
+      }
+    }
+  },
+  "cbtJournalReappraisalRealityCheck": "NEUBEWERTUNG & REALITÄTSCHECK",
+  "beliefLibraryViewRealitycheckPracticalShiftPracticalshift": "{realityCheck}\n\nPraktischer Shift: {practicalShift}",
+  "@beliefLibraryViewRealitycheckPracticalShiftPracticalshift": {
+    "placeholders": {
+      "realityCheck": {
+        "type": "Object"
+      },
+      "practicalShift": {
+        "type": "Object"
+      }
+    }
+  },
+  "beliefLibraryViewBeliefToolkit": "Glaubenssätze-Baukasten",
+  "beliefLibraryViewTheMostCommonMentalTraps": "Die häufigsten mentalen Fallen bei Leistungsangst – und die biologische Wahrheit dahinter. Tippe auf eine Karte, um sie direkt in dein eigenes Journal zu übernehmen.",
+  "beliefLibraryViewForHer": "FÜR SIE 🌸",
+  "beliefLibraryViewForHim": "FÜR IHN 🌿",
+  "beliefLibraryViewTypicalMisbeliefMentalMovie": "TYPISCHER IRRGLAUBE (KOPFKINO)",
+  "beliefLibraryViewIrrationalthought": "„{irrationalThought}“",
+  "@beliefLibraryViewIrrationalthought": {
+    "placeholders": {
+      "irrationalThought": {
+        "type": "Object"
+      }
+    }
+  },
+  "beliefLibraryViewRealityCheck": "BIOLOGISCHER REALITÄTSCHECK",
+  "beliefLibraryViewTakeIntoMyJournal": "In eigenes Journal übernehmen"
 }

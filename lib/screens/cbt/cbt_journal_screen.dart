@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../models/journal_entry.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import '../../l10n/t.dart';
 import 'cbt_new_entry_screen.dart';
 import 'belief_library_view.dart';
 
@@ -56,15 +57,15 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Eintrag löschen?'),
-        content: const Text(
-          'Möchtest du dieses Gedankenprotokoll wirklich von deinem Gerät entfernen?',
+        title: Text(t.cbtJournalDeleteEntry),
+        content: Text(
+          t.cbtJournalDoYouReallyWantTo,
           style: TextStyle(color: AppTheme.textSecondary),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Abbrechen', style: TextStyle(color: AppTheme.textMuted)),
+            child: Text(t.ausspracheMeldenCancel, style: TextStyle(color: AppTheme.textMuted)),
           ),
           ElevatedButton(
             onPressed: () async {
@@ -76,7 +77,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               backgroundColor: AppTheme.rose,
               foregroundColor: Colors.white,
             ),
-            child: const Text('Löschen'),
+            child: Text(t.cbtJournalDelete),
           ),
         ],
       ),
@@ -104,8 +105,8 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               backgroundColor: AppTheme.sageGreen,
               foregroundColor: Colors.black,
               icon: const Icon(Icons.add_rounded),
-              label: const Text(
-                'Neuer Eintrag',
+              label: Text(
+                t.cbtJournalNewEntry,
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             )
@@ -141,17 +142,17 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                     children: [
                       const Icon(Icons.edit_note_rounded, size: 16),
                       const SizedBox(width: 8),
-                      Text('Meine Protokolle (${_entries.length})'),
+                      Text(t.cbtJournalMyRecordsEntrieslength(_entries.length)),
                     ],
                   ),
                 ),
-                const Tab(
+                Tab(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.library_books_rounded, size: 16),
                       SizedBox(width: 8),
-                      Text('Glaubenssätze'),
+                      Text(t.cbtJournalBeliefs),
                     ],
                   ),
                 ),
@@ -200,8 +201,8 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
-              'Noch keine Gedankenprotokolle',
+            Text(
+              t.cbtJournalNoThoughtRecordsYet,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 19,
@@ -210,8 +211,8 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              'Wenn der Kopf vor oder bei der Intimität blockiert, hilft es ungemein, den automatischen Gedanken aufzuschreiben und die kognitive Verzerrung schwarz auf weiß zu entlarven.',
+            Text(
+              t.cbtJournalWhenYourHeadBlocksBefore,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14,
@@ -225,7 +226,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               child: ElevatedButton.icon(
                 onPressed: () => _openNewEntry(),
                 icon: const Icon(Icons.add_rounded, size: 20),
-                label: const Text('Neues Protokoll'),
+                label: Text(t.cbtJournalNewRecord),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppTheme.sageGreen,
                   foregroundColor: Colors.black,
@@ -238,7 +239,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               child: OutlinedButton.icon(
                 onPressed: () => _tabController.animateTo(1),
                 icon: const Icon(Icons.library_books_rounded, size: 18),
-                label: const Text('Mit einem Glaubenssatz starten'),
+                label: Text(t.cbtJournalStartWithABelief),
               ),
             ),
           ],
@@ -285,8 +286,8 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Kognitive Umstrukturierung',
+                Text(
+                  t.cbtJournalCognitiveRestructuring,
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
@@ -295,7 +296,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  '${_entries.length} Gedankenprotokoll${_entries.length == 1 ? '' : 'e'} lokal gesichert',
+                  t.cbtJournalProtocolsSaved(_entries.length),
                   style: const TextStyle(
                     fontSize: 12,
                     color: AppTheme.textSecondary,
@@ -351,23 +352,23 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                     }
                   },
                   itemBuilder: (context) => [
-                    const PopupMenuItem(
+                    PopupMenuItem(
                       value: 'edit',
                       child: Row(
                         children: [
                           Icon(Icons.edit_rounded, size: 16, color: AppTheme.textSecondary),
                           SizedBox(width: 8),
-                          Text('Bearbeiten'),
+                          Text(t.cbtJournalEdit),
                         ],
                       ),
                     ),
-                    const PopupMenuItem(
+                    PopupMenuItem(
                       value: 'delete',
                       child: Row(
                         children: [
                           Icon(Icons.delete_outline_rounded, size: 16, color: AppTheme.rose),
                           SizedBox(width: 8),
-                          Text('Löschen', style: TextStyle(color: AppTheme.rose)),
+                          Text(t.cbtJournalDelete, style: TextStyle(color: AppTheme.rose)),
                         ],
                       ),
                     ),
@@ -403,8 +404,8 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'AUTOMATISCHER GEDANKE (ALARM)',
+                  Text(
+                    t.cbtJournalAutomaticThoughtAlarm,
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w800,
@@ -414,7 +415,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    '„${entry.automaticThought}“',
+                    t.cbtJournalAutomaticthought(entry.automaticThought),
                     style: const TextStyle(
                       fontSize: 13,
                       fontStyle: FontStyle.italic,
@@ -441,7 +442,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                     border: Border.all(color: AppTheme.amber.withValues(alpha: 0.3)),
                   ),
                   child: Text(
-                    d,
+                    CbtJournalEntry.anzeige(d),
                     style: const TextStyle(
                       fontSize: 11,
                       color: AppTheme.amberLight,
@@ -467,8 +468,8 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'NEUBEWERTUNG & REALITÄTSCHECK',
+                  Text(
+                    t.cbtJournalReappraisalRealityCheck,
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w800,

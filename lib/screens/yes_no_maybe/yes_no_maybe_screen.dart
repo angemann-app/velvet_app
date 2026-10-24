@@ -14,6 +14,7 @@ import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../couples_channel/pairing_modal.dart';
+import '../../l10n/t.dart';
 
 class YesNoMaybeScreen extends StatefulWidget {
   const YesNoMaybeScreen({super.key});
@@ -112,8 +113,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
     }
 
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Antworten werden verschlüsselt abgeglichen …'),
+      SnackBar(
+        content: Text(t.yesNoMaybeMatchingAnswersEncrypted),
         backgroundColor: AppTheme.amber,
         duration: Duration(seconds: 1),
       ),
@@ -123,7 +124,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('$count Antworten erfolgreich abgeglichen! ✨'),
+          content: Text(t.yesNoMaybeCountAnswersMatched(count)),
           backgroundColor: AppTheme.sageGreen,
         ),
       );
@@ -227,7 +228,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text('WEITERLESEN',
+                              Text(t.yesNoMaybeReadMore,
                                   style: TextStyle(
                                       fontSize: 11, fontWeight: FontWeight.w800, color: AppTheme.amber, letterSpacing: 0.6)),
                               const SizedBox(height: 2),
@@ -260,16 +261,16 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
     return Scaffold(
       backgroundColor: AppTheme.background,
       appBar: AppBar(
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Fantasie-Landkarte',
+              t.couplesChannelFantasyMap,
               style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800),
             ),
             Text(
-              'Ja / Vielleicht / Nein',
+              t.yesNoMaybeYesMaybeNo,
               style: TextStyle(fontSize: 11, color: AppTheme.amberLight, fontWeight: FontWeight.w500),
             ),
           ],
@@ -288,7 +289,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   Icons.sync_rounded,
                   color: isPaired ? AppTheme.amber : AppTheme.textMuted,
                 ),
-                tooltip: isPaired ? 'Mit Partner synchronisieren' : 'Koppeln erforderlich',
+                tooltip: isPaired ? t.yesNoMaybeSyncWithPartner : t.yesNoMaybePairingRequired,
               );
             },
           ),
@@ -316,7 +317,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               tabs: [
                 Tab(
                   icon: const Icon(Icons.list_alt_rounded, size: 18),
-                  text: 'Fragenkatalog ($answeredCount/$totalItems)',
+                  text: t.yesNoMaybeQuestionsAnsweredcountTotalitems(answeredCount, totalItems),
                 ),
                 AnimatedBuilder(
                   animation: Listenable.merge([
@@ -340,7 +341,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                         backgroundColor: const Color(0xFF10B981),
                         child: const Icon(Icons.favorite_rounded, size: 18),
                       ),
-                      text: 'Matches ($matchCount)',
+                      text: t.yesNoMaybeMatchesMatchcount(matchCount),
                     );
                   },
                 ),
@@ -388,12 +389,12 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Row(
+              Row(
                 children: [
                   Icon(Icons.shield_outlined, color: AppTheme.amber, size: 20),
                   SizedBox(width: 8),
                   Text(
-                    'DIGITALER SAFE SPACE',
+                    t.yesNoMaybeDigitalSafeSpace,
                     style: TextStyle(
                       color: AppTheme.amber,
                       fontWeight: FontWeight.w800,
@@ -404,8 +405,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 ],
               ),
               const SizedBox(height: 8),
-              const Text(
-                'Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar.',
+              Text(
+                t.yesNoMaybeFindOutWhatExcitesYou,
                 style: TextStyle(
                   color: AppTheme.textSecondary,
                   fontSize: 13,
@@ -415,11 +416,11 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               const SizedBox(height: 14),
               Row(
                 children: [
-                  _buildStatPill('Ja', '$yesCount', const Color(0xFF10B981)),
+                  _buildStatPill(t.yesNoMaybeYes, '$yesCount', const Color(0xFF10B981)),
                   const SizedBox(width: 8),
-                  _buildStatPill('Vielleicht', '$maybeCount', const Color(0xFFF59E0B)),
+                  _buildStatPill(t.yesNoMaybeMaybe, '$maybeCount', const Color(0xFFF59E0B)),
                   const SizedBox(width: 8),
-                  _buildStatPill('Nein', '$noCount', const Color(0xFFF43F5E)),
+                  _buildStatPill(t.yesNoMaybeNo, '$noCount', const Color(0xFFF43F5E)),
                 ],
               ),
             ],
@@ -433,15 +434,15 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              _buildFilterChip('all', 'Alle (${ListenUebersetzung.eintraege.length})'),
+              _buildFilterChip('all', t.yesNoMaybeAllEintraegelength(ListenUebersetzung.eintraege.length)),
               const SizedBox(width: 8),
-              _buildFilterChip('open', 'Offen'),
+              _buildFilterChip('open', t.yesNoMaybeOpen),
               const SizedBox(width: 8),
-              _buildFilterChip('yes', 'Ja ($yesCount)'),
+              _buildFilterChip('yes', t.yesNoMaybeYesYescount(yesCount)),
               const SizedBox(width: 8),
-              _buildFilterChip('maybe', 'Vielleicht ($maybeCount)'),
+              _buildFilterChip('maybe', t.yesNoMaybeMaybeMaybecount(maybeCount)),
               const SizedBox(width: 8),
-              _buildFilterChip('no', 'Nein ($noCount)'),
+              _buildFilterChip('no', t.yesNoMaybeNoNocount(noCount)),
             ],
           ),
         ),
@@ -743,13 +744,13 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     ),
                   ),
                   const SizedBox(height: 20),
-                  const Text(
-                    'Kopplung erforderlich',
+                  Text(
+                    t.yesNoMaybePairingRequired2,
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppTheme.textPrimary),
                   ),
                   const SizedBox(height: 8),
-                  const Text(
-                    'Verbinde dich im Paar-Kanal per QR-Code mit deinem Gegenüber. Eure Antworten werden dann Ende-zu-Ende-verschlüsselt abgeglichen.',
+                  Text(
+                    t.yesNoMaybeConnectWithYourPartnerIn,
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.45),
                   ),
@@ -757,7 +758,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   ElevatedButton.icon(
                     onPressed: _showPairingPrompt,
                     icon: const Icon(Icons.qr_code_scanner_rounded, size: 18),
-                    label: const Text('Jetzt per QR-Code koppeln'),
+                    label: Text(t.yesNoMaybePairViaQrCodeNow),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppTheme.amber,
                       foregroundColor: const Color(0xFF0F172A),
@@ -817,7 +818,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                       const Icon(Icons.auto_awesome_rounded, color: Color(0xFF34D399), size: 22),
                       const SizedBox(width: 8),
                       Text(
-                        'VOLLTREFFER MIT $partnerName'.toUpperCase(),
+                        t.yesNoMaybePerfectMatchWithPartnername(partnerName).toUpperCase(),
                         style: const TextStyle(
                           color: Color(0xFF34D399),
                           fontWeight: FontWeight.w900,
@@ -829,7 +830,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    '${yesMatches.length} gemeinsame Ja-Übereinstimmungen & ${curiosityMatches.length} Neugier-Punkte entdeckt!',
+                    t.yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(yesMatches.length, curiosityMatches.length),
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
@@ -837,8 +838,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     ),
                   ),
                   const SizedBox(height: 6),
-                  const Text(
-                    'Keine Zurückweisung: Alle Grenzen wurden diskret gewahrt. Nur echte gemeinsame Lust wird enthüllt.',
+                  Text(
+                    t.yesNoMaybeNoRejectionAllLimitsWere,
                     style: TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.4),
                   ),
                 ],
@@ -849,12 +850,12 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
 
             // 1. Direct YES-Matches
             if (yesMatches.isNotEmpty) ...[
-              const Row(
+              Row(
                 children: [
                   Icon(Icons.check_circle_rounded, color: Color(0xFF10B981), size: 18),
                   SizedBox(width: 8),
                   Text(
-                    'Volltreffer (Beide haben JA gesagt)',
+                    t.yesNoMaybePerfectMatchBothSaidYes,
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w800,
@@ -870,12 +871,12 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
 
             // 2. CURIOSITY Matches (Yes/Maybe or Maybe/Maybe)
             if (curiosityMatches.isNotEmpty) ...[
-              const Row(
+              Row(
                 children: [
                   Icon(Icons.help_outline_rounded, color: Color(0xFFF59E0B), size: 18),
                   SizedBox(width: 8),
                   Text(
-                    'Gemeinsame Neugier (Offen für Erkundung)',
+                    t.yesNoMaybeSharedCuriosityOpenToExploring,
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w800,
@@ -897,17 +898,17 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(color: AppTheme.border),
                 ),
-                child: const Column(
+                child: Column(
                   children: [
                     Icon(Icons.hourglass_empty_rounded, color: AppTheme.amber, size: 36),
                     SizedBox(height: 12),
                     Text(
-                      'Noch keine Übereinstimmungen',
+                      t.yesNoMaybeNoMatchesYet,
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                     SizedBox(height: 6),
                     Text(
-                      'Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Ja oder Vielleicht bewertet habt, leuchtet er hier auf.',
+                      t.yesNoMaybeBothKeepVotingInThe,
                       textAlign: TextAlign.center,
                       style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4),
                     ),
@@ -962,7 +963,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  isDirectYes ? 'Ihr beide: Ja' : 'Gemeinsam neugierig',
+                  isDirectYes ? t.yesNoMaybeYouBothYes : t.yesNoMaybeCuriousTogether,
                   style: TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w600,
@@ -985,7 +986,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 side: BorderSide(color: color.withValues(alpha: 0.5)),
               ),
             ),
-            child: const Text('Kurs ▶', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
+            child: Text(t.yesNoMaybeCourse, style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
           ),
         ],
       ),

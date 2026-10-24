@@ -1764,6 +1764,813 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Ergänzen'**
   String get partnerProfileDialogAdd;
+
+  /// No description provided for @distortionSpectatoring.
+  ///
+  /// In de, this message translates to:
+  /// **'Spectatoring / Selbstbeobachtung'**
+  String get distortionSpectatoring;
+
+  /// No description provided for @distortionCatastrophizing.
+  ///
+  /// In de, this message translates to:
+  /// **'Katastrophisieren'**
+  String get distortionCatastrophizing;
+
+  /// No description provided for @distortionAllOrNothing.
+  ///
+  /// In de, this message translates to:
+  /// **'Alles-oder-Nichts-Denken'**
+  String get distortionAllOrNothing;
+
+  /// No description provided for @distortionMindReading.
+  ///
+  /// In de, this message translates to:
+  /// **'Gedankenlesen'**
+  String get distortionMindReading;
+
+  /// No description provided for @distortionPerformancePressure.
+  ///
+  /// In de, this message translates to:
+  /// **'Leistungsdruck'**
+  String get distortionPerformancePressure;
+
+  /// No description provided for @distortionTunnelVision.
+  ///
+  /// In de, this message translates to:
+  /// **'Tunnelblick auf Körpersignale'**
+  String get distortionTunnelVision;
+
+  /// No description provided for @cbtJournalProtocolsSaved.
+  ///
+  /// In de, this message translates to:
+  /// **'{count, plural, =1{1 Gedankenprotokoll lokal gesichert} other{{count} Gedankenprotokolle lokal gesichert}}'**
+  String cbtJournalProtocolsSaved(int count);
+
+  /// No description provided for @selbstReiseEndTheJourney.
+  ///
+  /// In de, this message translates to:
+  /// **'Reise beenden?'**
+  String get selbstReiseEndTheJourney;
+
+  /// No description provided for @selbstReiseTheGuidanceStopsThenYou.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Begleitung hört dann auf. Du kannst jederzeit neu beginnen.'**
+  String get selbstReiseTheGuidanceStopsThenYou;
+
+  /// No description provided for @selbstReiseAVoiceGuidesYouThrough.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine Stimme begleitet dich durch Ankommen, Atem und eine Reise über deinen Körper. Die meiste Zeit ist Stille, damit du ganz bei dir bist. Jede Reise wird neu zusammengestellt, und es gibt kein Ziel.'**
+  String get selbstReiseAVoiceGuidesYouThrough;
+
+  /// No description provided for @selbstReiseYouDecideYouCanPause.
+  ///
+  /// In de, this message translates to:
+  /// **'Du bestimmst. Pausieren, einen Schritt überspringen oder aufhören geht jederzeit über die Knöpfe unten. Es muss nichts passieren: Bei einer angenehmen, nicht sexuellen Berührung zu bleiben ist genauso richtig. Wird etwas unangenehm oder kommen schwierige Erinnerungen hoch, darfst du jederzeit aufhören.'**
+  String get selbstReiseYouDecideYouCanPause;
+
+  /// No description provided for @selbstReiseMMin.
+  ///
+  /// In de, this message translates to:
+  /// **'{m} Min.'**
+  String selbstReiseMMin(Object m);
+
+  /// No description provided for @selbstReiseHowCloseWouldYouLike.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie nah möchtest du dir heute kommen?'**
+  String get selbstReiseHowCloseWouldYouLike;
+
+  /// No description provided for @selbstReiseGentle.
+  ///
+  /// In de, this message translates to:
+  /// **'Sanft'**
+  String get selbstReiseGentle;
+
+  /// No description provided for @selbstReiseFaceScalpEarsNeckArms.
+  ///
+  /// In de, this message translates to:
+  /// **'Gesicht, Kopfhaut, Ohren, Hals, Arme, Hände, Brust, Bauch, Beine und Füße, gern bekleidet.'**
+  String get selbstReiseFaceScalpEarsNeckArms;
+
+  /// No description provided for @selbstReiseSkin.
+  ///
+  /// In de, this message translates to:
+  /// **'Haut'**
+  String get selbstReiseSkin;
+
+  /// No description provided for @selbstReisePlusBareSkinWithOil.
+  ///
+  /// In de, this message translates to:
+  /// **'Dazu nackte Haut mit Öl, Hüften und Innenschenkel.'**
+  String get selbstReisePlusBareSkinWithOil;
+
+  /// No description provided for @selbstReisePlusPerineumAndGenitalsWith.
+  ///
+  /// In de, this message translates to:
+  /// **'Dazu Damm und Geschlecht, mit Wellen statt Ziel.'**
+  String get selbstReisePlusPerineumAndGenitalsWith;
+
+  /// No description provided for @selbstReiseYourBody.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Körper'**
+  String get selbstReiseYourBody;
+
+  /// No description provided for @selbstReiseVulva.
+  ///
+  /// In de, this message translates to:
+  /// **'Vulva'**
+  String get selbstReiseVulva;
+
+  /// No description provided for @selbstReisePenis.
+  ///
+  /// In de, this message translates to:
+  /// **'Penis'**
+  String get selbstReisePenis;
+
+  /// No description provided for @selbstReiseBeginTheJourney.
+  ///
+  /// In de, this message translates to:
+  /// **'Reise beginnen'**
+  String get selbstReiseBeginTheJourney;
+
+  /// No description provided for @selbstReiseThankYou.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke dir'**
+  String get selbstReiseThankYou;
+
+  /// No description provided for @selbstReiseBodyJourney.
+  ///
+  /// In de, this message translates to:
+  /// **'Körperreise'**
+  String get selbstReiseBodyJourney;
+
+  /// No description provided for @selbstReiseSilenceStillerestLeft.
+  ///
+  /// In de, this message translates to:
+  /// **'Stille · noch {stilleRest}'**
+  String selbstReiseSilenceStillerestLeft(Object stilleRest);
+
+  /// No description provided for @selbstReiseStayLyingDownAsLong.
+  ///
+  /// In de, this message translates to:
+  /// **'Bleib liegen, solange es sich gut anfühlt.'**
+  String get selbstReiseStayLyingDownAsLong;
+
+  /// No description provided for @lustProfileCircling.
+  ///
+  /// In de, this message translates to:
+  /// **'Kreisen'**
+  String get lustProfileCircling;
+
+  /// No description provided for @lustProfileUpAndDown.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf und ab'**
+  String get lustProfileUpAndDown;
+
+  /// No description provided for @lustProfileSideToSide.
+  ///
+  /// In de, this message translates to:
+  /// **'Seitwärts'**
+  String get lustProfileSideToSide;
+
+  /// No description provided for @lustProfilePressAndHold.
+  ///
+  /// In de, this message translates to:
+  /// **'Drücken und halten'**
+  String get lustProfilePressAndHold;
+
+  /// No description provided for @lustProfileFramingTwoFingersLeftAnd.
+  ///
+  /// In de, this message translates to:
+  /// **'Rahmen – zwei Finger links und rechts'**
+  String get lustProfileFramingTwoFingersLeftAnd;
+
+  /// No description provided for @lustProfileLightTapping.
+  ///
+  /// In de, this message translates to:
+  /// **'Leichtes Klopfen'**
+  String get lustProfileLightTapping;
+
+  /// No description provided for @lustProfileInsideAndOutsideAtOnce.
+  ///
+  /// In de, this message translates to:
+  /// **'Innen und außen zugleich'**
+  String get lustProfileInsideAndOutsideAtOnce;
+
+  /// No description provided for @lustProfileOpenOiledHand.
+  ///
+  /// In de, this message translates to:
+  /// **'Offene, eingeölte Hand'**
+  String get lustProfileOpenOiledHand;
+
+  /// No description provided for @lustProfileTwoHandedGliding.
+  ///
+  /// In de, this message translates to:
+  /// **'Zweihand-Gleiten'**
+  String get lustProfileTwoHandedGliding;
+
+  /// No description provided for @lustProfileTwisting.
+  ///
+  /// In de, this message translates to:
+  /// **'Drehen'**
+  String get lustProfileTwisting;
+
+  /// No description provided for @lustProfileRingAtTheBase.
+  ///
+  /// In de, this message translates to:
+  /// **'Ring an der Wurzel'**
+  String get lustProfileRingAtTheBase;
+
+  /// No description provided for @lustProfileCirclingTheFrenulum.
+  ///
+  /// In de, this message translates to:
+  /// **'Das Bändchen umkreisen'**
+  String get lustProfileCirclingTheFrenulum;
+
+  /// No description provided for @lustProfileIncludingTesticlesAndPerineum.
+  ///
+  /// In de, this message translates to:
+  /// **'Hoden und Damm einbeziehen'**
+  String get lustProfileIncludingTesticlesAndPerineum;
+
+  /// No description provided for @lustProfileWavesPausingJustBeforeClimax.
+  ///
+  /// In de, this message translates to:
+  /// **'Wellen – kurz vor dem Höhepunkt innehalten'**
+  String get lustProfileWavesPausingJustBeforeClimax;
+
+  /// No description provided for @lustProfileStartSlowlyAroundRatherThan.
+  ///
+  /// In de, this message translates to:
+  /// **'Langsam beginnen, rundherum statt direkt'**
+  String get lustProfileStartSlowlyAroundRatherThan;
+
+  /// No description provided for @lustProfileWhenItSGoodKeep.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn es gut ist: genau so weitermachen'**
+  String get lustProfileWhenItSGoodKeep;
+
+  /// No description provided for @lustProfileWithPlentyOfLubricant.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit viel Gleitmittel'**
+  String get lustProfileWithPlentyOfLubricant;
+
+  /// No description provided for @lustProfileLotsOfTimeNoGoal.
+  ///
+  /// In de, this message translates to:
+  /// **'Viel Zeit, ohne Ziel'**
+  String get lustProfileLotsOfTimeNoGoal;
+
+  /// No description provided for @lustProfileMyDesireProfileThisIs.
+  ///
+  /// In de, this message translates to:
+  /// **'💛 Mein Lust-Profil – das habe ich über mich entdeckt:\n'**
+  String get lustProfileMyDesireProfileThisIs;
+
+  /// No description provided for @lustProfileWouldYouLikeToTry.
+  ///
+  /// In de, this message translates to:
+  /// **'\nMagst du es mit mir ausprobieren?'**
+  String get lustProfileWouldYouLikeToTry;
+
+  /// No description provided for @lustProfileYourDesireProfileIsOn.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Lust-Profil ist verschlüsselt unterwegs 💛'**
+  String get lustProfileYourDesireProfileIsOn;
+
+  /// No description provided for @lustProfileSendingDidnTWorkPlease.
+  ///
+  /// In de, this message translates to:
+  /// **'Senden hat nicht geklappt. Bitte gleich noch einmal.'**
+  String get lustProfileSendingDidnTWorkPlease;
+
+  /// No description provided for @lustProfileTextCopied.
+  ///
+  /// In de, this message translates to:
+  /// **'Text kopiert.'**
+  String get lustProfileTextCopied;
+
+  /// No description provided for @lustProfileWithVulva.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit Vulva'**
+  String get lustProfileWithVulva;
+
+  /// No description provided for @lustProfileWithPenis.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit Penis'**
+  String get lustProfileWithPenis;
+
+  /// No description provided for @lustProfileTickWhatYouEnjoyedWhile.
+  ///
+  /// In de, this message translates to:
+  /// **'Hake an, was dir beim Erkunden gefallen hat. Nur du entscheidest, ob und wann du es teilst – gesendet wird ausschließlich, was du hier auswählst.'**
+  String get lustProfileTickWhatYouEnjoyedWhile;
+
+  /// No description provided for @lustProfileGeneral.
+  ///
+  /// In de, this message translates to:
+  /// **'Allgemein'**
+  String get lustProfileGeneral;
+
+  /// No description provided for @lustProfilePersonalNote.
+  ///
+  /// In de, this message translates to:
+  /// **'Eigene Notiz'**
+  String get lustProfilePersonalNote;
+
+  /// No description provided for @lustProfileForExampleAtTheBeginning.
+  ///
+  /// In de, this message translates to:
+  /// **'Zum Beispiel: Am Anfang mag ich große, langsame Kreise …'**
+  String get lustProfileForExampleAtTheBeginning;
+
+  /// No description provided for @lustProfileSendToMyPartner.
+  ///
+  /// In de, this message translates to:
+  /// **'An mein Gegenüber senden'**
+  String get lustProfileSendToMyPartner;
+
+  /// No description provided for @lustProfileConnectCoupleChannelAndSend.
+  ///
+  /// In de, this message translates to:
+  /// **'Paar-Kanal verbinden und senden'**
+  String get lustProfileConnectCoupleChannelAndSend;
+
+  /// No description provided for @lustProfileJustCopyAsText.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur als Text kopieren'**
+  String get lustProfileJustCopyAsText;
+
+  /// No description provided for @lustProfileTipEvenNicerThanAny.
+  ///
+  /// In de, this message translates to:
+  /// **'Tipp: Noch schöner als jede Nachricht ist es, die Hand deines Gegenübers zu führen oder es dir zeigen zu lassen. Die Nachricht kann der Anstoß dafür sein.'**
+  String get lustProfileTipEvenNicerThanAny;
+
+  /// No description provided for @yesNoMaybeMatchingAnswersEncrypted.
+  ///
+  /// In de, this message translates to:
+  /// **'Antworten werden verschlüsselt abgeglichen …'**
+  String get yesNoMaybeMatchingAnswersEncrypted;
+
+  /// No description provided for @yesNoMaybeCountAnswersMatched.
+  ///
+  /// In de, this message translates to:
+  /// **'{count} Antworten erfolgreich abgeglichen! ✨'**
+  String yesNoMaybeCountAnswersMatched(Object count);
+
+  /// No description provided for @yesNoMaybeReadMore.
+  ///
+  /// In de, this message translates to:
+  /// **'WEITERLESEN'**
+  String get yesNoMaybeReadMore;
+
+  /// No description provided for @yesNoMaybeYesMaybeNo.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja / Vielleicht / Nein'**
+  String get yesNoMaybeYesMaybeNo;
+
+  /// No description provided for @yesNoMaybeSyncWithPartner.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit Partner synchronisieren'**
+  String get yesNoMaybeSyncWithPartner;
+
+  /// No description provided for @yesNoMaybePairingRequired.
+  ///
+  /// In de, this message translates to:
+  /// **'Koppeln erforderlich'**
+  String get yesNoMaybePairingRequired;
+
+  /// No description provided for @yesNoMaybeQuestionsAnsweredcountTotalitems.
+  ///
+  /// In de, this message translates to:
+  /// **'Fragenkatalog ({answeredCount}/{totalItems})'**
+  String yesNoMaybeQuestionsAnsweredcountTotalitems(
+      Object answeredCount, Object totalItems);
+
+  /// No description provided for @yesNoMaybeMatchesMatchcount.
+  ///
+  /// In de, this message translates to:
+  /// **'Matches ({matchCount})'**
+  String yesNoMaybeMatchesMatchcount(Object matchCount);
+
+  /// No description provided for @yesNoMaybeDigitalSafeSpace.
+  ///
+  /// In de, this message translates to:
+  /// **'DIGITALER SAFE SPACE'**
+  String get yesNoMaybeDigitalSafeSpace;
+
+  /// No description provided for @yesNoMaybeFindOutWhatExcitesYou.
+  ///
+  /// In de, this message translates to:
+  /// **'Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar.'**
+  String get yesNoMaybeFindOutWhatExcitesYou;
+
+  /// No description provided for @yesNoMaybeYes.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja'**
+  String get yesNoMaybeYes;
+
+  /// No description provided for @yesNoMaybeMaybe.
+  ///
+  /// In de, this message translates to:
+  /// **'Vielleicht'**
+  String get yesNoMaybeMaybe;
+
+  /// No description provided for @yesNoMaybeNo.
+  ///
+  /// In de, this message translates to:
+  /// **'Nein'**
+  String get yesNoMaybeNo;
+
+  /// No description provided for @yesNoMaybeAllEintraegelength.
+  ///
+  /// In de, this message translates to:
+  /// **'Alle ({eintraegeLength})'**
+  String yesNoMaybeAllEintraegelength(Object eintraegeLength);
+
+  /// No description provided for @yesNoMaybeOpen.
+  ///
+  /// In de, this message translates to:
+  /// **'Offen'**
+  String get yesNoMaybeOpen;
+
+  /// No description provided for @yesNoMaybeYesYescount.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja ({yesCount})'**
+  String yesNoMaybeYesYescount(Object yesCount);
+
+  /// No description provided for @yesNoMaybeMaybeMaybecount.
+  ///
+  /// In de, this message translates to:
+  /// **'Vielleicht ({maybeCount})'**
+  String yesNoMaybeMaybeMaybecount(Object maybeCount);
+
+  /// No description provided for @yesNoMaybeNoNocount.
+  ///
+  /// In de, this message translates to:
+  /// **'Nein ({noCount})'**
+  String yesNoMaybeNoNocount(Object noCount);
+
+  /// No description provided for @yesNoMaybePairingRequired2.
+  ///
+  /// In de, this message translates to:
+  /// **'Kopplung erforderlich'**
+  String get yesNoMaybePairingRequired2;
+
+  /// No description provided for @yesNoMaybeConnectWithYourPartnerIn.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbinde dich im Paar-Kanal per QR-Code mit deinem Gegenüber. Eure Antworten werden dann Ende-zu-Ende-verschlüsselt abgeglichen.'**
+  String get yesNoMaybeConnectWithYourPartnerIn;
+
+  /// No description provided for @yesNoMaybePairViaQrCodeNow.
+  ///
+  /// In de, this message translates to:
+  /// **'Jetzt per QR-Code koppeln'**
+  String get yesNoMaybePairViaQrCodeNow;
+
+  /// No description provided for @yesNoMaybePerfectMatchWithPartnername.
+  ///
+  /// In de, this message translates to:
+  /// **'VOLLTREFFER MIT {partnerName}'**
+  String yesNoMaybePerfectMatchWithPartnername(Object partnerName);
+
+  /// No description provided for @yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints.
+  ///
+  /// In de, this message translates to:
+  /// **'{yesMatchesLength} gemeinsame Ja-Übereinstimmungen & {curiosityMatchesLength} Neugier-Punkte entdeckt!'**
+  String yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(
+      Object yesMatchesLength, Object curiosityMatchesLength);
+
+  /// No description provided for @yesNoMaybeNoRejectionAllLimitsWere.
+  ///
+  /// In de, this message translates to:
+  /// **'Keine Zurückweisung: Alle Grenzen wurden diskret gewahrt. Nur echte gemeinsame Lust wird enthüllt.'**
+  String get yesNoMaybeNoRejectionAllLimitsWere;
+
+  /// No description provided for @yesNoMaybePerfectMatchBothSaidYes.
+  ///
+  /// In de, this message translates to:
+  /// **'Volltreffer (Beide haben JA gesagt)'**
+  String get yesNoMaybePerfectMatchBothSaidYes;
+
+  /// No description provided for @yesNoMaybeSharedCuriosityOpenToExploring.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsame Neugier (Offen für Erkundung)'**
+  String get yesNoMaybeSharedCuriosityOpenToExploring;
+
+  /// No description provided for @yesNoMaybeNoMatchesYet.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch keine Übereinstimmungen'**
+  String get yesNoMaybeNoMatchesYet;
+
+  /// No description provided for @yesNoMaybeBothKeepVotingInThe.
+  ///
+  /// In de, this message translates to:
+  /// **'Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Ja oder Vielleicht bewertet habt, leuchtet er hier auf.'**
+  String get yesNoMaybeBothKeepVotingInThe;
+
+  /// No description provided for @yesNoMaybeYouBothYes.
+  ///
+  /// In de, this message translates to:
+  /// **'Ihr beide: Ja'**
+  String get yesNoMaybeYouBothYes;
+
+  /// No description provided for @yesNoMaybeCuriousTogether.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsam neugierig'**
+  String get yesNoMaybeCuriousTogether;
+
+  /// No description provided for @yesNoMaybeCourse.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurs ▶'**
+  String get yesNoMaybeCourse;
+
+  /// No description provided for @cbtNewEntryPleaseChooseAtLeastOne.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte wähle mindestens ein Denkmuster / eine Verzerrung aus.'**
+  String get cbtNewEntryPleaseChooseAtLeastOne;
+
+  /// No description provided for @cbtNewEntryNewThoughtRecord.
+  ///
+  /// In de, this message translates to:
+  /// **'Neues Gedankenprotokoll'**
+  String get cbtNewEntryNewThoughtRecord;
+
+  /// No description provided for @cbtNewEntryEditEntry.
+  ///
+  /// In de, this message translates to:
+  /// **'Eintrag bearbeiten'**
+  String get cbtNewEntryEditEntry;
+
+  /// No description provided for @cbtNewEntryCognitiveRestructuringUnmaskIrrationalAlarm.
+  ///
+  /// In de, this message translates to:
+  /// **'Kognitive Umstrukturierung: Enttarne irrationale Alarmgedanken und formuliere eine biologisch realistische Antwort.'**
+  String get cbtNewEntryCognitiveRestructuringUnmaskIrrationalAlarm;
+
+  /// No description provided for @cbtNewEntryTriggerSituation.
+  ///
+  /// In de, this message translates to:
+  /// **'Auslöser / Situation'**
+  String get cbtNewEntryTriggerSituation;
+
+  /// No description provided for @cbtNewEntryWhenOrDuringWhatDid.
+  ///
+  /// In de, this message translates to:
+  /// **'Wann oder wobei trat die Anspannung auf? (z.B. „Als wir ins Bett gingen“, „Als sie mich berührte“)'**
+  String get cbtNewEntryWhenOrDuringWhatDid;
+
+  /// No description provided for @cbtNewEntryDescribeTheSpecificSituation.
+  ///
+  /// In de, this message translates to:
+  /// **'Konkrete Situation beschreiben...'**
+  String get cbtNewEntryDescribeTheSpecificSituation;
+
+  /// No description provided for @cbtNewEntryPleaseDescribeASituation.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte gib eine Situation an.'**
+  String get cbtNewEntryPleaseDescribeASituation;
+
+  /// No description provided for @cbtNewEntryAutomaticThoughtMentalMovie.
+  ///
+  /// In de, this message translates to:
+  /// **'Automatischer Gedanke (Kopfkino)'**
+  String get cbtNewEntryAutomaticThoughtMentalMovie;
+
+  /// No description provided for @cbtNewEntryWhatShotThroughYourHead.
+  ///
+  /// In de, this message translates to:
+  /// **'Was schoss dir sofort durch den Kopf? Was sagte der innere Kritiker? (z.B. „Ich werde gleich wieder versagen“)'**
+  String get cbtNewEntryWhatShotThroughYourHead;
+
+  /// No description provided for @cbtNewEntryNoteTheUnfilteredThought.
+  ///
+  /// In de, this message translates to:
+  /// **'Den ungefilterten Gedanken notieren...'**
+  String get cbtNewEntryNoteTheUnfilteredThought;
+
+  /// No description provided for @cbtNewEntryPleaseNoteYourThought.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte notiere deinen Gedanken.'**
+  String get cbtNewEntryPleaseNoteYourThought;
+
+  /// No description provided for @cbtNewEntryExposeTheCognitiveDistortion.
+  ///
+  /// In de, this message translates to:
+  /// **'Kognitive Verzerrung entlarven'**
+  String get cbtNewEntryExposeTheCognitiveDistortion;
+
+  /// No description provided for @cbtNewEntryWhichThinkingTrapIsThis.
+  ///
+  /// In de, this message translates to:
+  /// **'Welche Denkfalle liegt hier vor? (Wähle mindestens eine aus)'**
+  String get cbtNewEntryWhichThinkingTrapIsThis;
+
+  /// No description provided for @cbtNewEntryReappraisalRealityCheck.
+  ///
+  /// In de, this message translates to:
+  /// **'Neubewertung / Realitätscheck'**
+  String get cbtNewEntryReappraisalRealityCheck;
+
+  /// No description provided for @cbtNewEntryWhatSTheRealisticView.
+  ///
+  /// In de, this message translates to:
+  /// **'Was ist die biologische Wahrheit? Was würde ein empathischer Coach oder Freund dazu sagen?'**
+  String get cbtNewEntryWhatSTheRealisticView;
+
+  /// No description provided for @cbtNewEntryEGMyBodyIs.
+  ///
+  /// In de, this message translates to:
+  /// **'z.B.: „Mein Körper reagiert nur auf Adrenalin. Ich muss heute niemanden beeindrucken. Wenn ich den Fokus auf Hautkontakt und Atmung lenke, fällt der Druck ab.“'**
+  String get cbtNewEntryEGMyBodyIs;
+
+  /// No description provided for @cbtNewEntryPleasePhraseAReappraisal.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte formuliere eine Neubewertung.'**
+  String get cbtNewEntryPleasePhraseAReappraisal;
+
+  /// No description provided for @cbtNewEntrySaving.
+  ///
+  /// In de, this message translates to:
+  /// **'Wird gespeichert...'**
+  String get cbtNewEntrySaving;
+
+  /// No description provided for @cbtNewEntrySaveThoughtRecord.
+  ///
+  /// In de, this message translates to:
+  /// **'Gedankenprotokoll speichern'**
+  String get cbtNewEntrySaveThoughtRecord;
+
+  /// No description provided for @cbtJournalDeleteEntry.
+  ///
+  /// In de, this message translates to:
+  /// **'Eintrag löschen?'**
+  String get cbtJournalDeleteEntry;
+
+  /// No description provided for @cbtJournalDoYouReallyWantTo.
+  ///
+  /// In de, this message translates to:
+  /// **'Möchtest du dieses Gedankenprotokoll wirklich von deinem Gerät entfernen?'**
+  String get cbtJournalDoYouReallyWantTo;
+
+  /// No description provided for @cbtJournalDelete.
+  ///
+  /// In de, this message translates to:
+  /// **'Löschen'**
+  String get cbtJournalDelete;
+
+  /// No description provided for @cbtJournalNewEntry.
+  ///
+  /// In de, this message translates to:
+  /// **'Neuer Eintrag'**
+  String get cbtJournalNewEntry;
+
+  /// No description provided for @cbtJournalMyRecordsEntrieslength.
+  ///
+  /// In de, this message translates to:
+  /// **'Meine Protokolle ({entriesLength})'**
+  String cbtJournalMyRecordsEntrieslength(Object entriesLength);
+
+  /// No description provided for @cbtJournalBeliefs.
+  ///
+  /// In de, this message translates to:
+  /// **'Glaubenssätze'**
+  String get cbtJournalBeliefs;
+
+  /// No description provided for @cbtJournalNoThoughtRecordsYet.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch keine Gedankenprotokolle'**
+  String get cbtJournalNoThoughtRecordsYet;
+
+  /// No description provided for @cbtJournalWhenYourHeadBlocksBefore.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn der Kopf vor oder bei der Intimität blockiert, hilft es ungemein, den automatischen Gedanken aufzuschreiben und die kognitive Verzerrung schwarz auf weiß zu entlarven.'**
+  String get cbtJournalWhenYourHeadBlocksBefore;
+
+  /// No description provided for @cbtJournalNewRecord.
+  ///
+  /// In de, this message translates to:
+  /// **'Neues Protokoll'**
+  String get cbtJournalNewRecord;
+
+  /// No description provided for @cbtJournalStartWithABelief.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit einem Glaubenssatz starten'**
+  String get cbtJournalStartWithABelief;
+
+  /// No description provided for @cbtJournalCognitiveRestructuring.
+  ///
+  /// In de, this message translates to:
+  /// **'Kognitive Umstrukturierung'**
+  String get cbtJournalCognitiveRestructuring;
+
+  /// No description provided for @cbtJournalEdit.
+  ///
+  /// In de, this message translates to:
+  /// **'Bearbeiten'**
+  String get cbtJournalEdit;
+
+  /// No description provided for @cbtJournalAutomaticThoughtAlarm.
+  ///
+  /// In de, this message translates to:
+  /// **'AUTOMATISCHER GEDANKE (ALARM)'**
+  String get cbtJournalAutomaticThoughtAlarm;
+
+  /// No description provided for @cbtJournalAutomaticthought.
+  ///
+  /// In de, this message translates to:
+  /// **'„{automaticThought}“'**
+  String cbtJournalAutomaticthought(Object automaticThought);
+
+  /// No description provided for @cbtJournalReappraisalRealityCheck.
+  ///
+  /// In de, this message translates to:
+  /// **'NEUBEWERTUNG & REALITÄTSCHECK'**
+  String get cbtJournalReappraisalRealityCheck;
+
+  /// No description provided for @beliefLibraryViewRealitycheckPracticalShiftPracticalshift.
+  ///
+  /// In de, this message translates to:
+  /// **'{realityCheck}\n\nPraktischer Shift: {practicalShift}'**
+  String beliefLibraryViewRealitycheckPracticalShiftPracticalshift(
+      Object realityCheck, Object practicalShift);
+
+  /// No description provided for @beliefLibraryViewBeliefToolkit.
+  ///
+  /// In de, this message translates to:
+  /// **'Glaubenssätze-Baukasten'**
+  String get beliefLibraryViewBeliefToolkit;
+
+  /// No description provided for @beliefLibraryViewTheMostCommonMentalTraps.
+  ///
+  /// In de, this message translates to:
+  /// **'Die häufigsten mentalen Fallen bei Leistungsangst – und die biologische Wahrheit dahinter. Tippe auf eine Karte, um sie direkt in dein eigenes Journal zu übernehmen.'**
+  String get beliefLibraryViewTheMostCommonMentalTraps;
+
+  /// No description provided for @beliefLibraryViewForHer.
+  ///
+  /// In de, this message translates to:
+  /// **'FÜR SIE 🌸'**
+  String get beliefLibraryViewForHer;
+
+  /// No description provided for @beliefLibraryViewForHim.
+  ///
+  /// In de, this message translates to:
+  /// **'FÜR IHN 🌿'**
+  String get beliefLibraryViewForHim;
+
+  /// No description provided for @beliefLibraryViewTypicalMisbeliefMentalMovie.
+  ///
+  /// In de, this message translates to:
+  /// **'TYPISCHER IRRGLAUBE (KOPFKINO)'**
+  String get beliefLibraryViewTypicalMisbeliefMentalMovie;
+
+  /// No description provided for @beliefLibraryViewIrrationalthought.
+  ///
+  /// In de, this message translates to:
+  /// **'„{irrationalThought}“'**
+  String beliefLibraryViewIrrationalthought(Object irrationalThought);
+
+  /// No description provided for @beliefLibraryViewRealityCheck.
+  ///
+  /// In de, this message translates to:
+  /// **'BIOLOGISCHER REALITÄTSCHECK'**
+  String get beliefLibraryViewRealityCheck;
+
+  /// No description provided for @beliefLibraryViewTakeIntoMyJournal.
+  ///
+  /// In de, this message translates to:
+  /// **'In eigenes Journal übernehmen'**
+  String get beliefLibraryViewTakeIntoMyJournal;
 }
 
 class _AppLocalizationsDelegate

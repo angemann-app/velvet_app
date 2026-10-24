@@ -1006,4 +1006,496 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get partnerProfileDialogAdd => 'Ergänzen';
+
+  @override
+  String get distortionSpectatoring => 'Spectatoring / Selbstbeobachtung';
+
+  @override
+  String get distortionCatastrophizing => 'Katastrophisieren';
+
+  @override
+  String get distortionAllOrNothing => 'Alles-oder-Nichts-Denken';
+
+  @override
+  String get distortionMindReading => 'Gedankenlesen';
+
+  @override
+  String get distortionPerformancePressure => 'Leistungsdruck';
+
+  @override
+  String get distortionTunnelVision => 'Tunnelblick auf Körpersignale';
+
+  @override
+  String cbtJournalProtocolsSaved(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count Gedankenprotokolle lokal gesichert',
+      one: '1 Gedankenprotokoll lokal gesichert',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get selbstReiseEndTheJourney => 'Reise beenden?';
+
+  @override
+  String get selbstReiseTheGuidanceStopsThenYou =>
+      'Die Begleitung hört dann auf. Du kannst jederzeit neu beginnen.';
+
+  @override
+  String get selbstReiseAVoiceGuidesYouThrough =>
+      'Eine Stimme begleitet dich durch Ankommen, Atem und eine Reise über deinen Körper. Die meiste Zeit ist Stille, damit du ganz bei dir bist. Jede Reise wird neu zusammengestellt, und es gibt kein Ziel.';
+
+  @override
+  String get selbstReiseYouDecideYouCanPause =>
+      'Du bestimmst. Pausieren, einen Schritt überspringen oder aufhören geht jederzeit über die Knöpfe unten. Es muss nichts passieren: Bei einer angenehmen, nicht sexuellen Berührung zu bleiben ist genauso richtig. Wird etwas unangenehm oder kommen schwierige Erinnerungen hoch, darfst du jederzeit aufhören.';
+
+  @override
+  String selbstReiseMMin(Object m) {
+    return '$m Min.';
+  }
+
+  @override
+  String get selbstReiseHowCloseWouldYouLike =>
+      'Wie nah möchtest du dir heute kommen?';
+
+  @override
+  String get selbstReiseGentle => 'Sanft';
+
+  @override
+  String get selbstReiseFaceScalpEarsNeckArms =>
+      'Gesicht, Kopfhaut, Ohren, Hals, Arme, Hände, Brust, Bauch, Beine und Füße, gern bekleidet.';
+
+  @override
+  String get selbstReiseSkin => 'Haut';
+
+  @override
+  String get selbstReisePlusBareSkinWithOil =>
+      'Dazu nackte Haut mit Öl, Hüften und Innenschenkel.';
+
+  @override
+  String get selbstReisePlusPerineumAndGenitalsWith =>
+      'Dazu Damm und Geschlecht, mit Wellen statt Ziel.';
+
+  @override
+  String get selbstReiseYourBody => 'Dein Körper';
+
+  @override
+  String get selbstReiseVulva => 'Vulva';
+
+  @override
+  String get selbstReisePenis => 'Penis';
+
+  @override
+  String get selbstReiseBeginTheJourney => 'Reise beginnen';
+
+  @override
+  String get selbstReiseThankYou => 'Danke dir';
+
+  @override
+  String get selbstReiseBodyJourney => 'Körperreise';
+
+  @override
+  String selbstReiseSilenceStillerestLeft(Object stilleRest) {
+    return 'Stille · noch $stilleRest';
+  }
+
+  @override
+  String get selbstReiseStayLyingDownAsLong =>
+      'Bleib liegen, solange es sich gut anfühlt.';
+
+  @override
+  String get lustProfileCircling => 'Kreisen';
+
+  @override
+  String get lustProfileUpAndDown => 'Auf und ab';
+
+  @override
+  String get lustProfileSideToSide => 'Seitwärts';
+
+  @override
+  String get lustProfilePressAndHold => 'Drücken und halten';
+
+  @override
+  String get lustProfileFramingTwoFingersLeftAnd =>
+      'Rahmen – zwei Finger links und rechts';
+
+  @override
+  String get lustProfileLightTapping => 'Leichtes Klopfen';
+
+  @override
+  String get lustProfileInsideAndOutsideAtOnce => 'Innen und außen zugleich';
+
+  @override
+  String get lustProfileOpenOiledHand => 'Offene, eingeölte Hand';
+
+  @override
+  String get lustProfileTwoHandedGliding => 'Zweihand-Gleiten';
+
+  @override
+  String get lustProfileTwisting => 'Drehen';
+
+  @override
+  String get lustProfileRingAtTheBase => 'Ring an der Wurzel';
+
+  @override
+  String get lustProfileCirclingTheFrenulum => 'Das Bändchen umkreisen';
+
+  @override
+  String get lustProfileIncludingTesticlesAndPerineum =>
+      'Hoden und Damm einbeziehen';
+
+  @override
+  String get lustProfileWavesPausingJustBeforeClimax =>
+      'Wellen – kurz vor dem Höhepunkt innehalten';
+
+  @override
+  String get lustProfileStartSlowlyAroundRatherThan =>
+      'Langsam beginnen, rundherum statt direkt';
+
+  @override
+  String get lustProfileWhenItSGoodKeep =>
+      'Wenn es gut ist: genau so weitermachen';
+
+  @override
+  String get lustProfileWithPlentyOfLubricant => 'Mit viel Gleitmittel';
+
+  @override
+  String get lustProfileLotsOfTimeNoGoal => 'Viel Zeit, ohne Ziel';
+
+  @override
+  String get lustProfileMyDesireProfileThisIs =>
+      '💛 Mein Lust-Profil – das habe ich über mich entdeckt:\n';
+
+  @override
+  String get lustProfileWouldYouLikeToTry =>
+      '\nMagst du es mit mir ausprobieren?';
+
+  @override
+  String get lustProfileYourDesireProfileIsOn =>
+      'Dein Lust-Profil ist verschlüsselt unterwegs 💛';
+
+  @override
+  String get lustProfileSendingDidnTWorkPlease =>
+      'Senden hat nicht geklappt. Bitte gleich noch einmal.';
+
+  @override
+  String get lustProfileTextCopied => 'Text kopiert.';
+
+  @override
+  String get lustProfileWithVulva => 'Mit Vulva';
+
+  @override
+  String get lustProfileWithPenis => 'Mit Penis';
+
+  @override
+  String get lustProfileTickWhatYouEnjoyedWhile =>
+      'Hake an, was dir beim Erkunden gefallen hat. Nur du entscheidest, ob und wann du es teilst – gesendet wird ausschließlich, was du hier auswählst.';
+
+  @override
+  String get lustProfileGeneral => 'Allgemein';
+
+  @override
+  String get lustProfilePersonalNote => 'Eigene Notiz';
+
+  @override
+  String get lustProfileForExampleAtTheBeginning =>
+      'Zum Beispiel: Am Anfang mag ich große, langsame Kreise …';
+
+  @override
+  String get lustProfileSendToMyPartner => 'An mein Gegenüber senden';
+
+  @override
+  String get lustProfileConnectCoupleChannelAndSend =>
+      'Paar-Kanal verbinden und senden';
+
+  @override
+  String get lustProfileJustCopyAsText => 'Nur als Text kopieren';
+
+  @override
+  String get lustProfileTipEvenNicerThanAny =>
+      'Tipp: Noch schöner als jede Nachricht ist es, die Hand deines Gegenübers zu führen oder es dir zeigen zu lassen. Die Nachricht kann der Anstoß dafür sein.';
+
+  @override
+  String get yesNoMaybeMatchingAnswersEncrypted =>
+      'Antworten werden verschlüsselt abgeglichen …';
+
+  @override
+  String yesNoMaybeCountAnswersMatched(Object count) {
+    return '$count Antworten erfolgreich abgeglichen! ✨';
+  }
+
+  @override
+  String get yesNoMaybeReadMore => 'WEITERLESEN';
+
+  @override
+  String get yesNoMaybeYesMaybeNo => 'Ja / Vielleicht / Nein';
+
+  @override
+  String get yesNoMaybeSyncWithPartner => 'Mit Partner synchronisieren';
+
+  @override
+  String get yesNoMaybePairingRequired => 'Koppeln erforderlich';
+
+  @override
+  String yesNoMaybeQuestionsAnsweredcountTotalitems(
+      Object answeredCount, Object totalItems) {
+    return 'Fragenkatalog ($answeredCount/$totalItems)';
+  }
+
+  @override
+  String yesNoMaybeMatchesMatchcount(Object matchCount) {
+    return 'Matches ($matchCount)';
+  }
+
+  @override
+  String get yesNoMaybeDigitalSafeSpace => 'DIGITALER SAFE SPACE';
+
+  @override
+  String get yesNoMaybeFindOutWhatExcitesYou =>
+      'Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar.';
+
+  @override
+  String get yesNoMaybeYes => 'Ja';
+
+  @override
+  String get yesNoMaybeMaybe => 'Vielleicht';
+
+  @override
+  String get yesNoMaybeNo => 'Nein';
+
+  @override
+  String yesNoMaybeAllEintraegelength(Object eintraegeLength) {
+    return 'Alle ($eintraegeLength)';
+  }
+
+  @override
+  String get yesNoMaybeOpen => 'Offen';
+
+  @override
+  String yesNoMaybeYesYescount(Object yesCount) {
+    return 'Ja ($yesCount)';
+  }
+
+  @override
+  String yesNoMaybeMaybeMaybecount(Object maybeCount) {
+    return 'Vielleicht ($maybeCount)';
+  }
+
+  @override
+  String yesNoMaybeNoNocount(Object noCount) {
+    return 'Nein ($noCount)';
+  }
+
+  @override
+  String get yesNoMaybePairingRequired2 => 'Kopplung erforderlich';
+
+  @override
+  String get yesNoMaybeConnectWithYourPartnerIn =>
+      'Verbinde dich im Paar-Kanal per QR-Code mit deinem Gegenüber. Eure Antworten werden dann Ende-zu-Ende-verschlüsselt abgeglichen.';
+
+  @override
+  String get yesNoMaybePairViaQrCodeNow => 'Jetzt per QR-Code koppeln';
+
+  @override
+  String yesNoMaybePerfectMatchWithPartnername(Object partnerName) {
+    return 'VOLLTREFFER MIT $partnerName';
+  }
+
+  @override
+  String yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(
+      Object yesMatchesLength, Object curiosityMatchesLength) {
+    return '$yesMatchesLength gemeinsame Ja-Übereinstimmungen & $curiosityMatchesLength Neugier-Punkte entdeckt!';
+  }
+
+  @override
+  String get yesNoMaybeNoRejectionAllLimitsWere =>
+      'Keine Zurückweisung: Alle Grenzen wurden diskret gewahrt. Nur echte gemeinsame Lust wird enthüllt.';
+
+  @override
+  String get yesNoMaybePerfectMatchBothSaidYes =>
+      'Volltreffer (Beide haben JA gesagt)';
+
+  @override
+  String get yesNoMaybeSharedCuriosityOpenToExploring =>
+      'Gemeinsame Neugier (Offen für Erkundung)';
+
+  @override
+  String get yesNoMaybeNoMatchesYet => 'Noch keine Übereinstimmungen';
+
+  @override
+  String get yesNoMaybeBothKeepVotingInThe =>
+      'Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Ja oder Vielleicht bewertet habt, leuchtet er hier auf.';
+
+  @override
+  String get yesNoMaybeYouBothYes => 'Ihr beide: Ja';
+
+  @override
+  String get yesNoMaybeCuriousTogether => 'Gemeinsam neugierig';
+
+  @override
+  String get yesNoMaybeCourse => 'Kurs ▶';
+
+  @override
+  String get cbtNewEntryPleaseChooseAtLeastOne =>
+      'Bitte wähle mindestens ein Denkmuster / eine Verzerrung aus.';
+
+  @override
+  String get cbtNewEntryNewThoughtRecord => 'Neues Gedankenprotokoll';
+
+  @override
+  String get cbtNewEntryEditEntry => 'Eintrag bearbeiten';
+
+  @override
+  String get cbtNewEntryCognitiveRestructuringUnmaskIrrationalAlarm =>
+      'Kognitive Umstrukturierung: Enttarne irrationale Alarmgedanken und formuliere eine biologisch realistische Antwort.';
+
+  @override
+  String get cbtNewEntryTriggerSituation => 'Auslöser / Situation';
+
+  @override
+  String get cbtNewEntryWhenOrDuringWhatDid =>
+      'Wann oder wobei trat die Anspannung auf? (z.B. „Als wir ins Bett gingen“, „Als sie mich berührte“)';
+
+  @override
+  String get cbtNewEntryDescribeTheSpecificSituation =>
+      'Konkrete Situation beschreiben...';
+
+  @override
+  String get cbtNewEntryPleaseDescribeASituation =>
+      'Bitte gib eine Situation an.';
+
+  @override
+  String get cbtNewEntryAutomaticThoughtMentalMovie =>
+      'Automatischer Gedanke (Kopfkino)';
+
+  @override
+  String get cbtNewEntryWhatShotThroughYourHead =>
+      'Was schoss dir sofort durch den Kopf? Was sagte der innere Kritiker? (z.B. „Ich werde gleich wieder versagen“)';
+
+  @override
+  String get cbtNewEntryNoteTheUnfilteredThought =>
+      'Den ungefilterten Gedanken notieren...';
+
+  @override
+  String get cbtNewEntryPleaseNoteYourThought =>
+      'Bitte notiere deinen Gedanken.';
+
+  @override
+  String get cbtNewEntryExposeTheCognitiveDistortion =>
+      'Kognitive Verzerrung entlarven';
+
+  @override
+  String get cbtNewEntryWhichThinkingTrapIsThis =>
+      'Welche Denkfalle liegt hier vor? (Wähle mindestens eine aus)';
+
+  @override
+  String get cbtNewEntryReappraisalRealityCheck =>
+      'Neubewertung / Realitätscheck';
+
+  @override
+  String get cbtNewEntryWhatSTheRealisticView =>
+      'Was ist die biologische Wahrheit? Was würde ein empathischer Coach oder Freund dazu sagen?';
+
+  @override
+  String get cbtNewEntryEGMyBodyIs =>
+      'z.B.: „Mein Körper reagiert nur auf Adrenalin. Ich muss heute niemanden beeindrucken. Wenn ich den Fokus auf Hautkontakt und Atmung lenke, fällt der Druck ab.“';
+
+  @override
+  String get cbtNewEntryPleasePhraseAReappraisal =>
+      'Bitte formuliere eine Neubewertung.';
+
+  @override
+  String get cbtNewEntrySaving => 'Wird gespeichert...';
+
+  @override
+  String get cbtNewEntrySaveThoughtRecord => 'Gedankenprotokoll speichern';
+
+  @override
+  String get cbtJournalDeleteEntry => 'Eintrag löschen?';
+
+  @override
+  String get cbtJournalDoYouReallyWantTo =>
+      'Möchtest du dieses Gedankenprotokoll wirklich von deinem Gerät entfernen?';
+
+  @override
+  String get cbtJournalDelete => 'Löschen';
+
+  @override
+  String get cbtJournalNewEntry => 'Neuer Eintrag';
+
+  @override
+  String cbtJournalMyRecordsEntrieslength(Object entriesLength) {
+    return 'Meine Protokolle ($entriesLength)';
+  }
+
+  @override
+  String get cbtJournalBeliefs => 'Glaubenssätze';
+
+  @override
+  String get cbtJournalNoThoughtRecordsYet => 'Noch keine Gedankenprotokolle';
+
+  @override
+  String get cbtJournalWhenYourHeadBlocksBefore =>
+      'Wenn der Kopf vor oder bei der Intimität blockiert, hilft es ungemein, den automatischen Gedanken aufzuschreiben und die kognitive Verzerrung schwarz auf weiß zu entlarven.';
+
+  @override
+  String get cbtJournalNewRecord => 'Neues Protokoll';
+
+  @override
+  String get cbtJournalStartWithABelief => 'Mit einem Glaubenssatz starten';
+
+  @override
+  String get cbtJournalCognitiveRestructuring => 'Kognitive Umstrukturierung';
+
+  @override
+  String get cbtJournalEdit => 'Bearbeiten';
+
+  @override
+  String get cbtJournalAutomaticThoughtAlarm => 'AUTOMATISCHER GEDANKE (ALARM)';
+
+  @override
+  String cbtJournalAutomaticthought(Object automaticThought) {
+    return '„$automaticThought“';
+  }
+
+  @override
+  String get cbtJournalReappraisalRealityCheck =>
+      'NEUBEWERTUNG & REALITÄTSCHECK';
+
+  @override
+  String beliefLibraryViewRealitycheckPracticalShiftPracticalshift(
+      Object realityCheck, Object practicalShift) {
+    return '$realityCheck\n\nPraktischer Shift: $practicalShift';
+  }
+
+  @override
+  String get beliefLibraryViewBeliefToolkit => 'Glaubenssätze-Baukasten';
+
+  @override
+  String get beliefLibraryViewTheMostCommonMentalTraps =>
+      'Die häufigsten mentalen Fallen bei Leistungsangst – und die biologische Wahrheit dahinter. Tippe auf eine Karte, um sie direkt in dein eigenes Journal zu übernehmen.';
+
+  @override
+  String get beliefLibraryViewForHer => 'FÜR SIE 🌸';
+
+  @override
+  String get beliefLibraryViewForHim => 'FÜR IHN 🌿';
+
+  @override
+  String get beliefLibraryViewTypicalMisbeliefMentalMovie =>
+      'TYPISCHER IRRGLAUBE (KOPFKINO)';
+
+  @override
+  String beliefLibraryViewIrrationalthought(Object irrationalThought) {
+    return '„$irrationalThought“';
+  }
+
+  @override
+  String get beliefLibraryViewRealityCheck => 'BIOLOGISCHER REALITÄTSCHECK';
+
+  @override
+  String get beliefLibraryViewTakeIntoMyJournal =>
+      'In eigenes Journal übernehmen';
 }
