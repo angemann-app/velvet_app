@@ -98,7 +98,7 @@ class AudioPaket {
   static const String pruefsummeUrl = '$paketUrl.sha256';
 
   /// Ungefähre Größe für die Anzeige (tools/generate_audio_en.py gibt die genaue aus).
-  static const int ungefaehrMb = 48;
+  static const int ungefaehrMb = 62;
 
   /// Fortschritt 0…1 während des Ladens, sonst null.
   static final ValueNotifier<double?> fortschritt = ValueNotifier<double?>(null);
