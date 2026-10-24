@@ -109,9 +109,9 @@ class BeliefLibraryView extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: AppTheme.amber.withOpacity(0.18),
+                    color: AppTheme.amber.withValues(alpha: 0.18),
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: AppTheme.amber.withOpacity(0.4)),
+                    border: Border.all(color: AppTheme.amber.withValues(alpha: 0.4)),
                   ),
                   child: Text(
                     belief.category.toUpperCase(),
@@ -129,13 +129,13 @@ class BeliefLibraryView extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
                       color: belief.target == 'women'
-                          ? const Color(0xFFFB7185).withOpacity(0.18)
-                          : AppTheme.sageGreen.withOpacity(0.18),
+                          ? const Color(0xFFFB7185).withValues(alpha: 0.18)
+                          : AppTheme.sageGreen.withValues(alpha: 0.18),
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
                         color: belief.target == 'women'
-                            ? const Color(0xFFFB7185).withOpacity(0.5)
-                            : AppTheme.sageGreen.withOpacity(0.5),
+                            ? const Color(0xFFFB7185).withValues(alpha: 0.5)
+                            : AppTheme.sageGreen.withValues(alpha: 0.5),
                       ),
                     ),
                     child: Text(
@@ -160,10 +160,10 @@ class BeliefLibraryView extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.rose.withOpacity(0.08),
+                color: AppTheme.rose.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(12),
                 border: Border(
-                  left: BorderSide(color: AppTheme.rose.withOpacity(0.8), width: 3),
+                  left: BorderSide(color: AppTheme.rose.withValues(alpha: 0.8), width: 3),
                 ),
               ),
               child: Column(
@@ -198,7 +198,7 @@ class BeliefLibraryView extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.sageGreen.withOpacity(0.08),
+                color: AppTheme.sageGreen.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(12),
                 border: Border(
                   left: const BorderSide(color: AppTheme.sageGreen, width: 3),

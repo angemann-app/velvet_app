@@ -28,6 +28,15 @@
       "punkte": [
         {"icon": "record_voice_over", "titel": "Wort falsch ausgesprochen?", "text": "Unter jedem Audio kannst du melden, wenn die Stimme ein Wort falsch betont. Die Meldung geht an GitHub; dort ist sie öffentlich und braucht ein Konto. Im Diskretions-Modus ist der Link ausgeblendet."}
       ]
+    },
+    {
+      "build": 28,
+      "version": "4.4.0-beta.7",
+      "punkte": [
+        {"icon": "favorite", "titel": "Paar-Kanal zuverlässiger", "text": "Geteilte Antworten der Ja/Nein-Liste kommen jetzt vollständig an, auch wenn dein Gegenüber gerade offline war. Und die App holt beim Verbinden alles seit dem letzten Mal ab."},
+        {"icon": "person", "titel": "Verbindung trennen", "text": "Im Menü des Paar-Kanals kannst du eine Verbindung trennen. Verbindest du dich mit jemand anderem, wird der alte Verlauf gelöscht – nach einer Nachfrage."},
+        {"icon": "edit", "titel": "Sicherung vollständig", "text": "Die Ja/Nein-Liste ist jetzt in der Sicherung enthalten, und beim Einspielen werden Check-ins und Antworten zusammengeführt statt überschrieben."}
+      ]
     }
   ]
 }

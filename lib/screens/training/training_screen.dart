@@ -56,7 +56,7 @@ class TrainingScreenState extends State<TrainingScreen> with SingleTickerProvide
             indicator: BoxDecoration(
               color: AppTheme.surfaceLight,
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: AppTheme.sageGreen.withOpacity(0.4)),
+              border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.4)),
             ),
             indicatorSize: TabBarIndicatorSize.tab,
             dividerColor: Colors.transparent,

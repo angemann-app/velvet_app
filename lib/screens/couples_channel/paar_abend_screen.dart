@@ -297,7 +297,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
           value: _teppich,
-          activeColor: AppTheme.amber,
+          activeThumbColor: AppTheme.amber,
           onChanged: (v) => setState(() => _teppich = v),
           title: const Text('Leiser Klangteppich', style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
           subtitle: const Text('Ruhiger Hintergrund in den Stillen',
@@ -307,9 +307,9 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         Container(
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            color: AppTheme.sageGreen.withOpacity(0.08),
+            color: AppTheme.sageGreen.withValues(alpha: 0.08),
             borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: AppTheme.sageGreen.withOpacity(0.35)),
+            border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.35)),
           ),
           child: const Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -357,7 +357,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
           HapticFeedback.selectionClick();
           onTap();
         },
-        selectedColor: AppTheme.amber.withOpacity(0.25),
+        selectedColor: AppTheme.amber.withValues(alpha: 0.25),
         backgroundColor: AppTheme.surface,
         side: BorderSide(color: aktiv ? AppTheme.amber : AppTheme.border),
         labelStyle: TextStyle(
@@ -381,7 +381,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
           decoration: BoxDecoration(
-            color: aktiv ? farbe.withOpacity(0.12) : AppTheme.surface,
+            color: aktiv ? farbe.withValues(alpha: 0.12) : AppTheme.surface,
             borderRadius: BorderRadius.circular(14),
             border: Border.all(color: aktiv ? farbe : AppTheme.border),
           ),
@@ -462,14 +462,14 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               gradient: RadialGradient(colors: [
-                (runde == 0 ? AppTheme.amber : AppTheme.rose).withOpacity(_pausiert ? 0.15 : 0.45),
+                (runde == 0 ? AppTheme.amber : AppTheme.rose).withValues(alpha: _pausiert ? 0.15 : 0.45),
                 AppTheme.background,
               ]),
             ),
             child: Center(
               child: Icon(
                 _fertig ? Icons.favorite_rounded : (spricht ? Icons.graphic_eq_rounded : Icons.spa_rounded),
-                color: AppTheme.textPrimary.withOpacity(0.85),
+                color: AppTheme.textPrimary.withValues(alpha: 0.85),
                 size: 44,
               ),
             ),

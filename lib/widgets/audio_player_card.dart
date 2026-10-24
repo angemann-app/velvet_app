@@ -90,14 +90,14 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: isPlaying
-              ? accentColor.withOpacity(0.7)
-              : (isPaused ? accentColor.withOpacity(0.3) : AppTheme.border),
+              ? accentColor.withValues(alpha: 0.7)
+              : (isPaused ? accentColor.withValues(alpha: 0.3) : AppTheme.border),
           width: isPlaying ? 1.5 : 1.0,
         ),
         boxShadow: isPlaying
             ? [
                 BoxShadow(
-                  color: accentColor.withOpacity(0.18),
+                  color: accentColor.withValues(alpha: 0.18),
                   blurRadius: 18,
                   spreadRadius: 2,
                   offset: const Offset(0, 4),
@@ -116,12 +116,12 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
                   color: isPlaying
-                      ? accentColor.withOpacity(0.2)
+                      ? accentColor.withValues(alpha: 0.2)
                       : AppTheme.surfaceLight,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: isPlaying
-                        ? accentColor.withOpacity(0.5)
+                        ? accentColor.withValues(alpha: 0.5)
                         : Colors.transparent,
                   ),
                 ),
@@ -191,7 +191,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
               inactiveTrackColor: AppTheme.surfaceLight,
               thumbColor: accentColor,
               thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6.5),
-              overlayColor: accentColor.withOpacity(0.2),
+              overlayColor: accentColor.withValues(alpha: 0.2),
               overlayShape: const RoundSliderOverlayShape(overlayRadius: 14),
             ),
             child: Slider(
@@ -227,7 +227,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                     : null,
                 icon: const Icon(Icons.replay_10_rounded),
                 iconSize: 30,
-                color: isCurrent ? AppTheme.textPrimary : AppTheme.textMuted.withOpacity(0.4),
+                color: isCurrent ? AppTheme.textPrimary : AppTheme.textMuted.withValues(alpha: 0.4),
                 tooltip: '10 Sek. zurück',
               ),
 
@@ -255,14 +255,14 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                     gradient: LinearGradient(
                       colors: [
                         accentColor,
-                        accentColor.withOpacity(0.85),
+                        accentColor.withValues(alpha: 0.85),
                       ],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: accentColor.withOpacity(0.35),
+                        color: accentColor.withValues(alpha: 0.35),
                         blurRadius: 14,
                         spreadRadius: 1,
                         offset: const Offset(0, 3),
@@ -288,7 +288,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                     : null,
                 icon: const Icon(Icons.forward_10_rounded),
                 iconSize: 30,
-                color: isCurrent ? AppTheme.textPrimary : AppTheme.textMuted.withOpacity(0.4),
+                color: isCurrent ? AppTheme.textPrimary : AppTheme.textMuted.withValues(alpha: 0.4),
                 tooltip: '10 Sek. vor',
               ),
 

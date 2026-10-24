@@ -213,14 +213,14 @@ class _CoursesScreenState extends State<CoursesScreen> {
               gradient: LinearGradient(
                 colors: [
                   const Color(0xFF1E293B),
-                  const Color(0xFF4C0519).withOpacity(0.35),
+                  const Color(0xFF4C0519).withValues(alpha: 0.35),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
-                color: const Color(0xFFFB7185).withOpacity(0.35),
+                color: const Color(0xFFFB7185).withValues(alpha: 0.35),
               ),
             ),
             child: Material(
@@ -235,7 +235,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       Container(
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFE11D48).withOpacity(0.18),
+                          color: const Color(0xFFE11D48).withValues(alpha: 0.18),
                           shape: BoxShape.circle,
                         ),
                         child: const Icon(
@@ -350,7 +350,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
         decoration: BoxDecoration(
-          color: isSelected ? activeColor.withOpacity(0.18) : AppTheme.surface,
+          color: isSelected ? activeColor.withValues(alpha: 0.18) : AppTheme.surface,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: isSelected ? activeColor : AppTheme.border,
@@ -432,9 +432,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                   decoration: BoxDecoration(
-                    color: AppTheme.amber.withOpacity(0.15),
+                    color: AppTheme.amber.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: AppTheme.amber.withOpacity(0.4)),
+                    border: Border.all(color: AppTheme.amber.withValues(alpha: 0.4)),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
@@ -524,7 +524,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
         color: AppTheme.surface,
         borderRadius: BorderRadius.circular(18),
         border: Border.all(
-          color: isAllDone ? AppTheme.sageGreen.withOpacity(0.5) : AppTheme.border,
+          color: isAllDone ? AppTheme.sageGreen.withValues(alpha: 0.5) : AppTheme.border,
         ),
       ),
       child: Column(
@@ -560,7 +560,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       gradient: LinearGradient(
                         colors: [
                           Colors.transparent,
-                          AppTheme.surface.withOpacity(0.7),
+                          AppTheme.surface.withValues(alpha: 0.7),
                           AppTheme.surface,
                         ],
                         begin: Alignment.topCenter,
@@ -576,9 +576,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
                     decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.65),
+                      color: Colors.black.withValues(alpha: 0.65),
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: badgeColor.withOpacity(0.7)),
+                      border: Border.all(color: badgeColor.withValues(alpha: 0.7)),
                     ),
                     child: Text(
                       course.targetBadgeLabel,
@@ -606,10 +606,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   width: 44,
                   height: 44,
                   decoration: BoxDecoration(
-                    color: isAllDone ? AppTheme.sageGreen.withOpacity(0.18) : AppTheme.surfaceLight,
+                    color: isAllDone ? AppTheme.sageGreen.withValues(alpha: 0.18) : AppTheme.surfaceLight,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                      color: isAllDone ? AppTheme.sageGreen.withOpacity(0.4) : AppTheme.border,
+                      color: isAllDone ? AppTheme.sageGreen.withValues(alpha: 0.4) : AppTheme.border,
                     ),
                   ),
                   child: Icon(
@@ -681,7 +681,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                           decoration: BoxDecoration(
                             border: Border(
                               bottom: BorderSide(
-                                color: AppTheme.border.withOpacity(0.5),
+                                color: AppTheme.border.withValues(alpha: 0.5),
                                 width: 0.5,
                               ),
                             ),

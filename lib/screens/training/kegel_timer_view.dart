@@ -381,7 +381,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                     ),
                     Switch(
                       value: _voiceCues,
-                      activeColor: AppTheme.sageGreen,
+                      activeThumbColor: AppTheme.sageGreen,
                       onChanged: (v) {
                         setState(() => _voiceCues = v);
                         _saveSettings();
@@ -401,7 +401,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             children: [
               _buildBadge('Runde $_currentRound von $_totalRounds', AppTheme.textPrimary, AppTheme.border),
               _buildBadge('Phase ${_currentPhaseIndex + 1}/${phases.length}', currentPhase.color,
-                  currentPhase.color.withOpacity(0.4)),
+                  currentPhase.color.withValues(alpha: 0.4)),
             ],
           ),
 
@@ -421,8 +421,8 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       gradient: RadialGradient(colors: [
-                        currentPhase.color.withOpacity(0.28),
-                        currentPhase.color.withOpacity(0.08),
+                        currentPhase.color.withValues(alpha: 0.28),
+                        currentPhase.color.withValues(alpha: 0.08),
                         Colors.transparent,
                       ]),
                       border: Border.all(color: currentPhase.color, width: 3.5),
@@ -519,7 +519,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               decoration: BoxDecoration(
                 color: AppTheme.surface,
                 borderRadius: BorderRadius.circular(14),
-                border: Border.all(color: AppTheme.sageGreen.withOpacity(0.35)),
+                border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.35)),
               ),
               child: const Row(
                 children: [
@@ -553,7 +553,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: border),
       ),
@@ -570,7 +570,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           decoration: BoxDecoration(
-            color: selected ? AppTheme.sageGreen.withOpacity(0.2) : Colors.transparent,
+            color: selected ? AppTheme.sageGreen.withValues(alpha: 0.2) : Colors.transparent,
             borderRadius: BorderRadius.circular(8),
             border: Border.all(color: selected ? AppTheme.sageGreen : AppTheme.border),
           ),
@@ -599,7 +599,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
           decoration: BoxDecoration(
             color: isSelected ? AppTheme.surfaceLight : Colors.transparent,
             borderRadius: BorderRadius.circular(10),
-            border: isSelected ? Border.all(color: AppTheme.sageGreen.withOpacity(0.5)) : null,
+            border: isSelected ? Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.5)) : null,
           ),
           child: Column(
             children: [

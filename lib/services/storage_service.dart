@@ -22,7 +22,11 @@ class StorageService {
   static const String _keyDailyCheckIns = 'daily_check_ins';
   static const String _keyUserProfile = 'user_profile';
   static const String _keyHasCompletedOnboarding = 'has_completed_onboarding';
-  static const String _keyYesNoMaybe = 'yes_no_maybe_answers';
+  // Muss zum Schlüssel in yes_no_maybe_screen.dart passen. Bis 4.4.0-beta.6 stand hier
+  // 'yes_no_maybe_answers' – die Liste fehlte darum in jeder Sicherung (gerettet wurde sie
+  // nur indirekt über myFantasyVotes).
+  static const String keyYesNoMaybe = 'velvet_yes_no_maybe_answers';
+  static const String _keyYesNoMaybe = keyYesNoMaybe;
   static const String _keyPartnerPubKey = 'velvet_partner_pubkey';
   static const String _keyPartnerName = 'velvet_partner_name';
   static const String _keyMyVotes = 'velvet_my_fantasy_votes';
@@ -424,11 +428,31 @@ class StorageService {
       final sorted = entries.values.toList()..sort((a, b) => b.timestamp.compareTo(a.timestamp));
       writes[_keyCbtEntries] = sorted.map((e) => jsonEncode(e.toJson())).toList();
     }
+    // Wie bei den Reflexionen: zusammenführen statt überschreiben. Bei gleichem Tag bzw.
+    // gleicher Frage gilt die Sicherung, alles nur lokal Vorhandene bleibt.
     if (d['dailyCheckIns'] is List) {
-      writes[_keyDailyCheckIns] = (d['dailyCheckIns'] as List).map((e) => e.toString()).toList();
+      final byDate = <String, String>{};
+      void add(String raw) {
+        try {
+          final date = (jsonDecode(raw) as Map)['date'];
+          if (date is String) byDate[date] = raw;
+        } catch (_) {}
+      }
+      (prefs.getStringList(_keyDailyCheckIns) ?? []).forEach(add);
+      for (final e in d['dailyCheckIns'] as List) {
+        add(e.toString());
+      }
+      final dates = byDate.keys.toList()..sort((a, b) => b.compareTo(a));
+      writes[_keyDailyCheckIns] = [for (final date in dates) byDate[date]!];
     }
     if (d['yesNoMaybe'] is String && (d['yesNoMaybe'] as String).isNotEmpty) {
-      writes[_keyYesNoMaybe] = d['yesNoMaybe'] as String;
+      final imported = jsonDecode(d['yesNoMaybe'] as String);
+      if (imported is! Map) throw const BackupException('Die Sicherung ist beschädigt (Ja/Nein-Liste).');
+      final currentStr = prefs.getString(_keyYesNoMaybe);
+      final current = currentStr == null || currentStr.isEmpty
+          ? <String, dynamic>{}
+          : Map<String, dynamic>.from(jsonDecode(currentStr) as Map);
+      writes[_keyYesNoMaybe] = jsonEncode({...current, ...imported});
     }
     if (d['streakCount'] is int && (d['streakCount'] as int) > getStreakCount()) {
       writes[_keyStreakCount] = d['streakCount'] as int;

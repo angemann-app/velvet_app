@@ -47,7 +47,7 @@ Future<bool> editPartnerProfile(BuildContext context) async {
                     label: Text(entry.value),
                     selected: gender == entry.key,
                     onSelected: (_) => setState(() => gender = entry.key),
-                    selectedColor: AppTheme.rose.withOpacity(0.25),
+                    selectedColor: AppTheme.rose.withValues(alpha: 0.25),
                     showCheckmark: false,
                   ),
               ],
@@ -86,9 +86,9 @@ class PartnerProfilePrompt extends StatelessWidget {
             margin: const EdgeInsets.fromLTRB(16, 10, 16, 0),
             padding: const EdgeInsets.fromLTRB(14, 12, 6, 6),
             decoration: BoxDecoration(
-              color: AppTheme.rose.withOpacity(0.08),
+              color: AppTheme.rose.withValues(alpha: 0.08),
               borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.rose.withOpacity(0.4)),
+              border: Border.all(color: AppTheme.rose.withValues(alpha: 0.4)),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

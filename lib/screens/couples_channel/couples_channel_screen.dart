@@ -207,7 +207,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             label: const Text('Partner einladen', style: TextStyle(fontWeight: FontWeight.w700)),
             style: OutlinedButton.styleFrom(
               foregroundColor: AppTheme.amberLight,
-              side: BorderSide(color: AppTheme.amber.withOpacity(0.6)),
+              side: BorderSide(color: AppTheme.amber.withValues(alpha: 0.6)),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
           ),
@@ -236,7 +236,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           Container(
             width: 40,
             height: 40,
-            decoration: BoxDecoration(color: color.withOpacity(0.15), shape: BoxShape.circle),
+            decoration: BoxDecoration(color: color.withValues(alpha: 0.15), shape: BoxShape.circle),
             child: Icon(icon, color: color, size: 20),
           ),
           const SizedBox(width: 14),
@@ -277,10 +277,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [AppTheme.rose.withOpacity(0.16), AppTheme.amber.withOpacity(0.10)],
+            colors: [AppTheme.rose.withValues(alpha: 0.16), AppTheme.amber.withValues(alpha: 0.10)],
           ),
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: AppTheme.rose.withOpacity(0.45)),
+          border: Border.all(color: AppTheme.rose.withValues(alpha: 0.45)),
         ),
         child: const Row(
           children: [
@@ -314,7 +314,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         decoration: BoxDecoration(
           color: AppTheme.surface,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: AppTheme.sageGreen.withOpacity(0.4)),
+          border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.4)),
         ),
         child: Row(
           children: [
@@ -356,9 +356,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           child: TabBar(
             controller: _subTabController,
             indicator: BoxDecoration(
-              color: AppTheme.amber.withOpacity(0.2),
+              color: AppTheme.amber.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppTheme.amber.withOpacity(0.5)),
+              border: Border.all(color: AppTheme.amber.withValues(alpha: 0.5)),
             ),
             indicatorSize: TabBarIndicatorSize.tab,
             dividerColor: Colors.transparent,
@@ -418,7 +418,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             children: [
               CircleAvatar(
                 radius: 20,
-                backgroundColor: AppTheme.rose.withOpacity(0.2),
+                backgroundColor: AppTheme.rose.withValues(alpha: 0.2),
                 child: Text(
                   name.isNotEmpty ? name.characters.first.toUpperCase() : '♥',
                   style: const TextStyle(color: AppTheme.rose, fontWeight: FontWeight.w800, fontSize: 16),
@@ -533,7 +533,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               padding: const EdgeInsets.symmetric(horizontal: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: AppTheme.surfaceLight.withOpacity(0.6),
+                color: AppTheme.surfaceLight.withValues(alpha: 0.6),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(color: AppTheme.border),
               ),
@@ -608,14 +608,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                   end: Alignment.bottomRight,
                 )
               : null,
-          color: isMe ? null : (isSpark ? AppTheme.rose.withOpacity(0.16) : AppTheme.surface),
+          color: isMe ? null : (isSpark ? AppTheme.rose.withValues(alpha: 0.16) : AppTheme.surface),
           borderRadius: BorderRadius.only(
             topLeft: const Radius.circular(16),
             topRight: const Radius.circular(16),
             bottomLeft: Radius.circular(isMe ? 16 : 4),
             bottomRight: Radius.circular(isMe ? 4 : 16),
           ),
-          border: isMe ? null : Border.all(color: isSpark ? AppTheme.rose.withOpacity(0.45) : AppTheme.border),
+          border: isMe ? null : Border.all(color: isSpark ? AppTheme.rose.withValues(alpha: 0.45) : AppTheme.border),
         ),
         child: Column(
           crossAxisAlignment: isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
@@ -638,7 +638,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
-                      color: (isMe ? Colors.black : AppTheme.amber).withOpacity(0.12),
+                      color: (isMe ? Colors.black : AppTheme.amber).withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Row(
@@ -659,7 +659,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             const SizedBox(height: 4),
             Text(
               _formatTime(msg.createdAt),
-              style: TextStyle(fontSize: 10, color: isMe ? textColor.withOpacity(0.65) : AppTheme.textMuted),
+              style: TextStyle(fontSize: 10, color: isMe ? textColor.withValues(alpha: 0.65) : AppTheme.textMuted),
             ),
           ],
         ),
@@ -684,7 +684,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 hintText: 'Nachricht schreiben …',
                 hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 13.5),
                 filled: true,
-                fillColor: AppTheme.surfaceLight.withOpacity(0.5),
+                fillColor: AppTheme.surfaceLight.withValues(alpha: 0.5),
                 contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(24),
@@ -802,9 +802,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: isMatch ? AppTheme.rose.withOpacity(0.1) : AppTheme.surface,
+        color: isMatch ? AppTheme.rose.withValues(alpha: 0.1) : AppTheme.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: isMatch ? AppTheme.rose.withOpacity(0.7) : AppTheme.border),
+        border: Border.all(color: isMatch ? AppTheme.rose.withValues(alpha: 0.7) : AppTheme.border),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

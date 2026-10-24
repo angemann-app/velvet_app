@@ -1,32 +1,30 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
+import 'package:path_provider/path_provider.dart';
 import 'backup_codec.dart';
 import 'storage_service.dart';
 
 class AutoBackupService {
   static const String backupFileName = 'velvetpulse_backup.json';
 
-  static String get _packageName {
-    try {
-      final cmdline = File('/proc/self/cmdline')
-          .readAsStringSync()
-          .split('\u0000')
-          .first
-          .trim();
-      if (cmdline.isNotEmpty) return cmdline;
-    } catch (_) {}
-    return 'org.velvetpulse.app';
-  }
-
   /// Einziger Ort, an dem Sicherungen automatisch geschrieben und gelesen werden:
   /// der private App-Speicher. Andere Apps können ihn nicht lesen. Die Sicherung
   /// enthält keine Geheimnisse (siehe BackupCodec, SecretStore).
   /// Dateien aus Download oder Documents werden nie automatisch eingelesen, nur
   /// über den Import im Onboarding, nach Prüfung und auf ausdrücklichen Wunsch.
-  static String? get _privateBackupPath {
-    if (!Platform.isAndroid) return null;
-    return '/data/user/0/$_packageName/files/$backupFileName';
+  ///
+  /// Den Ordner liefert Android (Context.getFilesDir), damit es auch in einem
+  /// Arbeitsprofil oder bei einem zweiten Nutzer klappt. Für den Hauptnutzer ist es
+  /// derselbe Ort wie früher (/data/user/0/<Paket>/files), alte Sicherungen bleiben also gültig.
+  static Future<String?> _privateBackupPath() async {
+    if (kIsWeb || !Platform.isAndroid) return null;
+    try {
+      final dir = await getApplicationSupportDirectory();
+      return '${dir.path}/$backupFileName';
+    } catch (_) {
+      return null;
+    }
   }
 
   /// Beim App-Start: Ist die App eingerichtet, wird nur gesichert. Sonst wird
@@ -62,7 +60,7 @@ class AutoBackupService {
         return false;
       }
 
-      final path = _privateBackupPath;
+      final path = await _privateBackupPath();
       if (path == null) return false;
 
       final jsonString = const JsonEncoder.withIndent('  ').convert(data);
@@ -80,7 +78,7 @@ class AutoBackupService {
 
   /// Inhalt der privaten Sicherung, falls vorhanden und nicht übergroß.
   static Future<String?> readBackupText() async {
-    final path = _privateBackupPath;
+    final path = await _privateBackupPath();
     if (path == null) return null;
     try {
       final file = File(path);

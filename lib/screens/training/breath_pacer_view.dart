@@ -239,7 +239,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: AppTheme.surfaceLight.withOpacity(0.4),
+                  color: AppTheme.surfaceLight.withValues(alpha: 0.4),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(color: AppTheme.border),
                 ),
@@ -273,8 +273,8 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                       shape: BoxShape.circle,
                       gradient: RadialGradient(
                         colors: [
-                          phaseColor.withOpacity(0.28),
-                          phaseColor.withOpacity(0.08),
+                          phaseColor.withValues(alpha: 0.28),
+                          phaseColor.withValues(alpha: 0.08),
                           Colors.transparent,
                         ],
                       ),
@@ -284,7 +284,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: phaseColor.withOpacity(0.35),
+                          color: phaseColor.withValues(alpha: 0.35),
                           blurRadius: 30,
                           spreadRadius: 4,
                         ),
@@ -413,7 +413,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
           Container(
             padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-              color: AppTheme.surfaceLight.withOpacity(0.3),
+              color: AppTheme.surfaceLight.withValues(alpha: 0.3),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: AppTheme.border),
             ),
@@ -460,7 +460,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
             color: isSelected ? AppTheme.surfaceLight : Colors.transparent,
             borderRadius: BorderRadius.circular(10),
             border: isSelected
-                ? Border.all(color: AppTheme.sageGreen.withOpacity(0.5))
+                ? Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.5))
                 : null,
           ),
           child: Column(

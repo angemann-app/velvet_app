@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -5,8 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../models/content_models.dart';
 import '../../models/yes_no_maybe_models.dart';
+import '../../services/auto_backup_service.dart';
 import '../../services/data_service.dart';
 import '../../services/nostr_service.dart';
+import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../couples_channel/pairing_modal.dart';
@@ -23,9 +26,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
   late TabController _tabController;
   final NostrService _nostr = NostrService();
 
-  static const String _storageKey = 'velvet_yes_no_maybe_answers';
+  static const String _storageKey = StorageService.keyYesNoMaybe;
   Map<String, String> _myAnswers = {};
-  bool _isLoading = false;
   String _selectedFilter = 'all'; // 'all', 'open', 'yes', 'maybe', 'no'
 
   VelvetDatabase? _db;
@@ -92,6 +94,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
     try {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString(_storageKey, jsonEncode(updated));
+      unawaited(AutoBackupService.saveAutoBackup());
     } catch (e) {
       debugPrint('Error saving YesNoMaybe answers: $e');
     }
@@ -211,9 +214,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   child: Container(
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: AppTheme.amber.withOpacity(0.1),
+                      color: AppTheme.amber.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(14),
-                      border: Border.all(color: AppTheme.amber.withOpacity(0.4)),
+                      border: Border.all(color: AppTheme.amber.withValues(alpha: 0.4)),
                     ),
                     child: Row(
                       children: [
@@ -301,9 +304,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
             child: TabBar(
               controller: _tabController,
               indicator: BoxDecoration(
-                color: AppTheme.amber.withOpacity(0.2),
+                color: AppTheme.amber.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: AppTheme.amber.withOpacity(0.6)),
+                border: Border.all(color: AppTheme.amber.withValues(alpha: 0.6)),
               ),
               indicatorSize: TabBarIndicatorSize.tab,
               labelColor: AppTheme.amberLight,
@@ -373,7 +376,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
             gradient: LinearGradient(
               colors: [
                 const Color(0xFF1E293B),
-                const Color(0xFF0F172A).withOpacity(0.8),
+                const Color(0xFF0F172A).withValues(alpha: 0.8),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -518,9 +521,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.15),
+        color: color.withValues(alpha: 0.15),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: color.withOpacity(0.4)),
+        border: Border.all(color: color.withValues(alpha: 0.4)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -559,7 +562,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
         decoration: BoxDecoration(
-          color: isSelected ? AppTheme.amber.withOpacity(0.2) : AppTheme.surface,
+          color: isSelected ? AppTheme.amber.withValues(alpha: 0.2) : AppTheme.surface,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
             color: isSelected ? AppTheme.amber : AppTheme.border,
@@ -588,7 +591,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
         color: AppTheme.surface,
         borderRadius: BorderRadius.circular(14),
         border: Border.all(
-          color: currentVote != null ? currentVote.color.withOpacity(0.35) : AppTheme.border,
+          color: currentVote != null ? currentVote.color.withValues(alpha: 0.35) : AppTheme.border,
           width: currentVote != null ? 1.2 : 0.8,
         ),
       ),
@@ -674,7 +677,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           duration: const Duration(milliseconds: 180),
           padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: BoxDecoration(
-            color: isActive ? color.withOpacity(0.2) : AppTheme.background,
+            color: isActive ? color.withValues(alpha: 0.2) : AppTheme.background,
             borderRadius: BorderRadius.circular(10),
             border: Border.all(
               color: isActive ? color : AppTheme.border,
@@ -730,9 +733,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     width: 72,
                     height: 72,
                     decoration: BoxDecoration(
-                      color: AppTheme.amber.withOpacity(0.15),
+                      color: AppTheme.amber.withValues(alpha: 0.15),
                       shape: BoxShape.circle,
-                      border: Border.all(color: AppTheme.amber.withOpacity(0.4)),
+                      border: Border.all(color: AppTheme.amber.withValues(alpha: 0.4)),
                     ),
                     child: const Center(
                       child: Icon(Icons.favorite_border_rounded, size: 36, color: AppTheme.amber),
@@ -796,10 +799,10 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   end: Alignment.bottomRight,
                 ),
                 borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: const Color(0xFF10B981).withOpacity(0.5)),
+                border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.5)),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xFF10B981).withOpacity(0.2),
+                    color: const Color(0xFF10B981).withValues(alpha: 0.2),
                     blurRadius: 16,
                     spreadRadius: 2,
                   ),
@@ -926,14 +929,14 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
       decoration: BoxDecoration(
         color: AppTheme.surface,
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: color.withOpacity(0.4), width: 1.2),
+        border: Border.all(color: color.withValues(alpha: 0.4), width: 1.2),
       ),
       child: Row(
         children: [
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.15),
+              color: color.withValues(alpha: 0.15),
               shape: BoxShape.circle,
             ),
             child: Icon(
@@ -972,13 +975,13 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           ElevatedButton(
             onPressed: () => _openDetails(item),
             style: ElevatedButton.styleFrom(
-              backgroundColor: color.withOpacity(0.2),
+              backgroundColor: color.withValues(alpha: 0.2),
               foregroundColor: color,
               elevation: 0,
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
-                side: BorderSide(color: color.withOpacity(0.5)),
+                side: BorderSide(color: color.withValues(alpha: 0.5)),
               ),
             ),
             child: const Text('Kurs ▶', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),

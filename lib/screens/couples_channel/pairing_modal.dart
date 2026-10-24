@@ -113,7 +113,6 @@ class _PairingModalState extends State<PairingModal>
   @override
   Widget build(BuildContext context) {
     final nostr = NostrService();
-    final myNpub = nostr.myNpub;
 
     return Container(
       height: MediaQuery.of(context).size.height * 0.88,
@@ -199,7 +198,7 @@ class _PairingModalState extends State<PairingModal>
                               borderRadius: BorderRadius.circular(20),
                               boxShadow: [
                                 BoxShadow(
-                                  color: AppTheme.amber.withOpacity(0.2),
+                                  color: AppTheme.amber.withValues(alpha: 0.2),
                                   blurRadius: 20,
                                   spreadRadius: 2,
                                 ),
@@ -301,7 +300,7 @@ class _PairingModalState extends State<PairingModal>
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.black,
-                            border: Border.all(color: AppTheme.amber.withOpacity(0.5), width: 1.5),
+                            border: Border.all(color: AppTheme.amber.withValues(alpha: 0.5), width: 1.5),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Stack(
@@ -337,7 +336,7 @@ class _PairingModalState extends State<PairingModal>
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                                     decoration: BoxDecoration(
-                                      color: Colors.black.withOpacity(0.6),
+                                      color: Colors.black.withValues(alpha: 0.6),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     child: const Text(
@@ -359,9 +358,9 @@ class _PairingModalState extends State<PairingModal>
                           padding: const EdgeInsets.all(10),
                           margin: const EdgeInsets.only(bottom: 12),
                           decoration: BoxDecoration(
-                            color: AppTheme.rose.withOpacity(0.15),
+                            color: AppTheme.rose.withValues(alpha: 0.15),
                             borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: AppTheme.rose.withOpacity(0.4)),
+                            border: Border.all(color: AppTheme.rose.withValues(alpha: 0.4)),
                           ),
                           child: Text(
                             _errorMessage!,
@@ -397,7 +396,7 @@ class _PairingModalState extends State<PairingModal>
                               label: Text(entry.value, style: const TextStyle(fontSize: 12.5)),
                               selected: _gender == entry.key,
                               onSelected: (_) => setState(() => _gender = entry.key),
-                              selectedColor: AppTheme.rose.withOpacity(0.25),
+                              selectedColor: AppTheme.rose.withValues(alpha: 0.25),
                               showCheckmark: false,
                             ),
                         ],

@@ -143,9 +143,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           margin: const EdgeInsets.only(top: 14),
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            color: AppTheme.rose.withOpacity(0.08),
+            color: AppTheme.rose.withValues(alpha: 0.08),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppTheme.rose.withOpacity(0.35)),
+            border: Border.all(color: AppTheme.rose.withValues(alpha: 0.35)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -291,13 +291,13 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
                     color: lesson.isAudioExercise
-                        ? AppTheme.amber.withOpacity(0.18)
-                        : AppTheme.sageGreen.withOpacity(0.15),
+                        ? AppTheme.amber.withValues(alpha: 0.18)
+                        : AppTheme.sageGreen.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
                       color: lesson.isAudioExercise
-                          ? AppTheme.amber.withOpacity(0.4)
-                          : AppTheme.sageGreen.withOpacity(0.3),
+                          ? AppTheme.amber.withValues(alpha: 0.4)
+                          : AppTheme.sageGreen.withValues(alpha: 0.3),
                     ),
                   ),
                   child: Row(
@@ -468,9 +468,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: accentColor.withOpacity(0.08),
+        color: accentColor.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: accentColor.withOpacity(0.3), width: 1.5),
+        border: Border.all(color: accentColor.withValues(alpha: 0.3), width: 1.5),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -480,7 +480,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: accentColor.withOpacity(0.15),
+                  color: accentColor.withValues(alpha: 0.15),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(toolIcon, color: accentColor, size: 20),

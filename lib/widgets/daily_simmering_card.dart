@@ -15,7 +15,6 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
     with SingleTickerProviderStateMixin {
   bool _isRevealed = false;
   late AnimationController _flipController;
-  late Animation<double> _flipAnimation;
 
   static const List<Map<String, String>> _couplesImpulses = [
     {
@@ -170,10 +169,6 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
       vsync: this,
       duration: const Duration(milliseconds: 350),
     );
-    _flipAnimation = CurvedAnimation(
-      parent: _flipController,
-      curve: Curves.easeOutBack,
-    );
   }
 
   @override
@@ -222,14 +217,14 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: _isRevealed
-              ? const Color(0xFFE11D48).withOpacity(0.6)
-              : AppTheme.amber.withOpacity(0.35),
+              ? const Color(0xFFE11D48).withValues(alpha: 0.6)
+              : AppTheme.amber.withValues(alpha: 0.35),
           width: 1.2,
         ),
         boxShadow: [
           if (_isRevealed)
             BoxShadow(
-              color: const Color(0xFFE11D48).withOpacity(0.12),
+              color: const Color(0xFFE11D48).withValues(alpha: 0.12),
               blurRadius: 16,
               offset: const Offset(0, 4),
             ),
@@ -254,7 +249,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                         Container(
                           padding: const EdgeInsets.all(6),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFE11D48).withOpacity(0.18),
+                            color: const Color(0xFFE11D48).withValues(alpha: 0.18),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: const Icon(
@@ -307,7 +302,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                         child: Text(
                           'Tippe hier, um deinen heutigen 45-Sekunden-Funken aufzudecken...',
                           style: TextStyle(
-                            color: AppTheme.textSecondary.withOpacity(0.9),
+                            color: AppTheme.textSecondary.withValues(alpha: 0.9),
                             fontSize: 13,
                             fontStyle: FontStyle.italic,
                           ),
@@ -316,7 +311,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                         decoration: BoxDecoration(
-                          color: AppTheme.amber.withOpacity(0.15),
+                          color: AppTheme.amber.withValues(alpha: 0.15),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: const Text(
@@ -352,7 +347,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
-                      color: AppTheme.surfaceLight.withOpacity(0.4),
+                      color: AppTheme.surfaceLight.withValues(alpha: 0.4),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Row(

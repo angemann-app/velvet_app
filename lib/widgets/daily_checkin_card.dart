@@ -118,8 +118,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: _todayCheckIn != null
-              ? AppTheme.sageGreen.withOpacity(0.4)
-              : AppTheme.amber.withOpacity(0.5),
+              ? AppTheme.sageGreen.withValues(alpha: 0.4)
+              : AppTheme.amber.withValues(alpha: 0.5),
         ),
       ),
       child: Column(
@@ -142,8 +142,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: _todayCheckIn != null
-                            ? AppTheme.sageGreen.withOpacity(0.18)
-                            : AppTheme.amber.withOpacity(0.18),
+                            ? AppTheme.sageGreen.withValues(alpha: 0.18)
+                            : AppTheme.amber.withValues(alpha: 0.18),
                         shape: BoxShape.circle,
                       ),
                       child: Icon(
@@ -176,7 +176,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                   decoration: BoxDecoration(
-                                    color: AppTheme.sageGreen.withOpacity(0.2),
+                                    color: AppTheme.sageGreen.withValues(alpha: 0.2),
                                     borderRadius: BorderRadius.circular(6),
                                   ),
                                   child: const Text(
@@ -249,7 +249,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       activeTrackColor: AppTheme.amber,
                       inactiveTrackColor: AppTheme.surfaceLight,
                       thumbColor: AppTheme.amber,
-                      overlayColor: AppTheme.amber.withOpacity(0.2),
+                      overlayColor: AppTheme.amber.withValues(alpha: 0.2),
                     ),
                     child: Slider(
                       value: _stressLevel,
@@ -293,7 +293,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       activeTrackColor: AppTheme.sageGreen,
                       inactiveTrackColor: AppTheme.surfaceLight,
                       thumbColor: AppTheme.sageGreen,
-                      overlayColor: AppTheme.sageGreen.withOpacity(0.2),
+                      overlayColor: AppTheme.sageGreen.withValues(alpha: 0.2),
                     ),
                     child: Slider(
                       value: _pressureLevel,
@@ -334,9 +334,9 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         labelPadding: const EdgeInsets.symmetric(horizontal: 2),
                         padding: const EdgeInsets.symmetric(horizontal: 6),
-                        selectedColor: AppTheme.sageGreen.withOpacity(0.25),
+                        selectedColor: AppTheme.sageGreen.withValues(alpha: 0.25),
                         checkmarkColor: AppTheme.sageGreen,
-                        backgroundColor: AppTheme.surfaceLight.withOpacity(0.3),
+                        backgroundColor: AppTheme.surfaceLight.withValues(alpha: 0.3),
                         side: BorderSide(
                           color: isSelected ? AppTheme.sageGreen : AppTheme.border,
                         ),
@@ -381,9 +381,9 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
               child: Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: AppTheme.surfaceLight.withOpacity(0.3),
+                  color: AppTheme.surfaceLight.withValues(alpha: 0.3),
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: AppTheme.border.withOpacity(0.5)),
+                  border: Border.all(color: AppTheme.border.withValues(alpha: 0.5)),
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -260,7 +260,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
           value: _teppich,
-          activeColor: AppTheme.rose,
+          activeThumbColor: AppTheme.rose,
           onChanged: (v) => setState(() => _teppich = v),
           title: const Text('Leiser Klangteppich', style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
           subtitle: const Text('Ruhiger Hintergrund in den Stillen',
@@ -296,7 +296,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           HapticFeedback.selectionClick();
           onTap();
         },
-        selectedColor: AppTheme.rose.withOpacity(0.22),
+        selectedColor: AppTheme.rose.withValues(alpha: 0.22),
         backgroundColor: AppTheme.surface,
         side: BorderSide(color: aktiv ? AppTheme.rose : AppTheme.border),
         labelStyle: TextStyle(color: aktiv ? AppTheme.textPrimary : AppTheme.textSecondary, fontWeight: FontWeight.w600),
@@ -316,7 +316,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
           decoration: BoxDecoration(
-            color: aktiv ? AppTheme.rose.withOpacity(0.10) : AppTheme.surface,
+            color: aktiv ? AppTheme.rose.withValues(alpha: 0.10) : AppTheme.surface,
             borderRadius: BorderRadius.circular(14),
             border: Border.all(color: aktiv ? AppTheme.rose : AppTheme.border),
           ),
@@ -375,13 +375,13 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             gradient: RadialGradient(colors: [
-              AppTheme.rose.withOpacity(_pausiert ? 0.15 : 0.42),
+              AppTheme.rose.withValues(alpha: _pausiert ? 0.15 : 0.42),
               AppTheme.background,
             ]),
           ),
           child: Center(
             child: Icon(_fertig ? Icons.favorite_rounded : (spricht ? Icons.graphic_eq_rounded : Icons.spa_rounded),
-                color: AppTheme.textPrimary.withOpacity(0.85), size: 44),
+                color: AppTheme.textPrimary.withValues(alpha: 0.85), size: 44),
           ),
         ),
         const SizedBox(height: 28),

@@ -126,7 +126,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               indicator: BoxDecoration(
                 color: AppTheme.surfaceLight,
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: AppTheme.sageGreen.withOpacity(0.4)),
+                border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.4)),
               ),
               indicatorSize: TabBarIndicatorSize.tab,
               dividerColor: Colors.transparent,
@@ -275,7 +275,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: AppTheme.sageGreen.withOpacity(0.15),
+              color: AppTheme.sageGreen.withValues(alpha: 0.15),
               shape: BoxShape.circle,
             ),
             child: const Icon(Icons.edit_note_rounded, color: AppTheme.sageGreen, size: 22),
@@ -394,10 +394,10 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.surfaceLight.withOpacity(0.35),
+                color: AppTheme.surfaceLight.withValues(alpha: 0.35),
                 borderRadius: BorderRadius.circular(10),
                 border: Border(
-                  left: BorderSide(color: AppTheme.rose.withOpacity(0.8), width: 3),
+                  left: BorderSide(color: AppTheme.rose.withValues(alpha: 0.8), width: 3),
                 ),
               ),
               child: Column(
@@ -436,9 +436,9 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                 return Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(
-                    color: AppTheme.amber.withOpacity(0.15),
+                    color: AppTheme.amber.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: AppTheme.amber.withOpacity(0.3)),
+                    border: Border.all(color: AppTheme.amber.withValues(alpha: 0.3)),
                   ),
                   child: Text(
                     d,
@@ -458,7 +458,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.sageGreen.withOpacity(0.08),
+                color: AppTheme.sageGreen.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(10),
                 border: Border(
                   left: const BorderSide(color: AppTheme.sageGreen, width: 3),

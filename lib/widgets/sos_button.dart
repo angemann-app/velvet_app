@@ -21,15 +21,15 @@ class SosButton extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
             decoration: BoxDecoration(
-              color: AppTheme.rose.withOpacity(0.15),
+              color: AppTheme.rose.withValues(alpha: 0.15),
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                color: AppTheme.rose.withOpacity(0.6),
+                color: AppTheme.rose.withValues(alpha: 0.6),
                 width: 1.2,
               ),
               boxShadow: [
                 BoxShadow(
-                  color: AppTheme.rose.withOpacity(0.2),
+                  color: AppTheme.rose.withValues(alpha: 0.2),
                   blurRadius: 8,
                   spreadRadius: 1,
                 ),

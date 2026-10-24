@@ -87,7 +87,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: AppTheme.rose.withOpacity(0.15),
+                    color: AppTheme.rose.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Icon(
@@ -216,14 +216,14 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  AppTheme.amber.withOpacity(0.18),
+                  AppTheme.amber.withValues(alpha: 0.18),
                   AppTheme.surface,
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: AppTheme.amber.withOpacity(0.5), width: 1.5),
+              border: Border.all(color: AppTheme.amber.withValues(alpha: 0.5), width: 1.5),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -303,10 +303,10 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                   child: Container(
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: isDone ? AppTheme.surfaceLight.withOpacity(0.2) : AppTheme.surface,
+                      color: isDone ? AppTheme.surfaceLight.withValues(alpha: 0.2) : AppTheme.surface,
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
-                        color: isDone ? AppTheme.sageGreen.withOpacity(0.5) : AppTheme.border,
+                        color: isDone ? AppTheme.sageGreen.withValues(alpha: 0.5) : AppTheme.border,
                       ),
                     ),
                     child: Row(

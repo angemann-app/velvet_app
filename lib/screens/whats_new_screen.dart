@@ -93,7 +93,7 @@ class WhatsNewScreen extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(color: AppTheme.rose.withOpacity(0.14), shape: BoxShape.circle),
+              decoration: BoxDecoration(color: AppTheme.rose.withValues(alpha: 0.14), shape: BoxShape.circle),
               child: Icon(_icons[item.icon] ?? Icons.star_rounded, color: AppTheme.rose, size: 22),
             ),
             const SizedBox(width: 14),

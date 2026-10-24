@@ -163,17 +163,13 @@ class AiService {
 
     // If dynamic discovery returned empty, use prioritized active model aliases
     if (candidateModels.isEmpty) {
+      // Nur Ersatz, wenn die Modell-Liste nicht abrufbar war. „-latest“-Namen zeigt Google
+      // auf das jeweils aktuelle Modell, sie veralten also nicht.
       candidateModels = [
-        'gemini-2.0-flash',
-        'gemini-2.0-flash-001',
         'gemini-flash-latest',
-        'gemini-1.5-flash-latest',
-        'gemini-1.5-flash-002',
-        'gemini-1.5-flash-001',
         'gemini-2.5-flash',
-        'gemini-1.5-pro-latest',
-        'gemini-1.5-pro',
-        'gemini-pro',
+        'gemini-flash-lite-latest',
+        'gemini-pro-latest',
       ];
     }
 

@@ -213,7 +213,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                   label: Text(distortion),
                   selected: isSelected,
                   onSelected: (_) => _toggleDistortion(distortion),
-                  selectedColor: AppTheme.amber.withOpacity(0.25),
+                  selectedColor: AppTheme.amber.withValues(alpha: 0.25),
                   checkmarkColor: AppTheme.amber,
                   backgroundColor: AppTheme.surface,
                   side: BorderSide(

@@ -195,7 +195,9 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                     const SizedBox(height: 12),
                   ],
                   const Text(
-                    'Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google.',
+                    'Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. '
+                    'In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; '
+                    'anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten.',
                     style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4),
                   ),
                   const SizedBox(height: 16),
@@ -249,13 +251,13 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         color: (testSuccess == true)
-                            ? AppTheme.sageGreen.withOpacity(0.15)
-                            : AppTheme.rose.withOpacity(0.15),
+                            ? AppTheme.sageGreen.withValues(alpha: 0.15)
+                            : AppTheme.rose.withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
                           color: (testSuccess == true)
-                              ? AppTheme.sageGreen.withOpacity(0.5)
-                              : AppTheme.rose.withOpacity(0.5),
+                              ? AppTheme.sageGreen.withValues(alpha: 0.5)
+                              : AppTheme.rose.withValues(alpha: 0.5),
                         ),
                       ),
                       child: Row(
@@ -414,7 +416,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
             color: AppTheme.surface,
-            border: Border(bottom: BorderSide(color: AppTheme.border.withOpacity(0.5))),
+            border: Border(bottom: BorderSide(color: AppTheme.border.withValues(alpha: 0.5))),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -475,9 +477,9 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
             margin: const EdgeInsets.fromLTRB(16, 10, 16, 4),
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
             decoration: BoxDecoration(
-              color: AppTheme.amber.withOpacity(0.12),
+              color: AppTheme.amber.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppTheme.amber.withOpacity(0.35)),
+              border: Border.all(color: AppTheme.amber.withValues(alpha: 0.35)),
             ),
             child: Row(
               children: [
@@ -534,7 +536,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                 Text(
                   'Coach reflektiert...',
                   style: TextStyle(
-                    color: AppTheme.sageGreen.withOpacity(0.9),
+                    color: AppTheme.sageGreen.withValues(alpha: 0.9),
                     fontSize: 12,
                     fontStyle: FontStyle.italic,
                   ),
@@ -559,7 +561,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                 return ActionChip(
                   label: Text(prompt),
                   onPressed: () => _sendMessage(prompt),
-                  backgroundColor: AppTheme.surfaceLight.withOpacity(0.4),
+                  backgroundColor: AppTheme.surfaceLight.withValues(alpha: 0.4),
                   side: const BorderSide(color: AppTheme.border),
                   labelStyle: const TextStyle(
                     fontSize: 11,
@@ -641,9 +643,9 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
               margin: const EdgeInsets.only(right: 10, top: 2),
               padding: const EdgeInsets.all(6),
               decoration: BoxDecoration(
-                color: AppTheme.sageGreen.withOpacity(0.18),
+                color: AppTheme.sageGreen.withValues(alpha: 0.18),
                 shape: BoxShape.circle,
-                border: Border.all(color: AppTheme.sageGreen.withOpacity(0.4)),
+                border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.4)),
               ),
               child: const Icon(Icons.psychology_rounded, size: 16, color: AppTheme.sageGreen),
             ),
@@ -662,7 +664,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                 border: Border.all(
                   color: isUser
                       ? AppTheme.border
-                      : AppTheme.sageGreen.withOpacity(0.3),
+                      : AppTheme.sageGreen.withValues(alpha: 0.3),
                   width: 1,
                 ),
               ),

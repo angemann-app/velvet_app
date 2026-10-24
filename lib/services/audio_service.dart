@@ -49,8 +49,22 @@ class AudioService {
       }
     });
 
+    // Liest die Geräte-Stimme vor (Aufnahme fehlt), spiegelt sie ihren Zustand in
+    // stateNotifier, damit der Player Pause und Weiter anzeigt.
+    _ttsFallback.stateNotifier.addListener(() {
+      if (!isUsingTtsFallbackNotifier.value) return;
+      stateNotifier.value = switch (_ttsFallback.stateNotifier.value) {
+        TtsPlaybackState.playing => PlayerState.playing,
+        TtsPlaybackState.paused => PlayerState.paused,
+        TtsPlaybackState.stopped => PlayerState.stopped,
+      };
+    });
+
     _initialized = true;
   }
+
+  /// Text für die Geräte-Stimme, um nach einer Pause weiterzulesen.
+  String? _fallbackText;
 
   bool isCurrentLesson(String lessonId) {
     return currentLessonIdNotifier.value == lessonId;
@@ -100,6 +114,7 @@ class AudioService {
     } catch (e) {
       debugPrint('AudioService: Asset playback failed ($e), falling back to TTS');
       isUsingTtsFallbackNotifier.value = true;
+      _fallbackText = fallbackText;
       if (fallbackText != null && fallbackText.isNotEmpty) {
         await _ttsFallback.speak(fallbackText, contextId: lessonId);
       }
@@ -118,7 +133,8 @@ class AudioService {
     final currentId = currentLessonIdNotifier.value;
     if (currentId != null) {
       if (isUsingTtsFallbackNotifier.value) {
-        // Handled via playLesson
+        final text = _fallbackText;
+        if (text != null && text.isNotEmpty) await _ttsFallback.speak(text, contextId: currentId);
       } else {
         await _player.resume();
       }

@@ -47,7 +47,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: AppTheme.amber.withOpacity(0.15),
+                    color: AppTheme.amber.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: const Icon(Icons.key_rounded, color: AppTheme.amber, size: 24),
@@ -110,12 +110,14 @@ class ApiKeyGuideSheet extends StatelessWidget {
                             style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.4),
                             children: [
                               TextSpan(
-                                text: '100% kostenlos & privat: ',
+                                text: 'Kostenlos – und was mit deinen Daten passiert: ',
                                 style: TextStyle(fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
                               ),
                               TextSpan(
                                 text:
-                                    'Google AI Studio bietet ein kostenloses Kontingent für Privatnutzer. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google.',
+                                    'Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. '
+                                    'In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. '
+                                    'Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen.',
                               ),
                             ],
                           ),
@@ -239,9 +241,9 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: AppTheme.surfaceLight.withOpacity(0.5),
+                    color: AppTheme.surfaceLight.withValues(alpha: 0.5),
                     borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: AppTheme.border.withOpacity(0.6)),
+                    border: Border.all(color: AppTheme.border.withValues(alpha: 0.6)),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -257,12 +259,12 @@ class ApiKeyGuideSheet extends StatelessWidget {
                       const SizedBox(height: 10),
                       _buildFaqItem(
                         'Kostet die Nutzung etwas?',
-                        'Nein. Google AI Studio stellt für private Anfragen ein dauerhaft kostenloses Limit (Free Tier) bereit. Es fallen keine Kosten an.',
+                        'Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern.',
                       ),
                       const SizedBox(height: 8),
                       _buildFaqItem(
                         'Welches Modell wird genutzt?',
-                        'VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (wie Gemini 1.5 Flash / 2.0 Flash) über deinen Key.',
+                        'VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key.',
                       ),
                     ],
                   ),
@@ -322,7 +324,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppTheme.surfaceLight,
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppTheme.border.withOpacity(0.8)),
+        border: Border.all(color: AppTheme.border.withValues(alpha: 0.8)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -332,7 +334,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
             height: 28,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: AppTheme.amber.withOpacity(0.2),
+              color: AppTheme.amber.withValues(alpha: 0.2),
               shape: BoxShape.circle,
               border: Border.all(color: AppTheme.amber, width: 1.5),
             ),
