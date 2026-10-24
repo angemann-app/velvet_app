@@ -10,7 +10,7 @@ import '../couples_channel/pairing_modal.dart';
 import '../../l10n/t.dart';
 
 /// Techniken aus dem Kurs „Sich selbst erkunden“ (Lektionen self_2 und self_3).
-List<(String, String)> _vulvaTechniques = [
+List<(String, String)> get _vulvaTechniques => [
   ('v_kreisen', t.lustProfileCircling),
   ('v_aufab', t.lustProfileUpAndDown),
   ('v_seitwaerts', t.lustProfileSideToSide),
@@ -20,7 +20,7 @@ List<(String, String)> _vulvaTechniques = [
   ('v_innen_aussen', t.lustProfileInsideAndOutsideAtOnce),
 ];
 
-List<(String, String)> _penisTechniques = [
+List<(String, String)> get _penisTechniques => [
   ('p_offen', t.lustProfileOpenOiledHand),
   ('p_zweihand', t.lustProfileTwoHandedGliding),
   ('p_drehen', t.lustProfileTwisting),
@@ -30,7 +30,7 @@ List<(String, String)> _penisTechniques = [
   ('p_wellen', t.lustProfileWavesPausingJustBeforeClimax),
 ];
 
-List<(String, String)> _general = [
+List<(String, String)> get _general => [
   ('g_langsam', t.lustProfileStartSlowlyAroundRatherThan),
   ('g_gleich', t.lustProfileWhenItSGoodKeep),
   ('g_gleitmittel', t.lustProfileWithPlentyOfLubricant),

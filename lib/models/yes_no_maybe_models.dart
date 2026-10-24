@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../l10n/t.dart';
 
 enum YesNoMaybeVote {
   yes,
@@ -17,22 +18,22 @@ enum YesNoMaybeVote {
   String get label {
     switch (this) {
       case YesNoMaybeVote.yes:
-        return 'Ja';
+        return t.yesNoMaybeYes;
       case YesNoMaybeVote.maybe:
-        return 'Vielleicht';
+        return t.yesNoMaybeMaybe;
       case YesNoMaybeVote.no:
-        return 'Nein';
+        return t.yesNoMaybeNo;
     }
   }
 
   String get description {
     switch (this) {
       case YesNoMaybeVote.yes:
-        return 'Reizt mich, möchte ich ausprobieren';
+        return t.yesNoMaybeModelsExcitesMeIDLike;
       case YesNoMaybeVote.maybe:
-        return 'Neugierig, aber unsicher – kommt auf den Moment an';
+        return t.yesNoMaybeModelsCuriousButUnsureDependsOn;
       case YesNoMaybeVote.no:
-        return 'Kommt für mich nicht infrage';
+        return t.yesNoMaybeModelsNotForMe;
     }
   }
 

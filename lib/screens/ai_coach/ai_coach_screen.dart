@@ -20,7 +20,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
   bool _isLoading = false;
   String? _apiKey;
 
-  static List<String> _suggestedPrompts = [
+  static List<String> get _suggestedPrompts => [
     t.aiCoachAsAWomanHowDo,
     t.aiCoachHowCanWeStopPerformance,
     t.aiCoachWhatToDoAboutRacing,

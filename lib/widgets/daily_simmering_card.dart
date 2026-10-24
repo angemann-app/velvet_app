@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import '../models/user_profile.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
+import '../l10n/t.dart';
 
 class DailySimmeringCard extends StatefulWidget {
   const DailySimmeringCard({super.key});
@@ -16,149 +17,129 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
   bool _isRevealed = false;
   late AnimationController _flipController;
 
-  static const List<Map<String, String>> _couplesImpulses = [
+  static List<Map<String, String>> get _couplesImpulses => [
     {
-      'title': 'Das 45-Sekunden-Wand-Teasing',
-      'tag': 'KURS 11 • TEASING',
+      'title': t.dailySimmeringCardTheSecondWallTease,
+      'tag': t.dailySimmeringCardCourseTeasing,
       'action':
-          'Drücke deinen Partner heute kurz fordernd an die Wand oder halte ihn sanft fest. Küsse langsam den Hals, raune ein Versprechen ins Ohr – und lächle nach genau 45 Sekunden und gehe weiter: "Den Rest heben wir uns für später auf."',
-      'benefit': 'Flutet das Dopamin-System, ohne Leistungsdruck aufzubauen.',
+          t.dailySimmeringCardTodayBrieflyPressYourPartner,
     },
     {
-      'title': 'Die Kiefer-Schmelze & Stimm-Aktivierung',
-      'tag': 'KURS 10 • HÖRBARE LUST',
+      'title': t.dailySimmeringCardJawMeltVoiceActivation,
+      'tag': t.dailySimmeringCardCourseAudiblePleasure,
       'action':
-          'Lege die Finger an deine Kiefergelenke, öffne den Mund und lass 3 tiefe, dunkle Seufzer hörbar durch den Raum vibrieren. Spüre, wie dein Beckenboden gleichzeitig nach unten nachgibt.',
-      'benefit': 'Löst über die Kehlkopf-Becken-Achse chronische Anspannung im Damm.',
+          t.dailySimmeringCardPlaceYourFingersOnYour,
     },
     {
-      'title': 'Die 15:00-Uhr-Antizipation',
-      'tag': 'KURS 11 • KOPFKINO',
+      'title': t.dailySimmeringCardThePmAnticipation,
+      'tag': t.dailySimmeringCardCourseAnticipation,
       'action':
-          'Schicke deinem Gegenüber heute Nachmittag eine unangekündigte Nachricht: "Heute Abend ab 21 Uhr gehört dein Körper mir. Du musst nichts tun, außer da zu sein."',
-      'benefit': 'Erzeugt wohlige Vorfreude statt hektischem Abrufen auf Knopfdruck.',
+          t.dailySimmeringCardThisAfternoonSendYourPartner,
     },
     {
-      'title': 'Zeitlupe beim Einschenken',
-      'tag': 'KURS 11 • SLOW SEX',
+      'title': t.dailySimmeringCardSlowMotionWhilePouring,
+      'tag': t.dailySimmeringCardCourseSlowSex,
       'action':
-          'Berühre deinen Partner heute bei einer Alltagsgelegenheit (am Tisch, auf dem Sofa) im extremen 10%-Zeitlupen-Tempo. Streiche 60 Sekunden quälend langsam über Handrücken und Unterarm.',
-      'benefit': 'Aktiviert feine Meissner-Tastkörperchen und signalisiert Sicherheit.',
+          t.dailySimmeringCardTodayTouchYourPartnerDuring,
     },
     {
-      'title': 'Das 15-Minuten-Seidentuch-Ritual',
-      'tag': 'KURS 12 • HINGABE',
+      'title': t.dailySimmeringCardTheMinuteSilkScarfRitual,
+      'tag': t.dailySimmeringCardCourseSurrender,
       'action':
-          'Verabredet für heute Abend: Einer bekommt die Augen verbunden und darf absolut nichts leisten oder zurückgeben. Der andere dirigiert 15 Minuten sanfte Berührungen.',
-      'benefit': 'Transient Hypofrontality: Schaltet den kontrollierenden Chef im Kopf ab.',
+          t.dailySimmeringCardAgreeForTonightOneOf,
     },
     {
-      'title': 'Das strikte Penetrations-Verbot',
-      'tag': 'KURS 7 • SENSATE FOCUS',
+      'title': t.dailySimmeringCardTheStrictNoPenetrationRule,
+      'tag': t.dailySimmeringCardCourseSensateFocus,
       'action':
-          'Verabredet heute: Ihr dürft euch nackt umarmen, küssen und streicheln – aber Penetration ist strikt tabu. Alles darf sein, nichts muss.',
-      'benefit': 'Halbiert den Adrenalinspiegel und lässt die Lust von allein kochen.',
+          t.dailySimmeringCardAgreeTodayYouMayHug,
     },
     {
-      'title': 'Sensory Narrating (Worte im Ohr)',
-      'tag': 'KVT • ANSTÄNDIGKEIT LÖSEN',
+      'title': t.dailySimmeringCardSensoryNarratingWordsInThe,
+      'tag': t.dailySimmeringCardCbtLettingGoOfPropriety,
       'action':
-          'Flüstere deinem Partner heute im Dunkeln eine einzige ehrliche, sinnliche Empfindung ins Ohr: "Es macht mich verrückt, wie warm und weich deine Haut gerade unter meiner Hand ist."',
-      'benefit': 'Sprengt die Stummfilm-Starre und verbindet euch intim.',
+          t.dailySimmeringCardTonightInTheDarkWhisper,
     },
     {
-      'title': 'Die charmante Traum-Brücke',
-      'tag': 'KURS 12 • FANTASIEN',
+      'title': t.dailySimmeringCardTheCharmingDreamBridge,
+      'tag': t.dailySimmeringCardCourseFantasies,
       'action':
-          'Erzähle heute beiläufig mit einem Schmunzeln von einem "unanständigen Traum", den du über euch beide hattest. Beobachte die Reaktion.',
-      'benefit': 'Öffnet den geheimen Garten ohne Scham oder Rechtfertigungsdruck.',
+          t.dailySimmeringCardTodayCasuallyAndWithA,
     },
     {
-      'title': 'Der Beckenboden-Check im Sitzen',
-      'tag': 'KURS 3 & 9 • SOMATIK',
+      'title': t.dailySimmeringCardTheSeatedPelvicFloorCheck,
+      'tag': t.dailySimmeringCardCoursesBody,
       'action':
-          'Achte genau jetzt darauf: Hältst du im Becken oder After fest? Atme tief ein und lass den Beckenboden wie eine weite Blüte nach unten sinken (Reverse Kegel).',
-      'benefit': 'Down-Training für Standfestigkeit und Schmerzfreiheit.',
+          t.dailySimmeringCardNoticeRightNowAreYou,
     },
     {
-      'title': 'Weicher Bauch • Volle Hingabe',
-      'tag': 'KURS 13 • RADICAL BODY LOVE',
+      'title': t.dailySimmeringCardSoftBellyFullSurrender,
+      'tag': t.dailySimmeringCardCourseRadicalBodyLove,
       'action':
-          'Lass deinen Bauch heute ganz bewusst locker nach außen sinken. Perfektion ist kalt – Hingabe und Wärme sind unwiderstehlich.',
-      'benefit': 'Ermöglicht freie Zwerchfell- und Becken-Durchblutung.',
+          t.dailySimmeringCardTodayConsciouslyLetYourBelly,
     },
   ];
 
-  static const List<Map<String, String>> _soloImpulses = [
+  static List<Map<String, String>> get _soloImpulses => [
     {
-      'title': 'Die Kiefer-Schmelze & Becken-Vibration',
-      'tag': 'KURS 10 • HÖRBARE LUST',
+      'title': t.dailySimmeringCardJawMeltPelvicVibration,
+      'tag': t.dailySimmeringCardCourseAudiblePleasure,
       'action':
-          'Öffne den Mund, streiche deine Wangen aus und seufze 3x tief und dunkel nach unten aus. Spüre, wie die Schwingung bis in dein Schambein hinabwandert.',
-      'benefit': 'Öffnet die Kehlkopf-Becken-Achse und entspannt den Damm.',
+          t.dailySimmeringCardOpenYourMouthSmoothOut,
     },
     {
-      'title': 'Broad Palm Touch mit warmem Öl',
-      'tag': 'KURS 9 • SOMATISCHES LAB',
+      'title': t.dailySimmeringCardBroadPalmTouchWithWarm,
+      'tag': t.dailySimmeringCardCourseBodyLab,
       'action':
-          'Verzichte heute beim Spüren auf jeden engen Klammergriff. Nutze viel Gleitmittel und bewege die gesamte flache Handfläche in Zeitlupe über das Becken.',
-      'benefit': 'Heilt den "Death Grip" und reaktiviert feine Dehnungsrezeptoren.',
+          t.dailySimmeringCardTodaySkipAnyTightGrip,
     },
     {
-      'title': 'Orbiting: Das Perineum erforschen',
-      'tag': 'KURS 8 & 9 • ORBITING',
+      'title': t.dailySimmeringCardOrbitingExploringThePerineum,
+      'tag': t.dailySimmeringCardCoursesOrbiting,
       'action':
-          'Lass die hochsensible Spitze heute für 10 Minuten völlig unberührt. Konzentriere Berührung nur auf Damm, Schaftbasis und Leiste.',
-      'benefit': 'Verhindert Reizüberflutung und dehnt Lust auf das ganze Becken aus.',
+          t.dailySimmeringCardLeaveTheHighlySensitiveTip,
     },
     {
-      'title': 'Plateau-Surfen auf Stufe 7',
-      'tag': 'KURS 9 • AUSDAUER',
+      'title': t.dailySimmeringCardPlateauSurfingAtLevel,
+      'tag': t.dailySimmeringCardCourseStayingPower,
       'action':
-          'Bringe deine Erregung auf Stufe 7. Sobald sie auf 8 klettert: Stoppe jede Bewegung (Stillness), atme 3x tief aus und lass den Beckenboden nach unten sinken.',
-      'benefit': 'Entkoppelt im Gehirn Lustempfinden vom Ejakulationsreflex.',
+          t.dailySimmeringCardBringYourArousalToLevel,
     },
     {
-      'title': 'Dopamin-Reset: Bildschirmfreies Spüren',
-      'tag': 'KURS 4 • REKALIBRIERUNG',
+      'title': t.dailySimmeringCardScreenFreeSensing,
+      'tag': t.dailySimmeringCardCourseRecalibration,
       'action':
-          'Nimm dir heute 10 Minuten Zeit ganz ohne Smartphone oder Bildschirme. Schließe die Augen und achte nur auf Temperatur und Atem.',
-      'benefit': 'Resettet die Rezeptoren für natürliche, berührende Nähe.',
+          t.dailySimmeringCardTakeMinutesTodayWithoutAny,
     },
     {
-      'title': 'Der Schließmuskel-Entlastungstest',
-      'tag': 'KURS 9 • MULTI-ORGASMIE',
+      'title': t.dailySimmeringCardTheSphincterReleaseTest,
+      'tag': t.dailySimmeringCardCourseMultipleOrgasms,
       'action':
-          'Beobachte deine Reflexe: Wenn Erregung steigt, lass den Anal-Schließmuskel bewusst locker, statt ihn anzuspannen.',
-      'benefit': 'Schützt vor dem vorzeitigen Reflex und breitet Lust im Körper aus.',
+          t.dailySimmeringCardObserveYourReflexesWhenArousal,
     },
     {
-      'title': 'Zero-Pressure Hocke (Malasana)',
-      'tag': 'KURS 3 • FASZIEN',
+      'title': t.dailySimmeringCardZeroPressureSquatMalasana,
+      'tag': t.dailySimmeringCardCourseFascia,
       'action':
-          'Gehe für 2 Minuten in die tiefe Hocke (Deep Squat). Atme 10 tiefe Atemzüge in das geöffnete Becken hinein.',
-      'benefit': 'Dehnt Adduktoren und befreit chronisch verkrampfte Beckenfaszien.',
+          t.dailySimmeringCardGoIntoADeepSquat,
     },
     {
-      'title': 'Körper-Mitgefühl vor dem Spiegel',
-      'tag': 'KURS 13 • SELBSTMITGEFÜHL',
+      'title': t.dailySimmeringCardBodyCompassionInTheMirror,
+      'tag': t.dailySimmeringCardCourseSelfCompassion,
       'action':
-          'Betrachte deinen Körper heute ohne Bewertung. Sag dir: "Mein Körper ist lebendig, atmend und fähig zu tiefster Lust."',
-      'benefit': 'Sprengt den inneren Kritiker und baut Scham ab.',
+          t.dailySimmeringCardLookAtYourBodyToday,
     },
     {
-      'title': 'Physiologischer Seufzer (Quick-Downregulation)',
-      'tag': 'TOOL • VAGUS-RESET',
+      'title': t.dailySimmeringCardPhysiologicalSighQuickCalming,
+      'tag': t.dailySimmeringCardToolCalmDown,
       'action':
-          'Doppelt durch die Nase tief einatmen, dann sehr lang und hörbar durch den offenen Mund seufzen. 3 Wiederholungen.',
-      'benefit': 'Schaltet den Sympathikus innerhalb von 45 Sekunden ab.',
+          t.dailySimmeringCardBreatheInTwiceDeeplyThrough,
     },
     {
-      'title': 'Der 90-Prozent-Pakt mit dir selbst',
-      'tag': 'KURS 11 • TEASING',
+      'title': t.dailySimmeringCardThePercentPactWithYourself,
+      'tag': t.dailySimmeringCardCourseTeasing,
       'action':
-          'Schenke dir heute 10 Minuten Genuss – aber nimm dir vor, bei 90% bewusst aufzuhören, ohne zum Abschluss zu eilen.',
-      'benefit': 'Trainiert das Nervensystem darauf, dass Lust kein Zweckbetrieb ist.',
+          t.dailySimmeringCardGiveYourselfMinutesOfPleasure,
     },
   ];
 
@@ -262,8 +243,8 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'HEUTIGER EROTIK-FUNKE',
+                            Text(
+                              t.dailySimmeringCardTodaySEroticSpark,
                               style: TextStyle(
                                 fontSize: 11,
                                 fontWeight: FontWeight.w800,
@@ -272,7 +253,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                               ),
                             ),
                             Text(
-                              _isRevealed ? impulse['tag']! : 'Simmering & Alltags-Teasing',
+                              _isRevealed ? impulse['tag']! : t.dailySimmeringCardSimmeringEverydayTeasing,
                               style: const TextStyle(
                                 fontSize: 11,
                                 color: AppTheme.textMuted,
@@ -300,7 +281,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                     children: [
                       Expanded(
                         child: Text(
-                          'Tippe hier, um deinen heutigen 45-Sekunden-Funken aufzudecken...',
+                          t.dailySimmeringCardTapHereToRevealToday,
                           style: TextStyle(
                             color: AppTheme.textSecondary.withValues(alpha: 0.9),
                             fontSize: 13,
@@ -314,8 +295,8 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                           color: AppTheme.amber.withValues(alpha: 0.15),
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        child: const Text(
-                          'ÖFFNEN',
+                        child: Text(
+                          t.dailySimmeringCardOpen,
                           style: TextStyle(
                             color: AppTheme.amberLight,
                             fontSize: 11,

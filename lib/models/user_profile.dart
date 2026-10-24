@@ -1,4 +1,5 @@
-class UserProfile {
+
+import '../l10n/t.dart';class UserProfile {
   final String name;
   final String gender; // 'male', 'female', 'other'
   final int age;
@@ -20,37 +21,37 @@ class UserProfile {
   String get genderLabel {
     switch (gender) {
       case 'female':
-        return 'Weiblich';
+        return t.onboardingFemale;
       case 'male':
-        return 'Männlich';
+        return t.onboardingMale;
       default:
-        return 'Divers / Offen';
+        return t.userProfileNonBinaryOpen;
     }
   }
 
   String get relationshipLabel {
     switch (relationshipStatus) {
       case 'relationship':
-        return 'In Beziehung / Verheiratet';
+        return t.userProfileInARelationshipMarried;
       case 'dating':
-        return 'Dating / Kennenlernphase';
+        return t.userProfileDatingGettingToKnowSomeone;
       case 'single':
-        return 'Single';
+        return t.userProfileSingle;
       default:
-        return 'Kompliziert';
+        return t.userProfileComplicated;
     }
   }
 
   String get goalLabel {
     switch (primaryGoal) {
       case 'pelvic_somatics':
-        return 'Beckenboden & Somatik';
+        return t.userProfilePelvicFloorBody;
       case 'couple_intimacy':
-        return 'Paar-Intimität & Nähe';
+        return t.userProfileCoupleIntimacyCloseness;
       case 'body_pleasure':
-        return 'Lust & Entspannung';
+        return t.userProfileDesireRelaxation;
       default:
-        return 'Leistungsdruck abbauen';
+        return t.userProfileEasingPerformancePressure;
     }
   }
 
@@ -63,7 +64,7 @@ class UserProfile {
       };
 
   factory UserProfile.fromJson(Map<String, dynamic> json) => UserProfile(
-        name: json['name'] as String? ?? 'Gast',
+        name: json['name'] as String? ?? t.onboardingGuest,
         gender: json['gender'] as String? ?? 'male',
         age: (json['age'] as num?)?.toInt() ?? 30,
         relationshipStatus: json['relationship_status'] as String? ?? 'relationship',

@@ -328,7 +328,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       final isSelected = _selectedActions.contains(action);
 
                       return FilterChip(
-                        label: Text(action),
+                        label: Text(DailyCheckIn.anzeige(action)),
                         selected: isSelected,
                         onSelected: (_) => _toggleAction(action),
                         visualDensity: VisualDensity.compact,

@@ -2387,4 +2387,326 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get backupDialogsPasswordCannotBeReset =>
       '\n\nWithout your password, the connection and API key can\'t be restored. We can\'t reset it either.';
+
+  @override
+  String get checkinActionBreathed =>
+      'Breathed deeply on purpose (physiological sigh)';
+
+  @override
+  String get checkinActionPelvicFloor =>
+      'Relaxed the pelvic floor (reverse Kegel)';
+
+  @override
+  String get checkinActionPhoneAway => 'Put the phone away in the evening';
+
+  @override
+  String get checkinActionWalk => 'Went for a walk in fresh air';
+
+  @override
+  String get checkinActionSkinContact => 'Focused on skin contact';
+
+  @override
+  String get checkinActionOpenWord => 'Dared an open word with my partner';
+
+  @override
+  String get dailySimmeringCardTheSecondWallTease => 'The 45-second wall tease';
+
+  @override
+  String get dailySimmeringCardCourseTeasing => 'COURSE 11 • TEASING';
+
+  @override
+  String get dailySimmeringCardTodayBrieflyPressYourPartner =>
+      'Today, briefly press your partner against the wall with intent, or hold them gently. Slowly kiss their neck, murmur a promise into their ear – and after exactly 45 seconds smile and walk on: \"We\'ll save the rest for later.\"';
+
+  @override
+  String get dailySimmeringCardJawMeltVoiceActivation =>
+      'Jaw melt & voice activation';
+
+  @override
+  String get dailySimmeringCardCourseAudiblePleasure =>
+      'COURSE 10 • AUDIBLE PLEASURE';
+
+  @override
+  String get dailySimmeringCardPlaceYourFingersOnYour =>
+      'Place your fingers on your jaw joints, open your mouth and let 3 deep, low sighs vibrate audibly through the room. Feel your pelvic floor giving way downwards at the same time.';
+
+  @override
+  String get dailySimmeringCardThePmAnticipation => 'The 3 pm anticipation';
+
+  @override
+  String get dailySimmeringCardCourseAnticipation => 'COURSE 11 • ANTICIPATION';
+
+  @override
+  String get dailySimmeringCardThisAfternoonSendYourPartner =>
+      'This afternoon, send your partner an unannounced message: \"Tonight from 9 pm your body is mine. You don\'t have to do anything but be there.\"';
+
+  @override
+  String get dailySimmeringCardSlowMotionWhilePouring =>
+      'Slow motion while pouring';
+
+  @override
+  String get dailySimmeringCardCourseSlowSex => 'COURSE 11 • SLOW SEX';
+
+  @override
+  String get dailySimmeringCardTodayTouchYourPartnerDuring =>
+      'Today, touch your partner during an everyday moment (at the table, on the sofa) at an extreme 10% slow-motion pace. Stroke the back of their hand and forearm teasingly slowly for 60 seconds.';
+
+  @override
+  String get dailySimmeringCardTheMinuteSilkScarfRitual =>
+      'The 15-minute silk scarf ritual';
+
+  @override
+  String get dailySimmeringCardCourseSurrender => 'COURSE 12 • SURRENDER';
+
+  @override
+  String get dailySimmeringCardAgreeForTonightOneOf =>
+      'Agree for tonight: one of you is blindfolded and doesn\'t have to do or give back anything at all. The other directs 15 minutes of gentle touch.';
+
+  @override
+  String get dailySimmeringCardTheStrictNoPenetrationRule =>
+      'The strict no-penetration rule';
+
+  @override
+  String get dailySimmeringCardCourseSensateFocus => 'COURSE 7 • SENSATE FOCUS';
+
+  @override
+  String get dailySimmeringCardAgreeTodayYouMayHug =>
+      'Agree today: you may hug, kiss and caress each other naked – but penetration is strictly off-limits. Everything may happen, nothing has to.';
+
+  @override
+  String get dailySimmeringCardSensoryNarratingWordsInThe =>
+      'Sensory narrating (words in the ear)';
+
+  @override
+  String get dailySimmeringCardCbtLettingGoOfPropriety =>
+      'CBT • LETTING GO OF PROPRIETY';
+
+  @override
+  String get dailySimmeringCardTonightInTheDarkWhisper =>
+      'Tonight in the dark, whisper one single honest, sensual sensation into your partner\'s ear: \"It drives me crazy how warm and soft your skin feels under my hand right now.\"';
+
+  @override
+  String get dailySimmeringCardTheCharmingDreamBridge =>
+      'The charming dream bridge';
+
+  @override
+  String get dailySimmeringCardCourseFantasies => 'COURSE 12 • FANTASIES';
+
+  @override
+  String get dailySimmeringCardTodayCasuallyAndWithA =>
+      'Today, casually and with a smile, mention a \"naughty dream\" you had about the two of you. Watch the reaction.';
+
+  @override
+  String get dailySimmeringCardTheSeatedPelvicFloorCheck =>
+      'The seated pelvic floor check';
+
+  @override
+  String get dailySimmeringCardCoursesBody => 'COURSES 3 & 9 • BODY';
+
+  @override
+  String get dailySimmeringCardNoticeRightNowAreYou =>
+      'Notice right now: are you holding tension in your pelvis or anus? Breathe in deeply and let your pelvic floor sink down like an opening flower (reverse Kegel).';
+
+  @override
+  String get dailySimmeringCardSoftBellyFullSurrender =>
+      'Soft belly • full surrender';
+
+  @override
+  String get dailySimmeringCardCourseRadicalBodyLove =>
+      'COURSE 13 • RADICAL BODY LOVE';
+
+  @override
+  String get dailySimmeringCardTodayConsciouslyLetYourBelly =>
+      'Today, consciously let your belly relax outwards. Perfection is cold – surrender and warmth are irresistible.';
+
+  @override
+  String get dailySimmeringCardJawMeltPelvicVibration =>
+      'Jaw melt & pelvic vibration';
+
+  @override
+  String get dailySimmeringCardOpenYourMouthSmoothOut =>
+      'Open your mouth, smooth out your cheeks and sigh 3 times deep and low. Feel the vibration travel down towards your pubic bone.';
+
+  @override
+  String get dailySimmeringCardBroadPalmTouchWithWarm =>
+      'Broad palm touch with warm oil';
+
+  @override
+  String get dailySimmeringCardCourseBodyLab => 'COURSE 9 • BODY LAB';
+
+  @override
+  String get dailySimmeringCardTodaySkipAnyTightGrip =>
+      'Today, skip any tight grip when touching yourself. Use plenty of lubricant and move your whole flat palm over your pelvis in slow motion.';
+
+  @override
+  String get dailySimmeringCardOrbitingExploringThePerineum =>
+      'Orbiting: exploring the perineum';
+
+  @override
+  String get dailySimmeringCardCoursesOrbiting => 'COURSES 8 & 9 • ORBITING';
+
+  @override
+  String get dailySimmeringCardLeaveTheHighlySensitiveTip =>
+      'Leave the highly sensitive tip completely untouched for 10 minutes today. Focus touch only on the perineum, the base of the shaft and the groin.';
+
+  @override
+  String get dailySimmeringCardPlateauSurfingAtLevel =>
+      'Plateau surfing at level 7';
+
+  @override
+  String get dailySimmeringCardCourseStayingPower => 'COURSE 9 • STAYING POWER';
+
+  @override
+  String get dailySimmeringCardBringYourArousalToLevel =>
+      'Bring your arousal to level 7. As soon as it climbs to 8: stop all movement (stillness), breathe out deeply 3 times and let your pelvic floor sink down.';
+
+  @override
+  String get dailySimmeringCardScreenFreeSensing => 'Screen-free sensing';
+
+  @override
+  String get dailySimmeringCardCourseRecalibration =>
+      'COURSE 4 • RECALIBRATION';
+
+  @override
+  String get dailySimmeringCardTakeMinutesTodayWithoutAny =>
+      'Take 10 minutes today without any phone or screens. Close your eyes and pay attention only to temperature and breath.';
+
+  @override
+  String get dailySimmeringCardTheSphincterReleaseTest =>
+      'The sphincter release test';
+
+  @override
+  String get dailySimmeringCardCourseMultipleOrgasms =>
+      'COURSE 9 • MULTIPLE ORGASMS';
+
+  @override
+  String get dailySimmeringCardObserveYourReflexesWhenArousal =>
+      'Observe your reflexes: when arousal rises, consciously let your anal sphincter relax instead of tightening it.';
+
+  @override
+  String get dailySimmeringCardZeroPressureSquatMalasana =>
+      'Zero-pressure squat (malasana)';
+
+  @override
+  String get dailySimmeringCardCourseFascia => 'COURSE 3 • FASCIA';
+
+  @override
+  String get dailySimmeringCardGoIntoADeepSquat =>
+      'Go into a deep squat for 2 minutes. Take 10 deep breaths into your open pelvis.';
+
+  @override
+  String get dailySimmeringCardBodyCompassionInTheMirror =>
+      'Body compassion in the mirror';
+
+  @override
+  String get dailySimmeringCardCourseSelfCompassion =>
+      'COURSE 13 • SELF-COMPASSION';
+
+  @override
+  String get dailySimmeringCardLookAtYourBodyToday =>
+      'Look at your body today without judgement. Tell yourself: \"My body is alive, breathing and capable of deep pleasure.\"';
+
+  @override
+  String get dailySimmeringCardPhysiologicalSighQuickCalming =>
+      'Physiological sigh (quick calming)';
+
+  @override
+  String get dailySimmeringCardToolCalmDown => 'TOOL • CALM DOWN';
+
+  @override
+  String get dailySimmeringCardBreatheInTwiceDeeplyThrough =>
+      'Breathe in twice deeply through the nose, then sigh out very long and audibly through the open mouth. 3 repetitions.';
+
+  @override
+  String get dailySimmeringCardThePercentPactWithYourself =>
+      'The 90 percent pact with yourself';
+
+  @override
+  String get dailySimmeringCardGiveYourselfMinutesOfPleasure =>
+      'Give yourself 10 minutes of pleasure today – but decide to stop consciously at 90%, without rushing to the finish.';
+
+  @override
+  String get dailySimmeringCardTodaySEroticSpark => 'TODAY\'S EROTIC SPARK';
+
+  @override
+  String get dailySimmeringCardSimmeringEverydayTeasing =>
+      'Simmering & everyday teasing';
+
+  @override
+  String get dailySimmeringCardTapHereToRevealToday =>
+      'Tap here to reveal today\'s 45-second spark...';
+
+  @override
+  String get dailySimmeringCardOpen => 'OPEN';
+
+  @override
+  String get userProfileNonBinaryOpen => 'Non-binary / open';
+
+  @override
+  String get userProfileInARelationshipMarried => 'In a relationship / married';
+
+  @override
+  String get userProfileDatingGettingToKnowSomeone =>
+      'Dating / getting to know someone';
+
+  @override
+  String get userProfileSingle => 'Single';
+
+  @override
+  String get userProfileComplicated => 'Complicated';
+
+  @override
+  String get userProfilePelvicFloorBody => 'Pelvic floor & body';
+
+  @override
+  String get userProfileCoupleIntimacyCloseness =>
+      'Couple intimacy & closeness';
+
+  @override
+  String get userProfileDesireRelaxation => 'Desire & relaxation';
+
+  @override
+  String get userProfileEasingPerformancePressure =>
+      'Easing performance pressure';
+
+  @override
+  String get contentModelsTheArtOfTouchFor => 'THE ART OF TOUCH • FOR HER';
+
+  @override
+  String get contentModelsTouchLabForHim => 'TOUCH LAB • FOR HIM';
+
+  @override
+  String get contentModelsSelfExploration => 'SELF-EXPLORATION';
+
+  @override
+  String get contentModelsVoiceBody => 'VOICE & BODY';
+
+  @override
+  String get contentModelsAnticipationDesire => 'ANTICIPATION & DESIRE';
+
+  @override
+  String get contentModelsPolarityRoles => 'POLARITY & ROLES';
+
+  @override
+  String get contentModelsBodyPresence => 'BODY PRESENCE';
+
+  @override
+  String get contentModelsForHer => 'FOR HER';
+
+  @override
+  String get contentModelsForCouples => 'FOR COUPLES';
+
+  @override
+  String get contentModelsForHim => 'FOR HIM';
+
+  @override
+  String get yesNoMaybeModelsExcitesMeIDLike =>
+      'Excites me, I\'d like to try it';
+
+  @override
+  String get yesNoMaybeModelsCuriousButUnsureDependsOn =>
+      'Curious but unsure – depends on the moment';
+
+  @override
+  String get yesNoMaybeModelsNotForMe => 'Not for me';
 }

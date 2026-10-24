@@ -16,7 +16,7 @@ import 'pairing_modal.dart';
 import '../../l10n/t.dart';
 
 /// Schnelle Funken: ein Tippen sagt, worauf man heute Lust hat – oder eben nicht.
-List<(String, String)> _sparks = [
+List<(String, String)> get _sparks => [
   ('🔥', t.couplesChannelIWantYou),
   ('🌿', t.couplesChannelJustCuddlesToday),
   ('🥂', t.couplesChannelLookingForwardToLater),

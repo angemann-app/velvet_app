@@ -4092,6 +4092,546 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'\n\nOhne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen.'**
   String get backupDialogsPasswordCannotBeReset;
+
+  /// No description provided for @checkinActionBreathed.
+  ///
+  /// In de, this message translates to:
+  /// **'Bewusst tief geatmet (Physiol. Seufzer)'**
+  String get checkinActionBreathed;
+
+  /// No description provided for @checkinActionPelvicFloor.
+  ///
+  /// In de, this message translates to:
+  /// **'Beckenboden entspannt (Reverse Kegel)'**
+  String get checkinActionPelvicFloor;
+
+  /// No description provided for @checkinActionPhoneAway.
+  ///
+  /// In de, this message translates to:
+  /// **'Das Handy abends weggelegt'**
+  String get checkinActionPhoneAway;
+
+  /// No description provided for @checkinActionWalk.
+  ///
+  /// In de, this message translates to:
+  /// **'Spaziergang an frischer Luft gemacht'**
+  String get checkinActionWalk;
+
+  /// No description provided for @checkinActionSkinContact.
+  ///
+  /// In de, this message translates to:
+  /// **'Fokus auf Hautkontakt gelenkt'**
+  String get checkinActionSkinContact;
+
+  /// No description provided for @checkinActionOpenWord.
+  ///
+  /// In de, this message translates to:
+  /// **'Offenes Wort mit Partner/in gewagt'**
+  String get checkinActionOpenWord;
+
+  /// No description provided for @dailySimmeringCardTheSecondWallTease.
+  ///
+  /// In de, this message translates to:
+  /// **'Das 45-Sekunden-Wand-Teasing'**
+  String get dailySimmeringCardTheSecondWallTease;
+
+  /// No description provided for @dailySimmeringCardCourseTeasing.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 11 • TEASING'**
+  String get dailySimmeringCardCourseTeasing;
+
+  /// No description provided for @dailySimmeringCardTodayBrieflyPressYourPartner.
+  ///
+  /// In de, this message translates to:
+  /// **'Drücke deinen Partner heute kurz fordernd an die Wand oder halte ihn sanft fest. Küsse langsam den Hals, raune ein Versprechen ins Ohr – und lächle nach genau 45 Sekunden und gehe weiter: \"Den Rest heben wir uns für später auf.\"'**
+  String get dailySimmeringCardTodayBrieflyPressYourPartner;
+
+  /// No description provided for @dailySimmeringCardJawMeltVoiceActivation.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Kiefer-Schmelze & Stimm-Aktivierung'**
+  String get dailySimmeringCardJawMeltVoiceActivation;
+
+  /// No description provided for @dailySimmeringCardCourseAudiblePleasure.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 10 • HÖRBARE LUST'**
+  String get dailySimmeringCardCourseAudiblePleasure;
+
+  /// No description provided for @dailySimmeringCardPlaceYourFingersOnYour.
+  ///
+  /// In de, this message translates to:
+  /// **'Lege die Finger an deine Kiefergelenke, öffne den Mund und lass 3 tiefe, dunkle Seufzer hörbar durch den Raum vibrieren. Spüre, wie dein Beckenboden gleichzeitig nach unten nachgibt.'**
+  String get dailySimmeringCardPlaceYourFingersOnYour;
+
+  /// No description provided for @dailySimmeringCardThePmAnticipation.
+  ///
+  /// In de, this message translates to:
+  /// **'Die 15:00-Uhr-Antizipation'**
+  String get dailySimmeringCardThePmAnticipation;
+
+  /// No description provided for @dailySimmeringCardCourseAnticipation.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 11 • KOPFKINO'**
+  String get dailySimmeringCardCourseAnticipation;
+
+  /// No description provided for @dailySimmeringCardThisAfternoonSendYourPartner.
+  ///
+  /// In de, this message translates to:
+  /// **'Schicke deinem Gegenüber heute Nachmittag eine unangekündigte Nachricht: \"Heute Abend ab 21 Uhr gehört dein Körper mir. Du musst nichts tun, außer da zu sein.\"'**
+  String get dailySimmeringCardThisAfternoonSendYourPartner;
+
+  /// No description provided for @dailySimmeringCardSlowMotionWhilePouring.
+  ///
+  /// In de, this message translates to:
+  /// **'Zeitlupe beim Einschenken'**
+  String get dailySimmeringCardSlowMotionWhilePouring;
+
+  /// No description provided for @dailySimmeringCardCourseSlowSex.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 11 • SLOW SEX'**
+  String get dailySimmeringCardCourseSlowSex;
+
+  /// No description provided for @dailySimmeringCardTodayTouchYourPartnerDuring.
+  ///
+  /// In de, this message translates to:
+  /// **'Berühre deinen Partner heute bei einer Alltagsgelegenheit (am Tisch, auf dem Sofa) im extremen 10%-Zeitlupen-Tempo. Streiche 60 Sekunden quälend langsam über Handrücken und Unterarm.'**
+  String get dailySimmeringCardTodayTouchYourPartnerDuring;
+
+  /// No description provided for @dailySimmeringCardTheMinuteSilkScarfRitual.
+  ///
+  /// In de, this message translates to:
+  /// **'Das 15-Minuten-Seidentuch-Ritual'**
+  String get dailySimmeringCardTheMinuteSilkScarfRitual;
+
+  /// No description provided for @dailySimmeringCardCourseSurrender.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 12 • HINGABE'**
+  String get dailySimmeringCardCourseSurrender;
+
+  /// No description provided for @dailySimmeringCardAgreeForTonightOneOf.
+  ///
+  /// In de, this message translates to:
+  /// **'Verabredet für heute Abend: Einer bekommt die Augen verbunden und darf absolut nichts leisten oder zurückgeben. Der andere dirigiert 15 Minuten sanfte Berührungen.'**
+  String get dailySimmeringCardAgreeForTonightOneOf;
+
+  /// No description provided for @dailySimmeringCardTheStrictNoPenetrationRule.
+  ///
+  /// In de, this message translates to:
+  /// **'Das strikte Penetrations-Verbot'**
+  String get dailySimmeringCardTheStrictNoPenetrationRule;
+
+  /// No description provided for @dailySimmeringCardCourseSensateFocus.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 7 • SENSATE FOCUS'**
+  String get dailySimmeringCardCourseSensateFocus;
+
+  /// No description provided for @dailySimmeringCardAgreeTodayYouMayHug.
+  ///
+  /// In de, this message translates to:
+  /// **'Verabredet heute: Ihr dürft euch nackt umarmen, küssen und streicheln – aber Penetration ist strikt tabu. Alles darf sein, nichts muss.'**
+  String get dailySimmeringCardAgreeTodayYouMayHug;
+
+  /// No description provided for @dailySimmeringCardSensoryNarratingWordsInThe.
+  ///
+  /// In de, this message translates to:
+  /// **'Sensory Narrating (Worte im Ohr)'**
+  String get dailySimmeringCardSensoryNarratingWordsInThe;
+
+  /// No description provided for @dailySimmeringCardCbtLettingGoOfPropriety.
+  ///
+  /// In de, this message translates to:
+  /// **'KVT • ANSTÄNDIGKEIT LÖSEN'**
+  String get dailySimmeringCardCbtLettingGoOfPropriety;
+
+  /// No description provided for @dailySimmeringCardTonightInTheDarkWhisper.
+  ///
+  /// In de, this message translates to:
+  /// **'Flüstere deinem Partner heute im Dunkeln eine einzige ehrliche, sinnliche Empfindung ins Ohr: \"Es macht mich verrückt, wie warm und weich deine Haut gerade unter meiner Hand ist.\"'**
+  String get dailySimmeringCardTonightInTheDarkWhisper;
+
+  /// No description provided for @dailySimmeringCardTheCharmingDreamBridge.
+  ///
+  /// In de, this message translates to:
+  /// **'Die charmante Traum-Brücke'**
+  String get dailySimmeringCardTheCharmingDreamBridge;
+
+  /// No description provided for @dailySimmeringCardCourseFantasies.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 12 • FANTASIEN'**
+  String get dailySimmeringCardCourseFantasies;
+
+  /// No description provided for @dailySimmeringCardTodayCasuallyAndWithA.
+  ///
+  /// In de, this message translates to:
+  /// **'Erzähle heute beiläufig mit einem Schmunzeln von einem \"unanständigen Traum\", den du über euch beide hattest. Beobachte die Reaktion.'**
+  String get dailySimmeringCardTodayCasuallyAndWithA;
+
+  /// No description provided for @dailySimmeringCardTheSeatedPelvicFloorCheck.
+  ///
+  /// In de, this message translates to:
+  /// **'Der Beckenboden-Check im Sitzen'**
+  String get dailySimmeringCardTheSeatedPelvicFloorCheck;
+
+  /// No description provided for @dailySimmeringCardCoursesBody.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 3 & 9 • SOMATIK'**
+  String get dailySimmeringCardCoursesBody;
+
+  /// No description provided for @dailySimmeringCardNoticeRightNowAreYou.
+  ///
+  /// In de, this message translates to:
+  /// **'Achte genau jetzt darauf: Hältst du im Becken oder After fest? Atme tief ein und lass den Beckenboden wie eine weite Blüte nach unten sinken (Reverse Kegel).'**
+  String get dailySimmeringCardNoticeRightNowAreYou;
+
+  /// No description provided for @dailySimmeringCardSoftBellyFullSurrender.
+  ///
+  /// In de, this message translates to:
+  /// **'Weicher Bauch • Volle Hingabe'**
+  String get dailySimmeringCardSoftBellyFullSurrender;
+
+  /// No description provided for @dailySimmeringCardCourseRadicalBodyLove.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 13 • RADICAL BODY LOVE'**
+  String get dailySimmeringCardCourseRadicalBodyLove;
+
+  /// No description provided for @dailySimmeringCardTodayConsciouslyLetYourBelly.
+  ///
+  /// In de, this message translates to:
+  /// **'Lass deinen Bauch heute ganz bewusst locker nach außen sinken. Perfektion ist kalt – Hingabe und Wärme sind unwiderstehlich.'**
+  String get dailySimmeringCardTodayConsciouslyLetYourBelly;
+
+  /// No description provided for @dailySimmeringCardJawMeltPelvicVibration.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Kiefer-Schmelze & Becken-Vibration'**
+  String get dailySimmeringCardJawMeltPelvicVibration;
+
+  /// No description provided for @dailySimmeringCardOpenYourMouthSmoothOut.
+  ///
+  /// In de, this message translates to:
+  /// **'Öffne den Mund, streiche deine Wangen aus und seufze 3x tief und dunkel nach unten aus. Spüre, wie die Schwingung bis in dein Schambein hinabwandert.'**
+  String get dailySimmeringCardOpenYourMouthSmoothOut;
+
+  /// No description provided for @dailySimmeringCardBroadPalmTouchWithWarm.
+  ///
+  /// In de, this message translates to:
+  /// **'Broad Palm Touch mit warmem Öl'**
+  String get dailySimmeringCardBroadPalmTouchWithWarm;
+
+  /// No description provided for @dailySimmeringCardCourseBodyLab.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 9 • SOMATISCHES LAB'**
+  String get dailySimmeringCardCourseBodyLab;
+
+  /// No description provided for @dailySimmeringCardTodaySkipAnyTightGrip.
+  ///
+  /// In de, this message translates to:
+  /// **'Verzichte heute beim Spüren auf jeden engen Klammergriff. Nutze viel Gleitmittel und bewege die gesamte flache Handfläche in Zeitlupe über das Becken.'**
+  String get dailySimmeringCardTodaySkipAnyTightGrip;
+
+  /// No description provided for @dailySimmeringCardOrbitingExploringThePerineum.
+  ///
+  /// In de, this message translates to:
+  /// **'Orbiting: Das Perineum erforschen'**
+  String get dailySimmeringCardOrbitingExploringThePerineum;
+
+  /// No description provided for @dailySimmeringCardCoursesOrbiting.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 8 & 9 • ORBITING'**
+  String get dailySimmeringCardCoursesOrbiting;
+
+  /// No description provided for @dailySimmeringCardLeaveTheHighlySensitiveTip.
+  ///
+  /// In de, this message translates to:
+  /// **'Lass die hochsensible Spitze heute für 10 Minuten völlig unberührt. Konzentriere Berührung nur auf Damm, Schaftbasis und Leiste.'**
+  String get dailySimmeringCardLeaveTheHighlySensitiveTip;
+
+  /// No description provided for @dailySimmeringCardPlateauSurfingAtLevel.
+  ///
+  /// In de, this message translates to:
+  /// **'Plateau-Surfen auf Stufe 7'**
+  String get dailySimmeringCardPlateauSurfingAtLevel;
+
+  /// No description provided for @dailySimmeringCardCourseStayingPower.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 9 • AUSDAUER'**
+  String get dailySimmeringCardCourseStayingPower;
+
+  /// No description provided for @dailySimmeringCardBringYourArousalToLevel.
+  ///
+  /// In de, this message translates to:
+  /// **'Bringe deine Erregung auf Stufe 7. Sobald sie auf 8 klettert: Stoppe jede Bewegung (Stillness), atme 3x tief aus und lass den Beckenboden nach unten sinken.'**
+  String get dailySimmeringCardBringYourArousalToLevel;
+
+  /// No description provided for @dailySimmeringCardScreenFreeSensing.
+  ///
+  /// In de, this message translates to:
+  /// **'Dopamin-Reset: Bildschirmfreies Spüren'**
+  String get dailySimmeringCardScreenFreeSensing;
+
+  /// No description provided for @dailySimmeringCardCourseRecalibration.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 4 • REKALIBRIERUNG'**
+  String get dailySimmeringCardCourseRecalibration;
+
+  /// No description provided for @dailySimmeringCardTakeMinutesTodayWithoutAny.
+  ///
+  /// In de, this message translates to:
+  /// **'Nimm dir heute 10 Minuten Zeit ganz ohne Smartphone oder Bildschirme. Schließe die Augen und achte nur auf Temperatur und Atem.'**
+  String get dailySimmeringCardTakeMinutesTodayWithoutAny;
+
+  /// No description provided for @dailySimmeringCardTheSphincterReleaseTest.
+  ///
+  /// In de, this message translates to:
+  /// **'Der Schließmuskel-Entlastungstest'**
+  String get dailySimmeringCardTheSphincterReleaseTest;
+
+  /// No description provided for @dailySimmeringCardCourseMultipleOrgasms.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 9 • MULTI-ORGASMIE'**
+  String get dailySimmeringCardCourseMultipleOrgasms;
+
+  /// No description provided for @dailySimmeringCardObserveYourReflexesWhenArousal.
+  ///
+  /// In de, this message translates to:
+  /// **'Beobachte deine Reflexe: Wenn Erregung steigt, lass den Anal-Schließmuskel bewusst locker, statt ihn anzuspannen.'**
+  String get dailySimmeringCardObserveYourReflexesWhenArousal;
+
+  /// No description provided for @dailySimmeringCardZeroPressureSquatMalasana.
+  ///
+  /// In de, this message translates to:
+  /// **'Zero-Pressure Hocke (Malasana)'**
+  String get dailySimmeringCardZeroPressureSquatMalasana;
+
+  /// No description provided for @dailySimmeringCardCourseFascia.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 3 • FASZIEN'**
+  String get dailySimmeringCardCourseFascia;
+
+  /// No description provided for @dailySimmeringCardGoIntoADeepSquat.
+  ///
+  /// In de, this message translates to:
+  /// **'Gehe für 2 Minuten in die tiefe Hocke (Deep Squat). Atme 10 tiefe Atemzüge in das geöffnete Becken hinein.'**
+  String get dailySimmeringCardGoIntoADeepSquat;
+
+  /// No description provided for @dailySimmeringCardBodyCompassionInTheMirror.
+  ///
+  /// In de, this message translates to:
+  /// **'Körper-Mitgefühl vor dem Spiegel'**
+  String get dailySimmeringCardBodyCompassionInTheMirror;
+
+  /// No description provided for @dailySimmeringCardCourseSelfCompassion.
+  ///
+  /// In de, this message translates to:
+  /// **'KURS 13 • SELBSTMITGEFÜHL'**
+  String get dailySimmeringCardCourseSelfCompassion;
+
+  /// No description provided for @dailySimmeringCardLookAtYourBodyToday.
+  ///
+  /// In de, this message translates to:
+  /// **'Betrachte deinen Körper heute ohne Bewertung. Sag dir: \"Mein Körper ist lebendig, atmend und fähig zu tiefster Lust.\"'**
+  String get dailySimmeringCardLookAtYourBodyToday;
+
+  /// No description provided for @dailySimmeringCardPhysiologicalSighQuickCalming.
+  ///
+  /// In de, this message translates to:
+  /// **'Physiologischer Seufzer (Quick-Downregulation)'**
+  String get dailySimmeringCardPhysiologicalSighQuickCalming;
+
+  /// No description provided for @dailySimmeringCardToolCalmDown.
+  ///
+  /// In de, this message translates to:
+  /// **'TOOL • VAGUS-RESET'**
+  String get dailySimmeringCardToolCalmDown;
+
+  /// No description provided for @dailySimmeringCardBreatheInTwiceDeeplyThrough.
+  ///
+  /// In de, this message translates to:
+  /// **'Doppelt durch die Nase tief einatmen, dann sehr lang und hörbar durch den offenen Mund seufzen. 3 Wiederholungen.'**
+  String get dailySimmeringCardBreatheInTwiceDeeplyThrough;
+
+  /// No description provided for @dailySimmeringCardThePercentPactWithYourself.
+  ///
+  /// In de, this message translates to:
+  /// **'Der 90-Prozent-Pakt mit dir selbst'**
+  String get dailySimmeringCardThePercentPactWithYourself;
+
+  /// No description provided for @dailySimmeringCardGiveYourselfMinutesOfPleasure.
+  ///
+  /// In de, this message translates to:
+  /// **'Schenke dir heute 10 Minuten Genuss – aber nimm dir vor, bei 90% bewusst aufzuhören, ohne zum Abschluss zu eilen.'**
+  String get dailySimmeringCardGiveYourselfMinutesOfPleasure;
+
+  /// No description provided for @dailySimmeringCardTodaySEroticSpark.
+  ///
+  /// In de, this message translates to:
+  /// **'HEUTIGER EROTIK-FUNKE'**
+  String get dailySimmeringCardTodaySEroticSpark;
+
+  /// No description provided for @dailySimmeringCardSimmeringEverydayTeasing.
+  ///
+  /// In de, this message translates to:
+  /// **'Simmering & Alltags-Teasing'**
+  String get dailySimmeringCardSimmeringEverydayTeasing;
+
+  /// No description provided for @dailySimmeringCardTapHereToRevealToday.
+  ///
+  /// In de, this message translates to:
+  /// **'Tippe hier, um deinen heutigen 45-Sekunden-Funken aufzudecken...'**
+  String get dailySimmeringCardTapHereToRevealToday;
+
+  /// No description provided for @dailySimmeringCardOpen.
+  ///
+  /// In de, this message translates to:
+  /// **'ÖFFNEN'**
+  String get dailySimmeringCardOpen;
+
+  /// No description provided for @userProfileNonBinaryOpen.
+  ///
+  /// In de, this message translates to:
+  /// **'Divers / Offen'**
+  String get userProfileNonBinaryOpen;
+
+  /// No description provided for @userProfileInARelationshipMarried.
+  ///
+  /// In de, this message translates to:
+  /// **'In Beziehung / Verheiratet'**
+  String get userProfileInARelationshipMarried;
+
+  /// No description provided for @userProfileDatingGettingToKnowSomeone.
+  ///
+  /// In de, this message translates to:
+  /// **'Dating / Kennenlernphase'**
+  String get userProfileDatingGettingToKnowSomeone;
+
+  /// No description provided for @userProfileSingle.
+  ///
+  /// In de, this message translates to:
+  /// **'Single'**
+  String get userProfileSingle;
+
+  /// No description provided for @userProfileComplicated.
+  ///
+  /// In de, this message translates to:
+  /// **'Kompliziert'**
+  String get userProfileComplicated;
+
+  /// No description provided for @userProfilePelvicFloorBody.
+  ///
+  /// In de, this message translates to:
+  /// **'Beckenboden & Somatik'**
+  String get userProfilePelvicFloorBody;
+
+  /// No description provided for @userProfileCoupleIntimacyCloseness.
+  ///
+  /// In de, this message translates to:
+  /// **'Paar-Intimität & Nähe'**
+  String get userProfileCoupleIntimacyCloseness;
+
+  /// No description provided for @userProfileDesireRelaxation.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust & Entspannung'**
+  String get userProfileDesireRelaxation;
+
+  /// No description provided for @userProfileEasingPerformancePressure.
+  ///
+  /// In de, this message translates to:
+  /// **'Leistungsdruck abbauen'**
+  String get userProfileEasingPerformancePressure;
+
+  /// No description provided for @contentModelsTheArtOfTouchFor.
+  ///
+  /// In de, this message translates to:
+  /// **'BERÜHRUNGSKUNST • FÜR SIE'**
+  String get contentModelsTheArtOfTouchFor;
+
+  /// No description provided for @contentModelsTouchLabForHim.
+  ///
+  /// In de, this message translates to:
+  /// **'TAST-LABOR • FÜR IHN'**
+  String get contentModelsTouchLabForHim;
+
+  /// No description provided for @contentModelsSelfExploration.
+  ///
+  /// In de, this message translates to:
+  /// **'SELBST ERKUNDEN'**
+  String get contentModelsSelfExploration;
+
+  /// No description provided for @contentModelsVoiceBody.
+  ///
+  /// In de, this message translates to:
+  /// **'STIMME & SOMATIK'**
+  String get contentModelsVoiceBody;
+
+  /// No description provided for @contentModelsAnticipationDesire.
+  ///
+  /// In de, this message translates to:
+  /// **'HINHALTEN & VERLANGEN'**
+  String get contentModelsAnticipationDesire;
+
+  /// No description provided for @contentModelsPolarityRoles.
+  ///
+  /// In de, this message translates to:
+  /// **'POLARITÄT & ROLLEN'**
+  String get contentModelsPolarityRoles;
+
+  /// No description provided for @contentModelsBodyPresence.
+  ///
+  /// In de, this message translates to:
+  /// **'KÖRPER-PRÄSENZ'**
+  String get contentModelsBodyPresence;
+
+  /// No description provided for @contentModelsForHer.
+  ///
+  /// In de, this message translates to:
+  /// **'FÜR SIE'**
+  String get contentModelsForHer;
+
+  /// No description provided for @contentModelsForCouples.
+  ///
+  /// In de, this message translates to:
+  /// **'FÜR PAARE'**
+  String get contentModelsForCouples;
+
+  /// No description provided for @contentModelsForHim.
+  ///
+  /// In de, this message translates to:
+  /// **'FÜR IHN'**
+  String get contentModelsForHim;
+
+  /// No description provided for @yesNoMaybeModelsExcitesMeIDLike.
+  ///
+  /// In de, this message translates to:
+  /// **'Reizt mich, möchte ich ausprobieren'**
+  String get yesNoMaybeModelsExcitesMeIDLike;
+
+  /// No description provided for @yesNoMaybeModelsCuriousButUnsureDependsOn.
+  ///
+  /// In de, this message translates to:
+  /// **'Neugierig, aber unsicher – kommt auf den Moment an'**
+  String get yesNoMaybeModelsCuriousButUnsureDependsOn;
+
+  /// No description provided for @yesNoMaybeModelsNotForMe.
+  ///
+  /// In de, this message translates to:
+  /// **'Kommt für mich nicht infrage'**
+  String get yesNoMaybeModelsNotForMe;
 }
 
 class _AppLocalizationsDelegate

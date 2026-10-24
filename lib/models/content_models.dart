@@ -1,4 +1,5 @@
-class VelvetDatabase {
+
+import '../l10n/t.dart';class VelvetDatabase {
   final String version;
   final List<Course> courses;
   final List<SosCard> sosCards;
@@ -66,32 +67,32 @@ class Course {
 
   String get targetBadgeLabel {
     if (id.contains('touch') || id.contains('omgyes')) {
-      return isForWomen ? 'BERÜHRUNGSKUNST • FÜR SIE' : 'TAST-LABOR • FÜR IHN';
+      return isForWomen ? t.contentModelsTheArtOfTouchFor : t.contentModelsTouchLabForHim;
     }
     if (id == 'course_self_exploration') {
-      return 'SELBST ERKUNDEN';
+      return t.contentModelsSelfExploration;
     }
     if (id == 'course_vocal_pelvic') {
-      return 'STIMME & SOMATIK';
+      return t.contentModelsVoiceBody;
     }
     if (id == 'course_teasing_desire') {
-      return 'HINHALTEN & VERLANGEN';
+      return t.contentModelsAnticipationDesire;
     }
     if (id == 'course_fantasies_shadow') {
-      return 'POLARITÄT & ROLLEN';
+      return t.contentModelsPolarityRoles;
     }
     if (id == 'course_body_acceptance') {
-      return 'KÖRPER-PRÄSENZ';
+      return t.contentModelsBodyPresence;
     }
     switch (category) {
       case 'women':
-        return 'FÜR SIE';
+        return t.contentModelsForHer;
       case 'couples':
-        return 'FÜR PAARE';
+        return t.contentModelsForCouples;
       case 'men':
-        return 'FÜR IHN';
+        return t.contentModelsForHim;
       default:
-        return 'GRUNDLAGEN';
+        return t.kegelGuideSheetBasics;
     }
   }
 

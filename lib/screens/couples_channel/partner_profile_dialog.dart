@@ -4,7 +4,7 @@ import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
 import '../../l10n/t.dart';
 
-Map<String?, String> partnerGenderLabels = {
+Map<String?, String> get partnerGenderLabels => {
   'female': t.partnerProfileDialogWoman,
   'male': t.partnerProfileDialogMan,
   'other': t.partnerProfileDialogNonBinary,

@@ -1,3 +1,5 @@
+import '../l10n/t.dart';
+
 class DailyCheckIn {
   final String date; // YYYY-MM-DD
   final int stressLevel; // 1 to 5
@@ -34,6 +36,8 @@ class DailyCheckIn {
         'timestamp': timestamp.toIso8601String(),
       };
 
+  /// Die deutschen Texte sind zugleich die gespeicherte Kennung (in Check-ins und Sicherungen) –
+  /// nie ändern. Angezeigt wird die Übersetzung über [anzeige].
   static const List<String> availableActions = [
     'Bewusst tief geatmet (Physiol. Seufzer)',
     'Beckenboden entspannt (Reverse Kegel)',
@@ -42,4 +46,14 @@ class DailyCheckIn {
     'Fokus auf Hautkontakt gelenkt',
     'Offenes Wort mit Partner/in gewagt',
   ];
+
+  static String anzeige(String gespeichert) => switch (gespeichert) {
+        'Bewusst tief geatmet (Physiol. Seufzer)' => t.checkinActionBreathed,
+        'Beckenboden entspannt (Reverse Kegel)' => t.checkinActionPelvicFloor,
+        'Das Handy abends weggelegt' => t.checkinActionPhoneAway,
+        'Spaziergang an frischer Luft gemacht' => t.checkinActionWalk,
+        'Fokus auf Hautkontakt gelenkt' => t.checkinActionSkinContact,
+        'Offenes Wort mit Partner/in gewagt' => t.checkinActionOpenWord,
+        _ => gespeichert,
+      };
 }
