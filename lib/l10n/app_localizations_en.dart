@@ -1486,4 +1486,579 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get beliefLibraryViewTakeIntoMyJournal => 'Take into my journal';
+
+  @override
+  String get kegelTimerViewBreatheInWiden => 'BREATHE IN & WIDEN';
+
+  @override
+  String get kegelTimerViewBreatheDeepIntoTheBelly =>
+      'Breathe deep into the belly. Let the pelvic floor gently give way downwards – no pushing.';
+
+  @override
+  String get kegelTimerViewStaySoft => 'STAY SOFT';
+
+  @override
+  String get kegelTimerViewBreatheOutSlowlyAndStay =>
+      'Breathe out slowly and stay wide, like a hammock hanging loosely.';
+
+  @override
+  String get kegelTimerViewNotice => 'NOTICE';
+
+  @override
+  String get kegelTimerViewKeepBreathingNormallyAndFeel =>
+      'Keep breathing normally and feel how warm and calm the pelvis is.';
+
+  @override
+  String get kegelTimerViewTighten => 'TIGHTEN';
+
+  @override
+  String get kegelTimerViewGentlyDrawTheAreaBetween =>
+      'Gently draw the area between pubic bone and tailbone inwards and upwards. Buttocks and belly stay relaxed.';
+
+  @override
+  String get kegelTimerViewHoldTheTensionAtAbout =>
+      'Hold the tension at about half strength. Keep breathing calmly.';
+
+  @override
+  String get kegelTimerViewLetGoCompletely => 'LET GO COMPLETELY';
+
+  @override
+  String get kegelTimerViewRelaxCompletelyLettingGoLasts =>
+      'Relax completely. Letting go lasts at least as long as holding.';
+
+  @override
+  String get kegelTimerViewQuickSqueeze => 'QUICK SQUEEZE';
+
+  @override
+  String get kegelTimerViewAQuickShortSqueezeLike =>
+      'A quick, short squeeze – like a wink with the pelvic floor.';
+
+  @override
+  String get kegelTimerViewRelease => 'RELEASE';
+
+  @override
+  String get kegelTimerViewLetGoCompletelyRightAway =>
+      'Let go completely right away.';
+
+  @override
+  String get kegelTimerViewBreatheInSoften => 'BREATHE IN & SOFTEN';
+
+  @override
+  String get kegelTimerViewBreatheDeepIntoTheBelly2 =>
+      'Breathe deep into the belly. Consciously let perineum and buttocks soften.';
+
+  @override
+  String get kegelTimerViewLongExhale => 'LONG EXHALE';
+
+  @override
+  String get kegelTimerViewBreatheOutLongAndAudibly =>
+      'Breathe out long and audibly, the pelvic floor stays wide. This is how you practise staying loose when aroused.';
+
+  @override
+  String get kegelTimerViewKeepBreathingCalmlyAndFeel =>
+      'Keep breathing calmly and feel the warmth in your pelvis.';
+
+  @override
+  String get kegelTimerViewDone => 'Done';
+
+  @override
+  String kegelTimerViewYouPractisedTotalroundsRoundsA(Object totalRounds) {
+    return 'You practised $totalRounds rounds. A few minutes regularly do more than long sessions rarely – see you tomorrow!';
+  }
+
+  @override
+  String get kegelTimerViewFinish => 'Finish';
+
+  @override
+  String get kegelTimerViewLetGo => 'Let go';
+
+  @override
+  String get kegelTimerViewWiden => 'widen';
+
+  @override
+  String get kegelTimerViewStrengthen => 'Strengthen';
+
+  @override
+  String get kegelTimerViewHoldRelease => 'hold & release';
+
+  @override
+  String get kegelTimerViewQuickPulses => 'Quick pulses';
+
+  @override
+  String get kegelTimerViewQuickOnQuickOff => 'quick on, quick off';
+
+  @override
+  String get kegelTimerViewWaves => 'Waves';
+
+  @override
+  String get kegelTimerViewSoftWhenAroused => 'soft when aroused';
+
+  @override
+  String get kegelTimerViewRounds => 'Rounds';
+
+  @override
+  String kegelTimerViewMinutesMin(Object minutes) {
+    return '≈ $minutes min';
+  }
+
+  @override
+  String get kegelTimerViewLevel => 'Level';
+
+  @override
+  String get kegelTimerViewVoiceCues => 'Voice cues';
+
+  @override
+  String get kegelTimerViewAVoiceGuidesYou => 'A voice guides you';
+
+  @override
+  String get kegelTimerViewVibrationOnly => 'vibration only';
+
+  @override
+  String kegelTimerViewRoundCurrentroundOfTotalrounds(
+      Object currentRound, Object totalRounds) {
+    return 'Round $currentRound of $totalRounds';
+  }
+
+  @override
+  String kegelTimerViewPhaseCurrentphaseindexPhaseslength(
+      Object currentPhaseIndex, Object phasesLength) {
+    return 'Phase $currentPhaseIndex/$phasesLength';
+  }
+
+  @override
+  String get kegelTimerViewGuidePracticePlan => 'Guide & practice plan';
+
+  @override
+  String get kegelTimerViewFindingTheMuscleWhichExercise =>
+      'Finding the muscle, which exercise for what, common mistakes, 6-week plan';
+
+  @override
+  String get kegelGuideSheetPelvicFloorGuide => 'Pelvic floor guide';
+
+  @override
+  String get kegelGuideSheetFindingTheMuscleExercisesPlan =>
+      'Finding the muscle, exercises, plan';
+
+  @override
+  String get kegelGuideSheetFindingTheMuscle => '1. Finding the muscle';
+
+  @override
+  String get kegelGuideSheetBasics => 'BASICS';
+
+  @override
+  String get kegelGuideSheetThePelvicFloorStretchesLike =>
+      'The pelvic floor stretches like a hammock between pubic bone and tailbone – in everyone. It can do two things: lift and hold, and widen and let go. Both belong to training.';
+
+  @override
+  String get kegelGuideSheetTightenAndLift => 'Tighten and lift';
+
+  @override
+  String get kegelGuideSheetImagineHoldingBackWindAnd =>
+      'Imagine holding back wind and stopping the flow of urine at the same time – only in your imagination.\n• With a vulva: the vaginal opening and perineum draw gently inwards and upwards.\n• With a penis: the base of the penis lifts a little, the testicles draw slightly upwards.';
+
+  @override
+  String get kegelGuideSheetLetGoAndWiden => 'Let go and widen';
+
+  @override
+  String get kegelGuideSheetBreatheDeepIntoTheBelly =>
+      'Breathe deep into the belly. As the belly rounds, let the pelvic floor gently give way downwards – like at the start of urinating, but without pushing. The area between pubic bone and tailbone becomes soft and warm.';
+
+  @override
+  String get kegelGuideSheetButtocksThighsAndBellyStay =>
+      'Buttocks, thighs and belly stay relaxed. A hand on your buttocks tells you whether they\'re joining in.';
+
+  @override
+  String get kegelGuideSheetWhichExerciseForWhat =>
+      '2. Which exercise for what?';
+
+  @override
+  String get kegelGuideSheetExercises => 'EXERCISES';
+
+  @override
+  String get kegelGuideSheetForTensionPainOnPenetration =>
+      'for tension, pain on penetration, early ejaculation';
+
+  @override
+  String get kegelGuideSheetForEveryoneWhosePelvicFloor =>
+      'For everyone whose pelvic floor tends to hold too much. That\'s common with stress, lots of sitting and performance pressure. Start here if you\'re unsure.';
+
+  @override
+  String get kegelGuideSheetForSupportControlAndStability =>
+      'for support, control and stability';
+
+  @override
+  String get kegelGuideSheetStrengthensTheMusclesForExample =>
+      'Strengthens the muscles, for example after giving birth, with mild bladder weakness or for more control. Practise at half strength; letting go afterwards is just as important as holding.';
+
+  @override
+  String get kegelGuideSheetForResponsiveness => 'for responsiveness';
+
+  @override
+  String get kegelGuideSheetAShortSqueezeAndImmediate =>
+      'A short squeeze and immediate release trains the fast muscle fibres – for example for the moment of coughing or sneezing.';
+
+  @override
+  String get kegelGuideSheetStayingLooseWhenItGets =>
+      'staying loose when it gets exciting';
+
+  @override
+  String get kegelGuideSheetALongAudibleExhaleWith =>
+      'A long, audible exhale with soft perineum and buttocks. Exactly this helps with the wave surfing from courses 8 and 9 to keep arousal high without it spilling over.';
+
+  @override
+  String get kegelGuideSheetCommonMistakes => '3. Common mistakes';
+
+  @override
+  String get kegelGuideSheetCareful => 'CAREFUL';
+
+  @override
+  String get kegelGuideSheetSqueezingTheButtocks => 'Squeezing the buttocks';
+
+  @override
+  String get kegelGuideSheetTheBigGlutealMuscleLikes =>
+      'The big gluteal muscle likes to sneak in. The buttocks stay soft.';
+
+  @override
+  String get kegelGuideSheetHoldingYourBreath => 'Holding your breath';
+
+  @override
+  String get kegelGuideSheetKeepBreathingCalmlyWhileHolding =>
+      'Keep breathing calmly while holding. Holding your breath increases pressure in the belly.';
+
+  @override
+  String get kegelGuideSheetPushingInsteadOfLettingGo =>
+      'Pushing instead of letting go';
+
+  @override
+  String get kegelGuideSheetWhenLettingGoNothingIs =>
+      'When letting go, nothing is pushed down. It\'s a giving way, not a pushing.';
+
+  @override
+  String get kegelGuideSheetPractisingWhileActuallyUrinating =>
+      'Practising while actually urinating';
+
+  @override
+  String get kegelGuideSheetRegularlyStoppingTheFlowOf =>
+      'Regularly stopping the flow of urine can disturb bladder emptying. Only practise in your imagination.';
+
+  @override
+  String get kegelGuideSheetBetterShortAndRegular => 'Better short and regular';
+
+  @override
+  String get kegelGuideSheetAFewMinutesOnMost =>
+      'A few minutes on most days do more than an occasional long session.';
+
+  @override
+  String get kegelGuideSheetAPlanForSixWeeks => '4. A plan for six weeks';
+
+  @override
+  String get kegelGuideSheetPlan => 'PLAN';
+
+  @override
+  String get kegelGuideSheetWeek => 'Week 1–2';
+
+  @override
+  String get kegelGuideSheetLetGoDailyRoundsEasy =>
+      'Let go daily, 5 rounds, easy level. Goal: to clearly feel the widening.';
+
+  @override
+  String get kegelGuideSheetWeek2 => 'Week 3–4';
+
+  @override
+  String get kegelGuideSheetLetGoRoundsThenStrengthen =>
+      'Let go 5 rounds, then strengthen 5 rounds, easy level. Waves on two days.';
+
+  @override
+  String get kegelGuideSheetWeek3 => 'Week 5–6';
+
+  @override
+  String get kegelGuideSheetRoundsOfYourMainExercise =>
+      '10 rounds of your main exercise, medium level. Plus a few quick pulses.';
+
+  @override
+  String get kegelGuideSheetAfterThatKeepTwoOr =>
+      'After that: keep two or three short sessions a week. And use letting go consciously in intimate moments – breathe deep into the belly, let the pelvic floor sink.';
+
+  @override
+  String get kegelGuideSheetWhenToSeeAPhysiotherapist =>
+      '5. When to see a physiotherapist?';
+
+  @override
+  String get kegelGuideSheetHealth => 'HEALTH';
+
+  @override
+  String get kegelGuideSheetSpecialisedPelvicFloorPhysiotherapyCan =>
+      'Specialised pelvic floor physiotherapy can examine exactly whether your pelvic floor tends to be too weak or too tight, and guide you specifically. Get advice if you have:\n• pain in the pelvis, during sex or during training\n• bladder or bowel weakness\n• problems after giving birth or pelvic surgery\n• the feeling that you can\'t control the muscle at all';
+
+  @override
+  String get kegelGuideSheetBackToTraining => 'Back to training';
+
+  @override
+  String get aiCoachAsAWomanHowDo =>
+      'As a woman, how do I relax my pelvic floor during sex?';
+
+  @override
+  String get aiCoachHowCanWeStopPerformance =>
+      'How can we stop performance pressure in bed together?';
+
+  @override
+  String get aiCoachWhatToDoAboutRacing =>
+      'What to do about racing thoughts & spectatoring?';
+
+  @override
+  String get aiCoachHowDoIExplainResponsive =>
+      'How do I explain responsive desire to my partner?';
+
+  @override
+  String get aiCoachWhyDoesTheReverseKegel =>
+      'Why does the reverse Kegel help with nervousness?';
+
+  @override
+  String get aiCoachWelcomeToConfidentialSomaticRelationship =>
+      'Welcome to confidential somatic & relationship coaching. I\'m here for you – as a woman, a man or a couple – with all questions about relaxing the pelvic floor, overcoming racing thoughts and performance pressure, shame and fulfilling intimacy without a goal.\n\nWhat would you like to talk about, or what\'s on your mind most right now?';
+
+  @override
+  String get aiCoachPleaseAddYourGeminiApi =>
+      'Please add your Gemini API key first to chat with the coach.';
+
+  @override
+  String get aiCoachNoApiKeyAddedPlease =>
+      'No API key added. Please tap the gear icon at the top.';
+
+  @override
+  String get aiCoachGoogleRejectedTheApiKey =>
+      'Google rejected the API key as invalid. Please check the key in Google AI Studio.';
+
+  @override
+  String aiCoachConnectionErrorCleanerr(Object cleanErr) {
+    return 'Connection error: $cleanErr';
+  }
+
+  @override
+  String get aiCoachCheckKey => 'Check key';
+
+  @override
+  String get aiCoachGeminiApiKey => 'Gemini API key';
+
+  @override
+  String get aiCoachPrivateCoachingUsesGoogleGemini =>
+      'Private coaching uses Google Gemini. The key is stored encrypted on your phone only; your messages and profile details go to Google to be answered. In the EU, Switzerland and the UK, Google\'s terms say it doesn\'t use them to improve its products; elsewhere Google may analyse requests from the free tier.';
+
+  @override
+  String get aiCoachFreeViaAistudioGoogleCom => 'Free via aistudio.google.com';
+
+  @override
+  String get aiCoachShowGuide => 'Show guide';
+
+  @override
+  String get aiCoachPleaseEnterAKeyFirst => 'Please enter a key first.';
+
+  @override
+  String get aiCoachCheckingConnection => 'Checking connection...';
+
+  @override
+  String get aiCoachTestConnection => 'Test connection';
+
+  @override
+  String get aiCoachApiKeyRemoved => 'API key removed.';
+
+  @override
+  String get aiCoachApiKeySaved => 'API key saved.';
+
+  @override
+  String get aiCoachClearChatHistory => 'Clear chat history?';
+
+  @override
+  String get aiCoachDoYouWantToDelete =>
+      'Do you want to delete all previous messages in this conversation?';
+
+  @override
+  String get aiCoachChatHistoryClearedWhatWould =>
+      'Chat history cleared. What would you like to talk about?';
+
+  @override
+  String get aiCoachClear => 'Clear';
+
+  @override
+  String get aiCoachGeminiAiConnected => 'Gemini AI connected';
+
+  @override
+  String get aiCoachNoApiKeyAdded => 'No API key added';
+
+  @override
+  String get aiCoachGuideCreateAKey => 'Guide: create a key';
+
+  @override
+  String get aiCoachClearChat => 'Clear chat';
+
+  @override
+  String get aiCoachApiKeySettings => 'API key settings';
+
+  @override
+  String get aiCoachNoApiKeyYetCreated =>
+      'No API key yet? Created for free in 2 minutes.';
+
+  @override
+  String get aiCoachGuide => 'Guide';
+
+  @override
+  String get aiCoachCoachIsThinking => 'Coach is thinking...';
+
+  @override
+  String get aiCoachAskAConfidentialQuestion =>
+      'Ask a confidential question...';
+
+  @override
+  String get apiKeyGuideSheetFreeGeminiApiKey => 'Free Gemini API key';
+
+  @override
+  String get apiKeyGuideSheetCreatedStepByStepIn =>
+      'Created step by step in 2 minutes';
+
+  @override
+  String get apiKeyGuideSheetFreeAndWhatHappensTo =>
+      'Free – and what happens to your data: ';
+
+  @override
+  String get apiKeyGuideSheetGoogleAiStudioHasA =>
+      'Google AI Studio has a free tier. Your key stays encrypted on your phone. Your messages, name, age, gender, relationship status and focus go to Google to be answered. In the EU, Switzerland and the UK, Google\'s terms say it doesn\'t use them to improve its products. Elsewhere Google may analyse requests from the free tier for that and have humans read them.';
+
+  @override
+  String get apiKeyGuideSheetOpenGoogleAiStudio => 'Open Google AI Studio';
+
+  @override
+  String get apiKeyGuideSheetOpenGoogleSOfficialDeveloper =>
+      'Open Google\'s official developer platform in your browser (Chrome, Safari, Firefox):\n';
+
+  @override
+  String get apiKeyGuideSheetLinkCopiedToClipboard =>
+      'Link copied to clipboard!';
+
+  @override
+  String get apiKeyGuideSheetCopy => 'Copy';
+
+  @override
+  String get apiKeyGuideSheetSignInWithAGoogle =>
+      'Sign in with a Google account';
+
+  @override
+  String get apiKeyGuideSheetSignInWithYourExisting =>
+      'Sign in with your existing Google account (Gmail). No credit card or payment method is required.';
+
+  @override
+  String get apiKeyGuideSheetClickGetApiKey => 'Click \"Get API key\"';
+
+  @override
+  String get apiKeyGuideSheetInTheMenuAtThe =>
+      'In the menu at the top left, click the blue \"Get API key\" button.';
+
+  @override
+  String get apiKeyGuideSheetChooseCreateApiKeyIn =>
+      'Choose \"Create API key in new project\"';
+
+  @override
+  String get apiKeyGuideSheetChooseTheOptionCreateApi =>
+      'Choose the option \"Create API key in new project\". Google automatically sets up a free project in the background.';
+
+  @override
+  String get apiKeyGuideSheetCopyTheKeyPasteIt =>
+      'Copy the key & paste it into VelvetPulse';
+
+  @override
+  String get apiKeyGuideSheetCopyTheGeneratedStringIt =>
+      'Copy the generated string. It usually starts with \"AIzaSy...\" – then paste it into the app here.';
+
+  @override
+  String get apiKeyGuideSheetFrequentlyAskedQuestions =>
+      'Frequently asked questions:';
+
+  @override
+  String get apiKeyGuideSheetDoesItCostAnything => 'Does it cost anything?';
+
+  @override
+  String get apiKeyGuideSheetNotWithinTheFreeTier =>
+      'Not within the free tier of Google AI Studio. Google sets the scope and terms and can change them.';
+
+  @override
+  String get apiKeyGuideSheetWhichModelIsUsed => 'Which model is used?';
+
+  @override
+  String get apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest =>
+      'VelvetPulse automatically finds the latest active Gemini models (preferring the fast Flash models) via your key.';
+
+  @override
+  String get apiKeyGuideSheetEnterApiKeyConnectNow =>
+      'Enter API key & connect now';
+
+  @override
+  String get dailyCheckinCardVeryCalm => 'Very calm';
+
+  @override
+  String get dailyCheckinCardMild => 'Mild';
+
+  @override
+  String get dailyCheckinCardModerate => 'Moderate';
+
+  @override
+  String get dailyCheckinCardHigh => 'High';
+
+  @override
+  String get dailyCheckinCardExtremeStress => 'Extreme stress';
+
+  @override
+  String get dailyCheckinCardClearHead => 'Clear head';
+
+  @override
+  String get dailyCheckinCardHardlyAnyPressure => 'Hardly any pressure';
+
+  @override
+  String get dailyCheckinCardSomeRestlessness => 'Some restlessness';
+
+  @override
+  String get dailyCheckinCardNoticeablyHigh => 'Noticeably high';
+
+  @override
+  String get dailyCheckinCardStrongPressure => 'Strong pressure';
+
+  @override
+  String get dailyCheckinCardSecondDailyCheckIn => '30-second daily check-in';
+
+  @override
+  String get dailyCheckinCardDone => 'Done';
+
+  @override
+  String dailyCheckinCardStressStresslevelPressurePressurelevel(
+      Object stressLevel, Object pressureLevel) {
+    return 'Stress: $stressLevel • Pressure: $pressureLevel';
+  }
+
+  @override
+  String get dailyCheckinCardHowDoStressPerformancePressure =>
+      'How do stress & performance pressure relate today?';
+
+  @override
+  String get dailyCheckinCardEverydayStressTodayJobAppointments =>
+      '1. Everyday stress today (job, appointments, sleep)';
+
+  @override
+  String get dailyCheckinCardInnerPerformancePressureRacingThoughts =>
+      '2. Inner performance pressure & racing thoughts';
+
+  @override
+  String get dailyCheckinCardWhatDidYouGoodToday =>
+      '3. What did you some good today?';
+
+  @override
+  String get dailyCheckinCardSaveDailyCheckIn => 'Save daily check-in';
+
+  @override
+  String get dailyCheckinCardUpdateValues => 'Update values';
+
+  @override
+  String get dailyCheckinCardCoachingInsightYourEverydayStress =>
+      '💡 Coaching insight: your everyday stress is high today. Remember: stress and exhaustion often slow desire down by themselves. That\'s a normal reaction, not a defect.';
+
+  @override
+  String get dailyCheckinCardCoachingInsightWhenEverydayStress =>
+      '💡 Coaching insight: when everyday stress drops, it\'s often easier to relax. Use today\'s calm to feel into your body without pressure to perform.';
 }

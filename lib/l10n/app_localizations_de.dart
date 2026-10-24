@@ -1498,4 +1498,577 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get beliefLibraryViewTakeIntoMyJournal =>
       'In eigenes Journal übernehmen';
+
+  @override
+  String get kegelTimerViewBreatheInWiden => 'EINATMEN & WEIT WERDEN';
+
+  @override
+  String get kegelTimerViewBreatheDeepIntoTheBelly =>
+      'Tief in den Bauch atmen. Den Beckenboden sanft nach unten nachgeben lassen – kein Pressen.';
+
+  @override
+  String get kegelTimerViewStaySoft => 'WEICH BLEIBEN';
+
+  @override
+  String get kegelTimerViewBreatheOutSlowlyAndStay =>
+      'Langsam ausatmen und weit bleiben, wie eine Hängematte, die locker durchhängt.';
+
+  @override
+  String get kegelTimerViewNotice => 'NACHSPÜREN';
+
+  @override
+  String get kegelTimerViewKeepBreathingNormallyAndFeel =>
+      'Normal weiteratmen und spüren, wie warm und ruhig das Becken ist.';
+
+  @override
+  String get kegelTimerViewTighten => 'ANSPANNEN';
+
+  @override
+  String get kegelTimerViewGentlyDrawTheAreaBetween =>
+      'Den Bereich zwischen Schambein und Steißbein sanft nach innen und oben ziehen. Po und Bauch bleiben locker.';
+
+  @override
+  String get kegelTimerViewHoldTheTensionAtAbout =>
+      'Die Spannung halten, etwa mit halber Kraft. Weiter ruhig atmen.';
+
+  @override
+  String get kegelTimerViewLetGoCompletely => 'GANZ LOSLASSEN';
+
+  @override
+  String get kegelTimerViewRelaxCompletelyLettingGoLasts =>
+      'Vollständig entspannen. Das Loslassen dauert mindestens so lange wie das Halten.';
+
+  @override
+  String get kegelTimerViewQuickSqueeze => 'KURZ AN';
+
+  @override
+  String get kegelTimerViewAQuickShortSqueezeLike =>
+      'Ein schnelles, kurzes Anspannen – wie ein Zwinkern mit dem Beckenboden.';
+
+  @override
+  String get kegelTimerViewRelease => 'LOS';
+
+  @override
+  String get kegelTimerViewLetGoCompletelyRightAway =>
+      'Sofort wieder ganz loslassen.';
+
+  @override
+  String get kegelTimerViewBreatheInSoften => 'EINATMEN & WEICH';
+
+  @override
+  String get kegelTimerViewBreatheDeepIntoTheBelly2 =>
+      'Tief in den Bauch atmen. Damm und Po bewusst weich werden lassen.';
+
+  @override
+  String get kegelTimerViewLongExhale => 'LANG AUSATMEN';
+
+  @override
+  String get kegelTimerViewBreatheOutLongAndAudibly =>
+      'Lang und hörbar ausatmen, der Beckenboden bleibt weit. So übst du, bei Erregung locker zu bleiben.';
+
+  @override
+  String get kegelTimerViewKeepBreathingCalmlyAndFeel =>
+      'Ruhig weiteratmen und die Wärme im Becken spüren.';
+
+  @override
+  String get kegelTimerViewDone => 'Geschafft';
+
+  @override
+  String kegelTimerViewYouPractisedTotalroundsRoundsA(Object totalRounds) {
+    return 'Du hast $totalRounds Runden geübt. Regelmäßig ein paar Minuten bringen mehr als selten lange – bis morgen!';
+  }
+
+  @override
+  String get kegelTimerViewFinish => 'Fertig';
+
+  @override
+  String get kegelTimerViewLetGo => 'Loslassen';
+
+  @override
+  String get kegelTimerViewWiden => 'weit werden';
+
+  @override
+  String get kegelTimerViewStrengthen => 'Kräftigen';
+
+  @override
+  String get kegelTimerViewHoldRelease => 'halten & lösen';
+
+  @override
+  String get kegelTimerViewQuickPulses => 'Schnelle Impulse';
+
+  @override
+  String get kegelTimerViewQuickOnQuickOff => 'kurz an, kurz los';
+
+  @override
+  String get kegelTimerViewWaves => 'Wellen';
+
+  @override
+  String get kegelTimerViewSoftWhenAroused => 'weich bei Erregung';
+
+  @override
+  String get kegelTimerViewRounds => 'Runden';
+
+  @override
+  String kegelTimerViewMinutesMin(Object minutes) {
+    return '≈ $minutes Min.';
+  }
+
+  @override
+  String get kegelTimerViewLevel => 'Stufe';
+
+  @override
+  String get kegelTimerViewVoiceCues => 'Ansage';
+
+  @override
+  String get kegelTimerViewAVoiceGuidesYou => 'Stimme führt dich durch';
+
+  @override
+  String get kegelTimerViewVibrationOnly => 'nur Vibration';
+
+  @override
+  String kegelTimerViewRoundCurrentroundOfTotalrounds(
+      Object currentRound, Object totalRounds) {
+    return 'Runde $currentRound von $totalRounds';
+  }
+
+  @override
+  String kegelTimerViewPhaseCurrentphaseindexPhaseslength(
+      Object currentPhaseIndex, Object phasesLength) {
+    return 'Phase $currentPhaseIndex/$phasesLength';
+  }
+
+  @override
+  String get kegelTimerViewGuidePracticePlan => 'Anleitung & Übungsplan';
+
+  @override
+  String get kegelTimerViewFindingTheMuscleWhichExercise =>
+      'Muskel finden, welche Übung wofür, typische Fehler, Plan für 6 Wochen';
+
+  @override
+  String get kegelGuideSheetPelvicFloorGuide => 'Beckenboden-Anleitung';
+
+  @override
+  String get kegelGuideSheetFindingTheMuscleExercisesPlan =>
+      'Muskel finden, Übungen, Plan';
+
+  @override
+  String get kegelGuideSheetFindingTheMuscle => '1. Den Muskel finden';
+
+  @override
+  String get kegelGuideSheetBasics => 'GRUNDLAGEN';
+
+  @override
+  String get kegelGuideSheetThePelvicFloorStretchesLike =>
+      'Der Beckenboden spannt sich wie eine Hängematte zwischen Schambein und Steißbein – bei allen Menschen. Er kann zwei Dinge: heben und halten, und weit werden und loslassen. Beides gehört zum Training.';
+
+  @override
+  String get kegelGuideSheetTightenAndLift => 'Anspannen und heben';
+
+  @override
+  String get kegelGuideSheetImagineHoldingBackWindAnd =>
+      'Stell dir vor, du hältst einen Wind zurück und stoppst gleichzeitig den Urinstrahl – nur in der Vorstellung.\n• Mit Vulva: Scheideneingang und Damm ziehen sich sanft nach innen und oben.\n• Mit Penis: Die Peniswurzel hebt sich ein kleines Stück, die Hoden ziehen leicht nach oben.';
+
+  @override
+  String get kegelGuideSheetLetGoAndWiden => 'Loslassen und weit werden';
+
+  @override
+  String get kegelGuideSheetBreatheDeepIntoTheBelly =>
+      'Atme tief in den Bauch. Während sich der Bauch wölbt, lass den Beckenboden sanft nach unten nachgeben – wie beim Beginn des Wasserlassens, aber ohne zu pressen. Der Bereich zwischen Schambein und Steißbein wird weich und warm.';
+
+  @override
+  String get kegelGuideSheetButtocksThighsAndBellyStay =>
+      'Po, Oberschenkel und Bauch bleiben locker. Eine Hand auf dem Po verrät, ob er mitarbeitet.';
+
+  @override
+  String get kegelGuideSheetWhichExerciseForWhat => '2. Welche Übung wofür?';
+
+  @override
+  String get kegelGuideSheetExercises => 'ÜBUNGEN';
+
+  @override
+  String get kegelGuideSheetForTensionPainOnPenetration =>
+      'bei Anspannung, Schmerzen beim Eindringen, frühem Samenerguss';
+
+  @override
+  String get kegelGuideSheetForEveryoneWhosePelvicFloor =>
+      'Für alle, deren Beckenboden eher zu viel festhält. Das ist bei Stress, viel Sitzen und Leistungsdruck häufig. Fang hier an, wenn du unsicher bist.';
+
+  @override
+  String get kegelGuideSheetForSupportControlAndStability =>
+      'für Halt, Kontrolle und Stabilität';
+
+  @override
+  String get kegelGuideSheetStrengthensTheMusclesForExample =>
+      'Stärkt die Muskulatur, etwa nach einer Geburt, bei leichter Blasenschwäche oder für mehr Kontrolle. Mit halber Kraft üben, das Loslassen danach ist genauso wichtig wie das Halten.';
+
+  @override
+  String get kegelGuideSheetForResponsiveness => 'für Reaktionsfähigkeit';
+
+  @override
+  String get kegelGuideSheetAShortSqueezeAndImmediate =>
+      'Kurzes An und sofortiges Los trainiert die schnellen Muskelfasern – zum Beispiel für den Moment beim Husten oder Niesen.';
+
+  @override
+  String get kegelGuideSheetStayingLooseWhenItGets =>
+      'locker bleiben, wenn es spannend wird';
+
+  @override
+  String get kegelGuideSheetALongAudibleExhaleWith =>
+      'Langes, hörbares Ausatmen mit weichem Damm und Po. Genau das hilft beim Wellen-Surfen aus den Kursen 8 und 9, die Erregung hoch zu halten, ohne dass sie überläuft.';
+
+  @override
+  String get kegelGuideSheetCommonMistakes => '3. Typische Fehler';
+
+  @override
+  String get kegelGuideSheetCareful => 'ACHTUNG';
+
+  @override
+  String get kegelGuideSheetSqueezingTheButtocks => 'Den Po zusammenkneifen';
+
+  @override
+  String get kegelGuideSheetTheBigGlutealMuscleLikes =>
+      'Der große Gesäßmuskel mogelt sich gern hinein. Der Po bleibt weich.';
+
+  @override
+  String get kegelGuideSheetHoldingYourBreath => 'Die Luft anhalten';
+
+  @override
+  String get kegelGuideSheetKeepBreathingCalmlyWhileHolding =>
+      'Atme beim Halten ruhig weiter. Angehaltener Atem erhöht den Druck im Bauch.';
+
+  @override
+  String get kegelGuideSheetPushingInsteadOfLettingGo =>
+      'Pressen statt loslassen';
+
+  @override
+  String get kegelGuideSheetWhenLettingGoNothingIs =>
+      'Beim Loslassen wird nichts nach unten gedrückt. Es ist ein Nachgeben, kein Schieben.';
+
+  @override
+  String get kegelGuideSheetPractisingWhileActuallyUrinating =>
+      'Beim echten Wasserlassen üben';
+
+  @override
+  String get kegelGuideSheetRegularlyStoppingTheFlowOf =>
+      'Den Urinstrahl regelmäßig zu stoppen kann die Blasenentleerung stören. Nur in der Vorstellung üben.';
+
+  @override
+  String get kegelGuideSheetBetterShortAndRegular =>
+      'Lieber kurz und regelmäßig';
+
+  @override
+  String get kegelGuideSheetAFewMinutesOnMost =>
+      'Ein paar Minuten an den meisten Tagen bringen mehr als selten eine lange Einheit.';
+
+  @override
+  String get kegelGuideSheetAPlanForSixWeeks => '4. Ein Plan für sechs Wochen';
+
+  @override
+  String get kegelGuideSheetPlan => 'PLAN';
+
+  @override
+  String get kegelGuideSheetWeek => 'Woche 1–2';
+
+  @override
+  String get kegelGuideSheetLetGoDailyRoundsEasy =>
+      'Täglich Loslassen, 5 Runden, Stufe leicht. Ziel: das Weitwerden sicher spüren.';
+
+  @override
+  String get kegelGuideSheetWeek2 => 'Woche 3–4';
+
+  @override
+  String get kegelGuideSheetLetGoRoundsThenStrengthen =>
+      'Loslassen 5 Runden, danach Kräftigen 5 Runden, Stufe leicht. An zwei Tagen Wellen.';
+
+  @override
+  String get kegelGuideSheetWeek3 => 'Woche 5–6';
+
+  @override
+  String get kegelGuideSheetRoundsOfYourMainExercise =>
+      '10 Runden in deiner Hauptübung, Stufe mittel. Dazu ein paar Schnelle Impulse.';
+
+  @override
+  String get kegelGuideSheetAfterThatKeepTwoOr =>
+      'Danach: Behalte zwei, drei kurze Einheiten pro Woche bei. Und nutze das Loslassen bewusst in intimen Momenten – tief in den Bauch atmen, den Beckenboden sinken lassen.';
+
+  @override
+  String get kegelGuideSheetWhenToSeeAPhysiotherapist =>
+      '5. Wann zur Physiotherapie?';
+
+  @override
+  String get kegelGuideSheetHealth => 'GESUNDHEIT';
+
+  @override
+  String get kegelGuideSheetSpecialisedPelvicFloorPhysiotherapyCan =>
+      'Eine spezialisierte Beckenboden-Physiotherapie kann genau untersuchen, ob dein Beckenboden eher zu schwach oder zu fest ist, und dich gezielt anleiten. Lass dich beraten bei:\n• Schmerzen im Becken, beim Sex oder beim Training\n• Blasen- oder Darmschwäche\n• Beschwerden nach einer Geburt oder einer Operation im Becken\n• dem Gefühl, den Muskel gar nicht ansteuern zu können';
+
+  @override
+  String get kegelGuideSheetBackToTraining => 'Zurück zum Training';
+
+  @override
+  String get aiCoachAsAWomanHowDo =>
+      'Wie entspanne ich als Frau meinen Beckenboden beim Sex?';
+
+  @override
+  String get aiCoachHowCanWeStopPerformance =>
+      'Wie stoppen wir zu zweit den Leistungsdruck im Bett?';
+
+  @override
+  String get aiCoachWhatToDoAboutRacing =>
+      'Was tun bei akutem Kopfkino & Spectatoring?';
+
+  @override
+  String get aiCoachHowDoIExplainResponsive =>
+      'Wie erkläre ich meinem Partner die responsive Lust?';
+
+  @override
+  String get aiCoachWhyDoesTheReverseKegel =>
+      'Warum hilft der Reverse Kegel bei Nervosität?';
+
+  @override
+  String get aiCoachWelcomeToConfidentialSomaticRelationship =>
+      'Willkommen im vertraulichen Somatik- & Beziehungs-Coaching. Ich begleite euch – ob als Frau, Mann oder als Paar – bei allen Fragen zu Beckenboden-Entspannung, Überwindung von Kopfkino und Leistungsdruck, Scham und erfüllender, absichtsloser Intimität.\n\nWorüber möchtet ihr sprechen oder was beschäftigt dein Nervensystem gerade am meisten?';
+
+  @override
+  String get aiCoachPleaseAddYourGeminiApi =>
+      'Bitte hinterlege zuerst deinen Gemini API-Key, um mit dem Coach zu schreiben.';
+
+  @override
+  String get aiCoachNoApiKeyAddedPlease =>
+      'Kein API-Key hinterlegt. Bitte klicke oben auf das Zahnrad-Symbol.';
+
+  @override
+  String get aiCoachGoogleRejectedTheApiKey =>
+      'Der API-Key wurde von Google als ungültig abgelehnt. Bitte überprüfe den Key im Google AI Studio.';
+
+  @override
+  String aiCoachConnectionErrorCleanerr(Object cleanErr) {
+    return 'Verbindungsfehler: $cleanErr';
+  }
+
+  @override
+  String get aiCoachCheckKey => 'Key prüfen';
+
+  @override
+  String get aiCoachGeminiApiKey => 'Gemini API-Key';
+
+  @override
+  String get aiCoachPrivateCoachingUsesGoogleGemini =>
+      'Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten.';
+
+  @override
+  String get aiCoachFreeViaAistudioGoogleCom =>
+      'Kostenlos via aistudio.google.com';
+
+  @override
+  String get aiCoachShowGuide => 'Anleitung anzeigen';
+
+  @override
+  String get aiCoachPleaseEnterAKeyFirst => 'Bitte gib zuerst einen Key ein.';
+
+  @override
+  String get aiCoachCheckingConnection => 'Prüfe Verbindung...';
+
+  @override
+  String get aiCoachTestConnection => 'Verbindung testen';
+
+  @override
+  String get aiCoachApiKeyRemoved => 'API-Key entfernt.';
+
+  @override
+  String get aiCoachApiKeySaved => 'API-Key erfolgreich gespeichert.';
+
+  @override
+  String get aiCoachClearChatHistory => 'Chatverlauf leeren?';
+
+  @override
+  String get aiCoachDoYouWantToDelete =>
+      'Möchtest du alle bisherigen Nachrichten dieses Dialogs löschen?';
+
+  @override
+  String get aiCoachChatHistoryClearedWhatWould =>
+      'Chatverlauf zurückgesetzt. Worüber möchtest du sprechen?';
+
+  @override
+  String get aiCoachClear => 'Leeren';
+
+  @override
+  String get aiCoachGeminiAiConnected => 'Gemini KI verbunden';
+
+  @override
+  String get aiCoachNoApiKeyAdded => 'Kein API-Key hinterlegt';
+
+  @override
+  String get aiCoachGuideCreateAKey => 'Anleitung: Key erstellen';
+
+  @override
+  String get aiCoachClearChat => 'Chat leeren';
+
+  @override
+  String get aiCoachApiKeySettings => 'API-Key Einstellungen';
+
+  @override
+  String get aiCoachNoApiKeyYetCreated =>
+      'Noch kein API-Key? In 2 Min. kostenlos erstellt.';
+
+  @override
+  String get aiCoachGuide => 'Anleitung';
+
+  @override
+  String get aiCoachCoachIsThinking => 'Coach reflektiert...';
+
+  @override
+  String get aiCoachAskAConfidentialQuestion => 'Vertrauliche Frage stellen...';
+
+  @override
+  String get apiKeyGuideSheetFreeGeminiApiKey => 'Kostenlosen Gemini API-Key';
+
+  @override
+  String get apiKeyGuideSheetCreatedStepByStepIn =>
+      'Schritt-für-Schritt in 2 Minuten erstellt';
+
+  @override
+  String get apiKeyGuideSheetFreeAndWhatHappensTo =>
+      'Kostenlos – und was mit deinen Daten passiert: ';
+
+  @override
+  String get apiKeyGuideSheetGoogleAiStudioHasA =>
+      'Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen.';
+
+  @override
+  String get apiKeyGuideSheetOpenGoogleAiStudio => 'Google AI Studio aufrufen';
+
+  @override
+  String get apiKeyGuideSheetOpenGoogleSOfficialDeveloper =>
+      'Öffne im Browser (Chrome, Safari, Firefox) die offizielle Entwickler-Plattform von Google:\n';
+
+  @override
+  String get apiKeyGuideSheetLinkCopiedToClipboard =>
+      'Link in Zwischenablage kopiert!';
+
+  @override
+  String get apiKeyGuideSheetCopy => 'Kopieren';
+
+  @override
+  String get apiKeyGuideSheetSignInWithAGoogle => 'Mit Google-Konto anmelden';
+
+  @override
+  String get apiKeyGuideSheetSignInWithYourExisting =>
+      'Melde dich mit deinem bestehenden Google-Konto (Gmail) an. Es ist keine Kreditkarte oder Zahlungsmethode erforderlich.';
+
+  @override
+  String get apiKeyGuideSheetClickGetApiKey => '\"Get API key\" anklicken';
+
+  @override
+  String get apiKeyGuideSheetInTheMenuAtThe =>
+      'Klicke im Menü links oben auf den blauen Button \"Get API key\" (oder \"API-Schlüssel anfordern\").';
+
+  @override
+  String get apiKeyGuideSheetChooseCreateApiKeyIn =>
+      '\"Create API key in new project\" wählen';
+
+  @override
+  String get apiKeyGuideSheetChooseTheOptionCreateApi =>
+      'Wähle die Option \"Create API key in new project\". Google richtet sofort automatisch im Hintergrund ein kostenloses Projekt ein.';
+
+  @override
+  String get apiKeyGuideSheetCopyTheKeyPasteIt =>
+      'Key kopieren & in VelvetPulse einfügen';
+
+  @override
+  String get apiKeyGuideSheetCopyTheGeneratedStringIt =>
+      'Kopiere die erzeugte Zeichenkette. Sie beginnt typischerweise mit \"AIzaSy...\" – füge sie anschließend hier in die App ein.';
+
+  @override
+  String get apiKeyGuideSheetFrequentlyAskedQuestions => 'Häufige Fragen:';
+
+  @override
+  String get apiKeyGuideSheetDoesItCostAnything => 'Kostet die Nutzung etwas?';
+
+  @override
+  String get apiKeyGuideSheetNotWithinTheFreeTier =>
+      'Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern.';
+
+  @override
+  String get apiKeyGuideSheetWhichModelIsUsed => 'Welches Modell wird genutzt?';
+
+  @override
+  String get apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest =>
+      'VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key.';
+
+  @override
+  String get apiKeyGuideSheetEnterApiKeyConnectNow =>
+      'API-Key jetzt eintragen & verbinden';
+
+  @override
+  String get dailyCheckinCardVeryCalm => 'Sehr ruhig';
+
+  @override
+  String get dailyCheckinCardMild => 'Leicht';
+
+  @override
+  String get dailyCheckinCardModerate => 'Mäßig';
+
+  @override
+  String get dailyCheckinCardHigh => 'Hoch';
+
+  @override
+  String get dailyCheckinCardExtremeStress => 'Extremer Stress';
+
+  @override
+  String get dailyCheckinCardClearHead => 'Frei im Kopf';
+
+  @override
+  String get dailyCheckinCardHardlyAnyPressure => 'Kaum Druck';
+
+  @override
+  String get dailyCheckinCardSomeRestlessness => 'Unruhe da';
+
+  @override
+  String get dailyCheckinCardNoticeablyHigh => 'Spürbar hoch';
+
+  @override
+  String get dailyCheckinCardStrongPressure => 'Starker Druck';
+
+  @override
+  String get dailyCheckinCardSecondDailyCheckIn => '30-Sekunden Tages-Check-in';
+
+  @override
+  String get dailyCheckinCardDone => 'Erledigt';
+
+  @override
+  String dailyCheckinCardStressStresslevelPressurePressurelevel(
+      Object stressLevel, Object pressureLevel) {
+    return 'Stress: $stressLevel • Druck: $pressureLevel';
+  }
+
+  @override
+  String get dailyCheckinCardHowDoStressPerformancePressure =>
+      'Wie stehen Stress & Leistungsdruck heute zueinander?';
+
+  @override
+  String get dailyCheckinCardEverydayStressTodayJobAppointments =>
+      '1. Alltagsstress heute (Job, Termine, Schlaf)';
+
+  @override
+  String get dailyCheckinCardInnerPerformancePressureRacingThoughts =>
+      '2. Innerer Leistungsdruck & Kopfkino';
+
+  @override
+  String get dailyCheckinCardWhatDidYouGoodToday =>
+      '3. Was hat deinem Nervensystem heute gut getan?';
+
+  @override
+  String get dailyCheckinCardSaveDailyCheckIn => 'Tages-Check-in speichern';
+
+  @override
+  String get dailyCheckinCardUpdateValues => 'Werte aktualisieren';
+
+  @override
+  String get dailyCheckinCardCoachingInsightYourEverydayStress =>
+      '💡 Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.';
+
+  @override
+  String get dailyCheckinCardCoachingInsightWhenEverydayStress =>
+      '💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.';
 }

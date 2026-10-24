@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../theme/app_theme.dart';
+import '../../l10n/t.dart';
 
 class ApiKeyGuideSheet extends StatelessWidget {
   final VoidCallback? onOpenKeyDialog;
@@ -53,12 +54,12 @@ class ApiKeyGuideSheet extends StatelessWidget {
                   child: const Icon(Icons.key_rounded, color: AppTheme.amber, size: 24),
                 ),
                 const SizedBox(width: 14),
-                const Expanded(
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Kostenlosen Gemini API-Key',
+                        t.apiKeyGuideSheetFreeGeminiApiKey,
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w700,
@@ -67,7 +68,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                       ),
                       SizedBox(height: 2),
                       Text(
-                        'Schritt-für-Schritt in 2 Minuten erstellt',
+                        t.apiKeyGuideSheetCreatedStepByStepIn,
                         style: TextStyle(
                           fontSize: 13,
                           color: AppTheme.textSecondary,
@@ -106,18 +107,16 @@ class ApiKeyGuideSheet extends StatelessWidget {
                       const SizedBox(width: 10),
                       Expanded(
                         child: RichText(
-                          text: const TextSpan(
+                          text: TextSpan(
                             style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.4),
                             children: [
                               TextSpan(
-                                text: 'Kostenlos – und was mit deinen Daten passiert: ',
+                                text: t.apiKeyGuideSheetFreeAndWhatHappensTo,
                                 style: TextStyle(fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
                               ),
                               TextSpan(
                                 text:
-                                    'Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. '
-                                    'In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. '
-                                    'Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen.',
+                                    t.apiKeyGuideSheetGoogleAiStudioHasA,
                               ),
                             ],
                           ),
@@ -133,9 +132,9 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 _buildStep(
                   context,
                   stepNumber: '1',
-                  title: 'Google AI Studio aufrufen',
+                  title: t.apiKeyGuideSheetOpenGoogleAiStudio,
                   description:
-                      'Öffne im Browser (Chrome, Safari, Firefox) die offizielle Entwickler-Plattform von Google:\n',
+                      t.apiKeyGuideSheetOpenGoogleSOfficialDeveloper,
                   actionWidget: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     decoration: BoxDecoration(
@@ -163,8 +162,8 @@ class ApiKeyGuideSheet extends StatelessWidget {
                               const ClipboardData(text: 'https://aistudio.google.com'),
                             );
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Link in Zwischenablage kopiert!'),
+                              SnackBar(
+                                content: Text(t.apiKeyGuideSheetLinkCopiedToClipboard),
                                 duration: Duration(seconds: 2),
                                 backgroundColor: AppTheme.sageGreen,
                               ),
@@ -177,11 +176,11 @@ class ApiKeyGuideSheet extends StatelessWidget {
                               color: AppTheme.surfaceLight,
                               borderRadius: BorderRadius.circular(6),
                             ),
-                            child: const Row(
+                            child: Row(
                               children: [
                                 Icon(Icons.copy_rounded, color: AppTheme.textPrimary, size: 14),
                                 SizedBox(width: 4),
-                                Text('Kopieren', style: TextStyle(color: AppTheme.textPrimary, fontSize: 11)),
+                                Text(t.apiKeyGuideSheetCopy, style: TextStyle(color: AppTheme.textPrimary, fontSize: 11)),
                               ],
                             ),
                           ),
@@ -197,9 +196,9 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 _buildStep(
                   context,
                   stepNumber: '2',
-                  title: 'Mit Google-Konto anmelden',
+                  title: t.apiKeyGuideSheetSignInWithAGoogle,
                   description:
-                      'Melde dich mit deinem bestehenden Google-Konto (Gmail) an. Es ist keine Kreditkarte oder Zahlungsmethode erforderlich.',
+                      t.apiKeyGuideSheetSignInWithYourExisting,
                 ),
 
                 const SizedBox(height: 16),
@@ -208,9 +207,9 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 _buildStep(
                   context,
                   stepNumber: '3',
-                  title: '"Get API key" anklicken',
+                  title: t.apiKeyGuideSheetClickGetApiKey,
                   description:
-                      'Klicke im Menü links oben auf den blauen Button "Get API key" (oder "API-Schlüssel anfordern").',
+                      t.apiKeyGuideSheetInTheMenuAtThe,
                 ),
 
                 const SizedBox(height: 16),
@@ -219,9 +218,9 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 _buildStep(
                   context,
                   stepNumber: '4',
-                  title: '"Create API key in new project" wählen',
+                  title: t.apiKeyGuideSheetChooseCreateApiKeyIn,
                   description:
-                      'Wähle die Option "Create API key in new project". Google richtet sofort automatisch im Hintergrund ein kostenloses Projekt ein.',
+                      t.apiKeyGuideSheetChooseTheOptionCreateApi,
                 ),
 
                 const SizedBox(height: 16),
@@ -230,9 +229,9 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 _buildStep(
                   context,
                   stepNumber: '5',
-                  title: 'Key kopieren & in VelvetPulse einfügen',
+                  title: t.apiKeyGuideSheetCopyTheKeyPasteIt,
                   description:
-                      'Kopiere die erzeugte Zeichenkette. Sie beginnt typischerweise mit "AIzaSy..." – füge sie anschließend hier in die App ein.',
+                      t.apiKeyGuideSheetCopyTheGeneratedStringIt,
                 ),
 
                 const SizedBox(height: 24),
@@ -248,8 +247,8 @@ class ApiKeyGuideSheet extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        'Häufige Fragen:',
+                      Text(
+                        t.apiKeyGuideSheetFrequentlyAskedQuestions,
                         style: TextStyle(
                           color: AppTheme.textPrimary,
                           fontWeight: FontWeight.w700,
@@ -258,13 +257,13 @@ class ApiKeyGuideSheet extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                       _buildFaqItem(
-                        'Kostet die Nutzung etwas?',
-                        'Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern.',
+                        t.apiKeyGuideSheetDoesItCostAnything,
+                        t.apiKeyGuideSheetNotWithinTheFreeTier,
                       ),
                       const SizedBox(height: 8),
                       _buildFaqItem(
-                        'Welches Modell wird genutzt?',
-                        'VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key.',
+                        t.apiKeyGuideSheetWhichModelIsUsed,
+                        t.apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest,
                       ),
                     ],
                   ),
@@ -293,8 +292,8 @@ class ApiKeyGuideSheet extends StatelessWidget {
                   }
                 },
                 icon: const Icon(Icons.key_rounded, size: 20),
-                label: const Text(
-                  'API-Key jetzt eintragen & verbinden',
+                label: Text(
+                  t.apiKeyGuideSheetEnterApiKeyConnectNow,
                   style: TextStyle(fontWeight: FontWeight.w700),
                 ),
                 style: ElevatedButton.styleFrom(

@@ -838,5 +838,218 @@
     }
   },
   "beliefLibraryViewRealityCheck": "BIOLOGISCHER REALITÄTSCHECK",
-  "beliefLibraryViewTakeIntoMyJournal": "In eigenes Journal übernehmen"
+  "beliefLibraryViewTakeIntoMyJournal": "In eigenes Journal übernehmen",
+  "kegelTimerViewBreatheInWiden": "EINATMEN & WEIT WERDEN",
+  "kegelTimerViewBreatheDeepIntoTheBelly": "Tief in den Bauch atmen. Den Beckenboden sanft nach unten nachgeben lassen – kein Pressen.",
+  "kegelTimerViewStaySoft": "WEICH BLEIBEN",
+  "kegelTimerViewBreatheOutSlowlyAndStay": "Langsam ausatmen und weit bleiben, wie eine Hängematte, die locker durchhängt.",
+  "kegelTimerViewNotice": "NACHSPÜREN",
+  "kegelTimerViewKeepBreathingNormallyAndFeel": "Normal weiteratmen und spüren, wie warm und ruhig das Becken ist.",
+  "kegelTimerViewTighten": "ANSPANNEN",
+  "kegelTimerViewGentlyDrawTheAreaBetween": "Den Bereich zwischen Schambein und Steißbein sanft nach innen und oben ziehen. Po und Bauch bleiben locker.",
+  "kegelTimerViewHoldTheTensionAtAbout": "Die Spannung halten, etwa mit halber Kraft. Weiter ruhig atmen.",
+  "kegelTimerViewLetGoCompletely": "GANZ LOSLASSEN",
+  "kegelTimerViewRelaxCompletelyLettingGoLasts": "Vollständig entspannen. Das Loslassen dauert mindestens so lange wie das Halten.",
+  "kegelTimerViewQuickSqueeze": "KURZ AN",
+  "kegelTimerViewAQuickShortSqueezeLike": "Ein schnelles, kurzes Anspannen – wie ein Zwinkern mit dem Beckenboden.",
+  "kegelTimerViewRelease": "LOS",
+  "kegelTimerViewLetGoCompletelyRightAway": "Sofort wieder ganz loslassen.",
+  "kegelTimerViewBreatheInSoften": "EINATMEN & WEICH",
+  "kegelTimerViewBreatheDeepIntoTheBelly2": "Tief in den Bauch atmen. Damm und Po bewusst weich werden lassen.",
+  "kegelTimerViewLongExhale": "LANG AUSATMEN",
+  "kegelTimerViewBreatheOutLongAndAudibly": "Lang und hörbar ausatmen, der Beckenboden bleibt weit. So übst du, bei Erregung locker zu bleiben.",
+  "kegelTimerViewKeepBreathingCalmlyAndFeel": "Ruhig weiteratmen und die Wärme im Becken spüren.",
+  "kegelTimerViewDone": "Geschafft",
+  "kegelTimerViewYouPractisedTotalroundsRoundsA": "Du hast {totalRounds} Runden geübt. Regelmäßig ein paar Minuten bringen mehr als selten lange – bis morgen!",
+  "@kegelTimerViewYouPractisedTotalroundsRoundsA": {
+    "placeholders": {
+      "totalRounds": {
+        "type": "Object"
+      }
+    }
+  },
+  "kegelTimerViewFinish": "Fertig",
+  "kegelTimerViewLetGo": "Loslassen",
+  "kegelTimerViewWiden": "weit werden",
+  "kegelTimerViewStrengthen": "Kräftigen",
+  "kegelTimerViewHoldRelease": "halten & lösen",
+  "kegelTimerViewQuickPulses": "Schnelle Impulse",
+  "kegelTimerViewQuickOnQuickOff": "kurz an, kurz los",
+  "kegelTimerViewWaves": "Wellen",
+  "kegelTimerViewSoftWhenAroused": "weich bei Erregung",
+  "kegelTimerViewRounds": "Runden",
+  "kegelTimerViewMinutesMin": "≈ {minutes} Min.",
+  "@kegelTimerViewMinutesMin": {
+    "placeholders": {
+      "minutes": {
+        "type": "Object"
+      }
+    }
+  },
+  "kegelTimerViewLevel": "Stufe",
+  "kegelTimerViewVoiceCues": "Ansage",
+  "kegelTimerViewAVoiceGuidesYou": "Stimme führt dich durch",
+  "kegelTimerViewVibrationOnly": "nur Vibration",
+  "kegelTimerViewRoundCurrentroundOfTotalrounds": "Runde {currentRound} von {totalRounds}",
+  "@kegelTimerViewRoundCurrentroundOfTotalrounds": {
+    "placeholders": {
+      "currentRound": {
+        "type": "Object"
+      },
+      "totalRounds": {
+        "type": "Object"
+      }
+    }
+  },
+  "kegelTimerViewPhaseCurrentphaseindexPhaseslength": "Phase {currentPhaseIndex}/{phasesLength}",
+  "@kegelTimerViewPhaseCurrentphaseindexPhaseslength": {
+    "placeholders": {
+      "currentPhaseIndex": {
+        "type": "Object"
+      },
+      "phasesLength": {
+        "type": "Object"
+      }
+    }
+  },
+  "kegelTimerViewGuidePracticePlan": "Anleitung & Übungsplan",
+  "kegelTimerViewFindingTheMuscleWhichExercise": "Muskel finden, welche Übung wofür, typische Fehler, Plan für 6 Wochen",
+  "kegelGuideSheetPelvicFloorGuide": "Beckenboden-Anleitung",
+  "kegelGuideSheetFindingTheMuscleExercisesPlan": "Muskel finden, Übungen, Plan",
+  "kegelGuideSheetFindingTheMuscle": "1. Den Muskel finden",
+  "kegelGuideSheetBasics": "GRUNDLAGEN",
+  "kegelGuideSheetThePelvicFloorStretchesLike": "Der Beckenboden spannt sich wie eine Hängematte zwischen Schambein und Steißbein – bei allen Menschen. Er kann zwei Dinge: heben und halten, und weit werden und loslassen. Beides gehört zum Training.",
+  "kegelGuideSheetTightenAndLift": "Anspannen und heben",
+  "kegelGuideSheetImagineHoldingBackWindAnd": "Stell dir vor, du hältst einen Wind zurück und stoppst gleichzeitig den Urinstrahl – nur in der Vorstellung.\n• Mit Vulva: Scheideneingang und Damm ziehen sich sanft nach innen und oben.\n• Mit Penis: Die Peniswurzel hebt sich ein kleines Stück, die Hoden ziehen leicht nach oben.",
+  "kegelGuideSheetLetGoAndWiden": "Loslassen und weit werden",
+  "kegelGuideSheetBreatheDeepIntoTheBelly": "Atme tief in den Bauch. Während sich der Bauch wölbt, lass den Beckenboden sanft nach unten nachgeben – wie beim Beginn des Wasserlassens, aber ohne zu pressen. Der Bereich zwischen Schambein und Steißbein wird weich und warm.",
+  "kegelGuideSheetButtocksThighsAndBellyStay": "Po, Oberschenkel und Bauch bleiben locker. Eine Hand auf dem Po verrät, ob er mitarbeitet.",
+  "kegelGuideSheetWhichExerciseForWhat": "2. Welche Übung wofür?",
+  "kegelGuideSheetExercises": "ÜBUNGEN",
+  "kegelGuideSheetForTensionPainOnPenetration": "bei Anspannung, Schmerzen beim Eindringen, frühem Samenerguss",
+  "kegelGuideSheetForEveryoneWhosePelvicFloor": "Für alle, deren Beckenboden eher zu viel festhält. Das ist bei Stress, viel Sitzen und Leistungsdruck häufig. Fang hier an, wenn du unsicher bist.",
+  "kegelGuideSheetForSupportControlAndStability": "für Halt, Kontrolle und Stabilität",
+  "kegelGuideSheetStrengthensTheMusclesForExample": "Stärkt die Muskulatur, etwa nach einer Geburt, bei leichter Blasenschwäche oder für mehr Kontrolle. Mit halber Kraft üben, das Loslassen danach ist genauso wichtig wie das Halten.",
+  "kegelGuideSheetForResponsiveness": "für Reaktionsfähigkeit",
+  "kegelGuideSheetAShortSqueezeAndImmediate": "Kurzes An und sofortiges Los trainiert die schnellen Muskelfasern – zum Beispiel für den Moment beim Husten oder Niesen.",
+  "kegelGuideSheetStayingLooseWhenItGets": "locker bleiben, wenn es spannend wird",
+  "kegelGuideSheetALongAudibleExhaleWith": "Langes, hörbares Ausatmen mit weichem Damm und Po. Genau das hilft beim Wellen-Surfen aus den Kursen 8 und 9, die Erregung hoch zu halten, ohne dass sie überläuft.",
+  "kegelGuideSheetCommonMistakes": "3. Typische Fehler",
+  "kegelGuideSheetCareful": "ACHTUNG",
+  "kegelGuideSheetSqueezingTheButtocks": "Den Po zusammenkneifen",
+  "kegelGuideSheetTheBigGlutealMuscleLikes": "Der große Gesäßmuskel mogelt sich gern hinein. Der Po bleibt weich.",
+  "kegelGuideSheetHoldingYourBreath": "Die Luft anhalten",
+  "kegelGuideSheetKeepBreathingCalmlyWhileHolding": "Atme beim Halten ruhig weiter. Angehaltener Atem erhöht den Druck im Bauch.",
+  "kegelGuideSheetPushingInsteadOfLettingGo": "Pressen statt loslassen",
+  "kegelGuideSheetWhenLettingGoNothingIs": "Beim Loslassen wird nichts nach unten gedrückt. Es ist ein Nachgeben, kein Schieben.",
+  "kegelGuideSheetPractisingWhileActuallyUrinating": "Beim echten Wasserlassen üben",
+  "kegelGuideSheetRegularlyStoppingTheFlowOf": "Den Urinstrahl regelmäßig zu stoppen kann die Blasenentleerung stören. Nur in der Vorstellung üben.",
+  "kegelGuideSheetBetterShortAndRegular": "Lieber kurz und regelmäßig",
+  "kegelGuideSheetAFewMinutesOnMost": "Ein paar Minuten an den meisten Tagen bringen mehr als selten eine lange Einheit.",
+  "kegelGuideSheetAPlanForSixWeeks": "4. Ein Plan für sechs Wochen",
+  "kegelGuideSheetPlan": "PLAN",
+  "kegelGuideSheetWeek": "Woche 1–2",
+  "kegelGuideSheetLetGoDailyRoundsEasy": "Täglich Loslassen, 5 Runden, Stufe leicht. Ziel: das Weitwerden sicher spüren.",
+  "kegelGuideSheetWeek2": "Woche 3–4",
+  "kegelGuideSheetLetGoRoundsThenStrengthen": "Loslassen 5 Runden, danach Kräftigen 5 Runden, Stufe leicht. An zwei Tagen Wellen.",
+  "kegelGuideSheetWeek3": "Woche 5–6",
+  "kegelGuideSheetRoundsOfYourMainExercise": "10 Runden in deiner Hauptübung, Stufe mittel. Dazu ein paar Schnelle Impulse.",
+  "kegelGuideSheetAfterThatKeepTwoOr": "Danach: Behalte zwei, drei kurze Einheiten pro Woche bei. Und nutze das Loslassen bewusst in intimen Momenten – tief in den Bauch atmen, den Beckenboden sinken lassen.",
+  "kegelGuideSheetWhenToSeeAPhysiotherapist": "5. Wann zur Physiotherapie?",
+  "kegelGuideSheetHealth": "GESUNDHEIT",
+  "kegelGuideSheetSpecialisedPelvicFloorPhysiotherapyCan": "Eine spezialisierte Beckenboden-Physiotherapie kann genau untersuchen, ob dein Beckenboden eher zu schwach oder zu fest ist, und dich gezielt anleiten. Lass dich beraten bei:\n• Schmerzen im Becken, beim Sex oder beim Training\n• Blasen- oder Darmschwäche\n• Beschwerden nach einer Geburt oder einer Operation im Becken\n• dem Gefühl, den Muskel gar nicht ansteuern zu können",
+  "kegelGuideSheetBackToTraining": "Zurück zum Training",
+  "aiCoachAsAWomanHowDo": "Wie entspanne ich als Frau meinen Beckenboden beim Sex?",
+  "aiCoachHowCanWeStopPerformance": "Wie stoppen wir zu zweit den Leistungsdruck im Bett?",
+  "aiCoachWhatToDoAboutRacing": "Was tun bei akutem Kopfkino & Spectatoring?",
+  "aiCoachHowDoIExplainResponsive": "Wie erkläre ich meinem Partner die responsive Lust?",
+  "aiCoachWhyDoesTheReverseKegel": "Warum hilft der Reverse Kegel bei Nervosität?",
+  "aiCoachWelcomeToConfidentialSomaticRelationship": "Willkommen im vertraulichen Somatik- & Beziehungs-Coaching. Ich begleite euch – ob als Frau, Mann oder als Paar – bei allen Fragen zu Beckenboden-Entspannung, Überwindung von Kopfkino und Leistungsdruck, Scham und erfüllender, absichtsloser Intimität.\n\nWorüber möchtet ihr sprechen oder was beschäftigt dein Nervensystem gerade am meisten?",
+  "aiCoachPleaseAddYourGeminiApi": "Bitte hinterlege zuerst deinen Gemini API-Key, um mit dem Coach zu schreiben.",
+  "aiCoachNoApiKeyAddedPlease": "Kein API-Key hinterlegt. Bitte klicke oben auf das Zahnrad-Symbol.",
+  "aiCoachGoogleRejectedTheApiKey": "Der API-Key wurde von Google als ungültig abgelehnt. Bitte überprüfe den Key im Google AI Studio.",
+  "aiCoachConnectionErrorCleanerr": "Verbindungsfehler: {cleanErr}",
+  "@aiCoachConnectionErrorCleanerr": {
+    "placeholders": {
+      "cleanErr": {
+        "type": "Object"
+      }
+    }
+  },
+  "aiCoachCheckKey": "Key prüfen",
+  "aiCoachGeminiApiKey": "Gemini API-Key",
+  "aiCoachPrivateCoachingUsesGoogleGemini": "Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten.",
+  "aiCoachFreeViaAistudioGoogleCom": "Kostenlos via aistudio.google.com",
+  "aiCoachShowGuide": "Anleitung anzeigen",
+  "aiCoachPleaseEnterAKeyFirst": "Bitte gib zuerst einen Key ein.",
+  "aiCoachCheckingConnection": "Prüfe Verbindung...",
+  "aiCoachTestConnection": "Verbindung testen",
+  "aiCoachApiKeyRemoved": "API-Key entfernt.",
+  "aiCoachApiKeySaved": "API-Key erfolgreich gespeichert.",
+  "aiCoachClearChatHistory": "Chatverlauf leeren?",
+  "aiCoachDoYouWantToDelete": "Möchtest du alle bisherigen Nachrichten dieses Dialogs löschen?",
+  "aiCoachChatHistoryClearedWhatWould": "Chatverlauf zurückgesetzt. Worüber möchtest du sprechen?",
+  "aiCoachClear": "Leeren",
+  "aiCoachGeminiAiConnected": "Gemini KI verbunden",
+  "aiCoachNoApiKeyAdded": "Kein API-Key hinterlegt",
+  "aiCoachGuideCreateAKey": "Anleitung: Key erstellen",
+  "aiCoachClearChat": "Chat leeren",
+  "aiCoachApiKeySettings": "API-Key Einstellungen",
+  "aiCoachNoApiKeyYetCreated": "Noch kein API-Key? In 2 Min. kostenlos erstellt.",
+  "aiCoachGuide": "Anleitung",
+  "aiCoachCoachIsThinking": "Coach reflektiert...",
+  "aiCoachAskAConfidentialQuestion": "Vertrauliche Frage stellen...",
+  "apiKeyGuideSheetFreeGeminiApiKey": "Kostenlosen Gemini API-Key",
+  "apiKeyGuideSheetCreatedStepByStepIn": "Schritt-für-Schritt in 2 Minuten erstellt",
+  "apiKeyGuideSheetFreeAndWhatHappensTo": "Kostenlos – und was mit deinen Daten passiert: ",
+  "apiKeyGuideSheetGoogleAiStudioHasA": "Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen.",
+  "apiKeyGuideSheetOpenGoogleAiStudio": "Google AI Studio aufrufen",
+  "apiKeyGuideSheetOpenGoogleSOfficialDeveloper": "Öffne im Browser (Chrome, Safari, Firefox) die offizielle Entwickler-Plattform von Google:\n",
+  "apiKeyGuideSheetLinkCopiedToClipboard": "Link in Zwischenablage kopiert!",
+  "apiKeyGuideSheetCopy": "Kopieren",
+  "apiKeyGuideSheetSignInWithAGoogle": "Mit Google-Konto anmelden",
+  "apiKeyGuideSheetSignInWithYourExisting": "Melde dich mit deinem bestehenden Google-Konto (Gmail) an. Es ist keine Kreditkarte oder Zahlungsmethode erforderlich.",
+  "apiKeyGuideSheetClickGetApiKey": "\"Get API key\" anklicken",
+  "apiKeyGuideSheetInTheMenuAtThe": "Klicke im Menü links oben auf den blauen Button \"Get API key\" (oder \"API-Schlüssel anfordern\").",
+  "apiKeyGuideSheetChooseCreateApiKeyIn": "\"Create API key in new project\" wählen",
+  "apiKeyGuideSheetChooseTheOptionCreateApi": "Wähle die Option \"Create API key in new project\". Google richtet sofort automatisch im Hintergrund ein kostenloses Projekt ein.",
+  "apiKeyGuideSheetCopyTheKeyPasteIt": "Key kopieren & in VelvetPulse einfügen",
+  "apiKeyGuideSheetCopyTheGeneratedStringIt": "Kopiere die erzeugte Zeichenkette. Sie beginnt typischerweise mit \"AIzaSy...\" – füge sie anschließend hier in die App ein.",
+  "apiKeyGuideSheetFrequentlyAskedQuestions": "Häufige Fragen:",
+  "apiKeyGuideSheetDoesItCostAnything": "Kostet die Nutzung etwas?",
+  "apiKeyGuideSheetNotWithinTheFreeTier": "Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern.",
+  "apiKeyGuideSheetWhichModelIsUsed": "Welches Modell wird genutzt?",
+  "apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest": "VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key.",
+  "apiKeyGuideSheetEnterApiKeyConnectNow": "API-Key jetzt eintragen & verbinden",
+  "dailyCheckinCardVeryCalm": "Sehr ruhig",
+  "dailyCheckinCardMild": "Leicht",
+  "dailyCheckinCardModerate": "Mäßig",
+  "dailyCheckinCardHigh": "Hoch",
+  "dailyCheckinCardExtremeStress": "Extremer Stress",
+  "dailyCheckinCardClearHead": "Frei im Kopf",
+  "dailyCheckinCardHardlyAnyPressure": "Kaum Druck",
+  "dailyCheckinCardSomeRestlessness": "Unruhe da",
+  "dailyCheckinCardNoticeablyHigh": "Spürbar hoch",
+  "dailyCheckinCardStrongPressure": "Starker Druck",
+  "dailyCheckinCardSecondDailyCheckIn": "30-Sekunden Tages-Check-in",
+  "dailyCheckinCardDone": "Erledigt",
+  "dailyCheckinCardStressStresslevelPressurePressurelevel": "Stress: {stressLevel} • Druck: {pressureLevel}",
+  "@dailyCheckinCardStressStresslevelPressurePressurelevel": {
+    "placeholders": {
+      "stressLevel": {
+        "type": "Object"
+      },
+      "pressureLevel": {
+        "type": "Object"
+      }
+    }
+  },
+  "dailyCheckinCardHowDoStressPerformancePressure": "Wie stehen Stress & Leistungsdruck heute zueinander?",
+  "dailyCheckinCardEverydayStressTodayJobAppointments": "1. Alltagsstress heute (Job, Termine, Schlaf)",
+  "dailyCheckinCardInnerPerformancePressureRacingThoughts": "2. Innerer Leistungsdruck & Kopfkino",
+  "dailyCheckinCardWhatDidYouGoodToday": "3. Was hat deinem Nervensystem heute gut getan?",
+  "dailyCheckinCardSaveDailyCheckIn": "Tages-Check-in speichern",
+  "dailyCheckinCardUpdateValues": "Werte aktualisieren",
+  "dailyCheckinCardCoachingInsightYourEverydayStress": "💡 Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.",
+  "dailyCheckinCardCoachingInsightWhenEverydayStress": "💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren."
 }

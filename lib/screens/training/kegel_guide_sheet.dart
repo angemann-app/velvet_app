@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_theme.dart';
+import '../../l10n/t.dart';
 
 class KegelGuideSheet extends StatelessWidget {
   const KegelGuideSheet({super.key});
@@ -53,7 +54,7 @@ class KegelGuideSheet extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Row(
+                    Row(
                       children: [
                         Icon(Icons.menu_book_rounded, color: AppTheme.sageGreen, size: 24),
                         SizedBox(width: 10),
@@ -61,7 +62,7 @@ class KegelGuideSheet extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Beckenboden-Anleitung',
+                              t.kegelGuideSheetPelvicFloorGuide,
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w800,
@@ -69,7 +70,7 @@ class KegelGuideSheet extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              'Muskel finden, Übungen, Plan',
+                              t.kegelGuideSheetFindingTheMuscleExercisesPlan,
                               style: TextStyle(
                                 fontSize: 12,
                                 color: AppTheme.textSecondary,
@@ -96,72 +97,65 @@ class KegelGuideSheet extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                   children: [
                     _buildSectionCard(
-                      title: '1. Den Muskel finden',
-                      badge: 'GRUNDLAGEN',
+                      title: t.kegelGuideSheetFindingTheMuscle,
+                      badge: t.kegelGuideSheetBasics,
                       badgeColor: AppTheme.sageGreen,
                       children: [
-                        const Text(
-                          'Der Beckenboden spannt sich wie eine Hängematte zwischen Schambein und Steißbein – bei allen Menschen. '
-                          'Er kann zwei Dinge: heben und halten, und weit werden und loslassen. Beides gehört zum Training.',
+                        Text(
+                          t.kegelGuideSheetThePelvicFloorStretchesLike,
                           style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.5),
                         ),
                         const SizedBox(height: 12),
                         _buildMethodBox(
                           icon: Icons.vertical_align_top_rounded,
-                          title: 'Anspannen und heben',
-                          text: 'Stell dir vor, du hältst einen Wind zurück und stoppst gleichzeitig den Urinstrahl – nur in der Vorstellung.\n'
-                              '• Mit Vulva: Scheideneingang und Damm ziehen sich sanft nach innen und oben.\n'
-                              '• Mit Penis: Die Peniswurzel hebt sich ein kleines Stück, die Hoden ziehen leicht nach oben.',
+                          title: t.kegelGuideSheetTightenAndLift,
+                          text: t.kegelGuideSheetImagineHoldingBackWindAnd,
                           accentColor: AppTheme.sageGreen,
                         ),
                         const SizedBox(height: 8),
                         _buildMethodBox(
                           icon: Icons.vertical_align_bottom_rounded,
-                          title: 'Loslassen und weit werden',
-                          text: 'Atme tief in den Bauch. Während sich der Bauch wölbt, lass den Beckenboden sanft nach unten nachgeben – '
-                              'wie beim Beginn des Wasserlassens, aber ohne zu pressen. Der Bereich zwischen Schambein und Steißbein wird weich und warm.',
+                          title: t.kegelGuideSheetLetGoAndWiden,
+                          text: t.kegelGuideSheetBreatheDeepIntoTheBelly,
                           accentColor: AppTheme.amber,
                         ),
                         const SizedBox(height: 10),
-                        _buildTip('Po, Oberschenkel und Bauch bleiben locker. Eine Hand auf dem Po verrät, ob er mitarbeitet.'),
+                        _buildTip(t.kegelGuideSheetButtocksThighsAndBellyStay),
                       ],
                     ),
 
                     const SizedBox(height: 16),
 
                     _buildSectionCard(
-                      title: '2. Welche Übung wofür?',
-                      badge: 'ÜBUNGEN',
+                      title: t.kegelGuideSheetWhichExerciseForWhat,
+                      badge: t.kegelGuideSheetExercises,
                       badgeColor: AppTheme.amber,
                       children: [
                         _buildModeComparison(
-                          title: 'Loslassen',
-                          subtitle: 'bei Anspannung, Schmerzen beim Eindringen, frühem Samenerguss',
-                          description: 'Für alle, deren Beckenboden eher zu viel festhält. Das ist bei Stress, viel Sitzen und Leistungsdruck häufig. '
-                              'Fang hier an, wenn du unsicher bist.',
+                          title: t.kegelTimerViewLetGo,
+                          subtitle: t.kegelGuideSheetForTensionPainOnPenetration,
+                          description: t.kegelGuideSheetForEveryoneWhosePelvicFloor,
                           color: AppTheme.amber,
                         ),
                         const SizedBox(height: 10),
                         _buildModeComparison(
-                          title: 'Kräftigen',
-                          subtitle: 'für Halt, Kontrolle und Stabilität',
-                          description: 'Stärkt die Muskulatur, etwa nach einer Geburt, bei leichter Blasenschwäche oder für mehr Kontrolle. '
-                              'Mit halber Kraft üben, das Loslassen danach ist genauso wichtig wie das Halten.',
+                          title: t.kegelTimerViewStrengthen,
+                          subtitle: t.kegelGuideSheetForSupportControlAndStability,
+                          description: t.kegelGuideSheetStrengthensTheMusclesForExample,
                           color: AppTheme.sageGreen,
                         ),
                         const SizedBox(height: 10),
                         _buildModeComparison(
-                          title: 'Schnelle Impulse',
-                          subtitle: 'für Reaktionsfähigkeit',
-                          description: 'Kurzes An und sofortiges Los trainiert die schnellen Muskelfasern – zum Beispiel für den Moment beim Husten oder Niesen.',
+                          title: t.kegelTimerViewQuickPulses,
+                          subtitle: t.kegelGuideSheetForResponsiveness,
+                          description: t.kegelGuideSheetAShortSqueezeAndImmediate,
                           color: AppTheme.sageGreen,
                         ),
                         const SizedBox(height: 10),
                         _buildModeComparison(
-                          title: 'Wellen',
-                          subtitle: 'locker bleiben, wenn es spannend wird',
-                          description: 'Langes, hörbares Ausatmen mit weichem Damm und Po. Genau das hilft beim Wellen-Surfen aus den Kursen 8 und 9, '
-                              'die Erregung hoch zu halten, ohne dass sie überläuft.',
+                          title: t.kegelTimerViewWaves,
+                          subtitle: t.kegelGuideSheetStayingLooseWhenItGets,
+                          description: t.kegelGuideSheetALongAudibleExhaleWith,
                           color: AppTheme.rose,
                         ),
                       ],
@@ -170,34 +164,34 @@ class KegelGuideSheet extends StatelessWidget {
                     const SizedBox(height: 16),
 
                     _buildSectionCard(
-                      title: '3. Typische Fehler',
-                      badge: 'ACHTUNG',
+                      title: t.kegelGuideSheetCommonMistakes,
+                      badge: t.kegelGuideSheetCareful,
                       badgeColor: AppTheme.rose,
                       children: [
                         _buildRuleItem(
                           isWarning: true,
-                          title: 'Den Po zusammenkneifen',
-                          description: 'Der große Gesäßmuskel mogelt sich gern hinein. Der Po bleibt weich.',
+                          title: t.kegelGuideSheetSqueezingTheButtocks,
+                          description: t.kegelGuideSheetTheBigGlutealMuscleLikes,
                         ),
                         _buildRuleItem(
                           isWarning: true,
-                          title: 'Die Luft anhalten',
-                          description: 'Atme beim Halten ruhig weiter. Angehaltener Atem erhöht den Druck im Bauch.',
+                          title: t.kegelGuideSheetHoldingYourBreath,
+                          description: t.kegelGuideSheetKeepBreathingCalmlyWhileHolding,
                         ),
                         _buildRuleItem(
                           isWarning: true,
-                          title: 'Pressen statt loslassen',
-                          description: 'Beim Loslassen wird nichts nach unten gedrückt. Es ist ein Nachgeben, kein Schieben.',
+                          title: t.kegelGuideSheetPushingInsteadOfLettingGo,
+                          description: t.kegelGuideSheetWhenLettingGoNothingIs,
                         ),
                         _buildRuleItem(
                           isWarning: true,
-                          title: 'Beim echten Wasserlassen üben',
-                          description: 'Den Urinstrahl regelmäßig zu stoppen kann die Blasenentleerung stören. Nur in der Vorstellung üben.',
+                          title: t.kegelGuideSheetPractisingWhileActuallyUrinating,
+                          description: t.kegelGuideSheetRegularlyStoppingTheFlowOf,
                         ),
                         _buildRuleItem(
                           isWarning: false,
-                          title: 'Lieber kurz und regelmäßig',
-                          description: 'Ein paar Minuten an den meisten Tagen bringen mehr als selten eine lange Einheit.',
+                          title: t.kegelGuideSheetBetterShortAndRegular,
+                          description: t.kegelGuideSheetAFewMinutesOnMost,
                         ),
                       ],
                     ),
@@ -205,17 +199,16 @@ class KegelGuideSheet extends StatelessWidget {
                     const SizedBox(height: 16),
 
                     _buildSectionCard(
-                      title: '4. Ein Plan für sechs Wochen',
-                      badge: 'PLAN',
+                      title: t.kegelGuideSheetAPlanForSixWeeks,
+                      badge: t.kegelGuideSheetPlan,
                       badgeColor: AppTheme.sageGreen,
                       children: [
-                        _buildPlanRow('Woche 1–2', 'Täglich Loslassen, 5 Runden, Stufe leicht. Ziel: das Weitwerden sicher spüren.'),
-                        _buildPlanRow('Woche 3–4', 'Loslassen 5 Runden, danach Kräftigen 5 Runden, Stufe leicht. An zwei Tagen Wellen.'),
-                        _buildPlanRow('Woche 5–6', '10 Runden in deiner Hauptübung, Stufe mittel. Dazu ein paar Schnelle Impulse.'),
+                        _buildPlanRow(t.kegelGuideSheetWeek, t.kegelGuideSheetLetGoDailyRoundsEasy),
+                        _buildPlanRow(t.kegelGuideSheetWeek2, t.kegelGuideSheetLetGoRoundsThenStrengthen),
+                        _buildPlanRow(t.kegelGuideSheetWeek3, t.kegelGuideSheetRoundsOfYourMainExercise),
                         const SizedBox(height: 6),
-                        const Text(
-                          'Danach: Behalte zwei, drei kurze Einheiten pro Woche bei. Und nutze das Loslassen bewusst in intimen Momenten – '
-                          'tief in den Bauch atmen, den Beckenboden sinken lassen.',
+                        Text(
+                          t.kegelGuideSheetAfterThatKeepTwoOr,
                           style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.45),
                         ),
                       ],
@@ -224,17 +217,12 @@ class KegelGuideSheet extends StatelessWidget {
                     const SizedBox(height: 16),
 
                     _buildSectionCard(
-                      title: '5. Wann zur Physiotherapie?',
-                      badge: 'GESUNDHEIT',
+                      title: t.kegelGuideSheetWhenToSeeAPhysiotherapist,
+                      badge: t.kegelGuideSheetHealth,
                       badgeColor: AppTheme.amber,
                       children: [
-                        const Text(
-                          'Eine spezialisierte Beckenboden-Physiotherapie kann genau untersuchen, ob dein Beckenboden eher zu schwach oder zu fest ist, '
-                          'und dich gezielt anleiten. Lass dich beraten bei:\n'
-                          '• Schmerzen im Becken, beim Sex oder beim Training\n'
-                          '• Blasen- oder Darmschwäche\n'
-                          '• Beschwerden nach einer Geburt oder einer Operation im Becken\n'
-                          '• dem Gefühl, den Muskel gar nicht ansteuern zu können',
+                        Text(
+                          t.kegelGuideSheetSpecialisedPelvicFloorPhysiotherapyCan,
                           style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.5),
                         ),
                       ],
@@ -252,7 +240,7 @@ class KegelGuideSheet extends StatelessWidget {
                           foregroundColor: Colors.black,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                         ),
-                        child: const Text('Zurück zum Training', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                        child: Text(t.kegelGuideSheetBackToTraining, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                       ),
                     ),
 

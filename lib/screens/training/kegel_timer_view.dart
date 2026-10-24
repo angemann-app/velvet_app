@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import 'kegel_guide_sheet.dart';
+import '../../l10n/t.dart';
 
 enum KegelPreset { loslassen, kraeftigen, impulse, wellen }
 
@@ -65,25 +66,25 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
     switch (_selectedPreset) {
       case KegelPreset.loslassen:
         return [
-          const KegelPhase(
-            label: 'EINATMEN & WEIT WERDEN',
-            instruction: 'Tief in den Bauch atmen. Den Beckenboden sanft nach unten nachgeben lassen – kein Pressen.',
+          KegelPhase(
+            label: t.kegelTimerViewBreatheInWiden,
+            instruction: t.kegelTimerViewBreatheDeepIntoTheBelly,
             durationSeconds: 4,
             color: AppTheme.sageGreen,
             circleScaleTarget: 1.25,
             cue: 'einatmen_weit',
           ),
           KegelPhase(
-            label: 'WEICH BLEIBEN',
-            instruction: 'Langsam ausatmen und weit bleiben, wie eine Hängematte, die locker durchhängt.',
+            label: t.kegelTimerViewStaySoft,
+            instruction: t.kegelTimerViewBreatheOutSlowlyAndStay,
             durationSeconds: _hold(6),
             color: AppTheme.amber,
             circleScaleTarget: 1.35,
             cue: 'weich_bleiben',
           ),
-          const KegelPhase(
-            label: 'NACHSPÜREN',
-            instruction: 'Normal weiteratmen und spüren, wie warm und ruhig das Becken ist.',
+          KegelPhase(
+            label: t.kegelTimerViewNotice,
+            instruction: t.kegelTimerViewKeepBreathingNormallyAndFeel,
             durationSeconds: 5,
             color: AppTheme.surfaceLight,
             circleScaleTarget: 1.0,
@@ -92,25 +93,25 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
         ];
       case KegelPreset.kraeftigen:
         return [
-          const KegelPhase(
-            label: 'ANSPANNEN',
-            instruction: 'Den Bereich zwischen Schambein und Steißbein sanft nach innen und oben ziehen. Po und Bauch bleiben locker.',
+          KegelPhase(
+            label: t.kegelTimerViewTighten,
+            instruction: t.kegelTimerViewGentlyDrawTheAreaBetween,
             durationSeconds: 2,
             color: AppTheme.sageGreen,
             circleScaleTarget: 0.8,
             cue: 'anspannen',
           ),
           KegelPhase(
-            label: 'HALTEN',
-            instruction: 'Die Spannung halten, etwa mit halber Kraft. Weiter ruhig atmen.',
+            label: t.breathPacerViewHold,
+            instruction: t.kegelTimerViewHoldTheTensionAtAbout,
             durationSeconds: _hold(3),
             color: AppTheme.amber,
             circleScaleTarget: 0.75,
             cue: 'halten',
           ),
           KegelPhase(
-            label: 'GANZ LOSLASSEN',
-            instruction: 'Vollständig entspannen. Das Loslassen dauert mindestens so lange wie das Halten.',
+            label: t.kegelTimerViewLetGoCompletely,
+            instruction: t.kegelTimerViewRelaxCompletelyLettingGoLasts,
             durationSeconds: _hold(3) + 3,
             color: AppTheme.surfaceLight,
             circleScaleTarget: 1.1,
@@ -118,18 +119,18 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
           ),
         ];
       case KegelPreset.impulse:
-        return const [
+        return [
           KegelPhase(
-            label: 'KURZ AN',
-            instruction: 'Ein schnelles, kurzes Anspannen – wie ein Zwinkern mit dem Beckenboden.',
+            label: t.kegelTimerViewQuickSqueeze,
+            instruction: t.kegelTimerViewAQuickShortSqueezeLike,
             durationSeconds: 1,
             color: AppTheme.sageGreen,
             circleScaleTarget: 0.8,
             cue: 'an',
           ),
           KegelPhase(
-            label: 'LOS',
-            instruction: 'Sofort wieder ganz loslassen.',
+            label: t.kegelTimerViewRelease,
+            instruction: t.kegelTimerViewLetGoCompletelyRightAway,
             durationSeconds: 2,
             color: AppTheme.surfaceLight,
             circleScaleTarget: 1.05,
@@ -138,25 +139,25 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
         ];
       case KegelPreset.wellen:
         return [
-          const KegelPhase(
-            label: 'EINATMEN & WEICH',
-            instruction: 'Tief in den Bauch atmen. Damm und Po bewusst weich werden lassen.',
+          KegelPhase(
+            label: t.kegelTimerViewBreatheInSoften,
+            instruction: t.kegelTimerViewBreatheDeepIntoTheBelly2,
             durationSeconds: 5,
             color: AppTheme.rose,
             circleScaleTarget: 1.35,
             cue: 'welle',
           ),
           KegelPhase(
-            label: 'LANG AUSATMEN',
-            instruction: 'Lang und hörbar ausatmen, der Beckenboden bleibt weit. So übst du, bei Erregung locker zu bleiben.',
+            label: t.kegelTimerViewLongExhale,
+            instruction: t.kegelTimerViewBreatheOutLongAndAudibly,
             durationSeconds: _hold(7),
             color: AppTheme.amber,
             circleScaleTarget: 1.45,
             cue: 'seufzen',
           ),
-          const KegelPhase(
-            label: 'NACHSPÜREN',
-            instruction: 'Ruhig weiteratmen und die Wärme im Becken spüren.',
+          KegelPhase(
+            label: t.kegelTimerViewNotice,
+            instruction: t.kegelTimerViewKeepBreathingCalmlyAndFeel,
             durationSeconds: 4,
             color: AppTheme.surfaceLight,
             circleScaleTarget: 1.0,
@@ -286,14 +287,13 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Geschafft'),
+        title: Text(t.kegelTimerViewDone),
         content: Text(
-          'Du hast $_totalRounds Runden geübt. Regelmäßig ein paar Minuten bringen mehr als selten lange – '
-          'bis morgen!',
+          t.kegelTimerViewYouPractisedTotalroundsRoundsA(_totalRounds),
           style: const TextStyle(color: AppTheme.textSecondary, height: 1.4),
         ),
         actions: [
-          ElevatedButton(onPressed: () => Navigator.of(context).pop(), child: const Text('Fertig')),
+          ElevatedButton(onPressed: () => Navigator.of(context).pop(), child: Text(t.kegelTimerViewFinish)),
         ],
       ),
     );
@@ -323,15 +323,15 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               children: [
                 Row(
                   children: [
-                    Expanded(child: _buildPresetButton('Loslassen', 'weit werden', KegelPreset.loslassen)),
-                    Expanded(child: _buildPresetButton('Kräftigen', 'halten & lösen', KegelPreset.kraeftigen)),
+                    Expanded(child: _buildPresetButton(t.kegelTimerViewLetGo, t.kegelTimerViewWiden, KegelPreset.loslassen)),
+                    Expanded(child: _buildPresetButton(t.kegelTimerViewStrengthen, t.kegelTimerViewHoldRelease, KegelPreset.kraeftigen)),
                   ],
                 ),
                 const SizedBox(height: 4),
                 Row(
                   children: [
-                    Expanded(child: _buildPresetButton('Schnelle Impulse', 'kurz an, kurz los', KegelPreset.impulse)),
-                    Expanded(child: _buildPresetButton('Wellen', 'weich bei Erregung', KegelPreset.wellen)),
+                    Expanded(child: _buildPresetButton(t.kegelTimerViewQuickPulses, t.kegelTimerViewQuickOnQuickOff, KegelPreset.impulse)),
+                    Expanded(child: _buildPresetButton(t.kegelTimerViewWaves, t.kegelTimerViewSoftWhenAroused, KegelPreset.wellen)),
                   ],
                 ),
               ],
@@ -352,17 +352,17 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               children: [
                 Row(
                   children: [
-                    const SizedBox(width: 64, child: Text('Runden', style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
+                    SizedBox(width: 64, child: Text(t.kegelTimerViewRounds, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
                     ..._roundOptions.map((r) => _buildOptionChip('$r', _totalRounds == r, () => _changeSettings(() => _totalRounds = r))),
                     const Spacer(),
-                    Text('≈ $minutes Min.', style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+                    Text(t.kegelTimerViewMinutesMin(minutes), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
                   ],
                 ),
                 if (_selectedPreset != KegelPreset.impulse) ...[
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      const SizedBox(width: 64, child: Text('Stufe', style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
+                      SizedBox(width: 64, child: Text(t.kegelTimerViewLevel, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
                       _buildOptionChip('leicht', _level == KegelLevel.leicht, () => _changeSettings(() => _level = KegelLevel.leicht)),
                       _buildOptionChip('mittel', _level == KegelLevel.mittel, () => _changeSettings(() => _level = KegelLevel.mittel)),
                       _buildOptionChip('stark', _level == KegelLevel.fortgeschritten,
@@ -372,10 +372,10 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                 ],
                 Row(
                   children: [
-                    const SizedBox(width: 64, child: Text('Ansage', style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
+                    SizedBox(width: 64, child: Text(t.kegelTimerViewVoiceCues, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
                     Expanded(
                       child: Text(
-                        _voiceCues ? 'Stimme führt dich durch' : 'nur Vibration',
+                        _voiceCues ? t.kegelTimerViewAVoiceGuidesYou : t.kegelTimerViewVibrationOnly,
                         style: const TextStyle(color: AppTheme.textMuted, fontSize: 12),
                       ),
                     ),
@@ -399,8 +399,8 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _buildBadge('Runde $_currentRound von $_totalRounds', AppTheme.textPrimary, AppTheme.border),
-              _buildBadge('Phase ${_currentPhaseIndex + 1}/${phases.length}', currentPhase.color,
+              _buildBadge(t.kegelTimerViewRoundCurrentroundOfTotalrounds(_currentRound, _totalRounds), AppTheme.textPrimary, AppTheme.border),
+              _buildBadge(t.kegelTimerViewPhaseCurrentphaseindexPhaseslength(_currentPhaseIndex + 1, phases.length), currentPhase.color,
                   currentPhase.color.withValues(alpha: 0.4)),
             ],
           ),
@@ -491,7 +491,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                 child: ElevatedButton.icon(
                   onPressed: _isRunning ? _pauseTraining : _startTraining,
                   icon: Icon(_isRunning ? Icons.pause_rounded : Icons.play_arrow_rounded, size: 26),
-                  label: Text(_isRunning ? 'Pause' : 'Start',
+                  label: Text(_isRunning ? t.playerSteuerungPause2 : t.breathPacerViewStart,
                       style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: _isRunning ? AppTheme.amber : AppTheme.sageGreen,
@@ -521,7 +521,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                 borderRadius: BorderRadius.circular(14),
                 border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.35)),
               ),
-              child: const Row(
+              child: Row(
                 children: [
                   Icon(Icons.menu_book_rounded, color: AppTheme.sageGreen, size: 22),
                   SizedBox(width: 12),
@@ -529,10 +529,10 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Anleitung & Übungsplan',
+                        Text(t.kegelTimerViewGuidePracticePlan,
                             style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w700, fontSize: 13.5)),
                         SizedBox(height: 2),
-                        Text('Muskel finden, welche Übung wofür, typische Fehler, Plan für 6 Wochen',
+                        Text(t.kegelTimerViewFindingTheMuscleWhichExercise,
                             style: TextStyle(color: AppTheme.textMuted, fontSize: 11.5, height: 1.3)),
                       ],
                     ),

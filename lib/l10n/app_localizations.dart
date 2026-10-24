@@ -2571,6 +2571,981 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'In eigenes Journal übernehmen'**
   String get beliefLibraryViewTakeIntoMyJournal;
+
+  /// No description provided for @kegelTimerViewBreatheInWiden.
+  ///
+  /// In de, this message translates to:
+  /// **'EINATMEN & WEIT WERDEN'**
+  String get kegelTimerViewBreatheInWiden;
+
+  /// No description provided for @kegelTimerViewBreatheDeepIntoTheBelly.
+  ///
+  /// In de, this message translates to:
+  /// **'Tief in den Bauch atmen. Den Beckenboden sanft nach unten nachgeben lassen – kein Pressen.'**
+  String get kegelTimerViewBreatheDeepIntoTheBelly;
+
+  /// No description provided for @kegelTimerViewStaySoft.
+  ///
+  /// In de, this message translates to:
+  /// **'WEICH BLEIBEN'**
+  String get kegelTimerViewStaySoft;
+
+  /// No description provided for @kegelTimerViewBreatheOutSlowlyAndStay.
+  ///
+  /// In de, this message translates to:
+  /// **'Langsam ausatmen und weit bleiben, wie eine Hängematte, die locker durchhängt.'**
+  String get kegelTimerViewBreatheOutSlowlyAndStay;
+
+  /// No description provided for @kegelTimerViewNotice.
+  ///
+  /// In de, this message translates to:
+  /// **'NACHSPÜREN'**
+  String get kegelTimerViewNotice;
+
+  /// No description provided for @kegelTimerViewKeepBreathingNormallyAndFeel.
+  ///
+  /// In de, this message translates to:
+  /// **'Normal weiteratmen und spüren, wie warm und ruhig das Becken ist.'**
+  String get kegelTimerViewKeepBreathingNormallyAndFeel;
+
+  /// No description provided for @kegelTimerViewTighten.
+  ///
+  /// In de, this message translates to:
+  /// **'ANSPANNEN'**
+  String get kegelTimerViewTighten;
+
+  /// No description provided for @kegelTimerViewGentlyDrawTheAreaBetween.
+  ///
+  /// In de, this message translates to:
+  /// **'Den Bereich zwischen Schambein und Steißbein sanft nach innen und oben ziehen. Po und Bauch bleiben locker.'**
+  String get kegelTimerViewGentlyDrawTheAreaBetween;
+
+  /// No description provided for @kegelTimerViewHoldTheTensionAtAbout.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Spannung halten, etwa mit halber Kraft. Weiter ruhig atmen.'**
+  String get kegelTimerViewHoldTheTensionAtAbout;
+
+  /// No description provided for @kegelTimerViewLetGoCompletely.
+  ///
+  /// In de, this message translates to:
+  /// **'GANZ LOSLASSEN'**
+  String get kegelTimerViewLetGoCompletely;
+
+  /// No description provided for @kegelTimerViewRelaxCompletelyLettingGoLasts.
+  ///
+  /// In de, this message translates to:
+  /// **'Vollständig entspannen. Das Loslassen dauert mindestens so lange wie das Halten.'**
+  String get kegelTimerViewRelaxCompletelyLettingGoLasts;
+
+  /// No description provided for @kegelTimerViewQuickSqueeze.
+  ///
+  /// In de, this message translates to:
+  /// **'KURZ AN'**
+  String get kegelTimerViewQuickSqueeze;
+
+  /// No description provided for @kegelTimerViewAQuickShortSqueezeLike.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein schnelles, kurzes Anspannen – wie ein Zwinkern mit dem Beckenboden.'**
+  String get kegelTimerViewAQuickShortSqueezeLike;
+
+  /// No description provided for @kegelTimerViewRelease.
+  ///
+  /// In de, this message translates to:
+  /// **'LOS'**
+  String get kegelTimerViewRelease;
+
+  /// No description provided for @kegelTimerViewLetGoCompletelyRightAway.
+  ///
+  /// In de, this message translates to:
+  /// **'Sofort wieder ganz loslassen.'**
+  String get kegelTimerViewLetGoCompletelyRightAway;
+
+  /// No description provided for @kegelTimerViewBreatheInSoften.
+  ///
+  /// In de, this message translates to:
+  /// **'EINATMEN & WEICH'**
+  String get kegelTimerViewBreatheInSoften;
+
+  /// No description provided for @kegelTimerViewBreatheDeepIntoTheBelly2.
+  ///
+  /// In de, this message translates to:
+  /// **'Tief in den Bauch atmen. Damm und Po bewusst weich werden lassen.'**
+  String get kegelTimerViewBreatheDeepIntoTheBelly2;
+
+  /// No description provided for @kegelTimerViewLongExhale.
+  ///
+  /// In de, this message translates to:
+  /// **'LANG AUSATMEN'**
+  String get kegelTimerViewLongExhale;
+
+  /// No description provided for @kegelTimerViewBreatheOutLongAndAudibly.
+  ///
+  /// In de, this message translates to:
+  /// **'Lang und hörbar ausatmen, der Beckenboden bleibt weit. So übst du, bei Erregung locker zu bleiben.'**
+  String get kegelTimerViewBreatheOutLongAndAudibly;
+
+  /// No description provided for @kegelTimerViewKeepBreathingCalmlyAndFeel.
+  ///
+  /// In de, this message translates to:
+  /// **'Ruhig weiteratmen und die Wärme im Becken spüren.'**
+  String get kegelTimerViewKeepBreathingCalmlyAndFeel;
+
+  /// No description provided for @kegelTimerViewDone.
+  ///
+  /// In de, this message translates to:
+  /// **'Geschafft'**
+  String get kegelTimerViewDone;
+
+  /// No description provided for @kegelTimerViewYouPractisedTotalroundsRoundsA.
+  ///
+  /// In de, this message translates to:
+  /// **'Du hast {totalRounds} Runden geübt. Regelmäßig ein paar Minuten bringen mehr als selten lange – bis morgen!'**
+  String kegelTimerViewYouPractisedTotalroundsRoundsA(Object totalRounds);
+
+  /// No description provided for @kegelTimerViewFinish.
+  ///
+  /// In de, this message translates to:
+  /// **'Fertig'**
+  String get kegelTimerViewFinish;
+
+  /// No description provided for @kegelTimerViewLetGo.
+  ///
+  /// In de, this message translates to:
+  /// **'Loslassen'**
+  String get kegelTimerViewLetGo;
+
+  /// No description provided for @kegelTimerViewWiden.
+  ///
+  /// In de, this message translates to:
+  /// **'weit werden'**
+  String get kegelTimerViewWiden;
+
+  /// No description provided for @kegelTimerViewStrengthen.
+  ///
+  /// In de, this message translates to:
+  /// **'Kräftigen'**
+  String get kegelTimerViewStrengthen;
+
+  /// No description provided for @kegelTimerViewHoldRelease.
+  ///
+  /// In de, this message translates to:
+  /// **'halten & lösen'**
+  String get kegelTimerViewHoldRelease;
+
+  /// No description provided for @kegelTimerViewQuickPulses.
+  ///
+  /// In de, this message translates to:
+  /// **'Schnelle Impulse'**
+  String get kegelTimerViewQuickPulses;
+
+  /// No description provided for @kegelTimerViewQuickOnQuickOff.
+  ///
+  /// In de, this message translates to:
+  /// **'kurz an, kurz los'**
+  String get kegelTimerViewQuickOnQuickOff;
+
+  /// No description provided for @kegelTimerViewWaves.
+  ///
+  /// In de, this message translates to:
+  /// **'Wellen'**
+  String get kegelTimerViewWaves;
+
+  /// No description provided for @kegelTimerViewSoftWhenAroused.
+  ///
+  /// In de, this message translates to:
+  /// **'weich bei Erregung'**
+  String get kegelTimerViewSoftWhenAroused;
+
+  /// No description provided for @kegelTimerViewRounds.
+  ///
+  /// In de, this message translates to:
+  /// **'Runden'**
+  String get kegelTimerViewRounds;
+
+  /// No description provided for @kegelTimerViewMinutesMin.
+  ///
+  /// In de, this message translates to:
+  /// **'≈ {minutes} Min.'**
+  String kegelTimerViewMinutesMin(Object minutes);
+
+  /// No description provided for @kegelTimerViewLevel.
+  ///
+  /// In de, this message translates to:
+  /// **'Stufe'**
+  String get kegelTimerViewLevel;
+
+  /// No description provided for @kegelTimerViewVoiceCues.
+  ///
+  /// In de, this message translates to:
+  /// **'Ansage'**
+  String get kegelTimerViewVoiceCues;
+
+  /// No description provided for @kegelTimerViewAVoiceGuidesYou.
+  ///
+  /// In de, this message translates to:
+  /// **'Stimme führt dich durch'**
+  String get kegelTimerViewAVoiceGuidesYou;
+
+  /// No description provided for @kegelTimerViewVibrationOnly.
+  ///
+  /// In de, this message translates to:
+  /// **'nur Vibration'**
+  String get kegelTimerViewVibrationOnly;
+
+  /// No description provided for @kegelTimerViewRoundCurrentroundOfTotalrounds.
+  ///
+  /// In de, this message translates to:
+  /// **'Runde {currentRound} von {totalRounds}'**
+  String kegelTimerViewRoundCurrentroundOfTotalrounds(
+      Object currentRound, Object totalRounds);
+
+  /// No description provided for @kegelTimerViewPhaseCurrentphaseindexPhaseslength.
+  ///
+  /// In de, this message translates to:
+  /// **'Phase {currentPhaseIndex}/{phasesLength}'**
+  String kegelTimerViewPhaseCurrentphaseindexPhaseslength(
+      Object currentPhaseIndex, Object phasesLength);
+
+  /// No description provided for @kegelTimerViewGuidePracticePlan.
+  ///
+  /// In de, this message translates to:
+  /// **'Anleitung & Übungsplan'**
+  String get kegelTimerViewGuidePracticePlan;
+
+  /// No description provided for @kegelTimerViewFindingTheMuscleWhichExercise.
+  ///
+  /// In de, this message translates to:
+  /// **'Muskel finden, welche Übung wofür, typische Fehler, Plan für 6 Wochen'**
+  String get kegelTimerViewFindingTheMuscleWhichExercise;
+
+  /// No description provided for @kegelGuideSheetPelvicFloorGuide.
+  ///
+  /// In de, this message translates to:
+  /// **'Beckenboden-Anleitung'**
+  String get kegelGuideSheetPelvicFloorGuide;
+
+  /// No description provided for @kegelGuideSheetFindingTheMuscleExercisesPlan.
+  ///
+  /// In de, this message translates to:
+  /// **'Muskel finden, Übungen, Plan'**
+  String get kegelGuideSheetFindingTheMuscleExercisesPlan;
+
+  /// No description provided for @kegelGuideSheetFindingTheMuscle.
+  ///
+  /// In de, this message translates to:
+  /// **'1. Den Muskel finden'**
+  String get kegelGuideSheetFindingTheMuscle;
+
+  /// No description provided for @kegelGuideSheetBasics.
+  ///
+  /// In de, this message translates to:
+  /// **'GRUNDLAGEN'**
+  String get kegelGuideSheetBasics;
+
+  /// No description provided for @kegelGuideSheetThePelvicFloorStretchesLike.
+  ///
+  /// In de, this message translates to:
+  /// **'Der Beckenboden spannt sich wie eine Hängematte zwischen Schambein und Steißbein – bei allen Menschen. Er kann zwei Dinge: heben und halten, und weit werden und loslassen. Beides gehört zum Training.'**
+  String get kegelGuideSheetThePelvicFloorStretchesLike;
+
+  /// No description provided for @kegelGuideSheetTightenAndLift.
+  ///
+  /// In de, this message translates to:
+  /// **'Anspannen und heben'**
+  String get kegelGuideSheetTightenAndLift;
+
+  /// No description provided for @kegelGuideSheetImagineHoldingBackWindAnd.
+  ///
+  /// In de, this message translates to:
+  /// **'Stell dir vor, du hältst einen Wind zurück und stoppst gleichzeitig den Urinstrahl – nur in der Vorstellung.\n• Mit Vulva: Scheideneingang und Damm ziehen sich sanft nach innen und oben.\n• Mit Penis: Die Peniswurzel hebt sich ein kleines Stück, die Hoden ziehen leicht nach oben.'**
+  String get kegelGuideSheetImagineHoldingBackWindAnd;
+
+  /// No description provided for @kegelGuideSheetLetGoAndWiden.
+  ///
+  /// In de, this message translates to:
+  /// **'Loslassen und weit werden'**
+  String get kegelGuideSheetLetGoAndWiden;
+
+  /// No description provided for @kegelGuideSheetBreatheDeepIntoTheBelly.
+  ///
+  /// In de, this message translates to:
+  /// **'Atme tief in den Bauch. Während sich der Bauch wölbt, lass den Beckenboden sanft nach unten nachgeben – wie beim Beginn des Wasserlassens, aber ohne zu pressen. Der Bereich zwischen Schambein und Steißbein wird weich und warm.'**
+  String get kegelGuideSheetBreatheDeepIntoTheBelly;
+
+  /// No description provided for @kegelGuideSheetButtocksThighsAndBellyStay.
+  ///
+  /// In de, this message translates to:
+  /// **'Po, Oberschenkel und Bauch bleiben locker. Eine Hand auf dem Po verrät, ob er mitarbeitet.'**
+  String get kegelGuideSheetButtocksThighsAndBellyStay;
+
+  /// No description provided for @kegelGuideSheetWhichExerciseForWhat.
+  ///
+  /// In de, this message translates to:
+  /// **'2. Welche Übung wofür?'**
+  String get kegelGuideSheetWhichExerciseForWhat;
+
+  /// No description provided for @kegelGuideSheetExercises.
+  ///
+  /// In de, this message translates to:
+  /// **'ÜBUNGEN'**
+  String get kegelGuideSheetExercises;
+
+  /// No description provided for @kegelGuideSheetForTensionPainOnPenetration.
+  ///
+  /// In de, this message translates to:
+  /// **'bei Anspannung, Schmerzen beim Eindringen, frühem Samenerguss'**
+  String get kegelGuideSheetForTensionPainOnPenetration;
+
+  /// No description provided for @kegelGuideSheetForEveryoneWhosePelvicFloor.
+  ///
+  /// In de, this message translates to:
+  /// **'Für alle, deren Beckenboden eher zu viel festhält. Das ist bei Stress, viel Sitzen und Leistungsdruck häufig. Fang hier an, wenn du unsicher bist.'**
+  String get kegelGuideSheetForEveryoneWhosePelvicFloor;
+
+  /// No description provided for @kegelGuideSheetForSupportControlAndStability.
+  ///
+  /// In de, this message translates to:
+  /// **'für Halt, Kontrolle und Stabilität'**
+  String get kegelGuideSheetForSupportControlAndStability;
+
+  /// No description provided for @kegelGuideSheetStrengthensTheMusclesForExample.
+  ///
+  /// In de, this message translates to:
+  /// **'Stärkt die Muskulatur, etwa nach einer Geburt, bei leichter Blasenschwäche oder für mehr Kontrolle. Mit halber Kraft üben, das Loslassen danach ist genauso wichtig wie das Halten.'**
+  String get kegelGuideSheetStrengthensTheMusclesForExample;
+
+  /// No description provided for @kegelGuideSheetForResponsiveness.
+  ///
+  /// In de, this message translates to:
+  /// **'für Reaktionsfähigkeit'**
+  String get kegelGuideSheetForResponsiveness;
+
+  /// No description provided for @kegelGuideSheetAShortSqueezeAndImmediate.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurzes An und sofortiges Los trainiert die schnellen Muskelfasern – zum Beispiel für den Moment beim Husten oder Niesen.'**
+  String get kegelGuideSheetAShortSqueezeAndImmediate;
+
+  /// No description provided for @kegelGuideSheetStayingLooseWhenItGets.
+  ///
+  /// In de, this message translates to:
+  /// **'locker bleiben, wenn es spannend wird'**
+  String get kegelGuideSheetStayingLooseWhenItGets;
+
+  /// No description provided for @kegelGuideSheetALongAudibleExhaleWith.
+  ///
+  /// In de, this message translates to:
+  /// **'Langes, hörbares Ausatmen mit weichem Damm und Po. Genau das hilft beim Wellen-Surfen aus den Kursen 8 und 9, die Erregung hoch zu halten, ohne dass sie überläuft.'**
+  String get kegelGuideSheetALongAudibleExhaleWith;
+
+  /// No description provided for @kegelGuideSheetCommonMistakes.
+  ///
+  /// In de, this message translates to:
+  /// **'3. Typische Fehler'**
+  String get kegelGuideSheetCommonMistakes;
+
+  /// No description provided for @kegelGuideSheetCareful.
+  ///
+  /// In de, this message translates to:
+  /// **'ACHTUNG'**
+  String get kegelGuideSheetCareful;
+
+  /// No description provided for @kegelGuideSheetSqueezingTheButtocks.
+  ///
+  /// In de, this message translates to:
+  /// **'Den Po zusammenkneifen'**
+  String get kegelGuideSheetSqueezingTheButtocks;
+
+  /// No description provided for @kegelGuideSheetTheBigGlutealMuscleLikes.
+  ///
+  /// In de, this message translates to:
+  /// **'Der große Gesäßmuskel mogelt sich gern hinein. Der Po bleibt weich.'**
+  String get kegelGuideSheetTheBigGlutealMuscleLikes;
+
+  /// No description provided for @kegelGuideSheetHoldingYourBreath.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Luft anhalten'**
+  String get kegelGuideSheetHoldingYourBreath;
+
+  /// No description provided for @kegelGuideSheetKeepBreathingCalmlyWhileHolding.
+  ///
+  /// In de, this message translates to:
+  /// **'Atme beim Halten ruhig weiter. Angehaltener Atem erhöht den Druck im Bauch.'**
+  String get kegelGuideSheetKeepBreathingCalmlyWhileHolding;
+
+  /// No description provided for @kegelGuideSheetPushingInsteadOfLettingGo.
+  ///
+  /// In de, this message translates to:
+  /// **'Pressen statt loslassen'**
+  String get kegelGuideSheetPushingInsteadOfLettingGo;
+
+  /// No description provided for @kegelGuideSheetWhenLettingGoNothingIs.
+  ///
+  /// In de, this message translates to:
+  /// **'Beim Loslassen wird nichts nach unten gedrückt. Es ist ein Nachgeben, kein Schieben.'**
+  String get kegelGuideSheetWhenLettingGoNothingIs;
+
+  /// No description provided for @kegelGuideSheetPractisingWhileActuallyUrinating.
+  ///
+  /// In de, this message translates to:
+  /// **'Beim echten Wasserlassen üben'**
+  String get kegelGuideSheetPractisingWhileActuallyUrinating;
+
+  /// No description provided for @kegelGuideSheetRegularlyStoppingTheFlowOf.
+  ///
+  /// In de, this message translates to:
+  /// **'Den Urinstrahl regelmäßig zu stoppen kann die Blasenentleerung stören. Nur in der Vorstellung üben.'**
+  String get kegelGuideSheetRegularlyStoppingTheFlowOf;
+
+  /// No description provided for @kegelGuideSheetBetterShortAndRegular.
+  ///
+  /// In de, this message translates to:
+  /// **'Lieber kurz und regelmäßig'**
+  String get kegelGuideSheetBetterShortAndRegular;
+
+  /// No description provided for @kegelGuideSheetAFewMinutesOnMost.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein paar Minuten an den meisten Tagen bringen mehr als selten eine lange Einheit.'**
+  String get kegelGuideSheetAFewMinutesOnMost;
+
+  /// No description provided for @kegelGuideSheetAPlanForSixWeeks.
+  ///
+  /// In de, this message translates to:
+  /// **'4. Ein Plan für sechs Wochen'**
+  String get kegelGuideSheetAPlanForSixWeeks;
+
+  /// No description provided for @kegelGuideSheetPlan.
+  ///
+  /// In de, this message translates to:
+  /// **'PLAN'**
+  String get kegelGuideSheetPlan;
+
+  /// No description provided for @kegelGuideSheetWeek.
+  ///
+  /// In de, this message translates to:
+  /// **'Woche 1–2'**
+  String get kegelGuideSheetWeek;
+
+  /// No description provided for @kegelGuideSheetLetGoDailyRoundsEasy.
+  ///
+  /// In de, this message translates to:
+  /// **'Täglich Loslassen, 5 Runden, Stufe leicht. Ziel: das Weitwerden sicher spüren.'**
+  String get kegelGuideSheetLetGoDailyRoundsEasy;
+
+  /// No description provided for @kegelGuideSheetWeek2.
+  ///
+  /// In de, this message translates to:
+  /// **'Woche 3–4'**
+  String get kegelGuideSheetWeek2;
+
+  /// No description provided for @kegelGuideSheetLetGoRoundsThenStrengthen.
+  ///
+  /// In de, this message translates to:
+  /// **'Loslassen 5 Runden, danach Kräftigen 5 Runden, Stufe leicht. An zwei Tagen Wellen.'**
+  String get kegelGuideSheetLetGoRoundsThenStrengthen;
+
+  /// No description provided for @kegelGuideSheetWeek3.
+  ///
+  /// In de, this message translates to:
+  /// **'Woche 5–6'**
+  String get kegelGuideSheetWeek3;
+
+  /// No description provided for @kegelGuideSheetRoundsOfYourMainExercise.
+  ///
+  /// In de, this message translates to:
+  /// **'10 Runden in deiner Hauptübung, Stufe mittel. Dazu ein paar Schnelle Impulse.'**
+  String get kegelGuideSheetRoundsOfYourMainExercise;
+
+  /// No description provided for @kegelGuideSheetAfterThatKeepTwoOr.
+  ///
+  /// In de, this message translates to:
+  /// **'Danach: Behalte zwei, drei kurze Einheiten pro Woche bei. Und nutze das Loslassen bewusst in intimen Momenten – tief in den Bauch atmen, den Beckenboden sinken lassen.'**
+  String get kegelGuideSheetAfterThatKeepTwoOr;
+
+  /// No description provided for @kegelGuideSheetWhenToSeeAPhysiotherapist.
+  ///
+  /// In de, this message translates to:
+  /// **'5. Wann zur Physiotherapie?'**
+  String get kegelGuideSheetWhenToSeeAPhysiotherapist;
+
+  /// No description provided for @kegelGuideSheetHealth.
+  ///
+  /// In de, this message translates to:
+  /// **'GESUNDHEIT'**
+  String get kegelGuideSheetHealth;
+
+  /// No description provided for @kegelGuideSheetSpecialisedPelvicFloorPhysiotherapyCan.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine spezialisierte Beckenboden-Physiotherapie kann genau untersuchen, ob dein Beckenboden eher zu schwach oder zu fest ist, und dich gezielt anleiten. Lass dich beraten bei:\n• Schmerzen im Becken, beim Sex oder beim Training\n• Blasen- oder Darmschwäche\n• Beschwerden nach einer Geburt oder einer Operation im Becken\n• dem Gefühl, den Muskel gar nicht ansteuern zu können'**
+  String get kegelGuideSheetSpecialisedPelvicFloorPhysiotherapyCan;
+
+  /// No description provided for @kegelGuideSheetBackToTraining.
+  ///
+  /// In de, this message translates to:
+  /// **'Zurück zum Training'**
+  String get kegelGuideSheetBackToTraining;
+
+  /// No description provided for @aiCoachAsAWomanHowDo.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie entspanne ich als Frau meinen Beckenboden beim Sex?'**
+  String get aiCoachAsAWomanHowDo;
+
+  /// No description provided for @aiCoachHowCanWeStopPerformance.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie stoppen wir zu zweit den Leistungsdruck im Bett?'**
+  String get aiCoachHowCanWeStopPerformance;
+
+  /// No description provided for @aiCoachWhatToDoAboutRacing.
+  ///
+  /// In de, this message translates to:
+  /// **'Was tun bei akutem Kopfkino & Spectatoring?'**
+  String get aiCoachWhatToDoAboutRacing;
+
+  /// No description provided for @aiCoachHowDoIExplainResponsive.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie erkläre ich meinem Partner die responsive Lust?'**
+  String get aiCoachHowDoIExplainResponsive;
+
+  /// No description provided for @aiCoachWhyDoesTheReverseKegel.
+  ///
+  /// In de, this message translates to:
+  /// **'Warum hilft der Reverse Kegel bei Nervosität?'**
+  String get aiCoachWhyDoesTheReverseKegel;
+
+  /// No description provided for @aiCoachWelcomeToConfidentialSomaticRelationship.
+  ///
+  /// In de, this message translates to:
+  /// **'Willkommen im vertraulichen Somatik- & Beziehungs-Coaching. Ich begleite euch – ob als Frau, Mann oder als Paar – bei allen Fragen zu Beckenboden-Entspannung, Überwindung von Kopfkino und Leistungsdruck, Scham und erfüllender, absichtsloser Intimität.\n\nWorüber möchtet ihr sprechen oder was beschäftigt dein Nervensystem gerade am meisten?'**
+  String get aiCoachWelcomeToConfidentialSomaticRelationship;
+
+  /// No description provided for @aiCoachPleaseAddYourGeminiApi.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte hinterlege zuerst deinen Gemini API-Key, um mit dem Coach zu schreiben.'**
+  String get aiCoachPleaseAddYourGeminiApi;
+
+  /// No description provided for @aiCoachNoApiKeyAddedPlease.
+  ///
+  /// In de, this message translates to:
+  /// **'Kein API-Key hinterlegt. Bitte klicke oben auf das Zahnrad-Symbol.'**
+  String get aiCoachNoApiKeyAddedPlease;
+
+  /// No description provided for @aiCoachGoogleRejectedTheApiKey.
+  ///
+  /// In de, this message translates to:
+  /// **'Der API-Key wurde von Google als ungültig abgelehnt. Bitte überprüfe den Key im Google AI Studio.'**
+  String get aiCoachGoogleRejectedTheApiKey;
+
+  /// No description provided for @aiCoachConnectionErrorCleanerr.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbindungsfehler: {cleanErr}'**
+  String aiCoachConnectionErrorCleanerr(Object cleanErr);
+
+  /// No description provided for @aiCoachCheckKey.
+  ///
+  /// In de, this message translates to:
+  /// **'Key prüfen'**
+  String get aiCoachCheckKey;
+
+  /// No description provided for @aiCoachGeminiApiKey.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemini API-Key'**
+  String get aiCoachGeminiApiKey;
+
+  /// No description provided for @aiCoachPrivateCoachingUsesGoogleGemini.
+  ///
+  /// In de, this message translates to:
+  /// **'Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten.'**
+  String get aiCoachPrivateCoachingUsesGoogleGemini;
+
+  /// No description provided for @aiCoachFreeViaAistudioGoogleCom.
+  ///
+  /// In de, this message translates to:
+  /// **'Kostenlos via aistudio.google.com'**
+  String get aiCoachFreeViaAistudioGoogleCom;
+
+  /// No description provided for @aiCoachShowGuide.
+  ///
+  /// In de, this message translates to:
+  /// **'Anleitung anzeigen'**
+  String get aiCoachShowGuide;
+
+  /// No description provided for @aiCoachPleaseEnterAKeyFirst.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte gib zuerst einen Key ein.'**
+  String get aiCoachPleaseEnterAKeyFirst;
+
+  /// No description provided for @aiCoachCheckingConnection.
+  ///
+  /// In de, this message translates to:
+  /// **'Prüfe Verbindung...'**
+  String get aiCoachCheckingConnection;
+
+  /// No description provided for @aiCoachTestConnection.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbindung testen'**
+  String get aiCoachTestConnection;
+
+  /// No description provided for @aiCoachApiKeyRemoved.
+  ///
+  /// In de, this message translates to:
+  /// **'API-Key entfernt.'**
+  String get aiCoachApiKeyRemoved;
+
+  /// No description provided for @aiCoachApiKeySaved.
+  ///
+  /// In de, this message translates to:
+  /// **'API-Key erfolgreich gespeichert.'**
+  String get aiCoachApiKeySaved;
+
+  /// No description provided for @aiCoachClearChatHistory.
+  ///
+  /// In de, this message translates to:
+  /// **'Chatverlauf leeren?'**
+  String get aiCoachClearChatHistory;
+
+  /// No description provided for @aiCoachDoYouWantToDelete.
+  ///
+  /// In de, this message translates to:
+  /// **'Möchtest du alle bisherigen Nachrichten dieses Dialogs löschen?'**
+  String get aiCoachDoYouWantToDelete;
+
+  /// No description provided for @aiCoachChatHistoryClearedWhatWould.
+  ///
+  /// In de, this message translates to:
+  /// **'Chatverlauf zurückgesetzt. Worüber möchtest du sprechen?'**
+  String get aiCoachChatHistoryClearedWhatWould;
+
+  /// No description provided for @aiCoachClear.
+  ///
+  /// In de, this message translates to:
+  /// **'Leeren'**
+  String get aiCoachClear;
+
+  /// No description provided for @aiCoachGeminiAiConnected.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemini KI verbunden'**
+  String get aiCoachGeminiAiConnected;
+
+  /// No description provided for @aiCoachNoApiKeyAdded.
+  ///
+  /// In de, this message translates to:
+  /// **'Kein API-Key hinterlegt'**
+  String get aiCoachNoApiKeyAdded;
+
+  /// No description provided for @aiCoachGuideCreateAKey.
+  ///
+  /// In de, this message translates to:
+  /// **'Anleitung: Key erstellen'**
+  String get aiCoachGuideCreateAKey;
+
+  /// No description provided for @aiCoachClearChat.
+  ///
+  /// In de, this message translates to:
+  /// **'Chat leeren'**
+  String get aiCoachClearChat;
+
+  /// No description provided for @aiCoachApiKeySettings.
+  ///
+  /// In de, this message translates to:
+  /// **'API-Key Einstellungen'**
+  String get aiCoachApiKeySettings;
+
+  /// No description provided for @aiCoachNoApiKeyYetCreated.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch kein API-Key? In 2 Min. kostenlos erstellt.'**
+  String get aiCoachNoApiKeyYetCreated;
+
+  /// No description provided for @aiCoachGuide.
+  ///
+  /// In de, this message translates to:
+  /// **'Anleitung'**
+  String get aiCoachGuide;
+
+  /// No description provided for @aiCoachCoachIsThinking.
+  ///
+  /// In de, this message translates to:
+  /// **'Coach reflektiert...'**
+  String get aiCoachCoachIsThinking;
+
+  /// No description provided for @aiCoachAskAConfidentialQuestion.
+  ///
+  /// In de, this message translates to:
+  /// **'Vertrauliche Frage stellen...'**
+  String get aiCoachAskAConfidentialQuestion;
+
+  /// No description provided for @apiKeyGuideSheetFreeGeminiApiKey.
+  ///
+  /// In de, this message translates to:
+  /// **'Kostenlosen Gemini API-Key'**
+  String get apiKeyGuideSheetFreeGeminiApiKey;
+
+  /// No description provided for @apiKeyGuideSheetCreatedStepByStepIn.
+  ///
+  /// In de, this message translates to:
+  /// **'Schritt-für-Schritt in 2 Minuten erstellt'**
+  String get apiKeyGuideSheetCreatedStepByStepIn;
+
+  /// No description provided for @apiKeyGuideSheetFreeAndWhatHappensTo.
+  ///
+  /// In de, this message translates to:
+  /// **'Kostenlos – und was mit deinen Daten passiert: '**
+  String get apiKeyGuideSheetFreeAndWhatHappensTo;
+
+  /// No description provided for @apiKeyGuideSheetGoogleAiStudioHasA.
+  ///
+  /// In de, this message translates to:
+  /// **'Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen.'**
+  String get apiKeyGuideSheetGoogleAiStudioHasA;
+
+  /// No description provided for @apiKeyGuideSheetOpenGoogleAiStudio.
+  ///
+  /// In de, this message translates to:
+  /// **'Google AI Studio aufrufen'**
+  String get apiKeyGuideSheetOpenGoogleAiStudio;
+
+  /// No description provided for @apiKeyGuideSheetOpenGoogleSOfficialDeveloper.
+  ///
+  /// In de, this message translates to:
+  /// **'Öffne im Browser (Chrome, Safari, Firefox) die offizielle Entwickler-Plattform von Google:\n'**
+  String get apiKeyGuideSheetOpenGoogleSOfficialDeveloper;
+
+  /// No description provided for @apiKeyGuideSheetLinkCopiedToClipboard.
+  ///
+  /// In de, this message translates to:
+  /// **'Link in Zwischenablage kopiert!'**
+  String get apiKeyGuideSheetLinkCopiedToClipboard;
+
+  /// No description provided for @apiKeyGuideSheetCopy.
+  ///
+  /// In de, this message translates to:
+  /// **'Kopieren'**
+  String get apiKeyGuideSheetCopy;
+
+  /// No description provided for @apiKeyGuideSheetSignInWithAGoogle.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit Google-Konto anmelden'**
+  String get apiKeyGuideSheetSignInWithAGoogle;
+
+  /// No description provided for @apiKeyGuideSheetSignInWithYourExisting.
+  ///
+  /// In de, this message translates to:
+  /// **'Melde dich mit deinem bestehenden Google-Konto (Gmail) an. Es ist keine Kreditkarte oder Zahlungsmethode erforderlich.'**
+  String get apiKeyGuideSheetSignInWithYourExisting;
+
+  /// No description provided for @apiKeyGuideSheetClickGetApiKey.
+  ///
+  /// In de, this message translates to:
+  /// **'\"Get API key\" anklicken'**
+  String get apiKeyGuideSheetClickGetApiKey;
+
+  /// No description provided for @apiKeyGuideSheetInTheMenuAtThe.
+  ///
+  /// In de, this message translates to:
+  /// **'Klicke im Menü links oben auf den blauen Button \"Get API key\" (oder \"API-Schlüssel anfordern\").'**
+  String get apiKeyGuideSheetInTheMenuAtThe;
+
+  /// No description provided for @apiKeyGuideSheetChooseCreateApiKeyIn.
+  ///
+  /// In de, this message translates to:
+  /// **'\"Create API key in new project\" wählen'**
+  String get apiKeyGuideSheetChooseCreateApiKeyIn;
+
+  /// No description provided for @apiKeyGuideSheetChooseTheOptionCreateApi.
+  ///
+  /// In de, this message translates to:
+  /// **'Wähle die Option \"Create API key in new project\". Google richtet sofort automatisch im Hintergrund ein kostenloses Projekt ein.'**
+  String get apiKeyGuideSheetChooseTheOptionCreateApi;
+
+  /// No description provided for @apiKeyGuideSheetCopyTheKeyPasteIt.
+  ///
+  /// In de, this message translates to:
+  /// **'Key kopieren & in VelvetPulse einfügen'**
+  String get apiKeyGuideSheetCopyTheKeyPasteIt;
+
+  /// No description provided for @apiKeyGuideSheetCopyTheGeneratedStringIt.
+  ///
+  /// In de, this message translates to:
+  /// **'Kopiere die erzeugte Zeichenkette. Sie beginnt typischerweise mit \"AIzaSy...\" – füge sie anschließend hier in die App ein.'**
+  String get apiKeyGuideSheetCopyTheGeneratedStringIt;
+
+  /// No description provided for @apiKeyGuideSheetFrequentlyAskedQuestions.
+  ///
+  /// In de, this message translates to:
+  /// **'Häufige Fragen:'**
+  String get apiKeyGuideSheetFrequentlyAskedQuestions;
+
+  /// No description provided for @apiKeyGuideSheetDoesItCostAnything.
+  ///
+  /// In de, this message translates to:
+  /// **'Kostet die Nutzung etwas?'**
+  String get apiKeyGuideSheetDoesItCostAnything;
+
+  /// No description provided for @apiKeyGuideSheetNotWithinTheFreeTier.
+  ///
+  /// In de, this message translates to:
+  /// **'Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern.'**
+  String get apiKeyGuideSheetNotWithinTheFreeTier;
+
+  /// No description provided for @apiKeyGuideSheetWhichModelIsUsed.
+  ///
+  /// In de, this message translates to:
+  /// **'Welches Modell wird genutzt?'**
+  String get apiKeyGuideSheetWhichModelIsUsed;
+
+  /// No description provided for @apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest.
+  ///
+  /// In de, this message translates to:
+  /// **'VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key.'**
+  String get apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest;
+
+  /// No description provided for @apiKeyGuideSheetEnterApiKeyConnectNow.
+  ///
+  /// In de, this message translates to:
+  /// **'API-Key jetzt eintragen & verbinden'**
+  String get apiKeyGuideSheetEnterApiKeyConnectNow;
+
+  /// No description provided for @dailyCheckinCardVeryCalm.
+  ///
+  /// In de, this message translates to:
+  /// **'Sehr ruhig'**
+  String get dailyCheckinCardVeryCalm;
+
+  /// No description provided for @dailyCheckinCardMild.
+  ///
+  /// In de, this message translates to:
+  /// **'Leicht'**
+  String get dailyCheckinCardMild;
+
+  /// No description provided for @dailyCheckinCardModerate.
+  ///
+  /// In de, this message translates to:
+  /// **'Mäßig'**
+  String get dailyCheckinCardModerate;
+
+  /// No description provided for @dailyCheckinCardHigh.
+  ///
+  /// In de, this message translates to:
+  /// **'Hoch'**
+  String get dailyCheckinCardHigh;
+
+  /// No description provided for @dailyCheckinCardExtremeStress.
+  ///
+  /// In de, this message translates to:
+  /// **'Extremer Stress'**
+  String get dailyCheckinCardExtremeStress;
+
+  /// No description provided for @dailyCheckinCardClearHead.
+  ///
+  /// In de, this message translates to:
+  /// **'Frei im Kopf'**
+  String get dailyCheckinCardClearHead;
+
+  /// No description provided for @dailyCheckinCardHardlyAnyPressure.
+  ///
+  /// In de, this message translates to:
+  /// **'Kaum Druck'**
+  String get dailyCheckinCardHardlyAnyPressure;
+
+  /// No description provided for @dailyCheckinCardSomeRestlessness.
+  ///
+  /// In de, this message translates to:
+  /// **'Unruhe da'**
+  String get dailyCheckinCardSomeRestlessness;
+
+  /// No description provided for @dailyCheckinCardNoticeablyHigh.
+  ///
+  /// In de, this message translates to:
+  /// **'Spürbar hoch'**
+  String get dailyCheckinCardNoticeablyHigh;
+
+  /// No description provided for @dailyCheckinCardStrongPressure.
+  ///
+  /// In de, this message translates to:
+  /// **'Starker Druck'**
+  String get dailyCheckinCardStrongPressure;
+
+  /// No description provided for @dailyCheckinCardSecondDailyCheckIn.
+  ///
+  /// In de, this message translates to:
+  /// **'30-Sekunden Tages-Check-in'**
+  String get dailyCheckinCardSecondDailyCheckIn;
+
+  /// No description provided for @dailyCheckinCardDone.
+  ///
+  /// In de, this message translates to:
+  /// **'Erledigt'**
+  String get dailyCheckinCardDone;
+
+  /// No description provided for @dailyCheckinCardStressStresslevelPressurePressurelevel.
+  ///
+  /// In de, this message translates to:
+  /// **'Stress: {stressLevel} • Druck: {pressureLevel}'**
+  String dailyCheckinCardStressStresslevelPressurePressurelevel(
+      Object stressLevel, Object pressureLevel);
+
+  /// No description provided for @dailyCheckinCardHowDoStressPerformancePressure.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie stehen Stress & Leistungsdruck heute zueinander?'**
+  String get dailyCheckinCardHowDoStressPerformancePressure;
+
+  /// No description provided for @dailyCheckinCardEverydayStressTodayJobAppointments.
+  ///
+  /// In de, this message translates to:
+  /// **'1. Alltagsstress heute (Job, Termine, Schlaf)'**
+  String get dailyCheckinCardEverydayStressTodayJobAppointments;
+
+  /// No description provided for @dailyCheckinCardInnerPerformancePressureRacingThoughts.
+  ///
+  /// In de, this message translates to:
+  /// **'2. Innerer Leistungsdruck & Kopfkino'**
+  String get dailyCheckinCardInnerPerformancePressureRacingThoughts;
+
+  /// No description provided for @dailyCheckinCardWhatDidYouGoodToday.
+  ///
+  /// In de, this message translates to:
+  /// **'3. Was hat deinem Nervensystem heute gut getan?'**
+  String get dailyCheckinCardWhatDidYouGoodToday;
+
+  /// No description provided for @dailyCheckinCardSaveDailyCheckIn.
+  ///
+  /// In de, this message translates to:
+  /// **'Tages-Check-in speichern'**
+  String get dailyCheckinCardSaveDailyCheckIn;
+
+  /// No description provided for @dailyCheckinCardUpdateValues.
+  ///
+  /// In de, this message translates to:
+  /// **'Werte aktualisieren'**
+  String get dailyCheckinCardUpdateValues;
+
+  /// No description provided for @dailyCheckinCardCoachingInsightYourEverydayStress.
+  ///
+  /// In de, this message translates to:
+  /// **'💡 Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.'**
+  String get dailyCheckinCardCoachingInsightYourEverydayStress;
+
+  /// No description provided for @dailyCheckinCardCoachingInsightWhenEverydayStress.
+  ///
+  /// In de, this message translates to:
+  /// **'💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.'**
+  String get dailyCheckinCardCoachingInsightWhenEverydayStress;
 }
 
 class _AppLocalizationsDelegate

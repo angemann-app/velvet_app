@@ -4,6 +4,7 @@ import '../../services/ai_service.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import 'api_key_guide_sheet.dart';
+import '../../l10n/t.dart';
 
 class AiCoachScreen extends StatefulWidget {
   const AiCoachScreen({super.key});
@@ -19,12 +20,12 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
   bool _isLoading = false;
   String? _apiKey;
 
-  static const List<String> _suggestedPrompts = [
-    'Wie entspanne ich als Frau meinen Beckenboden beim Sex?',
-    'Wie stoppen wir zu zweit den Leistungsdruck im Bett?',
-    'Was tun bei akutem Kopfkino & Spectatoring?',
-    'Wie erkläre ich meinem Partner die responsive Lust?',
-    'Warum hilft der Reverse Kegel bei Nervosität?',
+  static List<String> _suggestedPrompts = [
+    t.aiCoachAsAWomanHowDo,
+    t.aiCoachHowCanWeStopPerformance,
+    t.aiCoachWhatToDoAboutRacing,
+    t.aiCoachHowDoIExplainResponsive,
+    t.aiCoachWhyDoesTheReverseKegel,
   ];
 
   @override
@@ -38,10 +39,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
         ChatMessage(
           id: 'welcome',
           text:
-              'Willkommen im vertraulichen Somatik- & Beziehungs-Coaching. '
-              'Ich begleite euch – ob als Frau, Mann oder als Paar – bei allen Fragen zu Beckenboden-Entspannung, '
-              'Überwindung von Kopfkino und Leistungsdruck, Scham und erfüllender, absichtsloser Intimität.\n\n'
-              'Worüber möchtet ihr sprechen oder was beschäftigt dein Nervensystem gerade am meisten?',
+              t.aiCoachWelcomeToConfidentialSomaticRelationship,
           isUser: false,
           timestamp: DateTime.now(),
         ),
@@ -77,7 +75,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
         : StorageService.getApiKey()?.trim();
 
     if (effectiveKey == null || effectiveKey.isEmpty) {
-      _showApiKeyDialog(reasonMessage: 'Bitte hinterlege zuerst deinen Gemini API-Key, um mit dem Coach zu schreiben.');
+      _showApiKeyDialog(reasonMessage: t.aiCoachPleaseAddYourGeminiApi);
       return;
     }
 
@@ -131,12 +129,12 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
         String errorText;
         final errString = e.toString();
         if (errString.contains('NO_API_KEY')) {
-          errorText = 'Kein API-Key hinterlegt. Bitte klicke oben auf das Zahnrad-Symbol.';
+          errorText = t.aiCoachNoApiKeyAddedPlease;
         } else if (errString.contains('INVALID_API_KEY')) {
-          errorText = 'Der API-Key wurde von Google als ungültig abgelehnt. Bitte überprüfe den Key im Google AI Studio.';
+          errorText = t.aiCoachGoogleRejectedTheApiKey;
         } else {
           final cleanErr = errString.replaceAll('Exception: ', '').trim();
-          errorText = 'Verbindungsfehler: $cleanErr';
+          errorText = t.aiCoachConnectionErrorCleanerr(cleanErr);
         }
 
         ScaffoldMessenger.of(context).showSnackBar(
@@ -145,7 +143,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
             backgroundColor: AppTheme.rose,
             duration: const Duration(seconds: 5),
             action: SnackBarAction(
-              label: 'Key prüfen',
+              label: t.aiCoachCheckKey,
               textColor: Colors.white,
               onPressed: () => _showApiKeyDialog(),
             ),
@@ -175,11 +173,11 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
         builder: (context, setDialogState) {
           return AlertDialog(
             backgroundColor: AppTheme.surface,
-            title: const Row(
+            title: Row(
               children: [
                 Icon(Icons.key_rounded, color: AppTheme.amber, size: 22),
                 SizedBox(width: 10),
-                Text('Gemini API-Key', style: TextStyle(fontSize: 18)),
+                Text(t.aiCoachGeminiApiKey, style: TextStyle(fontSize: 18)),
               ],
             ),
             content: SingleChildScrollView(
@@ -194,10 +192,8 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                     ),
                     const SizedBox(height: 12),
                   ],
-                  const Text(
-                    'Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. '
-                    'In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; '
-                    'anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten.',
+                  Text(
+                    t.aiCoachPrivateCoachingUsesGoogleGemini,
                     style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4),
                   ),
                   const SizedBox(height: 16),
@@ -213,8 +209,8 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        'Kostenlos via aistudio.google.com',
+                      Text(
+                        t.aiCoachFreeViaAistudioGoogleCom,
                         style: TextStyle(color: AppTheme.textMuted, fontSize: 11),
                       ),
                       InkWell(
@@ -223,14 +219,14 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                           _showApiKeyGuide();
                         },
                         borderRadius: BorderRadius.circular(6),
-                        child: const Padding(
+                        child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                           child: Row(
                             children: [
                               Icon(Icons.help_outline_rounded, size: 14, color: AppTheme.amberLight),
                               SizedBox(width: 4),
                               Text(
-                                'Anleitung anzeigen',
+                                t.aiCoachShowGuide,
                                 style: TextStyle(
                                   color: AppTheme.amberLight,
                                   fontSize: 11,
@@ -297,7 +293,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                               if (keyToTest.isEmpty) {
                                 setDialogState(() {
                                   testSuccess = false;
-                                  testResult = 'Bitte gib zuerst einen Key ein.';
+                                  testResult = t.aiCoachPleaseEnterAKeyFirst;
                                 });
                                 return;
                               }
@@ -320,7 +316,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                               child: CircularProgressIndicator(strokeWidth: 2, color: AppTheme.amber),
                             )
                           : const Icon(Icons.wifi_tethering_rounded, size: 16),
-                      label: Text(isTesting ? 'Prüfe Verbindung...' : 'Verbindung testen'),
+                      label: Text(isTesting ? t.aiCoachCheckingConnection : t.aiCoachTestConnection),
                       style: OutlinedButton.styleFrom(
                         foregroundColor: AppTheme.amber,
                         side: const BorderSide(color: AppTheme.amber),
@@ -334,7 +330,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
             actions: [
               TextButton(
                 onPressed: () => Navigator.of(context).pop(),
-                child: const Text('Abbrechen', style: TextStyle(color: AppTheme.textMuted)),
+                child: Text(t.ausspracheMeldenCancel, style: TextStyle(color: AppTheme.textMuted)),
               ),
               ElevatedButton(
                 onPressed: () async {
@@ -349,15 +345,15 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                       SnackBar(
                         content: Text(
                           newKey.isEmpty
-                              ? 'API-Key entfernt.'
-                              : 'API-Key erfolgreich gespeichert.',
+                              ? t.aiCoachApiKeyRemoved
+                              : t.aiCoachApiKeySaved,
                         ),
                         backgroundColor: newKey.isEmpty ? AppTheme.amber : AppTheme.sageGreen,
                       ),
                     );
                   }
                 },
-                child: const Text('Speichern'),
+                child: Text(t.partnerProfileDialogSave),
               ),
             ],
           );
@@ -371,15 +367,15 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Chatverlauf leeren?'),
-        content: const Text(
-          'Möchtest du alle bisherigen Nachrichten dieses Dialogs löschen?',
+        title: Text(t.aiCoachClearChatHistory),
+        content: Text(
+          t.aiCoachDoYouWantToDelete,
           style: TextStyle(color: AppTheme.textSecondary),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Abbrechen', style: TextStyle(color: AppTheme.textMuted)),
+            child: Text(t.ausspracheMeldenCancel, style: TextStyle(color: AppTheme.textMuted)),
           ),
           ElevatedButton(
             onPressed: () async {
@@ -389,7 +385,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                 _messages = [
                   ChatMessage(
                     id: 'welcome',
-                    text: 'Chatverlauf zurückgesetzt. Worüber möchtest du sprechen?',
+                    text: t.aiCoachChatHistoryClearedWhatWould,
                     isUser: false,
                     timestamp: DateTime.now(),
                   )
@@ -400,7 +396,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
               backgroundColor: AppTheme.rose,
               foregroundColor: Colors.white,
             ),
-            child: const Text('Leeren'),
+            child: Text(t.aiCoachClear),
           ),
         ],
       ),
@@ -436,8 +432,8 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                   const SizedBox(width: 8),
                   Text(
                     (_apiKey != null && _apiKey!.isNotEmpty)
-                        ? 'Gemini KI verbunden'
-                        : 'Kein API-Key hinterlegt',
+                        ? t.aiCoachGeminiAiConnected
+                        : t.aiCoachNoApiKeyAdded,
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
@@ -452,17 +448,17 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                 children: [
                   IconButton(
                     icon: const Icon(Icons.help_outline_rounded, size: 20, color: AppTheme.amberLight),
-                    tooltip: 'Anleitung: Key erstellen',
+                    tooltip: t.aiCoachGuideCreateAKey,
                     onPressed: _showApiKeyGuide,
                   ),
                   IconButton(
                     icon: const Icon(Icons.delete_sweep_rounded, size: 20, color: AppTheme.textMuted),
-                    tooltip: 'Chat leeren',
+                    tooltip: t.aiCoachClearChat,
                     onPressed: _clearChat,
                   ),
                   IconButton(
                     icon: const Icon(Icons.settings_rounded, size: 20, color: AppTheme.textSecondary),
-                    tooltip: 'API-Key Einstellungen',
+                    tooltip: t.aiCoachApiKeySettings,
                     onPressed: () => _showApiKeyDialog(),
                   ),
                 ],
@@ -485,9 +481,9 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
               children: [
                 const Icon(Icons.lightbulb_outline_rounded, color: AppTheme.amber, size: 20),
                 const SizedBox(width: 10),
-                const Expanded(
+                Expanded(
                   child: Text(
-                    'Noch kein API-Key? In 2 Min. kostenlos erstellt.',
+                    t.aiCoachNoApiKeyYetCreated,
                     style: TextStyle(fontSize: 12, color: AppTheme.textPrimary),
                   ),
                 ),
@@ -499,7 +495,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     foregroundColor: AppTheme.amberLight,
                   ),
-                  child: const Text('Anleitung', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12)),
+                  child: Text(t.aiCoachGuide, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12)),
                 ),
               ],
             ),
@@ -534,7 +530,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                 ),
                 const SizedBox(width: 10),
                 Text(
-                  'Coach reflektiert...',
+                  t.aiCoachCoachIsThinking,
                   style: TextStyle(
                     color: AppTheme.sageGreen.withValues(alpha: 0.9),
                     fontSize: 12,
@@ -592,7 +588,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                     textCapitalization: TextCapitalization.sentences,
                     style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
                     decoration: InputDecoration(
-                      hintText: 'Vertrauliche Frage stellen...',
+                      hintText: t.aiCoachAskAConfidentialQuestion,
                       hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 14),
                       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                       fillColor: AppTheme.background,

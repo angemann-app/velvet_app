@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/daily_checkin.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
+import '../l10n/t.dart';
 
 class DailyCheckInCard extends StatefulWidget {
   final VoidCallback? onCheckInSaved;
@@ -78,15 +79,15 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
   String _getStressLabel(double val) {
     switch (val.round()) {
       case 1:
-        return 'Sehr ruhig';
+        return t.dailyCheckinCardVeryCalm;
       case 2:
-        return 'Leicht';
+        return t.dailyCheckinCardMild;
       case 3:
-        return 'Mäßig';
+        return t.dailyCheckinCardModerate;
       case 4:
-        return 'Hoch';
+        return t.dailyCheckinCardHigh;
       case 5:
-        return 'Extremer Stress';
+        return t.dailyCheckinCardExtremeStress;
       default:
         return '';
     }
@@ -95,15 +96,15 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
   String _getPressureLabel(double val) {
     switch (val.round()) {
       case 1:
-        return 'Frei im Kopf';
+        return t.dailyCheckinCardClearHead;
       case 2:
-        return 'Kaum Druck';
+        return t.dailyCheckinCardHardlyAnyPressure;
       case 3:
-        return 'Unruhe da';
+        return t.dailyCheckinCardSomeRestlessness;
       case 4:
-        return 'Spürbar hoch';
+        return t.dailyCheckinCardNoticeablyHigh;
       case 5:
-        return 'Starker Druck';
+        return t.dailyCheckinCardStrongPressure;
       default:
         return '';
     }
@@ -163,8 +164,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                         children: [
                           Row(
                             children: [
-                              const Text(
-                                '30-Sekunden Tages-Check-in',
+                              Text(
+                                t.dailyCheckinCardSecondDailyCheckIn,
                                 style: TextStyle(
                                   color: AppTheme.textPrimary,
                                   fontWeight: FontWeight.w700,
@@ -179,8 +180,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                                     color: AppTheme.sageGreen.withValues(alpha: 0.2),
                                     borderRadius: BorderRadius.circular(6),
                                   ),
-                                  child: const Text(
-                                    'Erledigt',
+                                  child: Text(
+                                    t.dailyCheckinCardDone,
                                     style: TextStyle(
                                       color: AppTheme.sageGreen,
                                       fontSize: 10,
@@ -194,8 +195,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                           const SizedBox(height: 2),
                           Text(
                             _todayCheckIn != null
-                                ? 'Stress: ${_getStressLabel(_stressLevel)} • Druck: ${_getPressureLabel(_pressureLevel)}'
-                                : 'Wie stehen Stress & Leistungsdruck heute zueinander?',
+                                ? t.dailyCheckinCardStressStresslevelPressurePressurelevel(_getStressLabel(_stressLevel), _getPressureLabel(_pressureLevel))
+                                : t.dailyCheckinCardHowDoStressPerformancePressure,
                             style: const TextStyle(
                               color: AppTheme.textSecondary,
                               fontSize: 12,
@@ -226,8 +227,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        '1. Alltagsstress heute (Job, Termine, Schlaf)',
+                      Text(
+                        t.dailyCheckinCardEverydayStressTodayJobAppointments,
                         style: TextStyle(
                           color: AppTheme.textPrimary,
                           fontSize: 13,
@@ -270,8 +271,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        '2. Innerer Leistungsdruck & Kopfkino',
+                      Text(
+                        t.dailyCheckinCardInnerPerformancePressureRacingThoughts,
                         style: TextStyle(
                           color: AppTheme.textPrimary,
                           fontSize: 13,
@@ -311,8 +312,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                   const SizedBox(height: 12),
 
                   // Positive Actions Chips
-                  const Text(
-                    '3. Was hat deinem Nervensystem heute gut getan?',
+                  Text(
+                    t.dailyCheckinCardWhatDidYouGoodToday,
                     style: TextStyle(
                       color: AppTheme.textPrimary,
                       fontSize: 13,
@@ -363,8 +364,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       ),
                       child: Text(
                         _todayCheckIn == null
-                            ? 'Tages-Check-in speichern'
-                            : 'Werte aktualisieren',
+                            ? t.dailyCheckinCardSaveDailyCheckIn
+                            : t.dailyCheckinCardUpdateValues,
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -393,8 +394,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                     Expanded(
                       child: Text(
                         _stressLevel >= 4
-                            ? '💡 Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Bei Cortisol und Erschöpfung bremst der Sympathikus ganz automatisch. Das ist reine Biologie und kein Defekt.'
-                            : '💡 Coaching-Insight: Wenn der Alltagsstress sinkt, hat der Parasympathikus freie Bahn. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.',
+                            ? t.dailyCheckinCardCoachingInsightYourEverydayStress
+                            : t.dailyCheckinCardCoachingInsightWhenEverydayStress,
                         style: const TextStyle(
                           fontSize: 12,
                           color: AppTheme.textSecondary,
