@@ -127,12 +127,18 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
 
 ## 5a. Englische Fassung (Pflicht)
 
-- Alle Inhalte liegen zusätzlich auf Englisch in 	ranslations/en/ (nicht Teil des App-Releases).
+- Alle Inhalte liegen zusätzlich auf Englisch in translations/en/. **Seit 4.5 ist die App zweisprachig:**
+  Deutsch auf deutschen Geräten, sonst Englisch, umschaltbar im Profil (lib/services/sprache.dart).
+  Oberflächentexte in lib/l10n/app_de.arb und app_en.arb (Zugriff t.<schlüssel>); neue Texte nie
+  hart im Code. Englische Aufnahmen als Download-Paket (lib/services/sprachausgabe.dart,
+  tools/generate_audio_en.py, Release-Tag audio-en-v1); ohne Paket liest die Geräte-Stimme.
+- Gespeicherte Kennungen bleiben deutsch (Denkfallen im Tagebuch, Check-in-Antworten), angezeigt wird
+  übersetzt – so bleiben Datenformat und Kompatibilität zwischen Beta und Stabil erhalten.
 - **Regel:** Jeder neue oder geänderte Inhalt wird im selben Arbeitsgang übersetzt. Das gilt für Lektionen,
   Kurse, SOS-Karten, Glaubenssätze, Bausteine des gemeinsamen Abends und die Ja/Nein/Vielleicht-Liste.
-- 	est/translation_test.dart vergleicht Prüfsummen der deutschen Texte mit den eingetragenen Werten in
+- test/translation_test.dart vergleicht Prüfsummen der deutschen Texte mit den eingetragenen Werten in
   _source. Fehlt eine Übersetzung oder ist sie veraltet, scheitert der Test und damit jedes Release.
-- Nach dem Übersetzen: lutter test test/translation_test.dart --dart-define=STAMP=<schlüssel,…>.
+- Nach dem Übersetzen: flutter test test/translation_test.dart --dart-define=STAMP=<schlüssel,…>.
   Nie stempeln, ohne vorher wirklich übersetzt zu haben.
 
 ## 5b. Persönliche Ansprache in Lektionen

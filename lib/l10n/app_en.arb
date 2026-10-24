@@ -789,7 +789,7 @@
   "storageServiceTheKeysInTheBackup": "The keys in the backup don't match.",
   "storageServiceTheBackupCouldNotBe": "The backup could not be restored. Nothing was changed.",
   "storageServiceTheBackupIsDamagedFeld": "The backup is damaged ({feld}).",
-  "spracheHinweis": "Interface, courses and exercises. The recordings are in German; in English, your device's voice reads aloud.",
+  "spracheHinweis": "Interface, courses and exercises. German recordings are built in; English recordings can be downloaded.",
   "cueEinatmenWeit": "Breathe in. And widen.",
   "cueWeichBleiben": "Stay soft.",
   "cueAnspannen": "Tighten. And gently lift.",
@@ -801,5 +801,13 @@
   "cueWelle": "Breathe in. Perineum and buttocks soft.",
   "cueSeufzen": "Breathe out. Long and audible.",
   "cueStart": "Let's begin.",
-  "cueFertig": "Done. Stay with the feeling for a moment."
+  "cueFertig": "Done. Stay with the feeling for a moment.",
+  "audioPaketTitel": "English voices",
+  "audioPaketText": "English recordings for lessons, shared evening, self-exploration and pelvic floor training (approx. {mb} MB). Without them, your device's voice reads aloud.",
+  "audioPaketInstalliert": "Installed ({mb} MB). The recordings are stored on this device only.",
+  "audioPaketLaden": "Download",
+  "audioPaketLoeschen": "Delete",
+  "audioPaketFertig": "English voices are ready.",
+  "audioPaketFehler": "That didn't work. Please check your internet connection and try again later.",
+  "navPaarKanalKurz": "Couple"
 }

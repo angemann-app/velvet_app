@@ -15,6 +15,7 @@ import '../../theme/app_theme.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../couples_channel/pairing_modal.dart';
 import '../../l10n/t.dart';
+import '../../services/sprache.dart';
 
 class YesNoMaybeScreen extends StatefulWidget {
   const YesNoMaybeScreen({super.key});
@@ -192,7 +193,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   borderRadius: BorderRadius.circular(14),
                   child: AspectRatio(
                     aspectRatio: 4 / 3,
-                    child: SvgPicture.asset(item.image!, fit: BoxFit.contain),
+                    child: SvgPicture.asset(Sprache.bild(item.image!), fit: BoxFit.contain),
                   ),
                 ),
               ],

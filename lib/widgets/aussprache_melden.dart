@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../services/privacy_service.dart';
+import '../services/sprache.dart';
 import '../theme/app_theme.dart';
 import '../l10n/t.dart';
 
@@ -67,7 +68,9 @@ class AusspracheMeldenButton extends StatefulWidget {
 
 class _AusspracheMeldenButtonState extends State<AusspracheMeldenButton> {
   // Einmal laden, nicht bei jedem Neuzeichnen des Players (sonst flackert der Link).
-  late final Future<bool> _diskret = PrivacyService.isDiscreetIcon();
+  // Auf Englisch ausgeblendet: Die Meldung betrifft die deutschen Aufnahmen.
+  late final Future<bool> _diskret =
+      Sprache.englisch ? Future.value(true) : PrivacyService.isDiscreetIcon();
 
   @override
   Widget build(BuildContext context) {

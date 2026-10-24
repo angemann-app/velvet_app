@@ -170,8 +170,7 @@ class UpdateService {
   }
 
   /// Inhalt einer `.sha256`-Datei („<64 Hex-Zeichen>“, optional gefolgt vom Dateinamen),
-  /// sonst null – z. B. bei einer Fehlerseite statt der Datei.
-  @visibleForTesting
+  /// sonst null – z. B. bei einer Fehlerseite statt der Datei. Auch für das Audiopaket.
   static String? parseSha256(String body) {
     final first = body.trim().split(RegExp(r'\s+')).first.toLowerCase();
     return RegExp(r'^[0-9a-f]{64}$').hasMatch(first) ? first : null;

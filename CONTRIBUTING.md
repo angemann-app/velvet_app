@@ -16,7 +16,8 @@ You don't need to be a developer. If you can edit a text file, you can help.
    which language is being worked on and nobody duplicates work.
 2. **Fork the repository** and copy the English folder as a starting point:
    `translations/en/` → `translations/<code>/` (e.g. `translations/fr/`).
-3. **Translate the text values** in the JSON files. Translate from the English version, or from the German
+3. **Translate the text values** in the JSON files, and the interface in `lib/l10n/app_en.arb` (copy it to
+   `app_<code>.arb`). Translate from the English version, or from the German
    original if you speak German – the German text is the reference when in doubt.
 4. **Open a pull request.** Partial translations are welcome too – for example the first few courses.
 

@@ -1,4 +1,4 @@
-﻿// Läuft als Test (eigener Ordner, damit er nicht bei jedem flutter test mitläuft).
+// Läuft als Test (eigener Ordner, damit er nicht bei jedem flutter test mitläuft).
 // ignore_for_file: invalid_use_of_visible_for_testing_member
 // Rendert alle Hauptscreens in Handygröße als PNG nach build/screens/ und
 // meldet Layout-Fehler (z. B. Überläufe). Nicht Teil der normalen Tests.
@@ -26,11 +26,15 @@ import 'package:velvetpulse/services/whats_new.dart';
 import 'package:velvetpulse/screens/yes_no_maybe/yes_no_maybe_screen.dart';
 import 'package:velvetpulse/services/data_service.dart';
 import 'package:velvetpulse/services/nostr_service.dart';
+import 'package:velvetpulse/l10n/t.dart';
+import 'package:velvetpulse/services/sprache.dart';
 import 'package:velvetpulse/services/storage_service.dart';
 import 'package:velvetpulse/theme/app_theme.dart';
 
 const _fontDir = 'C:/TOOLS/flutter/bin/cache/artifacts/material_fonts';
-final _outDir = Directory('build/screens');
+/// Sprache der Screenshots: flutter test test_screens/screens_test.dart --dart-define=LANG=en
+const _sprache = String.fromEnvironment('LANG', defaultValue: 'de');
+final _outDir = Directory(_sprache == 'de' ? 'build/screens' : 'build/screens_$_sprache');
 final _boundary = GlobalKey();
 
 Future<void> _loadFonts() async {
@@ -99,6 +103,7 @@ Future<void> _shot(WidgetTester tester, String name, List<String> errors) async 
 }
 
 void main() {
+  Sprache.geraetFuerTest = _sprache;
   testWidgets('Screens rendern', (tester) async {
     tester.view.physicalSize = const Size(390, 844);
     tester.view.devicePixelRatio = 1;
@@ -128,7 +133,7 @@ void main() {
     await tester.drag(find.byType(Scrollable).first, const Offset(0, -900));
     await _shot(tester, '01_kurse_unten', errors);
 
-    final tabs = {'Training': '02_training', 'Reframing': '03_reframing', 'Paar-Kanal': '04_paarkanal', 'KI-Coach': '05_kicoach'};
+    final tabs = {t.mainNavigationTraining: '02_training', t.mainNavigationReframing: '03_reframing', t.mainNavigationCoupleChannel: '04_paarkanal', t.mainNavigationAiCoach: '05_kicoach'};
     for (final entry in tabs.entries) {
       await tester.tap(find.text(entry.key).last);
       await _shot(tester, entry.value, errors);
@@ -138,7 +143,7 @@ void main() {
     await tester.runAsync(() => NostrService().startInvite('Anna'));
     NostrService().joinRequestNotifier.value = 'b' * 64;
     await tester.pumpWidget(_app(const MainNavigationScreen()));
-    await tester.tap(find.text('Paar-Kanal').last);
+    await tester.tap(find.text(t.mainNavigationCoupleChannel).last);
     await _shot(tester, '04_paarkanal_anfrage', errors);
     await tester.runAsync(() => NostrService().cancelInvite());
 
@@ -159,9 +164,9 @@ void main() {
     });
     NostrService().partnerReadUntil.value = DateTime(2026, 10, 23, 21).millisecondsSinceEpoch ~/ 1000;
     await tester.pumpWidget(_app(const MainNavigationScreen()));
-    await tester.tap(find.text('Paar-Kanal').last);
+    await tester.tap(find.text(t.mainNavigationCoupleChannel).last);
     await _shot(tester, '04_paarkanal_verbunden', errors);
-    await tester.tap(find.text('Wünsche'));
+    await tester.tap(find.text(t.couplesChannelWishes));
     await _shot(tester, '04_paarkanal_wuensche', errors);
 
     await tester.pumpWidget(const SizedBox());
@@ -170,7 +175,7 @@ void main() {
     await _shot(tester, '09_paar_abend', errors);
     await tester.drag(find.byType(Scrollable).first, const Offset(0, -700));
     await _shot(tester, '09_paar_abend_unten', errors);
-    await tester.tap(find.text('Abend beginnen'));
+    await tester.tap(find.text(t.paarAbendBeginTheEvening));
     await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 500)));
     await _shot(tester, '09_paar_abend_laeuft', errors);
     await tester.tap(find.byIcon(Icons.skip_next_rounded));
@@ -231,11 +236,11 @@ void main() {
     await tester.pumpWidget(const SizedBox());
 
     await tester.pumpWidget(_app(const SelbstReiseScreen()));
-    for (var i = 0; i < 10 && find.text('Intim').evaluate().isEmpty; i++) {
+    for (var i = 0; i < 10 && find.text(t.paarAbendIntimate).evaluate().isEmpty; i++) {
       await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 300)));
       await tester.pump();
     }
-    await tester.tap(find.text('Intim'));
+    await tester.tap(find.text(t.paarAbendIntimate));
     await _shot(tester, '13_selbst_reise', errors);
     await tester.drag(find.byType(Scrollable).first, const Offset(0, -700));
     await _shot(tester, '13_selbst_reise_unten', errors);

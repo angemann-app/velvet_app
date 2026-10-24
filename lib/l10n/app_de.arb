@@ -1387,7 +1387,7 @@
       }
     }
   },
-  "spracheHinweis": "Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch; auf Englisch liest die Geräte-Stimme vor.",
+  "spracheHinweis": "Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch in der App; englische Aufnahmen lassen sich nachladen.",
   "cueEinatmenWeit": "Einatmen. Und weit werden.",
   "cueWeichBleiben": "Weich bleiben.",
   "cueAnspannen": "Anspannen. Und sanft heben.",
@@ -1399,5 +1399,27 @@
   "cueWelle": "Einatmen. Damm und Po weich.",
   "cueSeufzen": "Ausatmen. Lang und hörbar.",
   "cueStart": "Wir beginnen.",
-  "cueFertig": "Geschafft. Spür noch einen Moment nach."
+  "cueFertig": "Geschafft. Spür noch einen Moment nach.",
+  "audioPaketTitel": "Englische Stimmen",
+  "audioPaketText": "Englische Aufnahmen für Lektionen, Gemeinsamen Abend, Selbsterkundung und Beckenboden-Training (ca. {mb} MB). Ohne sie liest die Geräte-Stimme vor.",
+  "@audioPaketText": {
+    "placeholders": {
+      "mb": {
+        "type": "int"
+      }
+    }
+  },
+  "audioPaketInstalliert": "Installiert ({mb} MB). Die Aufnahmen liegen nur auf diesem Gerät.",
+  "@audioPaketInstalliert": {
+    "placeholders": {
+      "mb": {
+        "type": "int"
+      }
+    }
+  },
+  "audioPaketLaden": "Herunterladen",
+  "audioPaketLoeschen": "Löschen",
+  "audioPaketFertig": "Englische Stimmen sind bereit.",
+  "audioPaketFehler": "Das hat nicht geklappt. Bitte Internetverbindung prüfen und später noch einmal versuchen.",
+  "navPaarKanalKurz": "Paar-Kanal"
 }

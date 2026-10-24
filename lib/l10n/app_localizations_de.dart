@@ -2871,7 +2871,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get spracheHinweis =>
-      'Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch; auf Englisch liest die Geräte-Stimme vor.';
+      'Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch in der App; englische Aufnahmen lassen sich nachladen.';
 
   @override
   String get cueEinatmenWeit => 'Einatmen. Und weit werden.';
@@ -2908,4 +2908,33 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get cueFertig => 'Geschafft. Spür noch einen Moment nach.';
+
+  @override
+  String get audioPaketTitel => 'Englische Stimmen';
+
+  @override
+  String audioPaketText(int mb) {
+    return 'Englische Aufnahmen für Lektionen, Gemeinsamen Abend, Selbsterkundung und Beckenboden-Training (ca. $mb MB). Ohne sie liest die Geräte-Stimme vor.';
+  }
+
+  @override
+  String audioPaketInstalliert(int mb) {
+    return 'Installiert ($mb MB). Die Aufnahmen liegen nur auf diesem Gerät.';
+  }
+
+  @override
+  String get audioPaketLaden => 'Herunterladen';
+
+  @override
+  String get audioPaketLoeschen => 'Löschen';
+
+  @override
+  String get audioPaketFertig => 'Englische Stimmen sind bereit.';
+
+  @override
+  String get audioPaketFehler =>
+      'Das hat nicht geklappt. Bitte Internetverbindung prüfen und später noch einmal versuchen.';
+
+  @override
+  String get navPaarKanalKurz => 'Paar-Kanal';
 }

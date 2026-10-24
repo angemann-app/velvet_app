@@ -1,8 +1,10 @@
+import 'dart:io';
 import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/services.dart';
 
+import '../services/sprachausgabe.dart';
 import '../services/sprache.dart';
 
 /// Ein gesprochener Baustein aus assets/data/paar_abend.json.
@@ -71,9 +73,10 @@ class PaarAbendDaten {
   static Future<PaarAbendDaten> laden() async {
     final data = jsonDecode(await rootBundle.loadString(Sprache.inhalt('paar_abend.json')));
     Map<String, int> dauer = {};
-    // Die gemessenen Längen gehören zu den deutschen Aufnahmen; auf Englisch wird geschätzt.
-    if (!Sprache.englisch) try {
-      final raw = jsonDecode(await rootBundle.loadString('assets/audio/paar/dauer.json')) as Map;
+    // Gemessene Längen der Aufnahmen: Deutsch aus der App, Englisch aus dem Audiopaket.
+    // Fehlen sie (Englisch ohne Paket), wird aus der Textlänge geschätzt.
+    try {
+      final raw = jsonDecode(await _dauerText('audio/paar/dauer.json')) as Map;
       dauer = raw.map((k, v) => MapEntry(k as String, v as int));
     } catch (_) {
       // Ohne Längenliste wird aus der Textlänge geschätzt.
@@ -209,4 +212,12 @@ class PaarAbendDaten {
       ..add(const PaarSchritt.klangschale(0));
     return schritte;
   }
+}
+
+/// Inhalt einer dauer.json in der aktuellen Sprache; wirft, wenn es keine gibt.
+Future<String> _dauerText(String pfad) async {
+  if (!Sprache.englisch) return rootBundle.loadString('assets/$pfad');
+  final datei = AudioPaket.datei(pfad);
+  if (datei == null) throw StateError('kein englisches Audiopaket');
+  return File(datei).readAsString();
 }

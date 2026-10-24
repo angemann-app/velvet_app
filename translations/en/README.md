@@ -1,14 +1,14 @@
 # VelvetPulse – English content
 
-English translations of all VelvetPulse content, for anyone who wants to build an English version of the app.
-They are **not** part of the app release; the app itself is German.
+English translations of all VelvetPulse content. Since version 4.5 they ship with the app: on non-German
+phones (or when chosen in the profile) the app loads these files instead of the German ones.
 
 | File | German source | Contents |
 |---|---|---|
 | `velvet_content.json` | `assets/data/velvet_content.json` | 22 courses, 80 lessons, SOS cards, belief library, match cards |
 | `paar_abend.json` | `assets/data/paar_abend.json` | 54 spoken building blocks of the guided couple evening |
 | `selbst_reise.json` | `assets/data/selbst_reise.json` | 37 spoken building blocks of the guided self-exploration |
-| `yes_no_maybe.json` | `lib/models/yes_no_maybe_models.dart` | yes/no/maybe list: 10 categories, 63 items with explanations |
+| `yes_no_maybe.json` | `lib/models/yes_no_maybe_models.dart` | yes/no/maybe list: 10 categories, 65 items with explanations |
 | `fantasy_options.json` | `lib/models/couple_channel_models.dart` | fantasy options of the couple channel |
 
 The structure matches the German files, so they can be swapped in directly. IDs are identical and must never change
@@ -16,10 +16,9 @@ The structure matches the German files, so they can be swapped in directly. IDs 
 
 ## What is not translated
 
-- **User interface:** buttons, menus and hints are written directly in the Dart code in German. An English app
-  also needs these strings translated (e.g. with Flutter's `intl`/ARB files).
-- **Audio:** the lesson recordings are German. `tools/generate_audio.py` can record English versions with
-  an English Kokoro voice.
+- **User interface:** lives in `lib/l10n/app_en.arb` (Flutter gen-l10n), not in this folder.
+- **Audio:** German recordings are built into the app. English recordings (`tools/generate_audio_en.py`,
+  Kokoro voices af_heart and am_michael) are an optional download inside the app.
 - **Country-specific details:** crisis lines and legal remarks refer to Germany and are phrased neutrally here
   where possible. Please adapt them to your country.
 

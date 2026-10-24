@@ -2860,7 +2860,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get spracheHinweis =>
-      'Interface, courses and exercises. The recordings are in German; in English, your device\'s voice reads aloud.';
+      'Interface, courses and exercises. German recordings are built in; English recordings can be downloaded.';
 
   @override
   String get cueEinatmenWeit => 'Breathe in. And widen.';
@@ -2897,4 +2897,33 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cueFertig => 'Done. Stay with the feeling for a moment.';
+
+  @override
+  String get audioPaketTitel => 'English voices';
+
+  @override
+  String audioPaketText(int mb) {
+    return 'English recordings for lessons, shared evening, self-exploration and pelvic floor training (approx. $mb MB). Without them, your device\'s voice reads aloud.';
+  }
+
+  @override
+  String audioPaketInstalliert(int mb) {
+    return 'Installed ($mb MB). The recordings are stored on this device only.';
+  }
+
+  @override
+  String get audioPaketLaden => 'Download';
+
+  @override
+  String get audioPaketLoeschen => 'Delete';
+
+  @override
+  String get audioPaketFertig => 'English voices are ready.';
+
+  @override
+  String get audioPaketFehler =>
+      'That didn\'t work. Please check your internet connection and try again later.';
+
+  @override
+  String get navPaarKanalKurz => 'Couple';
 }

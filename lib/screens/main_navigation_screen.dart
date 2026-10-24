@@ -133,7 +133,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.favorite_outline_rounded),
               activeIcon: Icon(Icons.favorite_rounded),
-              label: t.mainNavigationCoupleChannel,
+              label: t.navPaarKanalKurz,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.chat_bubble_outline_rounded),

@@ -4854,7 +4854,7 @@ abstract class AppLocalizations {
   /// No description provided for @spracheHinweis.
   ///
   /// In de, this message translates to:
-  /// **'Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch; auf Englisch liest die Geräte-Stimme vor.'**
+  /// **'Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch in der App; englische Aufnahmen lassen sich nachladen.'**
   String get spracheHinweis;
 
   /// No description provided for @cueEinatmenWeit.
@@ -4928,6 +4928,54 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Geschafft. Spür noch einen Moment nach.'**
   String get cueFertig;
+
+  /// No description provided for @audioPaketTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Englische Stimmen'**
+  String get audioPaketTitel;
+
+  /// No description provided for @audioPaketText.
+  ///
+  /// In de, this message translates to:
+  /// **'Englische Aufnahmen für Lektionen, Gemeinsamen Abend, Selbsterkundung und Beckenboden-Training (ca. {mb} MB). Ohne sie liest die Geräte-Stimme vor.'**
+  String audioPaketText(int mb);
+
+  /// No description provided for @audioPaketInstalliert.
+  ///
+  /// In de, this message translates to:
+  /// **'Installiert ({mb} MB). Die Aufnahmen liegen nur auf diesem Gerät.'**
+  String audioPaketInstalliert(int mb);
+
+  /// No description provided for @audioPaketLaden.
+  ///
+  /// In de, this message translates to:
+  /// **'Herunterladen'**
+  String get audioPaketLaden;
+
+  /// No description provided for @audioPaketLoeschen.
+  ///
+  /// In de, this message translates to:
+  /// **'Löschen'**
+  String get audioPaketLoeschen;
+
+  /// No description provided for @audioPaketFertig.
+  ///
+  /// In de, this message translates to:
+  /// **'Englische Stimmen sind bereit.'**
+  String get audioPaketFertig;
+
+  /// No description provided for @audioPaketFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Das hat nicht geklappt. Bitte Internetverbindung prüfen und später noch einmal versuchen.'**
+  String get audioPaketFehler;
+
+  /// No description provided for @navPaarKanalKurz.
+  ///
+  /// In de, this message translates to:
+  /// **'Paar-Kanal'**
+  String get navPaarKanalKurz;
 }
 
 class _AppLocalizationsDelegate

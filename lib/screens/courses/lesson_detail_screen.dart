@@ -11,6 +11,7 @@ import '../../widgets/audio_player_card.dart';
 import '../self_exploration/lust_profile_screen.dart';
 import '../self_exploration/selbst_reise_screen.dart';
 import '../../l10n/t.dart';
+import '../../services/sprache.dart';
 
 class LessonDetailScreen extends StatefulWidget {
   final Lesson lesson;
@@ -208,7 +209,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           appBar: AppBar(backgroundColor: Colors.black),
           body: InteractiveViewer(
             maxScale: 5,
-            child: Center(child: SvgPicture.asset(asset, fit: BoxFit.contain)),
+            child: Center(child: SvgPicture.asset(Sprache.bild(asset), fit: BoxFit.contain)),
           ),
         ),
       ),
@@ -264,7 +265,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                               // Alle Diagramme sind 800x600.
                               AspectRatio(
                                 aspectRatio: 4 / 3,
-                                child: SvgPicture.asset(lesson.image!, fit: BoxFit.contain),
+                                child: SvgPicture.asset(Sprache.bild(lesson.image!), fit: BoxFit.contain),
                               ),
                               const Positioned(
                                 right: 8,

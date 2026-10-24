@@ -9,10 +9,10 @@
 [![Inhalte: CC BY-NC-SA 4.0](https://img.shields.io/badge/Inhalte-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE-CONTENT.md)
 [![Android](https://img.shields.io/badge/Android-7%2B-3ddc84.svg)](https://github.com/angemann-app/velvet_app/releases/latest)
 [![Nostr](https://img.shields.io/badge/Nostr-NIP--04-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/04.md)
-[![English content](https://img.shields.io/badge/Content-English%20available-blue.svg)](translations/en/)
+[![Sprache: Deutsch · English](https://img.shields.io/badge/App-Deutsch%20%C2%B7%20English-blue.svg)](translations/en/)
 
-> 🇬🇧 **English:** All content – 22 courses, 80 lessons, guided couple sessions and lists – is also available in
-> English in [translations/en](translations/en/), ready for anyone who wants to build an English version.
+> 🇬🇧 **English:** The app is fully available in English – interface, 22 courses, 80 lessons, guided sessions
+> and lists. English recordings can be downloaded in the app; otherwise your device's voice reads aloud.
 > See the [English summary](#english-summary) below.
 >
 > 🌍 **Help translate:** we'd love to add more languages. You don't need to be a developer –
@@ -45,7 +45,7 @@ Bremse nehmen – allein oder zu zweit.
 <details>
 <summary><b>English summary</b></summary>
 
-**VelvetPulse** is a free, open-source Android app (German language) for sexual wellbeing and intimacy
+**VelvetPulse** is a free, open-source Android app (German and English) for sexual wellbeing and intimacy
 without performance pressure. It combines cognitive behavioural therapy (CBT), somatic body work and
 sex education:
 
@@ -61,8 +61,8 @@ sex education:
 
 Built with Flutter. Code under MIT, content under CC BY-NC-SA 4.0.
 
-**English content:** all courses, lessons, guided session texts and lists are available in English in
-[translations/en](translations/en/) – ready for anyone who wants to build an English version.
+**English:** the app switches to English automatically on non-German phones (or manually in the profile).
+English recordings are an optional download inside the app. Content sources: [translations/en](translations/en/).
 </details>
 
 ## Funktionen
@@ -204,7 +204,10 @@ liegen in `test_live/` und laufen nicht automatisch mit.
 | `assets/audio/<lektions-id>.opus` | Audio je Lektion (fehlt sie, liest die Geräte-Sprachausgabe vor) |
 | `tools/generate_audio.py` | Lektionen neu einsprechen, z. B. `tease_1` oder `--courses 8-17` (siehe unten) |
 | `tools/aussprache.json` | Aussprache-Wörterbuch für einzelne Wörter |
-| `translations/en/` | englische Fassung aller Inhalte (nicht im App-Release); jede Änderung am deutschen Text muss dort nachgezogen werden, sonst schlägt `test/translation_test.dart` fehl |
+| `translations/en/` | englische Fassung aller Inhalte, wird mit ausgeliefert; jede Änderung am deutschen Text muss dort nachgezogen werden, sonst schlägt `test/translation_test.dart` fehl |
+| `lib/l10n/app_de.arb`, `app_en.arb` | Oberflächentexte (Flutter gen-l10n, Zugriff `t.<schlüssel>`); `test/oberflaeche_texte_test.dart` prüft Vollständigkeit |
+| `tools/l10n_umzug.py`, `tools/arb_setzen.py` | feste Texte aus dem Code in die ARB-Dateien ziehen bzw. einzelne Einträge setzen |
+| `tools/generate_audio_en.py` | englisches Audiopaket einsprechen und packen (Download in der App) |
 | `tools/translations.py` | Hilfe beim Übersetzen: Gerüst, Textauszug, Einspielen |
 | `tools/generate_covers.py` | Kursbilder `assets/images/cover_NN.svg` neu erzeugen |
 | `assets/images/diagram_*.svg` | Anleitungsgrafiken (800×600) |

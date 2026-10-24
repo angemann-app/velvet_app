@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velvetpulse/models/paar_abend.dart';
@@ -32,6 +34,22 @@ void main() {
     expect(Sprache.wahl.value, 'de');
     await Sprache.setzen('auto');
     expect(Sprache.code, 'en');
+  });
+
+  test('Jede beschriftete Grafik hat eine englische Fassung', () {
+    final grafiken = Directory('assets/images')
+        .listSync()
+        .whereType<File>()
+        .map((f) => f.uri.pathSegments.last)
+        .where((n) => n.startsWith('diagram_') && !n.endsWith('_en.svg'));
+    for (final name in grafiken) {
+      expect(File('assets/images/${name.replaceFirst('.svg', '_en.svg')}').existsSync(), isTrue, reason: name);
+    }
+    Sprache.geraetFuerTest = 'en';
+    expect(Sprache.bild('assets/images/diagram_wellen.svg'), 'assets/images/diagram_wellen_en.svg');
+    expect(Sprache.bild('assets/images/cover_01.svg'), 'assets/images/cover_01.svg');
+    Sprache.geraetFuerTest = 'de';
+    expect(Sprache.bild('assets/images/diagram_wellen.svg'), 'assets/images/diagram_wellen.svg');
   });
 
   test('Inhalte, Listen und Bausteine kommen in der gewählten Sprache', () async {

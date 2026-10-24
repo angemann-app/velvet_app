@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#16121F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F59E0B" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B97B66"/>
+      <stop offset="1" stop-color="#DDA48C"/>
+    </linearGradient>
+    <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DFA690"/>
+      <stop offset="1" stop-color="#C08069"/>
+    </linearGradient>
+    <linearGradient id="glans" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E39AA2"/>
+      <stop offset="1" stop-color="#C46E7C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <ellipse cx="380" cy="270" rx="320" ry="200" fill="url(#glow)"/>
+
+  <!-- Unterkörper im Profil -->
+  <path d="M0 0 L150 0 C196 46 230 104 232 158 C233 196 248 218 262 238 C270 272 274 300 270 330
+           C266 380 250 420 228 448 C204 478 168 500 118 510 C70 518 30 520 0 520 Z"
+        fill="url(#skin)" stroke="#7A4A3B" stroke-width="2.5"/>
+  <!-- Leiste und Oberschenkel andeuten -->
+  <path d="M232 170 C214 240 196 300 150 360" fill="none" stroke="#9A604F" stroke-width="2" opacity="0.7"/>
+  <path d="M60 520 C110 470 150 420 168 380" fill="none" stroke="#9A604F" stroke-width="2" opacity="0.5"/>
+
+  <!-- Innere Strukturen (verborgen, gestrichelt) -->
+  <g fill="none" stroke="#FDE68A" stroke-width="3" stroke-dasharray="7 6" opacity="0.9">
+    <!-- Schwellkörperwurzel unter dem Damm -->
+    <path d="M270 270 C240 280 222 320 226 360 C230 392 246 408 262 404"/>
+    <!-- Prostata -->
+    <ellipse cx="178" cy="318" rx="30" ry="22"/>
+  </g>
+  <text x="178" y="282" text-anchor="middle" fill="#FDE68A" font-family="sans-serif" font-size="19" font-weight="700">Prostate</text>
+
+  <!-- Hodensack -->
+  <path d="M272 300 C238 330 232 400 276 424 C318 446 362 414 352 360 C346 328 318 304 290 300 Z"
+        fill="#C98A74" stroke="#7A4A3B" stroke-width="2.5"/>
+  <path d="M300 320 C306 360 304 396 296 418" fill="none" stroke="#9A604F" stroke-width="2"/>
+
+  <!-- Schaft -->
+  <path d="M262 238 C350 224 446 206 518 202 C528 230 530 258 522 282 C452 290 368 310 278 328 C270 300 266 268 262 238 Z"
+        fill="url(#shaft)" stroke="#7A4A3B" stroke-width="2.5"/>
+  <path d="M290 246 C370 232 450 218 508 214" fill="none" stroke="#F0C2AE" stroke-width="5" stroke-linecap="round" opacity="0.6"/>  <!-- Eichel -->
+  <path d="M512 198 C548 180 604 190 618 226 C628 256 604 286 560 288 C540 289 528 286 518 284 C532 258 530 222 512 198 Z"
+        fill="url(#glans)" stroke="#7A3E4A" stroke-width="2.5"/>
+  <path d="M514 200 C528 230 530 260 520 284" fill="none" stroke="#9E4E5C" stroke-width="3"/>
+  <path d="M600 222 C606 232 606 244 602 252" fill="none" stroke="#7A3E4A" stroke-width="2"/>
+
+  <!-- After -->
+  <circle cx="214" cy="462" r="7" fill="#8E5A4C" stroke="#6E4034" stroke-width="2"/>
+
+  <!-- 2: Ring an der Wurzel -->
+  <ellipse cx="292" cy="280" rx="16" ry="44" fill="none" stroke="#FBBF24" stroke-width="5" stroke-dasharray="10 6"/>
+
+  <!-- 3: Beidhändiges Streichen entlang des Schafts -->
+  <g fill="none" stroke="#F59E0B" stroke-width="5" stroke-linecap="round">
+    <path d="M330 206 C400 194 450 186 492 180"/>
+    <path d="M340 342 C410 328 456 318 494 310"/>
+  </g>
+  <polygon points="510,178 486,168 490,192" fill="#F59E0B"/>
+  <polygon points="512,306 488,298 494,321" fill="#F59E0B"/>
+
+  <!-- 4: Bändchen an der Unterseite -->
+  <circle cx="524" cy="276" r="11" fill="#FB7185" stroke="#FFFFFF" stroke-width="2.5"/>
+
+  <!-- 1: Damm -->
+  <path d="M262 428 C250 440 236 452 222 458" fill="none" stroke="#34D399" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Nummern -->
+  <g font-family="sans-serif" font-size="24" font-weight="800" text-anchor="middle" fill="#1A1224">
+    <circle cx="300" cy="470" r="22" fill="#34D399"/><text x="300" y="479">1</text>
+    <circle cx="292" cy="196" r="22" fill="#FBBF24"/><text x="292" y="205">2</text>
+    <circle cx="420" cy="150" r="22" fill="#F59E0B"/><text x="420" y="159">3</text>
+    <circle cx="566" cy="330" r="22" fill="#FB7185"/><text x="566" y="339">4</text>
+  </g>
+  <path d="M533 283 L552 314" stroke="#FB7185" stroke-width="3"/>
+
+  <!-- Legende rechts oben -->
+  <g font-family="sans-serif" fill="#F1F5F9">
+    <text x="560" y="60" font-size="22" font-weight="800" fill="#94A3B8">Side view</text>
+  </g>
+
+  <!-- Legende unten -->
+  <rect x="0" y="512" width="800" height="88" fill="#0B1120" opacity="0.85"/>
+  <g font-family="sans-serif" fill="#F1F5F9" font-size="20">
+    <text x="20" y="544" font-weight="800" fill="#34D399">1 Base</text>
+    <text x="20" y="574">Hold testicles, stroke perineum</text>
+
+    <text x="330" y="544" font-weight="800" fill="#FBBF24">2 Root</text>
+    <text x="330" y="574">loose ring, calm pressure</text>
+  </g>
+  <g font-family="sans-serif" fill="#F1F5F9" font-size="20">
+    <text x="600" y="420" font-weight="800" fill="#F59E0B">3 Shaft</text>
+    <text x="600" y="446">both hands</text>
+    <text x="600" y="470">alternating</text>
+
+    <text x="600" y="120" font-weight="800" fill="#FB7185">4 Frenulum</text>
+    <text x="600" y="146">circle gently,</text>
+    <text x="600" y="170">then pause:</text>
+    <text x="600" y="194">hand on perineum</text>
+  </g>
+</svg>
