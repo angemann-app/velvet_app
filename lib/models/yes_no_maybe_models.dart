@@ -759,6 +759,28 @@ const List<YesNoMaybeCategory> velvetYesNoMaybeCategories = [
             'Nur mit ausdrücklichem Einverständnis, nur für euch. Vorher klären, wo die Bilder liegen und wann sie '
             'gelöscht werden. Gesichter weglassen schützt zusätzlich.',
       ),
+      YesNoMaybeItem(
+        id: 'item_64',
+        categoryId: 'fantasy_watching',
+        text: 'Gemeinsam einen Porno schauen',
+        explanation:
+            'Zusammen auf dem Sofa oder im Bett, als Anregung oder einfach aus Neugier. Sucht den Film gemeinsam aus; '
+            'jede und jeder darf jederzeit Nein sagen oder umschalten. Pornos sind inszeniert: Körper, Ausdauer und '
+            'Tempo dort sind kein Maßstab für euch. Viele mögen Filme, die fair und mit einvernehmlich arbeitenden '
+            'Darstellerinnen und Darstellern gedreht sind.',
+        lessonId: 'dopa_1',
+      ),
+      YesNoMaybeItem(
+        id: 'item_65',
+        categoryId: 'fantasy_watching',
+        text: 'Zusammen einen Swingerclub besuchen – nur ihr zwei, beobachtet werden erlaubt',
+        explanation:
+            'Es geht nicht darum, die Beziehung zu öffnen, sondern um den Reiz, gesehen zu werden. Ihr bleibt '
+            'unter euch: Niemand macht mit, höchstens dürfen andere zuschauen. Sprecht vorher genau ab, was für '
+            'euch in Ordnung ist, und vereinbart ein Zeichen, mit dem ihr jederzeit geht. Sagt im Club klar, '
+            'dass ihr unter euch bleibt – ein Nein gilt dort wie überall.',
+        lessonId: 'fant_3',
+      ),
     ],
   ),
 ];

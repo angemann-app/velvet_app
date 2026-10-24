@@ -383,6 +383,16 @@
           "id": "item_62",
           "text": "Private photos for each other",
           "explanation": "Only with explicit consent, only for the two of you. Agree beforehand where the pictures are stored and when they'll be deleted. Leaving out faces adds protection."
+        },
+        {
+          "id": "item_64",
+          "text": "Watching porn together",
+          "explanation": "Together on the sofa or in bed, as inspiration or simply out of curiosity. Choose the film together; either of you may say no or switch it off at any time. Porn is staged: the bodies, stamina and pace there are no yardstick for you. Many people prefer films made fairly and with performers who consent to their work."
+        },
+        {
+          "id": "item_65",
+          "text": "Visiting a swingers' club together – just the two of you, being watched allowed",
+          "explanation": "It's not about opening the relationship, but about the thrill of being seen. You stay among yourselves: nobody joins in, at most others may watch. Agree beforehand exactly what's okay for you, and set a sign you can use to leave at any time. Say clearly in the club that you're staying among yourselves – a no counts there like everywhere."
         }
       ]
     }
@@ -448,6 +458,8 @@
     "ynm:item_61": "54037ff87673cd28",
     "ynm:item_62": "6ffdcd7f24a1925a",
     "ynm:item_63": "fd266d533c8005fa",
+    "ynm:item_64": "f4a58c506ba417f9",
+    "ynm:item_65": "abf0de5c941f2dab",
     "ynm:item_7": "b32d0db9937ba589",
     "ynm:item_8": "c42322c0d8d584cb",
     "ynm:item_9": "ed851b8c9a5eceb0",
