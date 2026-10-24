@@ -2,7 +2,9 @@
 
 Standard ist Kokoro mit deutschen Stimmen, lokal auf diesem Rechner:
   Victoria (kikiri-tts/kikiri-german-victoria) für Kurse mit category="women",
+  beide im Wechsel (Absatz für Absatz) für category="couples",
   Martin   (kikiri-tts/kikiri-german-martin) für alle anderen.
+  Eine Lektion kann mit "voice": "victoria" | "martin" | "both" abweichen.
 Ergebnis: assets/audio/<lesson_id>.opus (Opus, 32 kbit/s, mono) per ffmpeg.
 
 Kokoro braucht die deutschen Forks von kokoro/misaki, darum mit dieser Umgebung starten:
@@ -11,6 +13,7 @@ Kokoro braucht die deutschen Forks von kokoro/misaki, darum mit dieser Umgebung 
   C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --all
   C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --zeige "liefern" "Pedal"
   C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --paar      (Paar-Abend, beide Stimmen)
+  C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --selbst    (Selbsterkundung, beide Stimmen)
   C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py --klang     (Klangschale, Klangteppich)
 
 Aussprache-Fehler einzelner Wörter korrigiert tools/aussprache.json.
@@ -42,11 +45,35 @@ KOKORO_VOICES = {
 EDGE_VOICES = {"victoria": "de-DE-SeraphinaMultilingualNeural", "martin": "de-DE-FlorianMultilingualNeural"}
 
 
+BOTH = "both"  # Victoria und Martin wechseln sich Absatz für Absatz ab
+
+
 def voice_for(course, lesson=None):
-    # Eine Lektion kann ihre Stimme selbst festlegen (Feld "voice"), sonst entscheidet der Kurs.
-    if lesson and lesson.get("voice") in KOKORO_VOICES:
+    # Eine Lektion kann ihre Stimme selbst festlegen (Feld "voice"), sonst entscheidet der Kurs:
+    # Frauen-Kurse spricht Victoria, Paar-Kurse beide im Wechsel, alle anderen Martin.
+    if lesson and (lesson.get("voice") in KOKORO_VOICES or lesson.get("voice") == BOTH):
         return lesson["voice"]
-    return "victoria" if course.get("category") == "women" else "martin"
+    category = course.get("category")
+    return {"women": "victoria", "couples": BOTH}.get(category, "martin")
+
+
+def alternate_voices(text):
+    """Teilt einen Lektionstext in (Stimme, Abschnitt)-Paare für das Einsprechen mit zwei Stimmen.
+
+    Gewechselt wird an jedem Absatz; eine kurze Zwischenüberschrift bleibt bei dem Absatz, der ihr folgt,
+    damit nicht eine Stimme die Überschrift und die andere den Inhalt spricht.
+    """
+    lines = [l for l in text.split("\n") if l.strip()]
+    sections, pending = [], []
+    for line in lines:
+        pending.append(line)
+        if len(line) >= 60:
+            sections.append("\n".join(pending))
+            pending = []
+    if pending:
+        sections.append("\n".join(pending))
+    names = list(KOKORO_VOICES)
+    return [(names[i % 2], s) for i, s in enumerate(sections)]
 
 
 def speech_text(lesson):
@@ -142,9 +169,8 @@ class Kokoro:
         ps, _ = pipeline.g2p(text)
         return fix_phonemes(ps)
 
-    def synthesize_wav(self, text, name, wav_path, pause=True):
+    def _speak(self, text, name, pause):
         import numpy as np
-        import soundfile as sf
 
         pipeline, pack = self._load(name)
         silence = np.zeros(int(PARAGRAPH_PAUSE_S * SAMPLE_RATE), dtype=np.float32)
@@ -155,6 +181,16 @@ class Kokoro:
                     pieces.append(result.audio.numpy())
             if pause:
                 pieces.append(silence)
+        return pieces
+
+    def synthesize_wav(self, text, name, wav_path, pause=True):
+        import numpy as np
+        import soundfile as sf
+
+        if name == BOTH:
+            pieces = [p for voice, section in alternate_voices(text) for p in self._speak(section, voice, pause)]
+        else:
+            pieces = self._speak(text, name, pause)
         sf.write(wav_path, np.concatenate(pieces), SAMPLE_RATE)
 
 
@@ -232,13 +268,15 @@ def generate_cues():
 
 
 PAAR_JSON = ROOT / "assets" / "data" / "paar_abend.json"
+SELBST_JSON = ROOT / "assets" / "data" / "selbst_reise.json"
 
 
-def generate_paar(only=None):
-    # Bausteine für den geführten Paar-Abend (lib/screens/couples_channel/paar_abend_screen.dart).
-    out_dir = AUDIO_DIR / "paar"
+def generate_blocks(only=None, source=PAAR_JSON, folder="paar"):
+    # Bausteine für den Paar-Abend (lib/screens/couples_channel/paar_abend_screen.dart) bzw. die
+    # geführte Selbsterkundung (lib/screens/self_exploration/selbst_reise_screen.dart), jeweils beide Stimmen.
+    out_dir = AUDIO_DIR / folder
     out_dir.mkdir(exist_ok=True)
-    blocks = json.loads(PAAR_JSON.read_text(encoding="utf-8"))["bausteine"]
+    blocks = json.loads(source.read_text(encoding="utf-8"))["bausteine"]
     if only:
         blocks = [b for b in blocks if b["id"] in only]
     import soundfile as sf
@@ -328,13 +366,18 @@ def main():
                         help="kurze Ansagen für den Beckenboden-Timer erzeugen (assets/audio/cues/)")
     parser.add_argument("--paar", action="store_true",
                         help="Bausteine des Paar-Abends erzeugen (assets/audio/paar/), optional nur die genannten ids")
+    parser.add_argument("--selbst", action="store_true",
+                        help="Bausteine der Selbsterkundung erzeugen (assets/audio/selbst/), optional nur die genannten ids")
     parser.add_argument("--klang", action="store_true", help="Klangschale und Klangteppich erzeugen")
     args = parser.parse_args()
     if args.klang:
         generate_sounds()
         return
     if args.paar:
-        generate_paar(set(args.ids))
+        generate_blocks(set(args.ids))
+        return
+    if args.selbst:
+        generate_blocks(set(args.ids), SELBST_JSON, "selbst")
         return
     if args.courses and len(args.courses) == 1:
         args.courses = (args.courses[0], args.courses[0])
@@ -371,7 +414,7 @@ def main():
                 engine.synthesize_wav(speech_text(lesson), name, src)
             else:
                 src = Path(tmp) / "speech.mp3"
-                asyncio.run(edge_synthesize(speech_text(lesson), name, src))
+                asyncio.run(edge_synthesize(speech_text(lesson), "martin" if name == BOTH else name, src))
             to_opus(src, out)
         print(f"[{i}/{len(picked)}] {lesson['id']} ({name}) -> {out.stat().st_size // 1024} KB", flush=True)
 

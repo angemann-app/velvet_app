@@ -12,6 +12,9 @@ class PaarBaustein {
   final int stufe;
   final String? tiefe;
 
+  /// Nur bei der Selbsterkundung: 'vulva' oder 'penis' für körperspezifische Bausteine.
+  final String? koerper;
+
   const PaarBaustein({
     required this.id,
     required this.phase,
@@ -19,6 +22,7 @@ class PaarBaustein {
     this.zone,
     this.stufe = 0,
     this.tiefe,
+    this.koerper,
   });
 
   factory PaarBaustein.fromJson(Map<String, dynamic> json) => PaarBaustein(
@@ -28,6 +32,7 @@ class PaarBaustein {
         zone: json['zone'],
         stufe: json['stufe'] ?? 0,
         tiefe: json['tiefe'],
+        koerper: json['koerper'],
       );
 }
 

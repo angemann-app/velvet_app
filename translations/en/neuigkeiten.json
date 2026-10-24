@@ -1,0 +1,66 @@
+{
+  "_hinweis": "Englische Fassung von assets/data/neuigkeiten.json (nicht Teil des App-Releases).",
+  "eintraege": [
+    {
+      "build": 25,
+      "version": "4.4.0-beta.4",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Learning together",
+          "text": "Share a lesson with your partner. You only see each other's answers to the reflection question once both of you have answered."
+        },
+        {
+          "icon": "school",
+          "titel": "Three new courses",
+          "text": "Different levels of desire, life phases, and pain, shame and performance pressure. Plus deepening lessons in five courses."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Notice of new messages",
+          "text": "Even when the app is closed, you learn about new messages in the couple channel. The notice reveals no content."
+        },
+        {
+          "icon": "person",
+          "titel": "Personal address",
+          "text": "Lessons call your partner by name once you enter name and gender in the couple channel."
+        }
+      ]
+    },
+    {
+      "build": 26,
+      "version": "4.4.0-beta.5",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Guided self-exploration",
+          "text": "10 to 30 minutes just for you: a voice guides you through breathing and a journey across your body, as close as you like. Found in course 18."
+        },
+        {
+          "icon": "school",
+          "titel": "New course: The anatomy of arousal",
+          "text": "There are more erogenous zones than penis, breasts and clitoris. With an exercise for your own map of pleasure."
+        },
+        {
+          "icon": "edit",
+          "titel": "Exploring yourself, rewritten",
+          "text": "Course 18 has become warmer and more precise, and has been re-recorded."
+        },
+        {
+          "icon": "record_voice_over",
+          "titel": "Two voices for couples",
+          "text": "Couple lessons are now read by Victoria and Martin in turns."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "What's new",
+          "text": "From now on you'll see this screen once after every update."
+        }
+      ]
+    }
+  ],
+  "_source": {
+    "news:25": "43fb88b582323edc",
+    "news:26": "fe279afa040f4852"
+  }
+}

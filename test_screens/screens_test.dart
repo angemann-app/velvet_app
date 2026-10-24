@@ -18,6 +18,9 @@ import 'package:velvetpulse/screens/courses/lesson_detail_screen.dart';
 import 'package:velvetpulse/screens/main_navigation_screen.dart';
 import 'package:velvetpulse/screens/onboarding/onboarding_screen.dart';
 import 'package:velvetpulse/screens/self_exploration/lust_profile_screen.dart';
+import 'package:velvetpulse/screens/self_exploration/selbst_reise_screen.dart';
+import 'package:velvetpulse/screens/whats_new_screen.dart';
+import 'package:velvetpulse/services/whats_new.dart';
 import 'package:velvetpulse/screens/yes_no_maybe/yes_no_maybe_screen.dart';
 import 'package:velvetpulse/services/data_service.dart';
 import 'package:velvetpulse/services/nostr_service.dart';
@@ -90,6 +93,7 @@ Future<void> _shot(WidgetTester tester, String name, List<String> errors) async 
   final exception = tester.takeException();
   if (exception != null) errors.add('$name: $exception');
   errors.add('--- nach $name');
+  debugPrint('Screen fertig: $name');
 }
 
 void main() {
@@ -216,6 +220,22 @@ void main() {
     final course = DataService.getCourses().firstWhere((c) => c.id == 'course_sacred_massage');
     await tester.pumpWidget(_app(LessonDetailScreen(lesson: course.lessons[1], courseTitle: course.title)));
     await _shot(tester, '06_lektion', errors);
+    await tester.pumpWidget(const SizedBox());
+
+    final news = await tester.runAsync(WhatsNew.load);
+    await tester.pumpWidget(_app(WhatsNewScreen(entries: news!.reversed.take(1).toList())));
+    await _shot(tester, '12_was_ist_neu', errors);
+    await tester.pumpWidget(const SizedBox());
+
+    await tester.pumpWidget(_app(const SelbstReiseScreen()));
+    for (var i = 0; i < 10 && find.text('Intim').evaluate().isEmpty; i++) {
+      await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 300)));
+      await tester.pump();
+    }
+    await tester.tap(find.text('Intim'));
+    await _shot(tester, '13_selbst_reise', errors);
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, -700));
+    await _shot(tester, '13_selbst_reise_unten', errors);
 
     await tester.pumpWidget(const SizedBox());
     NostrService().dispose();

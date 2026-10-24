@@ -25,7 +25,7 @@ You don't need to be a developer. If you can edit a text file, you can help.
 | Translate | Keep unchanged |
 |---|---|
 | `title`, `subtitle`, `summary`, `content`, `reflection_question` | `id` and every other key name |
-| texts in `paar_abend.json`, `yes_no_maybe.json`, `fantasy_options.json` | `image`, `icon`, `type`, `linked_tool`, `voice`, `category`, `target` |
+| texts in `paar_abend.json`, `selbst_reise.json`, `yes_no_maybe.json`, `fantasy_options.json` | `image`, `icon`, `type`, `linked_tool`, `voice`, `category`, `target` |
 | SOS cards, belief library, match cards | the `_source` block (it's filled in automatically) |
 
 - **IDs must never change.** Saved answers and partner matching depend on them.

@@ -7,6 +7,7 @@ import 'services/auto_backup_service.dart';
 import 'services/message_notifier.dart';
 import 'services/nostr_service.dart';
 import 'services/privacy_service.dart';
+import 'services/whats_new.dart';
 import 'widgets/app_lock.dart';
 import 'theme/app_theme.dart';
 import 'screens/main_navigation_screen.dart';
@@ -77,9 +78,19 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
       debugPrint('DataService loadDatabase error: $e');
     }
 
+    final hasOnboarded = StorageService.hasCompletedOnboarding();
+    // Bei einer Neuinstallation gibt es nichts „Neues“ zu zeigen.
+    if (!hasOnboarded) {
+      try {
+        await WhatsNew.markInstalled();
+      } catch (e) {
+        debugPrint('WhatsNew init error: $e');
+      }
+    }
+
     if (mounted) {
       setState(() {
-        _hasOnboarded = StorageService.hasCompletedOnboarding();
+        _hasOnboarded = hasOnboarded;
         _isInitialized = true;
       });
     }

@@ -1,0 +1,26 @@
+{
+  "_hinweis": "Was ist neu – erscheint einmal nach einem Update (lib/services/whats_new.dart). Ein Eintrag pro Release mit dessen Build-Nummer; wer mehrere Versionen überspringt, sieht alle Einträge seit seiner letzten Version. tools/release.ps1 verlangt einen Eintrag für jede neue Build-Nummer. Englisch in translations/en/neuigkeiten.json.",
+  "eintraege": [
+    {
+      "build": 25,
+      "version": "4.4.0-beta.4",
+      "punkte": [
+        {"icon": "favorite", "titel": "Gemeinsam lernen", "text": "Teile eine Lektion mit deinem Gegenüber. Eure Antworten auf die Reflexionsfrage seht ihr erst, wenn beide geantwortet haben."},
+        {"icon": "school", "titel": "Drei neue Kurse", "text": "Unterschiedliche Lust, Lebensphasen sowie Schmerz, Scham und Leistungsdruck. Dazu vertiefende Lektionen in fünf Kursen."},
+        {"icon": "notifications", "titel": "Hinweis auf neue Nachrichten", "text": "Auch wenn die App geschlossen ist, erfährst du von neuen Nachrichten im Paar-Kanal. Der Hinweis verrät keinen Inhalt."},
+        {"icon": "person", "titel": "Persönliche Ansprache", "text": "Lektionen nennen dein Gegenüber beim Namen, wenn du Name und Geschlecht im Paar-Kanal hinterlegst."}
+      ]
+    },
+    {
+      "build": 26,
+      "version": "4.4.0-beta.5",
+      "punkte": [
+        {"icon": "spa", "titel": "Geführte Selbsterkundung", "text": "10 bis 30 Minuten nur für dich: Eine Stimme begleitet dich durch Atem und eine Reise über deinen Körper, so nah, wie du möchtest. Zu finden in Kurs 18."},
+        {"icon": "school", "titel": "Neuer Kurs: Anatomie der Erregung", "text": "Es gibt mehr erogene Zonen als Penis, Brust und Klitoris. Mit einer Übung für deine eigene Landkarte der Lust."},
+        {"icon": "edit", "titel": "Sich selbst erkunden, neu geschrieben", "text": "Kurs 18 ist wärmer und genauer geworden und neu eingesprochen."},
+        {"icon": "record_voice_over", "titel": "Zwei Stimmen für Paare", "text": "Paar-Lektionen lesen Victoria und Martin jetzt im Wechsel."},
+        {"icon": "new_releases", "titel": "Was ist neu", "text": "Diesen Bildschirm siehst du ab jetzt nach jedem Update einmal."}
+      ]
+    }
+  ]
+}

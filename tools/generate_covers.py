@@ -192,6 +192,7 @@ COVERS = {
     19: ("talk", "teal"),
     20: ("forehead", "gold"),
     21: ("bust_single", "teal"),
+    22: ("back_f", "violet"),
 }
 
 # Bereiche der Ja/Nein/Vielleicht-Liste (lib/models/yes_no_maybe_models.dart) -> (Motiv, Farbstimmung)

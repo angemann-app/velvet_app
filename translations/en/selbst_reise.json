@@ -1,0 +1,349 @@
+{
+  "_hinweis": "Englische Fassung der Bausteine der geführten Selbsterkundung (nicht Teil des App-Releases). Struktur wie assets/data/selbst_reise.json.",
+  "bausteine": [
+    {
+      "id": "ankommen_1",
+      "phase": "ankommen",
+      "text": "Welcome. This time belongs only to you. Lie down comfortably, somewhere warm where nobody will disturb you. Today you don't have to achieve or prove anything. You may simply be here, and curious about yourself."
+    },
+    {
+      "id": "ankommen_2",
+      "phase": "ankommen",
+      "text": "Lovely that you're taking this time. Make yourself cosy, pull the blanket closer if you're cool. Slowly leave the day behind you. Everything that comes now is an invitation. You can stop or do something differently at any time."
+    },
+    {
+      "id": "ankommen_3",
+      "phase": "ankommen",
+      "text": "Welcome to yourself. Let yourself sink into the surface beneath you, as if it were carrying you. Feel where your body rests: shoulders, back, pelvis, heels. There's nothing to do here. Only to feel."
+    },
+    {
+      "id": "atem_1",
+      "phase": "atem",
+      "text": "Place one hand on your heart and one on your belly. Breathe in deeply into your belly so that the lower hand rises. And out again slowly, through your slightly open mouth. Once more. With every exhale your body becomes a little heavier."
+    },
+    {
+      "id": "atem_2",
+      "phase": "atem",
+      "text": "Breathe in through your nose, and when your lungs are full, take one more small breath on top. Then let everything flow out long and soft. Let your jaw relax, your shoulders sink, your pelvic floor soften. Twice more, at your own pace."
+    },
+    {
+      "id": "gesicht_1",
+      "phase": "beruehren",
+      "zone": "gesicht",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Begin with your face. Stroke your forehead, temples and cheeks with your fingertips. As slowly as if you were discovering this face for the first time. I'll be quiet for a while now."
+    },
+    {
+      "id": "gesicht_2",
+      "phase": "beruehren",
+      "zone": "gesicht",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Very slowly trace the line of your lips with one finger. Feel how sensitive they are. Then stroke over your chin, your jaw, up to your ears. Take your time."
+    },
+    {
+      "id": "hals_1",
+      "phase": "beruehren",
+      "zone": "hals",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Move to your neck and the nape of your neck. Stroke with a flat hand from your ear to your shoulder, first left, then right. The whole day often sits here. Let it soften under your hand."
+    },
+    {
+      "id": "arme_1",
+      "phase": "beruehren",
+      "zone": "arme",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Now stroke along one arm, from the shoulder to the fingertips. Then the inside, from the wrist to the crook of the elbow, only with your fingertips. The skin there is thin and delicate. Then the other arm."
+    },
+    {
+      "id": "haende_1",
+      "phase": "beruehren",
+      "zone": "haende",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Take one hand in the other. Massage the palm with your thumb in small circles, stroke out each finger one by one. These hands do so much for you all day. Now they may receive."
+    },
+    {
+      "id": "brust_1",
+      "phase": "beruehren",
+      "zone": "brust",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Place both hands on your chest, over the fabric. Feel the warmth, feel your heartbeat. Then stroke slowly in large circles over your chest and shoulders, as if you were embracing yourself."
+    },
+    {
+      "id": "bauch_1",
+      "phase": "beruehren",
+      "zone": "bauch",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Move to your belly. Draw large, calm circles around your navel, clockwise. Many people judge their belly harshly. Today you meet it kindly, like someone you love."
+    },
+    {
+      "id": "beine_1",
+      "phase": "beruehren",
+      "zone": "beine",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Now stroke over your thighs, long and slow, down to your knees and back again. Sometimes with light, sometimes with firmer pressure. Notice what feels good, and stay there."
+    },
+    {
+      "id": "haut_brust_1",
+      "phase": "beruehren",
+      "zone": "haut_brust",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Take some warm oil in your hands if you like and rub them together. Place them on the bare skin of your chest. Glide slowly over it in soft circles, from the outside inwards and back again."
+    },
+    {
+      "id": "haut_brust_2",
+      "phase": "beruehren",
+      "zone": "haut_brust",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Let your fingertips dance over your chest, barely noticeable, and then again with your whole hand. Alternate between feather-light and warmly enveloping. Feel where your breath deepens."
+    },
+    {
+      "id": "haut_bauch_1",
+      "phase": "beruehren",
+      "zone": "haut_bauch",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Glide with your oiled hands over your bare belly, from the centre to the sides, like waves on a beach. Let it become completely soft. A soft belly makes room for deep pleasure."
+    },
+    {
+      "id": "huefte_1",
+      "phase": "beruehren",
+      "zone": "huefte",
+      "stufe": 3,
+      "tiefe": "haut",
+      "text": "Follow the curves of your hips with your hands, slowly, as if exploring a landscape. Stroke along your groin, that often forgotten spot between belly and leg. It's more sensitive than you'd think."
+    },
+    {
+      "id": "innenschenkel_1",
+      "phase": "beruehren",
+      "zone": "innenschenkel",
+      "stufe": 4,
+      "tiefe": "haut",
+      "text": "Move to the insides of your thighs. Stroke slowly upwards, approach the centre without touching it, and glide back again. Let the anticipation grow."
+    },
+    {
+      "id": "innenschenkel_2",
+      "phase": "beruehren",
+      "zone": "innenschenkel",
+      "stufe": 4,
+      "tiefe": "haut",
+      "text": "Place your hands warmly on your inner thighs and let them rest there. Feel the warmth coming from the centre. Then draw small circles with your thumbs, a little further each time, and back again."
+    },
+    {
+      "id": "vulva_1",
+      "phase": "beruehren",
+      "zone": "genital",
+      "stufe": 5,
+      "tiefe": "intim",
+      "koerper": "vulva",
+      "text": "Now rest one hand calmly and warmly on your vulva. No movement yet. Just holding. Feel the warmth of your hand sinking into you, and your pelvis coming alive beneath it."
+    },
+    {
+      "id": "vulva_2",
+      "phase": "beruehren",
+      "zone": "genital",
+      "stufe": 5,
+      "tiefe": "intim",
+      "koerper": "vulva",
+      "text": "Take some lubricant and begin with large, slow circles over the mons and labia. Leave out the centre for now. With every circle your body may awaken a little more."
+    },
+    {
+      "id": "vulva_3",
+      "phase": "beruehren",
+      "zone": "genital",
+      "stufe": 5,
+      "tiefe": "intim",
+      "koerper": "vulva",
+      "text": "When your body wants more, let two flat fingers wander to your clitoris. Circle gently, or stroke from top to bottom, however feels right just now. And when something is lovely, stay exactly with it."
+    },
+    {
+      "id": "vulva_4",
+      "phase": "beruehren",
+      "zone": "genital",
+      "stufe": 5,
+      "tiefe": "intim",
+      "koerper": "vulva",
+      "text": "Now try something different: place two fingers like a V to the left and right of your clitoris and glide slowly up and down. Or tap very softly on it, like raindrops. Listen to what your body says."
+    },
+    {
+      "id": "penis_1",
+      "phase": "beruehren",
+      "zone": "genital",
+      "stufe": 5,
+      "tiefe": "intim",
+      "koerper": "penis",
+      "text": "Now rest one hand calmly and warmly on your penis and testicles. No movement yet. Just holding. Feel the warmth, and your pelvis coming alive under your hand, whether your penis is soft or firm."
+    },
+    {
+      "id": "penis_2",
+      "phase": "beruehren",
+      "zone": "genital",
+      "stufe": 5,
+      "tiefe": "intim",
+      "koerper": "penis",
+      "text": "Take some lubricant and let your flat, open hand glide slowly along the shaft. No fist, no goal. Light pressure, a calm pace. Feel every centimetre."
+    },
+    {
+      "id": "penis_3",
+      "phase": "beruehren",
+      "zone": "genital",
+      "stufe": 5,
+      "tiefe": "intim",
+      "koerper": "penis",
+      "text": "Form a loose ring with your thumb and index finger at the root, right at the pubic bone, and hold there. With your other hand, stroke slowly upwards. Feel how arousal becomes broader and deeper."
+    },
+    {
+      "id": "penis_4",
+      "phase": "beruehren",
+      "zone": "genital",
+      "stufe": 5,
+      "tiefe": "intim",
+      "koerper": "penis",
+      "text": "Now turn to your perineum, the spot between testicles and anus. Apply gentle, circling pressure with two fingers while your other hand glides calmly along the shaft. Breathe deeply into your belly."
+    },
+    {
+      "id": "welle_1",
+      "phase": "welle",
+      "text": "Imagine your arousal on a scale from one to ten. When you're at about seven, slow down. Breathe out long, let your pelvic floor soften, and feel the wave sink a little. Then it may rise again."
+    },
+    {
+      "id": "welle_2",
+      "phase": "welle",
+      "text": "Pause for a moment now. Your hand stays still. Breathe in deeply three times and out slowly. Feel the pulsing, the warmth spreading. And when you're ready, begin again, very slowly."
+    },
+    {
+      "id": "erinnerung_1",
+      "phase": "erinnerung",
+      "text": "Keep breathing as you do. Calmly and deeply."
+    },
+    {
+      "id": "erinnerung_2",
+      "phase": "erinnerung",
+      "text": "You have all the time in the world. Feel free to go even slower."
+    },
+    {
+      "id": "erinnerung_3",
+      "phase": "erinnerung",
+      "text": "Let your jaw relax and your belly soften."
+    },
+    {
+      "id": "erinnerung_4",
+      "phase": "erinnerung",
+      "text": "If a thought comes, let it drift past. And return to your hand."
+    },
+    {
+      "id": "erinnerung_5",
+      "phase": "erinnerung",
+      "text": "There's nothing to achieve. Only this moment."
+    },
+    {
+      "id": "ausklang_1",
+      "phase": "ausklang",
+      "text": "Now slow down until your hands lie completely still. Place one hand on your heart and one on your belly. Feel what's there: the warmth, the pulsing, the breath. Whatever happened today, it was exactly right."
+    },
+    {
+      "id": "ausklang_2",
+      "phase": "ausklang",
+      "text": "Slowly come to rest. Pull the blanket closer if you like. Thank your body for this time, for everything it felt today. And stay lying here for as long as it feels good."
+    },
+    {
+      "id": "ausklang_3",
+      "phase": "ausklang",
+      "text": "To finish: say a sentence to yourself inwardly that feels good. Perhaps: I'm allowed to enjoy. Or: My body is my home. Breathe in deeply once more, and out slowly."
+    },
+    {
+      "id": "kopfhaut_1",
+      "phase": "beruehren",
+      "zone": "kopfhaut",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Run your fingers into your hair as if you were washing it, only much more slowly. Circle with your fingertips over your scalp, from the nape of your neck to your forehead. Then gently take a handful of hair close to the roots, pull very lightly, and let go again."
+    },
+    {
+      "id": "ohren_1",
+      "phase": "beruehren",
+      "zone": "ohren",
+      "stufe": 1,
+      "tiefe": "bekleidet",
+      "text": "Take your earlobes between thumb and index finger and massage them softly. Then trace the curve of your ear with one fingertip, very slowly, and stroke down behind the ear to your neck. Feel how much there is to feel here."
+    },
+    {
+      "id": "kniekehlen_1",
+      "phase": "beruehren",
+      "zone": "kniekehlen",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Bend your legs so that your knees point upwards. Let your fingertips wander into the backs of your knees, where the skin is soft and thin. Stroke very lightly, almost tickling, and then with a little more pressure. Which do you like more?"
+    },
+    {
+      "id": "fuesse_1",
+      "phase": "beruehren",
+      "zone": "fuesse",
+      "stufe": 2,
+      "tiefe": "bekleidet",
+      "text": "Draw one foot towards you, or leave it where it is if that is more comfortable. Press your thumb into the sole and stroke from the heel to the toes. Then glide very lightly over the top of your foot. These feet have carried you all day."
+    },
+    {
+      "id": "damm_1",
+      "phase": "beruehren",
+      "zone": "damm",
+      "stufe": 4,
+      "tiefe": "intim",
+      "koerper": "vulva",
+      "text": "Let one hand slide between your legs, to the perineum, the soft place between the vaginal opening and the anus. Lay two fingers flat on it and give gentle pressure, then release again. Small circles, very slowly. Many feel the deep roots of the clitoris here."
+    }
+  ],
+  "_source": {
+    "self_block:ankommen_1": "f82951941055fb0f",
+    "self_block:ankommen_2": "d632d944958d679c",
+    "self_block:ankommen_3": "de14763531f327c2",
+    "self_block:arme_1": "b004b9567575422e",
+    "self_block:atem_1": "e6ceafda44f31e3a",
+    "self_block:atem_2": "64b73af1b9a98b5a",
+    "self_block:ausklang_1": "613b6cda23f107e4",
+    "self_block:ausklang_2": "056a6543bf95ae59",
+    "self_block:ausklang_3": "188d87b993c4184c",
+    "self_block:bauch_1": "1d5a2c15f85fdfc9",
+    "self_block:beine_1": "155227e500b10269",
+    "self_block:brust_1": "ffc8138e2aee5a96",
+    "self_block:damm_1": "7267dd5601c99307",
+    "self_block:erinnerung_1": "d3dd0c2377a83d27",
+    "self_block:erinnerung_2": "9754e9fd21aacae7",
+    "self_block:erinnerung_3": "65f5226713469f06",
+    "self_block:erinnerung_4": "0e9e922f11481094",
+    "self_block:erinnerung_5": "7bb4375ed3cc8c84",
+    "self_block:fuesse_1": "f6912ba2994b8a97",
+    "self_block:gesicht_1": "0bfd55054c973f27",
+    "self_block:gesicht_2": "6af24ed7e12559c4",
+    "self_block:haende_1": "a930c143588fbc4a",
+    "self_block:hals_1": "36412c18cf43fe5c",
+    "self_block:haut_bauch_1": "e766608cd865ad5d",
+    "self_block:haut_brust_1": "a07c2d1e8fed7f1f",
+    "self_block:haut_brust_2": "aebdc66e5a4a80de",
+    "self_block:huefte_1": "27d88beee9d1fd3d",
+    "self_block:innenschenkel_1": "6c2fe1a9a052405a",
+    "self_block:innenschenkel_2": "014ce011ca9f0d78",
+    "self_block:kniekehlen_1": "205d965546d53a87",
+    "self_block:kopfhaut_1": "9ee39e2a9193b30e",
+    "self_block:ohren_1": "05260912869ce062",
+    "self_block:penis_1": "f7e0e50e4fde97b9",
+    "self_block:penis_2": "493e99190014ae5a",
+    "self_block:penis_3": "aac8902182f1d64b",
+    "self_block:penis_4": "702515453c2aac85",
+    "self_block:vulva_1": "8c7488ab884d6166",
+    "self_block:vulva_2": "0249084a464dfef0",
+    "self_block:vulva_3": "5ae5eaa3c5d8999b",
+    "self_block:vulva_4": "babda766991edba9",
+    "self_block:welle_1": "757a125a4d47503e",
+    "self_block:welle_2": "eb3af126ef688390"
+  }
+}

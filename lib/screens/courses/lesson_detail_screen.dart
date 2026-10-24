@@ -9,6 +9,7 @@ import '../../services/tts_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/audio_player_card.dart';
 import '../self_exploration/lust_profile_screen.dart';
+import '../self_exploration/selbst_reise_screen.dart';
 
 class LessonDetailScreen extends StatefulWidget {
   final Lesson lesson;
@@ -178,6 +179,10 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     final tool = widget.lesson.linkedTool;
     if (tool == 'lust_profil') {
       Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LustProfileScreen()));
+      return;
+    }
+    if (tool == 'selbst_reise') {
+      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SelbstReiseScreen()));
       return;
     }
     if (widget.onNavigateToTool != null) {
@@ -446,6 +451,11 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       toolTitle = 'Mein Lust-Profil';
       toolSubtitle = 'Ankreuzen, was dir gefällt – und auf Wunsch deinem Gegenüber schicken';
       toolIcon = Icons.favorite_rounded;
+      accentColor = AppTheme.rose;
+    } else if (tool == 'selbst_reise') {
+      toolTitle = 'Geführte Selbsterkundung';
+      toolSubtitle = '10 bis 30 Minuten, eine Stimme begleitet dich – so nah, wie du möchtest';
+      toolIcon = Icons.spa_rounded;
       accentColor = AppTheme.rose;
     } else if (tool == 'cbt_journal') {
       toolTitle = 'KVT-Gedankenprotokoll starten';

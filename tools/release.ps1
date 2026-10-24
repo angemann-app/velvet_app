@@ -34,6 +34,12 @@ if ($highest -and $Build -le $highest) {
     throw "Build $Build ist nicht höher als das bisher höchste Release (Build $highest)."
 }
 
+# Gate: ohne Eintrag im „Was ist neu“-Bildschirm kein Release.
+$news = Get-Content -Raw -Encoding utf8 assets\data\neuigkeiten.json | ConvertFrom-Json
+if (-not ($news.eintraege | Where-Object { $_.build -eq $Build })) {
+    throw "assets\data\neuigkeiten.json hat keinen Eintrag für Build $Build (plus Englisch in translations\en\neuigkeiten.json)."
+}
+
 # Gate: ohne grüne Tests (u. a. test/security_test.dart) kein Release.
 flutter test
 if ($LASTEXITCODE -ne 0) { throw "Tests fehlgeschlagen – kein Release." }

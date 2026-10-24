@@ -161,8 +161,11 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
 ## 6. Stimmen und Audio
 
 - **Engine:** Alle Lektionen sind mit **Kokoro** neu eingesprochen, lokal und ohne Cloud.
-  - Stimme Victoria für Kurse mit `category: women`, sonst Martin.
-  - Eine Lektion kann die Stimme über das Feld `voice` selbst festlegen.
+  - Stimme Victoria für Kurse mit `category: women`, Paar-Kurse (`couples`) sprechen Victoria und
+    Martin im Wechsel, Absatz für Absatz. Alle anderen spricht Martin.
+  - Eine Lektion kann die Stimme über das Feld `voice` selbst festlegen (`victoria`, `martin`, `both`).
+  - Getestet und verworfen: andere Kokoro-Stimmen und Chatterbox (klonte die Stimmen, war aber auf der
+    CPU etwa zehnmal langsamer als Echtzeit und ohne Aussprache-Wörterbuch).
 - **Skript:** `tools/generate_audio.py`. Es braucht die Python-Umgebung mit den deutschen Kokoro- und
   misaki-Forks (Aufruf siehe Kopf des Skripts).
   - `--pruefe` sucht nach verdächtiger Aussprache.
@@ -187,12 +190,34 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
     Dabei entsteht auch `dauer.json`, aus der der Planer die Stillen berechnet.
   - Test: `test/paar_abend_test.dart` prüft Dauer und Tiefe.
 
+## 7a. Neu: Geführte Selbsterkundung
+
+- **Einstieg:** Kurs 18, Lektion 1 („Warum sich selbst erkunden?“), Karte „Geführte Selbsterkundung“.
+- **Ablauf:** 10, 20 oder 30 Minuten. Ankommen, Atem, eine Reise über den Körper vom Gesicht abwärts,
+  bei „intim“ Berührung am Geschlecht mit Wellen statt Ziel, dann Ausklang.
+- **Einstellungen:** Tiefe (sanft, Haut, intim), Körper (Vulva oder Penis, Vorgabe aus dem Profil),
+  Stimme Victoria oder Martin, Klangteppich.
+- **Dateien:**
+  - Texte: `assets/data/selbst_reise.json` (37 Bausteine, Englisch in `translations/en/`)
+  - Planer: `lib/models/selbst_reise.dart`
+  - Bildschirm: `lib/screens/self_exploration/selbst_reise_screen.dart`
+  - Audio: `assets/audio/selbst/`, erzeugt mit `generate_audio.py --selbst`; Klangschale und
+    Klangteppich kommen aus `assets/audio/paar/`.
+  - Test: `test/selbst_reise_test.dart` prüft Dauer, Tiefe und Körper.
+- Kurs 18 wurde dafür neu geschrieben (Lektionen 1 bis 4).
+
+## 7b. Neu: „Was ist neu“ nach Updates
+
+- Nach einem Update erscheint einmal ein Willkommens-Bildschirm mit den Neuerungen; bei einer
+  Neuinstallation nicht. Wer mehrere Versionen überspringt, sieht alles seit seiner letzten Version.
+- **Pflicht bei jedem Release:** einen Eintrag mit der neuen Build-Nummer in
+  `assets/data/neuigkeiten.json` anlegen (und auf Englisch in `translations/en/neuigkeiten.json`).
+  `tools/release.ps1` bricht sonst ab, der Übersetzungstest ebenso.
+- Code: `lib/services/whats_new.dart`, `lib/screens/whats_new_screen.dart`, Test `test/whats_new_test.dart`.
+
 ## 8. Offen
 
-- Die Aufnahmen für Teil 1, Kurs 18 und den Gemeinsamen Abend sind noch nicht vollständig committet.
-- Das erste Release über `tools/release.ps1` steht noch aus. Wer bisher eine Debug-Version hat, muss
-  einmal eine Sicherung exportieren, die App deinstallieren und neu installieren.
+- Als Nächstes: Kurs „Anatomie der Erregung“ (weniger bekannte erogene Zonen).
 - Später geplant:
   - Lernpfad als optionaler Modus.
-  - Gemeinsam lernen im Paar-Kanal (Lektion teilen, gemeinsame Reflexion).
   - Feedback-Kanal für Tester.

@@ -7,6 +7,7 @@ import 'training/training_screen.dart';
 import 'cbt/cbt_journal_screen.dart';
 import 'couples_channel/couples_channel_screen.dart';
 import 'ai_coach/ai_coach_screen.dart';
+import 'whats_new_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -22,8 +23,10 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   @override
   void initState() {
     super.initState();
-    // Höchstens einmal täglich nach einer neuen Version auf GitHub schauen.
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    // Nach einem Update einmal zeigen, was neu ist; danach höchstens einmal täglich
+    // nach einer neuen Version auf GitHub schauen.
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      if (mounted) await showWhatsNewIfUpdated(context);
       if (mounted) checkForUpdateAndPrompt(context);
     });
   }
