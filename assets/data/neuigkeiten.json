@@ -229,6 +229,17 @@
           "text": "Im Spicy-Modus glüht die App jetzt rot, und im Paar-Chat kannst du dein Gegenüber zum Spicy-Modus einladen."
         }
       ]
+    },
+    {
+      "build": 35,
+      "version": "4.6.0-beta.2",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "Kurs 25 ausführlicher",
+          "text": "„Jeder Körper ist schön und sexy“ ist neu geschrieben: länger, für Frauen und Männer, über den ganzen Körper von Haut und Haaren bis zu Bauch, Brust und Statur."
+        }
+      ]
     }
   ]
 }

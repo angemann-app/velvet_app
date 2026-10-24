@@ -229,6 +229,17 @@
           "text": "In spicy mode the app now glows red, and in the couple chat you can invite your partner to spicy mode."
         }
       ]
+    },
+    {
+      "build": 35,
+      "version": "4.6.0-beta.2",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "Course 25 in more depth",
+          "text": "“Every body is beautiful and sexy” has been rewritten: longer, for women and men, covering the whole body from skin and hair to belly, chest and build."
+        }
+      ]
     }
   ],
   "_source": {
@@ -240,6 +251,7 @@
     "news:30": "042046eb1b760fe8",
     "news:32": "d365c10765d7fc66",
     "news:33": "ba744f6de785458c",
-    "news:34": "c0fad8002202b859"
+    "news:34": "c0fad8002202b859",
+    "news:35": "7f92712a8752b764"
   }
 }
