@@ -4,7 +4,7 @@ Thank you for wanting to help! The most welcome contribution right now is a **tr
 
 ## Translating the content
 
-All of VelvetPulse's content – 22 courses, 80 lessons, guided couple sessions and lists – exists in German
+All of VelvetPulse's content – 25 courses, 96 lessons, guided sessions and lists – exists in German
 (the original) and in English ([translations/en](translations/en/)). We'd love to add more languages:
 French, Spanish, Dutch, Italian, Polish, Portuguese … whatever you speak well.
 

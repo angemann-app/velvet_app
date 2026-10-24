@@ -11,7 +11,7 @@
 [![Nostr](https://img.shields.io/badge/Nostr-NIP--04-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/04.md)
 [![Sprache: Deutsch · English](https://img.shields.io/badge/App-Deutsch%20%C2%B7%20English-blue.svg)](translations/en/)
 
-> 🇬🇧 **English:** The app is fully available in English – interface, 22 courses, 80 lessons, guided sessions
+> 🇬🇧 **English:** The app is fully available in English – interface, 25 courses, 96 lessons, guided sessions
 > and lists. English recordings can be downloaded in the app; otherwise your device's voice reads aloud.
 > See the [English summary](#english-summary) below.
 >
@@ -49,8 +49,11 @@ Bremse nehmen – allein oder zu zweit.
 without performance pressure. It combines cognitive behavioural therapy (CBT), somatic body work and
 sex education:
 
-- **22 courses, 80 lessons** with offline audio – desire and arousal, performance anxiety, pelvic floor,
-  communication, touch techniques, mismatched desire, life phases, pain and shame, the anatomy of arousal.
+- **25 courses, 96 lessons** with offline audio – desire and arousal, performance anxiety, pelvic floor,
+  communication, touch techniques, mismatched desire, life phases, pain and shame, the anatomy of arousal,
+  body positivity.
+- **Optional spicy mode (18+):** bolder levels for the guided sessions, two extra courses and more
+  yes/no/maybe items – hidden unless you switch it on.
 - **Guided couple sessions** (20–45 min) and a **guided self-exploration** (10–30 min), assembled from audio
   building blocks, different every time.
 - **End-to-end encrypted couple channel** over [Nostr](https://nostr.com) (NIP-04): send sparks,
@@ -68,12 +71,16 @@ English recordings are an optional download inside the app. Content sources: [tr
 ## Funktionen
 
 ### Kurse und Lektionen
-- **22 Kurse mit 80 Lektionen**:
+- **25 Kurse mit 96 Lektionen**:
   - *Grundlagen* (Kurse 1–7): Zwei-Pedale-Modell, Beobachter-Falle, Beckenboden, Kommunikation, Sensate Focus.
   - *Praxis* (Kurse 8–17): Berührung für Sie und Ihn, Stimme und Atem, Vorfreude und Langsamkeit, Fantasien,
     Intim-Massage, Prostata und Damm, entspannte Stellungen, Szenarien für zwei.
   - *Vertiefung* (Kurse 18–22): Sich selbst erkunden, unterschiedliche Lust, Lebensphasen
     (Geburt, Wechseljahre, Älterwerden, Krankheit), Schmerz, Scham und Leistungsdruck, Anatomie der Erregung.
+  - *Kurs 25:* Jeder Körper ist schön und sexy.
+  - *Spicy* (Kurse 23–24, nur im Spicy-Modus): Spicy Solo und Spicy zu zweit.
+- **Spicy-Modus (ab 18, freiwillig):** schaltet im Profil zusätzliche Stufen für die geführten Audios,
+  zwei Kurse und weitere Ja/Vielleicht/Nein-Fragen frei; ohne ihn ist davon nichts zu sehen.
 - Jede Lektion folgt demselben Aufbau: **Warum das wirkt** · **Die Übung** ·
   **Einvernehmen und Sicherheit** · bei Bedarf **Wann ärztlich abklären**.
 - **Audio zu jeder Lektion** (offline, eingesprochen von den Stimmen Victoria und Martin).
@@ -82,13 +89,14 @@ English recordings are an optional download inside the app. Content sources: [tr
 
 ### Gemeinsamer Abend
 - Geführte Berührung für zwei, **20, 30 oder 45 Minuten**, bekleidet, Haut an Haut oder intim.
-- Jeder Abend wird neu aus über 50 gesprochenen Bausteinen zusammengestellt: Ankommen, zwei Runden mit
+- Jeder Abend wird neu aus über 100 gesprochenen Bausteinen zusammengestellt: Ankommen, zwei Runden mit
   Rollenwechsel, Ausklang – mit Klangschale und leisem Klangteppich in den Stillen.
 
 ### Geführte Selbsterkundung
 - Zeit nur für dich, **10, 20 oder 30 Minuten**: Ankommen, Atem und eine Reise über den eigenen Körper,
   sanft, mit nackter Haut oder intim, für Vulva oder Penis, mit Victoria oder Martin.
-- Ebenfalls jedes Mal neu zusammengestellt, aus über 40 Bausteinen.
+- Ebenfalls jedes Mal neu zusammengestellt, aus über 90 Bausteinen.
+- Beide sind direkt oben auf der Startseite zu finden.
 
 ### Training und Akuthilfe
 - **Beckenboden-Timer** mit vier Übungsarten (Loslassen, Kräftigen, Impulse, Wellen) und Sprachansagen.
@@ -99,7 +107,8 @@ English recordings are an optional download inside the app. Content sources: [tr
 ### Paar-Kanal
 - **Partner einladen** direkt aus der App oder per **QR-Code** verbinden – ohne Konto, ohne Telefonnummer.
 - **Funken:** ein Tippen sagt, worauf man heute Lust hat – oder eben nicht.
-- **Wünsche heimlich abgleichen:** 63 Ideen in 10 Bereichen; sichtbar wird nur, was beide wollen.
+- **Wünsche heimlich abgleichen:** 65 Ideen in 10 Bereichen (im Spicy-Modus 13 weitere); sichtbar wird nur,
+  was beide wollen.
 - **Gemeinsam lernen:** Lektionen teilen und Reflexionen austauschen – die Antwort des anderen wird erst
   sichtbar, wenn man selbst geantwortet hat.
 - **Hinweis bei neuen Nachrichten**, auch bei geschlossener App – ohne Inhalt und ohne Namen.
