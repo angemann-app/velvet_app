@@ -26,7 +26,9 @@ ROOT = Path(__file__).resolve().parent.parent
 EN = ROOT / "translations" / "en"
 ZIEL = ROOT / "build" / "audio_en"
 PAKET = ROOT / "build" / "velvetpulse-audio-en.zip"
-VERSION = "1"
+# Paketversion: muss zu AudioPaket.version in lib/services/sprachausgabe.dart passen.
+# 2: Spicy-Bausteine und Kurse 23/24 dazu (Aufnahmen aus 1 bleiben, es wird nur ergänzt).
+VERSION = "2"
 STIMMEN = {"victoria": "af_heart", "martin": "am_michael"}
 SR = 24000
 

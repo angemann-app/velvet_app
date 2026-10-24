@@ -2969,4 +2969,66 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get paarAbendSehrSpicyText =>
       'Like Spicy, but with dirty talk: crude words, greedy and shameless. Only if you both want it.';
+
+  @override
+  String audioPaketUpdate(int mb) {
+    return 'New English recordings are available (about $mb MB). Until then, the device voice reads the new texts.';
+  }
+
+  @override
+  String get audioPaketAktualisieren => 'Update';
+
+  @override
+  String get coachQHerOrgasm =>
+      'How do I help her climax without adding pressure?';
+
+  @override
+  String get coachQWomenRelax => 'What helps women truly let go during sex?';
+
+  @override
+  String get coachQHerDesire =>
+      'Why does it often take her longer to feel desire?';
+
+  @override
+  String get coachQAskHer =>
+      'How do I ask her what she likes without it getting awkward?';
+
+  @override
+  String get coachQMyPressure =>
+      'How do I get rid of performance pressure in bed?';
+
+  @override
+  String get coachQShowHim => 'How do I show him how I want to be touched?';
+
+  @override
+  String get coachQMenPressure =>
+      'What helps men with performance pressure in bed?';
+
+  @override
+  String get coachQPleaseHim =>
+      'How can I pleasure him even better with hands and mouth?';
+
+  @override
+  String get coachQWishesLimits =>
+      'How do we talk openly about wishes and limits?';
+
+  @override
+  String get coachQHerTouch =>
+      'How do we find out which touch she enjoys most?';
+
+  @override
+  String get coachQDesireGap =>
+      'How do we handle one of us wanting sex more often?';
+
+  @override
+  String get coachQKnowBody => 'How do I get to know my own body better?';
+
+  @override
+  String get coachQFemaleDesire => 'What should I know about female desire?';
+
+  @override
+  String get coachQMaleDesire => 'What should I know about male desire?';
+
+  @override
+  String get coachQShowTouch => 'How do I show how I want to be touched?';
 }

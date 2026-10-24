@@ -68,6 +68,15 @@ class AudioPaket {
 
   static bool get vorhanden => _ordner != null && File('$_ordner/audio/version.txt').existsSync();
 
+  /// Version des installierten Pakets, 0 ohne Paket.
+  static int get installierteVersion {
+    if (!vorhanden) return 0;
+    return int.tryParse(File('$_ordner/audio/version.txt').readAsStringSync().trim()) ?? 0;
+  }
+
+  /// Ein älteres Paket ist installiert; neue Texte liest bis zum Nachladen die Geräte-Stimme.
+  static bool get aktualisierbar => vorhanden && installierteVersion < version;
+
   /// Vollständiger Pfad einer Datei aus dem Paket, oder null.
   static String? datei(String pfad) {
     final o = _ordner;
@@ -79,9 +88,13 @@ class AudioPaket {
   // ---------------------------------------------------------------------------
   // Nachladen
 
+  /// Paketversion, die diese App-Version erwartet (tools/generate_audio_en.py, VERSION).
+  /// Jede Version enthält alles aus der vorigen; ältere Releases bleiben für ältere App-Versionen online.
+  static const int version = 2;
+
   /// Liegt als eigenes Release (Tag ohne „+Build“, wird von der Update-Suche nie gewählt).
   static const String paketUrl =
-      'https://github.com/${UpdateService.repo}/releases/download/audio-en-v1/velvetpulse-audio-en.zip';
+      'https://github.com/${UpdateService.repo}/releases/download/audio-en-v$version/velvetpulse-audio-en.zip';
   static const String pruefsummeUrl = '$paketUrl.sha256';
 
   /// Ungefähre Größe für die Anzeige (tools/generate_audio_en.py gibt die genaue aus).

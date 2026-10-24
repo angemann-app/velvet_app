@@ -5048,6 +5048,108 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos. Nur wenn ihr beide es wollt.'**
   String get paarAbendSehrSpicyText;
+
+  /// No description provided for @audioPaketUpdate.
+  ///
+  /// In de, this message translates to:
+  /// **'Neue englische Aufnahmen sind verfügbar (ca. {mb} MB). Bis dahin liest die Geräte-Stimme die neuen Texte vor.'**
+  String audioPaketUpdate(int mb);
+
+  /// No description provided for @audioPaketAktualisieren.
+  ///
+  /// In de, this message translates to:
+  /// **'Aktualisieren'**
+  String get audioPaketAktualisieren;
+
+  /// No description provided for @coachQHerOrgasm.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie bringe ich meine Partnerin zum Höhepunkt, ohne Druck zu machen?'**
+  String get coachQHerOrgasm;
+
+  /// No description provided for @coachQWomenRelax.
+  ///
+  /// In de, this message translates to:
+  /// **'Was hilft Frauen, beim Sex wirklich loszulassen?'**
+  String get coachQWomenRelax;
+
+  /// No description provided for @coachQHerDesire.
+  ///
+  /// In de, this message translates to:
+  /// **'Warum braucht sie oft länger, bis sie Lust bekommt?'**
+  String get coachQHerDesire;
+
+  /// No description provided for @coachQAskHer.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie frage ich sie, was ihr gefällt, ohne dass es peinlich wird?'**
+  String get coachQAskHer;
+
+  /// No description provided for @coachQMyPressure.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie werde ich den Leistungsdruck im Bett los?'**
+  String get coachQMyPressure;
+
+  /// No description provided for @coachQShowHim.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie zeige ich ihm, wie ich berührt werden möchte?'**
+  String get coachQShowHim;
+
+  /// No description provided for @coachQMenPressure.
+  ///
+  /// In de, this message translates to:
+  /// **'Was hilft Männern gegen Leistungsdruck im Bett?'**
+  String get coachQMenPressure;
+
+  /// No description provided for @coachQPleaseHim.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie verwöhne ich ihn mit Händen und Mund noch besser?'**
+  String get coachQPleaseHim;
+
+  /// No description provided for @coachQWishesLimits.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie sprechen wir offen über Wünsche und Grenzen?'**
+  String get coachQWishesLimits;
+
+  /// No description provided for @coachQHerTouch.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie finden wir heraus, welche Berührung ihr am meisten gefällt?'**
+  String get coachQHerTouch;
+
+  /// No description provided for @coachQDesireGap.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie gehen wir damit um, dass einer öfter Lust hat?'**
+  String get coachQDesireGap;
+
+  /// No description provided for @coachQKnowBody.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie lerne ich meinen eigenen Körper besser kennen?'**
+  String get coachQKnowBody;
+
+  /// No description provided for @coachQFemaleDesire.
+  ///
+  /// In de, this message translates to:
+  /// **'Was sollte ich über weibliche Lust wissen?'**
+  String get coachQFemaleDesire;
+
+  /// No description provided for @coachQMaleDesire.
+  ///
+  /// In de, this message translates to:
+  /// **'Was sollte ich über männliche Lust wissen?'**
+  String get coachQMaleDesire;
+
+  /// No description provided for @coachQShowTouch.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie zeige ich, wie ich berührt werden möchte?'**
+  String get coachQShowTouch;
 }
 
 class _AppLocalizationsDelegate

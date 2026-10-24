@@ -63,6 +63,18 @@ void main() {
     expect(AudioPaket.vorhanden, isFalse);
   });
 
+  test('Ein älteres Paket gilt als aktualisierbar, das aktuelle nicht', () async {
+    expect(AudioPaket.paketUrl, contains('audio-en-v${AudioPaket.version}/'));
+    expect(AudioPaket.aktualisierbar, isFalse, reason: 'ohne Paket gibt es nichts zu aktualisieren');
+    final alt = zipMit({'audio/version.txt': '${AudioPaket.version - 1}'});
+    await AudioPaket.laden(client: server(alt, sha256.convert(alt).toString()));
+    expect(AudioPaket.installierteVersion, AudioPaket.version - 1);
+    expect(AudioPaket.aktualisierbar, isTrue);
+    final neu = zipMit({'audio/version.txt': '${AudioPaket.version}\n'});
+    await AudioPaket.laden(client: server(neu, sha256.convert(neu).toString()));
+    expect(AudioPaket.aktualisierbar, isFalse);
+  });
+
   test('Löschen entfernt das Paket', () async {
     final zip = zipMit({'audio/version.txt': '1'});
     await AudioPaket.laden(client: server(zip, sha256.convert(zip).toString()));

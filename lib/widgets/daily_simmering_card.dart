@@ -324,34 +324,6 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                       height: 1.45,
                     ),
                   ),
-                  const SizedBox(height: 10),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: AppTheme.surfaceLight.withValues(alpha: 0.4),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Row(
-                      children: [
-                        const Icon(
-                          Icons.auto_awesome_rounded,
-                          size: 13,
-                          color: AppTheme.amber,
-                        ),
-                        const SizedBox(width: 6),
-                        Expanded(
-                          child: Text(
-                            impulse['benefit']!,
-                            style: const TextStyle(
-                              color: AppTheme.amberLight,
-                              fontSize: 11,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
                 ],
               ],
             ),

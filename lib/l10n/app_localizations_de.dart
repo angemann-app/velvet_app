@@ -2980,4 +2980,69 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get paarAbendSehrSpicyText =>
       'Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos. Nur wenn ihr beide es wollt.';
+
+  @override
+  String audioPaketUpdate(int mb) {
+    return 'Neue englische Aufnahmen sind verfügbar (ca. $mb MB). Bis dahin liest die Geräte-Stimme die neuen Texte vor.';
+  }
+
+  @override
+  String get audioPaketAktualisieren => 'Aktualisieren';
+
+  @override
+  String get coachQHerOrgasm =>
+      'Wie bringe ich meine Partnerin zum Höhepunkt, ohne Druck zu machen?';
+
+  @override
+  String get coachQWomenRelax =>
+      'Was hilft Frauen, beim Sex wirklich loszulassen?';
+
+  @override
+  String get coachQHerDesire =>
+      'Warum braucht sie oft länger, bis sie Lust bekommt?';
+
+  @override
+  String get coachQAskHer =>
+      'Wie frage ich sie, was ihr gefällt, ohne dass es peinlich wird?';
+
+  @override
+  String get coachQMyPressure =>
+      'Wie werde ich den Leistungsdruck im Bett los?';
+
+  @override
+  String get coachQShowHim =>
+      'Wie zeige ich ihm, wie ich berührt werden möchte?';
+
+  @override
+  String get coachQMenPressure =>
+      'Was hilft Männern gegen Leistungsdruck im Bett?';
+
+  @override
+  String get coachQPleaseHim =>
+      'Wie verwöhne ich ihn mit Händen und Mund noch besser?';
+
+  @override
+  String get coachQWishesLimits =>
+      'Wie sprechen wir offen über Wünsche und Grenzen?';
+
+  @override
+  String get coachQHerTouch =>
+      'Wie finden wir heraus, welche Berührung ihr am meisten gefällt?';
+
+  @override
+  String get coachQDesireGap =>
+      'Wie gehen wir damit um, dass einer öfter Lust hat?';
+
+  @override
+  String get coachQKnowBody =>
+      'Wie lerne ich meinen eigenen Körper besser kennen?';
+
+  @override
+  String get coachQFemaleDesire => 'Was sollte ich über weibliche Lust wissen?';
+
+  @override
+  String get coachQMaleDesire => 'Was sollte ich über männliche Lust wissen?';
+
+  @override
+  String get coachQShowTouch => 'Wie zeige ich, wie ich berührt werden möchte?';
 }

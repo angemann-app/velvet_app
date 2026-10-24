@@ -2,8 +2,10 @@
 # Tag ohne „+Build“ (z. B. audio-en-v1): Die Update-Suche der App wählt es nie als App-Update.
 # Die App lädt das Paket von genau dieser Adresse (lib/services/sprachausgabe.dart, AudioPaket.paketUrl).
 #
+# Ältere Pakete (audio-en-v1 …) nie löschen: ältere App-Versionen laden fest von ihrer Adresse.
+#
 #   powershell -ExecutionPolicy Bypass -File tools\audiopaket_hochladen.ps1
-param([string] $Tag = "audio-en-v1")
+param([string] $Tag = "audio-en-v2")
 $ErrorActionPreference = "Stop"
 $root = Split-Path $PSScriptRoot
 Set-Location $root

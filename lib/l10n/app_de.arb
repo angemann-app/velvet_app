@@ -1433,5 +1433,29 @@
   "paarAbendSpicyHinweis": "Sprecht vorher kurz über Wünsche und Grenzen und vereinbart ein Stoppwort. Wer es sagt, bekommt sofort Ruhe, ohne Diskussion. Grün, gelb, rot hilft zwischendurch.",
   "sehrSpicyStufe": "Sehr spicy",
   "selbstReiseSehrSpicyText": "Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos.",
-  "paarAbendSehrSpicyText": "Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos. Nur wenn ihr beide es wollt."
+  "paarAbendSehrSpicyText": "Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos. Nur wenn ihr beide es wollt.",
+  "audioPaketUpdate": "Neue englische Aufnahmen sind verfügbar (ca. {mb} MB). Bis dahin liest die Geräte-Stimme die neuen Texte vor.",
+  "audioPaketAktualisieren": "Aktualisieren",
+  "@audioPaketUpdate": {
+    "placeholders": {
+      "mb": {
+        "type": "int"
+      }
+    }
+  },
+  "coachQHerOrgasm": "Wie bringe ich meine Partnerin zum Höhepunkt, ohne Druck zu machen?",
+  "coachQWomenRelax": "Was hilft Frauen, beim Sex wirklich loszulassen?",
+  "coachQHerDesire": "Warum braucht sie oft länger, bis sie Lust bekommt?",
+  "coachQAskHer": "Wie frage ich sie, was ihr gefällt, ohne dass es peinlich wird?",
+  "coachQMyPressure": "Wie werde ich den Leistungsdruck im Bett los?",
+  "coachQShowHim": "Wie zeige ich ihm, wie ich berührt werden möchte?",
+  "coachQMenPressure": "Was hilft Männern gegen Leistungsdruck im Bett?",
+  "coachQPleaseHim": "Wie verwöhne ich ihn mit Händen und Mund noch besser?",
+  "coachQWishesLimits": "Wie sprechen wir offen über Wünsche und Grenzen?",
+  "coachQHerTouch": "Wie finden wir heraus, welche Berührung ihr am meisten gefällt?",
+  "coachQDesireGap": "Wie gehen wir damit um, dass einer öfter Lust hat?",
+  "coachQKnowBody": "Wie lerne ich meinen eigenen Körper besser kennen?",
+  "coachQFemaleDesire": "Was sollte ich über weibliche Lust wissen?",
+  "coachQMaleDesire": "Was sollte ich über männliche Lust wissen?",
+  "coachQShowTouch": "Wie zeige ich, wie ich berührt werden möchte?"
 }

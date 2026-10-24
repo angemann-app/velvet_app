@@ -26,6 +26,7 @@ class AudioPaketKarte extends StatelessWidget {
         valueListenable: AudioPaket.fortschritt,
         builder: (context, fortschritt, _) {
           final installiert = AudioPaket.vorhanden;
+          final aktualisierbar = AudioPaket.aktualisierbar;
           return Container(
             margin: const EdgeInsets.only(top: 6, right: 8, bottom: 8),
             padding: const EdgeInsets.all(12),
@@ -47,7 +48,11 @@ class AudioPaketKarte extends StatelessWidget {
                 ]),
                 const SizedBox(height: 6),
                 Text(
-                  installiert ? t.audioPaketInstalliert(AudioPaket.belegtMb) : t.audioPaketText(AudioPaket.ungefaehrMb),
+                  aktualisierbar
+                      ? t.audioPaketUpdate(AudioPaket.ungefaehrMb)
+                      : (installiert
+                          ? t.audioPaketInstalliert(AudioPaket.belegtMb)
+                          : t.audioPaketText(AudioPaket.ungefaehrMb)),
                   style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
                 ),
                 const SizedBox(height: 10),
@@ -57,6 +62,19 @@ class AudioPaketKarte extends StatelessWidget {
                     color: AppTheme.sageGreen,
                     backgroundColor: AppTheme.surfaceLight,
                   )
+                else if (aktualisierbar)
+                  Wrap(spacing: 8, children: [
+                    ElevatedButton.icon(
+                      onPressed: () => _laden(context),
+                      icon: const Icon(Icons.download_rounded, size: 18),
+                      label: Text(t.audioPaketAktualisieren),
+                    ),
+                    TextButton(
+                      onPressed: AudioPaket.loeschen,
+                      style: TextButton.styleFrom(foregroundColor: AppTheme.textSecondary),
+                      child: Text(t.audioPaketLoeschen),
+                    ),
+                  ])
                 else if (installiert)
                   TextButton.icon(
                     onPressed: AudioPaket.loeschen,

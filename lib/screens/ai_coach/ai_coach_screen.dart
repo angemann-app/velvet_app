@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../models/chat_message.dart';
 import '../../services/ai_service.dart';
+import '../../services/coach_vorschlaege.dart';
+import '../../services/nostr_service.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import 'api_key_guide_sheet.dart';
@@ -20,13 +22,16 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
   bool _isLoading = false;
   String? _apiKey;
 
-  static List<String> get _suggestedPrompts => [
-    t.aiCoachAsAWomanHowDo,
-    t.aiCoachHowCanWeStopPerformance,
-    t.aiCoachWhatToDoAboutRacing,
-    t.aiCoachHowDoIExplainResponsive,
-    t.aiCoachWhyDoesTheReverseKegel,
-  ];
+  /// Beispielfragen passend zum eigenen Profil und, wenn bekannt, zum Gegenüber aus dem Paar-Kanal.
+  List<String> get _suggestedPrompts {
+    final profil = StorageService.getUserProfile();
+    final nostr = NostrService();
+    return coachVorschlaege(
+      geschlecht: profil?.gender,
+      beziehung: profil?.relationshipStatus,
+      partnerGeschlecht: nostr.isPaired ? nostr.partnerGenderNotifier.value : null,
+    );
+  }
 
   @override
   void initState() {

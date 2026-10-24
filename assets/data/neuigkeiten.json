@@ -185,6 +185,11 @@
           "icon": "record_voice_over",
           "titel": "Martin spricht ruhiger",
           "text": "Martin liest alle Texte jetzt etwas langsamer, so dass Körperreise und Lektionen entspannter klingen."
+        },
+        {
+          "icon": "record_voice_over",
+          "titel": "Neue englische Aufnahmen",
+          "text": "Wer die App auf Englisch nutzt, kann unter Profil › Sprache die Aufnahmen für die neuen Inhalte nachladen."
         }
       ]
     }
