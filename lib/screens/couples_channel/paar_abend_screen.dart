@@ -9,6 +9,7 @@ import '../../models/paar_abend.dart';
 import '../../services/nostr_service.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/aussprache_melden.dart';
 
 /// Gemeinsamer, geführter Abend: Ein Handy liegt neben euch, die Stimme führt durch
 /// Ankommen, zwei Berührungsrunden mit Rollenwechsel und Ausklang.
@@ -533,8 +534,22 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
                 ),
               ],
             ),
+          if (_letzteAnsage() case final b?) ...[
+            const SizedBox(height: 6),
+            AusspracheMeldenButton(wo: 'Gemeinsamer Abend, Baustein ${b.id}', stimme: _stimme),
+          ],
         ],
       ),
     );
+  }
+
+  /// Die zuletzt gesprochene Ansage – darauf bezieht sich eine Aussprache-Meldung.
+  PaarBaustein? _letzteAnsage() {
+    final ablauf = _ablauf;
+    if (ablauf == null) return null;
+    for (var i = (_index < ablauf.length ? _index : ablauf.length - 1); i >= 0; i--) {
+      if (ablauf[i].baustein != null) return ablauf[i].baustein;
+    }
+    return null;
   }
 }

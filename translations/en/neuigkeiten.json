@@ -57,10 +57,22 @@
           "text": "From now on you'll see this screen once after every update."
         }
       ]
+    },
+    {
+      "build": 27,
+      "version": "4.4.0-beta.6",
+      "punkte": [
+        {
+          "icon": "record_voice_over",
+          "titel": "Word mispronounced?",
+          "text": "Below every audio you can report when the voice stresses a word wrongly. The report goes to GitHub, where it is public and needs an account. In discreet mode the link is hidden."
+        }
+      ]
     }
   ],
   "_source": {
     "news:25": "43fb88b582323edc",
-    "news:26": "fe279afa040f4852"
+    "news:26": "fe279afa040f4852",
+    "news:27": "7365439b9160b4f9"
   }
 }

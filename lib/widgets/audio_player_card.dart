@@ -2,6 +2,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
+import 'aussprache_melden.dart';
 
 class AudioPlayerCard extends StatefulWidget {
   final String textToRead;
@@ -9,12 +10,16 @@ class AudioPlayerCard extends StatefulWidget {
   final int durationMin;
   final bool isAudioExercise;
 
+  /// Wenn gesetzt, steht unter dem Player ein Link „Wort falsch ausgesprochen?“ mit diesem Ort.
+  final String? meldeOrt;
+
   const AudioPlayerCard({
     super.key,
     required this.textToRead,
     required this.contextId,
     required this.durationMin,
     required this.isAudioExercise,
+    this.meldeOrt,
   });
 
   @override
@@ -300,6 +305,14 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
               ],
             ],
           ),
+          // Bei der Geräte-Stimme (Fallback) hilft eine Meldung nichts.
+          if (widget.meldeOrt != null && !isUsingFallback)
+            AusspracheMeldenButton(
+              wo: widget.meldeOrt!,
+              position: () => _audioService.isCurrentLesson(widget.contextId)
+                  ? _audioService.positionNotifier.value
+                  : null,
+            ),
         ],
       ),
     );

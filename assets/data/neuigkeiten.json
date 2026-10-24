@@ -21,6 +21,13 @@
         {"icon": "record_voice_over", "titel": "Zwei Stimmen für Paare", "text": "Paar-Lektionen lesen Victoria und Martin jetzt im Wechsel."},
         {"icon": "new_releases", "titel": "Was ist neu", "text": "Diesen Bildschirm siehst du ab jetzt nach jedem Update einmal."}
       ]
+    },
+    {
+      "build": 27,
+      "version": "4.4.0-beta.6",
+      "punkte": [
+        {"icon": "record_voice_over", "titel": "Wort falsch ausgesprochen?", "text": "Unter jedem Audio kannst du melden, wenn die Stimme ein Wort falsch betont. Die Meldung geht an GitHub; dort ist sie öffentlich und braucht ein Konto. Im Diskretions-Modus ist der Link ausgeblendet."}
+      ]
     }
   ]
 }

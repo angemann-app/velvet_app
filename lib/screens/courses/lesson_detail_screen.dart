@@ -366,6 +366,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               contextId: lesson.id,
               durationMin: lesson.durationMin,
               isAudioExercise: lesson.isAudioExercise,
+              meldeOrt: '${widget.courseTitle}, „${lesson.title}“ (${lesson.id})',
             ),
 
             // Main Text Content

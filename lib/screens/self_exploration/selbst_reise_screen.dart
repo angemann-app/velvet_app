@@ -9,6 +9,7 @@ import '../../models/paar_abend.dart';
 import '../../models/selbst_reise.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/aussprache_melden.dart';
 
 /// Geführte Selbsterkundung: eine Stimme begleitet durch Ankommen, Atem, eine Körperreise
 /// und – wenn gewählt – intime Berührung mit Wellen. Jede Reise wird neu zusammengestellt
@@ -437,7 +438,21 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
               tooltip: 'Weiter',
             ),
           ]),
+        if (_letzteAnsage() case final b?) ...[
+          const SizedBox(height: 6),
+          AusspracheMeldenButton(wo: 'Geführte Selbsterkundung, Baustein ${b.id}', stimme: _stimme),
+        ],
       ]),
     );
+  }
+
+  /// Die zuletzt gesprochene Ansage – darauf bezieht sich eine Aussprache-Meldung.
+  PaarBaustein? _letzteAnsage() {
+    final ablauf = _ablauf;
+    if (ablauf == null) return null;
+    for (var i = (_index < ablauf.length ? _index : ablauf.length - 1); i >= 0; i--) {
+      if (ablauf[i].baustein != null) return ablauf[i].baustein;
+    }
+    return null;
   }
 }

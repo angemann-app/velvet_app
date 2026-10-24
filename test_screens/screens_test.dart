@@ -55,9 +55,9 @@ Future<void> _loadFonts() async {
 /// würden als Kästchen gezeichnet. Darum überall Roboto eintragen.
 ThemeData _testTheme() {
   final base = AppTheme.darkTheme;
-  ButtonStyle? withRoboto(ButtonStyle? style) => style?.copyWith(
+  ButtonStyle withRoboto(ButtonStyle? style) => (style ?? const ButtonStyle()).copyWith(
         textStyle: WidgetStatePropertyAll(
-            (style.textStyle?.resolve({}) ?? const TextStyle()).copyWith(fontFamily: 'Roboto')),
+            (style?.textStyle?.resolve({}) ?? const TextStyle()).copyWith(fontFamily: 'Roboto')),
       );
   return base.copyWith(
     textTheme: base.textTheme.apply(fontFamily: 'Roboto', fontFamilyFallback: ['Emoji']),
