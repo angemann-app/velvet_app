@@ -138,8 +138,18 @@
     },
     {
       "build": 30,
-      "version": "4.4.1",
+      "version": "4.5.0-beta.1",
       "punkte": [
+        {
+          "icon": "new_releases",
+          "titel": "VelvetPulse in English",
+          "text": "On English phones the app now appears in English – interface, courses and exercises. You can switch the language in your profile. English recordings come as a pack to download."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Two new questions",
+          "text": "The yes/no/maybe list now also asks about watching porn together and about visiting a swingers' club just the two of you, where others may at most watch."
+        },
         {
           "icon": "school",
           "titel": "More precise health texts",
@@ -169,6 +179,6 @@
     "news:27": "7365439b9160b4f9",
     "news:28": "9368bd4c890ce8fc",
     "news:29": "e43d0214df8aeed3",
-    "news:30": "fb5a1da9fbcf74de"
+    "news:30": "042046eb1b760fe8"
   }
 }
