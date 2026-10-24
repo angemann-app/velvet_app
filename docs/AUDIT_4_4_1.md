@@ -1,4 +1,10 @@
-# Audit 4.4.0+29 → 4.4.1+30
+# Audit 4.4.0+29 → 4.4.1 (veröffentlicht als Teil von 4.5.0-beta.1+30)
+
+> **Hinweis:** 4.4.1 wurde nie einzeln veröffentlicht. Die Änderungen unten stecken zusammen mit der
+> englischen Fassung in `v4.5.0-beta.1+30`. Die Prüfung dieser Beta steht im zweiten Teil
+> [„Beta-Prüfung 4.5.0-beta.1“](#beta-prüfung-450-beta1) am Ende.
+
+## Teil 1: Audit-Änderungen (geplant als 4.4.1)
 
 Grundlage: externer Prüfauftrag zu v4.4.0+29. Jeder Punkt wurde zuerst am Code geprüft; die Befunde
 unten sind die tatsächlich bestätigten. Format: **Finding → Test → Fix → Regression-Test → CI-Gate**.
@@ -144,3 +150,78 @@ Commit erfolgreich (GitHub Actions, 24.10.2026).
 ## Empfehlung
 Die Änderungen sind klein, getestet und ändern keine Datenformate. Sie eignen sich für einen
 **Patch-Release 4.4.1**. Vorher empfohlen: kurzer Blick auf die Selbsterkundung auf einem echten Gerät.
+
+---
+
+## Beta-Prüfung 4.5.0-beta.1
+
+Grundlage: externer Prüfauftrag zu `v4.5.0-beta.1+30` (24.10.2026). Neu gegenüber Teil 1 sind die englische
+Fassung (Oberfläche, Inhalte, Grafiken, Audiopaket) und zwei neue Fragen der Ja/Nein-Liste.
+Vergleichsbasis: `v4.4.0+29`.
+
+### Geprüft, ohne Befund
+- **Ja/Nein-Liste auf Englisch:** Alle 10 Kategorien und 65 Fragen (inkl. `item_64`, `item_65`) erscheinen
+  übersetzt; ids, Grafiken und Lektionsverweise sind unverändert, jede verknüpfte Lektion existiert auch auf
+  Englisch; Antwortstufen und leere Zustände übersetzt. Gespeicherte Antworten und der Partnerabgleich laufen
+  über die ids und sind sprachunabhängig. → `test/ja_nein_sprachen_test.dart` (Deutsch und Englisch).
+- **Verbliebene deutsche Texte:** Suche über `lib/` mit `tools/l10n_umzug.py kandidaten`; übrig nur gespeicherte
+  Kennungen (angezeigt übersetzt), die Vorlage für Aussprache-Meldungen an das deutsche Projekt und eine interne
+  Fehlermeldung. → `test/oberflaeche_texte_test.dart` (gleiche Schlüssel und Platzhalter, nichts leer, keine
+  Kodierungsfehler).
+- **Sprachwechsel ohne Datenverlust:** Er ändert nur `app_language`. → `test/sprache_test.dart`.
+- **Geräte-Stimme als Ersatz:** Ohne englisches Audiopaket liefert `Sprachausgabe.quelle` keine Aufnahme; Lektionen,
+  Gemeinsamer Abend, Selbsterkundung und Beckenboden-Ansagen lesen dann mit der Geräte-Stimme (`en-US`).
+  Codeprüfung; die tatsächliche Ausgabe braucht ein echtes Gerät.
+- **Grafiken passend zur Sprache:** Jede beschriftete Anleitungsgrafik hat eine `_en`-Fassung. → `test/sprache_test.dart`.
+- **Paar-Kanal, Backup, OTA gegenüber 4.4.0:** `nostr_service.dart` nur umbenannte lokale Variablen und übersetzte
+  Texte (keine Logikänderung); Backup und Update entsprechen Teil 1.
+- **Release `v4.5.0-beta.1+30`:** als Vorabversion, drei APKs mit Prüfsummen; CI „Tests“ für den Release-Commit
+  erfolgreich (Lauf 40090718016).
+
+### Befunde
+
+**B1 – Sprachwechsel verlangt erneut den Fingerabdruck**
+- *Finding:* Ein Sprachwechsel baut die ganze App neu auf (`MaterialApp` mit Schlüssel je Sprache). Dabei entstand
+  auch die App-Sperre neu und sperrte sofort – wer die Sperre nutzt, musste mitten in den Einstellungen erneut
+  entsperren.
+- *Reproduktionstest:* `test/app_lock_test.dart` – ohne Fix 2 Abfragen statt 1 (ausgeführt und bestätigt).
+- *Fix:* `AppLock` merkt sich, dass die Sitzung entsperrt ist; nach einem Neustart oder zu langer Zeit im
+  Hintergrund wird wie bisher gesperrt.
+- *Regressionstest / CI-Gate:* `test/app_lock_test.dart` in `flutter test` (CI und `tools/release.ps1`).
+
+**B2 – Datum im Gedanken-Tagebuch immer deutsch**
+- *Finding:* `cbt_journal_screen.dart` formatierte fest als `TT.MM.JJJJ`.
+- *Fix:* `DateFormat.yMd(Sprache.code)` mit deutschem Rückfall.
+- *Test:* Sichtprüfung; das Format kommt aus `intl`. Gerätetest empfohlen.
+
+**B3 – Versionsnummer in `pubspec.yaml` veraltet**
+- *Finding:* `4.4.0-beta.4+25`. Releases setzen Name und Build über `tools/release.ps1` korrekt, nur
+  Entwickler-Builds zeigten eine falsche Version.
+- *Fix:* `4.5.0-beta.1+30`.
+
+### Bereits während der Entwicklung von 4.5 gefunden und behoben (vor der Beta)
+- Unbelegte Versprechen in der CAT-Grafik („verdoppelte Orgasmus-Wahrscheinlichkeit“, „20+ Min. Ausdauer“),
+  auch auf Deutsch korrigiert.
+- 20 ungenutzte Wirkungssätze der Tagesimpulse („halbiert den Adrenalinspiegel“) entfernt.
+- Übersetzte Listen als einmal gefüllte Variablen hätten nach einem Sprachwechsel die alte Sprache behalten → Getter.
+- Gespeicherte Kennungen (Denkfallen, Check-in-Antworten) bleiben deutsch, angezeigt wird übersetzt – Datenformat
+  und Kompatibilität Beta/Stabil unverändert.
+
+### Ausgeführte Prüfungen (lokal, 24.10.2026, nach den Fixes)
+| Prüfung | Ergebnis |
+|---|---|
+| `flutter test` (86 Tests) | bestanden |
+| `flutter analyze` (gesamtes Projekt) | keine Befunde |
+| Release-Build (`--build-name 4.5.0-beta.2 --build-number 31`, nur Kontrolle) | erfolgreich |
+| Screenshots Deutsch und Englisch (`test_screens`, `--dart-define=LANG=en`) | durchgesehen |
+
+### Nur auf einem echten Gerät prüfbar (offen)
+- Sprachwechsel im Profil mit eingeschalteter Fingerabdruck-Sperre (B1 auf dem Gerät).
+- Geräte-Stimme auf Englisch (installierte englische Sprachausgabe nötig), Download des Audiopakets
+  (`audio-en-v1`, noch nicht hochgeladen), Wiedergabe der Pakete.
+- Benachrichtigung in englischer Sprache aus dem Hintergrund.
+- Screenreader auf Englisch.
+
+### Empfehlung
+B1–B3 sind klein und getestet; sie gehören in `4.5.0-beta.2`. Für die stabile 4.5.0 zusätzlich: Audiopaket
+hochladen und die offenen Geräteprüfungen durchführen.

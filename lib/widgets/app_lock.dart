@@ -12,6 +12,9 @@ class AppLock extends StatefulWidget {
 
   const AppLock({super.key, required this.child, this.initiallyLocked = false});
 
+  @visibleForTesting
+  static void zuruecksetzenFuerTest() => _AppLockState._sitzungEntsperrt = false;
+
   @override
   State<AppLock> createState() => _AppLockState();
 }
@@ -21,10 +24,14 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
   bool _locked = false;
   DateTime? _backgroundSince;
 
+  /// In dieser Sitzung schon entsperrt? Ein Sprachwechsel baut die App neu auf (main.dart); dabei soll
+  /// nicht erneut gesperrt werden. Nach einem neuen Start oder langer Zeit im Hintergrund gilt das nicht.
+  static bool _sitzungEntsperrt = false;
+
   @override
   void initState() {
     super.initState();
-    _locked = widget.initiallyLocked;
+    _locked = widget.initiallyLocked && !_sitzungEntsperrt;
     WidgetsBinding.instance.addObserver(this);
     _init();
   }
@@ -39,6 +46,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
     _enabled = await PrivacyService.isLockEnabled();
     if (!_enabled || !mounted) return;
     await PrivacyService.applySecureFlag(true);
+    if (_sitzungEntsperrt) return;
     setState(() => _locked = true);
     _unlock();
   }
@@ -55,6 +63,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
       final since = _backgroundSince;
       _backgroundSince = null;
       if (_enabled && !_locked && since != null && DateTime.now().difference(since) > PrivacyService.relockAfter) {
+        _sitzungEntsperrt = false;
         setState(() => _locked = true);
         _unlock();
       }
@@ -63,6 +72,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
 
   Future<void> _unlock() async {
     final ok = await PrivacyService.authenticate();
+    if (ok) _sitzungEntsperrt = true;
     if (ok && mounted) setState(() => _locked = false);
   }
 

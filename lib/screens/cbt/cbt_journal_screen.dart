@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import '../../models/journal_entry.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../l10n/t.dart';
+import '../../services/sprache.dart';
 import 'cbt_new_entry_screen.dart';
 import 'belief_library_view.dart';
 
@@ -84,7 +86,13 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
     );
   }
 
+  /// Datum im Format der App-Sprache (24.10.2026 bzw. 10/24/2026).
   String _formatDate(DateTime dt) {
+    try {
+      return DateFormat.yMd(Sprache.code).format(dt);
+    } catch (_) {
+      // Ohne geladene Datumsformate (z. B. in Tests): deutsche Schreibweise.
+    }
     return '${dt.day.toString().padLeft(2, '0')}.${dt.month.toString().padLeft(2, '0')}.${dt.year}';
   }
 

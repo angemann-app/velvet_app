@@ -39,8 +39,13 @@ class PrivacyService {
     }
   }
 
+  /// Ersatz für den Fingerabdruck-Dialog in Tests.
+  @visibleForTesting
+  static Future<bool> Function()? authenticateFuerTest;
+
   /// Fragt Fingerabdruck oder Geräte-PIN ab. Gibt true bei Erfolg zurück.
   static Future<bool> authenticate({String? reason}) async {
+    if (authenticateFuerTest != null) return authenticateFuerTest!();
     reason ??= t.privacyServiceUnlockTheApp;
     if (_authenticating) return false;
     _authenticating = true;

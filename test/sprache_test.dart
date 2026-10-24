@@ -26,6 +26,22 @@ void main() {
     }
   });
 
+  test('Ein Sprachwechsel ändert keine gespeicherten Daten außer der Sprachwahl', () async {
+    SharedPreferences.setMockInitialValues({
+      'completed_lessons': ['neuro_1'],
+      'velvet_yes_no_maybe_answers': '{"item_64":"yes"}',
+      'cbt_journal_entries': ['{"id":"1","cognitive_distortions":["Leistungsdruck"]}'],
+    });
+    final prefs = await SharedPreferences.getInstance();
+    final vorher = {for (final k in prefs.getKeys()) k: prefs.get(k)};
+    await Sprache.setzen('en');
+    await DataService.neuLaden();
+    await Sprache.setzen('de');
+    await DataService.neuLaden();
+    final nachher = {for (final k in prefs.getKeys()) if (k != 'app_language') k: prefs.get(k)};
+    expect(nachher, vorher);
+  });
+
   test('Die Wahl im Profil schlägt die Gerätesprache und bleibt gespeichert', () async {
     Sprache.geraetFuerTest = 'en';
     await Sprache.setzen('de');
