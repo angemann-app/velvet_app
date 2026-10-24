@@ -64,14 +64,13 @@ class _CoursesScreenState extends State<CoursesScreen> {
   }
 
   void _openProfileEditor() async {
-    final updated = await Navigator.of(context).push(
+    await Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => const OnboardingScreen(isEditing: true),
       ),
     );
-    if (updated == true) {
-      _loadData();
-    }
+    // Immer neu laden: auch ohne Speichern kann sich z. B. der Spicy-Modus geändert haben.
+    _loadData();
   }
 
   void _onLessonTap(Course course, Lesson lesson) async {

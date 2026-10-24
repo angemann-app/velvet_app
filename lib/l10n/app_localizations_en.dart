@@ -2926,4 +2926,47 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get navPaarKanalKurz => 'Couple';
+
+  @override
+  String get spicyModus => 'Spicy mode';
+
+  @override
+  String get spicyModusText =>
+      '18+. Unlocks the levels “Spicy” and “Extra spicy” in the body journey and the shared evening.';
+
+  @override
+  String get spicyEinschaltenTitel => 'Turn on spicy mode?';
+
+  @override
+  String get spicyEinschaltenText =>
+      'Adults only. The body journey and the shared evening will then offer two extra levels:\n\n“Spicy”: hot and direct, playing with arousal to just before climax, for couples also kisses, teasing and the mouth.\n\n“Extra spicy”: the same with dirty talk and crude words.\n\nEverything stays an invitation, and a stop word always applies. You can turn the mode off here at any time, and the levels disappear straight away.';
+
+  @override
+  String get spicyEinschalten => 'I\'m 18+, turn on';
+
+  @override
+  String get spicyStufe => 'Spicy';
+
+  @override
+  String get selbstReiseSpicyText =>
+      'Start right on the skin, then waves of arousal to just before the edge, and at the end your choice: come or savour.';
+
+  @override
+  String get paarAbendSpicyText =>
+      'Teasing, kisses all over the body, hand and mouth on the genitals, playing with the edge. Only if you both want it.';
+
+  @override
+  String get paarAbendSpicyHinweis =>
+      'Talk briefly beforehand about wishes and limits, and agree on a stop word. Whoever says it gets an immediate pause, no discussion. Green, yellow, red helps in between.';
+
+  @override
+  String get sehrSpicyStufe => 'Extra spicy';
+
+  @override
+  String get selbstReiseSehrSpicyText =>
+      'Like Spicy, but with dirty talk: crude words, greedy and shameless.';
+
+  @override
+  String get paarAbendSehrSpicyText =>
+      'Like Spicy, but with dirty talk: crude words, greedy and shameless. Only if you both want it.';
 }

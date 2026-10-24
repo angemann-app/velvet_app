@@ -15,9 +15,20 @@ void main() {
           final gesamt = ablauf.fold<Duration>(Duration.zero, (s, x) => s + x.dauer);
           expect(gesamt.inSeconds, closeTo(minuten * 60, 90), reason: '$minuten Min., $tiefe');
 
-          final erlaubt = PaarTiefe.values.sublist(0, tiefe.index + 1).map((t) => t.name);
+          final erlaubt = erlaubteTiefen(tiefe);
           final zonen = ablauf.map((s) => s.baustein).whereType<PaarBaustein>().where((b) => b.phase == 'beruehren');
           expect(zonen.every((b) => erlaubt.contains(b.tiefe)), isTrue);
+          final bausteine = ablauf.map((s) => s.baustein).whereType<PaarBaustein>().toList();
+          // Bausteine einer Spicy-Stufe nur bei genau dieser Stufe.
+          final fremd = {'spicy', 'sehrSpicy'}..remove(tiefe.name);
+          expect(bausteine.any((b) => fremd.contains(b.tiefe)), isFalse, reason: '$tiefe');
+          if (tiefe.istSpicy) {
+            expect(zonen.any((b) => b.tiefe == 'bekleidet'), isFalse, reason: 'Spicy beginnt auf der Haut');
+            expect(zonen.any((b) => b.tiefe == tiefe.name), isTrue);
+            for (final p in ['ankommen', 'runde_start', 'check_in', 'runde_ende', 'wechsel', 'ausklang']) {
+              expect(bausteine.where((b) => b.phase == p).every((b) => b.tiefe == tiefe.name), isTrue, reason: p);
+            }
+          }
           // Jeder Baustein höchstens einmal pro Abend.
           final ids = ablauf.map((s) => s.baustein?.id).whereType<String>().where((id) => !id.startsWith('erinnerung'));
           expect(ids.toSet().length, ids.length);

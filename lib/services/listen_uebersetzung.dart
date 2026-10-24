@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import '../models/couple_channel_models.dart';
 import '../models/yes_no_maybe_models.dart';
 import 'sprache.dart';
+import 'storage_service.dart';
 
 /// Die Ja/Nein/Vielleicht-Liste und die Fantasie-Optionen stehen auf Deutsch im Code
 /// (yes_no_maybe_models.dart, couple_channel_models.dart) – das ist die Quelle für die Übersetzung.
@@ -39,11 +40,17 @@ class ListenUebersetzung {
   static String _text(Map<String, Map<String, dynamic>> quelle, String id, String feld, String deutsch) =>
       (quelle[id]?[feld] as String?) ?? deutsch;
 
+  /// Die sichtbaren Kategorien: Spicy-Kategorien nur bei eingeschaltetem Spicy-Modus.
   static List<YesNoMaybeCategory> get kategorien {
-    if (_kategorien.isEmpty) return velvetYesNoMaybeCategories;
-    return [
+    final sichtbar = [
       for (final c in velvetYesNoMaybeCategories)
+        if (!c.spicy || StorageService.spicyMode()) c,
+    ];
+    if (_kategorien.isEmpty) return sichtbar;
+    return [
+      for (final c in sichtbar)
         YesNoMaybeCategory(
+          spicy: c.spicy,
           id: c.id,
           title: _text(_kategorien, c.id, 'title', c.title),
           description: _text(_kategorien, c.id, 'description', c.description),

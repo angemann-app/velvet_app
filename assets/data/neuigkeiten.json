@@ -171,6 +171,22 @@
           "text": "Updates werden nur mit gültiger Prüfsumme aus diesem Projekt installiert, und beschädigte Sicherungen werden verständlich abgelehnt."
         }
       ]
+    },
+    {
+      "build": 32,
+      "version": "4.5.0-beta.2",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Spicy-Modus",
+          "text": "Ab 18 und nur, wenn du ihn im Profil einschaltest: die Stufen „Spicy“ und „Sehr spicy“ für Körperreise und Gemeinsamen Abend, zwei neue Kurse und weitere Ja/Vielleicht/Nein-Fragen."
+        },
+        {
+          "icon": "record_voice_over",
+          "titel": "Martin spricht ruhiger",
+          "text": "Martin liest alle Texte jetzt etwas langsamer, so dass Körperreise und Lektionen entspannter klingen."
+        }
+      ]
     }
   ]
 }

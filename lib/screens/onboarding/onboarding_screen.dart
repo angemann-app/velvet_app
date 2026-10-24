@@ -41,6 +41,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   UpdateChannel _updateChannel = UpdateChannel.stable;
   bool _notifyMessages = false;
   bool _personalizeNames = StorageService.personalizeNames();
+  bool _spicyMode = StorageService.spicyMode();
   bool _lockSupported = false;
 
   @override
@@ -802,6 +803,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 const SizedBox(height: 16),
                 _buildPrivacySection(),
                 const SizedBox(height: 16),
+                _buildSpicySection(),
+                const SizedBox(height: 16),
                 _buildBackupSection(),
                 const SizedBox(height: 16),
                 _buildVersionSection(),
@@ -1177,6 +1180,53 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         ],
       ),
     );
+  }
+
+  /// Spicy-Modus: aus, bis man ihn bewusst und mit Bestätigung einschaltet; Ausschalten geht sofort.
+  Widget _buildSpicySection() {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 8, 8, 8),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: SwitchListTile(
+        contentPadding: const EdgeInsets.only(right: 8),
+        value: _spicyMode,
+        activeThumbColor: AppTheme.rose,
+        secondary: Icon(Icons.local_fire_department_rounded, color: _spicyMode ? AppTheme.rose : AppTheme.textMuted),
+        title: Text(t.spicyModus, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700)),
+        subtitle: Text(
+          t.spicyModusText,
+          style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+        ),
+        onChanged: (value) async {
+          if (value && !await _spicyBestaetigen()) return;
+          await StorageService.setSpicyMode(value);
+          if (mounted) setState(() => _spicyMode = value);
+        },
+      ),
+    );
+  }
+
+  Future<bool> _spicyBestaetigen() async {
+    final ja = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: AppTheme.surface,
+        title: Text(t.spicyEinschaltenTitel),
+        content: Text(t.spicyEinschaltenText, style: const TextStyle(height: 1.45)),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.ausspracheMeldenCancel)),
+          TextButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: Text(t.spicyEinschalten, style: const TextStyle(color: AppTheme.rose)),
+          ),
+        ],
+      ),
+    );
+    return ja == true;
   }
 
   Widget _buildBackupSection() {

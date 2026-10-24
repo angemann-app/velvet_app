@@ -193,6 +193,8 @@ COVERS = {
     20: ("forehead", "gold"),
     21: ("bust_single", "teal"),
     22: ("back_f", "violet"),
+    23: ("bust_single_f", "crimson"),
+    24: ("blindfold", "rose"),
 }
 
 # Bereiche der Ja/Nein/Vielleicht-Liste (lib/models/yes_no_maybe_models.dart) -> (Motiv, Farbstimmung)
@@ -207,6 +209,7 @@ YES_NO_MAYBE = {
     "toys_aids": ("back_m", "teal"),
     "roles_settings": ("talk", "violet"),
     "fantasy_watching": ("bust_single_f", "crimson"),
+    "spicy": ("near_kiss", "crimson"),
 }
 
 if __name__ == "__main__":

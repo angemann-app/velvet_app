@@ -171,6 +171,22 @@
           "text": "Updates are only installed with a valid checksum from this project, and damaged backups are rejected with a clear message."
         }
       ]
+    },
+    {
+      "build": 32,
+      "version": "4.5.0-beta.2",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Spicy mode",
+          "text": "18+ and only if you turn it on in your profile: the levels “Spicy” and “Extra spicy” for the body journey and the shared evening, two new courses and more yes/maybe/no questions."
+        },
+        {
+          "icon": "record_voice_over",
+          "titel": "Martin speaks more calmly",
+          "text": "Martin now reads all German texts a little more slowly, so the body journey and lessons sound more relaxed."
+        }
+      ]
     }
   ],
   "_source": {
@@ -179,6 +195,7 @@
     "news:27": "7365439b9160b4f9",
     "news:28": "9368bd4c890ce8fc",
     "news:29": "e43d0214df8aeed3",
-    "news:30": "042046eb1b760fe8"
+    "news:30": "042046eb1b760fe8",
+    "news:32": "711b6836fb5df36e"
   }
 }

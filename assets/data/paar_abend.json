@@ -1,5 +1,5 @@
 {
-  "_hinweis": "Bausteine für den geführten Paar-Abend. phase: ankommen | runde_start | beruehren | erinnerung (kurz, mitten in langen Stillen) | check_in | runde_ende | wechsel | ausklang. Bei beruehren: zone, stufe (1 = neutral … 5 = intim) und tiefe (bekleidet | haut | intim). Audio: assets/audio/paar/<stimme>_<id>.opus, erzeugt mit tools/generate_audio.py --paar.",
+  "_hinweis": "Bausteine für den geführten Paar-Abend. phase: ankommen | runde_start | beruehren | erinnerung (kurz, mitten in langen Stillen) | check_in | runde_ende | wechsel | ausklang. Bei beruehren: zone, stufe (1 = neutral … 6 = spicy) und tiefe (bekleidet | haut | intim | spicy | sehrSpicy). Bausteine mit tiefe \"spicy\" bzw. \"sehrSpicy\" (Dirty Talk) gibt es nur bei eingeschaltetem Spicy-Modus und genau dieser Stufe; außerhalb von beruehren ersetzen sie dort die übrigen Varianten ihrer Phase (erinnerung mischt). ids: …_s1 = spicy, …_x1 = sehr spicy. Audio: assets/audio/paar/<stimme>_<id>.opus, erzeugt mit tools/generate_audio.py --paar.",
   "bausteine": [
     {
       "id": "ankommen_1",
@@ -369,6 +369,358 @@
       "id": "ausklang_3",
       "phase": "ausklang",
       "text": "Zum Schluss: Legt eine Hand auf das Herz des anderen. Spürt den Herzschlag. Sagt euch, wenn ihr mögt, ein Wort für diesen Abend. Und bleibt so lange liegen, wie es sich gut anfühlt."
+    },
+    {
+      "id": "ankommen_s1",
+      "phase": "ankommen",
+      "tiefe": "spicy",
+      "text": "Willkommen zu eurem Spicy-Abend. Heute darf es heiß werden. Legt Gleitmittel, ein Handtuch und vielleicht ein Tuch für die Augen bereit. Vereinbart jetzt euer Stoppwort. Fällt es, wird es sofort ruhig, ohne Diskussion. Alles andere ist erlaubt, wenn ihr beide es wollt."
+    },
+    {
+      "id": "ankommen_x1",
+      "phase": "ankommen",
+      "tiefe": "sehrSpicy",
+      "text": "Willkommen. Heute Abend wird's versaut. Zieht euch aus, legt Gleitmittel und Handtuch bereit, und vielleicht was für die Augen. Macht jetzt euer Stoppwort aus. Fällt es, ist sofort Schluss, ohne Diskussion. Alles andere: Hauptsache, ihr beide habt Bock drauf."
+    },
+    {
+      "id": "ankommen_s2",
+      "phase": "ankommen",
+      "tiefe": "spicy",
+      "text": "Schön, dass ihr euch diesen Abend gönnt. Schaut euch in die Augen. Sagt euch einen Wunsch für heute, und eine Grenze. Denkt an euer Stoppwort. Dann atmet dreimal zusammen, und lasst die Spannung steigen."
+    },
+    {
+      "id": "ankommen_x2",
+      "phase": "ankommen",
+      "tiefe": "sehrSpicy",
+      "text": "Schaut euch an. Sagt euch, worauf ihr heute richtig Lust habt, und was heute nicht geht. Denkt an euer Stoppwort. Dann ein Kuss, ruhig ein schmutziger. Es geht los."
+    },
+    {
+      "id": "runde_start_s1",
+      "phase": "runde_start",
+      "tiefe": "spicy",
+      "text": "Wer empfängt, legt sich hin, schließt die Augen oder bindet sich das Tuch um. Wer gibt, lässt sich Zeit. Heute wird geneckt: Lust wecken, hinhalten, und das Ersehnte erst geben, wenn es kaum noch auszuhalten ist."
+    },
+    {
+      "id": "runde_start_x1",
+      "phase": "runde_start",
+      "tiefe": "sehrSpicy",
+      "text": "Wer empfängt, legt sich hin, Augen zu oder Tuch drum. Wer gibt, darf jetzt mit dem anderen machen, was abgesprochen ist. Heiß machen, hinhalten, zappeln lassen. Und erst dann geben, wenn gebettelt wird."
+    },
+    {
+      "id": "runde_start_s2",
+      "phase": "runde_start",
+      "tiefe": "spicy",
+      "text": "Neue Runde. Wer empfängt, macht es sich bequem und darf nur nehmen. Wer gibt, darf frech sein, fordernd sogar, aber immer aufmerksam. Atem, Laute, Bewegungen verraten dir, was gefällt."
+    },
+    {
+      "id": "runde_start_x2",
+      "phase": "runde_start",
+      "tiefe": "sehrSpicy",
+      "text": "Nächste Runde. Wer empfängt, liegt da und lässt sich verwöhnen, ohne was zurückzugeben. Wer gibt, darf gierig sein. Hör genau hin. Jedes Stöhnen sagt dir, wo du weitermachen sollst."
+    },
+    {
+      "id": "necken_s1",
+      "phase": "beruehren",
+      "zone": "necken",
+      "stufe": 5,
+      "tiefe": "spicy",
+      "text": "Fahr mit den Fingerspitzen über den nackten Körper deines Gegenübers. Bauch, Brust, Hüften, Innenschenkel. Komm dem Geschlecht so nah, dass man die Hitze spürt, und weich wieder aus. Wieder und wieder. Lass es betteln."
+    },
+    {
+      "id": "necken_x1",
+      "phase": "beruehren",
+      "zone": "necken",
+      "stufe": 5,
+      "tiefe": "sehrSpicy",
+      "text": "Streichle den nackten Körper, überall, nur nicht da, wo es am meisten will. Fahr die Innenschenkel hoch, bis ganz kurz davor, und dann wieder weg. Lass dein Gegenüber zappeln, bis sich die Hüften dir entgegenstrecken."
+    },
+    {
+      "id": "necken_s2",
+      "phase": "beruehren",
+      "zone": "necken",
+      "stufe": 5,
+      "tiefe": "spicy",
+      "text": "Berühre jetzt nur mit deinem Atem. Hauch über Hals, Brust, Bauch, Innenschenkel, ganz nah am Geschlecht. Fast eine Berührung, aber eben nicht. Wer empfängt, darf zeigen, wie sehr es kribbelt."
+    },
+    {
+      "id": "necken_x2",
+      "phase": "beruehren",
+      "zone": "necken",
+      "stufe": 5,
+      "tiefe": "sehrSpicy",
+      "text": "Jetzt nur dein Atem. Hauch über die Nippel, den Bauch, die Innenschenkel, ganz nah zwischen die Beine. Fast dran, aber nicht ganz. Wer empfängt, darf ruhig sagen, was er oder sie jetzt will."
+    },
+    {
+      "id": "kuesse_s1",
+      "phase": "beruehren",
+      "zone": "kuesse",
+      "stufe": 5,
+      "tiefe": "spicy",
+      "text": "Wandere mit Lippen und Zunge über den Körper. Nacken, Schultern, Brust, Bauch. Küss, leck, knabber. Werde langsamer, je tiefer du kommst, und hör kurz vor dem Ziel auf."
+    },
+    {
+      "id": "kuesse_x1",
+      "phase": "beruehren",
+      "zone": "kuesse",
+      "stufe": 5,
+      "tiefe": "sehrSpicy",
+      "text": "Leck dich über den Körper nach unten. Hals, Nippel, Bauch, Leiste. Küssen, lecken, beißen, alles, was gefällt. Und kurz bevor du unten ankommst, hörst du auf. Lass es warten."
+    },
+    {
+      "id": "kuesse_s2",
+      "phase": "beruehren",
+      "zone": "kuesse",
+      "stufe": 5,
+      "tiefe": "spicy",
+      "text": "Küss die Brustwarzen, umkreise sie mit der Zunge, saug daran. Zart, dann fester, ein leichter Biss. Achte auf jedes Seufzen und mach genau dort weiter."
+    },
+    {
+      "id": "kuesse_x2",
+      "phase": "beruehren",
+      "zone": "kuesse",
+      "stufe": 5,
+      "tiefe": "sehrSpicy",
+      "text": "Nimm die Nippel in den Mund. Saug, leck, beiß zart rein. Wenn dein Gegenüber aufstöhnt, mach genau so weiter, und greif dabei kurz zwischen die Beine."
+    },
+    {
+      "id": "lust_s1",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Nimm reichlich Gleitmittel und streichle das Geschlecht deines Gegenübers, erst langsam und genüsslich, dann bestimmter. Finde den Rhythmus, der gut tut, und bleib dabei. Wer empfängt, sag ruhig: mehr, fester, genau da."
+    },
+    {
+      "id": "lust_x1",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Nimm ordentlich Gleitmittel und fass zu. Reib, wichs, streichle, je nachdem, was zwischen den Beinen auf dich wartet. Finde den Takt, der geil ist, und bleib dabei. Wer empfängt, sagt laut: mehr, fester, genau da."
+    },
+    {
+      "id": "lust_s2",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Jetzt spielt ihr mit der Kante. Wer gibt, treibt die Erregung hoch, bis das Gegenüber kurz davor ist. Wer empfängt, sagt: jetzt. Sofort hört die Hand auf. Spürt beide das Pochen. Und wenn es etwas sinkt, geht es von vorne los."
+    },
+    {
+      "id": "lust_x2",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Jetzt wird gequält. Wer gibt, macht so lange, bis das Gegenüber kurz vorm Kommen ist. Wer empfängt, sagt: jetzt. Sofort Hände weg. Zuschauen, wie es zuckt und bettelt. Und dann wieder von vorn."
+    },
+    {
+      "id": "lust_s3",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Spielt mit Tempo und Druck. Ein paar schnelle, feste Bewegungen, dann quälend langsam. Fester, dann federleicht. Wer gibt, merkt sich genau, was den Atem des anderen stocken lässt, und kehrt immer wieder dorthin zurück."
+    },
+    {
+      "id": "lust_x3",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Wechsel das Tempo. Ein paar schnelle, harte Bewegungen, dann quälend langsam. Fester, dann kaum noch. Pass auf, wann dein Gegenüber nach Luft schnappt, und mach genau das wieder und wieder."
+    },
+    {
+      "id": "lust_s4",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Wer empfängt, legt die eigene Hand auf die gebende Hand und führt sie. Wo, wie schnell, wie fest. Wer gibt, lässt sich führen und lernt. Kein Wort nötig, der Körper sagt alles."
+    },
+    {
+      "id": "lust_x4",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Wer empfängt, nimmt jetzt die Hand des anderen und zeigt, wie man es sich selbst macht. Genau so, genau da, genau so schnell. Wer gibt, macht es nach. Lernt euch kennen, schamlos."
+    },
+    {
+      "id": "mund_s1",
+      "phase": "beruehren",
+      "zone": "mund",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Wenn ihr beide es wollt, nimm jetzt den Mund dazu. Küss dich die Innenschenkel hinauf, und dann mitten aufs Geschlecht. Lippen, Zunge, heißer Atem. Langsam, gierig. Wer empfängt, zeigt mit Lauten, was gefällt."
+    },
+    {
+      "id": "mund_x1",
+      "phase": "beruehren",
+      "zone": "mund",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Wenn ihr beide Lust drauf habt: jetzt mit dem Mund. Leck die Innenschenkel hoch und dann mitten rein. Lecken, saugen, lutschen, langsam und gierig. Wer empfängt, stöhnt laut, damit klar ist, was gut ist."
+    },
+    {
+      "id": "mund_s2",
+      "phase": "beruehren",
+      "zone": "mund",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Wechselt zwischen Mund und Hand. Ein paar Augenblicke Lippen und Zunge, dann die Hand, dann wieder der Mund. So steigt die Erregung in Wellen. Achtet auf euer Stoppwort und eure Grenzen."
+    },
+    {
+      "id": "mund_x2",
+      "phase": "beruehren",
+      "zone": "mund",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Wechsel ab: lecken, dann mit der Hand, dann wieder lecken. Bring dein Gegenüber so immer wieder hoch, bis es kaum noch auszuhalten ist. Und denkt beide an euer Stoppwort."
+    },
+    {
+      "id": "check_in_s1",
+      "phase": "check_in",
+      "tiefe": "spicy",
+      "text": "Kurz innehalten. Wer empfängt, sag eine Zahl von eins bis zehn: Wie heiß bist du gerade? Und einen Wunsch: mehr, weniger, langsamer, oder genau so."
+    },
+    {
+      "id": "check_in_x1",
+      "phase": "check_in",
+      "tiefe": "sehrSpicy",
+      "text": "Kurze Pause. Wer empfängt, sag eine Zahl: Wie geil bist du gerade, von eins bis zehn? Und was willst du jetzt? Sag's ruhig so direkt, wie es dir einfällt."
+    },
+    {
+      "id": "check_in_s2",
+      "phase": "check_in",
+      "tiefe": "spicy",
+      "text": "Haltet kurz an. Wer empfängt: Grün heißt weiter so, gelb heißt langsamer, rot heißt Stopp. Sag eine Farbe. Und wenn du magst, was du als Nächstes willst."
+    },
+    {
+      "id": "check_in_x2",
+      "phase": "check_in",
+      "tiefe": "sehrSpicy",
+      "text": "Stopp. Ampel. Wer empfängt, sagt grün, gelb oder rot. Bei grün sag dazu, was du als Nächstes willst. Je schmutziger, desto besser."
+    },
+    {
+      "id": "check_in_s3",
+      "phase": "check_in",
+      "tiefe": "spicy",
+      "text": "Atmet beide tief durch. Wer gibt, frag leise: Wie ist es? Wer empfängt, antworte ehrlich. Ein Wort reicht. Es gibt keine falsche Antwort."
+    },
+    {
+      "id": "check_in_x3",
+      "phase": "check_in",
+      "tiefe": "sehrSpicy",
+      "text": "Atmet durch. Wer gibt, fragt: Gefällt dir das? Wer empfängt, antwortet ehrlich. Ein Ja, ein Nein, ein Mehr. Alles ist gut, solange es ehrlich ist."
+    },
+    {
+      "id": "runde_ende_s1",
+      "phase": "runde_ende",
+      "tiefe": "spicy",
+      "text": "Diese Runde geht zu Ende. Wenn ihr wollt, darf es jetzt bis zum Höhepunkt gehen. Oder ihr werdet langsamer und lasst die Lust nachglühen. Beides ist schön. Nehmt euch die Zeit, die ihr braucht."
+    },
+    {
+      "id": "runde_ende_x1",
+      "phase": "runde_ende",
+      "tiefe": "sehrSpicy",
+      "text": "Die Runde ist fast vorbei. Wer empfangen hat, darf jetzt kommen, wenn er oder sie will. Wer gibt, macht weiter, bis es so weit ist. Oder ihr hört knapp davor auf und spart es euch auf."
+    },
+    {
+      "id": "runde_ende_s2",
+      "phase": "runde_ende",
+      "tiefe": "spicy",
+      "text": "Werdet langsamer. Lasst die Hände dort ruhen, wo es heiß ist. Wer empfangen hat, wünscht sich jetzt, wie es endet: Höhepunkt, oder Stille und Halten. Wer gegeben hat, schenkt genau das."
+    },
+    {
+      "id": "runde_ende_x2",
+      "phase": "runde_ende",
+      "tiefe": "sehrSpicy",
+      "text": "Werdet langsamer. Wer empfangen hat, sagt jetzt, wie es enden soll: kommen, oder einfach festgehalten werden. Wer gegeben hat, liefert genau das."
+    },
+    {
+      "id": "wechsel_s1",
+      "phase": "wechsel",
+      "tiefe": "spicy",
+      "text": "Rollentausch. Ein Kuss, ein Blick, ein Schluck Wasser. Wer eben genießen durfte, darf jetzt verführen. Necken ist erlaubt, Eile nicht."
+    },
+    {
+      "id": "wechsel_x1",
+      "phase": "wechsel",
+      "tiefe": "sehrSpicy",
+      "text": "Jetzt wird getauscht. Ein Kuss, ein Schluck Wasser. Wer eben dran war, darf sich jetzt revanchieren. Und zwar genau so gemein und geil wie eben."
+    },
+    {
+      "id": "wechsel_s2",
+      "phase": "wechsel",
+      "tiefe": "spicy",
+      "text": "Zeit zu tauschen. Sagt euch in einem Satz, was in der ersten Runde am heißesten war. Dann legt sich hin, wer gegeben hat, und darf jetzt nehmen."
+    },
+    {
+      "id": "wechsel_x2",
+      "phase": "wechsel",
+      "tiefe": "sehrSpicy",
+      "text": "Tausch. Sagt euch kurz, was euch eben am meisten angemacht hat. Dann legt sich hin, wer gegeben hat, und lässt sich jetzt richtig verwöhnen."
+    },
+    {
+      "id": "ausklang_s1",
+      "phase": "ausklang",
+      "tiefe": "spicy",
+      "text": "Kommt zur Ruhe. Legt euch eng aneinander, Haut an Haut, und atmet zusammen. Spürt das Nachbeben. Ihr habt euch heute etwas Mutiges geschenkt. Sagt euch später, was ihr wiederholen wollt."
+    },
+    {
+      "id": "ausklang_x1",
+      "phase": "ausklang",
+      "tiefe": "sehrSpicy",
+      "text": "Kommt runter. Legt euch verschwitzt aneinander und atmet. Spürt, wie es noch nachzuckt. Das war heiß. Erzählt euch später, was ihr unbedingt wieder machen wollt."
+    },
+    {
+      "id": "ausklang_s2",
+      "phase": "ausklang",
+      "tiefe": "spicy",
+      "text": "Lasst den Abend ausklingen. Zieht die Decke heran, haltet euch, und schweigt einen Moment. Morgen vielleicht erzählt ihr euch, was euch überrascht hat und was ihr euch beim nächsten Mal wünscht."
+    },
+    {
+      "id": "ausklang_x2",
+      "phase": "ausklang",
+      "tiefe": "sehrSpicy",
+      "text": "Decke drüber, festhalten, durchatmen. Kein Wort nötig. Und morgen beim Frühstück dürft ihr euch ruhig zuflüstern, was ihr beim nächsten Mal noch ausprobieren wollt."
+    },
+    {
+      "id": "erinnerung_s1",
+      "phase": "erinnerung",
+      "tiefe": "spicy",
+      "text": "Atmet hörbar. Lasst die Laute raus."
+    },
+    {
+      "id": "erinnerung_x1",
+      "phase": "erinnerung",
+      "tiefe": "sehrSpicy",
+      "text": "Stöhnt ruhig laut."
+    },
+    {
+      "id": "erinnerung_s2",
+      "phase": "erinnerung",
+      "tiefe": "spicy",
+      "text": "Achte auf die Signale deines Gegenübers."
+    },
+    {
+      "id": "erinnerung_x2",
+      "phase": "erinnerung",
+      "tiefe": "sehrSpicy",
+      "text": "Hör hin, was gefällt."
+    },
+    {
+      "id": "erinnerung_s3",
+      "phase": "erinnerung",
+      "tiefe": "spicy",
+      "text": "Langsamer ist oft heißer."
+    },
+    {
+      "id": "erinnerung_x3",
+      "phase": "erinnerung",
+      "tiefe": "sehrSpicy",
+      "text": "Lass es betteln."
     }
   ]
 }

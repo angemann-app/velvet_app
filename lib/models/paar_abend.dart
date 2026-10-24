@@ -41,7 +41,47 @@ class PaarBaustein {
 }
 
 /// Wie weit der Abend gehen darf. Jede Stufe schließt die vorherigen ein.
-enum PaarTiefe { bekleidet, haut, intim }
+/// [spicy] und [sehrSpicy] (Dirty Talk) gibt es nur bei eingeschaltetem Spicy-Modus
+/// (StorageService.spicyMode). Sie schließen die Stufen bis „intim“ ein, aber nicht einander.
+enum PaarTiefe {
+  bekleidet,
+  haut,
+  intim,
+  spicy,
+  sehrSpicy;
+
+  bool get istSpicy => index >= spicy.index;
+}
+
+/// Die Stufen, die die Einrichtung anbietet: die Spicy-Stufen nur bei eingeschaltetem Spicy-Modus.
+List<PaarTiefe> waehlbareTiefen({required bool spicyErlaubt}) =>
+    [for (final t in PaarTiefe.values) if (!t.istSpicy || spicyErlaubt) t];
+
+/// Gespeicherte Tiefe; eine Spicy-Stufe wird zu Intim, solange der Spicy-Modus aus ist.
+PaarTiefe tiefeAusName(String? name, {required bool spicyErlaubt}) {
+  final tiefe = PaarTiefe.values.asNameMap()[name] ?? PaarTiefe.bekleidet;
+  return tiefe.istSpicy && !spicyErlaubt ? PaarTiefe.intim : tiefe;
+}
+
+/// Die Werte von `tiefe`, deren Berührungen bei [tiefe] vorkommen dürfen. Die Spicy-Stufen beginnen
+/// gleich auf der Haut, damit genug Zeit für die heißen Teile bleibt.
+Set<String> erlaubteTiefen(PaarTiefe tiefe) => {
+      for (final t in PaarTiefe.values)
+        if (t.istSpicy ? t == tiefe : (t.index <= tiefe.index && !(tiefe.istSpicy && t == PaarTiefe.bekleidet)))
+          t.name,
+    };
+
+/// Bausteine einer Phase für die gewählte Tiefe. Bausteine einer Spicy-Stufe kommen nur bei genau dieser
+/// Stufe vor; dort ersetzen sie die übrigen Varianten ihrer Phase, nur Berührungen und Erinnerungen mischen.
+List<PaarBaustein> bausteineDerPhase(List<PaarBaustein> bausteine, String phase, PaarTiefe tiefe) {
+  final spicyNamen = {for (final t in PaarTiefe.values) if (t.istSpicy) t.name};
+  final alle = bausteine
+      .where((b) => b.phase == phase && (!spicyNamen.contains(b.tiefe) || b.tiefe == tiefe.name))
+      .toList();
+  if (!tiefe.istSpicy || phase == 'beruehren' || phase == 'erinnerung') return alle;
+  final scharf = alle.where((b) => b.tiefe == tiefe.name).toList();
+  return scharf.isEmpty ? alle : scharf;
+}
 
 /// Ein Schritt im Ablauf: Ansage, Stille oder Klangschale.
 class PaarSchritt {
@@ -115,9 +155,9 @@ class PaarAbendDaten {
       return b;
     }
 
-    Iterable<PaarBaustein> phase(String p) => bausteine.where((b) => b.phase == p);
+    Iterable<PaarBaustein> phase(String p) => bausteineDerPhase(bausteine, p, tiefe);
 
-    final erlaubt = PaarTiefe.values.sublist(0, tiefe.index + 1).map((t) => t.name).toSet();
+    final erlaubt = erlaubteTiefen(tiefe);
     final zonen = <String, List<PaarBaustein>>{};
     for (final b in phase('beruehren').where((b) => erlaubt.contains(b.tiefe))) {
       zonen.putIfAbsent(b.zone!, () => []).add(b);

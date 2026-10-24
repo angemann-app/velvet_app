@@ -78,7 +78,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     setState(() {
       _daten = daten;
       _minuten = prefs.getInt(_keyMinuten) ?? 30;
-      _tiefe = PaarTiefe.values.asNameMap()[prefs.getString(_keyTiefe)] ?? PaarTiefe.bekleidet;
+      _tiefe = tiefeAusName(prefs.getString(_keyTiefe), spicyErlaubt: StorageService.spicyMode());
       _stimme = prefs.getString(_keyStimme) ??
           (StorageService.getUserProfile()?.isFemale == true ? 'martin' : 'victoria');
     });
@@ -272,9 +272,14 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         ),
         const SizedBox(height: 20),
         _titel(t.paarAbendHowFarMayItGo),
-        _tiefeOption(PaarTiefe.bekleidet, t.paarAbendClothed, t.paarAbendBackShouldersHandsHeadLegs),
-        _tiefeOption(PaarTiefe.haut, t.paarAbendSkinToSkin, t.paarAbendPlusMassageWithOilBelly),
-        _tiefeOption(PaarTiefe.intim, t.paarAbendIntimate, t.paarAbendPlusChestInnerThighsAnd),
+        for (final tiefe in waehlbareTiefen(spicyErlaubt: StorageService.spicyMode()))
+          switch (tiefe) {
+            PaarTiefe.bekleidet => _tiefeOption(tiefe, t.paarAbendClothed, t.paarAbendBackShouldersHandsHeadLegs),
+            PaarTiefe.haut => _tiefeOption(tiefe, t.paarAbendSkinToSkin, t.paarAbendPlusMassageWithOilBelly),
+            PaarTiefe.intim => _tiefeOption(tiefe, t.paarAbendIntimate, t.paarAbendPlusChestInnerThighsAnd),
+            PaarTiefe.spicy => _tiefeOption(tiefe, t.spicyStufe, t.paarAbendSpicyText),
+            PaarTiefe.sehrSpicy => _tiefeOption(tiefe, t.sehrSpicyStufe, t.paarAbendSehrSpicyText),
+          },
         const SizedBox(height: 20),
         _titel(t.paarAbendWhoGivesFirst),
         Wrap(
@@ -319,7 +324,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
               SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  t.paarAbendAgreeOnAStopWord,
+                  _tiefe.istSpicy ? t.paarAbendSpicyHinweis : t.paarAbendAgreeOnAStopWord,
                   style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.45),
                 ),
               ),
@@ -369,7 +374,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
 
   Widget _tiefeOption(PaarTiefe tiefe, String titel, String text) {
     final aktiv = _tiefe == tiefe;
-    final farbe = tiefe == PaarTiefe.intim ? AppTheme.rose : AppTheme.amber;
+    final farbe = tiefe.index >= PaarTiefe.intim.index ? AppTheme.rose : AppTheme.amber;
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: InkWell(

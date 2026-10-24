@@ -35,6 +35,9 @@ AUDIO_DIR = ROOT / "assets" / "audio"
 LEXICON_JSON = Path(__file__).resolve().parent / "aussprache.json"
 
 SPEED = 0.9
+# Martin spricht bei gleichem Wert rund 12 % schneller als Victoria und wirkte hektisch,
+# darum bekommt er überall ein eigenes, ruhigeres Tempo.
+VOICE_SPEED = {"martin": 0.8}
 PARAGRAPH_PAUSE_S = 0.6
 SAMPLE_RATE = 24000
 
@@ -173,11 +176,12 @@ class Kokoro:
         import numpy as np
 
         pipeline, pack = self._load(name)
+        speed = VOICE_SPEED.get(name, SPEED)
         silence = np.zeros(int(PARAGRAPH_PAUSE_S * SAMPLE_RATE), dtype=np.float32)
         pieces = []
         for paragraph in [p for p in text.split("\n") if p.strip()]:
             for chunk in _chunks(self.phonemes(paragraph, name)):
-                for result in pipeline.generate_from_tokens(chunk, voice=pack, speed=SPEED):
+                for result in pipeline.generate_from_tokens(chunk, voice=pack, speed=speed):
                     pieces.append(result.audio.numpy())
             if pause:
                 pieces.append(silence)
@@ -253,11 +257,11 @@ CUES = {
 }
 
 
-def generate_cues():
+def generate_cues(voices=None):
     out_dir = AUDIO_DIR / "cues"
     out_dir.mkdir(exist_ok=True)
     engine = Kokoro()
-    for name in KOKORO_VOICES:
+    for name in voices or KOKORO_VOICES:
         for cue, text in CUES.items():
             out = out_dir / f"{name}_{cue}.opus"
             with tempfile.TemporaryDirectory() as tmp:
@@ -271,7 +275,7 @@ PAAR_JSON = ROOT / "assets" / "data" / "paar_abend.json"
 SELBST_JSON = ROOT / "assets" / "data" / "selbst_reise.json"
 
 
-def generate_blocks(only=None, source=PAAR_JSON, folder="paar"):
+def generate_blocks(only=None, source=PAAR_JSON, folder="paar", voices=None):
     # Bausteine für den Paar-Abend (lib/screens/couples_channel/paar_abend_screen.dart) bzw. die
     # geführte Selbsterkundung (lib/screens/self_exploration/selbst_reise_screen.dart), jeweils beide Stimmen.
     out_dir = AUDIO_DIR / folder
@@ -285,9 +289,10 @@ def generate_blocks(only=None, source=PAAR_JSON, folder="paar"):
     durations_json = out_dir / "dauer.json"
     durations = json.loads(durations_json.read_text(encoding="utf-8")) if durations_json.exists() else {}
     engine = Kokoro()
-    total = len(blocks) * len(KOKORO_VOICES)
+    voices = voices or list(KOKORO_VOICES)
+    total = len(blocks) * len(voices)
     i = 0
-    for name in KOKORO_VOICES:
+    for name in voices:
         for block in blocks:
             i += 1
             out = out_dir / f"{name}_{block['id']}.opus"
@@ -369,15 +374,18 @@ def main():
     parser.add_argument("--selbst", action="store_true",
                         help="Bausteine der Selbsterkundung erzeugen (assets/audio/selbst/), optional nur die genannten ids")
     parser.add_argument("--klang", action="store_true", help="Klangschale und Klangteppich erzeugen")
+    parser.add_argument("--stimme", choices=list(KOKORO_VOICES),
+                        help="nur Aufnahmen mit dieser Stimme erneuern (Lektionen im Wechsel zählen mit)")
     args = parser.parse_args()
+    voices = [args.stimme] if args.stimme else None
     if args.klang:
         generate_sounds()
         return
     if args.paar:
-        generate_blocks(set(args.ids))
+        generate_blocks(set(args.ids), voices=voices)
         return
     if args.selbst:
-        generate_blocks(set(args.ids), SELBST_JSON, "selbst")
+        generate_blocks(set(args.ids), SELBST_JSON, "selbst", voices)
         return
     if args.courses and len(args.courses) == 1:
         args.courses = (args.courses[0], args.courses[0])
@@ -390,7 +398,7 @@ def main():
         return
 
     if args.ansagen:
-        generate_cues()
+        generate_cues(voices)
         return
 
     data = json.loads(CONTENT_JSON.read_text(encoding="utf-8"))
@@ -400,6 +408,8 @@ def main():
         return
 
     picked = select(data, args)
+    if args.stimme:
+        picked = [(c, l) for c, l in picked if voice_for(c, l) in (args.stimme, BOTH)]
     unknown = set(args.ids) - {l["id"] for _, l in picked}
     if unknown or not picked:
         sys.exit(f"Keine oder unbekannte Lektionen: {sorted(unknown)}")

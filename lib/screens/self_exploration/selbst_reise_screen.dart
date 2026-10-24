@@ -68,7 +68,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
     setState(() {
       _daten = daten;
       _minuten = prefs.getInt(_keyMinuten) ?? 20;
-      _tiefe = PaarTiefe.values.asNameMap()[prefs.getString(_keyTiefe)] ?? PaarTiefe.bekleidet;
+      _tiefe = tiefeAusName(prefs.getString(_keyTiefe), spicyErlaubt: StorageService.spicyMode());
       _koerper = prefs.getString(_keyKoerper) ?? (profil?.isMale == true ? 'penis' : 'vulva');
       _stimme = prefs.getString(_keyStimme) ?? (profil?.isMale == true ? 'martin' : 'victoria');
     });
@@ -255,10 +255,15 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         ]),
         const SizedBox(height: 20),
         _titel(t.selbstReiseHowCloseWouldYouLike),
-        _tiefeOption(PaarTiefe.bekleidet, t.selbstReiseGentle, t.selbstReiseFaceScalpEarsNeckArms),
-        _tiefeOption(PaarTiefe.haut, t.selbstReiseSkin, t.selbstReisePlusBareSkinWithOil),
-        _tiefeOption(PaarTiefe.intim, t.paarAbendIntimate, t.selbstReisePlusPerineumAndGenitalsWith),
-        if (_tiefe == PaarTiefe.intim) ...[
+        for (final tiefe in waehlbareTiefen(spicyErlaubt: StorageService.spicyMode()))
+          switch (tiefe) {
+            PaarTiefe.bekleidet => _tiefeOption(tiefe, t.selbstReiseGentle, t.selbstReiseFaceScalpEarsNeckArms),
+            PaarTiefe.haut => _tiefeOption(tiefe, t.selbstReiseSkin, t.selbstReisePlusBareSkinWithOil),
+            PaarTiefe.intim => _tiefeOption(tiefe, t.paarAbendIntimate, t.selbstReisePlusPerineumAndGenitalsWith),
+            PaarTiefe.spicy => _tiefeOption(tiefe, t.spicyStufe, t.selbstReiseSpicyText),
+            PaarTiefe.sehrSpicy => _tiefeOption(tiefe, t.sehrSpicyStufe, t.selbstReiseSehrSpicyText),
+          },
+        if (_tiefe.index >= PaarTiefe.intim.index) ...[
           const SizedBox(height: 12),
           _titel(t.selbstReiseYourBody),
           Wrap(spacing: 8, children: [

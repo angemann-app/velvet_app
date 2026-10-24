@@ -1421,5 +1421,17 @@
   "audioPaketLoeschen": "Löschen",
   "audioPaketFertig": "Englische Stimmen sind bereit.",
   "audioPaketFehler": "Das hat nicht geklappt. Bitte Internetverbindung prüfen und später noch einmal versuchen.",
-  "navPaarKanalKurz": "Paar-Kanal"
+  "navPaarKanalKurz": "Paar-Kanal",
+  "spicyModus": "Spicy-Modus",
+  "spicyModusText": "Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy“ und „Sehr spicy“ frei.",
+  "spicyEinschaltenTitel": "Spicy-Modus einschalten?",
+  "spicyEinschaltenText": "Nur für Erwachsene. In Körperreise und Gemeinsamem Abend erscheinen dann zwei zusätzliche Stufen:\n\n„Spicy“: heiß und direkt, Spiel mit der Erregung bis kurz vor den Höhepunkt, für Paare auch Küsse, Necken und der Mund.\n\n„Sehr spicy“: dasselbe mit Dirty Talk und derben Wörtern.\n\nAlles bleibt eine Einladung, ein Stoppwort gilt immer. Du kannst den Modus hier jederzeit ausschalten, dann verschwinden die Stufen sofort.",
+  "spicyEinschalten": "Ich bin 18+, einschalten",
+  "spicyStufe": "Spicy",
+  "selbstReiseSpicyText": "Direkt auf der Haut beginnen, dann Erregungswellen bis kurz vor die Kante, und am Ende deine Wahl: kommen oder genießen.",
+  "paarAbendSpicyText": "Necken, Küsse über den ganzen Körper, Hand und Mund am Geschlecht, Spiel mit der Kante. Nur wenn ihr beide es wollt.",
+  "paarAbendSpicyHinweis": "Sprecht vorher kurz über Wünsche und Grenzen und vereinbart ein Stoppwort. Wer es sagt, bekommt sofort Ruhe, ohne Diskussion. Grün, gelb, rot hilft zwischendurch.",
+  "sehrSpicyStufe": "Sehr spicy",
+  "selbstReiseSehrSpicyText": "Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos.",
+  "paarAbendSehrSpicyText": "Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos. Nur wenn ihr beide es wollt."
 }

@@ -18,18 +18,32 @@ void main() {
             final gesamt = ablauf.fold<Duration>(Duration.zero, (s, x) => s + x.dauer);
             expect(gesamt.inSeconds, closeTo(minuten * 60, 90), reason: '$minuten Min., $tiefe, $koerper');
 
-            final erlaubt = PaarTiefe.values.sublist(0, tiefe.index + 1).map((t) => t.name);
+            final erlaubt = erlaubteTiefen(tiefe);
             final bausteine = ablauf.map((s) => s.baustein).whereType<PaarBaustein>().toList();
             final beruehren = bausteine.where((b) => b.phase == 'beruehren');
             expect(beruehren.every((b) => erlaubt.contains(b.tiefe)), isTrue);
             expect(beruehren.every((b) => b.koerper == null || b.koerper == koerper), isTrue);
 
             final genital = beruehren.where((b) => b.zone == 'genital').toList();
-            if (tiefe == PaarTiefe.intim) {
+            if (tiefe.index >= PaarTiefe.intim.index) {
               expect(genital.first.id, endsWith('_1'), reason: 'Beginnt mit dem ruhigen Auflegen der Hand');
               expect(bausteine.any((b) => b.phase == 'welle'), isTrue);
             } else {
               expect(genital, isEmpty);
+            }
+
+            // Bausteine einer Spicy-Stufe nur bei genau dieser Stufe.
+            final fremd = {'spicy', 'sehrSpicy'}..remove(tiefe.name);
+            expect(bausteine.any((b) => fremd.contains(b.tiefe)), isFalse, reason: '$tiefe');
+            if (tiefe.istSpicy) {
+              expect(bausteine.where((b) => b.phase == 'hoehepunkt'), hasLength(1));
+              expect(beruehren.any((b) => b.tiefe == 'bekleidet'), isFalse, reason: 'Spicy beginnt auf der Haut');
+              expect(beruehren.any((b) => b.tiefe == tiefe.name), isTrue);
+              for (final p in ['ankommen', 'welle', 'hoehepunkt', 'ausklang']) {
+                expect(bausteine.where((b) => b.phase == p).every((b) => b.tiefe == tiefe.name), isTrue, reason: p);
+              }
+            } else {
+              expect(bausteine.any((b) => b.phase == 'hoehepunkt'), isFalse);
             }
 
             final ids = bausteine.map((b) => b.id).where((id) => !id.startsWith('erinnerung'));

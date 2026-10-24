@@ -1,16 +1,24 @@
 
-import '../l10n/t.dart';class VelvetDatabase {
+import '../l10n/t.dart';
+import '../services/storage_service.dart';
+
+class VelvetDatabase {
   final String version;
-  final List<Course> courses;
+
+  /// Alle Kurse, auch die Spicy-Kurse. Die App zeigt [courses].
+  final List<Course> alleKurse;
   final List<SosCard> sosCards;
   final List<BeliefCard> beliefLibrary;
 
   VelvetDatabase({
     required this.version,
-    required this.courses,
+    required List<Course> courses,
     required this.sosCards,
     this.beliefLibrary = const [],
-  });
+  }) : alleKurse = courses;
+
+  /// Die sichtbaren Kurse: Spicy-Kurse nur bei eingeschaltetem Spicy-Modus.
+  List<Course> get courses => [for (final c in alleKurse) if (!c.spicy || StorageService.spicyMode()) c];
 
   factory VelvetDatabase.fromJson(Map<String, dynamic> json) {
     return VelvetDatabase(
@@ -32,7 +40,7 @@ import '../l10n/t.dart';class VelvetDatabase {
 
   Map<String, dynamic> toJson() => {
         'version': version,
-        'courses': courses.map((e) => e.toJson()).toList(),
+        'courses': alleKurse.map((e) => e.toJson()).toList(),
         'sos_cards': sosCards.map((e) => e.toJson()).toList(),
         'belief_library': beliefLibrary.map((e) => e.toJson()).toList(),
       };
@@ -48,6 +56,9 @@ class Course {
 
   /// Optionale Hervorhebungsfarbe für den Titel, z. B. "#F43F5E".
   final String? titleColor;
+
+  /// Nur mit eingeschaltetem Spicy-Modus sichtbar (Feld "spicy" in velvet_content.json).
+  final bool spicy;
   final List<Lesson> lessons;
 
   Course({
@@ -58,6 +69,7 @@ class Course {
     this.category = 'all',
     this.image,
     this.titleColor,
+    this.spicy = false,
     required this.lessons,
   });
 
@@ -105,6 +117,7 @@ class Course {
       category: json['category'] as String? ?? 'all',
       image: json['image'] as String?,
       titleColor: json['title_color'] as String?,
+      spicy: json['spicy'] as bool? ?? false,
       lessons: (json['lessons'] as List<dynamic>?)
               ?.map((e) => Lesson.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -120,6 +133,7 @@ class Course {
         'category': category,
         'image': image,
         if (titleColor != null) 'title_color': titleColor,
+        if (spicy) 'spicy': true,
         'lessons': lessons.map((e) => e.toJson()).toList(),
       };
 }

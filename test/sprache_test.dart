@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velvetpulse/models/paar_abend.dart';
+import 'package:velvetpulse/models/yes_no_maybe_models.dart';
 import 'package:velvetpulse/services/data_service.dart';
 import 'package:velvetpulse/services/listen_uebersetzung.dart';
 import 'package:velvetpulse/services/sprache.dart';
@@ -80,6 +81,6 @@ void main() {
     Sprache.geraetFuerTest = 'de';
     db = await DataService.neuLaden();
     expect(db.courses.first.title, '1. Kopf und Körper verstehen');
-    expect(ListenUebersetzung.kategorien, same(ListenUebersetzung.kategorien));
+    expect(ListenUebersetzung.kategorien.first.title, velvetYesNoMaybeCategories.first.title);
   });
 }

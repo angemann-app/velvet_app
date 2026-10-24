@@ -221,6 +221,31 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
   `tools/release.ps1` bricht sonst ab, der Übersetzungstest ebenso.
 - Code: `lib/services/whats_new.dart`, `lib/screens/whats_new_screen.dart`, Test `test/whats_new_test.dart`.
 
+## 7c. Neu: Spicy-Modus
+
+- **Einschalten:** Profil › „Spicy-Modus“, standardmäßig aus. Einschalten nur über einen Dialog
+  („Ich bin 18+, einschalten“), Ausschalten sofort. Gespeichert in `spicy_mode`
+  (`StorageService.spicyMode`), bewusst nicht Teil der Sicherung.
+- **Wirkung:** In Körperreise und Gemeinsamem Abend erscheinen zwei weitere Stufen, „Spicy“ (heiß,
+  ohne Vulgärwörter) und „Sehr spicy“ (Dirty Talk) (`PaarTiefe.spicy`, `PaarTiefe.sehrSpicy`).
+  Ohne Modus sind sie nicht wählbar; eine gespeicherte Spicy-Wahl wird zu „Intim“ (`tiefeAusName`).
+  Ältere Versionen kennen die Werte nicht und fallen auf „sanft“ zurück.
+  Dazu die Kurse 23 (Spicy Solo) und 24 (Spicy zu zweit) mit `"spicy": true` (`VelvetDatabase.courses`
+  filtert, `alleKurse` enthält alles) und die Ja/Vielleicht/Nein-Kategorie `spicy` (item_66 bis
+  item_78, `ListenUebersetzung.kategorien` filtert). Quelltexte der Kurse: `tools/content/kurs_23_*`,
+  `kurs_24_*` (jeweils mit `_en`).
+- **Inhalte:** Bausteine mit `"tiefe": "spicy"` (ids `…_s1`) bzw. `"sehrSpicy"` (ids `…_x1`) in
+  `selbst_reise.json` und `paar_abend.json`, Englisch in `translations/en/`. Bausteine einer
+  Spicy-Stufe kommen nur bei genau dieser Stufe vor; außerhalb von `beruehren` ersetzen sie dort die
+  übrigen Varianten ihrer Phase (`bausteineDerPhase`), Erinnerungen mischen.
+  - Körperreise: beginnt auf der Haut, neue Zonen Brustwarzen und Po, mehr Genital-Bausteine,
+    Wellen bis kurz vor die Kante (Edging), am Ende die Phase `hoehepunkt` (freie Wahl, 90 s Stille).
+  - Gemeinsamer Abend: beginnt auf der Haut, neue Zonen Necken, Küsse, Lust (Hand, Edging, Führen)
+    und Mund; Check-ins mit Lust-Skala und Ampel, Stoppwort-Hinweis in der Einrichtung.
+- **Tests:** `test/spicy_modus_test.dart`, Spicy-Fälle in `selbst_reise_test.dart` und `paar_abend_test.dart`.
+- **Audio:** Deutsch für beide Stimmen. Das englische Audiopaket `audio-en-v1` enthält die Spicy-Bausteine
+  noch nicht; bis zu einem Paket v2 liest auf Englisch die Geräte-Stimme sie vor.
+
 ## 8. Offen
 
 - **Keystore-Restpunkt (aus Audit 4.4.1):** Schlägt bei Altinstallationen (bis 4.3.0-beta.1) der Umzug
@@ -230,7 +255,11 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
   Siehe docs/AUDIT_4_4_1.md.
 - **Nostr NIP-17/44:** würde Metadaten besser verbergen; nur als eigenes Projekt mit Kompatibilitäts- und
   Migrationstests (ältere Versionen sprechen nur NIP-04).
-- **Übersetzbare Oberfläche:** Beschriftungen aus dem Code in ARB-Dateien (Flutter gen-l10n), geplant.
+- **Englisches Audiopaket v2:** Spicy-Bausteine und Kurse 23/24 fehlen in `audio-en-v1` (Geräte-Stimme
+  springt ein).
+- **Lokaler KI-Coach:** Messung auf dem Handy des Users steht aus. Test-App außerhalb des Repos unter
+  `C:\TOOLS\workspace\vp_ki_test` (lädt Modelle selbst, Bericht per Teilen); Kabel-Weg
+  (`tools/handy_ki_test.ps1`) scheiterte, weil das Xiaomi bei langen Übertragungen die USB-Verbindung verliert.
 - Später geplant:
   - Lernpfad als optionaler Modus.
   - Feedback-Kanal für Tester.

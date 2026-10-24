@@ -395,6 +395,78 @@
           "explanation": "It's not about opening the relationship, but about the thrill of being seen. You stay among yourselves: nobody joins in, at most others may watch. Agree beforehand exactly what's okay for you, and set a sign you can use to leave at any time. Say clearly in the club that you're staying among yourselves – a no counts there like everywhere."
         }
       ]
+    },
+    {
+      "id": "spicy",
+      "title": "Spicy",
+      "description": "Spicy mode only: hotter, more direct, bolder.",
+      "items": [
+        {
+          "id": "item_66",
+          "text": "Dirty talk: saying out loud in bed what you want and do",
+          "explanation": "From describing (“That feels so good”) through wishes to commands. Agree beforehand which words turn you on and which are off limits."
+        },
+        {
+          "id": "item_67",
+          "text": "Edging for two: stopping just before climax, several times",
+          "explanation": "One person brings the other to the edge, pauses and starts again. Whoever receives says “now”; the stop word ends everything."
+        },
+        {
+          "id": "item_68",
+          "text": "Oral sex all the way to climax",
+          "explanation": "With lips, tongue and hand to the end. Agree beforehand whether coming in the mouth is okay. Without tests and exclusivity, condoms or dental dams protect you."
+        },
+        {
+          "id": "item_69",
+          "text": "Pleasuring each other with your mouths at the same time (69)",
+          "explanation": "Both give and receive at once. For some the hottest thing of all, for others too much at once – that's exactly the question."
+        },
+        {
+          "id": "item_70",
+          "text": "Being tied to the bed with scarves or soft cuffs",
+          "explanation": "Never anything around the neck, two fingers of room at the wrists, scissors within reach, and whoever is tied up is never left alone."
+        },
+        {
+          "id": "item_71",
+          "text": "Blindfolded and surprised: mouth, hands, ice cubes",
+          "explanation": "If you can't see, you feel more. Whoever gives alternates between warm breath, cold fingers and pauses."
+        },
+        {
+          "id": "item_72",
+          "text": "A remote-controlled toy, with your partner holding the remote",
+          "explanation": "At home or, if you dare, out and about. With app-controlled toys, check the privacy settings first."
+        },
+        {
+          "id": "item_73",
+          "text": "Adding a vibrator during oral sex or sex",
+          "explanation": "Not a rival but a playmate. Whoever receives decides spot and strength."
+        },
+        {
+          "id": "item_74",
+          "text": "Anal sex with plenty of time and lube",
+          "explanation": "Slowly, with lots of lube and preparation with fingers or a small toy. Whoever receives sets every pace. Pain means stop immediately."
+        },
+        {
+          "id": "item_75",
+          "text": "A quickie: fast, spontaneous, anywhere in the flat",
+          "explanation": "No foreplay programme, just desire in the moment. Kitchen, hallway, sofa. A look is enough as a question, a no is enough as an answer."
+        },
+        {
+          "id": "item_76",
+          "text": "Being in complete charge for an agreed half hour",
+          "explanation": "One person leads, the other follows. Lists beforehand: wanted, maybe, off limits. Afterwards, time for closeness and a few words."
+        },
+        {
+          "id": "item_77",
+          "text": "Spanking with the hand, harder than a pat",
+          "explanation": "Only on the buttocks, never on the back or kidneys. Build up slowly and stroke in between. The traffic light helps: green, yellow, red."
+        },
+        {
+          "id": "item_78",
+          "text": "Masturbating side by side until you both come",
+          "explanation": "Each of you pleasures yourself while you look at each other. A lesson in what the other likes, and surprisingly intimate for many."
+        }
+      ]
     }
   ],
   "_source": {
@@ -460,7 +532,20 @@
     "ynm:item_63": "fd266d533c8005fa",
     "ynm:item_64": "f4a58c506ba417f9",
     "ynm:item_65": "abf0de5c941f2dab",
+    "ynm:item_66": "a53df6430d561ce8",
+    "ynm:item_67": "18813a861a97d41b",
+    "ynm:item_68": "7338de8ff2432478",
+    "ynm:item_69": "482d7bfcb6b21caf",
     "ynm:item_7": "b32d0db9937ba589",
+    "ynm:item_70": "57d864276c8370c5",
+    "ynm:item_71": "e5b0f9615e92489b",
+    "ynm:item_72": "5ff023e8fcd48eda",
+    "ynm:item_73": "3c61fdd487641914",
+    "ynm:item_74": "0936cc3b149226a5",
+    "ynm:item_75": "d3d1d2c268c97362",
+    "ynm:item_76": "d1ebbf9b07252887",
+    "ynm:item_77": "806063f9a673c651",
+    "ynm:item_78": "208787b52f2f95e2",
     "ynm:item_8": "c42322c0d8d584cb",
     "ynm:item_9": "ed851b8c9a5eceb0",
     "ynm_cat:communication_mind": "7fca6f5c571b192d",
@@ -471,6 +556,7 @@
     "ynm_cat:power_dynamics": "48b972cbb14ef8ad",
     "ynm_cat:roles_settings": "fb30a5299957a158",
     "ynm_cat:sensory_basics": "7de8b0e94a325ab8",
+    "ynm_cat:spicy": "fb5e1a91e6e44e70",
     "ynm_cat:touch_techniques": "3b05d36f6acd1fd9",
     "ynm_cat:toys_aids": "98ae9ec191a87359"
   }

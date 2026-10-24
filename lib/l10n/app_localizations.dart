@@ -4976,6 +4976,78 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Paar-Kanal'**
   String get navPaarKanalKurz;
+
+  /// No description provided for @spicyModus.
+  ///
+  /// In de, this message translates to:
+  /// **'Spicy-Modus'**
+  String get spicyModus;
+
+  /// No description provided for @spicyModusText.
+  ///
+  /// In de, this message translates to:
+  /// **'Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy“ und „Sehr spicy“ frei.'**
+  String get spicyModusText;
+
+  /// No description provided for @spicyEinschaltenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Spicy-Modus einschalten?'**
+  String get spicyEinschaltenTitel;
+
+  /// No description provided for @spicyEinschaltenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur für Erwachsene. In Körperreise und Gemeinsamem Abend erscheinen dann zwei zusätzliche Stufen:\n\n„Spicy“: heiß und direkt, Spiel mit der Erregung bis kurz vor den Höhepunkt, für Paare auch Küsse, Necken und der Mund.\n\n„Sehr spicy“: dasselbe mit Dirty Talk und derben Wörtern.\n\nAlles bleibt eine Einladung, ein Stoppwort gilt immer. Du kannst den Modus hier jederzeit ausschalten, dann verschwinden die Stufen sofort.'**
+  String get spicyEinschaltenText;
+
+  /// No description provided for @spicyEinschalten.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich bin 18+, einschalten'**
+  String get spicyEinschalten;
+
+  /// No description provided for @spicyStufe.
+  ///
+  /// In de, this message translates to:
+  /// **'Spicy'**
+  String get spicyStufe;
+
+  /// No description provided for @selbstReiseSpicyText.
+  ///
+  /// In de, this message translates to:
+  /// **'Direkt auf der Haut beginnen, dann Erregungswellen bis kurz vor die Kante, und am Ende deine Wahl: kommen oder genießen.'**
+  String get selbstReiseSpicyText;
+
+  /// No description provided for @paarAbendSpicyText.
+  ///
+  /// In de, this message translates to:
+  /// **'Necken, Küsse über den ganzen Körper, Hand und Mund am Geschlecht, Spiel mit der Kante. Nur wenn ihr beide es wollt.'**
+  String get paarAbendSpicyText;
+
+  /// No description provided for @paarAbendSpicyHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Sprecht vorher kurz über Wünsche und Grenzen und vereinbart ein Stoppwort. Wer es sagt, bekommt sofort Ruhe, ohne Diskussion. Grün, gelb, rot hilft zwischendurch.'**
+  String get paarAbendSpicyHinweis;
+
+  /// No description provided for @sehrSpicyStufe.
+  ///
+  /// In de, this message translates to:
+  /// **'Sehr spicy'**
+  String get sehrSpicyStufe;
+
+  /// No description provided for @selbstReiseSehrSpicyText.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos.'**
+  String get selbstReiseSehrSpicyText;
+
+  /// No description provided for @paarAbendSehrSpicyText.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos. Nur wenn ihr beide es wollt.'**
+  String get paarAbendSehrSpicyText;
 }
 
 class _AppLocalizationsDelegate

@@ -61,10 +61,10 @@ class SelbstReiseDaten {
       return b;
     }
 
-    Iterable<PaarBaustein> phase(String p) => bausteine.where((b) => b.phase == p);
+    Iterable<PaarBaustein> phase(String p) => bausteineDerPhase(bausteine, p, tiefe);
     Duration d(PaarBaustein b) => dauerVon(b, stimme);
-
-    final erlaubt = PaarTiefe.values.sublist(0, tiefe.index + 1).map((t) => t.name).toSet();
+    final spicy = tiefe.istSpicy;
+    final erlaubt = erlaubteTiefen(tiefe);
     final zonen = <String, List<PaarBaustein>>{};
     for (final b in phase('beruehren')) {
       if (!erlaubt.contains(b.tiefe)) continue;
@@ -72,12 +72,12 @@ class SelbstReiseDaten {
       if (b.zone == 'genital') continue; // kommt am Ende eigens dran
       zonen.putIfAbsent(b.zone!, () => []).add(b);
     }
-    final genital = tiefe == PaarTiefe.intim
+    final genital = tiefe.index >= PaarTiefe.intim.index
         ? phase('beruehren').where((b) => b.zone == 'genital' && b.koerper == koerper).toList()
         : <PaarBaustein>[];
 
     // Körperreise: Zonen nach Stufe geordnet und gleichmäßig verteilt, damit sie sanft beginnt.
-    final anzahl = minuten >= 30 ? 7 : (minuten >= 20 ? 5 : 3);
+    final anzahl = spicy ? (minuten >= 30 ? 4 : (minuten >= 20 ? 3 : 2)) : (minuten >= 30 ? 7 : (minuten >= 20 ? 5 : 3));
     final namen = zonen.keys.toList()..shuffle(rnd);
     int stufe(String z) => zonen[z]!.first.stufe;
     namen.sort((a, b) => stufe(a).compareTo(stufe(b)));
@@ -87,18 +87,26 @@ class SelbstReiseDaten {
     final reise = [for (final z in gewaehlt) waehle(zonen[z]!)];
 
     // Intim: mehrere Genital-Bausteine, dazwischen eine Wellen-Anleitung.
+    // Spicy: mehr davon, eine Welle nach jedem zweiten, und am Ende die Wahl des Höhepunkts.
     final intim = <PaarBaustein>[];
     if (genital.isNotEmpty) {
-      final wieviele = minuten >= 30 ? 4 : (minuten >= 20 ? 3 : 2);
+      final wieviele = spicy
+          ? (minuten >= 30 ? 7 : (minuten >= 20 ? 5 : 3))
+          : (minuten >= 30 ? 4 : (minuten >= 20 ? 3 : 2));
       // Der erste ist immer das ruhige Auflegen der Hand.
       final halten = genital.firstWhere((b) => b.id.endsWith('_1'), orElse: () => genital.first);
       benutzt.add(halten.id);
       intim.add(halten);
+      // Bei Spicy kommen die Berührungen aus der gewählten Spicy-Stufe, die übrigen nur als Reserve.
+      final scharf = genital.where((b) => b.tiefe == tiefe.name).toList();
+      final auswahl = spicy && scharf.isNotEmpty ? scharf : genital.where((b) => b != halten).toList();
       for (var i = 1; i < wieviele; i++) {
-        intim.add(waehle(genital.where((b) => b != halten)));
-        if (i == 1) intim.add(waehle(phase('welle')));
+        intim.add(waehle(auswahl));
+        if (i == 1 || (spicy && i.isEven)) intim.add(waehle(phase('welle')));
       }
     }
+    final hoehepunkt = spicy && genital.isNotEmpty ? waehle(phase('hoehepunkt')) : null;
+    const hoehepunktZeit = Duration(seconds: 90);
 
     final ankommen = waehle(phase('ankommen'));
     final atem = waehle(phase('atem'));
@@ -112,6 +120,7 @@ class SelbstReiseDaten {
     for (final b in mitStille) {
       fest += d(b);
     }
+    if (hoehepunkt != null) fest += d(hoehepunkt) + hoehepunktZeit;
     final rest = Duration(minutes: minuten) - fest;
     final stilleSek = (rest.inSeconds / mitStille.length).clamp(30, 300).round();
 
@@ -134,6 +143,11 @@ class SelbstReiseDaten {
       } else {
         schritte.add(PaarSchritt.stille(Duration(seconds: stilleSek), 1));
       }
+    }
+    if (hoehepunkt != null) {
+      schritte
+        ..add(PaarSchritt.ansage(hoehepunkt, d(hoehepunkt), 1))
+        ..add(const PaarSchritt.stille(hoehepunktZeit, 1));
     }
     schritte
       ..add(PaarSchritt.ansage(ausklang, d(ausklang), 0))

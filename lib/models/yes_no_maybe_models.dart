@@ -93,6 +93,9 @@ class YesNoMaybeCategory {
   final String image;
   final List<YesNoMaybeItem> items;
 
+  /// Nur mit eingeschaltetem Spicy-Modus sichtbar (ListenUebersetzung.kategorien filtert).
+  final bool spicy;
+
   const YesNoMaybeCategory({
     required this.id,
     required this.title,
@@ -100,6 +103,7 @@ class YesNoMaybeCategory {
     required this.icon,
     required this.image,
     required this.items,
+    this.spicy = false,
   });
 }
 
@@ -780,6 +784,129 @@ const List<YesNoMaybeCategory> velvetYesNoMaybeCategories = [
             'euch in Ordnung ist, und vereinbart ein Zeichen, mit dem ihr jederzeit geht. Sagt im Club klar, '
             'dass ihr unter euch bleibt – ein Nein gilt dort wie überall.',
         lessonId: 'fant_3',
+      ),
+    ],
+  ),
+  // Nur im Spicy-Modus sichtbar (ListenUebersetzung.kategorien).
+  YesNoMaybeCategory(
+    id: 'spicy',
+    title: 'Spicy',
+    description: 'Nur im Spicy-Modus: heißer, direkter, mutiger.',
+    icon: Icons.local_fire_department_rounded,
+    image: 'assets/images/ynm_spicy.svg',
+    spicy: true,
+    items: [
+      YesNoMaybeItem(
+        id: 'item_66',
+        categoryId: 'spicy',
+        text: 'Dirty Talk: im Bett aussprechen, was man will und tut',
+        explanation:
+            'Vom Beschreiben („Das fühlt sich so gut an“) über Wünsche bis zu Ansagen. Klärt vorher, welche Wörter '
+            'euch anmachen und welche tabu sind.',
+        lessonId: 'spduo_1',
+      ),
+      YesNoMaybeItem(
+        id: 'item_67',
+        categoryId: 'spicy',
+        text: 'Edging zu zweit: mehrmals kurz vor dem Höhepunkt aufhören',
+        explanation:
+            'Eine Person bringt die andere bis an die Kante, hält inne und beginnt von vorn. Wer empfängt, sagt '
+            '„jetzt“, das Stoppwort beendet alles.',
+        lessonId: 'spduo_3',
+      ),
+      YesNoMaybeItem(
+        id: 'item_68',
+        categoryId: 'spicy',
+        text: 'Oralsex bis zum Höhepunkt',
+        explanation:
+            'Mit Lippen, Zunge und Hand bis zum Ende. Vorher klären, ob Kommen im Mund in Ordnung ist. Ohne Tests '
+            'und Exklusivität schützen Kondom oder Lecktuch.',
+        lessonId: 'spduo_2',
+      ),
+      YesNoMaybeItem(
+        id: 'item_69',
+        categoryId: 'spicy',
+        text: 'Gleichzeitig mit dem Mund verwöhnen (69)',
+        explanation:
+            'Beide geben und empfangen zugleich. Für manche das Heißeste überhaupt, für andere zu viel auf einmal – '
+            'genau das ist die Frage.',
+        lessonId: 'spduo_2',
+      ),
+      YesNoMaybeItem(
+        id: 'item_70',
+        categoryId: 'spicy',
+        text: 'Mit Tüchern oder weichen Fesseln ans Bett gebunden werden',
+        explanation:
+            'Nie etwas um den Hals, zwei Finger Platz an den Handgelenken, eine Schere griffbereit, und wer gefesselt '
+            'ist, wird nie allein gelassen.',
+        lessonId: 'spduo_4',
+      ),
+      YesNoMaybeItem(
+        id: 'item_71',
+        categoryId: 'spicy',
+        text: 'Augen verbunden und überrascht werden: Mund, Hände, Eiswürfel',
+        explanation:
+            'Wer nichts sieht, spürt mehr. Wer gibt, wechselt zwischen warmem Atem, kalten Fingern und Pausen.',
+        lessonId: 'spduo_4',
+      ),
+      YesNoMaybeItem(
+        id: 'item_72',
+        categoryId: 'spicy',
+        text: 'Ein ferngesteuertes Toy, die Fernbedienung hat das Gegenüber',
+        explanation:
+            'Zu Hause oder, wenn ihr euch traut, unterwegs. Bei Toys mit App vorher die Datenschutz-Einstellungen '
+            'anschauen.',
+        lessonId: 'spduo_5',
+      ),
+      YesNoMaybeItem(
+        id: 'item_73',
+        categoryId: 'spicy',
+        text: 'Einen Vibrator beim Oralsex oder Sex dazunehmen',
+        explanation:
+            'Kein Konkurrent, sondern ein Mitspieler. Wer empfängt, bestimmt Stelle und Stärke.',
+        lessonId: 'spduo_5',
+      ),
+      YesNoMaybeItem(
+        id: 'item_74',
+        categoryId: 'spicy',
+        text: 'Analsex mit viel Zeit und Gleitmittel',
+        explanation:
+            'Langsam, mit reichlich Gleitmittel und Vorbereitung durch Finger oder ein kleines Toy. Wer empfängt, '
+            'bestimmt jedes Tempo. Schmerz heißt sofort aufhören.',
+      ),
+      YesNoMaybeItem(
+        id: 'item_75',
+        categoryId: 'spicy',
+        text: 'Ein Quickie: schnell, spontan, irgendwo in der Wohnung',
+        explanation:
+            'Kein Vorspiel-Programm, nur Lust im Moment. Küche, Flur, Sofa. Ein Blick reicht als Frage, ein Nein '
+            'reicht als Antwort.',
+      ),
+      YesNoMaybeItem(
+        id: 'item_76',
+        categoryId: 'spicy',
+        text: 'Für eine verabredete halbe Stunde ganz bestimmen dürfen',
+        explanation:
+            'Eine Person führt, die andere folgt. Vorher Listen: erwünscht, vielleicht, tabu. Danach Zeit für Nähe '
+            'und ein paar Worte.',
+        lessonId: 'spduo_6',
+      ),
+      YesNoMaybeItem(
+        id: 'item_77',
+        categoryId: 'spicy',
+        text: 'Spanking mit der Hand, fester als ein Klaps',
+        explanation:
+            'Nur auf die Pobacken, nie auf Rücken oder Nieren. Langsam steigern und zwischendurch streicheln. Die Ampel '
+            'hilft: grün, gelb, rot.',
+        lessonId: 'spduo_6',
+      ),
+      YesNoMaybeItem(
+        id: 'item_78',
+        categoryId: 'spicy',
+        text: 'Nebeneinander masturbieren, bis beide kommen',
+        explanation:
+            'Jede Person verwöhnt sich selbst, ihr schaut euch dabei an. Eine Lehrstunde darin, was der andere mag, '
+            'und für viele überraschend intim.',
       ),
     ],
   ),

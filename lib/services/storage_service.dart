@@ -179,6 +179,17 @@ class StorageService {
     await prefs.setBool(_keyPersonalizeNames, value);
   }
 
+  // Spicy-Modus: schaltet in Körperreise und Gemeinsamem Abend die Stufe „Spicy“ frei.
+  // Bewusst nur auf diesem Gerät und nicht Teil der Sicherung: Wer ihn will, schaltet ihn selbst ein.
+  static const String _keySpicyMode = 'spicy_mode';
+
+  static bool spicyMode() => _prefs?.getBool(_keySpicyMode) ?? false;
+
+  static Future<void> setSpicyMode(bool value) async {
+    final prefs = await _ensurePrefs();
+    await prefs.setBool(_keySpicyMode, value);
+  }
+
   // AI Chat Messages
   static List<ChatMessage> getChatHistory() {
     final list = _prefs?.getStringList(_keyChatHistory) ?? [];

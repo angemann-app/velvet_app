@@ -369,30 +369,434 @@
       "id": "ausklang_3",
       "phase": "ausklang",
       "text": "To finish: place a hand on each other's heart. Feel the heartbeat. If you like, say one word for this evening. And stay lying like this for as long as it feels good."
+    },
+    {
+      "id": "ankommen_s1",
+      "phase": "ankommen",
+      "tiefe": "spicy",
+      "text": "Welcome to your spicy evening. Tonight things may get hot. Have lube, a towel and perhaps a scarf for the eyes ready. Agree on your stop word now. If it's said, everything goes quiet at once, no discussion. Everything else is allowed, if you both want it."
+    },
+    {
+      "id": "ankommen_x1",
+      "phase": "ankommen",
+      "tiefe": "sehrSpicy",
+      "text": "Welcome. Tonight gets filthy. Get undressed, have lube and a towel ready, and maybe something for the eyes. Agree on your stop word now. If it's said, it stops at once, no discussion. Everything else: as long as you're both up for it."
+    },
+    {
+      "id": "ankommen_s2",
+      "phase": "ankommen",
+      "tiefe": "spicy",
+      "text": "Lovely that you're treating yourselves to this evening. Look into each other's eyes. Tell each other one wish for tonight, and one limit. Remember your stop word. Then breathe together three times, and let the tension rise."
+    },
+    {
+      "id": "ankommen_x2",
+      "phase": "ankommen",
+      "tiefe": "sehrSpicy",
+      "text": "Look at each other. Tell each other what you're really in the mood for tonight, and what's off limits. Remember your stop word. Then a kiss, a dirty one is fine. Here we go."
+    },
+    {
+      "id": "runde_start_s1",
+      "phase": "runde_start",
+      "tiefe": "spicy",
+      "text": "Whoever receives lies down, closes their eyes or ties on the scarf. Whoever gives takes their time. Tonight is for teasing: awaken desire, hold back, and only give what's longed for once it's almost unbearable."
+    },
+    {
+      "id": "runde_start_x1",
+      "phase": "runde_start",
+      "tiefe": "sehrSpicy",
+      "text": "Whoever receives lies down, eyes closed or scarf on. Whoever gives may now do with the other whatever you agreed. Turn them on, hold back, leave them squirming. And only give it when they beg."
+    },
+    {
+      "id": "runde_start_s2",
+      "phase": "runde_start",
+      "tiefe": "spicy",
+      "text": "A new round. Whoever receives gets comfortable and may only take. Whoever gives may be cheeky, even demanding, but always attentive. Breath, sounds and movements tell you what feels good."
+    },
+    {
+      "id": "runde_start_x2",
+      "phase": "runde_start",
+      "tiefe": "sehrSpicy",
+      "text": "Next round. Whoever receives lies back and gets spoiled, without giving anything back. Whoever gives may be greedy. Listen closely. Every moan tells you where to keep going."
+    },
+    {
+      "id": "necken_s1",
+      "phase": "beruehren",
+      "zone": "necken",
+      "stufe": 5,
+      "tiefe": "spicy",
+      "text": "Run your fingertips over your partner's naked body. Belly, chest, hips, inner thighs. Come so close to the genitals that the heat can be felt, and move away again. Again and again. Make them beg."
+    },
+    {
+      "id": "necken_x1",
+      "phase": "beruehren",
+      "zone": "necken",
+      "stufe": 5,
+      "tiefe": "sehrSpicy",
+      "text": "Stroke the naked body, everywhere, except where it wants it most. Trail up the inner thighs, right to the brink, and then away again. Leave your partner squirming until their hips push towards you."
+    },
+    {
+      "id": "necken_s2",
+      "phase": "beruehren",
+      "zone": "necken",
+      "stufe": 5,
+      "tiefe": "spicy",
+      "text": "Now touch only with your breath. Breathe over neck, chest, belly, inner thighs, very close to the genitals. Almost a touch, but not quite. Whoever receives may show how much it tingles."
+    },
+    {
+      "id": "necken_x2",
+      "phase": "beruehren",
+      "zone": "necken",
+      "stufe": 5,
+      "tiefe": "sehrSpicy",
+      "text": "Now only your breath. Breathe over the nipples, the belly, the inner thighs, right between the legs. Almost there, but not quite. Whoever receives may say exactly what they want right now."
+    },
+    {
+      "id": "kuesse_s1",
+      "phase": "beruehren",
+      "zone": "kuesse",
+      "stufe": 5,
+      "tiefe": "spicy",
+      "text": "Travel over the body with lips and tongue. Neck, shoulders, chest, belly. Kiss, lick, nibble. Slow down the lower you go, and stop just short of the goal."
+    },
+    {
+      "id": "kuesse_x1",
+      "phase": "beruehren",
+      "zone": "kuesse",
+      "stufe": 5,
+      "tiefe": "sehrSpicy",
+      "text": "Lick your way down the body. Neck, nipples, belly, groin. Kiss, lick, bite, whatever feels good. And just before you get down there, you stop. Make them wait."
+    },
+    {
+      "id": "kuesse_s2",
+      "phase": "beruehren",
+      "zone": "kuesse",
+      "stufe": 5,
+      "tiefe": "spicy",
+      "text": "Kiss the nipples, circle them with your tongue, suck on them. Soft, then firmer, a light bite. Listen for every sigh and keep going exactly there."
+    },
+    {
+      "id": "kuesse_x2",
+      "phase": "beruehren",
+      "zone": "kuesse",
+      "stufe": 5,
+      "tiefe": "sehrSpicy",
+      "text": "Take the nipples in your mouth. Suck, lick, bite gently. When your partner moans, keep doing exactly that, and reach between their legs while you're at it, just briefly."
+    },
+    {
+      "id": "lust_s1",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Take plenty of lube and stroke your partner's genitals, slowly and with relish at first, then more firmly. Find the rhythm that feels good and stay with it. Whoever receives, feel free to say: more, harder, right there."
+    },
+    {
+      "id": "lust_x1",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Take a good amount of lube and grab hold. Rub, stroke, jerk, depending on what's waiting for you between their legs. Find the beat that's hot and stay with it. Whoever receives says it out loud: more, harder, right there."
+    },
+    {
+      "id": "lust_s2",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Now you play with the edge. Whoever gives drives the arousal up until their partner is close. Whoever receives says: now. The hand stops immediately. Both of you feel the throbbing. And when it sinks a little, it starts all over again."
+    },
+    {
+      "id": "lust_x2",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Now for some torment. Whoever gives keeps going until their partner is about to come. Whoever receives says: now. Hands off at once. Watch it twitch and beg. And then again from the top."
+    },
+    {
+      "id": "lust_s3",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Play with pace and pressure. A few quick, firm movements, then agonisingly slow. Firmer, then feather-light. Whoever gives notices exactly what makes the other's breath catch, and keeps returning there."
+    },
+    {
+      "id": "lust_x3",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Switch up the pace. A few fast, hard movements, then agonisingly slow. Harder, then barely at all. Watch for when your partner gasps, and do exactly that again and again."
+    },
+    {
+      "id": "lust_s4",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Whoever receives places their own hand on the giving hand and guides it. Where, how fast, how firm. Whoever gives lets themselves be guided and learns. No words needed, the body says it all."
+    },
+    {
+      "id": "lust_x4",
+      "phase": "beruehren",
+      "zone": "lust",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Whoever receives now takes the other's hand and shows how they do it to themselves. Exactly like that, exactly there, exactly that fast. Whoever gives copies it. Get to know each other, shamelessly."
+    },
+    {
+      "id": "mund_s1",
+      "phase": "beruehren",
+      "zone": "mund",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "If you both want it, bring your mouth in now. Kiss your way up the inner thighs, and then right onto the genitals. Lips, tongue, hot breath. Slow, greedy. Whoever receives shows with sounds what feels good."
+    },
+    {
+      "id": "mund_x1",
+      "phase": "beruehren",
+      "zone": "mund",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "If you're both up for it: now with your mouth. Lick up the inner thighs and then right in the middle. Lick, suck, slurp, slow and greedy. Whoever receives moans out loud, so it's clear what's good."
+    },
+    {
+      "id": "mund_s2",
+      "phase": "beruehren",
+      "zone": "mund",
+      "stufe": 6,
+      "tiefe": "spicy",
+      "text": "Alternate between mouth and hand. A few moments of lips and tongue, then the hand, then the mouth again. That way the arousal rises in waves. Keep your stop word and your limits in mind."
+    },
+    {
+      "id": "mund_x2",
+      "phase": "beruehren",
+      "zone": "mund",
+      "stufe": 6,
+      "tiefe": "sehrSpicy",
+      "text": "Alternate: lick, then use your hand, then lick again. Keep bringing your partner up like that until it's almost unbearable. And both of you, remember your stop word."
+    },
+    {
+      "id": "check_in_s1",
+      "phase": "check_in",
+      "tiefe": "spicy",
+      "text": "Pause for a moment. Whoever receives, say a number from one to ten: how hot are you right now? And one wish: more, less, slower, or just like this."
+    },
+    {
+      "id": "check_in_x1",
+      "phase": "check_in",
+      "tiefe": "sehrSpicy",
+      "text": "Short pause. Whoever receives, say a number: how horny are you right now, from one to ten? And what do you want now? Say it as bluntly as it comes to you."
+    },
+    {
+      "id": "check_in_s2",
+      "phase": "check_in",
+      "tiefe": "spicy",
+      "text": "Stop for a moment. Whoever receives: green means keep going, yellow means slower, red means stop. Say a colour. And if you like, what you want next."
+    },
+    {
+      "id": "check_in_x2",
+      "phase": "check_in",
+      "tiefe": "sehrSpicy",
+      "text": "Stop. Traffic light. Whoever receives says green, yellow or red. If it's green, add what you want next. The dirtier the better."
+    },
+    {
+      "id": "check_in_s3",
+      "phase": "check_in",
+      "tiefe": "spicy",
+      "text": "Both take a deep breath. Whoever gives, ask quietly: how is it? Whoever receives, answer honestly. One word is enough. There's no wrong answer."
+    },
+    {
+      "id": "check_in_x3",
+      "phase": "check_in",
+      "tiefe": "sehrSpicy",
+      "text": "Breathe. Whoever gives asks: do you like that? Whoever receives answers honestly. A yes, a no, a more. Everything's fine as long as it's honest."
+    },
+    {
+      "id": "runde_ende_s1",
+      "phase": "runde_ende",
+      "tiefe": "spicy",
+      "text": "This round is coming to an end. If you want, it may now go all the way to climax. Or you slow down and let the pleasure glow on. Both are beautiful. Take the time you need."
+    },
+    {
+      "id": "runde_ende_x1",
+      "phase": "runde_ende",
+      "tiefe": "sehrSpicy",
+      "text": "The round is almost over. Whoever received may come now, if they want to. Whoever gives keeps going until it happens. Or you stop just short and save it for later."
+    },
+    {
+      "id": "runde_ende_s2",
+      "phase": "runde_ende",
+      "tiefe": "spicy",
+      "text": "Slow down. Let your hands rest where it's hot. Whoever received now wishes for how it ends: climax, or stillness and holding. Whoever gave offers exactly that."
+    },
+    {
+      "id": "runde_ende_x2",
+      "phase": "runde_ende",
+      "tiefe": "sehrSpicy",
+      "text": "Slow down. Whoever received now says how it should end: coming, or simply being held. Whoever gave delivers exactly that."
+    },
+    {
+      "id": "wechsel_s1",
+      "phase": "wechsel",
+      "tiefe": "spicy",
+      "text": "Role swap. A kiss, a look, a sip of water. Whoever just got to enjoy may now seduce. Teasing is allowed, hurrying isn't."
+    },
+    {
+      "id": "wechsel_x1",
+      "phase": "wechsel",
+      "tiefe": "sehrSpicy",
+      "text": "Now swap. A kiss, a sip of water. Whoever just had their turn may now pay it back. Exactly as mean and as hot as before."
+    },
+    {
+      "id": "wechsel_s2",
+      "phase": "wechsel",
+      "tiefe": "spicy",
+      "text": "Time to swap. Tell each other in one sentence what was hottest in the first round. Then whoever gave lies down and may now take."
+    },
+    {
+      "id": "wechsel_x2",
+      "phase": "wechsel",
+      "tiefe": "sehrSpicy",
+      "text": "Swap. Tell each other quickly what turned you on most just now. Then whoever gave lies down and gets properly spoiled."
+    },
+    {
+      "id": "ausklang_s1",
+      "phase": "ausklang",
+      "tiefe": "spicy",
+      "text": "Come to rest. Lie close together, skin to skin, and breathe together. Feel the aftershocks. You've given each other something brave tonight. Tell each other later what you want to repeat."
+    },
+    {
+      "id": "ausklang_x1",
+      "phase": "ausklang",
+      "tiefe": "sehrSpicy",
+      "text": "Come down. Lie together, sweaty, and breathe. Feel it still twitching. That was hot. Tell each other later what you absolutely want to do again."
+    },
+    {
+      "id": "ausklang_s2",
+      "phase": "ausklang",
+      "tiefe": "spicy",
+      "text": "Let the evening fade out. Pull the blanket close, hold each other, and be quiet for a moment. Tomorrow perhaps, tell each other what surprised you and what you'd wish for next time."
+    },
+    {
+      "id": "ausklang_x2",
+      "phase": "ausklang",
+      "tiefe": "sehrSpicy",
+      "text": "Blanket over you, hold on, breathe. No words needed. And tomorrow at breakfast feel free to whisper to each other what you want to try next time."
+    },
+    {
+      "id": "erinnerung_s1",
+      "phase": "erinnerung",
+      "tiefe": "spicy",
+      "text": "Breathe audibly. Let the sounds out."
+    },
+    {
+      "id": "erinnerung_x1",
+      "phase": "erinnerung",
+      "tiefe": "sehrSpicy",
+      "text": "Go ahead and moan loudly."
+    },
+    {
+      "id": "erinnerung_s2",
+      "phase": "erinnerung",
+      "tiefe": "spicy",
+      "text": "Pay attention to your partner's signals."
+    },
+    {
+      "id": "erinnerung_x2",
+      "phase": "erinnerung",
+      "tiefe": "sehrSpicy",
+      "text": "Listen for what feels good."
+    },
+    {
+      "id": "erinnerung_s3",
+      "phase": "erinnerung",
+      "tiefe": "spicy",
+      "text": "Slower is often hotter."
+    },
+    {
+      "id": "erinnerung_x3",
+      "phase": "erinnerung",
+      "tiefe": "sehrSpicy",
+      "text": "Make them beg."
     }
   ],
   "_source": {
     "block:ankommen_1": "72788190f0138c99",
     "block:ankommen_2": "cf65be2a5e1f3b8a",
     "block:ankommen_3": "b77cf0473d310170",
+    "block:ankommen_s1": "1ba5e296260ec0e2",
+    "block:ankommen_s2": "ef87cda98eb4d9a7",
+    "block:ankommen_x1": "fec32bf71b656943",
+    "block:ankommen_x2": "298f903455ded000",
     "block:ausklang_1": "6766d5778aefdbcb",
     "block:ausklang_2": "b12eaa4ee41cec69",
     "block:ausklang_3": "7f2abe093562d352",
+    "block:ausklang_s1": "5f33d6b3b6fa90d4",
+    "block:ausklang_s2": "0ab4644e4bb6c5c2",
+    "block:ausklang_x1": "b4d6479e7a49b3b1",
+    "block:ausklang_x2": "5319495e282f1d21",
     "block:check_in_1": "2e44f89f1e120d61",
     "block:check_in_2": "2b9a9c22a29ed657",
     "block:check_in_3": "db93dbee8a45bb20",
+    "block:check_in_s1": "bcda52de6454554d",
+    "block:check_in_s2": "209cf7371aeb96dc",
+    "block:check_in_s3": "9341ac63f73a2b47",
+    "block:check_in_x1": "9f89ea4212546779",
+    "block:check_in_x2": "30f35a1558af44b1",
+    "block:check_in_x3": "d69faf8b8fdf84be",
     "block:erinnerung_1": "d3dd0c2377a83d27",
     "block:erinnerung_2": "9754e9fd21aacae7",
     "block:erinnerung_3": "fa3e264c449d5e12",
     "block:erinnerung_4": "b72b1be9ef394fa8",
     "block:erinnerung_5": "649c287c8a400938",
     "block:erinnerung_6": "7bb4375ed3cc8c84",
+    "block:erinnerung_s1": "256ada2b46e95239",
+    "block:erinnerung_s2": "078e8677dc834679",
+    "block:erinnerung_s3": "67e9da59c1a77aae",
+    "block:erinnerung_x1": "f23e6c0066bb7c22",
+    "block:erinnerung_x2": "e089e4eb77a9a64d",
+    "block:erinnerung_x3": "3999412360ffdf9b",
+    "block:kuesse_s1": "4721c33bafa3add0",
+    "block:kuesse_s2": "ca999c0ac16c9f7a",
+    "block:kuesse_x1": "5fd313acb977ed41",
+    "block:kuesse_x2": "c6a6a152f922c919",
+    "block:lust_s1": "bc35dfffb9f16142",
+    "block:lust_s2": "5f8627f07ca41b93",
+    "block:lust_s3": "b698ccfb63c50737",
+    "block:lust_s4": "e1a12d1e34fc6fb9",
+    "block:lust_x1": "474b58db0ce96b62",
+    "block:lust_x2": "465a827232f40248",
+    "block:lust_x3": "1277ef377ce99b5f",
+    "block:lust_x4": "e832cfe56ee34724",
+    "block:mund_s1": "87ee9c8a5f62fdbd",
+    "block:mund_s2": "52512757af7709a2",
+    "block:mund_x1": "ea6009c2ccb95d19",
+    "block:mund_x2": "894b5679a21e42c1",
+    "block:necken_s1": "3e39870e2b556ff3",
+    "block:necken_s2": "b7da33ef6b38b152",
+    "block:necken_x1": "508685fcd7a22bf9",
+    "block:necken_x2": "19eb3a86d9bac69c",
     "block:runde_ende_1": "82ca8a28a6652184",
     "block:runde_ende_2": "ca2539c94f86ce00",
+    "block:runde_ende_s1": "b4188097ba13845a",
+    "block:runde_ende_s2": "d4201bde6e2fbe48",
+    "block:runde_ende_x1": "ca1d9a247ed20977",
+    "block:runde_ende_x2": "ba2d5c8f4b55d5a0",
     "block:runde_start_1": "f34530ac7b94f403",
     "block:runde_start_2": "b87dc77c45493ded",
+    "block:runde_start_s1": "f6010f4212d4fd3f",
+    "block:runde_start_s2": "9cf8e4da4b941bd4",
+    "block:runde_start_x1": "004913ab49bd26bc",
+    "block:runde_start_x2": "5a13c71ca1e9eec8",
     "block:wechsel_1": "ef15dd01bddacd1f",
     "block:wechsel_2": "cbc3fdca904898f4",
+    "block:wechsel_s1": "4c29d0c26b5ad7c0",
+    "block:wechsel_s2": "31500602498a94bb",
+    "block:wechsel_x1": "7ca1e76e6caf1aef",
+    "block:wechsel_x2": "4df82d2426723f99",
     "block:zone_arme_1": "58ef5dfee2422cc6",
     "block:zone_arme_2": "66222b0fd2454a06",
     "block:zone_bauch_1": "91b1b784670c2f83",
