@@ -4850,6 +4850,84 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Die Sicherung ist beschädigt ({feld}).'**
   String storageServiceTheBackupIsDamagedFeld(Object feld);
+
+  /// No description provided for @spracheHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch; auf Englisch liest die Geräte-Stimme vor.'**
+  String get spracheHinweis;
+
+  /// No description provided for @cueEinatmenWeit.
+  ///
+  /// In de, this message translates to:
+  /// **'Einatmen. Und weit werden.'**
+  String get cueEinatmenWeit;
+
+  /// No description provided for @cueWeichBleiben.
+  ///
+  /// In de, this message translates to:
+  /// **'Weich bleiben.'**
+  String get cueWeichBleiben;
+
+  /// No description provided for @cueAnspannen.
+  ///
+  /// In de, this message translates to:
+  /// **'Anspannen. Und sanft heben.'**
+  String get cueAnspannen;
+
+  /// No description provided for @cueHalten.
+  ///
+  /// In de, this message translates to:
+  /// **'Halten. Weiter atmen.'**
+  String get cueHalten;
+
+  /// No description provided for @cueLoslassen.
+  ///
+  /// In de, this message translates to:
+  /// **'Und ganz loslassen.'**
+  String get cueLoslassen;
+
+  /// No description provided for @cueNachspueren.
+  ///
+  /// In de, this message translates to:
+  /// **'Nachspüren.'**
+  String get cueNachspueren;
+
+  /// No description provided for @cueAn.
+  ///
+  /// In de, this message translates to:
+  /// **'An.'**
+  String get cueAn;
+
+  /// No description provided for @cueLos.
+  ///
+  /// In de, this message translates to:
+  /// **'Los.'**
+  String get cueLos;
+
+  /// No description provided for @cueWelle.
+  ///
+  /// In de, this message translates to:
+  /// **'Einatmen. Damm und Po weich.'**
+  String get cueWelle;
+
+  /// No description provided for @cueSeufzen.
+  ///
+  /// In de, this message translates to:
+  /// **'Ausatmen. Lang und hörbar.'**
+  String get cueSeufzen;
+
+  /// No description provided for @cueStart.
+  ///
+  /// In de, this message translates to:
+  /// **'Wir beginnen.'**
+  String get cueStart;
+
+  /// No description provided for @cueFertig.
+  ///
+  /// In de, this message translates to:
+  /// **'Geschafft. Spür noch einen Moment nach.'**
+  String get cueFertig;
 }
 
 class _AppLocalizationsDelegate

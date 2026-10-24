@@ -1386,5 +1386,18 @@
         "type": "Object"
       }
     }
-  }
+  },
+  "spracheHinweis": "Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch; auf Englisch liest die Geräte-Stimme vor.",
+  "cueEinatmenWeit": "Einatmen. Und weit werden.",
+  "cueWeichBleiben": "Weich bleiben.",
+  "cueAnspannen": "Anspannen. Und sanft heben.",
+  "cueHalten": "Halten. Weiter atmen.",
+  "cueLoslassen": "Und ganz loslassen.",
+  "cueNachspueren": "Nachspüren.",
+  "cueAn": "An.",
+  "cueLos": "Los.",
+  "cueWelle": "Einatmen. Damm und Po weich.",
+  "cueSeufzen": "Ausatmen. Lang und hörbar.",
+  "cueStart": "Wir beginnen.",
+  "cueFertig": "Geschafft. Spür noch einen Moment nach."
 }

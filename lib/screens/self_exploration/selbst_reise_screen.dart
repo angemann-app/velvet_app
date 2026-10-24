@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/paar_abend.dart';
 import '../../models/selbst_reise.dart';
+import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
@@ -76,6 +77,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
   @override
   void dispose() {
     _lauf++;
+    Sprachausgabe.vorlesenBeenden();
     _stimmePlayer.dispose();
     _klangPlayer.dispose();
     _teppichPlayer.dispose();
@@ -120,7 +122,8 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
       if (schritt.klang) {
         _klangPlayer.play(AssetSource('audio/paar/klangschale.opus'), volume: 0.8).catchError((_) {});
       } else if (schritt.baustein != null) {
-        _stimmePlayer.play(AssetSource('audio/selbst/${_stimme}_${schritt.baustein!.id}.opus')).catchError((_) {});
+        Sprachausgabe.sprich(_stimmePlayer, 'audio/selbst/${_stimme}_${schritt.baustein!.id}.opus',
+            schritt.baustein!.text);
       }
       while (_imSchritt < schritt.dauer) {
         await Future.delayed(const Duration(milliseconds: 250));
@@ -145,7 +148,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
     HapticFeedback.lightImpact();
     setState(() => _pausiert = !_pausiert);
     if (_pausiert) {
-      _stimmePlayer.pause().catchError((_) {});
+      Sprachausgabe.pause(_stimmePlayer);
       _teppichPlayer.pause().catchError((_) {});
     } else {
       _stimmePlayer.resume().catchError((_) {});
@@ -157,13 +160,13 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
     final ablauf = _ablauf;
     if (ablauf == null || _index >= ablauf.length) return;
     HapticFeedback.selectionClick();
-    _stimmePlayer.stop().catchError((_) {});
+    Sprachausgabe.stopp(_stimmePlayer);
     setState(() => _imSchritt = ablauf[_index].dauer);
   }
 
   void _beenden() {
     _lauf++;
-    _stimmePlayer.stop().catchError((_) {});
+    Sprachausgabe.stopp(_stimmePlayer);
     _klangPlayer.stop().catchError((_) {});
     _teppichPlayer.stop().catchError((_) {});
     setState(() {

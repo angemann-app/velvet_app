@@ -3,6 +3,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import 'kegel_guide_sheet.dart';
@@ -197,6 +198,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
   void dispose() {
     _ticker?.cancel();
     _animController.dispose();
+    Sprachausgabe.vorlesenBeenden();
     _cuePlayer.dispose();
     super.dispose();
   }
@@ -204,10 +206,27 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
   /// Victoria für Frauen-Profile, sonst Martin – wie bei den Lektionen.
   String get _voiceName => StorageService.getUserProfile()?.isFemale == true ? 'victoria' : 'martin';
 
+  /// Text der Ansage, für die Geräte-Stimme, solange keine Aufnahme in dieser Sprache da ist.
+  String _ansageText(String cue) => switch (cue) {
+        'einatmen_weit' => t.cueEinatmenWeit,
+        'weich_bleiben' => t.cueWeichBleiben,
+        'anspannen' => t.cueAnspannen,
+        'halten' => t.cueHalten,
+        'loslassen' => t.cueLoslassen,
+        'nachspueren' => t.cueNachspueren,
+        'an' => t.cueAn,
+        'los' => t.cueLos,
+        'welle' => t.cueWelle,
+        'seufzen' => t.cueSeufzen,
+        'start' => t.cueStart,
+        'fertig' => t.cueFertig,
+        _ => '',
+      };
+
   void _playCue(String? cue) {
     if (!_voiceCues || cue == null) return;
-    _cuePlayer.stop();
-    _cuePlayer.play(AssetSource('audio/cues/${_voiceName}_$cue.opus')).catchError((_) {});
+    Sprachausgabe.stopp(_cuePlayer);
+    Sprachausgabe.sprich(_cuePlayer, 'audio/cues/${_voiceName}_$cue.opus', _ansageText(cue));
   }
 
   void _changeSettings(VoidCallback change) {

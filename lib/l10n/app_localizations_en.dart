@@ -2857,4 +2857,44 @@ class AppLocalizationsEn extends AppLocalizations {
   String storageServiceTheBackupIsDamagedFeld(Object feld) {
     return 'The backup is damaged ($feld).';
   }
+
+  @override
+  String get spracheHinweis =>
+      'Interface, courses and exercises. The recordings are in German; in English, your device\'s voice reads aloud.';
+
+  @override
+  String get cueEinatmenWeit => 'Breathe in. And widen.';
+
+  @override
+  String get cueWeichBleiben => 'Stay soft.';
+
+  @override
+  String get cueAnspannen => 'Tighten. And gently lift.';
+
+  @override
+  String get cueHalten => 'Hold. Keep breathing.';
+
+  @override
+  String get cueLoslassen => 'And let go completely.';
+
+  @override
+  String get cueNachspueren => 'Notice.';
+
+  @override
+  String get cueAn => 'On.';
+
+  @override
+  String get cueLos => 'Off.';
+
+  @override
+  String get cueWelle => 'Breathe in. Perineum and buttocks soft.';
+
+  @override
+  String get cueSeufzen => 'Breathe out. Long and audible.';
+
+  @override
+  String get cueStart => 'Let\'s begin.';
+
+  @override
+  String get cueFertig => 'Done. Stay with the feeling for a moment.';
 }

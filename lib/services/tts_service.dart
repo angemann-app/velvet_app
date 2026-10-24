@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
+import 'sprache.dart';
+
 enum TtsPlaybackState { stopped, playing, paused }
 
 class TtsService {
@@ -15,13 +17,21 @@ class TtsService {
       ValueNotifier<String?>(null);
 
   bool _initialized = false;
+  String? _sprache;
 
   Future<void> init() async {
-    if (_initialized) return;
+    // Sprache der Geräte-Stimme folgt der App-Sprache, auch nach einem Wechsel.
+    if (_initialized && _sprache == Sprache.code) return;
+    if (_initialized) {
+      _sprache = Sprache.code;
+      await _flutterTts.setLanguage(Sprache.englisch ? 'en-US' : 'de-DE').timeout(const Duration(seconds: 2)).catchError((_) => null);
+      return;
+    }
+    _sprache = Sprache.code;
 
     try {
       await _flutterTts
-          .setLanguage('de-DE')
+          .setLanguage(Sprache.englisch ? 'en-US' : 'de-DE')
           .timeout(const Duration(seconds: 2));
       await _flutterTts
           .setSpeechRate(0.45)

@@ -788,5 +788,18 @@
   "storageServiceYesNoList": "Yes/no list",
   "storageServiceTheKeysInTheBackup": "The keys in the backup don't match.",
   "storageServiceTheBackupCouldNotBe": "The backup could not be restored. Nothing was changed.",
-  "storageServiceTheBackupIsDamagedFeld": "The backup is damaged ({feld})."
+  "storageServiceTheBackupIsDamagedFeld": "The backup is damaged ({feld}).",
+  "spracheHinweis": "Interface, courses and exercises. The recordings are in German; in English, your device's voice reads aloud.",
+  "cueEinatmenWeit": "Breathe in. And widen.",
+  "cueWeichBleiben": "Stay soft.",
+  "cueAnspannen": "Tighten. And gently lift.",
+  "cueHalten": "Hold. Keep breathing.",
+  "cueLoslassen": "And let go completely.",
+  "cueNachspueren": "Notice.",
+  "cueAn": "On.",
+  "cueLos": "Off.",
+  "cueWelle": "Breathe in. Perineum and buttocks soft.",
+  "cueSeufzen": "Breathe out. Long and audible.",
+  "cueStart": "Let's begin.",
+  "cueFertig": "Done. Stay with the feeling for a moment."
 }

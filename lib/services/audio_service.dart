@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
+import 'sprachausgabe.dart';
 import 'tts_service.dart';
 
 class AudioService {
@@ -107,8 +108,9 @@ class AudioService {
     durationNotifier.value = Duration.zero;
 
     try {
-      // audioplayers AssetSource resolves from assets/ automatically
-      final source = AssetSource('audio/$lessonId.opus');
+      // Deutsch aus den Assets, Englisch aus dem Audiopaket; fehlt die Aufnahme, liest die Geräte-Stimme.
+      final source = Sprachausgabe.quelle('audio/$lessonId.opus');
+      if (source == null) throw StateError('keine Aufnahme in dieser Sprache');
       await _player.play(source);
       debugPrint('AudioService: Playing neural asset audio/$lessonId.opus');
     } catch (e) {

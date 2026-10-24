@@ -12,6 +12,7 @@ import '../../widgets/update_dialog.dart';
 import '../../theme/app_theme.dart';
 import '../main_navigation_screen.dart';
 import '../../l10n/t.dart';
+import '../../services/sprache.dart';
 
 class OnboardingScreen extends StatefulWidget {
   final bool isEditing;
@@ -796,6 +797,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 const SizedBox(height: 24),
                 const Divider(color: AppTheme.border),
                 const SizedBox(height: 16),
+                _buildLanguageSection(),
+                const SizedBox(height: 16),
                 _buildPrivacySection(),
                 const SizedBox(height: 16),
                 _buildBackupSection(),
@@ -1019,6 +1022,54 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               await UpdateService.setChannel(channel);
               if (mounted) setState(() => _updateChannel = channel);
             },
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Sprache der App. Ein Wechsel baut die ganze App neu auf (main.dart) und lädt die Inhalte neu.
+  Widget _buildLanguageSection() {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 16, 8, 8),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.translate_rounded, color: AppTheme.sageGreen, size: 20),
+              const SizedBox(width: 8),
+              Text(t.spracheTitel,
+                  style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14.5, fontWeight: FontWeight.w700)),
+            ],
+          ),
+          const SizedBox(height: 4),
+          Text(t.spracheHinweis, style: const TextStyle(color: AppTheme.textMuted, fontSize: 12.5, height: 1.4)),
+          const SizedBox(height: 6),
+          RadioGroup<String>(
+            groupValue: Sprache.wahl.value,
+            onChanged: (wert) {
+              if (wert != null) Sprache.setzen(wert);
+            },
+            child: Column(children: [
+              for (final (wert, text) in [
+                ('auto', t.spracheAutomatisch),
+                ('de', t.spracheDeutsch),
+                ('en', t.spracheEnglisch),
+              ])
+                RadioListTile<String>(
+                  value: wert,
+                  dense: true,
+                  contentPadding: EdgeInsets.zero,
+                  activeColor: AppTheme.sageGreen,
+                  title: Text(text, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14)),
+                ),
+            ]),
           ),
         ],
       ),

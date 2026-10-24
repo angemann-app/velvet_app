@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/paar_abend.dart';
 import '../../services/nostr_service.dart';
+import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
@@ -86,6 +87,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
   @override
   void dispose() {
     _lauf++;
+    Sprachausgabe.vorlesenBeenden();
     _stimmePlayer.dispose();
     _klangPlayer.dispose();
     _teppichPlayer.dispose();
@@ -133,9 +135,8 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
       if (schritt.klang) {
         _klangPlayer.play(AssetSource('audio/paar/klangschale.opus'), volume: 0.8).catchError((_) {});
       } else if (schritt.baustein != null) {
-        _stimmePlayer
-            .play(AssetSource('audio/paar/${_stimme}_${schritt.baustein!.id}.opus'))
-            .catchError((_) {});
+        Sprachausgabe.sprich(_stimmePlayer, 'audio/paar/${_stimme}_${schritt.baustein!.id}.opus',
+            schritt.baustein!.text);
       }
       // Die Zeit läuft selbst mit, statt auf das Ende der Aufnahme zu warten:
       // So bleibt der Ablauf stabil, auch wenn eine Datei fehlt.
@@ -166,7 +167,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     HapticFeedback.lightImpact();
     setState(() => _pausiert = !_pausiert);
     if (_pausiert) {
-      _stimmePlayer.pause().catchError((_) {});
+      Sprachausgabe.pause(_stimmePlayer);
       _teppichPlayer.pause().catchError((_) {});
     } else {
       _stimmePlayer.resume().catchError((_) {});
@@ -179,13 +180,13 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     final ablauf = _ablauf;
     if (ablauf == null || _index >= ablauf.length) return;
     HapticFeedback.selectionClick();
-    _stimmePlayer.stop().catchError((_) {});
+    Sprachausgabe.stopp(_stimmePlayer);
     setState(() => _imSchritt = ablauf[_index].dauer);
   }
 
   void _beenden() {
     _lauf++;
-    _stimmePlayer.stop().catchError((_) {});
+    Sprachausgabe.stopp(_stimmePlayer);
     _klangPlayer.stop().catchError((_) {});
     _teppichPlayer.stop().catchError((_) {});
     setState(() {

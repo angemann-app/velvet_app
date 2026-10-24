@@ -2868,4 +2868,44 @@ class AppLocalizationsDe extends AppLocalizations {
   String storageServiceTheBackupIsDamagedFeld(Object feld) {
     return 'Die Sicherung ist beschädigt ($feld).';
   }
+
+  @override
+  String get spracheHinweis =>
+      'Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch; auf Englisch liest die Geräte-Stimme vor.';
+
+  @override
+  String get cueEinatmenWeit => 'Einatmen. Und weit werden.';
+
+  @override
+  String get cueWeichBleiben => 'Weich bleiben.';
+
+  @override
+  String get cueAnspannen => 'Anspannen. Und sanft heben.';
+
+  @override
+  String get cueHalten => 'Halten. Weiter atmen.';
+
+  @override
+  String get cueLoslassen => 'Und ganz loslassen.';
+
+  @override
+  String get cueNachspueren => 'Nachspüren.';
+
+  @override
+  String get cueAn => 'An.';
+
+  @override
+  String get cueLos => 'Los.';
+
+  @override
+  String get cueWelle => 'Einatmen. Damm und Po weich.';
+
+  @override
+  String get cueSeufzen => 'Ausatmen. Lang und hörbar.';
+
+  @override
+  String get cueStart => 'Wir beginnen.';
+
+  @override
+  String get cueFertig => 'Geschafft. Spür noch einen Moment nach.';
 }
