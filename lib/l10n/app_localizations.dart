@@ -5150,6 +5150,66 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Wie zeige ich, wie ich berührt werden möchte?'**
   String get coachQShowTouch;
+
+  /// No description provided for @gefuehrtTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Geführte Audios'**
+  String get gefuehrtTitel;
+
+  /// No description provided for @gefuehrtSelbstTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Körperreise'**
+  String get gefuehrtSelbstTitel;
+
+  /// No description provided for @gefuehrtSelbstText.
+  ///
+  /// In de, this message translates to:
+  /// **'10 bis 30 Minuten nur für dich: eine Stimme führt dich über deinen Körper, so nah, wie du möchtest.'**
+  String get gefuehrtSelbstText;
+
+  /// No description provided for @lessonDetailTryGuidedEvening.
+  ///
+  /// In de, this message translates to:
+  /// **'Jetzt geführt ausprobieren: Gemeinsamer Abend'**
+  String get lessonDetailTryGuidedEvening;
+
+  /// No description provided for @spicyEinladen.
+  ///
+  /// In de, this message translates to:
+  /// **'Zum Spicy-Modus einladen'**
+  String get spicyEinladen;
+
+  /// No description provided for @spicyEinladungText.
+  ///
+  /// In de, this message translates to:
+  /// **'🔥 Ich habe den Spicy-Modus eingeschaltet. Magst du ihn auch ausprobieren? (Profil › Spicy-Modus)'**
+  String get spicyEinladungText;
+
+  /// No description provided for @spicyEinladungAnnehmen.
+  ///
+  /// In de, this message translates to:
+  /// **'Spicy-Modus ansehen'**
+  String get spicyEinladungAnnehmen;
+
+  /// No description provided for @spicyEinladungSchonAn.
+  ///
+  /// In de, this message translates to:
+  /// **'Bei dir ist der Spicy-Modus schon an.'**
+  String get spicyEinladungSchonAn;
+
+  /// No description provided for @spicyEinladungGesendet.
+  ///
+  /// In de, this message translates to:
+  /// **'Einladung gesendet.'**
+  String get spicyEinladungGesendet;
+
+  /// No description provided for @spicyEinladungFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Das hat nicht geklappt. Bitte später noch einmal versuchen.'**
+  String get spicyEinladungFehler;
 }
 
 class _AppLocalizationsDelegate

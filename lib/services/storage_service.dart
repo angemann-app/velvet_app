@@ -41,6 +41,7 @@ class StorageService {
   static Future<void> init() async {
     try {
       _prefs ??= await SharedPreferences.getInstance();
+      spicyAenderung.value = spicyMode();
       await SecretStore.init(_prefs!);
       final profStr = _prefs?.getString(_keyUserProfile);
       if (profStr != null && profStr.isNotEmpty) {
@@ -185,9 +186,13 @@ class StorageService {
 
   static bool spicyMode() => _prefs?.getBool(_keySpicyMode) ?? false;
 
+  /// Ändert sich beim Ein- und Ausschalten, damit Oberflächen sofort folgen (z. B. der Spicy-Look).
+  static final ValueNotifier<bool> spicyAenderung = ValueNotifier<bool>(false);
+
   static Future<void> setSpicyMode(bool value) async {
     final prefs = await _ensurePrefs();
     await prefs.setBool(_keySpicyMode, value);
+    spicyAenderung.value = value;
   }
 
   // AI Chat Messages

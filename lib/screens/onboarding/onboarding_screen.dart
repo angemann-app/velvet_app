@@ -14,6 +14,7 @@ import '../main_navigation_screen.dart';
 import '../../l10n/t.dart';
 import '../../services/sprache.dart';
 import '../../widgets/audio_paket_karte.dart';
+import '../../widgets/spicy_modus_dialog.dart';
 
 class OnboardingScreen extends StatefulWidget {
   final bool isEditing;
@@ -1202,31 +1203,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
         ),
         onChanged: (value) async {
-          if (value && !await _spicyBestaetigen()) return;
-          await StorageService.setSpicyMode(value);
+          if (value) {
+            if (!await spicyModusEinschalten(context)) return;
+          } else {
+            await StorageService.setSpicyMode(false);
+          }
           if (mounted) setState(() => _spicyMode = value);
         },
       ),
     );
-  }
-
-  Future<bool> _spicyBestaetigen() async {
-    final ja = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.surface,
-        title: Text(t.spicyEinschaltenTitel),
-        content: Text(t.spicyEinschaltenText, style: const TextStyle(height: 1.45)),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.ausspracheMeldenCancel)),
-          TextButton(
-            onPressed: () => Navigator.pop(context, true),
-            child: Text(t.spicyEinschalten, style: const TextStyle(color: AppTheme.rose)),
-          ),
-        ],
-      ),
-    );
-    return ja == true;
   }
 
   Widget _buildBackupSection() {

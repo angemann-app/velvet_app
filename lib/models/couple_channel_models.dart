@@ -25,6 +25,9 @@ class CoupleMessage {
 
   /// Lektion, auf die sich die Nachricht bezieht (geteilte Lektion oder Reflexion).
   final String? lessonId;
+
+  /// Einladung zum Spicy-Modus (als Chat-Nachricht mit Zusatzfeld, ältere Versionen zeigen den Text).
+  final bool spicyEinladung;
   final DateTime createdAt;
 
   const CoupleMessage({
@@ -37,6 +40,7 @@ class CoupleMessage {
     this.fantasyId,
     this.fantasyVote,
     this.lessonId,
+    this.spicyEinladung = false,
     required this.createdAt,
   });
 
@@ -51,6 +55,7 @@ class CoupleMessage {
       'fantasyId': fantasyId,
       'fantasyVote': fantasyVote,
       'lessonId': lessonId,
+      if (spicyEinladung) 'spicyEinladung': true,
       'createdAt': createdAt.toIso8601String(),
     };
   }
@@ -69,6 +74,7 @@ class CoupleMessage {
       fantasyId: map['fantasyId'] as String?,
       fantasyVote: map['fantasyVote'] as String?,
       lessonId: map['lessonId'] as String?,
+      spicyEinladung: map['spicyEinladung'] == true,
       createdAt: map['createdAt'] != null
           ? DateTime.tryParse(map['createdAt'] as String) ?? DateTime.now()
           : DateTime.now(),

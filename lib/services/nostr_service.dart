@@ -523,6 +523,7 @@ class NostrService {
     String? fantasyId;
     String? fantasyVote;
     String? lessonId;
+    var spicyEinladung = false;
 
     try {
       final data = jsonDecode(decryptedText);
@@ -544,6 +545,7 @@ class NostrService {
           // den lesbaren Text zeigen. Die Antwort selbst steckt nur im Zusatzfeld.
           final lesson = data['lesson'];
           if (lesson is String && lesson.length <= 64) lessonId = lesson;
+          spicyEinladung = data['spicy_invite'] == true;
           final reflection = data['reflection'];
           if (!isMe && lessonId != null && reflection is String && reflection.length <= 5000) {
             partnerReflectionsNotifier.value = {...partnerReflectionsNotifier.value, lessonId: reflection};
@@ -576,6 +578,7 @@ class NostrService {
       fantasyId: fantasyId,
       fantasyVote: fantasyVote,
       lessonId: lessonId,
+      spicyEinladung: spicyEinladung,
       createdAt: timestamp,
     );
 
@@ -790,6 +793,10 @@ class NostrService {
   /// Lektion empfehlen. Ältere Versionen zeigen nur den Text.
   Future<bool> sendLessonShare(String lessonId, String lessonTitle, String courseTitle) =>
       _sendLearning({'text': t.nostrServiceHaveAReadLessontitleCoursetitle(lessonTitle, courseTitle), 'lesson': lessonId});
+
+  /// Zum Spicy-Modus einladen. Einschalten muss das Gegenüber selbst (mit Altersabfrage);
+  /// ältere Versionen zeigen nur den Text.
+  Future<bool> sendSpicyEinladung() => _sendLearning({'text': t.spicyEinladungText}, extra: {'spicy_invite': true});
 
   /// Eigene Reflexion teilen. Der lesbare Text verrät die Antwort nicht.
   Future<bool> sendReflection(String lessonId, String lessonTitle, String answer) => _sendLearning({

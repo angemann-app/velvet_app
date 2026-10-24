@@ -4,6 +4,7 @@ import '../../models/content_models.dart';
 import '../../models/user_profile.dart';
 import '../../services/data_service.dart';
 import '../../services/storage_service.dart';
+import '../../widgets/gefuehrte_audios.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/daily_checkin_card.dart';
 import '../../widgets/daily_simmering_card.dart';
@@ -35,6 +36,14 @@ class _CoursesScreenState extends State<CoursesScreen> {
   void initState() {
     super.initState();
     _loadData();
+    // Spicy-Kurse erscheinen und verschwinden sofort, wenn der Modus umgeschaltet wird.
+    StorageService.spicyAenderung.addListener(_loadData);
+  }
+
+  @override
+  void dispose() {
+    StorageService.spicyAenderung.removeListener(_loadData);
+    super.dispose();
   }
 
   Future<void> _loadData() async {
@@ -171,6 +180,11 @@ class _CoursesScreenState extends State<CoursesScreen> {
           _buildHeroHeader(completedCount, totalLessons, overallProgress),
 
           const SizedBox(height: 18),
+
+          // Geführte Audios gut sichtbar statt versteckt in einzelnen Lektionen.
+          GefuehrteAudios(mitPaar: showCouples),
+
+          const SizedBox(height: 6),
 
           // Category Filter Chips
           SingleChildScrollView(

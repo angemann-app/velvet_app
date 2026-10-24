@@ -243,6 +243,20 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
   - Gemeinsamer Abend: beginnt auf der Haut, neue Zonen Necken, Küsse, Lust (Hand, Edging, Führen)
     und Mund; Check-ins mit Lust-Skala und Ampel, Stoppwort-Hinweis in der Einrichtung.
 - **Tests:** `test/spicy_modus_test.dart`, Spicy-Fälle in `selbst_reise_test.dart` und `paar_abend_test.dart`.
+- **Spicy-Look:** Solange der Modus an ist, legt `lib/widgets/spicy_atmosphaere.dart` ein dezentes rotes
+  Glühen mit Funken über die App (fängt keine Berührungen ab), die Kopfzeile bekommt eine Flamme und
+  die Navigation rote Akzente. `StorageService.spicyAenderung` meldet jedes Umschalten.
+- **Einladung im Paar-Chat:** Menü „Zum Spicy-Modus einladen“ (nur wer ihn selbst an hat). Gesendet als
+  normale Chat-Nachricht mit `spicy_invite: true`, ältere Versionen zeigen den Text. Beim Gegenüber
+  erscheint „Spicy-Modus ansehen“, eingeschaltet wird nur mit der eigenen Altersabfrage
+  (`lib/widgets/spicy_modus_dialog.dart`).
+
+## 7d. Geführte Audios sichtbar
+
+- Startseite (Kurse) oben: Karten „Körperreise“ und „Gemeinsamer Abend“ (`lib/widgets/gefuehrte_audios.dart`,
+  Bilder `assets/images/guided_*.svg` aus `tools/generate_covers.py`); Singles sehen nur die Körperreise.
+- Paar-Kanal: die Abend-Karte steht unter der Begrüßung bzw. oben im Wünsche-Tab.
+- Lektionen couples_1 und mass_1 haben `linked_tool: paar_abend`, spsolo_1 `selbst_reise`.
 - **Audio:** Deutsch für beide Stimmen. Das englische Audiopaket `audio-en-v1` enthält die Spicy-Bausteine
   noch nicht; bis zu einem Paket v2 liest auf Englisch die Geräte-Stimme sie vor.
 

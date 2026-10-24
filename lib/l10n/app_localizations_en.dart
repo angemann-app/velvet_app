@@ -3031,4 +3031,38 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get coachQShowTouch => 'How do I show how I want to be touched?';
+
+  @override
+  String get gefuehrtTitel => 'Guided audio';
+
+  @override
+  String get gefuehrtSelbstTitel => 'Body journey';
+
+  @override
+  String get gefuehrtSelbstText =>
+      '10 to 30 minutes just for you: a voice guides you across your body, as close as you like.';
+
+  @override
+  String get lessonDetailTryGuidedEvening =>
+      'Try it guided now: Shared evening';
+
+  @override
+  String get spicyEinladen => 'Invite to spicy mode';
+
+  @override
+  String get spicyEinladungText =>
+      '🔥 I\'ve turned on spicy mode. Would you like to try it too? (Profile › Spicy mode)';
+
+  @override
+  String get spicyEinladungAnnehmen => 'Look at spicy mode';
+
+  @override
+  String get spicyEinladungSchonAn => 'Spicy mode is already on for you.';
+
+  @override
+  String get spicyEinladungGesendet => 'Invitation sent.';
+
+  @override
+  String get spicyEinladungFehler =>
+      'That didn\'t work. Please try again later.';
 }

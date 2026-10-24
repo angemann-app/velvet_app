@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../services/nostr_service.dart';
+import '../services/storage_service.dart';
+import '../widgets/spicy_atmosphaere.dart';
 import '../theme/app_theme.dart';
 import '../widgets/sos_button.dart';
 import '../widgets/update_dialog.dart';
@@ -69,23 +71,53 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Im Spicy-Modus wird die ganze Oberfläche wärmer und röter (lib/widgets/spicy_atmosphaere.dart).
+    return ValueListenableBuilder<bool>(
+      valueListenable: StorageService.spicyAenderung,
+      builder: (context, spicy, _) => _buildScaffold(spicy),
+    );
+  }
+
+  Widget _buildScaffold(bool spicy) {
     return Scaffold(
       backgroundColor: AppTheme.background,
       appBar: AppBar(
-        title: Text(
-          _getAppBarTitle(_currentIndex),
-          style: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w800,
-            letterSpacing: -0.3,
+        flexibleSpace: spicy
+            ? DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [SpicyAtmosphaere.glut.withValues(alpha: 0.28), AppTheme.background],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+              )
+            : null,
+        title: Row(mainAxisSize: MainAxisSize.min, children: [
+          if (spicy) ...[
+            Icon(Icons.local_fire_department_rounded, color: AppTheme.rose, size: 20, semanticLabel: t.spicyModus),
+            const SizedBox(width: 6),
+          ],
+          Flexible(
+            child: Text(
+              _getAppBarTitle(_currentIndex),
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -0.3,
+              ),
+            ),
           ),
-        ),
+        ]),
         actions: const [
           // Global SOS Button permanently in the AppBar
           SosButton(),
         ],
       ),
-      body: IndexedStack(
+      body: SpicyAtmosphaere(
+        an: spicy,
+        child: IndexedStack(
         index: _currentIndex,
         children: [
           CoursesScreen(
@@ -98,18 +130,20 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           const CouplesChannelScreen(),
           const AiCoachScreen(),
         ],
+        ),
       ),
       bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           border: Border(
-            top: BorderSide(color: AppTheme.border, width: 0.8),
+            top: BorderSide(
+                color: spicy ? SpicyAtmosphaere.glut.withValues(alpha: 0.6) : AppTheme.border, width: 0.8),
           ),
         ),
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
           type: BottomNavigationBarType.fixed,
-          backgroundColor: AppTheme.surface,
-          selectedItemColor: AppTheme.amber,
+          backgroundColor: spicy ? Color.alphaBlend(SpicyAtmosphaere.glut.withValues(alpha: 0.08), AppTheme.surface) : AppTheme.surface,
+          selectedItemColor: spicy ? AppTheme.rose : AppTheme.amber,
           unselectedItemColor: AppTheme.textMuted,
           selectedFontSize: 11,
           unselectedFontSize: 11,

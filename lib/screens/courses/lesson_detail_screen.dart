@@ -10,6 +10,7 @@ import '../../theme/app_theme.dart';
 import '../../widgets/audio_player_card.dart';
 import '../self_exploration/lust_profile_screen.dart';
 import '../self_exploration/selbst_reise_screen.dart';
+import '../couples_channel/paar_abend_screen.dart';
 import '../../l10n/t.dart';
 import '../../services/sprache.dart';
 
@@ -185,6 +186,10 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     }
     if (tool == 'selbst_reise') {
       Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SelbstReiseScreen()));
+      return;
+    }
+    if (tool == 'paar_abend') {
+      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PaarAbendScreen()));
       return;
     }
     if (widget.onNavigateToTool != null) {
@@ -459,6 +464,11 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       toolTitle = t.lessonDetailGuidedSelfExploration;
       toolSubtitle = t.lessonDetailToMinutesAVoiceGuides;
       toolIcon = Icons.spa_rounded;
+      accentColor = AppTheme.rose;
+    } else if (tool == 'paar_abend') {
+      toolTitle = t.lessonDetailTryGuidedEvening;
+      toolSubtitle = t.couplesChannelGuidedTouchForTheTwo;
+      toolIcon = Icons.favorite_rounded;
       accentColor = AppTheme.rose;
     } else if (tool == 'cbt_journal') {
       toolTitle = t.lessonDetailStartCbtThoughtRecord;

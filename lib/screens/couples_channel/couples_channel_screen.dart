@@ -11,6 +11,9 @@ import '../../theme/app_theme.dart';
 import '../yes_no_maybe/yes_no_maybe_screen.dart';
 import 'invite_partner.dart';
 import 'paar_abend_screen.dart';
+import '../../widgets/gefuehrte_audios.dart';
+import '../../widgets/spicy_modus_dialog.dart';
+import '../../services/storage_service.dart';
 import 'partner_profile_dialog.dart';
 import 'pairing_modal.dart';
 import '../../l10n/t.dart';
@@ -187,7 +190,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           t.couplesChannelConnectWithYourPartnerAnd,
           style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.45),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 16),
+        // Geht auch ohne Verbindung: ein Handy neben euch reicht.
+        const GefuehrteAudios(mitSelbst: false),
+        const SizedBox(height: 8),
         _buildFeature(
           Icons.bolt_rounded,
           AppTheme.amber,
@@ -244,8 +250,6 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           ),
         ),
         const SizedBox(height: 12),
-        _buildAbendCard(),
-        const SizedBox(height: 10),
         _buildFantasyMapCard(subtitle: t.couplesChannelYouCanAlsoFillIt),
       ],
     );
@@ -288,45 +292,44 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     ));
   }
 
+  Future<void> _spicyEinladen() async {
+    final messenger = ScaffoldMessenger.of(context);
+    final ok = await _nostr.sendSpicyEinladung();
+    messenger.showSnackBar(SnackBar(content: Text(ok ? t.spicyEinladungGesendet : t.spicyEinladungFehler)));
+  }
+
+  /// Knopf unter einer Einladung des Gegenübers: einschalten (mit Altersabfrage) oder Hinweis, dass er schon an ist.
+  Widget _spicyAnnehmen() {
+    return ValueListenableBuilder<bool>(
+      valueListenable: StorageService.spicyAenderung,
+      builder: (context, an, _) => Padding(
+        padding: const EdgeInsets.only(top: 6),
+        child: an
+            ? Text(t.spicyEinladungSchonAn, style: const TextStyle(fontSize: 12, color: AppTheme.textMuted))
+            : InkWell(
+                onTap: () => spicyModusEinschalten(context),
+                borderRadius: BorderRadius.circular(10),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: AppTheme.rose.withValues(alpha: 0.16),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(mainAxisSize: MainAxisSize.min, children: [
+                    const Icon(Icons.local_fire_department_rounded, size: 15, color: AppTheme.rose),
+                    const SizedBox(width: 6),
+                    Text(t.spicyEinladungAnnehmen,
+                        style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: AppTheme.rose)),
+                  ]),
+                ),
+              ),
+      ),
+    );
+  }
+
   void _openAbend() {
     HapticFeedback.lightImpact();
     Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PaarAbendScreen()));
-  }
-
-  Widget _buildAbendCard() {
-    return InkWell(
-      onTap: _openAbend,
-      borderRadius: BorderRadius.circular(16),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [AppTheme.rose.withValues(alpha: 0.16), AppTheme.amber.withValues(alpha: 0.10)],
-          ),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: AppTheme.rose.withValues(alpha: 0.45)),
-        ),
-        child: Row(
-          children: [
-            Icon(Icons.spa_rounded, color: AppTheme.rose, size: 26),
-            SizedBox(width: 14),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(t.couplesChannelSharedEvening,
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
-                  SizedBox(height: 2),
-                  Text(t.couplesChannelGuidedTouchForTheTwo,
-                      style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
-                ],
-              ),
-            ),
-            Icon(Icons.chevron_right_rounded, color: AppTheme.textMuted),
-          ],
-        ),
-      ),
-    );
   }
 
   Widget _buildFantasyMapCard({required String subtitle}) {
@@ -511,9 +514,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                       _confirmUnpair();
                     case 'read':
                       _nostr.setReadReceiptsEnabled(!_nostr.readReceiptsEnabled.value);
+                    case 'spicy':
+                      _spicyEinladen();
                   }
                 },
                 itemBuilder: (_) => [
+                  // Einladen kann nur, wer den Spicy-Modus selbst eingeschaltet hat.
+                  if (StorageService.spicyMode())
+                    PopupMenuItem(value: 'spicy', child: Text(t.spicyEinladen)),
                   PopupMenuItem(value: 'profile', child: Text(t.couplesChannelPartnerSNameGender)),
                   CheckedPopupMenuItem(
                     value: 'read',
@@ -681,6 +689,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 height: 1.35,
               ),
             ),
+            if (msg.spicyEinladung && !isMe) _spicyAnnehmen(),
             if (msg.lessonId != null && DataService.getLessonById(msg.lessonId!) != null)
               Padding(
                 padding: const EdgeInsets.only(top: 6),
@@ -781,6 +790,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
               ),
             ),
+            const GefuehrteAudios(mitSelbst: false),
             _buildFantasyMapCard(subtitle: t.couplesChannelQuestionsInSeveralAreasWith(ListenUebersetzung.eintraege.length, ListenUebersetzung.kategorien.length)),
             const SizedBox(height: 16),
             if (matches.isNotEmpty) ...[

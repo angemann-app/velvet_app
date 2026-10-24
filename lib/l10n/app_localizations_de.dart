@@ -3045,4 +3045,38 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get coachQShowTouch => 'Wie zeige ich, wie ich berührt werden möchte?';
+
+  @override
+  String get gefuehrtTitel => 'Geführte Audios';
+
+  @override
+  String get gefuehrtSelbstTitel => 'Körperreise';
+
+  @override
+  String get gefuehrtSelbstText =>
+      '10 bis 30 Minuten nur für dich: eine Stimme führt dich über deinen Körper, so nah, wie du möchtest.';
+
+  @override
+  String get lessonDetailTryGuidedEvening =>
+      'Jetzt geführt ausprobieren: Gemeinsamer Abend';
+
+  @override
+  String get spicyEinladen => 'Zum Spicy-Modus einladen';
+
+  @override
+  String get spicyEinladungText =>
+      '🔥 Ich habe den Spicy-Modus eingeschaltet. Magst du ihn auch ausprobieren? (Profil › Spicy-Modus)';
+
+  @override
+  String get spicyEinladungAnnehmen => 'Spicy-Modus ansehen';
+
+  @override
+  String get spicyEinladungSchonAn => 'Bei dir ist der Spicy-Modus schon an.';
+
+  @override
+  String get spicyEinladungGesendet => 'Einladung gesendet.';
+
+  @override
+  String get spicyEinladungFehler =>
+      'Das hat nicht geklappt. Bitte später noch einmal versuchen.';
 }

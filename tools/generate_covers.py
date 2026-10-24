@@ -108,7 +108,8 @@ def bust(x, y, s, flip=False, hair=None, blindfold=False, tilt=0):
 def recline(shape, x, y, s, flip=False, shade=False):
     sx = -s if flip else s
     fill = "#160D16" if shade else "url(#skinT)"
-    stroke = "none" if shade else "url(#rimT)"
+    # Auch die Person im Schatten bekommt eine feine Lichtkante, sonst verschwimmt ihr Umriss.
+    stroke = 'url(#rimT)" stroke-opacity="0.55' if shade else "url(#rimT)"
     hair = f'<path d="{RECLINE_F_HAIR}" fill="#170D16"/>' if shape == RECLINE_F else ""
     return (f'  <g transform="translate({x} {y}) scale({sx} {s})">'
             f'<path d="{shape}" fill="{fill}" stroke="{stroke}" stroke-width="2"/>{hair}</g>\n')
@@ -127,6 +128,18 @@ def back(fig, x, y, s):
 
 def bed(y, color):
     return f'  <rect x="0" y="{y}" width="840" height="{300 - y}" fill="{color}" opacity="0.55"/>\n'
+
+
+def funken(p, anzahl=26, seed=7):
+    """Kleine schwebende Lichtpunkte, immer gleich verteilt (fester Startwert)."""
+    import random
+    r = random.Random(seed)
+    s = ""
+    for _ in range(anzahl):
+        x, y = r.uniform(40, 800), r.uniform(10, 230)
+        rad, op = r.uniform(1.2, 3.6), r.uniform(0.25, 0.85)
+        s += f'  <circle cx="{x:.0f}" cy="{y:.0f}" r="{rad:.1f}" fill="{p["core"]}" opacity="{op:.2f}"/>\n'
+    return s
 
 
 PALETTES = {
@@ -166,6 +179,12 @@ def scene(kind, pal):
     elif kind == "massage":            # Rücken der Empfangenden, daneben die gebende Person, die sich zu ihr neigt
         s += glow(470, 110, 320, 210)
         s += back(BACK_F, 350, 108, 0.66) + bust(610, 122, 1.2, flip=True, hair=SHORT_HAIR, tilt=18)
+    elif kind == "recline_sparks":     # eine Person liegt im warmen Licht, darüber schwebende Funken
+        s += glow(430, 120, 360, 170) + funken(p)
+        s += recline(RECLINE_F, 95, 112, 1.0) + bed(242, "#000000")
+    elif kind == "recline_pair":       # zwei liegen eng aneinander, die hintere Person im Schatten
+        s += glow(430, 112, 380, 180) + funken(p, 30, 11)
+        s += recline(RECLINE_M, 60, 74, 1.04, shade=True) + recline(RECLINE_F, 130, 120, 0.96) + bed(244, "#000000")
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 300" width="840" height="300">\n{s}</svg>\n'
 
 
@@ -212,7 +231,17 @@ YES_NO_MAYBE = {
     "spicy": ("near_kiss", "crimson"),
 }
 
+# Geführte Audios (Startseite, Paar-Kanal) -> (Motiv, Farbstimmung)
+GEFUEHRT = {
+    "guided_selbst": ("recline_sparks", "rose"),
+    "guided_paar": ("recline_pair", "crimson"),
+}
+
 if __name__ == "__main__":
+    for name, (kind, pal) in GEFUEHRT.items():
+        path = OUT / f"{name}.svg"
+        path.write_text(scene(kind, pal), encoding="utf-8")
+        print(path.name, kind, pal)
     for nr, (kind, pal) in COVERS.items():
         path = OUT / f"cover_{nr:02d}.svg"
         path.write_text(scene(kind, pal), encoding="utf-8")

@@ -4,6 +4,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nostr_tools/nostr_tools.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:velvetpulse/models/couple_channel_models.dart';
 import 'package:velvetpulse/services/nostr_service.dart';
 import 'package:velvetpulse/services/secret_store.dart';
 import 'package:velvetpulse/services/storage_service.dart';
@@ -40,6 +41,19 @@ void main() {
         senderPriv,
       )
       .toJson();
+
+  test('Spicy-Einladung kommt als lesbare Nachricht mit Kennzeichen an und übersteht das Speichern', () async {
+    final partner = keyApi.generatePrivateKey();
+    await nostr.setPartner(keyApi.getPublicKey(partner), name: 'Anna');
+    await nostr.handleIncomingKind4Map(dm(partner, {'type': 'chat', 'text': '🔥 Spicy?', 'spicy_invite': true}));
+    final msg = nostr.messagesNotifier.value.single;
+    expect(msg.text, '🔥 Spicy?');
+    expect(msg.spicyEinladung, isTrue);
+    expect(CoupleMessage.fromJson(msg.toJson()).spicyEinladung, isTrue);
+    // Eine normale Nachricht ist keine Einladung.
+    await nostr.handleIncomingKind4Map(dm(partner, {'type': 'chat', 'text': 'Hallo'}));
+    expect(nostr.messagesNotifier.value.where((m) => m.spicyEinladung), hasLength(1));
+  });
 
   test('Ohne Kopplung und ohne Einladung werden Nachrichten Fremder ignoriert', () async {
     final stranger = keyApi.generatePrivateKey();
