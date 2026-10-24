@@ -3546,6 +3546,552 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.'**
   String get dailyCheckinCardCoachingInsightWhenEverydayStress;
+
+  /// No description provided for @onboardingGuest.
+  ///
+  /// In de, this message translates to:
+  /// **'Gast'**
+  String get onboardingGuest;
+
+  /// No description provided for @onboardingProfileUpdated.
+  ///
+  /// In de, this message translates to:
+  /// **'Profil erfolgreich aktualisiert.'**
+  String get onboardingProfileUpdated;
+
+  /// No description provided for @onboardingRestoreBackup.
+  ///
+  /// In de, this message translates to:
+  /// **'Sicherung wiederherstellen'**
+  String get onboardingRestoreBackup;
+
+  /// No description provided for @onboardingRestoreYourProfileLessonsCouple.
+  ///
+  /// In de, this message translates to:
+  /// **'Stelle dein Profil, Lektionen & Nostr-Kanal wieder her'**
+  String get onboardingRestoreYourProfileLessonsCouple;
+
+  /// No description provided for @onboardingBackupFoundOnThisDevice.
+  ///
+  /// In de, this message translates to:
+  /// **'Sicherung auf dem Gerät gefunden!'**
+  String get onboardingBackupFoundOnThisDevice;
+
+  /// No description provided for @onboardingProfileProfilename.
+  ///
+  /// In de, this message translates to:
+  /// **'Profil: {profileName}'**
+  String onboardingProfileProfilename(Object profileName);
+
+  /// No description provided for @onboardingRestoreAutomaticBackupNow.
+  ///
+  /// In de, this message translates to:
+  /// **'Automatische Sicherung jetzt einspielen'**
+  String get onboardingRestoreAutomaticBackupNow;
+
+  /// No description provided for @onboardingReadyInClipboard.
+  ///
+  /// In de, this message translates to:
+  /// **'IN ZWISCHENABLAGE BEREIT'**
+  String get onboardingReadyInClipboard;
+
+  /// No description provided for @onboardingBackupForProfilename.
+  ///
+  /// In de, this message translates to:
+  /// **'Sicherung für: „{profileName}“'**
+  String onboardingBackupForProfilename(Object profileName);
+
+  /// No description provided for @onboardingRestoreFromClipboard.
+  ///
+  /// In de, this message translates to:
+  /// **'Aus Zwischenablage einspielen'**
+  String get onboardingRestoreFromClipboard;
+
+  /// No description provided for @onboardingPasteBackupCodeJsonManually.
+  ///
+  /// In de, this message translates to:
+  /// **'Backup-Code / JSON manuell einfügen:'**
+  String get onboardingPasteBackupCodeJsonManually;
+
+  /// No description provided for @onboardingPasteJsonTextHereE.
+  ///
+  /// In de, this message translates to:
+  /// **'Hier den Text der Sicherung einfügen (beginnt mit \"app\": \"VelvetPulse\")'**
+  String get onboardingPasteJsonTextHereE;
+
+  /// No description provided for @onboardingPleasePasteTheBackupJson.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte füge zuerst den Backup-JSON-Text ein.'**
+  String get onboardingPleasePasteTheBackupJson;
+
+  /// No description provided for @onboardingApplyBackupNow.
+  ///
+  /// In de, this message translates to:
+  /// **'Sicherung jetzt anwenden'**
+  String get onboardingApplyBackupNow;
+
+  /// No description provided for @onboardingTheBackupCouldNotBe.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung konnte nicht eingespielt werden.'**
+  String get onboardingTheBackupCouldNotBe;
+
+  /// No description provided for @onboardingUser.
+  ///
+  /// In de, this message translates to:
+  /// **'Nutzer'**
+  String get onboardingUser;
+
+  /// No description provided for @onboardingBackupForNameRestored.
+  ///
+  /// In de, this message translates to:
+  /// **'Sicherung für \"{name}\" erfolgreich eingespielt! ✨'**
+  String onboardingBackupForNameRestored(Object name);
+
+  /// No description provided for @onboardingProfilePersonalisation.
+  ///
+  /// In de, this message translates to:
+  /// **'Profil & Personalisierung'**
+  String get onboardingProfilePersonalisation;
+
+  /// No description provided for @onboardingWelcomeToVelvetpulse.
+  ///
+  /// In de, this message translates to:
+  /// **'Willkommen bei VelvetPulse'**
+  String get onboardingWelcomeToVelvetpulse;
+
+  /// No description provided for @onboardingYourPrivateCoachingProgrammeFor.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intimität.'**
+  String get onboardingYourPrivateCoachingProgrammeFor;
+
+  /// No description provided for @onboardingPrivateProfileJournalProgressStay.
+  ///
+  /// In de, this message translates to:
+  /// **'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der KI-Coach (Google Gemini), der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).'**
+  String get onboardingPrivateProfileJournalProgressStay;
+
+  /// No description provided for @onboardingAlreadyUsingVelvetpulse.
+  ///
+  /// In de, this message translates to:
+  /// **'Bereits VelvetPulse-Nutzer?'**
+  String get onboardingAlreadyUsingVelvetpulse;
+
+  /// No description provided for @onboardingLoadABackupFromFile.
+  ///
+  /// In de, this message translates to:
+  /// **'Sicherung aus Datei oder Zwischenablage laden'**
+  String get onboardingLoadABackupFromFile;
+
+  /// No description provided for @onboardingRestore.
+  ///
+  /// In de, this message translates to:
+  /// **'Wiederherstellen'**
+  String get onboardingRestore;
+
+  /// No description provided for @onboardingWhatShouldWeCallYou.
+  ///
+  /// In de, this message translates to:
+  /// **'1. Wie dürfen wir dich ansprechen?'**
+  String get onboardingWhatShouldWeCallYou;
+
+  /// No description provided for @onboardingYourFirstNameOrA.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Vorname oder Pseudonym'**
+  String get onboardingYourFirstNameOrA;
+
+  /// No description provided for @onboardingYourGender.
+  ///
+  /// In de, this message translates to:
+  /// **'2. Dein Geschlecht'**
+  String get onboardingYourGender;
+
+  /// No description provided for @onboardingAdjustsCourseRecommendationsPelvicFloor.
+  ///
+  /// In de, this message translates to:
+  /// **'Passt Kursempfehlungen, Beckenboden-Physiologie und KI-Antworten an.'**
+  String get onboardingAdjustsCourseRecommendationsPelvicFloor;
+
+  /// No description provided for @onboardingMale.
+  ///
+  /// In de, this message translates to:
+  /// **'Männlich'**
+  String get onboardingMale;
+
+  /// No description provided for @onboardingFemale.
+  ///
+  /// In de, this message translates to:
+  /// **'Weiblich'**
+  String get onboardingFemale;
+
+  /// No description provided for @onboardingYourAgeSelectedageYears.
+  ///
+  /// In de, this message translates to:
+  /// **'3. Dein Alter: {selectedAge} Jahre'**
+  String onboardingYourAgeSelectedageYears(Object selectedAge);
+
+  /// No description provided for @onboardingYourRelationshipStatus.
+  ///
+  /// In de, this message translates to:
+  /// **'4. Dein Beziehungsstatus'**
+  String get onboardingYourRelationshipStatus;
+
+  /// No description provided for @onboardingInARelationshipMarried.
+  ///
+  /// In de, this message translates to:
+  /// **'In fester Beziehung / Verheiratet 💍'**
+  String get onboardingInARelationshipMarried;
+
+  /// No description provided for @onboardingDatingGettingToKnowSomeone.
+  ///
+  /// In de, this message translates to:
+  /// **'Dating / Kennenlernphase 💫'**
+  String get onboardingDatingGettingToKnowSomeone;
+
+  /// No description provided for @onboardingSingle.
+  ///
+  /// In de, this message translates to:
+  /// **'Single 🌱'**
+  String get onboardingSingle;
+
+  /// No description provided for @onboardingItSComplicated.
+  ///
+  /// In de, this message translates to:
+  /// **'Es ist kompliziert 🌀'**
+  String get onboardingItSComplicated;
+
+  /// No description provided for @onboardingWhatSYourBiggestPriority.
+  ///
+  /// In de, this message translates to:
+  /// **'5. Was ist aktuell deine größte Priorität?'**
+  String get onboardingWhatSYourBiggestPriority;
+
+  /// No description provided for @onboardingStopPerformancePressureRacingThoughts.
+  ///
+  /// In de, this message translates to:
+  /// **'Leistungsdruck & Kopfkino stoppen'**
+  String get onboardingStopPerformancePressureRacingThoughts;
+
+  /// No description provided for @onboardingBreakThoughtLoopsStopSpectatoring.
+  ///
+  /// In de, this message translates to:
+  /// **'Gedankenkreise durchbrechen, Spectatoring beenden.'**
+  String get onboardingBreakThoughtLoopsStopSpectatoring;
+
+  /// No description provided for @onboardingPelvicFloorRelaxationBodyAwareness.
+  ///
+  /// In de, this message translates to:
+  /// **'Beckenboden-Entspannung & Somatik'**
+  String get onboardingPelvicFloorRelaxationBodyAwareness;
+
+  /// No description provided for @onboardingReleaseTensionPractiseReverseKegels.
+  ///
+  /// In de, this message translates to:
+  /// **'Hypertonie lösen, Reverse Kegel trainieren, Vagusnerv beruhigen.'**
+  String get onboardingReleaseTensionPractiseReverseKegels;
+
+  /// No description provided for @onboardingCoupleIntimacyPressureFreeSex.
+  ///
+  /// In de, this message translates to:
+  /// **'Paar-Intimität & Druckfreier Sex'**
+  String get onboardingCoupleIntimacyPressureFreeSex;
+
+  /// No description provided for @onboardingSensateFocusTogetherCalmingEach.
+  ///
+  /// In de, this message translates to:
+  /// **'Sensate Focus zu zweit, Co-Regulierung & verletzliche Nähe.'**
+  String get onboardingSensateFocusTogetherCalmingEach;
+
+  /// No description provided for @onboardingDesireSelfAcceptanceBodyAwareness.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust, Selbstannahme & Körperempfinden'**
+  String get onboardingDesireSelfAcceptanceBodyAwareness;
+
+  /// No description provided for @onboardingUnderstandResponsiveDesireEaseOrgasm.
+  ///
+  /// In de, this message translates to:
+  /// **'Responsive Lust verstehen, Orgasmusdruck abbauen.'**
+  String get onboardingUnderstandResponsiveDesireEaseOrgasm;
+
+  /// No description provided for @onboardingSaveChanges.
+  ///
+  /// In de, this message translates to:
+  /// **'Änderungen speichern'**
+  String get onboardingSaveChanges;
+
+  /// No description provided for @onboardingPersonaliseProgrammeNow.
+  ///
+  /// In de, this message translates to:
+  /// **'Programm jetzt personalisieren'**
+  String get onboardingPersonaliseProgrammeNow;
+
+  /// No description provided for @onboardingSkipGoStraightToThe.
+  ///
+  /// In de, this message translates to:
+  /// **'Überspringen & Direkt zur App ➔'**
+  String get onboardingSkipGoStraightToThe;
+
+  /// No description provided for @onboardingVersionData.
+  ///
+  /// In de, this message translates to:
+  /// **'Version {data}'**
+  String onboardingVersionData(Object data);
+
+  /// No description provided for @onboardingCheckForUpdates.
+  ///
+  /// In de, this message translates to:
+  /// **'Nach Updates suchen'**
+  String get onboardingCheckForUpdates;
+
+  /// No description provided for @onboardingReceiveBetaVersions.
+  ///
+  /// In de, this message translates to:
+  /// **'Beta-Versionen erhalten'**
+  String get onboardingReceiveBetaVersions;
+
+  /// No description provided for @onboardingYouGetNewFeaturesEarlier.
+  ///
+  /// In de, this message translates to:
+  /// **'Du bekommst neue Funktionen früher, dafür vielleicht mit kleinen Fehlern.'**
+  String get onboardingYouGetNewFeaturesEarlier;
+
+  /// No description provided for @onboardingOnlyTestedVersionsWhenSwitching.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur geprüfte Versionen. Beim Zurückwechseln von Beta bleibt deine Version, bis eine neuere stabile erscheint.'**
+  String get onboardingOnlyTestedVersionsWhenSwitching;
+
+  /// No description provided for @onboardingDiscretion.
+  ///
+  /// In de, this message translates to:
+  /// **'Diskretion'**
+  String get onboardingDiscretion;
+
+  /// No description provided for @onboardingLockWithFingerprint.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit Fingerabdruck sperren'**
+  String get onboardingLockWithFingerprint;
+
+  /// No description provided for @onboardingOnOpeningAndAfterOne.
+  ///
+  /// In de, this message translates to:
+  /// **'Beim Öffnen und nach einer Minute im Hintergrund. Inhalte sind in der App-Übersicht verborgen, Screenshots gesperrt.'**
+  String get onboardingOnOpeningAndAfterOne;
+
+  /// No description provided for @onboardingNoScreenLockIsSet.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf diesem Gerät ist keine Displaysperre eingerichtet.'**
+  String get onboardingNoScreenLockIsSet;
+
+  /// No description provided for @onboardingTheAppIsNowCalled.
+  ///
+  /// In de, this message translates to:
+  /// **'Die App heißt jetzt „Pulse“. Der Startbildschirm braucht dafür ein paar Sekunden.'**
+  String get onboardingTheAppIsNowCalled;
+
+  /// No description provided for @onboardingTheAppIsCalledVelvetpulse.
+  ///
+  /// In de, this message translates to:
+  /// **'Die App heißt wieder „VelvetPulse“.'**
+  String get onboardingTheAppIsCalledVelvetpulse;
+
+  /// No description provided for @onboardingDiscreetAppIcon.
+  ///
+  /// In de, this message translates to:
+  /// **'Unauffälliges App-Symbol'**
+  String get onboardingDiscreetAppIcon;
+
+  /// No description provided for @onboardingShowsPulseWithANeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Zeigt „Pulse“ mit neutralem Symbol auf dem Startbildschirm.'**
+  String get onboardingShowsPulseWithANeutral;
+
+  /// No description provided for @onboardingCallYourPartnerByName.
+  ///
+  /// In de, this message translates to:
+  /// **'Gegenüber in Lektionen beim Namen nennen'**
+  String get onboardingCallYourPartnerByName;
+
+  /// No description provided for @onboardingForExampleAnnaLiesOn.
+  ///
+  /// In de, this message translates to:
+  /// **'Zum Beispiel „Anna liegt auf dem Rücken“ statt „sie liegt“. Aus, wenn öfter jemand mitliest.'**
+  String get onboardingForExampleAnnaLiesOn;
+
+  /// No description provided for @onboardingAndroidHasnTAllowedNotifications.
+  ///
+  /// In de, this message translates to:
+  /// **'Android hat Mitteilungen für die App nicht erlaubt. Das lässt sich in den Android-Einstellungen ändern.'**
+  String get onboardingAndroidHasnTAllowedNotifications;
+
+  /// No description provided for @onboardingNotifyAboutNewMessages.
+  ///
+  /// In de, this message translates to:
+  /// **'Hinweis bei neuen Nachrichten'**
+  String get onboardingNotifyAboutNewMessages;
+
+  /// No description provided for @onboardingEvenWhenTheAppIs.
+  ///
+  /// In de, this message translates to:
+  /// **'Auch wenn die App geschlossen ist: nur „Neue Nachricht“, ohne Inhalt und Namen. Bei geschlossener App kann es bis zu 15 Minuten dauern.'**
+  String get onboardingEvenWhenTheAppIs;
+
+  /// No description provided for @onboardingPrivacyUpdateSafety.
+  ///
+  /// In de, this message translates to:
+  /// **'Datenschutz & Update-Sicherheit'**
+  String get onboardingPrivacyUpdateSafety;
+
+  /// No description provided for @onboardingEverythingStaysLocalOnYour.
+  ///
+  /// In de, this message translates to:
+  /// **'Alles bleibt lokal auf deinem Gerät und übersteht Updates. API-Key und Paar-Verbindung liegen verschlüsselt im Android-Schlüsselspeicher und gehen nur mit Passwort in eine Sicherung.'**
+  String get onboardingEverythingStaysLocalOnYour;
+
+  /// No description provided for @onboardingExportBackup.
+  ///
+  /// In de, this message translates to:
+  /// **'Backup exportieren'**
+  String get onboardingExportBackup;
+
+  /// No description provided for @backupDialogsWhatShouldGoIntoThe.
+  ///
+  /// In de, this message translates to:
+  /// **'Was soll in die Sicherung?'**
+  String get backupDialogsWhatShouldGoIntoThe;
+
+  /// No description provided for @backupDialogsOnlyYourDataProfileProgress.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n\nMit Passwort: zusätzlich die Verbindung im Paar-Kanal und dein API-Key, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy.'**
+  String get backupDialogsOnlyYourDataProfileProgress;
+
+  /// No description provided for @backupDialogsDataOnly.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur Daten'**
+  String get backupDialogsDataOnly;
+
+  /// No description provided for @backupDialogsWithPassword.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit Passwort'**
+  String get backupDialogsWithPassword;
+
+  /// No description provided for @backupDialogsBackupCopied.
+  ///
+  /// In de, this message translates to:
+  /// **'Sicherung kopiert'**
+  String get backupDialogsBackupCopied;
+
+  /// No description provided for @backupDialogsOk.
+  ///
+  /// In de, this message translates to:
+  /// **'OK'**
+  String get backupDialogsOk;
+
+  /// No description provided for @backupDialogsOlderBackup.
+  ///
+  /// In de, this message translates to:
+  /// **'Ältere Sicherung'**
+  String get backupDialogsOlderBackup;
+
+  /// No description provided for @backupDialogsThisBackupComesFromAn.
+  ///
+  /// In de, this message translates to:
+  /// **'Diese Sicherung stammt aus einer älteren Version und enthält deinen API-Key und deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n\nLösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort.'**
+  String get backupDialogsThisBackupComesFromAn;
+
+  /// No description provided for @backupDialogsRestore.
+  ///
+  /// In de, this message translates to:
+  /// **'Einspielen'**
+  String get backupDialogsRestore;
+
+  /// No description provided for @backupDialogsBackupPassword.
+  ///
+  /// In de, this message translates to:
+  /// **'Passwort der Sicherung'**
+  String get backupDialogsBackupPassword;
+
+  /// No description provided for @backupDialogsThisAlsoBringsBackThe.
+  ///
+  /// In de, this message translates to:
+  /// **'Damit kommen auch die Verbindung im Paar-Kanal und dein API-Key zurück.'**
+  String get backupDialogsThisAlsoBringsBackThe;
+
+  /// No description provided for @backupDialogsPassword.
+  ///
+  /// In de, this message translates to:
+  /// **'Passwort'**
+  String get backupDialogsPassword;
+
+  /// No description provided for @backupDialogsWithoutKeys.
+  ///
+  /// In de, this message translates to:
+  /// **'Ohne Schlüssel'**
+  String get backupDialogsWithoutKeys;
+
+  /// No description provided for @backupDialogsPasswordForTheBackup.
+  ///
+  /// In de, this message translates to:
+  /// **'Passwort für die Sicherung'**
+  String get backupDialogsPasswordForTheBackup;
+
+  /// No description provided for @backupDialogsPasswordAtLeastCharacters.
+  ///
+  /// In de, this message translates to:
+  /// **'Passwort (mindestens 8 Zeichen)'**
+  String get backupDialogsPasswordAtLeastCharacters;
+
+  /// No description provided for @backupDialogsRepeatPassword.
+  ///
+  /// In de, this message translates to:
+  /// **'Passwort wiederholen'**
+  String get backupDialogsRepeatPassword;
+
+  /// No description provided for @backupDialogsPleaseUseAtLeastCharacters.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte mindestens 8 Zeichen.'**
+  String get backupDialogsPleaseUseAtLeastCharacters;
+
+  /// No description provided for @backupDialogsThePasswordsDonTMatch.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Passwörter sind verschieden.'**
+  String get backupDialogsThePasswordsDonTMatch;
+
+  /// No description provided for @backupDialogsEncrypt.
+  ///
+  /// In de, this message translates to:
+  /// **'Verschlüsseln'**
+  String get backupDialogsEncrypt;
+
+  /// No description provided for @backupDialogsOneMoment.
+  ///
+  /// In de, this message translates to:
+  /// **'Einen Moment …'**
+  String get backupDialogsOneMoment;
+
+  /// No description provided for @backupDialogsBackupCopiedText.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung liegt in der Zwischenablage. Füge sie in eine Notiz oder ein privates Dokument ein.'**
+  String get backupDialogsBackupCopiedText;
+
+  /// No description provided for @backupDialogsPasswordCannotBeReset.
+  ///
+  /// In de, this message translates to:
+  /// **'\n\nOhne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen.'**
+  String get backupDialogsPasswordCannotBeReset;
 }
 
 class _AppLocalizationsDelegate

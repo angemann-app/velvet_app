@@ -200,6 +200,9 @@ def anwenden(umzug_datei):
             if text != e["de"]:
                 sys.exit(f"{datei} Nr. {e['nr']}: Text passt nicht mehr – Kandidaten neu erzeugen.")
             namen = re.findall(r"\{(\w+)\}", text)
+            for probe in (text, e["en"]):
+                if re.search(r"[{}]", re.sub(r"\{\w+\}", "", probe)):
+                    sys.exit(f"{datei}: geschweifte Klammer außerhalb eines Platzhalters (ICU): {probe[:60]}")
             # gleicher deutscher Text ohne Platzhalter: vorhandenen Schlüssel wiederverwenden
             key = vorhanden.get(text) if not namen and en.get(vorhanden.get(text, "")) == e["en"] else None
             if key is None:

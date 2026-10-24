@@ -1051,5 +1051,131 @@
   "dailyCheckinCardSaveDailyCheckIn": "Tages-Check-in speichern",
   "dailyCheckinCardUpdateValues": "Werte aktualisieren",
   "dailyCheckinCardCoachingInsightYourEverydayStress": "💡 Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.",
-  "dailyCheckinCardCoachingInsightWhenEverydayStress": "💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren."
+  "dailyCheckinCardCoachingInsightWhenEverydayStress": "💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.",
+  "onboardingGuest": "Gast",
+  "onboardingProfileUpdated": "Profil erfolgreich aktualisiert.",
+  "onboardingRestoreBackup": "Sicherung wiederherstellen",
+  "onboardingRestoreYourProfileLessonsCouple": "Stelle dein Profil, Lektionen & Nostr-Kanal wieder her",
+  "onboardingBackupFoundOnThisDevice": "Sicherung auf dem Gerät gefunden!",
+  "onboardingProfileProfilename": "Profil: {profileName}",
+  "@onboardingProfileProfilename": {
+    "placeholders": {
+      "profileName": {
+        "type": "Object"
+      }
+    }
+  },
+  "onboardingRestoreAutomaticBackupNow": "Automatische Sicherung jetzt einspielen",
+  "onboardingReadyInClipboard": "IN ZWISCHENABLAGE BEREIT",
+  "onboardingBackupForProfilename": "Sicherung für: „{profileName}“",
+  "@onboardingBackupForProfilename": {
+    "placeholders": {
+      "profileName": {
+        "type": "Object"
+      }
+    }
+  },
+  "onboardingRestoreFromClipboard": "Aus Zwischenablage einspielen",
+  "onboardingPasteBackupCodeJsonManually": "Backup-Code / JSON manuell einfügen:",
+  "onboardingPasteJsonTextHereE": "Hier den Text der Sicherung einfügen (beginnt mit \"app\": \"VelvetPulse\")",
+  "onboardingPleasePasteTheBackupJson": "Bitte füge zuerst den Backup-JSON-Text ein.",
+  "onboardingApplyBackupNow": "Sicherung jetzt anwenden",
+  "onboardingTheBackupCouldNotBe": "Die Sicherung konnte nicht eingespielt werden.",
+  "onboardingUser": "Nutzer",
+  "onboardingBackupForNameRestored": "Sicherung für \"{name}\" erfolgreich eingespielt! ✨",
+  "@onboardingBackupForNameRestored": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "onboardingProfilePersonalisation": "Profil & Personalisierung",
+  "onboardingWelcomeToVelvetpulse": "Willkommen bei VelvetPulse",
+  "onboardingYourPrivateCoachingProgrammeFor": "Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intimität.",
+  "onboardingPrivateProfileJournalProgressStay": "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der KI-Coach (Google Gemini), der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).",
+  "onboardingAlreadyUsingVelvetpulse": "Bereits VelvetPulse-Nutzer?",
+  "onboardingLoadABackupFromFile": "Sicherung aus Datei oder Zwischenablage laden",
+  "onboardingRestore": "Wiederherstellen",
+  "onboardingWhatShouldWeCallYou": "1. Wie dürfen wir dich ansprechen?",
+  "onboardingYourFirstNameOrA": "Dein Vorname oder Pseudonym",
+  "onboardingYourGender": "2. Dein Geschlecht",
+  "onboardingAdjustsCourseRecommendationsPelvicFloor": "Passt Kursempfehlungen, Beckenboden-Physiologie und KI-Antworten an.",
+  "onboardingMale": "Männlich",
+  "onboardingFemale": "Weiblich",
+  "onboardingYourAgeSelectedageYears": "3. Dein Alter: {selectedAge} Jahre",
+  "@onboardingYourAgeSelectedageYears": {
+    "placeholders": {
+      "selectedAge": {
+        "type": "Object"
+      }
+    }
+  },
+  "onboardingYourRelationshipStatus": "4. Dein Beziehungsstatus",
+  "onboardingInARelationshipMarried": "In fester Beziehung / Verheiratet 💍",
+  "onboardingDatingGettingToKnowSomeone": "Dating / Kennenlernphase 💫",
+  "onboardingSingle": "Single 🌱",
+  "onboardingItSComplicated": "Es ist kompliziert 🌀",
+  "onboardingWhatSYourBiggestPriority": "5. Was ist aktuell deine größte Priorität?",
+  "onboardingStopPerformancePressureRacingThoughts": "Leistungsdruck & Kopfkino stoppen",
+  "onboardingBreakThoughtLoopsStopSpectatoring": "Gedankenkreise durchbrechen, Spectatoring beenden.",
+  "onboardingPelvicFloorRelaxationBodyAwareness": "Beckenboden-Entspannung & Somatik",
+  "onboardingReleaseTensionPractiseReverseKegels": "Hypertonie lösen, Reverse Kegel trainieren, Vagusnerv beruhigen.",
+  "onboardingCoupleIntimacyPressureFreeSex": "Paar-Intimität & Druckfreier Sex",
+  "onboardingSensateFocusTogetherCalmingEach": "Sensate Focus zu zweit, Co-Regulierung & verletzliche Nähe.",
+  "onboardingDesireSelfAcceptanceBodyAwareness": "Lust, Selbstannahme & Körperempfinden",
+  "onboardingUnderstandResponsiveDesireEaseOrgasm": "Responsive Lust verstehen, Orgasmusdruck abbauen.",
+  "onboardingSaveChanges": "Änderungen speichern",
+  "onboardingPersonaliseProgrammeNow": "Programm jetzt personalisieren",
+  "onboardingSkipGoStraightToThe": "Überspringen & Direkt zur App ➔",
+  "onboardingVersionData": "Version {data}",
+  "@onboardingVersionData": {
+    "placeholders": {
+      "data": {
+        "type": "Object"
+      }
+    }
+  },
+  "onboardingCheckForUpdates": "Nach Updates suchen",
+  "onboardingReceiveBetaVersions": "Beta-Versionen erhalten",
+  "onboardingYouGetNewFeaturesEarlier": "Du bekommst neue Funktionen früher, dafür vielleicht mit kleinen Fehlern.",
+  "onboardingOnlyTestedVersionsWhenSwitching": "Nur geprüfte Versionen. Beim Zurückwechseln von Beta bleibt deine Version, bis eine neuere stabile erscheint.",
+  "onboardingDiscretion": "Diskretion",
+  "onboardingLockWithFingerprint": "Mit Fingerabdruck sperren",
+  "onboardingOnOpeningAndAfterOne": "Beim Öffnen und nach einer Minute im Hintergrund. Inhalte sind in der App-Übersicht verborgen, Screenshots gesperrt.",
+  "onboardingNoScreenLockIsSet": "Auf diesem Gerät ist keine Displaysperre eingerichtet.",
+  "onboardingTheAppIsNowCalled": "Die App heißt jetzt „Pulse“. Der Startbildschirm braucht dafür ein paar Sekunden.",
+  "onboardingTheAppIsCalledVelvetpulse": "Die App heißt wieder „VelvetPulse“.",
+  "onboardingDiscreetAppIcon": "Unauffälliges App-Symbol",
+  "onboardingShowsPulseWithANeutral": "Zeigt „Pulse“ mit neutralem Symbol auf dem Startbildschirm.",
+  "onboardingCallYourPartnerByName": "Gegenüber in Lektionen beim Namen nennen",
+  "onboardingForExampleAnnaLiesOn": "Zum Beispiel „Anna liegt auf dem Rücken“ statt „sie liegt“. Aus, wenn öfter jemand mitliest.",
+  "onboardingAndroidHasnTAllowedNotifications": "Android hat Mitteilungen für die App nicht erlaubt. Das lässt sich in den Android-Einstellungen ändern.",
+  "onboardingNotifyAboutNewMessages": "Hinweis bei neuen Nachrichten",
+  "onboardingEvenWhenTheAppIs": "Auch wenn die App geschlossen ist: nur „Neue Nachricht“, ohne Inhalt und Namen. Bei geschlossener App kann es bis zu 15 Minuten dauern.",
+  "onboardingPrivacyUpdateSafety": "Datenschutz & Update-Sicherheit",
+  "onboardingEverythingStaysLocalOnYour": "Alles bleibt lokal auf deinem Gerät und übersteht Updates. API-Key und Paar-Verbindung liegen verschlüsselt im Android-Schlüsselspeicher und gehen nur mit Passwort in eine Sicherung.",
+  "onboardingExportBackup": "Backup exportieren",
+  "backupDialogsWhatShouldGoIntoThe": "Was soll in die Sicherung?",
+  "backupDialogsOnlyYourDataProfileProgress": "Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n\nMit Passwort: zusätzlich die Verbindung im Paar-Kanal und dein API-Key, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy.",
+  "backupDialogsDataOnly": "Nur Daten",
+  "backupDialogsWithPassword": "Mit Passwort",
+  "backupDialogsBackupCopied": "Sicherung kopiert",
+  "backupDialogsOk": "OK",
+  "backupDialogsOlderBackup": "Ältere Sicherung",
+  "backupDialogsThisBackupComesFromAn": "Diese Sicherung stammt aus einer älteren Version und enthält deinen API-Key und deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n\nLösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort.",
+  "backupDialogsRestore": "Einspielen",
+  "backupDialogsBackupPassword": "Passwort der Sicherung",
+  "backupDialogsThisAlsoBringsBackThe": "Damit kommen auch die Verbindung im Paar-Kanal und dein API-Key zurück.",
+  "backupDialogsPassword": "Passwort",
+  "backupDialogsWithoutKeys": "Ohne Schlüssel",
+  "backupDialogsPasswordForTheBackup": "Passwort für die Sicherung",
+  "backupDialogsPasswordAtLeastCharacters": "Passwort (mindestens 8 Zeichen)",
+  "backupDialogsRepeatPassword": "Passwort wiederholen",
+  "backupDialogsPleaseUseAtLeastCharacters": "Bitte mindestens 8 Zeichen.",
+  "backupDialogsThePasswordsDonTMatch": "Die Passwörter sind verschieden.",
+  "backupDialogsEncrypt": "Verschlüsseln",
+  "backupDialogsOneMoment": "Einen Moment …",
+  "backupDialogsBackupCopiedText": "Die Sicherung liegt in der Zwischenablage. Füge sie in eine Notiz oder ein privates Dokument ein.",
+  "backupDialogsPasswordCannotBeReset": "\n\nOhne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen."
 }

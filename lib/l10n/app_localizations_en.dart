@@ -2061,4 +2061,330 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get dailyCheckinCardCoachingInsightWhenEverydayStress =>
       '💡 Coaching insight: when everyday stress drops, it\'s often easier to relax. Use today\'s calm to feel into your body without pressure to perform.';
+
+  @override
+  String get onboardingGuest => 'Guest';
+
+  @override
+  String get onboardingProfileUpdated => 'Profile updated.';
+
+  @override
+  String get onboardingRestoreBackup => 'Restore backup';
+
+  @override
+  String get onboardingRestoreYourProfileLessonsCouple =>
+      'Restore your profile, lessons & couple channel';
+
+  @override
+  String get onboardingBackupFoundOnThisDevice =>
+      'Backup found on this device!';
+
+  @override
+  String onboardingProfileProfilename(Object profileName) {
+    return 'Profile: $profileName';
+  }
+
+  @override
+  String get onboardingRestoreAutomaticBackupNow =>
+      'Restore automatic backup now';
+
+  @override
+  String get onboardingReadyInClipboard => 'READY IN CLIPBOARD';
+
+  @override
+  String onboardingBackupForProfilename(Object profileName) {
+    return 'Backup for: “$profileName”';
+  }
+
+  @override
+  String get onboardingRestoreFromClipboard => 'Restore from clipboard';
+
+  @override
+  String get onboardingPasteBackupCodeJsonManually =>
+      'Paste backup code / JSON manually:';
+
+  @override
+  String get onboardingPasteJsonTextHereE =>
+      'Paste the backup text here (starts with \"app\": \"VelvetPulse\")';
+
+  @override
+  String get onboardingPleasePasteTheBackupJson =>
+      'Please paste the backup JSON text first.';
+
+  @override
+  String get onboardingApplyBackupNow => 'Apply backup now';
+
+  @override
+  String get onboardingTheBackupCouldNotBe =>
+      'The backup could not be restored.';
+
+  @override
+  String get onboardingUser => 'User';
+
+  @override
+  String onboardingBackupForNameRestored(Object name) {
+    return 'Backup for \"$name\" restored! ✨';
+  }
+
+  @override
+  String get onboardingProfilePersonalisation => 'Profile & personalisation';
+
+  @override
+  String get onboardingWelcomeToVelvetpulse => 'Welcome to VelvetPulse';
+
+  @override
+  String get onboardingYourPrivateCoachingProgrammeFor =>
+      'Your private coaching programme for calm, pelvic floor & intimacy.';
+
+  @override
+  String get onboardingPrivateProfileJournalProgressStay =>
+      'Private: profile, journal & progress stay on your phone. Only the AI coach (Google Gemini), the encrypted couple channel and the update check (GitHub) go online.';
+
+  @override
+  String get onboardingAlreadyUsingVelvetpulse => 'Already using VelvetPulse?';
+
+  @override
+  String get onboardingLoadABackupFromFile =>
+      'Load a backup from file or clipboard';
+
+  @override
+  String get onboardingRestore => 'Restore';
+
+  @override
+  String get onboardingWhatShouldWeCallYou => '1. What should we call you?';
+
+  @override
+  String get onboardingYourFirstNameOrA => 'Your first name or a nickname';
+
+  @override
+  String get onboardingYourGender => '2. Your gender';
+
+  @override
+  String get onboardingAdjustsCourseRecommendationsPelvicFloor =>
+      'Adjusts course recommendations, pelvic floor content and AI answers.';
+
+  @override
+  String get onboardingMale => 'Male';
+
+  @override
+  String get onboardingFemale => 'Female';
+
+  @override
+  String onboardingYourAgeSelectedageYears(Object selectedAge) {
+    return '3. Your age: $selectedAge years';
+  }
+
+  @override
+  String get onboardingYourRelationshipStatus => '4. Your relationship status';
+
+  @override
+  String get onboardingInARelationshipMarried =>
+      'In a relationship / married 💍';
+
+  @override
+  String get onboardingDatingGettingToKnowSomeone =>
+      'Dating / getting to know someone 💫';
+
+  @override
+  String get onboardingSingle => 'Single 🌱';
+
+  @override
+  String get onboardingItSComplicated => 'It\'s complicated 🌀';
+
+  @override
+  String get onboardingWhatSYourBiggestPriority =>
+      '5. What\'s your biggest priority right now?';
+
+  @override
+  String get onboardingStopPerformancePressureRacingThoughts =>
+      'Stop performance pressure & racing thoughts';
+
+  @override
+  String get onboardingBreakThoughtLoopsStopSpectatoring =>
+      'Break thought loops, stop spectatoring.';
+
+  @override
+  String get onboardingPelvicFloorRelaxationBodyAwareness =>
+      'Pelvic floor relaxation & body awareness';
+
+  @override
+  String get onboardingReleaseTensionPractiseReverseKegels =>
+      'Release tension, practise reverse Kegels, calm down.';
+
+  @override
+  String get onboardingCoupleIntimacyPressureFreeSex =>
+      'Couple intimacy & pressure-free sex';
+
+  @override
+  String get onboardingSensateFocusTogetherCalmingEach =>
+      'Sensate focus together, calming each other & vulnerable closeness.';
+
+  @override
+  String get onboardingDesireSelfAcceptanceBodyAwareness =>
+      'Desire, self-acceptance & body awareness';
+
+  @override
+  String get onboardingUnderstandResponsiveDesireEaseOrgasm =>
+      'Understand responsive desire, ease orgasm pressure.';
+
+  @override
+  String get onboardingSaveChanges => 'Save changes';
+
+  @override
+  String get onboardingPersonaliseProgrammeNow => 'Personalise programme now';
+
+  @override
+  String get onboardingSkipGoStraightToThe => 'Skip & go straight to the app ➔';
+
+  @override
+  String onboardingVersionData(Object data) {
+    return 'Version $data';
+  }
+
+  @override
+  String get onboardingCheckForUpdates => 'Check for updates';
+
+  @override
+  String get onboardingReceiveBetaVersions => 'Receive beta versions';
+
+  @override
+  String get onboardingYouGetNewFeaturesEarlier =>
+      'You get new features earlier, possibly with small bugs.';
+
+  @override
+  String get onboardingOnlyTestedVersionsWhenSwitching =>
+      'Only tested versions. When switching back from beta, your version stays until a newer stable one is released.';
+
+  @override
+  String get onboardingDiscretion => 'Discretion';
+
+  @override
+  String get onboardingLockWithFingerprint => 'Lock with fingerprint';
+
+  @override
+  String get onboardingOnOpeningAndAfterOne =>
+      'On opening and after one minute in the background. Content is hidden in the app overview, screenshots are blocked.';
+
+  @override
+  String get onboardingNoScreenLockIsSet =>
+      'No screen lock is set up on this device.';
+
+  @override
+  String get onboardingTheAppIsNowCalled =>
+      'The app is now called “Pulse”. The home screen takes a few seconds to update.';
+
+  @override
+  String get onboardingTheAppIsCalledVelvetpulse =>
+      'The app is called “VelvetPulse” again.';
+
+  @override
+  String get onboardingDiscreetAppIcon => 'Discreet app icon';
+
+  @override
+  String get onboardingShowsPulseWithANeutral =>
+      'Shows “Pulse” with a neutral icon on the home screen.';
+
+  @override
+  String get onboardingCallYourPartnerByName =>
+      'Call your partner by name in lessons';
+
+  @override
+  String get onboardingForExampleAnnaLiesOn =>
+      'For example “Anna lies on her back” instead of “she lies”. Turn off if someone often reads along.';
+
+  @override
+  String get onboardingAndroidHasnTAllowedNotifications =>
+      'Android hasn\'t allowed notifications for the app. You can change that in the Android settings.';
+
+  @override
+  String get onboardingNotifyAboutNewMessages => 'Notify about new messages';
+
+  @override
+  String get onboardingEvenWhenTheAppIs =>
+      'Even when the app is closed: only “New message”, without content or names. When the app is closed it can take up to 15 minutes.';
+
+  @override
+  String get onboardingPrivacyUpdateSafety => 'Privacy & update safety';
+
+  @override
+  String get onboardingEverythingStaysLocalOnYour =>
+      'Everything stays local on your device and survives updates. API key and couple connection are stored encrypted in the Android keystore and only go into a backup with a password.';
+
+  @override
+  String get onboardingExportBackup => 'Export backup';
+
+  @override
+  String get backupDialogsWhatShouldGoIntoThe =>
+      'What should go into the backup?';
+
+  @override
+  String get backupDialogsOnlyYourDataProfileProgress =>
+      'Only your data: profile, progress, reflections, journal, wishes. Enough for this phone.\n\nWith password: additionally the couple channel connection and your API key, encrypted. You need this for moving to another phone.';
+
+  @override
+  String get backupDialogsDataOnly => 'Data only';
+
+  @override
+  String get backupDialogsWithPassword => 'With password';
+
+  @override
+  String get backupDialogsBackupCopied => 'Backup copied';
+
+  @override
+  String get backupDialogsOk => 'OK';
+
+  @override
+  String get backupDialogsOlderBackup => 'Older backup';
+
+  @override
+  String get backupDialogsThisBackupComesFromAn =>
+      'This backup comes from an older version and contains your API key and your connection key unencrypted. It will be restored anyway.\n\nAfterwards, delete the old backup wherever you kept it, and create a new one with a password if needed.';
+
+  @override
+  String get backupDialogsRestore => 'Restore';
+
+  @override
+  String get backupDialogsBackupPassword => 'Backup password';
+
+  @override
+  String get backupDialogsThisAlsoBringsBackThe =>
+      'This also brings back the couple channel connection and your API key.';
+
+  @override
+  String get backupDialogsPassword => 'Password';
+
+  @override
+  String get backupDialogsWithoutKeys => 'Without keys';
+
+  @override
+  String get backupDialogsPasswordForTheBackup => 'Password for the backup';
+
+  @override
+  String get backupDialogsPasswordAtLeastCharacters =>
+      'Password (at least 8 characters)';
+
+  @override
+  String get backupDialogsRepeatPassword => 'Repeat password';
+
+  @override
+  String get backupDialogsPleaseUseAtLeastCharacters =>
+      'Please use at least 8 characters.';
+
+  @override
+  String get backupDialogsThePasswordsDonTMatch =>
+      'The passwords don\'t match.';
+
+  @override
+  String get backupDialogsEncrypt => 'Encrypt';
+
+  @override
+  String get backupDialogsOneMoment => 'One moment …';
+
+  @override
+  String get backupDialogsBackupCopiedText =>
+      'The backup is in the clipboard. Paste it into a note or a private document.';
+
+  @override
+  String get backupDialogsPasswordCannotBeReset =>
+      '\n\nWithout your password, the connection and API key can\'t be restored. We can\'t reset it either.';
 }

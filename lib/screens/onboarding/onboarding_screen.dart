@@ -11,6 +11,7 @@ import '../../widgets/backup_dialogs.dart';
 import '../../widgets/update_dialog.dart';
 import '../../theme/app_theme.dart';
 import '../main_navigation_screen.dart';
+import '../../l10n/t.dart';
 
 class OnboardingScreen extends StatefulWidget {
   final bool isEditing;
@@ -65,7 +66,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     setState(() => _isSubmitting = true);
 
     try {
-      final name = _nameController.text.trim().isEmpty ? 'Gast' : _nameController.text.trim();
+      final name = _nameController.text.trim().isEmpty ? t.onboardingGuest : _nameController.text.trim();
       final profile = UserProfile(
         name: name,
         gender: _selectedGender,
@@ -80,8 +81,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         if (mounted) {
           Navigator.of(context).pop(true);
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Profil erfolgreich aktualisiert.'),
+            SnackBar(
+              content: Text(t.onboardingProfileUpdated),
               backgroundColor: AppTheme.sageGreen,
             ),
           );
@@ -172,7 +173,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  const Row(
+                  Row(
                     children: [
                       Icon(Icons.restore_page_rounded, color: AppTheme.sageGreen, size: 24),
                       SizedBox(width: 10),
@@ -181,7 +182,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Sicherung wiederherstellen',
+                              t.onboardingRestoreBackup,
                               style: TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
@@ -189,7 +190,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                             ),
                             Text(
-                              'Stelle dein Profil, Lektionen & Nostr-Kanal wieder her',
+                              t.onboardingRestoreYourProfileLessonsCouple,
                               style: TextStyle(fontSize: 12, color: AppTheme.textMuted),
                             ),
                           ],
@@ -217,7 +218,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               const Icon(Icons.check_circle_rounded, color: Color(0xFF10B981), size: 18),
                               const SizedBox(width: 8),
                               Text(
-                                'Sicherung auf dem Gerät gefunden!'.toUpperCase(),
+                                t.onboardingBackupFoundOnThisDevice.toUpperCase(),
                                 style: const TextStyle(
                                   color: Color(0xFF34D399),
                                   fontWeight: FontWeight.w800,
@@ -229,7 +230,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            'Profil: ${fileData.profileName}',
+                            t.onboardingProfileProfilename(fileData.profileName),
                             style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 10),
@@ -241,7 +242,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 await _applyRestore(fileData!);
                               },
                               icon: const Icon(Icons.flash_on_rounded, size: 16),
-                              label: const Text('Automatische Sicherung jetzt einspielen', style: TextStyle(fontWeight: FontWeight.bold)),
+                              label: Text(t.onboardingRestoreAutomaticBackupNow, style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color(0xFF10B981),
                                 foregroundColor: const Color(0xFF0F172A),
@@ -266,12 +267,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Row(
+                          Row(
                             children: [
                               Icon(Icons.content_paste_rounded, color: AppTheme.amber, size: 18),
                               SizedBox(width: 8),
                               Text(
-                                'IN ZWISCHENABLAGE BEREIT',
+                                t.onboardingReadyInClipboard,
                                 style: TextStyle(
                                   color: AppTheme.amber,
                                   fontWeight: FontWeight.w800,
@@ -283,7 +284,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                           const SizedBox(height: 6),
                           Text(
-                            'Sicherung für: „${clipData.profileName}“',
+                            t.onboardingBackupForProfilename(clipData.profileName),
                             style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 10),
@@ -295,7 +296,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 await _applyRestore(clipData!);
                               },
                               icon: const Icon(Icons.done_all_rounded, size: 16),
-                              label: const Text('Aus Zwischenablage einspielen', style: TextStyle(fontWeight: FontWeight.bold)),
+                              label: Text(t.onboardingRestoreFromClipboard, style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: AppTheme.amber,
                                 foregroundColor: const Color(0xFF0F172A),
@@ -308,8 +309,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ],
 
                   // Option 3: Manual JSON Input field
-                  const Text(
-                    'Backup-Code / JSON manuell einfügen:',
+                  Text(
+                    t.onboardingPasteBackupCodeJsonManually,
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w700,
@@ -322,14 +323,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     maxLines: 4,
                     style: const TextStyle(fontSize: 12, fontFamily: 'monospace', color: AppTheme.textPrimary),
                     decoration: InputDecoration(
-                      hintText: 'Hier JSON-Text einfügen (z. B. {"app": "VelvetPulse", ...})',
+                      hintText: t.onboardingPasteJsonTextHereE,
                       hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 11),
                       filled: true,
                       fillColor: AppTheme.background,
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: AppTheme.border)),
                       suffixIcon: IconButton(
                         icon: const Icon(Icons.paste_rounded, color: AppTheme.amber, size: 20),
-                        tooltip: 'Aus Zwischenablage einfügen',
+                        tooltip: t.pairingModalPasteFromClipboard,
                         onPressed: () async {
                           final c = await Clipboard.getData('text/plain');
                           if (c?.text != null) {
@@ -350,7 +351,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         final raw = inputController.text.trim();
                         if (raw.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text('Bitte füge zuerst den Backup-JSON-Text ein.'), backgroundColor: AppTheme.amber),
+                            SnackBar(content: Text(t.onboardingPleasePasteTheBackupJson), backgroundColor: AppTheme.amber),
                           );
                           return;
                         }
@@ -365,7 +366,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         }
                       },
                       icon: const Icon(Icons.check_rounded, size: 18),
-                      label: const Text('Sicherung jetzt anwenden', style: TextStyle(fontWeight: FontWeight.bold)),
+                      label: Text(t.onboardingApplyBackupNow, style: TextStyle(fontWeight: FontWeight.bold)),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppTheme.sageGreen,
                         foregroundColor: Colors.black,
@@ -391,18 +392,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     } on BackupException catch (e) {
       error = e.message;
     } catch (_) {
-      error = 'Die Sicherung konnte nicht eingespielt werden.';
+      error = t.onboardingTheBackupCouldNotBe;
     }
     if (!mounted) return;
 
     if (error == null) {
       HapticFeedback.mediumImpact();
       final profile = StorageService.getUserProfile();
-      final name = profile?.name ?? 'Nutzer';
+      final name = profile?.name ?? t.onboardingUser;
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Sicherung für "$name" erfolgreich eingespielt! ✨'),
+          content: Text(t.onboardingBackupForNameRestored(name)),
           backgroundColor: AppTheme.sageGreen,
         ),
       );
@@ -435,7 +436,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       backgroundColor: AppTheme.background,
       appBar: widget.isEditing
           ? AppBar(
-              title: const Text('Profil & Personalisierung'),
+              title: Text(t.onboardingProfilePersonalisation),
               backgroundColor: AppTheme.background,
             )
           : null,
@@ -470,9 +471,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 const SizedBox(height: 18),
-                const Center(
+                Center(
                   child: Text(
-                    'Willkommen bei VelvetPulse',
+                    t.onboardingWelcomeToVelvetpulse,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w900,
@@ -482,9 +483,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                const Center(
+                Center(
                   child: Text(
-                    'Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intimität.',
+                    t.onboardingYourPrivateCoachingProgrammeFor,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 13,
@@ -501,14 +502,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(color: AppTheme.border),
                   ),
-                  child: const Row(
+                  child: Row(
                     children: [
                       Icon(Icons.lock_outline_rounded, color: AppTheme.sageGreen, size: 18),
                       SizedBox(width: 10),
                       Expanded(
                         child: Text(
-                          'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. '
-                          'Ins Internet gehen nur der KI-Coach (Google Gemini), der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).',
+                          t.onboardingPrivateProfileJournalProgressStay,
                           style: TextStyle(
                             fontSize: 11.5,
                             color: AppTheme.textSecondary,
@@ -533,12 +533,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     children: [
                       const Icon(Icons.cloud_download_rounded, color: AppTheme.sageGreen, size: 24),
                       const SizedBox(width: 12),
-                      const Expanded(
+                      Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Bereits VelvetPulse-Nutzer?',
+                              t.onboardingAlreadyUsingVelvetpulse,
                               style: TextStyle(
                                 fontSize: 13.5,
                                 fontWeight: FontWeight.w700,
@@ -546,7 +546,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                             ),
                             Text(
-                              'Sicherung aus Datei oder Zwischenablage laden',
+                              t.onboardingLoadABackupFromFile,
                               style: TextStyle(fontSize: 11, color: AppTheme.textMuted),
                             ),
                           ],
@@ -559,7 +559,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           foregroundColor: AppTheme.sageGreen,
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                         ),
-                        child: const Text('Wiederherstellen', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
+                        child: Text(t.onboardingRestore, style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
                       ),
                     ],
                   ),
@@ -568,13 +568,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ],
 
               // 1. Name
-              _buildSectionTitle('1. Wie dürfen wir dich ansprechen?', Icons.person_rounded),
+              _buildSectionTitle(t.onboardingWhatShouldWeCallYou, Icons.person_rounded),
               const SizedBox(height: 8),
               TextField(
                 controller: _nameController,
                 style: const TextStyle(color: AppTheme.textPrimary, fontSize: 15),
                 decoration: InputDecoration(
-                  hintText: 'Dein Vorname oder Pseudonym',
+                  hintText: t.onboardingYourFirstNameOrA,
                   prefixIcon: const Icon(Icons.badge_outlined, color: AppTheme.textMuted, size: 20),
                   filled: true,
                   fillColor: AppTheme.surface,
@@ -596,9 +596,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(height: 24),
 
               // 2. Gender
-              _buildSectionTitle('2. Dein Geschlecht', Icons.wc_rounded),
-              const Text(
-                'Passt Kursempfehlungen, Beckenboden-Physiologie und KI-Antworten an.',
+              _buildSectionTitle(t.onboardingYourGender, Icons.wc_rounded),
+              Text(
+                t.onboardingAdjustsCourseRecommendationsPelvicFloor,
                 style: TextStyle(fontSize: 12, color: AppTheme.textMuted),
               ),
               const SizedBox(height: 10),
@@ -608,7 +608,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: _buildSelectCard(
                       id: 'male',
                       current: _selectedGender,
-                      label: 'Männlich',
+                      label: t.onboardingMale,
                       icon: Icons.male_rounded,
                       activeColor: AppTheme.sageGreen,
                       onTap: () => setState(() => _selectedGender = 'male'),
@@ -619,7 +619,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: _buildSelectCard(
                       id: 'female',
                       current: _selectedGender,
-                      label: 'Weiblich',
+                      label: t.onboardingFemale,
                       icon: Icons.female_rounded,
                       activeColor: const Color(0xFFFB7185),
                       onTap: () => setState(() => _selectedGender = 'female'),
@@ -630,7 +630,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: _buildSelectCard(
                       id: 'other',
                       current: _selectedGender,
-                      label: 'Divers',
+                      label: t.partnerProfileDialogNonBinary,
                       icon: Icons.all_inclusive_rounded,
                       activeColor: AppTheme.amber,
                       onTap: () => setState(() => _selectedGender = 'other'),
@@ -642,7 +642,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(height: 24),
 
               // 3. Age
-              _buildSectionTitle('3. Dein Alter: $_selectedAge Jahre', Icons.cake_rounded),
+              _buildSectionTitle(t.onboardingYourAgeSelectedageYears(_selectedAge), Icons.cake_rounded),
               const SizedBox(height: 4),
               SliderTheme(
                 data: SliderTheme.of(context).copyWith(
@@ -665,7 +665,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(height: 20),
 
               // 4. Relationship Status
-              _buildSectionTitle('4. Dein Beziehungsstatus', Icons.favorite_rounded),
+              _buildSectionTitle(t.onboardingYourRelationshipStatus, Icons.favorite_rounded),
               const SizedBox(height: 8),
               Wrap(
                 spacing: 8,
@@ -674,25 +674,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   _buildChoiceChip(
                     id: 'relationship',
                     current: _selectedRelationship,
-                    label: 'In fester Beziehung / Verheiratet 💍',
+                    label: t.onboardingInARelationshipMarried,
                     onTap: () => setState(() => _selectedRelationship = 'relationship'),
                   ),
                   _buildChoiceChip(
                     id: 'dating',
                     current: _selectedRelationship,
-                    label: 'Dating / Kennenlernphase 💫',
+                    label: t.onboardingDatingGettingToKnowSomeone,
                     onTap: () => setState(() => _selectedRelationship = 'dating'),
                   ),
                   _buildChoiceChip(
                     id: 'single',
                     current: _selectedRelationship,
-                    label: 'Single 🌱',
+                    label: t.onboardingSingle,
                     onTap: () => setState(() => _selectedRelationship = 'single'),
                   ),
                   _buildChoiceChip(
                     id: 'complicated',
                     current: _selectedRelationship,
-                    label: 'Es ist kompliziert 🌀',
+                    label: t.onboardingItSComplicated,
                     onTap: () => setState(() => _selectedRelationship = 'complicated'),
                   ),
                 ],
@@ -701,30 +701,30 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(height: 24),
 
               // 5. Primary Goal
-              _buildSectionTitle('5. Was ist aktuell deine größte Priorität?', Icons.track_changes_rounded),
+              _buildSectionTitle(t.onboardingWhatSYourBiggestPriority, Icons.track_changes_rounded),
               const SizedBox(height: 8),
               _buildGoalTile(
                 id: 'performance_anxiety',
-                title: 'Leistungsdruck & Kopfkino stoppen',
-                subtitle: 'Gedankenkreise durchbrechen, Spectatoring beenden.',
+                title: t.onboardingStopPerformancePressureRacingThoughts,
+                subtitle: t.onboardingBreakThoughtLoopsStopSpectatoring,
               ),
               const SizedBox(height: 8),
               _buildGoalTile(
                 id: 'pelvic_somatics',
-                title: 'Beckenboden-Entspannung & Somatik',
-                subtitle: 'Hypertonie lösen, Reverse Kegel trainieren, Vagusnerv beruhigen.',
+                title: t.onboardingPelvicFloorRelaxationBodyAwareness,
+                subtitle: t.onboardingReleaseTensionPractiseReverseKegels,
               ),
               const SizedBox(height: 8),
               _buildGoalTile(
                 id: 'couple_intimacy',
-                title: 'Paar-Intimität & Druckfreier Sex',
-                subtitle: 'Sensate Focus zu zweit, Co-Regulierung & verletzliche Nähe.',
+                title: t.onboardingCoupleIntimacyPressureFreeSex,
+                subtitle: t.onboardingSensateFocusTogetherCalmingEach,
               ),
               const SizedBox(height: 8),
               _buildGoalTile(
                 id: 'body_pleasure',
-                title: 'Lust, Selbstannahme & Körperempfinden',
-                subtitle: 'Responsive Lust verstehen, Orgasmusdruck abbauen.',
+                title: t.onboardingDesireSelfAcceptanceBodyAwareness,
+                subtitle: t.onboardingUnderstandResponsiveDesireEaseOrgasm,
               ),
 
               const SizedBox(height: 32),
@@ -750,7 +750,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         )
                       : Text(
-                          widget.isEditing ? 'Änderungen speichern' : 'Programm jetzt personalisieren',
+                          widget.isEditing ? t.onboardingSaveChanges : t.onboardingPersonaliseProgrammeNow,
                           style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                 ),
@@ -764,7 +764,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ? null
                         : () async {
                             final defaultProfile = UserProfile(
-                              name: 'Du',
+                              name: t.paarAbendYou,
                               gender: _selectedGender,
                               age: _selectedAge,
                               relationshipStatus: _selectedRelationship,
@@ -784,8 +784,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             }
                           },
                     icon: const Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.textMuted),
-                    label: const Text(
-                      'Überspringen & Direkt zur App ➔',
+                    label: Text(
+                      t.onboardingSkipGoStraightToThe,
                       style: TextStyle(color: AppTheme.textMuted, fontSize: 13),
                     ),
                   ),
@@ -991,14 +991,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: FutureBuilder<String>(
                   future: UpdateService.installedVersion(),
                   builder: (context, snap) => Text(
-                    'Version ${snap.data ?? '…'}',
+                    t.onboardingVersionData(snap.data ?? '…'),
                     style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
                   ),
                 ),
               ),
               TextButton(
                 onPressed: () => checkForUpdateAndPrompt(context, force: true),
-                child: const Text('Nach Updates suchen', style: TextStyle(color: AppTheme.sageGreen)),
+                child: Text(t.onboardingCheckForUpdates, style: TextStyle(color: AppTheme.sageGreen)),
               ),
             ],
           ),
@@ -1006,13 +1006,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             contentPadding: const EdgeInsets.only(left: 30, right: 4),
             value: _updateChannel == UpdateChannel.beta,
             activeThumbColor: AppTheme.amber,
-            title: const Text('Beta-Versionen erhalten',
+            title: Text(t.onboardingReceiveBetaVersions,
                 style: TextStyle(color: AppTheme.textPrimary, fontSize: 14)),
             subtitle: Text(
               _updateChannel == UpdateChannel.beta
-                  ? 'Du bekommst neue Funktionen früher, dafür vielleicht mit kleinen Fehlern.'
-                  : 'Nur geprüfte Versionen. Beim Zurückwechseln von Beta bleibt deine Version, '
-                      'bis eine neuere stabile erscheint.',
+                  ? t.onboardingYouGetNewFeaturesEarlier
+                  : t.onboardingOnlyTestedVersionsWhenSwitching,
               style: const TextStyle(color: AppTheme.textMuted, fontSize: 12, height: 1.35),
             ),
             onChanged: (beta) async {
@@ -1037,12 +1036,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Row(
+          Row(
             children: [
               Icon(Icons.visibility_off_rounded, color: AppTheme.sageGreen, size: 20),
               SizedBox(width: 8),
               Text(
-                'Diskretion',
+                t.onboardingDiscretion,
                 style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5, fontWeight: FontWeight.w700),
               ),
             ],
@@ -1057,11 +1056,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     if (ok && mounted) setState(() => _lockEnabled = value);
                   }
                 : null,
-            title: const Text('Mit Fingerabdruck sperren', style: TextStyle(fontSize: 14)),
+            title: Text(t.onboardingLockWithFingerprint, style: TextStyle(fontSize: 14)),
             subtitle: Text(
               _lockSupported
-                  ? 'Beim Öffnen und nach einer Minute im Hintergrund. Inhalte sind in der App-Übersicht verborgen, Screenshots gesperrt.'
-                  : 'Auf diesem Gerät ist keine Displaysperre eingerichtet.',
+                  ? t.onboardingOnOpeningAndAfterOne
+                  : t.onboardingNoScreenLockIsSet,
               style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),
@@ -1076,14 +1075,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(value
-                      ? 'Die App heißt jetzt „Pulse“. Der Startbildschirm braucht dafür ein paar Sekunden.'
-                      : 'Die App heißt wieder „VelvetPulse“.'),
+                      ? t.onboardingTheAppIsNowCalled
+                      : t.onboardingTheAppIsCalledVelvetpulse),
                 ),
               );
             },
-            title: const Text('Unauffälliges App-Symbol', style: TextStyle(fontSize: 14)),
-            subtitle: const Text(
-              'Zeigt „Pulse“ mit neutralem Symbol auf dem Startbildschirm.',
+            title: Text(t.onboardingDiscreetAppIcon, style: TextStyle(fontSize: 14)),
+            subtitle: Text(
+              t.onboardingShowsPulseWithANeutral,
               style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),
@@ -1095,9 +1094,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               await StorageService.setPersonalizeNames(value);
               if (mounted) setState(() => _personalizeNames = value);
             },
-            title: const Text('Gegenüber in Lektionen beim Namen nennen', style: TextStyle(fontSize: 14)),
-            subtitle: const Text(
-              'Zum Beispiel „Anna liegt auf dem Rücken“ statt „sie liegt“. Aus, wenn öfter jemand mitliest.',
+            title: Text(t.onboardingCallYourPartnerByName, style: TextStyle(fontSize: 14)),
+            subtitle: Text(
+              t.onboardingForExampleAnnaLiesOn,
               style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),
@@ -1111,15 +1110,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               if (ok) {
                 setState(() => _notifyMessages = value);
               } else {
-                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                  content: Text('Android hat Mitteilungen für die App nicht erlaubt. Das lässt sich in den Android-Einstellungen ändern.'),
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(t.onboardingAndroidHasnTAllowedNotifications),
                 ));
               }
             },
-            title: const Text('Hinweis bei neuen Nachrichten', style: TextStyle(fontSize: 14)),
-            subtitle: const Text(
-              'Auch wenn die App geschlossen ist: nur „Neue Nachricht“, ohne Inhalt und Namen. '
-              'Bei geschlossener App kann es bis zu 15 Minuten dauern.',
+            title: Text(t.onboardingNotifyAboutNewMessages, style: TextStyle(fontSize: 14)),
+            subtitle: Text(
+              t.onboardingEvenWhenTheAppIs,
               style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),
@@ -1139,12 +1137,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Row(
+          Row(
             children: [
               Icon(Icons.shield_rounded, color: AppTheme.sageGreen, size: 20),
               SizedBox(width: 8),
               Text(
-                'Datenschutz & Update-Sicherheit',
+                t.onboardingPrivacyUpdateSafety,
                 style: TextStyle(
                   color: AppTheme.textPrimary,
                   fontSize: 14.5,
@@ -1154,8 +1152,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ],
           ),
           const SizedBox(height: 8),
-          const Text(
-            'Alles bleibt lokal auf deinem Gerät und übersteht Updates. API-Key und Paar-Verbindung liegen verschlüsselt im Android-Schlüsselspeicher und gehen nur mit Passwort in eine Sicherung.',
+          Text(
+            t.onboardingEverythingStaysLocalOnYour,
             style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
           ),
           const SizedBox(height: 14),
@@ -1165,7 +1163,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: OutlinedButton.icon(
                   onPressed: () => showExportBackupDialog(context),
                   icon: const Icon(Icons.copy_rounded, size: 16),
-                  label: const Text('Backup exportieren', style: TextStyle(fontSize: 12)),
+                  label: Text(t.onboardingExportBackup, style: TextStyle(fontSize: 12)),
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.5)),
                     foregroundColor: AppTheme.sageGreen,
@@ -1178,7 +1176,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: OutlinedButton.icon(
                   onPressed: _promptRestoreBackup,
                   icon: const Icon(Icons.restore_page_rounded, size: 16),
-                  label: const Text('Wiederherstellen', style: TextStyle(fontSize: 12)),
+                  label: Text(t.onboardingRestore, style: TextStyle(fontSize: 12)),
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(color: AppTheme.amber.withValues(alpha: 0.5)),
                     foregroundColor: AppTheme.amber,

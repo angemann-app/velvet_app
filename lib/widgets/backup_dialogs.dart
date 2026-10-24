@@ -7,6 +7,7 @@ import '../services/auto_backup_service.dart';
 import '../services/backup_codec.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
+import '../l10n/t.dart';
 
 /// „Backup exportieren“: Nutzerdaten immer, Verbindungsschlüssel und API-Key nur mit Passwort.
 Future<void> showExportBackupDialog(BuildContext context) async {
@@ -14,16 +15,14 @@ Future<void> showExportBackupDialog(BuildContext context) async {
     context: context,
     builder: (ctx) => AlertDialog(
       backgroundColor: AppTheme.surface,
-      title: const Text('Was soll in die Sicherung?'),
-      content: const Text(
-        'Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n\n'
-        'Mit Passwort: zusätzlich die Verbindung im Paar-Kanal und dein API-Key, verschlüsselt. '
-        'Das brauchst du für einen Umzug auf ein anderes Handy.',
+      title: Text(t.backupDialogsWhatShouldGoIntoThe),
+      content: Text(
+        t.backupDialogsOnlyYourDataProfileProgress,
         style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
       ),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Nur Daten')),
-        ElevatedButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Mit Passwort')),
+        TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.backupDialogsDataOnly)),
+        ElevatedButton(onPressed: () => Navigator.pop(ctx, true), child: Text(t.backupDialogsWithPassword)),
       ],
     ),
   );
@@ -45,13 +44,12 @@ Future<void> showExportBackupDialog(BuildContext context) async {
     context: context,
     builder: (ctx) => AlertDialog(
       backgroundColor: AppTheme.surface,
-      title: const Text('Sicherung kopiert'),
+      title: Text(t.backupDialogsBackupCopied),
       content: Text(
-        'Die Sicherung liegt in der Zwischenablage. Füge sie in eine Notiz oder ein privates Dokument ein.'
-        '${withSecrets ? '\n\nOhne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen.' : ''}',
+        t.backupDialogsBackupCopiedText + (withSecrets ? t.backupDialogsPasswordCannotBeReset : ''),
         style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
       ),
-      actions: [TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('OK'))],
+      actions: [TextButton(onPressed: () => Navigator.pop(ctx), child: Text(t.backupDialogsOk))],
     ),
   );
 }
@@ -64,17 +62,14 @@ Future<Map<String, String>?> resolveBackupSecrets(BuildContext context, Validate
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Ältere Sicherung'),
-        content: const Text(
-          'Diese Sicherung stammt aus einer älteren Version und enthält deinen API-Key und deinen '
-          'Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n\n'
-          'Lösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf '
-          'eine neue mit Passwort.',
+        title: Text(t.backupDialogsOlderBackup),
+        content: Text(
+          t.backupDialogsThisBackupComesFromAn,
           style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Abbrechen')),
-          ElevatedButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Einspielen')),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
+          ElevatedButton(onPressed: () => Navigator.pop(ctx, true), child: Text(t.backupDialogsRestore)),
         ],
       ),
     );
@@ -89,13 +84,13 @@ Future<Map<String, String>?> resolveBackupSecrets(BuildContext context, Validate
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Passwort der Sicherung'),
+        title: Text(t.backupDialogsBackupPassword),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Damit kommen auch die Verbindung im Paar-Kanal und dein API-Key zurück.',
+            Text(
+              t.backupDialogsThisAlsoBringsBackThe,
               style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
             ),
             const SizedBox(height: 12),
@@ -103,13 +98,13 @@ Future<Map<String, String>?> resolveBackupSecrets(BuildContext context, Validate
               controller: controller,
               obscureText: true,
               autofocus: true,
-              decoration: InputDecoration(hintText: 'Passwort', errorText: error),
+              decoration: InputDecoration(hintText: t.backupDialogsPassword, errorText: error),
             ),
           ],
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, ''), child: const Text('Ohne Schlüssel')),
-          ElevatedButton(onPressed: () => Navigator.pop(ctx, controller.text), child: const Text('Entsperren')),
+          TextButton(onPressed: () => Navigator.pop(ctx, ''), child: Text(t.backupDialogsWithoutKeys)),
+          ElevatedButton(onPressed: () => Navigator.pop(ctx, controller.text), child: Text(t.appLockUnlock)),
         ],
       ),
     );
@@ -135,30 +130,30 @@ Future<String?> _askNewPassword(BuildContext context) async {
     builder: (ctx) => StatefulBuilder(
       builder: (ctx, setState) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Passwort für die Sicherung'),
+        title: Text(t.backupDialogsPasswordForTheBackup),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             TextField(controller: first, obscureText: true, autofocus: true,
-                decoration: const InputDecoration(hintText: 'Passwort (mindestens 8 Zeichen)')),
+                decoration: InputDecoration(hintText: t.backupDialogsPasswordAtLeastCharacters)),
             const SizedBox(height: 8),
             TextField(controller: second, obscureText: true,
-                decoration: InputDecoration(hintText: 'Passwort wiederholen', errorText: error)),
+                decoration: InputDecoration(hintText: t.backupDialogsRepeatPassword, errorText: error)),
           ],
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Abbrechen')),
+          TextButton(onPressed: () => Navigator.pop(ctx), child: Text(t.ausspracheMeldenCancel)),
           ElevatedButton(
             onPressed: () {
               if (first.text.length < 8) {
-                setState(() => error = 'Bitte mindestens 8 Zeichen.');
+                setState(() => error = t.backupDialogsPleaseUseAtLeastCharacters);
               } else if (first.text != second.text) {
-                setState(() => error = 'Die Passwörter sind verschieden.');
+                setState(() => error = t.backupDialogsThePasswordsDonTMatch);
               } else {
                 Navigator.pop(ctx, first.text);
               }
             },
-            child: const Text('Verschlüsseln'),
+            child: Text(t.backupDialogsEncrypt),
           ),
         ],
       ),
@@ -174,13 +169,13 @@ Future<T> _withProgress<T>(BuildContext context, Future<T> work) async {
   showDialog<void>(
     context: context,
     barrierDismissible: false,
-    builder: (_) => const AlertDialog(
+    builder: (_) => AlertDialog(
       backgroundColor: AppTheme.surface,
       content: Row(
         children: [
           SizedBox(width: 22, height: 22, child: CircularProgressIndicator(strokeWidth: 2.5)),
           SizedBox(width: 16),
-          Expanded(child: Text('Einen Moment …')),
+          Expanded(child: Text(t.backupDialogsOneMoment)),
         ],
       ),
     ),
