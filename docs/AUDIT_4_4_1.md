@@ -120,7 +120,8 @@ Commit erfolgreich (GitHub Actions, 24.10.2026).
 | Release-Build `flutter build apk --release --split-per-abi` (4.4.1+30) | erfolgreich (3 APKs, arm64 76,9 MB) |
 | Neu eingesprochen: `pain_1`, `pain_2`, `pos_3`, `anat_2`–`anat_4` | erledigt |
 | `dart format` | nicht als Gate genutzt: 48 von 75 Dateien weichen vom Standardformat ab (Projekt nie damit formatiert); Massen-Umformatierung bewusst nicht vorgenommen |
-| CI (GitHub Actions „Tests“) für diese Änderungen | erst nach dem Push sichtbar |
+| CI (GitHub Actions „Tests“) für Commit fda1305 | erfolgreich (Lauf 40085922216, 1 min 21 s) |
+| Prüfung auf echtem Gerät (Selbsterkundung, Screenreader, Audio-Stopp, Update) | vor dem Stabil-Release offen |
 
 ## Nicht automatisch prüfbar / offen
 - Fachliche Richtigkeit der Gesundheitstexte: manuell durchgesehen, keine ärztliche Prüfung.

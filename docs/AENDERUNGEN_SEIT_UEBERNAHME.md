@@ -217,7 +217,14 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
 
 ## 8. Offen
 
-- Als Nächstes: Kurs „Anatomie der Erregung“ (weniger bekannte erogene Zonen).
+- **Keystore-Restpunkt (aus Audit 4.4.1):** Schlägt bei Altinstallationen (bis 4.3.0-beta.1) der Umzug
+  eines Klartext-Geheimnisses aus den SharedPreferences in den Keystore fehl, bleibt es dort – und damit
+  in Androids Cloud-Sicherung. Idee: in eine eigene, von Sicherung und Geräteübertragung ausgenommene
+  Datei verschieben (backup_rules.xml, data_extraction_rules.xml) statt in den Einstellungen zu belassen.
+  Siehe docs/AUDIT_4_4_1.md.
+- **Nostr NIP-17/44:** würde Metadaten besser verbergen; nur als eigenes Projekt mit Kompatibilitäts- und
+  Migrationstests (ältere Versionen sprechen nur NIP-04).
+- **Übersetzbare Oberfläche:** Beschriftungen aus dem Code in ARB-Dateien (Flutter gen-l10n), geplant.
 - Später geplant:
   - Lernpfad als optionaler Modus.
   - Feedback-Kanal für Tester.
