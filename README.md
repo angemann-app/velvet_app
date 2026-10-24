@@ -11,12 +11,15 @@
 [![Nostr](https://img.shields.io/badge/Nostr-NIP--04-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/04.md)
 [![English content](https://img.shields.io/badge/Content-English%20available-blue.svg)](translations/en/)
 
-> 🇬🇧 **English:** All content – 21 courses, 75 lessons, guided couple sessions and lists – is also available in
+> 🇬🇧 **English:** All content – 22 courses, 80 lessons, guided couple sessions and lists – is also available in
 > English in [translations/en](translations/en/), ready for anyone who wants to build an English version.
 > See the [English summary](#english-summary) below.
 >
 > 🌍 **Help translate:** we'd love to add more languages. You don't need to be a developer –
 > see [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
+>
+> 🗣️ **Klingt ein Wort falsch?** Wenn die Vorlesestimme ein Wort falsch ausspricht, melde es gern über
+> [diese Vorlage](https://github.com/angemann-app/velvet_app/issues/new?template=aussprache.md).
 
 VelvetPulse ist eine deutschsprachige Android-App für erfüllte Sexualität und Nähe. Sie verbindet
 **Kognitive Verhaltenstherapie (KVT)**, **Körperarbeit (Somatik)** und **Sexualaufklärung**:
@@ -46,9 +49,10 @@ Bremse nehmen – allein oder zu zweit.
 without performance pressure. It combines cognitive behavioural therapy (CBT), somatic body work and
 sex education:
 
-- **21 courses, 75 lessons** with offline audio – desire and arousal, performance anxiety, pelvic floor,
-  communication, touch techniques, mismatched desire, life phases, pain and shame.
-- **Guided couple sessions** (20–45 min) assembled from audio building blocks, different every time.
+- **22 courses, 80 lessons** with offline audio – desire and arousal, performance anxiety, pelvic floor,
+  communication, touch techniques, mismatched desire, life phases, pain and shame, the anatomy of arousal.
+- **Guided couple sessions** (20–45 min) and a **guided self-exploration** (10–30 min), assembled from audio
+  building blocks, different every time.
 - **End-to-end encrypted couple channel** over [Nostr](https://nostr.com) (NIP-04): send sparks,
   match wishes privately, share lessons and reflections – no account, no phone number, no server.
 - **Pelvic floor trainer**, breathing pacer, CBT thought journal, SOS help.
@@ -64,12 +68,12 @@ Built with Flutter. Code under MIT, content under CC BY-NC-SA 4.0.
 ## Funktionen
 
 ### Kurse und Lektionen
-- **21 Kurse mit 75 Lektionen**:
+- **22 Kurse mit 80 Lektionen**:
   - *Grundlagen* (Kurse 1–7): Zwei-Pedale-Modell, Beobachter-Falle, Beckenboden, Kommunikation, Sensate Focus.
   - *Praxis* (Kurse 8–17): Berührung für Sie und Ihn, Stimme und Atem, Vorfreude und Langsamkeit, Fantasien,
     Intim-Massage, Prostata und Damm, entspannte Stellungen, Szenarien für zwei.
-  - *Vertiefung* (Kurse 18–21): Sich selbst erkunden, unterschiedliche Lust, Lebensphasen
-    (Geburt, Wechseljahre, Älterwerden, Krankheit), Schmerz, Scham und Leistungsdruck.
+  - *Vertiefung* (Kurse 18–22): Sich selbst erkunden, unterschiedliche Lust, Lebensphasen
+    (Geburt, Wechseljahre, Älterwerden, Krankheit), Schmerz, Scham und Leistungsdruck, Anatomie der Erregung.
 - Jede Lektion folgt demselben Aufbau: **Warum das wirkt** · **Die Übung** ·
   **Einvernehmen und Sicherheit** · bei Bedarf **Wann ärztlich abklären**.
 - **Audio zu jeder Lektion** (offline, eingesprochen von den Stimmen Victoria und Martin).
@@ -80,6 +84,11 @@ Built with Flutter. Code under MIT, content under CC BY-NC-SA 4.0.
 - Geführte Berührung für zwei, **20, 30 oder 45 Minuten**, bekleidet, Haut an Haut oder intim.
 - Jeder Abend wird neu aus über 50 gesprochenen Bausteinen zusammengestellt: Ankommen, zwei Runden mit
   Rollenwechsel, Ausklang – mit Klangschale und leisem Klangteppich in den Stillen.
+
+### Geführte Selbsterkundung
+- Zeit nur für dich, **10, 20 oder 30 Minuten**: Ankommen, Atem und eine Reise über den eigenen Körper,
+  sanft, mit nackter Haut oder intim, für Vulva oder Penis, mit Victoria oder Martin.
+- Ebenfalls jedes Mal neu zusammengestellt, aus über 40 Bausteinen.
 
 ### Training und Akuthilfe
 - **Beckenboden-Timer** mit vier Übungsarten (Loslassen, Kräftigen, Impulse, Wellen) und Sprachansagen.

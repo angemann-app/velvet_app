@@ -5,7 +5,7 @@ They are **not** part of the app release; the app itself is German.
 
 | File | German source | Contents |
 |---|---|---|
-| `velvet_content.json` | `assets/data/velvet_content.json` | 21 courses, 75 lessons, SOS cards, belief library, match cards |
+| `velvet_content.json` | `assets/data/velvet_content.json` | 22 courses, 80 lessons, SOS cards, belief library, match cards |
 | `paar_abend.json` | `assets/data/paar_abend.json` | 54 spoken building blocks of the guided couple evening |
 | `selbst_reise.json` | `assets/data/selbst_reise.json` | 37 spoken building blocks of the guided self-exploration |
 | `yes_no_maybe.json` | `lib/models/yes_no_maybe_models.dart` | yes/no/maybe list: 10 categories, 63 items with explanations |

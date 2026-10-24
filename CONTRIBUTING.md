@@ -4,7 +4,7 @@ Thank you for wanting to help! The most welcome contribution right now is a **tr
 
 ## Translating the content
 
-All of VelvetPulse's content – 21 courses, 75 lessons, guided couple sessions and lists – exists in German
+All of VelvetPulse's content – 22 courses, 80 lessons, guided couple sessions and lists – exists in German
 (the original) and in English ([translations/en](translations/en/)). We'd love to add more languages:
 French, Spanish, Dutch, Italian, Polish, Portuguese … whatever you speak well.
 
@@ -59,6 +59,17 @@ as it is – we'll take care of it when merging.
 English is maintained together with the German original and is always up to date. Other languages are
 maintained by the community and may lag behind; the checksums make visible what needs updating. If you'd like
 to look after a language long-term, say so in your issue – you'll be named as its maintainer.
+
+## Reporting pronunciation (German audio)
+
+The lessons are read aloud by a local text-to-speech voice (Victoria and Martin). Sometimes it stresses a
+word wrongly or sounds a little off. If you hear such a word, please report it with the
+[pronunciation template](../../issues/new?template=aussprache.md) – a description in words is enough, e.g.
+“Beckenboden: stress is on the wrong syllable”. Fixes go into `tools/aussprache.json` and the affected
+recordings are regenerated.
+
+Please **don't attach recordings of your own voice**: a voice is personal and would stay public in the
+repository. For the same reason we don't collect human voice recordings for the app.
 
 ## Other contributions
 
