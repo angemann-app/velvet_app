@@ -7,6 +7,8 @@ import 'services/auto_backup_service.dart';
 import 'services/message_notifier.dart';
 import 'services/nostr_service.dart';
 import 'services/privacy_service.dart';
+import 'services/sprache.dart';
+import 'l10n/app_localizations.dart';
 import 'services/update_service.dart';
 import 'services/whats_new.dart';
 import 'widgets/app_lock.dart';
@@ -49,6 +51,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
   @override
   void initState() {
     super.initState();
+    Sprache.wahl.addListener(_spracheGewechselt);
     _initApp();
   }
 
@@ -57,6 +60,12 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
       _lockEnabled = await PrivacyService.isLockEnabled();
     } catch (e) {
       debugPrint('Privacy init error: $e');
+    }
+
+    try {
+      await Sprache.laden();
+    } catch (e) {
+      debugPrint('Sprache init error: $e');
     }
 
     try {
@@ -109,11 +118,22 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
     });
   }
 
+  /// Neue Sprache: Inhalte in dieser Sprache laden und die ganze App neu aufbauen.
+  Future<void> _spracheGewechselt() async {
+    await DataService.neuLaden();
+    if (mounted) setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // Neuer Schlüssel je Sprache: Die ganze App wird neu aufgebaut, kein Text bleibt in der alten Sprache.
+      key: ValueKey(Sprache.code),
       title: 'VelvetPulse',
       debugShowCheckedModeBanner: false,
+      locale: Sprache.locale,
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
       theme: AppTheme.darkTheme,
       // Erlaubt Scrollen per Mausziehen (Web-/Desktop-Vorschau); auf dem Handy ohne Wirkung.
       scrollBehavior: const MaterialScrollBehavior().copyWith(

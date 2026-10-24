@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../theme/app_theme.dart';
+import '../l10n/t.dart';
 
 /// Beenden · Pause/Fortsetzen · Überspringen für die geführten Audios (Gemeinsamer Abend,
 /// Selbsterkundung). Jeder Knopf ist beschriftet, damit sofort klar ist, wie man anhält oder
@@ -29,12 +30,12 @@ class PlayerSteuerung extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _knopf(Icons.stop_rounded, 'Beenden', onBeenden),
+        _knopf(Icons.stop_rounded, t.playerSteuerungStop, onBeenden),
         const SizedBox(width: 20),
         Column(children: [
           Semantics(
             button: true,
-            label: pausiert ? 'Fortsetzen' : 'Pausieren',
+            label: pausiert ? t.playerSteuerungResume : t.playerSteuerungPause,
             excludeSemantics: true,
             child: InkWell(
               onTap: onPause,
@@ -48,10 +49,10 @@ class PlayerSteuerung extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 6),
-          ExcludeSemantics(child: _beschriftung(pausiert ? 'Fortsetzen' : 'Pause')),
+          ExcludeSemantics(child: _beschriftung(pausiert ? t.playerSteuerungResume : t.playerSteuerungPause2)),
         ]),
         const SizedBox(width: 20),
-        _knopf(Icons.skip_next_rounded, 'Überspringen', onUeberspringen),
+        _knopf(Icons.skip_next_rounded, t.playerSteuerungSkip, onUeberspringen),
       ],
     );
   }

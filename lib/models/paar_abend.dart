@@ -3,6 +3,8 @@ import 'dart:math';
 
 import 'package:flutter/services.dart';
 
+import '../services/sprache.dart';
+
 /// Ein gesprochener Baustein aus assets/data/paar_abend.json.
 class PaarBaustein {
   final String id;
@@ -67,9 +69,10 @@ class PaarAbendDaten {
   const PaarAbendDaten(this.bausteine, this.dauerMs);
 
   static Future<PaarAbendDaten> laden() async {
-    final data = jsonDecode(await rootBundle.loadString('assets/data/paar_abend.json'));
+    final data = jsonDecode(await rootBundle.loadString(Sprache.inhalt('paar_abend.json')));
     Map<String, int> dauer = {};
-    try {
+    // Die gemessenen Längen gehören zu den deutschen Aufnahmen; auf Englisch wird geschätzt.
+    if (!Sprache.englisch) try {
       final raw = jsonDecode(await rootBundle.loadString('assets/audio/paar/dauer.json')) as Map;
       dauer = raw.map((k, v) => MapEntry(k as String, v as int));
     } catch (_) {

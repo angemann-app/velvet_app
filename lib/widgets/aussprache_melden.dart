@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../services/privacy_service.dart';
 import '../theme/app_theme.dart';
+import '../l10n/t.dart';
 
 /// Link zur Vorlage .github/ISSUE_TEMPLATE/aussprache.md, schon ausgefüllt mit dem Ort im Audio.
 /// Übertragen wird nur, was hier steht – keine Profil- oder Nutzungsdaten.
@@ -29,16 +30,14 @@ Future<void> ausspracheMelden(BuildContext context, {required String wo, String?
     context: context,
     builder: (context) => AlertDialog(
       backgroundColor: AppTheme.surface,
-      title: const Text('Wort falsch ausgesprochen?'),
-      content: const Text(
-        'Danke, dass du hilfst! Die Meldung landet öffentlich auf GitHub und braucht dort ein Konto. '
-        'Sie ist unter deinem Kontonamen sichtbar.\n\n'
-        'Übertragen werden nur die Stelle im Audio und die Stimme. Das Wort trägst du selbst ein.',
+      title: Text(t.ausspracheMeldenWordMispronounced),
+      content: Text(
+        t.ausspracheMeldenThanksForHelpingTheReport,
         style: TextStyle(color: AppTheme.textSecondary, height: 1.45),
       ),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Abbrechen')),
-        TextButton(onPressed: () => Navigator.pop(context, true), child: const Text('Weiter zu GitHub')),
+        TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.ausspracheMeldenCancel)),
+        TextButton(onPressed: () => Navigator.pop(context, true), child: Text(t.ausspracheMeldenContinueToGithub)),
       ],
     ),
   );
@@ -48,7 +47,7 @@ Future<void> ausspracheMelden(BuildContext context, {required String wo, String?
       .catchError((_) => false);
   if (!ok && context.mounted) {
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Der Browser ließ sich nicht öffnen.')),
+      SnackBar(content: Text(t.ausspracheMeldenTheBrowserCouldNotBe)),
     );
   }
 }
@@ -81,7 +80,7 @@ class _AusspracheMeldenButtonState extends State<AusspracheMeldenButton> {
             onPressed: () => ausspracheMelden(context,
                 wo: widget.wo, stimme: widget.stimme, position: widget.position?.call()),
             icon: const Icon(Icons.record_voice_over_outlined, size: 16),
-            label: const Text('Wort falsch ausgesprochen?'),
+            label: Text(t.ausspracheMeldenWordMispronounced),
             style: TextButton.styleFrom(
               foregroundColor: AppTheme.textMuted,
               textStyle: const TextStyle(fontSize: 12.5),

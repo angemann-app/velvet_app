@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/services.dart';
 
+import '../services/sprache.dart';
 import 'paar_abend.dart';
 
 /// Geführte Selbsterkundung: aus den Bausteinen in assets/data/selbst_reise.json wird jedes Mal
@@ -17,9 +18,10 @@ class SelbstReiseDaten {
   const SelbstReiseDaten(this.bausteine, this.dauerMs);
 
   static Future<SelbstReiseDaten> laden() async {
-    final data = jsonDecode(await rootBundle.loadString('assets/data/selbst_reise.json'));
+    final data = jsonDecode(await rootBundle.loadString(Sprache.inhalt('selbst_reise.json')));
     Map<String, int> dauer = {};
-    try {
+    // Die gemessenen Längen gehören zu den deutschen Aufnahmen; auf Englisch wird geschätzt.
+    if (!Sprache.englisch) try {
       final raw = jsonDecode(await rootBundle.loadString('assets/audio/selbst/dauer.json')) as Map;
       dauer = raw.map((k, v) => MapEntry(k as String, v as int));
     } catch (_) {}

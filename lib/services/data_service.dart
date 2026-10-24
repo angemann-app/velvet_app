@@ -1,17 +1,26 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import '../models/content_models.dart';
+import 'listen_uebersetzung.dart';
+import 'sprache.dart';
 
 class DataService {
   static VelvetDatabase? _cachedDatabase;
+
+  /// Nach einem Sprachwechsel: Inhalte in der neuen Sprache laden.
+  static Future<VelvetDatabase> neuLaden() {
+    _cachedDatabase = null;
+    return loadDatabase();
+  }
 
   static Future<VelvetDatabase> loadDatabase() async {
     if (_cachedDatabase != null) {
       return _cachedDatabase!;
     }
 
+    await ListenUebersetzung.laden();
     try {
-      final jsonString = await rootBundle.loadString('assets/data/velvet_content.json');
+      final jsonString = await rootBundle.loadString(Sprache.inhalt('velvet_content.json'));
       final Map<String, dynamic> jsonData = jsonDecode(jsonString);
       _cachedDatabase = VelvetDatabase.fromJson(jsonData);
       return _cachedDatabase!;

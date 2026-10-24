@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ota_update/ota_update.dart';
 import '../services/update_service.dart';
 import '../theme/app_theme.dart';
+import '../l10n/t.dart';
 
 /// Prüft im Hintergrund auf Updates und zeigt bei Bedarf den Dialog.
 Future<void> checkForUpdateAndPrompt(BuildContext context, {bool force = false}) async {
@@ -10,7 +11,7 @@ Future<void> checkForUpdateAndPrompt(BuildContext context, {bool force = false})
   if (update == null) {
     if (force) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Du hast die neueste Version.')),
+        SnackBar(content: Text(t.updateDialogYouHaveTheLatestVersion)),
       );
     }
     return;
@@ -52,17 +53,17 @@ class _UpdateDialogState extends State<UpdateDialog> {
           case OtaStatus.PERMISSION_NOT_GRANTED_ERROR:
             setState(() {
               _progress = null;
-              _error = 'Bitte erlaube der App im nächsten Schritt, Updates zu installieren, und tippe dann erneut.';
+              _error = t.updateDialogPleaseAllowTheAppTo;
             });
           case OtaStatus.CHECKSUM_ERROR:
             setState(() {
               _progress = null;
-              _error = 'Die heruntergeladene Datei ist beschädigt. Bitte später noch einmal versuchen.';
+              _error = t.updateDialogTheDownloadedFileIsDamaged;
             });
           default:
             setState(() {
               _progress = null;
-              _error = 'Das Update hat nicht geklappt (${event.status.name}). Bitte später noch einmal versuchen.';
+              _error = t.updateDialogTheUpdateDidnTWork(event.status.name);
             });
         }
       },
@@ -70,7 +71,7 @@ class _UpdateDialogState extends State<UpdateDialog> {
         if (mounted) {
           setState(() {
             _progress = null;
-            _error = 'Download fehlgeschlagen. Bitte Internetverbindung prüfen.';
+            _error = t.updateDialogDownloadFailedPleaseCheckYour;
           });
         }
       },
@@ -85,7 +86,7 @@ class _UpdateDialogState extends State<UpdateDialog> {
     return AlertDialog(
       backgroundColor: AppTheme.surface,
       title: Text(
-        update.prerelease ? 'Neue Beta ${update.version}' : 'Neue Version ${update.version}',
+        update.prerelease ? t.updateDialogNewBetaVersion(update.version) : t.updateDialogNewVersionVersion(update.version),
         style: const TextStyle(fontSize: 18),
       ),
       content: SingleChildScrollView(
@@ -94,14 +95,14 @@ class _UpdateDialogState extends State<UpdateDialog> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              update.notes.isNotEmpty ? update.notes : 'Verbesserungen und Fehlerbehebungen.',
+              update.notes.isNotEmpty ? update.notes : t.updateDialogImprovementsAndBugFixes,
               style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
             ),
             if (downloading) ...[
               const SizedBox(height: 16),
               LinearProgressIndicator(value: _progress == 0 ? null : _progress, color: AppTheme.sageGreen),
               const SizedBox(height: 6),
-              Text('Wird heruntergeladen … ${((_progress ?? 0) * 100).round()} %',
+              Text(t.updateDialogDownloadingProgress(((_progress ?? 0) * 100).round()),
                   style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
             ],
             if (_error != null) ...[
@@ -109,8 +110,8 @@ class _UpdateDialogState extends State<UpdateDialog> {
               Text(_error!, style: const TextStyle(color: AppTheme.rose, fontSize: 13)),
             ],
             const SizedBox(height: 12),
-            const Text(
-              'Deine Daten bleiben bei der Aktualisierung erhalten.',
+            Text(
+              t.updateDialogYourDataIsKeptDuring,
               style: TextStyle(color: AppTheme.textMuted, fontSize: 12),
             ),
           ],
@@ -121,11 +122,11 @@ class _UpdateDialogState extends State<UpdateDialog> {
           TextButton(
             // Erinnert nach UpdateService.checkInterval erneut.
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Später', style: TextStyle(color: AppTheme.textSecondary)),
+            child: Text(t.updateDialogLater, style: TextStyle(color: AppTheme.textSecondary)),
           ),
         ElevatedButton(
           onPressed: downloading ? null : _install,
-          child: const Text('Jetzt aktualisieren'),
+          child: Text(t.updateDialogUpdateNow),
         ),
       ],
     );

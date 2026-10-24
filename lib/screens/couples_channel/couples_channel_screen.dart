@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/couple_channel_models.dart';
 import '../../services/data_service.dart';
+import '../../services/listen_uebersetzung.dart';
 import '../../services/message_notifier.dart';
 import '../../services/nostr_service.dart';
 import '../courses/lesson_detail_screen.dart';
@@ -786,7 +787,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               _buildMatchBanner(matches),
               const SizedBox(height: 16),
             ],
-            ...defaultFantasyOptions.map((opt) => _buildWishCard(opt, myVotes[opt.id], matches.contains(opt.id))),
+            ...ListenUebersetzung.fantasien.map((opt) => _buildWishCard(opt, myVotes[opt.id], matches.contains(opt.id))),
           ],
         );
       },
@@ -813,7 +814,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           ),
           const SizedBox(height: 8),
           ...matches.map((id) {
-            final opt = defaultFantasyOptions.firstWhere((o) => o.id == id, orElse: () => defaultFantasyOptions.first);
+            final opt = ListenUebersetzung.fantasien.firstWhere((o) => o.id == id, orElse: () => ListenUebersetzung.fantasien.first);
             return Padding(
               padding: const EdgeInsets.only(top: 4),
               child: Text('✨ ${opt.title}',

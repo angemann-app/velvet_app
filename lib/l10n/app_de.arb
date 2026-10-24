@@ -1,0 +1,76 @@
+{
+  "@@locale": "de",
+  "appName": "VelvetPulse",
+  "spracheTitel": "Sprache",
+  "spracheAutomatisch": "Automatisch (wie das Gerät)",
+  "spracheDeutsch": "Deutsch",
+  "spracheEnglisch": "English",
+  "mainNavigationProgrammeCourses": "Programm & Kurse",
+  "mainNavigationSomaticsTraining": "Somatik & Training",
+  "mainNavigationCbtReframing": "KVT-Reframing",
+  "mainNavigationCoupleChannel": "Paar-Kanal",
+  "mainNavigationAiCoach": "KI-Coach",
+  "mainNavigationCourses": "Kurse",
+  "mainNavigationTraining": "Training",
+  "mainNavigationReframing": "Reframing",
+  "whatsNewWelcomeBack": "Willkommen zurück",
+  "whatsNewThisIsNewInVersion": "Das ist neu in Version {version}.",
+  "@whatsNewThisIsNewInVersion": {
+    "placeholders": {
+      "version": {
+        "type": "Object"
+      }
+    }
+  },
+  "whatsNewLetSGo": "Los geht's",
+  "playerSteuerungStop": "Beenden",
+  "playerSteuerungResume": "Fortsetzen",
+  "playerSteuerungPause": "Pausieren",
+  "playerSteuerungPause2": "Pause",
+  "playerSteuerungSkip": "Überspringen",
+  "ausspracheMeldenWordMispronounced": "Wort falsch ausgesprochen?",
+  "ausspracheMeldenThanksForHelpingTheReport": "Danke, dass du hilfst! Die Meldung landet öffentlich auf GitHub und braucht dort ein Konto. Sie ist unter deinem Kontonamen sichtbar.\n\nÜbertragen werden nur die Stelle im Audio und die Stimme. Das Wort trägst du selbst ein.",
+  "ausspracheMeldenCancel": "Abbrechen",
+  "ausspracheMeldenContinueToGithub": "Weiter zu GitHub",
+  "ausspracheMeldenTheBrowserCouldNotBe": "Der Browser ließ sich nicht öffnen.",
+  "updateDialogYouHaveTheLatestVersion": "Du hast die neueste Version.",
+  "updateDialogPleaseAllowTheAppTo": "Bitte erlaube der App im nächsten Schritt, Updates zu installieren, und tippe dann erneut.",
+  "updateDialogTheDownloadedFileIsDamaged": "Die heruntergeladene Datei ist beschädigt. Bitte später noch einmal versuchen.",
+  "updateDialogTheUpdateDidnTWork": "Das Update hat nicht geklappt ({statusName}). Bitte später noch einmal versuchen.",
+  "@updateDialogTheUpdateDidnTWork": {
+    "placeholders": {
+      "statusName": {
+        "type": "Object"
+      }
+    }
+  },
+  "updateDialogDownloadFailedPleaseCheckYour": "Download fehlgeschlagen. Bitte Internetverbindung prüfen.",
+  "updateDialogNewBetaVersion": "Neue Beta {version}",
+  "@updateDialogNewBetaVersion": {
+    "placeholders": {
+      "version": {
+        "type": "Object"
+      }
+    }
+  },
+  "updateDialogNewVersionVersion": "Neue Version {version}",
+  "@updateDialogNewVersionVersion": {
+    "placeholders": {
+      "version": {
+        "type": "Object"
+      }
+    }
+  },
+  "updateDialogImprovementsAndBugFixes": "Verbesserungen und Fehlerbehebungen.",
+  "updateDialogDownloadingProgress": "Wird heruntergeladen … {progress} %",
+  "@updateDialogDownloadingProgress": {
+    "placeholders": {
+      "progress": {
+        "type": "Object"
+      }
+    }
+  },
+  "updateDialogYourDataIsKeptDuring": "Deine Daten bleiben bei der Aktualisierung erhalten.",
+  "updateDialogLater": "Später",
+  "updateDialogUpdateNow": "Jetzt aktualisieren"
+}

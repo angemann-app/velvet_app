@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../services/whats_new.dart';
 import '../theme/app_theme.dart';
+import '../l10n/t.dart';
 
 /// Zeigt nach einem Update einmal, was neu ist, und merkt sich das danach.
 Future<void> showWhatsNewIfUpdated(BuildContext context) async {
@@ -49,13 +50,13 @@ class WhatsNewScreen extends StatelessWidget {
                 children: [
                   const Icon(Icons.auto_awesome_rounded, color: AppTheme.rose, size: 40),
                   const SizedBox(height: 16),
-                  const Text(
-                    'Willkommen zurück',
+                  Text(
+                    t.whatsNewWelcomeBack,
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800, color: AppTheme.textPrimary),
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    'Das ist neu in Version $version.',
+                    t.whatsNewThisIsNewInVersion(version),
                     style: const TextStyle(fontSize: 15, color: AppTheme.textSecondary),
                   ),
                   const SizedBox(height: 26),
@@ -76,7 +77,7 @@ class WhatsNewScreen extends StatelessWidget {
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                   ),
-                  child: const Text('Los geht\'s', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
+                  child: Text(t.whatsNewLetSGo, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
                 ),
               ),
             ),

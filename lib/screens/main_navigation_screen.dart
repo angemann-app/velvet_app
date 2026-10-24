@@ -9,6 +9,7 @@ import 'cbt/cbt_journal_screen.dart';
 import 'couples_channel/couples_channel_screen.dart';
 import 'ai_coach/ai_coach_screen.dart';
 import 'whats_new_screen.dart';
+import '../l10n/t.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -52,15 +53,15 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   String _getAppBarTitle(int index) {
     switch (index) {
       case 0:
-        return 'Programm & Kurse';
+        return t.mainNavigationProgrammeCourses;
       case 1:
-        return 'Somatik & Training';
+        return t.mainNavigationSomaticsTraining;
       case 2:
-        return 'KVT-Reframing';
+        return t.mainNavigationCbtReframing;
       case 3:
-        return 'Paar-Kanal';
+        return t.mainNavigationCoupleChannel;
       case 4:
-        return 'KI-Coach';
+        return t.mainNavigationAiCoach;
       default:
         return 'VelvetPulse';
     }
@@ -113,31 +114,31 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           selectedFontSize: 11,
           unselectedFontSize: 11,
           onTap: _showTab,
-          items: const [
+          items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.menu_book_rounded),
               activeIcon: Icon(Icons.menu_book_rounded),
-              label: 'Kurse',
+              label: t.mainNavigationCourses,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.fitness_center_rounded),
               activeIcon: Icon(Icons.fitness_center_rounded),
-              label: 'Training',
+              label: t.mainNavigationTraining,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.psychology_rounded),
               activeIcon: Icon(Icons.psychology_rounded),
-              label: 'Reframing',
+              label: t.mainNavigationReframing,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.favorite_outline_rounded),
               activeIcon: Icon(Icons.favorite_rounded),
-              label: 'Paar-Kanal',
+              label: t.mainNavigationCoupleChannel,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.chat_bubble_outline_rounded),
               activeIcon: Icon(Icons.chat_bubble_rounded),
-              label: 'KI-Coach',
+              label: t.mainNavigationAiCoach,
             ),
           ],
         ),

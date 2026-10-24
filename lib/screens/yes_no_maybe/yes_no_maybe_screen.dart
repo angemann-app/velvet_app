@@ -8,6 +8,7 @@ import '../../models/content_models.dart';
 import '../../models/yes_no_maybe_models.dart';
 import '../../services/auto_backup_service.dart';
 import '../../services/data_service.dart';
+import '../../services/listen_uebersetzung.dart';
 import '../../services/nostr_service.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
@@ -253,7 +254,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
 
   @override
   Widget build(BuildContext context) {
-    final totalItems = allYesNoMaybeItems.length;
+    final totalItems = ListenUebersetzung.eintraege.length;
     final answeredCount = _myAnswers.values.where((v) => v.isNotEmpty).length;
 
     return Scaffold(
@@ -325,7 +326,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   builder: (context, _) {
                     final partnerVotes = _nostr.partnerFantasyVotesNotifier.value;
                     int matchCount = 0;
-                    for (var item in allYesNoMaybeItems) {
+                    for (var item in ListenUebersetzung.eintraege) {
                       final myV = _myAnswers[item.id] ?? _nostr.myFantasyVotesNotifier.value[item.id];
                       final pV = partnerVotes[item.id];
                       if (myV == 'yes' && pV == 'yes') {
@@ -432,7 +433,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              _buildFilterChip('all', 'Alle (${allYesNoMaybeItems.length})'),
+              _buildFilterChip('all', 'Alle (${ListenUebersetzung.eintraege.length})'),
               const SizedBox(width: 8),
               _buildFilterChip('open', 'Offen'),
               const SizedBox(width: 8),
@@ -448,7 +449,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
         const SizedBox(height: 16),
 
         // Categories & Items
-        ...velvetYesNoMaybeCategories.map((category) {
+        ...ListenUebersetzung.kategorien.map((category) {
           final filteredItems = category.items.where((item) {
             final vote = _myAnswers[item.id];
             if (_selectedFilter == 'open') return vote == null || vote.isEmpty;
@@ -773,7 +774,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
         final yesMatches = <YesNoMaybeItem>[];
         final curiosityMatches = <YesNoMaybeItem>[];
 
-        for (var item in allYesNoMaybeItems) {
+        for (var item in ListenUebersetzung.eintraege) {
           final myV = _myAnswers[item.id] ?? _nostr.myFantasyVotesNotifier.value[item.id];
           final pV = partnerVotes[item.id];
 

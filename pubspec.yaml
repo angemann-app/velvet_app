@@ -30,6 +30,7 @@ dependencies:
   flutter_local_notifications: ^22.3.2
   url_launcher: ^6.3.3
   path_provider: ^2.1.6
+  intl: any
 
 dev_dependencies:
   flutter_test:
@@ -39,12 +40,20 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   assets:
     - assets/data/velvet_content.json
     - assets/data/paar_abend.json
     - assets/data/selbst_reise.json
     - assets/data/neuigkeiten.json
+    # Englische Inhalte (seit 4.5 Teil der App, Sprache je nach Gerät oder Einstellung)
+    - translations/en/velvet_content.json
+    - translations/en/paar_abend.json
+    - translations/en/selbst_reise.json
+    - translations/en/neuigkeiten.json
+    - translations/en/yes_no_maybe.json
+    - translations/en/fantasy_options.json
     - assets/images/
     - assets/audio/
     - assets/audio/cues/

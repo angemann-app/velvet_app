@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'sprache.dart';
 import 'update_service.dart';
 
 /// Ein Punkt auf dem „Was ist neu“-Bildschirm.
@@ -61,7 +62,7 @@ class WhatsNew {
   }
 
   static Future<List<WhatsNewEntry>> load() async {
-    final data = jsonDecode(await rootBundle.loadString('assets/data/neuigkeiten.json'));
+    final data = jsonDecode(await rootBundle.loadString(Sprache.inhalt('neuigkeiten.json')));
     return [for (final e in data['eintraege'] as List) WhatsNewEntry.fromJson(e)];
   }
 }
