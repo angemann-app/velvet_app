@@ -483,6 +483,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                       editPartnerProfile(context);
                     case 'reconnect':
                       _nostr.reconnectNextRelay();
+                    case 'unpair':
+                      _confirmUnpair();
                   }
                 },
                 itemBuilder: (_) => const [
@@ -490,6 +492,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                   PopupMenuItem(value: 'info', child: Text('Verschlüsselung & Details')),
                   PopupMenuItem(value: 'pair', child: Text('Verbindung verwalten')),
                   PopupMenuItem(value: 'reconnect', child: Text('Neu verbinden')),
+                  PopupMenuItem(value: 'unpair', child: Text('Verbindung trennen')),
                 ],
               ),
             ],
@@ -842,6 +845,34 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   }
 
   // ---------------------------------------------------------------------------
+
+  Future<void> _confirmUnpair() async {
+    final name = _nostr.partnerName;
+    final ja = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppTheme.surface,
+        title: const Text('Verbindung trennen?', style: TextStyle(fontSize: 18)),
+        content: Text(
+          'Der Verlauf mit $name, die Antworten von $name auf die Ja/Nein-Liste und die geteilten '
+          'Reflexionen werden auf diesem Handy gelöscht. Deine eigenen Antworten bleiben erhalten.\n\n'
+          'Auf dem Handy von $name ändert sich nichts.',
+          style: const TextStyle(color: AppTheme.textSecondary, height: 1.45),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Abbrechen')),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Trennen', style: TextStyle(color: AppTheme.rose)),
+          ),
+        ],
+      ),
+    );
+    if (ja != true) return;
+    await _nostr.unpairPartner();
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Verbindung getrennt.')));
+  }
 
   void _showInfoDialog() {
     showDialog(

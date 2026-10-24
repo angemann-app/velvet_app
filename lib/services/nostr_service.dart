@@ -26,6 +26,13 @@ class NostrService {
   static const String _keyPartnerGender = 'velvet_partner_gender';
   static const String _keyProfilePromptDismissed = 'velvet_partner_profile_prompt_dismissed';
 
+  /// Zeitstempel (created_at) der neuesten verarbeiteten Nachricht des Partners. Beim Verbinden
+  /// wird alles seitdem abgeholt, nicht nur die letzten paar Nachrichten.
+  static const String _keyInboxSince = 'velvet_inbox_since';
+
+  /// Spielraum für abweichende Uhren und Nachzügler beim Abholen.
+  static const int _inboxOverlapSeconds = 600;
+
   static const List<String> fallbackRelays = [
     'wss://relay.primal.net',
     'wss://nos.lol',
@@ -97,6 +104,12 @@ class NostrService {
   final ValueNotifier<String?> joinRequestNotifier = ValueNotifier<String?>(null);
 
   final Set<String> _processedEventIds = {};
+
+  int? _inboxSince;
+
+  /// Wann die gerade gültige Stimme des Partners je Fantasie abgegeben wurde. Beim erneuten
+  /// Abholen kommen Nachrichten in beliebiger Reihenfolge; eine ältere darf keine neuere überschreiben.
+  final Map<String, int> _partnerVoteTimes = {};
 
   /// Merkt sich eine verschickte Einladung. Die erste Nachricht, die danach von
   /// einem unbekannten Absender kommt, wird als Verbindungsanfrage angezeigt.
@@ -210,6 +223,8 @@ class NostrService {
     _partnerPublicKey = prefs.getString(_keyPartnerPubKey);
     _partnerName = prefs.getString(_keyPartnerName) ?? 'Partner';
     inviteNameNotifier.value = prefs.getString(_keyInviteName);
+    _inboxSince = prefs.getInt(_keyInboxSince);
+    _partnerVoteTimes.clear();
     partnerGenderNotifier.value = prefs.getString(_keyPartnerGender);
     partnerPubKeyNotifier.value = _partnerPublicKey;
     partnerNameNotifier.value = _partnerName;
@@ -357,13 +372,17 @@ class NostrService {
 
   void _subscribeToInbox([_RelayConnection? only]) {
     if (_myPublicKey == null) return;
+    // Alles seit der letzten bekannten Nachricht abholen. Früher waren es nur die letzten 20 –
+    // wer offline war, verpasste z. B. die meisten Antworten einer geteilten Ja/Nein-Liste.
+    final since = _inboxSince;
     final reqMessage = jsonEncode([
       'REQ',
       'velvet_sub',
       {
         'kinds': [4],
         '#p': [_myPublicKey!],
-        'limit': 20,
+        if (since != null) 'since': since - _inboxOverlapSeconds,
+        'limit': since != null ? 500 : 100,
       }
     ]);
     for (final relay in only == null ? _relays.values : [only]) {
@@ -427,13 +446,18 @@ class NostrService {
     final String content = ev['content'] as String;
     final int createdAt = ev['created_at'] as int;
 
-    // Ist ein Partner gesetzt, zählen nur seine Nachrichten.
-    if (_partnerPublicKey != null && _partnerPublicKey!.isNotEmpty) {
-      if (senderPubkey != _partnerPublicKey) {
-        return;
-      }
+    // Ist ein Partner gesetzt, zählen nur seine Nachrichten. Ohne Partner nur, solange eine
+    // Einladung offen ist (als Verbindungsanfrage) – sonst könnte jeder Fremde schreiben.
+    if (isPaired) {
+      if (senderPubkey != _partnerPublicKey) return;
+    } else if (inviteNameNotifier.value == null) {
+      return;
     }
     _processedEventIds.add(id);
+    if (isPaired && (_inboxSince == null || createdAt > _inboxSince!)) {
+      _inboxSince = createdAt;
+      unawaited(SharedPreferences.getInstance().then((p) => p.setInt(_keyInboxSince, createdAt)));
+    }
 
     try {
       final decrypted = _nip04.decrypt(_myPrivateKey!, senderPubkey, content);
@@ -491,6 +515,15 @@ class NostrService {
             partnerReflectionsNotifier.value = {...partnerReflectionsNotifier.value, lessonId: reflection};
             _savePartnerReflections();
           }
+          // Ja/Nein-Liste gebündelt: lesbarer Text für ältere Versionen, alle Stimmen im Zusatzfeld.
+          final votes = data['votes'];
+          if (!isMe && votes is Map && votes.length <= 500) {
+            _applyPartnerVotes({
+              for (final e in votes.entries)
+                if (e.key is String && e.value is String && (e.key as String).length <= 64)
+                  e.key as String: e.value as String,
+            }, timestamp);
+          }
         }
       }
     } catch (_) {
@@ -526,14 +559,14 @@ class NostrService {
           updated[fantasyId] = fantasyVote;
           myFantasyVotesNotifier.value = updated;
           _saveMyFantasyVotes();
+          _calculateMatches();
         } else {
-          final updated = Map<String, String>.from(partnerFantasyVotesNotifier.value);
-          updated[fantasyId] = fantasyVote;
-          partnerFantasyVotesNotifier.value = updated;
-          _savePartnerFantasyVotes();
+          _applyPartnerVotes({fantasyId: fantasyVote}, timestamp);
         }
-        _calculateMatches();
       }
+      // Stimmen gehören nicht in den Verlauf: Sie würden den Zwischenspeicher (100 Einträge)
+      // füllen und echte Nachrichten verdrängen.
+      return;
     }
 
     // Add to message list if chat or ping
@@ -544,6 +577,24 @@ class NostrService {
     messagesNotifier.value = currentList;
 
     _saveMessagesToCache();
+  }
+
+  void _applyPartnerVotes(Map<String, String> votes, DateTime timestamp) {
+    final t = timestamp.millisecondsSinceEpoch;
+    final updated = Map<String, String>.from(partnerFantasyVotesNotifier.value);
+    var changed = false;
+    for (final e in votes.entries) {
+      if ((_partnerVoteTimes[e.key] ?? 0) > t) continue;
+      _partnerVoteTimes[e.key] = t;
+      if (updated[e.key] != e.value) {
+        updated[e.key] = e.value;
+        changed = true;
+      }
+    }
+    if (!changed) return;
+    partnerFantasyVotesNotifier.value = updated;
+    _savePartnerFantasyVotes();
+    _calculateMatches();
   }
 
   void _calculateMatches() {
@@ -562,9 +613,18 @@ class NostrService {
     matchesNotifier.value = matches;
   }
 
-  Future<bool> setPartner(String inputKey, {String? name}) async {
+  /// true, wenn [inputKey] eine andere Person ist als das jetzige Gegenüber –
+  /// dann würde [setPartner] deren Verlauf löschen.
+  bool wouldReplacePartner(String inputKey) {
+    if (!isPaired) return false;
+    final key = _normalizePartnerKey(inputKey);
+    return key != null && key != _partnerPublicKey;
+  }
+
+  /// Macht aus npub, Hex oder einer ganzen Einladungsnachricht den Hex-Schlüssel, sonst null.
+  String? _normalizePartnerKey(String inputKey) {
     String cleanKey = inputKey.trim();
-    if (cleanKey.isEmpty) return false;
+    if (cleanKey.isEmpty) return null;
     // Wer die ganze Einladungsnachricht einfügt, soll trotzdem verbunden werden.
     final npubInText = RegExp(r'npub1[02-9ac-hj-np-z]{20,}').firstMatch(cleanKey);
     if (npubInText != null) cleanKey = npubInText.group(0)!;
@@ -579,13 +639,23 @@ class NostrService {
         }
       } catch (e) {
         debugPrint('Failed to decode npub: $e');
-        return false;
+        return null;
       }
     }
 
     // Hex must be valid 64-char key
-    if (cleanKey.length != 64) {
-      return false;
+    cleanKey = cleanKey.toLowerCase();
+    return RegExp(r'^[0-9a-f]{64}$').hasMatch(cleanKey) ? cleanKey : null;
+  }
+
+  Future<bool> setPartner(String inputKey, {String? name}) async {
+    final cleanKey = _normalizePartnerKey(inputKey);
+    if (cleanKey == null) return false;
+
+    final prefs = await SharedPreferences.getInstance();
+    // Neue Person: Verlauf, Stimmen und Reflexionen der alten gehören nicht dazu.
+    if (isPaired && cleanKey != _partnerPublicKey) {
+      await _clearPartnerData(prefs);
     }
 
     _partnerPublicKey = cleanKey;
@@ -599,7 +669,6 @@ class NostrService {
       _partnerName = name.trim();
     }
 
-    final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_keyPartnerPubKey, _partnerPublicKey!);
     await prefs.setString(_keyPartnerName, _partnerName);
 
@@ -620,6 +689,8 @@ class NostrService {
     await prefs.setString(_keyPartnerName, _partnerName);
   }
 
+  /// Trennt die Verbindung und löscht alles, was zu dieser Person gehört.
+  /// Die eigenen Antworten (Ja/Nein-Liste, Fantasien) bleiben erhalten.
   Future<void> unpairPartner() async {
     _partnerPublicKey = null;
     _partnerNpub = null;
@@ -631,11 +702,24 @@ class NostrService {
 
     partnerPubKeyNotifier.value = null;
     partnerNameNotifier.value = 'Partner';
+    await _clearPartnerData(prefs);
+  }
+
+  Future<void> _clearPartnerData(SharedPreferences prefs) async {
+    messagesNotifier.value = [];
+    lastPingNotifier.value = null;
+    await prefs.remove(_keyCachedMessages);
+    partnerFantasyVotesNotifier.value = {};
+    _partnerVoteTimes.clear();
+    await prefs.remove(_keyPartnerFantasyVotes);
+    _calculateMatches();
     partnerReflectionsNotifier.value = {};
     await prefs.remove(_keyPartnerReflections);
     partnerGenderNotifier.value = null;
     await prefs.remove(_keyPartnerGender);
     await prefs.remove(_keyProfilePromptDismissed);
+    _inboxSince = null;
+    await prefs.remove(_keyInboxSince);
   }
 
   /// Fehlen Name oder Geschlecht des Gegenübers, fragt der Paar-Kanal einmal nach.
@@ -676,9 +760,10 @@ class NostrService {
         'reflection': answer.trim(),
       });
 
-  Future<bool> _sendLearning(Map<String, String> fields) async {
+  Future<bool> _sendLearning(Map<String, String> fields, {Map<String, Object> extra = const {}}) async {
     if (!isPaired) return false;
-    final payload = jsonEncode({'type': 'chat', ...fields, 'timestamp': DateTime.now().millisecondsSinceEpoch});
+    final payload = jsonEncode(
+        {'type': 'chat', ...fields, ...extra, 'timestamp': DateTime.now().millisecondsSinceEpoch});
     return _sendKind4(payload, (eventId) {
       _parseAndAddMessage(
         eventId: eventId,
@@ -760,13 +845,32 @@ class NostrService {
     });
   }
 
+  /// Teilt alle Antworten der Ja/Nein-Liste in EINER Nachricht. Gibt die Zahl der geteilten
+  /// Antworten zurück, 0 wenn nichts rausging.
   Future<int> syncAllYesNoMaybeVotes(Map<String, String> answers) async {
-    int count = 0;
-    for (var entry in answers.entries) {
-      final success = await sendFantasyVote(entry.key, entry.value);
-      if (success) count++;
+    if (answers.isEmpty) return 0;
+    myFantasyVotesNotifier.value = {...myFantasyVotesNotifier.value, ...answers};
+    await _saveMyFantasyVotes();
+    _calculateMatches();
+    if (!isPaired) return 0;
+
+    // Übergang: Versionen bis 4.3 kennen nur Einzelstimmen. Solange das Gegenüber noch so eine
+    // Version haben kann, gehen sie zusätzlich raus (neue Versionen werten sie gleich aus).
+    // Kann entfallen, wenn 4.4 stabil ist und alle aktualisiert haben.
+    for (final entry in answers.entries) {
+      final payload = jsonEncode({
+        'type': 'fantasy_vote',
+        'fantasyId': entry.key,
+        'vote': entry.value,
+        'timestamp': DateTime.now().millisecondsSinceEpoch,
+      });
+      await _sendKind4(payload, _processedEventIds.add);
     }
-    return count;
+
+    final ok = await _sendLearning({
+      'text': '🗳️ Ich habe meine Antworten der Ja/Nein-Liste geteilt.',
+    }, extra: {'votes': answers});
+    return ok ? answers.length : 0;
   }
 
   Future<bool> _sendKind4(String plaintext, void Function(String eventId) onSuccess) async {

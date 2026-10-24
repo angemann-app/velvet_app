@@ -108,7 +108,9 @@ class MessageNotifier {
     await _plugin.show(
       id: _notificationId,
       title: discreet ? 'Pulse' : 'VelvetPulse',
-      body: count > 1 ? '$count neue Nachrichten' : 'Neue Nachricht',
+      // Ohne Entschlüsseln lässt sich nicht unterscheiden, was eine Nachricht und was z. B. eine
+      // einzelne Ja/Nein-Stimme ist – darum keine Zahl.
+      body: count > 1 ? 'Neue Nachrichten' : 'Neue Nachricht',
       notificationDetails: const NotificationDetails(
         android: AndroidNotificationDetails(
           'messages',

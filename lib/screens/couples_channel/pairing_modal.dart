@@ -54,6 +54,33 @@ class _PairingModalState extends State<PairingModal>
         ? _nameInputController.text.trim()
         : 'Partner';
 
+    if (nostr.wouldReplacePartner(rawKey)) {
+      final old = nostr.partnerName;
+      final weiter = await showDialog<bool>(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          backgroundColor: AppTheme.surface,
+          title: const Text('Mit jemand anderem verbinden?', style: TextStyle(fontSize: 18)),
+          content: Text(
+            'Du bist gerade mit $old verbunden. Diese Verbindung wird ersetzt, und der Verlauf mit $old, '
+            'die Antworten von $old und die geteilten Reflexionen werden auf diesem Handy gelöscht.',
+            style: const TextStyle(color: AppTheme.textSecondary, height: 1.45),
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Abbrechen')),
+            TextButton(
+              onPressed: () => Navigator.pop(ctx, true),
+              child: const Text('Ersetzen', style: TextStyle(color: AppTheme.rose)),
+            ),
+          ],
+        ),
+      );
+      if (weiter != true) {
+        if (mounted) setState(() => _isProcessingScan = false);
+        return;
+      }
+    }
+
     final success = await nostr.setPartner(rawKey, name: name);
 
     if (mounted) {
