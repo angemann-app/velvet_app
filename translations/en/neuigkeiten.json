@@ -208,6 +208,27 @@
           "text": "If you tested beta versions, you're now back on the stable channel. For the next test round, switch “Receive beta versions” in your profile back on."
         }
       ]
+    },
+    {
+      "build": 34,
+      "version": "4.6.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Guided audio right on the start page",
+          "text": "You'll now find the body journey and the shared evening at the top of the courses and in the couple channel, with new images."
+        },
+        {
+          "icon": "school",
+          "titel": "New course: Every body is beautiful and sexy",
+          "text": "Five lessons against comparison: the variety of real bodies, a kind look in the mirror, lights on in bed, and kindness when your body changes."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Spicy gets hotter",
+          "text": "In spicy mode the app now glows red, and in the couple chat you can invite your partner to spicy mode."
+        }
+      ]
     }
   ],
   "_source": {
@@ -218,6 +239,7 @@
     "news:29": "e43d0214df8aeed3",
     "news:30": "042046eb1b760fe8",
     "news:32": "d365c10765d7fc66",
-    "news:33": "ba744f6de785458c"
+    "news:33": "ba744f6de785458c",
+    "news:34": "c0fad8002202b859"
   }
 }

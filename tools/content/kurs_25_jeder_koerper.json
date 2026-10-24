@@ -1,0 +1,65 @@
+{
+  "id": "course_every_body",
+  "title": "25. Jeder Körper ist schön und sexy",
+  "subtitle": "Raus aus dem Vergleich, rein ins Spüren: wie du deinen Körper mit freundlichen Augen siehst und dich darin begehrenswert fühlst.",
+  "icon": "favorite",
+  "category": "all",
+  "image": "assets/images/cover_25.svg",
+  "lessons": [
+    {
+      "id": "beauty_1",
+      "title": "Schönheitsideale entzaubern",
+      "type": "article",
+      "duration_min": 5,
+      "linked_tool": "none",
+      "summary": "Woher das Bild vom „richtigen“ Körper kommt, und warum echte Körper so viel vielfältiger sind.",
+      "content": "Die meisten Körper, die wir täglich sehen, sind ausgewählt, ausgeleuchtet und oft nachbearbeitet. Werbung, Filter und Pornos zeigen einen winzigen Ausschnitt dessen, wie Menschen aussehen. Wer sich daran misst, verliert fast immer.\n\nWie vielfältig Körper sind\nSchamlippen sind mal kurz, mal lang, mal symmetrisch, oft nicht. Penisse sind gerade oder gebogen, im Ruhezustand klein oder größer, und das sagt wenig über ihre Größe in Erregung. Brüste sind unterschiedlich groß, oft verschieden geformt, Brustwarzen hell oder dunkel, flach oder vorstehend. Bäuche haben Rundungen, Falten, Dehnungsstreifen. All das ist normal, nicht die Ausnahme.\n\nWarum der Vergleich so wehtut\nUnser Gehirn vergleicht automatisch. Wer viele bearbeitete Bilder sieht, verschiebt unbemerkt den inneren Maßstab. Das Problem ist nicht dein Körper, sondern das Maß, an dem er gemessen wird.\n\nDie Aufgabe\nAchte eine Woche lang darauf, welche Körperbilder dir begegnen: auf dem Handy, in der Werbung, in Filmen. Frag dich jedes Mal kurz: Ist das echt, oder inszeniert? Und wenn du magst: Folge ein paar Menschen oder Projekten, die echte, unbearbeitete Körper zeigen. Viele berichten, dass sich ihr Blick auf sich selbst dadurch verändert.",
+      "reflection_question": "Welches Bild von einem „richtigen“ Körper trägst du mit dir herum, und woher kommt es?",
+      "voice": "both"
+    },
+    {
+      "id": "beauty_2",
+      "title": "Der freundliche Blick in den Spiegel",
+      "type": "article",
+      "duration_min": 5,
+      "linked_tool": "selbst_reise",
+      "summary": "Beschreiben statt bewerten: eine Spiegel-Übung, die den inneren Kritiker leiser macht.",
+      "content": "Viele schauen in den Spiegel wie ein strenger Prüfer: Was stimmt nicht, was ist zu viel, was zu wenig? Dieser Blick ist erlernt, und er lässt sich auch wieder verlernen.\n\nBeschreiben statt bewerten\nDer erste Schritt ist nicht, alles schön zu finden. Das wäre zu viel verlangt. Der erste Schritt ist, neutral hinzuschauen. Statt „mein Bauch ist zu dick“ sagst du: „Mein Bauch ist rund und weich.“ Statt „meine Beine sind hässlich“: „Meine Beine tragen mich jeden Tag.“ Neutralität ist eine Brücke zwischen Ablehnung und Zuneigung.\n\nDie Aufgabe\nStell dich fünf Minuten lang vor einen Spiegel, angezogen oder nackt, wie es sich für dich richtig anfühlt. Wandere mit dem Blick langsam von oben nach unten. Beschreib jede Stelle in einem neutralen Satz, laut oder leise. Wenn eine Bewertung auftaucht, bemerke sie und formuliere sie um. Zum Schluss nenne drei Dinge, die du an deinem Körper magst oder für die du ihm dankbar bist.\n\nWenn es schwerfällt\nDas ist normal, besonders am Anfang. Fang mit fünf Minuten an, nicht mit einer Stunde. Wiederhole es ein paar Tage hintereinander. Viele merken nach einer Woche, dass der innere Kritiker leiser wird.\n\nVertiefen\nDie geführte Körperreise unten ist die Fortsetzung mit den Händen: Spüren statt anschauen.",
+      "reflection_question": "Welcher neutrale Satz über deinen Körper hat sich überraschend gut angefühlt?",
+      "voice": "both"
+    },
+    {
+      "id": "beauty_3",
+      "title": "Sexy ist ein Gefühl, kein Maß",
+      "type": "article",
+      "duration_min": 5,
+      "linked_tool": "none",
+      "summary": "Was Anziehung wirklich ausmacht, und wie du dich in deinem Körper begehrenswert fühlst.",
+      "content": "Wen wir anziehend finden, hängt erstaunlich wenig von Maßen ab. Ausstrahlung, Präsenz, ein Blick, ein Lachen, die Art, wie sich jemand bewegt: Das sind die Dinge, an die sich Menschen erinnern. Und das Wichtigste daran: Sexy fühlen kann man sich lernen.\n\nWas dich sexy fühlen lässt\nFür manche ist es ein bestimmtes Kleidungsstück, für andere Musik, Tanzen, ein Duft, eine Bewegung, oder einfach ein ausgeschlafener Morgen. Es geht nicht darum, wie du für andere aussiehst, sondern wie du dich in dir fühlst.\n\nDie Aufgabe\nSchreib eine Liste mit fünf Dingen, bei denen du dich sexy oder lebendig fühlst. Wähle eins davon und tu es diese Woche bewusst, nur für dich. Zum Beispiel: Zieh Unterwäsche an, die sich gut anfühlt, auch wenn niemand sie sieht. Tanz in der Küche zu einem Lied, das dich bewegt. Geh einen Tag lang aufrechter, mit weichem Bauch und offener Brust.\n\nDer Körper denkt mit\nHaltung und Gefühl hängen zusammen. Wer sich aufrichtet und tief atmet, fühlt sich oft auch innerlich anders. Probier es aus und spür nach, was es mit dir macht.",
+      "reflection_question": "Bei welcher der fünf Dinge auf deiner Liste fühlst du dich am meisten wie du selbst?",
+      "voice": "both"
+    },
+    {
+      "id": "beauty_4",
+      "title": "Licht an: Scham im Bett lösen",
+      "type": "article",
+      "duration_min": 6,
+      "linked_tool": "none",
+      "summary": "Wenn das Licht ausgehen muss oder die Decke nicht wegdarf: wie ihr Scham gemeinsam leiser macht.",
+      "content": "Viele Menschen haben beim Sex nur halb Lust, weil ein Teil ihrer Aufmerksamkeit damit beschäftigt ist, den Bauch einzuziehen, die Decke festzuhalten oder eine bestimmte Stellung zu vermeiden. Diese Selbstbeobachtung kostet Erregung. Je weniger man sich beobachtet, desto mehr kann man spüren.\n\nWas wirklich zählt\nOft achtet das Gegenüber auf ganz andere Dinge als man selbst. Auf Nähe, auf Lust, darauf, dass man sich hingibt. Der Bauch, den man selbst so kritisch sieht, ist für das Gegenüber oft einfach ein Teil des Menschen, den es begehrt.\n\nDie Aufgabe zu zweit\nNehmt euch einen Abend mit warmem, gedimmtem Licht. Zieht euch gegenseitig langsam aus. Wer auszieht, sagt bei jedem Kleidungsstück einen Satz darüber, was er oder sie an dieser Stelle schön findet. Wer ausgezogen wird, sagt nichts, außer „danke“. Dann tauscht ihr.\n\nWenn es zu viel ist\nFangt kleiner an: mit Kerzenlicht statt Deckenlampe, mit einem Shirt, das anbleiben darf. Es gibt keinen Zwang zum Licht. Es gibt nur die Einladung, Stück für Stück mehr von euch zu zeigen.\n\nFür Singles\nDie Übung geht auch allein vor dem Spiegel: langsam ausziehen und jeder Stelle einen freundlichen Satz schenken.",
+      "reflection_question": "Was hat dich an dem, was dein Gegenüber an dir schön findet, am meisten überrascht?",
+      "voice": "both"
+    },
+    {
+      "id": "beauty_5",
+      "title": "Wenn der Körper sich verändert",
+      "type": "article",
+      "duration_min": 5,
+      "linked_tool": "none",
+      "summary": "Schwangerschaft, Alter, Krankheit, Narben: wie du deinem Körper durch Veränderungen hindurch freundlich bleibst.",
+      "content": "Kein Körper bleibt, wie er ist. Schwangerschaft, Älterwerden, Gewichtsschwankungen, Operationen, Krankheiten und Narben verändern, wie wir aussehen und uns anfühlen. Manchmal fühlt sich der eigene Körper danach fremd an.\n\nTrauer ist erlaubt\nWer einen Körper vermisst, den er früher hatte, darf das. Es hilft nicht, sich diese Trauer zu verbieten. Sie anzuerkennen macht oft erst den Weg frei, sich mit dem Körper von heute anzufreunden.\n\nDer Körper hat etwas erlebt\nEine Narbe erzählt von einer Operation, die geholfen hat. Ein Bauch von einem Kind, das er getragen hat. Falten von vielen Jahren Lachen. Du musst das nicht schön finden. Aber du kannst anerkennen, was dein Körper getragen und überstanden hat.\n\nDie Aufgabe\nLeg eine Hand auf eine Stelle, die sich verändert hat oder mit der du haderst. Atme ein paar Mal ruhig dorthin. Sag innerlich: „Danke, dass du mich durch das getragen hast.“ Wenn es sich passend anfühlt, streiche mit etwas Öl langsam darüber.\n\nGut zu wissen\nVeränderungen können auch die Sexualität betreffen, etwa Empfindungen nach einer Operation oder Trockenheit in den Wechseljahren. Vieles lässt sich gut behandeln. Sprich mit einer Ärztin oder einem Arzt, wenn dich etwas belastet.",
+      "reflection_question": "Wofür kannst du deinem Körper heute danken, auch wenn du nicht alles an ihm magst?",
+      "voice": "both"
+    }
+  ]
+}

@@ -208,6 +208,27 @@
           "text": "Wer Beta-Versionen getestet hat, steht jetzt wieder auf dem stabilen Kanal. Für die nächste Testrunde den Schalter „Beta-Versionen erhalten“ im Profil wieder einschalten."
         }
       ]
+    },
+    {
+      "build": 34,
+      "version": "4.6.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Geführte Audios gleich auf der Startseite",
+          "text": "Körperreise und Gemeinsamer Abend findest du jetzt oben in den Kursen und im Paar-Kanal, mit neuen Bildern."
+        },
+        {
+          "icon": "school",
+          "titel": "Neuer Kurs: Jeder Körper ist schön und sexy",
+          "text": "Fünf Lektionen gegen den Vergleich: Vielfalt echter Körper, der freundliche Blick in den Spiegel, Licht an im Bett und Freundlichkeit, wenn der Körper sich verändert."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Spicy wird prickelnder",
+          "text": "Im Spicy-Modus glüht die App jetzt rot, und im Paar-Chat kannst du dein Gegenüber zum Spicy-Modus einladen."
+        }
+      ]
     }
   ]
 }
