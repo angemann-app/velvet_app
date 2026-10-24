@@ -10,6 +10,7 @@ import '../../models/selbst_reise.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
+import '../../widgets/player_steuerung.dart';
 
 /// Geführte Selbsterkundung: eine Stimme begleitet durch Ankommen, Atem, eine Körperreise
 /// und – wenn gewählt – intime Berührung mit Wellen. Jede Reise wird neu zusammengestellt
@@ -232,6 +233,21 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           'und es gibt kein Ziel.',
           style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5),
         ),
+        const SizedBox(height: 14),
+        Container(
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: AppTheme.surface,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppTheme.border),
+          ),
+          child: const Text(
+            'Du bestimmst. Pausieren, einen Schritt überspringen oder aufhören geht jederzeit über die Knöpfe unten. '
+            'Es muss nichts passieren: Bei einer angenehmen, nicht sexuellen Berührung zu bleiben ist genauso richtig. '
+            'Wird etwas unangenehm oder kommen schwierige Erinnerungen hoch, darfst du jederzeit aufhören.',
+            style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.5),
+          ),
+        ),
         const SizedBox(height: 22),
         _titel('Dauer'),
         Wrap(spacing: 8, children: [
@@ -411,33 +427,14 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
             ),
           )
         else
-          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            IconButton(
-              onPressed: _fragBeenden,
-              icon: const Icon(Icons.stop_rounded),
-              iconSize: 30,
-              color: AppTheme.textSecondary,
-              tooltip: 'Beenden',
-            ),
-            const SizedBox(width: 24),
-            GestureDetector(
-              onTap: _pauseUmschalten,
-              child: Container(
-                width: 72,
-                height: 72,
-                decoration: const BoxDecoration(shape: BoxShape.circle, color: AppTheme.rose),
-                child: Icon(_pausiert ? Icons.play_arrow_rounded : Icons.pause_rounded, size: 38, color: Colors.white),
-              ),
-            ),
-            const SizedBox(width: 24),
-            IconButton(
-              onPressed: _weiter,
-              icon: const Icon(Icons.skip_next_rounded),
-              iconSize: 30,
-              color: AppTheme.textSecondary,
-              tooltip: 'Weiter',
-            ),
-          ]),
+          PlayerSteuerung(
+            pausiert: _pausiert,
+            farbe: AppTheme.rose,
+            symbolFarbe: Colors.white,
+            onBeenden: _fragBeenden,
+            onPause: _pauseUmschalten,
+            onUeberspringen: _weiter,
+          ),
         if (_letzteAnsage() case final b?) ...[
           const SizedBox(height: 6),
           AusspracheMeldenButton(wo: 'Geführte Selbsterkundung, Baustein ${b.id}', stimme: _stimme),

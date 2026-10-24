@@ -1,3 +1,5 @@
+﻿// Läuft als Test (eigener Ordner, damit er nicht bei jedem flutter test mitläuft).
+// ignore_for_file: invalid_use_of_visible_for_testing_member
 // Rendert alle Hauptscreens in Handygröße als PNG nach build/screens/ und
 // meldet Layout-Fehler (z. B. Überläufe). Nicht Teil der normalen Tests.
 //

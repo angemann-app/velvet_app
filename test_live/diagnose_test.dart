@@ -1,3 +1,5 @@
+﻿// Läuft als Test (eigener Ordner, damit er nicht bei jedem flutter test mitläuft).
+// ignore_for_file: invalid_use_of_visible_for_testing_member
 // Diagnose: Welche Direktnachrichten zweier Codes liegen auf welchen Relays?
 // Liest nur öffentliche Metadaten (Absender, Empfänger, Zeit), entschlüsselt nichts.
 // Aufruf: flutter test test_live/diagnose_test.dart --dart-define=A=npub1… --dart-define=B=npub1…

@@ -49,4 +49,44 @@ void main() {
     // Am gleichen Tag gilt die Sicherung.
     expect((jsonDecode(prefs.getStringList('daily_check_ins')!.first) as Map)['mood'], 5);
   });
+
+  test('Beschädigte Felder: verständliche Meldung, und es wird nichts verändert', () async {
+    final prefs = await SharedPreferences.getInstance();
+    final vorher = {for (final k in prefs.getKeys()) k: prefs.get(k)};
+    for (final (feld, wert) in [
+      ('yesNoMaybe', '{kaputt'),
+      ('yesNoMaybe', '["keine", "Zuordnung"]'),
+      ('yesNoMaybe', '{"a": 5}'),
+      ('reflectionAnswers', 'nicht json'),
+    ]) {
+      final backup = StorageService.exportAllUserData()..[feld] = wert;
+      await expectLater(
+        StorageService.importBackup(BackupCodec.validate(backup)),
+        throwsA(isA<BackupException>().having((e) => e.message, 'Meldung', contains('beschädigt'))),
+        reason: '$feld = $wert',
+      );
+      expect({for (final k in prefs.getKeys()) k: prefs.get(k)}, vorher, reason: '$feld = $wert');
+    }
+  });
+
+  test('Abgeschnittene Datei wird abgelehnt, eine Sicherung ohne Daten ändert nichts Wesentliches', () async {
+    final voll = jsonEncode(StorageService.exportAllUserData());
+    expect(() => BackupCodec.validate(voll.substring(0, voll.length ~/ 2)), throwsA(isA<BackupException>()));
+
+    final prefs = await SharedPreferences.getInstance();
+    final yesNoVorher = prefs.getString(StorageService.keyYesNoMaybe);
+    await StorageService.importBackup(BackupCodec.validate({'app': 'VelvetPulse', 'schema': 2}));
+    expect(prefs.getString(StorageService.keyYesNoMaybe), yesNoVorher);
+    expect(prefs.getStringList('daily_check_ins'), hasLength(2));
+  });
+
+  test('Beschädigter Passwort-Block: Fehlermeldung statt Absturz', () async {
+    for (final block in [
+      <String, dynamic>{'v': 1, 'kdf': 'pbkdf2-sha256', 'iter': 210000},
+      <String, dynamic>{'v': 1, 'kdf': 'pbkdf2-sha256', 'iter': 210000, 'salt': '!!', 'nonce': 'x', 'ct': 'y'},
+      <String, dynamic>{'v': 2},
+    ]) {
+      await expectLater(BackupCodec.decryptSecrets(block, 'egal'), throwsA(isA<BackupException>()));
+    }
+  });
 }

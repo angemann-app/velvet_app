@@ -943,8 +943,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             children: [
               const Text(
                 'Nachrichten werden auf deinem Handy verschlüsselt und erst auf dem Handy deines Gegenübers wieder lesbar. '
-                'Dazwischen laufen sie über öffentliche Nostr-Server. Die sehen nur, dass zwei anonyme Schlüssel '
-                'miteinander schreiben – nicht, was. Es gibt kein Konto, keine Telefonnummer und keinen Server von uns.',
+                'Dazwischen laufen sie über öffentliche Nostr-Server. Die können den Inhalt nicht lesen. Sichtbar sind '
+                'für sie aber die Schlüssel von Absender und Empfänger, Zeitpunkt und ungefähre Größe jeder Nachricht '
+                'sowie deine IP-Adresse – also dass, wann und wie oft ihr schreibt. Die Schlüssel tragen keinen Namen. '
+                'Es gibt kein Konto, keine Telefonnummer und keinen Server von uns.',
                 style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
               ),
               const SizedBox(height: 16),

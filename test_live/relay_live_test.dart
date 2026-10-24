@@ -1,3 +1,5 @@
+﻿// Läuft als Test (eigener Ordner, damit er nicht bei jedem flutter test mitläuft).
+// ignore_for_file: invalid_use_of_visible_for_testing_member
 // Live-Test gegen echte Nostr-Relays (braucht Internet, nicht Teil von `flutter test`).
 // Aufruf: flutter test test_live/relay_live_test.dart
 //

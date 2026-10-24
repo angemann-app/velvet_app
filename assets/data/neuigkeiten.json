@@ -51,6 +51,16 @@
         {"icon": "record_voice_over", "titel": "Zwei Stimmen, bessere Aussprache", "text": "Paar-Lektionen lesen Victoria und Martin im Wechsel. Klingt ein Wort falsch, kannst du es unter jedem Audio melden."},
         {"icon": "new_releases", "titel": "Beta-Test beendet", "text": "Warst du im Beta-Test, steht der Update-Kanal jetzt wieder auf Stabil. Für die nächste Testrunde kannst du dich im Profil unter „Beta-Versionen erhalten“ wieder anmelden. Danke fürs Testen!"}
       ]
+    },
+    {
+      "build": 30,
+      "version": "4.4.1",
+      "punkte": [
+        {"icon": "school", "titel": "Genauere Gesundheitstexte", "text": "Die Lektionen zu Erektionsproblemen, Schmerzen beim Sex und zur Anatomie der Erregung sind fachlich vorsichtiger formuliert: was belegt ist, was eine Vermutung ist, und wann eine ärztliche Abklärung sinnvoll ist."},
+        {"icon": "spa", "titel": "Du bestimmst", "text": "Gemeinsamer Abend und Selbsterkundung haben beschriftete Knöpfe zum Pausieren, Überspringen und Beenden. Vor der Selbsterkundung steht ein kurzer Hinweis, dass nichts passieren muss."},
+        {"icon": "edit", "titel": "Ehrlichere Datenschutz-Hinweise", "text": "Der Paar-Kanal erklärt jetzt genauer, was die Server sehen können: nicht den Inhalt, aber wann und wie oft geschrieben wird."},
+        {"icon": "new_releases", "titel": "Sicherere Updates und Sicherungen", "text": "Updates werden nur mit gültiger Prüfsumme aus diesem Projekt installiert, und beschädigte Sicherungen werden verständlich abgelehnt."}
+      ]
     }
   ]
 }

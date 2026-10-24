@@ -144,7 +144,8 @@ class BackupCodec {
   /// Entschlüsselt; wirft [BackupException], wenn das Passwort falsch ist oder die Daten verändert wurden.
   static Future<Map<String, String>> decryptSecrets(Map<String, dynamic> block, String password) async {
     final json = await compute(_decrypt, [jsonEncode(block), password]);
-    if (json == null) throw const BackupException('Das Passwort stimmt nicht.');
+    // GCM kann „falsches Passwort“ und „Datei verändert“ nicht unterscheiden.
+    if (json == null) throw const BackupException('Das Passwort stimmt nicht, oder die Sicherung wurde beschädigt.');
     final map = jsonDecode(json);
     if (map is! Map) throw const BackupException('Die Sicherung ist beschädigt.');
     return checkSecrets(map.map((k, v) => MapEntry(k.toString(), v.toString())));

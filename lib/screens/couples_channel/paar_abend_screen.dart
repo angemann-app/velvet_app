@@ -10,6 +10,7 @@ import '../../services/nostr_service.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
+import '../../widgets/player_steuerung.dart';
 
 /// Gemeinsamer, geführter Abend: Ein Handy liegt neben euch, die Stimme führt durch
 /// Ankommen, zwei Berührungsrunden mit Rollenwechsel und Ausklang.
@@ -503,36 +504,13 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
               ),
             )
           else
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  onPressed: _fragBeenden,
-                  icon: const Icon(Icons.stop_rounded),
-                  iconSize: 30,
-                  color: AppTheme.textSecondary,
-                  tooltip: 'Beenden',
-                ),
-                const SizedBox(width: 24),
-                GestureDetector(
-                  onTap: _pauseUmschalten,
-                  child: Container(
-                    width: 72,
-                    height: 72,
-                    decoration: const BoxDecoration(shape: BoxShape.circle, color: AppTheme.amber),
-                    child: Icon(_pausiert ? Icons.play_arrow_rounded : Icons.pause_rounded,
-                        size: 38, color: AppTheme.background),
-                  ),
-                ),
-                const SizedBox(width: 24),
-                IconButton(
-                  onPressed: _weiter,
-                  icon: const Icon(Icons.skip_next_rounded),
-                  iconSize: 30,
-                  color: AppTheme.textSecondary,
-                  tooltip: 'Weiter',
-                ),
-              ],
+            PlayerSteuerung(
+              pausiert: _pausiert,
+              farbe: AppTheme.amber,
+              symbolFarbe: AppTheme.background,
+              onBeenden: _fragBeenden,
+              onPause: _pauseUmschalten,
+              onUeberspringen: _weiter,
             ),
           if (_letzteAnsage() case final b?) ...[
             const SizedBox(height: 6),

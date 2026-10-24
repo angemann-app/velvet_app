@@ -508,7 +508,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       Expanded(
                         child: Text(
                           'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. '
-                          'Nur der KI-Coach (Google Gemini) und der verschlüsselte Paar-Kanal nutzen das Internet.',
+                          'Ins Internet gehen nur der KI-Coach (Google Gemini), der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).',
                           style: TextStyle(
                             fontSize: 11.5,
                             color: AppTheme.textSecondary,

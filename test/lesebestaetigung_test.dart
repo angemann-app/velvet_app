@@ -72,6 +72,18 @@ void main() {
     expect(nostr.partnerReadUntil.value, isNull);
   });
 
+  test('Manipulierte Lesebestätigungen werden verworfen', () async {
+    final echt = receipt(partnerPriv, {'read_until': 1000});
+    final andererInhalt = Map<String, dynamic>.from(echt)
+      ..['content'] = Nip04().encrypt(partnerPriv, myPub, jsonEncode({'read_until': 9999}));
+    final falscheSignatur = Map<String, dynamic>.from(echt)..['sig'] = 'a' * 128;
+    final falscheArt = receipt(partnerPriv, {'read_until': 1000}, kind: 4);
+    for (final ev in [andererInhalt, falscheSignatur, falscheArt]) {
+      await nostr.handleReadReceipt(ev);
+    }
+    expect(nostr.partnerReadUntil.value, isNull);
+  });
+
   test('Neue Person: alter Lesestatus wird gelöscht', () async {
     await nostr.handleReadReceipt(receipt(partnerPriv, {'read_until': 1000}));
     await nostr.setPartner(keyApi.getPublicKey(keyApi.generatePrivateKey()), name: 'Ben');

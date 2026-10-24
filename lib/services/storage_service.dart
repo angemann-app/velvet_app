@@ -408,13 +408,8 @@ class StorageService {
           {...getCompletedLessons(), ...(d['completedLessons'] as List).map((e) => e.toString())}.toList();
     }
     if (d['reflectionAnswers'] is String && (d['reflectionAnswers'] as String).isNotEmpty) {
-      final imported = jsonDecode(d['reflectionAnswers'] as String);
-      if (imported is! Map) throw const BackupException('Die Sicherung ist beschädigt (Reflexionen).');
-      final currentStr = prefs.getString(_keyReflectionAnswers);
-      final current = currentStr == null || currentStr.isEmpty
-          ? <String, dynamic>{}
-          : Map<String, dynamic>.from(jsonDecode(currentStr) as Map);
-      writes[_keyReflectionAnswers] = jsonEncode({...current, ...imported});
+      final imported = _textMap(d['reflectionAnswers'] as String, 'Reflexionen');
+      writes[_keyReflectionAnswers] = jsonEncode({..._lokaleMap(prefs, _keyReflectionAnswers), ...imported});
     }
     if (d['cbtEntries'] is List) {
       final entries = {for (final e in getCbtEntries()) e.id: e};
@@ -446,13 +441,8 @@ class StorageService {
       writes[_keyDailyCheckIns] = [for (final date in dates) byDate[date]!];
     }
     if (d['yesNoMaybe'] is String && (d['yesNoMaybe'] as String).isNotEmpty) {
-      final imported = jsonDecode(d['yesNoMaybe'] as String);
-      if (imported is! Map) throw const BackupException('Die Sicherung ist beschädigt (Ja/Nein-Liste).');
-      final currentStr = prefs.getString(_keyYesNoMaybe);
-      final current = currentStr == null || currentStr.isEmpty
-          ? <String, dynamic>{}
-          : Map<String, dynamic>.from(jsonDecode(currentStr) as Map);
-      writes[_keyYesNoMaybe] = jsonEncode({...current, ...imported});
+      final imported = _textMap(d['yesNoMaybe'] as String, 'Ja/Nein-Liste');
+      writes[_keyYesNoMaybe] = jsonEncode({..._lokaleMap(prefs, _keyYesNoMaybe), ...imported});
     }
     if (d['streakCount'] is int && (d['streakCount'] as int) > getStreakCount()) {
       writes[_keyStreakCount] = d['streakCount'] as int;
@@ -505,6 +495,26 @@ class StorageService {
     if (profile != null) _inMemoryProfile = profile;
     await NostrService().reloadKeysFromPrefs();
     await AutoBackupService.saveAutoBackup();
+  }
+
+  /// Ein Feld der Sicherung, das eine JSON-Zuordnung Text → Text sein muss.
+  static Map<String, String> _textMap(String raw, String feld) {
+    try {
+      final decoded = jsonDecode(raw);
+      if (decoded is Map && decoded.values.every((v) => v is String)) {
+        return decoded.map((k, v) => MapEntry(k.toString(), v as String));
+      }
+    } on FormatException catch (_) {}
+    throw BackupException('Die Sicherung ist beschädigt ($feld).');
+  }
+
+  /// Vorhandener lokaler Stand zum Zusammenführen; ist er selbst kaputt, zählt er als leer.
+  static Map<String, dynamic> _lokaleMap(SharedPreferences prefs, String key) {
+    try {
+      final decoded = jsonDecode(prefs.getString(key) ?? '{}');
+      if (decoded is Map) return Map<String, dynamic>.from(decoded);
+    } catch (_) {}
+    return {};
   }
 
   static Future<void> _put(SharedPreferences prefs, String key, Object? value) async {

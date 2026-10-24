@@ -116,20 +116,24 @@ class UpdateService {
 
       final assets = (release['assets'] as List).cast<Map<String, dynamic>>();
       final apk = _assetFor(assets, '${_abiName()}.apk');
-      if (apk == null) return null;
-      // Ohne Prüfsumme kein Update: so wird nie eine beschädigte oder fremde Datei installiert.
       final shaAsset = _assetFor(assets, '${_abiName()}.apk.sha256');
-      if (shaAsset == null) return null;
-      final shaResponse = await http.get(Uri.parse(shaAsset['browser_download_url'] as String));
+      if (apk == null || shaAsset == null) return null;
+      final apkUrl = apk['browser_download_url'] as String? ?? '';
+      final shaUrl = shaAsset['browser_download_url'] as String? ?? '';
+      if (!isReleaseDownloadUrl(apkUrl) || !isReleaseDownloadUrl(shaUrl)) return null;
+      // Ohne gültige Prüfsumme kein Update. ota_update vergleicht sie nach dem Download und vor der
+      // Installation; eine abgebrochene oder veränderte Datei wird dann nicht installiert.
+      final shaResponse = await http.get(Uri.parse(shaUrl)).timeout(const Duration(seconds: 10));
       if (shaResponse.statusCode != 200) return null;
-      final sha = shaResponse.body.trim().split(RegExp(r'\s+')).first.toLowerCase();
+      final sha = parseSha256(shaResponse.body);
+      if (sha == null) return null;
 
       return UpdateInfo(
         version: parts.first,
         prerelease: release['prerelease'] == true,
         build: build,
         notes: (release['body'] as String? ?? '').trim(),
-        apkUrl: apk['browser_download_url'] as String,
+        apkUrl: apkUrl,
         sha256: sha,
       );
     } catch (e) {
@@ -164,6 +168,19 @@ class UpdateService {
     }
     return best;
   }
+
+  /// Inhalt einer `.sha256`-Datei („<64 Hex-Zeichen>“, optional gefolgt vom Dateinamen),
+  /// sonst null – z. B. bei einer Fehlerseite statt der Datei.
+  @visibleForTesting
+  static String? parseSha256(String body) {
+    final first = body.trim().split(RegExp(r'\s+')).first.toLowerCase();
+    return RegExp(r'^[0-9a-f]{64}$').hasMatch(first) ? first : null;
+  }
+
+  /// Nur Dateien aus den Releases dieses Repositorys, nur über https.
+  @visibleForTesting
+  static bool isReleaseDownloadUrl(String url) =>
+      url.startsWith('https://github.com/$repo/releases/download/');
 
   /// Build-Nummer aus einem Tag wie `v4.2.0-beta.1+17`, 0 wenn keine erkennbar ist.
   static int buildFromTag(String tag) {

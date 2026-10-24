@@ -135,6 +135,32 @@
           "text": "If you were in the beta test, the update channel is now back on stable. For the next test round you can sign up again in your profile under “Receive beta versions”. Thanks for testing!"
         }
       ]
+    },
+    {
+      "build": 30,
+      "version": "4.4.1",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "More precise health texts",
+          "text": "The lessons on erection problems, pain during sex and the anatomy of arousal are worded more carefully: what is established, what is a hypothesis, and when it makes sense to see a doctor."
+        },
+        {
+          "icon": "spa",
+          "titel": "You decide",
+          "text": "The shared evening and the self-exploration have labelled buttons to pause, skip and stop. Before the self-exploration, a short note says that nothing has to happen."
+        },
+        {
+          "icon": "edit",
+          "titel": "More honest privacy notes",
+          "text": "The couple channel now explains more precisely what the servers can see: not the content, but when and how often you write."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Safer updates and backups",
+          "text": "Updates are only installed with a valid checksum from this project, and damaged backups are rejected with a clear message."
+        }
+      ]
     }
   ],
   "_source": {
@@ -142,6 +168,7 @@
     "news:26": "fe279afa040f4852",
     "news:27": "7365439b9160b4f9",
     "news:28": "9368bd4c890ce8fc",
-    "news:29": "e43d0214df8aeed3"
+    "news:29": "e43d0214df8aeed3",
+    "news:30": "fb5a1da9fbcf74de"
   }
 }

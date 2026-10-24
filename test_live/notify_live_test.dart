@@ -1,3 +1,5 @@
+﻿// Läuft als Test (eigener Ordner, damit er nicht bei jedem flutter test mitläuft).
+// ignore_for_file: invalid_use_of_visible_for_testing_member
 // Live-Test: Findet die Hintergrund-Prüfung eine neue Nachricht des Partners auf den Relays?
 // Aufruf: flutter test test_live/notify_live_test.dart
 import 'dart:convert';

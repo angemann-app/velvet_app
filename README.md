@@ -54,7 +54,7 @@ sex education:
 - **Guided couple sessions** (20–45 min) and a **guided self-exploration** (10–30 min), assembled from audio
   building blocks, different every time.
 - **End-to-end encrypted couple channel** over [Nostr](https://nostr.com) (NIP-04): send sparks,
-  match wishes privately, share lessons and reflections – no account, no phone number, no server.
+  match wishes privately, share lessons and reflections – no account, no phone number, no server of our own (public relays see metadata such as keys and timestamps, not content).
 - **Pelvic floor trainer**, breathing pacer, CBT thought journal, SOS help.
 - **Privacy first:** data stays on the device, secrets in the Android Keystore, optional fingerprint
   lock and discreet app icon, password-encrypted backups.
@@ -121,7 +121,7 @@ Built with Flutter. Code under MIT, content under CC BY-NC-SA 4.0.
 | Profil, Fortschritt, Tagebuch, Check-ins | nur auf dem Gerät (`SharedPreferences`), unverschlüsselt im privaten App-Speicher |
 | API-Key, privater Schlüssel des Paar-Kanals | im Android-Keystore verschlüsselt, nicht im Cloud-Backup und nicht im normalen Backup |
 | Automatisches Backup | privater App-Speicher (für andere Apps nicht lesbar), ohne Geheimnisse, über Androids Cloud-Backup gesichert |
-| Paar-Kanal | NIP-04-verschlüsselt über öffentliche Nostr-Server; diese sehen, *dass* zwei anonyme Schlüssel schreiben, nicht *was*. Eingehende Nachrichten werden auf Signatur und Absender geprüft. |
+| Paar-Kanal | NIP-04-verschlüsselt über öffentliche Nostr-Server. Den Inhalt können sie nicht lesen; sichtbar sind aber die öffentlichen Schlüssel von Absender und Empfänger, Zeitpunkt und Größe jeder Nachricht, die IP-Adresse und – bei Lesebestätigungen – dass ein App-Eintrag aktualisiert wurde. Eingehende Nachrichten werden auf ID, Signatur, Empfänger und Absender geprüft. |
 | KI-Coach | Nachrichten, Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen an Google Gemini – nur wenn du einen eigenen API-Key hinterlegst |
 
 Es gibt keine Benutzerkonten, kein Tracking und keinen eigenen Server.
