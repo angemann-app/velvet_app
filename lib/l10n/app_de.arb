@@ -1267,5 +1267,124 @@
   "contentModelsForHim": "FÜR IHN",
   "yesNoMaybeModelsExcitesMeIDLike": "Reizt mich, möchte ich ausprobieren",
   "yesNoMaybeModelsCuriousButUnsureDependsOn": "Neugierig, aber unsicher – kommt auf den Moment an",
-  "yesNoMaybeModelsNotForMe": "Kommt für mich nicht infrage"
+  "yesNoMaybeModelsNotForMe": "Kommt für mich nicht infrage",
+  "aiServiceYouAreTheConfidentialSomatic": "Du bist der vertrauliche Somatik-, KVT- und Erotik-Coach in der App VelvetPulse.\n\nDeine Grundhaltung & Tonalität:\n1. Charakter: Du bist eine faszinierende Mischung aus brillantem Neurowissenschaftler/Sexualtherapeuten und einem weltgewandten, charmant-frivolen Verführer auf Augenhöhe.\n2. Sprache: Du sprichst reines, flüssiges Deutsch – vollkommen frei von englischen Modewörtern oder Anglizismen. Du sprichst absolut schamfrei, sinnlich, warm und mit einem leichten, wissenden Augenzwinkern über Lust, Haut, Feuchtigkeit, Erektionen, Damm-Entspannung, Hingabe und Kopfkino. Vermeide jede sterile Krankenhaus-Sprache und jeden belehrenden Ton!\n3. Methodik: Verbinde Kognitive Verhaltenstherapie (das Entzaubern spießiger Leistungs- und Prüfungsgedanken) immer direkt mit lustvoller Somatik (Beckenboden wie warmen Honig schmelzen lassen, aktives Beckenboden-Öffnen, tiefe Kehlkopf-Seufzer, Vagus-Beruhigung, Kunst der Zeitlupe, sinnliches Umkreisen, reines Sinnesspüren).\n4. Kernbotschaft: Zeige dem Nutzer in jeder Zeile, dass sein Körper völlig in Ordnung ist und dass Langsamkeit, Pausen und das 'Nicht-Funktionieren-Müssen' kein Defekt sind, sondern der Schlüssel zu viel tieferer, unanständig guter Ekstase.\n5. Format: Antworte stets kompakt (2-3 prägnante, atmosphärische Absätze) und beende JEDE Antwort mit genau EINER offenen, leicht herausfordernden oder spür-orientierten Reflexionsfrage.\n6. Sicherheit: Du stellst keine Diagnosen. Bei Schmerzen, Blutungen oder anhaltenden Beschwerden empfiehlst du freundlich eine ärztliche Abklärung.",
+  "aiServiceConnectionSuccessfulModelslengthModelsAvailable": "Verbindung erfolgreich! {modelsLength} Modelle verfügbar (z. B. {join}).",
+  "@aiServiceConnectionSuccessfulModelslengthModelsAvailable": {
+    "placeholders": {
+      "modelsLength": {
+        "type": "Object"
+      },
+      "join": {
+        "type": "Object"
+      }
+    }
+  },
+  "aiServiceNoAvailableTextModelsFound": "Keine verfügbaren Textmodelle für diesen Key gefunden. Bitte prüfe die API-Berechtigungen.",
+  "aiServiceTheApiKeyIsInvalid": "Der API-Key ist ungültig. Bitte prüfe ihn im Google AI Studio.",
+  "aiServiceUserContextNameProfilenameGender": "\n\nKONTEXT DES NUTZERS:\n- Name/Rufname: {profileName}\n- Geschlecht: {genderLabel}\n- Alter: {age} Jahre\n- Beziehungsstatus: {relationshipLabel}\n- Hauptfokus: {goalLabel}\nSprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an.",
+  "@aiServiceUserContextNameProfilenameGender": {
+    "placeholders": {
+      "profileName": {
+        "type": "Object"
+      },
+      "genderLabel": {
+        "type": "Object"
+      },
+      "age": {
+        "type": "Object"
+      },
+      "relationshipLabel": {
+        "type": "Object"
+      },
+      "goalLabel": {
+        "type": "Object"
+      }
+    }
+  },
+  "aiServiceReceivedAnEmptyAnswerFrom": "Leere Antwort vom KI-Modell erhalten.",
+  "backupCodecTheBackupIsTooLarge": "Die Sicherung ist zu groß.",
+  "backupCodecThisIsNotAValid": "Das ist keine gültige Sicherung (kein JSON).",
+  "backupCodecThisIsNotAValid2": "Das ist keine gültige Sicherung.",
+  "backupCodecThisIsNotAVelvetpulse": "Das ist keine VelvetPulse-Sicherung.",
+  "backupCodecThisBackupComesFromA": "Diese Sicherung stammt aus einer neueren App-Version. Bitte erst aktualisieren.",
+  "backupCodecTheBackupIsDamagedField": "Die Sicherung ist beschädigt (Feld „{key}“).",
+  "@backupCodecTheBackupIsDamagedField": {
+    "placeholders": {
+      "key": {
+        "type": "Object"
+      }
+    }
+  },
+  "backupCodecTheBackupContainsAnInvalid": "Die Sicherung enthält einen ungültigen Verbindungsschlüssel.",
+  "backupCodecTheBackupIsDamagedField2": "Die Sicherung ist beschädigt (Feld „secrets“).",
+  "backupCodecTheBackupIsDamagedField3": "Die Sicherung ist beschädigt (Feld „{field}“ zu lang).",
+  "@backupCodecTheBackupIsDamagedField3": {
+    "placeholders": {
+      "field": {
+        "type": "Object"
+      }
+    }
+  },
+  "backupCodecTheBackupIsDamagedField4": "Die Sicherung ist beschädigt (Feld „{field}“ zu lang).",
+  "@backupCodecTheBackupIsDamagedField4": {
+    "placeholders": {
+      "field": {
+        "type": "Object"
+      }
+    }
+  },
+  "backupCodecThePasswordIsWrongOr": "Das Passwort stimmt nicht, oder die Sicherung wurde beschädigt.",
+  "backupCodecTheBackupIsDamaged": "Die Sicherung ist beschädigt.",
+  "messageNotifierNewMessages": "Neue Nachrichten",
+  "messageNotifierNewMessage": "Neue Nachricht",
+  "messageNotifierNoticeOfNewMessagesIn": "Hinweis auf neue Nachrichten im Paar-Kanal, ohne Inhalt",
+  "nostrServiceWeReConnected": "💛 Wir sind verbunden!",
+  "nostrServiceCountOfFallbackrelayslengthServers": "{count} von {fallbackRelaysLength} Servern",
+  "@nostrServiceCountOfFallbackrelayslengthServers": {
+    "placeholders": {
+      "count": {
+        "type": "Object"
+      },
+      "fallbackRelaysLength": {
+        "type": "Object"
+      }
+    }
+  },
+  "nostrServiceVotedOnTheFantasySelection": "Fantasie-Auswahl abgestimmt",
+  "nostrServiceHaveAReadLessontitleCoursetitle": "📖 Lies mal: „{lessonTitle}“ ({courseTitle})",
+  "@nostrServiceHaveAReadLessontitleCoursetitle": {
+    "placeholders": {
+      "lessonTitle": {
+        "type": "Object"
+      },
+      "courseTitle": {
+        "type": "Object"
+      }
+    }
+  },
+  "nostrServiceIVeSharedMyThoughts": "💭 Ich habe meine Gedanken zu „{lessonTitle}“ geteilt. Du siehst sie, sobald du selbst geantwortet hast.",
+  "@nostrServiceIVeSharedMyThoughts": {
+    "placeholders": {
+      "lessonTitle": {
+        "type": "Object"
+      }
+    }
+  },
+  "nostrServiceIVeSharedMyAnswers": "🗳️ Ich habe meine Antworten der Ja/Nein-Liste geteilt.",
+  "privacyServiceUnlockTheApp": "Entsperre die App",
+  "privacyServiceConfirmToTurnOnThe": "Bestätige, um die App-Sperre einzuschalten",
+  "storageServiceTheBackupIsDamagedProfile": "Die Sicherung ist beschädigt (Profil).",
+  "storageServiceReflections": "Reflexionen",
+  "storageServiceYesNoList": "Ja/Nein-Liste",
+  "storageServiceTheKeysInTheBackup": "Die Schlüssel in der Sicherung passen nicht zusammen.",
+  "storageServiceTheBackupCouldNotBe": "Die Sicherung konnte nicht eingespielt werden. Es wurde nichts verändert.",
+  "storageServiceTheBackupIsDamagedFeld": "Die Sicherung ist beschädigt ({feld}).",
+  "@storageServiceTheBackupIsDamagedFeld": {
+    "placeholders": {
+      "feld": {
+        "type": "Object"
+      }
+    }
+  }
 }

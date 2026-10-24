@@ -9,6 +9,7 @@ import 'message_notifier.dart';
 import 'nostr_event_check.dart';
 import 'nostr_keys.dart';
 import 'secret_store.dart';
+import '../l10n/t.dart';
 
 class NostrService {
   static final NostrService _instance = NostrService._internal();
@@ -154,7 +155,7 @@ class NostrService {
     if (ok) {
       await cancelInvite();
       // Als normale Chat-Nachricht, damit auch ältere Versionen sie anzeigen können.
-      await sendChatMessage('💛 Wir sind verbunden!');
+      await sendChatMessage(t.nostrServiceWeReConnected);
     }
     return ok;
   }
@@ -388,7 +389,7 @@ class NostrService {
   /// Für die Anzeige, z. B. „3 von 5 Servern“.
   String get connectedRelaysLabel {
     final count = _relays.values.where((r) => r.socket != null).length;
-    return '$count von ${fallbackRelays.length} Servern';
+    return t.nostrServiceCountOfFallbackrelayslengthServers(count, fallbackRelays.length);
   }
 
   List<String> get connectedRelays =>
@@ -526,17 +527,17 @@ class NostrService {
     try {
       final data = jsonDecode(decryptedText);
       if (data is Map<String, dynamic>) {
-        final t = data['type'] as String?;
-        if (t == 'ping') {
+        final typ = data['type'] as String?;
+        if (typ == 'ping') {
           type = CoupleMessageType.ping;
           emoji = data['emoji'] as String?;
           text = data['text'] as String?;
-        } else if (t == 'fantasy_vote') {
+        } else if (typ == 'fantasy_vote') {
           type = CoupleMessageType.fantasyVote;
           fantasyId = data['fantasyId'] as String?;
           fantasyVote = data['vote'] as String?;
-          text = 'Fantasie-Auswahl abgestimmt';
-        } else if (t == 'chat') {
+          text = t.nostrServiceVotedOnTheFantasySelection;
+        } else if (typ == 'chat') {
           type = CoupleMessageType.chat;
           text = data['text'] as String?;
           // Gemeinsam lernen: als normale Chat-Nachricht verschickt, damit ältere Versionen
@@ -613,12 +614,12 @@ class NostrService {
   }
 
   void _applyPartnerVotes(Map<String, String> votes, DateTime timestamp) {
-    final t = timestamp.millisecondsSinceEpoch;
+    final zeit = timestamp.millisecondsSinceEpoch;
     final updated = Map<String, String>.from(partnerFantasyVotesNotifier.value);
     var changed = false;
     for (final e in votes.entries) {
-      if ((_partnerVoteTimes[e.key] ?? 0) > t) continue;
-      _partnerVoteTimes[e.key] = t;
+      if ((_partnerVoteTimes[e.key] ?? 0) > zeit) continue;
+      _partnerVoteTimes[e.key] = zeit;
       if (updated[e.key] != e.value) {
         updated[e.key] = e.value;
         changed = true;
@@ -788,11 +789,11 @@ class NostrService {
 
   /// Lektion empfehlen. Ältere Versionen zeigen nur den Text.
   Future<bool> sendLessonShare(String lessonId, String lessonTitle, String courseTitle) =>
-      _sendLearning({'text': '📖 Lies mal: „$lessonTitle“ ($courseTitle)', 'lesson': lessonId});
+      _sendLearning({'text': t.nostrServiceHaveAReadLessontitleCoursetitle(lessonTitle, courseTitle), 'lesson': lessonId});
 
   /// Eigene Reflexion teilen. Der lesbare Text verrät die Antwort nicht.
   Future<bool> sendReflection(String lessonId, String lessonTitle, String answer) => _sendLearning({
-        'text': '💭 Ich habe meine Gedanken zu „$lessonTitle“ geteilt. Du siehst sie, sobald du selbst geantwortet hast.',
+        'text': t.nostrServiceIVeSharedMyThoughts(lessonTitle),
         'lesson': lessonId,
         'reflection': answer.trim(),
       });
@@ -905,7 +906,7 @@ class NostrService {
     }
 
     final ok = await _sendLearning({
-      'text': '🗳️ Ich habe meine Antworten der Ja/Nein-Liste geteilt.',
+      'text': t.nostrServiceIVeSharedMyAnswers,
     }, extra: {'votes': answers});
     return ok ? answers.length : 0;
   }
@@ -971,8 +972,8 @@ class NostrService {
     if (!isPaired || !readReceiptsEnabled.value) return;
     var latest = 0;
     for (final m in messagesNotifier.value) {
-      final t = m.createdAt.millisecondsSinceEpoch ~/ 1000;
-      if (!m.isMe && t > latest) latest = t;
+      final sek = m.createdAt.millisecondsSinceEpoch ~/ 1000;
+      if (!m.isMe && sek > latest) latest = sek;
     }
     if (latest <= _readSentUntil) return;
     if (await _sendReadReceipt({'read_until': latest})) {

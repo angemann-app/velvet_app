@@ -11,6 +11,7 @@ import 'auto_backup_service.dart';
 import 'backup_codec.dart';
 import 'nostr_service.dart';
 import 'secret_store.dart';
+import '../l10n/t.dart';
 
 class StorageService {
   static const String _keyCompletedLessons = 'completed_lessons';
@@ -399,7 +400,7 @@ class StorageService {
       try {
         profile = UserProfile.fromJson(Map<String, dynamic>.from(d['userProfile'] as Map));
       } catch (_) {
-        throw const BackupException('Die Sicherung ist beschädigt (Profil).');
+        throw BackupException(t.storageServiceTheBackupIsDamagedProfile);
       }
       writes[_keyUserProfile] = jsonEncode(profile.toJson());
     }
@@ -408,7 +409,7 @@ class StorageService {
           {...getCompletedLessons(), ...(d['completedLessons'] as List).map((e) => e.toString())}.toList();
     }
     if (d['reflectionAnswers'] is String && (d['reflectionAnswers'] as String).isNotEmpty) {
-      final imported = _textMap(d['reflectionAnswers'] as String, 'Reflexionen');
+      final imported = _textMap(d['reflectionAnswers'] as String, t.storageServiceReflections);
       writes[_keyReflectionAnswers] = jsonEncode({..._lokaleMap(prefs, _keyReflectionAnswers), ...imported});
     }
     if (d['cbtEntries'] is List) {
@@ -441,7 +442,7 @@ class StorageService {
       writes[_keyDailyCheckIns] = [for (final date in dates) byDate[date]!];
     }
     if (d['yesNoMaybe'] is String && (d['yesNoMaybe'] as String).isNotEmpty) {
-      final imported = _textMap(d['yesNoMaybe'] as String, 'Ja/Nein-Liste');
+      final imported = _textMap(d['yesNoMaybe'] as String, t.storageServiceYesNoList);
       writes[_keyYesNoMaybe] = jsonEncode({..._lokaleMap(prefs, _keyYesNoMaybe), ...imported});
     }
     if (d['streakCount'] is int && (d['streakCount'] as int) > getStreakCount()) {
@@ -452,7 +453,7 @@ class StorageService {
     // die Sicherung von genau diesem Schlüssel stammt. Sonst wäre die Verbindung nur scheinbar da.
     final newPriv = secrets['nostrPrivKey'];
     if (newPriv != null && d['nostrPubKey'] != null && KeyApi().getPublicKey(newPriv) != d['nostrPubKey']) {
-      throw const BackupException('Die Schlüssel in der Sicherung passen nicht zusammen.');
+      throw BackupException(t.storageServiceTheKeysInTheBackup);
     }
     final sameIdentity = d['nostrPubKey'] == null || d['nostrPubKey'] == NostrService().myPublicKey;
     if (newPriv != null || sameIdentity) {
@@ -489,7 +490,7 @@ class StorageService {
       for (final entry in secretsBefore.entries) {
         await SecretStore.write(entry.key, entry.value);
       }
-      throw const BackupException('Die Sicherung konnte nicht eingespielt werden. Es wurde nichts verändert.');
+      throw BackupException(t.storageServiceTheBackupCouldNotBe);
     }
 
     if (profile != null) _inMemoryProfile = profile;
@@ -505,7 +506,7 @@ class StorageService {
         return decoded.map((k, v) => MapEntry(k.toString(), v as String));
       }
     } on FormatException catch (_) {}
-    throw BackupException('Die Sicherung ist beschädigt ($feld).');
+    throw BackupException(t.storageServiceTheBackupIsDamagedFeld(feld));
   }
 
   /// Vorhandener lokaler Stand zum Zusammenführen; ist er selbst kaputt, zählt er als leer.

@@ -10,6 +10,8 @@ import 'package:workmanager/workmanager.dart';
 
 import 'nostr_event_check.dart';
 import 'nostr_service.dart';
+import 'sprache.dart';
+import '../l10n/t.dart';
 
 /// Hinweis auf neue Nachrichten im Paar-Kanal, auch wenn die App gesperrt oder geschlossen ist.
 ///
@@ -110,12 +112,12 @@ class MessageNotifier {
       title: discreet ? 'Pulse' : 'VelvetPulse',
       // Ohne Entschlüsseln lässt sich nicht unterscheiden, was eine Nachricht und was z. B. eine
       // einzelne Ja/Nein-Stimme ist – darum keine Zahl.
-      body: count > 1 ? 'Neue Nachrichten' : 'Neue Nachricht',
-      notificationDetails: const NotificationDetails(
+      body: count > 1 ? t.messageNotifierNewMessages : t.messageNotifierNewMessage,
+      notificationDetails: NotificationDetails(
         android: AndroidNotificationDetails(
           'messages',
-          'Nachrichten',
-          channelDescription: 'Hinweis auf neue Nachrichten im Paar-Kanal, ohne Inhalt',
+          t.couplesChannelMessages,
+          channelDescription: t.messageNotifierNoticeOfNewMessagesIn,
           importance: Importance.high,
           priority: Priority.high,
           visibility: NotificationVisibility.secret,
@@ -184,6 +186,8 @@ class MessageNotifier {
 void callbackDispatcher() {
   Workmanager().executeTask((task, inputData) async {
     try {
+      // Läuft getrennt von der App: Sprachwahl selbst laden, damit der Hinweis passt.
+      await Sprache.laden();
       final count = await MessageNotifier.checkRelays();
       if (count > 0) await MessageNotifier.show(count: count);
     } catch (_) {}

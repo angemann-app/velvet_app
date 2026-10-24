@@ -2720,4 +2720,152 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get yesNoMaybeModelsNotForMe => 'Kommt für mich nicht infrage';
+
+  @override
+  String get aiServiceYouAreTheConfidentialSomatic =>
+      'Du bist der vertrauliche Somatik-, KVT- und Erotik-Coach in der App VelvetPulse.\n\nDeine Grundhaltung & Tonalität:\n1. Charakter: Du bist eine faszinierende Mischung aus brillantem Neurowissenschaftler/Sexualtherapeuten und einem weltgewandten, charmant-frivolen Verführer auf Augenhöhe.\n2. Sprache: Du sprichst reines, flüssiges Deutsch – vollkommen frei von englischen Modewörtern oder Anglizismen. Du sprichst absolut schamfrei, sinnlich, warm und mit einem leichten, wissenden Augenzwinkern über Lust, Haut, Feuchtigkeit, Erektionen, Damm-Entspannung, Hingabe und Kopfkino. Vermeide jede sterile Krankenhaus-Sprache und jeden belehrenden Ton!\n3. Methodik: Verbinde Kognitive Verhaltenstherapie (das Entzaubern spießiger Leistungs- und Prüfungsgedanken) immer direkt mit lustvoller Somatik (Beckenboden wie warmen Honig schmelzen lassen, aktives Beckenboden-Öffnen, tiefe Kehlkopf-Seufzer, Vagus-Beruhigung, Kunst der Zeitlupe, sinnliches Umkreisen, reines Sinnesspüren).\n4. Kernbotschaft: Zeige dem Nutzer in jeder Zeile, dass sein Körper völlig in Ordnung ist und dass Langsamkeit, Pausen und das \'Nicht-Funktionieren-Müssen\' kein Defekt sind, sondern der Schlüssel zu viel tieferer, unanständig guter Ekstase.\n5. Format: Antworte stets kompakt (2-3 prägnante, atmosphärische Absätze) und beende JEDE Antwort mit genau EINER offenen, leicht herausfordernden oder spür-orientierten Reflexionsfrage.\n6. Sicherheit: Du stellst keine Diagnosen. Bei Schmerzen, Blutungen oder anhaltenden Beschwerden empfiehlst du freundlich eine ärztliche Abklärung.';
+
+  @override
+  String aiServiceConnectionSuccessfulModelslengthModelsAvailable(
+      Object modelsLength, Object join) {
+    return 'Verbindung erfolgreich! $modelsLength Modelle verfügbar (z. B. $join).';
+  }
+
+  @override
+  String get aiServiceNoAvailableTextModelsFound =>
+      'Keine verfügbaren Textmodelle für diesen Key gefunden. Bitte prüfe die API-Berechtigungen.';
+
+  @override
+  String get aiServiceTheApiKeyIsInvalid =>
+      'Der API-Key ist ungültig. Bitte prüfe ihn im Google AI Studio.';
+
+  @override
+  String aiServiceUserContextNameProfilenameGender(
+      Object profileName,
+      Object genderLabel,
+      Object age,
+      Object relationshipLabel,
+      Object goalLabel) {
+    return '\n\nKONTEXT DES NUTZERS:\n- Name/Rufname: $profileName\n- Geschlecht: $genderLabel\n- Alter: $age Jahre\n- Beziehungsstatus: $relationshipLabel\n- Hauptfokus: $goalLabel\nSprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an.';
+  }
+
+  @override
+  String get aiServiceReceivedAnEmptyAnswerFrom =>
+      'Leere Antwort vom KI-Modell erhalten.';
+
+  @override
+  String get backupCodecTheBackupIsTooLarge => 'Die Sicherung ist zu groß.';
+
+  @override
+  String get backupCodecThisIsNotAValid =>
+      'Das ist keine gültige Sicherung (kein JSON).';
+
+  @override
+  String get backupCodecThisIsNotAValid2 => 'Das ist keine gültige Sicherung.';
+
+  @override
+  String get backupCodecThisIsNotAVelvetpulse =>
+      'Das ist keine VelvetPulse-Sicherung.';
+
+  @override
+  String get backupCodecThisBackupComesFromA =>
+      'Diese Sicherung stammt aus einer neueren App-Version. Bitte erst aktualisieren.';
+
+  @override
+  String backupCodecTheBackupIsDamagedField(Object key) {
+    return 'Die Sicherung ist beschädigt (Feld „$key“).';
+  }
+
+  @override
+  String get backupCodecTheBackupContainsAnInvalid =>
+      'Die Sicherung enthält einen ungültigen Verbindungsschlüssel.';
+
+  @override
+  String get backupCodecTheBackupIsDamagedField2 =>
+      'Die Sicherung ist beschädigt (Feld „secrets“).';
+
+  @override
+  String backupCodecTheBackupIsDamagedField3(Object field) {
+    return 'Die Sicherung ist beschädigt (Feld „$field“ zu lang).';
+  }
+
+  @override
+  String backupCodecTheBackupIsDamagedField4(Object field) {
+    return 'Die Sicherung ist beschädigt (Feld „$field“ zu lang).';
+  }
+
+  @override
+  String get backupCodecThePasswordIsWrongOr =>
+      'Das Passwort stimmt nicht, oder die Sicherung wurde beschädigt.';
+
+  @override
+  String get backupCodecTheBackupIsDamaged => 'Die Sicherung ist beschädigt.';
+
+  @override
+  String get messageNotifierNewMessages => 'Neue Nachrichten';
+
+  @override
+  String get messageNotifierNewMessage => 'Neue Nachricht';
+
+  @override
+  String get messageNotifierNoticeOfNewMessagesIn =>
+      'Hinweis auf neue Nachrichten im Paar-Kanal, ohne Inhalt';
+
+  @override
+  String get nostrServiceWeReConnected => '💛 Wir sind verbunden!';
+
+  @override
+  String nostrServiceCountOfFallbackrelayslengthServers(
+      Object count, Object fallbackRelaysLength) {
+    return '$count von $fallbackRelaysLength Servern';
+  }
+
+  @override
+  String get nostrServiceVotedOnTheFantasySelection =>
+      'Fantasie-Auswahl abgestimmt';
+
+  @override
+  String nostrServiceHaveAReadLessontitleCoursetitle(
+      Object lessonTitle, Object courseTitle) {
+    return '📖 Lies mal: „$lessonTitle“ ($courseTitle)';
+  }
+
+  @override
+  String nostrServiceIVeSharedMyThoughts(Object lessonTitle) {
+    return '💭 Ich habe meine Gedanken zu „$lessonTitle“ geteilt. Du siehst sie, sobald du selbst geantwortet hast.';
+  }
+
+  @override
+  String get nostrServiceIVeSharedMyAnswers =>
+      '🗳️ Ich habe meine Antworten der Ja/Nein-Liste geteilt.';
+
+  @override
+  String get privacyServiceUnlockTheApp => 'Entsperre die App';
+
+  @override
+  String get privacyServiceConfirmToTurnOnThe =>
+      'Bestätige, um die App-Sperre einzuschalten';
+
+  @override
+  String get storageServiceTheBackupIsDamagedProfile =>
+      'Die Sicherung ist beschädigt (Profil).';
+
+  @override
+  String get storageServiceReflections => 'Reflexionen';
+
+  @override
+  String get storageServiceYesNoList => 'Ja/Nein-Liste';
+
+  @override
+  String get storageServiceTheKeysInTheBackup =>
+      'Die Schlüssel in der Sicherung passen nicht zusammen.';
+
+  @override
+  String get storageServiceTheBackupCouldNotBe =>
+      'Die Sicherung konnte nicht eingespielt werden. Es wurde nichts verändert.';
+
+  @override
+  String storageServiceTheBackupIsDamagedFeld(Object feld) {
+    return 'Die Sicherung ist beschädigt ($feld).';
+  }
 }

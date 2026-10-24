@@ -4632,6 +4632,224 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Kommt für mich nicht infrage'**
   String get yesNoMaybeModelsNotForMe;
+
+  /// No description provided for @aiServiceYouAreTheConfidentialSomatic.
+  ///
+  /// In de, this message translates to:
+  /// **'Du bist der vertrauliche Somatik-, KVT- und Erotik-Coach in der App VelvetPulse.\n\nDeine Grundhaltung & Tonalität:\n1. Charakter: Du bist eine faszinierende Mischung aus brillantem Neurowissenschaftler/Sexualtherapeuten und einem weltgewandten, charmant-frivolen Verführer auf Augenhöhe.\n2. Sprache: Du sprichst reines, flüssiges Deutsch – vollkommen frei von englischen Modewörtern oder Anglizismen. Du sprichst absolut schamfrei, sinnlich, warm und mit einem leichten, wissenden Augenzwinkern über Lust, Haut, Feuchtigkeit, Erektionen, Damm-Entspannung, Hingabe und Kopfkino. Vermeide jede sterile Krankenhaus-Sprache und jeden belehrenden Ton!\n3. Methodik: Verbinde Kognitive Verhaltenstherapie (das Entzaubern spießiger Leistungs- und Prüfungsgedanken) immer direkt mit lustvoller Somatik (Beckenboden wie warmen Honig schmelzen lassen, aktives Beckenboden-Öffnen, tiefe Kehlkopf-Seufzer, Vagus-Beruhigung, Kunst der Zeitlupe, sinnliches Umkreisen, reines Sinnesspüren).\n4. Kernbotschaft: Zeige dem Nutzer in jeder Zeile, dass sein Körper völlig in Ordnung ist und dass Langsamkeit, Pausen und das \'Nicht-Funktionieren-Müssen\' kein Defekt sind, sondern der Schlüssel zu viel tieferer, unanständig guter Ekstase.\n5. Format: Antworte stets kompakt (2-3 prägnante, atmosphärische Absätze) und beende JEDE Antwort mit genau EINER offenen, leicht herausfordernden oder spür-orientierten Reflexionsfrage.\n6. Sicherheit: Du stellst keine Diagnosen. Bei Schmerzen, Blutungen oder anhaltenden Beschwerden empfiehlst du freundlich eine ärztliche Abklärung.'**
+  String get aiServiceYouAreTheConfidentialSomatic;
+
+  /// No description provided for @aiServiceConnectionSuccessfulModelslengthModelsAvailable.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbindung erfolgreich! {modelsLength} Modelle verfügbar (z. B. {join}).'**
+  String aiServiceConnectionSuccessfulModelslengthModelsAvailable(
+      Object modelsLength, Object join);
+
+  /// No description provided for @aiServiceNoAvailableTextModelsFound.
+  ///
+  /// In de, this message translates to:
+  /// **'Keine verfügbaren Textmodelle für diesen Key gefunden. Bitte prüfe die API-Berechtigungen.'**
+  String get aiServiceNoAvailableTextModelsFound;
+
+  /// No description provided for @aiServiceTheApiKeyIsInvalid.
+  ///
+  /// In de, this message translates to:
+  /// **'Der API-Key ist ungültig. Bitte prüfe ihn im Google AI Studio.'**
+  String get aiServiceTheApiKeyIsInvalid;
+
+  /// No description provided for @aiServiceUserContextNameProfilenameGender.
+  ///
+  /// In de, this message translates to:
+  /// **'\n\nKONTEXT DES NUTZERS:\n- Name/Rufname: {profileName}\n- Geschlecht: {genderLabel}\n- Alter: {age} Jahre\n- Beziehungsstatus: {relationshipLabel}\n- Hauptfokus: {goalLabel}\nSprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an.'**
+  String aiServiceUserContextNameProfilenameGender(
+      Object profileName,
+      Object genderLabel,
+      Object age,
+      Object relationshipLabel,
+      Object goalLabel);
+
+  /// No description provided for @aiServiceReceivedAnEmptyAnswerFrom.
+  ///
+  /// In de, this message translates to:
+  /// **'Leere Antwort vom KI-Modell erhalten.'**
+  String get aiServiceReceivedAnEmptyAnswerFrom;
+
+  /// No description provided for @backupCodecTheBackupIsTooLarge.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung ist zu groß.'**
+  String get backupCodecTheBackupIsTooLarge;
+
+  /// No description provided for @backupCodecThisIsNotAValid.
+  ///
+  /// In de, this message translates to:
+  /// **'Das ist keine gültige Sicherung (kein JSON).'**
+  String get backupCodecThisIsNotAValid;
+
+  /// No description provided for @backupCodecThisIsNotAValid2.
+  ///
+  /// In de, this message translates to:
+  /// **'Das ist keine gültige Sicherung.'**
+  String get backupCodecThisIsNotAValid2;
+
+  /// No description provided for @backupCodecThisIsNotAVelvetpulse.
+  ///
+  /// In de, this message translates to:
+  /// **'Das ist keine VelvetPulse-Sicherung.'**
+  String get backupCodecThisIsNotAVelvetpulse;
+
+  /// No description provided for @backupCodecThisBackupComesFromA.
+  ///
+  /// In de, this message translates to:
+  /// **'Diese Sicherung stammt aus einer neueren App-Version. Bitte erst aktualisieren.'**
+  String get backupCodecThisBackupComesFromA;
+
+  /// No description provided for @backupCodecTheBackupIsDamagedField.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung ist beschädigt (Feld „{key}“).'**
+  String backupCodecTheBackupIsDamagedField(Object key);
+
+  /// No description provided for @backupCodecTheBackupContainsAnInvalid.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung enthält einen ungültigen Verbindungsschlüssel.'**
+  String get backupCodecTheBackupContainsAnInvalid;
+
+  /// No description provided for @backupCodecTheBackupIsDamagedField2.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung ist beschädigt (Feld „secrets“).'**
+  String get backupCodecTheBackupIsDamagedField2;
+
+  /// No description provided for @backupCodecTheBackupIsDamagedField3.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung ist beschädigt (Feld „{field}“ zu lang).'**
+  String backupCodecTheBackupIsDamagedField3(Object field);
+
+  /// No description provided for @backupCodecTheBackupIsDamagedField4.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung ist beschädigt (Feld „{field}“ zu lang).'**
+  String backupCodecTheBackupIsDamagedField4(Object field);
+
+  /// No description provided for @backupCodecThePasswordIsWrongOr.
+  ///
+  /// In de, this message translates to:
+  /// **'Das Passwort stimmt nicht, oder die Sicherung wurde beschädigt.'**
+  String get backupCodecThePasswordIsWrongOr;
+
+  /// No description provided for @backupCodecTheBackupIsDamaged.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung ist beschädigt.'**
+  String get backupCodecTheBackupIsDamaged;
+
+  /// No description provided for @messageNotifierNewMessages.
+  ///
+  /// In de, this message translates to:
+  /// **'Neue Nachrichten'**
+  String get messageNotifierNewMessages;
+
+  /// No description provided for @messageNotifierNewMessage.
+  ///
+  /// In de, this message translates to:
+  /// **'Neue Nachricht'**
+  String get messageNotifierNewMessage;
+
+  /// No description provided for @messageNotifierNoticeOfNewMessagesIn.
+  ///
+  /// In de, this message translates to:
+  /// **'Hinweis auf neue Nachrichten im Paar-Kanal, ohne Inhalt'**
+  String get messageNotifierNoticeOfNewMessagesIn;
+
+  /// No description provided for @nostrServiceWeReConnected.
+  ///
+  /// In de, this message translates to:
+  /// **'💛 Wir sind verbunden!'**
+  String get nostrServiceWeReConnected;
+
+  /// No description provided for @nostrServiceCountOfFallbackrelayslengthServers.
+  ///
+  /// In de, this message translates to:
+  /// **'{count} von {fallbackRelaysLength} Servern'**
+  String nostrServiceCountOfFallbackrelayslengthServers(
+      Object count, Object fallbackRelaysLength);
+
+  /// No description provided for @nostrServiceVotedOnTheFantasySelection.
+  ///
+  /// In de, this message translates to:
+  /// **'Fantasie-Auswahl abgestimmt'**
+  String get nostrServiceVotedOnTheFantasySelection;
+
+  /// No description provided for @nostrServiceHaveAReadLessontitleCoursetitle.
+  ///
+  /// In de, this message translates to:
+  /// **'📖 Lies mal: „{lessonTitle}“ ({courseTitle})'**
+  String nostrServiceHaveAReadLessontitleCoursetitle(
+      Object lessonTitle, Object courseTitle);
+
+  /// No description provided for @nostrServiceIVeSharedMyThoughts.
+  ///
+  /// In de, this message translates to:
+  /// **'💭 Ich habe meine Gedanken zu „{lessonTitle}“ geteilt. Du siehst sie, sobald du selbst geantwortet hast.'**
+  String nostrServiceIVeSharedMyThoughts(Object lessonTitle);
+
+  /// No description provided for @nostrServiceIVeSharedMyAnswers.
+  ///
+  /// In de, this message translates to:
+  /// **'🗳️ Ich habe meine Antworten der Ja/Nein-Liste geteilt.'**
+  String get nostrServiceIVeSharedMyAnswers;
+
+  /// No description provided for @privacyServiceUnlockTheApp.
+  ///
+  /// In de, this message translates to:
+  /// **'Entsperre die App'**
+  String get privacyServiceUnlockTheApp;
+
+  /// No description provided for @privacyServiceConfirmToTurnOnThe.
+  ///
+  /// In de, this message translates to:
+  /// **'Bestätige, um die App-Sperre einzuschalten'**
+  String get privacyServiceConfirmToTurnOnThe;
+
+  /// No description provided for @storageServiceTheBackupIsDamagedProfile.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung ist beschädigt (Profil).'**
+  String get storageServiceTheBackupIsDamagedProfile;
+
+  /// No description provided for @storageServiceReflections.
+  ///
+  /// In de, this message translates to:
+  /// **'Reflexionen'**
+  String get storageServiceReflections;
+
+  /// No description provided for @storageServiceYesNoList.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja/Nein-Liste'**
+  String get storageServiceYesNoList;
+
+  /// No description provided for @storageServiceTheKeysInTheBackup.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Schlüssel in der Sicherung passen nicht zusammen.'**
+  String get storageServiceTheKeysInTheBackup;
+
+  /// No description provided for @storageServiceTheBackupCouldNotBe.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung konnte nicht eingespielt werden. Es wurde nichts verändert.'**
+  String get storageServiceTheBackupCouldNotBe;
+
+  /// No description provided for @storageServiceTheBackupIsDamagedFeld.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sicherung ist beschädigt ({feld}).'**
+  String storageServiceTheBackupIsDamagedFeld(Object feld);
 }
 
 class _AppLocalizationsDelegate

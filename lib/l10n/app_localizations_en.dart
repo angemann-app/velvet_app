@@ -2709,4 +2709,152 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get yesNoMaybeModelsNotForMe => 'Not for me';
+
+  @override
+  String get aiServiceYouAreTheConfidentialSomatic =>
+      'You are the confidential somatic, CBT and erotic coach in the app VelvetPulse.\n\nYour attitude & tone:\n1. Character: you are a fascinating mix of a brilliant neuroscientist/sex therapist and a worldly, charmingly flirtatious seducer who meets people as equals.\n2. Language: you write natural, fluent English. You talk about desire, skin, wetness, erections, relaxing the perineum, surrender and racing thoughts completely without shame, sensually, warmly and with a light, knowing wink. Avoid any sterile hospital language and any lecturing tone!\n3. Method: always connect cognitive behavioural therapy (taking the magic out of stuffy performance and test-like thoughts) directly with pleasurable body work (letting the pelvic floor melt like warm honey, actively opening the pelvic floor, deep throaty sighs, calming the nervous system, the art of slow motion, sensual circling, pure sensing).\n4. Core message: show the user in every line that their body is completely fine and that slowness, pauses and \'not having to perform\' are not a defect but the key to much deeper, indecently good ecstasy.\n5. Format: always answer compactly (2-3 concise, atmospheric paragraphs) and end EVERY answer with exactly ONE open, gently challenging or sensation-oriented reflection question.\n6. Safety: you don\'t make diagnoses. With pain, bleeding or persistent problems, you kindly recommend seeing a doctor.';
+
+  @override
+  String aiServiceConnectionSuccessfulModelslengthModelsAvailable(
+      Object modelsLength, Object join) {
+    return 'Connection successful! $modelsLength models available (e.g. $join).';
+  }
+
+  @override
+  String get aiServiceNoAvailableTextModelsFound =>
+      'No available text models found for this key. Please check the API permissions.';
+
+  @override
+  String get aiServiceTheApiKeyIsInvalid =>
+      'The API key is invalid. Please check it in Google AI Studio.';
+
+  @override
+  String aiServiceUserContextNameProfilenameGender(
+      Object profileName,
+      Object genderLabel,
+      Object age,
+      Object relationshipLabel,
+      Object goalLabel) {
+    return '\n\nUSER CONTEXT:\n- Name: $profileName\n- Gender: $genderLabel\n- Age: $age years\n- Relationship status: $relationshipLabel\n- Main focus: $goalLabel\nAddress the person confidentially by their name, and tailor your psychological and somatic explanations to their gender, age and relationship status.';
+  }
+
+  @override
+  String get aiServiceReceivedAnEmptyAnswerFrom =>
+      'Received an empty answer from the AI model.';
+
+  @override
+  String get backupCodecTheBackupIsTooLarge => 'The backup is too large.';
+
+  @override
+  String get backupCodecThisIsNotAValid =>
+      'This is not a valid backup (not JSON).';
+
+  @override
+  String get backupCodecThisIsNotAValid2 => 'This is not a valid backup.';
+
+  @override
+  String get backupCodecThisIsNotAVelvetpulse =>
+      'This is not a VelvetPulse backup.';
+
+  @override
+  String get backupCodecThisBackupComesFromA =>
+      'This backup comes from a newer app version. Please update first.';
+
+  @override
+  String backupCodecTheBackupIsDamagedField(Object key) {
+    return 'The backup is damaged (field “$key”).';
+  }
+
+  @override
+  String get backupCodecTheBackupContainsAnInvalid =>
+      'The backup contains an invalid connection key.';
+
+  @override
+  String get backupCodecTheBackupIsDamagedField2 =>
+      'The backup is damaged (field “secrets”).';
+
+  @override
+  String backupCodecTheBackupIsDamagedField3(Object field) {
+    return 'The backup is damaged (field “$field” too long).';
+  }
+
+  @override
+  String backupCodecTheBackupIsDamagedField4(Object field) {
+    return 'The backup is damaged (field “$field” too long).';
+  }
+
+  @override
+  String get backupCodecThePasswordIsWrongOr =>
+      'The password is wrong, or the backup has been damaged.';
+
+  @override
+  String get backupCodecTheBackupIsDamaged => 'The backup is damaged.';
+
+  @override
+  String get messageNotifierNewMessages => 'New messages';
+
+  @override
+  String get messageNotifierNewMessage => 'New message';
+
+  @override
+  String get messageNotifierNoticeOfNewMessagesIn =>
+      'Notice of new messages in the couple channel, without content';
+
+  @override
+  String get nostrServiceWeReConnected => '💛 We\'re connected!';
+
+  @override
+  String nostrServiceCountOfFallbackrelayslengthServers(
+      Object count, Object fallbackRelaysLength) {
+    return '$count of $fallbackRelaysLength servers';
+  }
+
+  @override
+  String get nostrServiceVotedOnTheFantasySelection =>
+      'Voted on the fantasy selection';
+
+  @override
+  String nostrServiceHaveAReadLessontitleCoursetitle(
+      Object lessonTitle, Object courseTitle) {
+    return '📖 Have a read: “$lessonTitle” ($courseTitle)';
+  }
+
+  @override
+  String nostrServiceIVeSharedMyThoughts(Object lessonTitle) {
+    return '💭 I\'ve shared my thoughts on “$lessonTitle”. You\'ll see them as soon as you\'ve answered yourself.';
+  }
+
+  @override
+  String get nostrServiceIVeSharedMyAnswers =>
+      '🗳️ I\'ve shared my answers to the yes/no list.';
+
+  @override
+  String get privacyServiceUnlockTheApp => 'Unlock the app';
+
+  @override
+  String get privacyServiceConfirmToTurnOnThe =>
+      'Confirm to turn on the app lock';
+
+  @override
+  String get storageServiceTheBackupIsDamagedProfile =>
+      'The backup is damaged (profile).';
+
+  @override
+  String get storageServiceReflections => 'Reflections';
+
+  @override
+  String get storageServiceYesNoList => 'Yes/no list';
+
+  @override
+  String get storageServiceTheKeysInTheBackup =>
+      'The keys in the backup don\'t match.';
+
+  @override
+  String get storageServiceTheBackupCouldNotBe =>
+      'The backup could not be restored. Nothing was changed.';
+
+  @override
+  String storageServiceTheBackupIsDamagedFeld(Object feld) {
+    return 'The backup is damaged ($feld).';
+  }
 }

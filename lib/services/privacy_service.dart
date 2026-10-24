@@ -2,16 +2,17 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../l10n/t.dart';
 
 /// Diskretions-Modus: App-Sperre per Fingerabdruck und unauffälliges App-Symbol.
 class PrivacyService {
-  static const String _keyLockEnabled = 'privacy_lock_enabled';
-  static const String _keyDiscreetIcon = 'privacy_discreet_icon';
+  static String _keyLockEnabled = 'privacy_lock_enabled';
+  static String _keyDiscreetIcon = 'privacy_discreet_icon';
 
   /// Nach so langer Zeit im Hintergrund wird wieder entsperrt.
-  static const Duration relockAfter = Duration(minutes: 1);
+  static Duration relockAfter = Duration(minutes: 1);
 
-  static const MethodChannel _channel = MethodChannel('velvetpulse/privacy');
+  static MethodChannel _channel = MethodChannel('velvetpulse/privacy');
   static final LocalAuthentication _auth = LocalAuthentication();
 
   static bool _authenticating = false;
@@ -39,7 +40,8 @@ class PrivacyService {
   }
 
   /// Fragt Fingerabdruck oder Geräte-PIN ab. Gibt true bei Erfolg zurück.
-  static Future<bool> authenticate({String reason = 'Entsperre die App'}) async {
+  static Future<bool> authenticate({String? reason}) async {
+    reason ??= t.privacyServiceUnlockTheApp;
     if (_authenticating) return false;
     _authenticating = true;
     try {
@@ -55,7 +57,7 @@ class PrivacyService {
   /// Schaltet die Sperre um. Beim Einschalten wird zuerst einmal entsperrt,
   /// damit sich niemand versehentlich aussperrt.
   static Future<bool> setLockEnabled(bool enabled) async {
-    if (enabled && !await authenticate(reason: 'Bestätige, um die App-Sperre einzuschalten')) {
+    if (enabled && !await authenticate(reason: t.privacyServiceConfirmToTurnOnThe)) {
       return false;
     }
     final prefs = await SharedPreferences.getInstance();

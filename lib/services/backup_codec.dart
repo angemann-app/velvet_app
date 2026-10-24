@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:pointycastle/export.dart';
 
 import 'nostr_keys.dart';
+import '../l10n/t.dart';
 
 /// Format und Prüfung von Sicherungen.
 ///
@@ -46,21 +47,21 @@ class BackupCodec {
   /// einer verständlichen Meldung.
   static ValidatedBackup validate(Object? raw) {
     if (raw is String) {
-      if (raw.length > maxBackupChars) throw const BackupException('Die Sicherung ist zu groß.');
+      if (raw.length > maxBackupChars) throw BackupException(t.backupCodecTheBackupIsTooLarge);
       try {
         raw = jsonDecode(raw);
       } catch (_) {
-        throw const BackupException('Das ist keine gültige Sicherung (kein JSON).');
+        throw BackupException(t.backupCodecThisIsNotAValid);
       }
     }
-    if (raw is! Map) throw const BackupException('Das ist keine gültige Sicherung.');
+    if (raw is! Map) throw BackupException(t.backupCodecThisIsNotAValid2);
     final data = Map<String, dynamic>.from(raw);
-    if (data['app'] != 'VelvetPulse') throw const BackupException('Das ist keine VelvetPulse-Sicherung.');
+    if (data['app'] != 'VelvetPulse') throw BackupException(t.backupCodecThisIsNotAVelvetpulse);
 
     final schemaValue = data['schema'];
     final int foundSchema = schemaValue == null ? 1 : (schemaValue is int ? schemaValue : -1);
     if (foundSchema < 1 || foundSchema > schema) {
-      throw const BackupException('Diese Sicherung stammt aus einer neueren App-Version. Bitte erst aktualisieren.');
+      throw BackupException(t.backupCodecThisBackupComesFromA);
     }
 
     final clean = <String, dynamic>{};
@@ -68,7 +69,7 @@ class BackupCodec {
       final value = data[entry.key];
       if (value == null) continue;
       if (!_hasType(value, entry.value)) {
-        throw BackupException('Die Sicherung ist beschädigt (Feld „${entry.key}“).');
+        throw BackupException(t.backupCodecTheBackupIsDamagedField(entry.key));
       }
       _checkSize(value, entry.key);
       clean[entry.key] = value;
@@ -76,7 +77,7 @@ class BackupCodec {
     for (final field in ['nostrPubKey', 'nostrPartnerPubKey']) {
       final key = clean[field] as String?;
       if (key != null && key.isNotEmpty && !isValidPublicKeyHex(key)) {
-        throw const BackupException('Die Sicherung enthält einen ungültigen Verbindungsschlüssel.');
+        throw BackupException(t.backupCodecTheBackupContainsAnInvalid);
       }
     }
 
@@ -91,14 +92,14 @@ class BackupCodec {
       final priv = data['nostrPrivKey'];
       if (priv != null) {
         if (priv is! String || !isValidPrivateKeyHex(priv)) {
-          throw const BackupException('Die Sicherung enthält einen ungültigen Verbindungsschlüssel.');
+          throw BackupException(t.backupCodecTheBackupContainsAnInvalid);
         }
         legacySecrets['nostrPrivKey'] = priv;
       }
     }
 
     final secrets = data['secrets'];
-    if (secrets != null && secrets is! Map) throw const BackupException('Die Sicherung ist beschädigt (Feld „secrets“).');
+    if (secrets != null && secrets is! Map) throw BackupException(t.backupCodecTheBackupIsDamagedField2);
 
     return ValidatedBackup(
       data: clean,
@@ -111,7 +112,7 @@ class BackupCodec {
   static Map<String, String> checkSecrets(Map<String, String> secrets) {
     final priv = secrets['nostrPrivKey'];
     if (priv != null && !isValidPrivateKeyHex(priv)) {
-      throw const BackupException('Die Sicherung enthält einen ungültigen Verbindungsschlüssel.');
+      throw BackupException(t.backupCodecTheBackupContainsAnInvalid);
     }
     return secrets;
   }
@@ -126,10 +127,10 @@ class BackupCodec {
 
   static void _checkSize(Object value, String field) {
     if (value is String && value.length > _maxStringLength) {
-      throw BackupException('Die Sicherung ist beschädigt (Feld „$field“ zu lang).');
+      throw BackupException(t.backupCodecTheBackupIsDamagedField3(field));
     }
     if (value is List && value.length > _maxListLength) {
-      throw BackupException('Die Sicherung ist beschädigt (Feld „$field“ zu lang).');
+      throw BackupException(t.backupCodecTheBackupIsDamagedField4(field));
     }
   }
 
@@ -145,9 +146,9 @@ class BackupCodec {
   static Future<Map<String, String>> decryptSecrets(Map<String, dynamic> block, String password) async {
     final json = await compute(_decrypt, [jsonEncode(block), password]);
     // GCM kann „falsches Passwort“ und „Datei verändert“ nicht unterscheiden.
-    if (json == null) throw const BackupException('Das Passwort stimmt nicht, oder die Sicherung wurde beschädigt.');
+    if (json == null) throw BackupException(t.backupCodecThePasswordIsWrongOr);
     final map = jsonDecode(json);
-    if (map is! Map) throw const BackupException('Die Sicherung ist beschädigt.');
+    if (map is! Map) throw BackupException(t.backupCodecTheBackupIsDamaged);
     return checkSecrets(map.map((k, v) => MapEntry(k.toString(), v.toString())));
   }
 
@@ -203,7 +204,7 @@ class ValidatedBackup {
 
   bool get hasPlaintextSecrets => plaintextSecrets.isNotEmpty;
   bool get needsPassword => encryptedSecrets != null;
-  String get profileName => (data['userProfile'] as Map?)?['name']?.toString() ?? 'Nutzer';
+  String get profileName => (data['userProfile'] as Map?)?['name']?.toString() ?? t.onboardingUser;
 }
 
 class BackupException implements Exception {
