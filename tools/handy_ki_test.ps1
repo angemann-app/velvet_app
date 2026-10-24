@@ -23,8 +23,11 @@ if ($frei -lt $noetig + 2GB) { throw "Zu wenig freier Speicher auf dem Handy ($(
 
 "--- Kopieren"
 & $adb shell "mkdir -p $ziel"
-& $adb push "$bin\." $ziel | Select-Object -Last 1
-& $adb push $gguf "$ziel/$Modell" | Select-Object -Last 1
+# Einzeln statt als Ordner: „adb push ordner\.“ blieb unter Windows hängen.
+foreach ($datei in Get-ChildItem $bin -File | Where-Object { $_.Name -in 'llama-bench', 'llama-completion' -or $_.Extension -eq '.so' }) {
+    & $adb push $datei.FullName "$ziel/$($datei.Name)" | Out-Null
+}
+& $adb push $gguf "$ziel/$Modell"
 & $adb shell "chmod 755 $ziel/llama-*"
 
 "--- Tempo (llama-bench, nur Prozessor)"

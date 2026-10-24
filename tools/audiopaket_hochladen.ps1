@@ -1,4 +1,4 @@
-# Lädt das englische Audiopaket (build/velvetpulse-audio-en.zip + .sha256) als eigenes GitHub-Release hoch.
+﻿# Lädt das englische Audiopaket (build/velvetpulse-audio-en.zip + .sha256) als eigenes GitHub-Release hoch.
 # Tag ohne „+Build“ (z. B. audio-en-v1): Die Update-Suche der App wählt es nie als App-Update.
 # Die App lädt das Paket von genau dieser Adresse (lib/services/sprachausgabe.dart, AudioPaket.paketUrl).
 #
