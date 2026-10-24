@@ -10,6 +10,7 @@ import '../../theme/app_theme.dart';
 import '../../widgets/audio_player_card.dart';
 import '../self_exploration/lust_profile_screen.dart';
 import '../self_exploration/selbst_reise_screen.dart';
+import '../../l10n/t.dart';
 
 class LessonDetailScreen extends StatefulWidget {
   final Lesson lesson;
@@ -60,8 +61,8 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
         SnackBar(
           content: Text(
             newState
-                ? 'Lektion als abgeschlossen markiert! 🎉'
-                : 'Lektion wieder als offen markiert.',
+                ? t.lessonDetailLessonMarkedAsCompleted
+                : t.lessonDetailLessonMarkedAsOpenAgain,
           ),
           backgroundColor: newState ? AppTheme.sageGreen : AppTheme.surfaceLight,
           duration: const Duration(seconds: 2),
@@ -108,8 +109,8 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text(ok
-          ? 'Lektion an ${_nostr.partnerName} geschickt.'
-          : 'Senden hat nicht geklappt. Bitte gleich noch einmal versuchen.'),
+          ? t.lessonDetailLessonSentToPartnername(_nostr.partnerName)
+          : t.lessonDetailSendingDidnTWorkPlease),
       backgroundColor: ok ? AppTheme.sageGreen : AppTheme.rose,
     ));
   }
@@ -125,8 +126,8 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     setState(() {});
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text(ok
-          ? 'Deine Gedanken sind bei ${_nostr.partnerName}. Sichtbar werden sie, wenn auch dort eine Antwort steht.'
-          : 'Senden hat nicht geklappt. Bitte gleich noch einmal versuchen.'),
+          ? t.lessonDetailYourThoughtsAreWithPartnername(_nostr.partnerName)
+          : t.lessonDetailSendingDidnTWorkPlease),
       backgroundColor: ok ? AppTheme.sageGreen : AppTheme.rose,
     ));
   }
@@ -155,13 +156,13 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                   Icon(mine.isEmpty ? Icons.lock_outline_rounded : Icons.favorite_rounded,
                       color: AppTheme.rose, size: 16),
                   const SizedBox(width: 6),
-                  Text(mine.isEmpty ? '$name hat schon geantwortet' : 'Die Gedanken von $name',
+                  Text(mine.isEmpty ? t.lessonDetailNameHasAlreadyAnswered(name) : t.lessonDetailNameSThoughts(name),
                       style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13.5, fontWeight: FontWeight.w700)),
                 ],
               ),
               const SizedBox(height: 6),
               Text(
-                mine.isEmpty ? 'Schreib und speichere zuerst deine eigene Antwort, dann siehst du die von $name.' : theirs,
+                mine.isEmpty ? t.lessonDetailWriteAndSaveYourOwn(name) : theirs,
                 style: TextStyle(
                   color: mine.isEmpty ? AppTheme.textMuted : AppTheme.textPrimary,
                   fontSize: 13.5,
@@ -230,7 +231,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             IconButton(
               onPressed: _shareLesson,
               icon: const Icon(Icons.favorite_border_rounded, color: AppTheme.rose),
-              tooltip: 'Mit ${_nostr.partnerName} teilen',
+              tooltip: t.lessonDetailShareWithPartnername(_nostr.partnerName),
             ),
           IconButton(
             onPressed: _toggleCompleted,
@@ -239,7 +240,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               color: _isCompleted ? AppTheme.sageGreen : AppTheme.textMuted,
               size: 26,
             ),
-            tooltip: _isCompleted ? 'Abgeschlossen' : 'Als abgeschlossen markieren',
+            tooltip: _isCompleted ? t.lessonDetailCompleted : t.lessonDetailMarkAsCompleted,
           ),
           const SizedBox(width: 8),
         ],
@@ -310,7 +311,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                       ),
                       const SizedBox(width: 6),
                       Text(
-                        lesson.isAudioExercise ? 'AUDIO-ÜBUNG' : 'LEKTION',
+                        lesson.isAudioExercise ? t.lessonDetailAudioExercise : t.lessonDetailLesson,
                         style: TextStyle(
                           color: lesson.isAudioExercise ? AppTheme.amber : AppTheme.sageGreen,
                           fontSize: 11,
@@ -323,7 +324,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                 ),
                 const SizedBox(width: 10),
                 Text(
-                  '${lesson.durationMin} Min. Lesezeit',
+                  t.lessonDetailDurationminMinRead(lesson.durationMin),
                   style: const TextStyle(
                     color: AppTheme.textMuted,
                     fontSize: 12,
@@ -414,8 +415,8 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                 ),
                 label: Text(
                   _isCompleted
-                      ? 'Lektion abgeschlossen (Erledigt)'
-                      : 'Lektion als abgeschlossen markieren',
+                      ? t.lessonDetailLessonCompletedDone
+                      : t.lessonDetailMarkLessonAsCompleted,
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: _isCompleted ? AppTheme.surfaceLight : AppTheme.sageGreen,
@@ -439,28 +440,28 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     Color accentColor = AppTheme.sageGreen;
 
     if (tool == 'kegel_timer') {
-      toolTitle = 'Beckenboden-Timer öffnen';
-      toolSubtitle = 'Direkt in die Entspannungs- & Kräftigungs-Praxis einsteigen';
+      toolTitle = t.lessonDetailOpenPelvicFloorTimer;
+      toolSubtitle = t.lessonDetailGoStraightIntoRelaxationStrengthening;
       toolIcon = Icons.fitness_center_rounded;
       accentColor = AppTheme.amber;
     } else if (tool == 'breath_pacer') {
-      toolTitle = 'Atem-Pacer (Down-Regulation) starten';
-      toolSubtitle = 'Vagusnerv aktivieren & Adrenalin senken mit 4-7-8 oder Seufzer';
+      toolTitle = t.lessonDetailStartBreathPacerDownRegulation;
+      toolSubtitle = t.lessonDetailCalmDownWithBreathingOr;
       toolIcon = Icons.air_rounded;
       accentColor = AppTheme.sageGreen;
     } else if (tool == 'lust_profil') {
-      toolTitle = 'Mein Lust-Profil';
-      toolSubtitle = 'Ankreuzen, was dir gefällt – und auf Wunsch deinem Gegenüber schicken';
+      toolTitle = t.lessonDetailMyDesireProfile;
+      toolSubtitle = t.lessonDetailTickWhatYouLikeAnd;
       toolIcon = Icons.favorite_rounded;
       accentColor = AppTheme.rose;
     } else if (tool == 'selbst_reise') {
-      toolTitle = 'Geführte Selbsterkundung';
-      toolSubtitle = '10 bis 30 Minuten, eine Stimme begleitet dich – so nah, wie du möchtest';
+      toolTitle = t.lessonDetailGuidedSelfExploration;
+      toolSubtitle = t.lessonDetailToMinutesAVoiceGuides;
       toolIcon = Icons.spa_rounded;
       accentColor = AppTheme.rose;
     } else if (tool == 'cbt_journal') {
-      toolTitle = 'KVT-Gedankenprotokoll starten';
-      toolSubtitle = 'Erwartungsangst und innere Katastrophengedanken reframen';
+      toolTitle = t.lessonDetailStartCbtThoughtRecord;
+      toolSubtitle = t.lessonDetailReframeAnticipatoryAnxietyAndCatastrophic;
       toolIcon = Icons.psychology_rounded;
       accentColor = AppTheme.sageLight;
     }
@@ -491,7 +492,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'PASSENDE PRAXIS-ÜBUNG',
+                      t.lessonDetailMatchingPractice,
                       style: TextStyle(
                         color: accentColor,
                         fontSize: 11,
@@ -523,7 +524,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             child: ElevatedButton.icon(
               onPressed: _triggerSmartTool,
               icon: const Icon(Icons.arrow_forward_rounded, size: 18),
-              label: const Text('Jetzt Praxis-Übung starten'),
+              label: Text(t.lessonDetailStartThePracticeNow),
               style: ElevatedButton.styleFrom(
                 backgroundColor: accentColor,
                 foregroundColor: Colors.black,
@@ -546,12 +547,12 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Row(
+          Row(
             children: [
               Icon(Icons.edit_note_rounded, color: AppTheme.amber, size: 22),
-              const SizedBox(width: 8),
+              SizedBox(width: 8),
               Text(
-                'Deine persönliche Reflexion',
+                t.lessonDetailYourPersonalReflection,
                 style: TextStyle(
                   color: AppTheme.textPrimary,
                   fontSize: 16,
@@ -575,8 +576,8 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             controller: _reflectionController,
             maxLines: 4,
             style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
-            decoration: const InputDecoration(
-              hintText: 'Schreibe hier deine ehrlichen Gedanken auf. Sie bleiben auf deinem Gerät, außer du teilst sie.',
+            decoration: InputDecoration(
+              hintText: t.lessonDetailWriteDownYourHonestThoughts,
             ),
           ),
           const SizedBox(height: 12),
@@ -584,12 +585,12 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               if (_reflectionSavedMessage)
-                const Row(
+                Row(
                   children: [
                     Icon(Icons.check, color: AppTheme.sageGreen, size: 16),
                     SizedBox(width: 4),
                     Text(
-                      'Lokal gespeichert!',
+                      t.lessonDetailSavedLocally,
                       style: TextStyle(color: AppTheme.sageGreen, fontSize: 12, fontWeight: FontWeight.w600),
                     ),
                   ],
@@ -610,7 +611,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                         height: 16,
                         child: CircularProgressIndicator(strokeWidth: 2),
                       )
-                    : const Text('Antwort speichern', style: TextStyle(fontSize: 13)),
+                    : Text(t.lessonDetailSaveAnswer, style: TextStyle(fontSize: 13)),
               ),
             ],
           ),
@@ -621,7 +622,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               child: TextButton.icon(
                 onPressed: _shareReflection,
                 icon: const Icon(Icons.favorite_border_rounded, size: 16, color: AppTheme.rose),
-                label: Text('Mit ${_nostr.partnerName} teilen',
+                label: Text(t.lessonDetailShareWithPartnername2(_nostr.partnerName),
                     style: const TextStyle(color: AppTheme.rose, fontSize: 13, fontWeight: FontWeight.w600)),
               ),
             ),

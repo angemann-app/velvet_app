@@ -8,13 +8,13 @@ import 'services/message_notifier.dart';
 import 'services/nostr_service.dart';
 import 'services/privacy_service.dart';
 import 'services/sprache.dart';
-import 'l10n/app_localizations.dart';
 import 'services/update_service.dart';
 import 'services/whats_new.dart';
 import 'widgets/app_lock.dart';
 import 'theme/app_theme.dart';
 import 'screens/main_navigation_screen.dart';
 import 'screens/onboarding/onboarding_screen.dart';
+import 'l10n/t.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -143,7 +143,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
           ? AppLock(initiallyLocked: _lockEnabled, child: child!)
           : child!,
       home: !_isInitialized
-          ? const Scaffold(
+          ? Scaffold(
               backgroundColor: AppTheme.background,
               body: Center(
                 child: Column(
@@ -160,7 +160,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
                     ),
                     SizedBox(height: 6),
                     Text(
-                      'KVT & SOMATIK COACHING',
+                      t.mainCbtSomaticCoaching,
                       style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w700,

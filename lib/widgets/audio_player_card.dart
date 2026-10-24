@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
 import 'aussprache_melden.dart';
+import '../l10n/t.dart';
 
 class AudioPlayerCard extends StatefulWidget {
   final String textToRead;
@@ -136,8 +137,8 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                     const SizedBox(width: 6),
                     Text(
                       isUsingFallback
-                          ? 'GERÄTE-STIMME'
-                          : (widget.isAudioExercise ? 'GEFÜHRTE ÜBUNG' : 'ZUM ANHÖREN'),
+                          ? t.audioPlayerCardDeviceVoice
+                          : (widget.isAudioExercise ? t.audioPlayerCardGuidedExercise : t.audioPlayerCardListen),
                       style: TextStyle(
                         color: isPlaying ? accentColor : AppTheme.textSecondary,
                         fontSize: 10.5,
@@ -167,13 +168,13 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
           Text(
             isPlaying
                 ? (widget.isAudioExercise
-                    ? 'Folge einfach der Stimme …'
-                    : 'Wird vorgelesen …')
+                    ? t.audioPlayerCardJustFollowTheVoice
+                    : t.audioPlayerCardReadingAloud)
                 : (isPaused
-                    ? 'Pausiert • Tippe zum Fortsetzen'
+                    ? t.audioPlayerCardPausedTapToResume
                     : (widget.isAudioExercise
-                        ? 'Schließ die Augen und lausche'
-                        : 'Lektion anhören (ca. ${widget.durationMin} Min.)')),
+                        ? t.audioPlayerCardCloseYourEyesAndListen
+                        : t.audioPlayerCardListenToTheLessonApprox(widget.durationMin))),
             style: TextStyle(
               color: isPlaying ? AppTheme.textPrimary : AppTheme.textMuted,
               fontSize: 13,
@@ -228,7 +229,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                 icon: const Icon(Icons.replay_10_rounded),
                 iconSize: 30,
                 color: isCurrent ? AppTheme.textPrimary : AppTheme.textMuted.withValues(alpha: 0.4),
-                tooltip: '10 Sek. zurück',
+                tooltip: t.audioPlayerCardBackS,
               ),
 
               const SizedBox(width: 20),
@@ -289,7 +290,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                 icon: const Icon(Icons.forward_10_rounded),
                 iconSize: 30,
                 color: isCurrent ? AppTheme.textPrimary : AppTheme.textMuted.withValues(alpha: 0.4),
-                tooltip: '10 Sek. vor',
+                tooltip: t.audioPlayerCardForwardS,
               ),
 
               if (isCurrent) ...[
@@ -300,7 +301,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                   icon: const Icon(Icons.stop_rounded),
                   iconSize: 22,
                   color: AppTheme.textSecondary,
-                  tooltip: 'Stoppen & Zurücksetzen',
+                  tooltip: t.audioPlayerCardStopReset,
                 ),
               ],
             ],

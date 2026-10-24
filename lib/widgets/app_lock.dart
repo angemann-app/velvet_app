@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../services/privacy_service.dart';
 import '../theme/app_theme.dart';
+import '../l10n/t.dart';
 
 /// Legt sich über die ganze App, solange die Fingerabdruck-Sperre aktiv und noch nicht entsperrt ist.
 class AppLock extends StatefulWidget {
@@ -81,15 +82,15 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
                     children: [
                       const Icon(Icons.lock_rounded, color: AppTheme.textSecondary, size: 48),
                       const SizedBox(height: 16),
-                      const Text(
-                        'Gesperrt',
+                      Text(
+                        t.appLockLocked,
                         style: TextStyle(color: AppTheme.textPrimary, fontSize: 20, fontWeight: FontWeight.w700),
                       ),
                       const SizedBox(height: 24),
                       ElevatedButton.icon(
                         onPressed: _unlock,
                         icon: const Icon(Icons.fingerprint_rounded),
-                        label: const Text('Entsperren'),
+                        label: Text(t.appLockUnlock),
                       ),
                     ],
                   ),

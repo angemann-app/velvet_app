@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import '../../l10n/t.dart';
 
 enum BreathMode { fourSevenEight, physiologicalSigh }
 
@@ -44,43 +45,43 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
 
   List<BreathPhase> get _phases {
     if (_mode == BreathMode.fourSevenEight) {
-      return const [
+      return [
         BreathPhase(
-          title: 'EINATMEN',
-          action: 'Ruhig und tief durch die Nase einatmen...',
+          title: t.breathPacerViewBreatheIn,
+          action: t.breathPacerViewBreatheInCalmlyAndDeeply,
           seconds: 4,
           isInhale: true,
         ),
         BreathPhase(
-          title: 'HALTEN',
-          action: 'Atem anhalten, Brustkorb entspannt lassen...',
+          title: t.breathPacerViewHold,
+          action: t.breathPacerViewHoldYourBreathKeepThe,
           seconds: 7,
           isHold: true,
         ),
         BreathPhase(
-          title: 'LANGSAM AUSATMEN',
-          action: 'Vollständig und mit sanftem Zischen durch den Mund ausatmen...',
+          title: t.breathPacerViewBreatheOutSlowly,
+          action: t.breathPacerViewBreatheOutFullyThroughThe,
           seconds: 8,
           isExhale: true,
         ),
       ];
     } else {
-      return const [
+      return [
         BreathPhase(
-          title: 'TIEF EINATMEN',
-          action: 'Tief durch die Nase in den Bauch einatmen...',
+          title: t.breathPacerViewBreatheInDeeply,
+          action: t.breathPacerViewBreatheDeepIntoTheBelly,
           seconds: 3,
           isInhale: true,
         ),
         BreathPhase(
-          title: 'ZWEITER ATEMZUG',
-          action: 'Noch einen kurzen Luftzug oben drauf ziehen (Alveolen weiten)...',
+          title: t.breathPacerViewSecondBreath,
+          action: t.breathPacerViewTakeOneMoreShortSip,
           seconds: 1,
           isInhale: true,
         ),
         BreathPhase(
-          title: 'SEUFZEND AUSATMEN',
-          action: 'Sehr lang und hörbar durch den Mund ausatmen, Schultern fallen lassen...',
+          title: t.breathPacerViewSighItOut,
+          action: t.breathPacerViewBreatheOutVeryLongAnd,
           seconds: 6,
           isExhale: true,
         ),
@@ -214,15 +215,15 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
               children: [
                 Expanded(
                   child: _buildModeTab(
-                    title: '4-7-8 Atmung',
-                    subtitle: 'Tiefe Parasympathikus-Aktivierung',
+                    title: t.breathPacerViewBreathing,
+                    subtitle: t.breathPacerViewDeepCalmingBreath,
                     mode: BreathMode.fourSevenEight,
                   ),
                 ),
                 Expanded(
                   child: _buildModeTab(
-                    title: 'Physiol. Seufzer',
-                    subtitle: 'Sofortige Adrenalin-Bremse',
+                    title: t.breathPacerViewPhysiologicalSigh,
+                    subtitle: t.breathPacerViewQuickWayToCalmDown,
                     mode: BreathMode.physiologicalSigh,
                   ),
                 ),
@@ -244,7 +245,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                   border: Border.all(color: AppTheme.border),
                 ),
                 child: Text(
-                  '$_completedCycles Zyklen abgeschlossen',
+                  t.breathPacerViewCompletedcyclesCyclesCompleted(_completedCycles),
                   style: const TextStyle(
                     color: AppTheme.textPrimary,
                     fontWeight: FontWeight.w600,
@@ -349,8 +350,8 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                 const SizedBox(height: 6),
                 Text(
                   _mode == BreathMode.fourSevenEight
-                      ? 'Längeres Ausatmen verlangsamt messbar den Herzschlag.'
-                      : 'Der doppelte Atemzug entfaltet kollabierte Lungenbläschen.',
+                      ? t.breathPacerViewALongerExhaleMeasurablySlows
+                      : t.breathPacerViewTheDoubleInhaleIsMeant,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     color: AppTheme.textMuted,
@@ -386,7 +387,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                     size: 26,
                   ),
                   label: Text(
-                    _isRunning ? 'Pause' : 'Start',
+                    _isRunning ? t.playerSteuerungPause2 : t.breathPacerViewStart,
                     style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -417,14 +418,14 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: AppTheme.border),
             ),
-            child: const Row(
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(Icons.science_outlined, color: AppTheme.sageGreen, size: 20),
                 SizedBox(width: 10),
                 Expanded(
                   child: Text(
-                    'Biologischer Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, dehnt sich das Zwerchfell nach oben, das Herz bekommt etwas mehr Raum und der Vagusnerv schickt ein Signal ans Gehirn, die Herzfrequenz sofort zu drosseln.',
+                    t.breathPacerViewBackgroundWhenTheExhaleLasts,
                     style: TextStyle(
                       color: AppTheme.textSecondary,
                       fontSize: 12,

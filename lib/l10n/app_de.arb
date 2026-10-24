@@ -72,5 +72,239 @@
   },
   "updateDialogYourDataIsKeptDuring": "Deine Daten bleiben bei der Aktualisierung erhalten.",
   "updateDialogLater": "Später",
-  "updateDialogUpdateNow": "Jetzt aktualisieren"
+  "updateDialogUpdateNow": "Jetzt aktualisieren",
+  "coursesAllCourses": "Alle Kurse",
+  "coursesTouch": "Berührung",
+  "coursesForHer": "Für Sie 🌸",
+  "coursesForHim": "Für Ihn 🌿",
+  "coursesForCouples": "Für Paare 💫",
+  "coursesCoupleChannel": "PAAR-KANAL",
+  "coursesYourPrivateSpace": "Euer privater Raum",
+  "coursesSendSparksSecretlyMatchWishes": "Funken senden & Wünsche heimlich abgleichen",
+  "coursesYourCurriculum": "DEIN CURRICULUM",
+  "coursesHelloProfilename": "Hallo, {profileName}",
+  "@coursesHelloProfilename": {
+    "placeholders": {
+      "profileName": {
+        "type": "Object"
+      }
+    }
+  },
+  "coursesWelcome": "Willkommen",
+  "coursesYourFocusGoallabel": "Dein Fokus: {goalLabel}",
+  "@coursesYourFocusGoallabel": {
+    "placeholders": {
+      "goalLabel": {
+        "type": "Object"
+      }
+    }
+  },
+  "coursesUnderstandTheBiologyQuietThe": "Biologie verstehen. Kopfkino stoppen. Körper spüren.",
+  "coursesProfileSettings": "Profil & Einstellungen",
+  "coursesOverallProgressCompletedcountOfTotallessons": "Gesamtfortschritt: {completedCount} von {totalLessons} Lektionen",
+  "@coursesOverallProgressCompletedcountOfTotallessons": {
+    "placeholders": {
+      "completedCount": {
+        "type": "Object"
+      },
+      "totalLessons": {
+        "type": "Object"
+      }
+    }
+  },
+  "coursesDurationminMin": "{durationMin} Min.",
+  "@coursesDurationminMin": {
+    "placeholders": {
+      "durationMin": {
+        "type": "Object"
+      }
+    }
+  },
+  "coursesPracticePelvicFloor": "Praxis: Beckenboden",
+  "coursesPracticeBreath": "Praxis: Atem",
+  "coursesPracticeCbt": "Praxis: KVT",
+  "lessonDetailLessonMarkedAsCompleted": "Lektion als abgeschlossen markiert! 🎉",
+  "lessonDetailLessonMarkedAsOpenAgain": "Lektion wieder als offen markiert.",
+  "lessonDetailLessonSentToPartnername": "Lektion an {partnerName} geschickt.",
+  "@lessonDetailLessonSentToPartnername": {
+    "placeholders": {
+      "partnerName": {
+        "type": "Object"
+      }
+    }
+  },
+  "lessonDetailSendingDidnTWorkPlease": "Senden hat nicht geklappt. Bitte gleich noch einmal versuchen.",
+  "lessonDetailYourThoughtsAreWithPartnername": "Deine Gedanken sind bei {partnerName}. Sichtbar werden sie, wenn auch dort eine Antwort steht.",
+  "@lessonDetailYourThoughtsAreWithPartnername": {
+    "placeholders": {
+      "partnerName": {
+        "type": "Object"
+      }
+    }
+  },
+  "lessonDetailNameHasAlreadyAnswered": "{name} hat schon geantwortet",
+  "@lessonDetailNameHasAlreadyAnswered": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "lessonDetailNameSThoughts": "Die Gedanken von {name}",
+  "@lessonDetailNameSThoughts": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "lessonDetailWriteAndSaveYourOwn": "Schreib und speichere zuerst deine eigene Antwort, dann siehst du die von {name}.",
+  "@lessonDetailWriteAndSaveYourOwn": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "lessonDetailShareWithPartnername": "Mit {partnerName} teilen",
+  "@lessonDetailShareWithPartnername": {
+    "placeholders": {
+      "partnerName": {
+        "type": "Object"
+      }
+    }
+  },
+  "lessonDetailCompleted": "Abgeschlossen",
+  "lessonDetailMarkAsCompleted": "Als abgeschlossen markieren",
+  "lessonDetailAudioExercise": "AUDIO-ÜBUNG",
+  "lessonDetailLesson": "LEKTION",
+  "lessonDetailDurationminMinRead": "{durationMin} Min. Lesezeit",
+  "@lessonDetailDurationminMinRead": {
+    "placeholders": {
+      "durationMin": {
+        "type": "Object"
+      }
+    }
+  },
+  "lessonDetailLessonCompletedDone": "Lektion abgeschlossen (Erledigt)",
+  "lessonDetailMarkLessonAsCompleted": "Lektion als abgeschlossen markieren",
+  "lessonDetailOpenPelvicFloorTimer": "Beckenboden-Timer öffnen",
+  "lessonDetailGoStraightIntoRelaxationStrengthening": "Direkt in die Entspannungs- & Kräftigungs-Praxis einsteigen",
+  "lessonDetailStartBreathPacerDownRegulation": "Atem-Pacer (Down-Regulation) starten",
+  "lessonDetailCalmDownWithBreathingOr": "Vagusnerv aktivieren & Adrenalin senken mit 4-7-8 oder Seufzer",
+  "lessonDetailMyDesireProfile": "Mein Lust-Profil",
+  "lessonDetailTickWhatYouLikeAnd": "Ankreuzen, was dir gefällt – und auf Wunsch deinem Gegenüber schicken",
+  "lessonDetailGuidedSelfExploration": "Geführte Selbsterkundung",
+  "lessonDetailToMinutesAVoiceGuides": "10 bis 30 Minuten, eine Stimme begleitet dich – so nah, wie du möchtest",
+  "lessonDetailStartCbtThoughtRecord": "KVT-Gedankenprotokoll starten",
+  "lessonDetailReframeAnticipatoryAnxietyAndCatastrophic": "Erwartungsangst und innere Katastrophengedanken reframen",
+  "lessonDetailMatchingPractice": "PASSENDE PRAXIS-ÜBUNG",
+  "lessonDetailStartThePracticeNow": "Jetzt Praxis-Übung starten",
+  "lessonDetailYourPersonalReflection": "Deine persönliche Reflexion",
+  "lessonDetailWriteDownYourHonestThoughts": "Schreibe hier deine ehrlichen Gedanken auf. Sie bleiben auf deinem Gerät, außer du teilst sie.",
+  "lessonDetailSavedLocally": "Lokal gespeichert!",
+  "lessonDetailSaveAnswer": "Antwort speichern",
+  "lessonDetailShareWithPartnername2": "Mit {partnerName} teilen",
+  "@lessonDetailShareWithPartnername2": {
+    "placeholders": {
+      "partnerName": {
+        "type": "Object"
+      }
+    }
+  },
+  "audioPlayerCardDeviceVoice": "GERÄTE-STIMME",
+  "audioPlayerCardGuidedExercise": "GEFÜHRTE ÜBUNG",
+  "audioPlayerCardListen": "ZUM ANHÖREN",
+  "audioPlayerCardJustFollowTheVoice": "Folge einfach der Stimme …",
+  "audioPlayerCardReadingAloud": "Wird vorgelesen …",
+  "audioPlayerCardPausedTapToResume": "Pausiert • Tippe zum Fortsetzen",
+  "audioPlayerCardCloseYourEyesAndListen": "Schließ die Augen und lausche",
+  "audioPlayerCardListenToTheLessonApprox": "Lektion anhören (ca. {durationMin} Min.)",
+  "@audioPlayerCardListenToTheLessonApprox": {
+    "placeholders": {
+      "durationMin": {
+        "type": "Object"
+      }
+    }
+  },
+  "audioPlayerCardBackS": "10 Sek. zurück",
+  "audioPlayerCardForwardS": "10 Sek. vor",
+  "audioPlayerCardStopReset": "Stoppen & Zurücksetzen",
+  "trainingPelvicFloor": "Beckenboden",
+  "trainingBreathPacer": "Atem-Pacer",
+  "breathPacerViewBreatheIn": "EINATMEN",
+  "breathPacerViewBreatheInCalmlyAndDeeply": "Ruhig und tief durch die Nase einatmen...",
+  "breathPacerViewHold": "HALTEN",
+  "breathPacerViewHoldYourBreathKeepThe": "Atem anhalten, Brustkorb entspannt lassen...",
+  "breathPacerViewBreatheOutSlowly": "LANGSAM AUSATMEN",
+  "breathPacerViewBreatheOutFullyThroughThe": "Vollständig und mit sanftem Zischen durch den Mund ausatmen...",
+  "breathPacerViewBreatheInDeeply": "TIEF EINATMEN",
+  "breathPacerViewBreatheDeepIntoTheBelly": "Tief durch die Nase in den Bauch einatmen...",
+  "breathPacerViewSecondBreath": "ZWEITER ATEMZUG",
+  "breathPacerViewTakeOneMoreShortSip": "Noch einen kurzen Luftzug oben drauf ziehen...",
+  "breathPacerViewSighItOut": "SEUFZEND AUSATMEN",
+  "breathPacerViewBreatheOutVeryLongAnd": "Sehr lang und hörbar durch den Mund ausatmen, Schultern fallen lassen...",
+  "breathPacerViewBreathing": "4-7-8 Atmung",
+  "breathPacerViewDeepCalmingBreath": "Tiefe, beruhigende Atmung",
+  "breathPacerViewPhysiologicalSigh": "Physiol. Seufzer",
+  "breathPacerViewQuickWayToCalmDown": "Schnell zur Ruhe kommen",
+  "breathPacerViewCompletedcyclesCyclesCompleted": "{completedCycles} Zyklen abgeschlossen",
+  "@breathPacerViewCompletedcyclesCyclesCompleted": {
+    "placeholders": {
+      "completedCycles": {
+        "type": "Object"
+      }
+    }
+  },
+  "breathPacerViewALongerExhaleMeasurablySlows": "Längeres Ausatmen verlangsamt messbar den Herzschlag.",
+  "breathPacerViewTheDoubleInhaleIsMeant": "Der doppelte Atemzug entfaltet kollabierte Lungenbläschen.",
+  "breathPacerViewStart": "Start",
+  "breathPacerViewBackgroundWhenTheExhaleLasts": "Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, wird der Herzschlag mit jedem Ausatmen ein wenig langsamer. Das ist ein normaler Reflex, den viele als beruhigend erleben.",
+  "sosModalSosQuickHelp": "SOS Akut-Hilfe",
+  "sosModalCalmDownRightNowEmergency": "Sofortige Down-Regulation & Notfall-Schritte",
+  "sosModalBefore": "Vorab",
+  "sosModalInTheMoment": "Im Moment",
+  "sosModalAfterwards": "Danach",
+  "sosModalYourMantraForThisMoment": "DEIN MANTRA FÜR DIESEN MOMENT",
+  "sosModalMantra": "„{mantra}“",
+  "@sosModalMantra": {
+    "placeholders": {
+      "mantra": {
+        "type": "Object"
+      }
+    }
+  },
+  "sosModalImmediateStepsTickOff": "SOFORT-SCHRITTE (ABHAKEN)",
+  "sosModalCheckedlengthImmediatestepslengthDone": "{checkedLength}/{immediateStepsLength} erledigt",
+  "@sosModalCheckedlengthImmediatestepslengthDone": {
+    "placeholders": {
+      "checkedLength": {
+        "type": "Object"
+      },
+      "immediateStepsLength": {
+        "type": "Object"
+      }
+    }
+  },
+  "appLockLocked": "Gesperrt",
+  "appLockUnlock": "Entsperren",
+  "mainCbtSomaticCoaching": "KVT & SOMATIK COACHING",
+  "coursesCourseCount": "{count, plural, =1{1 Kurs} other{{count} Kurse}}",
+  "@coursesCourseCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "coursesStreakDays": "{count, plural, =1{1 Tag in Folge aktiv} other{{count} Tage in Folge aktiv}}",
+  "@coursesStreakDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "coursesPracticeSelfExploration": "Praxis: Selbsterkundung",
+  "coursesPracticeDesireProfile": "Praxis: Lust-Profil"
 }

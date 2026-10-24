@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../theme/app_theme.dart';
 import 'kegel_timer_view.dart';
 import 'breath_pacer_view.dart';
+import '../../l10n/t.dart';
 
 class TrainingScreen extends StatefulWidget {
   final String? initialSubTab;
@@ -64,14 +65,14 @@ class TrainingScreenState extends State<TrainingScreen> with SingleTickerProvide
             unselectedLabelColor: AppTheme.textMuted,
             labelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
             unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
-            tabs: const [
+            tabs: [
               Tab(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.fitness_center_rounded, size: 16),
                     SizedBox(width: 8),
-                    Text('Beckenboden'),
+                    Text(t.trainingPelvicFloor),
                   ],
                 ),
               ),
@@ -81,7 +82,7 @@ class TrainingScreenState extends State<TrainingScreen> with SingleTickerProvide
                   children: [
                     Icon(Icons.air_rounded, size: 16),
                     SizedBox(width: 8),
-                    Text('Atem-Pacer'),
+                    Text(t.trainingBreathPacer),
                   ],
                 ),
               ),

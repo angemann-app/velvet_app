@@ -9,6 +9,7 @@ import '../../widgets/daily_checkin_card.dart';
 import '../../widgets/daily_simmering_card.dart';
 import '../onboarding/onboarding_screen.dart';
 import 'lesson_detail_screen.dart';
+import '../../l10n/t.dart';
 
 class CoursesScreen extends StatefulWidget {
   final void Function(int tabIndex, {String? subTab}) onNavigateToTool;
@@ -177,15 +178,15 @@ class _CoursesScreenState extends State<CoursesScreen> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                _buildCategoryChip('all', 'Alle Kurse', Icons.apps_rounded),
+                _buildCategoryChip('all', t.coursesAllCourses, Icons.apps_rounded),
                 const SizedBox(width: 8),
-                _buildCategoryChip('touch', 'Berührung', Icons.touch_app_rounded),
+                _buildCategoryChip('touch', t.coursesTouch, Icons.touch_app_rounded),
                 const SizedBox(width: 8),
-                _buildCategoryChip('women', 'Für Sie 🌸', Icons.spa_rounded),
+                _buildCategoryChip('women', t.coursesForHer, Icons.spa_rounded),
                 const SizedBox(width: 8),
-                _buildCategoryChip('men', 'Für Ihn 🌿', Icons.male_rounded),
+                _buildCategoryChip('men', t.coursesForHim, Icons.male_rounded),
                 const SizedBox(width: 8),
-                _buildCategoryChip('couples', 'Für Paare 💫', Icons.favorite_rounded),
+                _buildCategoryChip('couples', t.coursesForCouples, Icons.favorite_rounded),
               ],
             ),
           ),
@@ -251,8 +252,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                           children: [
                             Row(
                               children: [
-                                const Text(
-                                  'PAAR-KANAL',
+                                Text(
+                                  t.coursesCoupleChannel,
                                   style: TextStyle(
                                     color: Color(0xFFFB7185),
                                     fontSize: 11,
@@ -265,8 +266,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                               ],
                             ),
                             const SizedBox(height: 2),
-                            const Text(
-                              'Euer privater Raum',
+                            Text(
+                              t.coursesYourPrivateSpace,
                               style: TextStyle(
                                 color: AppTheme.textPrimary,
                                 fontSize: 13.5,
@@ -274,8 +275,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                               ),
                             ),
                             const SizedBox(height: 2),
-                            const Text(
-                              'Funken senden & Wünsche heimlich abgleichen',
+                            Text(
+                              t.coursesSendSparksSecretlyMatchWishes,
                               style: TextStyle(
                                 color: AppTheme.textMuted,
                                 fontSize: 11.5,
@@ -302,8 +303,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'DEIN CURRICULUM',
+                Text(
+                  t.coursesYourCurriculum,
                   style: TextStyle(
                     color: AppTheme.textMuted,
                     fontSize: 12,
@@ -312,7 +313,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   ),
                 ),
                 Text(
-                  '${filteredCourses.length} ${filteredCourses.length == 1 ? 'Kurs' : 'Kurse'}',
+                  t.coursesCourseCount(filteredCourses.length),
                   style: const TextStyle(
                     color: AppTheme.textMuted,
                     fontSize: 11,
@@ -403,7 +404,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      _profile != null ? 'Hallo, ${_profile!.name}' : 'Willkommen',
+                      _profile != null ? t.coursesHelloProfilename(_profile!.name) : t.coursesWelcome,
                       style: const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w800,
@@ -414,8 +415,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     const SizedBox(height: 4),
                     Text(
                       _profile != null
-                          ? 'Dein Fokus: ${_profile!.goalLabel}'
-                          : 'Biologie verstehen. Kopfkino stoppen. Körper spüren.',
+                          ? t.coursesYourFocusGoallabel(_profile!.goalLabel)
+                          : t.coursesUnderstandTheBiologyQuietThe,
                       style: const TextStyle(
                         fontSize: 13.5,
                         color: AppTheme.textSecondary,
@@ -428,7 +429,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
               const SizedBox(width: 10),
               // Tagesserie
               Tooltip(
-                message: '$_streak ${_streak == 1 ? 'Tag' : 'Tage'} in Folge aktiv',
+                message: t.coursesStreakDays(_streak),
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                   decoration: BoxDecoration(
@@ -452,7 +453,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
               const SizedBox(width: 6),
               IconButton(
                 onPressed: _openProfileEditor,
-                tooltip: 'Profil & Einstellungen',
+                tooltip: t.coursesProfileSettings,
                 visualDensity: VisualDensity.compact,
                 icon: Icon(
                   Icons.account_circle_rounded,
@@ -468,7 +469,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Gesamtfortschritt: $completedCount von $totalLessons Lektionen',
+                t.coursesOverallProgressCompletedcountOfTotallessons(completedCount, totalLessons),
                 style: const TextStyle(
                   color: AppTheme.textSecondary,
                   fontSize: 12,
@@ -716,7 +717,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                                     Row(
                                       children: [
                                         Text(
-                                          '${lesson.durationMin} Min.',
+                                          t.coursesDurationminMin(lesson.durationMin),
                                           style: const TextStyle(
                                             fontSize: 11,
                                             color: AppTheme.textMuted,
@@ -725,11 +726,13 @@ class _CoursesScreenState extends State<CoursesScreen> {
                                         if (lesson.linkedTool != 'none') ...[
                                           const Text(' • ', style: TextStyle(color: AppTheme.textMuted, fontSize: 11)),
                                           Text(
-                                            lesson.linkedTool == 'kegel_timer'
-                                                ? 'Praxis: Beckenboden'
-                                                : (lesson.linkedTool == 'breath_pacer'
-                                                    ? 'Praxis: Atem'
-                                                    : 'Praxis: KVT'),
+                                            switch (lesson.linkedTool) {
+                                              'kegel_timer' => t.coursesPracticePelvicFloor,
+                                              'breath_pacer' => t.coursesPracticeBreath,
+                                              'selbst_reise' => t.coursesPracticeSelfExploration,
+                                              'lust_profil' => t.coursesPracticeDesireProfile,
+                                              _ => t.coursesPracticeCbt,
+                                            },
                                             style: const TextStyle(
                                               color: AppTheme.sageGreen,
                                               fontSize: 11,

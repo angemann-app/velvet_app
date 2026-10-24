@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../models/content_models.dart';
 import '../../services/data_service.dart';
 import '../../theme/app_theme.dart';
+import '../../l10n/t.dart';
 
 class SosModal extends StatefulWidget {
   const SosModal({super.key});
@@ -97,12 +98,12 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                   ),
                 ),
                 const SizedBox(width: 12),
-                const Expanded(
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'SOS Akut-Hilfe',
+                        t.sosModalSosQuickHelp,
                         style: TextStyle(
                           color: AppTheme.textPrimary,
                           fontSize: 19,
@@ -110,7 +111,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                         ),
                       ),
                       Text(
-                        'Sofortige Down-Regulation & Notfall-Schritte',
+                        t.sosModalCalmDownRightNowEmergency,
                         style: TextStyle(
                           color: AppTheme.textSecondary,
                           fontSize: 12,
@@ -136,10 +137,10 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
             unselectedLabelColor: AppTheme.textMuted,
             labelStyle: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
             unselectedLabelStyle: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
-            tabs: const [
-              Tab(text: 'Vorab'),
-              Tab(text: 'Im Moment'),
-              Tab(text: 'Danach'),
+            tabs: [
+              Tab(text: t.sosModalBefore),
+              Tab(text: t.sosModalInTheMoment),
+              Tab(text: t.sosModalAfterwards),
             ],
           ),
 
@@ -233,7 +234,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                     Icon(Icons.format_quote_rounded, color: AppTheme.amber, size: 20),
                     const SizedBox(width: 6),
                     Text(
-                      'DEIN MANTRA FÜR DIESEN MOMENT',
+                      t.sosModalYourMantraForThisMoment,
                       style: TextStyle(
                         color: AppTheme.amber,
                         fontSize: 11,
@@ -245,7 +246,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  '„${card.mantra}“',
+                  t.sosModalMantra(card.mantra),
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
@@ -264,8 +265,8 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                'SOFORT-SCHRITTE (ABHAKEN)',
+              Text(
+                t.sosModalImmediateStepsTickOff,
                 style: TextStyle(
                   color: AppTheme.textMuted,
                   fontSize: 12,
@@ -274,7 +275,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                 ),
               ),
               Text(
-                '${checked.length}/${card.immediateSteps.length} erledigt',
+                t.sosModalCheckedlengthImmediatestepslengthDone(checked.length, card.immediateSteps.length),
                 style: TextStyle(
                   color: checked.length == card.immediateSteps.length
                       ? AppTheme.sageGreen
