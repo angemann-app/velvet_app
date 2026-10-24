@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../services/nostr_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/sos_button.dart';
 import '../widgets/update_dialog.dart';
@@ -31,10 +32,16 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     });
   }
 
-  void _navigateToTab(int index, {String? subTab}) {
+  void _showTab(int index) {
     setState(() {
       _currentIndex = index;
     });
+    // Für Lesebestätigungen: Nur wer den Paar-Kanal wirklich sieht, hat gelesen.
+    NostrService().paarKanalSichtbar.value = index == 3;
+  }
+
+  void _navigateToTab(int index, {String? subTab}) {
+    _showTab(index);
     if (index == 1 && subTab != null) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         _trainingKey.currentState?.selectSubTab(subTab);
@@ -105,11 +112,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           unselectedItemColor: AppTheme.textMuted,
           selectedFontSize: 11,
           unselectedFontSize: 11,
-          onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
-          },
+          onTap: _showTab,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.menu_book_rounded),

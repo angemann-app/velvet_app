@@ -79,6 +79,11 @@
           "text": "Shared answers from the yes/no list now arrive in full, even if your partner was offline. And when connecting, the app fetches everything since last time."
         },
         {
+          "icon": "notifications",
+          "titel": "Read receipts",
+          "text": "Below your last message it says “Read” as soon as your partner has seen it – if you both have a current version. You can switch it off in the couple channel's menu; then neither of you sees it."
+        },
+        {
           "icon": "person",
           "titel": "Disconnect",
           "text": "In the couple channel's menu you can disconnect. If you connect with someone else, the old history is deleted – after asking you first."
@@ -95,6 +100,6 @@
     "news:25": "43fb88b582323edc",
     "news:26": "fe279afa040f4852",
     "news:27": "7365439b9160b4f9",
-    "news:28": "5c7ad862bf39ba4d"
+    "news:28": "9368bd4c890ce8fc"
   }
 }

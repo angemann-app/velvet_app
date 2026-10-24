@@ -155,6 +155,7 @@ void main() {
       await prefs.setString('velvet_partner_fantasy_votes', jsonEncode({'match_blindfold': 'yes'}));
       await NostrService().reloadKeysFromPrefs();
     });
+    NostrService().partnerReadUntil.value = DateTime(2026, 10, 23, 21).millisecondsSinceEpoch ~/ 1000;
     await tester.pumpWidget(_app(const MainNavigationScreen()));
     await tester.tap(find.text('Paar-Kanal').last);
     await _shot(tester, '04_paarkanal_verbunden', errors);

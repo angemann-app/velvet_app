@@ -31,7 +31,7 @@ class CouplesChannelScreen extends StatefulWidget {
 }
 
 class _CouplesChannelScreenState extends State<CouplesChannelScreen>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, WidgetsBindingObserver {
   late TabController _subTabController;
   final TextEditingController _chatController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
@@ -43,10 +43,32 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     _subTabController = TabController(length: 2, vsync: this);
     _nostr.init();
     MessageNotifier.clear();
+    WidgetsBinding.instance.addObserver(this);
+    _subTabController.addListener(_pruefeGelesen);
+    _nostr.paarKanalSichtbar.addListener(_pruefeGelesen);
+    _nostr.messagesNotifier.addListener(_pruefeGelesen);
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) _pruefeGelesen();
+  }
+
+  /// Gelesen ist, was im Nachrichten-Bereich bei geöffneter App auf dem Bildschirm steht.
+  void _pruefeGelesen() {
+    final sichtbar = _nostr.paarKanalSichtbar.value &&
+        _subTabController.index == 0 &&
+        WidgetsBinding.instance.lifecycleState == AppLifecycleState.resumed;
+    if (!sichtbar) return;
+    MessageNotifier.clear();
+    _nostr.markMessagesRead();
   }
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    _nostr.paarKanalSichtbar.removeListener(_pruefeGelesen);
+    _nostr.messagesNotifier.removeListener(_pruefeGelesen);
     _subTabController.dispose();
     _chatController.dispose();
     _scrollController.dispose();
@@ -485,14 +507,21 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                       _nostr.reconnectNextRelay();
                     case 'unpair':
                       _confirmUnpair();
+                    case 'read':
+                      _nostr.setReadReceiptsEnabled(!_nostr.readReceiptsEnabled.value);
                   }
                 },
-                itemBuilder: (_) => const [
-                  PopupMenuItem(value: 'profile', child: Text('Name & Geschlecht des Gegenübers')),
-                  PopupMenuItem(value: 'info', child: Text('Verschlüsselung & Details')),
-                  PopupMenuItem(value: 'pair', child: Text('Verbindung verwalten')),
-                  PopupMenuItem(value: 'reconnect', child: Text('Neu verbinden')),
-                  PopupMenuItem(value: 'unpair', child: Text('Verbindung trennen')),
+                itemBuilder: (_) => [
+                  const PopupMenuItem(value: 'profile', child: Text('Name & Geschlecht des Gegenübers')),
+                  CheckedPopupMenuItem(
+                    value: 'read',
+                    checked: _nostr.readReceiptsEnabled.value,
+                    child: const Text('Lesebestätigungen'),
+                  ),
+                  const PopupMenuItem(value: 'info', child: Text('Verschlüsselung & Details')),
+                  const PopupMenuItem(value: 'pair', child: Text('Verbindung verwalten')),
+                  const PopupMenuItem(value: 'reconnect', child: Text('Neu verbinden')),
+                  const PopupMenuItem(value: 'unpair', child: Text('Verbindung trennen')),
                 ],
               ),
             ],
@@ -583,13 +612,34 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           controller: _scrollController,
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           itemCount: messages.length,
-          itemBuilder: (context, index) => _buildBubble(messages[index]),
+          itemBuilder: (context, index) => _buildBubble(
+            messages[index],
+            istLetzteEigene: messages[index].isMe && messages.skip(index + 1).every((m) => !m.isMe),
+          ),
         );
       },
     );
   }
 
-  Widget _buildBubble(CoupleMessage msg) {
+  /// „Gelesen“ / „Gesendet“ – nur wenn beide Lesebestätigungen nutzen. Sendet das Gegenüber
+  /// keine (ältere Version oder ausgeschaltet), steht dort nichts statt eines falschen „Gesendet“.
+  Widget _lesestatus(CoupleMessage msg, Color farbe) => ValueListenableBuilder<bool>(
+        valueListenable: _nostr.readReceiptsEnabled,
+        builder: (context, an, _) => ValueListenableBuilder<int?>(
+          valueListenable: _nostr.partnerReadUntil,
+          builder: (context, bis, _) {
+            if (!an || bis == null) return const SizedBox.shrink();
+            // Kleiner Spielraum: Die Zeit in der Nachricht und im verschickten Event können eine Sekunde auseinanderliegen.
+            final gelesen = bis + 2 >= msg.createdAt.millisecondsSinceEpoch ~/ 1000;
+            return Text(
+              gelesen ? ' · Gelesen' : ' · Gesendet',
+              style: TextStyle(fontSize: 10, color: farbe, fontWeight: gelesen ? FontWeight.w700 : FontWeight.w400),
+            );
+          },
+        ),
+      );
+
+  Widget _buildBubble(CoupleMessage msg, {bool istLetzteEigene = false}) {
     final isMe = msg.isMe;
     final isSpark = msg.type == CoupleMessageType.ping;
     final textColor = isMe ? AppTheme.background : AppTheme.textPrimary;
@@ -657,9 +707,15 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 ),
               ),
             const SizedBox(height: 4),
-            Text(
-              _formatTime(msg.createdAt),
-              style: TextStyle(fontSize: 10, color: isMe ? textColor.withValues(alpha: 0.65) : AppTheme.textMuted),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  _formatTime(msg.createdAt),
+                  style: TextStyle(fontSize: 10, color: isMe ? textColor.withValues(alpha: 0.65) : AppTheme.textMuted),
+                ),
+                if (istLetzteEigene) _lesestatus(msg, textColor.withValues(alpha: 0.75)),
+              ],
             ),
           ],
         ),

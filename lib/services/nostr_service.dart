@@ -33,6 +33,15 @@ class NostrService {
   /// Spielraum für abweichende Uhren und Nachzügler beim Abholen.
   static const int _inboxOverlapSeconds = 600;
 
+  // Lesebestätigungen: ein verschlüsselter NIP-78-Eintrag (Art 30078, „ersetzbar“ – die Server
+  // behalten je Absender nur den neuesten). Ältere App-Versionen fragen diese Art gar nicht ab,
+  // und der Hintergrund-Hinweis (nur Art 4) meldet sie nicht als neue Nachricht.
+  static const int readReceiptKind = 30078;
+  static const String _readReceiptTag = 'velvet-read';
+  static const String _keyReadReceipts = 'velvet_read_receipts';
+  static const String _keyPartnerReadUntil = 'velvet_partner_read_until';
+  static const String _keyReadSentUntil = 'velvet_read_sent_until';
+
   static const List<String> fallbackRelays = [
     'wss://relay.primal.net',
     'wss://nos.lol',
@@ -106,6 +115,18 @@ class NostrService {
   final Set<String> _processedEventIds = {};
 
   int? _inboxSince;
+
+  /// Ist der Nachrichten-Bereich des Paar-Kanals gerade auf dem Bildschirm? (setzt die Navigation)
+  final ValueNotifier<bool> paarKanalSichtbar = ValueNotifier<bool>(false);
+
+  /// Eigene Einstellung „Lesebestätigungen“ (auf Gegenseitigkeit: aus = keine senden, keine anzeigen).
+  final ValueNotifier<bool> readReceiptsEnabled = ValueNotifier<bool>(true);
+
+  /// Bis zu welchem Zeitpunkt (created_at, Sekunden) das Gegenüber gelesen hat.
+  /// null: Das Gegenüber sendet keine Bestätigungen (ältere Version oder ausgeschaltet).
+  final ValueNotifier<int?> partnerReadUntil = ValueNotifier<int?>(null);
+
+  int _readSentUntil = 0;
 
   /// Wann die gerade gültige Stimme des Partners je Fantasie abgegeben wurde. Beim erneuten
   /// Abholen kommen Nachrichten in beliebiger Reihenfolge; eine ältere darf keine neuere überschreiben.
@@ -225,6 +246,9 @@ class NostrService {
     inviteNameNotifier.value = prefs.getString(_keyInviteName);
     _inboxSince = prefs.getInt(_keyInboxSince);
     _partnerVoteTimes.clear();
+    readReceiptsEnabled.value = prefs.getBool(_keyReadReceipts) ?? true;
+    partnerReadUntil.value = prefs.getInt(_keyPartnerReadUntil);
+    _readSentUntil = prefs.getInt(_keyReadSentUntil) ?? 0;
     partnerGenderNotifier.value = prefs.getString(_keyPartnerGender);
     partnerPubKeyNotifier.value = _partnerPublicKey;
     partnerNameNotifier.value = _partnerName;
@@ -383,7 +407,14 @@ class NostrService {
         '#p': [_myPublicKey!],
         if (since != null) 'since': since - _inboxOverlapSeconds,
         'limit': since != null ? 500 : 100,
-      }
+      },
+      if (isPaired)
+        {
+          'kinds': [readReceiptKind],
+          'authors': [_partnerPublicKey!],
+          '#d': [_readReceiptTag],
+          'limit': 1,
+        },
     ]);
     for (final relay in only == null ? _relays.values : [only]) {
       try {
@@ -408,6 +439,8 @@ class NostrService {
           final eventMap = decoded[2] as Map<String, dynamic>;
           if (eventMap['kind'] == 4) {
             _handleIncomingKind4Map(eventMap);
+          } else if (eventMap['kind'] == readReceiptKind) {
+            _handleReadReceipt(eventMap);
           }
         }
       } else if (type == 'OK') {
@@ -720,6 +753,10 @@ class NostrService {
     await prefs.remove(_keyProfilePromptDismissed);
     _inboxSince = null;
     await prefs.remove(_keyInboxSince);
+    partnerReadUntil.value = null;
+    await prefs.remove(_keyPartnerReadUntil);
+    _readSentUntil = 0;
+    await prefs.remove(_keyReadSentUntil);
   }
 
   /// Fehlen Name oder Geschlecht des Gegenübers, fragt der Paar-Kanal einmal nach.
@@ -873,7 +910,8 @@ class NostrService {
     return ok ? answers.length : 0;
   }
 
-  Future<bool> _sendKind4(String plaintext, void Function(String eventId) onSuccess) async {
+  Future<bool> _sendKind4(String plaintext, void Function(String eventId) onSuccess,
+      {int kind = 4, List<List<String>> extraTags = const []}) async {
     if (_myPrivateKey == null || _partnerPublicKey == null) return false;
     final sockets = [for (final r in _relays.values) if (r.socket != null) r.socket!];
     if (sockets.isEmpty) {
@@ -884,8 +922,9 @@ class NostrService {
     try {
       final encrypted = _nip04.encrypt(_myPrivateKey!, _partnerPublicKey!, plaintext);
       final event = Event(
-        kind: 4,
+        kind: kind,
         tags: [
+          ...extraTags,
           ['p', _partnerPublicKey!]
         ],
         content: encrypted,
@@ -920,6 +959,76 @@ class NostrService {
     } catch (e) {
       debugPrint('Error sending Nostr Kind 4 event: $e');
       return false;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Lesebestätigungen
+
+  /// Meldet dem Gegenüber, bis wohin gelesen wurde – nur wenn der Nachrichten-Bereich
+  /// sichtbar ist (entscheidet couples_channel_screen.dart) und die Einstellung an ist.
+  Future<void> markMessagesRead() async {
+    if (!isPaired || !readReceiptsEnabled.value) return;
+    var latest = 0;
+    for (final m in messagesNotifier.value) {
+      final t = m.createdAt.millisecondsSinceEpoch ~/ 1000;
+      if (!m.isMe && t > latest) latest = t;
+    }
+    if (latest <= _readSentUntil) return;
+    if (await _sendReadReceipt({'read_until': latest})) {
+      _readSentUntil = latest;
+      await (await SharedPreferences.getInstance()).setInt(_keyReadSentUntil, latest);
+    }
+  }
+
+  /// Ausschalten teilt das dem Gegenüber mit, damit dort kein veraltetes „Gelesen“ stehen bleibt.
+  Future<void> setReadReceiptsEnabled(bool enabled) async {
+    readReceiptsEnabled.value = enabled;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_keyReadReceipts, enabled);
+    if (!isPaired) return;
+    if (enabled) {
+      _readSentUntil = 0;
+      await markMessagesRead();
+    } else {
+      await _sendReadReceipt({'off': true});
+    }
+  }
+
+  Future<bool> _sendReadReceipt(Map<String, Object> fields) => _sendKind4(
+        jsonEncode(fields),
+        _processedEventIds.add,
+        kind: readReceiptKind,
+        extraTags: [
+          ['d', _readReceiptTag]
+        ],
+      );
+
+  @visibleForTesting
+  Future<void> handleReadReceipt(Map<String, dynamic> ev) => _handleReadReceipt(ev);
+
+  Future<void> _handleReadReceipt(Map<String, dynamic> ev) async {
+    if (!isPaired || _myPrivateKey == null || ev['pubkey'] != _partnerPublicKey) return;
+    if (!NostrEventCheck.isValidEvent(ev, recipient: _myPublicKey!, kind: readReceiptKind)) return;
+    final tags = ev['tags'] as List;
+    if (!tags.any((t) => t is List && t.length >= 2 && t[0] == 'd' && t[1] == _readReceiptTag)) return;
+    try {
+      final data = jsonDecode(_nip04.decrypt(_myPrivateKey!, _partnerPublicKey!, ev['content'] as String));
+      if (data is! Map) return;
+      final prefs = await SharedPreferences.getInstance();
+      if (data['off'] == true) {
+        partnerReadUntil.value = null;
+        await prefs.remove(_keyPartnerReadUntil);
+        return;
+      }
+      final until = data['read_until'];
+      if (until is! int) return;
+      if (until > (partnerReadUntil.value ?? 0)) {
+        partnerReadUntil.value = until;
+        await prefs.setInt(_keyPartnerReadUntil, until);
+      }
+    } catch (e) {
+      debugPrint('Nostr: Lesebestätigung nicht lesbar (${e.runtimeType})');
     }
   }
 

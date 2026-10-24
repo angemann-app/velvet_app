@@ -18,11 +18,16 @@ class NostrEventCheck {
   static final RegExp _hex128 = RegExp(r'^[0-9a-f]{128}$');
   static final EventApi _eventApi = EventApi();
 
-  static bool isValidDirectMessage(Map<String, dynamic> ev, {required String recipient, DateTime? now}) {
+  static bool isValidDirectMessage(Map<String, dynamic> ev, {required String recipient, DateTime? now}) =>
+      isValidEvent(ev, recipient: recipient, kind: 4, now: now);
+
+  /// Wie [isValidDirectMessage], aber für eine andere Event-Art (z. B. 30078 für Lesebestätigungen).
+  static bool isValidEvent(Map<String, dynamic> ev, {required String recipient, required int kind, DateTime? now}) {
+    final expectedKind = kind;
     final id = ev['id'];
     final pubkey = ev['pubkey'];
     final sig = ev['sig'];
-    final kind = ev['kind'];
+    final evKind = ev['kind'];
     final createdAt = ev['created_at'];
     final content = ev['content'];
     final rawTags = ev['tags'];
@@ -30,7 +35,7 @@ class NostrEventCheck {
     if (id is! String || !_hex64.hasMatch(id)) return false;
     if (pubkey is! String || !_hex64.hasMatch(pubkey)) return false;
     if (sig is! String || !_hex128.hasMatch(sig)) return false;
-    if (kind != 4) return false;
+    if (evKind != expectedKind) return false;
     if (content is! String || content.isEmpty || content.length > maxContentLength) return false;
     if (createdAt is! int || createdAt <= 0) return false;
     final latest = (now ?? DateTime.now()).add(maxClockSkew).millisecondsSinceEpoch ~/ 1000;
@@ -46,7 +51,7 @@ class NostrEventCheck {
 
     try {
       final event = Event(
-        kind: kind,
+        kind: expectedKind,
         tags: tags,
         content: content,
         created_at: createdAt,

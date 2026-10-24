@@ -34,6 +34,7 @@
       "version": "4.4.0-beta.7",
       "punkte": [
         {"icon": "favorite", "titel": "Paar-Kanal zuverlässiger", "text": "Geteilte Antworten der Ja/Nein-Liste kommen jetzt vollständig an, auch wenn dein Gegenüber gerade offline war. Und die App holt beim Verbinden alles seit dem letzten Mal ab."},
+        {"icon": "notifications", "titel": "Lesebestätigungen", "text": "Unter deiner letzten Nachricht steht „Gelesen“, sobald dein Gegenüber sie gesehen hat – wenn ihr beide eine aktuelle Version habt. Abschalten lässt es sich im Menü des Paar-Kanals; dann seht ihr es beide nicht."},
         {"icon": "person", "titel": "Verbindung trennen", "text": "Im Menü des Paar-Kanals kannst du eine Verbindung trennen. Verbindest du dich mit jemand anderem, wird der alte Verlauf gelöscht – nach einer Nachfrage."},
         {"icon": "edit", "titel": "Sicherung vollständig", "text": "Die Ja/Nein-Liste ist jetzt in der Sicherung enthalten, und beim Einspielen werden Check-ins und Antworten zusammengeführt statt überschrieben."}
       ]
