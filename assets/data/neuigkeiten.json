@@ -192,6 +192,22 @@
           "text": "Wer die App auf Englisch nutzt, kann unter Profil › Sprache die Aufnahmen für die neuen Inhalte nachladen."
         }
       ]
+    },
+    {
+      "build": 33,
+      "version": "4.5.0",
+      "punkte": [
+        {
+          "icon": "new_releases",
+          "titel": "Stabile Version 4.5.0",
+          "text": "Alles aus den Testversionen ist jetzt für alle da: Englisch, Spicy-Modus, ruhigere Stimme von Martin und viele kleine Verbesserungen."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Zurück auf Stabil",
+          "text": "Wer Beta-Versionen getestet hat, steht jetzt wieder auf dem stabilen Kanal. Für die nächste Testrunde den Schalter „Beta-Versionen erhalten“ im Profil wieder einschalten."
+        }
+      ]
     }
   ]
 }

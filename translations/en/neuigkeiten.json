@@ -192,6 +192,22 @@
           "text": "Under Profile › Language you can now download the recordings for the new content."
         }
       ]
+    },
+    {
+      "build": 33,
+      "version": "4.5.0",
+      "punkte": [
+        {
+          "icon": "new_releases",
+          "titel": "Stable version 4.5.0",
+          "text": "Everything from the test versions is now available to everyone: English, spicy mode, a calmer voice for Martin and many small improvements."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Back on stable",
+          "text": "If you tested beta versions, you're now back on the stable channel. For the next test round, switch “Receive beta versions” in your profile back on."
+        }
+      ]
     }
   ],
   "_source": {
@@ -201,6 +217,7 @@
     "news:28": "9368bd4c890ce8fc",
     "news:29": "e43d0214df8aeed3",
     "news:30": "042046eb1b760fe8",
-    "news:32": "d365c10765d7fc66"
+    "news:32": "d365c10765d7fc66",
+    "news:33": "ba744f6de785458c"
   }
 }
