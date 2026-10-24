@@ -306,5 +306,282 @@
     }
   },
   "coursesPracticeSelfExploration": "Praxis: Selbsterkundung",
-  "coursesPracticeDesireProfile": "Praxis: Lust-Profil"
+  "coursesPracticeDesireProfile": "Praxis: Lust-Profil",
+  "couplesChannelIWantYou": "Lust auf dich",
+  "couplesChannelJustCuddlesToday": "Heute nur kuscheln",
+  "couplesChannelLookingForwardToLater": "Freu mich auf später",
+  "couplesChannelVerySlowlyToday": "Heute ganz langsam",
+  "couplesChannelLetSTalk": "Lass uns reden",
+  "couplesChannelNotToday": "Heute lieber nicht",
+  "couplesChannelReconnect": "Neu verbinden",
+  "couplesChannelConnectWithYourPartnerAnd": "Verbinde dich mit deinem Gegenüber und teilt Wünsche, die sonst schwer auszusprechen sind.",
+  "couplesChannelSendSparks": "Funken senden",
+  "couplesChannelShowWithOneTapWhat": "Mit einem Tippen zeigen, worauf du heute Lust hast – oder eben nicht.",
+  "couplesChannelSecretlyMatchWishes": "Wünsche heimlich abgleichen",
+  "couplesChannelYouVoteSeparatelyOnlyWhat": "Ihr stimmt getrennt ab. Sichtbar wird nur, was ihr beide wollt.",
+  "couplesChannelJustForTheTwoOf": "Nur für euch beide",
+  "couplesChannelEndToEndEncryptedNo": "Ende-zu-Ende-verschlüsselt, ohne Konto und ohne Telefonnummer.",
+  "couplesChannelConnectWithPartner": "Mit Partner verbinden",
+  "couplesChannelInvitePartner": "Partner einladen",
+  "couplesChannelHowDoesItWork": "Wie funktioniert das?",
+  "couplesChannelYouCanAlsoFillIt": "Kannst du auch allein ausfüllen – und später mit deinem Gegenüber abgleichen.",
+  "couplesChannelSharedEvening": "Gemeinsamer Abend",
+  "couplesChannelGuidedTouchForTheTwo": "Geführte Berührung für euch beide, 20 bis 45 Minuten. Jedes Mal anders.",
+  "couplesChannelFantasyMap": "Fantasie-Landkarte",
+  "couplesChannelMessages": "Nachrichten",
+  "couplesChannelWishes": "Wünsche",
+  "couplesChannelConnectedEncrypted": "verbunden & verschlüsselt",
+  "couplesChannelConnecting": "verbindet …",
+  "couplesChannelOfflineTapToConnect": "offline – tippe zum Verbinden",
+  "couplesChannelYouName": "Du & {name}",
+  "@couplesChannelYouName": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "couplesChannelPartnerSNameGender": "Name & Geschlecht des Gegenübers",
+  "couplesChannelReadReceipts": "Lesebestätigungen",
+  "couplesChannelEncryptionDetails": "Verschlüsselung & Details",
+  "couplesChannelManageConnection": "Verbindung verwalten",
+  "couplesChannelDisconnect": "Verbindung trennen",
+  "couplesChannelItSStillQuietHere": "Noch ist es still hier",
+  "couplesChannelSendASparkFromThe": "Schick einen Funken aus der Leiste unten oder schreib ein paar Worte.",
+  "couplesChannelRead": " · Gelesen",
+  "couplesChannelSent": " · Gesendet",
+  "couplesChannelOpenLesson": "Lektion öffnen",
+  "couplesChannelWriteAMessage": "Nachricht schreiben …",
+  "couplesChannelSend": "Senden",
+  "couplesChannelVoteSeparatelyAWishOnly": "Stimmt getrennt ab. Ein Wunsch erscheint erst als Match, wenn ihr beide „Ja, gern“ sagt – ein „Lieber nicht“ wird nie angezeigt.",
+  "couplesChannelQuestionsInSeveralAreasWith": "{fragen} Fragen in {bereiche} Bereichen – mit passenden Kurs-Empfehlungen.",
+  "couplesChannelYouHaveAMatch": "Ihr habt ein Match",
+  "couplesChannelYouHaveMatcheslengthMatches": "Ihr habt {matchesLength} Matches",
+  "@couplesChannelYouHaveMatcheslengthMatches": {
+    "placeholders": {
+      "matchesLength": {
+        "type": "Object"
+      }
+    }
+  },
+  "couplesChannelAMatchIsAnInvitation": "Ein Match ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt.",
+  "couplesChannelYesPlease": "Ja, gern",
+  "couplesChannelRatherNot": "Lieber nicht",
+  "couplesChannelDisconnect2": "Verbindung trennen?",
+  "couplesChannelTheHistoryWithNameName": "Der Verlauf mit {name}, die Antworten von {name2} auf die Ja/Nein-Liste und die geteilten Reflexionen werden auf diesem Handy gelöscht. Deine eigenen Antworten bleiben erhalten.\n\nAuf dem Handy von {name3} ändert sich nichts.",
+  "@couplesChannelTheHistoryWithNameName": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      },
+      "name2": {
+        "type": "Object"
+      },
+      "name3": {
+        "type": "Object"
+      }
+    }
+  },
+  "couplesChannelDisconnect3": "Trennen",
+  "couplesChannelDisconnected": "Verbindung getrennt.",
+  "couplesChannelHowItStaysPrivate": "So bleibt es privat",
+  "couplesChannelMessagesAreEncryptedOnYour": "Nachrichten werden auf deinem Handy verschlüsselt und erst auf dem Handy deines Gegenübers wieder lesbar. Dazwischen laufen sie über öffentliche Nostr-Server. Die können den Inhalt nicht lesen. Sichtbar sind für sie aber die Schlüssel von Absender und Empfänger, Zeitpunkt und ungefähre Größe jeder Nachricht sowie deine IP-Adresse – also dass, wann und wie oft ihr schreibt. Die Schlüssel tragen keinen Namen. Es gibt kein Konto, keine Telefonnummer und keinen Server von uns.",
+  "couplesChannelEncryption": "Verschlüsselung",
+  "couplesChannelServers": "Server",
+  "couplesChannelYourConnectionCode": "Dein Verbindungscode",
+  "couplesChannelClose": "Schließen",
+  "paarAbendYou": "Du",
+  "paarAbendYourPartner": "dein Gegenüber",
+  "paarAbendEndTheEvening": "Abend beenden?",
+  "paarAbendTheGuidanceStopsThenYou": "Die Begleitung hört dann auf. Ihr könnt jederzeit neu beginnen.",
+  "paarAbendContinue": "Weitermachen",
+  "paarAbendPutThePhoneNextTo": "Legt das Handy neben euch. Eine Stimme führt euch durch Ankommen, zwei Runden Berührung mit Rollenwechsel und einen ruhigen Ausklang. Die meiste Zeit ist Stille, damit ihr ganz bei euch seid. Jeder Abend wird neu zusammengestellt.",
+  "paarAbendDuration": "Dauer",
+  "paarAbendMMin": "{m} Min.",
+  "@paarAbendMMin": {
+    "placeholders": {
+      "m": {
+        "type": "Object"
+      }
+    }
+  },
+  "paarAbendHowFarMayItGo": "Wie weit darf es gehen?",
+  "paarAbendClothed": "Bekleidet",
+  "paarAbendBackShouldersHandsHeadLegs": "Rücken, Schultern, Hände, Kopf, Beine und Füße.",
+  "paarAbendSkinToSkin": "Haut an Haut",
+  "paarAbendPlusMassageWithOilBelly": "Dazu Massage mit Öl, Bauch, Hüften und Po.",
+  "paarAbendIntimate": "Intim",
+  "paarAbendPlusChestInnerThighsAnd": "Dazu Brust, Innenschenkel und Geschlecht, ganz ohne Ziel.",
+  "paarAbendWhoGivesFirst": "Wer gibt zuerst?",
+  "paarAbendMe": "Ich",
+  "paarAbendMyPartner": "Mein Gegenüber",
+  "paarAbendVoice": "Stimme",
+  "paarAbendSoftSoundBed": "Leiser Klangteppich",
+  "paarAbendCalmBackgroundDuringTheSilences": "Ruhiger Hintergrund in den Stillen",
+  "paarAbendAgreeOnAStopWord": "Vereinbart vorher ein Stoppwort. Die Stimme lädt ein, sie bestimmt nichts: Was sich nicht gut anfühlt, lasst ihr einfach aus.",
+  "paarAbendBeginTheEvening": "Abend beginnen",
+  "paarAbendThankYouForYourEvening": "Danke für euren Abend",
+  "paarAbendStayLyingDownAsLong": "Bleibt liegen, solange es sich gut anfühlt.",
+  "paarAbendRoundRunde": "Runde {runde}",
+  "@paarAbendRoundRunde": {
+    "placeholders": {
+      "runde": {
+        "type": "Object"
+      }
+    }
+  },
+  "paarAbendYouGivePartnernameReceives": "Du gibst · {partnerName} empfängt",
+  "@paarAbendYouGivePartnernameReceives": {
+    "placeholders": {
+      "partnerName": {
+        "type": "Object"
+      }
+    }
+  },
+  "paarAbendPartnernamePartnernameGivesYouReceive": "{partnerName}{partnerName2} gibt · du empfängst",
+  "@paarAbendPartnernamePartnernameGivesYouReceive": {
+    "placeholders": {
+      "partnerName": {
+        "type": "Object"
+      },
+      "partnerName2": {
+        "type": "Object"
+      }
+    }
+  },
+  "paarAbendArriving": "Ankommen",
+  "paarAbendEnding": "Ausklang",
+  "paarAbendChangeOfRoles": "Rollenwechsel",
+  "paarAbendBreatheTogether": "Atmet gemeinsam.",
+  "paarAbendPaused": "Pausiert",
+  "paarAbendTheVoiceIsSpeaking": "Die Stimme spricht …",
+  "paarAbendSilenceStillerestLeft": "Stille · noch {stilleRest}",
+  "@paarAbendSilenceStillerestLeft": {
+    "placeholders": {
+      "stilleRest": {
+        "type": "Object"
+      }
+    }
+  },
+  "invitePartnerIDLikeToTry": "\nIch möchte VelvetPulse mit dir ausprobieren 💛 Eine private App nur für uns zwei.\n\n1. App laden (Android):\n{stableApkUrl}\nWenn Android fragt, die Installation erlauben.\n\n2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n\n3. Schick mir danach einen Funken, dann sind wir verbunden.\n\nAusführliche Anleitung: {testerGuideUrl}",
+  "@invitePartnerIDLikeToTry": {
+    "placeholders": {
+      "stableApkUrl": {
+        "type": "Object"
+      },
+      "testerGuideUrl": {
+        "type": "Object"
+      }
+    }
+  },
+  "invitePartnerYouSendALinkTo": "Du schickst einen Link zur App und deinen Verbindungscode, z. B. per Messenger. Sobald sich dein Gegenüber meldet, bestätigst du hier die Verbindung.",
+  "invitePartnerNameEGAnna": "Name, z. B. Anna",
+  "invitePartnerShareInvitation": "Einladung teilen",
+  "invitePartnerInvitationToVelvetpulse": "Einladung zu VelvetPulse",
+  "invitePartnerNowYourCode": "Jetzt noch deinen Code",
+  "invitePartnerSendYourConnectionCodeAfterwards": "Schick deinen Verbindungscode als eigene Nachricht hinterher, am besten an dieselbe Person. So lässt er sich mit einem Tippen kopieren.",
+  "invitePartnerShareCode": "Code teilen",
+  "invitePartnerMyVelvetpulseCode": "Mein VelvetPulse-Code",
+  "invitePartnerCopiedPasteTheTextInto": "Kopiert. Füge den Text in einen Messenger ein.",
+  "invitePartnerNameWantsToConnect": "{name} möchte sich verbinden",
+  "@invitePartnerNameWantsToConnect": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "invitePartnerInvitationSentToName": "Einladung an {name} verschickt",
+  "@invitePartnerInvitationSentToName": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "invitePartnerAMessageJustArrivedAt": "Gerade kam eine Nachricht an deinen Code. Wenn sie von {name} ist, nimm die Verbindung an.",
+  "@invitePartnerAMessageJustArrivedAt": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "invitePartnerAsSoonAsNameInstalls": "Sobald {name} die App installiert, deinen Code eingibt und dir einen Funken schickt, kannst du die Verbindung hier bestätigen.",
+  "@invitePartnerAsSoonAsNameInstalls": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "invitePartnerDecline": "Ablehnen",
+  "invitePartnerConnectedWithName": "Verbunden mit {name} 💛",
+  "@invitePartnerConnectedWithName": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "invitePartnerAccept": "Annehmen",
+  "invitePartnerWithdraw": "Zurückziehen",
+  "invitePartnerShareAgain": "Erneut teilen",
+  "pairingModalConnectWithSomeoneElse": "Mit jemand anderem verbinden?",
+  "pairingModalYouReCurrentlyConnectedWith": "Du bist gerade mit {old} verbunden. Diese Verbindung wird ersetzt, und der Verlauf mit {old2}, die Antworten von {old3} und die geteilten Reflexionen werden auf diesem Handy gelöscht.",
+  "@pairingModalYouReCurrentlyConnectedWith": {
+    "placeholders": {
+      "old": {
+        "type": "Object"
+      },
+      "old2": {
+        "type": "Object"
+      },
+      "old3": {
+        "type": "Object"
+      }
+    }
+  },
+  "pairingModalReplace": "Ersetzen",
+  "pairingModalHiIMConnectedNow": "👋 Hallo, ich bin jetzt verbunden.",
+  "pairingModalConnectedWithName": "Verbunden mit {name} 💛",
+  "@pairingModalConnectedWithName": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "pairingModalThisCodeDoesnTFit": "Dieser Code passt nicht. Scanne den QR-Code deines Gegenübers oder füge den vollständigen Code (beginnt mit npub1…) ein.",
+  "pairingModalMyCode": "Mein Code",
+  "pairingModalScanPartner": "Partner scannen",
+  "pairingModalLetYourPartnerScanThis": "Lass diesen Code von deinem Partner scannen, um euren privaten Kanal zu öffnen.",
+  "pairingModalCopyCode": "Code kopieren",
+  "pairingModalYourConnectionCodeHasBeen": "Dein Verbindungscode wurde kopiert.",
+  "pairingModalEndToEndEncryptedNo": "Ende-zu-Ende-verschlüsselt • ohne Konto",
+  "pairingModalHoldYourPartnerSQr": "Partner-QR-Code im Rahmen halten",
+  "pairingModalPartnerSNameEG": "Partner-Name (z.B. Mein Schatz, Anna)",
+  "pairingModalOrPasteNpubHexKey": "Oder npub1... / Hex-Schlüssel einfügen",
+  "pairingModalPasteFromClipboard": "Aus Zwischenablage einfügen",
+  "pairingModalConnectPair": "Verbinden & Koppeln",
+  "partnerProfileDialogWoman": "Frau",
+  "partnerProfileDialogMan": "Mann",
+  "partnerProfileDialogNonBinary": "Divers",
+  "partnerProfileDialogNotSpecified": "Keine Angabe",
+  "partnerProfileDialogYourPartner": "Dein Gegenüber",
+  "partnerProfileDialogThisLetsLessonsCallYour": "Damit können Lektionen dein Gegenüber beim Namen nennen, etwa „Anna liegt auf dem Rücken“ statt „sie liegt“. Beides bleibt nur auf deinem Handy.",
+  "partnerProfileDialogSave": "Speichern",
+  "partnerProfileDialogHowMayLessonsReferTo": "Wie dürfen Lektionen dein Gegenüber nennen?",
+  "partnerProfileDialogWithNameAndGenderThe": "Mit Name und Geschlecht sprechen die Texte euch persönlich an. Das bleibt auf deinem Handy.",
+  "partnerProfileDialogAdd": "Ergänzen",
+  "@couplesChannelQuestionsInSeveralAreasWith": {
+    "placeholders": {
+      "fragen": {
+        "type": "int"
+      },
+      "bereiche": {
+        "type": "int"
+      }
+    }
+  }
 }

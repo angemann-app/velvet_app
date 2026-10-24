@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
+import '../../l10n/t.dart';
 
-const Map<String?, String> partnerGenderLabels = {
-  'female': 'Frau',
-  'male': 'Mann',
-  'other': 'Divers',
-  null: 'Keine Angabe',
+Map<String?, String> partnerGenderLabels = {
+  'female': t.partnerProfileDialogWoman,
+  'male': t.partnerProfileDialogMan,
+  'other': t.partnerProfileDialogNonBinary,
+  null: t.partnerProfileDialogNotSpecified,
 };
 
 /// Name und Geschlecht des Gegenübers angeben oder ändern. Beides bleibt auf diesem Gerät
@@ -21,21 +22,20 @@ Future<bool> editPartnerProfile(BuildContext context) async {
     builder: (ctx) => StatefulBuilder(
       builder: (ctx, setState) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Dein Gegenüber'),
+        title: Text(t.partnerProfileDialogYourPartner),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Damit können Lektionen dein Gegenüber beim Namen nennen, etwa „Anna liegt auf dem Rücken“ '
-              'statt „sie liegt“. Beides bleibt nur auf deinem Handy.',
+            Text(
+              t.partnerProfileDialogThisLetsLessonsCallYour,
               style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.45),
             ),
             const SizedBox(height: 14),
             TextField(
               controller: name,
               textCapitalization: TextCapitalization.words,
-              decoration: const InputDecoration(hintText: 'Name, z. B. Anna'),
+              decoration: InputDecoration(hintText: t.invitePartnerNameEGAnna),
             ),
             const SizedBox(height: 14),
             Wrap(
@@ -55,8 +55,8 @@ Future<bool> editPartnerProfile(BuildContext context) async {
           ],
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Abbrechen')),
-          ElevatedButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Speichern')),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
+          ElevatedButton(onPressed: () => Navigator.pop(ctx, true), child: Text(t.partnerProfileDialogSave)),
         ],
       ),
     ),
@@ -93,11 +93,11 @@ class PartnerProfilePrompt extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Wie dürfen Lektionen dein Gegenüber nennen?',
+                Text(t.partnerProfileDialogHowMayLessonsReferTo,
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
                 const SizedBox(height: 4),
-                const Text(
-                  'Mit Name und Geschlecht sprechen die Texte euch persönlich an. Das bleibt auf deinem Handy.',
+                Text(
+                  t.partnerProfileDialogWithNameAndGenderThe,
                   style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
                 ),
                 Row(
@@ -105,11 +105,11 @@ class PartnerProfilePrompt extends StatelessWidget {
                   children: [
                     TextButton(
                       onPressed: nostr.dismissPartnerProfilePrompt,
-                      child: const Text('Später', style: TextStyle(color: AppTheme.textSecondary)),
+                      child: Text(t.updateDialogLater, style: TextStyle(color: AppTheme.textSecondary)),
                     ),
                     TextButton(
                       onPressed: () => editPartnerProfile(context),
-                      child: const Text('Ergänzen',
+                      child: Text(t.partnerProfileDialogAdd,
                           style: TextStyle(color: AppTheme.rose, fontWeight: FontWeight.w700)),
                     ),
                   ],

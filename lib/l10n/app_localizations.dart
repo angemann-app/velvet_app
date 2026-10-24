@@ -939,6 +939,831 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Praxis: Lust-Profil'**
   String get coursesPracticeDesireProfile;
+
+  /// No description provided for @couplesChannelIWantYou.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust auf dich'**
+  String get couplesChannelIWantYou;
+
+  /// No description provided for @couplesChannelJustCuddlesToday.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute nur kuscheln'**
+  String get couplesChannelJustCuddlesToday;
+
+  /// No description provided for @couplesChannelLookingForwardToLater.
+  ///
+  /// In de, this message translates to:
+  /// **'Freu mich auf später'**
+  String get couplesChannelLookingForwardToLater;
+
+  /// No description provided for @couplesChannelVerySlowlyToday.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute ganz langsam'**
+  String get couplesChannelVerySlowlyToday;
+
+  /// No description provided for @couplesChannelLetSTalk.
+  ///
+  /// In de, this message translates to:
+  /// **'Lass uns reden'**
+  String get couplesChannelLetSTalk;
+
+  /// No description provided for @couplesChannelNotToday.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute lieber nicht'**
+  String get couplesChannelNotToday;
+
+  /// No description provided for @couplesChannelReconnect.
+  ///
+  /// In de, this message translates to:
+  /// **'Neu verbinden'**
+  String get couplesChannelReconnect;
+
+  /// No description provided for @couplesChannelConnectWithYourPartnerAnd.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbinde dich mit deinem Gegenüber und teilt Wünsche, die sonst schwer auszusprechen sind.'**
+  String get couplesChannelConnectWithYourPartnerAnd;
+
+  /// No description provided for @couplesChannelSendSparks.
+  ///
+  /// In de, this message translates to:
+  /// **'Funken senden'**
+  String get couplesChannelSendSparks;
+
+  /// No description provided for @couplesChannelShowWithOneTapWhat.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit einem Tippen zeigen, worauf du heute Lust hast – oder eben nicht.'**
+  String get couplesChannelShowWithOneTapWhat;
+
+  /// No description provided for @couplesChannelSecretlyMatchWishes.
+  ///
+  /// In de, this message translates to:
+  /// **'Wünsche heimlich abgleichen'**
+  String get couplesChannelSecretlyMatchWishes;
+
+  /// No description provided for @couplesChannelYouVoteSeparatelyOnlyWhat.
+  ///
+  /// In de, this message translates to:
+  /// **'Ihr stimmt getrennt ab. Sichtbar wird nur, was ihr beide wollt.'**
+  String get couplesChannelYouVoteSeparatelyOnlyWhat;
+
+  /// No description provided for @couplesChannelJustForTheTwoOf.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur für euch beide'**
+  String get couplesChannelJustForTheTwoOf;
+
+  /// No description provided for @couplesChannelEndToEndEncryptedNo.
+  ///
+  /// In de, this message translates to:
+  /// **'Ende-zu-Ende-verschlüsselt, ohne Konto und ohne Telefonnummer.'**
+  String get couplesChannelEndToEndEncryptedNo;
+
+  /// No description provided for @couplesChannelConnectWithPartner.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit Partner verbinden'**
+  String get couplesChannelConnectWithPartner;
+
+  /// No description provided for @couplesChannelInvitePartner.
+  ///
+  /// In de, this message translates to:
+  /// **'Partner einladen'**
+  String get couplesChannelInvitePartner;
+
+  /// No description provided for @couplesChannelHowDoesItWork.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie funktioniert das?'**
+  String get couplesChannelHowDoesItWork;
+
+  /// No description provided for @couplesChannelYouCanAlsoFillIt.
+  ///
+  /// In de, this message translates to:
+  /// **'Kannst du auch allein ausfüllen – und später mit deinem Gegenüber abgleichen.'**
+  String get couplesChannelYouCanAlsoFillIt;
+
+  /// No description provided for @couplesChannelSharedEvening.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsamer Abend'**
+  String get couplesChannelSharedEvening;
+
+  /// No description provided for @couplesChannelGuidedTouchForTheTwo.
+  ///
+  /// In de, this message translates to:
+  /// **'Geführte Berührung für euch beide, 20 bis 45 Minuten. Jedes Mal anders.'**
+  String get couplesChannelGuidedTouchForTheTwo;
+
+  /// No description provided for @couplesChannelFantasyMap.
+  ///
+  /// In de, this message translates to:
+  /// **'Fantasie-Landkarte'**
+  String get couplesChannelFantasyMap;
+
+  /// No description provided for @couplesChannelMessages.
+  ///
+  /// In de, this message translates to:
+  /// **'Nachrichten'**
+  String get couplesChannelMessages;
+
+  /// No description provided for @couplesChannelWishes.
+  ///
+  /// In de, this message translates to:
+  /// **'Wünsche'**
+  String get couplesChannelWishes;
+
+  /// No description provided for @couplesChannelConnectedEncrypted.
+  ///
+  /// In de, this message translates to:
+  /// **'verbunden & verschlüsselt'**
+  String get couplesChannelConnectedEncrypted;
+
+  /// No description provided for @couplesChannelConnecting.
+  ///
+  /// In de, this message translates to:
+  /// **'verbindet …'**
+  String get couplesChannelConnecting;
+
+  /// No description provided for @couplesChannelOfflineTapToConnect.
+  ///
+  /// In de, this message translates to:
+  /// **'offline – tippe zum Verbinden'**
+  String get couplesChannelOfflineTapToConnect;
+
+  /// No description provided for @couplesChannelYouName.
+  ///
+  /// In de, this message translates to:
+  /// **'Du & {name}'**
+  String couplesChannelYouName(Object name);
+
+  /// No description provided for @couplesChannelPartnerSNameGender.
+  ///
+  /// In de, this message translates to:
+  /// **'Name & Geschlecht des Gegenübers'**
+  String get couplesChannelPartnerSNameGender;
+
+  /// No description provided for @couplesChannelReadReceipts.
+  ///
+  /// In de, this message translates to:
+  /// **'Lesebestätigungen'**
+  String get couplesChannelReadReceipts;
+
+  /// No description provided for @couplesChannelEncryptionDetails.
+  ///
+  /// In de, this message translates to:
+  /// **'Verschlüsselung & Details'**
+  String get couplesChannelEncryptionDetails;
+
+  /// No description provided for @couplesChannelManageConnection.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbindung verwalten'**
+  String get couplesChannelManageConnection;
+
+  /// No description provided for @couplesChannelDisconnect.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbindung trennen'**
+  String get couplesChannelDisconnect;
+
+  /// No description provided for @couplesChannelItSStillQuietHere.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch ist es still hier'**
+  String get couplesChannelItSStillQuietHere;
+
+  /// No description provided for @couplesChannelSendASparkFromThe.
+  ///
+  /// In de, this message translates to:
+  /// **'Schick einen Funken aus der Leiste unten oder schreib ein paar Worte.'**
+  String get couplesChannelSendASparkFromThe;
+
+  /// No description provided for @couplesChannelRead.
+  ///
+  /// In de, this message translates to:
+  /// **' · Gelesen'**
+  String get couplesChannelRead;
+
+  /// No description provided for @couplesChannelSent.
+  ///
+  /// In de, this message translates to:
+  /// **' · Gesendet'**
+  String get couplesChannelSent;
+
+  /// No description provided for @couplesChannelOpenLesson.
+  ///
+  /// In de, this message translates to:
+  /// **'Lektion öffnen'**
+  String get couplesChannelOpenLesson;
+
+  /// No description provided for @couplesChannelWriteAMessage.
+  ///
+  /// In de, this message translates to:
+  /// **'Nachricht schreiben …'**
+  String get couplesChannelWriteAMessage;
+
+  /// No description provided for @couplesChannelSend.
+  ///
+  /// In de, this message translates to:
+  /// **'Senden'**
+  String get couplesChannelSend;
+
+  /// No description provided for @couplesChannelVoteSeparatelyAWishOnly.
+  ///
+  /// In de, this message translates to:
+  /// **'Stimmt getrennt ab. Ein Wunsch erscheint erst als Match, wenn ihr beide „Ja, gern“ sagt – ein „Lieber nicht“ wird nie angezeigt.'**
+  String get couplesChannelVoteSeparatelyAWishOnly;
+
+  /// No description provided for @couplesChannelQuestionsInSeveralAreasWith.
+  ///
+  /// In de, this message translates to:
+  /// **'{fragen} Fragen in {bereiche} Bereichen – mit passenden Kurs-Empfehlungen.'**
+  String couplesChannelQuestionsInSeveralAreasWith(int fragen, int bereiche);
+
+  /// No description provided for @couplesChannelYouHaveAMatch.
+  ///
+  /// In de, this message translates to:
+  /// **'Ihr habt ein Match'**
+  String get couplesChannelYouHaveAMatch;
+
+  /// No description provided for @couplesChannelYouHaveMatcheslengthMatches.
+  ///
+  /// In de, this message translates to:
+  /// **'Ihr habt {matchesLength} Matches'**
+  String couplesChannelYouHaveMatcheslengthMatches(Object matchesLength);
+
+  /// No description provided for @couplesChannelAMatchIsAnInvitation.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Match ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt.'**
+  String get couplesChannelAMatchIsAnInvitation;
+
+  /// No description provided for @couplesChannelYesPlease.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja, gern'**
+  String get couplesChannelYesPlease;
+
+  /// No description provided for @couplesChannelRatherNot.
+  ///
+  /// In de, this message translates to:
+  /// **'Lieber nicht'**
+  String get couplesChannelRatherNot;
+
+  /// No description provided for @couplesChannelDisconnect2.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbindung trennen?'**
+  String get couplesChannelDisconnect2;
+
+  /// No description provided for @couplesChannelTheHistoryWithNameName.
+  ///
+  /// In de, this message translates to:
+  /// **'Der Verlauf mit {name}, die Antworten von {name2} auf die Ja/Nein-Liste und die geteilten Reflexionen werden auf diesem Handy gelöscht. Deine eigenen Antworten bleiben erhalten.\n\nAuf dem Handy von {name3} ändert sich nichts.'**
+  String couplesChannelTheHistoryWithNameName(
+      Object name, Object name2, Object name3);
+
+  /// No description provided for @couplesChannelDisconnect3.
+  ///
+  /// In de, this message translates to:
+  /// **'Trennen'**
+  String get couplesChannelDisconnect3;
+
+  /// No description provided for @couplesChannelDisconnected.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbindung getrennt.'**
+  String get couplesChannelDisconnected;
+
+  /// No description provided for @couplesChannelHowItStaysPrivate.
+  ///
+  /// In de, this message translates to:
+  /// **'So bleibt es privat'**
+  String get couplesChannelHowItStaysPrivate;
+
+  /// No description provided for @couplesChannelMessagesAreEncryptedOnYour.
+  ///
+  /// In de, this message translates to:
+  /// **'Nachrichten werden auf deinem Handy verschlüsselt und erst auf dem Handy deines Gegenübers wieder lesbar. Dazwischen laufen sie über öffentliche Nostr-Server. Die können den Inhalt nicht lesen. Sichtbar sind für sie aber die Schlüssel von Absender und Empfänger, Zeitpunkt und ungefähre Größe jeder Nachricht sowie deine IP-Adresse – also dass, wann und wie oft ihr schreibt. Die Schlüssel tragen keinen Namen. Es gibt kein Konto, keine Telefonnummer und keinen Server von uns.'**
+  String get couplesChannelMessagesAreEncryptedOnYour;
+
+  /// No description provided for @couplesChannelEncryption.
+  ///
+  /// In de, this message translates to:
+  /// **'Verschlüsselung'**
+  String get couplesChannelEncryption;
+
+  /// No description provided for @couplesChannelServers.
+  ///
+  /// In de, this message translates to:
+  /// **'Server'**
+  String get couplesChannelServers;
+
+  /// No description provided for @couplesChannelYourConnectionCode.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Verbindungscode'**
+  String get couplesChannelYourConnectionCode;
+
+  /// No description provided for @couplesChannelClose.
+  ///
+  /// In de, this message translates to:
+  /// **'Schließen'**
+  String get couplesChannelClose;
+
+  /// No description provided for @paarAbendYou.
+  ///
+  /// In de, this message translates to:
+  /// **'Du'**
+  String get paarAbendYou;
+
+  /// No description provided for @paarAbendYourPartner.
+  ///
+  /// In de, this message translates to:
+  /// **'dein Gegenüber'**
+  String get paarAbendYourPartner;
+
+  /// No description provided for @paarAbendEndTheEvening.
+  ///
+  /// In de, this message translates to:
+  /// **'Abend beenden?'**
+  String get paarAbendEndTheEvening;
+
+  /// No description provided for @paarAbendTheGuidanceStopsThenYou.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Begleitung hört dann auf. Ihr könnt jederzeit neu beginnen.'**
+  String get paarAbendTheGuidanceStopsThenYou;
+
+  /// No description provided for @paarAbendContinue.
+  ///
+  /// In de, this message translates to:
+  /// **'Weitermachen'**
+  String get paarAbendContinue;
+
+  /// No description provided for @paarAbendPutThePhoneNextTo.
+  ///
+  /// In de, this message translates to:
+  /// **'Legt das Handy neben euch. Eine Stimme führt euch durch Ankommen, zwei Runden Berührung mit Rollenwechsel und einen ruhigen Ausklang. Die meiste Zeit ist Stille, damit ihr ganz bei euch seid. Jeder Abend wird neu zusammengestellt.'**
+  String get paarAbendPutThePhoneNextTo;
+
+  /// No description provided for @paarAbendDuration.
+  ///
+  /// In de, this message translates to:
+  /// **'Dauer'**
+  String get paarAbendDuration;
+
+  /// No description provided for @paarAbendMMin.
+  ///
+  /// In de, this message translates to:
+  /// **'{m} Min.'**
+  String paarAbendMMin(Object m);
+
+  /// No description provided for @paarAbendHowFarMayItGo.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie weit darf es gehen?'**
+  String get paarAbendHowFarMayItGo;
+
+  /// No description provided for @paarAbendClothed.
+  ///
+  /// In de, this message translates to:
+  /// **'Bekleidet'**
+  String get paarAbendClothed;
+
+  /// No description provided for @paarAbendBackShouldersHandsHeadLegs.
+  ///
+  /// In de, this message translates to:
+  /// **'Rücken, Schultern, Hände, Kopf, Beine und Füße.'**
+  String get paarAbendBackShouldersHandsHeadLegs;
+
+  /// No description provided for @paarAbendSkinToSkin.
+  ///
+  /// In de, this message translates to:
+  /// **'Haut an Haut'**
+  String get paarAbendSkinToSkin;
+
+  /// No description provided for @paarAbendPlusMassageWithOilBelly.
+  ///
+  /// In de, this message translates to:
+  /// **'Dazu Massage mit Öl, Bauch, Hüften und Po.'**
+  String get paarAbendPlusMassageWithOilBelly;
+
+  /// No description provided for @paarAbendIntimate.
+  ///
+  /// In de, this message translates to:
+  /// **'Intim'**
+  String get paarAbendIntimate;
+
+  /// No description provided for @paarAbendPlusChestInnerThighsAnd.
+  ///
+  /// In de, this message translates to:
+  /// **'Dazu Brust, Innenschenkel und Geschlecht, ganz ohne Ziel.'**
+  String get paarAbendPlusChestInnerThighsAnd;
+
+  /// No description provided for @paarAbendWhoGivesFirst.
+  ///
+  /// In de, this message translates to:
+  /// **'Wer gibt zuerst?'**
+  String get paarAbendWhoGivesFirst;
+
+  /// No description provided for @paarAbendMe.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich'**
+  String get paarAbendMe;
+
+  /// No description provided for @paarAbendMyPartner.
+  ///
+  /// In de, this message translates to:
+  /// **'Mein Gegenüber'**
+  String get paarAbendMyPartner;
+
+  /// No description provided for @paarAbendVoice.
+  ///
+  /// In de, this message translates to:
+  /// **'Stimme'**
+  String get paarAbendVoice;
+
+  /// No description provided for @paarAbendSoftSoundBed.
+  ///
+  /// In de, this message translates to:
+  /// **'Leiser Klangteppich'**
+  String get paarAbendSoftSoundBed;
+
+  /// No description provided for @paarAbendCalmBackgroundDuringTheSilences.
+  ///
+  /// In de, this message translates to:
+  /// **'Ruhiger Hintergrund in den Stillen'**
+  String get paarAbendCalmBackgroundDuringTheSilences;
+
+  /// No description provided for @paarAbendAgreeOnAStopWord.
+  ///
+  /// In de, this message translates to:
+  /// **'Vereinbart vorher ein Stoppwort. Die Stimme lädt ein, sie bestimmt nichts: Was sich nicht gut anfühlt, lasst ihr einfach aus.'**
+  String get paarAbendAgreeOnAStopWord;
+
+  /// No description provided for @paarAbendBeginTheEvening.
+  ///
+  /// In de, this message translates to:
+  /// **'Abend beginnen'**
+  String get paarAbendBeginTheEvening;
+
+  /// No description provided for @paarAbendThankYouForYourEvening.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke für euren Abend'**
+  String get paarAbendThankYouForYourEvening;
+
+  /// No description provided for @paarAbendStayLyingDownAsLong.
+  ///
+  /// In de, this message translates to:
+  /// **'Bleibt liegen, solange es sich gut anfühlt.'**
+  String get paarAbendStayLyingDownAsLong;
+
+  /// No description provided for @paarAbendRoundRunde.
+  ///
+  /// In de, this message translates to:
+  /// **'Runde {runde}'**
+  String paarAbendRoundRunde(Object runde);
+
+  /// No description provided for @paarAbendYouGivePartnernameReceives.
+  ///
+  /// In de, this message translates to:
+  /// **'Du gibst · {partnerName} empfängt'**
+  String paarAbendYouGivePartnernameReceives(Object partnerName);
+
+  /// No description provided for @paarAbendPartnernamePartnernameGivesYouReceive.
+  ///
+  /// In de, this message translates to:
+  /// **'{partnerName}{partnerName2} gibt · du empfängst'**
+  String paarAbendPartnernamePartnernameGivesYouReceive(
+      Object partnerName, Object partnerName2);
+
+  /// No description provided for @paarAbendArriving.
+  ///
+  /// In de, this message translates to:
+  /// **'Ankommen'**
+  String get paarAbendArriving;
+
+  /// No description provided for @paarAbendEnding.
+  ///
+  /// In de, this message translates to:
+  /// **'Ausklang'**
+  String get paarAbendEnding;
+
+  /// No description provided for @paarAbendChangeOfRoles.
+  ///
+  /// In de, this message translates to:
+  /// **'Rollenwechsel'**
+  String get paarAbendChangeOfRoles;
+
+  /// No description provided for @paarAbendBreatheTogether.
+  ///
+  /// In de, this message translates to:
+  /// **'Atmet gemeinsam.'**
+  String get paarAbendBreatheTogether;
+
+  /// No description provided for @paarAbendPaused.
+  ///
+  /// In de, this message translates to:
+  /// **'Pausiert'**
+  String get paarAbendPaused;
+
+  /// No description provided for @paarAbendTheVoiceIsSpeaking.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Stimme spricht …'**
+  String get paarAbendTheVoiceIsSpeaking;
+
+  /// No description provided for @paarAbendSilenceStillerestLeft.
+  ///
+  /// In de, this message translates to:
+  /// **'Stille · noch {stilleRest}'**
+  String paarAbendSilenceStillerestLeft(Object stilleRest);
+
+  /// No description provided for @invitePartnerIDLikeToTry.
+  ///
+  /// In de, this message translates to:
+  /// **'\nIch möchte VelvetPulse mit dir ausprobieren 💛 Eine private App nur für uns zwei.\n\n1. App laden (Android):\n{stableApkUrl}\nWenn Android fragt, die Installation erlauben.\n\n2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n\n3. Schick mir danach einen Funken, dann sind wir verbunden.\n\nAusführliche Anleitung: {testerGuideUrl}'**
+  String invitePartnerIDLikeToTry(Object stableApkUrl, Object testerGuideUrl);
+
+  /// No description provided for @invitePartnerYouSendALinkTo.
+  ///
+  /// In de, this message translates to:
+  /// **'Du schickst einen Link zur App und deinen Verbindungscode, z. B. per Messenger. Sobald sich dein Gegenüber meldet, bestätigst du hier die Verbindung.'**
+  String get invitePartnerYouSendALinkTo;
+
+  /// No description provided for @invitePartnerNameEGAnna.
+  ///
+  /// In de, this message translates to:
+  /// **'Name, z. B. Anna'**
+  String get invitePartnerNameEGAnna;
+
+  /// No description provided for @invitePartnerShareInvitation.
+  ///
+  /// In de, this message translates to:
+  /// **'Einladung teilen'**
+  String get invitePartnerShareInvitation;
+
+  /// No description provided for @invitePartnerInvitationToVelvetpulse.
+  ///
+  /// In de, this message translates to:
+  /// **'Einladung zu VelvetPulse'**
+  String get invitePartnerInvitationToVelvetpulse;
+
+  /// No description provided for @invitePartnerNowYourCode.
+  ///
+  /// In de, this message translates to:
+  /// **'Jetzt noch deinen Code'**
+  String get invitePartnerNowYourCode;
+
+  /// No description provided for @invitePartnerSendYourConnectionCodeAfterwards.
+  ///
+  /// In de, this message translates to:
+  /// **'Schick deinen Verbindungscode als eigene Nachricht hinterher, am besten an dieselbe Person. So lässt er sich mit einem Tippen kopieren.'**
+  String get invitePartnerSendYourConnectionCodeAfterwards;
+
+  /// No description provided for @invitePartnerShareCode.
+  ///
+  /// In de, this message translates to:
+  /// **'Code teilen'**
+  String get invitePartnerShareCode;
+
+  /// No description provided for @invitePartnerMyVelvetpulseCode.
+  ///
+  /// In de, this message translates to:
+  /// **'Mein VelvetPulse-Code'**
+  String get invitePartnerMyVelvetpulseCode;
+
+  /// No description provided for @invitePartnerCopiedPasteTheTextInto.
+  ///
+  /// In de, this message translates to:
+  /// **'Kopiert. Füge den Text in einen Messenger ein.'**
+  String get invitePartnerCopiedPasteTheTextInto;
+
+  /// No description provided for @invitePartnerNameWantsToConnect.
+  ///
+  /// In de, this message translates to:
+  /// **'{name} möchte sich verbinden'**
+  String invitePartnerNameWantsToConnect(Object name);
+
+  /// No description provided for @invitePartnerInvitationSentToName.
+  ///
+  /// In de, this message translates to:
+  /// **'Einladung an {name} verschickt'**
+  String invitePartnerInvitationSentToName(Object name);
+
+  /// No description provided for @invitePartnerAMessageJustArrivedAt.
+  ///
+  /// In de, this message translates to:
+  /// **'Gerade kam eine Nachricht an deinen Code. Wenn sie von {name} ist, nimm die Verbindung an.'**
+  String invitePartnerAMessageJustArrivedAt(Object name);
+
+  /// No description provided for @invitePartnerAsSoonAsNameInstalls.
+  ///
+  /// In de, this message translates to:
+  /// **'Sobald {name} die App installiert, deinen Code eingibt und dir einen Funken schickt, kannst du die Verbindung hier bestätigen.'**
+  String invitePartnerAsSoonAsNameInstalls(Object name);
+
+  /// No description provided for @invitePartnerDecline.
+  ///
+  /// In de, this message translates to:
+  /// **'Ablehnen'**
+  String get invitePartnerDecline;
+
+  /// No description provided for @invitePartnerConnectedWithName.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbunden mit {name} 💛'**
+  String invitePartnerConnectedWithName(Object name);
+
+  /// No description provided for @invitePartnerAccept.
+  ///
+  /// In de, this message translates to:
+  /// **'Annehmen'**
+  String get invitePartnerAccept;
+
+  /// No description provided for @invitePartnerWithdraw.
+  ///
+  /// In de, this message translates to:
+  /// **'Zurückziehen'**
+  String get invitePartnerWithdraw;
+
+  /// No description provided for @invitePartnerShareAgain.
+  ///
+  /// In de, this message translates to:
+  /// **'Erneut teilen'**
+  String get invitePartnerShareAgain;
+
+  /// No description provided for @pairingModalConnectWithSomeoneElse.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit jemand anderem verbinden?'**
+  String get pairingModalConnectWithSomeoneElse;
+
+  /// No description provided for @pairingModalYouReCurrentlyConnectedWith.
+  ///
+  /// In de, this message translates to:
+  /// **'Du bist gerade mit {old} verbunden. Diese Verbindung wird ersetzt, und der Verlauf mit {old2}, die Antworten von {old3} und die geteilten Reflexionen werden auf diesem Handy gelöscht.'**
+  String pairingModalYouReCurrentlyConnectedWith(
+      Object old, Object old2, Object old3);
+
+  /// No description provided for @pairingModalReplace.
+  ///
+  /// In de, this message translates to:
+  /// **'Ersetzen'**
+  String get pairingModalReplace;
+
+  /// No description provided for @pairingModalHiIMConnectedNow.
+  ///
+  /// In de, this message translates to:
+  /// **'👋 Hallo, ich bin jetzt verbunden.'**
+  String get pairingModalHiIMConnectedNow;
+
+  /// No description provided for @pairingModalConnectedWithName.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbunden mit {name} 💛'**
+  String pairingModalConnectedWithName(Object name);
+
+  /// No description provided for @pairingModalThisCodeDoesnTFit.
+  ///
+  /// In de, this message translates to:
+  /// **'Dieser Code passt nicht. Scanne den QR-Code deines Gegenübers oder füge den vollständigen Code (beginnt mit npub1…) ein.'**
+  String get pairingModalThisCodeDoesnTFit;
+
+  /// No description provided for @pairingModalMyCode.
+  ///
+  /// In de, this message translates to:
+  /// **'Mein Code'**
+  String get pairingModalMyCode;
+
+  /// No description provided for @pairingModalScanPartner.
+  ///
+  /// In de, this message translates to:
+  /// **'Partner scannen'**
+  String get pairingModalScanPartner;
+
+  /// No description provided for @pairingModalLetYourPartnerScanThis.
+  ///
+  /// In de, this message translates to:
+  /// **'Lass diesen Code von deinem Partner scannen, um euren privaten Kanal zu öffnen.'**
+  String get pairingModalLetYourPartnerScanThis;
+
+  /// No description provided for @pairingModalCopyCode.
+  ///
+  /// In de, this message translates to:
+  /// **'Code kopieren'**
+  String get pairingModalCopyCode;
+
+  /// No description provided for @pairingModalYourConnectionCodeHasBeen.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Verbindungscode wurde kopiert.'**
+  String get pairingModalYourConnectionCodeHasBeen;
+
+  /// No description provided for @pairingModalEndToEndEncryptedNo.
+  ///
+  /// In de, this message translates to:
+  /// **'Ende-zu-Ende-verschlüsselt • ohne Konto'**
+  String get pairingModalEndToEndEncryptedNo;
+
+  /// No description provided for @pairingModalHoldYourPartnerSQr.
+  ///
+  /// In de, this message translates to:
+  /// **'Partner-QR-Code im Rahmen halten'**
+  String get pairingModalHoldYourPartnerSQr;
+
+  /// No description provided for @pairingModalPartnerSNameEG.
+  ///
+  /// In de, this message translates to:
+  /// **'Partner-Name (z.B. Mein Schatz, Anna)'**
+  String get pairingModalPartnerSNameEG;
+
+  /// No description provided for @pairingModalOrPasteNpubHexKey.
+  ///
+  /// In de, this message translates to:
+  /// **'Oder npub1... / Hex-Schlüssel einfügen'**
+  String get pairingModalOrPasteNpubHexKey;
+
+  /// No description provided for @pairingModalPasteFromClipboard.
+  ///
+  /// In de, this message translates to:
+  /// **'Aus Zwischenablage einfügen'**
+  String get pairingModalPasteFromClipboard;
+
+  /// No description provided for @pairingModalConnectPair.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbinden & Koppeln'**
+  String get pairingModalConnectPair;
+
+  /// No description provided for @partnerProfileDialogWoman.
+  ///
+  /// In de, this message translates to:
+  /// **'Frau'**
+  String get partnerProfileDialogWoman;
+
+  /// No description provided for @partnerProfileDialogMan.
+  ///
+  /// In de, this message translates to:
+  /// **'Mann'**
+  String get partnerProfileDialogMan;
+
+  /// No description provided for @partnerProfileDialogNonBinary.
+  ///
+  /// In de, this message translates to:
+  /// **'Divers'**
+  String get partnerProfileDialogNonBinary;
+
+  /// No description provided for @partnerProfileDialogNotSpecified.
+  ///
+  /// In de, this message translates to:
+  /// **'Keine Angabe'**
+  String get partnerProfileDialogNotSpecified;
+
+  /// No description provided for @partnerProfileDialogYourPartner.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Gegenüber'**
+  String get partnerProfileDialogYourPartner;
+
+  /// No description provided for @partnerProfileDialogThisLetsLessonsCallYour.
+  ///
+  /// In de, this message translates to:
+  /// **'Damit können Lektionen dein Gegenüber beim Namen nennen, etwa „Anna liegt auf dem Rücken“ statt „sie liegt“. Beides bleibt nur auf deinem Handy.'**
+  String get partnerProfileDialogThisLetsLessonsCallYour;
+
+  /// No description provided for @partnerProfileDialogSave.
+  ///
+  /// In de, this message translates to:
+  /// **'Speichern'**
+  String get partnerProfileDialogSave;
+
+  /// No description provided for @partnerProfileDialogHowMayLessonsReferTo.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie dürfen Lektionen dein Gegenüber nennen?'**
+  String get partnerProfileDialogHowMayLessonsReferTo;
+
+  /// No description provided for @partnerProfileDialogWithNameAndGenderThe.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit Name und Geschlecht sprechen die Texte euch persönlich an. Das bleibt auf deinem Handy.'**
+  String get partnerProfileDialogWithNameAndGenderThe;
+
+  /// No description provided for @partnerProfileDialogAdd.
+  ///
+  /// In de, this message translates to:
+  /// **'Ergänzen'**
+  String get partnerProfileDialogAdd;
 }
 
 class _AppLocalizationsDelegate

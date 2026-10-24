@@ -13,15 +13,16 @@ import 'invite_partner.dart';
 import 'paar_abend_screen.dart';
 import 'partner_profile_dialog.dart';
 import 'pairing_modal.dart';
+import '../../l10n/t.dart';
 
 /// Schnelle Funken: ein Tippen sagt, worauf man heute Lust hat – oder eben nicht.
-const List<(String, String)> _sparks = [
-  ('🔥', 'Lust auf dich'),
-  ('🌿', 'Heute nur kuscheln'),
-  ('🥂', 'Freu mich auf später'),
-  ('🐢', 'Heute ganz langsam'),
-  ('💬', 'Lass uns reden'),
-  ('🌙', 'Heute lieber nicht'),
+List<(String, String)> _sparks = [
+  ('🔥', t.couplesChannelIWantYou),
+  ('🌿', t.couplesChannelJustCuddlesToday),
+  ('🥂', t.couplesChannelLookingForwardToLater),
+  ('🐢', t.couplesChannelVerySlowlyToday),
+  ('💬', t.couplesChannelLetSTalk),
+  ('🌙', t.couplesChannelNotToday),
 ];
 
 class CouplesChannelScreen extends StatefulWidget {
@@ -124,10 +125,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   void _showSendError() {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: const Text('Senden hat nicht geklappt. Bitte gleich noch einmal versuchen.'),
+        content: Text(t.lessonDetailSendingDidnTWorkPlease),
         backgroundColor: AppTheme.rose,
         action: SnackBarAction(
-          label: 'Neu verbinden',
+          label: t.couplesChannelReconnect,
           textColor: Colors.white,
           onPressed: _nostr.reconnectNextRelay,
         ),
@@ -177,33 +178,33 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           ),
         ),
         const SizedBox(height: 20),
-        const Text(
-          'Euer privater Raum',
+        Text(
+          t.coursesYourPrivateSpace,
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: AppTheme.textPrimary),
         ),
         const SizedBox(height: 8),
-        const Text(
-          'Verbinde dich mit deinem Gegenüber und teilt Wünsche, die sonst schwer auszusprechen sind.',
+        Text(
+          t.couplesChannelConnectWithYourPartnerAnd,
           style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.45),
         ),
         const SizedBox(height: 20),
         _buildFeature(
           Icons.bolt_rounded,
           AppTheme.amber,
-          'Funken senden',
-          'Mit einem Tippen zeigen, worauf du heute Lust hast – oder eben nicht.',
+          t.couplesChannelSendSparks,
+          t.couplesChannelShowWithOneTapWhat,
         ),
         _buildFeature(
           Icons.favorite_rounded,
           AppTheme.rose,
-          'Wünsche heimlich abgleichen',
-          'Ihr stimmt getrennt ab. Sichtbar wird nur, was ihr beide wollt.',
+          t.couplesChannelSecretlyMatchWishes,
+          t.couplesChannelYouVoteSeparatelyOnlyWhat,
         ),
         _buildFeature(
           Icons.lock_rounded,
           AppTheme.sageGreen,
-          'Nur für euch beide',
-          'Ende-zu-Ende-verschlüsselt, ohne Konto und ohne Telefonnummer.',
+          t.couplesChannelJustForTheTwoOf,
+          t.couplesChannelEndToEndEncryptedNo,
         ),
         const SizedBox(height: 12),
         const InviteStatusCard(),
@@ -212,7 +213,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           child: ElevatedButton.icon(
             onPressed: _openPairingModal,
             icon: const Icon(Icons.qr_code_scanner_rounded, size: 20),
-            label: const Text('Mit Partner verbinden',
+            label: Text(t.couplesChannelConnectWithPartner,
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppTheme.amber,
@@ -227,7 +228,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           child: OutlinedButton.icon(
             onPressed: () => invitePartner(context),
             icon: const Icon(Icons.send_rounded, size: 18),
-            label: const Text('Partner einladen', style: TextStyle(fontWeight: FontWeight.w700)),
+            label: Text(t.couplesChannelInvitePartner, style: TextStyle(fontWeight: FontWeight.w700)),
             style: OutlinedButton.styleFrom(
               foregroundColor: AppTheme.amberLight,
               side: BorderSide(color: AppTheme.amber.withValues(alpha: 0.6)),
@@ -239,13 +240,13 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         Center(
           child: TextButton(
             onPressed: _showInfoDialog,
-            child: const Text('Wie funktioniert das?', style: TextStyle(color: AppTheme.textSecondary)),
+            child: Text(t.couplesChannelHowDoesItWork, style: TextStyle(color: AppTheme.textSecondary)),
           ),
         ),
         const SizedBox(height: 12),
         _buildAbendCard(),
         const SizedBox(height: 10),
-        _buildFantasyMapCard(subtitle: 'Kannst du auch allein ausfüllen – und später mit deinem Gegenüber abgleichen.'),
+        _buildFantasyMapCard(subtitle: t.couplesChannelYouCanAlsoFillIt),
       ],
     );
   }
@@ -305,7 +306,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           borderRadius: BorderRadius.circular(16),
           border: Border.all(color: AppTheme.rose.withValues(alpha: 0.45)),
         ),
-        child: const Row(
+        child: Row(
           children: [
             Icon(Icons.spa_rounded, color: AppTheme.rose, size: 26),
             SizedBox(width: 14),
@@ -313,10 +314,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Gemeinsamer Abend',
+                  Text(t.couplesChannelSharedEvening,
                       style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
                   SizedBox(height: 2),
-                  Text('Geführte Berührung für euch beide, 20 bis 45 Minuten. Jedes Mal anders.',
+                  Text(t.couplesChannelGuidedTouchForTheTwo,
                       style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
                 ],
               ),
@@ -347,7 +348,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Fantasie-Landkarte',
+                  Text(t.couplesChannelFantasyMap,
                       style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
                   const SizedBox(height: 2),
                   Text(subtitle, style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
@@ -389,7 +390,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             unselectedLabelColor: AppTheme.textSecondary,
             labelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
             tabs: [
-              const Tab(height: 42, text: 'Nachrichten'),
+              Tab(height: 42, text: t.couplesChannelMessages),
               ValueListenableBuilder<List<String>>(
                 valueListenable: _nostr.matchesNotifier,
                 builder: (context, matches, _) => Tab(
@@ -399,7 +400,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                     label: Text('${matches.length}'),
                     backgroundColor: AppTheme.rose,
                     offset: const Offset(14, -6),
-                    child: const Text('Wünsche'),
+                    child: Text(t.couplesChannelWishes),
                   ),
                 ),
               ),
@@ -426,9 +427,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         final name = _nostr.partnerName;
         final status = _nostr.statusNotifier.value;
         final (Color dot, String label) = switch (status) {
-          NostrConnectionStatus.connected => (AppTheme.sageGreen, 'verbunden & verschlüsselt'),
-          NostrConnectionStatus.connecting => (AppTheme.amber, 'verbindet …'),
-          _ => (AppTheme.rose, 'offline – tippe zum Verbinden'),
+          NostrConnectionStatus.connected => (AppTheme.sageGreen, t.couplesChannelConnectedEncrypted),
+          NostrConnectionStatus.connecting => (AppTheme.amber, t.couplesChannelConnecting),
+          _ => (AppTheme.rose, t.couplesChannelOfflineTapToConnect),
         };
 
         return Container(
@@ -455,7 +456,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Du & $name',
+                        t.couplesChannelYouName(name),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
@@ -486,12 +487,12 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               IconButton(
                 onPressed: _openAbend,
                 icon: const Icon(Icons.spa_outlined, color: AppTheme.rose, size: 22),
-                tooltip: 'Gemeinsamer Abend',
+                tooltip: t.couplesChannelSharedEvening,
               ),
               IconButton(
                 onPressed: _openFantasyMap,
                 icon: const Icon(Icons.explore_outlined, color: AppTheme.amber, size: 22),
-                tooltip: 'Fantasie-Landkarte',
+                tooltip: t.couplesChannelFantasyMap,
               ),
               PopupMenuButton<String>(
                 icon: const Icon(Icons.more_vert_rounded, color: AppTheme.textSecondary),
@@ -513,16 +514,16 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                   }
                 },
                 itemBuilder: (_) => [
-                  const PopupMenuItem(value: 'profile', child: Text('Name & Geschlecht des Gegenübers')),
+                  PopupMenuItem(value: 'profile', child: Text(t.couplesChannelPartnerSNameGender)),
                   CheckedPopupMenuItem(
                     value: 'read',
                     checked: _nostr.readReceiptsEnabled.value,
-                    child: const Text('Lesebestätigungen'),
+                    child: Text(t.couplesChannelReadReceipts),
                   ),
-                  const PopupMenuItem(value: 'info', child: Text('Verschlüsselung & Details')),
-                  const PopupMenuItem(value: 'pair', child: Text('Verbindung verwalten')),
-                  const PopupMenuItem(value: 'reconnect', child: Text('Neu verbinden')),
-                  const PopupMenuItem(value: 'unpair', child: Text('Verbindung trennen')),
+                  PopupMenuItem(value: 'info', child: Text(t.couplesChannelEncryptionDetails)),
+                  PopupMenuItem(value: 'pair', child: Text(t.couplesChannelManageConnection)),
+                  PopupMenuItem(value: 'reconnect', child: Text(t.couplesChannelReconnect)),
+                  PopupMenuItem(value: 'unpair', child: Text(t.couplesChannelDisconnect)),
                 ],
               ),
             ],
@@ -585,7 +586,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         final messages = allMessages.where((m) => m.type != CoupleMessageType.fantasyVote).toList();
 
         if (messages.isEmpty) {
-          return const Center(
+          return Center(
             child: Padding(
               padding: EdgeInsets.all(32),
               child: Column(
@@ -594,12 +595,12 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                   Icon(Icons.forum_outlined, size: 44, color: AppTheme.textMuted),
                   SizedBox(height: 12),
                   Text(
-                    'Noch ist es still hier',
+                    t.couplesChannelItSStillQuietHere,
                     style: TextStyle(color: AppTheme.textSecondary, fontSize: 15, fontWeight: FontWeight.w600),
                   ),
                   SizedBox(height: 6),
                   Text(
-                    'Schick einen Funken aus der Leiste unten oder schreib ein paar Worte.',
+                    t.couplesChannelSendASparkFromThe,
                     textAlign: TextAlign.center,
                     style: TextStyle(color: AppTheme.textMuted, fontSize: 13, height: 1.4),
                   ),
@@ -633,7 +634,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             // Kleiner Spielraum: Die Zeit in der Nachricht und im verschickten Event können eine Sekunde auseinanderliegen.
             final gelesen = bis + 2 >= msg.createdAt.millisecondsSinceEpoch ~/ 1000;
             return Text(
-              gelesen ? ' · Gelesen' : ' · Gesendet',
+              gelesen ? t.couplesChannelRead : t.couplesChannelSent,
               style: TextStyle(fontSize: 10, color: farbe, fontWeight: gelesen ? FontWeight.w700 : FontWeight.w400),
             );
           },
@@ -697,7 +698,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                       children: [
                         Icon(Icons.menu_book_rounded, size: 15, color: isMe ? textColor : AppTheme.amberLight),
                         const SizedBox(width: 6),
-                        Text('Lektion öffnen',
+                        Text(t.couplesChannelOpenLesson,
                             style: TextStyle(
                                 fontSize: 12.5,
                                 fontWeight: FontWeight.w700,
@@ -738,7 +739,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               textCapitalization: TextCapitalization.sentences,
               style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
               decoration: InputDecoration(
-                hintText: 'Nachricht schreiben …',
+                hintText: t.couplesChannelWriteAMessage,
                 hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 13.5),
                 filled: true,
                 fillColor: AppTheme.surfaceLight.withValues(alpha: 0.5),
@@ -756,7 +757,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             onPressed: _sendMessage,
             style: IconButton.styleFrom(backgroundColor: AppTheme.amber, fixedSize: const Size(46, 46)),
             icon: const Icon(Icons.send_rounded, color: AppTheme.background, size: 20),
-            tooltip: 'Senden',
+            tooltip: t.couplesChannelSend,
           ),
         ],
       ),
@@ -773,15 +774,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         return ListView(
           padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.fromLTRB(2, 4, 2, 14),
               child: Text(
-                'Stimmt getrennt ab. Ein Wunsch erscheint erst als Match, wenn ihr beide „Ja, gern“ sagt – '
-                'ein „Lieber nicht“ wird nie angezeigt.',
+                t.couplesChannelVoteSeparatelyAWishOnly,
                 style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
               ),
             ),
-            _buildFantasyMapCard(subtitle: '22 Fragen in 5 Bereichen – mit passenden Kurs-Empfehlungen.'),
+            _buildFantasyMapCard(subtitle: t.couplesChannelQuestionsInSeveralAreasWith(ListenUebersetzung.eintraege.length, ListenUebersetzung.kategorien.length)),
             const SizedBox(height: 16),
             if (matches.isNotEmpty) ...[
               _buildMatchBanner(matches),
@@ -809,7 +809,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            matches.length == 1 ? 'Ihr habt ein Match' : 'Ihr habt ${matches.length} Matches',
+            matches.length == 1 ? t.couplesChannelYouHaveAMatch : t.couplesChannelYouHaveMatcheslengthMatches(matches.length),
             style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 16),
           ),
           const SizedBox(height: 8),
@@ -822,8 +822,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             );
           }),
           const SizedBox(height: 10),
-          const Text(
-            'Ein Match ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt.',
+          Text(
+            t.couplesChannelAMatchIsAnInvitation,
             style: TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.4),
           ),
         ],
@@ -891,9 +891,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           const SizedBox(height: 14),
           Row(
             children: [
-              voteButton('yes', 'Ja, gern', Icons.local_fire_department_rounded),
+              voteButton('yes', t.couplesChannelYesPlease, Icons.local_fire_department_rounded),
               const SizedBox(width: 10),
-              voteButton('no', 'Lieber nicht', Icons.do_not_disturb_on_outlined),
+              voteButton('no', t.couplesChannelRatherNot, Icons.do_not_disturb_on_outlined),
             ],
           ),
         ],
@@ -909,18 +909,16 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Verbindung trennen?', style: TextStyle(fontSize: 18)),
+        title: Text(t.couplesChannelDisconnect2, style: TextStyle(fontSize: 18)),
         content: Text(
-          'Der Verlauf mit $name, die Antworten von $name auf die Ja/Nein-Liste und die geteilten '
-          'Reflexionen werden auf diesem Handy gelöscht. Deine eigenen Antworten bleiben erhalten.\n\n'
-          'Auf dem Handy von $name ändert sich nichts.',
+          t.couplesChannelTheHistoryWithNameName(name, name, name),
           style: const TextStyle(color: AppTheme.textSecondary, height: 1.45),
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Abbrechen')),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Trennen', style: TextStyle(color: AppTheme.rose)),
+            child: Text(t.couplesChannelDisconnect3, style: TextStyle(color: AppTheme.rose)),
           ),
         ],
       ),
@@ -928,7 +926,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     if (ja != true) return;
     await _nostr.unpairPartner();
     if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Verbindung getrennt.')));
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.couplesChannelDisconnected)));
   }
 
   void _showInfoDialog() {
@@ -936,26 +934,22 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('So bleibt es privat', style: TextStyle(fontSize: 18)),
+        title: Text(t.couplesChannelHowItStaysPrivate, style: TextStyle(fontSize: 18)),
         content: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
-                'Nachrichten werden auf deinem Handy verschlüsselt und erst auf dem Handy deines Gegenübers wieder lesbar. '
-                'Dazwischen laufen sie über öffentliche Nostr-Server. Die können den Inhalt nicht lesen. Sichtbar sind '
-                'für sie aber die Schlüssel von Absender und Empfänger, Zeitpunkt und ungefähre Größe jeder Nachricht '
-                'sowie deine IP-Adresse – also dass, wann und wie oft ihr schreibt. Die Schlüssel tragen keinen Namen. '
-                'Es gibt kein Konto, keine Telefonnummer und keinen Server von uns.',
+              Text(
+                t.couplesChannelMessagesAreEncryptedOnYour,
                 style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
               ),
               const SizedBox(height: 16),
-              _buildInfoRow('Verschlüsselung', 'Nostr NIP-04'),
-              _buildInfoRow('Server', _nostr.connectedRelaysLabel),
+              _buildInfoRow(t.couplesChannelEncryption, 'Nostr NIP-04'),
+              _buildInfoRow(t.couplesChannelServers, _nostr.connectedRelaysLabel),
               for (final relay in _nostr.connectedRelays) _buildInfoRow('', relay),
               const SizedBox(height: 10),
-              const Text('Dein Verbindungscode', style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+              Text(t.couplesChannelYourConnectionCode, style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
               const SizedBox(height: 4),
               SelectableText(
                 _nostr.myNpub,
@@ -967,7 +961,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text('Schließen', style: TextStyle(color: AppTheme.textSecondary)),
+            child: Text(t.couplesChannelClose, style: TextStyle(color: AppTheme.textSecondary)),
           ),
         ],
       ),

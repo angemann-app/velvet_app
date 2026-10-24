@@ -523,4 +523,487 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get coursesPracticeDesireProfile => 'Praxis: Lust-Profil';
+
+  @override
+  String get couplesChannelIWantYou => 'Lust auf dich';
+
+  @override
+  String get couplesChannelJustCuddlesToday => 'Heute nur kuscheln';
+
+  @override
+  String get couplesChannelLookingForwardToLater => 'Freu mich auf später';
+
+  @override
+  String get couplesChannelVerySlowlyToday => 'Heute ganz langsam';
+
+  @override
+  String get couplesChannelLetSTalk => 'Lass uns reden';
+
+  @override
+  String get couplesChannelNotToday => 'Heute lieber nicht';
+
+  @override
+  String get couplesChannelReconnect => 'Neu verbinden';
+
+  @override
+  String get couplesChannelConnectWithYourPartnerAnd =>
+      'Verbinde dich mit deinem Gegenüber und teilt Wünsche, die sonst schwer auszusprechen sind.';
+
+  @override
+  String get couplesChannelSendSparks => 'Funken senden';
+
+  @override
+  String get couplesChannelShowWithOneTapWhat =>
+      'Mit einem Tippen zeigen, worauf du heute Lust hast – oder eben nicht.';
+
+  @override
+  String get couplesChannelSecretlyMatchWishes => 'Wünsche heimlich abgleichen';
+
+  @override
+  String get couplesChannelYouVoteSeparatelyOnlyWhat =>
+      'Ihr stimmt getrennt ab. Sichtbar wird nur, was ihr beide wollt.';
+
+  @override
+  String get couplesChannelJustForTheTwoOf => 'Nur für euch beide';
+
+  @override
+  String get couplesChannelEndToEndEncryptedNo =>
+      'Ende-zu-Ende-verschlüsselt, ohne Konto und ohne Telefonnummer.';
+
+  @override
+  String get couplesChannelConnectWithPartner => 'Mit Partner verbinden';
+
+  @override
+  String get couplesChannelInvitePartner => 'Partner einladen';
+
+  @override
+  String get couplesChannelHowDoesItWork => 'Wie funktioniert das?';
+
+  @override
+  String get couplesChannelYouCanAlsoFillIt =>
+      'Kannst du auch allein ausfüllen – und später mit deinem Gegenüber abgleichen.';
+
+  @override
+  String get couplesChannelSharedEvening => 'Gemeinsamer Abend';
+
+  @override
+  String get couplesChannelGuidedTouchForTheTwo =>
+      'Geführte Berührung für euch beide, 20 bis 45 Minuten. Jedes Mal anders.';
+
+  @override
+  String get couplesChannelFantasyMap => 'Fantasie-Landkarte';
+
+  @override
+  String get couplesChannelMessages => 'Nachrichten';
+
+  @override
+  String get couplesChannelWishes => 'Wünsche';
+
+  @override
+  String get couplesChannelConnectedEncrypted => 'verbunden & verschlüsselt';
+
+  @override
+  String get couplesChannelConnecting => 'verbindet …';
+
+  @override
+  String get couplesChannelOfflineTapToConnect =>
+      'offline – tippe zum Verbinden';
+
+  @override
+  String couplesChannelYouName(Object name) {
+    return 'Du & $name';
+  }
+
+  @override
+  String get couplesChannelPartnerSNameGender =>
+      'Name & Geschlecht des Gegenübers';
+
+  @override
+  String get couplesChannelReadReceipts => 'Lesebestätigungen';
+
+  @override
+  String get couplesChannelEncryptionDetails => 'Verschlüsselung & Details';
+
+  @override
+  String get couplesChannelManageConnection => 'Verbindung verwalten';
+
+  @override
+  String get couplesChannelDisconnect => 'Verbindung trennen';
+
+  @override
+  String get couplesChannelItSStillQuietHere => 'Noch ist es still hier';
+
+  @override
+  String get couplesChannelSendASparkFromThe =>
+      'Schick einen Funken aus der Leiste unten oder schreib ein paar Worte.';
+
+  @override
+  String get couplesChannelRead => ' · Gelesen';
+
+  @override
+  String get couplesChannelSent => ' · Gesendet';
+
+  @override
+  String get couplesChannelOpenLesson => 'Lektion öffnen';
+
+  @override
+  String get couplesChannelWriteAMessage => 'Nachricht schreiben …';
+
+  @override
+  String get couplesChannelSend => 'Senden';
+
+  @override
+  String get couplesChannelVoteSeparatelyAWishOnly =>
+      'Stimmt getrennt ab. Ein Wunsch erscheint erst als Match, wenn ihr beide „Ja, gern“ sagt – ein „Lieber nicht“ wird nie angezeigt.';
+
+  @override
+  String couplesChannelQuestionsInSeveralAreasWith(int fragen, int bereiche) {
+    return '$fragen Fragen in $bereiche Bereichen – mit passenden Kurs-Empfehlungen.';
+  }
+
+  @override
+  String get couplesChannelYouHaveAMatch => 'Ihr habt ein Match';
+
+  @override
+  String couplesChannelYouHaveMatcheslengthMatches(Object matchesLength) {
+    return 'Ihr habt $matchesLength Matches';
+  }
+
+  @override
+  String get couplesChannelAMatchIsAnInvitation =>
+      'Ein Match ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt.';
+
+  @override
+  String get couplesChannelYesPlease => 'Ja, gern';
+
+  @override
+  String get couplesChannelRatherNot => 'Lieber nicht';
+
+  @override
+  String get couplesChannelDisconnect2 => 'Verbindung trennen?';
+
+  @override
+  String couplesChannelTheHistoryWithNameName(
+      Object name, Object name2, Object name3) {
+    return 'Der Verlauf mit $name, die Antworten von $name2 auf die Ja/Nein-Liste und die geteilten Reflexionen werden auf diesem Handy gelöscht. Deine eigenen Antworten bleiben erhalten.\n\nAuf dem Handy von $name3 ändert sich nichts.';
+  }
+
+  @override
+  String get couplesChannelDisconnect3 => 'Trennen';
+
+  @override
+  String get couplesChannelDisconnected => 'Verbindung getrennt.';
+
+  @override
+  String get couplesChannelHowItStaysPrivate => 'So bleibt es privat';
+
+  @override
+  String get couplesChannelMessagesAreEncryptedOnYour =>
+      'Nachrichten werden auf deinem Handy verschlüsselt und erst auf dem Handy deines Gegenübers wieder lesbar. Dazwischen laufen sie über öffentliche Nostr-Server. Die können den Inhalt nicht lesen. Sichtbar sind für sie aber die Schlüssel von Absender und Empfänger, Zeitpunkt und ungefähre Größe jeder Nachricht sowie deine IP-Adresse – also dass, wann und wie oft ihr schreibt. Die Schlüssel tragen keinen Namen. Es gibt kein Konto, keine Telefonnummer und keinen Server von uns.';
+
+  @override
+  String get couplesChannelEncryption => 'Verschlüsselung';
+
+  @override
+  String get couplesChannelServers => 'Server';
+
+  @override
+  String get couplesChannelYourConnectionCode => 'Dein Verbindungscode';
+
+  @override
+  String get couplesChannelClose => 'Schließen';
+
+  @override
+  String get paarAbendYou => 'Du';
+
+  @override
+  String get paarAbendYourPartner => 'dein Gegenüber';
+
+  @override
+  String get paarAbendEndTheEvening => 'Abend beenden?';
+
+  @override
+  String get paarAbendTheGuidanceStopsThenYou =>
+      'Die Begleitung hört dann auf. Ihr könnt jederzeit neu beginnen.';
+
+  @override
+  String get paarAbendContinue => 'Weitermachen';
+
+  @override
+  String get paarAbendPutThePhoneNextTo =>
+      'Legt das Handy neben euch. Eine Stimme führt euch durch Ankommen, zwei Runden Berührung mit Rollenwechsel und einen ruhigen Ausklang. Die meiste Zeit ist Stille, damit ihr ganz bei euch seid. Jeder Abend wird neu zusammengestellt.';
+
+  @override
+  String get paarAbendDuration => 'Dauer';
+
+  @override
+  String paarAbendMMin(Object m) {
+    return '$m Min.';
+  }
+
+  @override
+  String get paarAbendHowFarMayItGo => 'Wie weit darf es gehen?';
+
+  @override
+  String get paarAbendClothed => 'Bekleidet';
+
+  @override
+  String get paarAbendBackShouldersHandsHeadLegs =>
+      'Rücken, Schultern, Hände, Kopf, Beine und Füße.';
+
+  @override
+  String get paarAbendSkinToSkin => 'Haut an Haut';
+
+  @override
+  String get paarAbendPlusMassageWithOilBelly =>
+      'Dazu Massage mit Öl, Bauch, Hüften und Po.';
+
+  @override
+  String get paarAbendIntimate => 'Intim';
+
+  @override
+  String get paarAbendPlusChestInnerThighsAnd =>
+      'Dazu Brust, Innenschenkel und Geschlecht, ganz ohne Ziel.';
+
+  @override
+  String get paarAbendWhoGivesFirst => 'Wer gibt zuerst?';
+
+  @override
+  String get paarAbendMe => 'Ich';
+
+  @override
+  String get paarAbendMyPartner => 'Mein Gegenüber';
+
+  @override
+  String get paarAbendVoice => 'Stimme';
+
+  @override
+  String get paarAbendSoftSoundBed => 'Leiser Klangteppich';
+
+  @override
+  String get paarAbendCalmBackgroundDuringTheSilences =>
+      'Ruhiger Hintergrund in den Stillen';
+
+  @override
+  String get paarAbendAgreeOnAStopWord =>
+      'Vereinbart vorher ein Stoppwort. Die Stimme lädt ein, sie bestimmt nichts: Was sich nicht gut anfühlt, lasst ihr einfach aus.';
+
+  @override
+  String get paarAbendBeginTheEvening => 'Abend beginnen';
+
+  @override
+  String get paarAbendThankYouForYourEvening => 'Danke für euren Abend';
+
+  @override
+  String get paarAbendStayLyingDownAsLong =>
+      'Bleibt liegen, solange es sich gut anfühlt.';
+
+  @override
+  String paarAbendRoundRunde(Object runde) {
+    return 'Runde $runde';
+  }
+
+  @override
+  String paarAbendYouGivePartnernameReceives(Object partnerName) {
+    return 'Du gibst · $partnerName empfängt';
+  }
+
+  @override
+  String paarAbendPartnernamePartnernameGivesYouReceive(
+      Object partnerName, Object partnerName2) {
+    return '$partnerName$partnerName2 gibt · du empfängst';
+  }
+
+  @override
+  String get paarAbendArriving => 'Ankommen';
+
+  @override
+  String get paarAbendEnding => 'Ausklang';
+
+  @override
+  String get paarAbendChangeOfRoles => 'Rollenwechsel';
+
+  @override
+  String get paarAbendBreatheTogether => 'Atmet gemeinsam.';
+
+  @override
+  String get paarAbendPaused => 'Pausiert';
+
+  @override
+  String get paarAbendTheVoiceIsSpeaking => 'Die Stimme spricht …';
+
+  @override
+  String paarAbendSilenceStillerestLeft(Object stilleRest) {
+    return 'Stille · noch $stilleRest';
+  }
+
+  @override
+  String invitePartnerIDLikeToTry(Object stableApkUrl, Object testerGuideUrl) {
+    return '\nIch möchte VelvetPulse mit dir ausprobieren 💛 Eine private App nur für uns zwei.\n\n1. App laden (Android):\n$stableApkUrl\nWenn Android fragt, die Installation erlauben.\n\n2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n\n3. Schick mir danach einen Funken, dann sind wir verbunden.\n\nAusführliche Anleitung: $testerGuideUrl';
+  }
+
+  @override
+  String get invitePartnerYouSendALinkTo =>
+      'Du schickst einen Link zur App und deinen Verbindungscode, z. B. per Messenger. Sobald sich dein Gegenüber meldet, bestätigst du hier die Verbindung.';
+
+  @override
+  String get invitePartnerNameEGAnna => 'Name, z. B. Anna';
+
+  @override
+  String get invitePartnerShareInvitation => 'Einladung teilen';
+
+  @override
+  String get invitePartnerInvitationToVelvetpulse => 'Einladung zu VelvetPulse';
+
+  @override
+  String get invitePartnerNowYourCode => 'Jetzt noch deinen Code';
+
+  @override
+  String get invitePartnerSendYourConnectionCodeAfterwards =>
+      'Schick deinen Verbindungscode als eigene Nachricht hinterher, am besten an dieselbe Person. So lässt er sich mit einem Tippen kopieren.';
+
+  @override
+  String get invitePartnerShareCode => 'Code teilen';
+
+  @override
+  String get invitePartnerMyVelvetpulseCode => 'Mein VelvetPulse-Code';
+
+  @override
+  String get invitePartnerCopiedPasteTheTextInto =>
+      'Kopiert. Füge den Text in einen Messenger ein.';
+
+  @override
+  String invitePartnerNameWantsToConnect(Object name) {
+    return '$name möchte sich verbinden';
+  }
+
+  @override
+  String invitePartnerInvitationSentToName(Object name) {
+    return 'Einladung an $name verschickt';
+  }
+
+  @override
+  String invitePartnerAMessageJustArrivedAt(Object name) {
+    return 'Gerade kam eine Nachricht an deinen Code. Wenn sie von $name ist, nimm die Verbindung an.';
+  }
+
+  @override
+  String invitePartnerAsSoonAsNameInstalls(Object name) {
+    return 'Sobald $name die App installiert, deinen Code eingibt und dir einen Funken schickt, kannst du die Verbindung hier bestätigen.';
+  }
+
+  @override
+  String get invitePartnerDecline => 'Ablehnen';
+
+  @override
+  String invitePartnerConnectedWithName(Object name) {
+    return 'Verbunden mit $name 💛';
+  }
+
+  @override
+  String get invitePartnerAccept => 'Annehmen';
+
+  @override
+  String get invitePartnerWithdraw => 'Zurückziehen';
+
+  @override
+  String get invitePartnerShareAgain => 'Erneut teilen';
+
+  @override
+  String get pairingModalConnectWithSomeoneElse =>
+      'Mit jemand anderem verbinden?';
+
+  @override
+  String pairingModalYouReCurrentlyConnectedWith(
+      Object old, Object old2, Object old3) {
+    return 'Du bist gerade mit $old verbunden. Diese Verbindung wird ersetzt, und der Verlauf mit $old2, die Antworten von $old3 und die geteilten Reflexionen werden auf diesem Handy gelöscht.';
+  }
+
+  @override
+  String get pairingModalReplace => 'Ersetzen';
+
+  @override
+  String get pairingModalHiIMConnectedNow =>
+      '👋 Hallo, ich bin jetzt verbunden.';
+
+  @override
+  String pairingModalConnectedWithName(Object name) {
+    return 'Verbunden mit $name 💛';
+  }
+
+  @override
+  String get pairingModalThisCodeDoesnTFit =>
+      'Dieser Code passt nicht. Scanne den QR-Code deines Gegenübers oder füge den vollständigen Code (beginnt mit npub1…) ein.';
+
+  @override
+  String get pairingModalMyCode => 'Mein Code';
+
+  @override
+  String get pairingModalScanPartner => 'Partner scannen';
+
+  @override
+  String get pairingModalLetYourPartnerScanThis =>
+      'Lass diesen Code von deinem Partner scannen, um euren privaten Kanal zu öffnen.';
+
+  @override
+  String get pairingModalCopyCode => 'Code kopieren';
+
+  @override
+  String get pairingModalYourConnectionCodeHasBeen =>
+      'Dein Verbindungscode wurde kopiert.';
+
+  @override
+  String get pairingModalEndToEndEncryptedNo =>
+      'Ende-zu-Ende-verschlüsselt • ohne Konto';
+
+  @override
+  String get pairingModalHoldYourPartnerSQr =>
+      'Partner-QR-Code im Rahmen halten';
+
+  @override
+  String get pairingModalPartnerSNameEG =>
+      'Partner-Name (z.B. Mein Schatz, Anna)';
+
+  @override
+  String get pairingModalOrPasteNpubHexKey =>
+      'Oder npub1... / Hex-Schlüssel einfügen';
+
+  @override
+  String get pairingModalPasteFromClipboard => 'Aus Zwischenablage einfügen';
+
+  @override
+  String get pairingModalConnectPair => 'Verbinden & Koppeln';
+
+  @override
+  String get partnerProfileDialogWoman => 'Frau';
+
+  @override
+  String get partnerProfileDialogMan => 'Mann';
+
+  @override
+  String get partnerProfileDialogNonBinary => 'Divers';
+
+  @override
+  String get partnerProfileDialogNotSpecified => 'Keine Angabe';
+
+  @override
+  String get partnerProfileDialogYourPartner => 'Dein Gegenüber';
+
+  @override
+  String get partnerProfileDialogThisLetsLessonsCallYour =>
+      'Damit können Lektionen dein Gegenüber beim Namen nennen, etwa „Anna liegt auf dem Rücken“ statt „sie liegt“. Beides bleibt nur auf deinem Handy.';
+
+  @override
+  String get partnerProfileDialogSave => 'Speichern';
+
+  @override
+  String get partnerProfileDialogHowMayLessonsReferTo =>
+      'Wie dürfen Lektionen dein Gegenüber nennen?';
+
+  @override
+  String get partnerProfileDialogWithNameAndGenderThe =>
+      'Mit Name und Geschlecht sprechen die Texte euch persönlich an. Das bleibt auf deinem Handy.';
+
+  @override
+  String get partnerProfileDialogAdd => 'Ergänzen';
 }

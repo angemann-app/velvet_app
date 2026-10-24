@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
+import '../../l10n/t.dart';
 
 /// Direkter Download der neuesten STABILEN Version: GitHubs „latest“ überspringt Beta-Versionen.
 const String stableApkUrl =
@@ -13,18 +14,7 @@ const _share = MethodChannel('velvetpulse/share');
 
 /// Erste Nachricht: Link und Anleitung. Der Code folgt als eigene Nachricht, weil ältere
 /// Versionen beim Einfügen nur den reinen Code verstehen und Messenger ganze Nachrichten kopieren.
-String invitationText() => '''
-Ich möchte VelvetPulse mit dir ausprobieren 💛 Eine private App nur für uns zwei.
-
-1. App laden (Android):
-$stableApkUrl
-Wenn Android fragt, die Installation erlauben.
-
-2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.
-
-3. Schick mir danach einen Funken, dann sind wir verbunden.
-
-Ausführliche Anleitung: $testerGuideUrl''';
+String invitationText() => t.invitePartnerIDLikeToTry(stableApkUrl, testerGuideUrl);
 
 /// Fragt nach dem Namen, öffnet das Teilen-Menü mit der Einladung und merkt sich die offene Einladung.
 Future<void> invitePartner(BuildContext context) async {
@@ -33,14 +23,13 @@ Future<void> invitePartner(BuildContext context) async {
     context: context,
     builder: (context) => AlertDialog(
       backgroundColor: AppTheme.surface,
-      title: const Text('Partner einladen'),
+      title: Text(t.couplesChannelInvitePartner),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Du schickst einen Link zur App und deinen Verbindungscode, z. B. per Messenger. '
-            'Sobald sich dein Gegenüber meldet, bestätigst du hier die Verbindung.',
+          Text(
+            t.invitePartnerYouSendALinkTo,
             style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
           ),
           const SizedBox(height: 14),
@@ -48,15 +37,15 @@ Future<void> invitePartner(BuildContext context) async {
             controller: controller,
             autofocus: true,
             textCapitalization: TextCapitalization.words,
-            decoration: const InputDecoration(hintText: 'Name, z. B. Anna'),
+            decoration: InputDecoration(hintText: t.invitePartnerNameEGAnna),
           ),
         ],
       ),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(context), child: const Text('Abbrechen')),
+        TextButton(onPressed: () => Navigator.pop(context), child: Text(t.ausspracheMeldenCancel)),
         ElevatedButton(
           onPressed: () => Navigator.pop(context, controller.text.trim()),
-          child: const Text('Einladung teilen'),
+          child: Text(t.invitePartnerShareInvitation),
         ),
       ],
     ),
@@ -67,7 +56,7 @@ Future<void> invitePartner(BuildContext context) async {
   final nostr = NostrService();
   await nostr.startInvite(name.isEmpty ? 'Partner' : name);
   if (!context.mounted) return;
-  await _shareOrCopy(context, invitationText(), 'Einladung zu VelvetPulse');
+  await _shareOrCopy(context, invitationText(), t.invitePartnerInvitationToVelvetpulse);
   if (!context.mounted) return;
 
   // Schritt 2 wartet, bis man aus dem Messenger zurückkommt.
@@ -76,20 +65,19 @@ Future<void> invitePartner(BuildContext context) async {
     barrierDismissible: false,
     builder: (context) => AlertDialog(
       backgroundColor: AppTheme.surface,
-      title: const Text('Jetzt noch deinen Code'),
-      content: const Text(
-        'Schick deinen Verbindungscode als eigene Nachricht hinterher, am besten an dieselbe Person. '
-        'So lässt er sich mit einem Tippen kopieren.',
+      title: Text(t.invitePartnerNowYourCode),
+      content: Text(
+        t.invitePartnerSendYourConnectionCodeAfterwards,
         style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
       ),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Später')),
-        ElevatedButton(onPressed: () => Navigator.pop(context, true), child: const Text('Code teilen')),
+        TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.updateDialogLater)),
+        ElevatedButton(onPressed: () => Navigator.pop(context, true), child: Text(t.invitePartnerShareCode)),
       ],
     ),
   );
   if (sendCode == true && context.mounted) {
-    await _shareOrCopy(context, nostr.myNpub, 'Mein VelvetPulse-Code');
+    await _shareOrCopy(context, nostr.myNpub, t.invitePartnerMyVelvetpulseCode);
   }
 }
 
@@ -101,7 +89,7 @@ Future<void> _shareOrCopy(BuildContext context, String text, String subject) asy
     await Clipboard.setData(ClipboardData(text: text));
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Kopiert. Füge den Text in einen Messenger ein.')),
+        SnackBar(content: Text(t.invitePartnerCopiedPasteTheTextInto)),
       );
     }
   }
@@ -139,7 +127,7 @@ class InviteStatusCard extends StatelessWidget {
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(
-                      request ? '$name möchte sich verbinden' : 'Einladung an $name verschickt',
+                      request ? t.invitePartnerNameWantsToConnect(name) : t.invitePartnerInvitationSentToName(name),
                       style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
                     ),
                   ),
@@ -150,9 +138,8 @@ class InviteStatusCard extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 8),
                 child: Text(
                   request
-                      ? 'Gerade kam eine Nachricht an deinen Code. Wenn sie von $name ist, nimm die Verbindung an.'
-                      : 'Sobald $name die App installiert, deinen Code eingibt und dir einen Funken schickt, '
-                          'kannst du die Verbindung hier bestätigen.',
+                      ? t.invitePartnerAMessageJustArrivedAt(name)
+                      : t.invitePartnerAsSoonAsNameInstalls(name),
                   style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
                 ),
               ),
@@ -162,7 +149,7 @@ class InviteStatusCard extends StatelessWidget {
                     ? [
                         TextButton(
                           onPressed: nostr.declineJoinRequest,
-                          child: const Text('Ablehnen', style: TextStyle(color: AppTheme.textSecondary)),
+                          child: Text(t.invitePartnerDecline, style: TextStyle(color: AppTheme.textSecondary)),
                         ),
                         TextButton(
                           onPressed: () async {
@@ -170,22 +157,22 @@ class InviteStatusCard extends StatelessWidget {
                             final ok = await nostr.acceptJoinRequest();
                             if (context.mounted && ok) {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Verbunden mit $name 💛'), backgroundColor: AppTheme.sageGreen),
+                                SnackBar(content: Text(t.invitePartnerConnectedWithName(name)), backgroundColor: AppTheme.sageGreen),
                               );
                             }
                           },
-                          child: const Text('Annehmen',
+                          child: Text(t.invitePartnerAccept,
                               style: TextStyle(color: AppTheme.rose, fontWeight: FontWeight.w700)),
                         ),
                       ]
                     : [
                         TextButton(
                           onPressed: nostr.cancelInvite,
-                          child: const Text('Zurückziehen', style: TextStyle(color: AppTheme.textSecondary)),
+                          child: Text(t.invitePartnerWithdraw, style: TextStyle(color: AppTheme.textSecondary)),
                         ),
                         TextButton(
                           onPressed: () => invitePartner(context),
-                          child: Text('Erneut teilen', style: TextStyle(color: color)),
+                          child: Text(t.invitePartnerShareAgain, style: TextStyle(color: color)),
                         ),
                       ],
               ),

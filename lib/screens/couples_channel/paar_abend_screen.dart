@@ -11,6 +11,7 @@ import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
 import '../../widgets/player_steuerung.dart';
+import '../../l10n/t.dart';
 
 /// Gemeinsamer, geführter Abend: Ein Handy liegt neben euch, die Stimme führt durch
 /// Ankommen, zwei Berührungsrunden mit Rollenwechsel und Ausklang.
@@ -49,13 +50,13 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
 
   String get _ichName {
     final name = StorageService.getUserProfile()?.name.trim() ?? '';
-    return name.isEmpty ? 'Du' : name;
+    return name.isEmpty ? t.paarAbendYou : name;
   }
 
   String get _partnerName {
     final nostr = NostrService();
     final name = nostr.isPaired ? nostr.partnerName.trim() : '';
-    return name.isEmpty ? 'dein Gegenüber' : name;
+    return name.isEmpty ? t.paarAbendYourPartner : name;
   }
 
   @override
@@ -224,7 +225,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         backgroundColor: AppTheme.background,
         appBar: AppBar(
           backgroundColor: AppTheme.background,
-          title: const Text('Gemeinsamer Abend'),
+          title: Text(t.couplesChannelSharedEvening),
         ),
         body: SafeArea(
           child: _daten == null
@@ -240,11 +241,11 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppTheme.surface,
-        title: const Text('Abend beenden?'),
-        content: const Text('Die Begleitung hört dann auf. Ihr könnt jederzeit neu beginnen.'),
+        title: Text(t.paarAbendEndTheEvening),
+        content: Text(t.paarAbendTheGuidanceStopsThenYou),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Weitermachen')),
-          TextButton(onPressed: () => Navigator.pop(context, true), child: const Text('Beenden')),
+          TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.paarAbendContinue)),
+          TextButton(onPressed: () => Navigator.pop(context, true), child: Text(t.playerSteuerungStop)),
         ],
       ),
     );
@@ -255,38 +256,36 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
       children: [
-        const Text(
-          'Legt das Handy neben euch. Eine Stimme führt euch durch Ankommen, zwei Runden '
-          'Berührung mit Rollenwechsel und einen ruhigen Ausklang. Die meiste Zeit ist Stille, '
-          'damit ihr ganz bei euch seid. Jeder Abend wird neu zusammengestellt.',
+        Text(
+          t.paarAbendPutThePhoneNextTo,
           style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5),
         ),
         const SizedBox(height: 22),
-        _titel('Dauer'),
+        _titel(t.paarAbendDuration),
         Wrap(
           spacing: 8,
           children: [
             for (final m in _minutenOptionen)
-              _chip('$m Min.', _minuten == m, () => setState(() => _minuten = m)),
+              _chip(t.paarAbendMMin(m), _minuten == m, () => setState(() => _minuten = m)),
           ],
         ),
         const SizedBox(height: 20),
-        _titel('Wie weit darf es gehen?'),
-        _tiefeOption(PaarTiefe.bekleidet, 'Bekleidet', 'Rücken, Schultern, Hände, Kopf, Beine und Füße.'),
-        _tiefeOption(PaarTiefe.haut, 'Haut an Haut', 'Dazu Massage mit Öl, Bauch, Hüften und Po.'),
-        _tiefeOption(PaarTiefe.intim, 'Intim', 'Dazu Brust, Innenschenkel und Geschlecht, ganz ohne Ziel.'),
+        _titel(t.paarAbendHowFarMayItGo),
+        _tiefeOption(PaarTiefe.bekleidet, t.paarAbendClothed, t.paarAbendBackShouldersHandsHeadLegs),
+        _tiefeOption(PaarTiefe.haut, t.paarAbendSkinToSkin, t.paarAbendPlusMassageWithOilBelly),
+        _tiefeOption(PaarTiefe.intim, t.paarAbendIntimate, t.paarAbendPlusChestInnerThighsAnd),
         const SizedBox(height: 20),
-        _titel('Wer gibt zuerst?'),
+        _titel(t.paarAbendWhoGivesFirst),
         Wrap(
           spacing: 8,
           runSpacing: 8,
           children: [
-            _chip(_ichName == 'Du' ? 'Ich' : _ichName, _ichZuerst, () => setState(() => _ichZuerst = true)),
-            _chip(NostrService().isPaired ? _partnerName : 'Mein Gegenüber', !_ichZuerst, () => setState(() => _ichZuerst = false)),
+            _chip(_ichName == t.paarAbendYou ? t.paarAbendMe : _ichName, _ichZuerst, () => setState(() => _ichZuerst = true)),
+            _chip(NostrService().isPaired ? _partnerName : t.paarAbendMyPartner, !_ichZuerst, () => setState(() => _ichZuerst = false)),
           ],
         ),
         const SizedBox(height: 20),
-        _titel('Stimme'),
+        _titel(t.paarAbendVoice),
         Wrap(
           spacing: 8,
           children: [
@@ -300,8 +299,8 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
           value: _teppich,
           activeThumbColor: AppTheme.amber,
           onChanged: (v) => setState(() => _teppich = v),
-          title: const Text('Leiser Klangteppich', style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
-          subtitle: const Text('Ruhiger Hintergrund in den Stillen',
+          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+          subtitle: Text(t.paarAbendCalmBackgroundDuringTheSilences,
               style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5)),
         ),
         const SizedBox(height: 12),
@@ -312,15 +311,14 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
             borderRadius: BorderRadius.circular(14),
             border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.35)),
           ),
-          child: const Row(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Icon(Icons.handshake_outlined, color: AppTheme.sageGreen, size: 20),
               SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  'Vereinbart vorher ein Stoppwort. Die Stimme lädt ein, sie bestimmt nichts: '
-                  'Was sich nicht gut anfühlt, lasst ihr einfach aus.',
+                  t.paarAbendAgreeOnAStopWord,
                   style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.45),
                 ),
               ),
@@ -333,7 +331,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
           child: ElevatedButton.icon(
             onPressed: _starten,
             icon: const Icon(Icons.play_arrow_rounded),
-            label: const Text('Abend beginnen', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
+            label: Text(t.paarAbendBeginTheEvening, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppTheme.amber,
               foregroundColor: AppTheme.background,
@@ -420,16 +418,16 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     final String phase;
     final String zeile;
     if (_fertig || schritt == null) {
-      phase = 'Danke für euren Abend';
-      zeile = 'Bleibt liegen, solange es sich gut anfühlt.';
+      phase = t.paarAbendThankYouForYourEvening;
+      zeile = t.paarAbendStayLyingDownAsLong;
     } else if (runde > 0) {
-      phase = 'Runde $runde';
-      zeile = ichGebe ? 'Du gibst · $_partnerName empfängt' : '${_partnerName[0].toUpperCase()}${_partnerName.substring(1)} gibt · du empfängst';
+      phase = t.paarAbendRoundRunde(runde);
+      zeile = ichGebe ? t.paarAbendYouGivePartnernameReceives(_partnerName) : t.paarAbendPartnernamePartnernameGivesYouReceive(_partnerName[0].toUpperCase(), _partnerName.substring(1));
     } else {
       final ersteRunde = ablauf.indexWhere((s) => s.runde == 1);
       final letzteRunde = ablauf.lastIndexWhere((s) => s.runde == 2);
-      phase = _index < ersteRunde ? 'Ankommen' : (_index > letzteRunde ? 'Ausklang' : 'Rollenwechsel');
-      zeile = 'Atmet gemeinsam.';
+      phase = _index < ersteRunde ? t.paarAbendArriving : (_index > letzteRunde ? t.paarAbendEnding : t.paarAbendChangeOfRoles);
+      zeile = t.paarAbendBreatheTogether;
     }
     final spricht = schritt?.baustein != null;
     final stilleRest = schritt == null ? Duration.zero : schritt.dauer - _imSchritt;
@@ -485,7 +483,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
           const SizedBox(height: 10),
           if (!_fertig && schritt != null)
             Text(
-              _pausiert ? 'Pausiert' : (spricht ? 'Die Stimme spricht …' : 'Stille · noch ${_fmt(stilleRest)}'),
+              _pausiert ? t.paarAbendPaused : (spricht ? t.paarAbendTheVoiceIsSpeaking : t.paarAbendSilenceStillerestLeft(_fmt(stilleRest))),
               style: const TextStyle(fontSize: 13, color: AppTheme.textMuted),
             ),
           const Spacer(),
@@ -500,7 +498,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
                   side: const BorderSide(color: AppTheme.amber),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                 ),
-                child: const Text('Schließen', style: TextStyle(fontWeight: FontWeight.w700)),
+                child: Text(t.couplesChannelClose, style: TextStyle(fontWeight: FontWeight.w700)),
               ),
             )
           else

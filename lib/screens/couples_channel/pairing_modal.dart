@@ -5,6 +5,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
 import 'partner_profile_dialog.dart';
+import '../../l10n/t.dart';
 
 class PairingModal extends StatefulWidget {
   const PairingModal({super.key});
@@ -60,17 +61,16 @@ class _PairingModalState extends State<PairingModal>
         context: context,
         builder: (ctx) => AlertDialog(
           backgroundColor: AppTheme.surface,
-          title: const Text('Mit jemand anderem verbinden?', style: TextStyle(fontSize: 18)),
+          title: Text(t.pairingModalConnectWithSomeoneElse, style: TextStyle(fontSize: 18)),
           content: Text(
-            'Du bist gerade mit $old verbunden. Diese Verbindung wird ersetzt, und der Verlauf mit $old, '
-            'die Antworten von $old und die geteilten Reflexionen werden auf diesem Handy gelöscht.',
+            t.pairingModalYouReCurrentlyConnectedWith(old, old, old),
             style: const TextStyle(color: AppTheme.textSecondary, height: 1.45),
           ),
           actions: [
-            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Abbrechen')),
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
             TextButton(
               onPressed: () => Navigator.pop(ctx, true),
-              child: const Text('Ersetzen', style: TextStyle(color: AppTheme.rose)),
+              child: Text(t.pairingModalReplace, style: TextStyle(color: AppTheme.rose)),
             ),
           ],
         ),
@@ -92,11 +92,11 @@ class _PairingModalState extends State<PairingModal>
         HapticFeedback.mediumImpact();
         if (_gender != null) await nostr.setPartnerProfile(name: name, gender: _gender);
         // Meldet sich beim Gegenüber, damit eine offene Einladung dort sofort als Anfrage erscheint.
-        nostr.sendChatMessage('👋 Hallo, ich bin jetzt verbunden.');
+        nostr.sendChatMessage(t.pairingModalHiIMConnectedNow);
         Navigator.of(context).pop(true);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Verbunden mit $name 💛'),
+            content: Text(t.pairingModalConnectedWithName(name)),
             backgroundColor: AppTheme.sageGreen,
           ),
         );
@@ -104,7 +104,7 @@ class _PairingModalState extends State<PairingModal>
         HapticFeedback.heavyImpact();
         setState(() {
           _errorMessage =
-              'Dieser Code passt nicht. Scanne den QR-Code deines Gegenübers oder füge den vollständigen Code (beginnt mit npub1…) ein.';
+              t.pairingModalThisCodeDoesnTFit;
         });
       }
     }
@@ -135,14 +135,14 @@ class _PairingModalState extends State<PairingModal>
           const SizedBox(height: 16),
 
           // Title
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
                 Icon(Icons.link_rounded, color: AppTheme.amber, size: 24),
                 SizedBox(width: 10),
                 Text(
-                  'Mit Partner verbinden',
+                  t.couplesChannelConnectWithPartner,
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w800,
@@ -161,9 +161,9 @@ class _PairingModalState extends State<PairingModal>
             indicatorColor: AppTheme.amber,
             labelColor: AppTheme.amberLight,
             unselectedLabelColor: AppTheme.textSecondary,
-            tabs: const [
-              Tab(icon: Icon(Icons.qr_code_rounded), text: 'Mein Code'),
-              Tab(icon: Icon(Icons.qr_code_scanner_rounded), text: 'Partner scannen'),
+            tabs: [
+              Tab(icon: Icon(Icons.qr_code_rounded), text: t.pairingModalMyCode),
+              Tab(icon: Icon(Icons.qr_code_scanner_rounded), text: t.pairingModalScanPartner),
             ],
           ),
 
@@ -180,8 +180,8 @@ class _PairingModalState extends State<PairingModal>
                       padding: const EdgeInsets.all(24),
                       child: Column(
                         children: [
-                          const Text(
-                            'Lass diesen Code von deinem Partner scannen, um euren privaten Kanal zu öffnen.',
+                          Text(
+                            t.pairingModalLetYourPartnerScanThis,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: AppTheme.textSecondary,
@@ -248,13 +248,13 @@ class _PairingModalState extends State<PairingModal>
                                 IconButton(
                                   icon: const Icon(Icons.copy_rounded, size: 18),
                                   color: AppTheme.amberLight,
-                                  tooltip: 'Code kopieren',
+                                  tooltip: t.pairingModalCopyCode,
                                   onPressed: () {
                                     Clipboard.setData(ClipboardData(text: currentNpub));
                                     HapticFeedback.lightImpact();
                                     ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(
-                                        content: Text('Dein Verbindungscode wurde kopiert.'),
+                                      SnackBar(
+                                        content: Text(t.pairingModalYourConnectionCodeHasBeen),
                                         duration: Duration(seconds: 2),
                                       ),
                                     );
@@ -266,13 +266,13 @@ class _PairingModalState extends State<PairingModal>
 
                           const SizedBox(height: 16),
 
-                          const Row(
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(Icons.lock_rounded, size: 14, color: AppTheme.sageGreen),
                               SizedBox(width: 6),
                               Text(
-                                'Ende-zu-Ende-verschlüsselt • ohne Konto',
+                                t.pairingModalEndToEndEncryptedNo,
                                 style: TextStyle(
                                   color: AppTheme.sageGreen,
                                   fontSize: 11.5,
@@ -339,8 +339,8 @@ class _PairingModalState extends State<PairingModal>
                                       color: Colors.black.withValues(alpha: 0.6),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
-                                    child: const Text(
-                                      'Partner-QR-Code im Rahmen halten',
+                                    child: Text(
+                                      t.pairingModalHoldYourPartnerSQr,
                                       style: TextStyle(color: Colors.white, fontSize: 11),
                                     ),
                                   ),
@@ -374,7 +374,7 @@ class _PairingModalState extends State<PairingModal>
                         controller: _nameInputController,
                         style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
                         decoration: InputDecoration(
-                          hintText: 'Partner-Name (z.B. Mein Schatz, Anna)',
+                          hintText: t.pairingModalPartnerSNameEG,
                           hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 13),
                           prefixIcon: const Icon(Icons.favorite_outline_rounded, color: AppTheme.rose, size: 20),
                           filled: true,
@@ -409,12 +409,12 @@ class _PairingModalState extends State<PairingModal>
                         controller: _keyInputController,
                         style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13, fontFamily: 'monospace'),
                         decoration: InputDecoration(
-                          hintText: 'Oder npub1... / Hex-Schlüssel einfügen',
+                          hintText: t.pairingModalOrPasteNpubHexKey,
                           hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 12),
                           prefixIcon: const Icon(Icons.key_rounded, color: AppTheme.amber, size: 20),
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.paste_rounded, color: AppTheme.amberLight, size: 20),
-                            tooltip: 'Aus Zwischenablage einfügen',
+                            tooltip: t.pairingModalPasteFromClipboard,
                             onPressed: () async {
                               final data = await Clipboard.getData('text/plain');
                               if (data?.text != null) {
@@ -453,8 +453,8 @@ class _PairingModalState extends State<PairingModal>
                                   height: 20,
                                   child: CircularProgressIndicator(strokeWidth: 2, color: Colors.black),
                                 )
-                              : const Text(
-                                  'Verbinden & Koppeln',
+                              : Text(
+                                  t.pairingModalConnectPair,
                                   style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
                                 ),
                         ),

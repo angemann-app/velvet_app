@@ -518,4 +518,483 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get coursesPracticeDesireProfile => 'Practice: desire profile';
+
+  @override
+  String get couplesChannelIWantYou => 'I want you';
+
+  @override
+  String get couplesChannelJustCuddlesToday => 'Just cuddles today';
+
+  @override
+  String get couplesChannelLookingForwardToLater => 'Looking forward to later';
+
+  @override
+  String get couplesChannelVerySlowlyToday => 'Very slowly today';
+
+  @override
+  String get couplesChannelLetSTalk => 'Let\'s talk';
+
+  @override
+  String get couplesChannelNotToday => 'Not today';
+
+  @override
+  String get couplesChannelReconnect => 'Reconnect';
+
+  @override
+  String get couplesChannelConnectWithYourPartnerAnd =>
+      'Connect with your partner and share wishes that are otherwise hard to say out loud.';
+
+  @override
+  String get couplesChannelSendSparks => 'Send sparks';
+
+  @override
+  String get couplesChannelShowWithOneTapWhat =>
+      'Show with one tap what you\'re in the mood for today – or not.';
+
+  @override
+  String get couplesChannelSecretlyMatchWishes => 'Secretly match wishes';
+
+  @override
+  String get couplesChannelYouVoteSeparatelyOnlyWhat =>
+      'You vote separately. Only what you both want becomes visible.';
+
+  @override
+  String get couplesChannelJustForTheTwoOf => 'Just for the two of you';
+
+  @override
+  String get couplesChannelEndToEndEncryptedNo =>
+      'End-to-end encrypted, no account and no phone number.';
+
+  @override
+  String get couplesChannelConnectWithPartner => 'Connect with partner';
+
+  @override
+  String get couplesChannelInvitePartner => 'Invite partner';
+
+  @override
+  String get couplesChannelHowDoesItWork => 'How does it work?';
+
+  @override
+  String get couplesChannelYouCanAlsoFillIt =>
+      'You can also fill it in alone – and match it with your partner later.';
+
+  @override
+  String get couplesChannelSharedEvening => 'Shared evening';
+
+  @override
+  String get couplesChannelGuidedTouchForTheTwo =>
+      'Guided touch for the two of you, 20 to 45 minutes. Different every time.';
+
+  @override
+  String get couplesChannelFantasyMap => 'Fantasy map';
+
+  @override
+  String get couplesChannelMessages => 'Messages';
+
+  @override
+  String get couplesChannelWishes => 'Wishes';
+
+  @override
+  String get couplesChannelConnectedEncrypted => 'connected & encrypted';
+
+  @override
+  String get couplesChannelConnecting => 'connecting …';
+
+  @override
+  String get couplesChannelOfflineTapToConnect => 'offline – tap to connect';
+
+  @override
+  String couplesChannelYouName(Object name) {
+    return 'You & $name';
+  }
+
+  @override
+  String get couplesChannelPartnerSNameGender => 'Partner\'s name & gender';
+
+  @override
+  String get couplesChannelReadReceipts => 'Read receipts';
+
+  @override
+  String get couplesChannelEncryptionDetails => 'Encryption & details';
+
+  @override
+  String get couplesChannelManageConnection => 'Manage connection';
+
+  @override
+  String get couplesChannelDisconnect => 'Disconnect';
+
+  @override
+  String get couplesChannelItSStillQuietHere => 'It\'s still quiet here';
+
+  @override
+  String get couplesChannelSendASparkFromThe =>
+      'Send a spark from the bar below or write a few words.';
+
+  @override
+  String get couplesChannelRead => ' · Read';
+
+  @override
+  String get couplesChannelSent => ' · Sent';
+
+  @override
+  String get couplesChannelOpenLesson => 'Open lesson';
+
+  @override
+  String get couplesChannelWriteAMessage => 'Write a message …';
+
+  @override
+  String get couplesChannelSend => 'Send';
+
+  @override
+  String get couplesChannelVoteSeparatelyAWishOnly =>
+      'Vote separately. A wish only shows up as a match when you both say “Yes, please” – a “Rather not” is never shown.';
+
+  @override
+  String couplesChannelQuestionsInSeveralAreasWith(int fragen, int bereiche) {
+    return '$fragen questions in $bereiche areas – with matching course recommendations.';
+  }
+
+  @override
+  String get couplesChannelYouHaveAMatch => 'You have a match';
+
+  @override
+  String couplesChannelYouHaveMatcheslengthMatches(Object matchesLength) {
+    return 'You have $matchesLength matches';
+  }
+
+  @override
+  String get couplesChannelAMatchIsAnInvitation =>
+      'A match is an invitation, not a promise. Talk briefly beforehand about how you imagine it.';
+
+  @override
+  String get couplesChannelYesPlease => 'Yes, please';
+
+  @override
+  String get couplesChannelRatherNot => 'Rather not';
+
+  @override
+  String get couplesChannelDisconnect2 => 'Disconnect?';
+
+  @override
+  String couplesChannelTheHistoryWithNameName(
+      Object name, Object name2, Object name3) {
+    return 'The history with $name, $name2\'s answers to the yes/no list and the shared reflections will be deleted on this phone. Your own answers are kept.\n\nNothing changes on $name3\'s phone.';
+  }
+
+  @override
+  String get couplesChannelDisconnect3 => 'Disconnect';
+
+  @override
+  String get couplesChannelDisconnected => 'Disconnected.';
+
+  @override
+  String get couplesChannelHowItStaysPrivate => 'How it stays private';
+
+  @override
+  String get couplesChannelMessagesAreEncryptedOnYour =>
+      'Messages are encrypted on your phone and only become readable again on your partner\'s phone. In between they travel through public Nostr servers. These can\'t read the content. But they can see the keys of sender and recipient, the time and approximate size of each message and your IP address – so that, when and how often you write. The keys carry no names. There is no account, no phone number and no server of our own.';
+
+  @override
+  String get couplesChannelEncryption => 'Encryption';
+
+  @override
+  String get couplesChannelServers => 'Servers';
+
+  @override
+  String get couplesChannelYourConnectionCode => 'Your connection code';
+
+  @override
+  String get couplesChannelClose => 'Close';
+
+  @override
+  String get paarAbendYou => 'You';
+
+  @override
+  String get paarAbendYourPartner => 'your partner';
+
+  @override
+  String get paarAbendEndTheEvening => 'End the evening?';
+
+  @override
+  String get paarAbendTheGuidanceStopsThenYou =>
+      'The guidance stops then. You can start again any time.';
+
+  @override
+  String get paarAbendContinue => 'Continue';
+
+  @override
+  String get paarAbendPutThePhoneNextTo =>
+      'Put the phone next to you. A voice guides you through arriving, two rounds of touch with a change of roles and a calm ending. Most of the time is silence, so you can be fully with each other. Every evening is put together anew.';
+
+  @override
+  String get paarAbendDuration => 'Duration';
+
+  @override
+  String paarAbendMMin(Object m) {
+    return '$m min';
+  }
+
+  @override
+  String get paarAbendHowFarMayItGo => 'How far may it go?';
+
+  @override
+  String get paarAbendClothed => 'Clothed';
+
+  @override
+  String get paarAbendBackShouldersHandsHeadLegs =>
+      'Back, shoulders, hands, head, legs and feet.';
+
+  @override
+  String get paarAbendSkinToSkin => 'Skin to skin';
+
+  @override
+  String get paarAbendPlusMassageWithOilBelly =>
+      'Plus massage with oil, belly, hips and buttocks.';
+
+  @override
+  String get paarAbendIntimate => 'Intimate';
+
+  @override
+  String get paarAbendPlusChestInnerThighsAnd =>
+      'Plus chest, inner thighs and genitals, without any goal.';
+
+  @override
+  String get paarAbendWhoGivesFirst => 'Who gives first?';
+
+  @override
+  String get paarAbendMe => 'Me';
+
+  @override
+  String get paarAbendMyPartner => 'My partner';
+
+  @override
+  String get paarAbendVoice => 'Voice';
+
+  @override
+  String get paarAbendSoftSoundBed => 'Soft sound bed';
+
+  @override
+  String get paarAbendCalmBackgroundDuringTheSilences =>
+      'Calm background during the silences';
+
+  @override
+  String get paarAbendAgreeOnAStopWord =>
+      'Agree on a stop word beforehand. The voice invites, it decides nothing: whatever doesn\'t feel good, you simply leave out.';
+
+  @override
+  String get paarAbendBeginTheEvening => 'Begin the evening';
+
+  @override
+  String get paarAbendThankYouForYourEvening => 'Thank you for your evening';
+
+  @override
+  String get paarAbendStayLyingDownAsLong =>
+      'Stay lying down as long as it feels good.';
+
+  @override
+  String paarAbendRoundRunde(Object runde) {
+    return 'Round $runde';
+  }
+
+  @override
+  String paarAbendYouGivePartnernameReceives(Object partnerName) {
+    return 'You give · $partnerName receives';
+  }
+
+  @override
+  String paarAbendPartnernamePartnernameGivesYouReceive(
+      Object partnerName, Object partnerName2) {
+    return '$partnerName$partnerName2 gives · you receive';
+  }
+
+  @override
+  String get paarAbendArriving => 'Arriving';
+
+  @override
+  String get paarAbendEnding => 'Ending';
+
+  @override
+  String get paarAbendChangeOfRoles => 'Change of roles';
+
+  @override
+  String get paarAbendBreatheTogether => 'Breathe together.';
+
+  @override
+  String get paarAbendPaused => 'Paused';
+
+  @override
+  String get paarAbendTheVoiceIsSpeaking => 'The voice is speaking …';
+
+  @override
+  String paarAbendSilenceStillerestLeft(Object stilleRest) {
+    return 'Silence · $stilleRest left';
+  }
+
+  @override
+  String invitePartnerIDLikeToTry(Object stableApkUrl, Object testerGuideUrl) {
+    return '\nI\'d like to try VelvetPulse with you 💛 A private app just for the two of us.\n\n1. Get the app (Android):\n$stableApkUrl\nIf Android asks, allow the installation.\n\n2. I\'ll send you my connection code as a separate message. Copy it and paste it into the app: Couple channel › Connect with partner › Scan partner › paste code › “Connect & pair”.\n\n3. Then send me a spark, and we\'re connected.\n\nDetailed guide (German): $testerGuideUrl';
+  }
+
+  @override
+  String get invitePartnerYouSendALinkTo =>
+      'You send a link to the app and your connection code, e.g. via a messenger. As soon as your partner replies, you confirm the connection here.';
+
+  @override
+  String get invitePartnerNameEGAnna => 'Name, e.g. Anna';
+
+  @override
+  String get invitePartnerShareInvitation => 'Share invitation';
+
+  @override
+  String get invitePartnerInvitationToVelvetpulse =>
+      'Invitation to VelvetPulse';
+
+  @override
+  String get invitePartnerNowYourCode => 'Now your code';
+
+  @override
+  String get invitePartnerSendYourConnectionCodeAfterwards =>
+      'Send your connection code afterwards as a separate message, ideally to the same person. That way it can be copied with one tap.';
+
+  @override
+  String get invitePartnerShareCode => 'Share code';
+
+  @override
+  String get invitePartnerMyVelvetpulseCode => 'My VelvetPulse code';
+
+  @override
+  String get invitePartnerCopiedPasteTheTextInto =>
+      'Copied. Paste the text into a messenger.';
+
+  @override
+  String invitePartnerNameWantsToConnect(Object name) {
+    return '$name wants to connect';
+  }
+
+  @override
+  String invitePartnerInvitationSentToName(Object name) {
+    return 'Invitation sent to $name';
+  }
+
+  @override
+  String invitePartnerAMessageJustArrivedAt(Object name) {
+    return 'A message just arrived at your code. If it\'s from $name, accept the connection.';
+  }
+
+  @override
+  String invitePartnerAsSoonAsNameInstalls(Object name) {
+    return 'As soon as $name installs the app, enters your code and sends you a spark, you can confirm the connection here.';
+  }
+
+  @override
+  String get invitePartnerDecline => 'Decline';
+
+  @override
+  String invitePartnerConnectedWithName(Object name) {
+    return 'Connected with $name 💛';
+  }
+
+  @override
+  String get invitePartnerAccept => 'Accept';
+
+  @override
+  String get invitePartnerWithdraw => 'Withdraw';
+
+  @override
+  String get invitePartnerShareAgain => 'Share again';
+
+  @override
+  String get pairingModalConnectWithSomeoneElse => 'Connect with someone else?';
+
+  @override
+  String pairingModalYouReCurrentlyConnectedWith(
+      Object old, Object old2, Object old3) {
+    return 'You\'re currently connected with $old. This connection will be replaced, and the history with $old2, $old3\'s answers and the shared reflections will be deleted on this phone.';
+  }
+
+  @override
+  String get pairingModalReplace => 'Replace';
+
+  @override
+  String get pairingModalHiIMConnectedNow => '👋 Hi, I\'m connected now.';
+
+  @override
+  String pairingModalConnectedWithName(Object name) {
+    return 'Connected with $name 💛';
+  }
+
+  @override
+  String get pairingModalThisCodeDoesnTFit =>
+      'This code doesn\'t fit. Scan your partner\'s QR code or paste the complete code (starts with npub1…).';
+
+  @override
+  String get pairingModalMyCode => 'My code';
+
+  @override
+  String get pairingModalScanPartner => 'Scan partner';
+
+  @override
+  String get pairingModalLetYourPartnerScanThis =>
+      'Let your partner scan this code to open your private channel.';
+
+  @override
+  String get pairingModalCopyCode => 'Copy code';
+
+  @override
+  String get pairingModalYourConnectionCodeHasBeen =>
+      'Your connection code has been copied.';
+
+  @override
+  String get pairingModalEndToEndEncryptedNo =>
+      'End-to-end encrypted • no account';
+
+  @override
+  String get pairingModalHoldYourPartnerSQr =>
+      'Hold your partner\'s QR code in the frame';
+
+  @override
+  String get pairingModalPartnerSNameEG =>
+      'Partner\'s name (e.g. Darling, Anna)';
+
+  @override
+  String get pairingModalOrPasteNpubHexKey => 'Or paste npub1... / hex key';
+
+  @override
+  String get pairingModalPasteFromClipboard => 'Paste from clipboard';
+
+  @override
+  String get pairingModalConnectPair => 'Connect & pair';
+
+  @override
+  String get partnerProfileDialogWoman => 'Woman';
+
+  @override
+  String get partnerProfileDialogMan => 'Man';
+
+  @override
+  String get partnerProfileDialogNonBinary => 'Non-binary';
+
+  @override
+  String get partnerProfileDialogNotSpecified => 'Not specified';
+
+  @override
+  String get partnerProfileDialogYourPartner => 'Your partner';
+
+  @override
+  String get partnerProfileDialogThisLetsLessonsCallYour =>
+      'This lets lessons call your partner by name, e.g. “Anna lies on her back” instead of “she lies”. Both stay on your phone only.';
+
+  @override
+  String get partnerProfileDialogSave => 'Save';
+
+  @override
+  String get partnerProfileDialogHowMayLessonsReferTo =>
+      'How may lessons refer to your partner?';
+
+  @override
+  String get partnerProfileDialogWithNameAndGenderThe =>
+      'With name and gender, the texts address you personally. This stays on your phone.';
+
+  @override
+  String get partnerProfileDialogAdd => 'Add';
 }
