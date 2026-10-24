@@ -7,6 +7,7 @@ import 'services/auto_backup_service.dart';
 import 'services/message_notifier.dart';
 import 'services/nostr_service.dart';
 import 'services/privacy_service.dart';
+import 'services/update_service.dart';
 import 'services/whats_new.dart';
 import 'widgets/app_lock.dart';
 import 'theme/app_theme.dart';
@@ -76,6 +77,12 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
       await DataService.loadDatabase();
     } catch (e) {
       debugPrint('DataService loadDatabase error: $e');
+    }
+
+    try {
+      await UpdateService.resetChannelAfterStableUpdate();
+    } catch (e) {
+      debugPrint('Update channel reset error: $e');
     }
 
     final hasOnboarded = StorageService.hasCompletedOnboarding();

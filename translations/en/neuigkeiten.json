@@ -94,12 +94,54 @@
           "text": "The yes/no list is now included in the backup, and when restoring, check-ins and answers are merged instead of overwritten."
         }
       ]
+    },
+    {
+      "build": 29,
+      "version": "4.4.0",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Guided self-exploration",
+          "text": "10 to 30 minutes just for you: a voice guides you through breathing and a journey across your body, as close as you like. Found in course 18."
+        },
+        {
+          "icon": "school",
+          "titel": "Four new courses",
+          "text": "Different levels of desire, life phases, pain, shame and performance pressure, and the anatomy of arousal. Plus deepening lessons and a rewritten course 18."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Learning together",
+          "text": "Share a lesson with your partner. You only see each other's answers to the reflection question once both of you have answered."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Couple channel",
+          "text": "Notice of new messages even when the app is closed, read receipts, “Disconnect” in the menu – and shared yes/no answers now arrive in full."
+        },
+        {
+          "icon": "person",
+          "titel": "Personal address",
+          "text": "Lessons call your partner by name once you enter name and gender in the couple channel."
+        },
+        {
+          "icon": "record_voice_over",
+          "titel": "Two voices, better pronunciation",
+          "text": "Couple lessons are read by Victoria and Martin in turns. If a word sounds wrong, you can report it below every audio."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Beta test finished",
+          "text": "If you were in the beta test, the update channel is now back on stable. For the next test round you can sign up again in your profile under “Receive beta versions”. Thanks for testing!"
+        }
+      ]
     }
   ],
   "_source": {
     "news:25": "43fb88b582323edc",
     "news:26": "fe279afa040f4852",
     "news:27": "7365439b9160b4f9",
-    "news:28": "9368bd4c890ce8fc"
+    "news:28": "9368bd4c890ce8fc",
+    "news:29": "e43d0214df8aeed3"
   }
 }

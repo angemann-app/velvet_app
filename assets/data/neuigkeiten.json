@@ -38,6 +38,19 @@
         {"icon": "person", "titel": "Verbindung trennen", "text": "Im Menü des Paar-Kanals kannst du eine Verbindung trennen. Verbindest du dich mit jemand anderem, wird der alte Verlauf gelöscht – nach einer Nachfrage."},
         {"icon": "edit", "titel": "Sicherung vollständig", "text": "Die Ja/Nein-Liste ist jetzt in der Sicherung enthalten, und beim Einspielen werden Check-ins und Antworten zusammengeführt statt überschrieben."}
       ]
+    },
+    {
+      "build": 29,
+      "version": "4.4.0",
+      "punkte": [
+        {"icon": "spa", "titel": "Geführte Selbsterkundung", "text": "10 bis 30 Minuten nur für dich: Eine Stimme begleitet dich durch Atem und eine Reise über deinen Körper, so nah, wie du möchtest. Zu finden in Kurs 18."},
+        {"icon": "school", "titel": "Vier neue Kurse", "text": "Unterschiedliche Lust, Lebensphasen, Schmerz, Scham und Leistungsdruck sowie Anatomie der Erregung. Dazu vertiefende Lektionen und ein neu geschriebener Kurs 18."},
+        {"icon": "favorite", "titel": "Gemeinsam lernen", "text": "Teile eine Lektion mit deinem Gegenüber. Eure Antworten auf die Reflexionsfrage seht ihr erst, wenn beide geantwortet haben."},
+        {"icon": "notifications", "titel": "Paar-Kanal", "text": "Hinweis auf neue Nachrichten auch bei geschlossener App, Lesebestätigungen, „Verbindung trennen“ im Menü – und geteilte Ja/Nein-Antworten kommen jetzt vollständig an."},
+        {"icon": "person", "titel": "Persönliche Ansprache", "text": "Lektionen nennen dein Gegenüber beim Namen, wenn du Name und Geschlecht im Paar-Kanal hinterlegst."},
+        {"icon": "record_voice_over", "titel": "Zwei Stimmen, bessere Aussprache", "text": "Paar-Lektionen lesen Victoria und Martin im Wechsel. Klingt ein Wort falsch, kannst du es unter jedem Audio melden."},
+        {"icon": "new_releases", "titel": "Beta-Test beendet", "text": "Warst du im Beta-Test, steht der Update-Kanal jetzt wieder auf Stabil. Für die nächste Testrunde kannst du dich im Profil unter „Beta-Versionen erhalten“ wieder anmelden. Danke fürs Testen!"}
+      ]
     }
   ]
 }

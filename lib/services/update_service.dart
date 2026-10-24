@@ -52,6 +52,24 @@ class UpdateService {
     await prefs.setString(_keyChannel, channel.name);
   }
 
+  static const String _keyChannelResetBuild = 'update_channel_reset_build';
+
+  /// Jede stabile Version beendet die laufende Beta-Testrunde: Beim ersten Start eines neuen
+  /// stabilen Builds springt der Kanal von Beta auf Stabil zurück. Wer weiter testen will,
+  /// meldet sich bewusst wieder an (Profil → „Beta-Versionen erhalten“).
+  /// Gibt true zurück, wenn zurückgesetzt wurde.
+  static Future<bool> resetChannelAfterStableUpdate() async {
+    final info = await PackageInfo.fromPlatform();
+    if (info.version.contains('-')) return false; // Beta-Build, z. B. 4.4.0-beta.7
+    final build = await installedBuild();
+    final prefs = await SharedPreferences.getInstance();
+    if ((prefs.getInt(_keyChannelResetBuild) ?? 0) >= build) return false;
+    await prefs.setInt(_keyChannelResetBuild, build);
+    if (await channel() != UpdateChannel.beta) return false;
+    await setChannel(UpdateChannel.stable);
+    return true;
+  }
+
   /// Build-Nummer der installierten App. Bei --split-per-abi addiert Flutter
   /// 1000 × ABI auf den Versionscode, darum nur die letzten drei Stellen.
   static Future<int> installedBuild() async {
