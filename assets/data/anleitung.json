@@ -1,0 +1,89 @@
+{
+  "_hinweis": "Anleitung in der App (lib/screens/anleitung_screen.dart) und Quelle für docs/ANLEITUNG.md (tools/anleitung_md.py). Englisch in translations/en/anleitung.json. bild = Bildschirmfoto in docs/anleitung/ (nur fürs Repo).",
+  "abschnitte": [
+    {
+      "id": "start",
+      "icon": "flag",
+      "titel": "Erste Schritte",
+      "bild": "00_onboarding.png",
+      "text": "Beim ersten Start legst du ein kleines Profil an: Name, Geschlecht, Beziehungsstatus und dein Fokus. Daraus wählt die App passende Kurse, Stimmen und Beispielfragen aus. Alles bleibt auf deinem Handy.\nDein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Startseite. Dort findest du auch Sprache, Diskretion, Sicherung, Spicy-Modus und Updates."
+    },
+    {
+      "id": "kurse",
+      "icon": "school",
+      "titel": "Kurse und Lektionen",
+      "bild": "01_kurse.png",
+      "text": "Im Tab Kurse findest du alle Kurse, sortiert nach Grundlagen, Praxis und Vertiefung. Mit den Filtern oben wählst du zum Beispiel „Für Sie“, „Für Ihn“ oder „Für Paare“.\nJede Lektion hat einen Text, eine Aufnahme zum Anhören und am Ende eine Frage zum Nachdenken. Manche Lektionen haben unten einen Knopf, der dich direkt zur passenden Übung bringt, etwa zum Beckenboden-Timer oder zu einem geführten Audio.\nMit „Als abgeschlossen markieren“ zählt dein Fortschritt."
+    },
+    {
+      "id": "gefuehrt",
+      "icon": "spa",
+      "titel": "Geführte Audios",
+      "bild": "13_selbst_reise.png",
+      "text": "Ganz oben auf der Startseite liegen die geführten Audios.\nKörperreise: 10 bis 30 Minuten nur für dich. Du wählst, wie nah du dir kommen möchtest, und eine Stimme führt dich über deinen Körper. Die meiste Zeit ist Stille, damit du spüren kannst.\nGemeinsamer Abend: 20 bis 45 Minuten für zwei. Ihr wechselt euch beim Geben und Empfangen ab, eine Klangschale markiert die Übergänge. Vereinbart vorher ein Stoppwort.\nBeide werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden."
+    },
+    {
+      "id": "training",
+      "icon": "fitness",
+      "titel": "Training und Akuthilfe",
+      "bild": "02_training.png",
+      "text": "Im Tab Training findest du den Beckenboden-Timer mit vier Übungsarten und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.\nDer SOS-Knopf oben rechts hilft in Momenten mit Druck oder Angst: mit kurzen Schritten für vorher, im Moment und danach."
+    },
+    {
+      "id": "reframing",
+      "icon": "psychology",
+      "titel": "Reframing-Tagebuch und Check-in",
+      "bild": "03_reframing.png",
+      "text": "Im Tab Reframing schreibst du belastende Gedanken auf und prüfst sie nach der Methode der kognitiven Verhaltenstherapie: Was ist passiert, was hast du gedacht, was spricht dafür, was dagegen, und wie lässt es sich anders sehen?\nAuf der Startseite wartet außerdem der 30-Sekunden-Check-in: Wie stehen Stress und Lust heute zueinander?"
+    },
+    {
+      "id": "paar",
+      "icon": "favorite",
+      "titel": "Paar-Kanal",
+      "bild": "04_paarkanal_verbunden.png",
+      "text": "Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt.\nFunken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.\nNachrichten: mit Lesebestätigung, die ihr im Menü abschalten könnt.\nWünsche: In der Ja/Vielleicht/Nein-Liste stimmt jeder für sich ab. Sichtbar wird nur, was ihr beide wollt.\nGemeinsam lernen: Lektionen teilen und Antworten auf die Reflexionsfragen austauschen."
+    },
+    {
+      "id": "spicy",
+      "icon": "flame",
+      "titel": "Spicy-Modus (ab 18)",
+      "bild": "",
+      "text": "Den Spicy-Modus schaltest du im Profil ein, nur mit Bestätigung, dass du volljährig bist. Er schaltet frei: die Stufen „Spicy“ und „Sehr spicy“ in Körperreise und Gemeinsamem Abend, die Kurse 23 und 24, Spicy-Lektionen in weiteren Kursen und zusätzliche Fragen in der Ja/Vielleicht/Nein-Liste. Die App bekommt dann einen roten Look.\nIm Paar-Chat kommen heiße Funken dazu, Nachrichten, die nach dem Lesen verschwinden, und Fotos, die verschlüsselt direkt von Handy zu Handy gehen und sich nur einmal ansehen lassen. Für den Verbindungsaufbau sieht ein öffentlicher Hilfsserver (STUN, von Google) eure IP-Adressen, aber nie das Foto. Über das Menü im Chat lädst du dein Gegenüber zum Spicy-Modus ein.\nAusschalten geht jederzeit, dann ist alles davon sofort verschwunden."
+    },
+    {
+      "id": "coach",
+      "icon": "chat",
+      "titel": "KI-Coach",
+      "bild": "05_kicoach.png",
+      "text": "Der KI-Coach beantwortet Fragen zu Lust, Körper und Beziehung. Er nutzt Google Gemini mit deinem eigenen, kostenlosen Schlüssel. Wie du ihn bekommst, erklärt die App Schritt für Schritt. Deine Fragen gehen dabei an Google, aber nicht an uns.\nDie Beispielfragen passen sich deinem Profil an."
+    },
+    {
+      "id": "diskretion",
+      "icon": "lock",
+      "titel": "Datenschutz, Diskretion und Sicherung",
+      "bild": "",
+      "text": "Alles, was du einträgst, bleibt auf deinem Handy. Geheimnisse wie Schlüssel liegen im geschützten Speicher von Android.\nIm Profil kannst du die App mit Fingerabdruck sperren; dann sind Inhalte auch in der App-Übersicht verborgen und Screenshots blockiert. Das diskrete App-Symbol zeigt statt VelvetPulse einen neutralen Namen.\nMit „Backup exportieren“ erstellst du eine passwortgeschützte Sicherung, die du auf ein neues Handy übertragen kannst."
+    },
+    {
+      "id": "updates",
+      "icon": "update",
+      "titel": "Updates und Beta",
+      "bild": "12_was_ist_neu.png",
+      "text": "Unter Profil › „Nach Updates suchen“ findet die App neue Versionen und installiert sie nach deiner Bestätigung. Mit dem Schalter „Beta-Versionen erhalten“ testest du Neuerungen früher. Jede stabile Version stellt den Schalter wieder auf Stabil zurück.\nNach einem Update zeigt „Was ist neu“ einmal, was sich geändert hat."
+    },
+    {
+      "id": "sprache",
+      "icon": "language",
+      "titel": "Sprache und englische Aufnahmen",
+      "bild": "",
+      "text": "Die App gibt es auf Deutsch und Englisch. Sie richtet sich nach der Sprache deines Handys, im Profil kannst du sie umstellen.\nDie englischen Aufnahmen lädst du dort bei Bedarf als Paket nach. Ohne Paket liest die Stimme deines Handys vor."
+    },
+    {
+      "id": "hilfe",
+      "icon": "help",
+      "titel": "Hilfe und Rückmeldung",
+      "bild": "",
+      "text": "Klingt ein Wort in einer Aufnahme falsch, tippe unter dem Player auf „Wort falsch ausgesprochen?“. Fehler und Wünsche nimmt das Projekt auf GitHub entgegen.\nDie App ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es sinnvoll ist, sagen die Lektionen ausdrücklich, wann eine Abklärung ratsam ist."
+    }
+  ]
+}

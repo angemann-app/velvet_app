@@ -35,7 +35,7 @@ Bremse nehmen – allein oder zu zweit.
 </p>
 
 **[⬇ Neueste Version herunterladen](https://github.com/angemann-app/velvet_app/releases/latest)** ·
-[Anleitung zum Installieren](docs/TESTER.md)
+[Anleitung zum Installieren](docs/TESTER.md) · [So funktioniert die App](docs/ANLEITUNG.md) · [Guide (English)](docs/GUIDE.md)
 
 > **Hinweis:** Die App richtet sich an Erwachsene und enthält offene Aufklärungsinhalte zu Sexualität.
 > Sie ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es medizinisch sinnvoll ist,

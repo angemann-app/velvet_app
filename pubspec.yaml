@@ -50,6 +50,7 @@ flutter:
     - assets/data/paar_abend.json
     - assets/data/selbst_reise.json
     - assets/data/neuigkeiten.json
+    - assets/data/anleitung.json
     # Englische Inhalte (seit 4.5 Teil der App, Sprache je nach Gerät oder Einstellung)
     - translations/en/velvet_content.json
     - translations/en/paar_abend.json
@@ -57,6 +58,7 @@ flutter:
     - translations/en/neuigkeiten.json
     - translations/en/yes_no_maybe.json
     - translations/en/fantasy_options.json
+    - translations/en/anleitung.json
     - assets/images/
     - assets/audio/
     - assets/audio/cues/

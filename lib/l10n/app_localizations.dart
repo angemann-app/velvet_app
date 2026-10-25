@@ -5372,6 +5372,18 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Dieses Foto ist nicht mehr da.'**
   String get fotoWeg;
+
+  /// No description provided for @anleitungTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'So funktioniert VelvetPulse'**
+  String get anleitungTitel;
+
+  /// No description provided for @anleitungEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Hier findest du alle Bereiche der App kurz erklärt. Tippe auf einen Abschnitt, um ihn aufzuklappen.'**
+  String get anleitungEinleitung;
 }
 
 class _AppLocalizationsDelegate

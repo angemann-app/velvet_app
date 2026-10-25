@@ -1494,5 +1494,7 @@
   "fotoStatusZugestellt": "Zugestellt",
   "fotoStatusFehler": "Nicht zugestellt",
   "fotoAnsichtHinweis": "Nur jetzt sichtbar. Beim Schließen ist das Foto gelöscht.",
-  "fotoWeg": "Dieses Foto ist nicht mehr da."
+  "fotoWeg": "Dieses Foto ist nicht mehr da.",
+  "anleitungTitel": "So funktioniert VelvetPulse",
+  "anleitungEinleitung": "Hier findest du alle Bereiche der App kurz erklärt. Tippe auf einen Abschnitt, um ihn aufzuklappen."
 }

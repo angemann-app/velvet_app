@@ -15,6 +15,7 @@ import '../../l10n/t.dart';
 import '../../services/sprache.dart';
 import '../../widgets/audio_paket_karte.dart';
 import '../../widgets/spicy_modus_dialog.dart';
+import '../anleitung_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   final bool isEditing;
@@ -799,6 +800,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               if (widget.isEditing) ...[
                 const SizedBox(height: 24),
                 const Divider(color: AppTheme.border),
+                const SizedBox(height: 16),
+                OutlinedButton.icon(
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AnleitungScreen())),
+                  icon: const Icon(Icons.menu_book_rounded),
+                  label: Text(t.anleitungTitel),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: AppTheme.sageGreen,
+                    minimumSize: const Size.fromHeight(48),
+                    side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.6)),
+                  ),
+                ),
                 const SizedBox(height: 16),
                 _buildLanguageSection(),
                 const SizedBox(height: 16),

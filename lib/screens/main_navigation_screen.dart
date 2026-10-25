@@ -11,6 +11,7 @@ import 'cbt/cbt_journal_screen.dart';
 import 'couples_channel/couples_channel_screen.dart';
 import 'ai_coach/ai_coach_screen.dart';
 import 'whats_new_screen.dart';
+import 'anleitung_screen.dart';
 import '../l10n/t.dart';
 
 class MainNavigationScreen extends StatefulWidget {
@@ -110,9 +111,14 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             ),
           ),
         ]),
-        actions: const [
+        actions: [
+          IconButton(
+            onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AnleitungScreen())),
+            icon: const Icon(Icons.help_outline_rounded),
+            tooltip: t.anleitungTitel,
+          ),
           // Global SOS Button permanently in the AppBar
-          SosButton(),
+          const SosButton(),
         ],
       ),
       body: SpicyAtmosphaere(

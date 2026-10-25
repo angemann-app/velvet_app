@@ -30,6 +30,7 @@ Map<String, Map<String, String>> germanSources() {
   final paar = _readJson('assets/data/paar_abend.json');
   final selbst = _readJson('assets/data/selbst_reise.json');
   final news = _readJson('assets/data/neuigkeiten.json');
+  final anleitung = _readJson('assets/data/anleitung.json');
   return {
     'velvet_content.json': {
       for (final c in content['courses'] as List) ...{
@@ -54,6 +55,9 @@ Map<String, Map<String, String>> germanSources() {
     },
     'neuigkeiten.json': {
       for (final e in news['eintraege'] as List) 'news:${e['build']}': _hash(e['punkte']),
+    },
+    'anleitung.json': {
+      for (final a in anleitung['abschnitte'] as List) 'guide:${a['id']}': _hash({'titel': a['titel'], 'text': a['text']}),
     },
     'yes_no_maybe.json': {
       for (final c in velvetYesNoMaybeCategories) ...{
@@ -88,6 +92,8 @@ Set<String> translatedKeys(String file, Map<String, dynamic> en) {
       return {for (final b in en['bausteine'] as List) 'self_block:${b['id']}'};
     case 'neuigkeiten.json':
       return {for (final e in en['eintraege'] as List) 'news:${e['build']}'};
+    case 'anleitung.json':
+      return {for (final a in en['abschnitte'] as List) 'guide:${a['id']}'};
     case 'yes_no_maybe.json':
       return {
         for (final c in en['categories'] as List) ...{

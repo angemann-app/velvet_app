@@ -240,6 +240,27 @@
           "text": "“Every body is beautiful and sexy” has been rewritten: longer, for women and men, covering the whole body from skin and hair to belly, chest and build."
         }
       ]
+    },
+    {
+      "build": 36,
+      "version": "4.7.0-beta.1",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "New course: Everyday eroticism",
+          "text": "How desire stays alive between coffee and calendar: small gestures, anticipation, rituals and games."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Spicy gets hotter",
+          "text": "In spicy mode: wilder texts, dedicated sections for the breasts, spicy lessons in eight courses, hot sparks, messages that disappear after reading, and photos straight from phone to phone."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Guide",
+          "text": "The question mark at the top explains every part of the app."
+        }
+      ]
     }
   ],
   "_source": {
@@ -252,6 +273,7 @@
     "news:32": "d365c10765d7fc66",
     "news:33": "ba744f6de785458c",
     "news:34": "c0fad8002202b859",
-    "news:35": "7f92712a8752b764"
+    "news:35": "7f92712a8752b764",
+    "news:36": "54944e2b84024fc6"
   }
 }

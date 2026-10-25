@@ -251,6 +251,27 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
   erscheint „Spicy-Modus ansehen“, eingeschaltet wird nur mit der eigenen Altersabfrage
   (`lib/widgets/spicy_modus_dialog.dart`).
 
+## 7e. Paar-Chat im Spicy-Modus: Funken, verschwindende Nachrichten, Fotos
+
+- **Heiße Funken:** zweite Leiste, nur im Spicy-Modus.
+- **Verschwindende Nachrichten:** Feld `vanish` in der Nachricht; gelöscht nur nach dem Lesen
+  (Empfänger 10 Min. nach dem Anzeigen, Absender mit der Lesebestätigung), ids gelöschter Nachrichten
+  werden gemerkt. Server bekommen ein NIP-40-Ablaufdatum von 7 Tagen.
+- **Fotos** (`lib/services/foto_kanal.dart`, `foto_verbindung.dart`): AES-256-GCM, Schlüssel in der
+  verschlüsselten Nachricht (`foto`), das Foto selbst per WebRTC (flutter_webrtc) direkt; Aufbau über
+  flüchtige Nostr-Signale (Art 21555). Unsichtbare Prüfung „da?“; sonst bleibt es verschlüsselt beim
+  Absender, bis beide die App offen haben (max. 7 Tage). Einmal ansehen, Screenshots gesperrt.
+  Datenschutz: Der STUN-Server (stun.l.google.com) sieht die IP-Adressen beider Handys, nicht das Foto.
+  In manchen Mobilfunknetzen klappt die Direktverbindung nicht (kein TURN-Server).
+  Auf zwei echten Handys noch nicht getestet (Stand 2026-10-25).
+
+## 7f. Anleitung
+
+- In der App: Fragezeichen in der Kopfzeile und Knopf im Profil (`lib/screens/anleitung_screen.dart`),
+  Texte in `assets/data/anleitung.json` (Englisch in `translations/en/`, im Übersetzungstest).
+- Im Repo: `docs/ANLEITUNG.md` und `docs/GUIDE.md`, erzeugt mit `tools/anleitung_md.py`; Bilder in
+  `docs/anleitung/` aus `test_screens/screens_test.dart`.
+
 ## 7d. Geführte Audios sichtbar
 
 - Startseite (Kurse) oben: Karten „Körperreise“ und „Gemeinsamer Abend“ (`lib/widgets/gefuehrte_audios.dart`,

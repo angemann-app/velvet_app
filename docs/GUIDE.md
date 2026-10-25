@@ -1,0 +1,133 @@
+# How VelvetPulse works
+
+This guide is also inside the app (question mark at the top right, or in your profile). [Deutsche Fassung](ANLEITUNG.md)
+
+## Contents
+
+- [Getting started](#getting-started)
+- [Courses and lessons](#courses-and-lessons)
+- [Guided audio](#guided-audio)
+- [Training and quick help](#training-and-quick-help)
+- [Reframing journal and check-in](#reframing-journal-and-check-in)
+- [Couple channel](#couple-channel)
+- [Spicy mode (18+)](#spicy-mode-18)
+- [AI coach](#ai-coach)
+- [Privacy, discretion and backup](#privacy-discretion-and-backup)
+- [Updates and beta](#updates-and-beta)
+- [Language and English recordings](#language-and-english-recordings)
+- [Help and feedback](#help-and-feedback)
+
+## Getting started
+
+<img src="anleitung/00_onboarding.png" width="260" alt="Getting started">
+
+On first launch you create a small profile: name, gender, relationship status and your focus. The app uses it to choose suitable courses, voices and example questions. Everything stays on your phone.
+
+You can reach your profile at any time via the person icon at the top of the start page. That's also where you'll find language, discretion, backup, spicy mode and updates.
+
+
+## Courses and lessons
+
+<img src="anleitung/01_kurse.png" width="260" alt="Courses and lessons">
+
+The Courses tab contains all courses, sorted into basics, practice and deepening. Use the filters at the top to choose, for example, “For her”, “For him” or “For couples”.
+
+Every lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.
+
+Tapping “Mark as completed” counts towards your progress.
+
+
+## Guided audio
+
+<img src="anleitung/13_selbst_reise.png" width="260" alt="Guided audio">
+
+The guided audios sit at the very top of the start page.
+
+Body journey: 10 to 30 minutes just for you. You choose how close you want to come to yourself, and a voice guides you across your body. Most of the time is silence, so you can feel.
+
+Shared evening: 20 to 45 minutes for two. You take turns giving and receiving, and a singing bowl marks the transitions. Agree on a stop word beforehand.
+
+Both are put together anew every time. You can pause, skip and stop at any time.
+
+
+## Training and quick help
+
+<img src="anleitung/02_training.png" width="260" alt="Training and quick help">
+
+The Training tab contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
+
+The SOS button at the top right helps in moments of pressure or anxiety, with short steps for before, in the moment and afterwards.
+
+
+## Reframing journal and check-in
+
+<img src="anleitung/03_reframing.png" width="260" alt="Reframing journal and check-in">
+
+In the Reframing tab you write down distressing thoughts and examine them using the method of cognitive behavioural therapy: what happened, what did you think, what speaks for it, what against it, and how else could you see it?
+
+The start page also has the 30-second check-in: how do stress and desire relate to each other today?
+
+
+## Couple channel
+
+<img src="anleitung/04_paarkanal_verbunden.png" width="260" alt="Couple channel">
+
+In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted.
+
+Sparks: with one tap you show what you're in the mood for today, or not.
+
+Messages: with read receipts, which you can switch off in the menu.
+
+Wishes: in the yes/maybe/no list, each of you votes separately. Only what you both want becomes visible.
+
+Learning together: share lessons and exchange answers to the reflection questions.
+
+
+## Spicy mode (18+)
+
+You switch on spicy mode in your profile, only after confirming that you're an adult. It unlocks: the levels “Spicy” and “Extra spicy” in the body journey and the shared evening, courses 23 and 24, spicy lessons in other courses and additional questions in the yes/maybe/no list. The app also takes on a red look.
+
+In the couple chat you get hot sparks, messages that disappear after reading, and photos that travel encrypted directly from phone to phone and can be viewed only once. To set up the connection, a public helper server (STUN, run by Google) sees your IP addresses, but never the photo. Use the chat menu to invite your partner to spicy mode.
+
+You can switch it off at any time, and everything from it disappears immediately.
+
+
+## AI coach
+
+<img src="anleitung/05_kicoach.png" width="260" alt="AI coach">
+
+The AI coach answers questions about desire, body and relationships. It uses Google Gemini with your own free key; the app explains step by step how to get one. Your questions go to Google, but not to us.
+
+The example questions adapt to your profile.
+
+
+## Privacy, discretion and backup
+
+Everything you enter stays on your phone. Secrets such as keys are kept in Android's protected storage.
+
+In your profile you can lock the app with your fingerprint; content is then also hidden in the app overview and screenshots are blocked. The discreet app icon shows a neutral name instead of VelvetPulse.
+
+“Export backup” creates a password-protected backup that you can transfer to a new phone.
+
+
+## Updates and beta
+
+<img src="anleitung/12_was_ist_neu.png" width="260" alt="Updates and beta">
+
+Under Profile › “Check for updates” the app finds new versions and installs them after you confirm. With the “Receive beta versions” switch you can test new features earlier. Every stable version sets the switch back to stable.
+
+After an update, “What's new” shows once what has changed.
+
+
+## Language and English recordings
+
+The app is available in German and English. It follows your phone's language, and you can change it in your profile.
+
+There you can also download the English recordings as a pack. Without the pack, your phone's voice reads aloud.
+
+
+## Help and feedback
+
+If a word in a recording sounds wrong, tap “Word mispronounced?” below the player. The project takes bug reports and wishes on GitHub.
+
+The app is no substitute for medical or psychotherapeutic treatment. Where it makes sense, the lessons say explicitly when it's advisable to get checked.

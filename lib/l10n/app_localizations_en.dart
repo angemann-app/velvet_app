@@ -3151,4 +3151,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get fotoWeg => 'This photo is no longer available.';
+
+  @override
+  String get anleitungTitel => 'How VelvetPulse works';
+
+  @override
+  String get anleitungEinleitung =>
+      'Here you\'ll find every part of the app briefly explained. Tap a section to expand it.';
 }
