@@ -6,6 +6,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'sprache.dart';
 
+/// Eine Foto-Idee; [heiss] = deutlicher, dazu zeigt die Karte einen stärkeren Sicherheitshinweis.
+typedef FotoIdee = ({String text, bool heiss});
+
 /// Foto-Idee des Tages im Paar-Chat: nur im Spicy-Modus, ganz freiwillig. Keine Erinnerungen,
 /// keine Serien, keine Zähler. Beide bekommen am selben Tag dieselbe Idee (Tag des Jahres);
 /// „Andere Idee“ blättert nur auf dem eigenen Handy weiter.
@@ -17,11 +20,11 @@ class FotoIdeen {
   /// Ändert sich beim Ein-/Ausschalten und bei „Heute nicht“, damit die Karte sofort folgt.
   static final ValueNotifier<int> stand = ValueNotifier(0);
 
-  static List<String>? _ideen;
+  static List<FotoIdee>? _ideen;
 
-  static Future<List<String>> _laden() async {
+  static Future<List<FotoIdee>> _laden() async {
     final daten = jsonDecode(await rootBundle.loadString(Sprache.inhalt('foto_ideen.json')));
-    return [for (final i in daten['ideen'] as List) i['text'] as String];
+    return [for (final i in daten['ideen'] as List) (text: i['text'] as String, heiss: i['heiss'] == true)];
   }
 
   /// Nach einem Sprachwechsel neu laden.
@@ -39,7 +42,7 @@ class FotoIdeen {
   }
 
   /// Die Idee für heute, oder null, wenn ausgeschaltet oder für heute weggeklickt.
-  static Future<String?> heute({DateTime? jetzt}) async {
+  static Future<FotoIdee?> heute({DateTime? jetzt}) async {
     final d = jetzt ?? DateTime.now();
     final prefs = await SharedPreferences.getInstance();
     if (!(prefs.getBool(_keyAn) ?? true)) return null;

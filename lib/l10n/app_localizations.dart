@@ -5414,6 +5414,12 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Foto-Ideen anzeigen'**
   String get fotoIdeenAnzeigen;
+
+  /// No description provided for @fotoIdeeHinweisHeiss.
+  ///
+  /// In de, this message translates to:
+  /// **'Ganz freiwillig. Bitte ohne Gesicht, Tattoos oder erkennbaren Raum.'**
+  String get fotoIdeeHinweisHeiss;
 }
 
 class _AppLocalizationsDelegate

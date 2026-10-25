@@ -882,5 +882,6 @@
   "fotoIdeeHinweis": "Entirely optional. Safest without your face.",
   "fotoIdeeAndere": "Another idea",
   "fotoIdeeHeuteNicht": "Not today",
-  "fotoIdeenAnzeigen": "Show photo ideas"
+  "fotoIdeenAnzeigen": "Show photo ideas",
+  "fotoIdeeHinweisHeiss": "Entirely optional. Please no face, tattoos or recognisable room."
 }

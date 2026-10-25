@@ -3173,4 +3173,8 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get fotoIdeenAnzeigen => 'Show photo ideas';
+
+  @override
+  String get fotoIdeeHinweisHeiss =>
+      'Entirely optional. Please no face, tattoos or recognisable room.';
 }

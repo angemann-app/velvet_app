@@ -31,6 +31,14 @@ void main() {
     expect(await FotoIdeen.heute(jetzt: dienstag), morgenOhne);
   });
 
+  test('Heiße und sanfte Ideen wechseln sich ab', () async {
+    final woche = [
+      for (var i = 0; i < 14; i++) (await FotoIdeen.heute(jetzt: montag.add(Duration(days: i))))!.heiss,
+    ];
+    expect(woche, contains(true));
+    expect(woche, contains(false));
+  });
+
   test('„Heute nicht“ gilt bis morgen, Ausschalten für immer', () async {
     await FotoIdeen.heuteNicht(jetzt: montag);
     expect(await FotoIdeen.heute(jetzt: montag), isNull);

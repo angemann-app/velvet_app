@@ -3188,4 +3188,8 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get fotoIdeenAnzeigen => 'Foto-Ideen anzeigen';
+
+  @override
+  String get fotoIdeeHinweisHeiss =>
+      'Ganz freiwillig. Bitte ohne Gesicht, Tattoos oder erkennbaren Raum.';
 }

@@ -6,12 +6,22 @@
       "text": "Just your lips."
     },
     {
+      "id": "heiss_brust",
+      "text": "Your breasts or your chest, just for me.",
+      "heiss": true
+    },
+    {
       "id": "nacken",
       "text": "Your neck, the way you'd like it kissed."
     },
     {
       "id": "schatten",
       "text": "The shadow of your body on the wall."
+    },
+    {
+      "id": "heiss_po",
+      "text": "Your bottom in your skimpiest underwear.",
+      "heiss": true
     },
     {
       "id": "detail",
@@ -22,12 +32,22 @@
       "text": "What you're wearing underneath right now. Or not."
     },
     {
+      "id": "heiss_decke",
+      "text": "How you're lying under the covers right now, naked.",
+      "heiss": true
+    },
+    {
       "id": "bett",
       "text": "The place where you'll be waiting tonight."
     },
     {
       "id": "haut",
       "text": "A bit of skin in the day's most beautiful light."
+    },
+    {
+      "id": "heiss_hand",
+      "text": "Where your hand is right now.",
+      "heiss": true
     },
     {
       "id": "hand",
@@ -38,12 +58,22 @@
       "text": "The spot where you want to be kissed today."
     },
     {
+      "id": "heiss_vorfreude",
+      "text": "Show me how much you're looking forward to tonight. Unmistakably.",
+      "heiss": true
+    },
+    {
       "id": "schulter",
       "text": "A look over your shoulder, without your face."
     },
     {
       "id": "dampf",
       "text": "A steamed-up mirror after the shower."
+    },
+    {
+      "id": "heiss_toy",
+      "text": "The toy you want to use tonight.",
+      "heiss": true
     },
     {
       "id": "kurven",
@@ -54,8 +84,28 @@
       "text": "A scarf that might come into play tonight."
     },
     {
+      "id": "heiss_spiegel",
+      "text": "You in the mirror, in nothing but underwear.",
+      "heiss": true
+    },
+    {
       "id": "vorfreude",
       "text": "Something that shows what you're looking forward to tonight."
+    },
+    {
+      "id": "heiss_dusche",
+      "text": "Your skin, wet in the shower.",
+      "heiss": true
+    },
+    {
+      "id": "heiss_beine",
+      "text": "Your legs, slightly parted.",
+      "heiss": true
+    },
+    {
+      "id": "heiss_einladung",
+      "text": "An invitation that needs no words.",
+      "heiss": true
     }
   ],
   "_source": {
@@ -65,6 +115,16 @@
     "photo_idea:drunter": "cdce15b951d480ae",
     "photo_idea:hand": "720dc719333e8f2e",
     "photo_idea:haut": "9cd0aff089c86ed1",
+    "photo_idea:heiss_beine": "6ebca29acf7635e1",
+    "photo_idea:heiss_brust": "0e24c5298e11f5bf",
+    "photo_idea:heiss_decke": "3990fdadf03dfd58",
+    "photo_idea:heiss_dusche": "4a7d77b231d89385",
+    "photo_idea:heiss_einladung": "e46eade4704892a6",
+    "photo_idea:heiss_hand": "dc531bc16f46ff30",
+    "photo_idea:heiss_po": "fb97d059e87d6ea5",
+    "photo_idea:heiss_spiegel": "b206a792e1346d21",
+    "photo_idea:heiss_toy": "ef36a01e9d626faa",
+    "photo_idea:heiss_vorfreude": "814f9d10bf7af915",
     "photo_idea:kurven": "9dccd6907f47ee5d",
     "photo_idea:kuss": "a06a5f923bddaa64",
     "photo_idea:lippen": "dff953e10ea50ff7",

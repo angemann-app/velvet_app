@@ -1501,5 +1501,6 @@
   "fotoIdeeHinweis": "Ganz freiwillig. Ohne Gesicht ist am sichersten.",
   "fotoIdeeAndere": "Andere Idee",
   "fotoIdeeHeuteNicht": "Heute nicht",
-  "fotoIdeenAnzeigen": "Foto-Ideen anzeigen"
+  "fotoIdeenAnzeigen": "Foto-Ideen anzeigen",
+  "fotoIdeeHinweisHeiss": "Ganz freiwillig. Bitte ohne Gesicht, Tattoos oder erkennbaren Raum."
 }

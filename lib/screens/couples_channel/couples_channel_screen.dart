@@ -675,7 +675,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     if (!StorageService.spicyMode()) return const SizedBox.shrink();
     return ValueListenableBuilder<int>(
       valueListenable: FotoIdeen.stand,
-      builder: (context, _, __) => FutureBuilder<String?>(
+      builder: (context, _, __) => FutureBuilder<FotoIdee?>(
         future: FotoIdeen.heute(),
         builder: (context, snap) {
           final idee = snap.data;
@@ -696,8 +696,13 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                     style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, color: AppTheme.rose)),
               ]),
               const SizedBox(height: 4),
-              Text(idee, style: const TextStyle(fontSize: 14, color: AppTheme.textPrimary, fontWeight: FontWeight.w600)),
-              Text(t.fotoIdeeHinweis, style: const TextStyle(fontSize: 11, color: AppTheme.textMuted)),
+              Text(idee.text,
+                  style: const TextStyle(fontSize: 14, color: AppTheme.textPrimary, fontWeight: FontWeight.w600)),
+              Text(idee.heiss ? t.fotoIdeeHinweisHeiss : t.fotoIdeeHinweis,
+                  style: TextStyle(
+                      fontSize: 11,
+                      color: idee.heiss ? AppTheme.rose : AppTheme.textMuted,
+                      fontWeight: idee.heiss ? FontWeight.w600 : FontWeight.w400)),
               Wrap(spacing: 0, children: [
                 TextButton(onPressed: _fotoSenden, child: Text(t.fotoSenden)),
                 TextButton(onPressed: () => FotoIdeen.andereIdee(), child: Text(t.fotoIdeeAndere)),

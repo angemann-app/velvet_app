@@ -1,19 +1,111 @@
 {
-  "_hinweis": "Foto-Ideen für den Paar-Chat (nur im Spicy-Modus, ganz freiwillig). Beide bekommen am selben Tag dieselbe Idee. Englisch in translations/en/foto_ideen.json.",
+  "_hinweis": "Foto-Ideen für den Paar-Chat (nur im Spicy-Modus, ganz freiwillig). Beide bekommen am selben Tag dieselbe Idee. Englisch in translations/en/foto_ideen.json. heiss: true = deutlichere Idee, dazu ein stärkerer Sicherheitshinweis.",
   "ideen": [
-    {"id": "lippen", "text": "Nur deine Lippen."},
-    {"id": "nacken", "text": "Dein Nacken, so wie du ihn geküsst haben möchtest."},
-    {"id": "schatten", "text": "Der Schatten deines Körpers an der Wand."},
-    {"id": "detail", "text": "Ein Detail, das heute Abend ausgezogen werden darf."},
-    {"id": "drunter", "text": "Was du gerade drunter trägst. Oder eben nicht."},
-    {"id": "bett", "text": "Der Ort, an dem du heute Abend wartest."},
-    {"id": "haut", "text": "Ein Stück Haut im schönsten Licht des Tages."},
-    {"id": "hand", "text": "Deine Hand auf deinem Oberschenkel."},
-    {"id": "kuss", "text": "Die Stelle, an der du heute geküsst werden willst."},
-    {"id": "schulter", "text": "Ein Blick über die Schulter, ohne Gesicht."},
-    {"id": "dampf", "text": "Ein beschlagener Spiegel nach dem Duschen."},
-    {"id": "kurven", "text": "Eine Kurve deines Körpers, die du magst."},
-    {"id": "tuch", "text": "Ein Tuch, das heute Abend zum Einsatz kommen könnte."},
-    {"id": "vorfreude", "text": "Etwas, das zeigt, worauf du dich heute Abend freust."}
+    {
+      "id": "lippen",
+      "text": "Nur deine Lippen."
+    },
+    {
+      "id": "heiss_brust",
+      "text": "Deine Brüste oder deine Brust, nur für mich.",
+      "heiss": true
+    },
+    {
+      "id": "nacken",
+      "text": "Dein Nacken, so wie du ihn geküsst haben möchtest."
+    },
+    {
+      "id": "schatten",
+      "text": "Der Schatten deines Körpers an der Wand."
+    },
+    {
+      "id": "heiss_po",
+      "text": "Dein Po in deinem knappsten Slip.",
+      "heiss": true
+    },
+    {
+      "id": "detail",
+      "text": "Ein Detail, das heute Abend ausgezogen werden darf."
+    },
+    {
+      "id": "drunter",
+      "text": "Was du gerade drunter trägst. Oder eben nicht."
+    },
+    {
+      "id": "heiss_decke",
+      "text": "Wie du gerade unter der Decke liegst, nackt.",
+      "heiss": true
+    },
+    {
+      "id": "bett",
+      "text": "Der Ort, an dem du heute Abend wartest."
+    },
+    {
+      "id": "haut",
+      "text": "Ein Stück Haut im schönsten Licht des Tages."
+    },
+    {
+      "id": "heiss_hand",
+      "text": "Wo deine Hand gerade ist.",
+      "heiss": true
+    },
+    {
+      "id": "hand",
+      "text": "Deine Hand auf deinem Oberschenkel."
+    },
+    {
+      "id": "kuss",
+      "text": "Die Stelle, an der du heute geküsst werden willst."
+    },
+    {
+      "id": "heiss_vorfreude",
+      "text": "Zeig mir, wie sehr du dich auf heute Abend freust. Ganz eindeutig.",
+      "heiss": true
+    },
+    {
+      "id": "schulter",
+      "text": "Ein Blick über die Schulter, ohne Gesicht."
+    },
+    {
+      "id": "dampf",
+      "text": "Ein beschlagener Spiegel nach dem Duschen."
+    },
+    {
+      "id": "heiss_toy",
+      "text": "Das Spielzeug, das du heute Abend benutzen willst.",
+      "heiss": true
+    },
+    {
+      "id": "kurven",
+      "text": "Eine Kurve deines Körpers, die du magst."
+    },
+    {
+      "id": "tuch",
+      "text": "Ein Tuch, das heute Abend zum Einsatz kommen könnte."
+    },
+    {
+      "id": "heiss_spiegel",
+      "text": "Du im Spiegel, nur in Unterwäsche.",
+      "heiss": true
+    },
+    {
+      "id": "vorfreude",
+      "text": "Etwas, das zeigt, worauf du dich heute Abend freust."
+    },
+    {
+      "id": "heiss_dusche",
+      "text": "Deine Haut, nass unter der Dusche.",
+      "heiss": true
+    },
+    {
+      "id": "heiss_beine",
+      "text": "Deine Beine, leicht geöffnet.",
+      "heiss": true
+    },
+    {
+      "id": "heiss_einladung",
+      "text": "Eine Einladung, die keine Worte braucht.",
+      "heiss": true
+    }
   ]
 }
