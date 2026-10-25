@@ -1,6 +1,6 @@
 # Konzept: Einschlaf-Reise (erotisch schulende Meditation zum Einschlafen)
 
-Stand: Entwurf vom 25.10.2026, noch nicht umgesetzt. Offene Fragen stehen am Ende.
+Stand: Konzept vom 25.10.2026, abgestimmt, noch nicht umgesetzt. Entscheidungen stehen am Ende.
 
 ## Idee
 
@@ -25,20 +25,25 @@ Arbeitstitel: **Einschlaf-Reise** (passt zur „Geführten Selbsterkundung“), 
 
 ## Ablauf
 
-Länge wählbar: **20, 30 oder 45 Minuten**. Die Sprechdichte nimmt stetig ab: Am Anfang wird mehr gesprochen,
+Länge wählbar: **60, 90 oder 120 Minuten**. Die Sprechdichte nimmt stetig ab: Am Anfang wird mehr gesprochen,
 am Ende fast nichts mehr. Die Pausen werden länger, die Stimme wirkt dadurch immer leiser und weiter weg.
+**Abschnitte dürfen sich wiederholen:** Die Lernbögen laufen in Runden. Jede Runde greift dieselben Bögen
+wieder auf, mit anderen Varianten, kürzer und leiser. So wird die lange Zeit gefüllt, und die Wiederholung
+ist gewollt, denn sie trägt die Schulung.
 
 | Phase | Anteil der Zeit | Gesprochen | Inhalt |
 |---|---|---|---|
 | 1. Ankommen | ca. 8 % | viel | Im Bett ankommen, Licht aus, Handy darf weg, Bildschirm darf ausgehen. Erlaubnis einzuschlafen. |
 | 2. Sinken | ca. 15 % | viel | Körper von oben nach unten weich werden lassen: Stirn, Kiefer, Schultern, Bauch, **Becken und Beckenboden**, Beine. |
 | 3. Atem | ca. 7 % | mittel | Längeres Ausatmen, einmal der seufzende Atem, dann den Atem sich selbst überlassen. |
-| 4. Lernbögen | ca. 40 % | abnehmend | Zwei bis drei Lernbögen zum gewählten Schwerpunkt (siehe unten). Jeder Bogen: ein Bild, drei bis fünf Sätze, eine **Kurzformel**. |
-| 5. Nachklang | ca. 20 % | wenig | Nur noch die Kurzformeln, einzeln, mit langen Pausen dazwischen. |
-| 6. Stille | ca. 10 % | nichts | Nur der Klangteppich, der über drei bis fünf Minuten ausblendet. Kein Gong, kein „komm zurück“. |
+| 4. Lernrunden | ca. 40 % | abnehmend | Drei Lernbögen zum gewählten Schwerpunkt (siehe unten), in mehreren Runden. Runde 1: Bild, drei bis fünf Sätze, **Kurzformel**. Jede weitere Runde: dieselben Bögen in anderer Variante, weniger Sätze, längere Pausen, Sinken und Atem dazwischen kurz wiederholt. |
+| 5. Nachklang | ca. 25 % | wenig | Nur noch die Kurzformeln, einzeln und wiederholt, mit Pausen von mehreren Minuten. |
+| 6. Stille | ca. 5–10 % | nichts | Nur der Klangteppich, der über zehn Minuten ausblendet. Kein Gong, kein „komm zurück“. |
 
-Bei 20 Minuten gibt es zwei Lernbögen, bei 30 und 45 Minuten drei. Bei 45 Minuten sind die Pausen deutlich
-länger, nicht der Text.
+Richtwerte: 60 Minuten etwa 3 Lernrunden, 90 Minuten etwa 4, 120 Minuten etwa 5. Längere Reisen bekommen
+vor allem mehr Runden und mehr Stille, nicht mehr neuen Text. Die meisten Menschen schlafen nach 20 bis 40
+Minuten; der Rest begleitet den leichten Schlaf und sorgt dafür, dass niemand von plötzlicher Stille geweckt
+wird.
 
 ## Schwerpunkte (wählbar oder „Überrasch mich“)
 
@@ -121,6 +126,9 @@ Körper wählbar wie bei der Selbsterkundung (Vulva, Penis oder ohne Bezug), Sti
   bleibt die Reise stehen. Vor dem Schreiben der Texte mit einem Probe-Ablauf testen. Lösungen, falls nötig:
   ein Vordergrund-Dienst für die Wiedergabe (Benachrichtigung „Einschlaf-Reise läuft“, neutral formuliert)
   oder die Reise vorab zu einer einzigen Audiodatei zusammenfügen.
+- **Lange Laufzeit:** 1–2 Stunden Wiedergabe kosten Akku. Hinweis „am besten mit Ladekabel“; die Wiedergabe
+  muss die ganze Zeit zuverlässig weiterlaufen (siehe nächster Punkt). Wer aufwacht, kann mit einem Tipp auf die
+  Benachrichtigung beenden.
 - **Ende:** Nach der Stille stoppt alles von selbst und gibt den Audio-Fokus frei. Keine Benachrichtigung,
   kein Ton, keine Statistik-Frage in der Nacht.
 - **Ort in der App:** eigene Karte „Einschlafen“ bei den geführten Audios auf der Startseite; Hinweis darauf
@@ -143,10 +151,10 @@ Körper wählbar wie bei der Selbsterkundung (Vulva, Penis oder ohne Bezug), Sti
   allgemeinen Phasen, sanft und spicy, für Vulva, Penis und neutral).
 - Planer, Bildschirm, Aufnahmen, Audiopaket, Anleitung, Was-ist-neu, Tests: mittel.
 
-## Offene Fragen an dich
+## Entscheidungen (25.10.2026)
 
-1. Name: „Einschlaf-Reise“ oder etwas anderes?
-2. Sind die sechs Schwerpunkte die richtigen, fehlt einer?
-3. Spicy-Stufe so (deutlich, aber ruhig, ohne „Sehr spicy“)?
-4. Eine Variante für Paare, die nebeneinander einschlafen (Ansprache an beide), gleich mit oder später?
-5. Längen 20, 30, 45 Minuten, oder lieber 15, 30, 60?
+1. Name: **Einschlaf-Reise** (englisch *Drift-off journey*).
+2. Die sechs Schwerpunkte passen.
+3. Spicy-Stufe wie beschrieben: deutlich, aber ruhig, ohne „Sehr spicy“ und ohne Dirty Talk.
+4. **Kein Paarmodus.**
+5. Länge **60, 90 oder 120 Minuten**; Abschnitte dürfen sich wiederholen (Lernrunden, Nachklang).
