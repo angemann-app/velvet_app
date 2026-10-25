@@ -5456,6 +5456,24 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Fotos sind neu: In manchen Mobilfunknetzen kommt die direkte Verbindung noch nicht zustande.'**
   String get fotoExperimentellHinweis;
+
+  /// No description provided for @pairingAnfrageTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Code wurde gescannt'**
+  String get pairingAnfrageTitel;
+
+  /// No description provided for @pairingAnfrageText.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Handy hat gerade deinen Code gescannt und möchte sich mit dir verbinden. Bestätige nur, wenn es das Handy deines Gegenübers ist.'**
+  String get pairingAnfrageText;
+
+  /// No description provided for @pairingAnfrageVerbinden.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbinden'**
+  String get pairingAnfrageVerbinden;
 }
 
 class _AppLocalizationsDelegate

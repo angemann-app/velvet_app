@@ -1508,5 +1508,8 @@
   "fotoJetztAnsehen": "Jetzt ansehen",
   "fotoSpaeter": "Später",
   "fotoExperimentell": "Experimentell",
-  "fotoExperimentellHinweis": "Fotos sind neu: In manchen Mobilfunknetzen kommt die direkte Verbindung noch nicht zustande."
+  "fotoExperimentellHinweis": "Fotos sind neu: In manchen Mobilfunknetzen kommt die direkte Verbindung noch nicht zustande.",
+  "pairingAnfrageTitel": "Dein Code wurde gescannt",
+  "pairingAnfrageText": "Ein Handy hat gerade deinen Code gescannt und möchte sich mit dir verbinden. Bestätige nur, wenn es das Handy deines Gegenübers ist.",
+  "pairingAnfrageVerbinden": "Verbinden"
 }

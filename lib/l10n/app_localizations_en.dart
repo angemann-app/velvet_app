@@ -3197,4 +3197,14 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get fotoExperimentellHinweis =>
       'Photos are new: on some mobile networks the direct connection can\'t be made yet.';
+
+  @override
+  String get pairingAnfrageTitel => 'Your code was scanned';
+
+  @override
+  String get pairingAnfrageText =>
+      'A phone just scanned your code and wants to connect with you. Only confirm if it\'s your partner\'s phone.';
+
+  @override
+  String get pairingAnfrageVerbinden => 'Connect';
 }

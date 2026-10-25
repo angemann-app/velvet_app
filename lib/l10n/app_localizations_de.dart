@@ -3212,4 +3212,14 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get fotoExperimentellHinweis =>
       'Fotos sind neu: In manchen Mobilfunknetzen kommt die direkte Verbindung noch nicht zustande.';
+
+  @override
+  String get pairingAnfrageTitel => 'Dein Code wurde gescannt';
+
+  @override
+  String get pairingAnfrageText =>
+      'Ein Handy hat gerade deinen Code gescannt und möchte sich mit dir verbinden. Bestätige nur, wenn es das Handy deines Gegenübers ist.';
+
+  @override
+  String get pairingAnfrageVerbinden => 'Verbinden';
 }

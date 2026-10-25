@@ -103,6 +103,25 @@ void main() {
     expect(nostr.joinRequestNotifier.value, keyApi.getPublicKey(partner));
   });
 
+  test('Wer seinen QR-Code zeigt, bekommt die Begrüßung des scannenden Handys als Anfrage', () async {
+    final partner = keyApi.generatePrivateKey();
+    await nostr.codeZeigen();
+    await nostr.handleIncomingKind4Map(dm(partner, {'type': 'chat', 'text': 'Hallo, ich bin jetzt verbunden'}));
+    expect(nostr.joinRequestNotifier.value, keyApi.getPublicKey(partner));
+    expect(await nostr.acceptJoinRequest(), isTrue);
+    expect(nostr.partnerPublicKey, keyApi.getPublicKey(partner));
+    expect(nostr.inviteNameNotifier.value, isNull);
+  });
+
+  test('Koppeln per Scan schließt die offene Einladung, gekoppelt öffnet der Code keine neue', () async {
+    await nostr.codeZeigen();
+    expect(nostr.inviteNameNotifier.value, isNotNull);
+    await nostr.setPartner(keyApi.getPublicKey(keyApi.generatePrivateKey()), name: 'Anna');
+    expect(nostr.inviteNameNotifier.value, isNull);
+    await nostr.codeZeigen();
+    expect(nostr.inviteNameNotifier.value, isNull);
+  });
+
   test('Gebündelte Ja/Nein-Antworten kommen vollständig an, ohne den Verlauf zu füllen', () async {
     final partner = keyApi.generatePrivateKey();
     await nostr.setPartner(keyApi.getPublicKey(partner), name: 'Anna');

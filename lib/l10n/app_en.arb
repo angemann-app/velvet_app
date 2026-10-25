@@ -889,5 +889,8 @@
   "fotoJetztAnsehen": "View now",
   "fotoSpaeter": "Later",
   "fotoExperimentell": "Experimental",
-  "fotoExperimentellHinweis": "Photos are new: on some mobile networks the direct connection can't be made yet."
+  "fotoExperimentellHinweis": "Photos are new: on some mobile networks the direct connection can't be made yet.",
+  "pairingAnfrageTitel": "Your code was scanned",
+  "pairingAnfrageText": "A phone just scanned your code and wants to connect with you. Only confirm if it's your partner's phone.",
+  "pairingAnfrageVerbinden": "Connect"
 }

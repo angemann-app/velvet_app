@@ -141,6 +141,13 @@ class NostrService {
     inviteNameNotifier.value = name;
   }
 
+  /// Der eigene QR-Code wird gezeigt: Das zählt als offene Einladung, damit die Begrüßung des
+  /// Handys, das ihn scannt, als Verbindungsanfrage ankommt (ohne Einladung wird sie verworfen).
+  Future<void> codeZeigen() async {
+    if (isPaired || inviteNameNotifier.value != null) return;
+    await startInvite('Partner');
+  }
+
   Future<void> cancelInvite() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_keyInviteName);
@@ -738,6 +745,9 @@ class NostrService {
     partnerPubKeyNotifier.value = _partnerPublicKey;
     partnerNameNotifier.value = _partnerName;
 
+    // Gekoppelt: Eine offene Einladung (z. B. vom gezeigten QR-Code) hat sich erledigt.
+    if (inviteNameNotifier.value != null) await cancelInvite();
+
     // Refresh inbox subscription
     _subscribeToInbox();
 
@@ -894,6 +904,28 @@ class NostrService {
         timestamp: DateTime.now(),
       );
     });
+  }
+
+  /// Schickt eine Nachricht, sobald ein Server verbunden ist. Für die Begrüßung direkt nach dem
+  /// Scannen: Baut die App die Verbindung gerade erst auf, ginge sie sonst still verloren.
+  Future<bool> sendeSobaldVerbunden(String text, {Duration warten = const Duration(minutes: 2)}) async {
+    if (await sendChatMessage(text)) return true;
+    final fertig = Completer<bool>();
+    var laeuft = false;
+    void pruefen() {
+      if (fertig.isCompleted || laeuft || !isConnected) return;
+      laeuft = true;
+      sendChatMessage(text).then((ok) {
+        laeuft = false;
+        if (ok && !fertig.isCompleted) fertig.complete(true);
+      });
+    }
+
+    statusNotifier.addListener(pruefen);
+    pruefen();
+    final ok = await fertig.future.timeout(warten, onTimeout: () => false);
+    statusNotifier.removeListener(pruefen);
+    return ok;
   }
 
   Future<bool> sendFantasyVote(String fantasyId, String vote) async {

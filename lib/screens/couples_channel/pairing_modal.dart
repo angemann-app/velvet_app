@@ -27,15 +27,52 @@ class _PairingModalState extends State<PairingModal>
   bool _isProcessingScan = false;
   String? _gender;
   String? _errorMessage;
+  bool _anfrageOffen = false;
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
+    // Wer den eigenen Code zeigt, wartet darauf, gescannt zu werden: Die Begrüßung des anderen
+    // Handys erscheint dann hier als Anfrage zum Bestätigen.
+    NostrService().codeZeigen();
+    NostrService().joinRequestNotifier.addListener(_anfrageZeigen);
+  }
+
+  Future<void> _anfrageZeigen() async {
+    final nostr = NostrService();
+    if (!mounted || _anfrageOffen || nostr.joinRequestNotifier.value == null) return;
+    _anfrageOffen = true;
+    final verbinden = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppTheme.surface,
+        title: Text(t.pairingAnfrageTitel, style: const TextStyle(fontSize: 18)),
+        content: Text(t.pairingAnfrageText, style: const TextStyle(color: AppTheme.textSecondary, height: 1.45)),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.invitePartnerDecline)),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text(t.pairingAnfrageVerbinden, style: const TextStyle(color: AppTheme.rose)),
+          ),
+        ],
+      ),
+    );
+    _anfrageOffen = false;
+    if (!mounted) return;
+    if (verbinden != true) {
+      nostr.declineJoinRequest();
+      return;
+    }
+    if (await nostr.acceptJoinRequest() && mounted) {
+      HapticFeedback.mediumImpact();
+      Navigator.of(context).pop(true);
+    }
   }
 
   @override
   void dispose() {
+    NostrService().joinRequestNotifier.removeListener(_anfrageZeigen);
     _tabController.dispose();
     _keyInputController.dispose();
     _nameInputController.dispose();
@@ -92,7 +129,8 @@ class _PairingModalState extends State<PairingModal>
         HapticFeedback.mediumImpact();
         if (_gender != null) await nostr.setPartnerProfile(name: name, gender: _gender);
         // Meldet sich beim Gegenüber, damit eine offene Einladung dort sofort als Anfrage erscheint.
-        nostr.sendChatMessage(t.pairingModalHiIMConnectedNow);
+        // Notfalls, sobald ein Server verbunden ist.
+        nostr.sendeSobaldVerbunden(t.pairingModalHiIMConnectedNow);
         Navigator.of(context).pop(true);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
