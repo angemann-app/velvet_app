@@ -99,6 +99,16 @@ void main() {
     expect(alltag().lessons.where((l) => l.spicy).map((l) => l.id), ['alltag_6', 'alltag_7', 'alltag_8', 'alltag_10']);
   });
 
+  test('Toys-Kurs: sechs Lektionen für alle, zwei nur im Spicy-Modus', () async {
+    final db = VelvetDatabase.fromJson(jsonDecode(File('assets/data/velvet_content.json').readAsStringSync()));
+    Course toys() => db.courses.firstWhere((c) => c.id == 'course_toys');
+    await starten({});
+    expect(toys().lessons, hasLength(6));
+    await StorageService.setSpicyMode(true);
+    expect(toys().lessons, hasLength(8));
+    expect(toys().lessons.where((l) => l.spicy).map((l) => l.id), ['toys_7', 'toys_8']);
+  });
+
   test('Spicy-Fragen verweisen nur auf Lektionen, die es gibt', () {
     final db = VelvetDatabase.fromJson(jsonDecode(File('assets/data/velvet_content.json').readAsStringSync()));
     final lektionen = {for (final c in db.alleKurse) ...c.lessons.map((l) => l.id)};

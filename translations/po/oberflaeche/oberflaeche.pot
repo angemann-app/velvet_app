@@ -4117,9 +4117,9 @@ msgid "Das 45-Sekunden-Wand-Teasing"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 11 • TEASING
+#. EN: COURSE 15 • TEASING
 msgctxt "ui:dailySimmeringCardCourseTeasing#text"
-msgid "KURS 11 • TEASING"
+msgid "KURS 15 • TEASING"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4135,9 +4135,9 @@ msgid "Die Kiefer-Schmelze & Stimm-Aktivierung"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 10 • AUDIBLE PLEASURE
+#. EN: COURSE 21 • AUDIBLE PLEASURE
 msgctxt "ui:dailySimmeringCardCourseAudiblePleasure#text"
-msgid "KURS 10 • HÖRBARE LUST"
+msgid "KURS 21 • HÖRBARE LUST"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4153,9 +4153,9 @@ msgid "Die 15:00-Uhr-Antizipation"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 11 • ANTICIPATION
+#. EN: COURSE 15 • ANTICIPATION
 msgctxt "ui:dailySimmeringCardCourseAnticipation#text"
-msgid "KURS 11 • KOPFKINO"
+msgid "KURS 15 • KOPFKINO"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4171,9 +4171,9 @@ msgid "Zeitlupe beim Einschenken"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 11 • SLOW SEX
+#. EN: COURSE 15 • SLOW SEX
 msgctxt "ui:dailySimmeringCardCourseSlowSex#text"
-msgid "KURS 11 • SLOW SEX"
+msgid "KURS 15 • SLOW SEX"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4189,9 +4189,9 @@ msgid "Das 15-Minuten-Seidentuch-Ritual"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 12 • SURRENDER
+#. EN: COURSE 23 • SURRENDER
 msgctxt "ui:dailySimmeringCardCourseSurrender#text"
-msgid "KURS 12 • HINGABE"
+msgid "KURS 23 • HINGABE"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4207,9 +4207,9 @@ msgid "Das strikte Penetrations-Verbot"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 7 • SENSATE FOCUS
+#. EN: COURSE 17 • SENSATE FOCUS
 msgctxt "ui:dailySimmeringCardCourseSensateFocus#text"
-msgid "KURS 7 • SENSATE FOCUS"
+msgid "KURS 17 • SENSATE FOCUS"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4243,9 +4243,9 @@ msgid "Die charmante Traum-Brücke"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 12 • FANTASIES
+#. EN: COURSE 23 • FANTASIES
 msgctxt "ui:dailySimmeringCardCourseFantasies#text"
-msgid "KURS 12 • FANTASIEN"
+msgid "KURS 23 • FANTASIEN"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4263,7 +4263,7 @@ msgstr ""
 #. Text der Oberfläche
 #. EN: COURSES 3 & 9 • BODY
 msgctxt "ui:dailySimmeringCardCoursesBody#text"
-msgid "KURS 3 & 9 • SOMATIK"
+msgid "KURS 7 & 9 • SOMATIK"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4279,9 +4279,9 @@ msgid "Weicher Bauch • Volle Hingabe"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 13 • RADICAL BODY LOVE
+#. EN: COURSE 6 • RADICAL BODY LOVE
 msgctxt "ui:dailySimmeringCardCourseRadicalBodyLove#text"
-msgid "KURS 13 • RADICAL BODY LOVE"
+msgid "KURS 6 • RADICAL BODY LOVE"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4309,9 +4309,9 @@ msgid "Broad Palm Touch mit warmem Öl"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 9 • BODY LAB
+#. EN: COURSE 19 • BODY LAB
 msgctxt "ui:dailySimmeringCardCourseBodyLab#text"
-msgid "KURS 9 • SOMATISCHES LAB"
+msgid "KURS 19 • SOMATISCHES LAB"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4329,7 +4329,7 @@ msgstr ""
 #. Text der Oberfläche
 #. EN: COURSES 8 & 9 • ORBITING
 msgctxt "ui:dailySimmeringCardCoursesOrbiting#text"
-msgid "KURS 8 & 9 • ORBITING"
+msgid "KURS 18 & 9 • ORBITING"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4345,9 +4345,9 @@ msgid "Plateau-Surfen auf Stufe 7"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 9 • STAYING POWER
+#. EN: COURSE 19 • STAYING POWER
 msgctxt "ui:dailySimmeringCardCourseStayingPower#text"
-msgid "KURS 9 • AUSDAUER"
+msgid "KURS 19 • AUSDAUER"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4363,9 +4363,9 @@ msgid "Dopamin-Reset: Bildschirmfreies Spüren"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 4 • RECALIBRATION
+#. EN: COURSE 10 • RECALIBRATION
 msgctxt "ui:dailySimmeringCardCourseRecalibration#text"
-msgid "KURS 4 • REKALIBRIERUNG"
+msgid "KURS 10 • REKALIBRIERUNG"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4381,9 +4381,9 @@ msgid "Der Schließmuskel-Entlastungstest"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 9 • MULTIPLE ORGASMS
+#. EN: COURSE 19 • MULTIPLE ORGASMS
 msgctxt "ui:dailySimmeringCardCourseMultipleOrgasms#text"
-msgid "KURS 9 • MULTI-ORGASMIE"
+msgid "KURS 19 • MULTI-ORGASMIE"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4399,9 +4399,9 @@ msgid "Zero-Pressure Hocke (Malasana)"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 3 • FASCIA
+#. EN: COURSE 7 • FASCIA
 msgctxt "ui:dailySimmeringCardCourseFascia#text"
-msgid "KURS 3 • FASZIEN"
+msgid "KURS 7 • FASZIEN"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4417,9 +4417,9 @@ msgid "Körper-Mitgefühl vor dem Spiegel"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 13 • SELF-COMPASSION
+#. EN: COURSE 6 • SELF-COMPASSION
 msgctxt "ui:dailySimmeringCardCourseSelfCompassion#text"
-msgid "KURS 13 • SELBSTMITGEFÜHL"
+msgid "KURS 6 • SELBSTMITGEFÜHL"
 msgstr ""
 
 #. Text der Oberfläche

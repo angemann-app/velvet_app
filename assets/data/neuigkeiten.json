@@ -315,6 +315,22 @@
           "text": "Wünsche, Fehler und falsch ausgesprochene Wörter kannst du jetzt direkt aus der App schicken: anonym und verschlüsselt, ohne Konto. Zu finden im Profil und in der Anleitung, für die Aussprache direkt unter jedem Player."
         }
       ]
+    },
+    {
+      "build": 41,
+      "version": "4.8.0-beta.1",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "Neuer Kurs: Toys",
+          "text": "Kurs 25 zeigt, was es gibt, worauf du bei Material, Pflege und Sicherheit achtest, wie ihr darüber sprecht und (im Spicy-Modus) wie du allein und zu zweit anfängst. Mit Aufnahmen auf Deutsch."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Kurse neu geordnet",
+          "text": "Die Kurse sind jetzt nach Themen sortiert und neu nummeriert: Grundlagen, Körper und Selbst, Beziehung und Alltag, Berührung und Praxis, Fantasie und Spiel. Dein Fortschritt bleibt erhalten."
+        }
+      ]
     }
   ]
 }

@@ -46,17 +46,16 @@ man bei Bedarf in der App herunter.
 ## Funktionen
 
 ### Kurse und Lektionen
-- **26 Kurse mit 116 Lektionen** (davon 23 nur im Spicy-Modus):
-  - *Grundlagen* (Kurse 1–7): Zwei-Pedale-Modell, Beobachter-Falle, Beckenboden, Kommunikation, Sensate Focus.
-  - *Praxis* (Kurse 8–17): Berührung für Sie und Ihn, Stimme und Atem, Vorfreude und Langsamkeit, Fantasien,
-    Intim-Massage, Prostata und Damm, entspannte Stellungen, Szenarien für zwei.
-  - *Vertiefung* (Kurse 18–22): Sich selbst erkunden, unterschiedliche Lust, Lebensphasen
-    (Geburt, Wechseljahre, Älterwerden, Krankheit), Schmerz, Scham und Leistungsdruck, Anatomie der Erregung.
-  - *Kurs 25:* Jeder Körper ist schön und sexy, mit Wäsche für jeden Körper.
-  - *Kurs 26:* Alltagserotik, von kleinen Gesten und Ritualen bis zu Wäsche und Striptease.
-  - *Spicy* (Kurse 23–24, nur im Spicy-Modus): Spicy Solo und Spicy zu zweit.
+- **27 Kurse mit 124 Lektionen** (davon 25 nur im Spicy-Modus):
+  - *Grundlagen* (Kurse 1–6): Zwei-Pedale-Modell, Anatomie der Erregung, jeder Körper ist schön, Beobachter-Falle, Schmerz, Scham und Leistungsdruck, Präsenz und Selbstmitgefühl.
+  - *Körper und Selbst* (Kurse 7–11): Beckenboden, sich selbst erkunden, weibliche Lust, Reize neu einstellen, Prostata und Damm.
+  - *Beziehung und Alltag* (Kurse 12–16): das Schweigen brechen, unterschiedliche Lust, Lebensphasen
+    (Geburt, Wechseljahre, Älterwerden, Krankheit), Vorfreude und Langsamkeit, Alltagserotik.
+  - *Berührung und Praxis* (Kurse 17–22): Paar-Labor, Berührung für Sie und Ihn, Intim-Massage, Stimme und Atem, entspannte Stellungen.
+  - *Fantasie und Spiel* (Kurse 23–25): Fantasien und Hingabe, Szenarien für zwei, Toys.
+  - *Spicy* (Kurse 26–27, nur im Spicy-Modus): Spicy Solo und Spicy zu zweit.
 - **Spicy-Modus (ab 18, freiwillig):** schaltet im Profil zwei Stufen für die geführten Audios frei
-  (Spicy und Sehr spicy), zwei eigene Kurse, Spicy-Lektionen in neun weiteren Kursen, 13 weitere
+  (Spicy und Sehr spicy), zwei eigene Kurse, Spicy-Lektionen in zehn weiteren Kursen, 13 weitere
   Ja/Vielleicht/Nein-Fragen und im Paar-Chat heiße Funken, verschwindende Nachrichten, Fotos und eine
   freiwillige Foto-Idee des Tages. Ohne ihn ist davon nichts zu sehen.
 - Jede Lektion folgt demselben Aufbau: **Warum das wirkt** · **Die Übung** ·

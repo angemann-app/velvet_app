@@ -4138,7 +4138,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseTeasing.
   ///
   /// In de, this message translates to:
-  /// **'KURS 11 • TEASING'**
+  /// **'KURS 15 • TEASING'**
   String get dailySimmeringCardCourseTeasing;
 
   /// No description provided for @dailySimmeringCardTodayBrieflyPressYourPartner.
@@ -4156,7 +4156,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseAudiblePleasure.
   ///
   /// In de, this message translates to:
-  /// **'KURS 10 • HÖRBARE LUST'**
+  /// **'KURS 21 • HÖRBARE LUST'**
   String get dailySimmeringCardCourseAudiblePleasure;
 
   /// No description provided for @dailySimmeringCardPlaceYourFingersOnYour.
@@ -4174,7 +4174,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseAnticipation.
   ///
   /// In de, this message translates to:
-  /// **'KURS 11 • KOPFKINO'**
+  /// **'KURS 15 • KOPFKINO'**
   String get dailySimmeringCardCourseAnticipation;
 
   /// No description provided for @dailySimmeringCardThisAfternoonSendYourPartner.
@@ -4192,7 +4192,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseSlowSex.
   ///
   /// In de, this message translates to:
-  /// **'KURS 11 • SLOW SEX'**
+  /// **'KURS 15 • SLOW SEX'**
   String get dailySimmeringCardCourseSlowSex;
 
   /// No description provided for @dailySimmeringCardTodayTouchYourPartnerDuring.
@@ -4210,7 +4210,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseSurrender.
   ///
   /// In de, this message translates to:
-  /// **'KURS 12 • HINGABE'**
+  /// **'KURS 23 • HINGABE'**
   String get dailySimmeringCardCourseSurrender;
 
   /// No description provided for @dailySimmeringCardAgreeForTonightOneOf.
@@ -4228,7 +4228,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseSensateFocus.
   ///
   /// In de, this message translates to:
-  /// **'KURS 7 • SENSATE FOCUS'**
+  /// **'KURS 17 • SENSATE FOCUS'**
   String get dailySimmeringCardCourseSensateFocus;
 
   /// No description provided for @dailySimmeringCardAgreeTodayYouMayHug.
@@ -4264,7 +4264,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseFantasies.
   ///
   /// In de, this message translates to:
-  /// **'KURS 12 • FANTASIEN'**
+  /// **'KURS 23 • FANTASIEN'**
   String get dailySimmeringCardCourseFantasies;
 
   /// No description provided for @dailySimmeringCardTodayCasuallyAndWithA.
@@ -4282,7 +4282,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCoursesBody.
   ///
   /// In de, this message translates to:
-  /// **'KURS 3 & 9 • SOMATIK'**
+  /// **'KURS 7 & 9 • SOMATIK'**
   String get dailySimmeringCardCoursesBody;
 
   /// No description provided for @dailySimmeringCardNoticeRightNowAreYou.
@@ -4300,7 +4300,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseRadicalBodyLove.
   ///
   /// In de, this message translates to:
-  /// **'KURS 13 • RADICAL BODY LOVE'**
+  /// **'KURS 6 • RADICAL BODY LOVE'**
   String get dailySimmeringCardCourseRadicalBodyLove;
 
   /// No description provided for @dailySimmeringCardTodayConsciouslyLetYourBelly.
@@ -4330,7 +4330,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseBodyLab.
   ///
   /// In de, this message translates to:
-  /// **'KURS 9 • SOMATISCHES LAB'**
+  /// **'KURS 19 • SOMATISCHES LAB'**
   String get dailySimmeringCardCourseBodyLab;
 
   /// No description provided for @dailySimmeringCardTodaySkipAnyTightGrip.
@@ -4348,7 +4348,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCoursesOrbiting.
   ///
   /// In de, this message translates to:
-  /// **'KURS 8 & 9 • ORBITING'**
+  /// **'KURS 18 & 9 • ORBITING'**
   String get dailySimmeringCardCoursesOrbiting;
 
   /// No description provided for @dailySimmeringCardLeaveTheHighlySensitiveTip.
@@ -4366,7 +4366,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseStayingPower.
   ///
   /// In de, this message translates to:
-  /// **'KURS 9 • AUSDAUER'**
+  /// **'KURS 19 • AUSDAUER'**
   String get dailySimmeringCardCourseStayingPower;
 
   /// No description provided for @dailySimmeringCardBringYourArousalToLevel.
@@ -4384,7 +4384,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseRecalibration.
   ///
   /// In de, this message translates to:
-  /// **'KURS 4 • REKALIBRIERUNG'**
+  /// **'KURS 10 • REKALIBRIERUNG'**
   String get dailySimmeringCardCourseRecalibration;
 
   /// No description provided for @dailySimmeringCardTakeMinutesTodayWithoutAny.
@@ -4402,7 +4402,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseMultipleOrgasms.
   ///
   /// In de, this message translates to:
-  /// **'KURS 9 • MULTI-ORGASMIE'**
+  /// **'KURS 19 • MULTI-ORGASMIE'**
   String get dailySimmeringCardCourseMultipleOrgasms;
 
   /// No description provided for @dailySimmeringCardObserveYourReflexesWhenArousal.
@@ -4420,7 +4420,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseFascia.
   ///
   /// In de, this message translates to:
-  /// **'KURS 3 • FASZIEN'**
+  /// **'KURS 7 • FASZIEN'**
   String get dailySimmeringCardCourseFascia;
 
   /// No description provided for @dailySimmeringCardGoIntoADeepSquat.
@@ -4438,7 +4438,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseSelfCompassion.
   ///
   /// In de, this message translates to:
-  /// **'KURS 13 • SELBSTMITGEFÜHL'**
+  /// **'KURS 6 • SELBSTMITGEFÜHL'**
   String get dailySimmeringCardCourseSelfCompassion;
 
   /// No description provided for @dailySimmeringCardLookAtYourBodyToday.

@@ -85,7 +85,7 @@ Learning together: share lessons and exchange answers to the reflection question
 
 ## Spicy mode (18+)
 
-You switch on spicy mode in your profile, only after confirming that you're an adult. It unlocks: the levels “Spicy” and “Extra spicy” in the body journey and the shared evening, courses 23 and 24, spicy lessons in other courses and additional questions in the yes/maybe/no list. The app also takes on a red look.
+You switch on spicy mode in your profile, only after confirming that you're an adult. It unlocks: the levels “Spicy” and “Extra spicy” in the body journey and the shared evening, courses 26 and 27, spicy lessons in other courses and additional questions in the yes/maybe/no list. The app also takes on a red look.
 
 In the couple chat you get hot sparks, messages that disappear after reading, and photos that travel encrypted directly from phone to phone and can be viewed only once. To set up the connection, a public helper server (STUN, run by Google) sees your IP addresses, but never the photo. Photos are still experimental: on some mobile networks the direct connection can't be made. If you like, you'll find a photo idea there every day, entirely optional and gone at once with “Not today”. Use the chat menu to invite your partner to spicy mode.
 

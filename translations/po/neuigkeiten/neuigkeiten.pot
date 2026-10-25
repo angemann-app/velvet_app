@@ -550,3 +550,27 @@ msgstr ""
 msgctxt "news:40#0.text"
 msgid "Wünsche, Fehler und falsch ausgesprochene Wörter kannst du jetzt direkt aus der App schicken: anonym und verschlüsselt, ohne Konto. Zu finden im Profil und in der Anleitung, für die Aussprache direkt unter jedem Player."
 msgstr ""
+
+#. Was ist neu in Version 4.8.0-beta.1
+#. EN: New course: Toys
+msgctxt "news:41#0.titel"
+msgid "Neuer Kurs: Toys"
+msgstr ""
+
+#. Was ist neu in Version 4.8.0-beta.1
+#. EN: Course 25 shows what is out there, what to look for in material, care and safety, how to talk about it together and (in spicy mode) how to start alone and as a couple. With German recordings; English recordings follow with a later audio package.
+msgctxt "news:41#0.text"
+msgid "Kurs 25 zeigt, was es gibt, worauf du bei Material, Pflege und Sicherheit achtest, wie ihr darüber sprecht und (im Spicy-Modus) wie du allein und zu zweit anfängst. Mit Aufnahmen auf Deutsch."
+msgstr ""
+
+#. Was ist neu in Version 4.8.0-beta.1
+#. EN: Courses reordered
+msgctxt "news:41#1.titel"
+msgid "Kurse neu geordnet"
+msgstr ""
+
+#. Was ist neu in Version 4.8.0-beta.1
+#. EN: The courses are now sorted by topic and renumbered: Foundations, Body and self, Relationship and everyday life, Touch and practice, Fantasy and play. Your progress is kept.
+msgctxt "news:41#1.text"
+msgid "Die Kurse sind jetzt nach Themen sortiert und neu nummeriert: Grundlagen, Körper und Selbst, Beziehung und Alltag, Berührung und Praxis, Fantasie und Spiel. Dein Fortschritt bleibt erhalten."
+msgstr ""

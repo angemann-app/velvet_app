@@ -47,17 +47,16 @@ English recordings are an optional download inside the app; until then, your pho
 ## Features
 
 ### Courses and lessons
-- **26 courses with 116 lessons** (23 of them only in spicy mode):
-  - *Foundations* (courses 1–7): the two-pedal model, the spectator trap, pelvic floor, communication, sensate focus.
-  - *Practice* (courses 8–17): touch for her and for him, voice and breath, anticipation and slowness, fantasies,
-    intimate massage, prostate and perineum, relaxed positions, scenarios for two.
-  - *Going deeper* (courses 18–22): exploring yourself, mismatched desire, life phases
-    (birth, menopause, ageing, illness), pain, shame and performance pressure, the anatomy of arousal.
-  - *Course 25:* Every body is beautiful and sexy, including lingerie for every body.
-  - *Course 26:* Everyday eroticism, from small gestures and rituals to lingerie and striptease.
-  - *Spicy* (courses 23–24, spicy mode only): Spicy solo and Spicy for two.
+- **27 courses with 124 lessons** (25 of them only in spicy mode):
+  - *Foundations* (courses 1–6): the two-pedal model, anatomy of arousal, every body is beautiful, the spectator trap, pain, shame and performance pressure, presence and self-compassion.
+  - *Body and self* (courses 7–11): pelvic floor, exploring yourself, female desire, resetting stimuli, prostate and perineum.
+  - *Relationship and everyday life* (courses 12–16): breaking the silence, mismatched desire, life phases
+    (birth, menopause, ageing, illness), anticipation and slowness, everyday eroticism.
+  - *Touch and practice* (courses 17–22): the couple lab, touch for her and for him, intimate massage, voice and breath, relaxed positions.
+  - *Fantasy and play* (courses 23–25): fantasies and surrender, scenarios for two, toys.
+  - *Spicy* (courses 26–27, spicy mode only): Spicy solo and Spicy for two.
 - **Spicy mode (18+, optional):** switched on in the profile, it unlocks two levels for the guided audios
-  (spicy and very spicy), two courses of its own, spicy lessons in nine more courses, 13 more
+  (spicy and very spicy), two courses of its own, spicy lessons in ten more courses, 13 more
   yes/maybe/no items, and in the couple chat hot sparks, disappearing messages, photos and an optional
   photo idea of the day. Without it, none of this is visible.
 - Every lesson follows the same structure: **Why it works** · **The exercise** ·

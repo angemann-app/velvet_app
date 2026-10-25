@@ -2412,7 +2412,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dailySimmeringCardTheSecondWallTease => 'The 45-second wall tease';
 
   @override
-  String get dailySimmeringCardCourseTeasing => 'COURSE 11 • TEASING';
+  String get dailySimmeringCardCourseTeasing => 'COURSE 15 • TEASING';
 
   @override
   String get dailySimmeringCardTodayBrieflyPressYourPartner =>
@@ -2424,7 +2424,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardCourseAudiblePleasure =>
-      'COURSE 10 • AUDIBLE PLEASURE';
+      'COURSE 21 • AUDIBLE PLEASURE';
 
   @override
   String get dailySimmeringCardPlaceYourFingersOnYour =>
@@ -2434,7 +2434,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dailySimmeringCardThePmAnticipation => 'The 3 pm anticipation';
 
   @override
-  String get dailySimmeringCardCourseAnticipation => 'COURSE 11 • ANTICIPATION';
+  String get dailySimmeringCardCourseAnticipation => 'COURSE 15 • ANTICIPATION';
 
   @override
   String get dailySimmeringCardThisAfternoonSendYourPartner =>
@@ -2445,7 +2445,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Slow motion while pouring';
 
   @override
-  String get dailySimmeringCardCourseSlowSex => 'COURSE 11 • SLOW SEX';
+  String get dailySimmeringCardCourseSlowSex => 'COURSE 15 • SLOW SEX';
 
   @override
   String get dailySimmeringCardTodayTouchYourPartnerDuring =>
@@ -2456,7 +2456,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'The 15-minute silk scarf ritual';
 
   @override
-  String get dailySimmeringCardCourseSurrender => 'COURSE 12 • SURRENDER';
+  String get dailySimmeringCardCourseSurrender => 'COURSE 23 • SURRENDER';
 
   @override
   String get dailySimmeringCardAgreeForTonightOneOf =>
@@ -2467,7 +2467,8 @@ class AppLocalizationsEn extends AppLocalizations {
       'The strict no-penetration rule';
 
   @override
-  String get dailySimmeringCardCourseSensateFocus => 'COURSE 7 • SENSATE FOCUS';
+  String get dailySimmeringCardCourseSensateFocus =>
+      'COURSE 17 • SENSATE FOCUS';
 
   @override
   String get dailySimmeringCardAgreeTodayYouMayHug =>
@@ -2490,7 +2491,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'The charming dream bridge';
 
   @override
-  String get dailySimmeringCardCourseFantasies => 'COURSE 12 • FANTASIES';
+  String get dailySimmeringCardCourseFantasies => 'COURSE 23 • FANTASIES';
 
   @override
   String get dailySimmeringCardTodayCasuallyAndWithA =>
@@ -2513,7 +2514,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardCourseRadicalBodyLove =>
-      'COURSE 13 • RADICAL BODY LOVE';
+      'COURSE 6 • RADICAL BODY LOVE';
 
   @override
   String get dailySimmeringCardTodayConsciouslyLetYourBelly =>
@@ -2532,7 +2533,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Broad palm touch with warm oil';
 
   @override
-  String get dailySimmeringCardCourseBodyLab => 'COURSE 9 • BODY LAB';
+  String get dailySimmeringCardCourseBodyLab => 'COURSE 19 • BODY LAB';
 
   @override
   String get dailySimmeringCardTodaySkipAnyTightGrip =>
@@ -2554,7 +2555,8 @@ class AppLocalizationsEn extends AppLocalizations {
       'Plateau surfing at level 7';
 
   @override
-  String get dailySimmeringCardCourseStayingPower => 'COURSE 9 • STAYING POWER';
+  String get dailySimmeringCardCourseStayingPower =>
+      'COURSE 19 • STAYING POWER';
 
   @override
   String get dailySimmeringCardBringYourArousalToLevel =>
@@ -2565,7 +2567,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardCourseRecalibration =>
-      'COURSE 4 • RECALIBRATION';
+      'COURSE 10 • RECALIBRATION';
 
   @override
   String get dailySimmeringCardTakeMinutesTodayWithoutAny =>
@@ -2577,7 +2579,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardCourseMultipleOrgasms =>
-      'COURSE 9 • MULTIPLE ORGASMS';
+      'COURSE 19 • MULTIPLE ORGASMS';
 
   @override
   String get dailySimmeringCardObserveYourReflexesWhenArousal =>
@@ -2588,7 +2590,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Zero-pressure squat (malasana)';
 
   @override
-  String get dailySimmeringCardCourseFascia => 'COURSE 3 • FASCIA';
+  String get dailySimmeringCardCourseFascia => 'COURSE 7 • FASCIA';
 
   @override
   String get dailySimmeringCardGoIntoADeepSquat =>
@@ -2600,7 +2602,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardCourseSelfCompassion =>
-      'COURSE 13 • SELF-COMPASSION';
+      'COURSE 6 • SELF-COMPASSION';
 
   @override
   String get dailySimmeringCardLookAtYourBodyToday =>

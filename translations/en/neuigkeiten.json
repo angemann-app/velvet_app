@@ -315,6 +315,22 @@
           "text": "You can now send wishes, bugs and mispronounced words straight from the app: anonymous and encrypted, no account needed. Find it in your profile and in the guide, and for pronunciation right below every player."
         }
       ]
+    },
+    {
+      "build": 41,
+      "version": "4.8.0-beta.1",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "New course: Toys",
+          "text": "Course 25 shows what is out there, what to look for in material, care and safety, how to talk about it together and (in spicy mode) how to start alone and as a couple. With German recordings; English recordings follow with a later audio package."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Courses reordered",
+          "text": "The courses are now sorted by topic and renumbered: Foundations, Body and self, Relationship and everyday life, Touch and practice, Fantasy and play. Your progress is kept."
+        }
+      ]
     }
   ],
   "_source": {
@@ -332,6 +348,7 @@
     "news:37": "e2c97176e6c8dba5",
     "news:38": "448bdd315e1547df",
     "news:39": "04594a31ae0808e7",
-    "news:40": "dfabcaebe3b5aede"
+    "news:40": "dfabcaebe3b5aede",
+    "news:41": "cb5fe8cd7cc617f9"
   }
 }
