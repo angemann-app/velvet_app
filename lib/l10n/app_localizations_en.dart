@@ -3158,4 +3158,19 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get anleitungEinleitung =>
       'Here you\'ll find every part of the app briefly explained. Tap a section to expand it.';
+
+  @override
+  String get fotoIdeeTitel => 'PHOTO IDEA FOR TODAY';
+
+  @override
+  String get fotoIdeeHinweis => 'Entirely optional. Safest without your face.';
+
+  @override
+  String get fotoIdeeAndere => 'Another idea';
+
+  @override
+  String get fotoIdeeHeuteNicht => 'Not today';
+
+  @override
+  String get fotoIdeenAnzeigen => 'Show photo ideas';
 }

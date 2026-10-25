@@ -1496,5 +1496,10 @@
   "fotoAnsichtHinweis": "Nur jetzt sichtbar. Beim Schließen ist das Foto gelöscht.",
   "fotoWeg": "Dieses Foto ist nicht mehr da.",
   "anleitungTitel": "So funktioniert VelvetPulse",
-  "anleitungEinleitung": "Hier findest du alle Bereiche der App kurz erklärt. Tippe auf einen Abschnitt, um ihn aufzuklappen."
+  "anleitungEinleitung": "Hier findest du alle Bereiche der App kurz erklärt. Tippe auf einen Abschnitt, um ihn aufzuklappen.",
+  "fotoIdeeTitel": "FOTO-IDEE FÜR HEUTE",
+  "fotoIdeeHinweis": "Ganz freiwillig. Ohne Gesicht ist am sichersten.",
+  "fotoIdeeAndere": "Andere Idee",
+  "fotoIdeeHeuteNicht": "Heute nicht",
+  "fotoIdeenAnzeigen": "Foto-Ideen anzeigen"
 }

@@ -16,6 +16,7 @@ import 'paar_abend_screen.dart';
 import '../../widgets/gefuehrte_audios.dart';
 import '../../widgets/spicy_modus_dialog.dart';
 import '../../services/foto_kanal.dart';
+import '../../services/foto_ideen.dart';
 import 'package:image_picker/image_picker.dart';
 import 'foto_ansicht.dart';
 import '../../services/storage_service.dart';
@@ -63,12 +64,19 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   bool _verschwinden = false;
   Timer? _aufraeumTimer;
 
+  /// Für den Haken im Menü; die Karte selbst fragt FotoIdeen direkt.
+  bool _ideenAn = true;
+
   @override
   void initState() {
     super.initState();
     _subTabController = TabController(length: 2, vsync: this);
     _nostr.init().then((_) => FotoKanal.instanz.start());
     _aufraeumTimer = Timer.periodic(const Duration(seconds: 20), (_) => _nostr.aufraeumen());
+    FotoIdeen.an().then((an) {
+      if (mounted) setState(() => _ideenAn = an);
+    });
+    FotoIdeen.stand.addListener(_ideenStand);
     MessageNotifier.clear();
     WidgetsBinding.instance.addObserver(this);
     _subTabController.addListener(_pruefeGelesen);
@@ -94,6 +102,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   @override
   void dispose() {
     _aufraeumTimer?.cancel();
+    FotoIdeen.stand.removeListener(_ideenStand);
     FotoKanal.instanz.stop();
     WidgetsBinding.instance.removeObserver(this);
     _nostr.paarKanalSichtbar.removeListener(_pruefeGelesen);
@@ -122,6 +131,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   }
 
   bool get _verschwindenAktiv => _verschwinden && StorageService.spicyMode();
+
+  void _ideenStand() => FotoIdeen.an().then((an) {
+        if (mounted) setState(() => _ideenAn = an);
+      });
 
   /// Foto auswählen, verschlüsseln und direkt ans Gegenüber schicken (oder warten lassen).
   Future<void> _fotoSenden() async {
@@ -628,12 +641,16 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                       _nostr.setReadReceiptsEnabled(!_nostr.readReceiptsEnabled.value);
                     case 'spicy':
                       _spicyEinladen();
+                    case 'ideen':
+                      FotoIdeen.setzen(!_ideenAn);
                   }
                 },
                 itemBuilder: (_) => [
                   // Einladen kann nur, wer den Spicy-Modus selbst eingeschaltet hat.
-                  if (StorageService.spicyMode())
+                  if (StorageService.spicyMode()) ...[
                     PopupMenuItem(value: 'spicy', child: Text(t.spicyEinladen)),
+                    CheckedPopupMenuItem(value: 'ideen', checked: _ideenAn, child: Text(t.fotoIdeenAnzeigen)),
+                  ],
                   PopupMenuItem(value: 'profile', child: Text(t.couplesChannelPartnerSNameGender)),
                   CheckedPopupMenuItem(
                     value: 'read',
@@ -653,9 +670,54 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     );
   }
 
+  /// Foto-Idee des Tages: nur im Spicy-Modus, mit „Heute nicht“ sofort weg, ganz abschaltbar im Menü.
+  Widget _fotoIdee() {
+    if (!StorageService.spicyMode()) return const SizedBox.shrink();
+    return ValueListenableBuilder<int>(
+      valueListenable: FotoIdeen.stand,
+      builder: (context, _, __) => FutureBuilder<String?>(
+        future: FotoIdeen.heute(),
+        builder: (context, snap) {
+          final idee = snap.data;
+          if (idee == null) return const SizedBox.shrink();
+          return Container(
+            margin: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+            padding: const EdgeInsets.fromLTRB(14, 10, 6, 6),
+            decoration: BoxDecoration(
+              color: AppTheme.rose.withValues(alpha: 0.10),
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(color: AppTheme.rose.withValues(alpha: 0.4)),
+            ),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Row(children: [
+                const Icon(Icons.photo_camera_outlined, size: 16, color: AppTheme.rose),
+                const SizedBox(width: 6),
+                Text(t.fotoIdeeTitel,
+                    style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, color: AppTheme.rose)),
+              ]),
+              const SizedBox(height: 4),
+              Text(idee, style: const TextStyle(fontSize: 14, color: AppTheme.textPrimary, fontWeight: FontWeight.w600)),
+              Text(t.fotoIdeeHinweis, style: const TextStyle(fontSize: 11, color: AppTheme.textMuted)),
+              Wrap(spacing: 0, children: [
+                TextButton(onPressed: _fotoSenden, child: Text(t.fotoSenden)),
+                TextButton(onPressed: () => FotoIdeen.andereIdee(), child: Text(t.fotoIdeeAndere)),
+                TextButton(
+                  onPressed: () => FotoIdeen.heuteNicht(),
+                  style: TextButton.styleFrom(foregroundColor: AppTheme.textMuted),
+                  child: Text(t.fotoIdeeHeuteNicht),
+                ),
+              ]),
+            ]),
+          );
+        },
+      ),
+    );
+  }
+
   Widget _buildMessagesTab() {
     return Column(
       children: [
+        _fotoIdee(),
         Expanded(child: _buildChatStream()),
         _buildSparkBar(),
         _buildChatInputBar(),

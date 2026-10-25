@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import '../models/content_models.dart';
+import 'foto_ideen.dart';
 import 'listen_uebersetzung.dart';
 import 'sprache.dart';
 
@@ -10,6 +11,7 @@ class DataService {
   /// Nach einem Sprachwechsel: Inhalte in der neuen Sprache laden.
   static Future<VelvetDatabase> neuLaden() {
     _cachedDatabase = null;
+    FotoIdeen.vergessen();
     return loadDatabase();
   }
 

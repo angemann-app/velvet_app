@@ -3172,4 +3172,20 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get anleitungEinleitung =>
       'Hier findest du alle Bereiche der App kurz erklärt. Tippe auf einen Abschnitt, um ihn aufzuklappen.';
+
+  @override
+  String get fotoIdeeTitel => 'FOTO-IDEE FÜR HEUTE';
+
+  @override
+  String get fotoIdeeHinweis =>
+      'Ganz freiwillig. Ohne Gesicht ist am sichersten.';
+
+  @override
+  String get fotoIdeeAndere => 'Andere Idee';
+
+  @override
+  String get fotoIdeeHeuteNicht => 'Heute nicht';
+
+  @override
+  String get fotoIdeenAnzeigen => 'Foto-Ideen anzeigen';
 }

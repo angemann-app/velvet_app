@@ -877,5 +877,10 @@
   "fotoAnsichtHinweis": "Visible only now. When you close it, the photo is deleted.",
   "fotoWeg": "This photo is no longer available.",
   "anleitungTitel": "How VelvetPulse works",
-  "anleitungEinleitung": "Here you'll find every part of the app briefly explained. Tap a section to expand it."
+  "anleitungEinleitung": "Here you'll find every part of the app briefly explained. Tap a section to expand it.",
+  "fotoIdeeTitel": "PHOTO IDEA FOR TODAY",
+  "fotoIdeeHinweis": "Entirely optional. Safest without your face.",
+  "fotoIdeeAndere": "Another idea",
+  "fotoIdeeHeuteNicht": "Not today",
+  "fotoIdeenAnzeigen": "Show photo ideas"
 }

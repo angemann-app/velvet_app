@@ -5384,6 +5384,36 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Hier findest du alle Bereiche der App kurz erklärt. Tippe auf einen Abschnitt, um ihn aufzuklappen.'**
   String get anleitungEinleitung;
+
+  /// No description provided for @fotoIdeeTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'FOTO-IDEE FÜR HEUTE'**
+  String get fotoIdeeTitel;
+
+  /// No description provided for @fotoIdeeHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Ganz freiwillig. Ohne Gesicht ist am sichersten.'**
+  String get fotoIdeeHinweis;
+
+  /// No description provided for @fotoIdeeAndere.
+  ///
+  /// In de, this message translates to:
+  /// **'Andere Idee'**
+  String get fotoIdeeAndere;
+
+  /// No description provided for @fotoIdeeHeuteNicht.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute nicht'**
+  String get fotoIdeeHeuteNicht;
+
+  /// No description provided for @fotoIdeenAnzeigen.
+  ///
+  /// In de, this message translates to:
+  /// **'Foto-Ideen anzeigen'**
+  String get fotoIdeenAnzeigen;
 }
 
 class _AppLocalizationsDelegate
