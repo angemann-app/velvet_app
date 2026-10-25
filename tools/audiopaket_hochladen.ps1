@@ -5,7 +5,7 @@
 # Ältere Pakete (audio-en-v1 …) nie löschen: ältere App-Versionen laden fest von ihrer Adresse.
 #
 #   powershell -ExecutionPolicy Bypass -File tools\audiopaket_hochladen.ps1
-param([string] $Tag = "audio-en-v2")
+param([string] $Tag = "audio-en-v3")
 $ErrorActionPreference = "Stop"
 $root = Split-Path $PSScriptRoot
 Set-Location $root

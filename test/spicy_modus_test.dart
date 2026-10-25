@@ -93,10 +93,10 @@ void main() {
     Course alltag() => db.courses.firstWhere((c) => c.id == 'course_everyday_eros');
     await starten({});
     expect(alltag().lessons.map((l) => l.id), isNot(contains('alltag_6')));
-    expect(alltag().lessons, hasLength(5));
+    expect(alltag().lessons, hasLength(7));
     await StorageService.setSpicyMode(true);
-    expect(alltag().lessons, hasLength(8));
-    expect(alltag().lessons.where((l) => l.spicy).map((l) => l.id), ['alltag_6', 'alltag_7', 'alltag_8']);
+    expect(alltag().lessons, hasLength(11));
+    expect(alltag().lessons.where((l) => l.spicy).map((l) => l.id), ['alltag_6', 'alltag_7', 'alltag_8', 'alltag_10']);
   });
 
   test('Spicy-Fragen verweisen nur auf Lektionen, die es gibt', () {

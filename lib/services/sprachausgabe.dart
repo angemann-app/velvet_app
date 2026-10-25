@@ -90,7 +90,7 @@ class AudioPaket {
 
   /// Paketversion, die diese App-Version erwartet (tools/generate_audio_en.py, VERSION).
   /// Jede Version enthält alles aus der vorigen; ältere Releases bleiben für ältere App-Versionen online.
-  static const int version = 2;
+  static const int version = 3;
 
   /// Liegt als eigenes Release (Tag ohne „+Build“, wird von der Update-Suche nie gewählt).
   static const String paketUrl =

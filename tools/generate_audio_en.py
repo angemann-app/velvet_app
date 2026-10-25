@@ -28,7 +28,8 @@ ZIEL = ROOT / "build" / "audio_en"
 PAKET = ROOT / "build" / "velvetpulse-audio-en.zip"
 # Paketversion: muss zu AudioPaket.version in lib/services/sprachausgabe.dart passen.
 # 2: Spicy-Bausteine und Kurse 23/24 dazu (Aufnahmen aus 1 bleiben, es wird nur ergänzt).
-VERSION = "2"
+# 3: wildere Spicy-Bausteine, Kurse 25/26, Spicy-Lektionen; geänderte Texte werden neu eingesprochen.
+VERSION = "3"
 STIMMEN = {"victoria": "af_heart", "martin": "am_michael"}
 SR = 24000
 
@@ -67,53 +68,84 @@ def sprechtext(lesson):
     return (f"{lesson['title']}.\n\n" + "\n".join(zeilen)).replace("&", "and")
 
 
-def aufnehmen(engine, text, name, ziel, pause=True):
-    """Spricht ein, falls die Datei noch fehlt. Gibt die Länge in ms zurück (oder None, wenn vorhanden)."""
-    if ziel.exists():
-        return None
-    ziel.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory() as tmp:
-        wav = Path(tmp) / "x.wav"
-        ms = engine.wav(text, name, wav, pause=pause)
-        de.to_opus(wav, ziel)
-    return ms
+# Merkt sich pro Aufnahme eine Prüfsumme über Text, Stimme und Tempo: Ändert sich ein Text, wird neu
+# eingesprochen. Liegt neben dem Paket, nicht darin.
+TEXTE = ROOT / "build" / "audio_en_texte.json"
+# Stand, aus dem die Aufnahmen von Paket 1 und 2 stammen (für Dateien, die noch keine Prüfsumme haben).
+GRUNDSTAND = "6751a39"
 
 
-def bausteine(engine, quelle, ordner):
-    bloecke = json.loads((EN / quelle).read_text(encoding="utf-8"))["bausteine"]
-    dauer_pfad = ZIEL / "audio" / ordner / "dauer.json"
-    dauer = json.loads(dauer_pfad.read_text(encoding="utf-8")) if dauer_pfad.exists() else {}
-    for name in STIMMEN:
-        for b in bloecke:
-            ziel = ZIEL / "audio" / ordner / f"{name}_{b['id']}.opus"
-            ms = aufnehmen(engine, b["text"], name, ziel, pause=False)
-            if ms is not None:
-                dauer[ziel.stem] = ms
-                dauer_pfad.write_text(json.dumps(dict(sorted(dauer.items())), indent=1), encoding="utf-8")
-                print(f"{ordner}: {ziel.name}", flush=True)
+def pruefsumme(text, name, pause):
+    return hashlib.sha256(f"{name}|{de.SPEED}|{pause}|{text}".encode("utf-8")).hexdigest()[:16]
 
 
-def alles():
-    engine = Englisch()
+def auftraege(lesen):
+    """Alle Aufnahmen des Pakets: {relativer Pfad: (Text, Stimme, Pause)}. [lesen] liefert eine Datei als Text."""
+    auf = {}
     # Ansagen des Beckenboden-Timers: Texte aus der englischen Oberfläche (lib/l10n/app_en.arb, cue*)
-    arb = json.loads((ROOT / "lib/l10n/app_en.arb").read_text(encoding="utf-8"))
+    arb = json.loads(lesen("lib/l10n/app_en.arb"))
     cues = {re.sub(r"(?<!^)([A-Z])", r"_\1", k[3:]).lower(): v for k, v in arb.items() if k.startswith("cue")}
     namen = {"einatmen_weit", "weich_bleiben", "anspannen", "halten", "loslassen", "nachspueren", "an", "los",
              "welle", "seufzen", "start", "fertig"}
     assert set(cues) == namen, sorted(set(cues) ^ namen)
     for name in STIMMEN:
         for cue, text in cues.items():
-            if aufnehmen(engine, text, name, ZIEL / "audio" / "cues" / f"{name}_{cue}.opus", pause=False) is not None:
-                print(f"cue: {name}_{cue}", flush=True)
-    bausteine(engine, "paar_abend.json", "paar")
-    bausteine(engine, "selbst_reise.json", "selbst")
-    data = json.loads((EN / "velvet_content.json").read_text(encoding="utf-8"))
-    for kurs in data["courses"]:
+            auf[f"cues/{name}_{cue}.opus"] = (text, name, False)
+    for quelle, ordner in (("paar_abend.json", "paar"), ("selbst_reise.json", "selbst")):
+        for name in STIMMEN:
+            for b in json.loads(lesen(f"translations/en/{quelle}"))["bausteine"]:
+                auf[f"{ordner}/{name}_{b['id']}.opus"] = (b["text"], name, False)
+    for kurs in json.loads(lesen("translations/en/velvet_content.json"))["courses"]:
         for lesson in kurs["lessons"]:
-            name = de.voice_for(kurs, lesson)
-            ziel = ZIEL / "audio" / f"{lesson['id']}.opus"
-            if aufnehmen(engine, sprechtext(lesson), name, ziel) is not None:
-                print(f"lektion: {lesson['id']} ({name})", flush=True)
+            auf[f"{lesson['id']}.opus"] = (sprechtext(lesson), de.voice_for(kurs, lesson), True)
+    return auf
+
+
+def grundstand():
+    """Prüfsummen der Aufnahmen, wie sie aus dem Stand GRUNDSTAND entstanden sind."""
+    import subprocess
+
+    def lesen(pfad):
+        return subprocess.run(["git", "show", f"{GRUNDSTAND}:{pfad}"], cwd=ROOT, capture_output=True,
+                              check=True).stdout.decode("utf-8")
+    return {pfad: pruefsumme(*a) for pfad, a in auftraege(lesen).items()}
+
+
+def alles():
+    engine = Englisch()
+    audio = ZIEL / "audio"
+    auf = auftraege(lambda pfad: (ROOT / pfad).read_text(encoding="utf-8"))
+    texte = json.loads(TEXTE.read_text(encoding="utf-8")) if TEXTE.exists() else grundstand()
+    # Aufnahmen, deren Text es nicht mehr gibt, kommen raus.
+    for f in audio.rglob("*.opus"):
+        if f.relative_to(audio).as_posix() not in auf:
+            f.unlink()
+            print(f"entfernt: {f.relative_to(audio).as_posix()}", flush=True)
+    dauern = {}
+    for ordner in ("paar", "selbst"):
+        p = audio / ordner / "dauer.json"
+        dauern[ordner] = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+        dauern[ordner] = {k: v for k, v in dauern[ordner].items() if f"{ordner}/{k}.opus" in auf}
+    offen = [p for p, a in auf.items() if not (audio / p).exists() or texte.get(p) != pruefsumme(*a)]
+    print(f"{len(offen)} von {len(auf)} Aufnahmen neu", flush=True)
+    for i, pfad in enumerate(offen, 1):
+        text, name, pause = auf[pfad]
+        ziel = audio / pfad
+        ziel.parent.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory() as tmp:
+            wav = Path(tmp) / "x.wav"
+            ms = engine.wav(text, name, wav, pause=pause)
+            de.to_opus(wav, ziel)
+        texte[pfad] = pruefsumme(text, name, pause)
+        TEXTE.write_text(json.dumps(dict(sorted(texte.items())), indent=1), encoding="utf-8")
+        ordner = pfad.split("/")[0]
+        if ordner in dauern:
+            dauern[ordner][ziel.stem] = ms
+        print(f"[{i}/{len(offen)}] {pfad} ({name})", flush=True)
+    for ordner, dauer in dauern.items():
+        (audio / ordner / "dauer.json").write_text(json.dumps(dict(sorted(dauer.items())), indent=1), encoding="utf-8")
+    TEXTE.write_text(json.dumps(dict(sorted({p: texte[p] for p in auf if p in texte}.items())), indent=1),
+                     encoding="utf-8")
     packen()
 
 
