@@ -5444,6 +5444,18 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Später'**
   String get fotoSpaeter;
+
+  /// No description provided for @fotoExperimentell.
+  ///
+  /// In de, this message translates to:
+  /// **'Experimentell'**
+  String get fotoExperimentell;
+
+  /// No description provided for @fotoExperimentellHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Fotos sind neu: In manchen Mobilfunknetzen kommt die direkte Verbindung noch nicht zustande.'**
+  String get fotoExperimentellHinweis;
 }
 
 class _AppLocalizationsDelegate

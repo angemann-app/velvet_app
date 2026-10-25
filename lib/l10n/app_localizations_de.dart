@@ -3205,4 +3205,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get fotoSpaeter => 'Später';
+
+  @override
+  String get fotoExperimentell => 'Experimentell';
+
+  @override
+  String get fotoExperimentellHinweis =>
+      'Fotos sind neu: In manchen Mobilfunknetzen kommt die direkte Verbindung noch nicht zustande.';
 }

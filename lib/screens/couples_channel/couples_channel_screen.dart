@@ -143,6 +143,26 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       backgroundColor: AppTheme.surface,
       builder: (context) => SafeArea(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
+          // Direkte Verbindung ohne Relais-Server: klappt noch nicht in jedem Netz.
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
+            child: Row(children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                decoration: BoxDecoration(
+                  color: AppTheme.rose.withValues(alpha: 0.15),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Text(t.fotoExperimentell,
+                    style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: AppTheme.rose)),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(t.fotoExperimentellHinweis,
+                    style: const TextStyle(fontSize: 12, color: AppTheme.textMuted, height: 1.4)),
+              ),
+            ]),
+          ),
           ListTile(
             leading: const Icon(Icons.photo_camera_outlined),
             title: Text(t.fotoKamera),

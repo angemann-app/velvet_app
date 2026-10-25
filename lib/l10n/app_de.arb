@@ -1506,5 +1506,7 @@
   "fotoAlleinTitel": "Bist du allein?",
   "fotoAlleinText": "Das Foto lässt sich nur einmal ansehen. Schau es dir am besten an, wenn du allein bist und dir niemand über die Schulter schaut.",
   "fotoJetztAnsehen": "Jetzt ansehen",
-  "fotoSpaeter": "Später"
+  "fotoSpaeter": "Später",
+  "fotoExperimentell": "Experimentell",
+  "fotoExperimentellHinweis": "Fotos sind neu: In manchen Mobilfunknetzen kommt die direkte Verbindung noch nicht zustande."
 }

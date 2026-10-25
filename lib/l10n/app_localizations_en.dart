@@ -3190,4 +3190,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get fotoSpaeter => 'Later';
+
+  @override
+  String get fotoExperimentell => 'Experimental';
+
+  @override
+  String get fotoExperimentellHinweis =>
+      'Photos are new: on some mobile networks the direct connection can\'t be made yet.';
 }

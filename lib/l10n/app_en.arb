@@ -887,5 +887,7 @@
   "fotoAlleinTitel": "Are you alone?",
   "fotoAlleinText": "The photo can be viewed only once. It's best to look at it when you're alone and nobody is looking over your shoulder.",
   "fotoJetztAnsehen": "View now",
-  "fotoSpaeter": "Later"
+  "fotoSpaeter": "Later",
+  "fotoExperimentell": "Experimental",
+  "fotoExperimentellHinweis": "Photos are new: on some mobile networks the direct connection can't be made yet."
 }
