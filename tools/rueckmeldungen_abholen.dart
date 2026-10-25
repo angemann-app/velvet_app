@@ -1,6 +1,7 @@
 // Holt die Rückmeldungen aus dem Rückmelde-Postfach (lib/services/rueckmeldung.dart) und entschlüsselt sie.
 // Der private Schlüssel liegt nur hier: C:\TOOLS\velvet-feedback\feedback_key.json (tools/feedback_schluessel.dart).
-// Neue Rückmeldungen werden ausgegeben und an C:\TOOLS\velvet-feedback\rueckmeldungen.md angehängt.
+// Neue Rückmeldungen werden ausgegeben und an C:\TOOLS\velvet-feedback\rueckmeldungen.md angehängt,
+// danach öffentliche Antworten und Erwähnungen des Projekt-Profils (nur lesen).
 //
 //   C:\TOOLS\flutter\bin\dart.bat run tools/rueckmeldungen_abholen.dart          (nur neue)
 //   C:\TOOLS\flutter\bin\dart.bat run tools/rueckmeldungen_abholen.dart --alle   (alle, die die Server noch haben)
@@ -20,6 +21,9 @@ const relays = [
 ];
 const ordner = r'C:\TOOLS\velvet-feedback';
 
+/// Öffentliches Nostr-Profil des Projekts (für Antworten und Erwähnungen).
+const projektNpub = 'npub1lpcmrtc50qshs8q7l3v34wfq47z5l9fvyruxlt0pzhga3643jxlqsnrkr2';
+
 Future<void> main(List<String> args) async {
   final alle = args.contains('--alle');
   final schluessel = jsonDecode(File('$ordner\\feedback_key.json').readAsStringSync()) as Map<String, dynamic>;
@@ -30,37 +34,11 @@ Future<void> main(List<String> args) async {
     if (gesehenDatei.existsSync() && !alle) ...(jsonDecode(gesehenDatei.readAsStringSync()) as List).cast<String>(),
   };
 
-  final events = <String, Map<String, dynamic>>{};
-  await Future.wait([
-    for (final url in relays)
-      () async {
-        try {
-          final ws = await WebSocket.connect(url).timeout(const Duration(seconds: 8));
-          final fertig = Completer<void>();
-          ws.listen((raw) {
-            final m = jsonDecode(raw as String) as List;
-            if (m[0] == 'EVENT' && m[2] is Map) {
-              final ev = Map<String, dynamic>.from(m[2] as Map);
-              events[ev['id'] as String] = ev;
-            }
-            if ((m[0] == 'EOSE' || m[0] == 'CLOSED') && !fertig.isCompleted) fertig.complete();
-          }, onDone: () => fertig.isCompleted ? null : fertig.complete());
-          ws.add(jsonEncode([
-            'REQ',
-            'rueckmeldungen',
-            {
-              'kinds': [4],
-              '#p': [oeffentlich],
-              'limit': 500
-            }
-          ]));
-          await fertig.future.timeout(const Duration(seconds: 10), onTimeout: () {});
-          await ws.close();
-        } catch (e) {
-          stderr.writeln('$url: nicht erreichbar (${e.runtimeType})');
-        }
-      }(),
-  ]);
+  final events = await holen({
+    'kinds': [4],
+    '#p': [oeffentlich],
+    'limit': 500
+  });
 
   final neu = [
     for (final ev in events.values)
@@ -87,6 +65,60 @@ Future<void> main(List<String> args) async {
   if (neu.isNotEmpty && !alle) {
     File('$ordner\\rueckmeldungen.md').writeAsStringSync(protokoll.toString(), mode: FileMode.append);
   }
+  // Öffentliche Antworten und Erwähnungen am Projekt-Profil (kind 1, ohne eigene Beiträge).
+  final projekt = Nip19().decode(projektNpub)['data'] as String;
+  final erwaehnungen = [
+    for (final ev in (await holen({
+      'kinds': [1],
+      '#p': [projekt],
+      'limit': 200
+    })).values)
+      if (!gesehen.contains(ev['id']) && ev['pubkey'] != projekt) ev
+  ]..sort((a, b) => (a['created_at'] as int).compareTo(b['created_at'] as int));
+  if (erwaehnungen.isEmpty) {
+    stdout.writeln('Keine neuen öffentlichen Antworten oder Erwähnungen.');
+  } else {
+    stdout.writeln('${erwaehnungen.length} neue öffentliche Antwort(en)/Erwähnung(en):\n');
+    for (final ev in erwaehnungen) {
+      final zeit = DateTime.fromMillisecondsSinceEpoch((ev['created_at'] as int) * 1000).toLocal();
+      final von = Nip19().npubEncode(ev['pubkey'] as String);
+      stdout
+        ..writeln('## ${zeit.toIso8601String().substring(0, 16).replaceFirst('T', ' ')}  von ${von.substring(0, 16)}…  (nevent: ${ev['id']})')
+        ..writeln()
+        ..writeln(ev['content'])
+        ..writeln();
+      gesehen.add(ev['id'] as String);
+    }
+  }
+
   gesehenDatei.writeAsStringSync(jsonEncode(gesehen.toList()));
   exit(0);
+}
+
+/// Fragt alle Server mit einem Filter ab und sammelt die Events (doppelte zählen einmal).
+Future<Map<String, Map<String, dynamic>>> holen(Map<String, Object> filter) async {
+  final events = <String, Map<String, dynamic>>{};
+  await Future.wait([
+    for (final url in relays)
+      () async {
+        try {
+          final ws = await WebSocket.connect(url).timeout(const Duration(seconds: 8));
+          final fertig = Completer<void>();
+          ws.listen((raw) {
+            final m = jsonDecode(raw as String) as List;
+            if (m[0] == 'EVENT' && m[2] is Map) {
+              final ev = Map<String, dynamic>.from(m[2] as Map);
+              events[ev['id'] as String] = ev;
+            }
+            if ((m[0] == 'EOSE' || m[0] == 'CLOSED') && !fertig.isCompleted) fertig.complete();
+          }, onDone: () => fertig.isCompleted ? null : fertig.complete());
+          ws.add(jsonEncode(['REQ', 'abholen', filter]));
+          await fertig.future.timeout(const Duration(seconds: 10), onTimeout: () {});
+          await ws.close();
+        } catch (e) {
+          stderr.writeln('$url: nicht erreichbar (${e.runtimeType})');
+        }
+      }(),
+  ]);
+  return events;
 }
