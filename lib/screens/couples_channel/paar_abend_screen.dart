@@ -107,7 +107,8 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     await prefs.setString(_keyStimme, _stimme);
 
     final zuletzt = prefs.getStringList(_keyZuletzt) ?? [];
-    final ablauf = daten.planen(minuten: _minuten, tiefe: _tiefe, stimme: _stimme, zuletzt: zuletzt.toSet());
+    final ablauf = daten.planen(
+        minuten: _minuten, tiefe: _tiefe, stimme: _stimme, zuletzt: zuletzt.toSet(), empfaenger: _empfaenger());
     final neu = [for (final s in ablauf) if (s.baustein != null) s.baustein!.id];
     // Die letzten zwei Abende merken, damit der nächste möglichst andere Varianten bekommt.
     await prefs.setStringList(_keyZuletzt, [...neu, ...zuletzt].take(60).toList());
@@ -124,6 +125,18 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
       _teppichPlayer.play(AssetSource('audio/paar/klangteppich.opus')).catchError((_) {});
     }
     _abspielen(++_lauf);
+  }
+
+  /// Körper der Person, die in Runde 1 und 2 empfängt. Das Gegenüber kommt aus dem Paar-Kanal;
+  /// ist es unbekannt, nehmen wir bei Mann und Frau das andere Geschlecht an (wie bei den Coach-Fragen).
+  List<String?> _empfaenger() {
+    String? koerper(String? geschlecht) => switch (geschlecht) { 'female' => 'vulva', 'male' => 'penis', _ => null };
+    final ich = StorageService.getUserProfile()?.gender;
+    final nostr = NostrService();
+    final du = (nostr.isPaired ? nostr.partnerGenderNotifier.value : null) ??
+        switch (ich) { 'male' => 'female', 'female' => 'male', _ => null };
+    final (erste, zweite) = _ichZuerst ? (du, ich) : (ich, du);
+    return [koerper(erste), koerper(zweite)];
   }
 
   bool _abgebrochen(int lauf) => lauf != _lauf || !mounted;

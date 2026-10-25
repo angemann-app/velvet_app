@@ -215,6 +215,7 @@ COVERS = {
     23: ("bust_single_f", "crimson"),
     24: ("blindfold", "rose"),
     25: ("recline_sparks", "gold"),
+    26: ("near_kiss", "sunset"),
 }
 
 # Bereiche der Ja/Nein/Vielleicht-Liste (lib/models/yes_no_maybe_models.dart) -> (Motiv, Farbstimmung)

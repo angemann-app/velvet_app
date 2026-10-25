@@ -55,6 +55,40 @@ void main() {
     expect(nostr.messagesNotifier.value.where((m) => m.spicyEinladung), hasLength(1));
   });
 
+  test('Verschwindende Nachricht: nach dem Lesen mit Frist gelöscht und nicht wieder aufgenommen', () async {
+    final partner = keyApi.generatePrivateKey();
+    await nostr.setPartner(keyApi.getPublicKey(partner), name: 'Anna');
+    final ev = dm(partner, {'type': 'chat', 'text': 'Heute Abend 🔥', 'vanish': true});
+    await nostr.handleIncomingKind4Map(ev);
+    expect(nostr.messagesNotifier.value.single.verschwindet, isTrue);
+
+    // Ungelesen bleibt sie, auch nach Tagen.
+    await nostr.aufraeumen(jetzt: DateTime.now().add(const Duration(days: 10)));
+    expect(nostr.messagesNotifier.value, hasLength(1));
+
+    // Gelesen: Frist läuft, danach ist sie weg.
+    await nostr.markMessagesRead();
+    final ab = nostr.messagesNotifier.value.single.loeschenAb!;
+    await nostr.aufraeumen(jetzt: ab.subtract(const Duration(seconds: 1)));
+    expect(nostr.messagesNotifier.value, hasLength(1));
+    await nostr.aufraeumen(jetzt: ab);
+    expect(nostr.messagesNotifier.value, isEmpty);
+
+    // Schickt ein Server sie erneut, bleibt sie weg.
+    await nostr.handleIncomingKind4Map(ev);
+    expect(nostr.messagesNotifier.value, isEmpty);
+  });
+
+  test('Nach dem Lesen verschwinden nur die verschwindenden Nachrichten, normale bleiben', () async {
+    final partner = keyApi.generatePrivateKey();
+    await nostr.setPartner(keyApi.getPublicKey(partner), name: 'Anna');
+    await nostr.handleIncomingKind4Map(dm(partner, {'type': 'chat', 'text': 'weg', 'vanish': true}));
+    await nostr.handleIncomingKind4Map(dm(partner, {'type': 'chat', 'text': 'bleibt'}));
+    await nostr.markMessagesRead();
+    await nostr.aufraeumen(jetzt: DateTime.now().add(const Duration(minutes: 11)));
+    expect(nostr.messagesNotifier.value.map((m) => m.text), ['bleibt']);
+  });
+
   test('Ohne Kopplung und ohne Einladung werden Nachrichten Fremder ignoriert', () async {
     final stranger = keyApi.generatePrivateKey();
     await nostr.handleIncomingKind4Map(dm(stranger, {'type': 'chat', 'text': 'Hallo'}));

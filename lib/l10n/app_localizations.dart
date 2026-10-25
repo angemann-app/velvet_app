@@ -5210,6 +5210,72 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Das hat nicht geklappt. Bitte später noch einmal versuchen.'**
   String get spicyEinladungFehler;
+
+  /// No description provided for @spicyFunkeLippen.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich denk gerade an deine Lippen'**
+  String get spicyFunkeLippen;
+
+  /// No description provided for @spicyFunkeHeuteAbend.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute Abend gehörst du mir'**
+  String get spicyFunkeHeuteAbend;
+
+  /// No description provided for @spicyFunkeScharf.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich bin den ganzen Tag scharf auf dich'**
+  String get spicyFunkeScharf;
+
+  /// No description provided for @spicyFunkeSchmecken.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich will dich heute Abend schmecken'**
+  String get spicyFunkeSchmecken;
+
+  /// No description provided for @spicyFunkeNichtsDrunter.
+  ///
+  /// In de, this message translates to:
+  /// **'Zieh heute nichts drunter an'**
+  String get spicyFunkeNichtsDrunter;
+
+  /// No description provided for @spicyFunkeNackt.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich will dich nackt sehen'**
+  String get spicyFunkeNackt;
+
+  /// No description provided for @spicyFunkeFicken.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich will dich ficken. Heute.'**
+  String get spicyFunkeFicken;
+
+  /// No description provided for @spicyFunkeNachHause.
+  ///
+  /// In de, this message translates to:
+  /// **'Komm sofort nach Hause'**
+  String get spicyFunkeNachHause;
+
+  /// No description provided for @verschwindenSchalter.
+  ///
+  /// In de, this message translates to:
+  /// **'Verschwindende Nachricht'**
+  String get verschwindenSchalter;
+
+  /// No description provided for @verschwindenHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Verschwindet 10 Min. nach dem Lesen …'**
+  String get verschwindenHinweis;
+
+  /// No description provided for @verschwindetLabel.
+  ///
+  /// In de, this message translates to:
+  /// **'Verschwindet nach dem Lesen'**
+  String get verschwindetLabel;
 }
 
 class _AppLocalizationsDelegate

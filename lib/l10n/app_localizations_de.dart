@@ -3079,4 +3079,37 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get spicyEinladungFehler =>
       'Das hat nicht geklappt. Bitte später noch einmal versuchen.';
+
+  @override
+  String get spicyFunkeLippen => 'Ich denk gerade an deine Lippen';
+
+  @override
+  String get spicyFunkeHeuteAbend => 'Heute Abend gehörst du mir';
+
+  @override
+  String get spicyFunkeScharf => 'Ich bin den ganzen Tag scharf auf dich';
+
+  @override
+  String get spicyFunkeSchmecken => 'Ich will dich heute Abend schmecken';
+
+  @override
+  String get spicyFunkeNichtsDrunter => 'Zieh heute nichts drunter an';
+
+  @override
+  String get spicyFunkeNackt => 'Ich will dich nackt sehen';
+
+  @override
+  String get spicyFunkeFicken => 'Ich will dich ficken. Heute.';
+
+  @override
+  String get spicyFunkeNachHause => 'Komm sofort nach Hause';
+
+  @override
+  String get verschwindenSchalter => 'Verschwindende Nachricht';
+
+  @override
+  String get verschwindenHinweis => 'Verschwindet 10 Min. nach dem Lesen …';
+
+  @override
+  String get verschwindetLabel => 'Verschwindet nach dem Lesen';
 }

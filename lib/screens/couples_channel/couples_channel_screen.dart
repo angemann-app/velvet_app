@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -28,6 +30,18 @@ List<(String, String)> get _sparks => [
   ('🌙', t.couplesChannelNotToday),
 ];
 
+/// Heiße Funken, nur im Spicy-Modus (Spicy und Sehr spicy gemischt, der Schalter ist die Entscheidung).
+List<(String, String)> get _spicySparks => [
+  ('💋', t.spicyFunkeLippen),
+  ('😏', t.spicyFunkeHeuteAbend),
+  ('🔥', t.spicyFunkeScharf),
+  ('👅', t.spicyFunkeSchmecken),
+  ('😈', t.spicyFunkeNichtsDrunter),
+  ('🍑', t.spicyFunkeNackt),
+  ('💦', t.spicyFunkeFicken),
+  ('🏠', t.spicyFunkeNachHause),
+];
+
 class CouplesChannelScreen extends StatefulWidget {
   const CouplesChannelScreen({super.key});
 
@@ -42,11 +56,16 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   final ScrollController _scrollController = ScrollController();
   final NostrService _nostr = NostrService();
 
+  /// Nächste Nachricht oder nächster Funke verschwindet nach dem Lesen (nur im Spicy-Modus).
+  bool _verschwinden = false;
+  Timer? _aufraeumTimer;
+
   @override
   void initState() {
     super.initState();
     _subTabController = TabController(length: 2, vsync: this);
     _nostr.init();
+    _aufraeumTimer = Timer.periodic(const Duration(seconds: 20), (_) => _nostr.aufraeumen());
     MessageNotifier.clear();
     WidgetsBinding.instance.addObserver(this);
     _subTabController.addListener(_pruefeGelesen);
@@ -71,6 +90,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
 
   @override
   void dispose() {
+    _aufraeumTimer?.cancel();
     WidgetsBinding.instance.removeObserver(this);
     _nostr.paarKanalSichtbar.removeListener(_pruefeGelesen);
     _nostr.messagesNotifier.removeListener(_pruefeGelesen);
@@ -97,9 +117,11 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     );
   }
 
+  bool get _verschwindenAktiv => _verschwinden && StorageService.spicyMode();
+
   void _sendSpark(String emoji, String text) async {
     HapticFeedback.mediumImpact();
-    final success = await _nostr.sendQuickPing(emoji, text);
+    final success = await _nostr.sendQuickPing(emoji, text, verschwindet: _verschwindenAktiv);
     if (!mounted) return;
     if (success) {
       _scrollToBottom();
@@ -115,7 +137,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     _chatController.clear();
     HapticFeedback.lightImpact();
 
-    final success = await _nostr.sendChatMessage(text);
+    final success = await _nostr.sendChatMessage(text, verschwindet: _verschwindenAktiv);
     if (!mounted) return;
     if (success) {
       _scrollToBottom();
@@ -561,10 +583,11 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        itemCount: _sparks.length,
+        itemCount: _alleFunken.length,
         separatorBuilder: (_, __) => const SizedBox(width: 8),
         itemBuilder: (context, i) {
-          final (emoji, text) = _sparks[i];
+          final (emoji, text) = _alleFunken[i];
+          final heiss = i >= _sparks.length;
           return InkWell(
             onTap: () => _sendSpark(emoji, text),
             borderRadius: BorderRadius.circular(16),
@@ -572,9 +595,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               padding: const EdgeInsets.symmetric(horizontal: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: AppTheme.surfaceLight.withValues(alpha: 0.6),
+                color: heiss ? AppTheme.rose.withValues(alpha: 0.14) : AppTheme.surfaceLight.withValues(alpha: 0.6),
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: AppTheme.border),
+                border: Border.all(color: heiss ? AppTheme.rose.withValues(alpha: 0.6) : AppTheme.border),
               ),
               child: Text(
                 '$emoji  $text',
@@ -586,6 +609,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       ),
     );
   }
+
+  /// Normale Funken, im Spicy-Modus gefolgt von den heißen.
+  List<(String, String)> get _alleFunken => [..._sparks, if (StorageService.spicyMode()) ..._spicySparks];
 
   Widget _buildChatStream() {
     return ValueListenableBuilder<List<CoupleMessage>>(
@@ -721,6 +747,13 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
+                if (msg.verschwindet) ...[
+                  Icon(Icons.timer_outlined,
+                      size: 11,
+                      color: isMe ? textColor.withValues(alpha: 0.75) : AppTheme.rose,
+                      semanticLabel: t.verschwindetLabel),
+                  const SizedBox(width: 4),
+                ],
                 Text(
                   _formatTime(msg.createdAt),
                   style: TextStyle(fontSize: 10, color: isMe ? textColor.withValues(alpha: 0.65) : AppTheme.textMuted),
@@ -740,6 +773,19 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       color: AppTheme.surface,
       child: Row(
         children: [
+          if (StorageService.spicyMode()) ...[
+            IconButton(
+              onPressed: () {
+                HapticFeedback.selectionClick();
+                setState(() => _verschwinden = !_verschwinden);
+              },
+              isSelected: _verschwinden,
+              icon: const Icon(Icons.timer_outlined, color: AppTheme.textMuted),
+              selectedIcon: const Icon(Icons.timer_rounded, color: AppTheme.rose),
+              tooltip: t.verschwindenSchalter,
+            ),
+            const SizedBox(width: 2),
+          ],
           Expanded(
             child: TextField(
               controller: _chatController,
@@ -748,10 +794,12 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               textCapitalization: TextCapitalization.sentences,
               style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
               decoration: InputDecoration(
-                hintText: t.couplesChannelWriteAMessage,
-                hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 13.5),
+                hintText: _verschwindenAktiv ? t.verschwindenHinweis : t.couplesChannelWriteAMessage,
+                hintStyle: TextStyle(color: _verschwindenAktiv ? AppTheme.rose : AppTheme.textMuted, fontSize: 13.5),
                 filled: true,
-                fillColor: AppTheme.surfaceLight.withValues(alpha: 0.5),
+                fillColor: _verschwindenAktiv
+                    ? AppTheme.rose.withValues(alpha: 0.10)
+                    : AppTheme.surfaceLight.withValues(alpha: 0.5),
                 contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(24),

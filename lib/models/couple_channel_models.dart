@@ -28,6 +28,13 @@ class CoupleMessage {
 
   /// Einladung zum Spicy-Modus (als Chat-Nachricht mit Zusatzfeld, ältere Versionen zeigen den Text).
   final bool spicyEinladung;
+
+  /// Verschwindende Nachricht: wird 10 Minuten nach dem Lesen gelöscht, nur nach dem Lesen
+  /// (NostrService.verschwindenNachLesen).
+  final bool verschwindet;
+
+  /// Ab wann die verschwindende Nachricht gelöscht wird (gesetzt, sobald sie gelesen wurde).
+  final DateTime? loeschenAb;
   final DateTime createdAt;
 
   const CoupleMessage({
@@ -41,8 +48,26 @@ class CoupleMessage {
     this.fantasyVote,
     this.lessonId,
     this.spicyEinladung = false,
+    this.verschwindet = false,
+    this.loeschenAb,
     required this.createdAt,
   });
+
+  CoupleMessage mitLoeschzeit(DateTime zeit) => CoupleMessage(
+        id: id,
+        senderPubkey: senderPubkey,
+        isMe: isMe,
+        type: type,
+        text: text,
+        emoji: emoji,
+        fantasyId: fantasyId,
+        fantasyVote: fantasyVote,
+        lessonId: lessonId,
+        spicyEinladung: spicyEinladung,
+        verschwindet: verschwindet,
+        loeschenAb: zeit,
+        createdAt: createdAt,
+      );
 
   Map<String, dynamic> toJson() {
     return {
@@ -56,6 +81,8 @@ class CoupleMessage {
       'fantasyVote': fantasyVote,
       'lessonId': lessonId,
       if (spicyEinladung) 'spicyEinladung': true,
+      if (verschwindet) 'verschwindet': true,
+      if (loeschenAb != null) 'loeschenAb': loeschenAb!.toIso8601String(),
       'createdAt': createdAt.toIso8601String(),
     };
   }
@@ -75,6 +102,8 @@ class CoupleMessage {
       fantasyVote: map['fantasyVote'] as String?,
       lessonId: map['lessonId'] as String?,
       spicyEinladung: map['spicyEinladung'] == true,
+      verschwindet: map['verschwindet'] == true,
+      loeschenAb: DateTime.tryParse(map['loeschenAb'] as String? ?? ''),
       createdAt: map['createdAt'] != null
           ? DateTime.tryParse(map['createdAt'] as String) ?? DateTime.now()
           : DateTime.now(),

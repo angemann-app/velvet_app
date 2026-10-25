@@ -69,9 +69,13 @@ class SelbstReiseDaten {
     for (final b in phase('beruehren')) {
       if (!erlaubt.contains(b.tiefe)) continue;
       if (b.koerper != null && b.koerper != koerper) continue;
-      if (b.zone == 'genital') continue; // kommt am Ende eigens dran
+      if (b.zone == 'genital' || b.zone == 'brueste') continue; // kommen am Ende eigens dran
       zonen.putIfAbsent(b.zone!, () => []).add(b);
     }
+    // Spicy mit Vulva: die Brüste bekommen ihren eigenen Moment, gleich nach dem Ankommen an der Vulva.
+    final brueste = spicy
+        ? phase('beruehren').where((b) => b.zone == 'brueste' && b.koerper == koerper && erlaubt.contains(b.tiefe)).toList()
+        : <PaarBaustein>[];
     final genital = tiefe.index >= PaarTiefe.intim.index
         ? phase('beruehren').where((b) => b.zone == 'genital' && b.koerper == koerper).toList()
         : <PaarBaustein>[];
@@ -97,6 +101,7 @@ class SelbstReiseDaten {
       final halten = genital.firstWhere((b) => b.id.endsWith('_1'), orElse: () => genital.first);
       benutzt.add(halten.id);
       intim.add(halten);
+      if (brueste.isNotEmpty) intim.add(waehle(brueste));
       // Bei Spicy kommen die Berührungen aus der gewählten Spicy-Stufe, die übrigen nur als Reserve.
       final scharf = genital.where((b) => b.tiefe == tiefe.name).toList();
       final auswahl = spicy && scharf.isNotEmpty ? scharf : genital.where((b) => b != halten).toList();

@@ -37,6 +37,25 @@ void main() {
     }
   });
 
+  test('Spicy: Brust-Bausteine nur in Runden, in denen eine Frau empfängt, dort aber immer', () async {
+    final daten = await PaarAbendDaten.laden();
+    for (final tiefe in [PaarTiefe.spicy, PaarTiefe.sehrSpicy]) {
+      for (final minuten in [20, 30, 45]) {
+        for (var seed = 0; seed < 10; seed++) {
+          List<PaarBaustein> brueste(List<String?> empfaenger, int runde) => daten
+              .planen(minuten: minuten, tiefe: tiefe, stimme: 'martin', empfaenger: empfaenger, zufall: Random(seed))
+              .where((s) => s.runde == runde && s.baustein?.zone == 'brueste')
+              .map((s) => s.baustein!)
+              .toList();
+          expect(brueste(['vulva', 'penis'], 1), hasLength(1), reason: '$tiefe $minuten');
+          expect(brueste(['vulva', 'penis'], 1).single.tiefe, tiefe.name);
+          expect(brueste(['vulva', 'penis'], 2), isEmpty);
+          expect(brueste([null, null], 1) + brueste([null, null], 2), isEmpty, reason: 'unbekannt: neutral');
+        }
+      }
+    }
+  });
+
   test('Der nächste Abend bevorzugt andere Berührungen', () async {
     final daten = await PaarAbendDaten.laden();
     Set<String> beruehrungen(List<PaarSchritt> ablauf) =>

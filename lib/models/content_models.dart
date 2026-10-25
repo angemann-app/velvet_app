@@ -17,8 +17,14 @@ class VelvetDatabase {
     this.beliefLibrary = const [],
   }) : alleKurse = courses;
 
-  /// Die sichtbaren Kurse: Spicy-Kurse nur bei eingeschaltetem Spicy-Modus.
-  List<Course> get courses => [for (final c in alleKurse) if (!c.spicy || StorageService.spicyMode()) c];
+  /// Die sichtbaren Kurse: Spicy-Kurse und Spicy-Lektionen nur bei eingeschaltetem Spicy-Modus.
+  List<Course> get courses {
+    if (StorageService.spicyMode()) return alleKurse;
+    return [
+      for (final c in alleKurse)
+        if (!c.spicy) c.lessons.any((l) => l.spicy) ? c.ohneSpicyLektionen() : c,
+    ];
+  }
 
   factory VelvetDatabase.fromJson(Map<String, dynamic> json) {
     return VelvetDatabase(
@@ -72,6 +78,19 @@ class Course {
     this.spicy = false,
     required this.lessons,
   });
+
+  /// Derselbe Kurs ohne die Lektionen, die nur im Spicy-Modus sichtbar sind.
+  Course ohneSpicyLektionen() => Course(
+        id: id,
+        title: title,
+        subtitle: subtitle,
+        icon: icon,
+        category: category,
+        image: image,
+        titleColor: titleColor,
+        spicy: spicy,
+        lessons: [for (final l in lessons) if (!l.spicy) l],
+      );
 
   bool get isForWomen => category == 'women';
   bool get isForCouples => category == 'couples';
@@ -153,6 +172,9 @@ class Lesson {
   /// (wichtig für gleichgeschlechtliche Paare, siehe lib/services/personalize.dart).
   final String? perspective;
 
+  /// Nur im Spicy-Modus sichtbar (Feld "spicy"), auch in Kursen, die sonst für alle sind.
+  final bool spicy;
+
   Lesson({
     required this.id,
     required this.title,
@@ -164,6 +186,7 @@ class Lesson {
     required this.reflectionQuestion,
     this.image,
     this.perspective,
+    this.spicy = false,
   });
 
   bool get isAudioExercise => type == 'audio_exercise';
@@ -180,6 +203,7 @@ class Lesson {
       reflectionQuestion: json['reflection_question'] as String? ?? '',
       image: json['image'] as String?,
       perspective: json['perspective'] as String?,
+      spicy: json['spicy'] as bool? ?? false,
     );
   }
 
@@ -194,6 +218,7 @@ class Lesson {
         'reflection_question': reflectionQuestion,
         'image': image,
         'perspective': perspective,
+        if (spicy) 'spicy': true,
       };
 }
 

@@ -7,6 +7,23 @@ import 'package:velvetpulse/models/selbst_reise.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
+  test('Spicy mit Vulva: die Brüste kommen immer dran, in der passenden Stufe', () async {
+    final daten = await SelbstReiseDaten.laden();
+    for (final tiefe in [PaarTiefe.spicy, PaarTiefe.sehrSpicy]) {
+      for (var seed = 0; seed < 10; seed++) {
+        List<PaarBaustein> brueste(String koerper) => daten
+            .planen(minuten: 10, tiefe: tiefe, koerper: koerper, stimme: 'victoria', zufall: Random(seed))
+            .map((s) => s.baustein)
+            .whereType<PaarBaustein>()
+            .where((b) => b.zone == 'brueste')
+            .toList();
+        expect(brueste('vulva'), hasLength(1));
+        expect(brueste('vulva').single.tiefe, tiefe.name);
+        expect(brueste('penis'), isEmpty);
+      }
+    }
+  });
+
   test('Reisen treffen die Dauer, bleiben in der Tiefe und beim gewählten Körper', () async {
     final daten = await SelbstReiseDaten.laden();
     for (final minuten in [10, 20, 30]) {

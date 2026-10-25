@@ -88,6 +88,17 @@ void main() {
     expect(ListenUebersetzung.kategorien.any((k) => k.id == 'spicy'), isTrue);
   });
 
+  test('Spicy-Lektionen in normalen Kursen nur bei eingeschaltetem Modus', () async {
+    final db = VelvetDatabase.fromJson(jsonDecode(File('assets/data/velvet_content.json').readAsStringSync()));
+    Course alltag() => db.courses.firstWhere((c) => c.id == 'course_everyday_eros');
+    await starten({});
+    expect(alltag().lessons.map((l) => l.id), isNot(contains('alltag_6')));
+    expect(alltag().lessons, hasLength(5));
+    await StorageService.setSpicyMode(true);
+    expect(alltag().lessons, hasLength(8));
+    expect(alltag().lessons.where((l) => l.spicy).map((l) => l.id), ['alltag_6', 'alltag_7', 'alltag_8']);
+  });
+
   test('Spicy-Fragen verweisen nur auf Lektionen, die es gibt', () {
     final db = VelvetDatabase.fromJson(jsonDecode(File('assets/data/velvet_content.json').readAsStringSync()));
     final lektionen = {for (final c in db.alleKurse) ...c.lessons.map((l) => l.id)};

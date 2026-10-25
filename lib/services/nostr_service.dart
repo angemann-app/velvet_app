@@ -263,6 +263,10 @@ class NostrService {
     }
 
     // 3. Load cached messages
+    _geloeschteIds
+      ..clear()
+      ..addAll(prefs.getStringList(_keyGeloeschte) ?? const []);
+    _processedEventIds.addAll(_geloeschteIds);
     final cachedMsgJson = prefs.getString(_keyCachedMessages);
     if (cachedMsgJson != null && cachedMsgJson.isNotEmpty) {
       try {
@@ -279,6 +283,7 @@ class NostrService {
         debugPrint('Error reading cached couple messages: $e');
       }
     }
+    await aufraeumen();
 
     // 4. Load fantasy votes
     final myVotesJson = prefs.getString(_keyMyFantasyVotes);
@@ -524,11 +529,14 @@ class NostrService {
     String? fantasyVote;
     String? lessonId;
     var spicyEinladung = false;
+    var verschwindet = false;
+    if (_geloeschteIds.contains(eventId)) return;
 
     try {
       final data = jsonDecode(decryptedText);
       if (data is Map<String, dynamic>) {
         final typ = data['type'] as String?;
+        verschwindet = data['vanish'] == true;
         if (typ == 'ping') {
           type = CoupleMessageType.ping;
           emoji = data['emoji'] as String?;
@@ -579,6 +587,7 @@ class NostrService {
       fantasyVote: fantasyVote,
       lessonId: lessonId,
       spicyEinladung: spicyEinladung,
+      verschwindet: verschwindet,
       createdAt: timestamp,
     );
 
@@ -827,17 +836,18 @@ class NostrService {
     } catch (_) {}
   }
 
-  Future<bool> sendQuickPing(String emoji, String label) async {
+  Future<bool> sendQuickPing(String emoji, String label, {bool verschwindet = false}) async {
     if (!isPaired) return false;
 
     final payload = jsonEncode({
       'type': 'ping',
       'emoji': emoji,
       'text': label,
+      if (verschwindet) 'vanish': true,
       'timestamp': DateTime.now().millisecondsSinceEpoch,
     });
 
-    return _sendKind4(payload, (eventId) {
+    return _sendKind4(payload, extraTags: verschwindet ? _ablaufTag() : const [], (eventId) {
       _parseAndAddMessage(
         eventId: eventId,
         senderPubkey: _myPublicKey!,
@@ -848,16 +858,17 @@ class NostrService {
     });
   }
 
-  Future<bool> sendChatMessage(String text) async {
+  Future<bool> sendChatMessage(String text, {bool verschwindet = false}) async {
     if (!isPaired || text.trim().isEmpty) return false;
 
     final payload = jsonEncode({
       'type': 'chat',
       'text': text.trim(),
+      if (verschwindet) 'vanish': true,
       'timestamp': DateTime.now().millisecondsSinceEpoch,
     });
 
-    return _sendKind4(payload, (eventId) {
+    return _sendKind4(payload, extraTags: verschwindet ? _ablaufTag() : const [], (eventId) {
       _parseAndAddMessage(
         eventId: eventId,
         senderPubkey: _myPublicKey!,
@@ -976,6 +987,8 @@ class NostrService {
   /// Meldet dem Gegenüber, bis wohin gelesen wurde – nur wenn der Nachrichten-Bereich
   /// sichtbar ist (entscheidet couples_channel_screen.dart) und die Einstellung an ist.
   Future<void> markMessagesRead() async {
+    // Gelesene verschwindende Nachrichten des Gegenübers laufen ab jetzt ab – auch ohne Lesebestätigung.
+    _loeschzeitSetzen((m) => !m.isMe);
     if (!isPaired || !readReceiptsEnabled.value) return;
     var latest = 0;
     for (final m in messagesNotifier.value) {
@@ -1035,9 +1048,61 @@ class NostrService {
         partnerReadUntil.value = until;
         await prefs.setInt(_keyPartnerReadUntil, until);
       }
+      // Eigene verschwindende Nachrichten, die das Gegenüber gelesen hat, laufen ab jetzt ab.
+      _loeschzeitSetzen((m) => m.isMe && m.createdAt.millisecondsSinceEpoch ~/ 1000 <= until);
     } catch (e) {
       debugPrint('Nostr: Lesebestätigung nicht lesbar (${e.runtimeType})');
     }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Verschwindende Nachrichten
+
+  /// So lange bleibt eine verschwindende Nachricht nach dem Lesen stehen. Gelöscht wird nur nach dem
+  /// Lesen: beim Gegenüber, sobald sie auf dem Bildschirm war, beim Absender mit dessen Lesebestätigung.
+  static const verschwindenNachLesen = Duration(minutes: 10);
+
+  /// Ablaufdatum für die Server (NIP-40), damit die verschlüsselte Nachricht dort nicht ewig liegt.
+  /// Großzügig gewählt, damit sie auch nach längerer Abwesenheit noch ankommt.
+  static const serverAblauf = Duration(days: 7);
+
+  static const _keyGeloeschte = 'velvet_vanished_ids';
+  final Set<String> _geloeschteIds = {};
+
+  List<List<String>> _ablaufTag() => [
+        ['expiration', '${DateTime.now().add(serverAblauf).millisecondsSinceEpoch ~/ 1000}']
+      ];
+
+  void _loeschzeitSetzen(bool Function(CoupleMessage) welche) {
+    var geaendert = false;
+    final liste = [
+      for (final m in messagesNotifier.value)
+        if (m.verschwindet && m.loeschenAb == null && welche(m))
+          (() {
+            geaendert = true;
+            return m.mitLoeschzeit(DateTime.now().add(verschwindenNachLesen));
+          })()
+        else
+          m,
+    ];
+    if (!geaendert) return;
+    messagesNotifier.value = liste;
+    _saveMessagesToCache();
+  }
+
+  /// Entfernt abgelaufene verschwindende Nachrichten und merkt sich ihre ids, damit ein Server sie
+  /// nicht wieder hereinreicht. Läuft beim Laden und regelmäßig, solange der Paar-Kanal offen ist.
+  Future<void> aufraeumen({DateTime? jetzt}) async {
+    final now = jetzt ?? DateTime.now();
+    bool abgelaufen(CoupleMessage m) => m.verschwindet && m.loeschenAb != null && !now.isBefore(m.loeschenAb!);
+    final weg = messagesNotifier.value.where(abgelaufen).toList();
+    if (weg.isEmpty) return;
+    _geloeschteIds.addAll(weg.map((m) => m.id));
+    messagesNotifier.value = messagesNotifier.value.where((m) => !abgelaufen(m)).toList();
+    await _saveMessagesToCache();
+    final prefs = await SharedPreferences.getInstance();
+    final ids = _geloeschteIds.toList();
+    await prefs.setStringList(_keyGeloeschte, ids.length > 300 ? ids.sublist(ids.length - 300) : ids);
   }
 
   Future<void> _saveMessagesToCache() async {

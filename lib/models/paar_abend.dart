@@ -16,7 +16,8 @@ class PaarBaustein {
   final int stufe;
   final String? tiefe;
 
-  /// Nur bei der Selbsterkundung: 'vulva' oder 'penis' für körperspezifische Bausteine.
+  /// 'vulva' oder 'penis' für körperspezifische Bausteine: bei der Selbsterkundung der eigene Körper,
+  /// beim Gemeinsamen Abend der Körper der Person, die in der Runde empfängt.
   final String? koerper;
 
   const PaarBaustein({
@@ -135,11 +136,14 @@ class PaarAbendDaten {
 
   /// Stellt einen Abend zusammen, der möglichst genau [minuten] lang ist.
   /// [zuletzt] sind die zuletzt gehörten Baustein-ids; sie kommen nur dran, wenn es nicht anders geht.
+  /// [empfaenger]: Körper der Person, die in Runde 1 bzw. 2 empfängt ('vulva', 'penis' oder null,
+  /// wenn unbekannt). Körperspezifische Bausteine kommen nur in passenden Runden vor.
   List<PaarSchritt> planen({
     required int minuten,
     required PaarTiefe tiefe,
     required String stimme,
     Set<String> zuletzt = const {},
+    List<String?> empfaenger = const [null, null],
     Random? zufall,
   }) {
     final rnd = zufall ?? Random();
@@ -166,15 +170,31 @@ class PaarAbendDaten {
 
     // Zonen nach Stufe ordnen (innerhalb einer Stufe zufällig) und gleichmäßig verteilt auswählen,
     // so dass jede Runde sanft beginnt und mit der tiefsten erlaubten Zone endet.
-    List<String> zonenFuerRunde() {
+    Map<String, List<PaarBaustein>> zonenFuer(String? koerper) => {
+          for (final e in zonen.entries)
+            if (e.value.any((b) => b.koerper == null || b.koerper == koerper))
+              e.key: [for (final b in e.value) if (b.koerper == null || b.koerper == koerper) b],
+        };
+
+    List<String> zonenFuerRunde(Map<String, List<PaarBaustein>> zonen, String? koerper) {
       // Zonen, deren Varianten in Runde 1 schon alle dran waren, nur nehmen, wenn sonst zu wenige bleiben.
       var namen = zonen.keys.where((z) => zonen[z]!.any((b) => !benutzt.contains(b.id))).toList();
       if (namen.length < proRunde) namen = zonen.keys.toList();
       namen.shuffle(rnd);
       int stufe(String z) => zonen[z]!.first.stufe;
       namen.sort((a, b) => stufe(a).compareTo(stufe(b)));
-      if (namen.length <= proRunde) return namen;
-      return [for (var j = 0; j < proRunde; j++) namen[(j * (namen.length - 1) / (proRunde - 1)).round()]];
+      var gewaehlt = namen.length <= proRunde
+          ? namen
+          : [for (var j = 0; j < proRunde; j++) namen[(j * (namen.length - 1) / (proRunde - 1)).round()]];
+      // Bei Spicy bekommen die Brüste einer Frau immer ihren eigenen Moment.
+      const brueste = 'brueste';
+      if (tiefe.istSpicy && koerper == 'vulva' && zonen.containsKey(brueste) && !gewaehlt.contains(brueste)) {
+        gewaehlt = [...gewaehlt];
+        // Die tiefste Zone bleibt am Ende, ersetzt wird die davor.
+        gewaehlt.length >= 2 ? gewaehlt[gewaehlt.length - 2] = brueste : gewaehlt.add(brueste);
+        gewaehlt.sort((a, b) => stufe(a).compareTo(stufe(b)));
+      }
+      return gewaehlt;
     }
 
     // Erst alle Ansagen auswählen, dann die Stillen so verteilen, dass die Gesamtlänge stimmt.
@@ -182,7 +202,9 @@ class PaarAbendDaten {
     final runden = <(PaarBaustein, List<PaarBaustein>, PaarBaustein, PaarBaustein)>[];
     for (var r = 0; r < 2; r++) {
       final start = waehle(phase('runde_start'));
-      final beruehren = [for (final z in zonenFuerRunde()) waehle(zonen[z]!)];
+      final koerper = r < empfaenger.length ? empfaenger[r] : null;
+      final passend = zonenFuer(koerper);
+      final beruehren = [for (final z in zonenFuerRunde(passend, koerper)) waehle(passend[z]!)];
       runden.add((start, beruehren, waehle(phase('check_in')), waehle(phase('runde_ende'))));
     }
     final wechsel = waehle(phase('wechsel'));
