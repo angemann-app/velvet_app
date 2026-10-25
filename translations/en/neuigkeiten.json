@@ -261,6 +261,27 @@
           "text": "The question mark at the top explains every part of the app."
         }
       ]
+    },
+    {
+      "build": 37,
+      "version": "4.7.0-beta.2",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "Lingerie and striptease",
+          "text": "New lessons in courses 25 and 26: lingerie for every body, lingerie in everyday life and a striptease to try. In Spicy mode also: Wrapped up hot."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "English recordings",
+          "text": "The English audio pack is up to date. If you've already downloaded it, you can update it in your profile."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Photos still experimental",
+          "text": "Photos in the couple chat are marked as experimental: on some mobile networks the direct connection doesn't work yet. Before viewing, the app asks whether you're alone."
+        }
+      ]
     }
   ],
   "_source": {
@@ -274,6 +295,7 @@
     "news:33": "ba744f6de785458c",
     "news:34": "c0fad8002202b859",
     "news:35": "7f92712a8752b764",
-    "news:36": "54944e2b84024fc6"
+    "news:36": "54944e2b84024fc6",
+    "news:37": "e2c97176e6c8dba5"
   }
 }

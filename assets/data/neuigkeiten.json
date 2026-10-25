@@ -261,6 +261,27 @@
           "text": "Das Fragezeichen oben erklärt alle Bereiche der App."
         }
       ]
+    },
+    {
+      "build": 37,
+      "version": "4.7.0-beta.2",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "Wäsche und Striptease",
+          "text": "Neue Lektionen in den Kursen 25 und 26: Wäsche für jeden Körper, Wäsche im Alltag und ein Striptease zum Mitmachen. Im Spicy-Modus dazu: Heiß verpackt."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Englische Aufnahmen",
+          "text": "Das englische Audiopaket ist auf dem neuen Stand. Wer es schon geladen hat, kann es im Profil aktualisieren."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Fotos noch experimentell",
+          "text": "Fotos im Paar-Chat sind als experimentell gekennzeichnet: In manchen Mobilfunknetzen klappt die direkte Verbindung noch nicht. Vor dem Ansehen fragt die App, ob du allein bist."
+        }
+      ]
     }
   ]
 }
