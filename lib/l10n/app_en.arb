@@ -859,5 +859,21 @@
   "spicyFunkeNachHause": "Come home right now",
   "verschwindenSchalter": "Disappearing message",
   "verschwindenHinweis": "Disappears 10 min after reading …",
-  "verschwindetLabel": "Disappears after reading"
+  "verschwindetLabel": "Disappears after reading",
+  "fotoNachricht": "📷 A photo for you, viewable only once. Open VelvetPulse and it comes straight to you.",
+  "fotoSenden": "Send photo",
+  "fotoKamera": "Camera",
+  "fotoGalerie": "Gallery",
+  "fotoSicherheitHinweis": "The photo travels encrypted directly from phone to phone and can be viewed only once. Safest without your face or recognisable surroundings. A second phone can still photograph the screen.",
+  "fotoNichtDa": "Your partner doesn't have VelvetPulse open right now. The photo stays encrypted on your phone and goes out as soon as you both have the app open.",
+  "fotoFehler": "The photo couldn't be announced. Please try again later.",
+  "fotoStatusWartet": "Photo waiting: both of you open VelvetPulse",
+  "fotoStatusLaedt": "Transferring photo …",
+  "fotoAnsehen": "View photo (only once)",
+  "fotoStatusAngesehen": "Photo viewed",
+  "fotoStatusWartetRaus": "Waiting for your partner",
+  "fotoStatusZugestellt": "Delivered",
+  "fotoStatusFehler": "Not delivered",
+  "fotoAnsichtHinweis": "Visible only now. When you close it, the photo is deleted.",
+  "fotoWeg": "This photo is no longer available."
 }

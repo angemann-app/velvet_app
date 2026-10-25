@@ -35,6 +35,9 @@ class CoupleMessage {
 
   /// Ab wann die verschwindende Nachricht gelöscht wird (gesetzt, sobald sie gelesen wurde).
   final DateTime? loeschenAb;
+
+  /// Foto, das direkt von Handy zu Handy übertragen wird (lib/services/foto_kanal.dart).
+  final String? fotoId;
   final DateTime createdAt;
 
   const CoupleMessage({
@@ -50,6 +53,7 @@ class CoupleMessage {
     this.spicyEinladung = false,
     this.verschwindet = false,
     this.loeschenAb,
+    this.fotoId,
     required this.createdAt,
   });
 
@@ -66,6 +70,7 @@ class CoupleMessage {
         spicyEinladung: spicyEinladung,
         verschwindet: verschwindet,
         loeschenAb: zeit,
+        fotoId: fotoId,
         createdAt: createdAt,
       );
 
@@ -83,6 +88,7 @@ class CoupleMessage {
       if (spicyEinladung) 'spicyEinladung': true,
       if (verschwindet) 'verschwindet': true,
       if (loeschenAb != null) 'loeschenAb': loeschenAb!.toIso8601String(),
+      if (fotoId != null) 'fotoId': fotoId,
       'createdAt': createdAt.toIso8601String(),
     };
   }
@@ -104,6 +110,7 @@ class CoupleMessage {
       spicyEinladung: map['spicyEinladung'] == true,
       verschwindet: map['verschwindet'] == true,
       loeschenAb: DateTime.tryParse(map['loeschenAb'] as String? ?? ''),
+      fotoId: map['fotoId'] as String?,
       createdAt: map['createdAt'] != null
           ? DateTime.tryParse(map['createdAt'] as String) ?? DateTime.now()
           : DateTime.now(),

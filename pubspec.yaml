@@ -33,6 +33,9 @@ dependencies:
   intl: any
   crypto: ^3.0.7
   archive: ^4.5.2
+  flutter_webrtc: ^1.6.2+hotfix.4
+  image_picker: ^1.2.4
+  cryptography: ^2.9.0
 
 dev_dependencies:
   flutter_test:

@@ -5276,6 +5276,102 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Verschwindet nach dem Lesen'**
   String get verschwindetLabel;
+
+  /// No description provided for @fotoNachricht.
+  ///
+  /// In de, this message translates to:
+  /// **'📷 Ein Foto für dich, nur einmal ansehbar. Öffne VelvetPulse, dann kommt es direkt zu dir.'**
+  String get fotoNachricht;
+
+  /// No description provided for @fotoSenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Foto senden'**
+  String get fotoSenden;
+
+  /// No description provided for @fotoKamera.
+  ///
+  /// In de, this message translates to:
+  /// **'Kamera'**
+  String get fotoKamera;
+
+  /// No description provided for @fotoGalerie.
+  ///
+  /// In de, this message translates to:
+  /// **'Galerie'**
+  String get fotoGalerie;
+
+  /// No description provided for @fotoSicherheitHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Das Foto geht verschlüsselt direkt von Handy zu Handy und lässt sich nur einmal ansehen. Am sichersten ohne Gesicht und ohne erkennbare Umgebung. Ein zweites Handy kann den Bildschirm trotzdem abfotografieren.'**
+  String get fotoSicherheitHinweis;
+
+  /// No description provided for @fotoNichtDa.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Gegenüber hat VelvetPulse gerade nicht offen. Das Foto bleibt verschlüsselt bei dir und geht raus, sobald ihr beide die App offen habt.'**
+  String get fotoNichtDa;
+
+  /// No description provided for @fotoFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Das Foto konnte nicht angekündigt werden. Bitte später noch einmal versuchen.'**
+  String get fotoFehler;
+
+  /// No description provided for @fotoStatusWartet.
+  ///
+  /// In de, this message translates to:
+  /// **'Foto wartet: öffnet beide VelvetPulse'**
+  String get fotoStatusWartet;
+
+  /// No description provided for @fotoStatusLaedt.
+  ///
+  /// In de, this message translates to:
+  /// **'Foto wird übertragen …'**
+  String get fotoStatusLaedt;
+
+  /// No description provided for @fotoAnsehen.
+  ///
+  /// In de, this message translates to:
+  /// **'Foto ansehen (nur einmal)'**
+  String get fotoAnsehen;
+
+  /// No description provided for @fotoStatusAngesehen.
+  ///
+  /// In de, this message translates to:
+  /// **'Foto angesehen'**
+  String get fotoStatusAngesehen;
+
+  /// No description provided for @fotoStatusWartetRaus.
+  ///
+  /// In de, this message translates to:
+  /// **'Wartet auf dein Gegenüber'**
+  String get fotoStatusWartetRaus;
+
+  /// No description provided for @fotoStatusZugestellt.
+  ///
+  /// In de, this message translates to:
+  /// **'Zugestellt'**
+  String get fotoStatusZugestellt;
+
+  /// No description provided for @fotoStatusFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Nicht zugestellt'**
+  String get fotoStatusFehler;
+
+  /// No description provided for @fotoAnsichtHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur jetzt sichtbar. Beim Schließen ist das Foto gelöscht.'**
+  String get fotoAnsichtHinweis;
+
+  /// No description provided for @fotoWeg.
+  ///
+  /// In de, this message translates to:
+  /// **'Dieses Foto ist nicht mehr da.'**
+  String get fotoWeg;
 }
 
 class _AppLocalizationsDelegate

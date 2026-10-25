@@ -1478,5 +1478,21 @@
   "spicyFunkeNachHause": "Komm sofort nach Hause",
   "verschwindenSchalter": "Verschwindende Nachricht",
   "verschwindenHinweis": "Verschwindet 10 Min. nach dem Lesen …",
-  "verschwindetLabel": "Verschwindet nach dem Lesen"
+  "verschwindetLabel": "Verschwindet nach dem Lesen",
+  "fotoNachricht": "📷 Ein Foto für dich, nur einmal ansehbar. Öffne VelvetPulse, dann kommt es direkt zu dir.",
+  "fotoSenden": "Foto senden",
+  "fotoKamera": "Kamera",
+  "fotoGalerie": "Galerie",
+  "fotoSicherheitHinweis": "Das Foto geht verschlüsselt direkt von Handy zu Handy und lässt sich nur einmal ansehen. Am sichersten ohne Gesicht und ohne erkennbare Umgebung. Ein zweites Handy kann den Bildschirm trotzdem abfotografieren.",
+  "fotoNichtDa": "Dein Gegenüber hat VelvetPulse gerade nicht offen. Das Foto bleibt verschlüsselt bei dir und geht raus, sobald ihr beide die App offen habt.",
+  "fotoFehler": "Das Foto konnte nicht angekündigt werden. Bitte später noch einmal versuchen.",
+  "fotoStatusWartet": "Foto wartet: öffnet beide VelvetPulse",
+  "fotoStatusLaedt": "Foto wird übertragen …",
+  "fotoAnsehen": "Foto ansehen (nur einmal)",
+  "fotoStatusAngesehen": "Foto angesehen",
+  "fotoStatusWartetRaus": "Wartet auf dein Gegenüber",
+  "fotoStatusZugestellt": "Zugestellt",
+  "fotoStatusFehler": "Nicht zugestellt",
+  "fotoAnsichtHinweis": "Nur jetzt sichtbar. Beim Schließen ist das Foto gelöscht.",
+  "fotoWeg": "Dieses Foto ist nicht mehr da."
 }

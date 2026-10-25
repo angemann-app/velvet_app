@@ -15,6 +15,9 @@ import 'invite_partner.dart';
 import 'paar_abend_screen.dart';
 import '../../widgets/gefuehrte_audios.dart';
 import '../../widgets/spicy_modus_dialog.dart';
+import '../../services/foto_kanal.dart';
+import 'package:image_picker/image_picker.dart';
+import 'foto_ansicht.dart';
 import '../../services/storage_service.dart';
 import 'partner_profile_dialog.dart';
 import 'pairing_modal.dart';
@@ -64,7 +67,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   void initState() {
     super.initState();
     _subTabController = TabController(length: 2, vsync: this);
-    _nostr.init();
+    _nostr.init().then((_) => FotoKanal.instanz.start());
     _aufraeumTimer = Timer.periodic(const Duration(seconds: 20), (_) => _nostr.aufraeumen());
     MessageNotifier.clear();
     WidgetsBinding.instance.addObserver(this);
@@ -91,6 +94,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   @override
   void dispose() {
     _aufraeumTimer?.cancel();
+    FotoKanal.instanz.stop();
     WidgetsBinding.instance.removeObserver(this);
     _nostr.paarKanalSichtbar.removeListener(_pruefeGelesen);
     _nostr.messagesNotifier.removeListener(_pruefeGelesen);
@@ -118,6 +122,92 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   }
 
   bool get _verschwindenAktiv => _verschwinden && StorageService.spicyMode();
+
+  /// Foto auswählen, verschlüsseln und direkt ans Gegenüber schicken (oder warten lassen).
+  Future<void> _fotoSenden() async {
+    final quelle = await showModalBottomSheet<ImageSource>(
+      context: context,
+      backgroundColor: AppTheme.surface,
+      builder: (context) => SafeArea(
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          ListTile(
+            leading: const Icon(Icons.photo_camera_outlined),
+            title: Text(t.fotoKamera),
+            onTap: () => Navigator.pop(context, ImageSource.camera),
+          ),
+          ListTile(
+            leading: const Icon(Icons.photo_library_outlined),
+            title: Text(t.fotoGalerie),
+            onTap: () => Navigator.pop(context, ImageSource.gallery),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+            child: Text(t.fotoSicherheitHinweis,
+                style: const TextStyle(fontSize: 12, color: AppTheme.textMuted, height: 1.4)),
+          ),
+        ]),
+      ),
+    );
+    if (quelle == null) return;
+    final gewaehlt = await ImagePicker().pickImage(source: quelle, maxWidth: 1600, maxHeight: 1600, imageQuality: 82);
+    if (gewaehlt == null || !mounted) return;
+    final messenger = ScaffoldMessenger.of(context);
+    final ergebnis = await FotoKanal.instanz.senden(await gewaehlt.readAsBytes(), verschwindet: _verschwindenAktiv);
+    switch (ergebnis) {
+      case FotoErgebnis.fehler:
+        messenger.showSnackBar(SnackBar(content: Text(t.fotoFehler), backgroundColor: AppTheme.rose));
+      case FotoErgebnis.wartet:
+        messenger.showSnackBar(SnackBar(content: Text(t.fotoNichtDa), duration: const Duration(seconds: 6)));
+        _scrollToBottom();
+      case FotoErgebnis.unterwegs:
+        _scrollToBottom();
+    }
+  }
+
+  /// Zustand und Knopf für ein Foto in der Sprechblase.
+  Widget _fotoZeile(CoupleMessage msg, Color farbe) {
+    final id = msg.fotoId!;
+    return ValueListenableBuilder<Map<String, String>>(
+      valueListenable: FotoKanal.instanz.status,
+      builder: (context, _, __) => FutureBuilder<String>(
+        future: FotoKanal.instanz.zustand(id, vonMir: msg.isMe),
+        builder: (context, snap) {
+          final z = snap.data ?? 'wartet';
+          if (!msg.isMe && z == 'bereit') {
+            return Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: FilledButton.icon(
+                onPressed: () async {
+                  final bild = await FotoKanal.instanz.einmalOeffnen(id);
+                  if (!context.mounted) return;
+                  if (bild == null) {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.fotoWeg)));
+                    return;
+                  }
+                  await Navigator.of(context).push(MaterialPageRoute(builder: (_) => FotoAnsicht(bild: bild)));
+                },
+                style: FilledButton.styleFrom(backgroundColor: AppTheme.rose),
+                icon: const Icon(Icons.visibility_outlined, size: 18),
+                label: Text(t.fotoAnsehen),
+              ),
+            );
+          }
+          final text = switch ((msg.isMe, z)) {
+            (_, 'laedt') => t.fotoStatusLaedt,
+            (_, 'angesehen') => t.fotoStatusAngesehen,
+            (true, 'zugestellt') => t.fotoStatusZugestellt,
+            (true, 'fehler') => t.fotoStatusFehler,
+            (true, _) => t.fotoStatusWartetRaus,
+            (false, _) => t.fotoStatusWartet,
+          };
+          return Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: Text(text, style: TextStyle(fontSize: 11.5, color: farbe, fontStyle: FontStyle.italic)),
+          );
+        },
+      ),
+    );
+  }
 
   void _sendSpark(String emoji, String text) async {
     HapticFeedback.mediumImpact();
@@ -716,6 +806,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               ),
             ),
             if (msg.spicyEinladung && !isMe) _spicyAnnehmen(),
+            if (msg.fotoId != null) _fotoZeile(msg, isMe ? textColor.withValues(alpha: 0.8) : AppTheme.textSecondary),
             if (msg.lessonId != null && DataService.getLessonById(msg.lessonId!) != null)
               Padding(
                 padding: const EdgeInsets.only(top: 6),
@@ -784,7 +875,11 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               selectedIcon: const Icon(Icons.timer_rounded, color: AppTheme.rose),
               tooltip: t.verschwindenSchalter,
             ),
-            const SizedBox(width: 2),
+            IconButton(
+              onPressed: _fotoSenden,
+              icon: const Icon(Icons.add_a_photo_outlined, color: AppTheme.textMuted),
+              tooltip: t.fotoSenden,
+            ),
           ],
           Expanded(
             child: TextField(

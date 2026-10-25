@@ -421,6 +421,14 @@ class NostrService {
           '#d': [_readReceiptTag],
           'limit': 1,
         },
+      // Flüchtige Signale (Foto-Übertragung): Server speichern sie nicht, sie kommen nur live an.
+      if (isPaired)
+        {
+          'kinds': [signalKind],
+          'authors': [_partnerPublicKey!],
+          '#p': [_myPublicKey!],
+          'since': DateTime.now().millisecondsSinceEpoch ~/ 1000 - 60,
+        },
     ]);
     for (final relay in only == null ? _relays.values : [only]) {
       try {
@@ -447,6 +455,8 @@ class NostrService {
             _handleIncomingKind4Map(eventMap);
           } else if (eventMap['kind'] == readReceiptKind) {
             _handleReadReceipt(eventMap);
+          } else if (eventMap['kind'] == signalKind) {
+            handleSignal(eventMap);
           }
         }
       } else if (type == 'OK') {
@@ -530,6 +540,7 @@ class NostrService {
     String? lessonId;
     var spicyEinladung = false;
     var verschwindet = false;
+    String? fotoId;
     if (_geloeschteIds.contains(eventId)) return;
 
     try {
@@ -554,6 +565,11 @@ class NostrService {
           final lesson = data['lesson'];
           if (lesson is String && lesson.length <= 64) lessonId = lesson;
           spicyEinladung = data['spicy_invite'] == true;
+          final foto = data['foto'];
+          if (foto is Map && foto['id'] is String && (foto['id'] as String).length <= 64) {
+            fotoId = foto['id'] as String;
+            if (!isMe) _fotoMerken(fotoId, Map<String, dynamic>.from(foto));
+          }
           final reflection = data['reflection'];
           if (!isMe && lessonId != null && reflection is String && reflection.length <= 5000) {
             partnerReflectionsNotifier.value = {...partnerReflectionsNotifier.value, lessonId: reflection};
@@ -588,6 +604,7 @@ class NostrService {
       lessonId: lessonId,
       spicyEinladung: spicyEinladung,
       verschwindet: verschwindet,
+      fotoId: fotoId,
       createdAt: timestamp,
     );
 
@@ -1054,6 +1071,68 @@ class NostrService {
       debugPrint('Nostr: Lesebestätigung nicht lesbar (${e.runtimeType})');
     }
   }
+
+  // ---------------------------------------------------------------------------
+  // Flüchtige Signale (lib/services/foto_kanal.dart)
+
+  /// Flüchtige Art (20000–29999): Server reichen sie nur live weiter und speichern sie nicht.
+  static const int signalKind = 21555;
+  final StreamController<Map<String, dynamic>> _signale = StreamController<Map<String, dynamic>>.broadcast();
+
+  /// Entschlüsselte Signale des Gegenübers, z. B. „bist du da?“ oder der Verbindungsaufbau für ein Foto.
+  Stream<Map<String, dynamic>> get signale => _signale.stream;
+
+  Future<bool> sendSignal(Map<String, Object?> daten) =>
+      _sendKind4(jsonEncode(daten), _processedEventIds.add, kind: signalKind);
+
+  @visibleForTesting
+  void handleSignal(Map<String, dynamic> ev) {
+    if (!isPaired || _myPrivateKey == null || ev['pubkey'] != _partnerPublicKey) return;
+    if (!NostrEventCheck.isValidEvent(ev, recipient: _myPublicKey!, kind: signalKind)) return;
+    // Alte Signale (vom Server nachgereicht) sind wertlos und könnten verwirren.
+    final alter = DateTime.now().millisecondsSinceEpoch ~/ 1000 - (ev['created_at'] as int? ?? 0);
+    if (alter > 120) return;
+    final id = ev['id'] as String;
+    if (!_processedEventIds.add(id)) return;
+    try {
+      final daten = jsonDecode(_nip04.decrypt(_myPrivateKey!, _partnerPublicKey!, ev['content'] as String));
+      if (daten is Map<String, dynamic>) _signale.add(daten);
+    } catch (e) {
+      debugPrint('Nostr: Signal nicht lesbar (${e.runtimeType})');
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Fotos: Schlüssel empfangener Fotos (bis zum Ansehen)
+
+  static const _keyFotoSchluessel = 'velvet_foto_keys';
+
+  /// Angaben zu einem empfangenen Foto (Schlüssel, Größe, Prüfsumme), oder null.
+  Future<Map<String, dynamic>?> fotoAngebot(String id) async {
+    final prefs = await SharedPreferences.getInstance();
+    final alle = jsonDecode(prefs.getString(_keyFotoSchluessel) ?? '{}') as Map<String, dynamic>;
+    return alle[id] as Map<String, dynamic>?;
+  }
+
+  Future<void> _fotoMerken(String id, Map<String, dynamic> angaben) async {
+    final prefs = await SharedPreferences.getInstance();
+    final alle = jsonDecode(prefs.getString(_keyFotoSchluessel) ?? '{}') as Map<String, dynamic>;
+    alle[id] = angaben;
+    await prefs.setString(_keyFotoSchluessel, jsonEncode(alle));
+  }
+
+  /// Nach dem Ansehen: Schlüssel vergessen, das Foto ist nicht mehr zu öffnen.
+  Future<void> fotoVergessen(String id) async {
+    final prefs = await SharedPreferences.getInstance();
+    final alle = jsonDecode(prefs.getString(_keyFotoSchluessel) ?? '{}') as Map<String, dynamic>;
+    alle.remove(id);
+    await prefs.setString(_keyFotoSchluessel, jsonEncode(alle));
+  }
+
+  /// Kündigt ein Foto an. Der Schlüssel reist verschlüsselt in der Nachricht, das Foto selbst
+  /// später direkt von Handy zu Handy. Ältere Versionen zeigen nur den Text.
+  Future<bool> sendFotoAngebot(Map<String, Object> angaben, {bool verschwindet = false}) =>
+      _sendLearning({'text': t.fotoNachricht}, extra: {'foto': angaben, if (verschwindet) 'vanish': true});
 
   // ---------------------------------------------------------------------------
   // Verschwindende Nachrichten

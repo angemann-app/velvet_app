@@ -3098,4 +3098,57 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get verschwindetLabel => 'Disappears after reading';
+
+  @override
+  String get fotoNachricht =>
+      '📷 A photo for you, viewable only once. Open VelvetPulse and it comes straight to you.';
+
+  @override
+  String get fotoSenden => 'Send photo';
+
+  @override
+  String get fotoKamera => 'Camera';
+
+  @override
+  String get fotoGalerie => 'Gallery';
+
+  @override
+  String get fotoSicherheitHinweis =>
+      'The photo travels encrypted directly from phone to phone and can be viewed only once. Safest without your face or recognisable surroundings. A second phone can still photograph the screen.';
+
+  @override
+  String get fotoNichtDa =>
+      'Your partner doesn\'t have VelvetPulse open right now. The photo stays encrypted on your phone and goes out as soon as you both have the app open.';
+
+  @override
+  String get fotoFehler =>
+      'The photo couldn\'t be announced. Please try again later.';
+
+  @override
+  String get fotoStatusWartet => 'Photo waiting: both of you open VelvetPulse';
+
+  @override
+  String get fotoStatusLaedt => 'Transferring photo …';
+
+  @override
+  String get fotoAnsehen => 'View photo (only once)';
+
+  @override
+  String get fotoStatusAngesehen => 'Photo viewed';
+
+  @override
+  String get fotoStatusWartetRaus => 'Waiting for your partner';
+
+  @override
+  String get fotoStatusZugestellt => 'Delivered';
+
+  @override
+  String get fotoStatusFehler => 'Not delivered';
+
+  @override
+  String get fotoAnsichtHinweis =>
+      'Visible only now. When you close it, the photo is deleted.';
+
+  @override
+  String get fotoWeg => 'This photo is no longer available.';
 }
