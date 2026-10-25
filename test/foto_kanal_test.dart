@@ -113,14 +113,25 @@ void main() {
 
   Future<void> warten() => Future.delayed(const Duration(milliseconds: 200));
 
+  /// Wartet, bis die Übertragung durch ist; fest 200 ms reichen unter Last (alle Tests parallel) nicht immer.
+  Future<String?> zustandAbwarten(FotoKanal kanal, String id, String ziel) async {
+    String? z;
+    for (var i = 0; i < 50; i++) {
+      z = await kanal.zustand(id, vonMir: false);
+      if (z == ziel) break;
+      await Future.delayed(const Duration(milliseconds: 100));
+    }
+    return z;
+  }
+
   test('Beide online: Foto kommt direkt an, lässt sich genau einmal ansehen', () async {
     await annaKanal.start();
     await benKanal.start();
     final ergebnis = await annaKanal.senden(bild);
     expect(ergebnis, FotoErgebnis.unterwegs);
-    await warten();
     final id = ben.angebote.keys.single;
-    expect(await benKanal.zustand(id, vonMir: false), 'bereit');
+    expect(await zustandAbwarten(benKanal, id, 'bereit'), 'bereit');
+    await warten(); // Empfangsbestätigung an Anna
     expect(annaKanal.status.value[id], 'zugestellt');
     expect(File('${tmp.path}/anna/raus_$id.bin').existsSync(), isFalse, reason: 'beim Absender gelöscht');
     // Auf der Platte liegt beim Empfänger nur Verschlüsseltes.
@@ -144,8 +155,7 @@ void main() {
 
     ben.online = true;
     await benKanal.start(); // Ben öffnet die App und meldet fehlende Fotos.
-    await warten();
-    expect(await benKanal.zustand(id, vonMir: false), 'bereit');
+    expect(await zustandAbwarten(benKanal, id, 'bereit'), 'bereit');
     expect(await benKanal.einmalOeffnen(id), bild);
   });
 
