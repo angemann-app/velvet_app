@@ -293,6 +293,17 @@
           "text": "Whoever shows their code now gets the request right in the pairing window and can confirm it. Before, the scanned side never noticed."
         }
       ]
+    },
+    {
+      "build": 39,
+      "version": "4.7.0",
+      "punkte": [
+        {
+          "icon": "new_releases",
+          "titel": "Version 4.7.0 is stable",
+          "text": "Everything from the recent betas is now in the stable version: course 26 Everyday eroticism, lessons on lingerie and striptease, the guide, a hotter spicy mode with photos and disappearing messages, and the fixed pairing by QR code."
+        }
+      ]
     }
   ],
   "_source": {
@@ -308,6 +319,7 @@
     "news:35": "7f92712a8752b764",
     "news:36": "54944e2b84024fc6",
     "news:37": "e2c97176e6c8dba5",
-    "news:38": "448bdd315e1547df"
+    "news:38": "448bdd315e1547df",
+    "news:39": "04594a31ae0808e7"
   }
 }
