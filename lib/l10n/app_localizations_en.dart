@@ -3177,4 +3177,17 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get fotoIdeeHinweisHeiss =>
       'Entirely optional. Please no face, tattoos or recognisable room.';
+
+  @override
+  String get fotoAlleinTitel => 'Are you alone?';
+
+  @override
+  String get fotoAlleinText =>
+      'The photo can be viewed only once. It\'s best to look at it when you\'re alone and nobody is looking over your shoulder.';
+
+  @override
+  String get fotoJetztAnsehen => 'View now';
+
+  @override
+  String get fotoSpaeter => 'Later';
 }

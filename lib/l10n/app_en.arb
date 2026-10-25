@@ -883,5 +883,9 @@
   "fotoIdeeAndere": "Another idea",
   "fotoIdeeHeuteNicht": "Not today",
   "fotoIdeenAnzeigen": "Show photo ideas",
-  "fotoIdeeHinweisHeiss": "Entirely optional. Please no face, tattoos or recognisable room."
+  "fotoIdeeHinweisHeiss": "Entirely optional. Please no face, tattoos or recognisable room.",
+  "fotoAlleinTitel": "Are you alone?",
+  "fotoAlleinText": "The photo can be viewed only once. It's best to look at it when you're alone and nobody is looking over your shoulder.",
+  "fotoJetztAnsehen": "View now",
+  "fotoSpaeter": "Later"
 }

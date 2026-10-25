@@ -5420,6 +5420,30 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Ganz freiwillig. Bitte ohne Gesicht, Tattoos oder erkennbaren Raum.'**
   String get fotoIdeeHinweisHeiss;
+
+  /// No description provided for @fotoAlleinTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Bist du allein?'**
+  String get fotoAlleinTitel;
+
+  /// No description provided for @fotoAlleinText.
+  ///
+  /// In de, this message translates to:
+  /// **'Das Foto lässt sich nur einmal ansehen. Schau es dir am besten an, wenn du allein bist und dir niemand über die Schulter schaut.'**
+  String get fotoAlleinText;
+
+  /// No description provided for @fotoJetztAnsehen.
+  ///
+  /// In de, this message translates to:
+  /// **'Jetzt ansehen'**
+  String get fotoJetztAnsehen;
+
+  /// No description provided for @fotoSpaeter.
+  ///
+  /// In de, this message translates to:
+  /// **'Später'**
+  String get fotoSpaeter;
 }
 
 class _AppLocalizationsDelegate

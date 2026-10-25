@@ -1502,5 +1502,9 @@
   "fotoIdeeAndere": "Andere Idee",
   "fotoIdeeHeuteNicht": "Heute nicht",
   "fotoIdeenAnzeigen": "Foto-Ideen anzeigen",
-  "fotoIdeeHinweisHeiss": "Ganz freiwillig. Bitte ohne Gesicht, Tattoos oder erkennbaren Raum."
+  "fotoIdeeHinweisHeiss": "Ganz freiwillig. Bitte ohne Gesicht, Tattoos oder erkennbaren Raum.",
+  "fotoAlleinTitel": "Bist du allein?",
+  "fotoAlleinText": "Das Foto lässt sich nur einmal ansehen. Schau es dir am besten an, wenn du allein bist und dir niemand über die Schulter schaut.",
+  "fotoJetztAnsehen": "Jetzt ansehen",
+  "fotoSpaeter": "Später"
 }

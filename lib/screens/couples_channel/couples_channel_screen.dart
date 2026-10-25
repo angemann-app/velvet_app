@@ -191,6 +191,23 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               padding: const EdgeInsets.only(top: 6),
               child: FilledButton.icon(
                 onPressed: () async {
+                  // Erst fragen: Das Foto lässt sich nur einmal ansehen, also besser allein.
+                  final jetzt = await showDialog<bool>(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      backgroundColor: AppTheme.surface,
+                      title: Text(t.fotoAlleinTitel),
+                      content: Text(t.fotoAlleinText, style: const TextStyle(height: 1.45)),
+                      actions: [
+                        TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.fotoSpaeter)),
+                        TextButton(
+                          onPressed: () => Navigator.pop(context, true),
+                          child: Text(t.fotoJetztAnsehen, style: const TextStyle(color: AppTheme.rose)),
+                        ),
+                      ],
+                    ),
+                  );
+                  if (jetzt != true) return;
                   final bild = await FotoKanal.instanz.einmalOeffnen(id);
                   if (!context.mounted) return;
                   if (bild == null) {

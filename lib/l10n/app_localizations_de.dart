@@ -3192,4 +3192,17 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get fotoIdeeHinweisHeiss =>
       'Ganz freiwillig. Bitte ohne Gesicht, Tattoos oder erkennbaren Raum.';
+
+  @override
+  String get fotoAlleinTitel => 'Bist du allein?';
+
+  @override
+  String get fotoAlleinText =>
+      'Das Foto lässt sich nur einmal ansehen. Schau es dir am besten an, wenn du allein bist und dir niemand über die Schulter schaut.';
+
+  @override
+  String get fotoJetztAnsehen => 'Jetzt ansehen';
+
+  @override
+  String get fotoSpaeter => 'Später';
 }
