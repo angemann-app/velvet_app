@@ -1,5 +1,8 @@
 """Pflege der Übersetzungen in translations/<sprache>/ (Standard: en).
 
+Für weitere Sprachen gibt es inzwischen PO-Dateien (translations/po/, Anleitung in translations/README.md);
+dieses Skript ist vor allem für Englisch gedacht.
+
 Regel: Jeder neue oder geänderte Inhalt wird auch ins Englische übersetzt.
 test/translation_test.dart prüft das über Prüfsummen der deutschen Ausgangstexte.
 Weitere Sprachen (Beiträge der Community) mit --lang fr usw.; siehe CONTRIBUTING.md.

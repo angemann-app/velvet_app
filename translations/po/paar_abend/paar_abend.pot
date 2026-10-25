@@ -1,0 +1,673 @@
+# VelvetPulse: Gemeinsamer Abend (Audio-Bausteine)
+# Ausgangssprache Deutsch, Quelle: assets/data/paar_abend.json
+# Anleitung für Übersetzer / Guide for translators: translations/README.md
+# Enthält Inhalte über Sexualität für Erwachsene. / Contains adult content about sexuality.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VelvetPulse\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Source-Language: de\n"
+
+#. Baustein des gemeinsamen Abends, phase: ankommen
+#. EN: Welcome to your evening together. Place the phone so you can hear me well, and dim the light. Sit or lie close to each other. Look into each other's eyes for a moment. You don't have to say anything. Just breathe. Tonight there is no goal. You're giving each other time and touch, nothing else.
+msgctxt "block:ankommen_1#text"
+msgid "Willkommen zu eurem gemeinsamen Abend. Legt das Handy so hin, dass ihr mich gut hören könnt, und dimmt das Licht. Setzt oder legt euch nah zueinander. Schaut euch einen Moment in die Augen. Ihr müsst nichts sagen. Atmet einfach. Heute gibt es kein Ziel. Ihr schenkt euch Zeit und Berührung, sonst nichts."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ankommen
+#. EN: Lovely that you're here. Make yourselves comfortable, somewhere warm where nobody will disturb you. Hold hands. Feel the warmth of the other hand. Breathe in deeply together. And slowly out again. Leave the day outside. Everything that comes now is an invitation, not an instruction.
+msgctxt "block:ankommen_2#text"
+msgid "Schön, dass ihr hier seid. Macht es euch bequem, an einem warmen Ort, an dem euch niemand stört. Nehmt euch an den Händen. Spürt die Wärme der anderen Hand. Atmet gemeinsam tief ein. Und langsam wieder aus. Lasst den Tag draußen. Alles, was jetzt kommt, ist eine Einladung, kein Auftrag."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ankommen
+#. EN: Welcome. Lie down next to each other so that your bodies touch somewhere. Perhaps just your shoulders, perhaps your hands. Close your eyes. Breathe in deeply three times and out slowly. Remember your agreement: one word is enough, and everything stops. Nothing has to happen. You may simply enjoy.
+msgctxt "block:ankommen_3#text"
+msgid "Willkommen. Legt euch nebeneinander, so dass sich eure Körper irgendwo berühren. Vielleicht nur die Schultern, vielleicht die Hände. Schließt die Augen. Atmet dreimal tief ein und lang aus. Erinnert euch an eure Abmachung: Ein Wort genügt, und alles hält an. Nichts muss passieren. Ihr dürft einfach genießen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_start
+#. EN: Now the first round begins. Whoever gives sits comfortably next to the receiving person. Whoever receives lies down however feels comfortable and closes their eyes. From now on you, the receiving person, don't have to do anything at all. Just feel. And you, the giving person, may take all the time in the world.
+msgctxt "block:runde_start_1#text"
+msgid "Jetzt beginnt die erste Runde. Wer gibt, setzt sich bequem neben die empfangende Person. Wer empfängt, legt sich hin, wie es angenehm ist, und schließt die Augen. Ab jetzt musst du, die empfangende Person, gar nichts tun. Nur spüren. Und du, die gebende Person, darfst dir alle Zeit der Welt lassen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_start
+#. EN: A new round begins. Find your places. Whoever receives lies warm and comfortable and may hand over all responsibility from now on. Whoever gives rubs their hands together until they're warm. First simply rest them calmly on your partner's body. No movement yet. Just arriving.
+msgctxt "block:runde_start_2#text"
+msgid "Eine neue Runde beginnt. Findet eure Plätze. Wer empfängt, liegt warm und bequem und darf ab jetzt jede Verantwortung abgeben. Wer gibt, reibt die Hände aneinander, bis sie warm werden. Lege sie zuerst einfach ruhig auf den Körper deines Gegenübers. Noch keine Bewegung. Nur ankommen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: ruecken, stufe: 1, tiefe: bekleidet
+#. EN: Place your hands flat on your partner's back. Begin with long, slow strokes, from the shoulders down to the small of the back. Imagine your hands moving through warm honey. I'll be quiet for a while now.
+msgctxt "block:zone_ruecken_1#text"
+msgid "Lege deine Hände flach auf den Rücken deines Gegenübers. Beginne mit langen, langsamen Strichen, von den Schultern bis zum Kreuz. Stell dir vor, deine Hände bewegen sich durch warmen Honig. Ich bin jetzt eine Weile still."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: ruecken, stufe: 1, tiefe: bekleidet
+#. EN: Let both hands wander over the back. Circles that grow larger and smaller again. Feel where the body softens and where it's still holding on. Stay there a little longer. Take your time.
+msgctxt "block:zone_ruecken_2#text"
+msgid "Wandere mit beiden Händen über den Rücken. Kreise, die größer und wieder kleiner werden. Spüre, wo der Körper weich wird und wo er noch festhält. Bleib dort ein wenig länger. Lass dir Zeit."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: schultern, stufe: 1, tiefe: bekleidet
+#. EN: Now turn to the shoulders and neck. This is where the day often collects. Stroke with warm hands from the centre outwards, as if lifting something heavy away. At your own pace.
+msgctxt "block:zone_schultern_1#text"
+msgid "Wende dich jetzt den Schultern und dem Nacken zu. Hier sammelt sich oft der Tag. Streiche mit warmen Händen von der Mitte nach außen, als würdest du etwas Schweres abnehmen. Ganz in deinem Tempo."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: schultern, stufe: 1, tiefe: bekleidet
+#. EN: Place your hands on the shoulders and simply let their weight work. Then begin slowly stroking out the neck with your fingertips, up to the hairline. Whoever receives may sigh if it feels good.
+msgctxt "block:zone_schultern_2#text"
+msgid "Lege deine Hände auf die Schultern und lass einfach ihr Gewicht wirken. Dann beginne, den Nacken mit den Fingerspitzen langsam auszustreichen, bis hinauf zum Haaransatz. Wer empfängt, darf seufzen, wenn es guttut."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: arme, stufe: 2, tiefe: bekleidet
+#. EN: Now take one arm in your hands. Stroke from the shoulder to the fingertips, slowly, centimetre by centimetre. When you arrive at the hand, hold it for a moment. Then the other arm.
+msgctxt "block:zone_arme_1#text"
+msgid "Nimm jetzt einen Arm in deine Hände. Streiche von der Schulter bis zu den Fingerspitzen, langsam, Zentimeter für Zentimeter. Wenn du an der Hand ankommst, halte sie einen Moment. Dann der andere Arm."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: haende, stufe: 2, tiefe: bekleidet
+#. EN: Now devote yourself to the hands. Massage the palm with your thumb in small circles. Stroke out each finger one by one. Hands carry so much through the day. Now they may receive.
+msgctxt "block:zone_haende_1#text"
+msgid "Widme dich jetzt den Händen. Massiere die Handfläche mit dem Daumen in kleinen Kreisen. Streiche jeden Finger einzeln aus. Hände tragen so viel durch den Tag. Jetzt dürfen sie empfangen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: kopf, stufe: 2, tiefe: bekleidet
+#. EN: Move to the head. Slowly run your fingers through the hair, as if combing it. Massage the scalp with gentle circles. Stroke over the forehead, the temples, the eyebrows. Very lightly.
+msgctxt "block:zone_kopf_1#text"
+msgid "Wandere zum Kopf. Fahre mit den Fingern langsam durch das Haar, als würdest du es kämmen. Massiere die Kopfhaut mit sanften Kreisen. Streiche über die Stirn, die Schläfen, die Augenbrauen. Ganz leicht."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: kopf, stufe: 2, tiefe: bekleidet
+#. EN: Place your fingertips on your partner's face. Trace its lines: forehead, cheekbones, chin, lips. As slowly as if you were discovering this face for the first time.
+msgctxt "block:zone_kopf_2#text"
+msgid "Lege die Fingerspitzen auf das Gesicht deines Gegenübers. Zeichne die Linien nach: Stirn, Wangenknochen, Kinn, die Lippen. So langsam, als würdest du dieses Gesicht zum ersten Mal entdecken."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: beine, stufe: 2, tiefe: bekleidet
+#. EN: Now turn to the legs. Long, calm strokes from the thighs down to the ankles. Sometimes with light, sometimes with slightly firmer pressure. Notice how your partner is breathing.
+msgctxt "block:zone_beine_1#text"
+msgid "Wende dich jetzt den Beinen zu. Lange, ruhige Striche von den Oberschenkeln bis zu den Knöcheln. Mal mit leichtem, mal mit etwas festerem Druck. Achte darauf, wie dein Gegenüber atmet."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: fuesse, stufe: 2, tiefe: bekleidet
+#. EN: Take one foot in both hands. Keep it warm. Then stroke with your thumbs over the sole, from the heel to the toes. Feet carry us all day. Now they are carried.
+msgctxt "block:zone_fuesse_1#text"
+msgid "Nimm einen Fuß in beide Hände. Halte ihn warm. Dann streiche mit den Daumen über die Fußsohle, von der Ferse zu den Zehen. Füße tragen uns den ganzen Tag. Jetzt werden sie getragen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: ruecken_oel, stufe: 3, tiefe: haut
+#. EN: Now take some warm oil in your hands and rub them together. Place them on the bare back. Glide over the skin with long, flowing movements, along the spine and down the sides. Let your hands become heavy.
+msgctxt "block:zone_ruecken_oel_1#text"
+msgid "Nimm jetzt etwas warmes Öl in die Hände und reibe sie aneinander. Lege sie auf den nackten Rücken. Gleite mit langen, fließenden Bewegungen über die Haut, die Wirbelsäule entlang und die Seiten hinunter. Lass die Hände schwer werden."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: ruecken_oel, stufe: 3, tiefe: haut
+#. EN: With oil on the skin you can now glide with your whole forearm, from the small of the back up to the shoulders. Alternate between firm and feather-light. Notice where your partner breathes more deeply.
+msgctxt "block:zone_ruecken_oel_2#text"
+msgid "Mit Öl auf der Haut kannst du jetzt mit dem ganzen Unterarm gleiten, vom Kreuz bis zu den Schultern. Wechsle zwischen fest und federleicht. Achte darauf, wo dein Gegenüber tiefer atmet."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: bauch, stufe: 3, tiefe: haut
+#. EN: Place a warm hand on the belly. No movement yet. Feel how it rises and falls with the breath. Then begin large, slow circles clockwise around the navel.
+msgctxt "block:zone_bauch_1#text"
+msgid "Lege eine warme Hand auf den Bauch. Noch keine Bewegung. Spüre, wie er sich mit dem Atem hebt und senkt. Dann beginne mit großen, langsamen Kreisen im Uhrzeigersinn um den Nabel."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: bauch, stufe: 3, tiefe: haut
+#. EN: Stroke over the belly with both hands, from the centre to the sides, like waves on a beach. For many, the belly is a vulnerable place. Go gently, and let it soften.
+msgctxt "block:zone_bauch_2#text"
+msgid "Streiche mit beiden Händen über den Bauch, von der Mitte zu den Seiten, wie Wellen am Strand. Der Bauch ist für viele ein verletzlicher Ort. Geh behutsam vor, und lass ihn weich werden."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: huefte, stufe: 3, tiefe: haut
+#. EN: Move to the hips and the sides of the body. Follow the curves with your hands, slowly, as if exploring a landscape. The skin above the pelvis is often more sensitive than you'd think.
+msgctxt "block:zone_huefte_1#text"
+msgid "Wandere zu den Hüften und den Seiten des Körpers. Folge mit den Händen den Rundungen, langsam, als würdest du eine Landschaft erkunden. Die Haut über dem Becken ist oft empfindsamer, als man denkt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: brust, stufe: 4, tiefe: intim
+#. EN: If it feels right for both of you, now turn to the chest. Begin on the outside, with large, soft circles, and slowly approach the centre. Without a goal. Just warmth and skin.
+msgctxt "block:zone_brust_1#text"
+msgid "Wenn es für euch beide stimmt, wende dich jetzt der Brust zu. Beginne außen, mit großen, weichen Kreisen, und nähere dich langsam der Mitte. Ohne Ziel. Nur Wärme und Haut."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: brust, stufe: 4, tiefe: intim
+#. EN: Stroke over the chest and nipples, with your fingertips or a flat hand. Sometimes very lightly, sometimes with a little more pressure. Pay attention to every sign from your partner and let it guide you.
+msgctxt "block:zone_brust_2#text"
+msgid "Streiche über Brust und Brustwarzen, mit den Fingerspitzen oder der flachen Hand. Mal ganz leicht, mal mit etwas mehr Druck. Achte auf jedes Zeichen deines Gegenübers und lass dich davon leiten."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: innenschenkel, stufe: 4, tiefe: intim
+#. EN: Move to the insides of the thighs. Stroke slowly upwards, approach the centre without touching it, and glide back again. Let the anticipation grow.
+msgctxt "block:zone_innenschenkel_1#text"
+msgid "Wandere zu den Innenseiten der Oberschenkel. Streiche langsam nach oben, nähere dich der Mitte, ohne sie zu berühren, und gleite wieder zurück. Lass die Vorfreude wachsen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: innenschenkel, stufe: 4, tiefe: intim
+#. EN: Place your hands on the inner thighs and let them rest there. Feel the warmth coming from the centre. Then stroke with your thumbs in small circles, a little further each time, and back again.
+msgctxt "block:zone_innenschenkel_2#text"
+msgid "Lege deine Hände auf die Innenschenkel und lass sie dort ruhen. Spüre die Wärme, die von der Mitte ausgeht. Dann streiche mit den Daumen in kleinen Kreisen, immer ein Stück weiter, und wieder zurück."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: geschlecht, stufe: 5, tiefe: intim
+#. EN: If your partner wants it, now place one hand very calmly on their genitals. No movement. Just holding, warming, being there. Both of you, feel how much this touch alone sets off.
+msgctxt "block:zone_geschlecht_1#text"
+msgid "Wenn dein Gegenüber es möchte, lege jetzt eine Hand ganz ruhig auf das Geschlecht. Keine Bewegung. Nur halten, wärmen, da sein. Spürt beide, wie viel allein diese Berührung auslöst."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: geschlecht, stufe: 5, tiefe: intim
+#. EN: Now begin to stroke the genitals slowly with plenty of lubricant. All around, flat, without hurry. Use what you learned in the course. And remember: there's nothing to achieve. Only to enjoy.
+msgctxt "block:zone_geschlecht_2#text"
+msgid "Beginne jetzt, das Geschlecht mit viel Gleitmittel langsam zu streicheln. Rundherum, flach, ohne Eile. Nimm, was du im Kurs gelernt hast. Und denk daran: Es gibt nichts zu erreichen. Nur zu genießen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: geschlecht, stufe: 5, tiefe: intim
+#. EN: Now let your hands wander freely, from the genitals over the belly and thighs and back again. Very slowly. Whoever receives may show with their own hand how it feels best.
+msgctxt "block:zone_geschlecht_3#text"
+msgid "Lass deine Hände jetzt frei wandern, vom Geschlecht über den Bauch und die Schenkel und wieder zurück. Ganz langsam. Wer empfängt, darf mit der eigenen Hand zeigen, wie es am schönsten ist."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: ruecken, stufe: 1, tiefe: bekleidet
+#. EN: Now use only your fingertips. Let them dance over the back like feathers, barely noticeable. Draw lines, circles, perhaps a word. Whoever receives may guess, or simply enjoy.
+msgctxt "block:zone_ruecken_3#text"
+msgid "Nimm jetzt nur noch die Fingerspitzen. Lass sie wie Federn über den Rücken tanzen, kaum spürbar. Male Linien, Kreise, vielleicht ein Wort. Wer empfängt, darf raten, oder einfach nur genießen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: arme, stufe: 2, tiefe: bekleidet
+#. EN: Stroke along the inside of the arms with your fingertips, from the wrist into the crook of the elbow and beyond. The skin there is thin and sensitive. The slower, the lovelier.
+msgctxt "block:zone_arme_2#text"
+msgid "Streiche mit den Fingerspitzen die Innenseite der Arme entlang, vom Handgelenk bis in die Armbeuge und weiter. Die Haut dort ist dünn und empfindsam. Je langsamer, desto schöner."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: haende, stufe: 2, tiefe: bekleidet
+#. EN: Place your palms against each other. Feel the warmth. Then let your fingers slide between your partner's fingers, slowly, and out again. A small touch that says a lot.
+msgctxt "block:zone_haende_2#text"
+msgid "Legt eure Handflächen aneinander. Spürt die Wärme. Dann lass deine Finger zwischen die Finger deines Gegenübers gleiten, langsam, und wieder hinaus. Eine kleine Berührung, die viel erzählt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: beine, stufe: 2, tiefe: bekleidet
+#. EN: Hold a calf with both hands and slowly stroke it out towards the knee. Then the hollow of the knee, very lightly, only with your fingertips. Many people feel more there than they expect.
+msgctxt "block:zone_beine_2#text"
+msgid "Umfasse eine Wade mit beiden Händen und streiche sie langsam aus, Richtung Knie. Dann die Kniekehle, ganz leicht, nur mit den Fingerspitzen. Viele Menschen spüren dort mehr, als sie erwarten."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: fuesse, stufe: 2, tiefe: bekleidet
+#. EN: Hold both feet in your hands and simply let them get warm. Then massage the ankles in small circles and stroke out each toe one by one. Calmly and thoroughly.
+msgctxt "block:zone_fuesse_2#text"
+msgid "Halte beide Füße in deinen Händen und lass sie einfach warm werden. Dann massiere die Knöchel in kleinen Kreisen und streiche jeden Zeh einzeln aus. Ruhig und gründlich."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: po, stufe: 3, tiefe: haut
+#. EN: Now move to the buttocks. Knead the muscles with your whole hand, firmly and slowly, like warm dough. A lot of tension sits here. Then stroke softly over them and feel the body let go.
+msgctxt "block:zone_po_1#text"
+msgid "Wandere jetzt zum Po. Knete die Muskeln mit der ganzen Hand, kräftig und langsam, wie warmen Teig. Hier sitzt viel Spannung. Dann streiche weich darüber und spüre, wie der Körper loslässt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: po, stufe: 3, tiefe: haut
+#. EN: Place both hands flat on the buttocks and let them become heavy. Then trace large figures of eight with your fingertips over the curves and down the thighs. Once firm, once as light as a breath.
+msgctxt "block:zone_po_2#text"
+msgid "Lege beide Hände flach auf den Po und lass sie schwer werden. Dann zeichne mit den Fingerspitzen große Achten über die Rundungen und die Oberschenkel hinab. Einmal fest, einmal hauchzart."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: huefte, stufe: 3, tiefe: haut
+#. EN: Place your hands on the right and left of the pelvis and rock it very gently back and forth. Then glide along the groin, slowly, with flat hands. A place that is often overlooked.
+msgctxt "block:zone_huefte_2#text"
+msgid "Lege deine Hände rechts und links auf das Becken und wiege es ganz sanft hin und her. Dann gleite die Leisten entlang, langsam, mit flachen Händen. Ein Ort, der oft übersehen wird."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: ganzkoerper, stufe: 3, tiefe: haut
+#. EN: Now connect everything. Long strokes over the whole body, from the neck to the feet, and back again. Leave no spot out. You're painting your partner a picture of themselves.
+msgctxt "block:zone_ganzkoerper_1#text"
+msgid "Verbinde jetzt alles. Lange Striche über den ganzen Körper, vom Nacken bis zu den Füßen, und wieder zurück. Lass keine Stelle aus. Du malst deinem Gegenüber ein Bild von sich selbst."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: brust, stufe: 4, tiefe: intim
+#. EN: Now try something different: your breath. Breathe warmly over the chest, then cool. Let your lips just brush the skin. Both of you, feel how the tension changes.
+msgctxt "block:zone_brust_3#text"
+msgid "Probiere jetzt etwas anderes: deinen Atem. Hauche warm über die Brust, dann kühl. Lass deine Lippen die Haut nur streifen. Spürt beide, wie sich die Spannung verändert."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: geschlecht, stufe: 5, tiefe: intim
+#. EN: Now slow down again. Stroke the genitals so lightly that it can hardly be felt any more, and stay with this slowness for a while. Often this is exactly where the loveliest arousal arises.
+msgctxt "block:zone_geschlecht_4#text"
+msgid "Werde jetzt wieder langsamer. Streichle das Geschlecht so leicht, dass es fast nicht mehr zu spüren ist, und bleib eine Weile bei dieser Langsamkeit. Oft entsteht genau hier die schönste Erregung."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung
+#. EN: Keep breathing as you do. Calmly and deeply.
+msgctxt "block:erinnerung_1#text"
+msgid "Atme dabei weiter. Ruhig und tief."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung
+#. EN: You have all the time in the world. Feel free to go even slower.
+msgctxt "block:erinnerung_2#text"
+msgid "Du hast alle Zeit der Welt. Werde ruhig noch langsamer."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung
+#. EN: Keep your attention fully in your hands.
+msgctxt "block:erinnerung_3#text"
+msgid "Bleib mit deiner Aufmerksamkeit ganz in deinen Händen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung
+#. EN: Whoever receives: let every thought drift away. Just feel.
+msgctxt "block:erinnerung_4#text"
+msgid "Wer empfängt: Lass jeden Gedanken ziehen. Nur spüren."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung
+#. EN: Notice your partner's breath. It shows you the way.
+msgctxt "block:erinnerung_5#text"
+msgid "Achte auf den Atem deines Gegenübers. Er zeigt dir den Weg."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung
+#. EN: There's nothing to achieve. Only this moment.
+msgctxt "block:erinnerung_6#text"
+msgid "Es gibt nichts zu erreichen. Nur diesen Moment."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: check_in
+#. EN: Pause for a moment. Whoever receives, say in one word how you're doing right now. Green, yellow or red. Then we'll continue.
+msgctxt "block:check_in_1#text"
+msgid "Halte einen Moment inne. Wer empfängt, sag mit einem Wort, wie es dir gerade geht. Grün, gelb oder rot. Dann geht es weiter."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: check_in
+#. EN: A short pause. Both of you breathe in deeply once and out slowly. Whoever receives may ask for something: slower, firmer, a different spot. One sentence is enough.
+msgctxt "block:check_in_2#text"
+msgid "Kurze Pause. Atmet beide einmal tief ein und lang aus. Wer empfängt, darf sich etwas wünschen: langsamer, fester, eine andere Stelle. Ein Satz genügt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: check_in
+#. EN: How does it feel? You don't have to explain anything. A smile, a nod, a sigh is enough. And if something isn't right, just say so.
+msgctxt "block:check_in_3#text"
+msgid "Wie fühlt es sich an? Ihr müsst nichts erklären. Ein Lächeln, ein Nicken, ein Seufzer reicht. Und wenn etwas nicht stimmt, sagt es einfach."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_ende
+#. EN: Now let your hands slow down. Finally rest them calmly on your partner's body and breathe together. Then release them very gently.
+msgctxt "block:runde_ende_1#text"
+msgid "Lass deine Hände jetzt langsamer werden. Lege sie zum Schluss ruhig auf den Körper deines Gegenübers und atmet gemeinsam. Dann löse sie ganz behutsam."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_ende
+#. EN: This round is coming to an end. Let your movements become slower and slower until your hands lie still. Both of you, feel what's there. Whoever received may take a moment longer before opening their eyes.
+msgctxt "block:runde_ende_2#text"
+msgid "Diese Runde geht zu Ende. Werde mit deinen Bewegungen immer langsamer, bis deine Hände still liegen. Spürt beide nach. Wer empfangen hat, darf sich noch einen Moment Zeit lassen, bevor sich die Augen öffnen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: wechsel
+#. EN: Now you swap roles. Take a moment to arrive. Perhaps a kiss, perhaps a look. Whoever just received may now give.
+msgctxt "block:wechsel_1#text"
+msgid "Jetzt tauscht ihr die Rollen. Nehmt euch einen Moment, um anzukommen. Vielleicht ein Kuss, vielleicht ein Blick. Wer eben empfangen hat, darf jetzt geben."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: wechsel
+#. EN: Time to switch roles. Take a breath, stretch if you like. Whoever just gave now lies down and may receive.
+msgctxt "block:wechsel_2#text"
+msgid "Zeit, die Rollen zu wechseln. Atmet kurz durch, streckt euch, wenn ihr mögt. Wer eben gegeben hat, legt sich jetzt hin und darf empfangen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ausklang
+#. EN: Your evening is drawing to a close. Lie close together. Breathe together. You don't have to do anything more. If you like, tell each other what was most beautiful. And if it turns into more, that's wonderful. If not, it was exactly right as it was.
+msgctxt "block:ausklang_1#text"
+msgid "Euer Abend neigt sich dem Ende zu. Legt euch eng aneinander. Atmet gemeinsam. Ihr müsst nichts mehr tun. Wenn ihr mögt, erzählt euch, was am schönsten war. Und wenn mehr daraus wird, ist das wunderbar. Wenn nicht, war es genau richtig so."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ausklang
+#. EN: Slowly come to rest. Simply hold each other. Feel each other's warmth and breath. Thank you for this time together.
+msgctxt "block:ausklang_2#text"
+msgid "Kommt langsam zur Ruhe. Haltet euch einfach im Arm. Spürt die Wärme und den Atem des anderen. Danke euch für diese Zeit miteinander."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ausklang
+#. EN: To finish: place a hand on each other's heart. Feel the heartbeat. If you like, say one word for this evening. And stay lying like this for as long as it feels good.
+msgctxt "block:ausklang_3#text"
+msgid "Zum Schluss: Legt eine Hand auf das Herz des anderen. Spürt den Herzschlag. Sagt euch, wenn ihr mögt, ein Wort für diesen Abend. Und bleibt so lange liegen, wie es sich gut anfühlt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ankommen, tiefe: spicy
+#. EN: Welcome to your spicy evening. Tonight things may get hot. Have lube, a towel and perhaps a scarf for the eyes ready. Agree on your stop word now. If it's said, everything goes quiet at once, no discussion. Everything else is allowed, if you both want it.
+msgctxt "block:ankommen_s1#text"
+msgid "Willkommen zu eurem Spicy-Abend. Heute darf es heiß werden. Legt Gleitmittel, ein Handtuch und vielleicht ein Tuch für die Augen bereit. Vereinbart jetzt euer Stoppwort. Fällt es, wird es sofort ruhig, ohne Diskussion. Alles andere ist erlaubt, wenn ihr beide es wollt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ankommen, tiefe: sehrSpicy
+#. EN: Welcome. Tonight gets filthy. Get undressed, have lube and a towel ready, and something for the eyes. Agree on your stop word now. If it's said, it stops at once, no discussion. Everything else: as long as you're both really up for it.
+msgctxt "block:ankommen_x1#text"
+msgid "Willkommen. Heute Abend wird's versaut. Zieht euch aus, legt Gleitmittel und Handtuch bereit, und was für die Augen. Macht jetzt euer Stoppwort aus. Fällt es, ist sofort Schluss, ohne Diskussion. Alles andere: Hauptsache, ihr beide seid richtig geil drauf."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ankommen, tiefe: spicy
+#. EN: Lovely that you're treating yourselves to this evening. Look into each other's eyes. Tell each other one wish for tonight, and one limit. Remember your stop word. Then breathe together three times, and let the tension rise.
+msgctxt "block:ankommen_s2#text"
+msgid "Schön, dass ihr euch diesen Abend gönnt. Schaut euch in die Augen. Sagt euch einen Wunsch für heute, und eine Grenze. Denkt an euer Stoppwort. Dann atmet dreimal zusammen, und lasst die Spannung steigen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ankommen, tiefe: sehrSpicy
+#. EN: Look at each other. Tell each other straight out what you're horny for tonight and what's off limits, dirty words are welcome. Remember your stop word. Then a kiss, deep and greedy. Here we go.
+msgctxt "block:ankommen_x2#text"
+msgid "Schaut euch an. Sagt euch ganz direkt, worauf ihr heute geil seid und was heute nicht geht, ruhig mit schmutzigen Worten. Denkt an euer Stoppwort. Dann ein Kuss, tief und gierig. Es geht los."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_start, tiefe: spicy
+#. EN: Whoever receives lies down, closes their eyes or ties on the scarf. Whoever gives takes their time. Tonight is for teasing: awaken desire, hold back, and only give what's longed for once it's almost unbearable.
+msgctxt "block:runde_start_s1#text"
+msgid "Wer empfängt, legt sich hin, schließt die Augen oder bindet sich das Tuch um. Wer gibt, lässt sich Zeit. Heute wird geneckt: Lust wecken, hinhalten, und das Ersehnte erst geben, wenn es kaum noch auszuhalten ist."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_start, tiefe: sehrSpicy
+#. EN: Whoever receives lies down, eyes closed or scarf on. Whoever gives may now do with the other whatever you agreed. Turn them on, hold back, leave them squirming. And only give it when they beg out loud.
+msgctxt "block:runde_start_x1#text"
+msgid "Wer empfängt, legt sich hin, Augen zu oder Tuch drum. Wer gibt, darf jetzt mit dem anderen machen, was abgesprochen ist. Heiß machen, hinhalten, zappeln lassen. Und erst dann geben, wenn laut gebettelt wird."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_start, tiefe: spicy
+#. EN: A new round. Whoever receives gets comfortable and may only take. Whoever gives may be cheeky, even demanding, but always attentive. Breath, sounds and movements tell you what feels good.
+msgctxt "block:runde_start_s2#text"
+msgid "Neue Runde. Wer empfängt, macht es sich bequem und darf nur nehmen. Wer gibt, darf frech sein, fordernd sogar, aber immer aufmerksam. Atem, Laute, Bewegungen verraten dir, was gefällt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_start, tiefe: sehrSpicy
+#. EN: Next round. Whoever receives lies back, spreads their legs and lets themselves be spoiled and devoured, just as agreed. Whoever gives may be greedy. Every moan tells you where to keep going.
+msgctxt "block:runde_start_x2#text"
+msgid "Nächste Runde. Wer empfängt, liegt da, spreizt die Beine und lässt sich verwöhnen und verschlingen, ganz wie abgesprochen. Wer gibt, darf gierig sein. Jedes Stöhnen sagt dir, wo du weitermachen sollst."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: necken, stufe: 5, tiefe: spicy
+#. EN: Run your fingertips over your partner's naked body. Belly, chest, hips, inner thighs. Come so close to the genitals that the heat can be felt, and move away again. Again and again. Make them beg.
+msgctxt "block:necken_s1#text"
+msgid "Fahr mit den Fingerspitzen über den nackten Körper deines Gegenübers. Bauch, Brust, Hüften, Innenschenkel. Komm dem Geschlecht so nah, dass man die Hitze spürt, und weich wieder aus. Wieder und wieder. Lass es betteln."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: necken, stufe: 5, tiefe: sehrSpicy
+#. EN: Stroke the naked body, everywhere except where it wants it most. Trail up the inner thighs, right to the brink, feel the heat, and away. Again and again. Leave your partner squirming until they push their hips at you and beg.
+msgctxt "block:necken_x1#text"
+msgid "Streichle den nackten Körper, überall, nur nicht da, wo es am meisten will. Fahr die Innenschenkel hoch, ganz kurz davor, spür die Hitze, und weg. Wieder und wieder. Lass dein Gegenüber zappeln, bis es dir die Hüften entgegenreckt und bettelt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: necken, stufe: 5, tiefe: spicy
+#. EN: Now touch only with your breath. Breathe over neck, chest, belly, inner thighs, very close to the genitals. Almost a touch, but not quite. Whoever receives may show how much it tingles.
+msgctxt "block:necken_s2#text"
+msgid "Berühre jetzt nur mit deinem Atem. Hauch über Hals, Brust, Bauch, Innenschenkel, ganz nah am Geschlecht. Fast eine Berührung, aber eben nicht. Wer empfängt, darf zeigen, wie sehr es kribbelt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: necken, stufe: 5, tiefe: sehrSpicy
+#. EN: Now only your breath and your words. Breathe over the nipples, the belly, between the legs, and whisper what you're about to do to your partner. Very direct. Very dirty. But don't touch yet.
+msgctxt "block:necken_x2#text"
+msgid "Jetzt nur dein Atem und deine Worte. Hauch über die Nippel, den Bauch, zwischen die Beine, und flüster dabei, was du gleich alles mit deinem Gegenüber machen wirst. Ganz direkt. Ganz dreckig. Aber noch nicht anfassen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: kuesse, stufe: 5, tiefe: spicy
+#. EN: Travel over the body with lips and tongue. Neck, shoulders, chest, belly. Kiss, lick, nibble. Slow down the lower you go, and stop just short of the goal.
+msgctxt "block:kuesse_s1#text"
+msgid "Wandere mit Lippen und Zunge über den Körper. Nacken, Schultern, Brust, Bauch. Küss, leck, knabber. Werde langsamer, je tiefer du kommst, und hör kurz vor dem Ziel auf."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: kuesse, stufe: 5, tiefe: sehrSpicy
+#. EN: Lick your way down the body. Neck, nipples, belly, groin. Kiss, lick, bite. And just before you get down there, stop and look up. Ask: do you want this? Make them say it.
+msgctxt "block:kuesse_x1#text"
+msgid "Leck dich über den Körper nach unten. Hals, Nippel, Bauch, Leiste. Küssen, lecken, beißen. Und kurz bevor du unten ankommst, hörst du auf und schaust hoch. Frag: Willst du das? Lass es dir sagen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: kuesse, stufe: 5, tiefe: spicy
+#. EN: Kiss the nipples, circle them with your tongue, suck on them. Soft, then firmer, a light bite. Listen for every sigh and keep going exactly there.
+msgctxt "block:kuesse_s2#text"
+msgid "Küss die Brustwarzen, umkreise sie mit der Zunge, saug daran. Zart, dann fester, ein leichter Biss. Achte auf jedes Seufzen und mach genau dort weiter."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: kuesse, stufe: 5, tiefe: sehrSpicy
+#. EN: Take the nipples in your mouth. Suck, lick, bite gently, tug with your lips. When your partner moans, keep doing exactly that and reach between their legs. Feel how wet or hard it already is down there.
+msgctxt "block:kuesse_x2#text"
+msgid "Nimm die Nippel in den Mund. Saug, leck, beiß zart rein, zieh mit den Lippen dran. Wenn dein Gegenüber aufstöhnt, mach genau so weiter und greif dabei zwischen die Beine. Spür, wie nass oder hart es dort schon ist."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: lust, stufe: 6, tiefe: spicy
+#. EN: Take plenty of lube and stroke your partner's genitals, slowly and with relish at first, then more firmly. Find the rhythm that feels good and stay with it. Whoever receives, feel free to say: more, harder, right there.
+msgctxt "block:lust_s1#text"
+msgid "Nimm reichlich Gleitmittel und streichle das Geschlecht deines Gegenübers, erst langsam und genüsslich, dann bestimmter. Finde den Rhythmus, der gut tut, und bleib dabei. Wer empfängt, sag ruhig: mehr, fester, genau da."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: lust, stufe: 6, tiefe: sehrSpicy
+#. EN: Take a good amount of lube and grab hold. Rub, stroke, finger-fuck, depending on what's waiting for you between their legs. Find the beat that's really hot and stay with it. Whoever receives says it out loud: more, harder, right there.
+msgctxt "block:lust_x1#text"
+msgid "Nimm ordentlich Gleitmittel und fass zu. Reib, wichs, fick mit den Fingern, je nachdem, was zwischen den Beinen auf dich wartet. Finde den Takt, der richtig geil ist, und bleib dabei. Wer empfängt, sagt laut: mehr, fester, genau da."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: lust, stufe: 6, tiefe: spicy
+#. EN: Now you play with the edge. Whoever gives drives the arousal up until their partner is close. Whoever receives says: now. The hand stops immediately. Both of you feel the throbbing. And when it sinks a little, it starts all over again.
+msgctxt "block:lust_s2#text"
+msgid "Jetzt spielt ihr mit der Kante. Wer gibt, treibt die Erregung hoch, bis das Gegenüber kurz davor ist. Wer empfängt, sagt: jetzt. Sofort hört die Hand auf. Spürt beide das Pochen. Und wenn es etwas sinkt, geht es von vorne los."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: lust, stufe: 6, tiefe: sehrSpicy
+#. EN: Now for some torment. Whoever gives keeps going until their partner is about to come. Whoever receives says: now. Hands off at once. Watch it twitch and beg, and say how hot it looks. And then again from the top.
+msgctxt "block:lust_x2#text"
+msgid "Jetzt wird gequält. Wer gibt, macht so lange, bis das Gegenüber kurz vorm Kommen ist. Wer empfängt, sagt: jetzt. Sofort Hände weg. Zuschauen, wie es zuckt und bettelt, und sagen, wie geil das aussieht. Und dann wieder von vorn."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: lust, stufe: 6, tiefe: spicy
+#. EN: Play with pace and pressure. A few quick, firm movements, then agonisingly slow. Firmer, then feather-light. Whoever gives notices exactly what makes the other's breath catch, and keeps returning there.
+msgctxt "block:lust_s3#text"
+msgid "Spielt mit Tempo und Druck. Ein paar schnelle, feste Bewegungen, dann quälend langsam. Fester, dann federleicht. Wer gibt, merkt sich genau, was den Atem des anderen stocken lässt, und kehrt immer wieder dorthin zurück."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: lust, stufe: 6, tiefe: sehrSpicy
+#. EN: Switch up the pace. A few fast, hard movements, then agonisingly slow. Harder, then barely at all. Watch for when your partner gasps, and do exactly that again. And again. Until they can't lie still any more.
+msgctxt "block:lust_x3#text"
+msgid "Wechsel das Tempo. Ein paar schnelle, harte Bewegungen, dann quälend langsam. Fester, dann kaum noch. Pass auf, wann dein Gegenüber nach Luft schnappt, und mach genau das wieder. Und wieder. Bis es nicht mehr still liegen kann."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: lust, stufe: 6, tiefe: spicy
+#. EN: Whoever receives places their own hand on the giving hand and guides it. Where, how fast, how firm. Whoever gives lets themselves be guided and learns. No words needed, the body says it all.
+msgctxt "block:lust_s4#text"
+msgid "Wer empfängt, legt die eigene Hand auf die gebende Hand und führt sie. Wo, wie schnell, wie fest. Wer gibt, lässt sich führen und lernt. Kein Wort nötig, der Körper sagt alles."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: lust, stufe: 6, tiefe: sehrSpicy
+#. EN: Whoever receives now takes the other's hand and shows how they get themselves off. Exactly like that, exactly there, exactly that fast. And says out loud what feels hot. Whoever gives copies it. Shamelessly.
+msgctxt "block:lust_x4#text"
+msgid "Wer empfängt, nimmt jetzt die Hand des anderen und zeigt, wie man es sich selbst besorgt. Genau so, genau da, genau so schnell. Und sagt dabei laut, was sich geil anfühlt. Wer gibt, macht es nach. Schamlos."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: mund, stufe: 6, tiefe: spicy
+#. EN: If you both want it, bring your mouth in now. Kiss your way up the inner thighs, and then right onto the genitals. Lips, tongue, hot breath. Slow, greedy. Whoever receives shows with sounds what feels good.
+msgctxt "block:mund_s1#text"
+msgid "Wenn ihr beide es wollt, nimm jetzt den Mund dazu. Küss dich die Innenschenkel hinauf, und dann mitten aufs Geschlecht. Lippen, Zunge, heißer Atem. Langsam, gierig. Wer empfängt, zeigt mit Lauten, was gefällt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: mund, stufe: 6, tiefe: sehrSpicy
+#. EN: If you're both up for it: now with your mouth. Lick up the inner thighs and then right in the middle. Lick, suck, slurp, greedily, as if you were starving. Whoever receives moans out loud and may grab the head, without pushing.
+msgctxt "block:mund_x1#text"
+msgid "Wenn ihr beide Lust drauf habt: jetzt mit dem Mund. Leck die Innenschenkel hoch und dann mitten rein. Lecken, saugen, lutschen, gierig, als würdest du verhungern. Wer empfängt, stöhnt laut und darf den Kopf packen, ohne zu drücken."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: mund, stufe: 6, tiefe: spicy
+#. EN: Alternate between mouth and hand. A few moments of lips and tongue, then the hand, then the mouth again. That way the arousal rises in waves. Keep your stop word and your limits in mind.
+msgctxt "block:mund_s2#text"
+msgid "Wechselt zwischen Mund und Hand. Ein paar Augenblicke Lippen und Zunge, dann die Hand, dann wieder der Mund. So steigt die Erregung in Wellen. Achtet auf euer Stoppwort und eure Grenzen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: mund, stufe: 6, tiefe: sehrSpicy
+#. EN: Alternate: lick, then the hand, then lick again. Keep bringing your partner up to the edge until it's almost unbearable and they beg you. And both of you, remember your stop word.
+msgctxt "block:mund_x2#text"
+msgid "Wechsel ab: lecken, dann die Hand, dann wieder lecken. Bring dein Gegenüber so immer wieder bis an die Kante, bis es kaum noch auszuhalten ist und es dich anbettelt. Und denkt beide an euer Stoppwort."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: check_in, tiefe: spicy
+#. EN: Pause for a moment. Whoever receives, say a number from one to ten: how hot are you right now? And one wish: more, less, slower, or just like this.
+msgctxt "block:check_in_s1#text"
+msgid "Kurz innehalten. Wer empfängt, sag eine Zahl von eins bis zehn: Wie heiß bist du gerade? Und einen Wunsch: mehr, weniger, langsamer, oder genau so."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: check_in, tiefe: sehrSpicy
+#. EN: Short pause. Whoever receives, say a number: how horny are you right now, from one to ten? Then say straight out what you want now. The dirtier the better.
+msgctxt "block:check_in_x1#text"
+msgid "Kurze Pause. Wer empfängt, sag eine Zahl: Wie geil bist du gerade, von eins bis zehn? Und dann sag ganz direkt, was du jetzt willst. Je schmutziger, desto besser."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: check_in, tiefe: spicy
+#. EN: Stop for a moment. Whoever receives: green means keep going, yellow means slower, red means stop. Say a colour. And if you like, what you want next.
+msgctxt "block:check_in_s2#text"
+msgid "Haltet kurz an. Wer empfängt: Grün heißt weiter so, gelb heißt langsamer, rot heißt Stopp. Sag eine Farbe. Und wenn du magst, was du als Nächstes willst."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: check_in, tiefe: sehrSpicy
+#. EN: Stop. Traffic light. Whoever receives says green, yellow or red. If it's green, add what should happen next, in your own dirty words.
+msgctxt "block:check_in_x2#text"
+msgid "Stopp. Ampel. Wer empfängt, sagt grün, gelb oder rot. Bei grün sag dazu, was als Nächstes passieren soll, in deinen eigenen, schmutzigen Worten."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: check_in, tiefe: spicy
+#. EN: Both take a deep breath. Whoever gives, ask quietly: how is it? Whoever receives, answer honestly. One word is enough. There's no wrong answer.
+msgctxt "block:check_in_s3#text"
+msgid "Atmet beide tief durch. Wer gibt, frag leise: Wie ist es? Wer empfängt, antworte ehrlich. Ein Wort reicht. Es gibt keine falsche Antwort."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: check_in, tiefe: sehrSpicy
+#. EN: Breathe. Whoever gives asks: do you like that? Do you want more? Whoever receives answers honestly. A yes, a no, a more. Everything's fine as long as it's honest.
+msgctxt "block:check_in_x3#text"
+msgid "Atmet durch. Wer gibt, fragt: Gefällt dir das? Willst du mehr? Wer empfängt, antwortet ehrlich. Ein Ja, ein Nein, ein Mehr. Alles ist gut, solange es ehrlich ist."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_ende, tiefe: spicy
+#. EN: This round is coming to an end. If you want, it may now go all the way to climax. Or you slow down and let the pleasure glow on. Both are beautiful. Take the time you need.
+msgctxt "block:runde_ende_s1#text"
+msgid "Diese Runde geht zu Ende. Wenn ihr wollt, darf es jetzt bis zum Höhepunkt gehen. Oder ihr werdet langsamer und lasst die Lust nachglühen. Beides ist schön. Nehmt euch die Zeit, die ihr braucht."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_ende, tiefe: sehrSpicy
+#. EN: The round is almost over. Whoever received may come now, if they want to. Whoever gives keeps going, harder, until it happens, watching closely. Or you stop just short and save it for later.
+msgctxt "block:runde_ende_x1#text"
+msgid "Die Runde ist fast vorbei. Wer empfangen hat, darf jetzt kommen, wenn er oder sie will. Wer gibt, macht weiter, härter, bis es so weit ist, und schaut dabei genau hin. Oder ihr hört knapp davor auf und spart es euch auf."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_ende, tiefe: spicy
+#. EN: Slow down. Let your hands rest where it's hot. Whoever received now wishes for how it ends: climax, or stillness and holding. Whoever gave offers exactly that.
+msgctxt "block:runde_ende_s2#text"
+msgid "Werdet langsamer. Lasst die Hände dort ruhen, wo es heiß ist. Wer empfangen hat, wünscht sich jetzt, wie es endet: Höhepunkt, oder Stille und Halten. Wer gegeben hat, schenkt genau das."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: runde_ende, tiefe: sehrSpicy
+#. EN: Slow down. Whoever received now says how it should end: coming, or simply being held. Whoever gave delivers exactly that.
+msgctxt "block:runde_ende_x2#text"
+msgid "Werdet langsamer. Wer empfangen hat, sagt jetzt, wie es enden soll: kommen, oder einfach festgehalten werden. Wer gegeben hat, liefert genau das."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: wechsel, tiefe: spicy
+#. EN: Role swap. A kiss, a look, a sip of water. Whoever just got to enjoy may now seduce. Teasing is allowed, hurrying isn't.
+msgctxt "block:wechsel_s1#text"
+msgid "Rollentausch. Ein Kuss, ein Blick, ein Schluck Wasser. Wer eben genießen durfte, darf jetzt verführen. Necken ist erlaubt, Eile nicht."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: wechsel, tiefe: sehrSpicy
+#. EN: Now swap. A kiss, a sip of water. Whoever just had their turn may now pay it back, exactly as mean and as hot as before. Or a little meaner.
+msgctxt "block:wechsel_x1#text"
+msgid "Jetzt wird getauscht. Ein Kuss, ein Schluck Wasser. Wer eben dran war, darf sich jetzt revanchieren, und zwar genau so gemein und geil wie eben. Oder noch ein bisschen gemeiner."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: wechsel, tiefe: spicy
+#. EN: Time to swap. Tell each other in one sentence what was hottest in the first round. Then whoever gave lies down and may now take.
+msgctxt "block:wechsel_s2#text"
+msgid "Zeit zu tauschen. Sagt euch in einem Satz, was in der ersten Runde am heißesten war. Dann legt sich hin, wer gegeben hat, und darf jetzt nehmen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: wechsel, tiefe: sehrSpicy
+#. EN: Swap. Tell each other quickly what turned you on most just now, in proper dirty words. Then whoever gave lies down and gets properly taken.
+msgctxt "block:wechsel_x2#text"
+msgid "Tausch. Sagt euch kurz, was euch eben am meisten angemacht hat, mit den richtigen, dreckigen Worten. Dann legt sich hin, wer gegeben hat, und wird jetzt richtig rangenommen."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ausklang, tiefe: spicy
+#. EN: Come to rest. Lie close together, skin to skin, and breathe together. Feel the aftershocks. You've given each other something brave tonight. Tell each other later what you want to repeat.
+msgctxt "block:ausklang_s1#text"
+msgid "Kommt zur Ruhe. Legt euch eng aneinander, Haut an Haut, und atmet zusammen. Spürt das Nachbeben. Ihr habt euch heute etwas Mutiges geschenkt. Sagt euch später, was ihr wiederholen wollt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ausklang, tiefe: sehrSpicy
+#. EN: Come down. Lie together, sweaty, and breathe. Feel it still twitching. That was damn hot. Tell each other later what you absolutely want to do again.
+msgctxt "block:ausklang_x1#text"
+msgid "Kommt runter. Legt euch verschwitzt aneinander und atmet. Spürt, wie es noch nachzuckt. Das war verdammt heiß. Erzählt euch später, was ihr unbedingt wieder machen wollt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ausklang, tiefe: spicy
+#. EN: Let the evening fade out. Pull the blanket close, hold each other, and be quiet for a moment. Tomorrow perhaps, tell each other what surprised you and what you'd wish for next time.
+msgctxt "block:ausklang_s2#text"
+msgid "Lasst den Abend ausklingen. Zieht die Decke heran, haltet euch, und schweigt einen Moment. Morgen vielleicht erzählt ihr euch, was euch überrascht hat und was ihr euch beim nächsten Mal wünscht."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: ausklang, tiefe: sehrSpicy
+#. EN: Blanket over you, hold on, breathe. No words needed. And tomorrow at breakfast, whisper to each other what even dirtier thing you want to try next time.
+msgctxt "block:ausklang_x2#text"
+msgid "Decke drüber, festhalten, durchatmen. Kein Wort nötig. Und morgen beim Frühstück flüstert ihr euch zu, was ihr beim nächsten Mal noch Versauteres ausprobieren wollt."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung, tiefe: spicy
+#. EN: Breathe audibly. Let the sounds out.
+msgctxt "block:erinnerung_s1#text"
+msgid "Atmet hörbar. Lasst die Laute raus."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung, tiefe: sehrSpicy
+#. EN: Go ahead and moan loudly.
+msgctxt "block:erinnerung_x1#text"
+msgid "Stöhnt ruhig laut."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung, tiefe: spicy
+#. EN: Pay attention to your partner's signals.
+msgctxt "block:erinnerung_s2#text"
+msgid "Achte auf die Signale deines Gegenübers."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung, tiefe: sehrSpicy
+#. EN: Say what you want.
+msgctxt "block:erinnerung_x2#text"
+msgid "Sag, was du willst."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung, tiefe: spicy
+#. EN: Slower is often hotter.
+msgctxt "block:erinnerung_s3#text"
+msgid "Langsamer ist oft heißer."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: erinnerung, tiefe: sehrSpicy
+#. EN: Make them beg.
+msgctxt "block:erinnerung_x3#text"
+msgid "Lass es betteln."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: brueste, stufe: 5, tiefe: spicy, koerper: vulva
+#. EN: Now devote yourself completely to her breasts. Circle them with your fingertips, cradle them in your hands, knead them gently. Then the nipples: stroke, roll, tug very lightly. Notice how her breathing quickens.
+msgctxt "block:brueste_s1#text"
+msgid "Widme dich jetzt ganz ihren Brüsten. Umkreise sie mit den Fingerspitzen, wieg sie in den Händen, knete sie sanft. Dann die Brustwarzen: streicheln, zwirbeln, ganz leicht ziehen. Achte darauf, wie ihr Atem schneller wird."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: brueste, stufe: 5, tiefe: spicy, koerper: vulva
+#. EN: Take her nipples in your mouth. Kiss them, lick them, suck gently, switch between left and right. One hand may wander down over her belly meanwhile, but only to just short of it.
+msgctxt "block:brueste_s2#text"
+msgid "Nimm ihre Brustwarzen in den Mund. Küss sie, leck sie, saug sanft daran, wechsel zwischen links und rechts. Eine Hand darf dabei über ihren Bauch nach unten wandern, aber nur bis kurz davor."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: brueste, stufe: 5, tiefe: sehrSpicy, koerper: vulva
+#. EN: Grab her tits. Knead them, squeeze them together, bury your face between them. Lick over her nipples, suck them into your mouth, bite gently. And tell her how hot you find them.
+msgctxt "block:brueste_x1#text"
+msgid "Pack ihre Titten. Knete sie, drück sie zusammen, vergrab dein Gesicht dazwischen. Leck über die Nippel, saug sie in den Mund, beiß zart rein. Und sag ihr dabei, wie geil du sie findest."
+msgstr ""
+
+#. Baustein des gemeinsamen Abends, phase: beruehren, zone: brueste, stufe: 5, tiefe: sehrSpicy, koerper: vulva
+#. EN: One nipple in your mouth, the other between your fingers, pinching in rhythm. Your free hand rubs between her legs at the same time. Listen to her moan, and don't stop before she begs.
+msgctxt "block:brueste_x2#text"
+msgid "Ein Nippel im Mund, der andere zwischen deinen Fingern, und zwick im Takt. Die freie Hand reibt sie gleichzeitig zwischen den Beinen. Hör, wie sie stöhnt, und hör nicht auf, bevor sie bettelt."
+msgstr ""

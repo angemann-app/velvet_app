@@ -1,0 +1,5496 @@
+# VelvetPulse: Oberfläche (Knöpfe, Menüs, Meldungen)
+# Ausgangssprache Deutsch, Quelle: lib/l10n/app_de.arb
+# Anleitung für Übersetzer / Guide for translators: translations/README.md
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VelvetPulse\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Source-Language: de\n"
+
+#. Text der Oberfläche
+#. EN: VelvetPulse
+msgctxt "ui:appName#text"
+msgid "VelvetPulse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Language
+msgctxt "ui:spracheTitel#text"
+msgid "Sprache"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Automatic (like the device)
+msgctxt "ui:spracheAutomatisch#text"
+msgid "Automatisch (wie das Gerät)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Deutsch
+msgctxt "ui:spracheDeutsch#text"
+msgid "Deutsch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: English
+msgctxt "ui:spracheEnglisch#text"
+msgid "English"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Programme & courses
+msgctxt "ui:mainNavigationProgrammeCourses#text"
+msgid "Programm & Kurse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Somatics & training
+msgctxt "ui:mainNavigationSomaticsTraining#text"
+msgid "Somatik & Training"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: CBT reframing
+msgctxt "ui:mainNavigationCbtReframing#text"
+msgid "KVT-Reframing"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Couple channel
+msgctxt "ui:mainNavigationCoupleChannel#text"
+msgid "Paar-Kanal"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: AI coach
+msgctxt "ui:mainNavigationAiCoach#text"
+msgid "KI-Coach"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Courses
+msgctxt "ui:mainNavigationCourses#text"
+msgid "Kurse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Training
+msgctxt "ui:mainNavigationTraining#text"
+msgid "Training"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reframing
+msgctxt "ui:mainNavigationReframing#text"
+msgid "Reframing"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Welcome back
+msgctxt "ui:whatsNewWelcomeBack#text"
+msgid "Willkommen zurück"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {version}
+#. EN: This is new in version {version}.
+msgctxt "ui:whatsNewThisIsNewInVersion#text"
+msgid "Das ist neu in Version {version}."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let's go
+msgctxt "ui:whatsNewLetSGo#text"
+msgid "Los geht's"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Stop
+msgctxt "ui:playerSteuerungStop#text"
+msgid "Beenden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Resume
+msgctxt "ui:playerSteuerungResume#text"
+msgid "Fortsetzen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pause
+msgctxt "ui:playerSteuerungPause#text"
+msgid "Pausieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pause
+msgctxt "ui:playerSteuerungPause2#text"
+msgid "Pause"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Skip
+msgctxt "ui:playerSteuerungSkip#text"
+msgid "Überspringen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Word mispronounced?
+msgctxt "ui:ausspracheMeldenWordMispronounced#text"
+msgid "Wort falsch ausgesprochen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thanks for helping! The report is posted publicly on GitHub and needs an account there. It is visible under your account name.
+#. EN:
+#. EN: Only the place in the audio and the voice are passed on. You enter the word yourself.
+msgctxt "ui:ausspracheMeldenThanksForHelpingTheReport#text"
+msgid ""
+"Danke, dass du hilfst! Die Meldung landet öffentlich auf GitHub und braucht dort ein Konto. Sie ist unter deinem Kontonamen sichtbar.\n"
+"\n"
+"Übertragen werden nur die Stelle im Audio und die Stimme. Das Wort trägst du selbst ein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Cancel
+msgctxt "ui:ausspracheMeldenCancel#text"
+msgid "Abbrechen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Continue to GitHub
+msgctxt "ui:ausspracheMeldenContinueToGithub#text"
+msgid "Weiter zu GitHub"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The browser could not be opened.
+msgctxt "ui:ausspracheMeldenTheBrowserCouldNotBe#text"
+msgid "Der Browser ließ sich nicht öffnen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You have the latest version.
+msgctxt "ui:updateDialogYouHaveTheLatestVersion#text"
+msgid "Du hast die neueste Version."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please allow the app to install updates in the next step, then tap again.
+msgctxt "ui:updateDialogPleaseAllowTheAppTo#text"
+msgid "Bitte erlaube der App im nächsten Schritt, Updates zu installieren, und tippe dann erneut."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The downloaded file is damaged. Please try again later.
+msgctxt "ui:updateDialogTheDownloadedFileIsDamaged#text"
+msgid "Die heruntergeladene Datei ist beschädigt. Bitte später noch einmal versuchen."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {statusName}
+#. EN: The update didn't work ({statusName}). Please try again later.
+msgctxt "ui:updateDialogTheUpdateDidnTWork#text"
+msgid "Das Update hat nicht geklappt ({statusName}). Bitte später noch einmal versuchen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download failed. Please check your internet connection.
+msgctxt "ui:updateDialogDownloadFailedPleaseCheckYour#text"
+msgid "Download fehlgeschlagen. Bitte Internetverbindung prüfen."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {version}
+#. EN: New beta {version}
+msgctxt "ui:updateDialogNewBetaVersion#text"
+msgid "Neue Beta {version}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {version}
+#. EN: New version {version}
+msgctxt "ui:updateDialogNewVersionVersion#text"
+msgid "Neue Version {version}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Improvements and bug fixes.
+msgctxt "ui:updateDialogImprovementsAndBugFixes#text"
+msgid "Verbesserungen und Fehlerbehebungen."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {progress}
+#. EN: Downloading … {progress} %
+msgctxt "ui:updateDialogDownloadingProgress#text"
+msgid "Wird heruntergeladen … {progress} %"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your data is kept during the update.
+msgctxt "ui:updateDialogYourDataIsKeptDuring#text"
+msgid "Deine Daten bleiben bei der Aktualisierung erhalten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Later
+msgctxt "ui:updateDialogLater#text"
+msgid "Später"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Update now
+msgctxt "ui:updateDialogUpdateNow#text"
+msgid "Jetzt aktualisieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: All courses
+msgctxt "ui:coursesAllCourses#text"
+msgid "Alle Kurse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Touch
+msgctxt "ui:coursesTouch#text"
+msgid "Berührung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For her 🌸
+msgctxt "ui:coursesForHer#text"
+msgid "Für Sie 🌸"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For him 🌿
+msgctxt "ui:coursesForHim#text"
+msgid "Für Ihn 🌿"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For couples 💫
+msgctxt "ui:coursesForCouples#text"
+msgid "Für Paare 💫"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COUPLE CHANNEL
+msgctxt "ui:coursesCoupleChannel#text"
+msgid "PAAR-KANAL"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your private space
+msgctxt "ui:coursesYourPrivateSpace#text"
+msgid "Euer privater Raum"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send sparks & secretly match wishes
+msgctxt "ui:coursesSendSparksSecretlyMatchWishes#text"
+msgid "Funken senden & Wünsche heimlich abgleichen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: YOUR CURRICULUM
+msgctxt "ui:coursesYourCurriculum#text"
+msgid "DEIN CURRICULUM"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {profileName}
+#. EN: Hello, {profileName}
+msgctxt "ui:coursesHelloProfilename#text"
+msgid "Hallo, {profileName}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Welcome
+msgctxt "ui:coursesWelcome#text"
+msgid "Willkommen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {goalLabel}
+#. EN: Your focus: {goalLabel}
+msgctxt "ui:coursesYourFocusGoallabel#text"
+msgid "Dein Fokus: {goalLabel}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Understand the biology. Quiet the head. Feel the body.
+msgctxt "ui:coursesUnderstandTheBiologyQuietThe#text"
+msgid "Biologie verstehen. Kopfkino stoppen. Körper spüren."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Profile & settings
+msgctxt "ui:coursesProfileSettings#text"
+msgid "Profil & Einstellungen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {completedCount}, {totalLessons}
+#. EN: Overall progress: {completedCount} of {totalLessons} lessons
+msgctxt "ui:coursesOverallProgressCompletedcountOfTotallessons#text"
+msgid "Gesamtfortschritt: {completedCount} von {totalLessons} Lektionen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {durationMin}
+#. EN: {durationMin} min
+msgctxt "ui:coursesDurationminMin#text"
+msgid "{durationMin} Min."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Practice: pelvic floor
+msgctxt "ui:coursesPracticePelvicFloor#text"
+msgid "Praxis: Beckenboden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Practice: breath
+msgctxt "ui:coursesPracticeBreath#text"
+msgid "Praxis: Atem"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Practice: CBT
+msgctxt "ui:coursesPracticeCbt#text"
+msgid "Praxis: KVT"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Lesson marked as completed! 🎉
+msgctxt "ui:lessonDetailLessonMarkedAsCompleted#text"
+msgid "Lektion als abgeschlossen markiert! 🎉"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Lesson marked as open again.
+msgctxt "ui:lessonDetailLessonMarkedAsOpenAgain#text"
+msgid "Lektion wieder als offen markiert."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {partnerName}
+#. EN: Lesson sent to {partnerName}.
+msgctxt "ui:lessonDetailLessonSentToPartnername#text"
+msgid "Lektion an {partnerName} geschickt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sending didn't work. Please try again in a moment.
+msgctxt "ui:lessonDetailSendingDidnTWorkPlease#text"
+msgid "Senden hat nicht geklappt. Bitte gleich noch einmal versuchen."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {partnerName}
+#. EN: Your thoughts are with {partnerName}. They become visible once there is an answer there too.
+msgctxt "ui:lessonDetailYourThoughtsAreWithPartnername#text"
+msgid "Deine Gedanken sind bei {partnerName}. Sichtbar werden sie, wenn auch dort eine Antwort steht."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: {name} has already answered
+msgctxt "ui:lessonDetailNameHasAlreadyAnswered#text"
+msgid "{name} hat schon geantwortet"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: {name}'s thoughts
+msgctxt "ui:lessonDetailNameSThoughts#text"
+msgid "Die Gedanken von {name}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Write and save your own answer first, then you'll see {name}'s.
+msgctxt "ui:lessonDetailWriteAndSaveYourOwn#text"
+msgid "Schreib und speichere zuerst deine eigene Antwort, dann siehst du die von {name}."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {partnerName}
+#. EN: Share with {partnerName}
+msgctxt "ui:lessonDetailShareWithPartnername#text"
+msgid "Mit {partnerName} teilen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Completed
+msgctxt "ui:lessonDetailCompleted#text"
+msgid "Abgeschlossen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Mark as completed
+msgctxt "ui:lessonDetailMarkAsCompleted#text"
+msgid "Als abgeschlossen markieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: AUDIO EXERCISE
+msgctxt "ui:lessonDetailAudioExercise#text"
+msgid "AUDIO-ÜBUNG"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: LESSON
+msgctxt "ui:lessonDetailLesson#text"
+msgid "LEKTION"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {durationMin}
+#. EN: {durationMin} min read
+msgctxt "ui:lessonDetailDurationminMinRead#text"
+msgid "{durationMin} Min. Lesezeit"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Lesson completed (done)
+msgctxt "ui:lessonDetailLessonCompletedDone#text"
+msgid "Lektion abgeschlossen (Erledigt)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Mark lesson as completed
+msgctxt "ui:lessonDetailMarkLessonAsCompleted#text"
+msgid "Lektion als abgeschlossen markieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open pelvic floor timer
+msgctxt "ui:lessonDetailOpenPelvicFloorTimer#text"
+msgid "Beckenboden-Timer öffnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Go straight into relaxation & strengthening practice
+msgctxt "ui:lessonDetailGoStraightIntoRelaxationStrengthening#text"
+msgid "Direkt in die Entspannungs- & Kräftigungs-Praxis einsteigen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start breath pacer (down-regulation)
+msgctxt "ui:lessonDetailStartBreathPacerDownRegulation#text"
+msgid "Atem-Pacer (Down-Regulation) starten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Calm down with 4-7-8 breathing or the sigh
+msgctxt "ui:lessonDetailCalmDownWithBreathingOr#text"
+msgid "Vagusnerv aktivieren & Adrenalin senken mit 4-7-8 oder Seufzer"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: My desire profile
+msgctxt "ui:lessonDetailMyDesireProfile#text"
+msgid "Mein Lust-Profil"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tick what you like – and send it to your partner if you want
+msgctxt "ui:lessonDetailTickWhatYouLikeAnd#text"
+msgid "Ankreuzen, was dir gefällt – und auf Wunsch deinem Gegenüber schicken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guided self-exploration
+msgctxt "ui:lessonDetailGuidedSelfExploration#text"
+msgid "Geführte Selbsterkundung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 10 to 30 minutes, a voice guides you – as close as you like
+msgctxt "ui:lessonDetailToMinutesAVoiceGuides#text"
+msgid "10 bis 30 Minuten, eine Stimme begleitet dich – so nah, wie du möchtest"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start CBT thought record
+msgctxt "ui:lessonDetailStartCbtThoughtRecord#text"
+msgid "KVT-Gedankenprotokoll starten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reframe anticipatory anxiety and catastrophic thoughts
+msgctxt "ui:lessonDetailReframeAnticipatoryAnxietyAndCatastrophic#text"
+msgid "Erwartungsangst und innere Katastrophengedanken reframen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: MATCHING PRACTICE
+msgctxt "ui:lessonDetailMatchingPractice#text"
+msgid "PASSENDE PRAXIS-ÜBUNG"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start the practice now
+msgctxt "ui:lessonDetailStartThePracticeNow#text"
+msgid "Jetzt Praxis-Übung starten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your personal reflection
+msgctxt "ui:lessonDetailYourPersonalReflection#text"
+msgid "Deine persönliche Reflexion"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Write down your honest thoughts here. They stay on your device unless you share them.
+msgctxt "ui:lessonDetailWriteDownYourHonestThoughts#text"
+msgid "Schreibe hier deine ehrlichen Gedanken auf. Sie bleiben auf deinem Gerät, außer du teilst sie."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Saved locally!
+msgctxt "ui:lessonDetailSavedLocally#text"
+msgid "Lokal gespeichert!"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Save answer
+msgctxt "ui:lessonDetailSaveAnswer#text"
+msgid "Antwort speichern"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {partnerName}
+#. EN: Share with {partnerName}
+msgctxt "ui:lessonDetailShareWithPartnername2#text"
+msgid "Mit {partnerName} teilen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: DEVICE VOICE
+msgctxt "ui:audioPlayerCardDeviceVoice#text"
+msgid "GERÄTE-STIMME"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: GUIDED EXERCISE
+msgctxt "ui:audioPlayerCardGuidedExercise#text"
+msgid "GEFÜHRTE ÜBUNG"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: LISTEN
+msgctxt "ui:audioPlayerCardListen#text"
+msgid "ZUM ANHÖREN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Just follow the voice …
+msgctxt "ui:audioPlayerCardJustFollowTheVoice#text"
+msgid "Folge einfach der Stimme …"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reading aloud …
+msgctxt "ui:audioPlayerCardReadingAloud#text"
+msgid "Wird vorgelesen …"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paused • Tap to resume
+msgctxt "ui:audioPlayerCardPausedTapToResume#text"
+msgid "Pausiert • Tippe zum Fortsetzen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Close your eyes and listen
+msgctxt "ui:audioPlayerCardCloseYourEyesAndListen#text"
+msgid "Schließ die Augen und lausche"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {durationMin}
+#. EN: Listen to the lesson (approx. {durationMin} min)
+msgctxt "ui:audioPlayerCardListenToTheLessonApprox#text"
+msgid "Lektion anhören (ca. {durationMin} Min.)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Back 10 s
+msgctxt "ui:audioPlayerCardBackS#text"
+msgid "10 Sek. zurück"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Forward 10 s
+msgctxt "ui:audioPlayerCardForwardS#text"
+msgid "10 Sek. vor"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Stop & reset
+msgctxt "ui:audioPlayerCardStopReset#text"
+msgid "Stoppen & Zurücksetzen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pelvic floor
+msgctxt "ui:trainingPelvicFloor#text"
+msgid "Beckenboden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breath pacer
+msgctxt "ui:trainingBreathPacer#text"
+msgid "Atem-Pacer"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: BREATHE IN
+msgctxt "ui:breathPacerViewBreatheIn#text"
+msgid "EINATMEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe in calmly and deeply through the nose...
+msgctxt "ui:breathPacerViewBreatheInCalmlyAndDeeply#text"
+msgid "Ruhig und tief durch die Nase einatmen..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: HOLD
+msgctxt "ui:breathPacerViewHold#text"
+msgid "HALTEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Hold your breath, keep the chest relaxed...
+msgctxt "ui:breathPacerViewHoldYourBreathKeepThe#text"
+msgid "Atem anhalten, Brustkorb entspannt lassen..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: BREATHE OUT SLOWLY
+msgctxt "ui:breathPacerViewBreatheOutSlowly#text"
+msgid "LANGSAM AUSATMEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe out fully through the mouth with a soft whoosh...
+msgctxt "ui:breathPacerViewBreatheOutFullyThroughThe#text"
+msgid "Vollständig und mit sanftem Zischen durch den Mund ausatmen..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: BREATHE IN DEEPLY
+msgctxt "ui:breathPacerViewBreatheInDeeply#text"
+msgid "TIEF EINATMEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe deep into the belly through the nose...
+msgctxt "ui:breathPacerViewBreatheDeepIntoTheBelly#text"
+msgid "Tief durch die Nase in den Bauch einatmen..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: SECOND BREATH
+msgctxt "ui:breathPacerViewSecondBreath#text"
+msgid "ZWEITER ATEMZUG"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Take one more short sip of air on top...
+msgctxt "ui:breathPacerViewTakeOneMoreShortSip#text"
+msgid "Noch einen kurzen Luftzug oben drauf ziehen..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: SIGH IT OUT
+msgctxt "ui:breathPacerViewSighItOut#text"
+msgid "SEUFZEND AUSATMEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe out very long and audibly through the mouth, let the shoulders drop...
+msgctxt "ui:breathPacerViewBreatheOutVeryLongAnd#text"
+msgid "Sehr lang und hörbar durch den Mund ausatmen, Schultern fallen lassen..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 4-7-8 breathing
+msgctxt "ui:breathPacerViewBreathing#text"
+msgid "4-7-8 Atmung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Deep calming breath
+msgctxt "ui:breathPacerViewDeepCalmingBreath#text"
+msgid "Tiefe, beruhigende Atmung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Physiological sigh
+msgctxt "ui:breathPacerViewPhysiologicalSigh#text"
+msgid "Physiol. Seufzer"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Quick way to calm down
+msgctxt "ui:breathPacerViewQuickWayToCalmDown#text"
+msgid "Schnell zur Ruhe kommen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {completedCycles}
+#. EN: {completedCycles} cycles completed
+msgctxt "ui:breathPacerViewCompletedcyclesCyclesCompleted#text"
+msgid "{completedCycles} Zyklen abgeschlossen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A longer exhale measurably slows the heartbeat.
+msgctxt "ui:breathPacerViewALongerExhaleMeasurablySlows#text"
+msgid "Längeres Ausatmen verlangsamt messbar den Herzschlag."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The double inhale is meant to reopen the air sacs in the lungs.
+msgctxt "ui:breathPacerViewTheDoubleInhaleIsMeant#text"
+msgid "Der doppelte Atemzug entfaltet kollabierte Lungenbläschen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start
+msgctxt "ui:breathPacerViewStart#text"
+msgid "Start"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Background: when the exhale lasts longer than the inhale, the heart rate slows down a little with each breath out. This is a normal reflex that many people feel as calming.
+msgctxt "ui:breathPacerViewBackgroundWhenTheExhaleLasts#text"
+msgid "Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, wird der Herzschlag mit jedem Ausatmen ein wenig langsamer. Das ist ein normaler Reflex, den viele als beruhigend erleben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: SOS quick help
+msgctxt "ui:sosModalSosQuickHelp#text"
+msgid "SOS Akut-Hilfe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Calm down right now & emergency steps
+msgctxt "ui:sosModalCalmDownRightNowEmergency#text"
+msgid "Sofortige Down-Regulation & Notfall-Schritte"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Before
+msgctxt "ui:sosModalBefore#text"
+msgid "Vorab"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: In the moment
+msgctxt "ui:sosModalInTheMoment#text"
+msgid "Im Moment"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Afterwards
+msgctxt "ui:sosModalAfterwards#text"
+msgid "Danach"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: YOUR MANTRA FOR THIS MOMENT
+msgctxt "ui:sosModalYourMantraForThisMoment#text"
+msgid "DEIN MANTRA FÜR DIESEN MOMENT"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {mantra}
+#. EN: “{mantra}”
+msgctxt "ui:sosModalMantra#text"
+msgid "„{mantra}“"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: IMMEDIATE STEPS (TICK OFF)
+msgctxt "ui:sosModalImmediateStepsTickOff#text"
+msgid "SOFORT-SCHRITTE (ABHAKEN)"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {checkedLength}, {immediateStepsLength}
+#. EN: {checkedLength}/{immediateStepsLength} done
+msgctxt "ui:sosModalCheckedlengthImmediatestepslengthDone#text"
+msgid "{checkedLength}/{immediateStepsLength} erledigt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Locked
+msgctxt "ui:appLockLocked#text"
+msgid "Gesperrt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Unlock
+msgctxt "ui:appLockUnlock#text"
+msgid "Entsperren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: CBT & SOMATIC COACHING
+msgctxt "ui:mainCbtSomaticCoaching#text"
+msgid "KVT & SOMATIK COACHING"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {count}
+#. EN: {count, plural, =1{1 course} other{{count} courses}}
+msgctxt "ui:coursesCourseCount#text"
+msgid "{count, plural, =1{1 Kurs} other{{count} Kurse}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {count}
+#. EN: {count, plural, =1{Active 1 day in a row} other{Active {count} days in a row}}
+msgctxt "ui:coursesStreakDays#text"
+msgid "{count, plural, =1{1 Tag in Folge aktiv} other{{count} Tage in Folge aktiv}}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Practice: self-exploration
+msgctxt "ui:coursesPracticeSelfExploration#text"
+msgid "Praxis: Selbsterkundung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Practice: desire profile
+msgctxt "ui:coursesPracticeDesireProfile#text"
+msgid "Praxis: Lust-Profil"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I want you
+msgctxt "ui:couplesChannelIWantYou#text"
+msgid "Lust auf dich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Just cuddles today
+msgctxt "ui:couplesChannelJustCuddlesToday#text"
+msgid "Heute nur kuscheln"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Looking forward to later
+msgctxt "ui:couplesChannelLookingForwardToLater#text"
+msgid "Freu mich auf später"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Very slowly today
+msgctxt "ui:couplesChannelVerySlowlyToday#text"
+msgid "Heute ganz langsam"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let's talk
+msgctxt "ui:couplesChannelLetSTalk#text"
+msgid "Lass uns reden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not today
+msgctxt "ui:couplesChannelNotToday#text"
+msgid "Heute lieber nicht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reconnect
+msgctxt "ui:couplesChannelReconnect#text"
+msgid "Neu verbinden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect with your partner and share wishes that are otherwise hard to say out loud.
+msgctxt "ui:couplesChannelConnectWithYourPartnerAnd#text"
+msgid "Verbinde dich mit deinem Gegenüber und teilt Wünsche, die sonst schwer auszusprechen sind."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send sparks
+msgctxt "ui:couplesChannelSendSparks#text"
+msgid "Funken senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Show with one tap what you're in the mood for today – or not.
+msgctxt "ui:couplesChannelShowWithOneTapWhat#text"
+msgid "Mit einem Tippen zeigen, worauf du heute Lust hast – oder eben nicht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Secretly match wishes
+msgctxt "ui:couplesChannelSecretlyMatchWishes#text"
+msgid "Wünsche heimlich abgleichen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You vote separately. Only what you both want becomes visible.
+msgctxt "ui:couplesChannelYouVoteSeparatelyOnlyWhat#text"
+msgid "Ihr stimmt getrennt ab. Sichtbar wird nur, was ihr beide wollt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Just for the two of you
+msgctxt "ui:couplesChannelJustForTheTwoOf#text"
+msgid "Nur für euch beide"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: End-to-end encrypted, no account and no phone number.
+msgctxt "ui:couplesChannelEndToEndEncryptedNo#text"
+msgid "Ende-zu-Ende-verschlüsselt, ohne Konto und ohne Telefonnummer."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect with partner
+msgctxt "ui:couplesChannelConnectWithPartner#text"
+msgid "Mit Partner verbinden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Invite partner
+msgctxt "ui:couplesChannelInvitePartner#text"
+msgid "Partner einladen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How does it work?
+msgctxt "ui:couplesChannelHowDoesItWork#text"
+msgid "Wie funktioniert das?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You can also fill it in alone – and match it with your partner later.
+msgctxt "ui:couplesChannelYouCanAlsoFillIt#text"
+msgid "Kannst du auch allein ausfüllen – und später mit deinem Gegenüber abgleichen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Shared evening
+msgctxt "ui:couplesChannelSharedEvening#text"
+msgid "Gemeinsamer Abend"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guided touch for the two of you, 20 to 45 minutes. Different every time.
+msgctxt "ui:couplesChannelGuidedTouchForTheTwo#text"
+msgid "Geführte Berührung für euch beide, 20 bis 45 Minuten. Jedes Mal anders."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Fantasy map
+msgctxt "ui:couplesChannelFantasyMap#text"
+msgid "Fantasie-Landkarte"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Messages
+msgctxt "ui:couplesChannelMessages#text"
+msgid "Nachrichten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Wishes
+msgctxt "ui:couplesChannelWishes#text"
+msgid "Wünsche"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: connected & encrypted
+msgctxt "ui:couplesChannelConnectedEncrypted#text"
+msgid "verbunden & verschlüsselt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: connecting …
+msgctxt "ui:couplesChannelConnecting#text"
+msgid "verbindet …"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: offline – tap to connect
+msgctxt "ui:couplesChannelOfflineTapToConnect#text"
+msgid "offline – tippe zum Verbinden"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: You & {name}
+msgctxt "ui:couplesChannelYouName#text"
+msgid "Du & {name}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Partner's name & gender
+msgctxt "ui:couplesChannelPartnerSNameGender#text"
+msgid "Name & Geschlecht des Gegenübers"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Read receipts
+msgctxt "ui:couplesChannelReadReceipts#text"
+msgid "Lesebestätigungen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Encryption & details
+msgctxt "ui:couplesChannelEncryptionDetails#text"
+msgid "Verschlüsselung & Details"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Manage connection
+msgctxt "ui:couplesChannelManageConnection#text"
+msgid "Verbindung verwalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnect
+msgctxt "ui:couplesChannelDisconnect#text"
+msgid "Verbindung trennen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: It's still quiet here
+msgctxt "ui:couplesChannelItSStillQuietHere#text"
+msgid "Noch ist es still hier"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send a spark from the bar below or write a few words.
+msgctxt "ui:couplesChannelSendASparkFromThe#text"
+msgid "Schick einen Funken aus der Leiste unten oder schreib ein paar Worte."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN:  · Read
+msgctxt "ui:couplesChannelRead#text"
+msgid " · Gelesen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN:  · Sent
+msgctxt "ui:couplesChannelSent#text"
+msgid " · Gesendet"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open lesson
+msgctxt "ui:couplesChannelOpenLesson#text"
+msgid "Lektion öffnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Write a message …
+msgctxt "ui:couplesChannelWriteAMessage#text"
+msgid "Nachricht schreiben …"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send
+msgctxt "ui:couplesChannelSend#text"
+msgid "Senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Vote separately. A wish only shows up as a match when you both say “Yes, please” – a “Rather not” is never shown.
+msgctxt "ui:couplesChannelVoteSeparatelyAWishOnly#text"
+msgid "Stimmt getrennt ab. Ein Wunsch erscheint erst als Match, wenn ihr beide „Ja, gern“ sagt – ein „Lieber nicht“ wird nie angezeigt."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {fragen}, {bereiche}
+#. EN: {fragen} questions in {bereiche} areas – with matching course recommendations.
+msgctxt "ui:couplesChannelQuestionsInSeveralAreasWith#text"
+msgid "{fragen} Fragen in {bereiche} Bereichen – mit passenden Kurs-Empfehlungen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You have a match
+msgctxt "ui:couplesChannelYouHaveAMatch#text"
+msgid "Ihr habt ein Match"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {matchesLength}
+#. EN: You have {matchesLength} matches
+msgctxt "ui:couplesChannelYouHaveMatcheslengthMatches#text"
+msgid "Ihr habt {matchesLength} Matches"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A match is an invitation, not a promise. Talk briefly beforehand about how you imagine it.
+msgctxt "ui:couplesChannelAMatchIsAnInvitation#text"
+msgid "Ein Match ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes, please
+msgctxt "ui:couplesChannelYesPlease#text"
+msgid "Ja, gern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Rather not
+msgctxt "ui:couplesChannelRatherNot#text"
+msgid "Lieber nicht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnect?
+msgctxt "ui:couplesChannelDisconnect2#text"
+msgid "Verbindung trennen?"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}, {name2}, {name3}
+#. EN: The history with {name}, {name2}'s answers to the yes/no list and the shared reflections will be deleted on this phone. Your own answers are kept.
+#. EN:
+#. EN: Nothing changes on {name3}'s phone.
+msgctxt "ui:couplesChannelTheHistoryWithNameName#text"
+msgid ""
+"Der Verlauf mit {name}, die Antworten von {name2} auf die Ja/Nein-Liste und die geteilten Reflexionen werden auf diesem Handy gelöscht. Deine eigenen Antworten bleiben erhalten.\n"
+"\n"
+"Auf dem Handy von {name3} ändert sich nichts."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnect
+msgctxt "ui:couplesChannelDisconnect3#text"
+msgid "Trennen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnected.
+msgctxt "ui:couplesChannelDisconnected#text"
+msgid "Verbindung getrennt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How it stays private
+msgctxt "ui:couplesChannelHowItStaysPrivate#text"
+msgid "So bleibt es privat"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Messages are encrypted on your phone and only become readable again on your partner's phone. In between they travel through public Nostr servers. These can't read the content. But they can see the keys of sender and recipient, the time and approximate size of each message and your IP address – so that, when and how often you write. The keys carry no names. There is no account, no phone number and no server of our own.
+msgctxt "ui:couplesChannelMessagesAreEncryptedOnYour#text"
+msgid "Nachrichten werden auf deinem Handy verschlüsselt und erst auf dem Handy deines Gegenübers wieder lesbar. Dazwischen laufen sie über öffentliche Nostr-Server. Die können den Inhalt nicht lesen. Sichtbar sind für sie aber die Schlüssel von Absender und Empfänger, Zeitpunkt und ungefähre Größe jeder Nachricht sowie deine IP-Adresse – also dass, wann und wie oft ihr schreibt. Die Schlüssel tragen keinen Namen. Es gibt kein Konto, keine Telefonnummer und keinen Server von uns."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Encryption
+msgctxt "ui:couplesChannelEncryption#text"
+msgid "Verschlüsselung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Servers
+msgctxt "ui:couplesChannelServers#text"
+msgid "Server"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your connection code
+msgctxt "ui:couplesChannelYourConnectionCode#text"
+msgid "Dein Verbindungscode"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Close
+msgctxt "ui:couplesChannelClose#text"
+msgid "Schließen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You
+msgctxt "ui:paarAbendYou#text"
+msgid "Du"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: your partner
+msgctxt "ui:paarAbendYourPartner#text"
+msgid "dein Gegenüber"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: End the evening?
+msgctxt "ui:paarAbendEndTheEvening#text"
+msgid "Abend beenden?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The guidance stops then. You can start again any time.
+msgctxt "ui:paarAbendTheGuidanceStopsThenYou#text"
+msgid "Die Begleitung hört dann auf. Ihr könnt jederzeit neu beginnen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Continue
+msgctxt "ui:paarAbendContinue#text"
+msgid "Weitermachen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Put the phone next to you. A voice guides you through arriving, two rounds of touch with a change of roles and a calm ending. Most of the time is silence, so you can be fully with each other. Every evening is put together anew.
+msgctxt "ui:paarAbendPutThePhoneNextTo#text"
+msgid "Legt das Handy neben euch. Eine Stimme führt euch durch Ankommen, zwei Runden Berührung mit Rollenwechsel und einen ruhigen Ausklang. Die meiste Zeit ist Stille, damit ihr ganz bei euch seid. Jeder Abend wird neu zusammengestellt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Duration
+msgctxt "ui:paarAbendDuration#text"
+msgid "Dauer"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {m}
+#. EN: {m} min
+msgctxt "ui:paarAbendMMin#text"
+msgid "{m} Min."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How far may it go?
+msgctxt "ui:paarAbendHowFarMayItGo#text"
+msgid "Wie weit darf es gehen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Clothed
+msgctxt "ui:paarAbendClothed#text"
+msgid "Bekleidet"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Back, shoulders, hands, head, legs and feet.
+msgctxt "ui:paarAbendBackShouldersHandsHeadLegs#text"
+msgid "Rücken, Schultern, Hände, Kopf, Beine und Füße."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Skin to skin
+msgctxt "ui:paarAbendSkinToSkin#text"
+msgid "Haut an Haut"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Plus massage with oil, belly, hips and buttocks.
+msgctxt "ui:paarAbendPlusMassageWithOilBelly#text"
+msgid "Dazu Massage mit Öl, Bauch, Hüften und Po."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Intimate
+msgctxt "ui:paarAbendIntimate#text"
+msgid "Intim"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Plus chest, inner thighs and genitals, without any goal.
+msgctxt "ui:paarAbendPlusChestInnerThighsAnd#text"
+msgid "Dazu Brust, Innenschenkel und Geschlecht, ganz ohne Ziel."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Who gives first?
+msgctxt "ui:paarAbendWhoGivesFirst#text"
+msgid "Wer gibt zuerst?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Me
+msgctxt "ui:paarAbendMe#text"
+msgid "Ich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: My partner
+msgctxt "ui:paarAbendMyPartner#text"
+msgid "Mein Gegenüber"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Voice
+msgctxt "ui:paarAbendVoice#text"
+msgid "Stimme"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Soft sound bed
+msgctxt "ui:paarAbendSoftSoundBed#text"
+msgid "Leiser Klangteppich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Calm background during the silences
+msgctxt "ui:paarAbendCalmBackgroundDuringTheSilences#text"
+msgid "Ruhiger Hintergrund in den Stillen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Agree on a stop word beforehand. The voice invites, it decides nothing: whatever doesn't feel good, you simply leave out.
+msgctxt "ui:paarAbendAgreeOnAStopWord#text"
+msgid "Vereinbart vorher ein Stoppwort. Die Stimme lädt ein, sie bestimmt nichts: Was sich nicht gut anfühlt, lasst ihr einfach aus."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Begin the evening
+msgctxt "ui:paarAbendBeginTheEvening#text"
+msgid "Abend beginnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thank you for your evening
+msgctxt "ui:paarAbendThankYouForYourEvening#text"
+msgid "Danke für euren Abend"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Stay lying down as long as it feels good.
+msgctxt "ui:paarAbendStayLyingDownAsLong#text"
+msgid "Bleibt liegen, solange es sich gut anfühlt."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {runde}
+#. EN: Round {runde}
+msgctxt "ui:paarAbendRoundRunde#text"
+msgid "Runde {runde}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {partnerName}
+#. EN: You give · {partnerName} receives
+msgctxt "ui:paarAbendYouGivePartnernameReceives#text"
+msgid "Du gibst · {partnerName} empfängt"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {partnerName}, {partnerName2}
+#. EN: {partnerName}{partnerName2} gives · you receive
+msgctxt "ui:paarAbendPartnernamePartnernameGivesYouReceive#text"
+msgid "{partnerName}{partnerName2} gibt · du empfängst"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Arriving
+msgctxt "ui:paarAbendArriving#text"
+msgid "Ankommen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Ending
+msgctxt "ui:paarAbendEnding#text"
+msgid "Ausklang"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Change of roles
+msgctxt "ui:paarAbendChangeOfRoles#text"
+msgid "Rollenwechsel"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe together.
+msgctxt "ui:paarAbendBreatheTogether#text"
+msgid "Atmet gemeinsam."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paused
+msgctxt "ui:paarAbendPaused#text"
+msgid "Pausiert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The voice is speaking …
+msgctxt "ui:paarAbendTheVoiceIsSpeaking#text"
+msgid "Die Stimme spricht …"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {stilleRest}
+#. EN: Silence · {stilleRest} left
+msgctxt "ui:paarAbendSilenceStillerestLeft#text"
+msgid "Stille · noch {stilleRest}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {stableApkUrl}, {testerGuideUrl}
+#. EN:
+#. EN: I'd like to try VelvetPulse with you 💛 A private app just for the two of us.
+#. EN:
+#. EN: 1. Get the app (Android):
+#. EN: {stableApkUrl}
+#. EN: If Android asks, allow the installation.
+#. EN:
+#. EN: 2. I'll send you my connection code as a separate message. Copy it and paste it into the app: Couple channel › Connect with partner › Scan partner › paste code › “Connect & pair”.
+#. EN:
+#. EN: 3. Then send me a spark, and we're connected.
+#. EN:
+#. EN: Detailed guide (German): {testerGuideUrl}
+msgctxt "ui:invitePartnerIDLikeToTry#text"
+msgid ""
+"\n"
+"Ich möchte VelvetPulse mit dir ausprobieren 💛 Eine private App nur für uns zwei.\n"
+"\n"
+"1. App laden (Android):\n"
+"{stableApkUrl}\n"
+"Wenn Android fragt, die Installation erlauben.\n"
+"\n"
+"2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n"
+"\n"
+"3. Schick mir danach einen Funken, dann sind wir verbunden.\n"
+"\n"
+"Ausführliche Anleitung: {testerGuideUrl}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You send a link to the app and your connection code, e.g. via a messenger. As soon as your partner replies, you confirm the connection here.
+msgctxt "ui:invitePartnerYouSendALinkTo#text"
+msgid "Du schickst einen Link zur App und deinen Verbindungscode, z. B. per Messenger. Sobald sich dein Gegenüber meldet, bestätigst du hier die Verbindung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Name, e.g. Anna
+msgctxt "ui:invitePartnerNameEGAnna#text"
+msgid "Name, z. B. Anna"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Share invitation
+msgctxt "ui:invitePartnerShareInvitation#text"
+msgid "Einladung teilen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Invitation to VelvetPulse
+msgctxt "ui:invitePartnerInvitationToVelvetpulse#text"
+msgid "Einladung zu VelvetPulse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Now your code
+msgctxt "ui:invitePartnerNowYourCode#text"
+msgid "Jetzt noch deinen Code"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send your connection code afterwards as a separate message, ideally to the same person. That way it can be copied with one tap.
+msgctxt "ui:invitePartnerSendYourConnectionCodeAfterwards#text"
+msgid "Schick deinen Verbindungscode als eigene Nachricht hinterher, am besten an dieselbe Person. So lässt er sich mit einem Tippen kopieren."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Share code
+msgctxt "ui:invitePartnerShareCode#text"
+msgid "Code teilen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: My VelvetPulse code
+msgctxt "ui:invitePartnerMyVelvetpulseCode#text"
+msgid "Mein VelvetPulse-Code"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Copied. Paste the text into a messenger.
+msgctxt "ui:invitePartnerCopiedPasteTheTextInto#text"
+msgid "Kopiert. Füge den Text in einen Messenger ein."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: {name} wants to connect
+msgctxt "ui:invitePartnerNameWantsToConnect#text"
+msgid "{name} möchte sich verbinden"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Invitation sent to {name}
+msgctxt "ui:invitePartnerInvitationSentToName#text"
+msgid "Einladung an {name} verschickt"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: A message just arrived at your code. If it's from {name}, accept the connection.
+msgctxt "ui:invitePartnerAMessageJustArrivedAt#text"
+msgid "Gerade kam eine Nachricht an deinen Code. Wenn sie von {name} ist, nimm die Verbindung an."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: As soon as {name} installs the app, enters your code and sends you a spark, you can confirm the connection here.
+msgctxt "ui:invitePartnerAsSoonAsNameInstalls#text"
+msgid "Sobald {name} die App installiert, deinen Code eingibt und dir einen Funken schickt, kannst du die Verbindung hier bestätigen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Decline
+msgctxt "ui:invitePartnerDecline#text"
+msgid "Ablehnen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Connected with {name} 💛
+msgctxt "ui:invitePartnerConnectedWithName#text"
+msgid "Verbunden mit {name} 💛"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Accept
+msgctxt "ui:invitePartnerAccept#text"
+msgid "Annehmen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Withdraw
+msgctxt "ui:invitePartnerWithdraw#text"
+msgid "Zurückziehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Share again
+msgctxt "ui:invitePartnerShareAgain#text"
+msgid "Erneut teilen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect with someone else?
+msgctxt "ui:pairingModalConnectWithSomeoneElse#text"
+msgid "Mit jemand anderem verbinden?"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {old}, {old2}, {old3}
+#. EN: You're currently connected with {old}. This connection will be replaced, and the history with {old2}, {old3}'s answers and the shared reflections will be deleted on this phone.
+msgctxt "ui:pairingModalYouReCurrentlyConnectedWith#text"
+msgid "Du bist gerade mit {old} verbunden. Diese Verbindung wird ersetzt, und der Verlauf mit {old2}, die Antworten von {old3} und die geteilten Reflexionen werden auf diesem Handy gelöscht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Replace
+msgctxt "ui:pairingModalReplace#text"
+msgid "Ersetzen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 👋 Hi, I'm connected now.
+msgctxt "ui:pairingModalHiIMConnectedNow#text"
+msgid "👋 Hallo, ich bin jetzt verbunden."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Connected with {name} 💛
+msgctxt "ui:pairingModalConnectedWithName#text"
+msgid "Verbunden mit {name} 💛"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This code doesn't fit. Scan your partner's QR code or paste the complete code (starts with npub1…).
+msgctxt "ui:pairingModalThisCodeDoesnTFit#text"
+msgid "Dieser Code passt nicht. Scanne den QR-Code deines Gegenübers oder füge den vollständigen Code (beginnt mit npub1…) ein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: My code
+msgctxt "ui:pairingModalMyCode#text"
+msgid "Mein Code"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Scan partner
+msgctxt "ui:pairingModalScanPartner#text"
+msgid "Partner scannen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let your partner scan this code to open your private channel.
+msgctxt "ui:pairingModalLetYourPartnerScanThis#text"
+msgid "Lass diesen Code von deinem Partner scannen, um euren privaten Kanal zu öffnen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Copy code
+msgctxt "ui:pairingModalCopyCode#text"
+msgid "Code kopieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your connection code has been copied.
+msgctxt "ui:pairingModalYourConnectionCodeHasBeen#text"
+msgid "Dein Verbindungscode wurde kopiert."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: End-to-end encrypted • no account
+msgctxt "ui:pairingModalEndToEndEncryptedNo#text"
+msgid "Ende-zu-Ende-verschlüsselt • ohne Konto"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Hold your partner's QR code in the frame
+msgctxt "ui:pairingModalHoldYourPartnerSQr#text"
+msgid "Partner-QR-Code im Rahmen halten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Partner's name (e.g. Darling, Anna)
+msgctxt "ui:pairingModalPartnerSNameEG#text"
+msgid "Partner-Name (z.B. Mein Schatz, Anna)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Or paste npub1... / hex key
+msgctxt "ui:pairingModalOrPasteNpubHexKey#text"
+msgid "Oder npub1... / Hex-Schlüssel einfügen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paste from clipboard
+msgctxt "ui:pairingModalPasteFromClipboard#text"
+msgid "Aus Zwischenablage einfügen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect & pair
+msgctxt "ui:pairingModalConnectPair#text"
+msgid "Verbinden & Koppeln"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Woman
+msgctxt "ui:partnerProfileDialogWoman#text"
+msgid "Frau"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Man
+msgctxt "ui:partnerProfileDialogMan#text"
+msgid "Mann"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Non-binary
+msgctxt "ui:partnerProfileDialogNonBinary#text"
+msgid "Divers"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not specified
+msgctxt "ui:partnerProfileDialogNotSpecified#text"
+msgid "Keine Angabe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your partner
+msgctxt "ui:partnerProfileDialogYourPartner#text"
+msgid "Dein Gegenüber"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This lets lessons call your partner by name, e.g. “Anna lies on her back” instead of “she lies”. Both stay on your phone only.
+msgctxt "ui:partnerProfileDialogThisLetsLessonsCallYour#text"
+msgid "Damit können Lektionen dein Gegenüber beim Namen nennen, etwa „Anna liegt auf dem Rücken“ statt „sie liegt“. Beides bleibt nur auf deinem Handy."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Save
+msgctxt "ui:partnerProfileDialogSave#text"
+msgid "Speichern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How may lessons refer to your partner?
+msgctxt "ui:partnerProfileDialogHowMayLessonsReferTo#text"
+msgid "Wie dürfen Lektionen dein Gegenüber nennen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: With name and gender, the texts address you personally. This stays on your phone.
+msgctxt "ui:partnerProfileDialogWithNameAndGenderThe#text"
+msgid "Mit Name und Geschlecht sprechen die Texte euch persönlich an. Das bleibt auf deinem Handy."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Add
+msgctxt "ui:partnerProfileDialogAdd#text"
+msgid "Ergänzen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Spectatoring / self-monitoring
+msgctxt "ui:distortionSpectatoring#text"
+msgid "Spectatoring / Selbstbeobachtung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Catastrophizing
+msgctxt "ui:distortionCatastrophizing#text"
+msgid "Katastrophisieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: All-or-nothing thinking
+msgctxt "ui:distortionAllOrNothing#text"
+msgid "Alles-oder-Nichts-Denken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Mind reading
+msgctxt "ui:distortionMindReading#text"
+msgid "Gedankenlesen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Performance pressure
+msgctxt "ui:distortionPerformancePressure#text"
+msgid "Leistungsdruck"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tunnel vision on body signals
+msgctxt "ui:distortionTunnelVision#text"
+msgid "Tunnelblick auf Körpersignale"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {count}
+#. EN: {count, plural, =1{1 thought record saved locally} other{{count} thought records saved locally}}
+msgctxt "ui:cbtJournalProtocolsSaved#text"
+msgid "{count, plural, =1{1 Gedankenprotokoll lokal gesichert} other{{count} Gedankenprotokolle lokal gesichert}}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: End the journey?
+msgctxt "ui:selbstReiseEndTheJourney#text"
+msgid "Reise beenden?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The guidance stops then. You can start again any time.
+msgctxt "ui:selbstReiseTheGuidanceStopsThenYou#text"
+msgid "Die Begleitung hört dann auf. Du kannst jederzeit neu beginnen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A voice guides you through arriving, breathing and a journey across your body. Most of the time is silence, so you can be fully with yourself. Every journey is put together anew, and there is no goal.
+msgctxt "ui:selbstReiseAVoiceGuidesYouThrough#text"
+msgid "Eine Stimme begleitet dich durch Ankommen, Atem und eine Reise über deinen Körper. Die meiste Zeit ist Stille, damit du ganz bei dir bist. Jede Reise wird neu zusammengestellt, und es gibt kein Ziel."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You decide. You can pause, skip a step or stop at any time with the buttons below. Nothing has to happen: staying with a pleasant, non-sexual touch is just as right. If something becomes uncomfortable or difficult memories come up, you may stop at any time.
+msgctxt "ui:selbstReiseYouDecideYouCanPause#text"
+msgid "Du bestimmst. Pausieren, einen Schritt überspringen oder aufhören geht jederzeit über die Knöpfe unten. Es muss nichts passieren: Bei einer angenehmen, nicht sexuellen Berührung zu bleiben ist genauso richtig. Wird etwas unangenehm oder kommen schwierige Erinnerungen hoch, darfst du jederzeit aufhören."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {m}
+#. EN: {m} min
+msgctxt "ui:selbstReiseMMin#text"
+msgid "{m} Min."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How close would you like to come to yourself today?
+msgctxt "ui:selbstReiseHowCloseWouldYouLike#text"
+msgid "Wie nah möchtest du dir heute kommen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gentle
+msgctxt "ui:selbstReiseGentle#text"
+msgid "Sanft"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Face, scalp, ears, neck, arms, hands, chest, belly, legs and feet, clothed if you like.
+msgctxt "ui:selbstReiseFaceScalpEarsNeckArms#text"
+msgid "Gesicht, Kopfhaut, Ohren, Hals, Arme, Hände, Brust, Bauch, Beine und Füße, gern bekleidet."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Skin
+msgctxt "ui:selbstReiseSkin#text"
+msgid "Haut"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Plus bare skin with oil, hips and inner thighs.
+msgctxt "ui:selbstReisePlusBareSkinWithOil#text"
+msgid "Dazu nackte Haut mit Öl, Hüften und Innenschenkel."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Plus perineum and genitals, with waves instead of a goal.
+msgctxt "ui:selbstReisePlusPerineumAndGenitalsWith#text"
+msgid "Dazu Damm und Geschlecht, mit Wellen statt Ziel."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your body
+msgctxt "ui:selbstReiseYourBody#text"
+msgid "Dein Körper"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Vulva
+msgctxt "ui:selbstReiseVulva#text"
+msgid "Vulva"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Penis
+msgctxt "ui:selbstReisePenis#text"
+msgid "Penis"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Begin the journey
+msgctxt "ui:selbstReiseBeginTheJourney#text"
+msgid "Reise beginnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thank you
+msgctxt "ui:selbstReiseThankYou#text"
+msgid "Danke dir"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Body journey
+msgctxt "ui:selbstReiseBodyJourney#text"
+msgid "Körperreise"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {stilleRest}
+#. EN: Silence · {stilleRest} left
+msgctxt "ui:selbstReiseSilenceStillerestLeft#text"
+msgid "Stille · noch {stilleRest}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Stay lying down as long as it feels good.
+msgctxt "ui:selbstReiseStayLyingDownAsLong#text"
+msgid "Bleib liegen, solange es sich gut anfühlt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Circling
+msgctxt "ui:lustProfileCircling#text"
+msgid "Kreisen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Up and down
+msgctxt "ui:lustProfileUpAndDown#text"
+msgid "Auf und ab"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Side to side
+msgctxt "ui:lustProfileSideToSide#text"
+msgid "Seitwärts"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Press and hold
+msgctxt "ui:lustProfilePressAndHold#text"
+msgid "Drücken und halten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Framing – two fingers left and right
+msgctxt "ui:lustProfileFramingTwoFingersLeftAnd#text"
+msgid "Rahmen – zwei Finger links und rechts"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Light tapping
+msgctxt "ui:lustProfileLightTapping#text"
+msgid "Leichtes Klopfen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Inside and outside at once
+msgctxt "ui:lustProfileInsideAndOutsideAtOnce#text"
+msgid "Innen und außen zugleich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open, oiled hand
+msgctxt "ui:lustProfileOpenOiledHand#text"
+msgid "Offene, eingeölte Hand"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Two-handed gliding
+msgctxt "ui:lustProfileTwoHandedGliding#text"
+msgid "Zweihand-Gleiten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Twisting
+msgctxt "ui:lustProfileTwisting#text"
+msgid "Drehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Ring at the base
+msgctxt "ui:lustProfileRingAtTheBase#text"
+msgid "Ring an der Wurzel"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Circling the frenulum
+msgctxt "ui:lustProfileCirclingTheFrenulum#text"
+msgid "Das Bändchen umkreisen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Including testicles and perineum
+msgctxt "ui:lustProfileIncludingTesticlesAndPerineum#text"
+msgid "Hoden und Damm einbeziehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Waves – pausing just before climax
+msgctxt "ui:lustProfileWavesPausingJustBeforeClimax#text"
+msgid "Wellen – kurz vor dem Höhepunkt innehalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start slowly, around rather than direct
+msgctxt "ui:lustProfileStartSlowlyAroundRatherThan#text"
+msgid "Langsam beginnen, rundherum statt direkt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: When it's good: keep going exactly like that
+msgctxt "ui:lustProfileWhenItSGoodKeep#text"
+msgid "Wenn es gut ist: genau so weitermachen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: With plenty of lubricant
+msgctxt "ui:lustProfileWithPlentyOfLubricant#text"
+msgid "Mit viel Gleitmittel"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Lots of time, no goal
+msgctxt "ui:lustProfileLotsOfTimeNoGoal#text"
+msgid "Viel Zeit, ohne Ziel"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 💛 My desire profile – this is what I've discovered about myself:
+#. EN:
+msgctxt "ui:lustProfileMyDesireProfileThisIs#text"
+msgid ""
+"💛 Mein Lust-Profil – das habe ich über mich entdeckt:\n"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN:
+#. EN: Would you like to try it with me?
+msgctxt "ui:lustProfileWouldYouLikeToTry#text"
+msgid ""
+"\n"
+"Magst du es mit mir ausprobieren?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your desire profile is on its way, encrypted 💛
+msgctxt "ui:lustProfileYourDesireProfileIsOn#text"
+msgid "Dein Lust-Profil ist verschlüsselt unterwegs 💛"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sending didn't work. Please try again.
+msgctxt "ui:lustProfileSendingDidnTWorkPlease#text"
+msgid "Senden hat nicht geklappt. Bitte gleich noch einmal."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Text copied.
+msgctxt "ui:lustProfileTextCopied#text"
+msgid "Text kopiert."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: With vulva
+msgctxt "ui:lustProfileWithVulva#text"
+msgid "Mit Vulva"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: With penis
+msgctxt "ui:lustProfileWithPenis#text"
+msgid "Mit Penis"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tick what you enjoyed while exploring. Only you decide whether and when to share it – only what you select here is sent.
+msgctxt "ui:lustProfileTickWhatYouEnjoyedWhile#text"
+msgid "Hake an, was dir beim Erkunden gefallen hat. Nur du entscheidest, ob und wann du es teilst – gesendet wird ausschließlich, was du hier auswählst."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: General
+msgctxt "ui:lustProfileGeneral#text"
+msgid "Allgemein"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Personal note
+msgctxt "ui:lustProfilePersonalNote#text"
+msgid "Eigene Notiz"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For example: at the beginning I like big, slow circles …
+msgctxt "ui:lustProfileForExampleAtTheBeginning#text"
+msgid "Zum Beispiel: Am Anfang mag ich große, langsame Kreise …"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send to my partner
+msgctxt "ui:lustProfileSendToMyPartner#text"
+msgid "An mein Gegenüber senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect couple channel and send
+msgctxt "ui:lustProfileConnectCoupleChannelAndSend#text"
+msgid "Paar-Kanal verbinden und senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Just copy as text
+msgctxt "ui:lustProfileJustCopyAsText#text"
+msgid "Nur als Text kopieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tip: even nicer than any message is guiding your partner's hand or letting them show you. The message can be the start of that.
+msgctxt "ui:lustProfileTipEvenNicerThanAny#text"
+msgid "Tipp: Noch schöner als jede Nachricht ist es, die Hand deines Gegenübers zu führen oder es dir zeigen zu lassen. Die Nachricht kann der Anstoß dafür sein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Matching answers, encrypted …
+msgctxt "ui:yesNoMaybeMatchingAnswersEncrypted#text"
+msgid "Antworten werden verschlüsselt abgeglichen …"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {count}
+#. EN: {count} answers matched! ✨
+msgctxt "ui:yesNoMaybeCountAnswersMatched#text"
+msgid "{count} Antworten erfolgreich abgeglichen! ✨"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: READ MORE
+msgctxt "ui:yesNoMaybeReadMore#text"
+msgid "WEITERLESEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes / Maybe / No
+msgctxt "ui:yesNoMaybeYesMaybeNo#text"
+msgid "Ja / Vielleicht / Nein"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sync with partner
+msgctxt "ui:yesNoMaybeSyncWithPartner#text"
+msgid "Mit Partner synchronisieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pairing required
+msgctxt "ui:yesNoMaybePairingRequired#text"
+msgid "Koppeln erforderlich"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {answeredCount}, {totalItems}
+#. EN: Questions ({answeredCount}/{totalItems})
+msgctxt "ui:yesNoMaybeQuestionsAnsweredcountTotalitems#text"
+msgid "Fragenkatalog ({answeredCount}/{totalItems})"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {matchCount}
+#. EN: Matches ({matchCount})
+msgctxt "ui:yesNoMaybeMatchesMatchcount#text"
+msgid "Matches ({matchCount})"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: DIGITAL SAFE SPACE
+msgctxt "ui:yesNoMaybeDigitalSafeSpace#text"
+msgid "DIGITALER SAFE SPACE"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Find out what excites you and where your limits are. Not sure what is meant? Tap “Learn more”. If you're connected in the couple channel, you only see what you both want – a no stays invisible.
+msgctxt "ui:yesNoMaybeFindOutWhatExcitesYou#text"
+msgid "Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes
+msgctxt "ui:yesNoMaybeYes#text"
+msgid "Ja"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Maybe
+msgctxt "ui:yesNoMaybeMaybe#text"
+msgid "Vielleicht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No
+msgctxt "ui:yesNoMaybeNo#text"
+msgid "Nein"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {eintraegeLength}
+#. EN: All ({eintraegeLength})
+msgctxt "ui:yesNoMaybeAllEintraegelength#text"
+msgid "Alle ({eintraegeLength})"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open
+msgctxt "ui:yesNoMaybeOpen#text"
+msgid "Offen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {yesCount}
+#. EN: Yes ({yesCount})
+msgctxt "ui:yesNoMaybeYesYescount#text"
+msgid "Ja ({yesCount})"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {maybeCount}
+#. EN: Maybe ({maybeCount})
+msgctxt "ui:yesNoMaybeMaybeMaybecount#text"
+msgid "Vielleicht ({maybeCount})"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {noCount}
+#. EN: No ({noCount})
+msgctxt "ui:yesNoMaybeNoNocount#text"
+msgid "Nein ({noCount})"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pairing required
+msgctxt "ui:yesNoMaybePairingRequired2#text"
+msgid "Kopplung erforderlich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect with your partner in the couple channel via QR code. Your answers are then matched end-to-end encrypted.
+msgctxt "ui:yesNoMaybeConnectWithYourPartnerIn#text"
+msgid "Verbinde dich im Paar-Kanal per QR-Code mit deinem Gegenüber. Eure Antworten werden dann Ende-zu-Ende-verschlüsselt abgeglichen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pair via QR code now
+msgctxt "ui:yesNoMaybePairViaQrCodeNow#text"
+msgid "Jetzt per QR-Code koppeln"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {partnerName}
+#. EN: PERFECT MATCH WITH {partnerName}
+msgctxt "ui:yesNoMaybePerfectMatchWithPartnername#text"
+msgid "VOLLTREFFER MIT {partnerName}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {yesMatchesLength}, {curiosityMatchesLength}
+#. EN: {yesMatchesLength} shared yeses & {curiosityMatchesLength} points of curiosity discovered!
+msgctxt "ui:yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints#text"
+msgid "{yesMatchesLength} gemeinsame Ja-Übereinstimmungen & {curiosityMatchesLength} Neugier-Punkte entdeckt!"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No rejection: all limits were kept discreetly. Only real shared desire is revealed.
+msgctxt "ui:yesNoMaybeNoRejectionAllLimitsWere#text"
+msgid "Keine Zurückweisung: Alle Grenzen wurden diskret gewahrt. Nur echte gemeinsame Lust wird enthüllt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Perfect match (both said YES)
+msgctxt "ui:yesNoMaybePerfectMatchBothSaidYes#text"
+msgid "Volltreffer (Beide haben JA gesagt)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Shared curiosity (open to exploring)
+msgctxt "ui:yesNoMaybeSharedCuriosityOpenToExploring#text"
+msgid "Gemeinsame Neugier (Offen für Erkundung)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No matches yet
+msgctxt "ui:yesNoMaybeNoMatchesYet#text"
+msgid "Noch keine Übereinstimmungen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Both keep voting in the questions. As soon as you've both rated the same item yes or maybe, it lights up here.
+msgctxt "ui:yesNoMaybeBothKeepVotingInThe#text"
+msgid "Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Ja oder Vielleicht bewertet habt, leuchtet er hier auf."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You both: yes
+msgctxt "ui:yesNoMaybeYouBothYes#text"
+msgid "Ihr beide: Ja"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Curious together
+msgctxt "ui:yesNoMaybeCuriousTogether#text"
+msgid "Gemeinsam neugierig"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Course ▶
+msgctxt "ui:yesNoMaybeCourse#text"
+msgid "Kurs ▶"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please choose at least one thinking pattern / distortion.
+msgctxt "ui:cbtNewEntryPleaseChooseAtLeastOne#text"
+msgid "Bitte wähle mindestens ein Denkmuster / eine Verzerrung aus."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: New thought record
+msgctxt "ui:cbtNewEntryNewThoughtRecord#text"
+msgid "Neues Gedankenprotokoll"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Edit entry
+msgctxt "ui:cbtNewEntryEditEntry#text"
+msgid "Eintrag bearbeiten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Cognitive restructuring: unmask irrational alarm thoughts and phrase a realistic answer.
+msgctxt "ui:cbtNewEntryCognitiveRestructuringUnmaskIrrationalAlarm#text"
+msgid "Kognitive Umstrukturierung: Enttarne irrationale Alarmgedanken und formuliere eine biologisch realistische Antwort."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Trigger / situation
+msgctxt "ui:cbtNewEntryTriggerSituation#text"
+msgid "Auslöser / Situation"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: When or during what did the tension come up? (e.g. “When we went to bed”, “When she touched me”)
+msgctxt "ui:cbtNewEntryWhenOrDuringWhatDid#text"
+msgid "Wann oder wobei trat die Anspannung auf? (z.B. „Als wir ins Bett gingen“, „Als sie mich berührte“)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Describe the specific situation...
+msgctxt "ui:cbtNewEntryDescribeTheSpecificSituation#text"
+msgid "Konkrete Situation beschreiben..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please describe a situation.
+msgctxt "ui:cbtNewEntryPleaseDescribeASituation#text"
+msgid "Bitte gib eine Situation an."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Automatic thought (mental movie)
+msgctxt "ui:cbtNewEntryAutomaticThoughtMentalMovie#text"
+msgid "Automatischer Gedanke (Kopfkino)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What shot through your head right away? What did the inner critic say? (e.g. “I'm going to fail again”)
+msgctxt "ui:cbtNewEntryWhatShotThroughYourHead#text"
+msgid "Was schoss dir sofort durch den Kopf? Was sagte der innere Kritiker? (z.B. „Ich werde gleich wieder versagen“)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Note the unfiltered thought...
+msgctxt "ui:cbtNewEntryNoteTheUnfilteredThought#text"
+msgid "Den ungefilterten Gedanken notieren..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please note your thought.
+msgctxt "ui:cbtNewEntryPleaseNoteYourThought#text"
+msgid "Bitte notiere deinen Gedanken."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Expose the cognitive distortion
+msgctxt "ui:cbtNewEntryExposeTheCognitiveDistortion#text"
+msgid "Kognitive Verzerrung entlarven"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Which thinking trap is this? (choose at least one)
+msgctxt "ui:cbtNewEntryWhichThinkingTrapIsThis#text"
+msgid "Welche Denkfalle liegt hier vor? (Wähle mindestens eine aus)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reappraisal / reality check
+msgctxt "ui:cbtNewEntryReappraisalRealityCheck#text"
+msgid "Neubewertung / Realitätscheck"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What's the realistic view? What would an empathetic coach or friend say?
+msgctxt "ui:cbtNewEntryWhatSTheRealisticView#text"
+msgid "Was ist die biologische Wahrheit? Was würde ein empathischer Coach oder Freund dazu sagen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: e.g.: “My body is just reacting to stress. I don't have to impress anyone today. If I focus on skin contact and breathing, the pressure drops.”
+msgctxt "ui:cbtNewEntryEGMyBodyIs#text"
+msgid "z.B.: „Mein Körper reagiert nur auf Adrenalin. Ich muss heute niemanden beeindrucken. Wenn ich den Fokus auf Hautkontakt und Atmung lenke, fällt der Druck ab.“"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please phrase a reappraisal.
+msgctxt "ui:cbtNewEntryPleasePhraseAReappraisal#text"
+msgid "Bitte formuliere eine Neubewertung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Saving...
+msgctxt "ui:cbtNewEntrySaving#text"
+msgid "Wird gespeichert..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Save thought record
+msgctxt "ui:cbtNewEntrySaveThoughtRecord#text"
+msgid "Gedankenprotokoll speichern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Delete entry?
+msgctxt "ui:cbtJournalDeleteEntry#text"
+msgid "Eintrag löschen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Do you really want to remove this thought record from your device?
+msgctxt "ui:cbtJournalDoYouReallyWantTo#text"
+msgid "Möchtest du dieses Gedankenprotokoll wirklich von deinem Gerät entfernen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Delete
+msgctxt "ui:cbtJournalDelete#text"
+msgid "Löschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: New entry
+msgctxt "ui:cbtJournalNewEntry#text"
+msgid "Neuer Eintrag"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {entriesLength}
+#. EN: My records ({entriesLength})
+msgctxt "ui:cbtJournalMyRecordsEntrieslength#text"
+msgid "Meine Protokolle ({entriesLength})"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Beliefs
+msgctxt "ui:cbtJournalBeliefs#text"
+msgid "Glaubenssätze"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No thought records yet
+msgctxt "ui:cbtJournalNoThoughtRecordsYet#text"
+msgid "Noch keine Gedankenprotokolle"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: When your head blocks before or during intimacy, it helps a lot to write down the automatic thought and expose the cognitive distortion in black and white.
+msgctxt "ui:cbtJournalWhenYourHeadBlocksBefore#text"
+msgid "Wenn der Kopf vor oder bei der Intimität blockiert, hilft es ungemein, den automatischen Gedanken aufzuschreiben und die kognitive Verzerrung schwarz auf weiß zu entlarven."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: New record
+msgctxt "ui:cbtJournalNewRecord#text"
+msgid "Neues Protokoll"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start with a belief
+msgctxt "ui:cbtJournalStartWithABelief#text"
+msgid "Mit einem Glaubenssatz starten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Cognitive restructuring
+msgctxt "ui:cbtJournalCognitiveRestructuring#text"
+msgid "Kognitive Umstrukturierung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Edit
+msgctxt "ui:cbtJournalEdit#text"
+msgid "Bearbeiten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: AUTOMATIC THOUGHT (ALARM)
+msgctxt "ui:cbtJournalAutomaticThoughtAlarm#text"
+msgid "AUTOMATISCHER GEDANKE (ALARM)"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {automaticThought}
+#. EN: “{automaticThought}”
+msgctxt "ui:cbtJournalAutomaticthought#text"
+msgid "„{automaticThought}“"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: REAPPRAISAL & REALITY CHECK
+msgctxt "ui:cbtJournalReappraisalRealityCheck#text"
+msgid "NEUBEWERTUNG & REALITÄTSCHECK"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {realityCheck}, {practicalShift}
+#. EN: {realityCheck}
+#. EN:
+#. EN: Practical shift: {practicalShift}
+msgctxt "ui:beliefLibraryViewRealitycheckPracticalShiftPracticalshift#text"
+msgid ""
+"{realityCheck}\n"
+"\n"
+"Praktischer Shift: {practicalShift}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Belief toolkit
+msgctxt "ui:beliefLibraryViewBeliefToolkit#text"
+msgid "Glaubenssätze-Baukasten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The most common mental traps in performance anxiety – and the reality behind them. Tap a card to take it straight into your own journal.
+msgctxt "ui:beliefLibraryViewTheMostCommonMentalTraps#text"
+msgid "Die häufigsten mentalen Fallen bei Leistungsangst – und die biologische Wahrheit dahinter. Tippe auf eine Karte, um sie direkt in dein eigenes Journal zu übernehmen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: FOR HER 🌸
+msgctxt "ui:beliefLibraryViewForHer#text"
+msgid "FÜR SIE 🌸"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: FOR HIM 🌿
+msgctxt "ui:beliefLibraryViewForHim#text"
+msgid "FÜR IHN 🌿"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: TYPICAL MISBELIEF (MENTAL MOVIE)
+msgctxt "ui:beliefLibraryViewTypicalMisbeliefMentalMovie#text"
+msgid "TYPISCHER IRRGLAUBE (KOPFKINO)"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {irrationalThought}
+#. EN: “{irrationalThought}”
+msgctxt "ui:beliefLibraryViewIrrationalthought#text"
+msgid "„{irrationalThought}“"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: REALITY CHECK
+msgctxt "ui:beliefLibraryViewRealityCheck#text"
+msgid "BIOLOGISCHER REALITÄTSCHECK"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Take into my journal
+msgctxt "ui:beliefLibraryViewTakeIntoMyJournal#text"
+msgid "In eigenes Journal übernehmen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: BREATHE IN & WIDEN
+msgctxt "ui:kegelTimerViewBreatheInWiden#text"
+msgid "EINATMEN & WEIT WERDEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe deep into the belly. Let the pelvic floor gently give way downwards – no pushing.
+msgctxt "ui:kegelTimerViewBreatheDeepIntoTheBelly#text"
+msgid "Tief in den Bauch atmen. Den Beckenboden sanft nach unten nachgeben lassen – kein Pressen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: STAY SOFT
+msgctxt "ui:kegelTimerViewStaySoft#text"
+msgid "WEICH BLEIBEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe out slowly and stay wide, like a hammock hanging loosely.
+msgctxt "ui:kegelTimerViewBreatheOutSlowlyAndStay#text"
+msgid "Langsam ausatmen und weit bleiben, wie eine Hängematte, die locker durchhängt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: NOTICE
+msgctxt "ui:kegelTimerViewNotice#text"
+msgid "NACHSPÜREN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Keep breathing normally and feel how warm and calm the pelvis is.
+msgctxt "ui:kegelTimerViewKeepBreathingNormallyAndFeel#text"
+msgid "Normal weiteratmen und spüren, wie warm und ruhig das Becken ist."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: TIGHTEN
+msgctxt "ui:kegelTimerViewTighten#text"
+msgid "ANSPANNEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gently draw the area between pubic bone and tailbone inwards and upwards. Buttocks and belly stay relaxed.
+msgctxt "ui:kegelTimerViewGentlyDrawTheAreaBetween#text"
+msgid "Den Bereich zwischen Schambein und Steißbein sanft nach innen und oben ziehen. Po und Bauch bleiben locker."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Hold the tension at about half strength. Keep breathing calmly.
+msgctxt "ui:kegelTimerViewHoldTheTensionAtAbout#text"
+msgid "Die Spannung halten, etwa mit halber Kraft. Weiter ruhig atmen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: LET GO COMPLETELY
+msgctxt "ui:kegelTimerViewLetGoCompletely#text"
+msgid "GANZ LOSLASSEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Relax completely. Letting go lasts at least as long as holding.
+msgctxt "ui:kegelTimerViewRelaxCompletelyLettingGoLasts#text"
+msgid "Vollständig entspannen. Das Loslassen dauert mindestens so lange wie das Halten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: QUICK SQUEEZE
+msgctxt "ui:kegelTimerViewQuickSqueeze#text"
+msgid "KURZ AN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A quick, short squeeze – like a wink with the pelvic floor.
+msgctxt "ui:kegelTimerViewAQuickShortSqueezeLike#text"
+msgid "Ein schnelles, kurzes Anspannen – wie ein Zwinkern mit dem Beckenboden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: RELEASE
+msgctxt "ui:kegelTimerViewRelease#text"
+msgid "LOS"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let go completely right away.
+msgctxt "ui:kegelTimerViewLetGoCompletelyRightAway#text"
+msgid "Sofort wieder ganz loslassen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: BREATHE IN & SOFTEN
+msgctxt "ui:kegelTimerViewBreatheInSoften#text"
+msgid "EINATMEN & WEICH"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe deep into the belly. Consciously let perineum and buttocks soften.
+msgctxt "ui:kegelTimerViewBreatheDeepIntoTheBelly2#text"
+msgid "Tief in den Bauch atmen. Damm und Po bewusst weich werden lassen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: LONG EXHALE
+msgctxt "ui:kegelTimerViewLongExhale#text"
+msgid "LANG AUSATMEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe out long and audibly, the pelvic floor stays wide. This is how you practise staying loose when aroused.
+msgctxt "ui:kegelTimerViewBreatheOutLongAndAudibly#text"
+msgid "Lang und hörbar ausatmen, der Beckenboden bleibt weit. So übst du, bei Erregung locker zu bleiben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Keep breathing calmly and feel the warmth in your pelvis.
+msgctxt "ui:kegelTimerViewKeepBreathingCalmlyAndFeel#text"
+msgid "Ruhig weiteratmen und die Wärme im Becken spüren."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Done
+msgctxt "ui:kegelTimerViewDone#text"
+msgid "Geschafft"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {totalRounds}
+#. EN: You practised {totalRounds} rounds. A few minutes regularly do more than long sessions rarely – see you tomorrow!
+msgctxt "ui:kegelTimerViewYouPractisedTotalroundsRoundsA#text"
+msgid "Du hast {totalRounds} Runden geübt. Regelmäßig ein paar Minuten bringen mehr als selten lange – bis morgen!"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Finish
+msgctxt "ui:kegelTimerViewFinish#text"
+msgid "Fertig"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let go
+msgctxt "ui:kegelTimerViewLetGo#text"
+msgid "Loslassen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: widen
+msgctxt "ui:kegelTimerViewWiden#text"
+msgid "weit werden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Strengthen
+msgctxt "ui:kegelTimerViewStrengthen#text"
+msgid "Kräftigen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: hold & release
+msgctxt "ui:kegelTimerViewHoldRelease#text"
+msgid "halten & lösen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Quick pulses
+msgctxt "ui:kegelTimerViewQuickPulses#text"
+msgid "Schnelle Impulse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: quick on, quick off
+msgctxt "ui:kegelTimerViewQuickOnQuickOff#text"
+msgid "kurz an, kurz los"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Waves
+msgctxt "ui:kegelTimerViewWaves#text"
+msgid "Wellen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: soft when aroused
+msgctxt "ui:kegelTimerViewSoftWhenAroused#text"
+msgid "weich bei Erregung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Rounds
+msgctxt "ui:kegelTimerViewRounds#text"
+msgid "Runden"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {minutes}
+#. EN: ≈ {minutes} min
+msgctxt "ui:kegelTimerViewMinutesMin#text"
+msgid "≈ {minutes} Min."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Level
+msgctxt "ui:kegelTimerViewLevel#text"
+msgid "Stufe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Voice cues
+msgctxt "ui:kegelTimerViewVoiceCues#text"
+msgid "Ansage"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A voice guides you
+msgctxt "ui:kegelTimerViewAVoiceGuidesYou#text"
+msgid "Stimme führt dich durch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: vibration only
+msgctxt "ui:kegelTimerViewVibrationOnly#text"
+msgid "nur Vibration"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {currentRound}, {totalRounds}
+#. EN: Round {currentRound} of {totalRounds}
+msgctxt "ui:kegelTimerViewRoundCurrentroundOfTotalrounds#text"
+msgid "Runde {currentRound} von {totalRounds}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {currentPhaseIndex}, {phasesLength}
+#. EN: Phase {currentPhaseIndex}/{phasesLength}
+msgctxt "ui:kegelTimerViewPhaseCurrentphaseindexPhaseslength#text"
+msgid "Phase {currentPhaseIndex}/{phasesLength}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guide & practice plan
+msgctxt "ui:kegelTimerViewGuidePracticePlan#text"
+msgid "Anleitung & Übungsplan"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Finding the muscle, which exercise for what, common mistakes, 6-week plan
+msgctxt "ui:kegelTimerViewFindingTheMuscleWhichExercise#text"
+msgid "Muskel finden, welche Übung wofür, typische Fehler, Plan für 6 Wochen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pelvic floor guide
+msgctxt "ui:kegelGuideSheetPelvicFloorGuide#text"
+msgid "Beckenboden-Anleitung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Finding the muscle, exercises, plan
+msgctxt "ui:kegelGuideSheetFindingTheMuscleExercisesPlan#text"
+msgid "Muskel finden, Übungen, Plan"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 1. Finding the muscle
+msgctxt "ui:kegelGuideSheetFindingTheMuscle#text"
+msgid "1. Den Muskel finden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: BASICS
+msgctxt "ui:kegelGuideSheetBasics#text"
+msgid "GRUNDLAGEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The pelvic floor stretches like a hammock between pubic bone and tailbone – in everyone. It can do two things: lift and hold, and widen and let go. Both belong to training.
+msgctxt "ui:kegelGuideSheetThePelvicFloorStretchesLike#text"
+msgid "Der Beckenboden spannt sich wie eine Hängematte zwischen Schambein und Steißbein – bei allen Menschen. Er kann zwei Dinge: heben und halten, und weit werden und loslassen. Beides gehört zum Training."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tighten and lift
+msgctxt "ui:kegelGuideSheetTightenAndLift#text"
+msgid "Anspannen und heben"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Imagine holding back wind and stopping the flow of urine at the same time – only in your imagination.
+#. EN: • With a vulva: the vaginal opening and perineum draw gently inwards and upwards.
+#. EN: • With a penis: the base of the penis lifts a little, the testicles draw slightly upwards.
+msgctxt "ui:kegelGuideSheetImagineHoldingBackWindAnd#text"
+msgid ""
+"Stell dir vor, du hältst einen Wind zurück und stoppst gleichzeitig den Urinstrahl – nur in der Vorstellung.\n"
+"• Mit Vulva: Scheideneingang und Damm ziehen sich sanft nach innen und oben.\n"
+"• Mit Penis: Die Peniswurzel hebt sich ein kleines Stück, die Hoden ziehen leicht nach oben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let go and widen
+msgctxt "ui:kegelGuideSheetLetGoAndWiden#text"
+msgid "Loslassen und weit werden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe deep into the belly. As the belly rounds, let the pelvic floor gently give way downwards – like at the start of urinating, but without pushing. The area between pubic bone and tailbone becomes soft and warm.
+msgctxt "ui:kegelGuideSheetBreatheDeepIntoTheBelly#text"
+msgid "Atme tief in den Bauch. Während sich der Bauch wölbt, lass den Beckenboden sanft nach unten nachgeben – wie beim Beginn des Wasserlassens, aber ohne zu pressen. Der Bereich zwischen Schambein und Steißbein wird weich und warm."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Buttocks, thighs and belly stay relaxed. A hand on your buttocks tells you whether they're joining in.
+msgctxt "ui:kegelGuideSheetButtocksThighsAndBellyStay#text"
+msgid "Po, Oberschenkel und Bauch bleiben locker. Eine Hand auf dem Po verrät, ob er mitarbeitet."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 2. Which exercise for what?
+msgctxt "ui:kegelGuideSheetWhichExerciseForWhat#text"
+msgid "2. Welche Übung wofür?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: EXERCISES
+msgctxt "ui:kegelGuideSheetExercises#text"
+msgid "ÜBUNGEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: for tension, pain on penetration, early ejaculation
+msgctxt "ui:kegelGuideSheetForTensionPainOnPenetration#text"
+msgid "bei Anspannung, Schmerzen beim Eindringen, frühem Samenerguss"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For everyone whose pelvic floor tends to hold too much. That's common with stress, lots of sitting and performance pressure. Start here if you're unsure.
+msgctxt "ui:kegelGuideSheetForEveryoneWhosePelvicFloor#text"
+msgid "Für alle, deren Beckenboden eher zu viel festhält. Das ist bei Stress, viel Sitzen und Leistungsdruck häufig. Fang hier an, wenn du unsicher bist."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: for support, control and stability
+msgctxt "ui:kegelGuideSheetForSupportControlAndStability#text"
+msgid "für Halt, Kontrolle und Stabilität"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Strengthens the muscles, for example after giving birth, with mild bladder weakness or for more control. Practise at half strength; letting go afterwards is just as important as holding.
+msgctxt "ui:kegelGuideSheetStrengthensTheMusclesForExample#text"
+msgid "Stärkt die Muskulatur, etwa nach einer Geburt, bei leichter Blasenschwäche oder für mehr Kontrolle. Mit halber Kraft üben, das Loslassen danach ist genauso wichtig wie das Halten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: for responsiveness
+msgctxt "ui:kegelGuideSheetForResponsiveness#text"
+msgid "für Reaktionsfähigkeit"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A short squeeze and immediate release trains the fast muscle fibres – for example for the moment of coughing or sneezing.
+msgctxt "ui:kegelGuideSheetAShortSqueezeAndImmediate#text"
+msgid "Kurzes An und sofortiges Los trainiert die schnellen Muskelfasern – zum Beispiel für den Moment beim Husten oder Niesen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: staying loose when it gets exciting
+msgctxt "ui:kegelGuideSheetStayingLooseWhenItGets#text"
+msgid "locker bleiben, wenn es spannend wird"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A long, audible exhale with soft perineum and buttocks. Exactly this helps with the wave surfing from courses 8 and 9 to keep arousal high without it spilling over.
+msgctxt "ui:kegelGuideSheetALongAudibleExhaleWith#text"
+msgid "Langes, hörbares Ausatmen mit weichem Damm und Po. Genau das hilft beim Wellen-Surfen aus den Kursen 8 und 9, die Erregung hoch zu halten, ohne dass sie überläuft."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 3. Common mistakes
+msgctxt "ui:kegelGuideSheetCommonMistakes#text"
+msgid "3. Typische Fehler"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: CAREFUL
+msgctxt "ui:kegelGuideSheetCareful#text"
+msgid "ACHTUNG"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Squeezing the buttocks
+msgctxt "ui:kegelGuideSheetSqueezingTheButtocks#text"
+msgid "Den Po zusammenkneifen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The big gluteal muscle likes to sneak in. The buttocks stay soft.
+msgctxt "ui:kegelGuideSheetTheBigGlutealMuscleLikes#text"
+msgid "Der große Gesäßmuskel mogelt sich gern hinein. Der Po bleibt weich."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Holding your breath
+msgctxt "ui:kegelGuideSheetHoldingYourBreath#text"
+msgid "Die Luft anhalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Keep breathing calmly while holding. Holding your breath increases pressure in the belly.
+msgctxt "ui:kegelGuideSheetKeepBreathingCalmlyWhileHolding#text"
+msgid "Atme beim Halten ruhig weiter. Angehaltener Atem erhöht den Druck im Bauch."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pushing instead of letting go
+msgctxt "ui:kegelGuideSheetPushingInsteadOfLettingGo#text"
+msgid "Pressen statt loslassen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: When letting go, nothing is pushed down. It's a giving way, not a pushing.
+msgctxt "ui:kegelGuideSheetWhenLettingGoNothingIs#text"
+msgid "Beim Loslassen wird nichts nach unten gedrückt. Es ist ein Nachgeben, kein Schieben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Practising while actually urinating
+msgctxt "ui:kegelGuideSheetPractisingWhileActuallyUrinating#text"
+msgid "Beim echten Wasserlassen üben"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Regularly stopping the flow of urine can disturb bladder emptying. Only practise in your imagination.
+msgctxt "ui:kegelGuideSheetRegularlyStoppingTheFlowOf#text"
+msgid "Den Urinstrahl regelmäßig zu stoppen kann die Blasenentleerung stören. Nur in der Vorstellung üben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Better short and regular
+msgctxt "ui:kegelGuideSheetBetterShortAndRegular#text"
+msgid "Lieber kurz und regelmäßig"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A few minutes on most days do more than an occasional long session.
+msgctxt "ui:kegelGuideSheetAFewMinutesOnMost#text"
+msgid "Ein paar Minuten an den meisten Tagen bringen mehr als selten eine lange Einheit."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 4. A plan for six weeks
+msgctxt "ui:kegelGuideSheetAPlanForSixWeeks#text"
+msgid "4. Ein Plan für sechs Wochen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: PLAN
+msgctxt "ui:kegelGuideSheetPlan#text"
+msgid "PLAN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Week 1–2
+msgctxt "ui:kegelGuideSheetWeek#text"
+msgid "Woche 1–2"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let go daily, 5 rounds, easy level. Goal: to clearly feel the widening.
+msgctxt "ui:kegelGuideSheetLetGoDailyRoundsEasy#text"
+msgid "Täglich Loslassen, 5 Runden, Stufe leicht. Ziel: das Weitwerden sicher spüren."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Week 3–4
+msgctxt "ui:kegelGuideSheetWeek2#text"
+msgid "Woche 3–4"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let go 5 rounds, then strengthen 5 rounds, easy level. Waves on two days.
+msgctxt "ui:kegelGuideSheetLetGoRoundsThenStrengthen#text"
+msgid "Loslassen 5 Runden, danach Kräftigen 5 Runden, Stufe leicht. An zwei Tagen Wellen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Week 5–6
+msgctxt "ui:kegelGuideSheetWeek3#text"
+msgid "Woche 5–6"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 10 rounds of your main exercise, medium level. Plus a few quick pulses.
+msgctxt "ui:kegelGuideSheetRoundsOfYourMainExercise#text"
+msgid "10 Runden in deiner Hauptübung, Stufe mittel. Dazu ein paar Schnelle Impulse."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: After that: keep two or three short sessions a week. And use letting go consciously in intimate moments – breathe deep into the belly, let the pelvic floor sink.
+msgctxt "ui:kegelGuideSheetAfterThatKeepTwoOr#text"
+msgid "Danach: Behalte zwei, drei kurze Einheiten pro Woche bei. Und nutze das Loslassen bewusst in intimen Momenten – tief in den Bauch atmen, den Beckenboden sinken lassen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 5. When to see a physiotherapist?
+msgctxt "ui:kegelGuideSheetWhenToSeeAPhysiotherapist#text"
+msgid "5. Wann zur Physiotherapie?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: HEALTH
+msgctxt "ui:kegelGuideSheetHealth#text"
+msgid "GESUNDHEIT"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Specialised pelvic floor physiotherapy can examine exactly whether your pelvic floor tends to be too weak or too tight, and guide you specifically. Get advice if you have:
+#. EN: • pain in the pelvis, during sex or during training
+#. EN: • bladder or bowel weakness
+#. EN: • problems after giving birth or pelvic surgery
+#. EN: • the feeling that you can't control the muscle at all
+msgctxt "ui:kegelGuideSheetSpecialisedPelvicFloorPhysiotherapyCan#text"
+msgid ""
+"Eine spezialisierte Beckenboden-Physiotherapie kann genau untersuchen, ob dein Beckenboden eher zu schwach oder zu fest ist, und dich gezielt anleiten. Lass dich beraten bei:\n"
+"• Schmerzen im Becken, beim Sex oder beim Training\n"
+"• Blasen- oder Darmschwäche\n"
+"• Beschwerden nach einer Geburt oder einer Operation im Becken\n"
+"• dem Gefühl, den Muskel gar nicht ansteuern zu können"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Back to training
+msgctxt "ui:kegelGuideSheetBackToTraining#text"
+msgid "Zurück zum Training"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: As a woman, how do I relax my pelvic floor during sex?
+msgctxt "ui:aiCoachAsAWomanHowDo#text"
+msgid "Wie entspanne ich als Frau meinen Beckenboden beim Sex?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How can we stop performance pressure in bed together?
+msgctxt "ui:aiCoachHowCanWeStopPerformance#text"
+msgid "Wie stoppen wir zu zweit den Leistungsdruck im Bett?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What to do about racing thoughts & spectatoring?
+msgctxt "ui:aiCoachWhatToDoAboutRacing#text"
+msgid "Was tun bei akutem Kopfkino & Spectatoring?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do I explain responsive desire to my partner?
+msgctxt "ui:aiCoachHowDoIExplainResponsive#text"
+msgid "Wie erkläre ich meinem Partner die responsive Lust?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Why does the reverse Kegel help with nervousness?
+msgctxt "ui:aiCoachWhyDoesTheReverseKegel#text"
+msgid "Warum hilft der Reverse Kegel bei Nervosität?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Welcome to confidential somatic & relationship coaching. I'm here for you – as a woman, a man or a couple – with all questions about relaxing the pelvic floor, overcoming racing thoughts and performance pressure, shame and fulfilling intimacy without a goal.
+#. EN:
+#. EN: What would you like to talk about, or what's on your mind most right now?
+msgctxt "ui:aiCoachWelcomeToConfidentialSomaticRelationship#text"
+msgid ""
+"Willkommen im vertraulichen Somatik- & Beziehungs-Coaching. Ich begleite euch – ob als Frau, Mann oder als Paar – bei allen Fragen zu Beckenboden-Entspannung, Überwindung von Kopfkino und Leistungsdruck, Scham und erfüllender, absichtsloser Intimität.\n"
+"\n"
+"Worüber möchtet ihr sprechen oder was beschäftigt dein Nervensystem gerade am meisten?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please add your Gemini API key first to chat with the coach.
+msgctxt "ui:aiCoachPleaseAddYourGeminiApi#text"
+msgid "Bitte hinterlege zuerst deinen Gemini API-Key, um mit dem Coach zu schreiben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No API key added. Please tap the gear icon at the top.
+msgctxt "ui:aiCoachNoApiKeyAddedPlease#text"
+msgid "Kein API-Key hinterlegt. Bitte klicke oben auf das Zahnrad-Symbol."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Google rejected the API key as invalid. Please check the key in Google AI Studio.
+msgctxt "ui:aiCoachGoogleRejectedTheApiKey#text"
+msgid "Der API-Key wurde von Google als ungültig abgelehnt. Bitte überprüfe den Key im Google AI Studio."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {cleanErr}
+#. EN: Connection error: {cleanErr}
+msgctxt "ui:aiCoachConnectionErrorCleanerr#text"
+msgid "Verbindungsfehler: {cleanErr}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Check key
+msgctxt "ui:aiCoachCheckKey#text"
+msgid "Key prüfen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gemini API key
+msgctxt "ui:aiCoachGeminiApiKey#text"
+msgid "Gemini API-Key"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Private coaching uses Google Gemini. The key is stored encrypted on your phone only; your messages and profile details go to Google to be answered. In the EU, Switzerland and the UK, Google's terms say it doesn't use them to improve its products; elsewhere Google may analyse requests from the free tier.
+msgctxt "ui:aiCoachPrivateCoachingUsesGoogleGemini#text"
+msgid "Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Free via aistudio.google.com
+msgctxt "ui:aiCoachFreeViaAistudioGoogleCom#text"
+msgid "Kostenlos via aistudio.google.com"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Show guide
+msgctxt "ui:aiCoachShowGuide#text"
+msgid "Anleitung anzeigen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please enter a key first.
+msgctxt "ui:aiCoachPleaseEnterAKeyFirst#text"
+msgid "Bitte gib zuerst einen Key ein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Checking connection...
+msgctxt "ui:aiCoachCheckingConnection#text"
+msgid "Prüfe Verbindung..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Test connection
+msgctxt "ui:aiCoachTestConnection#text"
+msgid "Verbindung testen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: API key removed.
+msgctxt "ui:aiCoachApiKeyRemoved#text"
+msgid "API-Key entfernt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: API key saved.
+msgctxt "ui:aiCoachApiKeySaved#text"
+msgid "API-Key erfolgreich gespeichert."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Clear chat history?
+msgctxt "ui:aiCoachClearChatHistory#text"
+msgid "Chatverlauf leeren?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Do you want to delete all previous messages in this conversation?
+msgctxt "ui:aiCoachDoYouWantToDelete#text"
+msgid "Möchtest du alle bisherigen Nachrichten dieses Dialogs löschen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Chat history cleared. What would you like to talk about?
+msgctxt "ui:aiCoachChatHistoryClearedWhatWould#text"
+msgid "Chatverlauf zurückgesetzt. Worüber möchtest du sprechen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Clear
+msgctxt "ui:aiCoachClear#text"
+msgid "Leeren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gemini AI connected
+msgctxt "ui:aiCoachGeminiAiConnected#text"
+msgid "Gemini KI verbunden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No API key added
+msgctxt "ui:aiCoachNoApiKeyAdded#text"
+msgid "Kein API-Key hinterlegt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guide: create a key
+msgctxt "ui:aiCoachGuideCreateAKey#text"
+msgid "Anleitung: Key erstellen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Clear chat
+msgctxt "ui:aiCoachClearChat#text"
+msgid "Chat leeren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: API key settings
+msgctxt "ui:aiCoachApiKeySettings#text"
+msgid "API-Key Einstellungen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No API key yet? Created for free in 2 minutes.
+msgctxt "ui:aiCoachNoApiKeyYetCreated#text"
+msgid "Noch kein API-Key? In 2 Min. kostenlos erstellt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guide
+msgctxt "ui:aiCoachGuide#text"
+msgid "Anleitung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Coach is thinking...
+msgctxt "ui:aiCoachCoachIsThinking#text"
+msgid "Coach reflektiert..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Ask a confidential question...
+msgctxt "ui:aiCoachAskAConfidentialQuestion#text"
+msgid "Vertrauliche Frage stellen..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Free Gemini API key
+msgctxt "ui:apiKeyGuideSheetFreeGeminiApiKey#text"
+msgid "Kostenlosen Gemini API-Key"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Created step by step in 2 minutes
+msgctxt "ui:apiKeyGuideSheetCreatedStepByStepIn#text"
+msgid "Schritt-für-Schritt in 2 Minuten erstellt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Free – and what happens to your data:
+msgctxt "ui:apiKeyGuideSheetFreeAndWhatHappensTo#text"
+msgid "Kostenlos – und was mit deinen Daten passiert: "
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Google AI Studio has a free tier. Your key stays encrypted on your phone. Your messages, name, age, gender, relationship status and focus go to Google to be answered. In the EU, Switzerland and the UK, Google's terms say it doesn't use them to improve its products. Elsewhere Google may analyse requests from the free tier for that and have humans read them.
+msgctxt "ui:apiKeyGuideSheetGoogleAiStudioHasA#text"
+msgid "Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open Google AI Studio
+msgctxt "ui:apiKeyGuideSheetOpenGoogleAiStudio#text"
+msgid "Google AI Studio aufrufen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open Google's official developer platform in your browser (Chrome, Safari, Firefox):
+#. EN:
+msgctxt "ui:apiKeyGuideSheetOpenGoogleSOfficialDeveloper#text"
+msgid ""
+"Öffne im Browser (Chrome, Safari, Firefox) die offizielle Entwickler-Plattform von Google:\n"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Link copied to clipboard!
+msgctxt "ui:apiKeyGuideSheetLinkCopiedToClipboard#text"
+msgid "Link in Zwischenablage kopiert!"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Copy
+msgctxt "ui:apiKeyGuideSheetCopy#text"
+msgid "Kopieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sign in with a Google account
+msgctxt "ui:apiKeyGuideSheetSignInWithAGoogle#text"
+msgid "Mit Google-Konto anmelden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sign in with your existing Google account (Gmail). No credit card or payment method is required.
+msgctxt "ui:apiKeyGuideSheetSignInWithYourExisting#text"
+msgid "Melde dich mit deinem bestehenden Google-Konto (Gmail) an. Es ist keine Kreditkarte oder Zahlungsmethode erforderlich."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Click "Get API key"
+msgctxt "ui:apiKeyGuideSheetClickGetApiKey#text"
+msgid "\"Get API key\" anklicken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: In the menu at the top left, click the blue "Get API key" button.
+msgctxt "ui:apiKeyGuideSheetInTheMenuAtThe#text"
+msgid "Klicke im Menü links oben auf den blauen Button \"Get API key\" (oder \"API-Schlüssel anfordern\")."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Choose "Create API key in new project"
+msgctxt "ui:apiKeyGuideSheetChooseCreateApiKeyIn#text"
+msgid "\"Create API key in new project\" wählen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Choose the option "Create API key in new project". Google automatically sets up a free project in the background.
+msgctxt "ui:apiKeyGuideSheetChooseTheOptionCreateApi#text"
+msgid "Wähle die Option \"Create API key in new project\". Google richtet sofort automatisch im Hintergrund ein kostenloses Projekt ein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Copy the key & paste it into VelvetPulse
+msgctxt "ui:apiKeyGuideSheetCopyTheKeyPasteIt#text"
+msgid "Key kopieren & in VelvetPulse einfügen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Copy the generated string. It usually starts with "AIzaSy..." – then paste it into the app here.
+msgctxt "ui:apiKeyGuideSheetCopyTheGeneratedStringIt#text"
+msgid "Kopiere die erzeugte Zeichenkette. Sie beginnt typischerweise mit \"AIzaSy...\" – füge sie anschließend hier in die App ein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Frequently asked questions:
+msgctxt "ui:apiKeyGuideSheetFrequentlyAskedQuestions#text"
+msgid "Häufige Fragen:"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Does it cost anything?
+msgctxt "ui:apiKeyGuideSheetDoesItCostAnything#text"
+msgid "Kostet die Nutzung etwas?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not within the free tier of Google AI Studio. Google sets the scope and terms and can change them.
+msgctxt "ui:apiKeyGuideSheetNotWithinTheFreeTier#text"
+msgid "Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Which model is used?
+msgctxt "ui:apiKeyGuideSheetWhichModelIsUsed#text"
+msgid "Welches Modell wird genutzt?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: VelvetPulse automatically finds the latest active Gemini models (preferring the fast Flash models) via your key.
+msgctxt "ui:apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest#text"
+msgid "VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Enter API key & connect now
+msgctxt "ui:apiKeyGuideSheetEnterApiKeyConnectNow#text"
+msgid "API-Key jetzt eintragen & verbinden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Very calm
+msgctxt "ui:dailyCheckinCardVeryCalm#text"
+msgid "Sehr ruhig"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Mild
+msgctxt "ui:dailyCheckinCardMild#text"
+msgid "Leicht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Moderate
+msgctxt "ui:dailyCheckinCardModerate#text"
+msgid "Mäßig"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: High
+msgctxt "ui:dailyCheckinCardHigh#text"
+msgid "Hoch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Extreme stress
+msgctxt "ui:dailyCheckinCardExtremeStress#text"
+msgid "Extremer Stress"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Clear head
+msgctxt "ui:dailyCheckinCardClearHead#text"
+msgid "Frei im Kopf"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Hardly any pressure
+msgctxt "ui:dailyCheckinCardHardlyAnyPressure#text"
+msgid "Kaum Druck"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Some restlessness
+msgctxt "ui:dailyCheckinCardSomeRestlessness#text"
+msgid "Unruhe da"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Noticeably high
+msgctxt "ui:dailyCheckinCardNoticeablyHigh#text"
+msgid "Spürbar hoch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Strong pressure
+msgctxt "ui:dailyCheckinCardStrongPressure#text"
+msgid "Starker Druck"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 30-second daily check-in
+msgctxt "ui:dailyCheckinCardSecondDailyCheckIn#text"
+msgid "30-Sekunden Tages-Check-in"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Done
+msgctxt "ui:dailyCheckinCardDone#text"
+msgid "Erledigt"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {stressLevel}, {pressureLevel}
+#. EN: Stress: {stressLevel} • Pressure: {pressureLevel}
+msgctxt "ui:dailyCheckinCardStressStresslevelPressurePressurelevel#text"
+msgid "Stress: {stressLevel} • Druck: {pressureLevel}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do stress & performance pressure relate today?
+msgctxt "ui:dailyCheckinCardHowDoStressPerformancePressure#text"
+msgid "Wie stehen Stress & Leistungsdruck heute zueinander?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 1. Everyday stress today (job, appointments, sleep)
+msgctxt "ui:dailyCheckinCardEverydayStressTodayJobAppointments#text"
+msgid "1. Alltagsstress heute (Job, Termine, Schlaf)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 2. Inner performance pressure & racing thoughts
+msgctxt "ui:dailyCheckinCardInnerPerformancePressureRacingThoughts#text"
+msgid "2. Innerer Leistungsdruck & Kopfkino"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 3. What did you some good today?
+msgctxt "ui:dailyCheckinCardWhatDidYouGoodToday#text"
+msgid "3. Was hat deinem Nervensystem heute gut getan?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Save daily check-in
+msgctxt "ui:dailyCheckinCardSaveDailyCheckIn#text"
+msgid "Tages-Check-in speichern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Update values
+msgctxt "ui:dailyCheckinCardUpdateValues#text"
+msgid "Werte aktualisieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 💡 Coaching insight: your everyday stress is high today. Remember: stress and exhaustion often slow desire down by themselves. That's a normal reaction, not a defect.
+msgctxt "ui:dailyCheckinCardCoachingInsightYourEverydayStress#text"
+msgid "💡 Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 💡 Coaching insight: when everyday stress drops, it's often easier to relax. Use today's calm to feel into your body without pressure to perform.
+msgctxt "ui:dailyCheckinCardCoachingInsightWhenEverydayStress#text"
+msgid "💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guest
+msgctxt "ui:onboardingGuest#text"
+msgid "Gast"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Profile updated.
+msgctxt "ui:onboardingProfileUpdated#text"
+msgid "Profil erfolgreich aktualisiert."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Restore backup
+msgctxt "ui:onboardingRestoreBackup#text"
+msgid "Sicherung wiederherstellen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Restore your profile, lessons & couple channel
+msgctxt "ui:onboardingRestoreYourProfileLessonsCouple#text"
+msgid "Stelle dein Profil, Lektionen & Nostr-Kanal wieder her"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Backup found on this device!
+msgctxt "ui:onboardingBackupFoundOnThisDevice#text"
+msgid "Sicherung auf dem Gerät gefunden!"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {profileName}
+#. EN: Profile: {profileName}
+msgctxt "ui:onboardingProfileProfilename#text"
+msgid "Profil: {profileName}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Restore automatic backup now
+msgctxt "ui:onboardingRestoreAutomaticBackupNow#text"
+msgid "Automatische Sicherung jetzt einspielen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: READY IN CLIPBOARD
+msgctxt "ui:onboardingReadyInClipboard#text"
+msgid "IN ZWISCHENABLAGE BEREIT"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {profileName}
+#. EN: Backup for: “{profileName}”
+msgctxt "ui:onboardingBackupForProfilename#text"
+msgid "Sicherung für: „{profileName}“"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Restore from clipboard
+msgctxt "ui:onboardingRestoreFromClipboard#text"
+msgid "Aus Zwischenablage einspielen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paste backup code / JSON manually:
+msgctxt "ui:onboardingPasteBackupCodeJsonManually#text"
+msgid "Backup-Code / JSON manuell einfügen:"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paste the backup text here (starts with "app": "VelvetPulse")
+msgctxt "ui:onboardingPasteJsonTextHereE#text"
+msgid "Hier den Text der Sicherung einfügen (beginnt mit \"app\": \"VelvetPulse\")"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please paste the backup JSON text first.
+msgctxt "ui:onboardingPleasePasteTheBackupJson#text"
+msgid "Bitte füge zuerst den Backup-JSON-Text ein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Apply backup now
+msgctxt "ui:onboardingApplyBackupNow#text"
+msgid "Sicherung jetzt anwenden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The backup could not be restored.
+msgctxt "ui:onboardingTheBackupCouldNotBe#text"
+msgid "Die Sicherung konnte nicht eingespielt werden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: User
+msgctxt "ui:onboardingUser#text"
+msgid "Nutzer"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Backup for "{name}" restored! ✨
+msgctxt "ui:onboardingBackupForNameRestored#text"
+msgid "Sicherung für \"{name}\" erfolgreich eingespielt! ✨"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Profile & personalisation
+msgctxt "ui:onboardingProfilePersonalisation#text"
+msgid "Profil & Personalisierung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Welcome to VelvetPulse
+msgctxt "ui:onboardingWelcomeToVelvetpulse#text"
+msgid "Willkommen bei VelvetPulse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your private coaching programme for calm, pelvic floor & intimacy.
+msgctxt "ui:onboardingYourPrivateCoachingProgrammeFor#text"
+msgid "Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intimität."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Private: profile, journal & progress stay on your phone. Only the AI coach (Google Gemini), the encrypted couple channel and the update check (GitHub) go online.
+msgctxt "ui:onboardingPrivateProfileJournalProgressStay#text"
+msgid "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der KI-Coach (Google Gemini), der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub)."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Already using VelvetPulse?
+msgctxt "ui:onboardingAlreadyUsingVelvetpulse#text"
+msgid "Bereits VelvetPulse-Nutzer?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Load a backup from file or clipboard
+msgctxt "ui:onboardingLoadABackupFromFile#text"
+msgid "Sicherung aus Datei oder Zwischenablage laden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Restore
+msgctxt "ui:onboardingRestore#text"
+msgid "Wiederherstellen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 1. What should we call you?
+msgctxt "ui:onboardingWhatShouldWeCallYou#text"
+msgid "1. Wie dürfen wir dich ansprechen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your first name or a nickname
+msgctxt "ui:onboardingYourFirstNameOrA#text"
+msgid "Dein Vorname oder Pseudonym"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 2. Your gender
+msgctxt "ui:onboardingYourGender#text"
+msgid "2. Dein Geschlecht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Adjusts course recommendations, pelvic floor content and AI answers.
+msgctxt "ui:onboardingAdjustsCourseRecommendationsPelvicFloor#text"
+msgid "Passt Kursempfehlungen, Beckenboden-Physiologie und KI-Antworten an."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Male
+msgctxt "ui:onboardingMale#text"
+msgid "Männlich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Female
+msgctxt "ui:onboardingFemale#text"
+msgid "Weiblich"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {selectedAge}
+#. EN: 3. Your age: {selectedAge} years
+msgctxt "ui:onboardingYourAgeSelectedageYears#text"
+msgid "3. Dein Alter: {selectedAge} Jahre"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 4. Your relationship status
+msgctxt "ui:onboardingYourRelationshipStatus#text"
+msgid "4. Dein Beziehungsstatus"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: In a relationship / married 💍
+msgctxt "ui:onboardingInARelationshipMarried#text"
+msgid "In fester Beziehung / Verheiratet 💍"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Dating / getting to know someone 💫
+msgctxt "ui:onboardingDatingGettingToKnowSomeone#text"
+msgid "Dating / Kennenlernphase 💫"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Single 🌱
+msgctxt "ui:onboardingSingle#text"
+msgid "Single 🌱"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: It's complicated 🌀
+msgctxt "ui:onboardingItSComplicated#text"
+msgid "Es ist kompliziert 🌀"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 5. What's your biggest priority right now?
+msgctxt "ui:onboardingWhatSYourBiggestPriority#text"
+msgid "5. Was ist aktuell deine größte Priorität?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Stop performance pressure & racing thoughts
+msgctxt "ui:onboardingStopPerformancePressureRacingThoughts#text"
+msgid "Leistungsdruck & Kopfkino stoppen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Break thought loops, stop spectatoring.
+msgctxt "ui:onboardingBreakThoughtLoopsStopSpectatoring#text"
+msgid "Gedankenkreise durchbrechen, Spectatoring beenden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pelvic floor relaxation & body awareness
+msgctxt "ui:onboardingPelvicFloorRelaxationBodyAwareness#text"
+msgid "Beckenboden-Entspannung & Somatik"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Release tension, practise reverse Kegels, calm down.
+msgctxt "ui:onboardingReleaseTensionPractiseReverseKegels#text"
+msgid "Hypertonie lösen, Reverse Kegel trainieren, Vagusnerv beruhigen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Couple intimacy & pressure-free sex
+msgctxt "ui:onboardingCoupleIntimacyPressureFreeSex#text"
+msgid "Paar-Intimität & Druckfreier Sex"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sensate focus together, calming each other & vulnerable closeness.
+msgctxt "ui:onboardingSensateFocusTogetherCalmingEach#text"
+msgid "Sensate Focus zu zweit, Co-Regulierung & verletzliche Nähe."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Desire, self-acceptance & body awareness
+msgctxt "ui:onboardingDesireSelfAcceptanceBodyAwareness#text"
+msgid "Lust, Selbstannahme & Körperempfinden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Understand responsive desire, ease orgasm pressure.
+msgctxt "ui:onboardingUnderstandResponsiveDesireEaseOrgasm#text"
+msgid "Responsive Lust verstehen, Orgasmusdruck abbauen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Save changes
+msgctxt "ui:onboardingSaveChanges#text"
+msgid "Änderungen speichern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Personalise programme now
+msgctxt "ui:onboardingPersonaliseProgrammeNow#text"
+msgid "Programm jetzt personalisieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Skip & go straight to the app ➔
+msgctxt "ui:onboardingSkipGoStraightToThe#text"
+msgid "Überspringen & Direkt zur App ➔"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {data}
+#. EN: Version {data}
+msgctxt "ui:onboardingVersionData#text"
+msgid "Version {data}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Check for updates
+msgctxt "ui:onboardingCheckForUpdates#text"
+msgid "Nach Updates suchen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Receive beta versions
+msgctxt "ui:onboardingReceiveBetaVersions#text"
+msgid "Beta-Versionen erhalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You get new features earlier, possibly with small bugs.
+msgctxt "ui:onboardingYouGetNewFeaturesEarlier#text"
+msgid "Du bekommst neue Funktionen früher, dafür vielleicht mit kleinen Fehlern."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Only tested versions. When switching back from beta, your version stays until a newer stable one is released.
+msgctxt "ui:onboardingOnlyTestedVersionsWhenSwitching#text"
+msgid "Nur geprüfte Versionen. Beim Zurückwechseln von Beta bleibt deine Version, bis eine neuere stabile erscheint."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Discretion
+msgctxt "ui:onboardingDiscretion#text"
+msgid "Diskretion"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Lock with fingerprint
+msgctxt "ui:onboardingLockWithFingerprint#text"
+msgid "Mit Fingerabdruck sperren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: On opening and after one minute in the background. Content is hidden in the app overview, screenshots are blocked.
+msgctxt "ui:onboardingOnOpeningAndAfterOne#text"
+msgid "Beim Öffnen und nach einer Minute im Hintergrund. Inhalte sind in der App-Übersicht verborgen, Screenshots gesperrt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No screen lock is set up on this device.
+msgctxt "ui:onboardingNoScreenLockIsSet#text"
+msgid "Auf diesem Gerät ist keine Displaysperre eingerichtet."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The app is now called “Pulse”. The home screen takes a few seconds to update.
+msgctxt "ui:onboardingTheAppIsNowCalled#text"
+msgid "Die App heißt jetzt „Pulse“. Der Startbildschirm braucht dafür ein paar Sekunden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The app is called “VelvetPulse” again.
+msgctxt "ui:onboardingTheAppIsCalledVelvetpulse#text"
+msgid "Die App heißt wieder „VelvetPulse“."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Discreet app icon
+msgctxt "ui:onboardingDiscreetAppIcon#text"
+msgid "Unauffälliges App-Symbol"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Shows “Pulse” with a neutral icon on the home screen.
+msgctxt "ui:onboardingShowsPulseWithANeutral#text"
+msgid "Zeigt „Pulse“ mit neutralem Symbol auf dem Startbildschirm."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Call your partner by name in lessons
+msgctxt "ui:onboardingCallYourPartnerByName#text"
+msgid "Gegenüber in Lektionen beim Namen nennen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For example “Anna lies on her back” instead of “she lies”. Turn off if someone often reads along.
+msgctxt "ui:onboardingForExampleAnnaLiesOn#text"
+msgid "Zum Beispiel „Anna liegt auf dem Rücken“ statt „sie liegt“. Aus, wenn öfter jemand mitliest."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Android hasn't allowed notifications for the app. You can change that in the Android settings.
+msgctxt "ui:onboardingAndroidHasnTAllowedNotifications#text"
+msgid "Android hat Mitteilungen für die App nicht erlaubt. Das lässt sich in den Android-Einstellungen ändern."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Notify about new messages
+msgctxt "ui:onboardingNotifyAboutNewMessages#text"
+msgid "Hinweis bei neuen Nachrichten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Even when the app is closed: only “New message”, without content or names. When the app is closed it can take up to 15 minutes.
+msgctxt "ui:onboardingEvenWhenTheAppIs#text"
+msgid "Auch wenn die App geschlossen ist: nur „Neue Nachricht“, ohne Inhalt und Namen. Bei geschlossener App kann es bis zu 15 Minuten dauern."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Privacy & update safety
+msgctxt "ui:onboardingPrivacyUpdateSafety#text"
+msgid "Datenschutz & Update-Sicherheit"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Everything stays local on your device and survives updates. API key and couple connection are stored encrypted in the Android keystore and only go into a backup with a password.
+msgctxt "ui:onboardingEverythingStaysLocalOnYour#text"
+msgid "Alles bleibt lokal auf deinem Gerät und übersteht Updates. API-Key und Paar-Verbindung liegen verschlüsselt im Android-Schlüsselspeicher und gehen nur mit Passwort in eine Sicherung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Export backup
+msgctxt "ui:onboardingExportBackup#text"
+msgid "Backup exportieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What should go into the backup?
+msgctxt "ui:backupDialogsWhatShouldGoIntoThe#text"
+msgid "Was soll in die Sicherung?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Only your data: profile, progress, reflections, journal, wishes. Enough for this phone.
+#. EN:
+#. EN: With password: additionally the couple channel connection and your API key, encrypted. You need this for moving to another phone.
+msgctxt "ui:backupDialogsOnlyYourDataProfileProgress#text"
+msgid ""
+"Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n"
+"\n"
+"Mit Passwort: zusätzlich die Verbindung im Paar-Kanal und dein API-Key, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Data only
+msgctxt "ui:backupDialogsDataOnly#text"
+msgid "Nur Daten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: With password
+msgctxt "ui:backupDialogsWithPassword#text"
+msgid "Mit Passwort"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Backup copied
+msgctxt "ui:backupDialogsBackupCopied#text"
+msgid "Sicherung kopiert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: OK
+msgctxt "ui:backupDialogsOk#text"
+msgid "OK"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Older backup
+msgctxt "ui:backupDialogsOlderBackup#text"
+msgid "Ältere Sicherung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This backup comes from an older version and contains your API key and your connection key unencrypted. It will be restored anyway.
+#. EN:
+#. EN: Afterwards, delete the old backup wherever you kept it, and create a new one with a password if needed.
+msgctxt "ui:backupDialogsThisBackupComesFromAn#text"
+msgid ""
+"Diese Sicherung stammt aus einer älteren Version und enthält deinen API-Key und deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n"
+"\n"
+"Lösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Restore
+msgctxt "ui:backupDialogsRestore#text"
+msgid "Einspielen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Backup password
+msgctxt "ui:backupDialogsBackupPassword#text"
+msgid "Passwort der Sicherung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This also brings back the couple channel connection and your API key.
+msgctxt "ui:backupDialogsThisAlsoBringsBackThe#text"
+msgid "Damit kommen auch die Verbindung im Paar-Kanal und dein API-Key zurück."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Password
+msgctxt "ui:backupDialogsPassword#text"
+msgid "Passwort"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Without keys
+msgctxt "ui:backupDialogsWithoutKeys#text"
+msgid "Ohne Schlüssel"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Password for the backup
+msgctxt "ui:backupDialogsPasswordForTheBackup#text"
+msgid "Passwort für die Sicherung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Password (at least 8 characters)
+msgctxt "ui:backupDialogsPasswordAtLeastCharacters#text"
+msgid "Passwort (mindestens 8 Zeichen)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Repeat password
+msgctxt "ui:backupDialogsRepeatPassword#text"
+msgid "Passwort wiederholen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please use at least 8 characters.
+msgctxt "ui:backupDialogsPleaseUseAtLeastCharacters#text"
+msgid "Bitte mindestens 8 Zeichen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The passwords don't match.
+msgctxt "ui:backupDialogsThePasswordsDonTMatch#text"
+msgid "Die Passwörter sind verschieden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Encrypt
+msgctxt "ui:backupDialogsEncrypt#text"
+msgid "Verschlüsseln"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: One moment …
+msgctxt "ui:backupDialogsOneMoment#text"
+msgid "Einen Moment …"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The backup is in the clipboard. Paste it into a note or a private document.
+msgctxt "ui:backupDialogsBackupCopiedText#text"
+msgid "Die Sicherung liegt in der Zwischenablage. Füge sie in eine Notiz oder ein privates Dokument ein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN:
+#. EN:
+#. EN: Without your password, the connection and API key can't be restored. We can't reset it either.
+msgctxt "ui:backupDialogsPasswordCannotBeReset#text"
+msgid ""
+"\n"
+"\n"
+"Ohne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathed deeply on purpose (physiological sigh)
+msgctxt "ui:checkinActionBreathed#text"
+msgid "Bewusst tief geatmet (Physiol. Seufzer)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Relaxed the pelvic floor (reverse Kegel)
+msgctxt "ui:checkinActionPelvicFloor#text"
+msgid "Beckenboden entspannt (Reverse Kegel)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Put the phone away in the evening
+msgctxt "ui:checkinActionPhoneAway#text"
+msgid "Das Handy abends weggelegt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Went for a walk in fresh air
+msgctxt "ui:checkinActionWalk#text"
+msgid "Spaziergang an frischer Luft gemacht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Focused on skin contact
+msgctxt "ui:checkinActionSkinContact#text"
+msgid "Fokus auf Hautkontakt gelenkt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Dared an open word with my partner
+msgctxt "ui:checkinActionOpenWord#text"
+msgid "Offenes Wort mit Partner/in gewagt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The 45-second wall tease
+msgctxt "ui:dailySimmeringCardTheSecondWallTease#text"
+msgid "Das 45-Sekunden-Wand-Teasing"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 11 • TEASING
+msgctxt "ui:dailySimmeringCardCourseTeasing#text"
+msgid "KURS 11 • TEASING"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Today, briefly press your partner against the wall with intent, or hold them gently. Slowly kiss their neck, murmur a promise into their ear – and after exactly 45 seconds smile and walk on: "We'll save the rest for later."
+msgctxt "ui:dailySimmeringCardTodayBrieflyPressYourPartner#text"
+msgid "Drücke deinen Partner heute kurz fordernd an die Wand oder halte ihn sanft fest. Küsse langsam den Hals, raune ein Versprechen ins Ohr – und lächle nach genau 45 Sekunden und gehe weiter: \"Den Rest heben wir uns für später auf.\""
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Jaw melt & voice activation
+msgctxt "ui:dailySimmeringCardJawMeltVoiceActivation#text"
+msgid "Die Kiefer-Schmelze & Stimm-Aktivierung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 10 • AUDIBLE PLEASURE
+msgctxt "ui:dailySimmeringCardCourseAudiblePleasure#text"
+msgid "KURS 10 • HÖRBARE LUST"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Place your fingers on your jaw joints, open your mouth and let 3 deep, low sighs vibrate audibly through the room. Feel your pelvic floor giving way downwards at the same time.
+msgctxt "ui:dailySimmeringCardPlaceYourFingersOnYour#text"
+msgid "Lege die Finger an deine Kiefergelenke, öffne den Mund und lass 3 tiefe, dunkle Seufzer hörbar durch den Raum vibrieren. Spüre, wie dein Beckenboden gleichzeitig nach unten nachgibt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The 3 pm anticipation
+msgctxt "ui:dailySimmeringCardThePmAnticipation#text"
+msgid "Die 15:00-Uhr-Antizipation"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 11 • ANTICIPATION
+msgctxt "ui:dailySimmeringCardCourseAnticipation#text"
+msgid "KURS 11 • KOPFKINO"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This afternoon, send your partner an unannounced message: "Tonight from 9 pm your body is mine. You don't have to do anything but be there."
+msgctxt "ui:dailySimmeringCardThisAfternoonSendYourPartner#text"
+msgid "Schicke deinem Gegenüber heute Nachmittag eine unangekündigte Nachricht: \"Heute Abend ab 21 Uhr gehört dein Körper mir. Du musst nichts tun, außer da zu sein.\""
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Slow motion while pouring
+msgctxt "ui:dailySimmeringCardSlowMotionWhilePouring#text"
+msgid "Zeitlupe beim Einschenken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 11 • SLOW SEX
+msgctxt "ui:dailySimmeringCardCourseSlowSex#text"
+msgid "KURS 11 • SLOW SEX"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Today, touch your partner during an everyday moment (at the table, on the sofa) at an extreme 10% slow-motion pace. Stroke the back of their hand and forearm teasingly slowly for 60 seconds.
+msgctxt "ui:dailySimmeringCardTodayTouchYourPartnerDuring#text"
+msgid "Berühre deinen Partner heute bei einer Alltagsgelegenheit (am Tisch, auf dem Sofa) im extremen 10%-Zeitlupen-Tempo. Streiche 60 Sekunden quälend langsam über Handrücken und Unterarm."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The 15-minute silk scarf ritual
+msgctxt "ui:dailySimmeringCardTheMinuteSilkScarfRitual#text"
+msgid "Das 15-Minuten-Seidentuch-Ritual"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 12 • SURRENDER
+msgctxt "ui:dailySimmeringCardCourseSurrender#text"
+msgid "KURS 12 • HINGABE"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Agree for tonight: one of you is blindfolded and doesn't have to do or give back anything at all. The other directs 15 minutes of gentle touch.
+msgctxt "ui:dailySimmeringCardAgreeForTonightOneOf#text"
+msgid "Verabredet für heute Abend: Einer bekommt die Augen verbunden und darf absolut nichts leisten oder zurückgeben. Der andere dirigiert 15 Minuten sanfte Berührungen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The strict no-penetration rule
+msgctxt "ui:dailySimmeringCardTheStrictNoPenetrationRule#text"
+msgid "Das strikte Penetrations-Verbot"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 7 • SENSATE FOCUS
+msgctxt "ui:dailySimmeringCardCourseSensateFocus#text"
+msgid "KURS 7 • SENSATE FOCUS"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Agree today: you may hug, kiss and caress each other naked – but penetration is strictly off-limits. Everything may happen, nothing has to.
+msgctxt "ui:dailySimmeringCardAgreeTodayYouMayHug#text"
+msgid "Verabredet heute: Ihr dürft euch nackt umarmen, küssen und streicheln – aber Penetration ist strikt tabu. Alles darf sein, nichts muss."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sensory narrating (words in the ear)
+msgctxt "ui:dailySimmeringCardSensoryNarratingWordsInThe#text"
+msgid "Sensory Narrating (Worte im Ohr)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: CBT • LETTING GO OF PROPRIETY
+msgctxt "ui:dailySimmeringCardCbtLettingGoOfPropriety#text"
+msgid "KVT • ANSTÄNDIGKEIT LÖSEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tonight in the dark, whisper one single honest, sensual sensation into your partner's ear: "It drives me crazy how warm and soft your skin feels under my hand right now."
+msgctxt "ui:dailySimmeringCardTonightInTheDarkWhisper#text"
+msgid "Flüstere deinem Partner heute im Dunkeln eine einzige ehrliche, sinnliche Empfindung ins Ohr: \"Es macht mich verrückt, wie warm und weich deine Haut gerade unter meiner Hand ist.\""
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The charming dream bridge
+msgctxt "ui:dailySimmeringCardTheCharmingDreamBridge#text"
+msgid "Die charmante Traum-Brücke"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 12 • FANTASIES
+msgctxt "ui:dailySimmeringCardCourseFantasies#text"
+msgid "KURS 12 • FANTASIEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Today, casually and with a smile, mention a "naughty dream" you had about the two of you. Watch the reaction.
+msgctxt "ui:dailySimmeringCardTodayCasuallyAndWithA#text"
+msgid "Erzähle heute beiläufig mit einem Schmunzeln von einem \"unanständigen Traum\", den du über euch beide hattest. Beobachte die Reaktion."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The seated pelvic floor check
+msgctxt "ui:dailySimmeringCardTheSeatedPelvicFloorCheck#text"
+msgid "Der Beckenboden-Check im Sitzen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSES 3 & 9 • BODY
+msgctxt "ui:dailySimmeringCardCoursesBody#text"
+msgid "KURS 3 & 9 • SOMATIK"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Notice right now: are you holding tension in your pelvis or anus? Breathe in deeply and let your pelvic floor sink down like an opening flower (reverse Kegel).
+msgctxt "ui:dailySimmeringCardNoticeRightNowAreYou#text"
+msgid "Achte genau jetzt darauf: Hältst du im Becken oder After fest? Atme tief ein und lass den Beckenboden wie eine weite Blüte nach unten sinken (Reverse Kegel)."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Soft belly • full surrender
+msgctxt "ui:dailySimmeringCardSoftBellyFullSurrender#text"
+msgid "Weicher Bauch • Volle Hingabe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 13 • RADICAL BODY LOVE
+msgctxt "ui:dailySimmeringCardCourseRadicalBodyLove#text"
+msgid "KURS 13 • RADICAL BODY LOVE"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Today, consciously let your belly relax outwards. Perfection is cold – surrender and warmth are irresistible.
+msgctxt "ui:dailySimmeringCardTodayConsciouslyLetYourBelly#text"
+msgid "Lass deinen Bauch heute ganz bewusst locker nach außen sinken. Perfektion ist kalt – Hingabe und Wärme sind unwiderstehlich."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Jaw melt & pelvic vibration
+msgctxt "ui:dailySimmeringCardJawMeltPelvicVibration#text"
+msgid "Die Kiefer-Schmelze & Becken-Vibration"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open your mouth, smooth out your cheeks and sigh 3 times deep and low. Feel the vibration travel down towards your pubic bone.
+msgctxt "ui:dailySimmeringCardOpenYourMouthSmoothOut#text"
+msgid "Öffne den Mund, streiche deine Wangen aus und seufze 3x tief und dunkel nach unten aus. Spüre, wie die Schwingung bis in dein Schambein hinabwandert."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Broad palm touch with warm oil
+msgctxt "ui:dailySimmeringCardBroadPalmTouchWithWarm#text"
+msgid "Broad Palm Touch mit warmem Öl"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 9 • BODY LAB
+msgctxt "ui:dailySimmeringCardCourseBodyLab#text"
+msgid "KURS 9 • SOMATISCHES LAB"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Today, skip any tight grip when touching yourself. Use plenty of lubricant and move your whole flat palm over your pelvis in slow motion.
+msgctxt "ui:dailySimmeringCardTodaySkipAnyTightGrip#text"
+msgid "Verzichte heute beim Spüren auf jeden engen Klammergriff. Nutze viel Gleitmittel und bewege die gesamte flache Handfläche in Zeitlupe über das Becken."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Orbiting: exploring the perineum
+msgctxt "ui:dailySimmeringCardOrbitingExploringThePerineum#text"
+msgid "Orbiting: Das Perineum erforschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSES 8 & 9 • ORBITING
+msgctxt "ui:dailySimmeringCardCoursesOrbiting#text"
+msgid "KURS 8 & 9 • ORBITING"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Leave the highly sensitive tip completely untouched for 10 minutes today. Focus touch only on the perineum, the base of the shaft and the groin.
+msgctxt "ui:dailySimmeringCardLeaveTheHighlySensitiveTip#text"
+msgid "Lass die hochsensible Spitze heute für 10 Minuten völlig unberührt. Konzentriere Berührung nur auf Damm, Schaftbasis und Leiste."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Plateau surfing at level 7
+msgctxt "ui:dailySimmeringCardPlateauSurfingAtLevel#text"
+msgid "Plateau-Surfen auf Stufe 7"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 9 • STAYING POWER
+msgctxt "ui:dailySimmeringCardCourseStayingPower#text"
+msgid "KURS 9 • AUSDAUER"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Bring your arousal to level 7. As soon as it climbs to 8: stop all movement (stillness), breathe out deeply 3 times and let your pelvic floor sink down.
+msgctxt "ui:dailySimmeringCardBringYourArousalToLevel#text"
+msgid "Bringe deine Erregung auf Stufe 7. Sobald sie auf 8 klettert: Stoppe jede Bewegung (Stillness), atme 3x tief aus und lass den Beckenboden nach unten sinken."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Screen-free sensing
+msgctxt "ui:dailySimmeringCardScreenFreeSensing#text"
+msgid "Dopamin-Reset: Bildschirmfreies Spüren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 4 • RECALIBRATION
+msgctxt "ui:dailySimmeringCardCourseRecalibration#text"
+msgid "KURS 4 • REKALIBRIERUNG"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Take 10 minutes today without any phone or screens. Close your eyes and pay attention only to temperature and breath.
+msgctxt "ui:dailySimmeringCardTakeMinutesTodayWithoutAny#text"
+msgid "Nimm dir heute 10 Minuten Zeit ganz ohne Smartphone oder Bildschirme. Schließe die Augen und achte nur auf Temperatur und Atem."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The sphincter release test
+msgctxt "ui:dailySimmeringCardTheSphincterReleaseTest#text"
+msgid "Der Schließmuskel-Entlastungstest"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 9 • MULTIPLE ORGASMS
+msgctxt "ui:dailySimmeringCardCourseMultipleOrgasms#text"
+msgid "KURS 9 • MULTI-ORGASMIE"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Observe your reflexes: when arousal rises, consciously let your anal sphincter relax instead of tightening it.
+msgctxt "ui:dailySimmeringCardObserveYourReflexesWhenArousal#text"
+msgid "Beobachte deine Reflexe: Wenn Erregung steigt, lass den Anal-Schließmuskel bewusst locker, statt ihn anzuspannen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Zero-pressure squat (malasana)
+msgctxt "ui:dailySimmeringCardZeroPressureSquatMalasana#text"
+msgid "Zero-Pressure Hocke (Malasana)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 3 • FASCIA
+msgctxt "ui:dailySimmeringCardCourseFascia#text"
+msgid "KURS 3 • FASZIEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Go into a deep squat for 2 minutes. Take 10 deep breaths into your open pelvis.
+msgctxt "ui:dailySimmeringCardGoIntoADeepSquat#text"
+msgid "Gehe für 2 Minuten in die tiefe Hocke (Deep Squat). Atme 10 tiefe Atemzüge in das geöffnete Becken hinein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Body compassion in the mirror
+msgctxt "ui:dailySimmeringCardBodyCompassionInTheMirror#text"
+msgid "Körper-Mitgefühl vor dem Spiegel"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSE 13 • SELF-COMPASSION
+msgctxt "ui:dailySimmeringCardCourseSelfCompassion#text"
+msgid "KURS 13 • SELBSTMITGEFÜHL"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Look at your body today without judgement. Tell yourself: "My body is alive, breathing and capable of deep pleasure."
+msgctxt "ui:dailySimmeringCardLookAtYourBodyToday#text"
+msgid "Betrachte deinen Körper heute ohne Bewertung. Sag dir: \"Mein Körper ist lebendig, atmend und fähig zu tiefster Lust.\""
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Physiological sigh (quick calming)
+msgctxt "ui:dailySimmeringCardPhysiologicalSighQuickCalming#text"
+msgid "Physiologischer Seufzer (Quick-Downregulation)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: TOOL • CALM DOWN
+msgctxt "ui:dailySimmeringCardToolCalmDown#text"
+msgid "TOOL • VAGUS-RESET"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe in twice deeply through the nose, then sigh out very long and audibly through the open mouth. 3 repetitions.
+msgctxt "ui:dailySimmeringCardBreatheInTwiceDeeplyThrough#text"
+msgid "Doppelt durch die Nase tief einatmen, dann sehr lang und hörbar durch den offenen Mund seufzen. 3 Wiederholungen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The 90 percent pact with yourself
+msgctxt "ui:dailySimmeringCardThePercentPactWithYourself#text"
+msgid "Der 90-Prozent-Pakt mit dir selbst"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Give yourself 10 minutes of pleasure today – but decide to stop consciously at 90%, without rushing to the finish.
+msgctxt "ui:dailySimmeringCardGiveYourselfMinutesOfPleasure#text"
+msgid "Schenke dir heute 10 Minuten Genuss – aber nimm dir vor, bei 90% bewusst aufzuhören, ohne zum Abschluss zu eilen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: TODAY'S EROTIC SPARK
+msgctxt "ui:dailySimmeringCardTodaySEroticSpark#text"
+msgid "HEUTIGER EROTIK-FUNKE"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Simmering & everyday teasing
+msgctxt "ui:dailySimmeringCardSimmeringEverydayTeasing#text"
+msgid "Simmering & Alltags-Teasing"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tap here to reveal today's 45-second spark...
+msgctxt "ui:dailySimmeringCardTapHereToRevealToday#text"
+msgid "Tippe hier, um deinen heutigen 45-Sekunden-Funken aufzudecken..."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: OPEN
+msgctxt "ui:dailySimmeringCardOpen#text"
+msgid "ÖFFNEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Non-binary / open
+msgctxt "ui:userProfileNonBinaryOpen#text"
+msgid "Divers / Offen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: In a relationship / married
+msgctxt "ui:userProfileInARelationshipMarried#text"
+msgid "In Beziehung / Verheiratet"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Dating / getting to know someone
+msgctxt "ui:userProfileDatingGettingToKnowSomeone#text"
+msgid "Dating / Kennenlernphase"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Single
+msgctxt "ui:userProfileSingle#text"
+msgid "Single"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Complicated
+msgctxt "ui:userProfileComplicated#text"
+msgid "Kompliziert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pelvic floor & body
+msgctxt "ui:userProfilePelvicFloorBody#text"
+msgid "Beckenboden & Somatik"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Couple intimacy & closeness
+msgctxt "ui:userProfileCoupleIntimacyCloseness#text"
+msgid "Paar-Intimität & Nähe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Desire & relaxation
+msgctxt "ui:userProfileDesireRelaxation#text"
+msgid "Lust & Entspannung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Easing performance pressure
+msgctxt "ui:userProfileEasingPerformancePressure#text"
+msgid "Leistungsdruck abbauen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: THE ART OF TOUCH • FOR HER
+msgctxt "ui:contentModelsTheArtOfTouchFor#text"
+msgid "BERÜHRUNGSKUNST • FÜR SIE"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: TOUCH LAB • FOR HIM
+msgctxt "ui:contentModelsTouchLabForHim#text"
+msgid "TAST-LABOR • FÜR IHN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: SELF-EXPLORATION
+msgctxt "ui:contentModelsSelfExploration#text"
+msgid "SELBST ERKUNDEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: VOICE & BODY
+msgctxt "ui:contentModelsVoiceBody#text"
+msgid "STIMME & SOMATIK"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: ANTICIPATION & DESIRE
+msgctxt "ui:contentModelsAnticipationDesire#text"
+msgid "HINHALTEN & VERLANGEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: POLARITY & ROLES
+msgctxt "ui:contentModelsPolarityRoles#text"
+msgid "POLARITÄT & ROLLEN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: BODY PRESENCE
+msgctxt "ui:contentModelsBodyPresence#text"
+msgid "KÖRPER-PRÄSENZ"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: FOR HER
+msgctxt "ui:contentModelsForHer#text"
+msgid "FÜR SIE"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: FOR COUPLES
+msgctxt "ui:contentModelsForCouples#text"
+msgid "FÜR PAARE"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: FOR HIM
+msgctxt "ui:contentModelsForHim#text"
+msgid "FÜR IHN"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Excites me, I'd like to try it
+msgctxt "ui:yesNoMaybeModelsExcitesMeIDLike#text"
+msgid "Reizt mich, möchte ich ausprobieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Curious but unsure – depends on the moment
+msgctxt "ui:yesNoMaybeModelsCuriousButUnsureDependsOn#text"
+msgid "Neugierig, aber unsicher – kommt auf den Moment an"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not for me
+msgctxt "ui:yesNoMaybeModelsNotForMe#text"
+msgid "Kommt für mich nicht infrage"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You are the confidential somatic, CBT and erotic coach in the app VelvetPulse.
+#. EN:
+#. EN: Your attitude & tone:
+#. EN: 1. Character: you are a fascinating mix of a brilliant neuroscientist/sex therapist and a worldly, charmingly flirtatious seducer who meets people as equals.
+#. EN: 2. Language: you write natural, fluent English. You talk about desire, skin, wetness, erections, relaxing the perineum, surrender and racing thoughts completely without shame, sensually, warmly and with a light, knowing wink. Avoid any sterile hospital language and any lecturing tone!
+#. EN: 3. Method: always connect cognitive behavioural therapy (taking the magic out of stuffy performance and test-like thoughts) directly with pleasurable body work (letting the pelvic floor melt like warm honey, actively opening the pelvic floor, deep throaty sighs, calming the nervous system, the art of slow motion, sensual circling, pure sensing).
+#. EN: 4. Core message: show the user in every line that their body is completely fine and that slowness, pauses and 'not having to perform' are not a defect but the key to much deeper, indecently good ecstasy.
+#. EN: 5. Format: always answer compactly (2-3 concise, atmospheric paragraphs) and end EVERY answer with exactly ONE open, gently challenging or sensation-oriented reflection question.
+#. EN: 6. Safety: you don't make diagnoses. With pain, bleeding or persistent problems, you kindly recommend seeing a doctor.
+msgctxt "ui:aiServiceYouAreTheConfidentialSomatic#text"
+msgid ""
+"Du bist der vertrauliche Somatik-, KVT- und Erotik-Coach in der App VelvetPulse.\n"
+"\n"
+"Deine Grundhaltung & Tonalität:\n"
+"1. Charakter: Du bist eine faszinierende Mischung aus brillantem Neurowissenschaftler/Sexualtherapeuten und einem weltgewandten, charmant-frivolen Verführer auf Augenhöhe.\n"
+"2. Sprache: Du sprichst reines, flüssiges Deutsch – vollkommen frei von englischen Modewörtern oder Anglizismen. Du sprichst absolut schamfrei, sinnlich, warm und mit einem leichten, wissenden Augenzwinkern über Lust, Haut, Feuchtigkeit, Erektionen, Damm-Entspannung, Hingabe und Kopfkino. Vermeide jede sterile Krankenhaus-Sprache und jeden belehrenden Ton!\n"
+"3. Methodik: Verbinde Kognitive Verhaltenstherapie (das Entzaubern spießiger Leistungs- und Prüfungsgedanken) immer direkt mit lustvoller Somatik (Beckenboden wie warmen Honig schmelzen lassen, aktives Beckenboden-Öffnen, tiefe Kehlkopf-Seufzer, Vagus-Beruhigung, Kunst der Zeitlupe, sinnliches Umkreisen, reines Sinnesspüren).\n"
+"4. Kernbotschaft: Zeige dem Nutzer in jeder Zeile, dass sein Körper völlig in Ordnung ist und dass Langsamkeit, Pausen und das 'Nicht-Funktionieren-Müssen' kein Defekt sind, sondern der Schlüssel zu viel tieferer, unanständig guter Ekstase.\n"
+"5. Format: Antworte stets kompakt (2-3 prägnante, atmosphärische Absätze) und beende JEDE Antwort mit genau EINER offenen, leicht herausfordernden oder spür-orientierten Reflexionsfrage.\n"
+"6. Sicherheit: Du stellst keine Diagnosen. Bei Schmerzen, Blutungen oder anhaltenden Beschwerden empfiehlst du freundlich eine ärztliche Abklärung."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {modelsLength}, {join}
+#. EN: Connection successful! {modelsLength} models available (e.g. {join}).
+msgctxt "ui:aiServiceConnectionSuccessfulModelslengthModelsAvailable#text"
+msgid "Verbindung erfolgreich! {modelsLength} Modelle verfügbar (z. B. {join})."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No available text models found for this key. Please check the API permissions.
+msgctxt "ui:aiServiceNoAvailableTextModelsFound#text"
+msgid "Keine verfügbaren Textmodelle für diesen Key gefunden. Bitte prüfe die API-Berechtigungen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The API key is invalid. Please check it in Google AI Studio.
+msgctxt "ui:aiServiceTheApiKeyIsInvalid#text"
+msgid "Der API-Key ist ungültig. Bitte prüfe ihn im Google AI Studio."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {profileName}, {genderLabel}, {age}, {relationshipLabel}, {goalLabel}
+#. EN:
+#. EN:
+#. EN: USER CONTEXT:
+#. EN: - Name: {profileName}
+#. EN: - Gender: {genderLabel}
+#. EN: - Age: {age} years
+#. EN: - Relationship status: {relationshipLabel}
+#. EN: - Main focus: {goalLabel}
+#. EN: Address the person confidentially by their name, and tailor your psychological and somatic explanations to their gender, age and relationship status.
+msgctxt "ui:aiServiceUserContextNameProfilenameGender#text"
+msgid ""
+"\n"
+"\n"
+"KONTEXT DES NUTZERS:\n"
+"- Name/Rufname: {profileName}\n"
+"- Geschlecht: {genderLabel}\n"
+"- Alter: {age} Jahre\n"
+"- Beziehungsstatus: {relationshipLabel}\n"
+"- Hauptfokus: {goalLabel}\n"
+"Sprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Received an empty answer from the AI model.
+msgctxt "ui:aiServiceReceivedAnEmptyAnswerFrom#text"
+msgid "Leere Antwort vom KI-Modell erhalten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The backup is too large.
+msgctxt "ui:backupCodecTheBackupIsTooLarge#text"
+msgid "Die Sicherung ist zu groß."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This is not a valid backup (not JSON).
+msgctxt "ui:backupCodecThisIsNotAValid#text"
+msgid "Das ist keine gültige Sicherung (kein JSON)."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This is not a valid backup.
+msgctxt "ui:backupCodecThisIsNotAValid2#text"
+msgid "Das ist keine gültige Sicherung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This is not a VelvetPulse backup.
+msgctxt "ui:backupCodecThisIsNotAVelvetpulse#text"
+msgid "Das ist keine VelvetPulse-Sicherung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This backup comes from a newer app version. Please update first.
+msgctxt "ui:backupCodecThisBackupComesFromA#text"
+msgid "Diese Sicherung stammt aus einer neueren App-Version. Bitte erst aktualisieren."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {key}
+#. EN: The backup is damaged (field “{key}”).
+msgctxt "ui:backupCodecTheBackupIsDamagedField#text"
+msgid "Die Sicherung ist beschädigt (Feld „{key}“)."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The backup contains an invalid connection key.
+msgctxt "ui:backupCodecTheBackupContainsAnInvalid#text"
+msgid "Die Sicherung enthält einen ungültigen Verbindungsschlüssel."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The backup is damaged (field “secrets”).
+msgctxt "ui:backupCodecTheBackupIsDamagedField2#text"
+msgid "Die Sicherung ist beschädigt (Feld „secrets“)."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {field}
+#. EN: The backup is damaged (field “{field}” too long).
+msgctxt "ui:backupCodecTheBackupIsDamagedField3#text"
+msgid "Die Sicherung ist beschädigt (Feld „{field}“ zu lang)."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {field}
+#. EN: The backup is damaged (field “{field}” too long).
+msgctxt "ui:backupCodecTheBackupIsDamagedField4#text"
+msgid "Die Sicherung ist beschädigt (Feld „{field}“ zu lang)."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The password is wrong, or the backup has been damaged.
+msgctxt "ui:backupCodecThePasswordIsWrongOr#text"
+msgid "Das Passwort stimmt nicht, oder die Sicherung wurde beschädigt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The backup is damaged.
+msgctxt "ui:backupCodecTheBackupIsDamaged#text"
+msgid "Die Sicherung ist beschädigt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: New messages
+msgctxt "ui:messageNotifierNewMessages#text"
+msgid "Neue Nachrichten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: New message
+msgctxt "ui:messageNotifierNewMessage#text"
+msgid "Neue Nachricht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Notice of new messages in the couple channel, without content
+msgctxt "ui:messageNotifierNoticeOfNewMessagesIn#text"
+msgid "Hinweis auf neue Nachrichten im Paar-Kanal, ohne Inhalt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 💛 We're connected!
+msgctxt "ui:nostrServiceWeReConnected#text"
+msgid "💛 Wir sind verbunden!"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {count}, {fallbackRelaysLength}
+#. EN: {count} of {fallbackRelaysLength} servers
+msgctxt "ui:nostrServiceCountOfFallbackrelayslengthServers#text"
+msgid "{count} von {fallbackRelaysLength} Servern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Voted on the fantasy selection
+msgctxt "ui:nostrServiceVotedOnTheFantasySelection#text"
+msgid "Fantasie-Auswahl abgestimmt"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {lessonTitle}, {courseTitle}
+#. EN: 📖 Have a read: “{lessonTitle}” ({courseTitle})
+msgctxt "ui:nostrServiceHaveAReadLessontitleCoursetitle#text"
+msgid "📖 Lies mal: „{lessonTitle}“ ({courseTitle})"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {lessonTitle}
+#. EN: 💭 I've shared my thoughts on “{lessonTitle}”. You'll see them as soon as you've answered yourself.
+msgctxt "ui:nostrServiceIVeSharedMyThoughts#text"
+msgid "💭 Ich habe meine Gedanken zu „{lessonTitle}“ geteilt. Du siehst sie, sobald du selbst geantwortet hast."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 🗳️ I've shared my answers to the yes/no list.
+msgctxt "ui:nostrServiceIVeSharedMyAnswers#text"
+msgid "🗳️ Ich habe meine Antworten der Ja/Nein-Liste geteilt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Unlock the app
+msgctxt "ui:privacyServiceUnlockTheApp#text"
+msgid "Entsperre die App"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Confirm to turn on the app lock
+msgctxt "ui:privacyServiceConfirmToTurnOnThe#text"
+msgid "Bestätige, um die App-Sperre einzuschalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The backup is damaged (profile).
+msgctxt "ui:storageServiceTheBackupIsDamagedProfile#text"
+msgid "Die Sicherung ist beschädigt (Profil)."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reflections
+msgctxt "ui:storageServiceReflections#text"
+msgid "Reflexionen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes/no list
+msgctxt "ui:storageServiceYesNoList#text"
+msgid "Ja/Nein-Liste"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The keys in the backup don't match.
+msgctxt "ui:storageServiceTheKeysInTheBackup#text"
+msgid "Die Schlüssel in der Sicherung passen nicht zusammen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The backup could not be restored. Nothing was changed.
+msgctxt "ui:storageServiceTheBackupCouldNotBe#text"
+msgid "Die Sicherung konnte nicht eingespielt werden. Es wurde nichts verändert."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {feld}
+#. EN: The backup is damaged ({feld}).
+msgctxt "ui:storageServiceTheBackupIsDamagedFeld#text"
+msgid "Die Sicherung ist beschädigt ({feld})."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Interface, courses and exercises. German recordings are built in; English recordings can be downloaded.
+msgctxt "ui:spracheHinweis#text"
+msgid "Oberfläche, Kurse und Übungen. Die Aufnahmen gibt es auf Deutsch in der App; englische Aufnahmen lassen sich nachladen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe in. And widen.
+msgctxt "ui:cueEinatmenWeit#text"
+msgid "Einatmen. Und weit werden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Stay soft.
+msgctxt "ui:cueWeichBleiben#text"
+msgid "Weich bleiben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tighten. And gently lift.
+msgctxt "ui:cueAnspannen#text"
+msgid "Anspannen. Und sanft heben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Hold. Keep breathing.
+msgctxt "ui:cueHalten#text"
+msgid "Halten. Weiter atmen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: And let go completely.
+msgctxt "ui:cueLoslassen#text"
+msgid "Und ganz loslassen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Notice.
+msgctxt "ui:cueNachspueren#text"
+msgid "Nachspüren."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: On.
+msgctxt "ui:cueAn#text"
+msgid "An."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Off.
+msgctxt "ui:cueLos#text"
+msgid "Los."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe in. Perineum and buttocks soft.
+msgctxt "ui:cueWelle#text"
+msgid "Einatmen. Damm und Po weich."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathe out. Long and audible.
+msgctxt "ui:cueSeufzen#text"
+msgid "Ausatmen. Lang und hörbar."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let's begin.
+msgctxt "ui:cueStart#text"
+msgid "Wir beginnen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Done. Stay with the feeling for a moment.
+msgctxt "ui:cueFertig#text"
+msgid "Geschafft. Spür noch einen Moment nach."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: English voices
+msgctxt "ui:audioPaketTitel#text"
+msgid "Englische Stimmen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {mb}
+#. EN: English recordings for lessons, shared evening, self-exploration and pelvic floor training (approx. {mb} MB). Without them, your device's voice reads aloud.
+msgctxt "ui:audioPaketText#text"
+msgid "Englische Aufnahmen für Lektionen, Gemeinsamen Abend, Selbsterkundung und Beckenboden-Training (ca. {mb} MB). Ohne sie liest die Geräte-Stimme vor."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {mb}
+#. EN: Installed ({mb} MB). The recordings are stored on this device only.
+msgctxt "ui:audioPaketInstalliert#text"
+msgid "Installiert ({mb} MB). Die Aufnahmen liegen nur auf diesem Gerät."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download
+msgctxt "ui:audioPaketLaden#text"
+msgid "Herunterladen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Delete
+msgctxt "ui:audioPaketLoeschen#text"
+msgid "Löschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: English voices are ready.
+msgctxt "ui:audioPaketFertig#text"
+msgid "Englische Stimmen sind bereit."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: That didn't work. Please check your internet connection and try again later.
+msgctxt "ui:audioPaketFehler#text"
+msgid "Das hat nicht geklappt. Bitte Internetverbindung prüfen und später noch einmal versuchen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Couple
+msgctxt "ui:navPaarKanalKurz#text"
+msgid "Paar-Kanal"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Spicy mode
+msgctxt "ui:spicyModus#text"
+msgid "Spicy-Modus"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 18+. Unlocks the levels “Spicy” and “Extra spicy” in the body journey and the shared evening.
+msgctxt "ui:spicyModusText#text"
+msgid "Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy“ und „Sehr spicy“ frei."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Turn on spicy mode?
+msgctxt "ui:spicyEinschaltenTitel#text"
+msgid "Spicy-Modus einschalten?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Adults only. The body journey and the shared evening will then offer two extra levels:
+#. EN:
+#. EN: “Spicy”: hot and direct, playing with arousal to just before climax, for couples also kisses, teasing and the mouth.
+#. EN:
+#. EN: “Extra spicy”: the same with dirty talk and crude words.
+#. EN:
+#. EN: Everything stays an invitation, and a stop word always applies. You can turn the mode off here at any time, and the levels disappear straight away.
+msgctxt "ui:spicyEinschaltenText#text"
+msgid ""
+"Nur für Erwachsene. In Körperreise und Gemeinsamem Abend erscheinen dann zwei zusätzliche Stufen:\n"
+"\n"
+"„Spicy“: heiß und direkt, Spiel mit der Erregung bis kurz vor den Höhepunkt, für Paare auch Küsse, Necken und der Mund.\n"
+"\n"
+"„Sehr spicy“: dasselbe mit Dirty Talk und derben Wörtern.\n"
+"\n"
+"Alles bleibt eine Einladung, ein Stoppwort gilt immer. Du kannst den Modus hier jederzeit ausschalten, dann verschwinden die Stufen sofort."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I'm 18+, turn on
+msgctxt "ui:spicyEinschalten#text"
+msgid "Ich bin 18+, einschalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Spicy
+msgctxt "ui:spicyStufe#text"
+msgid "Spicy"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start right on the skin, then waves of arousal to just before the edge, and at the end your choice: come or savour.
+msgctxt "ui:selbstReiseSpicyText#text"
+msgid "Direkt auf der Haut beginnen, dann Erregungswellen bis kurz vor die Kante, und am Ende deine Wahl: kommen oder genießen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Teasing, kisses all over the body, hand and mouth on the genitals, playing with the edge. Only if you both want it.
+msgctxt "ui:paarAbendSpicyText#text"
+msgid "Necken, Küsse über den ganzen Körper, Hand und Mund am Geschlecht, Spiel mit der Kante. Nur wenn ihr beide es wollt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Talk briefly beforehand about wishes and limits, and agree on a stop word. Whoever says it gets an immediate pause, no discussion. Green, yellow, red helps in between.
+msgctxt "ui:paarAbendSpicyHinweis#text"
+msgid "Sprecht vorher kurz über Wünsche und Grenzen und vereinbart ein Stoppwort. Wer es sagt, bekommt sofort Ruhe, ohne Diskussion. Grün, gelb, rot hilft zwischendurch."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Extra spicy
+msgctxt "ui:sehrSpicyStufe#text"
+msgid "Sehr spicy"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Like Spicy, but with dirty talk: crude words, greedy and shameless.
+msgctxt "ui:selbstReiseSehrSpicyText#text"
+msgid "Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Like Spicy, but with dirty talk: crude words, greedy and shameless. Only if you both want it.
+msgctxt "ui:paarAbendSehrSpicyText#text"
+msgid "Wie Spicy, aber mit Dirty Talk: derbe Wörter, gierig und schamlos. Nur wenn ihr beide es wollt."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {mb}
+#. EN: New English recordings are available (about {mb} MB). Until then, the device voice reads the new texts.
+msgctxt "ui:audioPaketUpdate#text"
+msgid "Neue englische Aufnahmen sind verfügbar (ca. {mb} MB). Bis dahin liest die Geräte-Stimme die neuen Texte vor."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Update
+msgctxt "ui:audioPaketAktualisieren#text"
+msgid "Aktualisieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do I help her climax without adding pressure?
+msgctxt "ui:coachQHerOrgasm#text"
+msgid "Wie bringe ich meine Partnerin zum Höhepunkt, ohne Druck zu machen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What helps women truly let go during sex?
+msgctxt "ui:coachQWomenRelax#text"
+msgid "Was hilft Frauen, beim Sex wirklich loszulassen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Why does it often take her longer to feel desire?
+msgctxt "ui:coachQHerDesire#text"
+msgid "Warum braucht sie oft länger, bis sie Lust bekommt?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do I ask her what she likes without it getting awkward?
+msgctxt "ui:coachQAskHer#text"
+msgid "Wie frage ich sie, was ihr gefällt, ohne dass es peinlich wird?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do I get rid of performance pressure in bed?
+msgctxt "ui:coachQMyPressure#text"
+msgid "Wie werde ich den Leistungsdruck im Bett los?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do I show him how I want to be touched?
+msgctxt "ui:coachQShowHim#text"
+msgid "Wie zeige ich ihm, wie ich berührt werden möchte?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What helps men with performance pressure in bed?
+msgctxt "ui:coachQMenPressure#text"
+msgid "Was hilft Männern gegen Leistungsdruck im Bett?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How can I pleasure him even better with hands and mouth?
+msgctxt "ui:coachQPleaseHim#text"
+msgid "Wie verwöhne ich ihn mit Händen und Mund noch besser?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do we talk openly about wishes and limits?
+msgctxt "ui:coachQWishesLimits#text"
+msgid "Wie sprechen wir offen über Wünsche und Grenzen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do we find out which touch she enjoys most?
+msgctxt "ui:coachQHerTouch#text"
+msgid "Wie finden wir heraus, welche Berührung ihr am meisten gefällt?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do we handle one of us wanting sex more often?
+msgctxt "ui:coachQDesireGap#text"
+msgid "Wie gehen wir damit um, dass einer öfter Lust hat?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do I get to know my own body better?
+msgctxt "ui:coachQKnowBody#text"
+msgid "Wie lerne ich meinen eigenen Körper besser kennen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What should I know about female desire?
+msgctxt "ui:coachQFemaleDesire#text"
+msgid "Was sollte ich über weibliche Lust wissen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What should I know about male desire?
+msgctxt "ui:coachQMaleDesire#text"
+msgid "Was sollte ich über männliche Lust wissen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How do I show how I want to be touched?
+msgctxt "ui:coachQShowTouch#text"
+msgid "Wie zeige ich, wie ich berührt werden möchte?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guided audio
+msgctxt "ui:gefuehrtTitel#text"
+msgid "Geführte Audios"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Body journey
+msgctxt "ui:gefuehrtSelbstTitel#text"
+msgid "Körperreise"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 10 to 30 minutes just for you: a voice guides you across your body, as close as you like.
+msgctxt "ui:gefuehrtSelbstText#text"
+msgid "10 bis 30 Minuten nur für dich: eine Stimme führt dich über deinen Körper, so nah, wie du möchtest."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Try it guided now: Shared evening
+msgctxt "ui:lessonDetailTryGuidedEvening#text"
+msgid "Jetzt geführt ausprobieren: Gemeinsamer Abend"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Invite to spicy mode
+msgctxt "ui:spicyEinladen#text"
+msgid "Zum Spicy-Modus einladen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 🔥 I've turned on spicy mode. Would you like to try it too? (Profile › Spicy mode)
+msgctxt "ui:spicyEinladungText#text"
+msgid "🔥 Ich habe den Spicy-Modus eingeschaltet. Magst du ihn auch ausprobieren? (Profil › Spicy-Modus)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Look at spicy mode
+msgctxt "ui:spicyEinladungAnnehmen#text"
+msgid "Spicy-Modus ansehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Spicy mode is already on for you.
+msgctxt "ui:spicyEinladungSchonAn#text"
+msgid "Bei dir ist der Spicy-Modus schon an."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Invitation sent.
+msgctxt "ui:spicyEinladungGesendet#text"
+msgid "Einladung gesendet."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: That didn't work. Please try again later.
+msgctxt "ui:spicyEinladungFehler#text"
+msgid "Das hat nicht geklappt. Bitte später noch einmal versuchen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I'm thinking about your lips
+msgctxt "ui:spicyFunkeLippen#text"
+msgid "Ich denk gerade an deine Lippen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tonight you're mine
+msgctxt "ui:spicyFunkeHeuteAbend#text"
+msgid "Heute Abend gehörst du mir"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I've been hot for you all day
+msgctxt "ui:spicyFunkeScharf#text"
+msgid "Ich bin den ganzen Tag scharf auf dich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I want to taste you tonight
+msgctxt "ui:spicyFunkeSchmecken#text"
+msgid "Ich will dich heute Abend schmecken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Wear nothing underneath today
+msgctxt "ui:spicyFunkeNichtsDrunter#text"
+msgid "Zieh heute nichts drunter an"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I want to see you naked
+msgctxt "ui:spicyFunkeNackt#text"
+msgid "Ich will dich nackt sehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I want to fuck you. Today.
+msgctxt "ui:spicyFunkeFicken#text"
+msgid "Ich will dich ficken. Heute."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Come home right now
+msgctxt "ui:spicyFunkeNachHause#text"
+msgid "Komm sofort nach Hause"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disappearing message
+msgctxt "ui:verschwindenSchalter#text"
+msgid "Verschwindende Nachricht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disappears 10 min after reading …
+msgctxt "ui:verschwindenHinweis#text"
+msgid "Verschwindet 10 Min. nach dem Lesen …"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disappears after reading
+msgctxt "ui:verschwindetLabel#text"
+msgid "Verschwindet nach dem Lesen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 📷 A photo for you, viewable only once. Open VelvetPulse and it comes straight to you.
+msgctxt "ui:fotoNachricht#text"
+msgid "📷 Ein Foto für dich, nur einmal ansehbar. Öffne VelvetPulse, dann kommt es direkt zu dir."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send photo
+msgctxt "ui:fotoSenden#text"
+msgid "Foto senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Camera
+msgctxt "ui:fotoKamera#text"
+msgid "Kamera"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gallery
+msgctxt "ui:fotoGalerie#text"
+msgid "Galerie"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The photo travels encrypted directly from phone to phone and can be viewed only once. Safest without your face or recognisable surroundings. A second phone can still photograph the screen.
+msgctxt "ui:fotoSicherheitHinweis#text"
+msgid "Das Foto geht verschlüsselt direkt von Handy zu Handy und lässt sich nur einmal ansehen. Am sichersten ohne Gesicht und ohne erkennbare Umgebung. Ein zweites Handy kann den Bildschirm trotzdem abfotografieren."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your partner doesn't have VelvetPulse open right now. The photo stays encrypted on your phone and goes out as soon as you both have the app open.
+msgctxt "ui:fotoNichtDa#text"
+msgid "Dein Gegenüber hat VelvetPulse gerade nicht offen. Das Foto bleibt verschlüsselt bei dir und geht raus, sobald ihr beide die App offen habt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The photo couldn't be announced. Please try again later.
+msgctxt "ui:fotoFehler#text"
+msgid "Das Foto konnte nicht angekündigt werden. Bitte später noch einmal versuchen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Photo waiting: both of you open VelvetPulse
+msgctxt "ui:fotoStatusWartet#text"
+msgid "Foto wartet: öffnet beide VelvetPulse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Transferring photo …
+msgctxt "ui:fotoStatusLaedt#text"
+msgid "Foto wird übertragen …"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: View photo (only once)
+msgctxt "ui:fotoAnsehen#text"
+msgid "Foto ansehen (nur einmal)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Photo viewed
+msgctxt "ui:fotoStatusAngesehen#text"
+msgid "Foto angesehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Waiting for your partner
+msgctxt "ui:fotoStatusWartetRaus#text"
+msgid "Wartet auf dein Gegenüber"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Delivered
+msgctxt "ui:fotoStatusZugestellt#text"
+msgid "Zugestellt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not delivered
+msgctxt "ui:fotoStatusFehler#text"
+msgid "Nicht zugestellt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Visible only now. When you close it, the photo is deleted.
+msgctxt "ui:fotoAnsichtHinweis#text"
+msgid "Nur jetzt sichtbar. Beim Schließen ist das Foto gelöscht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This photo is no longer available.
+msgctxt "ui:fotoWeg#text"
+msgid "Dieses Foto ist nicht mehr da."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How VelvetPulse works
+msgctxt "ui:anleitungTitel#text"
+msgid "So funktioniert VelvetPulse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Here you'll find every part of the app briefly explained. Tap a section to expand it.
+msgctxt "ui:anleitungEinleitung#text"
+msgid "Hier findest du alle Bereiche der App kurz erklärt. Tippe auf einen Abschnitt, um ihn aufzuklappen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: PHOTO IDEA FOR TODAY
+msgctxt "ui:fotoIdeeTitel#text"
+msgid "FOTO-IDEE FÜR HEUTE"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Entirely optional. Safest without your face.
+msgctxt "ui:fotoIdeeHinweis#text"
+msgid "Ganz freiwillig. Ohne Gesicht ist am sichersten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Another idea
+msgctxt "ui:fotoIdeeAndere#text"
+msgid "Andere Idee"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not today
+msgctxt "ui:fotoIdeeHeuteNicht#text"
+msgid "Heute nicht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Show photo ideas
+msgctxt "ui:fotoIdeenAnzeigen#text"
+msgid "Foto-Ideen anzeigen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Entirely optional. Please no face, tattoos or recognisable room.
+msgctxt "ui:fotoIdeeHinweisHeiss#text"
+msgid "Ganz freiwillig. Bitte ohne Gesicht, Tattoos oder erkennbaren Raum."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Are you alone?
+msgctxt "ui:fotoAlleinTitel#text"
+msgid "Bist du allein?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The photo can be viewed only once. It's best to look at it when you're alone and nobody is looking over your shoulder.
+msgctxt "ui:fotoAlleinText#text"
+msgid "Das Foto lässt sich nur einmal ansehen. Schau es dir am besten an, wenn du allein bist und dir niemand über die Schulter schaut."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: View now
+msgctxt "ui:fotoJetztAnsehen#text"
+msgid "Jetzt ansehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Later
+msgctxt "ui:fotoSpaeter#text"
+msgid "Später"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Experimental
+msgctxt "ui:fotoExperimentell#text"
+msgid "Experimentell"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Photos are new: on some mobile networks the direct connection can't be made yet.
+msgctxt "ui:fotoExperimentellHinweis#text"
+msgid "Fotos sind neu: In manchen Mobilfunknetzen kommt die direkte Verbindung noch nicht zustande."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your code was scanned
+msgctxt "ui:pairingAnfrageTitel#text"
+msgid "Dein Code wurde gescannt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A phone just scanned your code and wants to connect with you. Only confirm if it's your partner's phone.
+msgctxt "ui:pairingAnfrageText#text"
+msgid "Ein Handy hat gerade deinen Code gescannt und möchte sich mit dir verbinden. Bestätige nur, wenn es das Handy deines Gegenübers ist."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect
+msgctxt "ui:pairingAnfrageVerbinden#text"
+msgid "Verbinden"
+msgstr ""

@@ -1,0 +1,208 @@
+# VelvetPulse: Anleitung in der App
+# Ausgangssprache Deutsch, Quelle: assets/data/anleitung.json
+# Anleitung für Übersetzer / Guide for translators: translations/README.md
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VelvetPulse\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Source-Language: de\n"
+
+#. Abschnitt der Anleitung
+#. EN: Getting started
+msgctxt "guide:start#titel"
+msgid "Erste Schritte"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: On first launch you create a small profile: name, gender, relationship status and your focus. The app uses it to choose suitable courses, voices and example questions. Everything stays on your phone.
+#. EN: You can reach your profile at any time via the person icon at the top of the start page. That's also where you'll find language, discretion, backup, spicy mode and updates.
+msgctxt "guide:start#text"
+msgid ""
+"Beim ersten Start legst du ein kleines Profil an: Name, Geschlecht, Beziehungsstatus und dein Fokus. Daraus wählt die App passende Kurse, Stimmen und Beispielfragen aus. Alles bleibt auf deinem Handy.\n"
+"Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Startseite. Dort findest du auch Sprache, Diskretion, Sicherung, Spicy-Modus und Updates."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Courses and lessons
+msgctxt "guide:kurse#titel"
+msgid "Kurse und Lektionen"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: The Courses tab contains all courses, sorted into basics, practice and deepening. Use the filters at the top to choose, for example, “For her”, “For him” or “For couples”.
+#. EN: Every lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.
+#. EN: Tapping “Mark as completed” counts towards your progress.
+msgctxt "guide:kurse#text"
+msgid ""
+"Im Tab Kurse findest du alle Kurse, sortiert nach Grundlagen, Praxis und Vertiefung. Mit den Filtern oben wählst du zum Beispiel „Für Sie“, „Für Ihn“ oder „Für Paare“.\n"
+"Jede Lektion hat einen Text, eine Aufnahme zum Anhören und am Ende eine Frage zum Nachdenken. Manche Lektionen haben unten einen Knopf, der dich direkt zur passenden Übung bringt, etwa zum Beckenboden-Timer oder zu einem geführten Audio.\n"
+"Mit „Als abgeschlossen markieren“ zählt dein Fortschritt."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Guided audio
+msgctxt "guide:gefuehrt#titel"
+msgid "Geführte Audios"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: The guided audios sit at the very top of the start page.
+#. EN: Body journey: 10 to 30 minutes just for you. You choose how close you want to come to yourself, and a voice guides you across your body. Most of the time is silence, so you can feel.
+#. EN: Shared evening: 20 to 45 minutes for two. You take turns giving and receiving, and a singing bowl marks the transitions. Agree on a stop word beforehand.
+#. EN: Both are put together anew every time. You can pause, skip and stop at any time.
+msgctxt "guide:gefuehrt#text"
+msgid ""
+"Ganz oben auf der Startseite liegen die geführten Audios.\n"
+"Körperreise: 10 bis 30 Minuten nur für dich. Du wählst, wie nah du dir kommen möchtest, und eine Stimme führt dich über deinen Körper. Die meiste Zeit ist Stille, damit du spüren kannst.\n"
+"Gemeinsamer Abend: 20 bis 45 Minuten für zwei. Ihr wechselt euch beim Geben und Empfangen ab, eine Klangschale markiert die Übergänge. Vereinbart vorher ein Stoppwort.\n"
+"Beide werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Training and quick help
+msgctxt "guide:training#titel"
+msgid "Training und Akuthilfe"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: The Training tab contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
+#. EN: The SOS button at the top right helps in moments of pressure or anxiety, with short steps for before, in the moment and afterwards.
+msgctxt "guide:training#text"
+msgid ""
+"Im Tab Training findest du den Beckenboden-Timer mit vier Übungsarten und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.\n"
+"Der SOS-Knopf oben rechts hilft in Momenten mit Druck oder Angst: mit kurzen Schritten für vorher, im Moment und danach."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Reframing journal and check-in
+msgctxt "guide:reframing#titel"
+msgid "Reframing-Tagebuch und Check-in"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: In the Reframing tab you write down distressing thoughts and examine them using the method of cognitive behavioural therapy: what happened, what did you think, what speaks for it, what against it, and how else could you see it?
+#. EN: The start page also has the 30-second check-in: how do stress and desire relate to each other today?
+msgctxt "guide:reframing#text"
+msgid ""
+"Im Tab Reframing schreibst du belastende Gedanken auf und prüfst sie nach der Methode der kognitiven Verhaltenstherapie: Was ist passiert, was hast du gedacht, was spricht dafür, was dagegen, und wie lässt es sich anders sehen?\n"
+"Auf der Startseite wartet außerdem der 30-Sekunden-Check-in: Wie stehen Stress und Lust heute zueinander?"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Couple channel
+msgctxt "guide:paar#titel"
+msgid "Paar-Kanal"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted.
+#. EN: Sparks: with one tap you show what you're in the mood for today, or not.
+#. EN: Messages: with read receipts, which you can switch off in the menu.
+#. EN: Wishes: in the yes/maybe/no list, each of you votes separately. Only what you both want becomes visible.
+#. EN: Learning together: share lessons and exchange answers to the reflection questions.
+msgctxt "guide:paar#text"
+msgid ""
+"Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt.\n"
+"Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.\n"
+"Nachrichten: mit Lesebestätigung, die ihr im Menü abschalten könnt.\n"
+"Wünsche: In der Ja/Vielleicht/Nein-Liste stimmt jeder für sich ab. Sichtbar wird nur, was ihr beide wollt.\n"
+"Gemeinsam lernen: Lektionen teilen und Antworten auf die Reflexionsfragen austauschen."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Spicy mode (18+)
+msgctxt "guide:spicy#titel"
+msgid "Spicy-Modus (ab 18)"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: You switch on spicy mode in your profile, only after confirming that you're an adult. It unlocks: the levels “Spicy” and “Extra spicy” in the body journey and the shared evening, courses 23 and 24, spicy lessons in other courses and additional questions in the yes/maybe/no list. The app also takes on a red look.
+#. EN: In the couple chat you get hot sparks, messages that disappear after reading, and photos that travel encrypted directly from phone to phone and can be viewed only once. To set up the connection, a public helper server (STUN, run by Google) sees your IP addresses, but never the photo. Photos are still experimental: on some mobile networks the direct connection can't be made. If you like, you'll find a photo idea there every day, entirely optional and gone at once with “Not today”. Use the chat menu to invite your partner to spicy mode.
+#. EN: You can switch it off at any time, and everything from it disappears immediately.
+msgctxt "guide:spicy#text"
+msgid ""
+"Den Spicy-Modus schaltest du im Profil ein, nur mit Bestätigung, dass du volljährig bist. Er schaltet frei: die Stufen „Spicy“ und „Sehr spicy“ in Körperreise und Gemeinsamem Abend, die Kurse 23 und 24, Spicy-Lektionen in weiteren Kursen und zusätzliche Fragen in der Ja/Vielleicht/Nein-Liste. Die App bekommt dann einen roten Look.\n"
+"Im Paar-Chat kommen heiße Funken dazu, Nachrichten, die nach dem Lesen verschwinden, und Fotos, die verschlüsselt direkt von Handy zu Handy gehen und sich nur einmal ansehen lassen. Für den Verbindungsaufbau sieht ein öffentlicher Hilfsserver (STUN, von Google) eure IP-Adressen, aber nie das Foto. Die Fotos sind noch experimentell: In manchen Mobilfunknetzen kommt die direkte Verbindung nicht zustande. Wer mag, findet dort jeden Tag eine Foto-Idee, ganz freiwillig und mit „Heute nicht“ sofort weg. Über das Menü im Chat lädst du dein Gegenüber zum Spicy-Modus ein.\n"
+"Ausschalten geht jederzeit, dann ist alles davon sofort verschwunden."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: AI coach
+msgctxt "guide:coach#titel"
+msgid "KI-Coach"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: The AI coach answers questions about desire, body and relationships. It uses Google Gemini with your own free key; the app explains step by step how to get one. Your questions go to Google, but not to us.
+#. EN: The example questions adapt to your profile.
+msgctxt "guide:coach#text"
+msgid ""
+"Der KI-Coach beantwortet Fragen zu Lust, Körper und Beziehung. Er nutzt Google Gemini mit deinem eigenen, kostenlosen Schlüssel. Wie du ihn bekommst, erklärt die App Schritt für Schritt. Deine Fragen gehen dabei an Google, aber nicht an uns.\n"
+"Die Beispielfragen passen sich deinem Profil an."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Privacy, discretion and backup
+msgctxt "guide:diskretion#titel"
+msgid "Datenschutz, Diskretion und Sicherung"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Everything you enter stays on your phone. Secrets such as keys are kept in Android's protected storage.
+#. EN: In your profile you can lock the app with your fingerprint; content is then also hidden in the app overview and screenshots are blocked. The discreet app icon shows a neutral name instead of VelvetPulse.
+#. EN: “Export backup” creates a password-protected backup that you can transfer to a new phone.
+msgctxt "guide:diskretion#text"
+msgid ""
+"Alles, was du einträgst, bleibt auf deinem Handy. Geheimnisse wie Schlüssel liegen im geschützten Speicher von Android.\n"
+"Im Profil kannst du die App mit Fingerabdruck sperren; dann sind Inhalte auch in der App-Übersicht verborgen und Screenshots blockiert. Das diskrete App-Symbol zeigt statt VelvetPulse einen neutralen Namen.\n"
+"Mit „Backup exportieren“ erstellst du eine passwortgeschützte Sicherung, die du auf ein neues Handy übertragen kannst."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Updates and beta
+msgctxt "guide:updates#titel"
+msgid "Updates und Beta"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Under Profile › “Check for updates” the app finds new versions and installs them after you confirm. With the “Receive beta versions” switch you can test new features earlier. Every stable version sets the switch back to stable.
+#. EN: After an update, “What's new” shows once what has changed.
+msgctxt "guide:updates#text"
+msgid ""
+"Unter Profil › „Nach Updates suchen“ findet die App neue Versionen und installiert sie nach deiner Bestätigung. Mit dem Schalter „Beta-Versionen erhalten“ testest du Neuerungen früher. Jede stabile Version stellt den Schalter wieder auf Stabil zurück.\n"
+"Nach einem Update zeigt „Was ist neu“ einmal, was sich geändert hat."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Language and English recordings
+msgctxt "guide:sprache#titel"
+msgid "Sprache und englische Aufnahmen"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: The app is available in German and English. It follows your phone's language, and you can change it in your profile.
+#. EN: There you can also download the English recordings as a pack. Without the pack, your phone's voice reads aloud.
+msgctxt "guide:sprache#text"
+msgid ""
+"Die App gibt es auf Deutsch und Englisch. Sie richtet sich nach der Sprache deines Handys, im Profil kannst du sie umstellen.\n"
+"Die englischen Aufnahmen lädst du dort bei Bedarf als Paket nach. Ohne Paket liest die Stimme deines Handys vor."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Help and feedback
+msgctxt "guide:hilfe#titel"
+msgid "Hilfe und Rückmeldung"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: If a word in a recording sounds wrong, tap “Word mispronounced?” below the player. The project takes bug reports and wishes on GitHub.
+#. EN: The app is no substitute for medical or psychotherapeutic treatment. Where it makes sense, the lessons say explicitly when it's advisable to get checked.
+msgctxt "guide:hilfe#text"
+msgid ""
+"Klingt ein Wort in einer Aufnahme falsch, tippe unter dem Player auf „Wort falsch ausgesprochen?“. Fehler und Wünsche nimmt das Projekt auf GitHub entgegen.\n"
+"Die App ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es sinnvoll ist, sagen die Lektionen ausdrücklich, wann eine Abklärung ratsam ist."
+msgstr ""

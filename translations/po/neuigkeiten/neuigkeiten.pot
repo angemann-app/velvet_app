@@ -1,0 +1,540 @@
+# VelvetPulse: Was ist neu (nach Updates)
+# Ausgangssprache Deutsch, Quelle: assets/data/neuigkeiten.json
+# Anleitung für Übersetzer / Guide for translators: translations/README.md
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VelvetPulse\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Source-Language: de\n"
+
+#. Was ist neu in Version 4.4.0-beta.4
+#. EN: Learning together
+msgctxt "news:25#0.titel"
+msgid "Gemeinsam lernen"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.4
+#. EN: Share a lesson with your partner. You only see each other's answers to the reflection question once both of you have answered.
+msgctxt "news:25#0.text"
+msgid "Teile eine Lektion mit deinem Gegenüber. Eure Antworten auf die Reflexionsfrage seht ihr erst, wenn beide geantwortet haben."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.4
+#. EN: Three new courses
+msgctxt "news:25#1.titel"
+msgid "Drei neue Kurse"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.4
+#. EN: Different levels of desire, life phases, and pain, shame and performance pressure. Plus deepening lessons in five courses.
+msgctxt "news:25#1.text"
+msgid "Unterschiedliche Lust, Lebensphasen sowie Schmerz, Scham und Leistungsdruck. Dazu vertiefende Lektionen in fünf Kursen."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.4
+#. EN: Notice of new messages
+msgctxt "news:25#2.titel"
+msgid "Hinweis auf neue Nachrichten"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.4
+#. EN: Even when the app is closed, you learn about new messages in the couple channel. The notice reveals no content.
+msgctxt "news:25#2.text"
+msgid "Auch wenn die App geschlossen ist, erfährst du von neuen Nachrichten im Paar-Kanal. Der Hinweis verrät keinen Inhalt."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.4
+#. EN: Personal address
+msgctxt "news:25#3.titel"
+msgid "Persönliche Ansprache"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.4
+#. EN: Lessons call your partner by name once you enter name and gender in the couple channel.
+msgctxt "news:25#3.text"
+msgid "Lektionen nennen dein Gegenüber beim Namen, wenn du Name und Geschlecht im Paar-Kanal hinterlegst."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: Guided self-exploration
+msgctxt "news:26#0.titel"
+msgid "Geführte Selbsterkundung"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: 10 to 30 minutes just for you: a voice guides you through breathing and a journey across your body, as close as you like. Found in course 18.
+msgctxt "news:26#0.text"
+msgid "10 bis 30 Minuten nur für dich: Eine Stimme begleitet dich durch Atem und eine Reise über deinen Körper, so nah, wie du möchtest. Zu finden in Kurs 18."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: New course: The anatomy of arousal
+msgctxt "news:26#1.titel"
+msgid "Neuer Kurs: Anatomie der Erregung"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: There are more erogenous zones than penis, breasts and clitoris. With an exercise for your own map of pleasure.
+msgctxt "news:26#1.text"
+msgid "Es gibt mehr erogene Zonen als Penis, Brust und Klitoris. Mit einer Übung für deine eigene Landkarte der Lust."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: Exploring yourself, rewritten
+msgctxt "news:26#2.titel"
+msgid "Sich selbst erkunden, neu geschrieben"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: Course 18 has become warmer and more precise, and has been re-recorded.
+msgctxt "news:26#2.text"
+msgid "Kurs 18 ist wärmer und genauer geworden und neu eingesprochen."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: Two voices for couples
+msgctxt "news:26#3.titel"
+msgid "Zwei Stimmen für Paare"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: Couple lessons are now read by Victoria and Martin in turns.
+msgctxt "news:26#3.text"
+msgid "Paar-Lektionen lesen Victoria und Martin jetzt im Wechsel."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: What's new
+msgctxt "news:26#4.titel"
+msgid "Was ist neu"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.5
+#. EN: From now on you'll see this screen once after every update.
+msgctxt "news:26#4.text"
+msgid "Diesen Bildschirm siehst du ab jetzt nach jedem Update einmal."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.6
+#. EN: Word mispronounced?
+msgctxt "news:27#0.titel"
+msgid "Wort falsch ausgesprochen?"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.6
+#. EN: Below every audio you can report when the voice stresses a word wrongly. The report goes to GitHub, where it is public and needs an account. In discreet mode the link is hidden.
+msgctxt "news:27#0.text"
+msgid "Unter jedem Audio kannst du melden, wenn die Stimme ein Wort falsch betont. Die Meldung geht an GitHub; dort ist sie öffentlich und braucht ein Konto. Im Diskretions-Modus ist der Link ausgeblendet."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.7
+#. EN: More reliable couple channel
+msgctxt "news:28#0.titel"
+msgid "Paar-Kanal zuverlässiger"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.7
+#. EN: Shared answers from the yes/no list now arrive in full, even if your partner was offline. And when connecting, the app fetches everything since last time.
+msgctxt "news:28#0.text"
+msgid "Geteilte Antworten der Ja/Nein-Liste kommen jetzt vollständig an, auch wenn dein Gegenüber gerade offline war. Und die App holt beim Verbinden alles seit dem letzten Mal ab."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.7
+#. EN: Read receipts
+msgctxt "news:28#1.titel"
+msgid "Lesebestätigungen"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.7
+#. EN: Below your last message it says “Read” as soon as your partner has seen it – if you both have a current version. You can switch it off in the couple channel's menu; then neither of you sees it.
+msgctxt "news:28#1.text"
+msgid "Unter deiner letzten Nachricht steht „Gelesen“, sobald dein Gegenüber sie gesehen hat – wenn ihr beide eine aktuelle Version habt. Abschalten lässt es sich im Menü des Paar-Kanals; dann seht ihr es beide nicht."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.7
+#. EN: Disconnect
+msgctxt "news:28#2.titel"
+msgid "Verbindung trennen"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.7
+#. EN: In the couple channel's menu you can disconnect. If you connect with someone else, the old history is deleted – after asking you first.
+msgctxt "news:28#2.text"
+msgid "Im Menü des Paar-Kanals kannst du eine Verbindung trennen. Verbindest du dich mit jemand anderem, wird der alte Verlauf gelöscht – nach einer Nachfrage."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.7
+#. EN: Complete backups
+msgctxt "news:28#3.titel"
+msgid "Sicherung vollständig"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0-beta.7
+#. EN: The yes/no list is now included in the backup, and when restoring, check-ins and answers are merged instead of overwritten.
+msgctxt "news:28#3.text"
+msgid "Die Ja/Nein-Liste ist jetzt in der Sicherung enthalten, und beim Einspielen werden Check-ins und Antworten zusammengeführt statt überschrieben."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Guided self-exploration
+msgctxt "news:29#0.titel"
+msgid "Geführte Selbsterkundung"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: 10 to 30 minutes just for you: a voice guides you through breathing and a journey across your body, as close as you like. Found in course 18.
+msgctxt "news:29#0.text"
+msgid "10 bis 30 Minuten nur für dich: Eine Stimme begleitet dich durch Atem und eine Reise über deinen Körper, so nah, wie du möchtest. Zu finden in Kurs 18."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Four new courses
+msgctxt "news:29#1.titel"
+msgid "Vier neue Kurse"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Different levels of desire, life phases, pain, shame and performance pressure, and the anatomy of arousal. Plus deepening lessons and a rewritten course 18.
+msgctxt "news:29#1.text"
+msgid "Unterschiedliche Lust, Lebensphasen, Schmerz, Scham und Leistungsdruck sowie Anatomie der Erregung. Dazu vertiefende Lektionen und ein neu geschriebener Kurs 18."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Learning together
+msgctxt "news:29#2.titel"
+msgid "Gemeinsam lernen"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Share a lesson with your partner. You only see each other's answers to the reflection question once both of you have answered.
+msgctxt "news:29#2.text"
+msgid "Teile eine Lektion mit deinem Gegenüber. Eure Antworten auf die Reflexionsfrage seht ihr erst, wenn beide geantwortet haben."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Couple channel
+msgctxt "news:29#3.titel"
+msgid "Paar-Kanal"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Notice of new messages even when the app is closed, read receipts, “Disconnect” in the menu – and shared yes/no answers now arrive in full.
+msgctxt "news:29#3.text"
+msgid "Hinweis auf neue Nachrichten auch bei geschlossener App, Lesebestätigungen, „Verbindung trennen“ im Menü – und geteilte Ja/Nein-Antworten kommen jetzt vollständig an."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Personal address
+msgctxt "news:29#4.titel"
+msgid "Persönliche Ansprache"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Lessons call your partner by name once you enter name and gender in the couple channel.
+msgctxt "news:29#4.text"
+msgid "Lektionen nennen dein Gegenüber beim Namen, wenn du Name und Geschlecht im Paar-Kanal hinterlegst."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Two voices, better pronunciation
+msgctxt "news:29#5.titel"
+msgid "Zwei Stimmen, bessere Aussprache"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Couple lessons are read by Victoria and Martin in turns. If a word sounds wrong, you can report it below every audio.
+msgctxt "news:29#5.text"
+msgid "Paar-Lektionen lesen Victoria und Martin im Wechsel. Klingt ein Wort falsch, kannst du es unter jedem Audio melden."
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: Beta test finished
+msgctxt "news:29#6.titel"
+msgid "Beta-Test beendet"
+msgstr ""
+
+#. Was ist neu in Version 4.4.0
+#. EN: If you were in the beta test, the update channel is now back on stable. For the next test round you can sign up again in your profile under “Receive beta versions”. Thanks for testing!
+msgctxt "news:29#6.text"
+msgid "Warst du im Beta-Test, steht der Update-Kanal jetzt wieder auf Stabil. Für die nächste Testrunde kannst du dich im Profil unter „Beta-Versionen erhalten“ wieder anmelden. Danke fürs Testen!"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: VelvetPulse in English
+msgctxt "news:30#0.titel"
+msgid "VelvetPulse auf Englisch"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: On English phones the app now appears in English – interface, courses and exercises. You can switch the language in your profile. English recordings come as a pack to download.
+msgctxt "news:30#0.text"
+msgid "Auf englischen Handys erscheint die App jetzt auf Englisch – Oberfläche, Kurse und Übungen. Umschalten lässt sich die Sprache im Profil. Englische Aufnahmen kommen als Paket zum Nachladen."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: Two new questions
+msgctxt "news:30#1.titel"
+msgid "Zwei neue Fragen"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: The yes/no/maybe list now also asks about watching porn together and about visiting a swingers' club just the two of you, where others may at most watch.
+msgctxt "news:30#1.text"
+msgid "Die Ja/Nein/Vielleicht-Liste fragt jetzt auch nach gemeinsamem Pornoschauen und nach einem Swingerclub-Besuch nur zu zweit, bei dem andere höchstens zuschauen."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: More precise health texts
+msgctxt "news:30#2.titel"
+msgid "Genauere Gesundheitstexte"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: The lessons on erection problems, pain during sex and the anatomy of arousal are worded more carefully: what is established, what is a hypothesis, and when it makes sense to see a doctor.
+msgctxt "news:30#2.text"
+msgid "Die Lektionen zu Erektionsproblemen, Schmerzen beim Sex und zur Anatomie der Erregung sind fachlich vorsichtiger formuliert: was belegt ist, was eine Vermutung ist, und wann eine ärztliche Abklärung sinnvoll ist."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: You decide
+msgctxt "news:30#3.titel"
+msgid "Du bestimmst"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: The shared evening and the self-exploration have labelled buttons to pause, skip and stop. Before the self-exploration, a short note says that nothing has to happen.
+msgctxt "news:30#3.text"
+msgid "Gemeinsamer Abend und Selbsterkundung haben beschriftete Knöpfe zum Pausieren, Überspringen und Beenden. Vor der Selbsterkundung steht ein kurzer Hinweis, dass nichts passieren muss."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: More honest privacy notes
+msgctxt "news:30#4.titel"
+msgid "Ehrlichere Datenschutz-Hinweise"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: The couple channel now explains more precisely what the servers can see: not the content, but when and how often you write.
+msgctxt "news:30#4.text"
+msgid "Der Paar-Kanal erklärt jetzt genauer, was die Server sehen können: nicht den Inhalt, aber wann und wie oft geschrieben wird."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: Safer updates and backups
+msgctxt "news:30#5.titel"
+msgid "Sicherere Updates und Sicherungen"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.1
+#. EN: Updates are only installed with a valid checksum from this project, and damaged backups are rejected with a clear message.
+msgctxt "news:30#5.text"
+msgid "Updates werden nur mit gültiger Prüfsumme aus diesem Projekt installiert, und beschädigte Sicherungen werden verständlich abgelehnt."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.2
+#. EN: Spicy mode
+msgctxt "news:32#0.titel"
+msgid "Spicy-Modus"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.2
+#. EN: 18+ and only if you turn it on in your profile: the levels “Spicy” and “Extra spicy” for the body journey and the shared evening, two new courses and more yes/maybe/no questions.
+msgctxt "news:32#0.text"
+msgid "Ab 18 und nur, wenn du ihn im Profil einschaltest: die Stufen „Spicy“ und „Sehr spicy“ für Körperreise und Gemeinsamen Abend, zwei neue Kurse und weitere Ja/Vielleicht/Nein-Fragen."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.2
+#. EN: Martin speaks more calmly
+msgctxt "news:32#1.titel"
+msgid "Martin spricht ruhiger"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.2
+#. EN: Martin now reads all German texts a little more slowly, so the body journey and lessons sound more relaxed.
+msgctxt "news:32#1.text"
+msgid "Martin liest alle Texte jetzt etwas langsamer, so dass Körperreise und Lektionen entspannter klingen."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.2
+#. EN: New English recordings
+msgctxt "news:32#2.titel"
+msgid "Neue englische Aufnahmen"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0-beta.2
+#. EN: Under Profile › Language you can now download the recordings for the new content.
+msgctxt "news:32#2.text"
+msgid "Wer die App auf Englisch nutzt, kann unter Profil › Sprache die Aufnahmen für die neuen Inhalte nachladen."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0
+#. EN: Stable version 4.5.0
+msgctxt "news:33#0.titel"
+msgid "Stabile Version 4.5.0"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0
+#. EN: Everything from the test versions is now available to everyone: English, spicy mode, a calmer voice for Martin and many small improvements.
+msgctxt "news:33#0.text"
+msgid "Alles aus den Testversionen ist jetzt für alle da: Englisch, Spicy-Modus, ruhigere Stimme von Martin und viele kleine Verbesserungen."
+msgstr ""
+
+#. Was ist neu in Version 4.5.0
+#. EN: Back on stable
+msgctxt "news:33#1.titel"
+msgid "Zurück auf Stabil"
+msgstr ""
+
+#. Was ist neu in Version 4.5.0
+#. EN: If you tested beta versions, you're now back on the stable channel. For the next test round, switch “Receive beta versions” in your profile back on.
+msgctxt "news:33#1.text"
+msgid "Wer Beta-Versionen getestet hat, steht jetzt wieder auf dem stabilen Kanal. Für die nächste Testrunde den Schalter „Beta-Versionen erhalten“ im Profil wieder einschalten."
+msgstr ""
+
+#. Was ist neu in Version 4.6.0-beta.1
+#. EN: Guided audio right on the start page
+msgctxt "news:34#0.titel"
+msgid "Geführte Audios gleich auf der Startseite"
+msgstr ""
+
+#. Was ist neu in Version 4.6.0-beta.1
+#. EN: You'll now find the body journey and the shared evening at the top of the courses and in the couple channel, with new images.
+msgctxt "news:34#0.text"
+msgid "Körperreise und Gemeinsamer Abend findest du jetzt oben in den Kursen und im Paar-Kanal, mit neuen Bildern."
+msgstr ""
+
+#. Was ist neu in Version 4.6.0-beta.1
+#. EN: New course: Every body is beautiful and sexy
+msgctxt "news:34#1.titel"
+msgid "Neuer Kurs: Jeder Körper ist schön und sexy"
+msgstr ""
+
+#. Was ist neu in Version 4.6.0-beta.1
+#. EN: Five lessons against comparison: the variety of real bodies, a kind look in the mirror, lights on in bed, and kindness when your body changes.
+msgctxt "news:34#1.text"
+msgid "Fünf Lektionen gegen den Vergleich: Vielfalt echter Körper, der freundliche Blick in den Spiegel, Licht an im Bett und Freundlichkeit, wenn der Körper sich verändert."
+msgstr ""
+
+#. Was ist neu in Version 4.6.0-beta.1
+#. EN: Spicy gets hotter
+msgctxt "news:34#2.titel"
+msgid "Spicy wird prickelnder"
+msgstr ""
+
+#. Was ist neu in Version 4.6.0-beta.1
+#. EN: In spicy mode the app now glows red, and in the couple chat you can invite your partner to spicy mode.
+msgctxt "news:34#2.text"
+msgid "Im Spicy-Modus glüht die App jetzt rot, und im Paar-Chat kannst du dein Gegenüber zum Spicy-Modus einladen."
+msgstr ""
+
+#. Was ist neu in Version 4.6.0-beta.2
+#. EN: Course 25 in more depth
+msgctxt "news:35#0.titel"
+msgid "Kurs 25 ausführlicher"
+msgstr ""
+
+#. Was ist neu in Version 4.6.0-beta.2
+#. EN: “Every body is beautiful and sexy” has been rewritten: longer, for women and men, covering the whole body from skin and hair to belly, chest and build.
+msgctxt "news:35#0.text"
+msgid "„Jeder Körper ist schön und sexy“ ist neu geschrieben: länger, für Frauen und Männer, über den ganzen Körper von Haut und Haaren bis zu Bauch, Brust und Statur."
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.1
+#. EN: New course: Everyday eroticism
+msgctxt "news:36#0.titel"
+msgid "Neuer Kurs: Alltagserotik"
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.1
+#. EN: How desire stays alive between coffee and calendar: small gestures, anticipation, rituals and games.
+msgctxt "news:36#0.text"
+msgid "Wie Lust zwischen Kaffee und Kalender lebendig bleibt: kleine Gesten, Vorfreude, Rituale und Spiele."
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.1
+#. EN: Spicy gets hotter
+msgctxt "news:36#1.titel"
+msgid "Spicy wird heißer"
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.1
+#. EN: In spicy mode: wilder texts, dedicated sections for the breasts, spicy lessons in eight courses, hot sparks, messages that disappear after reading, and photos straight from phone to phone.
+msgctxt "news:36#1.text"
+msgid "Im Spicy-Modus: wildere Texte, eigene Abschnitte für die Brüste, Spicy-Lektionen in acht Kursen, heiße Funken, Nachrichten, die nach dem Lesen verschwinden, und Fotos direkt von Handy zu Handy."
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.1
+#. EN: Guide
+msgctxt "news:36#2.titel"
+msgid "Anleitung"
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.1
+#. EN: The question mark at the top explains every part of the app.
+msgctxt "news:36#2.text"
+msgid "Das Fragezeichen oben erklärt alle Bereiche der App."
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.2
+#. EN: Lingerie and striptease
+msgctxt "news:37#0.titel"
+msgid "Wäsche und Striptease"
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.2
+#. EN: New lessons in courses 25 and 26: lingerie for every body, lingerie in everyday life and a striptease to try. In Spicy mode also: Wrapped up hot.
+msgctxt "news:37#0.text"
+msgid "Neue Lektionen in den Kursen 25 und 26: Wäsche für jeden Körper, Wäsche im Alltag und ein Striptease zum Mitmachen. Im Spicy-Modus dazu: Heiß verpackt."
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.2
+#. EN: English recordings
+msgctxt "news:37#1.titel"
+msgid "Englische Aufnahmen"
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.2
+#. EN: The English audio pack is up to date. If you've already downloaded it, you can update it in your profile.
+msgctxt "news:37#1.text"
+msgid "Das englische Audiopaket ist auf dem neuen Stand. Wer es schon geladen hat, kann es im Profil aktualisieren."
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.2
+#. EN: Photos still experimental
+msgctxt "news:37#2.titel"
+msgid "Fotos noch experimentell"
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.2
+#. EN: Photos in the couple chat are marked as experimental: on some mobile networks the direct connection doesn't work yet. Before viewing, the app asks whether you're alone.
+msgctxt "news:37#2.text"
+msgid "Fotos im Paar-Chat sind als experimentell gekennzeichnet: In manchen Mobilfunknetzen klappt die direkte Verbindung noch nicht. Vor dem Ansehen fragt die App, ob du allein bist."
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.3
+#. EN: Pairing by QR code fixed
+msgctxt "news:38#0.titel"
+msgid "Koppeln per QR-Code repariert"
+msgstr ""
+
+#. Was ist neu in Version 4.7.0-beta.3
+#. EN: Whoever shows their code now gets the request right in the pairing window and can confirm it. Before, the scanned side never noticed.
+msgctxt "news:38#0.text"
+msgid "Wer seinen Code zeigt, bekommt die Anfrage jetzt direkt im Kopplungsfenster und kann sie bestätigen. Vorher merkte die gescannte Seite nichts davon."
+msgstr ""
+
+#. Was ist neu in Version 4.7.0
+#. EN: Version 4.7.0 is stable
+msgctxt "news:39#0.titel"
+msgid "Version 4.7.0 ist stabil"
+msgstr ""
+
+#. Was ist neu in Version 4.7.0
+#. EN: Everything from the recent betas is now in the stable version: course 26 Everyday eroticism, lessons on lingerie and striptease, the guide, a hotter spicy mode with photos and disappearing messages, and the fixed pairing by QR code.
+msgctxt "news:39#0.text"
+msgid "Alles aus den letzten Betas ist jetzt in der stabilen Version: Kurs 26 Alltagserotik, Lektionen zu Wäsche und Striptease, die Anleitung, ein heißerer Spicy-Modus mit Fotos und verschwindenden Nachrichten und die reparierte Kopplung per QR-Code."
+msgstr ""

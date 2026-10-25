@@ -201,7 +201,8 @@ relays pass on direct messages.
 | `lib/l10n/app_de.arb`, `app_en.arb` | interface texts (Flutter gen-l10n, accessed as `t.<key>`); `test/oberflaeche_texte_test.dart` checks completeness |
 | `tools/l10n_umzug.py`, `tools/arb_setzen.py` | move fixed texts from the code into the ARB files, or set individual entries |
 | `tools/generate_audio_en.py` | record and pack the English audio pack (downloaded in the app) |
-| `tools/translations.py` | translation helper: skeleton, text export, import |
+| `tools/translations.py` | translation helper for English: skeleton, text export, import |
+| `translations/po/`, `translations/STATUS.md` | PO files for translators and the progress per language; refresh with `flutter test test/uebersetzung_test.dart --dart-define=PO=sync` ([guide](translations/README.md)) |
 | `tools/generate_covers.py` | regenerate the course images `assets/images/cover_NN.svg` |
 | `assets/images/diagram_*.svg` | illustrations (800×600) |
 

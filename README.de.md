@@ -200,7 +200,8 @@ prüft `dart run tools/relays_pruefen.dart`.
 | `lib/l10n/app_de.arb`, `app_en.arb` | Oberflächentexte (Flutter gen-l10n, Zugriff `t.<schlüssel>`); `test/oberflaeche_texte_test.dart` prüft Vollständigkeit |
 | `tools/l10n_umzug.py`, `tools/arb_setzen.py` | feste Texte aus dem Code in die ARB-Dateien ziehen bzw. einzelne Einträge setzen |
 | `tools/generate_audio_en.py` | englisches Audiopaket einsprechen und packen (Download in der App) |
-| `tools/translations.py` | Hilfe beim Übersetzen: Gerüst, Textauszug, Einspielen |
+| `tools/translations.py` | Hilfe beim Übersetzen ins Englische: Gerüst, Textauszug, Einspielen |
+| `translations/po/`, `translations/STATUS.md` | PO-Dateien für Übersetzer und der Fortschritt je Sprache; abgleichen mit `flutter test test/uebersetzung_test.dart --dart-define=PO=sync` ([Anleitung](translations/README.md)) |
 | `tools/generate_covers.py` | Kursbilder `assets/images/cover_NN.svg` neu erzeugen |
 | `assets/images/diagram_*.svg` | Anleitungsgrafiken (800×600) |
 

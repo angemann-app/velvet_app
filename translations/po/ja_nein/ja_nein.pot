@@ -1,0 +1,1297 @@
+# VelvetPulse: Ja/Nein/Vielleicht-Liste und Fantasie-Karten
+# Ausgangssprache Deutsch, Quelle: lib/models/yes_no_maybe_models.dart, lib/models/couple_channel_models.dart
+# Anleitung für Übersetzer / Guide for translators: translations/README.md
+# Enthält Inhalte über Sexualität für Erwachsene. / Contains adult content about sexuality.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VelvetPulse\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Source-Language: de\n"
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Sensuality & Senses
+msgctxt "ynm_cat:sensory_basics#title"
+msgid "Sinnlichkeit & Sinne"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Warmth, cold, skin, scent and sound – pleasure without a goal.
+msgctxt "ynm_cat:sensory_basics#description"
+msgid "Wärme, Kälte, Haut, Duft und Klang – Genuss ohne Ziel."
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Slow full-body massage with warm oil
+msgctxt "ynm:item_1#text"
+msgid "Langsame Ganzkörper-Massage mit warmem Öl"
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: One person lies down, the other massages – very slowly, with warmed oil and without a goal. Back, legs, belly, hands. It's about feeling, not foreplay. The receiving person decides whether the massage becomes intimate.
+msgctxt "ynm:item_1#explanation"
+msgid "Eine Person liegt, die andere massiert – ganz langsam, mit angewärmtem Öl und ohne Ziel. Rücken, Beine, Bauch, Hände. Es geht ums Spüren, nicht ums Vorspiel. Ob die Massage intim wird, bestimmt die empfangende Person."
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Playing with warmth and cold
+msgctxt "ynm:item_2#text"
+msgid "Spiel mit Wärme und Kälte"
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Alternating a chilled spoon, warm oil, a warm breath. The contrast wakes up the skin. Never put ice directly on mucous membranes and never for long in one spot.
+msgctxt "ynm:item_2#explanation"
+msgid "Abwechselnd ein gekühlter Löffel, warmes Öl, ein warmer Atemhauch. Der Kontrast macht die Haut wach. Eis nie direkt auf Schleimhäute und nie lange auf einer Stelle."
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Being touched while blindfolded
+msgctxt "ynm:item_3#text"
+msgid "Mit verbundenen Augen berührt werden"
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Without sight, touch and hearing become more intense, and the mind has less to judge. The blindfold must be removable by the wearer at any time.
+msgctxt "ynm:item_3#explanation"
+msgid "Ohne Sehen werden Tasten und Hören intensiver, und der Kopf hat weniger zu bewerten. Die Augenbinde muss sich jederzeit selbst abnehmen lassen."
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Humming or toning together to calm down
+msgctxt "ynm:item_4#text"
+msgid "Gemeinsam summen oder tönen, um zur Ruhe zu kommen"
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: A deep shared tone releases jaw, breath and pelvic floor. It sounds unusual, but connects strongly – and laughing while doing it is explicitly allowed.
+msgctxt "ynm:item_4#explanation"
+msgid "Ein tiefer gemeinsamer Ton löst Kiefer, Atem und Beckenboden. Klingt ungewohnt, verbindet aber stark – und ein Lachen dabei ist ausdrücklich erlaubt."
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Being stroked with a feather or soft brush
+msgctxt "ynm:item_5#text"
+msgid "Mit Feder oder weichem Pinsel gestreichelt werden"
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Feather-light touch on the neck, arms, back or inner thighs. Ticklish or electrifying – you only find out by trying.
+msgctxt "ynm:item_5#explanation"
+msgid "Federleichte Berührung an Hals, Armen, Rücken oder Innenschenkeln. Kitzelig oder elektrisierend – das findet man nur heraus, indem man es probiert."
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Bathing or showering together
+msgctxt "ynm:item_23#text"
+msgid "Zusammen baden oder duschen"
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Warm water relaxes, skin on skin becomes natural. A good way in for anyone who still finds nakedness in bed difficult.
+msgctxt "ynm:item_23#explanation"
+msgid "Warmes Wasser entspannt, Haut auf Haut wird selbstverständlich. Ein guter Einstieg für alle, denen Nacktheit im Bett noch schwerfällt."
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Setting up an evening deliberately: light, music, scent
+msgctxt "ynm:item_24#text"
+msgid "Einen Abend bewusst gestalten: Licht, Musik, Duft"
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Candles instead of the ceiling light, a shared playlist, a pleasant scent. A prepared room tells the nervous system: now it's time for us.
+msgctxt "ynm:item_24#explanation"
+msgid "Kerzen statt Deckenlicht, eine gemeinsame Playlist, ein angenehmer Duft. Ein vorbereiteter Raum sagt dem Nervensystem: Jetzt ist Zeit für uns."
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: Stroking the whole body – without genitals
+msgctxt "ynm:item_25#text"
+msgid "Streicheln am ganzen Körper – ohne Genitalien"
+msgstr ""
+
+#. Frage in „Sinnlichkeit & Sinne“: Aussage und Erklärung
+#. EN: The basic exercise of sensate focus: you touch each other everywhere, only breasts and genitals are left out. It takes all the pressure out and sharpens perception.
+msgctxt "ynm:item_25#explanation"
+msgid "Die Grundübung des Sensate Focus: Ihr berührt euch überall, nur Brüste und Genitalien bleiben ausgespart. Das nimmt jeden Druck heraus und schärft die Wahrnehmung."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Words & Communication
+msgctxt "ynm_cat:communication_mind#title"
+msgid "Worte & Kommunikation"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Speaking, whispering, writing – words as touch.
+msgctxt "ynm_cat:communication_mind#description"
+msgid "Sprechen, flüstern, schreiben – Worte als Berührung."
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Saying out loud what you feel while touching
+msgctxt "ynm:item_6#text"
+msgid "Beim Berühren laut sagen, was man spürt"
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Invent nothing, just describe: “I love how warm you are here.” Whoever says what is happening right now is fully in the moment and not in their head.
+msgctxt "ynm:item_6#explanation"
+msgid "Nichts erfinden, nur beschreiben: „Ich mag, wie warm du hier bist.“ Wer ausspricht, was gerade passiert, ist ganz im Moment und nicht im Kopf."
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Small erotic messages or sparks in everyday life
+msgctxt "ynm:item_7#text"
+msgid "Kleine erotische Nachrichten oder Funken im Alltag"
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: A sentence in the morning, a spark via the couple channel. Anticipation spread over the day – without a promise that it has to lead to something in the evening.
+msgctxt "ynm:item_7#explanation"
+msgid "Ein Satz am Vormittag, ein Funke über den Paar-Kanal. Vorfreude über den Tag verteilt – ohne Versprechen, dass daraus abends etwas werden muss."
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Reading or writing erotic scenes for each other
+msgctxt "ynm:item_8#text"
+msgid "Einander erotische Szenen vorlesen oder schreiben"
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Write a short scene and read it to the other – or read an erotic story together. Words act directly on the mental movie.
+msgctxt "ynm:item_8#explanation"
+msgid "Eine kurze Szene schreiben und dem anderen vorlesen – oder gemeinsam eine erotische Geschichte lesen. Worte wirken direkt aufs Kopfkino."
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: “Tell me what you want” – saying wishes out loud
+msgctxt "ynm:item_9#text"
+msgid "„Sag mir, was du willst“ – Wünsche laut aussprechen"
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Pause in the middle of the moment and ask the other to voice their wish. An invitation, not a test: “I don't know right now” is also a good answer.
+msgctxt "ynm:item_9#explanation"
+msgid "Mitten im Moment innehalten und den anderen bitten, seinen Wunsch auszusprechen. Eine Einladung, keine Prüfung: „Ich weiß es gerade nicht“ ist auch eine gute Antwort."
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Traffic-light words: green, yellow, red
+msgctxt "ynm:item_26#text"
+msgid "Ampel-Wörter: Grün, Gelb, Rot"
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Three simple words for in between: green means “keep going”, yellow “slower or different”, red “stop”. Makes feedback easy without breaking the mood.
+msgctxt "ynm:item_26#explanation"
+msgid "Drei einfache Wörter für zwischendurch: Grün heißt „weiter so“, Gelb „langsamer oder anders“, Rot „stopp“. Macht Rückmeldung leicht, ohne die Stimmung zu brechen."
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Compliments and praise in bed
+msgctxt "ynm:item_27#text"
+msgid "Komplimente und Lob im Bett"
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Saying what you like about the other – their body, their way, a touch. For many that's more arousing than any toy.
+msgctxt "ynm:item_27#explanation"
+msgid "Sagen, was einem am anderen gefällt – am Körper, an der Art, an einer Berührung. Für viele ist das erregender als jedes Spielzeug."
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: Telling fantasies without acting them out
+msgctxt "ynm:item_28#text"
+msgid "Fantasien erzählen, ohne sie umzusetzen"
+msgstr ""
+
+#. Frage in „Worte & Kommunikation“: Aussage und Erklärung
+#. EN: A fantasy is an image in the mind, not an instruction. Sharing it can be very connecting – whether any of it ever becomes reality is a completely different question.
+msgctxt "ynm:item_28#explanation"
+msgid "Eine Fantasie ist ein Bild im Kopf, kein Auftrag. Sie zu teilen kann sehr verbindend sein – ob je etwas davon Wirklichkeit wird, ist eine ganz andere Frage."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Touch & Hands
+msgctxt "ynm_cat:touch_techniques#title"
+msgid "Berührung & Hände"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Techniques for vulva and penis – slow, conscious, to enjoy.
+msgctxt "ynm_cat:touch_techniques#description"
+msgid "Techniken für Vulva und Penis – langsam, bewusst, zum Genießen."
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: Circling: first the surroundings, then the centre
+msgctxt "ynm:item_29#text"
+msgid "Umkreisen: erst die Umgebung, dann das Zentrum"
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: Instead of going straight to the most sensitive spot, the hand wanders around it in wide circles. With the vulva over the mons and labia, with the penis over the root, groin and perineum. The tip becomes more receptive by itself.
+msgctxt "ynm:item_29#explanation"
+msgid "Statt direkt auf die empfindlichste Stelle zu gehen, wandert die Hand in weiten Kreisen um sie herum. Bei der Vulva über Venushügel und Schamlippen, beim Penis über Wurzel, Leisten und Damm. Die Spitze wird so von selbst empfänglicher."
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: Flat fingers instead of a fingertip
+msgctxt "ynm:item_30#text"
+msgid "Flache Finger statt Fingerspitze"
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: Two fingers lie flat and soft instead of rubbing at one point. For many this feels full and safe instead of sharp and glaring – for the clitoris as for the frenulum of the penis.
+msgctxt "ynm:item_30#explanation"
+msgid "Zwei Finger liegen flach und weich auf, statt punktuell zu reiben. Das fühlt sich für viele satt und sicher an statt spitz und grell – gilt für Klitoris wie für das Bändchen am Penis."
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: When it's good: keep going exactly like that
+msgctxt "ynm:item_31#text"
+msgid "Wenn es gut ist: genau so weitermachen"
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: When a touch works, pace, pressure and spot stay the same – not faster, not firmer. A common wish that is rarely fulfilled.
+msgctxt "ynm:item_31#explanation"
+msgid "Wenn eine Berührung wirkt, bleiben Tempo, Druck und Stelle gleich – nicht schneller, nicht fester. Ein häufiger Wunsch, der selten erfüllt wird."
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: Waves: letting arousal rise and fall again
+msgctxt "ynm:item_32#text"
+msgid "Wellen: Erregung steigen und wieder sinken lassen"
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: Just before orgasm, take the pace out, breathe calmly, let arousal sink a little and build it up again. Orgasm is often deeper afterwards – and it doesn't have to come at all.
+msgctxt "ynm:item_32#explanation"
+msgid "Kurz vor dem Höhepunkt Tempo herausnehmen, ruhig atmen, die Erregung etwas sinken lassen und wieder aufbauen. Oft wird der Höhepunkt danach tiefer – und er muss gar nicht kommen."
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: An open, oiled hand on the penis instead of a tight fist
+msgctxt "ynm:item_33#text"
+msgid "Offene, eingeölte Hand am Penis statt fester Faust"
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: With plenty of lubricant and a flat hand, or both hands on either side of the shaft. Finer than the usual grip – and exactly that sharpens sensation again.
+msgctxt "ynm:item_33#explanation"
+msgid "Mit viel Gleitmittel und der flachen Hand oder beiden Händen links und rechts am Schaft. Feiner als der gewohnte Griff – und genau das schärft die Empfindung wieder."
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: Including the root, testicles and perineum
+msgctxt "ynm:item_34#text"
+msgid "Wurzel, Hoden und Damm mit einbeziehen"
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: A large part of the erectile tissue lies hidden beneath the pubic bone and perineum. Touch there makes arousal broader and calmer instead of concentrating it at the tip.
+msgctxt "ynm:item_34#explanation"
+msgid "Ein großer Teil der Schwellkörper liegt verborgen unter Schambein und Damm. Berührung dort macht Erregung breiter und ruhiger, statt sie an der Spitze zu bündeln."
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: Showing each other how you touch yourselves
+msgctxt "ynm:item_35#text"
+msgid "Einander zeigen, wie man sich selbst berührt"
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: The quickest way to learn what the other likes: watch how they do it themselves – or place your own hand on the other's hand and guide it.
+msgctxt "ynm:item_35#explanation"
+msgid "Die schnellste Art zu lernen, was der andere mag: zuschauen, wie er oder sie es selbst macht – oder die eigene Hand auf die Hand des anderen legen und führen."
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: Several calm stimuli at the same time
+msgctxt "ynm:item_63#text"
+msgid "Mehrere ruhige Reize gleichzeitig"
+msgstr ""
+
+#. Frage in „Berührung & Hände“: Aussage und Erklärung
+#. EN: A steady movement outside, calm holding from inside or a heavy hand on the belly or chest, plus audible breathing. Lots of fullness leaves the brooding mind no room.
+msgctxt "ynm:item_63#explanation"
+msgid "Eine gleichmäßige Bewegung außen, ruhiger Halt von innen oder eine schwere Hand auf Bauch oder Brust, dazu ein hörbarer Atem. Viel Fülle lässt dem grübelnden Kopf keinen Platz."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Mouth & Kissing
+msgctxt "ynm_cat:mouth_kissing#title"
+msgid "Mund & Küssen"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Lips, tongue and breath – from the kiss to oral pampering.
+msgctxt "ynm_cat:mouth_kissing#description"
+msgid "Lippen, Zunge und Atem – vom Kuss bis zur oralen Verwöhnung."
+msgstr ""
+
+#. Frage in „Mund & Küssen“: Aussage und Erklärung
+#. EN: Long, slow kisses – without it having to lead to more
+msgctxt "ynm:item_36#text"
+msgid "Lange, langsame Küsse – ohne dass mehr daraus werden muss"
+msgstr ""
+
+#. Frage in „Mund & Küssen“: Aussage und Erklärung
+#. EN: Kissing as an event in itself, not as a prelude. Taking your time often reveals how much arousal lies in the mouth and breath alone.
+msgctxt "ynm:item_36#explanation"
+msgid "Küssen als eigenes Ereignis, nicht als Auftakt. Wer sich Zeit nimmt, merkt oft erst, wie viel Erregung allein im Mund und im Atem steckt."
+msgstr ""
+
+#. Frage in „Mund & Küssen“: Aussage und Erklärung
+#. EN: Being pampered with lips and tongue (vulva)
+msgctxt "ynm:item_37#text"
+msgid "Mit Lippen und Zunge verwöhnt werden (Vulva)"
+msgstr ""
+
+#. Frage in „Mund & Küssen“: Aussage und Erklärung
+#. EN: Slowly, with a flat, soft tongue, first around the clitoris rather than directly on it. Consistency beats speed. The receiving person leads.
+msgctxt "ynm:item_37#explanation"
+msgid "Langsam, mit flacher, weicher Zunge, erst rund um die Klitoris statt direkt darauf. Gleichmäßigkeit schlägt Tempo. Die empfangende Person führt."
+msgstr ""
+
+#. Frage in „Mund & Küssen“: Aussage und Erklärung
+#. EN: Being pampered with lips and tongue (penis)
+msgctxt "ynm:item_38#text"
+msgid "Mit Lippen und Zunge verwöhnt werden (Penis)"
+msgstr ""
+
+#. Frage in „Mund & Küssen“: Aussage und Erklärung
+#. EN: With time and without a goal: lips, tongue and hand alternating, root and testicles included. Ejaculation isn't a must – agree beforehand what's okay.
+msgctxt "ynm:item_38#explanation"
+msgid "Mit Zeit und ohne Ziel: Lippen, Zunge und Hand im Wechsel, Wurzel und Hoden einbezogen. Ein Samenerguss ist kein Muss – sprecht vorher ab, was okay ist."
+msgstr ""
+
+#. Frage in „Mund & Küssen“: Aussage und Erklärung
+#. EN: Kisses all over the body: neck, back, inner thighs
+msgctxt "ynm:item_39#text"
+msgid "Küsse am ganzen Körper: Hals, Rücken, Innenschenkel"
+msgstr ""
+
+#. Frage in „Mund & Küssen“: Aussage und Erklärung
+#. EN: Wander slowly over the body and discover spots that are usually forgotten – the nape of the neck, the backs of the knees, the skin above the pelvis.
+msgctxt "ynm:item_39#explanation"
+msgid "Langsam über den Körper wandern und Stellen entdecken, die sonst vergessen werden – Nacken, Kniekehlen, die Haut über dem Becken."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Positions & Movement
+msgctxt "ynm_cat:positions_movement#title"
+msgid "Stellungen & Bewegung"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Rocking instead of thrusting – positions for closeness and relaxation.
+msgctxt "ynm_cat:positions_movement#description"
+msgid "Wiegen statt Stoßen – Positionen für Nähe und Entspannung."
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: High merge: rocking instead of thrusting
+msgctxt "ynm:item_22#text"
+msgid "Hohe Verschmelzung: wiegen statt stoßen"
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: In the missionary position he slides a little higher so that his pubic bone lies flat against the clitoris. Instead of in and out, an even rocking – more contact, less pressure.
+msgctxt "ynm:item_22#explanation"
+msgid "In der Missionarsstellung rutscht er etwas höher, sodass sein Schambein flächig auf der Klitoris liegt. Statt Rein und Raus ein gleichmäßiges Wiegen – mehr Kontakt, weniger Druck."
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: Spooning: on your sides, close together
+msgctxt "ynm:item_40#text"
+msgid "Löffelchen: seitlich und eng aneinander"
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: Both lie on their sides, nobody has to hold weight. The front hand is free for the breast or clitoris. Ideal for slow, relaxed moments.
+msgctxt "ynm:item_40#explanation"
+msgid "Beide liegen auf der Seite, niemand muss Gewicht halten. Die vordere Hand ist frei für Brust oder Klitoris. Ideal für langsame, entspannte Momente."
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: Sitting on top and circling the pelvis
+msgctxt "ynm:item_41#text"
+msgid "Oben sitzen und das Becken kreisen lassen"
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: Whoever is on top decides pace, depth and angle. Circling and grinding instead of up and down feels more intense for many and is more relaxed for both.
+msgctxt "ynm:item_41#explanation"
+msgid "Wer oben ist, bestimmt Tempo, Tiefe und Winkel. Kreisen und Reiben statt Auf und Ab fühlt sich für viele intensiver an und ist für beide entspannter."
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: Sex in slow motion
+msgctxt "ynm:item_42#text"
+msgid "Sex in Zeitlupe"
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: Slow your usual pace to a tenth. Every movement can be felt individually, and the pressure of coming too soon gets quieter.
+msgctxt "ynm:item_42#explanation"
+msgid "Das gewohnte Tempo auf ein Zehntel drosseln. Jede Bewegung wird einzeln spürbar, und der Druck, zu früh zu kommen, wird leiser."
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: Resting inside each other without moving
+msgctxt "ynm:item_43#text"
+msgid "Ineinander ruhen, ohne sich zu bewegen"
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: Stay connected and simply breathe, kiss, feel. Sounds unspectacular – for many it's one of the most intimate moments of all.
+msgctxt "ynm:item_43#explanation"
+msgid "Verbunden bleiben und einfach atmen, küssen, spüren. Klingt unspektakulär – ist für viele einer der intimsten Momente überhaupt."
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: She decides every millimetre during penetration
+msgctxt "ynm:item_44#text"
+msgid "Sie bestimmt beim Eindringen jeden Millimeter"
+msgstr ""
+
+#. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
+#. EN: He doesn't move, she leads and sinks at her own pace. Especially helpful with a tense pelvic floor or if penetration has hurt before.
+msgctxt "ynm:item_44#explanation"
+msgid "Er bewegt sich nicht, sie führt und sinkt in ihrem Tempo. Besonders hilfreich bei einem angespannten Beckenboden oder wenn Eindringen schon einmal wehgetan hat."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Leading & Surrender
+msgctxt "ynm_cat:power_dynamics#title"
+msgid "Führung & Hingabe"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Who leads, who receives – playing with control, always consensual.
+msgctxt "ynm_cat:power_dynamics#description"
+msgid "Wer führt, wer empfängt – Spiel mit Kontrolle, immer einvernehmlich."
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: Having your wrists held gently
+msgctxt "ynm:item_10#text"
+msgid "Handgelenke sanft festhalten lassen"
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: The hands lie above the head and mustn't move – that takes away performance pressure for many. At first only with the other's hands; cloths only loosely and never around the neck.
+msgctxt "ynm:item_10#explanation"
+msgid "Die Hände liegen über dem Kopf und dürfen sich nicht bewegen – das nimmt vielen den Leistungsdruck. Anfangs nur mit den Händen des anderen; Tücher nur locker und nie am Hals."
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: Receiving clear instructions
+msgctxt "ynm:item_11#text"
+msgid "Klare Anweisungen bekommen"
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: “Lie down.” “Don't move.” Calm, firm instructions give support and take decisions away. Discuss beforehand which tone feels good.
+msgctxt "ynm:item_11#explanation"
+msgid "„Leg dich hin.“ „Nicht bewegen.“ Ruhige, bestimmte Ansagen geben Halt und nehmen Entscheidungen ab. Vorher besprechen, welcher Ton angenehm ist."
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: Giving up control completely
+msgctxt "ynm:item_12#text"
+msgid "Die Kontrolle ganz abgeben"
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: For an agreed time, not having to decide anything, only receive. With a safeword and a sign without words that applies immediately.
+msgctxt "ynm:item_12#explanation"
+msgid "Für eine vereinbarte Zeit nichts entscheiden müssen, nur empfangen. Mit Stoppwort und einem Zeichen ohne Worte, das sofort gilt."
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: Taking the lead
+msgctxt "ynm:item_13#text"
+msgid "Die Führung übernehmen"
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: You decide the pace and sequence and read closely how your partner reacts. Whoever leads carries responsibility: check in now and then, respect the safeword.
+msgctxt "ynm:item_13#explanation"
+msgid "Du bestimmst Tempo und Ablauf und liest genau, wie dein Gegenüber reagiert. Wer führt, trägt Verantwortung: zwischendurch nachfragen, Stoppwort achten."
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: Light spanks on the bottom
+msgctxt "ynm:item_45#text"
+msgid "Leichte Klapse auf den Po"
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: Playfully, with a flat hand and only on the fleshy parts of the bottom – never on the spine or kidneys. Increase slowly and pay attention to feedback.
+msgctxt "ynm:item_45#explanation"
+msgid "Spielerisch, mit flacher Hand und nur auf die fleischigen Stellen des Pos – nie auf Wirbelsäule oder Nieren. Langsam steigern und auf Rückmeldung achten."
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: The other decides when orgasm may come
+msgctxt "ynm:item_46#text"
+msgid "Der andere bestimmt, wann der Höhepunkt kommen darf"
+msgstr ""
+
+#. Frage in „Führung & Hingabe“: Aussage und Erklärung
+#. EN: A teasing game: the leading person lets arousal rise and fall several times before saying “now”. Combines the wave technique with surrender.
+msgctxt "ynm:item_46#explanation"
+msgid "Ein Spiel mit Hinhalten: Die führende Person lässt die Erregung mehrmals steigen und wieder sinken, bevor sie „jetzt“ sagt. Verbindet Wellen-Technik mit Hingabe."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Intimate Massage, Prostate & Perineum
+msgctxt "ynm_cat:deep_somatics#title"
+msgid "Intim-Massage, Prostata & Damm"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Careful exploration with plenty of time and no goal.
+msgctxt "ynm_cat:deep_somatics#description"
+msgid "Behutsame Erkundung mit viel Zeit und ohne Ziel."
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: Yoni massage: long, purposeless massage of the vulva
+msgctxt "ynm:item_14#text"
+msgid "Yoni-Massage: lange, absichtslose Massage der Vulva"
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: One person receives, the other massages – first belly and inner thighs, then the vulva, inside only after an explicit yes. Orgasm is not a goal.
+msgctxt "ynm:item_14#explanation"
+msgid "Eine Person empfängt, die andere massiert – erst Bauch und Innenschenkel, dann die Vulva, innen nur nach ausdrücklichem Ja. Ein Höhepunkt ist kein Ziel."
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: Lingam massage: long, purposeless massage of the penis
+msgctxt "ynm:item_15#text"
+msgid "Lingam-Massage: lange, absichtslose Massage des Penis"
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: From the base to the tip, also when soft. Without any expectation of erection or ejaculation – exactly that lets many men let go completely for the first time.
+msgctxt "ynm:item_15#explanation"
+msgid "Von der Basis bis zur Spitze, auch im weichen Zustand. Ohne Erwartung an Erektion oder Samenerguss – genau das lässt viele Männer zum ersten Mal ganz loslassen."
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: Perineum massage from the outside
+msgctxt "ynm:item_16#text"
+msgid "Damm-Massage von außen"
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: Gentle, circling pressure on the skin between testicles and anus. Reaches the root of the erectile tissue and the prostate from the outside – a low-shame way in.
+msgctxt "ynm:item_16#explanation"
+msgid "Sanfter, kreisender Druck auf die Haut zwischen Hoden und After. Erreicht Schwellkörperwurzel und Prostata von außen – ein schamarmer Einstieg."
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: Exploring the prostate from inside
+msgctxt "ynm:item_17#text"
+msgid "Prostata von innen erkunden"
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: With plenty of lubricant, short nails and patience: the finger glides in on the exhale, rests, and then strokes gently over the prostate. Pain always means stop.
+msgctxt "ynm:item_17#explanation"
+msgid "Mit viel Gleitmittel, kurzen Nägeln und Geduld: Der Finger gleitet beim Ausatmen hinein, ruht, und streicht dann sanft über die Prostata. Schmerz heißt immer stopp."
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: Stamina training: pausing in time
+msgctxt "ynm:item_18#text"
+msgid "Ausdauer-Training: rechtzeitig innehalten"
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: Read your own arousal early and pause at about seven out of ten, instead of only just before the point of no return. Well researched and also playable together.
+msgctxt "ynm:item_18#explanation"
+msgid "Die eigene Erregung früh lesen und bei etwa sieben von zehn pausieren, statt erst kurz vor dem Punkt ohne Rückkehr. Gut untersucht und auch zu zweit spielbar."
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: Exploring the front vaginal wall (G-area)
+msgctxt "ynm:item_47#text"
+msgid "Die vordere Vaginalwand (G-Zone) erkunden"
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: One or two fingers, tip towards the navel, a slow come-hither movement. Some find this very deep, others neutral – both are normal.
+msgctxt "ynm:item_47#explanation"
+msgid "Ein oder zwei Finger, Kuppe Richtung Bauchnabel, eine langsame Komm-her-Bewegung. Manche empfinden das als sehr tief, andere als neutral – beides ist normal."
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: Trying orgasm without ejaculation
+msgctxt "ynm:item_48#text"
+msgid "Höhepunkt ohne Samenerguss ausprobieren"
+msgstr ""
+
+#. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
+#. EN: With practice, orgasmic waves can be experienced without ejaculating. Not a must and not a new performance standard – an experiment.
+msgctxt "ynm:item_48#explanation"
+msgid "Mit Übung lassen sich orgastische Wellen erleben, ohne zu ejakulieren. Kein Muss und kein neuer Leistungsmaßstab – ein Experiment."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Toys & Aids
+msgctxt "ynm_cat:toys_aids#title"
+msgid "Spielzeug & Hilfsmittel"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Lubricant, vibrators and more – as an enrichment, not a replacement.
+msgctxt "ynm_cat:toys_aids#description"
+msgid "Gleitmittel, Vibratoren und Co. – als Bereicherung, nicht als Ersatz."
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: Lubricant as a natural part of things
+msgctxt "ynm:item_49#text"
+msgid "Gleitmittel als selbstverständlicher Teil"
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: Not a sign of “too little desire”, but a pleasure enhancer. Water-based goes with everything; silicone lasts longer, but not with silicone toys. Oil doesn't mix with latex condoms.
+msgctxt "ynm:item_49#explanation"
+msgid "Kein Zeichen von „zu wenig Lust“, sondern ein Genussmittel. Wasserbasiert passt zu allem; Silikon hält länger, aber nicht mit Silikonspielzeug. Öl verträgt sich nicht mit Latexkondomen."
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: A lay-on vibrator during sex together
+msgctxt "ynm:item_50#text"
+msgid "Ein Auflegevibrator beim gemeinsamen Sex"
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: Many women come more easily during sex when the clitoris is additionally stimulated evenly. A small vibrator is a fellow player here, not competition.
+msgctxt "ynm:item_50#explanation"
+msgid "Viele Frauen kommen beim Sex leichter, wenn die Klitoris zusätzlich gleichmäßig stimuliert wird. Ein kleiner Vibrator ist dabei Mitspieler, keine Konkurrenz."
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: A cock ring
+msgctxt "ynm:item_51#text"
+msgid "Ein Penisring"
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: A stretchy ring at the base of the penis keeps blood in the erectile tissue a little longer. Only soft, stretchy rings and for about 20 minutes at most – take it off immediately with numbness or pain.
+msgctxt "ynm:item_51#explanation"
+msgid "Ein dehnbarer Ring an der Peniswurzel hält das Blut etwas länger im Schwellkörper. Nur weiche, dehnbare Ringe und höchstens etwa 20 Minuten – bei Taubheit oder Schmerz sofort ab."
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: Massage candle or warmed massage oil
+msgctxt "ynm:item_52#text"
+msgid "Massagekerze oder angewärmtes Massageöl"
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: A massage candle melts into warm oil – only use candles made for this, and test the oil on your wrist first.
+msgctxt "ynm:item_52#explanation"
+msgid "Eine Massagekerze schmilzt zu warmem Öl – nur Kerzen nehmen, die dafür gemacht sind, und das Öl vorher am Handgelenk testen."
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: Anal toys
+msgctxt "ynm:item_53#text"
+msgid "Analspielzeug"
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: Only toys with a flared base made specifically for anal use, made of silicone, with plenty of lubricant. Slowly, on the exhale, and pain means stop.
+msgctxt "ynm:item_53#explanation"
+msgid "Nur Spielzeug mit breitem Fuß und speziell für anale Nutzung, aus Silikon, mit viel Gleitmittel. Langsam, beim Ausatmen, und Schmerz heißt stopp."
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: Choosing a toy together
+msgctxt "ynm:item_54#text"
+msgid "Gemeinsam ein Spielzeug aussuchen"
+msgstr ""
+
+#. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
+#. EN: Browsing together is already anticipation – and along the way you find out what appeals to the other.
+msgctxt "ynm:item_54#explanation"
+msgid "Zusammen stöbern ist schon Vorfreude – und ihr findet nebenbei heraus, was den anderen reizt."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Roles, Places & Settings
+msgctxt "ynm_cat:roles_settings#title"
+msgid "Rollen, Orte & Kulissen"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Out of the routine – with new roles, times and spaces.
+msgctxt "ynm_cat:roles_settings#description"
+msgid "Raus aus der Routine – mit neuen Rollen, Zeiten und Räumen."
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: Role play: two strangers meeting in a bar
+msgctxt "ynm:item_19#text"
+msgid "Rollenspiel: zwei Fremde, die sich in einer Bar kennenlernen"
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: Go separately, pretend to see each other for the first time, flirt – and take each other home. The appeal lies in a new view of the familiar person.
+msgctxt "ynm:item_19#explanation"
+msgid "Getrennt hingehen, so tun, als sähe man sich zum ersten Mal, flirten – und sich gemeinsam nach Hause nehmen. Der Reiz liegt im neuen Blick auf den vertrauten Menschen."
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: Intimacy in unusual places
+msgctxt "ynm:item_20#text"
+msgid "Intimität an ungewöhnlichen Orten"
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: The living room floor, the kitchen, the garden in the dark – as long as it's new. Important: only where nobody can see you unintentionally. Sex in public is a criminal offence in many countries.
+msgctxt "ynm:item_20#explanation"
+msgid "Wohnzimmerboden, Küche, Garten im Dunkeln – Hauptsache neu. Wichtig: nur dort, wo euch niemand unfreiwillig sehen kann. Sex in der Öffentlichkeit ist strafbar."
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: Lingerie, dressing up or a special outfit
+msgctxt "ynm:item_21#text"
+msgid "Dessous, Verkleidung oder eine besondere Garderobe"
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: Wearing something you'd otherwise never wear – for the other or for yourself. Often it works above all on the person wearing it.
+msgctxt "ynm:item_21#explanation"
+msgid "Etwas tragen, das man sonst nie trägt – für den anderen oder für sich selbst. Oft wirkt es vor allem auf die Person, die es trägt."
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: A night in a hotel just for you
+msgctxt "ynm:item_55#text"
+msgid "Eine Nacht im Hotel nur für euch"
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: No everyday life, no laundry, no phone on the bedside table. An unfamiliar room makes many things easier.
+msgctxt "ynm:item_55#explanation"
+msgid "Kein Alltag, keine Wäsche, kein Handy auf dem Nachttisch. Ein fremder Raum macht vieles leichter."
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: In the morning, half asleep
+msgctxt "ynm:item_56#text"
+msgid "Morgens im Halbschlaf"
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: Still warm and soft, slowly nestled together. Agree beforehand whether you'd like to be woken like this.
+msgctxt "ynm:item_56#explanation"
+msgid "Noch warm und weich, langsam aneinandergeschmiegt. Vorher absprechen, ob man so geweckt werden möchte."
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: An evening with a rule, for example: only kissing
+msgctxt "ynm:item_57#text"
+msgid "Ein Abend mit Regel, zum Beispiel: nur küssen"
+msgstr ""
+
+#. Frage in „Rollen, Orte & Kulissen“: Aussage und Erklärung
+#. EN: A clear limit for the evening – only kissing, only hands, no sex. Precisely the prohibition often makes it especially exciting.
+msgctxt "ynm:item_57#explanation"
+msgid "Eine klare Grenze für den Abend – nur küssen, nur Hände, kein Sex. Gerade das Verbot macht ihn oft besonders aufregend."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Fantasy & Watching
+msgctxt "ynm_cat:fantasy_watching#title"
+msgid "Fantasie & Zuschauen"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste
+#. EN: Enjoying with the eyes, sharing mental movies.
+msgctxt "ynm_cat:fantasy_watching#description"
+msgid "Mit den Augen genießen, Kopfkino teilen."
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: Watching the other touch themselves
+msgctxt "ynm:item_58#text"
+msgid "Zusehen, wie der andere sich selbst berührt"
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: One person touches themselves slowly, the other lies beside them, watches and may kiss. Very intimate – and a lesson in what the other likes.
+msgctxt "ynm:item_58#explanation"
+msgid "Eine Person berührt sich langsam, die andere liegt daneben, schaut zu und darf küssen. Sehr intim – und eine Lehrstunde darin, was dem anderen gefällt."
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: Undressing each other slowly or a little striptease
+msgctxt "ynm:item_59#text"
+msgid "Einander langsam ausziehen oder ein kleiner Striptease"
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: No show, just taking time and being seen. Music helps, and so does laughing.
+msgctxt "ynm:item_59#explanation"
+msgid "Keine Show, nur Zeit lassen und gesehen werden. Musik hilft, ein Lachen auch."
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: A mirror in view
+msgctxt "ynm:item_60#text"
+msgid "Ein Spiegel im Blick"
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: Seeing yourself and the other during sex. Very arousing for some, distracting for others – that's exactly the question.
+msgctxt "ynm:item_60#explanation"
+msgid "Sich selbst und den anderen beim Sex sehen. Für manche sehr erregend, für andere lenkt es ab – genau das ist die Frage."
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: Listening to or reading an erotic story together
+msgctxt "ynm:item_61#text"
+msgid "Gemeinsam eine erotische Geschichte hören oder lesen"
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: An audiobook or a short story as a prelude. Someone else's images in your head, your own hands on the skin.
+msgctxt "ynm:item_61#explanation"
+msgid "Ein Hörbuch oder eine Kurzgeschichte als Auftakt. Fremde Bilder im Kopf, eigene Hände auf der Haut."
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: Private photos for each other
+msgctxt "ynm:item_62#text"
+msgid "Private Fotos füreinander"
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: Only with explicit consent, only for the two of you. Agree beforehand where the pictures are stored and when they'll be deleted. Leaving out faces adds protection.
+msgctxt "ynm:item_62#explanation"
+msgid "Nur mit ausdrücklichem Einverständnis, nur für euch. Vorher klären, wo die Bilder liegen und wann sie gelöscht werden. Gesichter weglassen schützt zusätzlich."
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: Watching porn together
+msgctxt "ynm:item_64#text"
+msgid "Gemeinsam einen Porno schauen"
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: Together on the sofa or in bed, as inspiration or simply out of curiosity. Choose the film together; either of you may say no or switch it off at any time. Porn is staged: the bodies, stamina and pace there are no yardstick for you. Many people prefer films made fairly and with performers who consent to their work.
+msgctxt "ynm:item_64#explanation"
+msgid "Zusammen auf dem Sofa oder im Bett, als Anregung oder einfach aus Neugier. Sucht den Film gemeinsam aus; jede und jeder darf jederzeit Nein sagen oder umschalten. Pornos sind inszeniert: Körper, Ausdauer und Tempo dort sind kein Maßstab für euch. Viele mögen Filme, die fair und mit einvernehmlich arbeitenden Darstellerinnen und Darstellern gedreht sind."
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: Visiting a swingers' club together – just the two of you, being watched allowed
+msgctxt "ynm:item_65#text"
+msgid "Zusammen einen Swingerclub besuchen – nur ihr zwei, beobachtet werden erlaubt"
+msgstr ""
+
+#. Frage in „Fantasie & Zuschauen“: Aussage und Erklärung
+#. EN: It's not about opening the relationship, but about the thrill of being seen. You stay among yourselves: nobody joins in, at most others may watch. Agree beforehand exactly what's okay for you, and set a sign you can use to leave at any time. Say clearly in the club that you're staying among yourselves – a no counts there like everywhere.
+msgctxt "ynm:item_65#explanation"
+msgid "Es geht nicht darum, die Beziehung zu öffnen, sondern um den Reiz, gesehen zu werden. Ihr bleibt unter euch: Niemand macht mit, höchstens dürfen andere zuschauen. Sprecht vorher genau ab, was für euch in Ordnung ist, und vereinbart ein Zeichen, mit dem ihr jederzeit geht. Sagt im Club klar, dass ihr unter euch bleibt – ein Nein gilt dort wie überall."
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste (nur im Spicy-Modus)
+#. EN: Spicy
+msgctxt "ynm_cat:spicy#title"
+msgid "Spicy"
+msgstr ""
+
+#. Kategorie der Ja/Nein/Vielleicht-Liste (nur im Spicy-Modus)
+#. EN: Spicy mode only: hotter, more direct, bolder.
+msgctxt "ynm_cat:spicy#description"
+msgid "Nur im Spicy-Modus: heißer, direkter, mutiger."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Dirty talk: saying out loud in bed what you want and do
+msgctxt "ynm:item_66#text"
+msgid "Dirty Talk: im Bett aussprechen, was man will und tut"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: From describing (“That feels so good”) through wishes to commands. Agree beforehand which words turn you on and which are off limits.
+msgctxt "ynm:item_66#explanation"
+msgid "Vom Beschreiben („Das fühlt sich so gut an“) über Wünsche bis zu Ansagen. Klärt vorher, welche Wörter euch anmachen und welche tabu sind."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Edging for two: stopping just before climax, several times
+msgctxt "ynm:item_67#text"
+msgid "Edging zu zweit: mehrmals kurz vor dem Höhepunkt aufhören"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: One person brings the other to the edge, pauses and starts again. Whoever receives says “now”; the stop word ends everything.
+msgctxt "ynm:item_67#explanation"
+msgid "Eine Person bringt die andere bis an die Kante, hält inne und beginnt von vorn. Wer empfängt, sagt „jetzt“, das Stoppwort beendet alles."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Oral sex all the way to climax
+msgctxt "ynm:item_68#text"
+msgid "Oralsex bis zum Höhepunkt"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: With lips, tongue and hand to the end. Agree beforehand whether coming in the mouth is okay. Without tests and exclusivity, condoms or dental dams protect you.
+msgctxt "ynm:item_68#explanation"
+msgid "Mit Lippen, Zunge und Hand bis zum Ende. Vorher klären, ob Kommen im Mund in Ordnung ist. Ohne Tests und Exklusivität schützen Kondom oder Lecktuch."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Pleasuring each other with your mouths at the same time (69)
+msgctxt "ynm:item_69#text"
+msgid "Gleichzeitig mit dem Mund verwöhnen (69)"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Both give and receive at once. For some the hottest thing of all, for others too much at once – that's exactly the question.
+msgctxt "ynm:item_69#explanation"
+msgid "Beide geben und empfangen zugleich. Für manche das Heißeste überhaupt, für andere zu viel auf einmal – genau das ist die Frage."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Being tied to the bed with scarves or soft cuffs
+msgctxt "ynm:item_70#text"
+msgid "Mit Tüchern oder weichen Fesseln ans Bett gebunden werden"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Never anything around the neck, two fingers of room at the wrists, scissors within reach, and whoever is tied up is never left alone.
+msgctxt "ynm:item_70#explanation"
+msgid "Nie etwas um den Hals, zwei Finger Platz an den Handgelenken, eine Schere griffbereit, und wer gefesselt ist, wird nie allein gelassen."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Blindfolded and surprised: mouth, hands, ice cubes
+msgctxt "ynm:item_71#text"
+msgid "Augen verbunden und überrascht werden: Mund, Hände, Eiswürfel"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: If you can't see, you feel more. Whoever gives alternates between warm breath, cold fingers and pauses.
+msgctxt "ynm:item_71#explanation"
+msgid "Wer nichts sieht, spürt mehr. Wer gibt, wechselt zwischen warmem Atem, kalten Fingern und Pausen."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: A remote-controlled toy, with your partner holding the remote
+msgctxt "ynm:item_72#text"
+msgid "Ein ferngesteuertes Toy, die Fernbedienung hat das Gegenüber"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: At home or, if you dare, out and about. With app-controlled toys, check the privacy settings first.
+msgctxt "ynm:item_72#explanation"
+msgid "Zu Hause oder, wenn ihr euch traut, unterwegs. Bei Toys mit App vorher die Datenschutz-Einstellungen anschauen."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Adding a vibrator during oral sex or sex
+msgctxt "ynm:item_73#text"
+msgid "Einen Vibrator beim Oralsex oder Sex dazunehmen"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Not a rival but a playmate. Whoever receives decides spot and strength.
+msgctxt "ynm:item_73#explanation"
+msgid "Kein Konkurrent, sondern ein Mitspieler. Wer empfängt, bestimmt Stelle und Stärke."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Anal sex with plenty of time and lube
+msgctxt "ynm:item_74#text"
+msgid "Analsex mit viel Zeit und Gleitmittel"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Slowly, with lots of lube and preparation with fingers or a small toy. Whoever receives sets every pace. Pain means stop immediately.
+msgctxt "ynm:item_74#explanation"
+msgid "Langsam, mit reichlich Gleitmittel und Vorbereitung durch Finger oder ein kleines Toy. Wer empfängt, bestimmt jedes Tempo. Schmerz heißt sofort aufhören."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: A quickie: fast, spontaneous, anywhere in the flat
+msgctxt "ynm:item_75#text"
+msgid "Ein Quickie: schnell, spontan, irgendwo in der Wohnung"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: No foreplay programme, just desire in the moment. Kitchen, hallway, sofa. A look is enough as a question, a no is enough as an answer.
+msgctxt "ynm:item_75#explanation"
+msgid "Kein Vorspiel-Programm, nur Lust im Moment. Küche, Flur, Sofa. Ein Blick reicht als Frage, ein Nein reicht als Antwort."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Being in complete charge for an agreed half hour
+msgctxt "ynm:item_76#text"
+msgid "Für eine verabredete halbe Stunde ganz bestimmen dürfen"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: One person leads, the other follows. Lists beforehand: wanted, maybe, off limits. Afterwards, time for closeness and a few words.
+msgctxt "ynm:item_76#explanation"
+msgid "Eine Person führt, die andere folgt. Vorher Listen: erwünscht, vielleicht, tabu. Danach Zeit für Nähe und ein paar Worte."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Spanking with the hand, harder than a pat
+msgctxt "ynm:item_77#text"
+msgid "Spanking mit der Hand, fester als ein Klaps"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Only on the buttocks, never on the back or kidneys. Build up slowly and stroke in between. The traffic light helps: green, yellow, red.
+msgctxt "ynm:item_77#explanation"
+msgid "Nur auf die Pobacken, nie auf Rücken oder Nieren. Langsam steigern und zwischendurch streicheln. Die Ampel hilft: grün, gelb, rot."
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Masturbating side by side until you both come
+msgctxt "ynm:item_78#text"
+msgid "Nebeneinander masturbieren, bis beide kommen"
+msgstr ""
+
+#. Frage in „Spicy“: Aussage und Erklärung
+#. EN: Each of you pleasures yourself while you look at each other. A lesson in what the other likes, and surprisingly intimate for many.
+msgctxt "ynm:item_78#explanation"
+msgid "Jede Person verwöhnt sich selbst, ihr schaut euch dabei an. Eine Lehrstunde darin, was der andere mag, und für viele überraschend intim."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Surrender under the blindfold (ice & warmth)
+msgctxt "fantasy:match_blindfold#title"
+msgid "Hingabe unter der Augenbinde (Eis & Wärme)"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: One of you is blindfolded and doesn't know whether warm lips, oil or an ice cube will touch their skin next.
+msgctxt "fantasy:match_blindfold#subtitle"
+msgid "Einer bekommt die Augen verbunden und weiß nicht, ob als Nächstes warme Lippen, Öl oder ein Eiswürfel seine Haut berühren."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Roles & senses
+msgctxt "fantasy:match_blindfold#tag"
+msgid "Rollen & Sinne"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: 45 min. yoni worship (for her)
+msgctxt "fantasy:match_yoni_ritual#title"
+msgid "45 Min. Yoni-Verehrung (Nur für Sie)"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: She only has to lie there, close her eyes and receive – with warm oil, without giving anything in return.
+msgctxt "fantasy:match_yoni_ritual#subtitle"
+msgid "Sie darf nur daliegen, die Augen schließen und empfangen – mit warmem Öl, ohne jede Gegenleistung."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Intimate massage
+msgctxt "fantasy:match_yoni_ritual#tag"
+msgid "Intim-Massage"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: 45 min. lingam & perineum journey (for him)
+msgctxt "fantasy:match_lingam_ritual#title"
+msgid "45 Min. Lingam- & Damm-Reise (Nur für Ihn)"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: A slow, two-handed oil massage of belly, perineum and shaft – completely without pressure to perform or succeed.
+msgctxt "fantasy:match_lingam_ritual#subtitle"
+msgid "Eine langsame, beidhändige Ölmassage von Bauch, Damm und Schaft – völlig ohne Leistungs- oder Erfolgsdruck."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Intimate massage
+msgctxt "fantasy:match_lingam_ritual#tag"
+msgid "Intim-Massage"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Captivating surrender (wrists held)
+msgctxt "fantasy:match_wrists#title"
+msgid "Fesselnde Hingabe (Handgelenke gehalten)"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: The wrists are held above the head with a soft scarf or the hands: no moving while being spoiled.
+msgctxt "fantasy:match_wrists#subtitle"
+msgid "Die Handgelenke werden mit einem weichen Schal oder den Händen über dem Kopf gehalten: Bewegungsverbot beim Verwöhntwerden."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Power & surrender
+msgctxt "fantasy:match_wrists#tag"
+msgid "Macht & Hingabe"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Thrust-free merging (pubic bone rocking)
+msgctxt "fantasy:match_cat_grinding#title"
+msgid "Stoßfreie Verschmelzung (Schambein-Wiegen)"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: No in-and-out: we stay deeply anchored inside each other and move only through slow, heavy pelvic rocking.
+msgctxt "fantasy:match_cat_grinding#subtitle"
+msgid "Kein Rein-Raus: Wir bleiben tief ineinander verankert und bewegen uns nur durch langsames, schweres Becken-Wiegen."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Positions
+msgctxt "fantasy:match_cat_grinding#tag"
+msgid "Stellungen"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Secret zone: perineum & prostate exploration
+msgctxt "fantasy:match_prostate_explore#title"
+msgid "Geheime Zone: Damm- & Prostata-Erkundung"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Curious, shame-free exploration of the male perineum and the inner pleasure point with plenty of lube and time.
+msgctxt "fantasy:match_prostate_explore#subtitle"
+msgid "Neugieriges, schamfreies Erforschen des männlichen Damms und des inneren Lustpunkts mit viel Gleitgel und Zeit."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Deep somatics
+msgctxt "fantasy:match_prostate_explore#tag"
+msgid "Tiefe Somatik"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Whispering in the dark (seductive words)
+msgctxt "fantasy:match_sensory_talk#title"
+msgid "Flüstern im Dunkeln (Verführerische Worte)"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: We switch the light off completely and, in deep voices, describe to each other right into the ear what we're feeling.
+msgctxt "fantasy:match_sensory_talk#subtitle"
+msgid "Wir schalten das Licht komplett aus und beschreiben uns gegenseitig mit tiefer Stimme direkt ins Ohr, was wir gerade spüren."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Communication
+msgctxt "fantasy:match_sensory_talk#tag"
+msgid "Kommunikation"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: The 90-percent game in everyday life
+msgctxt "fantasy:match_kitchen_tease#title"
+msgid "Das 90-Prozent-Spiel im Alltag"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: In the middle of the day, kiss intimately for a minute, let your hands wander – and then walk on smiling. No promise for later.
+msgctxt "fantasy:match_kitchen_tease#subtitle"
+msgid "Mitten am Tag eine Minute innig küssen, die Hände wandern lassen – und dann lächelnd weitergehen. Ohne Versprechen für später."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Crackling teasing
+msgctxt "fantasy:match_kitchen_tease#tag"
+msgid "Knisterndes Hinhalten"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Watching & enjoying (an evening for the eyes)
+msgctxt "fantasy:match_mirror_watch#title"
+msgid "Zuschauen & Genießen (Abend für die Augen)"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: One touches themselves very slowly following the relaxation rules, while the other lies close by, watches and kisses.
+msgctxt "fantasy:match_mirror_watch#subtitle"
+msgid "Einer berührt sich selbst ganz langsam nach den Entspannungs-Regeln, während der andere eng daneben liegt, zuschaut und küsst."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Fantasy
+msgctxt "fantasy:match_mirror_watch#tag"
+msgid "Fantasie"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Lips & tongue pampering in slow motion
+msgctxt "fantasy:match_oral_worship#title"
+msgid "Lippen- & Zungen-Verwöhnung in Zeitlupe"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Twenty minutes of pure focus with lips and tongue following the orbit principle – the head takes a break.
+msgctxt "fantasy:match_oral_worship#subtitle"
+msgid "Zwanzig Minuten reiner Fokus mit Lippen und Zunge nach dem Umlaufbahn-Prinzip – der Kopf hat Sendepause."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Sensuality
+msgctxt "fantasy:match_oral_worship#tag"
+msgid "Sinnlichkeit"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Strangers at the bar (the role play)
+msgctxt "fantasy:match_hotel_stranger#title"
+msgid "Fremde an der Bar (Das Rollenspiel)"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: We meet separately one evening, pretend to be seeing each other for the first time, and then take each other home.
+msgctxt "fantasy:match_hotel_stranger#subtitle"
+msgid "Wir treffen uns getrennt an einem Abend, tun so, als würden wir uns zum ersten Mal sehen, und nehmen uns danach mit nach Hause."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Fantasy
+msgctxt "fantasy:match_hotel_stranger#tag"
+msgid "Fantasie"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Half-asleep spooning in the morning
+msgctxt "fantasy:match_morning_spoon#title"
+msgid "Halbschlaf-Löffelchen am Morgen"
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Before the first coffee: nestled close together on our sides, gliding into each other in slow motion.
+msgctxt "fantasy:match_morning_spoon#subtitle"
+msgid "Noch vor dem ersten Kaffee: Seitlich eng aneinandergeschmiegt im Zeitlupen-Modus ineinander gleiten."
+msgstr ""
+
+#. Fantasie-Karte: Titel, Beschreibung, Schlagwort
+#. EN: Positions
+msgctxt "fantasy:match_morning_spoon#tag"
+msgid "Stellungen"
+msgstr ""

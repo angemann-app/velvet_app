@@ -1,0 +1,157 @@
+# VelvetPulse: Foto-Ideen im Paar-Chat (nur im Spicy-Modus)
+# Ausgangssprache Deutsch, Quelle: assets/data/foto_ideen.json
+# Anleitung für Übersetzer / Guide for translators: translations/README.md
+# Enthält Inhalte über Sexualität für Erwachsene. / Contains adult content about sexuality.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VelvetPulse\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Source-Language: de\n"
+
+#. Foto-Idee, sanft
+#. EN: Just your lips.
+msgctxt "photo_idea:lippen#text"
+msgid "Nur deine Lippen."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: Your breasts or your chest, just for me.
+msgctxt "photo_idea:heiss_brust#text"
+msgid "Deine Brüste oder deine Brust, nur für mich."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: Your neck, the way you'd like it kissed.
+msgctxt "photo_idea:nacken#text"
+msgid "Dein Nacken, so wie du ihn geküsst haben möchtest."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: The shadow of your body on the wall.
+msgctxt "photo_idea:schatten#text"
+msgid "Der Schatten deines Körpers an der Wand."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: Your bottom in your skimpiest underwear.
+msgctxt "photo_idea:heiss_po#text"
+msgid "Dein Po in deinem knappsten Slip."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: A detail that may come off tonight.
+msgctxt "photo_idea:detail#text"
+msgid "Ein Detail, das heute Abend ausgezogen werden darf."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: What you're wearing underneath right now. Or not.
+msgctxt "photo_idea:drunter#text"
+msgid "Was du gerade drunter trägst. Oder eben nicht."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: How you're lying under the covers right now, naked.
+msgctxt "photo_idea:heiss_decke#text"
+msgid "Wie du gerade unter der Decke liegst, nackt."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: The place where you'll be waiting tonight.
+msgctxt "photo_idea:bett#text"
+msgid "Der Ort, an dem du heute Abend wartest."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: A bit of skin in the day's most beautiful light.
+msgctxt "photo_idea:haut#text"
+msgid "Ein Stück Haut im schönsten Licht des Tages."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: Where your hand is right now.
+msgctxt "photo_idea:heiss_hand#text"
+msgid "Wo deine Hand gerade ist."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: Your hand on your thigh.
+msgctxt "photo_idea:hand#text"
+msgid "Deine Hand auf deinem Oberschenkel."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: The spot where you want to be kissed today.
+msgctxt "photo_idea:kuss#text"
+msgid "Die Stelle, an der du heute geküsst werden willst."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: Show me how much you're looking forward to tonight. Unmistakably.
+msgctxt "photo_idea:heiss_vorfreude#text"
+msgid "Zeig mir, wie sehr du dich auf heute Abend freust. Ganz eindeutig."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: A look over your shoulder, without your face.
+msgctxt "photo_idea:schulter#text"
+msgid "Ein Blick über die Schulter, ohne Gesicht."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: A steamed-up mirror after the shower.
+msgctxt "photo_idea:dampf#text"
+msgid "Ein beschlagener Spiegel nach dem Duschen."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: The toy you want to use tonight.
+msgctxt "photo_idea:heiss_toy#text"
+msgid "Das Spielzeug, das du heute Abend benutzen willst."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: A curve of your body that you like.
+msgctxt "photo_idea:kurven#text"
+msgid "Eine Kurve deines Körpers, die du magst."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: A scarf that might come into play tonight.
+msgctxt "photo_idea:tuch#text"
+msgid "Ein Tuch, das heute Abend zum Einsatz kommen könnte."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: You in the mirror, in nothing but underwear.
+msgctxt "photo_idea:heiss_spiegel#text"
+msgid "Du im Spiegel, nur in Unterwäsche."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: Something that shows what you're looking forward to tonight.
+msgctxt "photo_idea:vorfreude#text"
+msgid "Etwas, das zeigt, worauf du dich heute Abend freust."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: Your skin, wet in the shower.
+msgctxt "photo_idea:heiss_dusche#text"
+msgid "Deine Haut, nass unter der Dusche."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: Your legs, slightly parted.
+msgctxt "photo_idea:heiss_beine#text"
+msgid "Deine Beine, leicht geöffnet."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: An invitation that needs no words.
+msgctxt "photo_idea:heiss_einladung#text"
+msgid "Eine Einladung, die keine Worte braucht."
+msgstr ""
