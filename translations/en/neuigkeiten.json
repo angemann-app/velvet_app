@@ -331,6 +331,17 @@
           "text": "The courses are now sorted by topic and renumbered: Foundations, Body and self, Relationship and everyday life, Touch and practice, Fantasy and play. Your progress is kept."
         }
       ]
+    },
+    {
+      "build": 42,
+      "version": "4.9.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "New: Drift-off journey",
+          "text": "A long, quiet companion into sleep, 60, 90 or 120 minutes. You choose a focus or let yourself be surprised. The voice grows quieter and rarer, and in the end a soft sound remains. Find it with the guided audios on the start page. German recordings now, the English ones follow with a later audio package."
+        }
+      ]
     }
   ],
   "_source": {
@@ -349,6 +360,7 @@
     "news:38": "448bdd315e1547df",
     "news:39": "04594a31ae0808e7",
     "news:40": "dfabcaebe3b5aede",
-    "news:41": "bbf1744d4af75ae9"
+    "news:41": "bbf1744d4af75ae9",
+    "news:42": "bc76081269606aeb"
   }
 }

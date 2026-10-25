@@ -16,6 +16,7 @@ Map<String, Map<String, String>> germanSources() {
   final content = jsonLesen('assets/data/velvet_content.json');
   final paar = jsonLesen('assets/data/paar_abend.json');
   final selbst = jsonLesen('assets/data/selbst_reise.json');
+  final einschlaf = jsonLesen('assets/data/einschlaf_reise.json');
   final news = jsonLesen('assets/data/neuigkeiten.json');
   final anleitung = jsonLesen('assets/data/anleitung.json');
   final fotoIdeen = jsonLesen('assets/data/foto_ideen.json');
@@ -40,6 +41,9 @@ Map<String, Map<String, String>> germanSources() {
     },
     'selbst_reise.json': {
       for (final b in selbst['bausteine'] as List) 'self_block:${b['id']}': quellHash(b['text'] as String),
+    },
+    'einschlaf_reise.json': {
+      for (final b in einschlaf['bausteine'] as List) 'sleep_block:${b['id']}': quellHash(b['text'] as String),
     },
     'neuigkeiten.json': {
       for (final e in news['eintraege'] as List) 'news:${e['build']}': quellHash(e['punkte']),
@@ -80,6 +84,8 @@ Set<String> translatedKeys(String file, Map<String, dynamic> en) {
       };
     case 'paar_abend.json':
       return {for (final b in en['bausteine'] as List) 'block:${b['id']}'};
+    case 'einschlaf_reise.json':
+      return {for (final b in en['bausteine'] as List) 'sleep_block:${b['id']}'};
     case 'selbst_reise.json':
       return {for (final b in en['bausteine'] as List) 'self_block:${b['id']}'};
     case 'neuigkeiten.json':

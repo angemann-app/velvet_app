@@ -47,7 +47,9 @@ Körperreise: 10 bis 30 Minuten nur für dich. Du wählst, wie nah du dir kommen
 
 Gemeinsamer Abend: 20 bis 45 Minuten für zwei. Ihr wechselt euch beim Geben und Empfangen ab, eine Klangschale markiert die Übergänge. Vereinbart vorher ein Stoppwort.
 
-Beide werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden.
+Einschlafen: 60, 90 oder 120 Minuten im Bett, mit einem Schwerpunkt deiner Wahl oder als Überraschung. Die Stimme wird immer leiser und seltener, die Sätze kehren in Runden wieder, am Ende bleibt nur ein leiser Klang. Du darfst einschlafen. Am besten mit Ladekabel; auf der Karte steht im Diskretions-Modus nur Entspannung.
+
+Alle werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden.
 
 
 ## Training und Akuthilfe

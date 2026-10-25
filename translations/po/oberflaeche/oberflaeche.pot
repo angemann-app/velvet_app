@@ -5602,3 +5602,147 @@ msgstr ""
 msgctxt "ui:rueckmeldungGithub#text"
 msgid "Lieber öffentlich auf GitHub melden"
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Falling asleep
+msgctxt "ui:einschlafKarteTitel#text"
+msgid "Einschlafen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Relaxation
+msgctxt "ui:einschlafKarteTitelNeutral#text"
+msgid "Entspannung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A long, quiet journey into sleep: 60 to 120 minutes with sentences you take with you into half-sleep.
+msgctxt "ui:einschlafKarteText#text"
+msgid "Eine lange, ruhige Reise in den Schlaf: 60 bis 120 Minuten mit Sätzen, die du im Halbschlaf mitnimmst."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Drift-off journey
+msgctxt "ui:einschlafTitel#text"
+msgid "Einschlaf-Reise"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A voice accompanies you into sleep as you lie in bed. It speaks less and less, the pauses grow longer, and in the end only a soft sound remains. You may, and are meant to, fall asleep.
+msgctxt "ui:einschlafEinleitung#text"
+msgid "Eine Stimme begleitet dich im Bett in den Schlaf. Sie spricht immer weniger, die Pausen werden länger, und zum Schluss bleibt nur ein leiser Klang. Du darfst und sollst dabei einschlafen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The sentences work mostly in the quiet time before you fall asleep, and through repetition over many evenings. Nothing is learned in deep sleep.
+msgctxt "ui:einschlafWirkung#text"
+msgid "Die Sätze wirken vor allem in der ruhigen Zeit, bevor du einschläfst, und durch die Wiederholung an vielen Abenden. Gelernt wird nicht im Tiefschlaf."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not while driving or when you need to stay awake. Keep the volume low; headphones only if they are comfortable, otherwise use the speaker. Best with the charger plugged in. The drift-off journey does not replace treatment for sleep disorders.
+msgctxt "ui:einschlafHinweise#text"
+msgid "Nicht beim Autofahren oder wenn du wach bleiben musst. Stell es leise ein; Kopfhörer nur, wenn sie bequem sind, sonst den Lautsprecher. Am besten mit Ladekabel. Die Einschlaf-Reise ersetzt keine Behandlung von Schlafstörungen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Length
+msgctxt "ui:einschlafLaenge#text"
+msgid "Länge"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Focus
+msgctxt "ui:einschlafSchwerpunkt#text"
+msgid "Schwerpunkt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Surprise me
+msgctxt "ui:einschlafUeberrasch#text"
+msgid "Überrasch mich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: My body is welcome
+msgctxt "ui:einschlafThemaKoerper#text"
+msgid "Mein Körper ist willkommen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Desire is a wave
+msgctxt "ui:einschlafThemaWelle#text"
+msgid "Lust ist eine Welle"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gas pedal and brake
+msgctxt "ui:einschlafThemaGaspedal#text"
+msgid "Gaspedal und Bremse"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Feeling instead of watching
+msgctxt "ui:einschlafThemaSpueren#text"
+msgid "Spüren statt beobachten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A soft pelvis
+msgctxt "ui:einschlafThemaBecken#text"
+msgid "Ein weiches Becken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I may enjoy
+msgctxt "ui:einschlafThemaGeniessen#text"
+msgid "Ich darf genießen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No reference
+msgctxt "ui:einschlafOhneBezug#text"
+msgid "Ohne Bezug"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: More explicit words
+msgctxt "ui:einschlafSpicyTitel#text"
+msgid "Deutlichere Worte"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Calm, anatomical language for your own genitals. No dirty talk, nothing exciting.
+msgctxt "ui:einschlafSpicyText#text"
+msgid "Ruhige, anatomische Sprache für dein eigenes Geschlecht. Kein Dirty Talk, nichts Aufregendes."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Begin the drift-off journey
+msgctxt "ui:einschlafStart#text"
+msgid "Einschlaf-Reise beginnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You may fall asleep
+msgctxt "ui:einschlafLaeuft#text"
+msgid "Du darfst einschlafen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The voice grows quieter and rarer. In the end everything stops by itself.
+msgctxt "ui:einschlafLaeuftText#text"
+msgid "Die Stimme wird leiser und seltener. Am Ende stoppt alles von selbst."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: End the drift-off journey?
+msgctxt "ui:einschlafBeenden#text"
+msgid "Einschlaf-Reise beenden?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The guidance will then stop.
+msgctxt "ui:einschlafBeendenText#text"
+msgid "Die Begleitung hört dann auf."
+msgstr ""

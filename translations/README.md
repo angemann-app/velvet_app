@@ -20,6 +20,7 @@ translation. You work through them in order, and [STATUS.md](STATUS.md) shows ho
 | Courses and lessons | [po/kurse/kurse.pot](po/kurse/kurse.pot) | `po/kurse/<code>.po` |
 | Yes/no/maybe list and fantasy cards | [po/ja_nein/ja_nein.pot](po/ja_nein/ja_nein.pot) | `po/ja_nein/<code>.po` |
 | Guided self-exploration (audio blocks) | [po/selbst_reise/selbst_reise.pot](po/selbst_reise/selbst_reise.pot) | `po/selbst_reise/<code>.po` |
+| Drift-off journey (audio blocks) | [po/einschlaf_reise/einschlaf_reise.pot](po/einschlaf_reise/einschlaf_reise.pot) | `po/einschlaf_reise/<code>.po` |
 | An evening together (audio blocks) | [po/paar_abend/paar_abend.pot](po/paar_abend/paar_abend.pot) | `po/paar_abend/<code>.po` |
 | In-app guide | [po/anleitung/anleitung.pot](po/anleitung/anleitung.pot) | `po/anleitung/<code>.po` |
 | What's new (after updates) | [po/neuigkeiten/neuigkeiten.pot](po/neuigkeiten/neuigkeiten.pot) | `po/neuigkeiten/<code>.po` |

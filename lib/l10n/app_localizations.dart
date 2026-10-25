@@ -5582,6 +5582,150 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Lieber öffentlich auf GitHub melden'**
   String get rueckmeldungGithub;
+
+  /// No description provided for @einschlafKarteTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Einschlafen'**
+  String get einschlafKarteTitel;
+
+  /// No description provided for @einschlafKarteTitelNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Entspannung'**
+  String get einschlafKarteTitelNeutral;
+
+  /// No description provided for @einschlafKarteText.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine lange, ruhige Reise in den Schlaf: 60 bis 120 Minuten mit Sätzen, die du im Halbschlaf mitnimmst.'**
+  String get einschlafKarteText;
+
+  /// No description provided for @einschlafTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Einschlaf-Reise'**
+  String get einschlafTitel;
+
+  /// No description provided for @einschlafEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine Stimme begleitet dich im Bett in den Schlaf. Sie spricht immer weniger, die Pausen werden länger, und zum Schluss bleibt nur ein leiser Klang. Du darfst und sollst dabei einschlafen.'**
+  String get einschlafEinleitung;
+
+  /// No description provided for @einschlafWirkung.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Sätze wirken vor allem in der ruhigen Zeit, bevor du einschläfst, und durch die Wiederholung an vielen Abenden. Gelernt wird nicht im Tiefschlaf.'**
+  String get einschlafWirkung;
+
+  /// No description provided for @einschlafHinweise.
+  ///
+  /// In de, this message translates to:
+  /// **'Nicht beim Autofahren oder wenn du wach bleiben musst. Stell es leise ein; Kopfhörer nur, wenn sie bequem sind, sonst den Lautsprecher. Am besten mit Ladekabel. Die Einschlaf-Reise ersetzt keine Behandlung von Schlafstörungen.'**
+  String get einschlafHinweise;
+
+  /// No description provided for @einschlafLaenge.
+  ///
+  /// In de, this message translates to:
+  /// **'Länge'**
+  String get einschlafLaenge;
+
+  /// No description provided for @einschlafSchwerpunkt.
+  ///
+  /// In de, this message translates to:
+  /// **'Schwerpunkt'**
+  String get einschlafSchwerpunkt;
+
+  /// No description provided for @einschlafUeberrasch.
+  ///
+  /// In de, this message translates to:
+  /// **'Überrasch mich'**
+  String get einschlafUeberrasch;
+
+  /// No description provided for @einschlafThemaKoerper.
+  ///
+  /// In de, this message translates to:
+  /// **'Mein Körper ist willkommen'**
+  String get einschlafThemaKoerper;
+
+  /// No description provided for @einschlafThemaWelle.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust ist eine Welle'**
+  String get einschlafThemaWelle;
+
+  /// No description provided for @einschlafThemaGaspedal.
+  ///
+  /// In de, this message translates to:
+  /// **'Gaspedal und Bremse'**
+  String get einschlafThemaGaspedal;
+
+  /// No description provided for @einschlafThemaSpueren.
+  ///
+  /// In de, this message translates to:
+  /// **'Spüren statt beobachten'**
+  String get einschlafThemaSpueren;
+
+  /// No description provided for @einschlafThemaBecken.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein weiches Becken'**
+  String get einschlafThemaBecken;
+
+  /// No description provided for @einschlafThemaGeniessen.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich darf genießen'**
+  String get einschlafThemaGeniessen;
+
+  /// No description provided for @einschlafOhneBezug.
+  ///
+  /// In de, this message translates to:
+  /// **'Ohne Bezug'**
+  String get einschlafOhneBezug;
+
+  /// No description provided for @einschlafSpicyTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Deutlichere Worte'**
+  String get einschlafSpicyTitel;
+
+  /// No description provided for @einschlafSpicyText.
+  ///
+  /// In de, this message translates to:
+  /// **'Ruhige, anatomische Sprache für dein eigenes Geschlecht. Kein Dirty Talk, nichts Aufregendes.'**
+  String get einschlafSpicyText;
+
+  /// No description provided for @einschlafStart.
+  ///
+  /// In de, this message translates to:
+  /// **'Einschlaf-Reise beginnen'**
+  String get einschlafStart;
+
+  /// No description provided for @einschlafLaeuft.
+  ///
+  /// In de, this message translates to:
+  /// **'Du darfst einschlafen'**
+  String get einschlafLaeuft;
+
+  /// No description provided for @einschlafLaeuftText.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Stimme wird leiser und seltener. Am Ende stoppt alles von selbst.'**
+  String get einschlafLaeuftText;
+
+  /// No description provided for @einschlafBeenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Einschlaf-Reise beenden?'**
+  String get einschlafBeenden;
+
+  /// No description provided for @einschlafBeendenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Begleitung hört dann auf.'**
+  String get einschlafBeendenText;
 }
 
 class _AppLocalizationsDelegate

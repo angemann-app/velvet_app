@@ -53,13 +53,15 @@ msgstr ""
 #. EN: The guided audios sit at the very top of the start page.
 #. EN: Body journey: 10 to 30 minutes just for you. You choose how close you want to come to yourself, and a voice guides you across your body. Most of the time is silence, so you can feel.
 #. EN: Shared evening: 20 to 45 minutes for two. You take turns giving and receiving, and a singing bowl marks the transitions. Agree on a stop word beforehand.
-#. EN: Both are put together anew every time. You can pause, skip and stop at any time.
+#. EN: Falling asleep: 60, 90 or 120 minutes in bed, with a focus of your choice or as a surprise. The voice grows quieter and rarer, the sentences return in rounds, and in the end only a soft sound remains. You may fall asleep. Best with the charger plugged in; in discretion mode the card just says Relaxation.
+#. EN: All of them are put together anew every time. You can pause, skip and stop at any time.
 msgctxt "guide:gefuehrt#text"
 msgid ""
 "Ganz oben auf der Startseite liegen die geführten Audios.\n"
 "Körperreise: 10 bis 30 Minuten nur für dich. Du wählst, wie nah du dir kommen möchtest, und eine Stimme führt dich über deinen Körper. Die meiste Zeit ist Stille, damit du spüren kannst.\n"
 "Gemeinsamer Abend: 20 bis 45 Minuten für zwei. Ihr wechselt euch beim Geben und Empfangen ab, eine Klangschale markiert die Übergänge. Vereinbart vorher ein Stoppwort.\n"
-"Beide werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden."
+"Einschlafen: 60, 90 oder 120 Minuten im Bett, mit einem Schwerpunkt deiner Wahl oder als Überraschung. Die Stimme wird immer leiser und seltener, die Sätze kehren in Runden wieder, am Ende bleibt nur ein leiser Klang. Du darfst einschlafen. Am besten mit Ladekabel; auf der Karte steht im Diskretions-Modus nur Entspannung.\n"
+"Alle werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden."
 msgstr ""
 
 #. Abschnitt der Anleitung

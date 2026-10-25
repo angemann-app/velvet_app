@@ -1,0 +1,1009 @@
+{
+  "_hinweis": "Bausteine der Einschlaf-Reise (docs/konzepte/einschlaf-reise.md). Jeder Baustein steht für sich; Lernbausteine: thema, bogen, teil (v1 lang, v2 mittel, v3 kurz, f Kurzformel, s1/s2 Spicy).",
+  "bausteine": [
+    {
+      "id": "ankommen_1",
+      "phase": "ankommen",
+      "text": "The day is over. You are lying in your bed, and for today everything that needed doing is done.\nThe light may go out. Your phone may go aside, somewhere near you, where you can reach it without looking. The screen may turn dark. The voice stays with you all the same.\nYou need not listen to me until the end. If you fall asleep at some point, even in the middle of a sentence, that is exactly right. That is what this journey is for."
+    },
+    {
+      "id": "ankommen_2",
+      "phase": "ankommen",
+      "text": "That is enough for today. Whatever the day brought may stay outside the door of this room.\nLet the light go out and let your phone sink to one side. Lay it down so that its screen can go dark on its own. Around you, everything grows quiet and dark.\nThere is nothing to do here and nothing to hold on to. The words may come and go again. And if you fall asleep along the way, that is just as it should be."
+    },
+    {
+      "id": "ankommen_3",
+      "phase": "ankommen",
+      "text": "You have arrived. The blanket rests on you, the pillow holds your head, and the evening belongs to you.\nThe light may go out. Your phone may rest, and its screen may go dark, just like the room around you. Whatever is still open can wait until tomorrow.\nYou may simply lie here and listen for as long as you like. When your thoughts grow softer and sleep comes for you, let it gently take you. My voice simply stays with you, quietly."
+    },
+    {
+      "id": "sinken_1",
+      "phase": "sinken",
+      "text": "Imagine a warm, softened light resting on your forehead. Wherever it touches you, everything grows soft. Your forehead becomes smooth and wide. Your eyes grow heavy, the lids resting on each other.\nThe warm light slowly sinks lower. Your jaw may loosen, leaving a small gap between your teeth. Your tongue lies soft in your mouth. Your throat becomes warm and open.\nThe light flows over your shoulders. They sink into the mattress, a little deeper with every breath out. The warmth trickles down through your arms, all the way into your hands. Your fingers become heavy and still. Your chest rises and falls beneath the warm light, and your belly becomes soft and round.\nAnd a little lower still, the light arrives in your pelvis. Here it may spread out as if in a warm bowl. Your pelvis becomes heavy and wide. Your pelvic floor lets go, very gently, like a hand that opens. Here it is warm and safe.\nThe light sinks on through your legs, through your knees, down to your feet. Your feet become warm and heavy. Your whole body lies in warm light."
+    },
+    {
+      "id": "sinken_2",
+      "phase": "sinken",
+      "text": "Let your body be like fine sand, slowly settling after a long day. Grain by grain it comes to rest, from top to bottom.\nFirst on your forehead. It becomes smooth and still. The sand settles on your eyes, and the lids grow heavy. Your jaw sinks down a little. Your tongue rests soft and broad in your mouth. Your throat becomes calm.\nThe sand trickles over your shoulders and settles there. They grow heavy and sink. It runs down through your arms into your hands, and your hands lie heavy and warm. Your chest grows still. Your belly becomes soft, rising and falling all on its own.\nFurther down, in your pelvis, the sand gathers and comes to rest. Your pelvis becomes heavy and broad and lies safely on the bed. Your pelvic floor may settle too, soft and at ease, like sand at the bottom of a quiet lake. Here you may become completely heavy.\nThe sand trickles on through your legs, down into your feet. Your feet grow heavy. Everything in you has settled."
+    },
+    {
+      "id": "sinken_3",
+      "phase": "sinken",
+      "text": "Let your body be like the water of a lake in the evening. The wind has dropped, and the surface slowly becomes smooth.\nThe calm begins at your forehead. It becomes smooth like the water. Your eyes grow heavy and dark. Your jaw lets go, and your tongue floats softly in your mouth. Your throat becomes still and open.\nThe calm spreads out in small circles, over your shoulders. They soften and sink. It flows down through your arms into your hands. Your hands lie still, as if carried by the water. Your chest rises and falls, as gently as a small wave. Your belly grows soft.\nIn your pelvis the water becomes deep and calm. This is the stillest part of the lake. Your pelvis may grow heavy and wide. Your pelvic floor becomes soft, like the ground on which the water rests. Soft is not weak. Soft is calm and ready.\nThe calm flows on through your legs, down into your feet. Your feet grow heavy and warm. Your whole body lies still, like a lake at night."
+    },
+    {
+      "id": "sinken_kurz_1",
+      "phase": "sinken_kurz",
+      "text": "Your feet lie heavy. The heaviness rises slowly up through your legs and gathers warmly in your pelvis. Your belly grows soft, your shoulders sink deeper into the pillow. Your face grows still as well. Forehead and jaw are resting, and your whole body lies held."
+    },
+    {
+      "id": "sinken_kurz_2",
+      "phase": "sinken_kurz",
+      "text": "With every breath out, your pelvis grows a little heavier. From there the softness spreads, upward into your belly and chest, downward into your legs. It reaches your hands and your feet. Your body grows wide and heavy, and the bed holds all of you."
+    },
+    {
+      "id": "sinken_kurz_3",
+      "phase": "sinken_kurz",
+      "text": "Your head lies heavy in the pillow. Your shoulders, your back and your pelvis lie heavy on the bed. Your heels rest. Wherever your body touches the bed, it gives up a little more weight. The bed takes it all and carries you through the night."
+    },
+    {
+      "id": "sinken_kurz_4",
+      "phase": "sinken_kurz",
+      "text": "Under the blanket it grows warm. The warmth lies on your skin, on your arms, on your belly, on your legs. Slowly it sinks deeper, into the muscles, into your pelvis, down into your pelvic floor. Everything there grows soft. Your face is calm, and your body is heavy and warm."
+    },
+    {
+      "id": "atem_1",
+      "phase": "atem",
+      "text": "Breathe in a little deeper, comfortably, and let the breath flow out long and slow. Longer than it took to come in.\nOnce more in, and a long way out.\nAnd once, the breath may leave as a sigh, out loud or very quietly, as after a long day.\nAfter that, the breath may do whatever it likes. You may let go of it completely. It knows its way through the night."
+    },
+    {
+      "id": "atem_2",
+      "phase": "atem",
+      "text": "Let your next breath grow a little deeper. The air gently fills your chest and your belly. Then let it go slowly, long and quiet, like wind settling down.\nWith the next breath out, a sigh may come. With it, something of the day sinks out of you.\nAnd then you hand the breath over. It comes and goes on its own, as it does every night. Your body knows how this goes."
+    },
+    {
+      "id": "atem_kurz_1",
+      "phase": "atem_kurz",
+      "text": "Your breath comes and goes all on its own. Each breath out is a little longer and a little softer. You may simply follow it."
+    },
+    {
+      "id": "atem_kurz_2",
+      "phase": "atem_kurz",
+      "text": "The breath flows calmly. It gently lifts your belly and lets it slowly sink. With every breath out, your body grows a little heavier."
+    },
+    {
+      "id": "atem_kurz_3",
+      "phase": "atem_kurz",
+      "text": "Somewhere inside you, something breathes quietly, like waves on a shore at night. It breathes all by itself. The breath knows its way, even in sleep."
+    },
+    {
+      "id": "nachklang_stuetze_1",
+      "phase": "nachklang_stuetze",
+      "text": "You may keep sinking, as deep as feels good to you."
+    },
+    {
+      "id": "nachklang_stuetze_2",
+      "phase": "nachklang_stuetze",
+      "text": "Everything is fine, just the way it is."
+    },
+    {
+      "id": "nachklang_stuetze_3",
+      "phase": "nachklang_stuetze",
+      "text": "Your body carries you safely through the night."
+    },
+    {
+      "id": "nachklang_stuetze_4",
+      "phase": "nachklang_stuetze",
+      "text": "The darkness is soft and holds you very gently."
+    },
+    {
+      "id": "nachklang_stuetze_5",
+      "phase": "nachklang_stuetze",
+      "text": "You are safe here, warm and sheltered."
+    },
+    {
+      "id": "nachklang_stuetze_6",
+      "phase": "nachklang_stuetze",
+      "text": "Sleep may come to you whenever it wishes."
+    },
+    {
+      "id": "ausklang_1",
+      "phase": "ausklang",
+      "text": "A quiet thank you goes to your body, which carried you through this day. Now it rests, warm and safe. Good night."
+    },
+    {
+      "id": "ausklang_2",
+      "phase": "ausklang",
+      "text": "The night is still and wide. Your body rests warm in the dark, and everything that happened today may settle. Good night."
+    },
+    {
+      "id": "koerper_1_v1",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 1,
+      "teil": "v1",
+      "text": "There are people who look at you with warm eyes. A good friend, someone dear to you, someone who has known you for a long time. Their gaze is soft and calm, and it likes to rest on you.\nTonight you may look at yourself with that same gaze. It moves slowly over your body, the way warm light moves through a room. It lingers on your shoulders, on your belly, on your hands resting on the blanket.\nThis gaze has time. It is simply glad that you are here. It finds you beautiful, in every line and in every curve.\nYour body is good, and your gaze upon it may be kind."
+    },
+    {
+      "id": "koerper_1_v2",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 1,
+      "teil": "v2",
+      "text": "When someone is asleep, we often look at them with a special tenderness. The face is soft, the breath is calm, and everything about them is easy to love.\nTonight your gaze may rest on yourself with that same tenderness. On your face, on your breath, on your whole body beneath the blanket.\nYour body is good, and you look at it with kindness."
+    },
+    {
+      "id": "koerper_1_v3",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 1,
+      "teil": "v3",
+      "text": "Moonlight rests softly on your blanket, on every curve and every line, kind to all of it. Your gaze is just as kind.\nYour body is good, and you look at it with kindness."
+    },
+    {
+      "id": "koerper_1_f",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 1,
+      "teil": "f",
+      "text": "My body is good, and I look at it with kindness."
+    },
+    {
+      "id": "koerper_2_v1",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 2,
+      "teil": "v1",
+      "text": "Your body was with you all day long. It woke up with you, it carried you through rooms and streets, it felt warmth and coolness.\nYour legs carried you, step by step. Your hands held, gave and touched. Your skin felt the air, the fabric of your clothes, perhaps the sun or the rain.\nAnd your breath was there the whole time, quiet and faithful, even in the moments when you forgot about it.\nAll of this may rest in the darkness. Your body carried you today, and you may thank it."
+    },
+    {
+      "id": "koerper_2_v2",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 2,
+      "teil": "v2",
+      "text": "In the evening a boat lies still in the harbor. It carried wind and waves all day, and at last it rocks gently on the dark water.\nYour body lies in your bed in the same way. Your legs, your hands and your breath took care of you today, and they may rest.\nYour body carried you today, and you thank it."
+    },
+    {
+      "id": "koerper_2_v3",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 2,
+      "teil": "v3",
+      "text": "Your hands lie warm and heavy on the blanket. They held so much today.\nYour body carried you today, and you thank it."
+    },
+    {
+      "id": "koerper_2_f",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 2,
+      "teil": "f",
+      "text": "My body carried me today, and I thank it."
+    },
+    {
+      "id": "koerper_3_v1",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 3,
+      "teil": "v1",
+      "text": "A beach is a little different every day. The water shapes it anew, a soft hollow here, a line in the sand there. And every day it is wholly a beach, beautiful in its own way.\nYour body changes too, over the years. It grows softer or firmer, heavier or lighter, it carries lines and scars, it tells of everything you have lived. Each of these traces belongs to you.\nTonight, comparison with others may go to sleep. It lies down quietly and grows still.\nYour body is welcome, just as it is today."
+    },
+    {
+      "id": "koerper_3_v2",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 3,
+      "teil": "v2",
+      "text": "An old tree carries its rings within, and its bark has furrows and scars. That is exactly why it is beautiful, and its shade is calm and quiet.\nYour body carries its own story too, in every scar, in every curve, in every year. Comparison may go to sleep.\nYour body is welcome, just as it is today."
+    },
+    {
+      "id": "koerper_3_v3",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 3,
+      "teil": "v3",
+      "text": "A river is a different river every night, and every night it is beautiful. Comparison is asleep.\nYour body is welcome, just as it is today."
+    },
+    {
+      "id": "koerper_3_f",
+      "phase": "lernen",
+      "thema": "koerper",
+      "bogen": 3,
+      "teil": "f",
+      "text": "My body is welcome, just as it is today."
+    },
+    {
+      "id": "koerper_s_vulva_1",
+      "phase": "lernen_spicy",
+      "thema": "koerper",
+      "koerper": "vulva",
+      "teil": "s1",
+      "text": "Your sex is part of your body too, and there as well you are welcome. Your vulva rests warm and calm between your legs. Your labia are soft, in their very own shape and colour, as different as faces.\nYour clitoris rests quietly, your vagina is warm and relaxed, and your pelvis holds everything gently. Here everything may simply be as it is.\nJust as your vulva is today, it is beautiful. It may feel pleasure whenever that feels right, and tonight it may simply rest, warm and safe.\nYour body is welcome, completely."
+    },
+    {
+      "id": "koerper_s_vulva_2",
+      "phase": "lernen_spicy",
+      "thema": "koerper",
+      "koerper": "vulva",
+      "teil": "s2",
+      "text": "Your vulva is warm and soft, with labia in their own beautiful shape. Everything about it is right, just as it is today.\nYour pleasure rests in your pelvis, warm and safe. Here too, your body is welcome."
+    },
+    {
+      "id": "koerper_s_penis_1",
+      "phase": "lernen_spicy",
+      "thema": "koerper",
+      "koerper": "penis",
+      "teil": "s1",
+      "text": "Your sex is part of your body too, and there as well you are welcome. Your penis lies warm and calm between your legs, soft and heavy, in its very own shape and size, as different as faces.\nThe glans, the shaft, the testicles, all of it is warm and relaxed, and your pelvis holds it gently. Here everything may simply be as it is.\nSoft and calm, your penis is just as good as aroused. Pleasure may come whenever it likes, and tonight it simply rests within you, warm and safe.\nYour body is welcome, completely."
+    },
+    {
+      "id": "koerper_s_penis_2",
+      "phase": "lernen_spicy",
+      "thema": "koerper",
+      "koerper": "penis",
+      "teil": "s2",
+      "text": "Your penis rests soft and warm between your legs, in its own good shape. Soft, it is just as right as when it is aroused.\nYour pleasure rests in your pelvis, warm and safe. Here too, your body is welcome."
+    },
+    {
+      "id": "welle_1_v1",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 1,
+      "teil": "v1",
+      "text": "It is night by the sea. The sand beneath you is still warm from the day, and the air is soft and dark.\nThe waves come and go. One rises, rolls in, and spreads out flat across the sand. Then it slips back, very quietly, and the next one begins. Each one is different from the last. Some are high, some are flat and still.\nNobody asks a wave whether it is good enough. It may simply come, and it may simply go.\nYour desire is just the same. It comes and goes in its own time. You may feel it, just as it is."
+    },
+    {
+      "id": "welle_1_v2",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 1,
+      "teil": "v2",
+      "text": "It is as if your body were lying on warm water, and the water holds you.\nA wave lifts you gently and lowers you again. The next one is a little different, longer, softer. The water does all of this by itself.\nYour desire moves the same way. It comes and goes, and every wave may be just as it is."
+    },
+    {
+      "id": "welle_1_v3",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 1,
+      "teil": "v3",
+      "text": "Out in the darkness the sea murmurs, wave after wave, each one a little different.\nYour desire comes and goes too, in its own good time."
+    },
+    {
+      "id": "welle_1_f",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 1,
+      "teil": "f",
+      "text": "Desire comes and goes. I can simply feel it."
+    },
+    {
+      "id": "welle_2_v1",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 2,
+      "teil": "v1",
+      "text": "It is low tide. The water has drawn far back, and the beach lies quiet and wide in the moonlight. The sand is damp and smooth, and small pools hold the light.\nThe sea is still there. It is only resting, far out where it is dark. And very slowly it comes back. First a thin edge of water, then more, until the tide covers the sand again.\nYour desire is like that too. Sometimes it grows quiet and draws back, and nothing is lost. Often it only returns once warmth and calm are already there, very near and very gentle. It comes back, the way the water comes back."
+    },
+    {
+      "id": "welle_2_v2",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 2,
+      "teil": "v2",
+      "text": "At low tide a small boat lies on the sand, tilted a little to one side, perfectly calm. It rests and has all the time in the world. Sooner or later the tide comes in, and the water gently lifts it again.\nYour desire may rest like that too. When it grows quiet, nothing is lost. It comes back, like the water."
+    },
+    {
+      "id": "welle_2_v3",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 2,
+      "teil": "v3",
+      "text": "The sea draws back and returns, just like your breath.\nQuiet desire is only low tide. The tide always finds its way back to you."
+    },
+    {
+      "id": "welle_2_f",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 2,
+      "teil": "f",
+      "text": "Quiet desire is only resting. It returns like the tide."
+    },
+    {
+      "id": "welle_3_v1",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 3,
+      "teil": "v1",
+      "text": "There are days when the sea is completely smooth. Hardly a wave moves, and the water lies there like dark glass. The sky is mirrored in it, still and wide.\nThis is the sea too. Just as beautiful, just as alive, just as whole.\nYour body knows days like this as well. Days with little desire, days full of tiredness, evenings that long only for rest. They belong to you, the way the still days belong to the sea.\nTonight your body may simply rest. Every wave belongs, the small one and the still one too."
+    },
+    {
+      "id": "welle_3_v2",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 3,
+      "teil": "v2",
+      "text": "In a quiet bay the water barely ripples. Small waves brush over the pebbles, almost silent, and they are still the whole sea.\nSo are the tired days, the quiet evenings, the hours when desire is asleep. They belong to you, and every one of them is right."
+    },
+    {
+      "id": "welle_3_v3",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 3,
+      "teil": "v3",
+      "text": "The sea has still nights too, smooth and dark and completely at rest.\nYour tired days belong to you just the same. Every wave is right."
+    },
+    {
+      "id": "welle_3_f",
+      "phase": "lernen",
+      "thema": "welle",
+      "bogen": 3,
+      "teil": "f",
+      "text": "Every wave belongs to me, even the still one."
+    },
+    {
+      "id": "welle_s_vulva_1",
+      "phase": "lernen_spicy",
+      "thema": "welle",
+      "koerper": "vulva",
+      "teil": "s1",
+      "text": "Between your legs it is warm and dark. Your vulva lies soft and calm, your labia heavy and relaxed.\nDesire moves through your pelvis like a wave. Sometimes it grows a little warmer there, more blood flows in, and your labia and your clitoris become gently fuller. Then it ebbs away again, and everything turns still and soft. It all happens by itself, the way the sea comes and goes by itself.\nTonight your desire may rest, or it may be quietly present. Both belong to you, and both are good."
+    },
+    {
+      "id": "welle_s_vulva_2",
+      "phase": "lernen_spicy",
+      "thema": "welle",
+      "koerper": "vulva",
+      "teil": "s2",
+      "text": "Your clitoris and your labia rest warm in the darkness. Desire may gently swell and fade again in your pelvis, like a wave, all by itself.\nTonight it may simply rest, warm and safe within you."
+    },
+    {
+      "id": "welle_s_penis_1",
+      "phase": "lernen_spicy",
+      "thema": "welle",
+      "koerper": "penis",
+      "teil": "s1",
+      "text": "Between your legs it is warm and dark. Your penis lies soft and heavy, your testicles resting warm in their skin.\nDesire moves through your pelvis like a wave. Sometimes a little more blood flows in, the shaft becomes slightly fuller, the glans warmer. Then it ebbs away again, and everything turns soft and still. Both happen by themselves, the way the sea comes and goes.\nSoft is just as right as full. Tonight your desire may rest, or it may be quietly present, and both belong to you."
+    },
+    {
+      "id": "welle_s_penis_2",
+      "phase": "lernen_spicy",
+      "thema": "welle",
+      "koerper": "penis",
+      "teil": "s2",
+      "text": "Your penis rests soft and warm in the darkness, and soft is just as right as full.\nDesire may gently swell and fade again in your pelvis, like a wave, all by itself. Tonight it may simply rest."
+    },
+    {
+      "id": "gaspedal_1_v1",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 1,
+      "teil": "v1",
+      "text": "The day has loaded a lot onto you. Duties, thoughts, small worries, they hang on you like a heavy coat, damp from the rain, its pockets full.\nAt the end of the evening this coat may slip from your shoulders. It slides slowly down your arms and falls softly over a chair by the door. There it hangs, and there it may stay until morning.\nYour shoulders grow light. Your back lies free in the bed, warm and unburdened. Everything that held you back today has found its place, outside the night.\nThe coat waits patiently by the door. Whatever held you back rests there with it, until the morning comes."
+    },
+    {
+      "id": "gaspedal_1_v2",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 1,
+      "teil": "v2",
+      "text": "A backpack has walked with you all day. It was heavy with tasks and thoughts.\nAt the bedside the straps loosen from your shoulders. The backpack sinks to the floor and leans quietly against the wall.\nYour back grows wide and soft. What held you back lies beside the bed, and there it may rest."
+    },
+    {
+      "id": "gaspedal_1_v3",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 1,
+      "teil": "v3",
+      "text": "Your keys lie in the little bowl by the door. Your hands are empty and warm. What held you back rests there until morning."
+    },
+    {
+      "id": "gaspedal_1_f",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 1,
+      "teil": "f",
+      "text": "What holds me back may rest tonight."
+    },
+    {
+      "id": "gaspedal_2_v1",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 2,
+      "teil": "v1",
+      "text": "The blanket lies on you, heavy and warm. It follows every line of your body, your shoulders, your belly, your legs. The darkness in the room is soft as velvet.\nThis is a safe place. The door is closed, the house is quiet, and the night keeps everything loud far away.\nYour body notices this, very quietly. It grows heavier. Your belly widens, and your pelvis sinks deeper into the mattress.\nWhere the body feels safe, the brakes release by themselves. It happens the way warmth slowly spreads through a room."
+    },
+    {
+      "id": "gaspedal_2_v2",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 2,
+      "teil": "v2",
+      "text": "A cat curls up in a warm corner. She knows she is safe, and her body grows round and soft.\nYour body knows this too. The bed carries you, the blanket wraps around you. With every breath something in you lets go, all by itself."
+    },
+    {
+      "id": "gaspedal_2_v3",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 2,
+      "teil": "v3",
+      "text": "The darkness settles around you like a warm cloth. You are safe, and your body grows soft. Everything in you may sink a little deeper."
+    },
+    {
+      "id": "gaspedal_2_f",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 2,
+      "teil": "f",
+      "text": "I am safe here, and my body may grow soft."
+    },
+    {
+      "id": "gaspedal_3_v1",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 3,
+      "teil": "v1",
+      "text": "In the evening a car stands still in the driveway. The engine is off. The metal cools slowly and ticks softly in the dark. The foot rests beside the gas pedal.\nYour body may stand this still as well. The road has been driven to its end for today.\nPressure is a brake of its own. Under pressure the body grows tight. Where the pressure fades, there is room, wide and quiet.\nYour pleasure, your calm, your sleep, all of it may come whenever it wishes. You may simply be here."
+    },
+    {
+      "id": "gaspedal_3_v2",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 3,
+      "teil": "v2",
+      "text": "In the garden the grass grows through the night, without any effort. The rain falls, the earth breathes, and everything happens at its own pace.\nEverything in you may keep its own pace as well. There is nothing to achieve here. You may lie here, and that is enough."
+    },
+    {
+      "id": "gaspedal_3_v3",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 3,
+      "teil": "v3",
+      "text": "Your hands lie open on the blanket, light and empty. They may rest. You may simply be here. Everything else comes on its own, in its own time."
+    },
+    {
+      "id": "gaspedal_3_f",
+      "phase": "lernen",
+      "thema": "gaspedal",
+      "bogen": 3,
+      "teil": "f",
+      "text": "I may simply be here, and the rest comes on its own."
+    },
+    {
+      "id": "gaspedal_s_vulva_1",
+      "phase": "lernen_spicy",
+      "thema": "gaspedal",
+      "koerper": "vulva",
+      "teil": "s1",
+      "text": "Deep in your pelvis it grows warm. Your pelvic floor sinks softly downward, like sand settling at the bottom of still water.\nYour vulva rests in this warmth. Your labia are soft, your clitoris lies quiet and sheltered, and your vagina may be fully at ease. With the calm, blood flows slowly and warmly through your sex.\nWhen the worries fall silent, your body there grows soft by itself. Pleasure may be present or asleep, both are good. Pleasure is a possibility, and it has time. Your sex is safe, here in your bed."
+    },
+    {
+      "id": "gaspedal_s_vulva_2",
+      "phase": "lernen_spicy",
+      "thema": "gaspedal",
+      "koerper": "vulva",
+      "teil": "s2",
+      "text": "Your vulva lies warm and soft in the darkness. What held you back is resting. Your pelvis is safe, and pleasure may sleep or be quietly present, just as it wishes."
+    },
+    {
+      "id": "gaspedal_s_penis_1",
+      "phase": "lernen_spicy",
+      "thema": "gaspedal",
+      "koerper": "penis",
+      "teil": "s1",
+      "text": "Deep in your pelvis it grows warm. Your pelvic floor sinks softly downward, like sand settling at the bottom of still water.\nYour penis rests in this warmth, heavy and relaxed. The glans, the shaft and the testicles lie soft and sheltered. With the calm, blood flows slowly and warmly through your sex.\nWhen the worries fall silent, your body there grows soft by itself. Whether it rests or fills, both are good. Pleasure is a possibility, and it has time. Your sex is safe, here in your bed."
+    },
+    {
+      "id": "gaspedal_s_penis_2",
+      "phase": "lernen_spicy",
+      "thema": "gaspedal",
+      "koerper": "penis",
+      "teil": "s2",
+      "text": "Your penis lies warm and heavy between your legs. What held you back is resting. Your pelvis is safe, and pleasure may sleep or be quietly present, just as it wishes."
+    },
+    {
+      "id": "spueren_1_v1",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 1,
+      "teil": "v1",
+      "text": "A small, warm light rests behind your forehead. All day long, this is where the thinking happened, the planning and the weighing.\nThe light grows soft and begins to wander. It sinks behind your eyes, into your throat, slowly into your chest. Wherever it arrives, the skin grows a little warmer.\nIt sinks further, into your belly, which rises and falls. Here it is quiet and dark and good. The thinking stays up above, small and soft, and you are down here, in the breath, in the warmth.\nYou are in your body, right in the middle of it."
+    },
+    {
+      "id": "spueren_1_v2",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 1,
+      "teil": "v2",
+      "text": "Like rain sinking slowly into warm sand, your attention sinks downward. From your head into your shoulders, into your chest, into your soft belly.\nThe sand simply takes in the water. Your body takes you in, with its warmth and its breath.\nYou are in your body, right in the middle of it."
+    },
+    {
+      "id": "spueren_1_v3",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 1,
+      "teil": "v3",
+      "text": "For a long time you stood behind a window, looking out. The door opens softly, and you step into the warm night air.\nYou are in your body, in the middle of it."
+    },
+    {
+      "id": "spueren_1_f",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 1,
+      "teil": "f",
+      "text": "I am in my body, right in the middle of it."
+    },
+    {
+      "id": "spueren_2_v1",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 2,
+      "teil": "v1",
+      "text": "In a hall, a spectator sits in the very last row. All day long he has watched and judged every movement.\nIt has grown late. He stands, takes his coat and goes quietly out. His footsteps grow softer down the long corridor. The door falls gently shut.\nThe hall is dark and warm. The seats are empty. All that remains is your body, breathing, and the stillness around it.\nThe one who watches may go home. You may simply be here."
+    },
+    {
+      "id": "spueren_2_v2",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 2,
+      "teil": "v2",
+      "text": "Somewhere inside you, a voice judges and compares. It sounds like a conversation in the next room.\nA door closes gently, and the conversation grows softer, farther away, a friendly murmur that fades. What remains is your quiet breath.\nThis voice has finished work for the day. You may simply be here, warm and undisturbed."
+    },
+    {
+      "id": "spueren_2_v3",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 2,
+      "teil": "v3",
+      "text": "A notebook closes, and the pen lies still beside it. Everything for today is written down.\nThe one who watches may go home, and you may simply be here."
+    },
+    {
+      "id": "spueren_2_f",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 2,
+      "teil": "f",
+      "text": "The one who watches may go home. I may simply be here."
+    },
+    {
+      "id": "spueren_3_v1",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 3,
+      "teil": "v1",
+      "text": "A house stands in the night, and behind one window a warm light is burning. Inside it is quiet, and someone is at home.\nYour body is lived in, just like that house. Your skin is warm, and the blanket lies heavy and kind upon you. Beneath it, the warmth gathers as in a small room.\nDeep inside, your heart beats, calm and even. It beats for you, all night long. Your breath moves softly through you.\nYou are at home, here inside yourself, warm and lived in."
+    },
+    {
+      "id": "spueren_3_v2",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 3,
+      "teil": "v2",
+      "text": "A stone on the shore holds the warmth of the day long into the night. The warmth rests deep within it, right at its center.\nYour body carries its warmth in the same way. The blanket lies heavy upon you, your skin is soft, and beneath it your heart beats calmly.\nYour body is your home, warm and lived in."
+    },
+    {
+      "id": "spueren_3_v3",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 3,
+      "teil": "v3",
+      "text": "Under the blanket it is warm. Your heart beats softly, like the footsteps of someone who lives here.\nYour body is lived in."
+    },
+    {
+      "id": "spueren_3_f",
+      "phase": "lernen",
+      "thema": "spueren",
+      "bogen": 3,
+      "teil": "f",
+      "text": "My body is my home, warm and lived in."
+    },
+    {
+      "id": "spueren_s_vulva_1",
+      "phase": "lernen_spicy",
+      "thema": "spueren",
+      "koerper": "vulva",
+      "teil": "s1",
+      "text": "Between your legs there is warmth. Your vulva rests softly in the dark, your labia warm and still, your clitoris calm.\nBlood flows slowly through your pelvis, and at times there is a faint pulsing, as even as your breath. It is simply there.\nYou feel this part of you from the inside, as warmth, as softness, as a gentle weight. Here, no one is watching, and nothing is judged. Your vagina, your pelvis, all of it is calm and belongs to you.\nYou are in your body, in the middle of it, here too."
+    },
+    {
+      "id": "spueren_s_vulva_2",
+      "phase": "lernen_spicy",
+      "thema": "spueren",
+      "koerper": "vulva",
+      "teil": "s2",
+      "text": "Your vulva is warm and soft, resting in the dark beneath the blanket. Blood pulses quietly in your pelvis.\nYou feel it from the inside, with no eyes upon it. It belongs to you, warm and still."
+    },
+    {
+      "id": "spueren_s_penis_1",
+      "phase": "lernen_spicy",
+      "thema": "spueren",
+      "koerper": "penis",
+      "teil": "s1",
+      "text": "Between your legs there is warmth. Your penis rests soft and heavy, the glans warm, the shaft relaxed, the testicles sheltered and still.\nBlood flows slowly through your pelvis, and at times there is a faint pulsing, as even as your breath. Whether it stays soft or grows firmer, all of it is right. It is simply there.\nYou feel this part of you from the inside, as warmth, as weight, as rest. Here, no one is watching, and nothing is judged. It all belongs to you.\nYou are in your body, in the middle of it, here too."
+    },
+    {
+      "id": "spueren_s_penis_2",
+      "phase": "lernen_spicy",
+      "thema": "spueren",
+      "koerper": "penis",
+      "teil": "s2",
+      "text": "Your penis lies warm and heavy beneath the blanket, the testicles soft and sheltered. Blood pulses quietly in your pelvis.\nYou feel it from the inside, with no eyes upon it. It belongs to you, warm and still."
+    },
+    {
+      "id": "becken_1_v1",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 1,
+      "teil": "v1",
+      "text": "A hand rests on a warm blanket. All day long it has held, carried and gripped. Little by little it grows soft. The fingers loosen, one after another, and the palm lies open and heavy.\nThe floor of your pelvis may be like this too. It has held a great deal today, often quite unnoticed. In the evening it may let go. It grows soft and wide and heavy and sinks a little deeper into the mattress.\nYour buttocks rest warm in the bed. Your hips grow wide. Between them your pelvis rests, open like a hand that lets go. Being soft is just right here."
+    },
+    {
+      "id": "becken_1_v2",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 1,
+      "teil": "v2",
+      "text": "Someone falls asleep while reading. The book slides gently from their hand onto the blanket, and the hand stays open, warm and heavy.\nYour pelvic floor lets go in just the same way. It may grow soft, all by itself. Your pelvis lies open and calm, like a hand at rest."
+    },
+    {
+      "id": "becken_1_v3",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 1,
+      "teil": "v3",
+      "text": "A hand opens in sleep, slowly and warmly. In the same way the floor of your pelvis grows soft and heavy, and it may rest the whole night through."
+    },
+    {
+      "id": "becken_1_f",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 1,
+      "teil": "f",
+      "text": "My pelvis may be soft, like an open hand."
+    },
+    {
+      "id": "becken_2_v1",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 2,
+      "teil": "v1",
+      "text": "Your breath is like warm water. It flows down through your chest, through your belly, deep into your pelvis. There is room for it there, wide and soft.\nWith each breath in, the floor of your pelvis sinks a little, the way a soft cloth curves under water. With each breath out, it gently returns. There is nothing to do for this. It happens all by itself.\nAnd so it goes all night, a quiet sinking and rising, a gentle rocking deep inside you. Your pelvis breathes along."
+    },
+    {
+      "id": "becken_2_v2",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 2,
+      "teil": "v2",
+      "text": "On the beach a shallow wave rolls in, and the wet sand gives a little. Then the water draws back, and the sand lies smooth again.\nYour pelvic floor moves like this with your breath. As you breathe in, it softly gives. As you breathe out, it returns. All by itself."
+    },
+    {
+      "id": "becken_2_v3",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 2,
+      "teil": "v3",
+      "text": "Your breath sinks deep into your pelvis. The floor of your pelvis gently gives and returns, like a quiet rocking in the night."
+    },
+    {
+      "id": "becken_2_f",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 2,
+      "teil": "f",
+      "text": "My breath sinks into my pelvis and returns all by itself."
+    },
+    {
+      "id": "becken_3_v1",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 3,
+      "teil": "v1",
+      "text": "Outside, a tree stands in the night. A light wind moves through its branches, and they sway along, soft and supple. A branch that bends stays whole. It carries leaves, birds and rain, precisely because it can move.\nYour pelvis is like this too. Soft here means ready. A soft pelvic floor can carry and let go, it can receive warmth and let pleasure happen. Softness is its strength.\nYour hips rest heavy in the bed, your belly is warm. Your pelvis may sway like a branch in the wind, calm and strong."
+    },
+    {
+      "id": "becken_3_v2",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 3,
+      "teil": "v2",
+      "text": "Water is soft. It yields to every hand and takes on every shape. And yet, over a long time, it shapes the stone on the shore.\nYour pelvis may be just as soft. Soft means ready, open to warmth and to pleasure. In this softness lies a quiet strength."
+    },
+    {
+      "id": "becken_3_v3",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 3,
+      "teil": "v3",
+      "text": "A hammock between two trees is soft, and that is why it holds. Your pelvis may be soft as well. It carries you calmly through the night."
+    },
+    {
+      "id": "becken_3_f",
+      "phase": "lernen",
+      "thema": "becken",
+      "bogen": 3,
+      "teil": "f",
+      "text": "My pelvis is soft, and soft is strong."
+    },
+    {
+      "id": "becken_s_vulva_1",
+      "phase": "lernen_spicy",
+      "thema": "becken",
+      "koerper": "vulva",
+      "teil": "s1",
+      "text": "Warmth gathers deep in your pelvis. Around your vagina and your vulva lie fine muscles that have held on a little all day. In the evening they may grow soft, warm and heavy.\nWith each breath in, the floor of your pelvis gently sinks, and around your vagina everything grows wide. Your labia rest soft and warm, your clitoris is at rest. The blood flows slowly and evenly.\nIn this softness, pleasure is possible, whenever it may come. Tonight it may simply rest within you, warm and safe."
+    },
+    {
+      "id": "becken_s_vulva_2",
+      "phase": "lernen_spicy",
+      "thema": "becken",
+      "koerper": "vulva",
+      "teil": "s2",
+      "text": "The muscles around your vagina and your vulva grow soft and warm. As you breathe in, your pelvic floor gently sinks. Your labia rest, your clitoris rests. In this softness, pleasure may be there, quite at ease."
+    },
+    {
+      "id": "becken_s_penis_1",
+      "phase": "lernen_spicy",
+      "thema": "becken",
+      "koerper": "penis",
+      "teil": "s1",
+      "text": "Warmth gathers deep in your pelvis. Around your penis, your testicles and your perineum lie fine muscles that have held on a little all day. In the evening they may grow soft, warm and heavy.\nWith each breath in, the floor of your pelvis gently sinks, and your perineum grows wide and soft. Your penis lies calm and warm, your testicles rest heavy. The blood flows slowly and evenly.\nIn this softness, pleasure is possible, whenever it may come. Tonight it may simply rest within you, warm and safe."
+    },
+    {
+      "id": "becken_s_penis_2",
+      "phase": "lernen_spicy",
+      "thema": "becken",
+      "koerper": "penis",
+      "teil": "s2",
+      "text": "The muscles around your penis, your testicles and your perineum grow soft and warm. As you breathe in, your pelvic floor gently sinks. Your penis rests, your testicles lie heavy. In this softness, pleasure may be there, quite at ease."
+    },
+    {
+      "id": "geniessen_1_v1",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 1,
+      "teil": "v1",
+      "text": "On a windowsill, a cat lies in a warm patch of sunlight. The sun has simply arrived, the way it arrives every day. The cat lies long and heavy and lets the warmth sink into its fur.\nIt accepts the warmth, as naturally as breathing. The warmth belongs to it, simply because it is there.\nIt may be the same for you. Pleasure needs no reason. It does not have to be earned first. It is simply yours to have, every evening, just as you are today.\nYour body may take in what is lovely, slowly and without hurry. You have every right to pleasure."
+    },
+    {
+      "id": "geniessen_1_v2",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 1,
+      "teil": "v2",
+      "text": "Warm water surrounds your body, soft and kind. It carries you, whatever the day has brought.\nPleasure is a gift that asks for nothing in return. You may have it, even without a reason, even on a very ordinary evening.\nPleasure belongs to you. You have every right to it."
+    },
+    {
+      "id": "geniessen_1_v3",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 1,
+      "teil": "v3",
+      "text": "Evening sun warms a stone wall, just like that, and the stone gladly takes the warmth. You may have pleasure too, with no reason and no conditions. You have every right to pleasure."
+    },
+    {
+      "id": "geniessen_1_f",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 1,
+      "teil": "f",
+      "text": "I have every right to pleasure."
+    },
+    {
+      "id": "geniessen_2_v1",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 2,
+      "teil": "v1",
+      "text": "Soft rain falls on a garden in the evening. The leaves hold still and let the water come. The earth drinks, slowly and deeply, and turns soft and dark.\nThe garden rests within itself. It simply receives what the sky gives it. Every drop is welcome.\nYour body may be like this too. Here there is nothing to show and nothing to prove. You may take without giving back. You may lie here and receive warmth, rest and softness.\nYou are free to simply receive."
+    },
+    {
+      "id": "geniessen_2_v2",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 2,
+      "teil": "v2",
+      "text": "A small boat lies on still water. The water carries it with ease, and the boat lets itself be carried.\nYou may be carried too. The mattress holds you, the blanket warms you. Your body may take, and everything it receives is freely given.\nYou are free to simply receive."
+    },
+    {
+      "id": "geniessen_2_v3",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 2,
+      "teil": "v3",
+      "text": "An open hand rests quietly on the blanket, ready for the warmth. Your body may take without giving anything back. You are free to simply receive."
+    },
+    {
+      "id": "geniessen_2_f",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 2,
+      "teil": "f",
+      "text": "I am free to simply receive."
+    },
+    {
+      "id": "geniessen_3_v1",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 3,
+      "teil": "v1",
+      "text": "The fabric of your blanket lies soft on your skin. It is a little cool at the edges and warm where your body rests. This is a small pleasure, quiet and very close.\nThen there is the warmth under the blanket, gathering slowly. And your own breath, coming and going, soft as wind in the grass.\nSmall pleasures like these are always here. They wait for you every evening, kind and faithful, like a familiar path home.\nPleasure may be a quiet habit. Every evening, a small pleasure waits for you."
+    },
+    {
+      "id": "geniessen_3_v2",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 3,
+      "teil": "v2",
+      "text": "A pillow takes the shape of your head, evening after evening. It is familiar and soft, like an old friend.\nIn the same way, the small pleasures return. The warmth of the blanket, the calm breath, the darkness that wraps around you. They belong to your evening.\nEvery evening, a small pleasure waits for you."
+    },
+    {
+      "id": "geniessen_3_v3",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 3,
+      "teil": "v3",
+      "text": "The blanket is warm, the breath is quiet. This small pleasure returns every evening. Every evening, a small pleasure waits for you."
+    },
+    {
+      "id": "geniessen_3_f",
+      "phase": "lernen",
+      "thema": "geniessen",
+      "bogen": 3,
+      "teil": "f",
+      "text": "Every evening, a small pleasure waits for me."
+    },
+    {
+      "id": "geniessen_s_vulva_1",
+      "phase": "lernen_spicy",
+      "thema": "geniessen",
+      "koerper": "vulva",
+      "teil": "s1",
+      "text": "Between your legs there is a quiet warmth. Your vulva rests softly in the dark, your labia are warm and relaxed, and your clitoris is completely calm.\nThis part of you may feel pleasure whenever it wishes. It needs no occasion and no permission from anyone. The pleasure belongs to you, and it has all the time in the world.\nTonight your pleasure simply rests within you, warm and safe, like embers beneath soft ash. Your pelvis is heavy and at ease.\nYour whole body may enjoy. You have every right to pleasure."
+    },
+    {
+      "id": "geniessen_s_vulva_2",
+      "phase": "lernen_spicy",
+      "thema": "geniessen",
+      "koerper": "vulva",
+      "teil": "s2",
+      "text": "Your vulva is warm and soft, and blood flows calmly through your pelvis. Your clitoris rests. Pleasure may be there whenever it wishes, without hurry. Tonight it rests warm and safe within you."
+    },
+    {
+      "id": "geniessen_s_penis_1",
+      "phase": "lernen_spicy",
+      "thema": "geniessen",
+      "koerper": "penis",
+      "teil": "s1",
+      "text": "Between your legs there is a quiet warmth. Your penis rests soft and heavy, the glans is warm, the shaft relaxed, and your testicles lie sheltered in the warmth of your body.\nThis part of you may feel pleasure whenever it wishes. It needs no occasion, and it has nothing to show. The pleasure belongs to you, and it has all the time in the world.\nTonight your pleasure simply rests within you, warm and safe, like embers beneath soft ash. Your pelvis is heavy and at ease.\nYour whole body may enjoy. You have every right to pleasure."
+    },
+    {
+      "id": "geniessen_s_penis_2",
+      "phase": "lernen_spicy",
+      "thema": "geniessen",
+      "koerper": "penis",
+      "teil": "s2",
+      "text": "Your penis lies soft and warm, and blood flows calmly through your pelvis. Whether it rests or fills, all of it is right. Pleasure may be there whenever it wishes, without hurry. Tonight it rests warm and safe within you."
+    }
+  ],
+  "_source": {
+    "sleep_block:ankommen_1": "9bc4e70ecdf2e7ea",
+    "sleep_block:ankommen_2": "506ec4f60a617188",
+    "sleep_block:ankommen_3": "af270969758c834f",
+    "sleep_block:atem_1": "7067a3d7219012ad",
+    "sleep_block:atem_2": "e79df74d612f86e6",
+    "sleep_block:atem_kurz_1": "08022928a58b9e20",
+    "sleep_block:atem_kurz_2": "254b46de3f37c940",
+    "sleep_block:atem_kurz_3": "7b01ee3bd4ec88d9",
+    "sleep_block:ausklang_1": "b0fa299d6fa947ee",
+    "sleep_block:ausklang_2": "bbfb0090cde9491c",
+    "sleep_block:becken_1_f": "2363ee20159b43c0",
+    "sleep_block:becken_1_v1": "a3e897b05d68a5a6",
+    "sleep_block:becken_1_v2": "e18e9bfee63503cc",
+    "sleep_block:becken_1_v3": "98788b443dc1dfc7",
+    "sleep_block:becken_2_f": "713cf2bbec764e70",
+    "sleep_block:becken_2_v1": "13b659a4566d9353",
+    "sleep_block:becken_2_v2": "f1f5869c6d0e7393",
+    "sleep_block:becken_2_v3": "950e185e33e70d1d",
+    "sleep_block:becken_3_f": "6fe9fc8b0d7a12f3",
+    "sleep_block:becken_3_v1": "962b8bc998c99560",
+    "sleep_block:becken_3_v2": "cb9429928a95774a",
+    "sleep_block:becken_3_v3": "691a310d4864f494",
+    "sleep_block:becken_s_penis_1": "0f9de684b8ffe6ab",
+    "sleep_block:becken_s_penis_2": "079277e73feba994",
+    "sleep_block:becken_s_vulva_1": "7c30baa14d115e52",
+    "sleep_block:becken_s_vulva_2": "adb4d2b9276e1628",
+    "sleep_block:gaspedal_1_f": "9bc7b1e15b474d1a",
+    "sleep_block:gaspedal_1_v1": "d1500bf90a8ecbfe",
+    "sleep_block:gaspedal_1_v2": "54dbab9203233c96",
+    "sleep_block:gaspedal_1_v3": "f2d6599a432f10f8",
+    "sleep_block:gaspedal_2_f": "ed7f3c0dc9c2f50a",
+    "sleep_block:gaspedal_2_v1": "8d3ee3c90eb2e7b0",
+    "sleep_block:gaspedal_2_v2": "7a2ac922632585dd",
+    "sleep_block:gaspedal_2_v3": "198d42cb6bea4f7e",
+    "sleep_block:gaspedal_3_f": "986bc1be632b932c",
+    "sleep_block:gaspedal_3_v1": "39007fabbdde620f",
+    "sleep_block:gaspedal_3_v2": "2b3d93fd896f9901",
+    "sleep_block:gaspedal_3_v3": "69161f70f5fcf567",
+    "sleep_block:gaspedal_s_penis_1": "3d51091dd72b1308",
+    "sleep_block:gaspedal_s_penis_2": "702e2edac1ee28d3",
+    "sleep_block:gaspedal_s_vulva_1": "b49b4641e3df41d9",
+    "sleep_block:gaspedal_s_vulva_2": "712399f8e4c34e65",
+    "sleep_block:geniessen_1_f": "8a9d11cef62375b8",
+    "sleep_block:geniessen_1_v1": "aa235b4468f01085",
+    "sleep_block:geniessen_1_v2": "0150850a3587a493",
+    "sleep_block:geniessen_1_v3": "ba2d9c6008357c35",
+    "sleep_block:geniessen_2_f": "9a507ef15331a5d2",
+    "sleep_block:geniessen_2_v1": "5bc2a654a016da55",
+    "sleep_block:geniessen_2_v2": "a5e7f10189ade6e6",
+    "sleep_block:geniessen_2_v3": "2e2601c0058e75b0",
+    "sleep_block:geniessen_3_f": "151d0035cb7db5ee",
+    "sleep_block:geniessen_3_v1": "441a88ddc3390383",
+    "sleep_block:geniessen_3_v2": "6b9e857063a0a0e3",
+    "sleep_block:geniessen_3_v3": "6c027727f72552b6",
+    "sleep_block:geniessen_s_penis_1": "661d70dfab97efc6",
+    "sleep_block:geniessen_s_penis_2": "af2243102fa690f5",
+    "sleep_block:geniessen_s_vulva_1": "52908a5b7e2a834d",
+    "sleep_block:geniessen_s_vulva_2": "c83e2708c16d71ca",
+    "sleep_block:koerper_1_f": "2d29d81f32727c9b",
+    "sleep_block:koerper_1_v1": "396372691a034814",
+    "sleep_block:koerper_1_v2": "91460c508f7aeaef",
+    "sleep_block:koerper_1_v3": "ae99dce3dfe9905e",
+    "sleep_block:koerper_2_f": "e1d9040b6a97bec5",
+    "sleep_block:koerper_2_v1": "a6be6fd1cf739ed1",
+    "sleep_block:koerper_2_v2": "9d25244681371f2b",
+    "sleep_block:koerper_2_v3": "f0b8d768bc7d9383",
+    "sleep_block:koerper_3_f": "9f97ad1f7fae33fe",
+    "sleep_block:koerper_3_v1": "f1a1ec21b09f72dc",
+    "sleep_block:koerper_3_v2": "2c960dedb31c0ef4",
+    "sleep_block:koerper_3_v3": "6468b73d46c26712",
+    "sleep_block:koerper_s_penis_1": "bb7bd0e9f1994189",
+    "sleep_block:koerper_s_penis_2": "58538680ef0d415a",
+    "sleep_block:koerper_s_vulva_1": "9d9074cb90b0fc97",
+    "sleep_block:koerper_s_vulva_2": "54af173a4d1e8c3d",
+    "sleep_block:nachklang_stuetze_1": "b2c6b8928ee54029",
+    "sleep_block:nachklang_stuetze_2": "84130092e0982e22",
+    "sleep_block:nachklang_stuetze_3": "923774d744ae1484",
+    "sleep_block:nachklang_stuetze_4": "54511e7fc976847b",
+    "sleep_block:nachklang_stuetze_5": "a18d0633c6af3a7b",
+    "sleep_block:nachklang_stuetze_6": "0bab453ad3d0893a",
+    "sleep_block:sinken_1": "cbef76d56f45e72d",
+    "sleep_block:sinken_2": "ace70d6a4d1b26dc",
+    "sleep_block:sinken_3": "52895fe608369789",
+    "sleep_block:sinken_kurz_1": "a87651e730fd6f69",
+    "sleep_block:sinken_kurz_2": "1a83c204b1d565f9",
+    "sleep_block:sinken_kurz_3": "1ec9febedec00d30",
+    "sleep_block:sinken_kurz_4": "172f46701e2f0ef2",
+    "sleep_block:spueren_1_f": "668d4da781c64e7f",
+    "sleep_block:spueren_1_v1": "f5041526b5a51679",
+    "sleep_block:spueren_1_v2": "9767058a6a4e6ce1",
+    "sleep_block:spueren_1_v3": "8ac788e1e06a2300",
+    "sleep_block:spueren_2_f": "99fa6d5cb91efde4",
+    "sleep_block:spueren_2_v1": "828f6cd6bec450ff",
+    "sleep_block:spueren_2_v2": "9fa2f607105f14d3",
+    "sleep_block:spueren_2_v3": "4e7d95bb1575ae28",
+    "sleep_block:spueren_3_f": "3c58b71d9218723e",
+    "sleep_block:spueren_3_v1": "7222d62175861be3",
+    "sleep_block:spueren_3_v2": "610e9ed4bc841c57",
+    "sleep_block:spueren_3_v3": "d0e34be7a3681b2d",
+    "sleep_block:spueren_s_penis_1": "5847e312cf81d843",
+    "sleep_block:spueren_s_penis_2": "beb3660d9916dcc0",
+    "sleep_block:spueren_s_vulva_1": "7472584b6838026d",
+    "sleep_block:spueren_s_vulva_2": "8d81adc58ee799bb",
+    "sleep_block:welle_1_f": "0ffb2c623115ca58",
+    "sleep_block:welle_1_v1": "518a3ae16c873e60",
+    "sleep_block:welle_1_v2": "ee967b89c76a09f6",
+    "sleep_block:welle_1_v3": "05bdc9b4f8726fb3",
+    "sleep_block:welle_2_f": "41f03f59830df9bd",
+    "sleep_block:welle_2_v1": "7fbeebb0dd00b84a",
+    "sleep_block:welle_2_v2": "ec2eeed4487372ec",
+    "sleep_block:welle_2_v3": "007003de4402f285",
+    "sleep_block:welle_3_f": "de0717d642e58fb6",
+    "sleep_block:welle_3_v1": "ede3ccafc567862d",
+    "sleep_block:welle_3_v2": "59728225bcda886a",
+    "sleep_block:welle_3_v3": "14052cd6acc8c0f9",
+    "sleep_block:welle_s_penis_1": "95ad9fbba481caa3",
+    "sleep_block:welle_s_penis_2": "9d954131b03c3558",
+    "sleep_block:welle_s_vulva_1": "6f9e16c1520ab788",
+    "sleep_block:welle_s_vulva_2": "42c4ca02c70392b9"
+  }
+}

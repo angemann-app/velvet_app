@@ -47,7 +47,9 @@ Body journey: 10 to 30 minutes just for you. You choose how close you want to co
 
 Shared evening: 20 to 45 minutes for two. You take turns giving and receiving, and a singing bowl marks the transitions. Agree on a stop word beforehand.
 
-Both are put together anew every time. You can pause, skip and stop at any time.
+Falling asleep: 60, 90 or 120 minutes in bed, with a focus of your choice or as a surprise. The voice grows quieter and rarer, the sentences return in rounds, and in the end only a soft sound remains. You may fall asleep. Best with the charger plugged in; in discretion mode the card just says Relaxation.
+
+All of them are put together anew every time. You can pause, skip and stop at any time.
 
 
 ## Training and quick help

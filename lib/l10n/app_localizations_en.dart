@@ -3267,4 +3267,82 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get rueckmeldungGithub => 'Report publicly on GitHub instead';
+
+  @override
+  String get einschlafKarteTitel => 'Falling asleep';
+
+  @override
+  String get einschlafKarteTitelNeutral => 'Relaxation';
+
+  @override
+  String get einschlafKarteText =>
+      'A long, quiet journey into sleep: 60 to 120 minutes with sentences you take with you into half-sleep.';
+
+  @override
+  String get einschlafTitel => 'Drift-off journey';
+
+  @override
+  String get einschlafEinleitung =>
+      'A voice accompanies you into sleep as you lie in bed. It speaks less and less, the pauses grow longer, and in the end only a soft sound remains. You may, and are meant to, fall asleep.';
+
+  @override
+  String get einschlafWirkung =>
+      'The sentences work mostly in the quiet time before you fall asleep, and through repetition over many evenings. Nothing is learned in deep sleep.';
+
+  @override
+  String get einschlafHinweise =>
+      'Not while driving or when you need to stay awake. Keep the volume low; headphones only if they are comfortable, otherwise use the speaker. Best with the charger plugged in. The drift-off journey does not replace treatment for sleep disorders.';
+
+  @override
+  String get einschlafLaenge => 'Length';
+
+  @override
+  String get einschlafSchwerpunkt => 'Focus';
+
+  @override
+  String get einschlafUeberrasch => 'Surprise me';
+
+  @override
+  String get einschlafThemaKoerper => 'My body is welcome';
+
+  @override
+  String get einschlafThemaWelle => 'Desire is a wave';
+
+  @override
+  String get einschlafThemaGaspedal => 'Gas pedal and brake';
+
+  @override
+  String get einschlafThemaSpueren => 'Feeling instead of watching';
+
+  @override
+  String get einschlafThemaBecken => 'A soft pelvis';
+
+  @override
+  String get einschlafThemaGeniessen => 'I may enjoy';
+
+  @override
+  String get einschlafOhneBezug => 'No reference';
+
+  @override
+  String get einschlafSpicyTitel => 'More explicit words';
+
+  @override
+  String get einschlafSpicyText =>
+      'Calm, anatomical language for your own genitals. No dirty talk, nothing exciting.';
+
+  @override
+  String get einschlafStart => 'Begin the drift-off journey';
+
+  @override
+  String get einschlafLaeuft => 'You may fall asleep';
+
+  @override
+  String get einschlafLaeuftText =>
+      'The voice grows quieter and rarer. In the end everything stops by itself.';
+
+  @override
+  String get einschlafBeenden => 'End the drift-off journey?';
+
+  @override
+  String get einschlafBeendenText => 'The guidance will then stop.';
 }

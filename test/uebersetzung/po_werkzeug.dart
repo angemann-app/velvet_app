@@ -146,6 +146,8 @@ List<Bereich> bereiche() {
         'lib/models/couple_channel_models.dart', true, jaNein),
     Bereich('selbst_reise', 'Geführte Selbsterkundung (Audio-Bausteine)', 'assets/data/selbst_reise.json', true,
         bausteine('selbst_reise.json', 'self_block', 'Baustein der geführten Selbsterkundung')),
+    Bereich('einschlaf_reise', 'Einschlaf-Reise (Audio-Bausteine)', 'assets/data/einschlaf_reise.json', true,
+        bausteine('einschlaf_reise.json', 'sleep_block', 'Baustein der Einschlaf-Reise')),
     Bereich('paar_abend', 'Gemeinsamer Abend (Audio-Bausteine)', 'assets/data/paar_abend.json', true,
         bausteine('paar_abend.json', 'block', 'Baustein des gemeinsamen Abends')),
     Bereich('anleitung', 'Anleitung in der App', 'assets/data/anleitung.json', false, [
@@ -229,6 +231,9 @@ Map<String, String> felderLesen(String ordner, {String? arb}) {
   for (final b in datei('selbst_reise.json')?['bausteine'] as List? ?? const []) {
     setzen('self_block:${b['id']}#text', b['text']);
   }
+  for (final b in datei('einschlaf_reise.json')?['bausteine'] as List? ?? const []) {
+    setzen('sleep_block:${b['id']}#text', b['text']);
+  }
   for (final b in datei('paar_abend.json')?['bausteine'] as List? ?? const []) {
     setzen('block:${b['id']}#text', b['text']);
   }
@@ -263,6 +268,7 @@ Map<String, String> stempelLesen(String ordner) {
     'yes_no_maybe.json',
     'fantasy_options.json',
     'selbst_reise.json',
+    'einschlaf_reise.json',
     'paar_abend.json',
     'anleitung.json',
     'neuigkeiten.json',
@@ -366,7 +372,7 @@ void uebersetzungSchreiben(String ordner, String sprache, Map<String, String> fe
     '_source': quelle(const ['fantasy']),
   });
 
-  for (final (datei, praefix) in const [('selbst_reise.json', 'self_block'), ('paar_abend.json', 'block')]) {
+  for (final (datei, praefix) in const [('selbst_reise.json', 'self_block'), ('einschlaf_reise.json', 'sleep_block'), ('paar_abend.json', 'block')]) {
     _jsonSchreiben('$ordner/$datei', {
       '_hinweis': hinweis,
       'bausteine': [

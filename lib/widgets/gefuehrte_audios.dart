@@ -4,7 +4,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../l10n/t.dart';
 import '../screens/couples_channel/paar_abend_screen.dart';
+import '../screens/self_exploration/einschlaf_reise_screen.dart';
 import '../screens/self_exploration/selbst_reise_screen.dart';
+import '../services/privacy_service.dart';
 import '../theme/app_theme.dart';
 
 /// Die geführten Audios gut sichtbar: Körperreise für dich, Gemeinsamer Abend für Paare.
@@ -36,6 +38,7 @@ class GefuehrteAudios extends StatelessWidget {
             text: t.gefuehrtSelbstText,
             onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SelbstReiseScreen())),
           ),
+        if (mitSelbst) const _EinschlafKarte(),
         if (mitPaar)
           GefuehrtKarte(
             bild: 'assets/images/guided_paar.svg',
@@ -44,6 +47,24 @@ class GefuehrteAudios extends StatelessWidget {
             onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PaarAbendScreen())),
           ),
       ],
+    );
+  }
+}
+
+/// Die Einschlaf-Reise; im Diskretions-Modus steht auf der Karte nur „Entspannung“.
+class _EinschlafKarte extends StatelessWidget {
+  const _EinschlafKarte();
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<bool>(
+      future: PrivacyService.isDiscreetIcon(),
+      builder: (context, snapshot) => GefuehrtKarte(
+        bild: 'assets/images/guided_einschlaf.svg',
+        titel: snapshot.data == true ? t.einschlafKarteTitelNeutral : t.einschlafKarteTitel,
+        text: t.einschlafKarteText,
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const EinschlafReiseScreen())),
+      ),
     );
   }
 }

@@ -331,6 +331,17 @@
           "text": "Die Kurse sind jetzt nach Themen sortiert und neu nummeriert: Grundlagen, Körper und Selbst, Beziehung und Alltag, Berührung und Praxis, Fantasie und Spiel. Dein Fortschritt bleibt erhalten."
         }
       ]
+    },
+    {
+      "build": 42,
+      "version": "4.9.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Neu: Einschlaf-Reise",
+          "text": "Eine lange, ruhige Begleitung in den Schlaf, 60, 90 oder 120 Minuten. Du wählst einen Schwerpunkt oder lässt dich überraschen. Die Stimme wird immer leiser und seltener, am Ende bleibt ein leiser Klang. Zu finden bei den geführten Audios auf der Startseite. Deutsche Aufnahmen, die englischen folgen mit einem späteren Audiopaket."
+        }
+      ]
     }
   ]
 }

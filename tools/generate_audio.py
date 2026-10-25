@@ -275,7 +275,7 @@ PAAR_JSON = ROOT / "assets" / "data" / "paar_abend.json"
 SELBST_JSON = ROOT / "assets" / "data" / "selbst_reise.json"
 
 
-def generate_blocks(only=None, source=PAAR_JSON, folder="paar", voices=None):
+def generate_blocks(only=None, source=PAAR_JSON, folder="paar", voices=None, pause=False):
     # Bausteine für den Paar-Abend (lib/screens/couples_channel/paar_abend_screen.dart) bzw. die
     # geführte Selbsterkundung (lib/screens/self_exploration/selbst_reise_screen.dart), jeweils beide Stimmen.
     out_dir = AUDIO_DIR / folder
@@ -298,11 +298,26 @@ def generate_blocks(only=None, source=PAAR_JSON, folder="paar", voices=None):
             out = out_dir / f"{name}_{block['id']}.opus"
             with tempfile.TemporaryDirectory() as tmp:
                 wav = Path(tmp) / "block.wav"
-                engine.synthesize_wav(block["text"], name, wav, pause=False)
+                engine.synthesize_wav(block["text"], name, wav, pause=pause)
                 durations[out.stem] = int(sf.info(str(wav)).duration * 1000)
                 to_opus(wav, out)
             durations_json.write_text(json.dumps(dict(sorted(durations.items())), indent=1), encoding="utf-8")
             print(f"[{i}/{total}] {out.name} -> {out.stat().st_size // 1024} KB", flush=True)
+
+
+EINSCHLAF_JSON = ROOT / "assets" / "data" / "einschlaf_reise.json"
+
+
+def generate_einschlaf(only=None, voices=None):
+    """Einschlaf-Reise (lib/screens/self_exploration/einschlaf_reise_screen.dart): wie die Selbsterkundung,
+    aber deutlich langsamer gesprochen und mit längeren Pausen zwischen den Absätzen."""
+    global SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S
+    alt = SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S
+    SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S = 0.75, {"martin": 0.7}, 1.5
+    try:
+        generate_blocks(only, EINSCHLAF_JSON, "einschlaf", voices, pause=True)
+    finally:
+        SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S = alt
 
 
 def generate_sounds():
@@ -373,6 +388,8 @@ def main():
                         help="Bausteine des Paar-Abends erzeugen (assets/audio/paar/), optional nur die genannten ids")
     parser.add_argument("--selbst", action="store_true",
                         help="Bausteine der Selbsterkundung erzeugen (assets/audio/selbst/), optional nur die genannten ids")
+    parser.add_argument("--einschlaf", action="store_true",
+                        help="Bausteine der Einschlaf-Reise erzeugen (assets/audio/einschlaf/), optional nur die genannten ids")
     parser.add_argument("--klang", action="store_true", help="Klangschale und Klangteppich erzeugen")
     parser.add_argument("--stimme", choices=list(KOKORO_VOICES),
                         help="nur Aufnahmen mit dieser Stimme erneuern (Lektionen im Wechsel zählen mit)")
@@ -386,6 +403,9 @@ def main():
         return
     if args.selbst:
         generate_blocks(set(args.ids), SELBST_JSON, "selbst", voices)
+        return
+    if args.einschlaf:
+        generate_einschlaf(set(args.ids), voices)
         return
     if args.courses and len(args.courses) == 1:
         args.courses = (args.courses[0], args.courses[0])

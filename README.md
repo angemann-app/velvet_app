@@ -76,6 +76,12 @@ English recordings are an optional download inside the app; until then, your pho
 - Also assembled anew every time, from 100 building blocks.
 - Both are right at the top of the home screen.
 
+### Drift-off journey
+- A long, quiet companion into sleep, **60, 90 or 120 minutes**, with a focus of your choice (my body is welcome,
+  desire is a wave, gas pedal and brake, feeling instead of watching, a soft pelvis, I may enjoy) or as a surprise.
+- The voice grows quieter and rarer, the sentences return in rounds, and at the end only a soft sound fades out.
+  In spicy mode with calmer but more explicit words for vulva or penis. No couple mode.
+
 ### Training and quick help
 - **Pelvic floor timer** with four exercise types (release, strengthen, pulses, waves) and voice prompts.
 - **Breathing pacer** (including 4-7-8 breathing and the physiological sigh).

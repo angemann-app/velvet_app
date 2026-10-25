@@ -10,6 +10,7 @@ phones (or when chosen in the profile) the app loads these files instead of the 
 | `velvet_content.json` | `assets/data/velvet_content.json` | 26 courses (2 of them spicy mode only), 116 lessons, SOS cards, belief library, match cards |
 | `paar_abend.json` | `assets/data/paar_abend.json` | 110 spoken building blocks of the guided couple evening |
 | `selbst_reise.json` | `assets/data/selbst_reise.json` | 100 spoken building blocks of the guided self-exploration |
+| `einschlaf_reise.json` | `assets/data/einschlaf_reise.json` | 119 spoken building blocks of the drift-off journey |
 | `yes_no_maybe.json` | `lib/models/yes_no_maybe_models.dart` | yes/no/maybe list: 11 categories, 78 items with explanations (category „spicy“ only in spicy mode) |
 | `fantasy_options.json` | `lib/models/couple_channel_models.dart` | fantasy options of the couple channel |
 | `anleitung.json` | `assets/data/anleitung.json` | in-app guide |

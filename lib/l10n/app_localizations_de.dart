@@ -3281,4 +3281,82 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get rueckmeldungGithub => 'Lieber öffentlich auf GitHub melden';
+
+  @override
+  String get einschlafKarteTitel => 'Einschlafen';
+
+  @override
+  String get einschlafKarteTitelNeutral => 'Entspannung';
+
+  @override
+  String get einschlafKarteText =>
+      'Eine lange, ruhige Reise in den Schlaf: 60 bis 120 Minuten mit Sätzen, die du im Halbschlaf mitnimmst.';
+
+  @override
+  String get einschlafTitel => 'Einschlaf-Reise';
+
+  @override
+  String get einschlafEinleitung =>
+      'Eine Stimme begleitet dich im Bett in den Schlaf. Sie spricht immer weniger, die Pausen werden länger, und zum Schluss bleibt nur ein leiser Klang. Du darfst und sollst dabei einschlafen.';
+
+  @override
+  String get einschlafWirkung =>
+      'Die Sätze wirken vor allem in der ruhigen Zeit, bevor du einschläfst, und durch die Wiederholung an vielen Abenden. Gelernt wird nicht im Tiefschlaf.';
+
+  @override
+  String get einschlafHinweise =>
+      'Nicht beim Autofahren oder wenn du wach bleiben musst. Stell es leise ein; Kopfhörer nur, wenn sie bequem sind, sonst den Lautsprecher. Am besten mit Ladekabel. Die Einschlaf-Reise ersetzt keine Behandlung von Schlafstörungen.';
+
+  @override
+  String get einschlafLaenge => 'Länge';
+
+  @override
+  String get einschlafSchwerpunkt => 'Schwerpunkt';
+
+  @override
+  String get einschlafUeberrasch => 'Überrasch mich';
+
+  @override
+  String get einschlafThemaKoerper => 'Mein Körper ist willkommen';
+
+  @override
+  String get einschlafThemaWelle => 'Lust ist eine Welle';
+
+  @override
+  String get einschlafThemaGaspedal => 'Gaspedal und Bremse';
+
+  @override
+  String get einschlafThemaSpueren => 'Spüren statt beobachten';
+
+  @override
+  String get einschlafThemaBecken => 'Ein weiches Becken';
+
+  @override
+  String get einschlafThemaGeniessen => 'Ich darf genießen';
+
+  @override
+  String get einschlafOhneBezug => 'Ohne Bezug';
+
+  @override
+  String get einschlafSpicyTitel => 'Deutlichere Worte';
+
+  @override
+  String get einschlafSpicyText =>
+      'Ruhige, anatomische Sprache für dein eigenes Geschlecht. Kein Dirty Talk, nichts Aufregendes.';
+
+  @override
+  String get einschlafStart => 'Einschlaf-Reise beginnen';
+
+  @override
+  String get einschlafLaeuft => 'Du darfst einschlafen';
+
+  @override
+  String get einschlafLaeuftText =>
+      'Die Stimme wird leiser und seltener. Am Ende stoppt alles von selbst.';
+
+  @override
+  String get einschlafBeenden => 'Einschlaf-Reise beenden?';
+
+  @override
+  String get einschlafBeendenText => 'Die Begleitung hört dann auf.';
 }

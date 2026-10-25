@@ -1,0 +1,1092 @@
+# VelvetPulse: Einschlaf-Reise (Audio-Bausteine)
+# Ausgangssprache Deutsch, Quelle: assets/data/einschlaf_reise.json
+# Anleitung für Übersetzer / Guide for translators: translations/README.md
+# Enthält Inhalte über Sexualität für Erwachsene. / Contains adult content about sexuality.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VelvetPulse\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Source-Language: de\n"
+
+#. Baustein der Einschlaf-Reise, phase: ankommen
+#. EN: The day is over. You are lying in your bed, and for today everything that needed doing is done.
+#. EN: The light may go out. Your phone may go aside, somewhere near you, where you can reach it without looking. The screen may turn dark. The voice stays with you all the same.
+#. EN: You need not listen to me until the end. If you fall asleep at some point, even in the middle of a sentence, that is exactly right. That is what this journey is for.
+msgctxt "sleep_block:ankommen_1#text"
+msgid ""
+"Der Tag ist vorbei. Du liegst in deinem Bett, und für heute ist alles getan, was getan werden musste.\n"
+"Das Licht darf ausgehen. Dein Handy darf zur Seite, irgendwo neben dich, wo du es erreichst, ohne hinzusehen. Der Bildschirm darf dunkel werden. Die Stimme bleibt trotzdem bei dir.\n"
+"Du brauchst mir nicht bis zum Ende zuzuhören. Wenn du irgendwann einschläfst, auch mitten in einem Satz, dann ist das genau richtig. Dafür ist diese Reise da."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: ankommen
+#. EN: That is enough for today. Whatever the day brought may stay outside the door of this room.
+#. EN: Let the light go out and let your phone sink to one side. Lay it down so that its screen can go dark on its own. Around you, everything grows quiet and dark.
+#. EN: There is nothing to do here and nothing to hold on to. The words may come and go again. And if you fall asleep along the way, that is just as it should be.
+msgctxt "sleep_block:ankommen_2#text"
+msgid ""
+"Für heute ist es genug. Was der Tag gebracht hat, darf draußen bleiben, vor der Tür dieses Zimmers.\n"
+"Lass das Licht ausgehen und das Handy zur Seite sinken. Leg es so hin, dass sein Bildschirm von allein dunkel werden kann. Um dich herum wird es still und dunkel.\n"
+"Hier gibt es nichts zu tun und nichts zu behalten. Die Worte dürfen kommen und wieder gehen. Und wenn du dabei einschläfst, ist das genau so gemeint."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: ankommen
+#. EN: You have arrived. The blanket rests on you, the pillow holds your head, and the evening belongs to you.
+#. EN: The light may go out. Your phone may rest, and its screen may go dark, just like the room around you. Whatever is still open can wait until tomorrow.
+#. EN: You may simply lie here and listen for as long as you like. When your thoughts grow softer and sleep comes for you, let it gently take you. My voice simply stays with you, quietly.
+msgctxt "sleep_block:ankommen_3#text"
+msgid ""
+"Du bist angekommen. Die Decke liegt auf dir, das Kissen trägt deinen Kopf, und der Abend gehört dir.\n"
+"Das Licht darf ausgehen. Das Handy darf ruhen, und sein Bildschirm darf dunkel werden, so wie das Zimmer um dich herum. Was noch offen ist, wartet bis morgen.\n"
+"Du darfst einfach liegen und zuhören, so lange du magst. Wenn deine Gedanken weicher werden und der Schlaf dich holt, dann folge ihm ruhig. Meine Stimme bleibt einfach leise bei dir."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: sinken
+#. EN: Imagine a warm, softened light resting on your forehead. Wherever it touches you, everything grows soft. Your forehead becomes smooth and wide. Your eyes grow heavy, the lids resting on each other.
+#. EN: The warm light slowly sinks lower. Your jaw may loosen, leaving a small gap between your teeth. Your tongue lies soft in your mouth. Your throat becomes warm and open.
+#. EN: The light flows over your shoulders. They sink into the mattress, a little deeper with every breath out. The warmth trickles down through your arms, all the way into your hands. Your fingers become heavy and still. Your chest rises and falls beneath the warm light, and your belly becomes soft and round.
+#. EN: And a little lower still, the light arrives in your pelvis. Here it may spread out as if in a warm bowl. Your pelvis becomes heavy and wide. Your pelvic floor lets go, very gently, like a hand that opens. Here it is warm and safe.
+#. EN: The light sinks on through your legs, through your knees, down to your feet. Your feet become warm and heavy. Your whole body lies in warm light.
+msgctxt "sleep_block:sinken_1#text"
+msgid ""
+"Stell dir ein warmes, gedämpftes Licht vor, das auf deiner Stirn ruht. Wo es dich berührt, wird alles weich. Deine Stirn wird glatt und weit. Deine Augen werden schwer, die Lider ruhen aufeinander.\n"
+"Das warme Licht sinkt langsam tiefer. Dein Kiefer darf sich lösen, ein kleiner Spalt zwischen den Zähnen. Deine Zunge liegt weich im Mund. Dein Hals wird warm und frei.\n"
+"Das Licht fließt über deine Schultern. Sie sinken in die Matratze, ein wenig tiefer mit jedem Ausatmen. Die Wärme rinnt durch deine Arme hinab, bis in die Hände. Deine Finger werden schwer und still. Deine Brust hebt sich und senkt sich unter dem warmen Licht, und dein Bauch wird weich und rund.\n"
+"Und noch ein wenig tiefer kommt das Licht in deinem Becken an. Hier darf es sich ausbreiten wie in einer warmen Schale. Dein Becken wird schwer und weit. Der Boden deines Beckens lässt los, ganz sanft, so wie eine Hand, die sich öffnet. Hier ist es warm und sicher.\n"
+"Das Licht sinkt weiter durch deine Beine, durch die Knie, hinunter bis zu den Füßen. Deine Füße werden warm und schwer. Dein ganzer Körper liegt im warmen Licht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: sinken
+#. EN: Let your body be like fine sand, slowly settling after a long day. Grain by grain it comes to rest, from top to bottom.
+#. EN: First on your forehead. It becomes smooth and still. The sand settles on your eyes, and the lids grow heavy. Your jaw sinks down a little. Your tongue rests soft and broad in your mouth. Your throat becomes calm.
+#. EN: The sand trickles over your shoulders and settles there. They grow heavy and sink. It runs down through your arms into your hands, and your hands lie heavy and warm. Your chest grows still. Your belly becomes soft, rising and falling all on its own.
+#. EN: Further down, in your pelvis, the sand gathers and comes to rest. Your pelvis becomes heavy and broad and lies safely on the bed. Your pelvic floor may settle too, soft and at ease, like sand at the bottom of a quiet lake. Here you may become completely heavy.
+#. EN: The sand trickles on through your legs, down into your feet. Your feet grow heavy. Everything in you has settled.
+msgctxt "sleep_block:sinken_2#text"
+msgid ""
+"Lass deinen Körper sein wie feinen Sand, der sich nach einem langen Tag langsam setzt. Körnchen um Körnchen kommt er zur Ruhe, von oben nach unten.\n"
+"Zuerst auf deiner Stirn. Sie wird glatt und still. Der Sand legt sich auf deine Augen, und die Lider werden schwer. Dein Kiefer sinkt ein wenig nach unten. Deine Zunge ruht weich und breit im Mund. Dein Hals wird ruhig.\n"
+"Der Sand rieselt über deine Schultern und setzt sich dort. Sie werden schwer und sinken. Er rinnt durch deine Arme bis in die Hände, und deine Hände liegen schwer und warm. Auf deiner Brust wird es still. Dein Bauch wird weich, er hebt sich und senkt sich, ganz von allein.\n"
+"Tiefer unten, in deinem Becken, sammelt sich der Sand und kommt zur Ruhe. Dein Becken wird schwer und breit und liegt sicher auf dem Bett. Auch der Beckenboden darf sich setzen, weich und gelassen, wie Sand am Grund eines stillen Sees. Hier darfst du ganz schwer werden.\n"
+"Der Sand rieselt weiter durch deine Beine, bis hinab in die Füße. Deine Füße werden schwer. Alles an dir hat sich gesetzt."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: sinken
+#. EN: Let your body be like the water of a lake in the evening. The wind has dropped, and the surface slowly becomes smooth.
+#. EN: The calm begins at your forehead. It becomes smooth like the water. Your eyes grow heavy and dark. Your jaw lets go, and your tongue floats softly in your mouth. Your throat becomes still and open.
+#. EN: The calm spreads out in small circles, over your shoulders. They soften and sink. It flows down through your arms into your hands. Your hands lie still, as if carried by the water. Your chest rises and falls, as gently as a small wave. Your belly grows soft.
+#. EN: In your pelvis the water becomes deep and calm. This is the stillest part of the lake. Your pelvis may grow heavy and wide. Your pelvic floor becomes soft, like the ground on which the water rests. Soft is not weak. Soft is calm and ready.
+#. EN: The calm flows on through your legs, down into your feet. Your feet grow heavy and warm. Your whole body lies still, like a lake at night.
+msgctxt "sleep_block:sinken_3#text"
+msgid ""
+"Lass deinen Körper sein wie das Wasser eines Sees am Abend. Der Wind hat sich gelegt, und die Oberfläche wird langsam glatt.\n"
+"Die Ruhe beginnt an deiner Stirn. Sie wird glatt wie das Wasser. Deine Augen werden schwer und dunkel. Dein Kiefer lässt los, und deine Zunge treibt weich im Mund. Dein Hals wird still und weit.\n"
+"Die Ruhe breitet sich in kleinen Kreisen aus, über deine Schultern. Sie werden weich und sinken. Durch deine Arme fließt sie hinab, bis in die Hände. Deine Hände liegen still, wie vom Wasser getragen. Deine Brust hebt sich und senkt sich, so sanft wie eine kleine Welle. Dein Bauch wird weich.\n"
+"In deinem Becken wird das Wasser tief und ruhig. Hier ist der stillste Teil des Sees. Dein Becken darf schwer werden und sich weiten. Der Boden deines Beckens wird weich, wie ein Grund, auf dem das Wasser ruht. Weich ist nicht schwach. Weich ist ruhig und bereit.\n"
+"Die Ruhe fließt weiter durch deine Beine, bis in die Füße. Deine Füße werden schwer und warm. Dein ganzer Körper liegt still, wie ein See in der Nacht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: sinken_kurz
+#. EN: Your feet lie heavy. The heaviness rises slowly up through your legs and gathers warmly in your pelvis. Your belly grows soft, your shoulders sink deeper into the pillow. Your face grows still as well. Forehead and jaw are resting, and your whole body lies held.
+msgctxt "sleep_block:sinken_kurz_1#text"
+msgid "Deine Füße liegen schwer. Die Schwere steigt langsam durch die Beine hinauf und sammelt sich warm im Becken. Dein Bauch wird weich, deine Schultern sinken tiefer in das Kissen. Auch dein Gesicht wird still. Stirn und Kiefer ruhen, und der ganze Körper liegt getragen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: sinken_kurz
+#. EN: With every breath out, your pelvis grows a little heavier. From there the softness spreads, upward into your belly and chest, downward into your legs. It reaches your hands and your feet. Your body grows wide and heavy, and the bed holds all of you.
+msgctxt "sleep_block:sinken_kurz_2#text"
+msgid "Mit jedem Ausatmen wird dein Becken ein wenig schwerer. Von dort breitet sich die Weichheit aus, nach oben in Bauch und Brust, nach unten in die Beine. Sie erreicht deine Hände und deine Füße. Dein Körper wird weit und schwer, und das Bett trägt dich ganz."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: sinken_kurz
+#. EN: Your head lies heavy in the pillow. Your shoulders, your back and your pelvis lie heavy on the bed. Your heels rest. Wherever your body touches the bed, it gives up a little more weight. The bed takes it all and carries you through the night.
+msgctxt "sleep_block:sinken_kurz_3#text"
+msgid "Dein Kopf liegt schwer im Kissen. Deine Schultern, dein Rücken und dein Becken liegen schwer auf dem Bett. Deine Fersen ruhen. Überall, wo dein Körper aufliegt, gibt er ein wenig mehr Gewicht ab. Das Bett nimmt alles an und trägt dich, die ganze Nacht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: sinken_kurz
+#. EN: Under the blanket it grows warm. The warmth lies on your skin, on your arms, on your belly, on your legs. Slowly it sinks deeper, into the muscles, into your pelvis, down into your pelvic floor. Everything there grows soft. Your face is calm, and your body is heavy and warm.
+msgctxt "sleep_block:sinken_kurz_4#text"
+msgid "Unter der Decke wird es warm. Die Wärme liegt auf deiner Haut, auf den Armen, auf dem Bauch, auf den Beinen. Langsam sinkt sie tiefer, in die Muskeln, in das Becken, bis in den Beckenboden. Alles darin wird weich. Dein Gesicht ist ruhig, und dein Körper ist schwer und warm."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: atem
+#. EN: Breathe in a little deeper, comfortably, and let the breath flow out long and slow. Longer than it took to come in.
+#. EN: Once more in, and a long way out.
+#. EN: And once, the breath may leave as a sigh, out loud or very quietly, as after a long day.
+#. EN: After that, the breath may do whatever it likes. You may let go of it completely. It knows its way through the night.
+msgctxt "sleep_block:atem_1#text"
+msgid ""
+"Atme einmal etwas tiefer ein, ganz bequem, und lass den Atem lang und langsam wieder hinausströmen. Länger, als er hereingekommen ist.\n"
+"Noch einmal ein, und lang hinaus.\n"
+"Und einmal darf der Atem als Seufzer gehen, hörbar oder ganz leise, so wie nach einem langen Tag.\n"
+"Danach darf der Atem machen, was er möchte. Du darfst ihn ganz loslassen. Er kennt seinen Weg durch die Nacht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: atem
+#. EN: Let your next breath grow a little deeper. The air gently fills your chest and your belly. Then let it go slowly, long and quiet, like wind settling down.
+#. EN: With the next breath out, a sigh may come. With it, something of the day sinks out of you.
+#. EN: And then you hand the breath over. It comes and goes on its own, as it does every night. Your body knows how this goes.
+msgctxt "sleep_block:atem_2#text"
+msgid ""
+"Lass deinen nächsten Atemzug ein wenig tiefer werden. Die Luft füllt sanft deine Brust und deinen Bauch. Dann lass sie langsam gehen, lang und leise, wie Wind, der sich legt.\n"
+"Beim nächsten Ausatmen darf ein Seufzer entstehen. Mit ihm sinkt etwas vom Tag aus dir heraus.\n"
+"Und dann gibst du den Atem ab. Er kommt und geht von allein, so wie in jeder Nacht. Dein Körper weiß, wie das geht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: atem_kurz
+#. EN: Your breath comes and goes all on its own. Each breath out is a little longer and a little softer. You may simply follow it.
+msgctxt "sleep_block:atem_kurz_1#text"
+msgid "Dein Atem kommt und geht, ganz von allein. Jedes Ausatmen ist ein wenig länger und ein wenig weicher. Du darfst ihm einfach folgen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: atem_kurz
+#. EN: The breath flows calmly. It gently lifts your belly and lets it slowly sink. With every breath out, your body grows a little heavier.
+msgctxt "sleep_block:atem_kurz_2#text"
+msgid "Der Atem fließt ruhig. Er hebt deinen Bauch sanft an und lässt ihn langsam sinken. Mit jedem Ausatmen wird dein Körper ein wenig schwerer."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: atem_kurz
+#. EN: Somewhere inside you, something breathes quietly, like waves on a shore at night. It breathes all by itself. The breath knows its way, even in sleep.
+msgctxt "sleep_block:atem_kurz_3#text"
+msgid "Irgendwo in dir atmet es leise, wie Wellen an einem Ufer in der Nacht. Es atmet ganz von selbst. Der Atem kennt seinen Weg, auch im Schlaf."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: nachklang_stuetze
+#. EN: You may keep sinking, as deep as feels good to you.
+msgctxt "sleep_block:nachklang_stuetze_1#text"
+msgid "Du darfst weiter sinken, so tief, wie es sich gut anfühlt."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: nachklang_stuetze
+#. EN: Everything is fine, just the way it is.
+msgctxt "sleep_block:nachklang_stuetze_2#text"
+msgid "Alles ist gut so, wie es gerade ist."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: nachklang_stuetze
+#. EN: Your body carries you safely through the night.
+msgctxt "sleep_block:nachklang_stuetze_3#text"
+msgid "Dein Körper trägt dich sicher durch die Nacht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: nachklang_stuetze
+#. EN: The darkness is soft and holds you very gently.
+msgctxt "sleep_block:nachklang_stuetze_4#text"
+msgid "Die Dunkelheit ist weich und hält dich ganz behutsam."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: nachklang_stuetze
+#. EN: You are safe here, warm and sheltered.
+msgctxt "sleep_block:nachklang_stuetze_5#text"
+msgid "Du bist hier sicher, warm und geborgen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: nachklang_stuetze
+#. EN: Sleep may come to you whenever it wishes.
+msgctxt "sleep_block:nachklang_stuetze_6#text"
+msgid "Der Schlaf darf kommen, wann immer er möchte."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: ausklang
+#. EN: A quiet thank you goes to your body, which carried you through this day. Now it rests, warm and safe. Good night.
+msgctxt "sleep_block:ausklang_1#text"
+msgid "Ein stiller Dank geht an deinen Körper, der dich durch diesen Tag getragen hat. Nun ruht er, warm und sicher. Gute Nacht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: ausklang
+#. EN: The night is still and wide. Your body rests warm in the dark, and everything that happened today may settle. Good night.
+msgctxt "sleep_block:ausklang_2#text"
+msgid "Die Nacht ist still und weit. Dein Körper ruht warm im Dunkeln, und alles, was heute war, darf sich setzen. Gute Nacht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 1, teil: v1
+#. EN: There are people who look at you with warm eyes. A good friend, someone dear to you, someone who has known you for a long time. Their gaze is soft and calm, and it likes to rest on you.
+#. EN: Tonight you may look at yourself with that same gaze. It moves slowly over your body, the way warm light moves through a room. It lingers on your shoulders, on your belly, on your hands resting on the blanket.
+#. EN: This gaze has time. It is simply glad that you are here. It finds you beautiful, in every line and in every curve.
+#. EN: Your body is good, and your gaze upon it may be kind.
+msgctxt "sleep_block:koerper_1_v1#text"
+msgid ""
+"Es gibt Menschen, die dich mit warmen Augen ansehen. Ein guter Freund, eine liebe Freundin, jemand, der dich schon lange kennt. Ihr Blick ist weich und ruhig, und er ruht gern auf dir.\n"
+"Mit diesem Blick darfst du heute Nacht auch dich selbst ansehen. Er wandert langsam über deinen Körper, so wie warmes Licht durch ein Zimmer wandert. Er verweilt bei deinen Schultern, bei deinem Bauch, bei deinen Händen auf der Decke.\n"
+"Dieser Blick hat Zeit. Er freut sich einfach, dass du da bist. Er findet dich schön, in jeder Linie und in jeder Rundung.\n"
+"Dein Körper ist gut, und dein Blick auf ihn darf freundlich sein."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 1, teil: v2
+#. EN: When someone is asleep, we often look at them with a special tenderness. The face is soft, the breath is calm, and everything about them is easy to love.
+#. EN: Tonight your gaze may rest on yourself with that same tenderness. On your face, on your breath, on your whole body beneath the blanket.
+#. EN: Your body is good, and you look at it with kindness.
+msgctxt "sleep_block:koerper_1_v2#text"
+msgid ""
+"Wenn ein Mensch schläft, sieht man ihn oft mit besonderer Zärtlichkeit an. Das Gesicht ist weich, der Atem ist ruhig, und alles an ihm ist liebenswert.\n"
+"Mit dieser Zärtlichkeit darf dein Blick heute Nacht auch auf dir selbst liegen. Auf deinem Gesicht, auf deinem Atem, auf deinem ganzen Körper unter der Decke.\n"
+"Dein Körper ist gut, und dein Blick auf ihn ist freundlich."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 1, teil: v3
+#. EN: Moonlight rests softly on your blanket, on every curve and every line, kind to all of it. Your gaze is just as kind.
+#. EN: Your body is good, and you look at it with kindness.
+msgctxt "sleep_block:koerper_1_v3#text"
+msgid ""
+"Mondlicht liegt sanft auf deiner Decke, auf jeder Rundung und jeder Linie, überall gleich freundlich. Genauso freundlich ist dein Blick.\n"
+"Dein Körper ist gut, und dein Blick auf ihn ist freundlich."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 1, teil: f
+#. EN: My body is good, and I look at it with kindness.
+msgctxt "sleep_block:koerper_1_f#text"
+msgid "Mein Körper ist gut, und mein Blick auf ihn ist freundlich."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 2, teil: v1
+#. EN: Your body was with you all day long. It woke up with you, it carried you through rooms and streets, it felt warmth and coolness.
+#. EN: Your legs carried you, step by step. Your hands held, gave and touched. Your skin felt the air, the fabric of your clothes, perhaps the sun or the rain.
+#. EN: And your breath was there the whole time, quiet and faithful, even in the moments when you forgot about it.
+#. EN: All of this may rest in the darkness. Your body carried you today, and you may thank it.
+msgctxt "sleep_block:koerper_2_v1#text"
+msgid ""
+"Dein Körper war heute den ganzen Tag bei dir. Er ist mit dir aufgewacht, er hat dich durch Räume und Straßen getragen, er hat Wärme und Kühle gespürt.\n"
+"Deine Beine haben dich getragen, Schritt für Schritt. Deine Hände haben gehalten, gegeben und berührt. Deine Haut hat die Luft gespürt, den Stoff deiner Kleidung, vielleicht die Sonne oder den Regen.\n"
+"Und dein Atem war die ganze Zeit da, still und treu, auch in den Augenblicken, in denen du ihn vergessen hast.\n"
+"All das darf sich in der Dunkelheit ausruhen. Dein Körper hat dich heute getragen, und du darfst ihm danken."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 2, teil: v2
+#. EN: In the evening a boat lies still in the harbor. It carried wind and waves all day, and at last it rocks gently on the dark water.
+#. EN: Your body lies in your bed in the same way. Your legs, your hands and your breath took care of you today, and they may rest.
+#. EN: Your body carried you today, and you thank it.
+msgctxt "sleep_block:koerper_2_v2#text"
+msgid ""
+"Am Abend liegt ein Boot still im Hafen. Es hat den ganzen Tag Wind und Wellen getragen, und endlich schaukelt es sanft im dunklen Wasser.\n"
+"So liegt auch dein Körper in deinem Bett. Deine Beine, deine Hände und dein Atem haben heute für dich gesorgt, und sie dürfen ruhen.\n"
+"Dein Körper hat dich heute getragen, und du dankst ihm."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 2, teil: v3
+#. EN: Your hands lie warm and heavy on the blanket. They held so much today.
+#. EN: Your body carried you today, and you thank it.
+msgctxt "sleep_block:koerper_2_v3#text"
+msgid ""
+"Deine Hände liegen warm und schwer auf der Decke. Sie haben heute so viel gehalten.\n"
+"Dein Körper hat dich heute getragen, und du dankst ihm."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 2, teil: f
+#. EN: My body carried me today, and I thank it.
+msgctxt "sleep_block:koerper_2_f#text"
+msgid "Mein Körper hat mich heute getragen, und ich danke ihm."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 3, teil: v1
+#. EN: A beach is a little different every day. The water shapes it anew, a soft hollow here, a line in the sand there. And every day it is wholly a beach, beautiful in its own way.
+#. EN: Your body changes too, over the years. It grows softer or firmer, heavier or lighter, it carries lines and scars, it tells of everything you have lived. Each of these traces belongs to you.
+#. EN: Tonight, comparison with others may go to sleep. It lies down quietly and grows still.
+#. EN: Your body is welcome, just as it is today.
+msgctxt "sleep_block:koerper_3_v1#text"
+msgid ""
+"Ein Strand ist an jedem Tag ein wenig anders. Das Wasser formt ihn neu, hier eine weiche Mulde, dort eine Linie im Sand. Und an jedem Tag ist er ganz und gar ein Strand, schön auf seine eigene Weise.\n"
+"Auch dein Körper verändert sich mit den Jahren. Er wird weicher oder fester, schwerer oder leichter, er trägt Linien und Narben, er erzählt von allem, was du erlebt hast. Jede dieser Spuren gehört zu dir.\n"
+"Der Vergleich mit anderen darf heute Nacht schlafen gehen. Er legt sich leise hin und wird still.\n"
+"Dein Körper ist willkommen, so wie er heute ist."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 3, teil: v2
+#. EN: An old tree carries its rings within, and its bark has furrows and scars. That is exactly why it is beautiful, and its shade is calm and quiet.
+#. EN: Your body carries its own story too, in every scar, in every curve, in every year. Comparison may go to sleep.
+#. EN: Your body is welcome, just as it is today.
+msgctxt "sleep_block:koerper_3_v2#text"
+msgid ""
+"Ein alter Baum trägt seine Jahresringe in sich, und seine Rinde hat Furchen und Narben. Gerade darum ist er schön, und in seinem Schatten ist es ruhig.\n"
+"Auch dein Körper trägt seine Geschichte, in jeder Narbe, in jeder Rundung, in jedem Jahr. Der Vergleich darf schlafen gehen.\n"
+"Dein Körper ist willkommen, so wie er heute ist."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 3, teil: v3
+#. EN: A river is a different river every night, and every night it is beautiful. Comparison is asleep.
+#. EN: Your body is welcome, just as it is today.
+msgctxt "sleep_block:koerper_3_v3#text"
+msgid ""
+"Ein Fluss ist in jeder Nacht ein anderer Fluss, und in jeder Nacht ist er schön. Der Vergleich schläft.\n"
+"Dein Körper ist willkommen, so wie er heute ist."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: koerper, bogen: 3, teil: f
+#. EN: My body is welcome, just as it is today.
+msgctxt "sleep_block:koerper_3_f#text"
+msgid "Mein Körper ist willkommen, so wie er heute ist."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: koerper, koerper: vulva, teil: s1
+#. EN: Your sex is part of your body too, and there as well you are welcome. Your vulva rests warm and calm between your legs. Your labia are soft, in their very own shape and colour, as different as faces.
+#. EN: Your clitoris rests quietly, your vagina is warm and relaxed, and your pelvis holds everything gently. Here everything may simply be as it is.
+#. EN: Just as your vulva is today, it is beautiful. It may feel pleasure whenever that feels right, and tonight it may simply rest, warm and safe.
+#. EN: Your body is welcome, completely.
+msgctxt "sleep_block:koerper_s_vulva_1#text"
+msgid ""
+"Auch dein Geschlecht gehört zu deinem Körper, und auch dort bist du willkommen. Deine Vulva ist warm und ruhig zwischen deinen Beinen. Deine Schamlippen sind weich, in ihrer ganz eigenen Form und Farbe, so verschieden wie Gesichter.\n"
+"Deine Klitoris ruht still, deine Vagina ist warm und entspannt, und dein Becken trägt alles sanft. Hier darf alles einfach sein, so wie es ist.\n"
+"So wie deine Vulva heute ist, ist sie schön. Sie darf Lust empfinden, wann immer es sich richtig anfühlt, und heute Nacht darf sie einfach ruhen, warm und sicher.\n"
+"Dein Körper ist willkommen, ganz und gar."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: koerper, koerper: vulva, teil: s2
+#. EN: Your vulva is warm and soft, with labia in their own beautiful shape. Everything about it is right, just as it is today.
+#. EN: Your pleasure rests in your pelvis, warm and safe. Here too, your body is welcome.
+msgctxt "sleep_block:koerper_s_vulva_2#text"
+msgid ""
+"Deine Vulva ist warm und weich, mit Schamlippen in ihrer eigenen, schönen Form. Alles an ihr ist richtig, so wie es heute ist.\n"
+"Deine Lust ruht in deinem Becken, warm und sicher. Auch hier ist dein Körper willkommen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: koerper, koerper: penis, teil: s1
+#. EN: Your sex is part of your body too, and there as well you are welcome. Your penis lies warm and calm between your legs, soft and heavy, in its very own shape and size, as different as faces.
+#. EN: The glans, the shaft, the testicles, all of it is warm and relaxed, and your pelvis holds it gently. Here everything may simply be as it is.
+#. EN: Soft and calm, your penis is just as good as aroused. Pleasure may come whenever it likes, and tonight it simply rests within you, warm and safe.
+#. EN: Your body is welcome, completely.
+msgctxt "sleep_block:koerper_s_penis_1#text"
+msgid ""
+"Auch dein Geschlecht gehört zu deinem Körper, und auch dort bist du willkommen. Dein Penis liegt warm und ruhig zwischen deinen Beinen, weich und schwer, in seiner ganz eigenen Form und Größe, so verschieden wie Gesichter.\n"
+"Die Eichel, der Schaft, die Hoden, alles ist warm und entspannt, und dein Becken trägt es sanft. Hier darf alles einfach sein, so wie es ist.\n"
+"Weich und ruhig ist dein Penis genauso gut wie erregt. Lust darf kommen, wann immer sie mag, und heute Nacht ruht sie einfach in dir, warm und sicher.\n"
+"Dein Körper ist willkommen, ganz und gar."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: koerper, koerper: penis, teil: s2
+#. EN: Your penis rests soft and warm between your legs, in its own good shape. Soft, it is just as right as when it is aroused.
+#. EN: Your pleasure rests in your pelvis, warm and safe. Here too, your body is welcome.
+msgctxt "sleep_block:koerper_s_penis_2#text"
+msgid ""
+"Dein Penis ruht weich und warm zwischen deinen Beinen, in seiner eigenen, guten Form. Weich ist er genauso richtig wie erregt.\n"
+"Deine Lust ruht in deinem Becken, warm und sicher. Auch hier ist dein Körper willkommen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 1, teil: v1
+#. EN: It is night by the sea. The sand beneath you is still warm from the day, and the air is soft and dark.
+#. EN: The waves come and go. One rises, rolls in, and spreads out flat across the sand. Then it slips back, very quietly, and the next one begins. Each one is different from the last. Some are high, some are flat and still.
+#. EN: Nobody asks a wave whether it is good enough. It may simply come, and it may simply go.
+#. EN: Your desire is just the same. It comes and goes in its own time. You may feel it, just as it is.
+msgctxt "sleep_block:welle_1_v1#text"
+msgid ""
+"Es ist Nacht am Meer. Der Sand unter dir ist noch warm vom Tag, und die Luft ist weich und dunkel.\n"
+"Die Wellen kommen und gehen. Eine hebt sich, rollt heran und legt sich flach auf den Sand. Dann zieht sie sich zurück, ganz leise, und die nächste beginnt. Keine ist wie die andere. Manche sind hoch, manche sind flach und still.\n"
+"Niemand fragt eine Welle, ob sie gut genug ist. Sie darf einfach kommen, und sie darf einfach gehen.\n"
+"So ist es auch mit deiner Lust. Sie kommt und geht, ganz in ihrer eigenen Zeit. Du darfst sie spüren, so wie sie gerade ist."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 1, teil: v2
+#. EN: It is as if your body were lying on warm water, and the water holds you.
+#. EN: A wave lifts you gently and lowers you again. The next one is a little different, longer, softer. The water does all of this by itself.
+#. EN: Your desire moves the same way. It comes and goes, and every wave may be just as it is.
+msgctxt "sleep_block:welle_1_v2#text"
+msgid ""
+"Es ist, als läge dein Körper auf warmem Wasser, und das Wasser trägt dich.\n"
+"Eine Welle hebt dich sacht an und senkt dich wieder. Die nächste ist ein wenig anders, länger, weicher. Das Wasser macht das ganz von allein.\n"
+"Auch deine Lust bewegt sich so. Sie kommt und geht, und jede Welle darf so sein, wie sie ist."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 1, teil: v3
+#. EN: Out in the darkness the sea murmurs, wave after wave, each one a little different.
+#. EN: Your desire comes and goes too, in its own good time.
+msgctxt "sleep_block:welle_1_v3#text"
+msgid ""
+"Draußen in der Dunkelheit rauscht das Meer, Welle um Welle, jede ein wenig anders.\n"
+"Auch deine Lust kommt und geht, ganz in ihrer eigenen Zeit."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 1, teil: f
+#. EN: Desire comes and goes. I can simply feel it.
+msgctxt "sleep_block:welle_1_f#text"
+msgid "Lust kommt und geht. Ich darf sie einfach spüren."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 2, teil: v1
+#. EN: It is low tide. The water has drawn far back, and the beach lies quiet and wide in the moonlight. The sand is damp and smooth, and small pools hold the light.
+#. EN: The sea is still there. It is only resting, far out where it is dark. And very slowly it comes back. First a thin edge of water, then more, until the tide covers the sand again.
+#. EN: Your desire is like that too. Sometimes it grows quiet and draws back, and nothing is lost. Often it only returns once warmth and calm are already there, very near and very gentle. It comes back, the way the water comes back.
+msgctxt "sleep_block:welle_2_v1#text"
+msgid ""
+"Es ist Ebbe. Das Wasser hat sich weit zurückgezogen, und der Strand liegt still und weit im Mondlicht. Der Sand ist feucht und glatt, und kleine Pfützen halten das Licht.\n"
+"Das Meer ist trotzdem da. Es ruht nur, draußen, wo es dunkel ist. Und ganz langsam kommt es wieder. Erst ein schmaler Saum aus Wasser, dann mehr, bis die Flut den Sand wieder bedeckt.\n"
+"So ist es auch mit deiner Lust. Manchmal wird sie leise und zieht sich zurück, und nichts ist verloren. Oft kommt sie erst wieder, wenn Wärme und Ruhe schon da sind, ganz nah und ganz behutsam. Sie kehrt zurück, so wie das Wasser zurückkehrt."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 2, teil: v2
+#. EN: At low tide a small boat lies on the sand, tilted a little to one side, perfectly calm. It rests and has all the time in the world. Sooner or later the tide comes in, and the water gently lifts it again.
+#. EN: Your desire may rest like that too. When it grows quiet, nothing is lost. It comes back, like the water.
+msgctxt "sleep_block:welle_2_v2#text"
+msgid ""
+"Bei Ebbe liegt ein kleines Boot auf dem Sand, leicht zur Seite geneigt, ganz ruhig. Es ruht und hat alle Zeit der Welt. Irgendwann kommt die Flut, und das Wasser hebt es sanft wieder an.\n"
+"Deine Lust darf auch so ruhen. Wenn sie leiser wird, ist nichts verloren. Sie kommt wieder, wie das Wasser."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 2, teil: v3
+#. EN: The sea draws back and returns, just like your breath.
+#. EN: Quiet desire is only low tide. The tide always finds its way back to you.
+msgctxt "sleep_block:welle_2_v3#text"
+msgid ""
+"Das Meer zieht sich zurück und kommt wieder, so wie dein Atem.\n"
+"Auch leise Lust ist nur Ebbe. Die Flut findet ihren Weg zurück zu dir."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 2, teil: f
+#. EN: Quiet desire is only resting. It returns like the tide.
+msgctxt "sleep_block:welle_2_f#text"
+msgid "Leise Lust ruht nur. Sie kehrt zurück wie die Flut."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 3, teil: v1
+#. EN: There are days when the sea is completely smooth. Hardly a wave moves, and the water lies there like dark glass. The sky is mirrored in it, still and wide.
+#. EN: This is the sea too. Just as beautiful, just as alive, just as whole.
+#. EN: Your body knows days like this as well. Days with little desire, days full of tiredness, evenings that long only for rest. They belong to you, the way the still days belong to the sea.
+#. EN: Tonight your body may simply rest. Every wave belongs, the small one and the still one too.
+msgctxt "sleep_block:welle_3_v1#text"
+msgid ""
+"Es gibt Tage, an denen das Meer ganz glatt ist. Kaum eine Welle bewegt sich, und das Wasser liegt da wie dunkles Glas. Der Himmel spiegelt sich darin, still und weit.\n"
+"Auch das ist das Meer. Genauso schön, genauso lebendig, genauso ganz.\n"
+"Auch dein Körper kennt solche Tage. Tage mit wenig Lust, Tage voller Müdigkeit, Abende, die sich nur nach Ruhe sehnen. Sie gehören zu dir, so wie die stillen Tage zum Meer gehören.\n"
+"Heute Nacht darf dein Körper einfach ruhen. Jede Welle gehört dazu, auch die kleine, auch die stille."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 3, teil: v2
+#. EN: In a quiet bay the water barely ripples. Small waves brush over the pebbles, almost silent, and they are still the whole sea.
+#. EN: So are the tired days, the quiet evenings, the hours when desire is asleep. They belong to you, and every one of them is right.
+msgctxt "sleep_block:welle_3_v2#text"
+msgid ""
+"In einer stillen Bucht kräuselt sich das Wasser nur ganz leicht. Kleine Wellen streichen über die Kiesel, kaum hörbar, und sind doch ganz Meer.\n"
+"So sind auch die müden Tage, die leisen Abende, die Stunden, in denen die Lust schläft. Sie gehören zu dir, und jede von ihnen ist richtig."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 3, teil: v3
+#. EN: The sea has still nights too, smooth and dark and completely at rest.
+#. EN: Your tired days belong to you just the same. Every wave is right.
+msgctxt "sleep_block:welle_3_v3#text"
+msgid ""
+"Auch das Meer hat stille Nächte, glatt und dunkel und ganz in Ruhe.\n"
+"Deine müden Tage gehören genauso zu dir. Jede Welle ist richtig."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: welle, bogen: 3, teil: f
+#. EN: Every wave belongs to me, even the still one.
+msgctxt "sleep_block:welle_3_f#text"
+msgid "Jede Welle gehört zu mir, auch die stille."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: welle, koerper: vulva, teil: s1
+#. EN: Between your legs it is warm and dark. Your vulva lies soft and calm, your labia heavy and relaxed.
+#. EN: Desire moves through your pelvis like a wave. Sometimes it grows a little warmer there, more blood flows in, and your labia and your clitoris become gently fuller. Then it ebbs away again, and everything turns still and soft. It all happens by itself, the way the sea comes and goes by itself.
+#. EN: Tonight your desire may rest, or it may be quietly present. Both belong to you, and both are good.
+msgctxt "sleep_block:welle_s_vulva_1#text"
+msgid ""
+"Zwischen deinen Beinen ist es warm und dunkel. Deine Vulva liegt weich und ruhig, deine Schamlippen schwer und entspannt.\n"
+"Lust bewegt sich in deinem Becken wie eine Welle. Manchmal wird es dort ein wenig wärmer, mehr Blut fließt hinein, und deine Schamlippen und deine Klitoris werden sanft voller. Dann ebbt es wieder ab, und alles wird still und weich. Das geschieht ganz von allein, so wie das Meer von allein kommt und geht.\n"
+"Heute Nacht darf deine Lust ruhen oder leise da sein. Beides gehört zu dir, und beides ist gut."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: welle, koerper: vulva, teil: s2
+#. EN: Your clitoris and your labia rest warm in the darkness. Desire may gently swell and fade again in your pelvis, like a wave, all by itself.
+#. EN: Tonight it may simply rest, warm and safe within you.
+msgctxt "sleep_block:welle_s_vulva_2#text"
+msgid ""
+"Deine Klitoris und deine Schamlippen ruhen warm in der Dunkelheit. Lust darf in deinem Becken sanft anschwellen und wieder abklingen, wie eine Welle, ganz von allein.\n"
+"Heute Nacht darf sie einfach ruhen, warm und sicher in dir."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: welle, koerper: penis, teil: s1
+#. EN: Between your legs it is warm and dark. Your penis lies soft and heavy, your testicles resting warm in their skin.
+#. EN: Desire moves through your pelvis like a wave. Sometimes a little more blood flows in, the shaft becomes slightly fuller, the glans warmer. Then it ebbs away again, and everything turns soft and still. Both happen by themselves, the way the sea comes and goes.
+#. EN: Soft is just as right as full. Tonight your desire may rest, or it may be quietly present, and both belong to you.
+msgctxt "sleep_block:welle_s_penis_1#text"
+msgid ""
+"Zwischen deinen Beinen ist es warm und dunkel. Dein Penis liegt weich und schwer, deine Hoden ruhen warm in ihrer Haut.\n"
+"Lust bewegt sich in deinem Becken wie eine Welle. Manchmal fließt etwas mehr Blut hinein, der Schaft wird ein wenig voller, die Eichel wärmer. Dann ebbt es wieder ab, und alles wird weich und still. Beides geschieht ganz von allein, so wie das Meer kommt und geht.\n"
+"Weich ist genauso richtig wie voll. Heute Nacht darf deine Lust ruhen oder leise da sein, und beides gehört zu dir."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: welle, koerper: penis, teil: s2
+#. EN: Your penis rests soft and warm in the darkness, and soft is just as right as full.
+#. EN: Desire may gently swell and fade again in your pelvis, like a wave, all by itself. Tonight it may simply rest.
+msgctxt "sleep_block:welle_s_penis_2#text"
+msgid ""
+"Dein Penis ruht weich und warm in der Dunkelheit, und weich ist genauso richtig wie voll.\n"
+"Lust darf in deinem Becken sanft anschwellen und wieder abklingen, wie eine Welle, ganz von allein. Heute Nacht darf sie einfach ruhen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 1, teil: v1
+#. EN: The day has loaded a lot onto you. Duties, thoughts, small worries, they hang on you like a heavy coat, damp from the rain, its pockets full.
+#. EN: At the end of the evening this coat may slip from your shoulders. It slides slowly down your arms and falls softly over a chair by the door. There it hangs, and there it may stay until morning.
+#. EN: Your shoulders grow light. Your back lies free in the bed, warm and unburdened. Everything that held you back today has found its place, outside the night.
+#. EN: The coat waits patiently by the door. Whatever held you back rests there with it, until the morning comes.
+msgctxt "sleep_block:gaspedal_1_v1#text"
+msgid ""
+"Der Tag hat dir viel aufgeladen. Pflichten, Gedanken, kleine Sorgen, sie hängen an dir wie ein schwerer Mantel, feucht vom Regen und mit vollen Taschen.\n"
+"Am Ende des Abends darf dieser Mantel von deinen Schultern gleiten. Er rutscht langsam über die Arme und fällt weich über einen Stuhl neben der Tür. Dort hängt er, und dort darf er bis morgen bleiben.\n"
+"Deine Schultern werden leicht. Dein Rücken liegt frei im Bett, warm und unbeschwert. Alles, was dich heute gebremst hat, hat seinen Platz gefunden, draußen vor der Nacht.\n"
+"Der Mantel wartet geduldig an der Tür. Was dich gebremst hat, ruht dort mit ihm, bis der Morgen kommt."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 1, teil: v2
+#. EN: A backpack has walked with you all day. It was heavy with tasks and thoughts.
+#. EN: At the bedside the straps loosen from your shoulders. The backpack sinks to the floor and leans quietly against the wall.
+#. EN: Your back grows wide and soft. What held you back lies beside the bed, and there it may rest.
+msgctxt "sleep_block:gaspedal_1_v2#text"
+msgid ""
+"Ein Rucksack ist den ganzen Tag mit dir gegangen. Er war schwer von Aufgaben und Gedanken.\n"
+"Am Bett lösen sich die Riemen von deinen Schultern. Der Rucksack sinkt auf den Boden und lehnt still an der Wand.\n"
+"Dein Rücken wird breit und weich. Was dich gebremst hat, liegt neben dem Bett, und dort darf es ruhen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 1, teil: v3
+#. EN: Your keys lie in the little bowl by the door. Your hands are empty and warm. What held you back rests there until morning.
+msgctxt "sleep_block:gaspedal_1_v3#text"
+msgid "Dein Schlüsselbund liegt in der Schale an der Tür. Deine Hände sind leer und warm. Was dich gebremst hat, ruht dort bis zum Morgen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 1, teil: f
+#. EN: What holds me back may rest tonight.
+msgctxt "sleep_block:gaspedal_1_f#text"
+msgid "Was mich bremst, darf heute Nacht ruhen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 2, teil: v1
+#. EN: The blanket lies on you, heavy and warm. It follows every line of your body, your shoulders, your belly, your legs. The darkness in the room is soft as velvet.
+#. EN: This is a safe place. The door is closed, the house is quiet, and the night keeps everything loud far away.
+#. EN: Your body notices this, very quietly. It grows heavier. Your belly widens, and your pelvis sinks deeper into the mattress.
+#. EN: Where the body feels safe, the brakes release by themselves. It happens the way warmth slowly spreads through a room.
+msgctxt "sleep_block:gaspedal_2_v1#text"
+msgid ""
+"Die Decke liegt auf dir, schwer und warm. Sie folgt jeder Linie deines Körpers, den Schultern, dem Bauch, den Beinen. Die Dunkelheit im Zimmer ist weich wie Samt.\n"
+"Hier ist ein sicherer Ort. Die Tür ist zu, das Haus ist still, und die Nacht hält alles Laute in der Ferne.\n"
+"Dein Körper merkt das, ganz leise. Er wird schwerer. Dein Bauch wird weit, und dein Becken sinkt tiefer in die Matratze.\n"
+"Wo der Körper sich sicher fühlt, lösen sich die Bremsen von allein. Das geschieht so, wie sich Wärme langsam in einem Raum verteilt."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 2, teil: v2
+#. EN: A cat curls up in a warm corner. She knows she is safe, and her body grows round and soft.
+#. EN: Your body knows this too. The bed carries you, the blanket wraps around you. With every breath something in you lets go, all by itself.
+msgctxt "sleep_block:gaspedal_2_v2#text"
+msgid ""
+"Eine Katze rollt sich in einer warmen Ecke zusammen. Sie weiß, dass sie sicher ist, und ihr Körper wird rund und weich.\n"
+"Auch dein Körper kennt dieses Wissen. Das Bett trägt dich, die Decke hüllt dich ein. Mit jedem Atemzug lässt etwas in dir los, ganz von selbst."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 2, teil: v3
+#. EN: The darkness settles around you like a warm cloth. You are safe, and your body grows soft. Everything in you may sink a little deeper.
+msgctxt "sleep_block:gaspedal_2_v3#text"
+msgid "Die Dunkelheit legt sich um dich wie ein warmes Tuch. Du bist sicher, und dein Körper wird weich. Alles in dir darf ein wenig tiefer sinken."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 2, teil: f
+#. EN: I am safe here, and my body may grow soft.
+msgctxt "sleep_block:gaspedal_2_f#text"
+msgid "Ich bin hier sicher, und mein Körper darf weich werden."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 3, teil: v1
+#. EN: In the evening a car stands still in the driveway. The engine is off. The metal cools slowly and ticks softly in the dark. The foot rests beside the gas pedal.
+#. EN: Your body may stand this still as well. The road has been driven to its end for today.
+#. EN: Pressure is a brake of its own. Under pressure the body grows tight. Where the pressure fades, there is room, wide and quiet.
+#. EN: Your pleasure, your calm, your sleep, all of it may come whenever it wishes. You may simply be here.
+msgctxt "sleep_block:gaspedal_3_v1#text"
+msgid ""
+"Am Abend steht ein Wagen still in der Einfahrt. Der Motor ist aus. Das Metall wird langsam kühl und knackt leise in der Dunkelheit. Der Fuß ruht neben dem Gaspedal.\n"
+"So still darf auch dein Körper stehen. Die Straße ist für heute zu Ende gefahren.\n"
+"Das Müssen ist selbst eine Bremse. Unter dem Müssen wird der Körper eng. Wo das Müssen geht, wird Raum frei, weit und still.\n"
+"Deine Lust, deine Ruhe, dein Schlaf, alles darf kommen, wann es möchte. Du darfst einfach da sein."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 3, teil: v2
+#. EN: In the garden the grass grows through the night, without any effort. The rain falls, the earth breathes, and everything happens at its own pace.
+#. EN: Everything in you may keep its own pace as well. There is nothing to achieve here. You may lie here, and that is enough.
+msgctxt "sleep_block:gaspedal_3_v2#text"
+msgid ""
+"Im Garten wächst das Gras durch die Nacht, ganz ohne Mühe. Der Regen fällt, die Erde atmet, und alles geschieht in seinem eigenen Tempo.\n"
+"Auch in dir darf alles sein eigenes Tempo haben. Hier gibt es nichts zu leisten. Du darfst liegen, und das ist genug."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 3, teil: v3
+#. EN: Your hands lie open on the blanket, light and empty. They may rest. You may simply be here. Everything else comes on its own, in its own time.
+msgctxt "sleep_block:gaspedal_3_v3#text"
+msgid "Deine Hände liegen offen auf der Decke, leicht und leer. Sie dürfen ruhen. Du darfst einfach da sein. Alles Weitere kommt von selbst, in seiner eigenen Zeit."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: gaspedal, bogen: 3, teil: f
+#. EN: I may simply be here, and the rest comes on its own.
+msgctxt "sleep_block:gaspedal_3_f#text"
+msgid "Ich darf einfach da sein, alles andere kommt von selbst."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: gaspedal, koerper: vulva, teil: s1
+#. EN: Deep in your pelvis it grows warm. Your pelvic floor sinks softly downward, like sand settling at the bottom of still water.
+#. EN: Your vulva rests in this warmth. Your labia are soft, your clitoris lies quiet and sheltered, and your vagina may be fully at ease. With the calm, blood flows slowly and warmly through your sex.
+#. EN: When the worries fall silent, your body there grows soft by itself. Pleasure may be present or asleep, both are good. Pleasure is a possibility, and it has time. Your sex is safe, here in your bed.
+msgctxt "sleep_block:gaspedal_s_vulva_1#text"
+msgid ""
+"Tief in deinem Becken wird es warm. Dein Beckenboden sinkt weich nach unten, wie Sand, der sich am Grund von stillem Wasser setzt.\n"
+"Deine Vulva ruht in dieser Wärme. Deine Schamlippen sind weich, deine Klitoris liegt still und geborgen, und auch deine Vagina darf ganz entspannt sein. Mit der Ruhe fließt das Blut langsam und warm durch dein Geschlecht.\n"
+"Wenn die Sorgen schweigen, wird dein Körper dort weich, ganz von selbst. Lust darf da sein oder schlafen, beides ist gut. Lust ist eine Möglichkeit, und sie hat Zeit. Dein Geschlecht ist sicher, hier in deinem Bett."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: gaspedal, koerper: vulva, teil: s2
+#. EN: Your vulva lies warm and soft in the darkness. What held you back is resting. Your pelvis is safe, and pleasure may sleep or be quietly present, just as it wishes.
+msgctxt "sleep_block:gaspedal_s_vulva_2#text"
+msgid "Deine Vulva liegt warm und weich in der Dunkelheit. Was dich gebremst hat, ruht. Dein Becken ist sicher, und die Lust darf schlafen oder leise da sein, ganz wie sie möchte."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: gaspedal, koerper: penis, teil: s1
+#. EN: Deep in your pelvis it grows warm. Your pelvic floor sinks softly downward, like sand settling at the bottom of still water.
+#. EN: Your penis rests in this warmth, heavy and relaxed. The glans, the shaft and the testicles lie soft and sheltered. With the calm, blood flows slowly and warmly through your sex.
+#. EN: When the worries fall silent, your body there grows soft by itself. Whether it rests or fills, both are good. Pleasure is a possibility, and it has time. Your sex is safe, here in your bed.
+msgctxt "sleep_block:gaspedal_s_penis_1#text"
+msgid ""
+"Tief in deinem Becken wird es warm. Dein Beckenboden sinkt weich nach unten, wie Sand, der sich am Grund von stillem Wasser setzt.\n"
+"Dein Penis ruht in dieser Wärme, schwer und entspannt. Die Eichel, der Schaft und die Hoden liegen weich und geborgen. Mit der Ruhe fließt das Blut langsam und warm durch dein Geschlecht.\n"
+"Wenn die Sorgen schweigen, wird dein Körper dort weich, ganz von selbst. Ob er ruht oder sich füllt, beides ist gut. Lust ist eine Möglichkeit, und sie hat Zeit. Dein Geschlecht ist sicher, hier in deinem Bett."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: gaspedal, koerper: penis, teil: s2
+#. EN: Your penis lies warm and heavy between your legs. What held you back is resting. Your pelvis is safe, and pleasure may sleep or be quietly present, just as it wishes.
+msgctxt "sleep_block:gaspedal_s_penis_2#text"
+msgid "Dein Penis liegt warm und schwer zwischen deinen Beinen. Was dich gebremst hat, ruht. Dein Becken ist sicher, und die Lust darf schlafen oder leise da sein, ganz wie sie möchte."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 1, teil: v1
+#. EN: A small, warm light rests behind your forehead. All day long, this is where the thinking happened, the planning and the weighing.
+#. EN: The light grows soft and begins to wander. It sinks behind your eyes, into your throat, slowly into your chest. Wherever it arrives, the skin grows a little warmer.
+#. EN: It sinks further, into your belly, which rises and falls. Here it is quiet and dark and good. The thinking stays up above, small and soft, and you are down here, in the breath, in the warmth.
+#. EN: You are in your body, right in the middle of it.
+msgctxt "sleep_block:spueren_1_v1#text"
+msgid ""
+"Ein kleines, warmes Licht liegt hinter deiner Stirn. Dort ist den ganzen Tag gedacht worden, geplant und abgewogen.\n"
+"Das Licht wird weich und beginnt zu wandern. Es sinkt hinter deine Augen, in deinen Hals, langsam in deine Brust. Überall, wo es ankommt, wird die Haut ein wenig wärmer.\n"
+"Es sinkt weiter, in deinen Bauch, der sich hebt und senkt. Hier ist es still und dunkel und gut. Das Denken bleibt oben, leise und klein, und du bist hier unten, im Atem, in der Wärme.\n"
+"Du bist in deinem Körper, mitten darin."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 1, teil: v2
+#. EN: Like rain sinking slowly into warm sand, your attention sinks downward. From your head into your shoulders, into your chest, into your soft belly.
+#. EN: The sand simply takes in the water. Your body takes you in, with its warmth and its breath.
+#. EN: You are in your body, right in the middle of it.
+msgctxt "sleep_block:spueren_1_v2#text"
+msgid ""
+"Wie Regenwasser, das langsam in warmen Sand sinkt, so sinkt deine Aufmerksamkeit nach unten. Vom Kopf in die Schultern, in die Brust, in den weichen Bauch.\n"
+"Der Sand nimmt das Wasser einfach auf. Dein Körper nimmt dich auf, mit seiner Wärme und seinem Atem.\n"
+"Du bist in deinem Körper, mitten darin."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 1, teil: v3
+#. EN: For a long time you stood behind a window, looking out. The door opens softly, and you step into the warm night air.
+#. EN: You are in your body, in the middle of it.
+msgctxt "sleep_block:spueren_1_v3#text"
+msgid ""
+"Lange hast du hinter einem Fenster gestanden und hinausgesehen. Die Tür öffnet sich leise, und du trittst hinaus, mitten in die warme Nachtluft.\n"
+"Du bist in deinem Körper, mitten darin."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 1, teil: f
+#. EN: I am in my body, right in the middle of it.
+msgctxt "sleep_block:spueren_1_f#text"
+msgid "Ich bin in meinem Körper, mitten darin."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 2, teil: v1
+#. EN: In a hall, a spectator sits in the very last row. All day long he has watched and judged every movement.
+#. EN: It has grown late. He stands, takes his coat and goes quietly out. His footsteps grow softer down the long corridor. The door falls gently shut.
+#. EN: The hall is dark and warm. The seats are empty. All that remains is your body, breathing, and the stillness around it.
+#. EN: The one who watches may go home. You may simply be here.
+msgctxt "sleep_block:spueren_2_v1#text"
+msgid ""
+"In einem Saal sitzt ein Zuschauer in der letzten Reihe. Er hat den ganzen Tag zugesehen und jede Bewegung beurteilt.\n"
+"Es ist spät geworden. Er steht auf, nimmt seinen Mantel und geht leise hinaus. Seine Schritte werden leiser im langen Gang. Die Tür fällt sanft ins Schloss.\n"
+"Der Saal ist dunkel und warm. Die Stühle sind leer. Hier ist nur noch dein Körper, der atmet, und die Ruhe um ihn herum.\n"
+"Wer zuschaut, darf nach Hause gehen. Du darfst einfach da sein."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 2, teil: v2
+#. EN: Somewhere inside you, a voice judges and compares. It sounds like a conversation in the next room.
+#. EN: A door closes gently, and the conversation grows softer, farther away, a friendly murmur that fades. What remains is your quiet breath.
+#. EN: This voice has finished work for the day. You may simply be here, warm and undisturbed.
+msgctxt "sleep_block:spueren_2_v2#text"
+msgid ""
+"Irgendwo in dir spricht eine Stimme, die alles bewertet und vergleicht. Sie klingt wie ein Gespräch im Nebenzimmer.\n"
+"Eine Tür schließt sich sacht, und das Gespräch wird leiser, weiter weg, ein freundliches Murmeln, das verklingt. Was bleibt, ist dein ruhiger Atem.\n"
+"Diese Stimme hat Feierabend. Du darfst einfach da sein, warm und ungestört."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 2, teil: v3
+#. EN: A notebook closes, and the pen lies still beside it. Everything for today is written down.
+#. EN: The one who watches may go home, and you may simply be here.
+msgctxt "sleep_block:spueren_2_v3#text"
+msgid ""
+"Ein Notizbuch wird zugeklappt, der Stift liegt still daneben. Für heute ist alles notiert.\n"
+"Wer zuschaut, darf nach Hause gehen, und du darfst einfach da sein."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 2, teil: f
+#. EN: The one who watches may go home. I may simply be here.
+msgctxt "sleep_block:spueren_2_f#text"
+msgid "Wer zuschaut, darf gehen. Ich darf einfach da sein."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 3, teil: v1
+#. EN: A house stands in the night, and behind one window a warm light is burning. Inside it is quiet, and someone is at home.
+#. EN: Your body is lived in, just like that house. Your skin is warm, and the blanket lies heavy and kind upon you. Beneath it, the warmth gathers as in a small room.
+#. EN: Deep inside, your heart beats, calm and even. It beats for you, all night long. Your breath moves softly through you.
+#. EN: You are at home, here inside yourself, warm and lived in.
+msgctxt "sleep_block:spueren_3_v1#text"
+msgid ""
+"Ein Haus steht in der Nacht, und hinter einem Fenster brennt ein warmes Licht. Drinnen ist es still, und jemand ist zu Hause.\n"
+"So ist auch dein Körper bewohnt. Deine Haut ist warm, und die Decke liegt schwer und freundlich auf dir. Unter ihr sammelt sich die Wärme wie in einem kleinen Zimmer.\n"
+"Tief innen schlägt dein Herz, ruhig und gleichmäßig. Es schlägt für dich, die ganze Nacht. Dein Atem geht leise durch dich hindurch.\n"
+"Du bist zu Hause, hier in dir, warm und bewohnt."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 3, teil: v2
+#. EN: A stone on the shore holds the warmth of the day long into the night. The warmth rests deep within it, right at its center.
+#. EN: Your body carries its warmth in the same way. The blanket lies heavy upon you, your skin is soft, and beneath it your heart beats calmly.
+#. EN: Your body is your home, warm and lived in.
+msgctxt "sleep_block:spueren_3_v2#text"
+msgid ""
+"Ein Stein am Ufer hält die Wärme des Tages noch lange in der Nacht. Die Wärme sitzt tief in ihm, ganz innen.\n"
+"So trägt auch dein Körper seine Wärme. Die Decke liegt schwer auf dir, die Haut ist weich, und darunter schlägt ruhig dein Herz.\n"
+"Dein Körper ist dein Zuhause, warm und bewohnt."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 3, teil: v3
+#. EN: Under the blanket it is warm. Your heart beats softly, like the footsteps of someone who lives here.
+#. EN: Your body is lived in.
+msgctxt "sleep_block:spueren_3_v3#text"
+msgid ""
+"Unter der Decke ist es warm. Dein Herz schlägt leise, wie die Schritte von jemandem, der hier zu Hause ist.\n"
+"Dein Körper ist bewohnt."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: spueren, bogen: 3, teil: f
+#. EN: My body is my home, warm and lived in.
+msgctxt "sleep_block:spueren_3_f#text"
+msgid "Mein Körper ist mein Zuhause, warm und bewohnt."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: spueren, koerper: vulva, teil: s1
+#. EN: Between your legs there is warmth. Your vulva rests softly in the dark, your labia warm and still, your clitoris calm.
+#. EN: Blood flows slowly through your pelvis, and at times there is a faint pulsing, as even as your breath. It is simply there.
+#. EN: You feel this part of you from the inside, as warmth, as softness, as a gentle weight. Here, no one is watching, and nothing is judged. Your vagina, your pelvis, all of it is calm and belongs to you.
+#. EN: You are in your body, in the middle of it, here too.
+msgctxt "sleep_block:spueren_s_vulva_1#text"
+msgid ""
+"Zwischen deinen Beinen liegt Wärme. Deine Vulva ruht weich im Dunkeln, die Schamlippen warm und still, die Klitoris ganz ruhig.\n"
+"Das Blut fließt langsam durch dein Becken, und manchmal ist ein leises Pulsieren zu spüren, gleichmäßig wie der Atem. Es ist einfach da.\n"
+"Du spürst dein Geschlecht von innen, als Wärme, als Weichheit, als sanftes Gewicht. Hier schaut niemand zu, und nichts wird bewertet. Deine Vagina, dein Becken, alles ist ruhig und gehört dir.\n"
+"Du bist in deinem Körper, mitten darin, auch hier."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: spueren, koerper: vulva, teil: s2
+#. EN: Your vulva is warm and soft, resting in the dark beneath the blanket. Blood pulses quietly in your pelvis.
+#. EN: You feel it from the inside, with no eyes upon it. It belongs to you, warm and still.
+msgctxt "sleep_block:spueren_s_vulva_2#text"
+msgid ""
+"Deine Vulva ist warm und weich, sie ruht im Dunkeln unter der Decke. Das Blut pulsiert leise in deinem Becken.\n"
+"Du spürst sie von innen, ganz ohne Blick. Sie gehört dir, warm und still."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: spueren, koerper: penis, teil: s1
+#. EN: Between your legs there is warmth. Your penis rests soft and heavy, the glans warm, the shaft relaxed, the testicles sheltered and still.
+#. EN: Blood flows slowly through your pelvis, and at times there is a faint pulsing, as even as your breath. Whether it stays soft or grows firmer, all of it is right. It is simply there.
+#. EN: You feel this part of you from the inside, as warmth, as weight, as rest. Here, no one is watching, and nothing is judged. It all belongs to you.
+#. EN: You are in your body, in the middle of it, here too.
+msgctxt "sleep_block:spueren_s_penis_1#text"
+msgid ""
+"Zwischen deinen Beinen liegt Wärme. Dein Penis ruht weich und schwer, die Eichel warm, der Schaft entspannt, die Hoden geborgen und still.\n"
+"Das Blut fließt langsam durch dein Becken, und manchmal ist ein leises Pulsieren zu spüren, gleichmäßig wie der Atem. Ob er weich bleibt oder fester wird, alles ist richtig. Es ist einfach da.\n"
+"Du spürst dein Geschlecht von innen, als Wärme, als Gewicht, als Ruhe. Hier schaut niemand zu, und nichts wird bewertet. Alles gehört dir.\n"
+"Du bist in deinem Körper, mitten darin, auch hier."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: spueren, koerper: penis, teil: s2
+#. EN: Your penis lies warm and heavy beneath the blanket, the testicles soft and sheltered. Blood pulses quietly in your pelvis.
+#. EN: You feel it from the inside, with no eyes upon it. It belongs to you, warm and still.
+msgctxt "sleep_block:spueren_s_penis_2#text"
+msgid ""
+"Dein Penis liegt warm und schwer unter der Decke, die Hoden weich und geborgen. Das Blut pulsiert leise in deinem Becken.\n"
+"Du spürst ihn von innen, ganz ohne Blick. Er gehört dir, warm und still."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 1, teil: v1
+#. EN: A hand rests on a warm blanket. All day long it has held, carried and gripped. Little by little it grows soft. The fingers loosen, one after another, and the palm lies open and heavy.
+#. EN: The floor of your pelvis may be like this too. It has held a great deal today, often quite unnoticed. In the evening it may let go. It grows soft and wide and heavy and sinks a little deeper into the mattress.
+#. EN: Your buttocks rest warm in the bed. Your hips grow wide. Between them your pelvis rests, open like a hand that lets go. Being soft is just right here.
+msgctxt "sleep_block:becken_1_v1#text"
+msgid ""
+"Eine Hand liegt auf einer warmen Decke. Den ganzen Tag hat sie gehalten, getragen und gegriffen. Nach und nach wird sie weich. Die Finger lösen sich, einer nach dem anderen, und die Handfläche liegt offen und schwer.\n"
+"So darf auch der Boden deines Beckens sein. Er hat heute viel gehalten, oft ganz unbemerkt. Am Abend darf er loslassen. Er wird weich und breit und schwer und sinkt ein wenig tiefer in die Matratze.\n"
+"Dein Gesäß liegt warm im Bett. Deine Hüften werden weit. Dazwischen ruht dein Becken, offen wie eine Hand, die loslässt. Weich zu sein ist hier ganz richtig."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 1, teil: v2
+#. EN: Someone falls asleep while reading. The book slides gently from their hand onto the blanket, and the hand stays open, warm and heavy.
+#. EN: Your pelvic floor lets go in just the same way. It may grow soft, all by itself. Your pelvis lies open and calm, like a hand at rest.
+msgctxt "sleep_block:becken_1_v2#text"
+msgid ""
+"Ein Mensch schläft beim Lesen ein. Das Buch gleitet sanft aus seiner Hand auf die Decke, und die Hand bleibt offen liegen, warm und schwer.\n"
+"So lässt auch dein Beckenboden los. Er darf weich werden, ganz von selbst. Dein Becken liegt offen und ruhig, wie eine Hand, die ausruht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 1, teil: v3
+#. EN: A hand opens in sleep, slowly and warmly. In the same way the floor of your pelvis grows soft and heavy, and it may rest the whole night through.
+msgctxt "sleep_block:becken_1_v3#text"
+msgid "Eine Hand öffnet sich im Schlaf, langsam und warm. So wird auch der Boden deines Beckens weich und schwer, und er darf die ganze Nacht ausruhen."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 1, teil: f
+#. EN: My pelvis may be soft, like an open hand.
+msgctxt "sleep_block:becken_1_f#text"
+msgid "Mein Becken darf weich sein wie eine offene Hand."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 2, teil: v1
+#. EN: Your breath is like warm water. It flows down through your chest, through your belly, deep into your pelvis. There is room for it there, wide and soft.
+#. EN: With each breath in, the floor of your pelvis sinks a little, the way a soft cloth curves under water. With each breath out, it gently returns. There is nothing to do for this. It happens all by itself.
+#. EN: And so it goes all night, a quiet sinking and rising, a gentle rocking deep inside you. Your pelvis breathes along.
+msgctxt "sleep_block:becken_2_v1#text"
+msgid ""
+"Dein Atem ist wie warmes Wasser. Er fließt durch deine Brust nach unten, durch den Bauch, bis tief in dein Becken. Dort ist Platz für ihn, weit und weich.\n"
+"Mit jedem Einatmen senkt sich der Boden deines Beckens ein kleines Stück, so wie sich ein weiches Tuch unter Wasser wölbt. Mit jedem Ausatmen kehrt er sanft zurück. Dafür ist nichts zu tun. Es geschieht ganz von allein.\n"
+"So geht es die ganze Nacht, ein ruhiges Sinken und Steigen, ein leises Wiegen tief in dir. Dein Becken atmet mit."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 2, teil: v2
+#. EN: On the beach a shallow wave rolls in, and the wet sand gives a little. Then the water draws back, and the sand lies smooth again.
+#. EN: Your pelvic floor moves like this with your breath. As you breathe in, it softly gives. As you breathe out, it returns. All by itself.
+msgctxt "sleep_block:becken_2_v2#text"
+msgid ""
+"Am Strand rollt eine flache Welle heran, und der nasse Sand gibt ein wenig nach. Dann zieht das Wasser zurück, und der Sand liegt wieder glatt.\n"
+"So bewegt sich dein Beckenboden mit dem Atem. Beim Einatmen gibt er weich nach, beim Ausatmen kehrt er zurück. Ganz von allein."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 2, teil: v3
+#. EN: Your breath sinks deep into your pelvis. The floor of your pelvis gently gives and returns, like a quiet rocking in the night.
+msgctxt "sleep_block:becken_2_v3#text"
+msgid "Der Atem sinkt bis tief ins Becken. Der Boden deines Beckens gibt sanft nach und kehrt zurück, wie ein ruhiges Wiegen in der Nacht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 2, teil: f
+#. EN: My breath sinks into my pelvis and returns all by itself.
+msgctxt "sleep_block:becken_2_f#text"
+msgid "Mein Atem sinkt ins Becken und kehrt von allein zurück."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 3, teil: v1
+#. EN: Outside, a tree stands in the night. A light wind moves through its branches, and they sway along, soft and supple. A branch that bends stays whole. It carries leaves, birds and rain, precisely because it can move.
+#. EN: Your pelvis is like this too. Soft here means ready. A soft pelvic floor can carry and let go, it can receive warmth and let pleasure happen. Softness is its strength.
+#. EN: Your hips rest heavy in the bed, your belly is warm. Your pelvis may sway like a branch in the wind, calm and strong.
+msgctxt "sleep_block:becken_3_v1#text"
+msgid ""
+"Draußen steht ein Baum in der Nacht. Ein leichter Wind geht durch seine Äste, und sie wiegen sich mit, weich und biegsam. Ein Ast, der nachgibt, bleibt heil. Er trägt Blätter, Vögel und Regen, gerade weil er beweglich ist.\n"
+"So ist es auch mit deinem Becken. Weich heißt hier bereit. Ein weicher Beckenboden kann tragen und loslassen, er kann Wärme empfangen und Lust geschehen lassen. Weichheit ist seine Kraft.\n"
+"Deine Hüften liegen schwer im Bett, dein Bauch ist warm. Dein Becken darf sich wiegen wie ein Ast im Wind, ruhig und stark."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 3, teil: v2
+#. EN: Water is soft. It yields to every hand and takes on every shape. And yet, over a long time, it shapes the stone on the shore.
+#. EN: Your pelvis may be just as soft. Soft means ready, open to warmth and to pleasure. In this softness lies a quiet strength.
+msgctxt "sleep_block:becken_3_v2#text"
+msgid ""
+"Wasser ist weich. Es gibt jeder Hand nach und nimmt jede Form an. Und doch formt es über lange Zeit den Stein am Ufer.\n"
+"Auch dein Becken darf so weich sein. Weich heißt bereit, offen für Wärme und für Lust. In dieser Weichheit liegt eine stille Kraft."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 3, teil: v3
+#. EN: A hammock between two trees is soft, and that is why it holds. Your pelvis may be soft as well. It carries you calmly through the night.
+msgctxt "sleep_block:becken_3_v3#text"
+msgid "Eine Hängematte zwischen zwei Bäumen ist weich, und gerade deshalb trägt sie. Auch dein Becken darf weich sein. Es trägt dich ruhig durch die Nacht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: becken, bogen: 3, teil: f
+#. EN: My pelvis is soft, and soft is strong.
+msgctxt "sleep_block:becken_3_f#text"
+msgid "Mein Becken ist weich, und weich ist stark."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: becken, koerper: vulva, teil: s1
+#. EN: Warmth gathers deep in your pelvis. Around your vagina and your vulva lie fine muscles that have held on a little all day. In the evening they may grow soft, warm and heavy.
+#. EN: With each breath in, the floor of your pelvis gently sinks, and around your vagina everything grows wide. Your labia rest soft and warm, your clitoris is at rest. The blood flows slowly and evenly.
+#. EN: In this softness, pleasure is possible, whenever it may come. Tonight it may simply rest within you, warm and safe.
+msgctxt "sleep_block:becken_s_vulva_1#text"
+msgid ""
+"Die Wärme sammelt sich tief in deinem Becken. Rund um deine Vagina und deine Vulva liegen feine Muskeln, die den ganzen Tag ein wenig gehalten haben. Am Abend dürfen sie weich werden, warm und schwer.\n"
+"Mit jedem Einatmen senkt sich der Boden deines Beckens sanft, und um deine Vagina wird es weit. Deine Schamlippen liegen weich und warm, deine Klitoris ruht. Das Blut fließt langsam und gleichmäßig.\n"
+"In dieser Weichheit ist Lust möglich, wann immer sie kommen mag. Heute Nacht darf sie einfach in dir ruhen, warm und sicher."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: becken, koerper: vulva, teil: s2
+#. EN: The muscles around your vagina and your vulva grow soft and warm. As you breathe in, your pelvic floor gently sinks. Your labia rest, your clitoris rests. In this softness, pleasure may be there, quite at ease.
+msgctxt "sleep_block:becken_s_vulva_2#text"
+msgid "Die Muskeln rund um deine Vagina und deine Vulva werden weich und warm. Beim Einatmen senkt sich dein Beckenboden sanft. Deine Schamlippen ruhen, deine Klitoris ruht. In dieser Weichheit darf Lust da sein, ganz in Ruhe."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: becken, koerper: penis, teil: s1
+#. EN: Warmth gathers deep in your pelvis. Around your penis, your testicles and your perineum lie fine muscles that have held on a little all day. In the evening they may grow soft, warm and heavy.
+#. EN: With each breath in, the floor of your pelvis gently sinks, and your perineum grows wide and soft. Your penis lies calm and warm, your testicles rest heavy. The blood flows slowly and evenly.
+#. EN: In this softness, pleasure is possible, whenever it may come. Tonight it may simply rest within you, warm and safe.
+msgctxt "sleep_block:becken_s_penis_1#text"
+msgid ""
+"Die Wärme sammelt sich tief in deinem Becken. Rund um deinen Penis, deine Hoden und den Damm liegen feine Muskeln, die den ganzen Tag ein wenig gehalten haben. Am Abend dürfen sie weich werden, warm und schwer.\n"
+"Mit jedem Einatmen senkt sich der Boden deines Beckens sanft, und der Damm wird weit und weich. Dein Penis liegt ruhig und warm, deine Hoden ruhen schwer. Das Blut fließt langsam und gleichmäßig.\n"
+"In dieser Weichheit ist Lust möglich, wann immer sie kommen mag. Heute Nacht darf sie einfach in dir ruhen, warm und sicher."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: becken, koerper: penis, teil: s2
+#. EN: The muscles around your penis, your testicles and your perineum grow soft and warm. As you breathe in, your pelvic floor gently sinks. Your penis rests, your testicles lie heavy. In this softness, pleasure may be there, quite at ease.
+msgctxt "sleep_block:becken_s_penis_2#text"
+msgid "Die Muskeln rund um deinen Penis, deine Hoden und den Damm werden weich und warm. Beim Einatmen senkt sich dein Beckenboden sanft. Dein Penis ruht, deine Hoden liegen schwer. In dieser Weichheit darf Lust da sein, ganz in Ruhe."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 1, teil: v1
+#. EN: On a windowsill, a cat lies in a warm patch of sunlight. The sun has simply arrived, the way it arrives every day. The cat lies long and heavy and lets the warmth sink into its fur.
+#. EN: It accepts the warmth, as naturally as breathing. The warmth belongs to it, simply because it is there.
+#. EN: It may be the same for you. Pleasure needs no reason. It does not have to be earned first. It is simply yours to have, every evening, just as you are today.
+#. EN: Your body may take in what is lovely, slowly and without hurry. You have every right to pleasure.
+msgctxt "sleep_block:geniessen_1_v1#text"
+msgid ""
+"Auf einem Fensterbrett liegt eine Katze in einem warmen Fleck Sonne. Die Sonne ist einfach gekommen, so wie sie jeden Tag kommt. Die Katze liegt lang und schwer da und lässt die Wärme in ihr Fell sinken.\n"
+"Sie nimmt die Wärme an, ganz selbstverständlich. Die Wärme gehört ihr, einfach weil sie da ist.\n"
+"So darf es auch bei dir sein. Genuss braucht keinen Grund. Er muss vorher nicht verdient werden. Er ist dir einfach erlaubt, an jedem Abend, so wie du heute bist.\n"
+"Dein Körper darf das Schöne annehmen, ruhig und ohne Eile. Genuss ist dein gutes Recht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 1, teil: v2
+#. EN: Warm water surrounds your body, soft and kind. It carries you, whatever the day has brought.
+#. EN: Pleasure is a gift that asks for nothing in return. You may have it, even without a reason, even on a very ordinary evening.
+#. EN: Pleasure belongs to you. You have every right to it.
+msgctxt "sleep_block:geniessen_1_v2#text"
+msgid ""
+"Warmes Wasser umhüllt deinen Körper, weich und freundlich. Es trägt dich, ganz gleich, was der Tag gebracht hat.\n"
+"Genuss ist ein Geschenk ohne Bedingung. Du darfst ihn haben, auch ohne Grund, auch an einem ganz gewöhnlichen Abend.\n"
+"Genuss gehört zu dir. Er ist dein gutes Recht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 1, teil: v3
+#. EN: Evening sun warms a stone wall, just like that, and the stone gladly takes the warmth. You may have pleasure too, with no reason and no conditions. You have every right to pleasure.
+msgctxt "sleep_block:geniessen_1_v3#text"
+msgid "Die Abendsonne wärmt eine Mauer aus Stein, einfach so, und der Stein nimmt die Wärme gern. Auch dir ist Genuss erlaubt, ohne Grund und ohne Bedingung. Genuss ist dein gutes Recht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 1, teil: f
+#. EN: I have every right to pleasure.
+msgctxt "sleep_block:geniessen_1_f#text"
+msgid "Genuss ist mein gutes Recht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 2, teil: v1
+#. EN: Soft rain falls on a garden in the evening. The leaves hold still and let the water come. The earth drinks, slowly and deeply, and turns soft and dark.
+#. EN: The garden rests within itself. It simply receives what the sky gives it. Every drop is welcome.
+#. EN: Your body may be like this too. Here there is nothing to show and nothing to prove. You may take without giving back. You may lie here and receive warmth, rest and softness.
+#. EN: You are free to simply receive.
+msgctxt "sleep_block:geniessen_2_v1#text"
+msgid ""
+"Leiser Regen fällt auf einen Garten am Abend. Die Blätter halten still und lassen das Wasser kommen. Die Erde trinkt, langsam und tief, und wird weich und dunkel.\n"
+"Der Garten ist ganz bei sich. Er empfängt einfach, was der Himmel ihm schenkt. Jeder Tropfen ist willkommen.\n"
+"So darf auch dein Körper sein. Hier gibt es nichts zu zeigen und nichts zu beweisen. Du darfst nehmen, ohne zurückzugeben. Du darfst liegen und empfangen, Wärme, Ruhe und Weichheit.\n"
+"Du darfst empfangen, einfach so."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 2, teil: v2
+#. EN: A small boat lies on still water. The water carries it with ease, and the boat lets itself be carried.
+#. EN: You may be carried too. The mattress holds you, the blanket warms you. Your body may take, and everything it receives is freely given.
+#. EN: You are free to simply receive.
+msgctxt "sleep_block:geniessen_2_v2#text"
+msgid ""
+"Ein kleines Boot liegt auf stillem Wasser. Das Wasser trägt es ganz ohne Mühe, und das Boot lässt sich tragen.\n"
+"Auch du darfst getragen werden. Die Matratze hält dich, die Decke wärmt dich. Dein Körper darf nehmen, und alles, was er bekommt, ist frei geschenkt.\n"
+"Du darfst empfangen, einfach so."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 2, teil: v3
+#. EN: An open hand rests quietly on the blanket, ready for the warmth. Your body may take without giving anything back. You are free to simply receive.
+msgctxt "sleep_block:geniessen_2_v3#text"
+msgid "Eine offene Hand liegt still auf der Decke, bereit für die Wärme. Dein Körper darf nehmen, ohne etwas zu geben. Du darfst empfangen, einfach so."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 2, teil: f
+#. EN: I am free to simply receive.
+msgctxt "sleep_block:geniessen_2_f#text"
+msgid "Ich darf empfangen, einfach so."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 3, teil: v1
+#. EN: The fabric of your blanket lies soft on your skin. It is a little cool at the edges and warm where your body rests. This is a small pleasure, quiet and very close.
+#. EN: Then there is the warmth under the blanket, gathering slowly. And your own breath, coming and going, soft as wind in the grass.
+#. EN: Small pleasures like these are always here. They wait for you every evening, kind and faithful, like a familiar path home.
+#. EN: Pleasure may be a quiet habit. Every evening, a small pleasure waits for you.
+msgctxt "sleep_block:geniessen_3_v1#text"
+msgid ""
+"Der Stoff deiner Decke liegt weich auf deiner Haut. Er ist ein wenig kühl an den Rändern und warm dort, wo dein Körper ruht. Das ist ein kleiner Genuss, still und ganz nah.\n"
+"Dazu kommt die Wärme unter der Decke, die sich langsam sammelt. Und dein eigener Atem, der kommt und geht, leise wie ein Wind im Gras.\n"
+"Solche kleinen Genüsse sind immer da. Sie warten an jedem Abend auf dich, freundlich und treu, wie ein vertrauter Weg nach Hause.\n"
+"Genuss darf eine stille Gewohnheit sein. Jeden Abend wartet ein kleiner Genuss auf dich."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 3, teil: v2
+#. EN: A pillow takes the shape of your head, evening after evening. It is familiar and soft, like an old friend.
+#. EN: In the same way, the small pleasures return. The warmth of the blanket, the calm breath, the darkness that wraps around you. They belong to your evening.
+#. EN: Every evening, a small pleasure waits for you.
+msgctxt "sleep_block:geniessen_3_v2#text"
+msgid ""
+"Ein Kissen nimmt die Form deines Kopfes an, Abend für Abend. Es ist vertraut und weich, wie ein alter Freund.\n"
+"So kehren auch die kleinen Genüsse zurück. Die Wärme der Decke, der ruhige Atem, die Dunkelheit, die dich umhüllt. Sie gehören zu deinem Abend.\n"
+"Jeden Abend wartet ein kleiner Genuss auf dich."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 3, teil: v3
+#. EN: The blanket is warm, the breath is quiet. This small pleasure returns every evening. Every evening, a small pleasure waits for you.
+msgctxt "sleep_block:geniessen_3_v3#text"
+msgid "Die Decke ist warm, der Atem geht leise. Dieser kleine Genuss kehrt an jedem Abend zurück. Jeden Abend wartet ein kleiner Genuss auf dich."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen, thema: geniessen, bogen: 3, teil: f
+#. EN: Every evening, a small pleasure waits for me.
+msgctxt "sleep_block:geniessen_3_f#text"
+msgid "Jeden Abend wartet ein kleiner Genuss auf mich."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: geniessen, koerper: vulva, teil: s1
+#. EN: Between your legs there is a quiet warmth. Your vulva rests softly in the dark, your labia are warm and relaxed, and your clitoris is completely calm.
+#. EN: This part of you may feel pleasure whenever it wishes. It needs no occasion and no permission from anyone. The pleasure belongs to you, and it has all the time in the world.
+#. EN: Tonight your pleasure simply rests within you, warm and safe, like embers beneath soft ash. Your pelvis is heavy and at ease.
+#. EN: Your whole body may enjoy. You have every right to pleasure.
+msgctxt "sleep_block:geniessen_s_vulva_1#text"
+msgid ""
+"Zwischen deinen Beinen liegt eine stille Wärme. Deine Vulva ruht weich im Dunkeln, die Schamlippen sind warm und entspannt, und deine Klitoris ist ganz ruhig.\n"
+"Dieser Teil von dir darf Lust empfinden, wann immer er möchte. Er braucht dafür keinen Anlass und keine Erlaubnis von außen. Die Lust gehört dir, und sie hat alle Zeit der Welt.\n"
+"Heute Nacht ruht deine Lust einfach in dir, warm und sicher, wie Glut unter weicher Asche. Dein Becken ist schwer und gelöst.\n"
+"Dein ganzer Körper darf genießen. Genuss ist dein gutes Recht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: geniessen, koerper: vulva, teil: s2
+#. EN: Your vulva is warm and soft, and blood flows calmly through your pelvis. Your clitoris rests. Pleasure may be there whenever it wishes, without hurry. Tonight it rests warm and safe within you.
+msgctxt "sleep_block:geniessen_s_vulva_2#text"
+msgid "Deine Vulva ist warm und weich, das Blut fließt ruhig durch dein Becken. Deine Klitoris ruht. Lust darf da sein, wann immer sie möchte, ohne Eile. Heute Nacht ruht sie warm und sicher in dir."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: geniessen, koerper: penis, teil: s1
+#. EN: Between your legs there is a quiet warmth. Your penis rests soft and heavy, the glans is warm, the shaft relaxed, and your testicles lie sheltered in the warmth of your body.
+#. EN: This part of you may feel pleasure whenever it wishes. It needs no occasion, and it has nothing to show. The pleasure belongs to you, and it has all the time in the world.
+#. EN: Tonight your pleasure simply rests within you, warm and safe, like embers beneath soft ash. Your pelvis is heavy and at ease.
+#. EN: Your whole body may enjoy. You have every right to pleasure.
+msgctxt "sleep_block:geniessen_s_penis_1#text"
+msgid ""
+"Zwischen deinen Beinen liegt eine stille Wärme. Dein Penis ruht weich und schwer, die Eichel ist warm, der Schaft entspannt, und deine Hoden liegen geborgen in der Wärme deines Körpers.\n"
+"Dieser Teil von dir darf Lust empfinden, wann immer er möchte. Er braucht dafür keinen Anlass, und er hat nichts zu zeigen. Die Lust gehört dir, und sie hat alle Zeit der Welt.\n"
+"Heute Nacht ruht deine Lust einfach in dir, warm und sicher, wie Glut unter weicher Asche. Dein Becken ist schwer und gelöst.\n"
+"Dein ganzer Körper darf genießen. Genuss ist dein gutes Recht."
+msgstr ""
+
+#. Baustein der Einschlaf-Reise, phase: lernen_spicy, thema: geniessen, koerper: penis, teil: s2
+#. EN: Your penis lies soft and warm, and blood flows calmly through your pelvis. Whether it rests or fills, all of it is right. Pleasure may be there whenever it wishes, without hurry. Tonight it rests warm and safe within you.
+msgctxt "sleep_block:geniessen_s_penis_2#text"
+msgid "Dein Penis liegt weich und warm, das Blut fließt ruhig durch dein Becken. Ob er ruht oder sich füllt, alles ist richtig. Lust darf da sein, wann immer sie möchte, ohne Eile. Heute Nacht ruht sie warm und sicher in dir."
+msgstr ""

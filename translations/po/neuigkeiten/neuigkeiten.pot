@@ -574,3 +574,15 @@ msgstr ""
 msgctxt "news:41#1.text"
 msgid "Die Kurse sind jetzt nach Themen sortiert und neu nummeriert: Grundlagen, Körper und Selbst, Beziehung und Alltag, Berührung und Praxis, Fantasie und Spiel. Dein Fortschritt bleibt erhalten."
 msgstr ""
+
+#. Was ist neu in Version 4.9.0-beta.1
+#. EN: New: Drift-off journey
+msgctxt "news:42#0.titel"
+msgid "Neu: Einschlaf-Reise"
+msgstr ""
+
+#. Was ist neu in Version 4.9.0-beta.1
+#. EN: A long, quiet companion into sleep, 60, 90 or 120 minutes. You choose a focus or let yourself be surprised. The voice grows quieter and rarer, and in the end a soft sound remains. Find it with the guided audios on the start page. German recordings now, the English ones follow with a later audio package.
+msgctxt "news:42#0.text"
+msgid "Eine lange, ruhige Begleitung in den Schlaf, 60, 90 oder 120 Minuten. Du wählst einen Schwerpunkt oder lässt dich überraschen. Die Stimme wird immer leiser und seltener, am Ende bleibt ein leiser Klang. Zu finden bei den geführten Audios auf der Startseite. Deutsche Aufnahmen, die englischen folgen mit einem späteren Audiopaket."
+msgstr ""

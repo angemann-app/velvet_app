@@ -238,6 +238,7 @@ YES_NO_MAYBE = {
 GEFUEHRT = {
     "guided_selbst": ("recline_sparks", "rose"),
     "guided_paar": ("recline_pair", "crimson"),
+    "guided_einschlaf": ("back_f", "teal"),
 }
 
 if __name__ == "__main__":

@@ -1,0 +1,888 @@
+{
+ "_hinweis": "Bausteine der Einschlaf-Reise (docs/konzepte/einschlaf-reise.md). Jeder Baustein steht für sich; Lernbausteine: thema, bogen, teil (v1 lang, v2 mittel, v3 kurz, f Kurzformel, s1/s2 Spicy).",
+ "bausteine": [
+  {
+   "id": "ankommen_1",
+   "phase": "ankommen",
+   "text": "Der Tag ist vorbei. Du liegst in deinem Bett, und für heute ist alles getan, was getan werden musste.\nDas Licht darf ausgehen. Dein Handy darf zur Seite, irgendwo neben dich, wo du es erreichst, ohne hinzusehen. Der Bildschirm darf dunkel werden. Die Stimme bleibt trotzdem bei dir.\nDu brauchst mir nicht bis zum Ende zuzuhören. Wenn du irgendwann einschläfst, auch mitten in einem Satz, dann ist das genau richtig. Dafür ist diese Reise da."
+  },
+  {
+   "id": "ankommen_2",
+   "phase": "ankommen",
+   "text": "Für heute ist es genug. Was der Tag gebracht hat, darf draußen bleiben, vor der Tür dieses Zimmers.\nLass das Licht ausgehen und das Handy zur Seite sinken. Leg es so hin, dass sein Bildschirm von allein dunkel werden kann. Um dich herum wird es still und dunkel.\nHier gibt es nichts zu tun und nichts zu behalten. Die Worte dürfen kommen und wieder gehen. Und wenn du dabei einschläfst, ist das genau so gemeint."
+  },
+  {
+   "id": "ankommen_3",
+   "phase": "ankommen",
+   "text": "Du bist angekommen. Die Decke liegt auf dir, das Kissen trägt deinen Kopf, und der Abend gehört dir.\nDas Licht darf ausgehen. Das Handy darf ruhen, und sein Bildschirm darf dunkel werden, so wie das Zimmer um dich herum. Was noch offen ist, wartet bis morgen.\nDu darfst einfach liegen und zuhören, so lange du magst. Wenn deine Gedanken weicher werden und der Schlaf dich holt, dann folge ihm ruhig. Meine Stimme bleibt einfach leise bei dir."
+  },
+  {
+   "id": "sinken_1",
+   "phase": "sinken",
+   "text": "Stell dir ein warmes, gedämpftes Licht vor, das auf deiner Stirn ruht. Wo es dich berührt, wird alles weich. Deine Stirn wird glatt und weit. Deine Augen werden schwer, die Lider ruhen aufeinander.\nDas warme Licht sinkt langsam tiefer. Dein Kiefer darf sich lösen, ein kleiner Spalt zwischen den Zähnen. Deine Zunge liegt weich im Mund. Dein Hals wird warm und frei.\nDas Licht fließt über deine Schultern. Sie sinken in die Matratze, ein wenig tiefer mit jedem Ausatmen. Die Wärme rinnt durch deine Arme hinab, bis in die Hände. Deine Finger werden schwer und still. Deine Brust hebt sich und senkt sich unter dem warmen Licht, und dein Bauch wird weich und rund.\nUnd noch ein wenig tiefer kommt das Licht in deinem Becken an. Hier darf es sich ausbreiten wie in einer warmen Schale. Dein Becken wird schwer und weit. Der Boden deines Beckens lässt los, ganz sanft, so wie eine Hand, die sich öffnet. Hier ist es warm und sicher.\nDas Licht sinkt weiter durch deine Beine, durch die Knie, hinunter bis zu den Füßen. Deine Füße werden warm und schwer. Dein ganzer Körper liegt im warmen Licht."
+  },
+  {
+   "id": "sinken_2",
+   "phase": "sinken",
+   "text": "Lass deinen Körper sein wie feinen Sand, der sich nach einem langen Tag langsam setzt. Körnchen um Körnchen kommt er zur Ruhe, von oben nach unten.\nZuerst auf deiner Stirn. Sie wird glatt und still. Der Sand legt sich auf deine Augen, und die Lider werden schwer. Dein Kiefer sinkt ein wenig nach unten. Deine Zunge ruht weich und breit im Mund. Dein Hals wird ruhig.\nDer Sand rieselt über deine Schultern und setzt sich dort. Sie werden schwer und sinken. Er rinnt durch deine Arme bis in die Hände, und deine Hände liegen schwer und warm. Auf deiner Brust wird es still. Dein Bauch wird weich, er hebt sich und senkt sich, ganz von allein.\nTiefer unten, in deinem Becken, sammelt sich der Sand und kommt zur Ruhe. Dein Becken wird schwer und breit und liegt sicher auf dem Bett. Auch der Beckenboden darf sich setzen, weich und gelassen, wie Sand am Grund eines stillen Sees. Hier darfst du ganz schwer werden.\nDer Sand rieselt weiter durch deine Beine, bis hinab in die Füße. Deine Füße werden schwer. Alles an dir hat sich gesetzt."
+  },
+  {
+   "id": "sinken_3",
+   "phase": "sinken",
+   "text": "Lass deinen Körper sein wie das Wasser eines Sees am Abend. Der Wind hat sich gelegt, und die Oberfläche wird langsam glatt.\nDie Ruhe beginnt an deiner Stirn. Sie wird glatt wie das Wasser. Deine Augen werden schwer und dunkel. Dein Kiefer lässt los, und deine Zunge treibt weich im Mund. Dein Hals wird still und weit.\nDie Ruhe breitet sich in kleinen Kreisen aus, über deine Schultern. Sie werden weich und sinken. Durch deine Arme fließt sie hinab, bis in die Hände. Deine Hände liegen still, wie vom Wasser getragen. Deine Brust hebt sich und senkt sich, so sanft wie eine kleine Welle. Dein Bauch wird weich.\nIn deinem Becken wird das Wasser tief und ruhig. Hier ist der stillste Teil des Sees. Dein Becken darf schwer werden und sich weiten. Der Boden deines Beckens wird weich, wie ein Grund, auf dem das Wasser ruht. Weich ist nicht schwach. Weich ist ruhig und bereit.\nDie Ruhe fließt weiter durch deine Beine, bis in die Füße. Deine Füße werden schwer und warm. Dein ganzer Körper liegt still, wie ein See in der Nacht."
+  },
+  {
+   "id": "sinken_kurz_1",
+   "phase": "sinken_kurz",
+   "text": "Deine Füße liegen schwer. Die Schwere steigt langsam durch die Beine hinauf und sammelt sich warm im Becken. Dein Bauch wird weich, deine Schultern sinken tiefer in das Kissen. Auch dein Gesicht wird still. Stirn und Kiefer ruhen, und der ganze Körper liegt getragen."
+  },
+  {
+   "id": "sinken_kurz_2",
+   "phase": "sinken_kurz",
+   "text": "Mit jedem Ausatmen wird dein Becken ein wenig schwerer. Von dort breitet sich die Weichheit aus, nach oben in Bauch und Brust, nach unten in die Beine. Sie erreicht deine Hände und deine Füße. Dein Körper wird weit und schwer, und das Bett trägt dich ganz."
+  },
+  {
+   "id": "sinken_kurz_3",
+   "phase": "sinken_kurz",
+   "text": "Dein Kopf liegt schwer im Kissen. Deine Schultern, dein Rücken und dein Becken liegen schwer auf dem Bett. Deine Fersen ruhen. Überall, wo dein Körper aufliegt, gibt er ein wenig mehr Gewicht ab. Das Bett nimmt alles an und trägt dich, die ganze Nacht."
+  },
+  {
+   "id": "sinken_kurz_4",
+   "phase": "sinken_kurz",
+   "text": "Unter der Decke wird es warm. Die Wärme liegt auf deiner Haut, auf den Armen, auf dem Bauch, auf den Beinen. Langsam sinkt sie tiefer, in die Muskeln, in das Becken, bis in den Beckenboden. Alles darin wird weich. Dein Gesicht ist ruhig, und dein Körper ist schwer und warm."
+  },
+  {
+   "id": "atem_1",
+   "phase": "atem",
+   "text": "Atme einmal etwas tiefer ein, ganz bequem, und lass den Atem lang und langsam wieder hinausströmen. Länger, als er hereingekommen ist.\nNoch einmal ein, und lang hinaus.\nUnd einmal darf der Atem als Seufzer gehen, hörbar oder ganz leise, so wie nach einem langen Tag.\nDanach darf der Atem machen, was er möchte. Du darfst ihn ganz loslassen. Er kennt seinen Weg durch die Nacht."
+  },
+  {
+   "id": "atem_2",
+   "phase": "atem",
+   "text": "Lass deinen nächsten Atemzug ein wenig tiefer werden. Die Luft füllt sanft deine Brust und deinen Bauch. Dann lass sie langsam gehen, lang und leise, wie Wind, der sich legt.\nBeim nächsten Ausatmen darf ein Seufzer entstehen. Mit ihm sinkt etwas vom Tag aus dir heraus.\nUnd dann gibst du den Atem ab. Er kommt und geht von allein, so wie in jeder Nacht. Dein Körper weiß, wie das geht."
+  },
+  {
+   "id": "atem_kurz_1",
+   "phase": "atem_kurz",
+   "text": "Dein Atem kommt und geht, ganz von allein. Jedes Ausatmen ist ein wenig länger und ein wenig weicher. Du darfst ihm einfach folgen."
+  },
+  {
+   "id": "atem_kurz_2",
+   "phase": "atem_kurz",
+   "text": "Der Atem fließt ruhig. Er hebt deinen Bauch sanft an und lässt ihn langsam sinken. Mit jedem Ausatmen wird dein Körper ein wenig schwerer."
+  },
+  {
+   "id": "atem_kurz_3",
+   "phase": "atem_kurz",
+   "text": "Irgendwo in dir atmet es leise, wie Wellen an einem Ufer in der Nacht. Es atmet ganz von selbst. Der Atem kennt seinen Weg, auch im Schlaf."
+  },
+  {
+   "id": "nachklang_stuetze_1",
+   "phase": "nachklang_stuetze",
+   "text": "Du darfst weiter sinken, so tief, wie es sich gut anfühlt."
+  },
+  {
+   "id": "nachklang_stuetze_2",
+   "phase": "nachklang_stuetze",
+   "text": "Alles ist gut so, wie es gerade ist."
+  },
+  {
+   "id": "nachklang_stuetze_3",
+   "phase": "nachklang_stuetze",
+   "text": "Dein Körper trägt dich sicher durch die Nacht."
+  },
+  {
+   "id": "nachklang_stuetze_4",
+   "phase": "nachklang_stuetze",
+   "text": "Die Dunkelheit ist weich und hält dich ganz behutsam."
+  },
+  {
+   "id": "nachklang_stuetze_5",
+   "phase": "nachklang_stuetze",
+   "text": "Du bist hier sicher, warm und geborgen."
+  },
+  {
+   "id": "nachklang_stuetze_6",
+   "phase": "nachklang_stuetze",
+   "text": "Der Schlaf darf kommen, wann immer er möchte."
+  },
+  {
+   "id": "ausklang_1",
+   "phase": "ausklang",
+   "text": "Ein stiller Dank geht an deinen Körper, der dich durch diesen Tag getragen hat. Nun ruht er, warm und sicher. Gute Nacht."
+  },
+  {
+   "id": "ausklang_2",
+   "phase": "ausklang",
+   "text": "Die Nacht ist still und weit. Dein Körper ruht warm im Dunkeln, und alles, was heute war, darf sich setzen. Gute Nacht."
+  },
+  {
+   "id": "koerper_1_v1",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 1,
+   "teil": "v1",
+   "text": "Es gibt Menschen, die dich mit warmen Augen ansehen. Ein guter Freund, eine liebe Freundin, jemand, der dich schon lange kennt. Ihr Blick ist weich und ruhig, und er ruht gern auf dir.\nMit diesem Blick darfst du heute Nacht auch dich selbst ansehen. Er wandert langsam über deinen Körper, so wie warmes Licht durch ein Zimmer wandert. Er verweilt bei deinen Schultern, bei deinem Bauch, bei deinen Händen auf der Decke.\nDieser Blick hat Zeit. Er freut sich einfach, dass du da bist. Er findet dich schön, in jeder Linie und in jeder Rundung.\nDein Körper ist gut, und dein Blick auf ihn darf freundlich sein."
+  },
+  {
+   "id": "koerper_1_v2",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 1,
+   "teil": "v2",
+   "text": "Wenn ein Mensch schläft, sieht man ihn oft mit besonderer Zärtlichkeit an. Das Gesicht ist weich, der Atem ist ruhig, und alles an ihm ist liebenswert.\nMit dieser Zärtlichkeit darf dein Blick heute Nacht auch auf dir selbst liegen. Auf deinem Gesicht, auf deinem Atem, auf deinem ganzen Körper unter der Decke.\nDein Körper ist gut, und dein Blick auf ihn ist freundlich."
+  },
+  {
+   "id": "koerper_1_v3",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 1,
+   "teil": "v3",
+   "text": "Mondlicht liegt sanft auf deiner Decke, auf jeder Rundung und jeder Linie, überall gleich freundlich. Genauso freundlich ist dein Blick.\nDein Körper ist gut, und dein Blick auf ihn ist freundlich."
+  },
+  {
+   "id": "koerper_1_f",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 1,
+   "teil": "f",
+   "text": "Mein Körper ist gut, und mein Blick auf ihn ist freundlich."
+  },
+  {
+   "id": "koerper_2_v1",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 2,
+   "teil": "v1",
+   "text": "Dein Körper war heute den ganzen Tag bei dir. Er ist mit dir aufgewacht, er hat dich durch Räume und Straßen getragen, er hat Wärme und Kühle gespürt.\nDeine Beine haben dich getragen, Schritt für Schritt. Deine Hände haben gehalten, gegeben und berührt. Deine Haut hat die Luft gespürt, den Stoff deiner Kleidung, vielleicht die Sonne oder den Regen.\nUnd dein Atem war die ganze Zeit da, still und treu, auch in den Augenblicken, in denen du ihn vergessen hast.\nAll das darf sich in der Dunkelheit ausruhen. Dein Körper hat dich heute getragen, und du darfst ihm danken."
+  },
+  {
+   "id": "koerper_2_v2",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 2,
+   "teil": "v2",
+   "text": "Am Abend liegt ein Boot still im Hafen. Es hat den ganzen Tag Wind und Wellen getragen, und endlich schaukelt es sanft im dunklen Wasser.\nSo liegt auch dein Körper in deinem Bett. Deine Beine, deine Hände und dein Atem haben heute für dich gesorgt, und sie dürfen ruhen.\nDein Körper hat dich heute getragen, und du dankst ihm."
+  },
+  {
+   "id": "koerper_2_v3",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 2,
+   "teil": "v3",
+   "text": "Deine Hände liegen warm und schwer auf der Decke. Sie haben heute so viel gehalten.\nDein Körper hat dich heute getragen, und du dankst ihm."
+  },
+  {
+   "id": "koerper_2_f",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 2,
+   "teil": "f",
+   "text": "Mein Körper hat mich heute getragen, und ich danke ihm."
+  },
+  {
+   "id": "koerper_3_v1",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 3,
+   "teil": "v1",
+   "text": "Ein Strand ist an jedem Tag ein wenig anders. Das Wasser formt ihn neu, hier eine weiche Mulde, dort eine Linie im Sand. Und an jedem Tag ist er ganz und gar ein Strand, schön auf seine eigene Weise.\nAuch dein Körper verändert sich mit den Jahren. Er wird weicher oder fester, schwerer oder leichter, er trägt Linien und Narben, er erzählt von allem, was du erlebt hast. Jede dieser Spuren gehört zu dir.\nDer Vergleich mit anderen darf heute Nacht schlafen gehen. Er legt sich leise hin und wird still.\nDein Körper ist willkommen, so wie er heute ist."
+  },
+  {
+   "id": "koerper_3_v2",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 3,
+   "teil": "v2",
+   "text": "Ein alter Baum trägt seine Jahresringe in sich, und seine Rinde hat Furchen und Narben. Gerade darum ist er schön, und in seinem Schatten ist es ruhig.\nAuch dein Körper trägt seine Geschichte, in jeder Narbe, in jeder Rundung, in jedem Jahr. Der Vergleich darf schlafen gehen.\nDein Körper ist willkommen, so wie er heute ist."
+  },
+  {
+   "id": "koerper_3_v3",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 3,
+   "teil": "v3",
+   "text": "Ein Fluss ist in jeder Nacht ein anderer Fluss, und in jeder Nacht ist er schön. Der Vergleich schläft.\nDein Körper ist willkommen, so wie er heute ist."
+  },
+  {
+   "id": "koerper_3_f",
+   "phase": "lernen",
+   "thema": "koerper",
+   "bogen": 3,
+   "teil": "f",
+   "text": "Mein Körper ist willkommen, so wie er heute ist."
+  },
+  {
+   "id": "koerper_s_vulva_1",
+   "phase": "lernen_spicy",
+   "thema": "koerper",
+   "koerper": "vulva",
+   "teil": "s1",
+   "text": "Auch dein Geschlecht gehört zu deinem Körper, und auch dort bist du willkommen. Deine Vulva ist warm und ruhig zwischen deinen Beinen. Deine Schamlippen sind weich, in ihrer ganz eigenen Form und Farbe, so verschieden wie Gesichter.\nDeine Klitoris ruht still, deine Vagina ist warm und entspannt, und dein Becken trägt alles sanft. Hier darf alles einfach sein, so wie es ist.\nSo wie deine Vulva heute ist, ist sie schön. Sie darf Lust empfinden, wann immer es sich richtig anfühlt, und heute Nacht darf sie einfach ruhen, warm und sicher.\nDein Körper ist willkommen, ganz und gar."
+  },
+  {
+   "id": "koerper_s_vulva_2",
+   "phase": "lernen_spicy",
+   "thema": "koerper",
+   "koerper": "vulva",
+   "teil": "s2",
+   "text": "Deine Vulva ist warm und weich, mit Schamlippen in ihrer eigenen, schönen Form. Alles an ihr ist richtig, so wie es heute ist.\nDeine Lust ruht in deinem Becken, warm und sicher. Auch hier ist dein Körper willkommen."
+  },
+  {
+   "id": "koerper_s_penis_1",
+   "phase": "lernen_spicy",
+   "thema": "koerper",
+   "koerper": "penis",
+   "teil": "s1",
+   "text": "Auch dein Geschlecht gehört zu deinem Körper, und auch dort bist du willkommen. Dein Penis liegt warm und ruhig zwischen deinen Beinen, weich und schwer, in seiner ganz eigenen Form und Größe, so verschieden wie Gesichter.\nDie Eichel, der Schaft, die Hoden, alles ist warm und entspannt, und dein Becken trägt es sanft. Hier darf alles einfach sein, so wie es ist.\nWeich und ruhig ist dein Penis genauso gut wie erregt. Lust darf kommen, wann immer sie mag, und heute Nacht ruht sie einfach in dir, warm und sicher.\nDein Körper ist willkommen, ganz und gar."
+  },
+  {
+   "id": "koerper_s_penis_2",
+   "phase": "lernen_spicy",
+   "thema": "koerper",
+   "koerper": "penis",
+   "teil": "s2",
+   "text": "Dein Penis ruht weich und warm zwischen deinen Beinen, in seiner eigenen, guten Form. Weich ist er genauso richtig wie erregt.\nDeine Lust ruht in deinem Becken, warm und sicher. Auch hier ist dein Körper willkommen."
+  },
+  {
+   "id": "welle_1_v1",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 1,
+   "teil": "v1",
+   "text": "Es ist Nacht am Meer. Der Sand unter dir ist noch warm vom Tag, und die Luft ist weich und dunkel.\nDie Wellen kommen und gehen. Eine hebt sich, rollt heran und legt sich flach auf den Sand. Dann zieht sie sich zurück, ganz leise, und die nächste beginnt. Keine ist wie die andere. Manche sind hoch, manche sind flach und still.\nNiemand fragt eine Welle, ob sie gut genug ist. Sie darf einfach kommen, und sie darf einfach gehen.\nSo ist es auch mit deiner Lust. Sie kommt und geht, ganz in ihrer eigenen Zeit. Du darfst sie spüren, so wie sie gerade ist."
+  },
+  {
+   "id": "welle_1_v2",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 1,
+   "teil": "v2",
+   "text": "Es ist, als läge dein Körper auf warmem Wasser, und das Wasser trägt dich.\nEine Welle hebt dich sacht an und senkt dich wieder. Die nächste ist ein wenig anders, länger, weicher. Das Wasser macht das ganz von allein.\nAuch deine Lust bewegt sich so. Sie kommt und geht, und jede Welle darf so sein, wie sie ist."
+  },
+  {
+   "id": "welle_1_v3",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 1,
+   "teil": "v3",
+   "text": "Draußen in der Dunkelheit rauscht das Meer, Welle um Welle, jede ein wenig anders.\nAuch deine Lust kommt und geht, ganz in ihrer eigenen Zeit."
+  },
+  {
+   "id": "welle_1_f",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 1,
+   "teil": "f",
+   "text": "Lust kommt und geht. Ich darf sie einfach spüren."
+  },
+  {
+   "id": "welle_2_v1",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 2,
+   "teil": "v1",
+   "text": "Es ist Ebbe. Das Wasser hat sich weit zurückgezogen, und der Strand liegt still und weit im Mondlicht. Der Sand ist feucht und glatt, und kleine Pfützen halten das Licht.\nDas Meer ist trotzdem da. Es ruht nur, draußen, wo es dunkel ist. Und ganz langsam kommt es wieder. Erst ein schmaler Saum aus Wasser, dann mehr, bis die Flut den Sand wieder bedeckt.\nSo ist es auch mit deiner Lust. Manchmal wird sie leise und zieht sich zurück, und nichts ist verloren. Oft kommt sie erst wieder, wenn Wärme und Ruhe schon da sind, ganz nah und ganz behutsam. Sie kehrt zurück, so wie das Wasser zurückkehrt."
+  },
+  {
+   "id": "welle_2_v2",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 2,
+   "teil": "v2",
+   "text": "Bei Ebbe liegt ein kleines Boot auf dem Sand, leicht zur Seite geneigt, ganz ruhig. Es ruht und hat alle Zeit der Welt. Irgendwann kommt die Flut, und das Wasser hebt es sanft wieder an.\nDeine Lust darf auch so ruhen. Wenn sie leiser wird, ist nichts verloren. Sie kommt wieder, wie das Wasser."
+  },
+  {
+   "id": "welle_2_v3",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 2,
+   "teil": "v3",
+   "text": "Das Meer zieht sich zurück und kommt wieder, so wie dein Atem.\nAuch leise Lust ist nur Ebbe. Die Flut findet ihren Weg zurück zu dir."
+  },
+  {
+   "id": "welle_2_f",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 2,
+   "teil": "f",
+   "text": "Leise Lust ruht nur. Sie kehrt zurück wie die Flut."
+  },
+  {
+   "id": "welle_3_v1",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 3,
+   "teil": "v1",
+   "text": "Es gibt Tage, an denen das Meer ganz glatt ist. Kaum eine Welle bewegt sich, und das Wasser liegt da wie dunkles Glas. Der Himmel spiegelt sich darin, still und weit.\nAuch das ist das Meer. Genauso schön, genauso lebendig, genauso ganz.\nAuch dein Körper kennt solche Tage. Tage mit wenig Lust, Tage voller Müdigkeit, Abende, die sich nur nach Ruhe sehnen. Sie gehören zu dir, so wie die stillen Tage zum Meer gehören.\nHeute Nacht darf dein Körper einfach ruhen. Jede Welle gehört dazu, auch die kleine, auch die stille."
+  },
+  {
+   "id": "welle_3_v2",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 3,
+   "teil": "v2",
+   "text": "In einer stillen Bucht kräuselt sich das Wasser nur ganz leicht. Kleine Wellen streichen über die Kiesel, kaum hörbar, und sind doch ganz Meer.\nSo sind auch die müden Tage, die leisen Abende, die Stunden, in denen die Lust schläft. Sie gehören zu dir, und jede von ihnen ist richtig."
+  },
+  {
+   "id": "welle_3_v3",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 3,
+   "teil": "v3",
+   "text": "Auch das Meer hat stille Nächte, glatt und dunkel und ganz in Ruhe.\nDeine müden Tage gehören genauso zu dir. Jede Welle ist richtig."
+  },
+  {
+   "id": "welle_3_f",
+   "phase": "lernen",
+   "thema": "welle",
+   "bogen": 3,
+   "teil": "f",
+   "text": "Jede Welle gehört zu mir, auch die stille."
+  },
+  {
+   "id": "welle_s_vulva_1",
+   "phase": "lernen_spicy",
+   "thema": "welle",
+   "koerper": "vulva",
+   "teil": "s1",
+   "text": "Zwischen deinen Beinen ist es warm und dunkel. Deine Vulva liegt weich und ruhig, deine Schamlippen schwer und entspannt.\nLust bewegt sich in deinem Becken wie eine Welle. Manchmal wird es dort ein wenig wärmer, mehr Blut fließt hinein, und deine Schamlippen und deine Klitoris werden sanft voller. Dann ebbt es wieder ab, und alles wird still und weich. Das geschieht ganz von allein, so wie das Meer von allein kommt und geht.\nHeute Nacht darf deine Lust ruhen oder leise da sein. Beides gehört zu dir, und beides ist gut."
+  },
+  {
+   "id": "welle_s_vulva_2",
+   "phase": "lernen_spicy",
+   "thema": "welle",
+   "koerper": "vulva",
+   "teil": "s2",
+   "text": "Deine Klitoris und deine Schamlippen ruhen warm in der Dunkelheit. Lust darf in deinem Becken sanft anschwellen und wieder abklingen, wie eine Welle, ganz von allein.\nHeute Nacht darf sie einfach ruhen, warm und sicher in dir."
+  },
+  {
+   "id": "welle_s_penis_1",
+   "phase": "lernen_spicy",
+   "thema": "welle",
+   "koerper": "penis",
+   "teil": "s1",
+   "text": "Zwischen deinen Beinen ist es warm und dunkel. Dein Penis liegt weich und schwer, deine Hoden ruhen warm in ihrer Haut.\nLust bewegt sich in deinem Becken wie eine Welle. Manchmal fließt etwas mehr Blut hinein, der Schaft wird ein wenig voller, die Eichel wärmer. Dann ebbt es wieder ab, und alles wird weich und still. Beides geschieht ganz von allein, so wie das Meer kommt und geht.\nWeich ist genauso richtig wie voll. Heute Nacht darf deine Lust ruhen oder leise da sein, und beides gehört zu dir."
+  },
+  {
+   "id": "welle_s_penis_2",
+   "phase": "lernen_spicy",
+   "thema": "welle",
+   "koerper": "penis",
+   "teil": "s2",
+   "text": "Dein Penis ruht weich und warm in der Dunkelheit, und weich ist genauso richtig wie voll.\nLust darf in deinem Becken sanft anschwellen und wieder abklingen, wie eine Welle, ganz von allein. Heute Nacht darf sie einfach ruhen."
+  },
+  {
+   "id": "gaspedal_1_v1",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 1,
+   "teil": "v1",
+   "text": "Der Tag hat dir viel aufgeladen. Pflichten, Gedanken, kleine Sorgen, sie hängen an dir wie ein schwerer Mantel, feucht vom Regen und mit vollen Taschen.\nAm Ende des Abends darf dieser Mantel von deinen Schultern gleiten. Er rutscht langsam über die Arme und fällt weich über einen Stuhl neben der Tür. Dort hängt er, und dort darf er bis morgen bleiben.\nDeine Schultern werden leicht. Dein Rücken liegt frei im Bett, warm und unbeschwert. Alles, was dich heute gebremst hat, hat seinen Platz gefunden, draußen vor der Nacht.\nDer Mantel wartet geduldig an der Tür. Was dich gebremst hat, ruht dort mit ihm, bis der Morgen kommt."
+  },
+  {
+   "id": "gaspedal_1_v2",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 1,
+   "teil": "v2",
+   "text": "Ein Rucksack ist den ganzen Tag mit dir gegangen. Er war schwer von Aufgaben und Gedanken.\nAm Bett lösen sich die Riemen von deinen Schultern. Der Rucksack sinkt auf den Boden und lehnt still an der Wand.\nDein Rücken wird breit und weich. Was dich gebremst hat, liegt neben dem Bett, und dort darf es ruhen."
+  },
+  {
+   "id": "gaspedal_1_v3",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 1,
+   "teil": "v3",
+   "text": "Dein Schlüsselbund liegt in der Schale an der Tür. Deine Hände sind leer und warm. Was dich gebremst hat, ruht dort bis zum Morgen."
+  },
+  {
+   "id": "gaspedal_1_f",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 1,
+   "teil": "f",
+   "text": "Was mich bremst, darf heute Nacht ruhen."
+  },
+  {
+   "id": "gaspedal_2_v1",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 2,
+   "teil": "v1",
+   "text": "Die Decke liegt auf dir, schwer und warm. Sie folgt jeder Linie deines Körpers, den Schultern, dem Bauch, den Beinen. Die Dunkelheit im Zimmer ist weich wie Samt.\nHier ist ein sicherer Ort. Die Tür ist zu, das Haus ist still, und die Nacht hält alles Laute in der Ferne.\nDein Körper merkt das, ganz leise. Er wird schwerer. Dein Bauch wird weit, und dein Becken sinkt tiefer in die Matratze.\nWo der Körper sich sicher fühlt, lösen sich die Bremsen von allein. Das geschieht so, wie sich Wärme langsam in einem Raum verteilt."
+  },
+  {
+   "id": "gaspedal_2_v2",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 2,
+   "teil": "v2",
+   "text": "Eine Katze rollt sich in einer warmen Ecke zusammen. Sie weiß, dass sie sicher ist, und ihr Körper wird rund und weich.\nAuch dein Körper kennt dieses Wissen. Das Bett trägt dich, die Decke hüllt dich ein. Mit jedem Atemzug lässt etwas in dir los, ganz von selbst."
+  },
+  {
+   "id": "gaspedal_2_v3",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 2,
+   "teil": "v3",
+   "text": "Die Dunkelheit legt sich um dich wie ein warmes Tuch. Du bist sicher, und dein Körper wird weich. Alles in dir darf ein wenig tiefer sinken."
+  },
+  {
+   "id": "gaspedal_2_f",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 2,
+   "teil": "f",
+   "text": "Ich bin hier sicher, und mein Körper darf weich werden."
+  },
+  {
+   "id": "gaspedal_3_v1",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 3,
+   "teil": "v1",
+   "text": "Am Abend steht ein Wagen still in der Einfahrt. Der Motor ist aus. Das Metall wird langsam kühl und knackt leise in der Dunkelheit. Der Fuß ruht neben dem Gaspedal.\nSo still darf auch dein Körper stehen. Die Straße ist für heute zu Ende gefahren.\nDas Müssen ist selbst eine Bremse. Unter dem Müssen wird der Körper eng. Wo das Müssen geht, wird Raum frei, weit und still.\nDeine Lust, deine Ruhe, dein Schlaf, alles darf kommen, wann es möchte. Du darfst einfach da sein."
+  },
+  {
+   "id": "gaspedal_3_v2",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 3,
+   "teil": "v2",
+   "text": "Im Garten wächst das Gras durch die Nacht, ganz ohne Mühe. Der Regen fällt, die Erde atmet, und alles geschieht in seinem eigenen Tempo.\nAuch in dir darf alles sein eigenes Tempo haben. Hier gibt es nichts zu leisten. Du darfst liegen, und das ist genug."
+  },
+  {
+   "id": "gaspedal_3_v3",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 3,
+   "teil": "v3",
+   "text": "Deine Hände liegen offen auf der Decke, leicht und leer. Sie dürfen ruhen. Du darfst einfach da sein. Alles Weitere kommt von selbst, in seiner eigenen Zeit."
+  },
+  {
+   "id": "gaspedal_3_f",
+   "phase": "lernen",
+   "thema": "gaspedal",
+   "bogen": 3,
+   "teil": "f",
+   "text": "Ich darf einfach da sein, alles andere kommt von selbst."
+  },
+  {
+   "id": "gaspedal_s_vulva_1",
+   "phase": "lernen_spicy",
+   "thema": "gaspedal",
+   "koerper": "vulva",
+   "teil": "s1",
+   "text": "Tief in deinem Becken wird es warm. Dein Beckenboden sinkt weich nach unten, wie Sand, der sich am Grund von stillem Wasser setzt.\nDeine Vulva ruht in dieser Wärme. Deine Schamlippen sind weich, deine Klitoris liegt still und geborgen, und auch deine Vagina darf ganz entspannt sein. Mit der Ruhe fließt das Blut langsam und warm durch dein Geschlecht.\nWenn die Sorgen schweigen, wird dein Körper dort weich, ganz von selbst. Lust darf da sein oder schlafen, beides ist gut. Lust ist eine Möglichkeit, und sie hat Zeit. Dein Geschlecht ist sicher, hier in deinem Bett."
+  },
+  {
+   "id": "gaspedal_s_vulva_2",
+   "phase": "lernen_spicy",
+   "thema": "gaspedal",
+   "koerper": "vulva",
+   "teil": "s2",
+   "text": "Deine Vulva liegt warm und weich in der Dunkelheit. Was dich gebremst hat, ruht. Dein Becken ist sicher, und die Lust darf schlafen oder leise da sein, ganz wie sie möchte."
+  },
+  {
+   "id": "gaspedal_s_penis_1",
+   "phase": "lernen_spicy",
+   "thema": "gaspedal",
+   "koerper": "penis",
+   "teil": "s1",
+   "text": "Tief in deinem Becken wird es warm. Dein Beckenboden sinkt weich nach unten, wie Sand, der sich am Grund von stillem Wasser setzt.\nDein Penis ruht in dieser Wärme, schwer und entspannt. Die Eichel, der Schaft und die Hoden liegen weich und geborgen. Mit der Ruhe fließt das Blut langsam und warm durch dein Geschlecht.\nWenn die Sorgen schweigen, wird dein Körper dort weich, ganz von selbst. Ob er ruht oder sich füllt, beides ist gut. Lust ist eine Möglichkeit, und sie hat Zeit. Dein Geschlecht ist sicher, hier in deinem Bett."
+  },
+  {
+   "id": "gaspedal_s_penis_2",
+   "phase": "lernen_spicy",
+   "thema": "gaspedal",
+   "koerper": "penis",
+   "teil": "s2",
+   "text": "Dein Penis liegt warm und schwer zwischen deinen Beinen. Was dich gebremst hat, ruht. Dein Becken ist sicher, und die Lust darf schlafen oder leise da sein, ganz wie sie möchte."
+  },
+  {
+   "id": "spueren_1_v1",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 1,
+   "teil": "v1",
+   "text": "Ein kleines, warmes Licht liegt hinter deiner Stirn. Dort ist den ganzen Tag gedacht worden, geplant und abgewogen.\nDas Licht wird weich und beginnt zu wandern. Es sinkt hinter deine Augen, in deinen Hals, langsam in deine Brust. Überall, wo es ankommt, wird die Haut ein wenig wärmer.\nEs sinkt weiter, in deinen Bauch, der sich hebt und senkt. Hier ist es still und dunkel und gut. Das Denken bleibt oben, leise und klein, und du bist hier unten, im Atem, in der Wärme.\nDu bist in deinem Körper, mitten darin."
+  },
+  {
+   "id": "spueren_1_v2",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 1,
+   "teil": "v2",
+   "text": "Wie Regenwasser, das langsam in warmen Sand sinkt, so sinkt deine Aufmerksamkeit nach unten. Vom Kopf in die Schultern, in die Brust, in den weichen Bauch.\nDer Sand nimmt das Wasser einfach auf. Dein Körper nimmt dich auf, mit seiner Wärme und seinem Atem.\nDu bist in deinem Körper, mitten darin."
+  },
+  {
+   "id": "spueren_1_v3",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 1,
+   "teil": "v3",
+   "text": "Lange hast du hinter einem Fenster gestanden und hinausgesehen. Die Tür öffnet sich leise, und du trittst hinaus, mitten in die warme Nachtluft.\nDu bist in deinem Körper, mitten darin."
+  },
+  {
+   "id": "spueren_1_f",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 1,
+   "teil": "f",
+   "text": "Ich bin in meinem Körper, mitten darin."
+  },
+  {
+   "id": "spueren_2_v1",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 2,
+   "teil": "v1",
+   "text": "In einem Saal sitzt ein Zuschauer in der letzten Reihe. Er hat den ganzen Tag zugesehen und jede Bewegung beurteilt.\nEs ist spät geworden. Er steht auf, nimmt seinen Mantel und geht leise hinaus. Seine Schritte werden leiser im langen Gang. Die Tür fällt sanft ins Schloss.\nDer Saal ist dunkel und warm. Die Stühle sind leer. Hier ist nur noch dein Körper, der atmet, und die Ruhe um ihn herum.\nWer zuschaut, darf nach Hause gehen. Du darfst einfach da sein."
+  },
+  {
+   "id": "spueren_2_v2",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 2,
+   "teil": "v2",
+   "text": "Irgendwo in dir spricht eine Stimme, die alles bewertet und vergleicht. Sie klingt wie ein Gespräch im Nebenzimmer.\nEine Tür schließt sich sacht, und das Gespräch wird leiser, weiter weg, ein freundliches Murmeln, das verklingt. Was bleibt, ist dein ruhiger Atem.\nDiese Stimme hat Feierabend. Du darfst einfach da sein, warm und ungestört."
+  },
+  {
+   "id": "spueren_2_v3",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 2,
+   "teil": "v3",
+   "text": "Ein Notizbuch wird zugeklappt, der Stift liegt still daneben. Für heute ist alles notiert.\nWer zuschaut, darf nach Hause gehen, und du darfst einfach da sein."
+  },
+  {
+   "id": "spueren_2_f",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 2,
+   "teil": "f",
+   "text": "Wer zuschaut, darf gehen. Ich darf einfach da sein."
+  },
+  {
+   "id": "spueren_3_v1",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 3,
+   "teil": "v1",
+   "text": "Ein Haus steht in der Nacht, und hinter einem Fenster brennt ein warmes Licht. Drinnen ist es still, und jemand ist zu Hause.\nSo ist auch dein Körper bewohnt. Deine Haut ist warm, und die Decke liegt schwer und freundlich auf dir. Unter ihr sammelt sich die Wärme wie in einem kleinen Zimmer.\nTief innen schlägt dein Herz, ruhig und gleichmäßig. Es schlägt für dich, die ganze Nacht. Dein Atem geht leise durch dich hindurch.\nDu bist zu Hause, hier in dir, warm und bewohnt."
+  },
+  {
+   "id": "spueren_3_v2",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 3,
+   "teil": "v2",
+   "text": "Ein Stein am Ufer hält die Wärme des Tages noch lange in der Nacht. Die Wärme sitzt tief in ihm, ganz innen.\nSo trägt auch dein Körper seine Wärme. Die Decke liegt schwer auf dir, die Haut ist weich, und darunter schlägt ruhig dein Herz.\nDein Körper ist dein Zuhause, warm und bewohnt."
+  },
+  {
+   "id": "spueren_3_v3",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 3,
+   "teil": "v3",
+   "text": "Unter der Decke ist es warm. Dein Herz schlägt leise, wie die Schritte von jemandem, der hier zu Hause ist.\nDein Körper ist bewohnt."
+  },
+  {
+   "id": "spueren_3_f",
+   "phase": "lernen",
+   "thema": "spueren",
+   "bogen": 3,
+   "teil": "f",
+   "text": "Mein Körper ist mein Zuhause, warm und bewohnt."
+  },
+  {
+   "id": "spueren_s_vulva_1",
+   "phase": "lernen_spicy",
+   "thema": "spueren",
+   "koerper": "vulva",
+   "teil": "s1",
+   "text": "Zwischen deinen Beinen liegt Wärme. Deine Vulva ruht weich im Dunkeln, die Schamlippen warm und still, die Klitoris ganz ruhig.\nDas Blut fließt langsam durch dein Becken, und manchmal ist ein leises Pulsieren zu spüren, gleichmäßig wie der Atem. Es ist einfach da.\nDu spürst dein Geschlecht von innen, als Wärme, als Weichheit, als sanftes Gewicht. Hier schaut niemand zu, und nichts wird bewertet. Deine Vagina, dein Becken, alles ist ruhig und gehört dir.\nDu bist in deinem Körper, mitten darin, auch hier."
+  },
+  {
+   "id": "spueren_s_vulva_2",
+   "phase": "lernen_spicy",
+   "thema": "spueren",
+   "koerper": "vulva",
+   "teil": "s2",
+   "text": "Deine Vulva ist warm und weich, sie ruht im Dunkeln unter der Decke. Das Blut pulsiert leise in deinem Becken.\nDu spürst sie von innen, ganz ohne Blick. Sie gehört dir, warm und still."
+  },
+  {
+   "id": "spueren_s_penis_1",
+   "phase": "lernen_spicy",
+   "thema": "spueren",
+   "koerper": "penis",
+   "teil": "s1",
+   "text": "Zwischen deinen Beinen liegt Wärme. Dein Penis ruht weich und schwer, die Eichel warm, der Schaft entspannt, die Hoden geborgen und still.\nDas Blut fließt langsam durch dein Becken, und manchmal ist ein leises Pulsieren zu spüren, gleichmäßig wie der Atem. Ob er weich bleibt oder fester wird, alles ist richtig. Es ist einfach da.\nDu spürst dein Geschlecht von innen, als Wärme, als Gewicht, als Ruhe. Hier schaut niemand zu, und nichts wird bewertet. Alles gehört dir.\nDu bist in deinem Körper, mitten darin, auch hier."
+  },
+  {
+   "id": "spueren_s_penis_2",
+   "phase": "lernen_spicy",
+   "thema": "spueren",
+   "koerper": "penis",
+   "teil": "s2",
+   "text": "Dein Penis liegt warm und schwer unter der Decke, die Hoden weich und geborgen. Das Blut pulsiert leise in deinem Becken.\nDu spürst ihn von innen, ganz ohne Blick. Er gehört dir, warm und still."
+  },
+  {
+   "id": "becken_1_v1",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 1,
+   "teil": "v1",
+   "text": "Eine Hand liegt auf einer warmen Decke. Den ganzen Tag hat sie gehalten, getragen und gegriffen. Nach und nach wird sie weich. Die Finger lösen sich, einer nach dem anderen, und die Handfläche liegt offen und schwer.\nSo darf auch der Boden deines Beckens sein. Er hat heute viel gehalten, oft ganz unbemerkt. Am Abend darf er loslassen. Er wird weich und breit und schwer und sinkt ein wenig tiefer in die Matratze.\nDein Gesäß liegt warm im Bett. Deine Hüften werden weit. Dazwischen ruht dein Becken, offen wie eine Hand, die loslässt. Weich zu sein ist hier ganz richtig."
+  },
+  {
+   "id": "becken_1_v2",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 1,
+   "teil": "v2",
+   "text": "Ein Mensch schläft beim Lesen ein. Das Buch gleitet sanft aus seiner Hand auf die Decke, und die Hand bleibt offen liegen, warm und schwer.\nSo lässt auch dein Beckenboden los. Er darf weich werden, ganz von selbst. Dein Becken liegt offen und ruhig, wie eine Hand, die ausruht."
+  },
+  {
+   "id": "becken_1_v3",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 1,
+   "teil": "v3",
+   "text": "Eine Hand öffnet sich im Schlaf, langsam und warm. So wird auch der Boden deines Beckens weich und schwer, und er darf die ganze Nacht ausruhen."
+  },
+  {
+   "id": "becken_1_f",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 1,
+   "teil": "f",
+   "text": "Mein Becken darf weich sein wie eine offene Hand."
+  },
+  {
+   "id": "becken_2_v1",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 2,
+   "teil": "v1",
+   "text": "Dein Atem ist wie warmes Wasser. Er fließt durch deine Brust nach unten, durch den Bauch, bis tief in dein Becken. Dort ist Platz für ihn, weit und weich.\nMit jedem Einatmen senkt sich der Boden deines Beckens ein kleines Stück, so wie sich ein weiches Tuch unter Wasser wölbt. Mit jedem Ausatmen kehrt er sanft zurück. Dafür ist nichts zu tun. Es geschieht ganz von allein.\nSo geht es die ganze Nacht, ein ruhiges Sinken und Steigen, ein leises Wiegen tief in dir. Dein Becken atmet mit."
+  },
+  {
+   "id": "becken_2_v2",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 2,
+   "teil": "v2",
+   "text": "Am Strand rollt eine flache Welle heran, und der nasse Sand gibt ein wenig nach. Dann zieht das Wasser zurück, und der Sand liegt wieder glatt.\nSo bewegt sich dein Beckenboden mit dem Atem. Beim Einatmen gibt er weich nach, beim Ausatmen kehrt er zurück. Ganz von allein."
+  },
+  {
+   "id": "becken_2_v3",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 2,
+   "teil": "v3",
+   "text": "Der Atem sinkt bis tief ins Becken. Der Boden deines Beckens gibt sanft nach und kehrt zurück, wie ein ruhiges Wiegen in der Nacht."
+  },
+  {
+   "id": "becken_2_f",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 2,
+   "teil": "f",
+   "text": "Mein Atem sinkt ins Becken und kehrt von allein zurück."
+  },
+  {
+   "id": "becken_3_v1",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 3,
+   "teil": "v1",
+   "text": "Draußen steht ein Baum in der Nacht. Ein leichter Wind geht durch seine Äste, und sie wiegen sich mit, weich und biegsam. Ein Ast, der nachgibt, bleibt heil. Er trägt Blätter, Vögel und Regen, gerade weil er beweglich ist.\nSo ist es auch mit deinem Becken. Weich heißt hier bereit. Ein weicher Beckenboden kann tragen und loslassen, er kann Wärme empfangen und Lust geschehen lassen. Weichheit ist seine Kraft.\nDeine Hüften liegen schwer im Bett, dein Bauch ist warm. Dein Becken darf sich wiegen wie ein Ast im Wind, ruhig und stark."
+  },
+  {
+   "id": "becken_3_v2",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 3,
+   "teil": "v2",
+   "text": "Wasser ist weich. Es gibt jeder Hand nach und nimmt jede Form an. Und doch formt es über lange Zeit den Stein am Ufer.\nAuch dein Becken darf so weich sein. Weich heißt bereit, offen für Wärme und für Lust. In dieser Weichheit liegt eine stille Kraft."
+  },
+  {
+   "id": "becken_3_v3",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 3,
+   "teil": "v3",
+   "text": "Eine Hängematte zwischen zwei Bäumen ist weich, und gerade deshalb trägt sie. Auch dein Becken darf weich sein. Es trägt dich ruhig durch die Nacht."
+  },
+  {
+   "id": "becken_3_f",
+   "phase": "lernen",
+   "thema": "becken",
+   "bogen": 3,
+   "teil": "f",
+   "text": "Mein Becken ist weich, und weich ist stark."
+  },
+  {
+   "id": "becken_s_vulva_1",
+   "phase": "lernen_spicy",
+   "thema": "becken",
+   "koerper": "vulva",
+   "teil": "s1",
+   "text": "Die Wärme sammelt sich tief in deinem Becken. Rund um deine Vagina und deine Vulva liegen feine Muskeln, die den ganzen Tag ein wenig gehalten haben. Am Abend dürfen sie weich werden, warm und schwer.\nMit jedem Einatmen senkt sich der Boden deines Beckens sanft, und um deine Vagina wird es weit. Deine Schamlippen liegen weich und warm, deine Klitoris ruht. Das Blut fließt langsam und gleichmäßig.\nIn dieser Weichheit ist Lust möglich, wann immer sie kommen mag. Heute Nacht darf sie einfach in dir ruhen, warm und sicher."
+  },
+  {
+   "id": "becken_s_vulva_2",
+   "phase": "lernen_spicy",
+   "thema": "becken",
+   "koerper": "vulva",
+   "teil": "s2",
+   "text": "Die Muskeln rund um deine Vagina und deine Vulva werden weich und warm. Beim Einatmen senkt sich dein Beckenboden sanft. Deine Schamlippen ruhen, deine Klitoris ruht. In dieser Weichheit darf Lust da sein, ganz in Ruhe."
+  },
+  {
+   "id": "becken_s_penis_1",
+   "phase": "lernen_spicy",
+   "thema": "becken",
+   "koerper": "penis",
+   "teil": "s1",
+   "text": "Die Wärme sammelt sich tief in deinem Becken. Rund um deinen Penis, deine Hoden und den Damm liegen feine Muskeln, die den ganzen Tag ein wenig gehalten haben. Am Abend dürfen sie weich werden, warm und schwer.\nMit jedem Einatmen senkt sich der Boden deines Beckens sanft, und der Damm wird weit und weich. Dein Penis liegt ruhig und warm, deine Hoden ruhen schwer. Das Blut fließt langsam und gleichmäßig.\nIn dieser Weichheit ist Lust möglich, wann immer sie kommen mag. Heute Nacht darf sie einfach in dir ruhen, warm und sicher."
+  },
+  {
+   "id": "becken_s_penis_2",
+   "phase": "lernen_spicy",
+   "thema": "becken",
+   "koerper": "penis",
+   "teil": "s2",
+   "text": "Die Muskeln rund um deinen Penis, deine Hoden und den Damm werden weich und warm. Beim Einatmen senkt sich dein Beckenboden sanft. Dein Penis ruht, deine Hoden liegen schwer. In dieser Weichheit darf Lust da sein, ganz in Ruhe."
+  },
+  {
+   "id": "geniessen_1_v1",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 1,
+   "teil": "v1",
+   "text": "Auf einem Fensterbrett liegt eine Katze in einem warmen Fleck Sonne. Die Sonne ist einfach gekommen, so wie sie jeden Tag kommt. Die Katze liegt lang und schwer da und lässt die Wärme in ihr Fell sinken.\nSie nimmt die Wärme an, ganz selbstverständlich. Die Wärme gehört ihr, einfach weil sie da ist.\nSo darf es auch bei dir sein. Genuss braucht keinen Grund. Er muss vorher nicht verdient werden. Er ist dir einfach erlaubt, an jedem Abend, so wie du heute bist.\nDein Körper darf das Schöne annehmen, ruhig und ohne Eile. Genuss ist dein gutes Recht."
+  },
+  {
+   "id": "geniessen_1_v2",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 1,
+   "teil": "v2",
+   "text": "Warmes Wasser umhüllt deinen Körper, weich und freundlich. Es trägt dich, ganz gleich, was der Tag gebracht hat.\nGenuss ist ein Geschenk ohne Bedingung. Du darfst ihn haben, auch ohne Grund, auch an einem ganz gewöhnlichen Abend.\nGenuss gehört zu dir. Er ist dein gutes Recht."
+  },
+  {
+   "id": "geniessen_1_v3",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 1,
+   "teil": "v3",
+   "text": "Die Abendsonne wärmt eine Mauer aus Stein, einfach so, und der Stein nimmt die Wärme gern. Auch dir ist Genuss erlaubt, ohne Grund und ohne Bedingung. Genuss ist dein gutes Recht."
+  },
+  {
+   "id": "geniessen_1_f",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 1,
+   "teil": "f",
+   "text": "Genuss ist mein gutes Recht."
+  },
+  {
+   "id": "geniessen_2_v1",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 2,
+   "teil": "v1",
+   "text": "Leiser Regen fällt auf einen Garten am Abend. Die Blätter halten still und lassen das Wasser kommen. Die Erde trinkt, langsam und tief, und wird weich und dunkel.\nDer Garten ist ganz bei sich. Er empfängt einfach, was der Himmel ihm schenkt. Jeder Tropfen ist willkommen.\nSo darf auch dein Körper sein. Hier gibt es nichts zu zeigen und nichts zu beweisen. Du darfst nehmen, ohne zurückzugeben. Du darfst liegen und empfangen, Wärme, Ruhe und Weichheit.\nDu darfst empfangen, einfach so."
+  },
+  {
+   "id": "geniessen_2_v2",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 2,
+   "teil": "v2",
+   "text": "Ein kleines Boot liegt auf stillem Wasser. Das Wasser trägt es ganz ohne Mühe, und das Boot lässt sich tragen.\nAuch du darfst getragen werden. Die Matratze hält dich, die Decke wärmt dich. Dein Körper darf nehmen, und alles, was er bekommt, ist frei geschenkt.\nDu darfst empfangen, einfach so."
+  },
+  {
+   "id": "geniessen_2_v3",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 2,
+   "teil": "v3",
+   "text": "Eine offene Hand liegt still auf der Decke, bereit für die Wärme. Dein Körper darf nehmen, ohne etwas zu geben. Du darfst empfangen, einfach so."
+  },
+  {
+   "id": "geniessen_2_f",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 2,
+   "teil": "f",
+   "text": "Ich darf empfangen, einfach so."
+  },
+  {
+   "id": "geniessen_3_v1",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 3,
+   "teil": "v1",
+   "text": "Der Stoff deiner Decke liegt weich auf deiner Haut. Er ist ein wenig kühl an den Rändern und warm dort, wo dein Körper ruht. Das ist ein kleiner Genuss, still und ganz nah.\nDazu kommt die Wärme unter der Decke, die sich langsam sammelt. Und dein eigener Atem, der kommt und geht, leise wie ein Wind im Gras.\nSolche kleinen Genüsse sind immer da. Sie warten an jedem Abend auf dich, freundlich und treu, wie ein vertrauter Weg nach Hause.\nGenuss darf eine stille Gewohnheit sein. Jeden Abend wartet ein kleiner Genuss auf dich."
+  },
+  {
+   "id": "geniessen_3_v2",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 3,
+   "teil": "v2",
+   "text": "Ein Kissen nimmt die Form deines Kopfes an, Abend für Abend. Es ist vertraut und weich, wie ein alter Freund.\nSo kehren auch die kleinen Genüsse zurück. Die Wärme der Decke, der ruhige Atem, die Dunkelheit, die dich umhüllt. Sie gehören zu deinem Abend.\nJeden Abend wartet ein kleiner Genuss auf dich."
+  },
+  {
+   "id": "geniessen_3_v3",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 3,
+   "teil": "v3",
+   "text": "Die Decke ist warm, der Atem geht leise. Dieser kleine Genuss kehrt an jedem Abend zurück. Jeden Abend wartet ein kleiner Genuss auf dich."
+  },
+  {
+   "id": "geniessen_3_f",
+   "phase": "lernen",
+   "thema": "geniessen",
+   "bogen": 3,
+   "teil": "f",
+   "text": "Jeden Abend wartet ein kleiner Genuss auf mich."
+  },
+  {
+   "id": "geniessen_s_vulva_1",
+   "phase": "lernen_spicy",
+   "thema": "geniessen",
+   "koerper": "vulva",
+   "teil": "s1",
+   "text": "Zwischen deinen Beinen liegt eine stille Wärme. Deine Vulva ruht weich im Dunkeln, die Schamlippen sind warm und entspannt, und deine Klitoris ist ganz ruhig.\nDieser Teil von dir darf Lust empfinden, wann immer er möchte. Er braucht dafür keinen Anlass und keine Erlaubnis von außen. Die Lust gehört dir, und sie hat alle Zeit der Welt.\nHeute Nacht ruht deine Lust einfach in dir, warm und sicher, wie Glut unter weicher Asche. Dein Becken ist schwer und gelöst.\nDein ganzer Körper darf genießen. Genuss ist dein gutes Recht."
+  },
+  {
+   "id": "geniessen_s_vulva_2",
+   "phase": "lernen_spicy",
+   "thema": "geniessen",
+   "koerper": "vulva",
+   "teil": "s2",
+   "text": "Deine Vulva ist warm und weich, das Blut fließt ruhig durch dein Becken. Deine Klitoris ruht. Lust darf da sein, wann immer sie möchte, ohne Eile. Heute Nacht ruht sie warm und sicher in dir."
+  },
+  {
+   "id": "geniessen_s_penis_1",
+   "phase": "lernen_spicy",
+   "thema": "geniessen",
+   "koerper": "penis",
+   "teil": "s1",
+   "text": "Zwischen deinen Beinen liegt eine stille Wärme. Dein Penis ruht weich und schwer, die Eichel ist warm, der Schaft entspannt, und deine Hoden liegen geborgen in der Wärme deines Körpers.\nDieser Teil von dir darf Lust empfinden, wann immer er möchte. Er braucht dafür keinen Anlass, und er hat nichts zu zeigen. Die Lust gehört dir, und sie hat alle Zeit der Welt.\nHeute Nacht ruht deine Lust einfach in dir, warm und sicher, wie Glut unter weicher Asche. Dein Becken ist schwer und gelöst.\nDein ganzer Körper darf genießen. Genuss ist dein gutes Recht."
+  },
+  {
+   "id": "geniessen_s_penis_2",
+   "phase": "lernen_spicy",
+   "thema": "geniessen",
+   "koerper": "penis",
+   "teil": "s2",
+   "text": "Dein Penis liegt weich und warm, das Blut fließt ruhig durch dein Becken. Ob er ruht oder sich füllt, alles ist richtig. Lust darf da sein, wann immer sie möchte, ohne Eile. Heute Nacht ruht sie warm und sicher in dir."
+  }
+ ]
+}

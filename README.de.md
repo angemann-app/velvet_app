@@ -75,6 +75,13 @@ man bei Bedarf in der App herunter.
 - Ebenfalls jedes Mal neu zusammengestellt, aus über 90 Bausteinen.
 - Beide sind direkt oben auf der Startseite zu finden.
 
+### Einschlaf-Reise
+- Eine lange, ruhige Begleitung in den Schlaf, **60, 90 oder 120 Minuten**, mit einem Schwerpunkt deiner Wahl
+  (Mein Körper ist willkommen, Lust ist eine Welle, Gaspedal und Bremse, Spüren statt beobachten, Ein weiches Becken,
+  Ich darf genießen) oder als Überraschung.
+- Die Stimme wird immer leiser und seltener, die Sätze kehren in Runden wieder, am Ende blendet nur ein leiser Klang aus.
+  Im Spicy-Modus mit ruhigen, aber deutlicheren Worten für Vulva oder Penis. Kein Paarmodus.
+
 ### Training und Akuthilfe
 - **Beckenboden-Timer** mit vier Übungsarten (Loslassen, Kräftigen, Impulse, Wellen) und Sprachansagen.
 - **Atem-Taktgeber** (u. a. 4-7-8-Atmung, physiologischer Seufzer).
