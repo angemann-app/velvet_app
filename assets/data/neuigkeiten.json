@@ -282,6 +282,17 @@
           "text": "Fotos im Paar-Chat sind als experimentell gekennzeichnet: In manchen Mobilfunknetzen klappt die direkte Verbindung noch nicht. Vor dem Ansehen fragt die App, ob du allein bist."
         }
       ]
+    },
+    {
+      "build": 38,
+      "version": "4.7.0-beta.3",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Koppeln per QR-Code repariert",
+          "text": "Wer seinen Code zeigt, bekommt die Anfrage jetzt direkt im Kopplungsfenster und kann sie bestätigen. Vorher merkte die gescannte Seite nichts davon."
+        }
+      ]
     }
   ]
 }

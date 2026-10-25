@@ -282,6 +282,17 @@
           "text": "Photos in the couple chat are marked as experimental: on some mobile networks the direct connection doesn't work yet. Before viewing, the app asks whether you're alone."
         }
       ]
+    },
+    {
+      "build": 38,
+      "version": "4.7.0-beta.3",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Pairing by QR code fixed",
+          "text": "Whoever shows their code now gets the request right in the pairing window and can confirm it. Before, the scanned side never noticed."
+        }
+      ]
     }
   ],
   "_source": {
@@ -296,6 +307,7 @@
     "news:34": "c0fad8002202b859",
     "news:35": "7f92712a8752b764",
     "news:36": "54944e2b84024fc6",
-    "news:37": "e2c97176e6c8dba5"
+    "news:37": "e2c97176e6c8dba5",
+    "news:38": "448bdd315e1547df"
   }
 }
