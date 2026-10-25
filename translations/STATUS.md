@@ -18,5 +18,5 @@ Generated automatically, do not edit. Percentages by words of the German source;
 | Geführte Selbsterkundung (Audio-Bausteine) | 100 | 0 | 0 | (direkt gepflegt) |
 | Gemeinsamer Abend (Audio-Bausteine) | 110 | 0 | 0 | (direkt gepflegt) |
 | Anleitung in der App | 24 | 0 | 0 | (direkt gepflegt) |
-| Was ist neu (nach Updates) | 88 | 0 | 0 | (direkt gepflegt) |
+| Was ist neu (nach Updates) | 90 | 0 | 0 | (direkt gepflegt) |
 | Foto-Ideen im Paar-Chat (nur im Spicy-Modus) | 24 | 0 | 0 | (direkt gepflegt) |

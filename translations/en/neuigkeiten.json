@@ -304,6 +304,17 @@
           "text": "Everything from the recent betas is now in the stable version: course 26 Everyday eroticism, lessons on lingerie and striptease, the guide, a hotter spicy mode with photos and disappearing messages, and the fixed pairing by QR code."
         }
       ]
+    },
+    {
+      "build": 40,
+      "version": "4.7.1-beta.1",
+      "punkte": [
+        {
+          "icon": "record_voice_over",
+          "titel": "Send feedback",
+          "text": "You can now send wishes, bugs and mispronounced words straight from the app: anonymous and encrypted, no account needed. Find it in your profile and in the guide, and for pronunciation right below every player."
+        }
+      ]
     }
   ],
   "_source": {
@@ -320,6 +331,7 @@
     "news:36": "54944e2b84024fc6",
     "news:37": "e2c97176e6c8dba5",
     "news:38": "448bdd315e1547df",
-    "news:39": "04594a31ae0808e7"
+    "news:39": "04594a31ae0808e7",
+    "news:40": "dfabcaebe3b5aede"
   }
 }
