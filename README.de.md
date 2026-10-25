@@ -113,6 +113,7 @@ man bei Bedarf in der App herunter.
 | Automatisches Backup | privater App-Speicher (für andere Apps nicht lesbar), ohne Geheimnisse, über Androids Cloud-Backup gesichert |
 | Fotos im Paar-Chat | AES-256-GCM-verschlüsselt, direkt von Handy zu Handy (WebRTC). Für den Verbindungsaufbau sieht ein öffentlicher STUN-Server von Google die IP-Adressen, nie das Foto. Beim Empfänger nur einmal ansehbar, Bildschirmfotos gesperrt. |
 | Paar-Kanal | NIP-04-verschlüsselt über öffentliche Nostr-Server. Den Inhalt können sie nicht lesen; sichtbar sind aber die öffentlichen Schlüssel von Absender und Empfänger, Zeitpunkt und Größe jeder Nachricht, die IP-Adresse und – bei Lesebestätigungen – dass ein App-Eintrag aktualisiert wurde. Eingehende Nachrichten werden auf ID, Signatur, Empfänger und Absender geprüft. |
+| Rückmeldung (*Rückmeldung senden*) | nur was man eintippt, dazu App-Version und Sprache, NIP-04-verschlüsselt über die Nostr-Server an das Rückmelde-Postfach des Projekts, von einem frischen Einmal-Schlüssel ohne Bezug zum Paar-Kanal. Die Server sehen die IP-Adresse, nicht den Inhalt. |
 | KI-Coach | Nachrichten, Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen an Google Gemini – nur wenn du einen eigenen API-Key hinterlegst |
 
 Es gibt keine Benutzerkonten, kein Tracking und keinen eigenen Server.

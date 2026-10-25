@@ -5494,3 +5494,111 @@ msgstr ""
 msgctxt "ui:pairingAnfrageVerbinden#text"
 msgid "Verbinden"
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send feedback
+msgctxt "ui:rueckmeldungTitel#text"
+msgid "Rückmeldung senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A wish for a new feature, a bug, or a word that sounds wrong? Let us know, anonymously and encrypted.
+msgctxt "ui:rueckmeldungEinleitung#text"
+msgid "Ein Wunsch für eine neue Funktion, ein Fehler oder ein Wort, das falsch klingt? Schreib es uns, anonym und verschlüsselt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Wish
+msgctxt "ui:rueckmeldungWunsch#text"
+msgid "Wunsch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Bug
+msgctxt "ui:rueckmeldungFehlerArt#text"
+msgid "Fehler"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pronunciation
+msgctxt "ui:rueckmeldungAussprache#text"
+msgid "Aussprache"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your message
+msgctxt "ui:rueckmeldungNachricht#text"
+msgid "Deine Nachricht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What happened, and where in the app?
+msgctxt "ui:rueckmeldungFehlerHinweis#text"
+msgid "Was ist passiert, und wo in der App?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Which word sounds wrong?
+msgctxt "ui:rueckmeldungWort#text"
+msgid "Welches Wort klingt falsch?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How it should sound (optional)
+msgctxt "ui:rueckmeldungSoll#text"
+msgid "So sollte es klingen (freiwillig)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: e.g. stress on the second syllable
+msgctxt "ui:rueckmeldungSollHinweis#text"
+msgid "z. B. Betonung auf der zweiten Silbe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Note (optional)
+msgctxt "ui:rueckmeldungAnmerkung#text"
+msgid "Anmerkung (freiwillig)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Contact for questions (optional)
+msgctxt "ui:rueckmeldungKontakt#text"
+msgid "Kontakt für Rückfragen (freiwillig)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: e.g. email or Nostr npub
+msgctxt "ui:rueckmeldungKontaktHinweis#text"
+msgid "z. B. E-Mail oder Nostr-npub"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The message travels encrypted over Nostr to the VelvetPulse feedback inbox, with a one-time key and no link to your couple channel. Only what you enter here is sent, plus app version and language. The relays see your IP address, not the content.
+msgctxt "ui:rueckmeldungDatenschutz#text"
+msgid "Die Nachricht geht verschlüsselt über Nostr an das Rückmelde-Postfach von VelvetPulse, mit einem Einmal-Schlüssel, ohne Bezug zu deinem Paar-Kanal. Übertragen wird nur, was hier steht, dazu App-Version und Sprache. Die Server sehen deine IP-Adresse, nicht den Inhalt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send anonymously
+msgctxt "ui:rueckmeldungSenden#text"
+msgid "Anonym senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thank you! Your feedback has arrived.
+msgctxt "ui:rueckmeldungDanke#text"
+msgid "Danke! Deine Rückmeldung ist angekommen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sending didn't work. Please check your internet connection and try again.
+msgctxt "ui:rueckmeldungFehler#text"
+msgid "Senden hat nicht geklappt. Bitte prüfe die Internetverbindung und versuch es noch einmal."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Report publicly on GitHub instead
+msgctxt "ui:rueckmeldungGithub#text"
+msgid "Lieber öffentlich auf GitHub melden"
+msgstr ""

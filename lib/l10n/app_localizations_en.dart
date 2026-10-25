@@ -3207,4 +3207,62 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pairingAnfrageVerbinden => 'Connect';
+
+  @override
+  String get rueckmeldungTitel => 'Send feedback';
+
+  @override
+  String get rueckmeldungEinleitung =>
+      'A wish for a new feature, a bug, or a word that sounds wrong? Let us know, anonymously and encrypted.';
+
+  @override
+  String get rueckmeldungWunsch => 'Wish';
+
+  @override
+  String get rueckmeldungFehlerArt => 'Bug';
+
+  @override
+  String get rueckmeldungAussprache => 'Pronunciation';
+
+  @override
+  String get rueckmeldungNachricht => 'Your message';
+
+  @override
+  String get rueckmeldungFehlerHinweis =>
+      'What happened, and where in the app?';
+
+  @override
+  String get rueckmeldungWort => 'Which word sounds wrong?';
+
+  @override
+  String get rueckmeldungSoll => 'How it should sound (optional)';
+
+  @override
+  String get rueckmeldungSollHinweis => 'e.g. stress on the second syllable';
+
+  @override
+  String get rueckmeldungAnmerkung => 'Note (optional)';
+
+  @override
+  String get rueckmeldungKontakt => 'Contact for questions (optional)';
+
+  @override
+  String get rueckmeldungKontaktHinweis => 'e.g. email or Nostr npub';
+
+  @override
+  String get rueckmeldungDatenschutz =>
+      'The message travels encrypted over Nostr to the VelvetPulse feedback inbox, with a one-time key and no link to your couple channel. Only what you enter here is sent, plus app version and language. The relays see your IP address, not the content.';
+
+  @override
+  String get rueckmeldungSenden => 'Send anonymously';
+
+  @override
+  String get rueckmeldungDanke => 'Thank you! Your feedback has arrived.';
+
+  @override
+  String get rueckmeldungFehler =>
+      'Sending didn\'t work. Please check your internet connection and try again.';
+
+  @override
+  String get rueckmeldungGithub => 'Report publicly on GitHub instead';
 }

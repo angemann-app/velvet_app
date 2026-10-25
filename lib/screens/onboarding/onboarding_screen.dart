@@ -16,6 +16,7 @@ import '../../services/sprache.dart';
 import '../../widgets/audio_paket_karte.dart';
 import '../../widgets/spicy_modus_dialog.dart';
 import '../anleitung_screen.dart';
+import '../rueckmeldung_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   final bool isEditing;
@@ -810,6 +811,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     foregroundColor: AppTheme.sageGreen,
                     minimumSize: const Size.fromHeight(48),
                     side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.6)),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                OutlinedButton.icon(
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const RueckmeldungScreen())),
+                  icon: const Icon(Icons.campaign_outlined),
+                  label: Text(t.rueckmeldungTitel),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: AppTheme.textSecondary,
+                    minimumSize: const Size.fromHeight(48),
+                    side: const BorderSide(color: AppTheme.border),
                   ),
                 ),
                 const SizedBox(height: 16),

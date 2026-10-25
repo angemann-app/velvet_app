@@ -128,6 +128,6 @@ Die englischen Aufnahmen lädst du dort bei Bedarf als Paket nach. Ohne Paket li
 
 ## Hilfe und Rückmeldung
 
-Klingt ein Wort in einer Aufnahme falsch, tippe unter dem Player auf „Wort falsch ausgesprochen?“. Fehler und Wünsche nimmt das Projekt auf GitHub entgegen.
+Klingt ein Wort in einer Aufnahme falsch, tippe unter dem Player auf „Wort falsch ausgesprochen?“. Wünsche und Fehler schickst du über „Rückmeldung senden“ hier unten oder im Profil: anonym und verschlüsselt über Nostr, ohne Konto. Wer mag, kann sie auch öffentlich auf GitHub melden.
 
 Die App ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es sinnvoll ist, sagen die Lektionen ausdrücklich, wann eine Abklärung ratsam ist.

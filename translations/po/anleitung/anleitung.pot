@@ -199,10 +199,10 @@ msgid "Hilfe und Rückmeldung"
 msgstr ""
 
 #. Abschnitt der Anleitung
-#. EN: If a word in a recording sounds wrong, tap “Word mispronounced?” below the player. The project takes bug reports and wishes on GitHub.
+#. EN: If a word in a recording sounds wrong, tap “Word mispronounced?” below the player. Send wishes and bug reports with “Send feedback” at the bottom of this page or in your profile: anonymous and encrypted over Nostr, no account needed. You can also report them publicly on GitHub.
 #. EN: The app is no substitute for medical or psychotherapeutic treatment. Where it makes sense, the lessons say explicitly when it's advisable to get checked.
 msgctxt "guide:hilfe#text"
 msgid ""
-"Klingt ein Wort in einer Aufnahme falsch, tippe unter dem Player auf „Wort falsch ausgesprochen?“. Fehler und Wünsche nimmt das Projekt auf GitHub entgegen.\n"
+"Klingt ein Wort in einer Aufnahme falsch, tippe unter dem Player auf „Wort falsch ausgesprochen?“. Wünsche und Fehler schickst du über „Rückmeldung senden“ hier unten oder im Profil: anonym und verschlüsselt über Nostr, ohne Konto. Wer mag, kann sie auch öffentlich auf GitHub melden.\n"
 "Die App ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es sinnvoll ist, sagen die Lektionen ausdrücklich, wann eine Abklärung ratsam ist."
 msgstr ""

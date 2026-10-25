@@ -114,6 +114,7 @@ English recordings are an optional download inside the app; until then, your pho
 | Automatic backup | the app's private storage (not readable by other apps), without secrets, backed up via Android's cloud backup |
 | Photos in the couple chat | encrypted with AES-256-GCM, directly from phone to phone (WebRTC). To set up the connection, a public STUN server run by Google sees the IP addresses, never the photo. Viewable only once by the recipient, screenshots blocked. |
 | Couple channel | NIP-04 encrypted over public Nostr relays. They cannot read the content, but they can see the public keys of sender and recipient, the time and size of every message, the IP address and, for read receipts, that an app entry was updated. Incoming messages are checked for ID, signature, recipient and sender. |
+| Feedback (*Send feedback*) | only what you type, plus app version and language, NIP-04 encrypted over the Nostr relays to the project's feedback inbox, from a fresh one-time key with no link to the couple channel. The relays see the IP address, not the content. |
 | AI coach | messages, name, age, gender, relationship status and focus are sent to Google Gemini, only if you add your own API key |
 
 There are no user accounts, no tracking and no server of our own.

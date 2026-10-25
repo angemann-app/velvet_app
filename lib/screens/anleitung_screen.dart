@@ -7,6 +7,7 @@ import '../l10n/t.dart';
 import '../services/sprache.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
+import 'rueckmeldung_screen.dart';
 
 /// Ein Abschnitt der Anleitung (assets/data/anleitung.json, Englisch in translations/en/).
 class AnleitungAbschnitt {
@@ -64,6 +65,18 @@ class AnleitungScreen extends StatelessWidget {
               for (final a in abschnitte)
                 // Den Spicy-Abschnitt sieht nur, wer den Modus an hat; alle anderen sehen nur, dass es ihn gibt.
                 if (a.id != 'spicy' || StorageService.spicyMode()) _karte(a) else _spicyHinweis(),
+              const SizedBox(height: 8),
+              OutlinedButton.icon(
+                onPressed: () =>
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const RueckmeldungScreen())),
+                icon: const Icon(Icons.campaign_outlined),
+                label: Text(t.rueckmeldungTitel),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: AppTheme.sageGreen,
+                  minimumSize: const Size.fromHeight(48),
+                  side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.6)),
+                ),
+              ),
             ],
           );
         },

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
+import '../screens/rueckmeldung_screen.dart';
 import '../services/privacy_service.dart';
+import '../services/rueckmeldung.dart';
 import '../services/sprache.dart';
 import '../theme/app_theme.dart';
 import '../l10n/t.dart';
@@ -25,33 +26,23 @@ Uri ausspracheMeldungUrl({required String wo, String? stimme, Duration? position
   });
 }
 
-/// Fragt nach, weil die Meldung öffentlich ist, und öffnet sie dann im Browser.
-Future<void> ausspracheMelden(BuildContext context, {required String wo, String? stimme, Duration? position}) async {
-  final weiter = await showDialog<bool>(
-    context: context,
-    builder: (context) => AlertDialog(
-      backgroundColor: AppTheme.surface,
-      title: Text(t.ausspracheMeldenWordMispronounced),
-      content: Text(
-        t.ausspracheMeldenThanksForHelpingTheReport,
-        style: TextStyle(color: AppTheme.textSecondary, height: 1.45),
+/// Angaben zum Ort im Audio, die eine Aussprache-Meldung schon vorausgefüllt mitbringt.
+Map<String, String> ausspracheAngaben({required String wo, String? stimme, Duration? position}) => {
+      'Wo': wo,
+      if (stimme != null) 'Stimme': '${stimme[0].toUpperCase()}${stimme.substring(1)}',
+      if (position != null)
+        'Minute': '${position.inMinutes}:${position.inSeconds.remainder(60).toString().padLeft(2, '0')}',
+    };
+
+/// Öffnet die Rückmeldung (anonym über Nostr) mit Ort, Stimme und Minute vorausgefüllt.
+/// Wer lieber öffentlich auf GitHub meldet, findet dort einen Link.
+Future<void> ausspracheMelden(BuildContext context, {required String wo, String? stimme, Duration? position}) =>
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => RueckmeldungScreen(
+        art: RueckmeldungArt.aussprache,
+        angaben: ausspracheAngaben(wo: wo, stimme: stimme, position: position),
       ),
-      actions: [
-        TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.ausspracheMeldenCancel)),
-        TextButton(onPressed: () => Navigator.pop(context, true), child: Text(t.ausspracheMeldenContinueToGithub)),
-      ],
-    ),
-  );
-  if (weiter != true) return;
-  final ok = await launchUrl(ausspracheMeldungUrl(wo: wo, stimme: stimme, position: position),
-          mode: LaunchMode.externalApplication)
-      .catchError((_) => false);
-  if (!ok && context.mounted) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(t.ausspracheMeldenTheBrowserCouldNotBe)),
-    );
-  }
-}
+    ));
 
 /// Kleiner Link unter einem Audio-Player. Im Diskretions-Modus ausgeblendet,
 /// damit nichts nach außen auf die App hindeutet.

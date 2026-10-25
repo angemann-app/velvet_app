@@ -41,7 +41,8 @@ you'd like to look after a language long-term, say so in your issue – you'll b
 ## Reporting pronunciation (German audio)
 
 The lessons are read aloud by a local text-to-speech voice (Victoria and Martin). Sometimes it stresses a
-word wrongly or sounds a little off. If you hear such a word, please report it with the
+word wrongly or sounds a little off. If you hear such a word, tap “Word mispronounced?” below the player in the app: the report is sent
+anonymously and encrypted, with lesson, voice and minute already filled in. Or report it publicly with the
 [pronunciation template](../../issues/new?template=aussprache.md) – a description in words is enough, e.g.
 “Beckenboden: stress is on the wrong syllable”. Fixes go into `tools/aussprache.json` and the affected
 recordings are regenerated.
@@ -51,7 +52,7 @@ repository. For the same reason we don't collect human voice recordings for the 
 
 ## Other contributions
 
-Bug reports and ideas are welcome as issues. For larger changes to the app itself, please open an issue first so
+Bug reports and ideas are welcome, either anonymously in the app (*Profile → Send feedback*) or as issues. For larger changes to the app itself, please open an issue first so
 we can discuss it.
 
 By contributing, you agree that your contributions are licensed under the project's licenses:

@@ -3222,4 +3222,62 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get pairingAnfrageVerbinden => 'Verbinden';
+
+  @override
+  String get rueckmeldungTitel => 'Rückmeldung senden';
+
+  @override
+  String get rueckmeldungEinleitung =>
+      'Ein Wunsch für eine neue Funktion, ein Fehler oder ein Wort, das falsch klingt? Schreib es uns, anonym und verschlüsselt.';
+
+  @override
+  String get rueckmeldungWunsch => 'Wunsch';
+
+  @override
+  String get rueckmeldungFehlerArt => 'Fehler';
+
+  @override
+  String get rueckmeldungAussprache => 'Aussprache';
+
+  @override
+  String get rueckmeldungNachricht => 'Deine Nachricht';
+
+  @override
+  String get rueckmeldungFehlerHinweis =>
+      'Was ist passiert, und wo in der App?';
+
+  @override
+  String get rueckmeldungWort => 'Welches Wort klingt falsch?';
+
+  @override
+  String get rueckmeldungSoll => 'So sollte es klingen (freiwillig)';
+
+  @override
+  String get rueckmeldungSollHinweis => 'z. B. Betonung auf der zweiten Silbe';
+
+  @override
+  String get rueckmeldungAnmerkung => 'Anmerkung (freiwillig)';
+
+  @override
+  String get rueckmeldungKontakt => 'Kontakt für Rückfragen (freiwillig)';
+
+  @override
+  String get rueckmeldungKontaktHinweis => 'z. B. E-Mail oder Nostr-npub';
+
+  @override
+  String get rueckmeldungDatenschutz =>
+      'Die Nachricht geht verschlüsselt über Nostr an das Rückmelde-Postfach von VelvetPulse, mit einem Einmal-Schlüssel, ohne Bezug zu deinem Paar-Kanal. Übertragen wird nur, was hier steht, dazu App-Version und Sprache. Die Server sehen deine IP-Adresse, nicht den Inhalt.';
+
+  @override
+  String get rueckmeldungSenden => 'Anonym senden';
+
+  @override
+  String get rueckmeldungDanke => 'Danke! Deine Rückmeldung ist angekommen.';
+
+  @override
+  String get rueckmeldungFehler =>
+      'Senden hat nicht geklappt. Bitte prüfe die Internetverbindung und versuch es noch einmal.';
+
+  @override
+  String get rueckmeldungGithub => 'Lieber öffentlich auf GitHub melden';
 }

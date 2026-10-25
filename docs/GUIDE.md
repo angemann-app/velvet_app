@@ -128,6 +128,6 @@ There you can also download the English recordings as a pack. Without the pack, 
 
 ## Help and feedback
 
-If a word in a recording sounds wrong, tap “Word mispronounced?” below the player. The project takes bug reports and wishes on GitHub.
+If a word in a recording sounds wrong, tap “Word mispronounced?” below the player. Send wishes and bug reports with “Send feedback” at the bottom of this page or in your profile: anonymous and encrypted over Nostr, no account needed. You can also report them publicly on GitHub.
 
 The app is no substitute for medical or psychotherapeutic treatment. Where it makes sense, the lessons say explicitly when it's advisable to get checked.

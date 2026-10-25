@@ -5474,6 +5474,114 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Verbinden'**
   String get pairingAnfrageVerbinden;
+
+  /// No description provided for @rueckmeldungTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Rückmeldung senden'**
+  String get rueckmeldungTitel;
+
+  /// No description provided for @rueckmeldungEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Wunsch für eine neue Funktion, ein Fehler oder ein Wort, das falsch klingt? Schreib es uns, anonym und verschlüsselt.'**
+  String get rueckmeldungEinleitung;
+
+  /// No description provided for @rueckmeldungWunsch.
+  ///
+  /// In de, this message translates to:
+  /// **'Wunsch'**
+  String get rueckmeldungWunsch;
+
+  /// No description provided for @rueckmeldungFehlerArt.
+  ///
+  /// In de, this message translates to:
+  /// **'Fehler'**
+  String get rueckmeldungFehlerArt;
+
+  /// No description provided for @rueckmeldungAussprache.
+  ///
+  /// In de, this message translates to:
+  /// **'Aussprache'**
+  String get rueckmeldungAussprache;
+
+  /// No description provided for @rueckmeldungNachricht.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine Nachricht'**
+  String get rueckmeldungNachricht;
+
+  /// No description provided for @rueckmeldungFehlerHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Was ist passiert, und wo in der App?'**
+  String get rueckmeldungFehlerHinweis;
+
+  /// No description provided for @rueckmeldungWort.
+  ///
+  /// In de, this message translates to:
+  /// **'Welches Wort klingt falsch?'**
+  String get rueckmeldungWort;
+
+  /// No description provided for @rueckmeldungSoll.
+  ///
+  /// In de, this message translates to:
+  /// **'So sollte es klingen (freiwillig)'**
+  String get rueckmeldungSoll;
+
+  /// No description provided for @rueckmeldungSollHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'z. B. Betonung auf der zweiten Silbe'**
+  String get rueckmeldungSollHinweis;
+
+  /// No description provided for @rueckmeldungAnmerkung.
+  ///
+  /// In de, this message translates to:
+  /// **'Anmerkung (freiwillig)'**
+  String get rueckmeldungAnmerkung;
+
+  /// No description provided for @rueckmeldungKontakt.
+  ///
+  /// In de, this message translates to:
+  /// **'Kontakt für Rückfragen (freiwillig)'**
+  String get rueckmeldungKontakt;
+
+  /// No description provided for @rueckmeldungKontaktHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'z. B. E-Mail oder Nostr-npub'**
+  String get rueckmeldungKontaktHinweis;
+
+  /// No description provided for @rueckmeldungDatenschutz.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Nachricht geht verschlüsselt über Nostr an das Rückmelde-Postfach von VelvetPulse, mit einem Einmal-Schlüssel, ohne Bezug zu deinem Paar-Kanal. Übertragen wird nur, was hier steht, dazu App-Version und Sprache. Die Server sehen deine IP-Adresse, nicht den Inhalt.'**
+  String get rueckmeldungDatenschutz;
+
+  /// No description provided for @rueckmeldungSenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Anonym senden'**
+  String get rueckmeldungSenden;
+
+  /// No description provided for @rueckmeldungDanke.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke! Deine Rückmeldung ist angekommen.'**
+  String get rueckmeldungDanke;
+
+  /// No description provided for @rueckmeldungFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Senden hat nicht geklappt. Bitte prüfe die Internetverbindung und versuch es noch einmal.'**
+  String get rueckmeldungFehler;
+
+  /// No description provided for @rueckmeldungGithub.
+  ///
+  /// In de, this message translates to:
+  /// **'Lieber öffentlich auf GitHub melden'**
+  String get rueckmeldungGithub;
 }
 
 class _AppLocalizationsDelegate

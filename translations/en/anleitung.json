@@ -83,14 +83,14 @@
       "icon": "help",
       "titel": "Help and feedback",
       "bild": "",
-      "text": "If a word in a recording sounds wrong, tap “Word mispronounced?” below the player. The project takes bug reports and wishes on GitHub.\nThe app is no substitute for medical or psychotherapeutic treatment. Where it makes sense, the lessons say explicitly when it's advisable to get checked."
+      "text": "If a word in a recording sounds wrong, tap “Word mispronounced?” below the player. Send wishes and bug reports with “Send feedback” at the bottom of this page or in your profile: anonymous and encrypted over Nostr, no account needed. You can also report them publicly on GitHub.\nThe app is no substitute for medical or psychotherapeutic treatment. Where it makes sense, the lessons say explicitly when it's advisable to get checked."
     }
   ],
   "_source": {
     "guide:coach": "6528d2614ac06be6",
     "guide:diskretion": "868ef89b67a65ec3",
     "guide:gefuehrt": "fda68b69556f0830",
-    "guide:hilfe": "70895d2133aeb3dc",
+    "guide:hilfe": "0f67b34ec65bbd7e",
     "guide:kurse": "e619b5e83f74493c",
     "guide:paar": "a32d29ccbd8bb1ec",
     "guide:reframing": "220d1604fa3c086a",
