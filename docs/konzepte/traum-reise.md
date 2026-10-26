@@ -1,18 +1,24 @@
-# Konzept: Traum-Reise (lucide und sinnliche Träume)
+# Konzept: Traum-Reise (luzide und erotische Träume)
 
-Stand: Entwurf vom 26.10.2026, noch nicht abgestimmt, noch nicht umgesetzt. Offene Fragen stehen am Ende.
+Stand: Entwurf vom 26.10.2026, zusammengeführt aus zwei Entwürfen und ergänzt um die Fantasie-Räume und
+die Audio-Pakete. Noch nicht abgestimmt, noch nicht umgesetzt. Offene Fragen stehen am Ende.
 
 ## Idee
 
-Ein Programm über mehrere Wochen, das zwei Dinge übt: **Träume erinnern und erkennen** (bis hin zum
-luziden Traum, in dem man merkt, dass man träumt) und **sinnlichen Träumen Raum geben**. Es verbindet
-einfache, gut untersuchte Techniken aus der Klartraumforschung mit dem, was die Kurse lehren: Lust als
-Welle, ein freundlicher Blick auf den eigenen Körper, Genuss ohne Leistung.
+Ein Programm über mehrere Wochen, das drei Dinge übt: **Träume erinnern**, **im Traum erkennen, dass man
+träumt** (luzider Traum, Klartraum) und **erotischen Träumen Raum geben**. Es verbindet einfache, gut
+untersuchte Techniken aus der Klartraumforschung mit dem, was die Kurse lehren: Lust als Welle, ein
+freundlicher Blick auf den eigenen Körper und die eigene Fantasie, Genuss ohne Leistung.
+
+Im Spicy-Modus kommen die **Fantasie-Räume** dazu: klare erotische Szenen vor dem Einschlafen, auch solche,
+die wach nicht möglich sind, etwa im Körper eines anderen Geschlechts oder als Begegnung, die man im
+Wachleben nie suchen würde. Der Traum ist der Ort, an dem das sicher und folgenlos ist.
 
 Arbeitstitel: **Traum-Reise**, englisch *Dream journey*. Im Diskretions-Modus neutral: „Träume“.
 
-Die Traum-Reise ist **kein nächtliches Dauerprogramm**. Das Herzstück liegt am Tag und am Morgen
-(Tagebuch, kurze Übungen). Die Nacht selbst bleibt ruhig; ein Wecken in der Nacht ist freiwillig und selten.
+Die Traum-Reise ist **kein nächtliches Dauerprogramm**. Das Herzstück liegt am Abend, am Morgen und am Tag
+(Absicht, Tagebuch, kurze Übungen). Die Nacht selbst bleibt ruhig; ein Wecken in der Nacht ist freiwillig
+und selten.
 
 ## Was wir versprechen – und was nicht
 
@@ -20,10 +26,11 @@ Die Traum-Reise ist **kein nächtliches Dauerprogramm**. Das Herzstück liegt am
   realistischste Ziel und kommt zuerst.
 - **Luzide Träume** sind trainierbar, aber nicht bei allen und nicht auf Knopfdruck. Viele erleben nach
   einigen Wochen einzelne Klarträume, manche nie. Die App sagt das offen.
-- **Erotische Träume:** Was man vor dem Einschlafen denkt und fühlt, taucht häufiger im Traum auf
-  („Traum-Inkubation“). Wir können sinnliche Träume einladen, nicht bestellen.
-- **Orgasmus im Schlaf:** Kommt bei Frauen und Männern natürlicherweise vor. **Er lässt sich weder auslösen
-  noch üben**, und er ist kein Ziel des Programms. Die App erwähnt ihn als schöne Möglichkeit und
+- **Erotische Träume:** Was man vor dem Einschlafen denkt, sich vorstellt und fühlt, taucht häufiger im
+  Traum auf (Traum-Inkubation). Je lebendiger und gefühlsbetonter das Bild, desto eher. Wir können
+  erotische Träume einladen, nicht bestellen.
+- **Orgasmus im Schlaf:** Kommt bei Menschen jeden Geschlechts natürlicherweise vor. **Er lässt sich weder
+  auslösen noch üben** und ist kein Ziel des Programms. Die App erwähnt ihn als schöne Möglichkeit und
   normalisiert ihn (keine Scham, kein „Problem“), mehr nicht.
 - Kein Versprechen von Heilung, besserer Beziehung oder mehr Lust im Wachleben.
 
@@ -31,19 +38,41 @@ Formulierung in der App (Vorschlag): „Träume lassen sich einladen, nicht steu
 erinnerst du mehr, und manchmal merkst du mitten im Traum, dass du träumst. Was dann geschieht, gehört
 ganz dir.“
 
+Keine Erfolgsquote, keine Kette, die reißen kann, keine Bewertung einer Nacht.
+
 ## Bausteine
 
 | Baustein | Wann | Dauer | Inhalt |
 |---|---|---|---|
-| 1. Traumtagebuch | morgens | 1–3 Min. | Gleich nach dem Aufwachen festhalten: Stichworte, Gefühl, Stimmung, optional „sinnlich“, „luzide“. Auch „nichts erinnert“ zählt. |
-| 2. Realitätscheck | tagsüber | Sekunden | Zwei bis vier sanfte Erinnerungen am Tag: „Träume ich gerade?“ mit einer kleinen Prüfung (auf die Hand schauen, einen Text zweimal lesen). Wird zur Gewohnheit, die im Traum wieder auftaucht. |
-| 3. Traum-Absicht | beim Einschlafen | 10–20 Min. | Variante der Einschlaf-Reise: Sinken und Atem wie dort, dann ein **Traumbild** und eine Absicht, z. B. „Wenn ich träume, erkenne ich es.“ Sinnlich, ruhig, ohne Steigerung. |
-| 4. Wecken und Wiedereinschlafen | nachts, optional | 10–20 Min. wach | Leiser Wecker nach etwa 5 Stunden Schlaf, kurz wach bleiben, Traum notieren, dann die Absicht wiederholen und mit einer kurzen Audio-Begleitung wieder einschlafen. Die wirksamste Technik, aber sie kostet Schlaf. |
-| 5. Wochenrückblick | einmal pro Woche | 2 Min. | Wie viele Träume erinnert, welche Themen, welche Gefühle. Kein Punktestand, keine Kette, die reißen kann. |
+| 1. Traumtagebuch | morgens | 1–3 Min. | Gleich nach dem Aufwachen festhalten: Stichworte, Gefühl, Markierungen. Auch „nichts erinnert“ zählt. |
+| 2. Realitätscheck | tagsüber | Sekunden | Zwei bis vier sanfte Erinnerungen am Tag mit einer kleinen Prüfung (auf die Hand schauen, einen Text zweimal lesen). Wird zur Gewohnheit, die im Traum wieder auftaucht. |
+| 3. Traum-Absicht | beim Einschlafen | 10–25 Min. | Sinken und Atem wie in der Einschlaf-Reise, dann ein **Traumbild** oder ein **Fantasie-Raum** und eine Absicht. |
+| 4. Wecken und Wiedereinschlafen | nachts, optional | 10–20 Min. wach | Leiser Wecker nach etwa 5 Stunden Schlaf, Traum notieren, Absicht wiederholen, mit kurzer Begleitung wieder einschlafen. Die wirksamste Technik, aber sie kostet Schlaf. Höchstens zweimal pro Woche. |
+| 5. Wochenrückblick | einmal pro Woche | 2 Min. | Wie viele Träume erinnert, welche Themen, welche Gefühle. Kein Punktestand. |
 
-### Traumbilder (wählbar oder „Überrasch mich“)
+### Traumtagebuch
 
-Die Bilder knüpfen an die Schwerpunkte der Einschlaf-Reise an, damit beides zusammenpasst:
+- Erste Karte auf der Startseite bis mittags: „Woran erinnerst du dich?“ Ein Tipp öffnet das Eingabefeld,
+  ohne Umwege. Großer Knopf „Nichts erinnert“.
+- Tipp: Beim Aufwachen kurz still liegen bleiben und den Traum zurückholen, bevor man sich bewegt.
+- Markierungen: *erinnert*, *luzide*, *sinnlich*, *Höhepunkt*, *unangenehm*, *schlecht geschlafen*;
+  dazu automatisch das Traumbild bzw. der Fantasie-Raum des Abends. So sieht man selbst, welche Bilder bei
+  einem „ankommen“.
+- Wiederkehrende Motive (einfache Wortsuche, keine KI) werden als eigene Realitätscheck-Auslöser
+  angeboten („Wenn ich Wasser sehe, frage ich mich, ob ich träume“).
+- Nacht-Design: dunkel, wenig Helligkeit, Spracheingabe der Tastatur reicht.
+
+### Realitätschecks
+
+- Zeitfenster und Anzahl einstellbar, Standard aus. Texte neutral: „Kurzer Moment für dich“; im
+  Diskretions-Modus ohne jeden Bezug auf Träume.
+- Die Übung dauert Sekunden: Finger durch die Handfläche drücken wollen, einen Text zweimal lesen, auf die
+  Uhr sehen und wieder hin, dazu ernsthaft die Frage „Träume ich gerade?“.
+- Wer die Erinnerungen nicht mag, schaltet sie ab; das Programm funktioniert dann schwächer, aber weiter.
+
+### Traumbilder (sanft, für alle)
+
+Die Bilder knüpfen an die Schwerpunkte der Einschlaf-Reise an:
 
 | Traumbild | Bezug | Beispiel-Absicht |
 |---|---|---|
@@ -53,129 +82,258 @@ Die Bilder knüpfen an die Schwerpunkte der Einschlaf-Reise an, damit beides zus
 | **Begegnung** | offen, ohne Person | „Im Traum darf mir Zärtlichkeit begegnen.“ |
 | **Klarheit** | luzides Träumen | „Wenn ich träume, erkenne ich es.“ |
 
-**Kein Bild mit einer bestimmten Person**, auch nicht dem Partner oder der Partnerin. Wer im Traum
-erscheint, entscheidet der Traum. Das schützt vor Druck („Ich soll von dir träumen“) und vor Enttäuschung.
+Jedes Bild hat einen festen **Traum-Hinweis**, der im Traum zum Merkzeichen werden kann (z. B. „Das Licht
+hat eine ungewöhnliche Farbe“).
 
 **Spicy-Stufe (nur im Spicy-Modus):** deutlichere Worte für Wärme, Erregung und den eigenen Körper, wie in
-der Spicy-Stufe der Einschlaf-Reise. Weiterhin ruhig, ohne Handlung, ohne Dirty Talk, ohne Höhepunkt.
+der Spicy-Stufe der Einschlaf-Reise. Weiterhin ruhig, ohne Handlung, ohne Höhepunkt.
 
-### Was im luziden Traum?
+## Fantasie-Räume (eigene Stufe über Spicy)
 
-Die App gibt **keine Drehbücher** für den Traum vor. Sie bietet höchstens eine sanfte Idee an: „Wenn du
-merkst, dass du träumst, kannst du langsam atmen, den Boden unter dir spüren und schauen, was du dir
-wünschst.“ Ruhig bleiben hilft, im Klartraum zu bleiben; Aufregung weckt oft.
+### Warum klare erotische Impulse
+
+Für die Traum-Inkubation zählt, wie lebendig ein Bild ist. Ein vager „sinnlicher Ort“ landet seltener im
+Traum als eine klare erotische Szene mit Körper, Gegenüber und Gefühl. Und der Traum erlaubt, was wach
+nicht geht: einen anderen Körper haben, ein anderes Geschlecht, eine Begegnung mit einer Frau, einem Mann
+oder mehreren Menschen. Solche Fantasien sind sehr verbreitet, auch bei Menschen in festen und glücklichen
+Beziehungen, und sie sagen wenig über Wünsche im Wachleben. Die Traum-Reise lädt sie ohne Wertung ein.
+
+### Die Räume
+
+| Raum | Beispiel | Absicht |
+|---|---|---|
+| **Anderer Körper** | Du bist heute Nacht eine Frau / ein Mann / ein Körper, den es so nicht gibt, und erlebst Lust in diesem Körper. | „Im Traum spüre ich Lust in einem neuen Körper.“ |
+| **Begegnung mit einer Frau** | Eine Frau, die du begehrst, kommt auf dich zu. | „Im Traum darf ich ihr begegnen.“ |
+| **Begegnung mit einem Mann** | Ein Mann, den du begehrst, kommt auf dich zu. | „Im Traum darf ich ihm begegnen.“ |
+| **Kombination** | Anderer Körper und eine Begegnung, z. B. ein Mann, der träumt, eine Frau zu sein, und eine Frau trifft. | frei kombinierbar |
+| **Zu dritt** | Zwei Menschen wenden sich dir zu. | „Im Traum ist Platz für mehr.“ |
+| **Fremde Nacht** | Eine Begegnung mit einer unbekannten Person, an einem fremden Ort: Badehaus, Zugabteil, Hotel am Meer. | „Im Traum folge ich der Neugier.“ |
+| **Ansehen und angesehen werden** | Du wirst begehrend angeschaut, oder du schaust zu. | „Im Traum darf ich gesehen werden.“ |
+| **Führen und Hingeben** | Jemand führt dich, oder du führst, einvernehmlich und klar. | „Im Traum darf ich mich hingeben.“ / „… darf ich führen.“ |
+| **Mit meinem Partner** (offene Frage) | Eine Szene mit der eigenen Partnerin oder dem eigenen Partner. | „Im Traum begegne ich dir neu.“ |
+
+Körper und Gegenüber sind getrennt wählbar: **Mein Körper heute Nacht** (wie immer / Vulva / Penis / offen)
+und **Gegenüber** (Frau / Mann / mehrere / offen). Daraus setzt der Planer die Szene zusammen. So entsteht
+aus wenigen Bausteinen eine große Vielfalt, ohne dass jede Kombination eigens geschrieben werden muss.
+
+### Aufbau einer Fantasie-Szene: offenes Ende
+
+1. **Sinken und Atem** wie gewohnt, etwas kürzer.
+2. **Ort:** ein konkreter, sinnlicher Ort mit Traum-Hinweis.
+3. **Körper:** Im Raum „Anderer Körper“ ein langsames Ankommen im neuen Körper: Gewicht, Haut, Brust,
+   Becken, Geschlecht, wie es sich anfühlt.
+4. **Begegnung:** Das Gegenüber erscheint, Blick, Nähe, erste Berührung, deutliche Erregung, klare
+   anatomische Worte.
+5. **Offenes Ende:** Die Szene endet dort, wo es intim wird: „Was jetzt geschieht, erzählt dir dein Traum.“
+   Kein Höhepunkt im Audio.
+6. **Absicht** in Ich-Form, zwei- bis dreimal, dann Nachklang und Stille.
+
+Das offene Ende hat zwei Gründe: Wer beim Zuhören den Höhepunkt erlebt, ist danach wach statt im Traum. Und
+eine unvollendete Szene drängt stärker in den Traum als eine abgeschlossene.
+
+Damit weicht die Traum-Reise bewusst von der Einschlaf-Reise ab („keine Handlung, keine Steigerung“). Das
+ist gewollt, weil das Ziel ein anderes ist: Dort soll Lust ruhen, hier soll sie in den Traum mitgenommen
+werden. Nach der Begegnung muss der Text aber wieder ruhig werden, damit man einschlafen kann.
+
+### Auswahl, Einwilligung, Grenzen
+
+- **Eigene, private Auswahl:** Beim ersten Öffnen eine kurze Liste der Räume mit Ja / Vielleicht / Nein,
+  ähnlich wie Ja/Nein/Vielleicht, aber **nur für sich**: Diese Antworten werden nie mit dem Partner
+  abgeglichen oder geteilt und nicht an den KI-Coach gegeben.
+- **„Überrasch mich“** wählt nur aus Räumen mit Ja oder Vielleicht. Niemand landet ungewollt in einer
+  Fantasie.
+- Ein Raum mit „Vielleicht“ wird beim ersten Mal kurz angekündigt: „Heute: Anderer Körper. Passt das?“
+- **Grenzen in allen Texten:** Alle Figuren sind ausdrücklich erwachsen. Jede Begegnung ist gewollt und
+  gegenseitig. Keine echten Personen außer, falls gewählt, dem eigenen Partner. Keine Gewalt, kein Zwang,
+  auch im Raum „Führen und Hingeben“ ist das Einvernehmen hörbar.
+- Wechsel jederzeit: „Heute lieber sanft“ als Knopf vor dem Start.
+
+### Beispieltext: Anderer Körper (Ausschnitt, Stimme ruhig, Tempo wie Einschlaf-Reise)
+
+> Du liegst in einem Bett unter einem offenen Fenster. Die Luft ist warm, irgendwo ist das Meer.
+>
+> Dein Körper fühlt sich heute Nacht anders an. Weicher an den Hüften, voller an der Brust. Deine Haut ist
+> empfindlich, jede Bewegung der Decke ist spürbar. Zwischen deinen Beinen liegt eine warme, weiche Vulva,
+> und sie gehört ganz dir.
+>
+> Die Tür geht leise auf. Eine Frau kommt herein, barfuß, und setzt sich zu dir. Ihre Hand liegt auf deinem
+> Bauch, warm und ruhig, und wandert langsam tiefer. Dein neuer Körper antwortet mit einer Welle aus Wärme.
+>
+> Was jetzt geschieht, erzählt dir dein Traum.
+>
+> Im Traum spüre ich Lust in einem neuen Körper.
+
+## Was im luziden Traum?
+
+Die App gibt **keine Drehbücher** für den Traum selbst vor. Sie bietet höchstens eine sanfte Idee an: „Wenn
+du merkst, dass du träumst, kannst du langsam atmen, deine Hände ansehen, den Boden unter dir spüren und
+dann zu der Szene vom Abend zurückkehren oder schauen, was du dir wünschst.“ Ruhig bleiben hilft, im
+Klartraum zu bleiben; starke Aufregung weckt oft.
+
+## Programmablauf über die Wochen
+
+| Woche | Schwerpunkt | Neu dazu |
+|---|---|---|
+| 1 | Erinnern | Traumtagebuch, Traum-Absicht mit sanftem Traumbild |
+| 2 | Bemerken | Realitätschecks, Motive aus dem Tagebuch |
+| 3 | Klar werden | Absicht „Wenn ich träume, erkenne ich es“, nächtliches Wecken wird angeboten |
+| ab 4 | Gestalten | Fantasie-Räume (falls freigeschaltet), eigene Traumbilder, Ideen für den Klartraum |
+
+Fantasie-Räume sind ab dem ersten Tag wählbar; der Ablauf ist ein Vorschlag, kein Zwang. Jederzeit
+pausierbar, nach einer Pause ohne Hinweis auf „verlorene Tage“.
 
 ## Sicherheit und Hinweise
 
 Vor dem ersten Start ein kurzer Hinweisschirm, später jederzeit unter „Info“ erreichbar:
 
 - **Nicht geeignet** bei Schlafstörungen (z. B. Schlaflosigkeit, Narkolepsie), häufigen Albträumen,
-  Traumafolgen, Psychosen oder Dissoziation in der Vorgeschichte. Im Zweifel mit Ärztin oder Arzt sprechen.
+  Traumafolgen, Epilepsie, Psychosen oder Dissoziation in der Vorgeschichte. Im Zweifel mit Ärztin oder
+  Arzt sprechen.
 - **Kein nächtliches Wecken** bei Schichtarbeit, in der Schwangerschaft, mit einem Baby, das nachts weckt,
   oder wenn man ohnehin zu wenig schläft. Tagebuch und Traum-Absicht gehen trotzdem.
 - **Schlafparalyse:** Beim Wiedereinschlafen kann es selten passieren, dass man wach ist und sich kurz nicht
-  bewegen kann. Das ist harmlos und geht vorbei. Die App erklärt das ruhig vorher, nicht erst danach.
-- **Schlaf geht vor:** Wecken und Wiedereinschlafen höchstens **zweimal pro Woche**, nicht vor
-  Arbeitstagen mit frühem Beginn, nicht bei Müdigkeit am Tag. Die App schlägt Wochenend-Nächte vor.
-- **Pause-Regel:** Wer im Tagebuch mehrmals „schlecht geschlafen“ oder „unangenehmer Traum“ markiert,
-  bekommt das Angebot, nur noch Tagebuch und Traum-Absicht zu nutzen oder eine Pause zu machen.
-- Unangenehme oder verstörende Träume sind normal und kein Fehler. Kurzer Text dazu im Tagebuch, Hinweis auf
-  den SOS-Knopf.
+  bewegen kann. Das ist harmlos und geht vorbei; ruhig atmen, einen Finger bewegen. Die App erklärt das
+  vorher, nicht erst danach.
+- **Schlaf geht vor:** Wecken höchstens **zweimal pro Woche**, nicht vor Arbeitstagen mit frühem Beginn,
+  nicht bei Müdigkeit am Tag, nicht vor dem Autofahren. Die App schlägt Wochenend-Nächte vor.
+- **Sexsomnie:** Wer schon einmal sexuelle Handlungen im Schlaf gezeigt hat, nutzt die Fantasie-Räume nicht
+  und spricht mit einer Ärztin oder einem Arzt.
+- **Einvernehmen:** Erotik im Traum betrifft nur die eigene Fantasie. Ein schlafender Mensch kann nicht
+  zustimmen; die App regt nie zu Berührungen einer schlafenden Person an.
+- **Pause-Regel:** Wer mehrmals „schlecht geschlafen“ oder „unangenehm“ markiert, bekommt das Angebot, nur
+  Tagebuch und sanfte Traumbilder zu nutzen oder eine Pause zu machen. Hinweis auf den SOS-Knopf.
+- Unangenehme oder verstörende Träume sind normal und kein Fehler.
 
 ## Paar und Privatsphäre
 
 - **Das Traumtagebuch ist privat.** Erotische Träume handeln oft von anderen Menschen, von Fremden, von
-  Ex-Partnern oder von Dingen, die man wach nie wollen würde. Das ist normal und sagt wenig über Wünsche
-  aus. Ein kurzer Text in der App erklärt das.
-- **Teilen nur einzeln und bewusst:** Bei einem Eintrag „Mit Partner:in teilen“ wählen, dann geht er als
-  Nachricht in den Paar-Kanal (verschlüsselt wie alles dort). Nie automatisch, keine Statistik für den
-  anderen.
-- **Optional zu zweit:** „Gemeinsame Traum-Absicht“: Beide wählen am Abend unabhängig dasselbe Traumbild und
-  erzählen sich am Morgen, ob und was sie geträumt haben. Ein Gesprächsanlass, kein Wettbewerb. (Offene
-  Frage, siehe unten.)
+  Ex-Partnern oder von Dingen, die man wach nie wollen würde. Das ist normal. Ein kurzer Text erklärt das:
+  > Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht,
+  > muss nichts bedeuten. Du darfst den Traum einfach genießen oder vergessen.
+- **Fantasie-Räume sind besonders privat.** Welche Räume jemand gewählt hat, sieht der Partner nie, auch
+  nicht als Statistik. Wer davon erzählen möchte, entscheidet das selbst.
+- **Teilen nur einzeln und bewusst:** „Mit Partner:in teilen“ bei einem Eintrag, dann geht er verschlüsselt
+  in den Paar-Kanal. Nie automatisch.
+- **Optional zu zweit:** „Gemeinsames Traumbild“: Beide wählen am Abend dasselbe sanfte Traumbild und
+  erzählen sich am Morgen, ob sie davon geträumt haben. Ein Gesprächsanlass, kein Wettbewerb.
 - Einträge gehen **nicht an den KI-Coach**, außer man fügt einen bewusst in ein Gespräch ein.
-- Einträge sind Teil der verschlüsselten Sicherung und werden beim App-Sperren mit geschützt.
+- Einträge sind Teil der verschlüsselten Sicherung und von der App-Sperre geschützt.
 
 ## Sprache und Stil
 
-Für die Audios gilt die Textvorgabe der Einschlaf-Reise (`einschlaf-reise-textvorgabe.md`), mit zwei
-Ergänzungen:
+Für die Audios gilt `einschlaf-reise-textvorgabe.md`, mit diesen Abweichungen:
 
-- Die Absicht ist die einzige Stelle, die in der Ich-Form steht („Wenn ich träume, erkenne ich es.“), damit
-  man sie innerlich mitsprechen kann.
-- Die kurze Begleitung nach dem nächtlichen Wecken ist **noch leiser und kürzer** (fünf bis acht Minuten
-  Sprache, dann zehn Minuten Klangteppich), ohne Ankommen, beginnt direkt mit Atem.
+- Die Absicht ist die einzige Stelle in Ich-Form, damit man sie innerlich mitsprechen kann.
+- Die Begleitung nach dem nächtlichen Wecken ist noch leiser und kürzer (fünf bis acht Minuten Sprache,
+  dann zehn Minuten Klangteppich), ohne Ankommen.
+- **Nur Fantasie-Räume:** Handlung bis zur Schwelle der Intimität erlaubt, klare anatomische Worte für
+  beide Körper, Erregung darf wachsen. Kein Dirty Talk, kein Höhepunkt, offenes Ende, danach wieder ruhig.
 
-Texte am Tag (Realitätscheck, Tagebuch) sind neutral und diskret, damit eine Benachrichtigung im Büro
-nichts verrät: „Kurzer Moment für dich“ statt „Träumst du gerade?“, wenn der Diskretions-Modus an ist.
+Texte am Tag (Realitätscheck, Tagebuch) sind neutral, damit eine Benachrichtigung im Büro nichts verrät.
 
-## Beispieltexte
+## Audio: Bausteine und Pakete
 
-**Traum-Absicht, Bild „Warmes Wasser“**
-> Du liegst in warmem Wasser, das dich ganz von allein trägt. Es ist dunkel und still, und das Wasser
-> kennt deinen Körper. Es hält deine Schultern, deinen Rücken, dein Becken.
->
-> Dieses Wasser darf dich in deine Träume begleiten. Dort darfst du dich tragen lassen, weich und
-> warm.
->
-> Im Traum darf ich mich tragen lassen.
+### Das Problem
 
-**Traum-Absicht, Klarheit**
-> Träume sind wie ein zweites Zimmer in der Nacht. Manchmal steht die Tür einen Spalt offen, und du
-> erkennst, wo du bist. Das ist ein ruhiges, freundliches Erkennen.
->
-> Wenn ich träume, erkenne ich es.
+Die Traum-Reise ist ein Baukasten: Traumbilder × Varianten, Fantasie-Räume × Körper × Gegenüber, sanft
+und spicy, zwei Stimmen, zwei Sprachen. Das sind schnell mehrere Hundert Aufnahmen. Heute liegen schon
+gut 100 MB Audio in der APK (davon 25 MB Einschlaf-Reise), dazu 77 MB englisches Audiopaket.
 
-**Nach dem nächtlichen Wecken**
-> Dein Traum ist aufgeschrieben, er ist sicher. Dein Körper sinkt zurück in die Wärme des Bettes. Der Atem
-> wird lang. Das Zimmer der Träume ist ganz nah.
->
-> Wenn ich träume, erkenne ich es.
+### Möglichkeiten
 
-**Hinweis im Tagebuch (sinnlicher Traum)**
-> Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht,
-> muss nichts bedeuten. Du darfst den Traum einfach genießen oder vergessen.
+| Weg | Vorteile | Nachteile |
+|---|---|---|
+| **A. Alles in der APK** | einfach, sofort offline | APK wächst stark; jede Textkorrektur braucht ein App-Update; explizite Aufnahmen in jeder APK |
+| **B. Traum-Reise als eigenes Paket** | APK bleibt, wie sie ist; nur wer will, lädt | ein weiteres Sonderpaket neben dem englischen |
+| **C. Alle Audios aus der App lösen** | kleine APK; Audios unabhängig von App-Versionen; ein einheitlicher Weg für alle Sprachen | erster Start braucht Download; Umbau bestehender Funktionen |
+
+### Empfehlung: C in zwei Schritten, mit dem englischen Audiopaket als Vorbild
+
+Die Technik dafür gibt es schon: `AudioPaket` in `lib/services/sprachausgabe.dart` lädt ein ZIP aus einem
+GitHub-Release, prüft SHA-256, entpackt in den App-Speicher, und fehlt eine Aufnahme, liest die
+Geräte-Stimme. Das wird verallgemeinert:
+
+1. **Jetzt (mit der Traum-Reise):** Aus `AudioPaket` wird eine Paketverwaltung für mehrere Pakete. Die
+   Traum-Reise kommt als eigene Pakete:
+   - `traum-sanft-de`, `traum-sanft-en`: Traumbilder, Absichten, Wecken.
+   - `traum-fantasie-de`, `traum-fantasie-en`: Fantasie-Räume. Nur sichtbar und ladbar im Spicy-Modus mit
+     freigeschalteten Fantasie-Räumen.
+2. **Später:** Auch Einschlaf-Reise, Selbsterkundung, Paar-Abend und Lektionen wandern in Pakete. In der
+   APK bleiben nur die kleinen Ansagen (`cues`, unter 1 MB) und vielleicht die erste Lektion, damit die App
+   ohne Download sofort etwas abspielt.
+
+**Paket-Verzeichnis statt fester Adressen:** Eine kleine Datei `audio-index.json` listet alle Pakete mit
+Name, Sprache, Version, Größe, SHA-256 und Adresse. Die App kennt nur die Adresse dieses Verzeichnisses. So
+kommen neue Pakete und korrigierte Aufnahmen **ohne App-Update**. Das Verzeichnis wird mit einem
+Ed25519-Schlüssel signiert (`cryptography` ist schon dabei), damit niemand fremde Audios unterschieben kann,
+auch wenn die Pakete einmal woanders liegen als auf GitHub.
+
+**Pakete können klein sein:** Nicht ein großes ZIP pro Sprache, sondern ein Paket pro Thema. Wer nur die
+Traum-Reise auf Deutsch will, lädt nur diese, und eine korrigierte Aufnahme erneuert nur ihr Paket.
+
+### Vorteile für Diskretion und Verbreitung
+
+- Die APK enthält keine expliziten Aufnahmen. Wer die App installiert, bekommt erst einmal nichts
+  Eindeutiges auf das Gerät.
+- Das Fantasie-Paket lädt nur, wer es ausdrücklich will, nach dem Hinweisschirm.
+- **Zu prüfen:** Die Nutzungsbedingungen von GitHub schränken sexuell explizite Inhalte ein. Für
+  Texte und sanfte Aufnahmen dürfte das unkritisch sein, für das Fantasie-Paket sollte der Ablageort vorher
+  geklärt werden (eigener Speicher, z. B. ein Objektspeicher mit Prüfsummen). Das signierte Verzeichnis
+  macht den Ort austauschbar.
+
+### Ohne Paket
+
+Fehlt ein Paket, liest wie heute die Geräte-Stimme. Für die Traum-Absicht ist das akzeptabel, für lange
+Einschlaf-Begleitungen weniger; dort zeigt die App vor dem Start „Aufnahmen laden (x MB)?“.
 
 ## Technik
 
-- **Neues Modell `DreamEntry`** (`lib/models/traum_eintrag.dart`): Zeitpunkt, Text, Stimmung, Markierungen
-  (`erinnert`, `luzide`, `sinnlich`, `unangenehm`, `schlecht_geschlafen`), optional Traumbild des Abends,
-  `geteilt` ja/nein. Speicherung wie die übrigen Tagebücher über `StorageService`, Teil von Sicherung und
+- **Neues Modell `DreamEntry`** (`lib/models/traum_eintrag.dart`): Zeitpunkt, Text, Markierungen
+  (`erinnert`, `luzide`, `sinnlich`, `hoehepunkt`, `unangenehm`, `schlecht_geschlafen`), Traumbild bzw.
+  Fantasie-Raum des Abends, `geteilt` ja/nein. Speicherung über `StorageService`, Teil von Sicherung und
   Backup-Merge (Tests in `backup_merge_test.dart` ergänzen).
-- **Tagebuch-Bildschirm:** schnell, dunkel, wenig Helligkeit (Nacht-Design), Spracheingabe der Tastatur
-  reicht. Großer „Nichts erinnert“-Knopf.
+- **Fantasie-Auswahl:** eigener, lokaler Speicher, getrennt von Ja/Nein/Vielleicht, nie im Paar-Abgleich.
+- **Bausteine:** `assets/data/traum_reise.json` mit den Phasen `ankommen`, `sinken`, `atem` (aus der
+  Einschlaf-Reise wiederverwendbar), `traumbild`, `fantasie` (Felder `raum`, `teil`: ort | koerper |
+  begegnung | schwelle, `mein_koerper`, `gegenueber`), `absicht`, `nachklang`, `wach`. Planer im Stil von
+  `lib/models/einschlaf_reise.dart`.
+- **Aufnahmen:** `tools/generate_audio.py` erzeugt je Paket ein ZIP samt Prüfsumme und Eintrag für
+  `audio-index.json`.
 - **Realitätschecks:** wiederkehrende lokale Benachrichtigungen mit `flutter_local_notifications`
-  (`zonedSchedule`, braucht das Paket `timezone`). Zeitfenster und Anzahl einstellbar, Standard aus.
-  Bisher plant die App keine solchen Erinnerungen; das ist neu und muss auf Xiaomi getestet werden.
-- **Traum-Absicht:** als vierte Länge bzw. eigener Modus der Einschlaf-Reise, gleicher Planer, neue
-  Bausteine in `assets/data/einschlaf_reise.json` (Phase `absicht`, Feld `traumbild`). Aufnahmen über
-  `tools/generate_audio.py`, Ordner `assets/audio/einschlaf/`. Umfang grob 30–40 Bausteine je Stimme.
-- **Nächtliches Wecken:** am zuverlässigsten über einen **System-Wecker** (Intent an die Uhr-App) statt
-  eigener Weckerlogik; danach öffnet ein Tipp auf die Benachrichtigung direkt das Tagebuch und die kurze
-  Begleitung. Kein Wecken ohne ausdrückliche Einrichtung für genau diese Nacht.
-- **Kein Ton-Signal im REM-Schlaf.** In Studien werden luzide Träume mit leisen Signalen im REM-Schlaf
-  gefördert, dafür braucht es aber Messung im Schlaflabor. Ein Handy kann REM-Phasen nicht sicher
-  erkennen; Signale „auf Verdacht“ wecken eher, als dass sie helfen. Darum bewusst nicht in Version 1.
+  (`zonedSchedule`, braucht `timezone`). Neu in der App, auf Xiaomi testen.
+- **Nächtliches Wecken:** über einen System-Wecker (Intent an die Uhr-App); ein Tipp auf die Benachrichtigung
+  öffnet Tagebuch und kurze Begleitung. Nie ohne Einrichtung für genau diese Nacht.
+- **Kein Ton-Signal im REM-Schlaf** in Version 1: Ein Handy erkennt REM-Phasen nicht sicher, Signale auf
+  Verdacht wecken eher, auch die Person daneben.
 - **Wiedergabe bei ausgeschaltetem Bildschirm:** gleiche Lösung wie bei der Einschlaf-Reise.
-- **Diskretion:** neutrale Titel, neutrale Benachrichtigungen, kein Wort „Traum“ oder „erotisch“ auf dem
+- **Diskretion:** neutrale Titel und Benachrichtigungen, kein „Traum“ oder „erotisch“ auf dem
   Sperrbildschirm.
-- **Ort in der App:** eigene Karte unter den geführten Audios, Hinweise in den Kursen 2 (Spüren) und 26
-  (Alltagserotik).
+- **Ort in der App:** eigene Karte unter den geführten Audios, Tagebuch-Karte morgens auf der Startseite,
+  Hinweise in den Kursen 2, 13 und 26.
 
 ## Aufwand
 
+- Paketverwaltung mit signiertem Verzeichnis (Schritt 1): mittel, lohnt sich für alle späteren Inhalte.
 - Tagebuch, Modell, Sicherung, Tests: mittel.
-- Realitätscheck-Erinnerungen inklusive Test auf mehreren Geräten: mittel, erst Probe-Ablauf.
-- Texte Deutsch und Englisch (5 Traumbilder × 2–3 Varianten, sanft und spicy, Begleitung nach dem Wecken,
-  Hinweis- und Tagebuchtexte): mittel, deutlich weniger als bei der Einschlaf-Reise.
-- Aufnahmen, Audiopaket, Anleitung, Was-ist-neu: klein bis mittel.
+- Realitätschecks inklusive Test auf mehreren Geräten: mittel, erst Probe-Ablauf.
+- Texte sanft (5 Traumbilder × 2–3 Varianten, Wecken, Hinweise): mittel.
+- Texte Fantasie-Räume (Orte, Körper, Begegnungen, Schwellen, je Deutsch und Englisch): groß, aber durch
+  den Baukasten deutlich weniger als „jede Kombination einzeln“.
+- Aufnahmen, Anleitung, Was-ist-neu: klein bis mittel.
+
+Reihenfolge: Paketverwaltung und Tagebuch zuerst, dann sanfte Traum-Absicht, dann Fantasie-Räume, dann
+nächtliches Wecken.
 
 ## Offene Fragen
 
 1. Name: **Traum-Reise**, „Traumwerkstatt“ oder „Klarträumen“?
-2. Soll das nächtliche Wecken in Version 1 rein oder erst später, wenn Tagebuch und Absicht sich bewährt
-   haben?
-3. **Gemeinsame Traum-Absicht** für Paare: rein, später oder gar nicht? (Die Einschlaf-Reise hat bewusst
-   keinen Paarmodus.)
-4. Soll das Programm als **Vier-Wochen-Kurs** mit Tagesschritten laufen oder frei nutzbar sein?
-5. Traumbilder: passen die fünf, fehlt eines?
+2. Nächtliches Wecken in Version 1 oder später?
+3. **Gemeinsames Traumbild** für Paare: rein, später oder gar nicht?
+4. Fantasie-Raum **„Mit meinem Partner“**: aufnehmen? Dafür: schöne Brücke ins Paarleben. Dagegen: Druck
+   („Ich soll von dir träumen“), und der erste Entwurf wollte bewusst keine bestimmte Person.
+5. Welche Fantasie-Räume in Version 1? Vorschlag: Anderer Körper, Begegnung Frau, Begegnung Mann, Fremde
+   Nacht; Zu dritt, Ansehen sowie Führen und Hingeben später.
+6. Markierung „Höhepunkt“ im Tagebuch: behalten oder wirkt sie schon wie ein Ziel?
+7. Vier-Wochen-Ablauf mit Tagesschritten oder frei nutzbar?
+8. Audio: Schritt 1 (nur Traum-Reise als Pakete) jetzt, Schritt 2 (alle Audios aus der APK) später?
+   Und wo liegt das Fantasie-Paket?
