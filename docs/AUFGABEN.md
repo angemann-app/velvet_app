@@ -36,6 +36,8 @@ Details: `docs/konzepte/traum-reise.md`.
 
 ## Laufend: Aussprache korrigieren (täglich)
 
+Übernimmt Antigravity als Auftrag **AG-1** in `AG.md` (dort der genaue Ablauf). Kurzfassung:
+
 Nutzer melden falsch ausgesprochene Wörter in der App („Wort falsch ausgesprochen?“) oder als Issue.
 
 1. Meldungen abholen: `tools/rueckmeldungen_abholen.dart`.
