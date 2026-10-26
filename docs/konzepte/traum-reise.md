@@ -307,6 +307,12 @@ Geräte-Stimme. Das wird verallgemeinert:
 2. **Später:** Auch Einschlaf-Reise, Selbsterkundung, Paar-Abend und Lektionen wandern in Pakete. In der
    APK bleiben nur die kleinen Ansagen (`cues`, unter 1 MB) und vielleicht die erste Lektion, damit die App
    ohne Download sofort etwas abspielt.
+3. **Langfristiges Ziel: alle Inhalte getrennt von der App.** Kurse, Lektionen, Listen, geführte Texte und
+   Audios kommen als signierte Pakete, die App ist nur noch das Werkzeug. Das passt zur bestehenden
+   Lizenztrennung (Code MIT, Inhalte CC BY-NC-SA) und erlaubt später ein eigenes Inhalts-Repository.
+   **In der App bleiben immer:** Onboarding, SOS-Karten, Sicherheits- und Gesundheitshinweise, Datenschutz
+   und Anleitung, damit Hilfe auch ohne Netz und ohne Paket da ist. Übersetzungen (PO-Abgleich,
+   `translation_test.dart`) müssen dann gegen die Pakete statt gegen `assets/data/` laufen.
 
 **Paket-Verzeichnis statt fester Adressen:** Eine kleine Datei `audio-index.json` listet alle Pakete mit
 Name, Sprache, Version, Größe, SHA-256 und Adresse. Die App kennt nur die Adresse dieses Verzeichnisses. So
