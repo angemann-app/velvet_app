@@ -20,6 +20,8 @@ Ist eine Frage für den aktuellen Schritt noch offen, nachfragen statt raten.
 - Traum-Reise: `docs/konzepte/traum-reise.md` (abgestimmt, Entscheidungen am Ende; Reihenfolge: Paketverwaltung und Traumtagebuch,
   dann sanfte Traum-Absicht, dann Fantasie-Räume, dann nächtliches Wecken)
 
+**Aufgabenliste:** `docs/AUFGABEN.md` (Reihenfolge = Priorität). Erledigtes dort nach unten verschieben.
+
 **Grundsatz Inhalte:** Langfristig werden alle Inhalte (Texte und Audios) getrennt von der App als
 signierte Pakete angeboten. Neue Inhalte deshalb so anlegen, dass sie in ein Paket wandern können; nur
 Onboarding, SOS, Sicherheits- und Gesundheitshinweise, Datenschutz und Anleitung bleiben fest in der App.
