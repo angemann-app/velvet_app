@@ -339,6 +339,15 @@ Traum-Reise auf Deutsch will, lädt nur diese, und eine korrigierte Aufnahme ern
   **mehrere Adressen** haben, die App nimmt die erste, die antwortet, und prüft immer SHA-256. So lässt sich
   ein Paket später ohne App-Update auf einen eigenen Server oder auf Blossom-Server (Nostr, Dateien über ihre
   SHA-256 adressiert) verlegen oder spiegeln.
+- **Cloudflare R2 als Hauptquelle (eingerichtet 26.10.2026):** Konto mit eigener E-Mail und
+  Zwei-Faktor-Anmeldung (bewusst nicht über GitHub angemeldet, damit eine GitHub-Sperre den Zugang nicht
+  mitreißt), Bucket `velvetpulse-pakete` (Name prüfen), Standort EU. Kostenlos bis 10 GB, Downloads ohne
+  Gebühr. GitHub-Releases bleiben zweite Adresse.
+- **Hochladen nach R2 über GitHub Actions:** Ein Workflow lädt neue Pakete beim Release nach R2 und
+  aktualisiert `audio-index.json`. Zugang über einen R2-API-Token mit Object Read & Write nur für diesen
+  Bucket, hinterlegt als Repository-Secrets `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_ACCOUNT_ID`.
+  Token und Secrets legt der Nutzer selbst an, wenn der Workflow gebaut wird; Schlüssel nie in Code oder Chat.
+  Für den Dauerbetrieb eine eigene Domain verbinden statt der Test-Adresse von Cloudflare.
 - **Geprüft und verworfen:** Rainbow-Web (AGB § 9.2: keine reinen Download-Angebote, Traffic dann 0,19 € je
   MB) und netcup (AGB § 5.5: kein Material mit pornografischem oder kommerziell erotischem Charakter). Bei
   Hetzner sind pornografische Inhalte ausgeschlossen, erotische nicht ausdrücklich.
