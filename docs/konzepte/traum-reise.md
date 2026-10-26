@@ -124,8 +124,9 @@ aus wenigen Bausteinen eine große Vielfalt, ohne dass jede Kombination eigens g
 3. **Körper:** Im Raum „Anderer Körper“ ein langsames Ankommen im neuen Körper: Gewicht, Haut, Brust,
    Becken, Geschlecht, wie es sich anfühlt. Danach die **Selbstwahrnehmung** (siehe unten): Deine eigenen
    Hände entdecken diesen Körper, und der Text bleibt beim Spüren.
-4. **Begegnung:** Das Gegenüber erscheint: Blick, Nähe, erste Berührung, Wärme und Begehren. Körper
-   dürfen benannt werden, sexuelle Handlungen werden nicht beschrieben.
+4. **Begegnung:** Das Gegenüber erscheint: Blick, Nähe, Berührung, Wärme und Begehren. Die Berührung darf
+   zum Becken und Geschlecht wandern, Erregung darf benannt werden. Sexuelle Handlungen selbst werden nicht
+   beschrieben (siehe „Grenze für die Texte“).
 5. **Offenes Ende:** Die Szene endet dort, wo es intim wird: „Was jetzt geschieht, erzählt dir dein Traum.“
    Kein Höhepunkt im Audio.
 6. **Absicht** in Ich-Form, zwei- bis dreimal, dann Nachklang und Stille.
@@ -176,17 +177,20 @@ Beispiel (Ausschnitt):
 >
 > Im Traum entdecke ich meinen neuen Körper.
 
-### Grenze für die Texte: erotisch, nicht explizit
+### Grenze für die Texte: erotisch, an der Schwelle (geöffnet 26.10.2026)
 
-Die Fantasie-Räume bleiben **sinnlich und andeutend**, eher wie ein erotischer Roman als wie ein Hörspiel
-für Erwachsene. Das hält sie im Rahmen der Aufklärung, im Rahmen der Regeln von GitHub (siehe „Audio“) und
-rechtlich auf der sicheren Seite.
+Die Fantasie-Räume sind **deutlich erotisch** und führen bis an die Schwelle der Intimität. Erst die
+sexuelle Handlung selbst bleibt dem Traum überlassen.
 
-- **Ja:** Körper, Haut, Wärme, Begehren, Blicke, Nähe, eine erste Berührung, ruhige anatomische Wörter für
-  den eigenen Körper.
-- **Nein:** Beschreibung sexueller Handlungen, Bewegungen oder Abläufe, Dirty Talk, Steigerung bis zum
-  Höhepunkt, Geräusche.
-- Die Szene endet **vor** der Intimität. Was danach kommt, gehört dem Traum.
+- **Ja:** Körper, Haut, Wärme, Begehren, Blicke, Nähe; Berührungen, die zu Becken und Geschlecht wandern;
+  Erregung des eigenen Körpers benennen (z. B. aufgerichteter Penis, warme, pulsierende Vulva); ruhige
+  anatomische Wörter für beide Körper; die Selbstberührung im Traumkörper.
+- **Nein:** Beschreibung sexueller Handlungen selbst (Eindringen, Oralverkehr, Bewegungsabläufe beim
+  Sex oder bei der Selbstbefriedigung), Höhepunkt im Text, Dirty Talk, Geräusche.
+- Die Szene endet **an** der Schwelle: „Was jetzt geschieht, erzählt dir dein Traum.“
+- **Folgen der Öffnung:** Fantasie-Pakete liegen **nur auf Cloudflare R2**, nicht auf GitHub-Releases, und
+  ihre Texte kommen nicht ins Code-Repository (auch keine Rohentwürfe). Vor der Veröffentlichung einmal
+  medienrechtlich prüfen lassen (Jugendmedienschutz: erotisch ja, pornografisch nein).
 
 ### Beispieltext: Anderer Körper (Ausschnitt, Stimme ruhig, Tempo wie Einschlaf-Reise)
 
@@ -266,9 +270,12 @@ Für die Audios gilt `einschlaf-reise-textvorgabe.md`, mit diesen Abweichungen:
 - Die Absicht ist die einzige Stelle in Ich-Form, damit man sie innerlich mitsprechen kann.
 - Die Begleitung nach dem nächtlichen Wecken ist noch leiser und kürzer (fünf bis acht Minuten Sprache,
   dann zehn Minuten Klangteppich), ohne Ankommen.
-- **Nur Fantasie-Räume:** eine kurze Handlung bis zur Schwelle der Intimität ist erlaubt, Körper und
-  Begehren dürfen benannt werden. Sexuelle Handlungen werden nicht beschrieben (siehe „Grenze für die
-  Texte“). Kein Dirty Talk, kein Höhepunkt, offenes Ende, danach wieder ruhig.
+- **Nur Fantasie-Räume:** Handlung bis an die Schwelle der Intimität, Berührung bis zum Geschlecht,
+  Erregung benannt. Sexuelle Handlungen selbst werden nicht beschrieben (siehe „Grenze für die Texte“).
+  Kein Dirty Talk, kein Höhepunkt, offenes Ende, danach wieder ruhig.
+- Keine pseudowissenschaftlichen Begründungen in Texten oder Konzept (z. B. „versteckter Reverse Kegel
+  dämpft den Ejakulationsreflex“, „hält das Dopamin hoch“, „ermöglicht mehrere Höhepunkte“). Entspannende
+  Bilder fürs Becken sind erwünscht, aber ohne solche Wirkversprechen.
 - In App-Texten keine Erfolgszahlen aus Studien („25–50 %“ o. Ä.); sie stammen meist von geübten
   Teilnehmenden und wecken falsche Erwartungen.
 
@@ -331,10 +338,11 @@ Traum-Reise auf Deutsch will, lädt nur diese, und eine korrigierte Aufnahme ern
 
 ### Ablageort
 
-- **Zunächst GitHub-Releases**, wie das englische Audiopaket. Das ist vertretbar, weil die Inhalte
-  erotisch, aber nicht explizit sind: GitHubs Richtlinie erlaubt sexuelle Inhalte in bildenden Zusammenhängen
-  und verbietet Inhalte, die kaum einem anderen Zweck dienen als einer erotischen Reaktion, sowie
-  Pornografie.
+- **Sanfte Pakete:** Cloudflare R2 und zusätzlich GitHub-Releases. Unkritisch, denn GitHubs Richtlinie
+  erlaubt sexuelle Inhalte in bildenden Zusammenhängen.
+- **Fantasie-Pakete: nur Cloudflare R2.** Seit der Öffnung der Textgrenze dienen sie deutlich einer
+  erotischen Reaktion; GitHub verbietet genau solche Inhalte. Weitere Spiegel später nur bei Anbietern, die
+  erotische Inhalte erlauben.
 - **Austauschbar halten:** Die App kennt nur die Adresse der `audio-index.json`; jedes Paket kann
   **mehrere Adressen** haben, die App nimmt die erste, die antwortet, und prüft immer SHA-256. So lässt sich
   ein Paket später ohne App-Update auf einen eigenen Server oder auf Blossom-Server (Nostr, Dateien über ihre
@@ -418,6 +426,6 @@ nächtliches Wecken.
    dazu ein Schalter „Alles freischalten“. Fantasie-Räume sind im Spicy-Modus ab Tag 1 wählbar.
 8. **Audio:** Schritt 1 (Paketverwaltung mit signierter `audio-index.json`, zunächst nur für die
    Traum-Reise) jetzt, Schritt 2 (alle Audios aus der APK) später. Pakete enthalten Aufnahmen **und** Texte.
-   Ablage zunächst auf GitHub-Releases, mehrere Adressen je Paket möglich (siehe „Ablageort“).
-9. **Keine expliziten Inhalte:** Die Fantasie-Räume sind erotisch, nicht explizit (siehe „Grenze für die
-   Texte“).
+   Ablage: sanfte Pakete auf R2 und GitHub-Releases, Fantasie-Pakete nur auf R2 (siehe „Ablageort“).
+9. **Textgrenze geöffnet:** Die Fantasie-Räume sind deutlich erotisch bis an die Schwelle; die sexuelle
+   Handlung selbst wird nicht beschrieben (siehe „Grenze für die Texte“).
