@@ -22,6 +22,10 @@ Ist eine Frage für den aktuellen Schritt noch offen, nachfragen statt raten.
 
 **Aufgabenliste:** `docs/AUFGABEN.md` (Reihenfolge = Priorität). Erledigtes dort nach unten verschieben.
 
+**Antigravity:** Arbeitet parallel auf dem Rechner des Nutzers nach `AG.md`. Aufträge für Antigravity dort
+eintragen (klar abgegrenzt, mit erlaubten Dateien); Dateien, an denen Claude Code gerade arbeitet, unter
+„Gesperrt“ eintragen und nach Abschluss wieder freigeben.
+
 **Grundsatz Inhalte:** Langfristig werden alle Inhalte (Texte und Audios) getrennt von der App als
 signierte Pakete angeboten. Neue Inhalte deshalb so anlegen, dass sie in ein Paket wandern können; nur
 Onboarding, SOS, Sicherheits- und Gesundheitshinweise, Datenschutz und Anleitung bleiben fest in der App.
