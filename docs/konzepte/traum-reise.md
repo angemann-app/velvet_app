@@ -348,6 +348,9 @@ Traum-Reise auf Deutsch will, lädt nur diese, und eine korrigierte Aufnahme ern
   Bucket, hinterlegt als Repository-Secrets `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_ENDPOINT` (S3-API-Adresse des Buckets). Verbindungstest: `.github/workflows/r2-verbindungstest.yml`.
   Token und Secrets legt der Nutzer selbst an, wenn der Workflow gebaut wird; Schlüssel nie in Code oder Chat.
   Für den Dauerbetrieb eine eigene Domain verbinden statt der Test-Adresse von Cloudflare.
+- **Verbindung geprüft (26.10.2026):** `R2-Verbindungstest` erfolgreich (Hochladen, Lesen, Löschen). Der
+  Bucket liegt in der **EU-Jurisdiktion**; `R2_ENDPOINT` muss deshalb die EU-Adresse
+  `https://<account-id>.eu.r2.cloudflarestorage.com` sein. Ohne `.eu.` antwortet R2 mit `AccessDenied`.
 - **Geprüft und verworfen:** Rainbow-Web (AGB § 9.2: keine reinen Download-Angebote, Traffic dann 0,19 € je
   MB) und netcup (AGB § 5.5: kein Material mit pornografischem oder kommerziell erotischem Charakter). Bei
   Hetzner sind pornografische Inhalte ausgeschlossen, erotische nicht ausdrücklich.
