@@ -103,7 +103,7 @@ Beziehungen, und sie sagen wenig über Wünsche im Wachleben. Die Traum-Reise l�
 
 | Raum | Beispiel | Absicht |
 |---|---|---|
-| **Anderer Körper** | Du bist heute Nacht eine Frau / ein Mann / ein Körper, den es so nicht gibt, und erlebst Lust in diesem Körper. | „Im Traum spüre ich Lust in einem neuen Körper.“ |
+| **Anderer Körper** | Du bist heute Nacht eine Frau / ein Mann / ein Körper, den es so nicht gibt, und erlebst Lust in diesem Körper. Auch ganz allein möglich: Deine eigenen Hände entdecken den neuen Körper. | „Im Traum spüre ich Lust in einem neuen Körper.“ |
 | **Begegnung mit einer Frau** | Eine Frau, die du begehrst, kommt auf dich zu. | „Im Traum darf ich ihr begegnen.“ |
 | **Begegnung mit einem Mann** | Ein Mann, den du begehrst, kommt auf dich zu. | „Im Traum darf ich ihm begegnen.“ |
 | **Kombination** | Anderer Körper und eine Begegnung, z. B. ein Mann, der träumt, eine Frau zu sein, und eine Frau trifft. | frei kombinierbar |
@@ -114,7 +114,7 @@ Beziehungen, und sie sagen wenig über Wünsche im Wachleben. Die Traum-Reise l�
 | **Vertraute Nähe** | Ein Mensch, der dir tief vertraut ist, liegt neben dir. Ohne Namen und ohne das Wort „Partner“, damit kein Erwartungsdruck entsteht; wer sich den eigenen Partner wünscht, stellt ihn sich vor. | „Im Traum begegne ich vertrauter Nähe neu.“ |
 
 Körper und Gegenüber sind getrennt wählbar: **Mein Körper heute Nacht** (wie immer / Vulva / Penis / offen)
-und **Gegenüber** (Frau / Mann / mehrere / offen). Daraus setzt der Planer die Szene zusammen. So entsteht
+und **Gegenüber** (Frau / Mann / mehrere / offen / **niemand**: nur du und dein Körper). Daraus setzt der Planer die Szene zusammen. So entsteht
 aus wenigen Bausteinen eine große Vielfalt, ohne dass jede Kombination eigens geschrieben werden muss.
 
 ### Aufbau einer Fantasie-Szene: offenes Ende
@@ -122,7 +122,8 @@ aus wenigen Bausteinen eine große Vielfalt, ohne dass jede Kombination eigens g
 1. **Sinken und Atem** wie gewohnt, etwas kürzer.
 2. **Ort:** ein konkreter, sinnlicher Ort mit Traum-Hinweis.
 3. **Körper:** Im Raum „Anderer Körper“ ein langsames Ankommen im neuen Körper: Gewicht, Haut, Brust,
-   Becken, Geschlecht, wie es sich anfühlt.
+   Becken, Geschlecht, wie es sich anfühlt. Danach die **Selbstwahrnehmung** (siehe unten): Deine eigenen
+   Hände entdecken diesen Körper, und der Text bleibt beim Spüren.
 4. **Begegnung:** Das Gegenüber erscheint: Blick, Nähe, erste Berührung, Wärme und Begehren. Körper
    dürfen benannt werden, sexuelle Handlungen werden nicht beschrieben.
 5. **Offenes Ende:** Die Szene endet dort, wo es intim wird: „Was jetzt geschieht, erzählt dir dein Traum.“
@@ -148,6 +149,32 @@ werden. Nach der Begegnung muss der Text aber wieder ruhig werden, damit man ein
   gegenseitig. Keine echten oder benannten Personen. Keine Gewalt, kein Zwang,
   auch im Raum „Führen und Hingeben“ ist das Einvernehmen hörbar.
 - Wechsel jederzeit: „Heute lieber sanft“ als Knopf vor dem Start.
+
+### Selbstwahrnehmung im anderen Körper
+
+Im Raum „Anderer Körper“ liegt der Schwerpunkt auf der **Frage: Wie fühlt sich dieser Körper an, wenn ich
+mich selbst berühre?** Das verbindet die Fantasie mit dem, was die Kurse lehren: spüren statt beobachten
+(Kurse 2 und 13), jeder Körper ist willkommen (Kurs 25), Selbsterkundung.
+
+- Die Berührung geschieht **in der Vorstellung**, im Traumbild. Das Audio fordert nicht auf, sich im Bett
+  wirklich zu berühren; das würde wach machen und gehört in die Selbst-Reise.
+- Die Hände wandern langsam: Gesicht, Hals, Schultern, Brust, Bauch, Hüften, Innenseite der Schenkel. Am
+  Becken und am Geschlecht bleibt der Text bei **Wahrnehmung**: Wärme, Weichheit, Empfindlichkeit, wie anders
+  es sich anfühlt. Keine Technik, keine Bewegungsabläufe, keine Steigerung (siehe „Grenze für die Texte“).
+- Der Kern ist das Staunen über den Unterschied: andere Haut, anderes Gewicht, andere Empfindlichkeit, eine
+  andere Art, Lust zu spüren.
+- Kann allein stehen (Gegenüber „niemand“) oder einer Begegnung vorausgehen.
+- Absicht zum Beispiel: „Im Traum entdecke ich meinen neuen Körper.“
+
+Beispiel (Ausschnitt):
+> Deine Hände liegen auf deinem Bauch. Sie kennen diesen Körper noch nicht, und er fühlt sich weich und
+> warm an. Langsam wandern sie zu deinen Hüften, runder als sonst, und weiter zu deiner Brust. Die Haut ist
+> dort zarter, als du es kennst, und sie antwortet auf jede Berührung.
+>
+> Tiefer, zwischen deinen Beinen, ist alles warm und empfindlich. Es fühlt sich anders an als jemals zuvor,
+> und du darfst einfach staunen, wie dieser Körper Lust spürt.
+>
+> Im Traum entdecke ich meinen neuen Körper.
 
 ### Grenze für die Texte: erotisch, nicht explizit
 
@@ -363,7 +390,7 @@ nächtliches Wecken.
    von den Fantasie-Räumen.
 4. **„Mit meinem Partner“** wird zu **„Vertraute Nähe“**: ein tief vertrauter Mensch ohne Namen und ohne
    das Wort „Partner“, damit kein Erwartungsdruck entsteht.
-5. **Fantasie-Räume in Version 1:** Anderer Körper, Begegnung mit einer Frau, Begegnung mit einem Mann,
+5. **Fantasie-Räume in Version 1:** Anderer Körper (mit Selbstwahrnehmung, auch ohne Gegenüber), Begegnung mit einer Frau, Begegnung mit einem Mann,
    Fremde Nacht, Vertraute Nähe. Zu dritt, Ansehen und angesehen werden sowie Führen und Hingeben kommen
    später als Paket ohne App-Update.
 6. **„Höhepunkt“ bleibt** als Markierung im Tagebuch, als reine Beobachtung neben „sinnlich“ und
