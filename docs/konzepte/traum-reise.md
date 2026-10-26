@@ -1,7 +1,7 @@
 # Konzept: Traum-Reise (luzide und erotische Träume)
 
-Stand: Entwurf vom 26.10.2026, zusammengeführt aus zwei Entwürfen und ergänzt um die Fantasie-Räume und
-die Audio-Pakete. Noch nicht abgestimmt, noch nicht umgesetzt. Offene Fragen stehen am Ende.
+Stand: 26.10.2026, abgestimmt, noch nicht umgesetzt. Die Entscheidungen stehen am Ende und gehen den
+Abschnitten davor vor.
 
 ## Idee
 
@@ -10,7 +10,7 @@ träumt** (luzider Traum, Klartraum) und **erotischen Träumen Raum geben**. Es 
 untersuchte Techniken aus der Klartraumforschung mit dem, was die Kurse lehren: Lust als Welle, ein
 freundlicher Blick auf den eigenen Körper und die eigene Fantasie, Genuss ohne Leistung.
 
-Im Spicy-Modus kommen die **Fantasie-Räume** dazu: klare erotische Szenen vor dem Einschlafen, auch solche,
+Im Spicy-Modus kommen die **Fantasie-Räume** dazu: sinnliche, andeutende Szenen vor dem Einschlafen, auch solche,
 die wach nicht möglich sind, etwa im Körper eines anderen Geschlechts oder als Begegnung, die man im
 Wachleben nie suchen würde. Der Traum ist der Ort, an dem das sicher und folgenlos ist.
 
@@ -90,10 +90,11 @@ der Spicy-Stufe der Einschlaf-Reise. Weiterhin ruhig, ohne Handlung, ohne Höhep
 
 ## Fantasie-Räume (eigene Stufe über Spicy)
 
-### Warum klare erotische Impulse
+### Warum deutliche erotische Impulse
 
 Für die Traum-Inkubation zählt, wie lebendig ein Bild ist. Ein vager „sinnlicher Ort“ landet seltener im
-Traum als eine klare erotische Szene mit Körper, Gegenüber und Gefühl. Und der Traum erlaubt, was wach
+Traum als eine deutliche erotische Szene mit Körper, Gegenüber und Gefühl. Deutlich heißt dabei
+lebendig und gefühlvoll, nicht explizit (siehe „Grenze für die Texte“). Und der Traum erlaubt, was wach
 nicht geht: einen anderen Körper haben, ein anderes Geschlecht, eine Begegnung mit einer Frau, einem Mann
 oder mehreren Menschen. Solche Fantasien sind sehr verbreitet, auch bei Menschen in festen und glücklichen
 Beziehungen, und sie sagen wenig über Wünsche im Wachleben. Die Traum-Reise lädt sie ohne Wertung ein.
@@ -110,7 +111,7 @@ Beziehungen, und sie sagen wenig über Wünsche im Wachleben. Die Traum-Reise l�
 | **Fremde Nacht** | Eine Begegnung mit einer unbekannten Person, an einem fremden Ort: Badehaus, Zugabteil, Hotel am Meer. | „Im Traum folge ich der Neugier.“ |
 | **Ansehen und angesehen werden** | Du wirst begehrend angeschaut, oder du schaust zu. | „Im Traum darf ich gesehen werden.“ |
 | **Führen und Hingeben** | Jemand führt dich, oder du führst, einvernehmlich und klar. | „Im Traum darf ich mich hingeben.“ / „… darf ich führen.“ |
-| **Mit meinem Partner** (offene Frage) | Eine Szene mit der eigenen Partnerin oder dem eigenen Partner. | „Im Traum begegne ich dir neu.“ |
+| **Vertraute Nähe** | Ein Mensch, der dir tief vertraut ist, liegt neben dir. Ohne Namen und ohne das Wort „Partner“, damit kein Erwartungsdruck entsteht; wer sich den eigenen Partner wünscht, stellt ihn sich vor. | „Im Traum begegne ich vertrauter Nähe neu.“ |
 
 Körper und Gegenüber sind getrennt wählbar: **Mein Körper heute Nacht** (wie immer / Vulva / Penis / offen)
 und **Gegenüber** (Frau / Mann / mehrere / offen). Daraus setzt der Planer die Szene zusammen. So entsteht
@@ -122,8 +123,8 @@ aus wenigen Bausteinen eine große Vielfalt, ohne dass jede Kombination eigens g
 2. **Ort:** ein konkreter, sinnlicher Ort mit Traum-Hinweis.
 3. **Körper:** Im Raum „Anderer Körper“ ein langsames Ankommen im neuen Körper: Gewicht, Haut, Brust,
    Becken, Geschlecht, wie es sich anfühlt.
-4. **Begegnung:** Das Gegenüber erscheint, Blick, Nähe, erste Berührung, deutliche Erregung, klare
-   anatomische Worte.
+4. **Begegnung:** Das Gegenüber erscheint: Blick, Nähe, erste Berührung, Wärme und Begehren. Körper
+   dürfen benannt werden, sexuelle Handlungen werden nicht beschrieben.
 5. **Offenes Ende:** Die Szene endet dort, wo es intim wird: „Was jetzt geschieht, erzählt dir dein Traum.“
    Kein Höhepunkt im Audio.
 6. **Absicht** in Ich-Form, zwei- bis dreimal, dann Nachklang und Stille.
@@ -144,9 +145,21 @@ werden. Nach der Begegnung muss der Text aber wieder ruhig werden, damit man ein
   Fantasie.
 - Ein Raum mit „Vielleicht“ wird beim ersten Mal kurz angekündigt: „Heute: Anderer Körper. Passt das?“
 - **Grenzen in allen Texten:** Alle Figuren sind ausdrücklich erwachsen. Jede Begegnung ist gewollt und
-  gegenseitig. Keine echten Personen außer, falls gewählt, dem eigenen Partner. Keine Gewalt, kein Zwang,
+  gegenseitig. Keine echten oder benannten Personen. Keine Gewalt, kein Zwang,
   auch im Raum „Führen und Hingeben“ ist das Einvernehmen hörbar.
 - Wechsel jederzeit: „Heute lieber sanft“ als Knopf vor dem Start.
+
+### Grenze für die Texte: erotisch, nicht explizit
+
+Die Fantasie-Räume bleiben **sinnlich und andeutend**, eher wie ein erotischer Roman als wie ein Hörspiel
+für Erwachsene. Das hält sie im Rahmen der Aufklärung, im Rahmen der Regeln von GitHub (siehe „Audio“) und
+rechtlich auf der sicheren Seite.
+
+- **Ja:** Körper, Haut, Wärme, Begehren, Blicke, Nähe, eine erste Berührung, ruhige anatomische Wörter für
+  den eigenen Körper.
+- **Nein:** Beschreibung sexueller Handlungen, Bewegungen oder Abläufe, Dirty Talk, Steigerung bis zum
+  Höhepunkt, Geräusche.
+- Die Szene endet **vor** der Intimität. Was danach kommt, gehört dem Traum.
 
 ### Beispieltext: Anderer Körper (Ausschnitt, Stimme ruhig, Tempo wie Einschlaf-Reise)
 
@@ -226,8 +239,11 @@ Für die Audios gilt `einschlaf-reise-textvorgabe.md`, mit diesen Abweichungen:
 - Die Absicht ist die einzige Stelle in Ich-Form, damit man sie innerlich mitsprechen kann.
 - Die Begleitung nach dem nächtlichen Wecken ist noch leiser und kürzer (fünf bis acht Minuten Sprache,
   dann zehn Minuten Klangteppich), ohne Ankommen.
-- **Nur Fantasie-Räume:** Handlung bis zur Schwelle der Intimität erlaubt, klare anatomische Worte für
-  beide Körper, Erregung darf wachsen. Kein Dirty Talk, kein Höhepunkt, offenes Ende, danach wieder ruhig.
+- **Nur Fantasie-Räume:** eine kurze Handlung bis zur Schwelle der Intimität ist erlaubt, Körper und
+  Begehren dürfen benannt werden. Sexuelle Handlungen werden nicht beschrieben (siehe „Grenze für die
+  Texte“). Kein Dirty Talk, kein Höhepunkt, offenes Ende, danach wieder ruhig.
+- In App-Texten keine Erfolgszahlen aus Studien („25–50 %“ o. Ä.); sie stammen meist von geübten
+  Teilnehmenden und wecken falsche Erwartungen.
 
 Texte am Tag (Realitätscheck, Tagebuch) sind neutral, damit eine Benachrichtigung im Büro nichts verrät.
 
@@ -243,7 +259,7 @@ gut 100 MB Audio in der APK (davon 25 MB Einschlaf-Reise), dazu 77 MB englisches
 
 | Weg | Vorteile | Nachteile |
 |---|---|---|
-| **A. Alles in der APK** | einfach, sofort offline | APK wächst stark; jede Textkorrektur braucht ein App-Update; explizite Aufnahmen in jeder APK |
+| **A. Alles in der APK** | einfach, sofort offline | APK wächst stark; jede Textkorrektur braucht ein App-Update; sinnliche Inhalte in jeder APK |
 | **B. Traum-Reise als eigenes Paket** | APK bleibt, wie sie ist; nur wer will, lädt | ein weiteres Sonderpaket neben dem englischen |
 | **C. Alle Audios aus der App lösen** | kleine APK; Audios unabhängig von App-Versionen; ein einheitlicher Weg für alle Sprachen | erster Start braucht Download; Umbau bestehender Funktionen |
 
@@ -258,6 +274,9 @@ Geräte-Stimme. Das wird verallgemeinert:
    - `traum-sanft-de`, `traum-sanft-en`: Traumbilder, Absichten, Wecken.
    - `traum-fantasie-de`, `traum-fantasie-en`: Fantasie-Räume. Nur sichtbar und ladbar im Spicy-Modus mit
      freigeschalteten Fantasie-Räumen.
+   - **Pakete enthalten Aufnahmen und Texte.** Die Texte der Fantasie-Räume liegen nicht in `assets/data/`,
+     sondern im Paket (z. B. `texte.json` neben den Aufnahmen). So bleibt das Code-Repository sachlich und
+     aufklärend, und ein Streit um Inhalte kann nie Code, Issues und Releases treffen.
 2. **Später:** Auch Einschlaf-Reise, Selbsterkundung, Paar-Abend und Lektionen wandern in Pakete. In der
    APK bleiben nur die kleinen Ansagen (`cues`, unter 1 MB) und vielleicht die erste Lektion, damit die App
    ohne Download sofort etwas abspielt.
@@ -273,13 +292,25 @@ Traum-Reise auf Deutsch will, lädt nur diese, und eine korrigierte Aufnahme ern
 
 ### Vorteile für Diskretion und Verbreitung
 
-- Die APK enthält keine expliziten Aufnahmen. Wer die App installiert, bekommt erst einmal nichts
-  Eindeutiges auf das Gerät.
+- Die APK enthält keine Fantasie-Räume. Wer die App installiert, bekommt erst einmal nichts Eindeutiges
+  auf das Gerät.
 - Das Fantasie-Paket lädt nur, wer es ausdrücklich will, nach dem Hinweisschirm.
-- **Zu prüfen:** Die Nutzungsbedingungen von GitHub schränken sexuell explizite Inhalte ein. Für
-  Texte und sanfte Aufnahmen dürfte das unkritisch sein, für das Fantasie-Paket sollte der Ablageort vorher
-  geklärt werden (eigener Speicher, z. B. ein Objektspeicher mit Prüfsummen). Das signierte Verzeichnis
-  macht den Ort austauschbar.
+
+### Ablageort
+
+- **Zunächst GitHub-Releases**, wie das englische Audiopaket. Das ist vertretbar, weil die Inhalte
+  erotisch, aber nicht explizit sind: GitHubs Richtlinie erlaubt sexuelle Inhalte in bildenden Zusammenhängen
+  und verbietet Inhalte, die kaum einem anderen Zweck dienen als einer erotischen Reaktion, sowie
+  Pornografie.
+- **Austauschbar halten:** Die App kennt nur die Adresse der `audio-index.json`; jedes Paket kann
+  **mehrere Adressen** haben, die App nimmt die erste, die antwortet, und prüft immer SHA-256. So lässt sich
+  ein Paket später ohne App-Update auf einen eigenen Server oder auf Blossom-Server (Nostr, Dateien über ihre
+  SHA-256 adressiert) verlegen oder spiegeln.
+- **Geprüft und verworfen:** Rainbow-Web (AGB § 9.2: keine reinen Download-Angebote, Traffic dann 0,19 € je
+  MB) und netcup (AGB § 5.5: kein Material mit pornografischem oder kommerziell erotischem Charakter). Bei
+  Hetzner sind pornografische Inhalte ausgeschlossen, erotische nicht ausdrücklich.
+- **Verbreitung über F-Droid:** möglich, die App bekommt dort den Hinweis „NSFW“. Codeberg ist kein
+  großzügigerer Ersatz für GitHub, sondern hat eigene Inhaltsregeln.
 
 ### Ohne Paket
 
@@ -324,16 +355,24 @@ Einschlaf-Begleitungen weniger; dort zeigt die App vor dem Start „Aufnahmen la
 Reihenfolge: Paketverwaltung und Tagebuch zuerst, dann sanfte Traum-Absicht, dann Fantasie-Räume, dann
 nächtliches Wecken.
 
-## Offene Fragen
+## Entscheidungen (26.10.2026)
 
-1. Name: **Traum-Reise**, „Traumwerkstatt“ oder „Klarträumen“?
-2. Nächtliches Wecken in Version 1 oder später?
-3. **Gemeinsames Traumbild** für Paare: rein, später oder gar nicht?
-4. Fantasie-Raum **„Mit meinem Partner“**: aufnehmen? Dafür: schöne Brücke ins Paarleben. Dagegen: Druck
-   („Ich soll von dir träumen“), und der erste Entwurf wollte bewusst keine bestimmte Person.
-5. Welche Fantasie-Räume in Version 1? Vorschlag: Anderer Körper, Begegnung Frau, Begegnung Mann, Fremde
-   Nacht; Zu dritt, Ansehen sowie Führen und Hingeben später.
-6. Markierung „Höhepunkt“ im Tagebuch: behalten oder wirkt sie schon wie ein Ziel?
-7. Vier-Wochen-Ablauf mit Tagesschritten oder frei nutzbar?
-8. Audio: Schritt 1 (nur Traum-Reise als Pakete) jetzt, Schritt 2 (alle Audios aus der APK) später?
-   Und wo liegt das Fantasie-Paket?
+1. **Name:** Traum-Reise, im Diskretions-Modus „Träume“.
+2. **Nächtliches Wecken:** letztes Modul von Version 1 oder Update 1.1; im Ablauf ohnehin erst ab Woche 3.
+3. **Gemeinsames Traumbild:** später (Version 1.2), nur mit den fünf sanften Traumbildern, streng getrennt
+   von den Fantasie-Räumen.
+4. **„Mit meinem Partner“** wird zu **„Vertraute Nähe“**: ein tief vertrauter Mensch ohne Namen und ohne
+   das Wort „Partner“, damit kein Erwartungsdruck entsteht.
+5. **Fantasie-Räume in Version 1:** Anderer Körper, Begegnung mit einer Frau, Begegnung mit einem Mann,
+   Fremde Nacht, Vertraute Nähe. Zu dritt, Ansehen und angesehen werden sowie Führen und Hingeben kommen
+   später als Paket ohne App-Update.
+6. **„Höhepunkt“ bleibt** als Markierung im Tagebuch, als reine Beobachtung neben „sinnlich“ und
+   „unangenehm“. Eine Ansicht, nach welchen Räumen welche Markierungen vorkamen, ist nur privat und still:
+   keine Rangliste, keine Hervorhebung, keine Empfehlung „mehr davon“.
+7. **Ablauf:** „Sanfter Pfad“ mit Wochen-Stufen als Standard (Erinnern, Bemerken, Klar werden, Gestalten),
+   dazu ein Schalter „Alles freischalten“. Fantasie-Räume sind im Spicy-Modus ab Tag 1 wählbar.
+8. **Audio:** Schritt 1 (Paketverwaltung mit signierter `audio-index.json`, zunächst nur für die
+   Traum-Reise) jetzt, Schritt 2 (alle Audios aus der APK) später. Pakete enthalten Aufnahmen **und** Texte.
+   Ablage zunächst auf GitHub-Releases, mehrere Adressen je Paket möglich (siehe „Ablageort“).
+9. **Keine expliziten Inhalte:** Die Fantasie-Räume sind erotisch, nicht explizit (siehe „Grenze für die
+   Texte“).
