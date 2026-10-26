@@ -17,8 +17,12 @@ einer Funktion das passende Konzept lesen, besonders den Abschnitt „Entscheidu
 Ist eine Frage für den aktuellen Schritt noch offen, nachfragen statt raten.
 
 - Einschlaf-Reise: `docs/konzepte/einschlaf-reise.md`, Texte nach `docs/konzepte/einschlaf-reise-textvorgabe.md`
-- Traum-Reise: `docs/konzepte/traum-reise.md` (Entwurf; Reihenfolge: Paketverwaltung und Traumtagebuch,
+- Traum-Reise: `docs/konzepte/traum-reise.md` (abgestimmt, Entscheidungen am Ende; Reihenfolge: Paketverwaltung und Traumtagebuch,
   dann sanfte Traum-Absicht, dann Fantasie-Räume, dann nächtliches Wecken)
+
+**Grundsatz Inhalte:** Langfristig werden alle Inhalte (Texte und Audios) getrennt von der App als
+signierte Pakete angeboten. Neue Inhalte deshalb so anlegen, dass sie in ein Paket wandern können; nur
+Onboarding, SOS, Sicherheits- und Gesundheitshinweise, Datenschutz und Anleitung bleiben fest in der App.
 
 Weitere Hintergründe: `docs/AENDERUNGEN_SEIT_UEBERNAHME.md` (Entscheidungen und Stolperfallen),
 `docs/SICHERHEIT_AUDIT_BASELINE.md`, Bedienung in `docs/ANLEITUNG.md` / `docs/GUIDE.md`.
