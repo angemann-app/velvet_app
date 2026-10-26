@@ -63,4 +63,8 @@ Aussprache-Meldungen“ melden.
 
 ## Erledigt
 
-- 2026-10-26, `ag/2-traum-sanft` (AG-2): Texte der Traum-Reise nach Textvorgabe überarbeitet (`tools/content/traum/sanft.json` mit 39 Bausteinen DE/EN; Teil B lokal unter `C:\TOOLS\velvet-inhalte\traum\fantasie.json` mit 31 Bausteinen DE/EN).
+- 2026-10-26, Branch `ag/2-traum-sanft` (AG-2):
+  - **Repository-Aktionen:** Branch `ag/2-traum-sanft` von `main` (`61e72e1`) abgezweigt, `tools/content/traum/sanft.json` (neu, 39 Bausteine je `de`/`en`) und `AG.md` geändert, Commit `5c25f89` nach `origin/ag/2-traum-sanft` gepusht, Pull Request [#11](https://github.com/angemann-app/velvet_app/pull/11) gegen `main` eröffnet (`flutter test` grün).
+  - **Lokal außerhalb des Repos:** `C:\TOOLS\velvet-inhalte\traum\fantasie.json` (31 Bausteine je `de`/`en` für die 5 Fantasie-Räume) erstellt.
+- 2026-10-26, Branch `aussprache/2026-10-26` (AG-1):
+  - **Repository-Aktionen:** Branch `aussprache/2026-10-26` von `main` (`61e72e1`) abgezweigt, in `tools/aussprache.json` 16 Lautschrift-Einträge (`singles`, `liefert`, `liefern`, `aftercare`, `genitalien`, `scannt`, `scannen`, `atemzug`, `atemzüge`, `atemzügen`, `atemhauch`, `atemtechnik`, `atemkontrolle`, `liegen`, `app`, `apps`) ergänzt; neu eingesprochene Audios unter `assets/audio/` (`alltag_11.opus`, `spduo_5.opus`, `spduo_6.opus`, `anat_1.opus`, `scen_1.opus`, `scen_4.opus`, `desire_4.opus`, `einschlaf/victoria_sinken_kurz_1.opus`, `einschlaf/dauer.json`) sowie `AG.md` aktualisiert, Commit `953253e` nach `origin/aussprache/2026-10-26` gepusht, Pull Request [#12](https://github.com/angemann-app/velvet_app/pull/12) gegen `main` eröffnet.
