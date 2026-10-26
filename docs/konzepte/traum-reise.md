@@ -345,7 +345,7 @@ Traum-Reise auf Deutsch will, lädt nur diese, und eine korrigierte Aufnahme ern
   Gebühr. GitHub-Releases bleiben zweite Adresse.
 - **Hochladen nach R2 über GitHub Actions:** Ein Workflow lädt neue Pakete beim Release nach R2 und
   aktualisiert `audio-index.json`. Zugang über einen R2-API-Token mit Object Read & Write nur für diesen
-  Bucket, hinterlegt als Repository-Secrets `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_ACCOUNT_ID`.
+  Bucket, hinterlegt als Repository-Secrets `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_ENDPOINT` (S3-API-Adresse des Buckets). Verbindungstest: `.github/workflows/r2-verbindungstest.yml`.
   Token und Secrets legt der Nutzer selbst an, wenn der Workflow gebaut wird; Schlüssel nie in Code oder Chat.
   Für den Dauerbetrieb eine eigene Domain verbinden statt der Test-Adresse von Cloudflare.
 - **Geprüft und verworfen:** Rainbow-Web (AGB § 9.2: keine reinen Download-Angebote, Traffic dann 0,19 € je

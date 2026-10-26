@@ -1,0 +1,51 @@
+# Prüft die Verbindung zu Cloudflare R2: lädt eine kleine Testdatei hoch, liest sie zurück und löscht sie.
+# Start von Hand: GitHub → Actions → „R2-Verbindungstest“ → Run workflow.
+#
+# Benötigte Repository-Secrets (Settings → Secrets and variables → Actions):
+#   R2_ACCESS_KEY_ID      Access Key ID des R2-API-Tokens
+#   R2_SECRET_ACCESS_KEY  Secret Access Key des R2-API-Tokens
+#   R2_ENDPOINT           S3-API-Adresse aus den Bucket-Einstellungen, z. B.
+#                         https://<account-id>.r2.cloudflarestorage.com  (EU-Bucket: …<account-id>.eu.r2…)
+name: R2-Verbindungstest
+
+on:
+  workflow_dispatch:
+    inputs:
+      bucket:
+        description: Name des R2-Buckets
+        default: velvetpulse-pakete
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      BUCKET: ${{ inputs.bucket }}
+    steps:
+      - name: Secrets vorhanden?
+        run: |
+          fehlt=0
+          for n in AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY R2_ENDPOINT; do
+            if [ -z "${!n}" ]; then echo "::error::Secret für $n fehlt"; fehlt=1; fi
+          done
+          exit $fehlt
+
+      - name: Testdatei hochladen, zurücklesen, löschen
+        run: |
+          set -euo pipefail
+          inhalt="velvetpulse r2-test $(date -u +%Y-%m-%dT%H:%M:%SZ) ${GITHUB_RUN_ID}"
+          echo "$inhalt" > test.txt
+          ziel="s3://${BUCKET}/_test/verbindung-${GITHUB_RUN_ID}.txt"
+          aws s3 cp test.txt "$ziel" --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          aws s3 cp "$ziel" zurueck.txt --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          cmp test.txt zurueck.txt
+          aws s3 rm "$ziel" --endpoint-url "$R2_ENDPOINT" --only-show-errors
+          echo "### R2-Verbindung funktioniert ✅" >> "$GITHUB_STEP_SUMMARY"
+          echo "Bucket \`${BUCKET}\`: Hochladen, Lesen und Löschen erfolgreich." >> "$GITHUB_STEP_SUMMARY"
