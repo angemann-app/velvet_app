@@ -32,6 +32,8 @@ und selten.
 - **Orgasmus im Schlaf:** Kommt bei Menschen jeden Geschlechts natürlicherweise vor. **Er lässt sich weder
   auslösen noch üben** und ist kein Ziel des Programms. Die App erwähnt ihn als schöne Möglichkeit und
   normalisiert ihn (keine Scham, kein „Problem“), mehr nicht.
+  Wer den Höhepunkt im Traum ausdrücklich einladen möchte, findet dafür die eigene Serie „Lust im Traum“
+  (`docs/konzepte/lust-im-traum.md`).
 - Kein Versprechen von Heilung, besserer Beziehung oder mehr Lust im Wachleben.
 
 Formulierung in der App (Vorschlag): „Träume lassen sich einladen, nicht steuern. Mit etwas Übung
