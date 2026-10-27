@@ -329,6 +329,16 @@ kommen neue Pakete und korrigierte Aufnahmen **ohne App-Update**. Das Verzeichni
 Ed25519-Schlüssel signiert (`cryptography` ist schon dabei), damit niemand fremde Audios unterschieben kann,
 auch wenn die Pakete einmal woanders liegen als auf GitHub.
 
+Ergänzt nach Hinweisen aus der Nostr-Community (26.10.2026):
+- **Prüfschlüssel fest in der App:** Der öffentliche Ed25519-Schlüssel steckt im Code, er wird nie zusammen
+  mit den Paketen geladen. Der private Schlüssel liegt nur außerhalb des Repositorys (wie der Signierschlüssel
+  der App).
+- **Schutz vor Zurückrollen:** Im signierten Verzeichnis stehen eine **Formatversion** und eine **stetig
+  steigende Laufnummer**. Die App merkt sich die höchste angenommene Laufnummer und lehnt jedes Verzeichnis mit
+  kleinerer Nummer ab, auch wenn es gültig signiert ist. So lässt sich kein altes Paket als „Update“
+  unterschieben.
+- **Prüfung offline:** Signatur und SHA-256 werden auf dem Gerät geprüft, ohne Dienst im Netz.
+
 **Pakete können klein sein:** Nicht ein großes ZIP pro Sprache, sondern ein Paket pro Thema. Wer nur die
 Traum-Reise auf Deutsch will, lädt nur diese, und eine korrigierte Aufnahme erneuert nur ihr Paket.
 
