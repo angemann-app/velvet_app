@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -190,7 +191,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String coursesOverallProgressCompletedcountOfTotallessons(
-      Object completedCount, Object totalLessons) {
+    Object completedCount,
+    Object totalLessons,
+  ) {
     return 'Gesamtfortschritt: $completedCount von $totalLessons Lektionen';
   }
 
@@ -483,7 +486,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String sosModalCheckedlengthImmediatestepslengthDone(
-      Object checkedLength, Object immediateStepsLength) {
+    Object checkedLength,
+    Object immediateStepsLength,
+  ) {
     return '$checkedLength/$immediateStepsLength erledigt';
   }
 
@@ -684,7 +689,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String couplesChannelTheHistoryWithNameName(
-      Object name, Object name2, Object name3) {
+    Object name,
+    Object name2,
+    Object name3,
+  ) {
     return 'Der Verlauf mit $name, die Antworten von $name2 auf die Ja/Nein-Liste und die geteilten Reflexionen werden auf diesem Handy gelöscht. Deine eigenen Antworten bleiben erhalten.\n\nAuf dem Handy von $name3 ändert sich nichts.';
   }
 
@@ -810,7 +818,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String paarAbendPartnernamePartnernameGivesYouReceive(
-      Object partnerName, Object partnerName2) {
+    Object partnerName,
+    Object partnerName2,
+  ) {
     return '$partnerName$partnerName2 gibt · du empfängst';
   }
 
@@ -915,7 +925,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String pairingModalYouReCurrentlyConnectedWith(
-      Object old, Object old2, Object old3) {
+    Object old,
+    Object old2,
+    Object old3,
+  ) {
     return 'Du bist gerade mit $old verbunden. Diese Verbindung wird ersetzt, und der Verlauf mit $old2, die Antworten von $old3 und die geteilten Reflexionen werden auf diesem Handy gelöscht.';
   }
 
@@ -1240,7 +1253,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String yesNoMaybeQuestionsAnsweredcountTotalitems(
-      Object answeredCount, Object totalItems) {
+    Object answeredCount,
+    Object totalItems,
+  ) {
     return 'Fragenkatalog ($answeredCount/$totalItems)';
   }
 
@@ -1305,7 +1320,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(
-      Object yesMatchesLength, Object curiosityMatchesLength) {
+    Object yesMatchesLength,
+    Object curiosityMatchesLength,
+  ) {
     return '$yesMatchesLength gemeinsame Ja-Übereinstimmungen & $curiosityMatchesLength Neugier-Punkte entdeckt!';
   }
 
@@ -1466,7 +1483,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String beliefLibraryViewRealitycheckPracticalShiftPracticalshift(
-      Object realityCheck, Object practicalShift) {
+    Object realityCheck,
+    Object practicalShift,
+  ) {
     return '$realityCheck\n\nPraktischer Shift: $practicalShift';
   }
 
@@ -1627,13 +1646,17 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String kegelTimerViewRoundCurrentroundOfTotalrounds(
-      Object currentRound, Object totalRounds) {
+    Object currentRound,
+    Object totalRounds,
+  ) {
     return 'Runde $currentRound von $totalRounds';
   }
 
   @override
   String kegelTimerViewPhaseCurrentphaseindexPhaseslength(
-      Object currentPhaseIndex, Object phasesLength) {
+    Object currentPhaseIndex,
+    Object phasesLength,
+  ) {
     return 'Phase $currentPhaseIndex/$phasesLength';
   }
 
@@ -2038,7 +2061,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String dailyCheckinCardStressStresslevelPressurePressurelevel(
-      Object stressLevel, Object pressureLevel) {
+    Object stressLevel,
+    Object pressureLevel,
+  ) {
     return 'Stress: $stressLevel • Druck: $pressureLevel';
   }
 
@@ -2728,7 +2753,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String aiServiceConnectionSuccessfulModelslengthModelsAvailable(
-      Object modelsLength, Object join) {
+    Object modelsLength,
+    Object join,
+  ) {
     return 'Verbindung erfolgreich! $modelsLength Modelle verfügbar (z. B. $join).';
   }
 
@@ -2742,11 +2769,12 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String aiServiceUserContextNameProfilenameGender(
-      Object profileName,
-      Object genderLabel,
-      Object age,
-      Object relationshipLabel,
-      Object goalLabel) {
+    Object profileName,
+    Object genderLabel,
+    Object age,
+    Object relationshipLabel,
+    Object goalLabel,
+  ) {
     return '\n\nKONTEXT DES NUTZERS:\n- Name/Rufname: $profileName\n- Geschlecht: $genderLabel\n- Alter: $age Jahre\n- Beziehungsstatus: $relationshipLabel\n- Hauptfokus: $goalLabel\nSprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an.';
   }
 
@@ -2817,7 +2845,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String nostrServiceCountOfFallbackrelayslengthServers(
-      Object count, Object fallbackRelaysLength) {
+    Object count,
+    Object fallbackRelaysLength,
+  ) {
     return '$count von $fallbackRelaysLength Servern';
   }
 
@@ -2827,7 +2857,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String nostrServiceHaveAReadLessontitleCoursetitle(
-      Object lessonTitle, Object courseTitle) {
+    Object lessonTitle,
+    Object courseTitle,
+  ) {
     return '📖 Lies mal: „$lessonTitle“ ($courseTitle)';
   }
 
@@ -3796,4 +3828,90 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get rueckblickKeineMarken => 'ohne Markierung';
+
+  @override
+  String get realitaetTitel => 'Realitätscheck';
+
+  @override
+  String get realitaetFrage => 'Träume ich gerade?';
+
+  @override
+  String get realitaetEinleitung =>
+      'Ein kurzer Moment der Achtsamkeit. Wenn du dich tagsüber fragst, ob du wach bist, taucht diese Gewohnheit auch im Traum auf.';
+
+  @override
+  String get realitaetUebungHaendeTitel => 'Auf die Hände schauen';
+
+  @override
+  String get realitaetUebungHaendeText =>
+      'Sieh dir deine Handflächen und Finger aufmerksam an. Im Traum verändern Hände oft ihre Form oder Linien.';
+
+  @override
+  String get realitaetUebungFingerTitel => 'Finger durch die Handfläche';
+
+  @override
+  String get realitaetUebungFingerText =>
+      'Drücke sanft mit einem Finger gegen deine andere Handfläche. Stell dir vor, hindurchzugleiten. Im Traum gibt feste Materie manchmal nach.';
+
+  @override
+  String get realitaetUebungTextTitel => 'Text zweimal lesen';
+
+  @override
+  String get realitaetUebungTextText =>
+      'Lies eine Zeile oder eine Uhrzeit, schau kurz weg und lies noch einmal. Im Traum wechseln Buchstaben und Ziffern oft ihr Aussehen.';
+
+  @override
+  String get realitaetBestaetigenWach => 'Ich bin wach';
+
+  @override
+  String get realitaetBestaetigenTraum => 'Ich träume!';
+
+  @override
+  String get realitaetErinnerungenAktiv => 'Erinnerungen am Tag';
+
+  @override
+  String realitaetZeitfenster(int von, int bis) {
+    return 'Zeitfenster: $von bis $bis Uhr';
+  }
+
+  @override
+  String realitaetAnzahlTag(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Erinnerungen pro Tag',
+      one: '1 Erinnerung pro Tag',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get realitaetMotiveTitel => 'Motive aus deinem Tagebuch';
+
+  @override
+  String get realitaetMotiveKeine =>
+      'Sobald du mehr Notizen im Tagebuch hast, schlägt die App hier wiederkehrende Bilder als Auslöser vor.';
+
+  @override
+  String realitaetMotivSatz(String wort) {
+    return 'Wenn ich $wort sehe, frage ich mich, ob ich träume.';
+  }
+
+  @override
+  String get realitaetMitteilungTitel => 'Kurzer Moment für dich';
+
+  @override
+  String get realitaetMitteilungText =>
+      'Nimm dir einen kurzen Augenblick Zeit.';
+
+  @override
+  String get realitaetHinweisXiaomi =>
+      'Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein.';
+
+  @override
+  String get realitaetKanalName => 'Achtsamkeit';
+
+  @override
+  String get realitaetKanalBeschreibung =>
+      'Erinnerungen für den Realitätscheck am Tag';
 }

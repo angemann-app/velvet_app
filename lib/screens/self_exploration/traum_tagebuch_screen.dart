@@ -6,6 +6,7 @@ import '../../models/traum_eintrag.dart';
 import '../../models/traum_rueckblick.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import 'realitaetscheck_screen.dart';
 
 /// Traumtagebuch (docs/konzepte/traum-reise.md, „Traumtagebuch“): morgens kurz festhalten, woran man sich
 /// erinnert, mit Markierungen. Ruhig und dunkel; „Nichts erinnert“ zählt auch.
@@ -87,7 +88,36 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppTheme.background,
-      appBar: AppBar(backgroundColor: AppTheme.background, title: Text(t.tagebuchTitel)),
+      appBar: AppBar(
+        backgroundColor: AppTheme.background,
+        title: Text(t.tagebuchTitel),
+        actions: [
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.more_vert_rounded, color: AppTheme.textSecondary),
+            color: AppTheme.surface,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            onSelected: (val) {
+              if (val == 'realitaetscheck') {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const RealitaetscheckScreen()),
+                );
+              }
+            },
+            itemBuilder: (_) => [
+              PopupMenuItem(
+                value: 'realitaetscheck',
+                child: Row(
+                  children: [
+                    const Icon(Icons.touch_app_outlined, size: 18, color: AppTheme.textSecondary),
+                    const SizedBox(width: 10),
+                    Text(t.realitaetTitel, style: const TextStyle(color: AppTheme.textPrimary)),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
