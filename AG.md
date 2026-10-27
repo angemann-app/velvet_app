@@ -105,6 +105,29 @@ Entscheidungslogik (Lautsprecher → Dialog, Kopfhörer/Bluetooth → kein Dialo
 Im Pull Request unter „Für den Nutzer“: auf dem Handy testen mit und ohne Kopfhörer, Kopfhörer während eines
 Abends abziehen, Bluetooth aus- und einschalten.
 
+### AG-9: Freiwilliges „Hallo“ (einmalig, nach AG-8)
+
+**Branch:** `ag/9-hallo`
+**Vorher lesen:** `docs/konzepte/hallo.md` (alles), `lib/services/rueckmeldung.dart`, `lib/screens/rueckmeldung_screen.dart`.
+**Darf ändern:** `lib/services/rueckmeldung.dart` (nur eine Funktion für das Hallo, gleicher Versandweg),
+die Profil-Einstellungen (ein Eintrag „Einmal anonym Hallo sagen“), `lib/services/storage_service.dart`,
+`lib/services/backup_codec.dart` und `test/backup_merge_test.dart` (nur der Merker „gesendet am“),
+`tools/rueckmeldungen_abholen.dart` (Hallos getrennt zählen), neue Tests `test/hallo_test.dart`, ARB (Präfix
+`hallo`), erzeugte `app_localizations*.dart`, Anleitung (Datenschutz-Abschnitt in `assets/data/anleitung.json`,
+`translations/en/anleitung.json`, `docs/ANLEITUNG.md`, `docs/GUIDE.md`).
+
+1. Eintrag im Profil mit kurzem Text: was gesendet wird (nur Version und Sprache), wie (verschlüsselt, ohne
+   Absender) und dass es freiwillig ist. Knopf „Hallo sagen“; danach „Danke, gesendet am …“, kein zweites Mal.
+2. Versand wie bei den Rückmeldungen (NIP-17, Gift Wrap, Einmal-Schlüssel), mit einer eigenen Art `hallo`,
+   damit das Abholwerkzeug sie erkennt. Inhalt ausschließlich Version und Sprache.
+3. `tools/rueckmeldungen_abholen.dart`: Hallos am Ende als Zählung ausgeben („Hallo: 3 (de 2, en 1; 4.13.0: 3)“),
+   nicht einzeln. Den privaten Schlüssel nie ausgeben.
+4. Nie automatisch senden, auch nicht nach Updates oder Wiederherstellung.
+
+**Prüfen:** `flutter analyze --no-fatal-infos --no-fatal-warnings`, `flutter test`, Screen-Test; Tests: Inhalt
+enthält nur Version und Sprache, ohne Tipp wird nichts gesendet, nach dem Senden kein zweites Mal, Merker in
+Sicherung und Backup-Merge. Übersetzung stempeln und PO abgleichen.
+
 ### AG-3: Texte für „Lust im Traum“ (an Claude Code abgegeben)
 
 Der Inhaltsfilter von Antigravity bricht diese Texte ab. Claude Code schreibt sie (lokal unter
