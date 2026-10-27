@@ -24,8 +24,8 @@ Ist eine Frage für den aktuellen Schritt noch offen, nachfragen statt raten.
 
 **Antigravity:** Arbeitet parallel auf dem Rechner des Nutzers nach `AG.md` (dort „Wer macht was“).
 Claude schreibt die Aufträge (klar abgegrenzt, mit erlaubten Dateien), prüft die Pull Requests von
-Antigravity vor dem Zusammenführen (Kommentar im PR, Kleinigkeiten auf Wunsch im Branch nachbessern) und
-trägt nach dem Zusammenführen unter „Erledigt“ ein. Antigravity ändert `AG.md` in seinen Branches nicht.
+Antigravity (Kommentar im PR, Kleinigkeiten auf Wunsch im Branch nachbessern), führt **alle** Pull Requests
+selbst zusammen (bei Aufnahmen und Texten erst nach dem OK des Nutzers) und trägt unter „Erledigt“ ein. Antigravity ändert `AG.md` in seinen Branches nicht.
 Dateien, an denen Claude Code gerade arbeitet, mit Datum unter „Gesperrt“ eintragen und nach Abschluss
 wieder freigeben. Rückmeldungen holt Claude mit `tools/rueckmeldungen_abholen.dart` (eigener Lesestand),
 Antigravity mit `--leser ag`.
