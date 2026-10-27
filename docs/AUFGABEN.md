@@ -34,6 +34,11 @@ Paketverwaltung mit signierter `audio-index.json` (englisches Paket muss weiter 
 Upload-Workflow nach Cloudflare R2. Danach in eigener Sitzung das Traumtagebuch.
 Details: `docs/konzepte/traum-reise.md`.
 
+## 4. Lust im Traum (aufbauende Serie)
+
+Konzept (Entwurf, offene Fragen): `docs/konzepte/lust-im-traum.md`. Baut auf Traum-Reise Schritt 1,
+Traumtagebuch und nächtlichem Wecken auf, kommt daher danach.
+
 ## Laufend: Aussprache korrigieren (täglich)
 
 Übernimmt Antigravity als Auftrag **AG-1** in `AG.md` (dort der genaue Ablauf). Kurzfassung:
