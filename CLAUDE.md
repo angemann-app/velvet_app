@@ -74,8 +74,13 @@ flutter test test_screens/screens_test.dart   # rendert alle Screens nach build/
 - Aufnahmen entstehen lokal mit Kokoro (Stimmen Victoria und Martin) über `tools/generate_audio.py`
   (Windows-venv unter `C:\TOOLS\kikiri-venv`, siehe README). In dieser Umgebung meist nicht ausführbar:
   Texte vorbereiten, Einsprechen macht der Nutzer.
-- Fehlt eine Aufnahme, liest die Geräte-Stimme. Englisch kommt als nachladbares Audiopaket
-  (`AudioPaket` in `lib/services/sprachausgabe.dart`, Releases `audio-en-vN`; ältere Pakete nie löschen).
+- **Aufnahmen sind ausgelagert** (seit 4.10.0): Pakete `de-lektionen`, `de-gefuehrt`, `en-lektionen`,
+  `en-gefuehrt` (`lib/services/pakete.dart`), aufgelistet im signierten Verzeichnis `audio-index.json`
+  (`lib/services/paket_verzeichnis.dart`, Ed25519, Laufnummer gegen Zurückrollen). In der APK bleiben nur
+  Beckenboden-Ansagen, Klangschale, Klangteppich und `dauer.json`. Nach neuen Aufnahmen: Version in
+  `tools/pakete/versionen.json` hochzählen, dann `tools/pakete_hochladen.ps1`. Fehlt eine Aufnahme, liest
+  die Geräte-Stimme. Das alte englische Paket (`AudioPaket`, Releases `audio-en-vN`) wird weiter gelesen;
+  ältere Pakete und Releases nie löschen.
 - Aussprache-Korrekturen in `tools/aussprache.json`.
 
 ## Git

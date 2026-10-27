@@ -125,7 +125,7 @@ Nach einem Update zeigt „Was ist neu“ einmal, was sich geändert hat.
 
 Die App gibt es auf Deutsch und Englisch. Sie richtet sich nach der Sprache deines Handys, im Profil kannst du sie umstellen.
 
-Die englischen Aufnahmen lädst du dort bei Bedarf als Paket nach. Ohne Paket liest die Stimme deines Handys vor.
+Die Aufnahmen von Victoria und Martin lädst du im Profil unter „Aufnahmen“ nach, getrennt nach Lektionen und geführten Audios, auf Deutsch wie auf Englisch. Sie sind nicht mehr in der App selbst, damit sie klein bleibt und korrigierte Aufnahmen ohne Update kommen. Fehlt eine Aufnahme, liest die Stimme deines Handys vor.
 
 
 ## Hilfe und Rückmeldung

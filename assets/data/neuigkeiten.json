@@ -342,6 +342,17 @@
           "text": "Eine lange, ruhige Begleitung in den Schlaf, 60, 90 oder 120 Minuten. Du wählst einen Schwerpunkt oder lässt dich überraschen. Die Stimme wird immer leiser und seltener, am Ende bleibt ein leiser Klang. Zu finden bei den geführten Audios auf der Startseite. Deutsche Aufnahmen, die englischen folgen mit einem späteren Audiopaket."
         }
       ]
+    },
+    {
+      "build": 45,
+      "version": "4.10.0-beta.1",
+      "punkte": [
+        {
+          "icon": "record_voice_over",
+          "titel": "Aufnahmen zum Nachladen",
+          "text": "Die Stimmen von Victoria und Martin sind nicht mehr in der App selbst, sondern kommen als Pakete nach: Lektionen und geführte Audios, auf Deutsch und Englisch. Die App wird dadurch viel kleiner, und korrigierte Aufnahmen kommen ohne Update. Einmal im Profil unter „Aufnahmen“ laden, am besten im WLAN."
+        }
+      ]
     }
   ]
 }

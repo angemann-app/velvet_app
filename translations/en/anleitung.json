@@ -76,7 +76,7 @@
       "icon": "language",
       "titel": "Language and English recordings",
       "bild": "",
-      "text": "The app is available in German and English. It follows your phone's language, and you can change it in your profile.\nThere you can also download the English recordings as a pack. Without the pack, your phone's voice reads aloud."
+      "text": "The app is available in German and English. It follows your phone's language, and you can change it in your profile.\nYou download the recordings by Victoria and Martin in your profile under “Recordings”, split into lessons and guided audio, in German and in English. They're no longer inside the app itself, so it stays small and corrected recordings arrive without an update. If a recording is missing, your phone's voice reads aloud."
     },
     {
       "id": "hilfe",
@@ -95,7 +95,7 @@
     "guide:paar": "a32d29ccbd8bb1ec",
     "guide:reframing": "220d1604fa3c086a",
     "guide:spicy": "3c41844c35e12771",
-    "guide:sprache": "f25a4dfd7db85ffd",
+    "guide:sprache": "e06647757a6f7c49",
     "guide:start": "143baac086526c8b",
     "guide:training": "562d615a932eb37c",
     "guide:updates": "26cd13ac56425202"

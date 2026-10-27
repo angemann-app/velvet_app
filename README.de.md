@@ -40,8 +40,8 @@ Bremse nehmen – allein oder zu zweit.
 > weisen die Lektionen ausdrücklich darauf hin, wann eine Abklärung ratsam ist.
 
 Die App ist vollständig auch auf Englisch verfügbar. Auf Handys, die nicht auf Deutsch eingestellt sind,
-startet sie automatisch auf Englisch, umstellen lässt sich das im Profil. Die englischen Aufnahmen lädt
-man bei Bedarf in der App herunter.
+startet sie automatisch auf Englisch, umstellen lässt sich das im Profil. Die Aufnahmen (Deutsch und Englisch) lädt man in der App als
+Pakete nach; bis dahin liest die Stimme des Handys vor.
 
 ## Funktionen
 
@@ -60,7 +60,7 @@ man bei Bedarf in der App herunter.
   freiwillige Foto-Idee des Tages. Ohne ihn ist davon nichts zu sehen.
 - Jede Lektion folgt demselben Aufbau: **Warum das wirkt** · **Die Übung** ·
   **Einvernehmen und Sicherheit** · bei Bedarf **Wann ärztlich abklären**.
-- **Audio zu jeder Lektion** (offline, eingesprochen von den Stimmen Victoria und Martin).
+- **Audio zu jeder Lektion** (eingesprochen von den Stimmen Victoria und Martin, einmal als Paket geladen, danach offline).
 - **Anleitungsgrafiken** – antippen öffnet sie im Vollbild mit Zoom.
 - **Mein Lust-Profil:** festhalten, was gefällt, und es auf Wunsch dem Gegenüber schicken.
 
@@ -200,7 +200,8 @@ prüft `dart run tools/relays_pruefen.dart`.
 | Datei / Werkzeug | Zweck |
 |---|---|
 | `assets/data/velvet_content.json` | alle Kurse, Lektionen, SOS-Karten und Glaubenssätze |
-| `assets/audio/<lektions-id>.opus` | Audio je Lektion (fehlt sie, liest die Geräte-Sprachausgabe vor) |
+| `assets/audio/` | Quelle aller deutschen Aufnahmen; in die APK kommen nur die Beckenboden-Ansagen (`cues/`, Englisch in `cues_en/`), Klangschale und Klangteppich. Der Rest kommt als Paket |
+| `tools/pakete_hochladen.ps1` | Audio-Pakete bauen (`tools/pakete_bauen.py`, Versionen in `tools/pakete/versionen.json`), Verzeichnis `audio-index.json` signieren (`tools/pakete_verzeichnis.dart`, Schlüssel außerhalb des Repos), ins GitHub-Release `pakete` laden und nach Cloudflare R2 kopieren (Workflow `pakete-nach-r2.yml`) |
 | `tools/generate_audio.py` | Lektionen neu einsprechen, z. B. `tease_1` oder `--courses 8-17` (siehe unten) |
 | `tools/aussprache.json` | Aussprache-Wörterbuch für einzelne Wörter |
 | `translations/en/` | englische Fassung aller Inhalte, wird mit ausgeliefert; jede Änderung am deutschen Text muss dort nachgezogen werden, sonst schlägt `test/translation_test.dart` fehl |

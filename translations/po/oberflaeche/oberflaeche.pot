@@ -5746,3 +5746,93 @@ msgstr ""
 msgctxt "ui:einschlafBeendenText#text"
 msgid "Die Begleitung hört dann auf."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Recordings
+msgctxt "ui:aufnahmenTitel#text"
+msgid "Aufnahmen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download the spoken recordings by Victoria and Martin here, ideally on Wi-Fi. Without them, your phone's voice reads aloud.
+msgctxt "ui:aufnahmenText#text"
+msgid "Die gesprochenen Aufnahmen von Victoria und Martin lädst du hier nach, am besten im WLAN. Ohne sie liest die Stimme deines Handys vor."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Lessons
+msgctxt "ui:aufnahmenLektionen#text"
+msgid "Lektionen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guided audio
+msgctxt "ui:aufnahmenGefuehrt#text"
+msgid "Geführte Audios"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {mb}
+#. EN: {mb} MB
+msgctxt "ui:aufnahmenGroesse#text"
+msgid "{mb} MB"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {mb}
+#. EN: downloaded, {mb} MB
+msgctxt "ui:aufnahmenInstalliert#text"
+msgid "geladen, {mb} MB"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download
+msgctxt "ui:aufnahmenLaden#text"
+msgid "Laden"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {mb}
+#. EN: Download all ({mb} MB)
+msgctxt "ui:aufnahmenAlleLaden#text"
+msgid "Alle laden ({mb} MB)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Recordings downloaded.
+msgctxt "ui:aufnahmenFertig#text"
+msgid "Aufnahmen geladen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Downloading didn't work. Please check your internet connection and try again.
+msgctxt "ui:aufnahmenFehler#text"
+msgid "Laden hat nicht geklappt. Bitte prüfe die Internetverbindung und versuch es noch einmal."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The list of recordings can't be reached right now. Please try again later.
+msgctxt "ui:aufnahmenNichtErreichbar#text"
+msgid "Das Verzeichnis der Aufnahmen ist gerade nicht erreichbar. Bitte später noch einmal versuchen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download recordings
+msgctxt "ui:aufnahmenHinweisTitel#text"
+msgid "Aufnahmen laden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: So that Victoria and Martin voice the lessons and guided audio, download the recordings once. Until then, your phone's voice reads aloud.
+msgctxt "ui:aufnahmenHinweisText#text"
+msgid "Damit Victoria und Martin die Lektionen und geführten Audios sprechen, lade einmal die Aufnahmen. Bis dahin liest die Stimme deines Handys vor."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Later
+msgctxt "ui:aufnahmenSpaeter#text"
+msgid "Später"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: View
+msgctxt "ui:aufnahmenAnsehen#text"
+msgid "Ansehen"
+msgstr ""

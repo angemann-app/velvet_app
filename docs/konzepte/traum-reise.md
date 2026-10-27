@@ -436,8 +436,9 @@ nächtliches Wecken.
    keine Rangliste, keine Hervorhebung, keine Empfehlung „mehr davon“.
 7. **Ablauf:** „Sanfter Pfad“ mit Wochen-Stufen als Standard (Erinnern, Bemerken, Klar werden, Gestalten),
    dazu ein Schalter „Alles freischalten“. Fantasie-Räume sind im Spicy-Modus ab Tag 1 wählbar.
-8. **Audio:** Schritt 1 (Paketverwaltung mit signierter `audio-index.json`, zunächst nur für die
-   Traum-Reise) jetzt, Schritt 2 (alle Audios aus der APK) später. Pakete enthalten Aufnahmen **und** Texte.
+8. **Audio:** Schritt 1 (Paketverwaltung mit signierter `audio-index.json`) und **Schritt 2 (alle Audios aus
+   der APK, Deutsch und Englisch, je Sprache Lektionen und geführte Audios; Ansagen bleiben in der App)
+   zusammen mit 4.10.0** (Entscheidung des Nutzers 27.10.2026). Pakete enthalten Aufnahmen **und** Texte.
    Ablage: sanfte Pakete auf R2 und GitHub-Releases, Fantasie-Pakete nur auf R2 (siehe „Ablageort“).
 9. **Textgrenze geöffnet:** Die Fantasie-Räume sind deutlich erotisch bis an die Schwelle; die sexuelle
    Handlung selbst wird nicht beschrieben (siehe „Grenze für die Texte“).

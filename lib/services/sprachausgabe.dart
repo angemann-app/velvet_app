@@ -8,22 +8,25 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
 import 'paket_verzeichnis.dart';
+import 'pakete.dart';
 import 'sprache.dart';
 import 'tts_service.dart';
 import 'update_service.dart';
 
 /// Gesprochene Texte in der aktuellen Sprache.
 ///
-/// Deutsch: die Aufnahmen aus der App (assets/audio/…).
-/// Englisch: die Aufnahmen aus dem nachgeladenen englischen Audiopaket ([AudioPaket]); solange es
-/// fehlt oder eine Datei darin fehlt, liest die Geräte-Stimme den Text vor.
+/// Die Ansagen des Beckenboden-Trainings liegen in der App (Deutsch assets/audio/cues/, Englisch
+/// assets/audio/cues_en/). Alle anderen Aufnahmen kommen aus den nachgeladenen Paketen ([Pakete]); solange
+/// ein Paket oder eine Datei darin fehlt, liest die Geräte-Stimme den Text vor.
 class Sprachausgabe {
   static final TtsService _tts = TtsService();
 
   /// Aufnahme für [pfad] (z. B. 'audio/paar/victoria_ankommen_1.opus') oder null, wenn es keine gibt.
   static Source? quelle(String pfad) {
-    if (!Sprache.englisch) return AssetSource(pfad);
-    final datei = AudioPaket.datei(pfad);
+    if (pfad.startsWith('audio/cues/')) {
+      return AssetSource(Sprache.englisch ? 'audio/cues_en/${pfad.substring('audio/cues/'.length)}' : pfad);
+    }
+    final datei = Pakete.datei(pfad);
     return datei == null ? null : DeviceFileSource(datei);
   }
 
@@ -171,8 +174,8 @@ class AudioPaket {
 
   /// Entpackt [zipPfad] nach [ziel]: erst in einen Zwischenordner, dann in einem Schritt austauschen.
   /// Einträge, die aus dem Ordner ausbrechen würden (absolute Pfade, „..“), führen zum Abbruch.
-  @visibleForTesting
-  static Future<void> installieren(String zipPfad, String ziel) async {
+  /// [pflichtDatei] muss im Paket liegen, sonst gilt es als unvollständig.
+  static Future<void> installieren(String zipPfad, String ziel, {String pflichtDatei = 'audio/version.txt'}) async {
     final neu = Directory('$ziel.neu');
     if (neu.existsSync()) neu.deleteSync(recursive: true);
     neu.createSync(recursive: true);
@@ -195,7 +198,7 @@ class AudioPaket {
     } finally {
       await eingabe.close();
     }
-    if (!File('${neu.path}/audio/version.txt').existsSync()) {
+    if (!File('${neu.path}/$pflichtDatei').existsSync()) {
       neu.deleteSync(recursive: true);
       throw StateError('Paket unvollständig');
     }

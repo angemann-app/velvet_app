@@ -64,8 +64,13 @@ flutter:
     - translations/en/anleitung.json
     - translations/en/foto_ideen.json
     - assets/images/
-    - assets/audio/
+    # Aufnahmen kommen als Pakete nach (lib/services/pakete.dart, tools/pakete_bauen.py). In der App bleiben nur
+    # die Ansagen des Beckenboden-Trainings (Deutsch und Englisch), Klangschale, Klangteppich und die Längen der
+    # geführten Bausteine (für die Planung auch ohne Paket).
     - assets/audio/cues/
-    - assets/audio/paar/
-    - assets/audio/selbst/
-    - assets/audio/einschlaf/
+    - assets/audio/cues_en/
+    - assets/audio/paar/klangschale.opus
+    - assets/audio/paar/klangteppich.opus
+    - assets/audio/paar/dauer.json
+    - assets/audio/selbst/dauer.json
+    - assets/audio/einschlaf/dauer.json

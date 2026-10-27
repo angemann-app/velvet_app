@@ -4,7 +4,7 @@ import 'dart:math';
 
 import 'package:flutter/services.dart';
 
-import '../services/sprachausgabe.dart';
+import '../services/pakete.dart';
 import '../services/sprache.dart';
 import 'paar_abend.dart';
 
@@ -241,7 +241,7 @@ class EinschlafDaten {
 /// Inhalt einer dauer.json in der aktuellen Sprache; wirft, wenn es keine gibt.
 Future<String> _dauerText(String pfad) async {
   if (!Sprache.englisch) return rootBundle.loadString('assets/$pfad');
-  final datei = AudioPaket.datei(pfad);
+  final datei = Pakete.datei(pfad);
   if (datei == null) throw StateError('kein englisches Audiopaket');
   return File(datei).readAsString();
 }

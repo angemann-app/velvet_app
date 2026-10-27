@@ -125,7 +125,7 @@ After an update, “What's new” shows once what has changed.
 
 The app is available in German and English. It follows your phone's language, and you can change it in your profile.
 
-There you can also download the English recordings as a pack. Without the pack, your phone's voice reads aloud.
+You download the recordings by Victoria and Martin in your profile under “Recordings”, split into lessons and guided audio, in German and in English. They're no longer inside the app itself, so it stays small and corrected recordings arrive without an update. If a recording is missing, your phone's voice reads aloud.
 
 
 ## Help and feedback
