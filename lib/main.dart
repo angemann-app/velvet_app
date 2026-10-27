@@ -6,6 +6,7 @@ import 'services/storage_service.dart';
 import 'services/auto_backup_service.dart';
 import 'services/message_notifier.dart';
 import 'services/nostr_service.dart';
+import 'services/pakete.dart';
 import 'services/privacy_service.dart';
 import 'services/sprachausgabe.dart';
 import 'services/sprache.dart';
@@ -66,6 +67,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
     try {
       await Sprache.laden();
       await AudioPaket.init();
+      await Pakete.init();
     } catch (e) {
       debugPrint('Sprache init error: $e');
     }

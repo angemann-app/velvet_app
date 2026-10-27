@@ -3348,6 +3348,61 @@ class AppLocalizationsEn extends AppLocalizations {
   String get einschlafBeendenText => 'The guidance will then stop.';
 
   @override
+  String get aufnahmenTitel => 'Recordings';
+
+  @override
+  String get aufnahmenText =>
+      'Download the spoken recordings by Victoria and Martin here, ideally on Wi-Fi. Without them, your phone\'s voice reads aloud.';
+
+  @override
+  String get aufnahmenLektionen => 'Lessons';
+
+  @override
+  String get aufnahmenGefuehrt => 'Guided audio';
+
+  @override
+  String aufnahmenGroesse(int mb) {
+    return '$mb MB';
+  }
+
+  @override
+  String aufnahmenInstalliert(int mb) {
+    return 'downloaded, $mb MB';
+  }
+
+  @override
+  String get aufnahmenLaden => 'Download';
+
+  @override
+  String aufnahmenAlleLaden(int mb) {
+    return 'Download all ($mb MB)';
+  }
+
+  @override
+  String get aufnahmenFertig => 'Recordings downloaded.';
+
+  @override
+  String get aufnahmenFehler =>
+      'Downloading didn\'t work. Please check your internet connection and try again.';
+
+  @override
+  String get aufnahmenNichtErreichbar =>
+      'The list of recordings can\'t be reached right now. Please try again later.';
+
+  @override
+  String get aufnahmenHinweisTitel => 'Download recordings';
+
+  @override
+  String get aufnahmenHinweisText =>
+      'So that Victoria and Martin voice the lessons and guided audio, download the recordings once. Until then, your phone\'s voice reads aloud.';
+
+  @override
+  String get aufnahmenSpaeter => 'Later';
+
+  @override
+  String get aufnahmenAnsehen => 'View';
+
+  @override
   String get fotoErneutVersuchen => 'Try again now';
 
   @override

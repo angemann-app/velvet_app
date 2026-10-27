@@ -187,11 +187,11 @@ msgstr ""
 
 #. Abschnitt der Anleitung
 #. EN: The app is available in German and English. It follows your phone's language, and you can change it in your profile.
-#. EN: There you can also download the English recordings as a pack. Without the pack, your phone's voice reads aloud.
+#. EN: You download the recordings by Victoria and Martin in your profile under “Recordings”, split into lessons and guided audio, in German and in English. They're no longer inside the app itself, so it stays small and corrected recordings arrive without an update. If a recording is missing, your phone's voice reads aloud.
 msgctxt "guide:sprache#text"
 msgid ""
 "Die App gibt es auf Deutsch und Englisch. Sie richtet sich nach der Sprache deines Handys, im Profil kannst du sie umstellen.\n"
-"Die englischen Aufnahmen lädst du dort bei Bedarf als Paket nach. Ohne Paket liest die Stimme deines Handys vor."
+"Die Aufnahmen von Victoria und Martin lädst du im Profil unter „Aufnahmen“ nach, getrennt nach Lektionen und geführten Audios, auf Deutsch wie auf Englisch. Sie sind nicht mehr in der App selbst, damit sie klein bleibt und korrigierte Aufnahmen ohne Update kommen. Fehlt eine Aufnahme, liest die Stimme deines Handys vor."
 msgstr ""
 
 #. Abschnitt der Anleitung

@@ -42,7 +42,7 @@ brakes, then take your foot off the brake with exercises, breathing and touch, o
 > It does not replace medical or psychotherapeutic treatment. Where it matters medically, the lessons
 > say explicitly when it's wise to see a doctor.
 
-English recordings are an optional download inside the app; until then, your phone's voice reads aloud.
+The recordings (German and English) are downloaded inside the app as packs; until then, your phone's voice reads aloud.
 
 ## Features
 
@@ -61,7 +61,7 @@ English recordings are an optional download inside the app; until then, your pho
   photo idea of the day. Without it, none of this is visible.
 - Every lesson follows the same structure: **Why it works** · **The exercise** ·
   **Consent and safety** · where needed **When to see a doctor**.
-- **Audio for every lesson** (offline, voiced by Victoria and Martin).
+- **Audio for every lesson** (voiced by Victoria and Martin, downloaded once as a pack, then offline).
 - **Illustrations**: tap to open them full screen with zoom.
 - **My desire profile:** note down what you like and, if you want, send it to your partner.
 
@@ -202,7 +202,8 @@ relays pass on direct messages.
 | File / tool | Purpose |
 |---|---|
 | `assets/data/velvet_content.json` | all courses, lessons, SOS cards and beliefs (German original) |
-| `assets/audio/<lesson-id>.opus` | audio per lesson (if missing, the device's text-to-speech reads aloud) |
+| `assets/audio/` | source of all German recordings; not bundled in the APK except the pelvic floor cues (`cues/`, English in `cues_en/`), singing bowl and sound bed. The rest ships as packs |
+| `tools/pakete_hochladen.ps1` | build the audio packs (`tools/pakete_bauen.py`, versions in `tools/pakete/versionen.json`), sign the index `audio-index.json` (`tools/pakete_verzeichnis.dart`, key outside the repo), upload to the GitHub release `pakete` and copy to Cloudflare R2 (workflow `pakete-nach-r2.yml`) |
 | `tools/generate_audio.py` | re-record lessons, e.g. `tease_1` or `--courses 8-17` (see below) |
 | `tools/aussprache.json` | pronunciation dictionary for individual words |
 | `translations/en/` | English version of all content, shipped with the app; every change to a German text must be carried over there, otherwise `test/translation_test.dart` fails |

@@ -7,22 +7,26 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
+import 'paket_verzeichnis.dart';
+import 'pakete.dart';
 import 'sprache.dart';
 import 'tts_service.dart';
 import 'update_service.dart';
 
 /// Gesprochene Texte in der aktuellen Sprache.
 ///
-/// Deutsch: die Aufnahmen aus der App (assets/audio/…).
-/// Englisch: die Aufnahmen aus dem nachgeladenen englischen Audiopaket ([AudioPaket]); solange es
-/// fehlt oder eine Datei darin fehlt, liest die Geräte-Stimme den Text vor.
+/// Die Ansagen des Beckenboden-Trainings liegen in der App (Deutsch assets/audio/cues/, Englisch
+/// assets/audio/cues_en/). Alle anderen Aufnahmen kommen aus den nachgeladenen Paketen ([Pakete]); solange
+/// ein Paket oder eine Datei darin fehlt, liest die Geräte-Stimme den Text vor.
 class Sprachausgabe {
   static final TtsService _tts = TtsService();
 
   /// Aufnahme für [pfad] (z. B. 'audio/paar/victoria_ankommen_1.opus') oder null, wenn es keine gibt.
   static Source? quelle(String pfad) {
-    if (!Sprache.englisch) return AssetSource(pfad);
-    final datei = AudioPaket.datei(pfad);
+    if (pfad.startsWith('audio/cues/')) {
+      return AssetSource(Sprache.englisch ? 'audio/cues_en/${pfad.substring('audio/cues/'.length)}' : pfad);
+    }
+    final datei = Pakete.datei(pfad);
     return datei == null ? null : DeviceFileSource(datei);
   }
 
@@ -106,36 +110,61 @@ class AudioPaket {
   /// Ändert sich, wenn das Paket installiert oder gelöscht wurde (für die Anzeige).
   static final ValueNotifier<int> stand = ValueNotifier<int>(0);
 
+  /// Name im signierten Paket-Verzeichnis (lib/services/paket_verzeichnis.dart).
+  static const String paketName = 'audio-en';
+
   /// Lädt das Paket, prüft die SHA-256-Prüfsumme und entpackt es. Wirft bei jedem Fehler;
   /// dann bleibt ein vorhandenes Paket unverändert.
-  static Future<void> laden({http.Client? client}) async {
+  ///
+  /// Adressen und Prüfsumme kommen aus dem signierten Paket-Verzeichnis, wenn es dort mindestens die erwartete
+  /// [version] gibt (dann auch mehrere Spiegel nacheinander). Sonst wie bisher vom festen GitHub-Release.
+  static Future<void> laden({http.Client? client, PaketVerzeichnis? verzeichnis}) async {
     final o = _ordner;
     if (o == null) throw StateError('Kein Speicherort');
     final c = client ?? http.Client();
     final zip = File('$o.download.zip');
     fortschritt.value = 0;
     try {
-      final shaAntwort = await c.get(Uri.parse(pruefsummeUrl)).timeout(const Duration(seconds: 20));
-      final soll = shaAntwort.statusCode == 200 ? UpdateService.parseSha256(shaAntwort.body) : null;
-      if (soll == null) throw StateError('Keine gültige Prüfsumme');
-
-      final antwort = await c.send(http.Request('GET', Uri.parse(paketUrl)));
-      if (antwort.statusCode != 200) throw StateError('Download fehlgeschlagen (${antwort.statusCode})');
-      final gesamt = antwort.contentLength ?? 0;
-      var geladen = 0;
-      final senke = zip.openWrite();
-      await for (final teil in antwort.stream) {
-        senke.add(teil);
-        geladen += teil.length;
-        if (gesamt > 0) fortschritt.value = geladen / gesamt * 0.9;
+      final eintrag = (verzeichnis ?? await PaketVerzeichnis.laden(client: c))?.paket(paketName);
+      final List<String> quellen;
+      final String soll;
+      if (eintrag != null && eintrag.version >= version) {
+        quellen = eintrag.adressen;
+        soll = eintrag.sha256;
+      } else {
+        final shaAntwort = await c.get(Uri.parse(pruefsummeUrl)).timeout(const Duration(seconds: 20));
+        final alt = shaAntwort.statusCode == 200 ? UpdateService.parseSha256(shaAntwort.body) : null;
+        if (alt == null) throw StateError('Keine gültige Prüfsumme');
+        quellen = const [paketUrl];
+        soll = alt;
       }
-      await senke.close();
 
-      final ist = (await sha256.bind(zip.openRead()).first).toString();
-      if (ist != soll) throw StateError('Prüfsumme stimmt nicht');
-      await installieren(zip.path, o);
-      fortschritt.value = 1;
-      stand.value++;
+      Object? letzterFehler;
+      for (final quelle in quellen) {
+        try {
+          final antwort = await c.send(http.Request('GET', Uri.parse(quelle)));
+          if (antwort.statusCode != 200) throw StateError('Download fehlgeschlagen (${antwort.statusCode})');
+          final gesamt = antwort.contentLength ?? eintrag?.groesse ?? 0;
+          var geladen = 0;
+          final senke = zip.openWrite();
+          await for (final teil in antwort.stream) {
+            senke.add(teil);
+            geladen += teil.length;
+            if (gesamt > 0) fortschritt.value = geladen / gesamt * 0.9;
+          }
+          await senke.close();
+          final ist = (await sha256.bind(zip.openRead()).first).toString();
+          if (ist != soll) throw StateError('Prüfsumme stimmt nicht');
+          await installieren(zip.path, o);
+          fortschritt.value = 1;
+          stand.value++;
+          return;
+        } catch (e) {
+          letzterFehler = e;
+          debugPrint('Audiopaket: $quelle nicht nutzbar (${e.runtimeType})');
+        }
+      }
+      throw letzterFehler ?? StateError('Keine Adresse');
     } finally {
       if (zip.existsSync()) zip.deleteSync();
       fortschritt.value = null;
@@ -145,8 +174,8 @@ class AudioPaket {
 
   /// Entpackt [zipPfad] nach [ziel]: erst in einen Zwischenordner, dann in einem Schritt austauschen.
   /// Einträge, die aus dem Ordner ausbrechen würden (absolute Pfade, „..“), führen zum Abbruch.
-  @visibleForTesting
-  static Future<void> installieren(String zipPfad, String ziel) async {
+  /// [pflichtDatei] muss im Paket liegen, sonst gilt es als unvollständig.
+  static Future<void> installieren(String zipPfad, String ziel, {String pflichtDatei = 'audio/version.txt'}) async {
     final neu = Directory('$ziel.neu');
     if (neu.existsSync()) neu.deleteSync(recursive: true);
     neu.createSync(recursive: true);
@@ -169,7 +198,7 @@ class AudioPaket {
     } finally {
       await eingabe.close();
     }
-    if (!File('${neu.path}/audio/version.txt').existsSync()) {
+    if (!File('${neu.path}/$pflichtDatei').existsSync()) {
       neu.deleteSync(recursive: true);
       throw StateError('Paket unvollständig');
     }

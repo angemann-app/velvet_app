@@ -5727,6 +5727,96 @@ abstract class AppLocalizations {
   /// **'Die Begleitung hört dann auf.'**
   String get einschlafBeendenText;
 
+  /// No description provided for @aufnahmenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Aufnahmen'**
+  String get aufnahmenTitel;
+
+  /// No description provided for @aufnahmenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Die gesprochenen Aufnahmen von Victoria und Martin lädst du hier nach, am besten im WLAN. Ohne sie liest die Stimme deines Handys vor.'**
+  String get aufnahmenText;
+
+  /// No description provided for @aufnahmenLektionen.
+  ///
+  /// In de, this message translates to:
+  /// **'Lektionen'**
+  String get aufnahmenLektionen;
+
+  /// No description provided for @aufnahmenGefuehrt.
+  ///
+  /// In de, this message translates to:
+  /// **'Geführte Audios'**
+  String get aufnahmenGefuehrt;
+
+  /// No description provided for @aufnahmenGroesse.
+  ///
+  /// In de, this message translates to:
+  /// **'{mb} MB'**
+  String aufnahmenGroesse(int mb);
+
+  /// No description provided for @aufnahmenInstalliert.
+  ///
+  /// In de, this message translates to:
+  /// **'geladen, {mb} MB'**
+  String aufnahmenInstalliert(int mb);
+
+  /// No description provided for @aufnahmenLaden.
+  ///
+  /// In de, this message translates to:
+  /// **'Laden'**
+  String get aufnahmenLaden;
+
+  /// No description provided for @aufnahmenAlleLaden.
+  ///
+  /// In de, this message translates to:
+  /// **'Alle laden ({mb} MB)'**
+  String aufnahmenAlleLaden(int mb);
+
+  /// No description provided for @aufnahmenFertig.
+  ///
+  /// In de, this message translates to:
+  /// **'Aufnahmen geladen.'**
+  String get aufnahmenFertig;
+
+  /// No description provided for @aufnahmenFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Laden hat nicht geklappt. Bitte prüfe die Internetverbindung und versuch es noch einmal.'**
+  String get aufnahmenFehler;
+
+  /// No description provided for @aufnahmenNichtErreichbar.
+  ///
+  /// In de, this message translates to:
+  /// **'Das Verzeichnis der Aufnahmen ist gerade nicht erreichbar. Bitte später noch einmal versuchen.'**
+  String get aufnahmenNichtErreichbar;
+
+  /// No description provided for @aufnahmenHinweisTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Aufnahmen laden'**
+  String get aufnahmenHinweisTitel;
+
+  /// No description provided for @aufnahmenHinweisText.
+  ///
+  /// In de, this message translates to:
+  /// **'Damit Victoria und Martin die Lektionen und geführten Audios sprechen, lade einmal die Aufnahmen. Bis dahin liest die Stimme deines Handys vor.'**
+  String get aufnahmenHinweisText;
+
+  /// No description provided for @aufnahmenSpaeter.
+  ///
+  /// In de, this message translates to:
+  /// **'Später'**
+  String get aufnahmenSpaeter;
+
+  /// No description provided for @aufnahmenAnsehen.
+  ///
+  /// In de, this message translates to:
+  /// **'Ansehen'**
+  String get aufnahmenAnsehen;
+
   /// No description provided for @fotoErneutVersuchen.
   ///
   /// In de, this message translates to:

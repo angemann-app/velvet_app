@@ -1,0 +1,45 @@
+# Kopiert die Audio-Pakete und das signierte Verzeichnis aus dem GitHub-Release „pakete“ nach Cloudflare R2.
+# Start: tools/pakete_hochladen.ps1 (am Ende) oder GitHub → Actions → „Pakete nach R2“ → Run workflow.
+# Secrets wie beim R2-Verbindungstest: R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_ENDPOINT (EU-Adresse).
+# Die Pakete werden zuerst kopiert, das Verzeichnis zuletzt: So zeigt es nie auf etwas, das noch fehlt.
+name: Pakete nach R2
+
+on:
+  workflow_dispatch:
+    inputs:
+      bucket:
+        description: Name des R2-Buckets
+        default: velvetpulse-pakete
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  kopieren:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+      BUCKET: ${{ inputs.bucket }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Dateien aus dem Release holen
+        run: gh release download pakete --repo "$GITHUB_REPOSITORY" --dir pakete
+
+      - name: Nach R2 kopieren (Verzeichnis zuletzt)
+        run: |
+          set -euo pipefail
+          cd pakete
+          for f in *.zip; do
+            aws s3 cp "$f" "s3://${BUCKET}/$f" --endpoint-url "$R2_ENDPOINT" --only-show-errors \
+              --content-type application/zip --cache-control "public, max-age=31536000, immutable"
+          done
+          for f in audio-index.json.sig audio-index.json; do
+            aws s3 cp "$f" "s3://${BUCKET}/$f" --endpoint-url "$R2_ENDPOINT" --only-show-errors \
+              --cache-control "no-cache"
+          done
+          echo "### Pakete nach R2 kopiert ✅" >> "$GITHUB_STEP_SUMMARY"
+          ls -l >> "$GITHUB_STEP_SUMMARY"

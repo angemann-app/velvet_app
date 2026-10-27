@@ -610,3 +610,15 @@ msgstr ""
 msgctxt "news:44#0.text"
 msgid "Nachrichten gehen jetzt versiegelt (NIP-17), sobald auch das Handy deines Gegenübers diese Version hat: Die Server sehen dann nicht mehr, wer wem wann schreibt, und auch die Länge verrät weniger. Das stellt sich nach der ersten Nachricht von selbst ein. Mit einer älteren Version schreibt ihr weiter wie bisher."
 msgstr ""
+
+#. Was ist neu in Version 4.10.0-beta.1
+#. EN: Recordings to download
+msgctxt "news:45#0.titel"
+msgid "Aufnahmen zum Nachladen"
+msgstr ""
+
+#. Was ist neu in Version 4.10.0-beta.1
+#. EN: Victoria's and Martin's voices are no longer inside the app itself but come as packs: lessons and guided audio, in German and English. The app gets much smaller, and corrected recordings arrive without an update. Download them once in your profile under “Recordings”, ideally on Wi-Fi.
+msgctxt "news:45#0.text"
+msgid "Die Stimmen von Victoria und Martin sind nicht mehr in der App selbst, sondern kommen als Pakete nach: Lektionen und geführte Audios, auf Deutsch und Englisch. Die App wird dadurch viel kleiner, und korrigierte Aufnahmen kommen ohne Update. Einmal im Profil unter „Aufnahmen“ laden, am besten im WLAN."
+msgstr ""

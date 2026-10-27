@@ -1554,6 +1554,42 @@
   "einschlafLaeuftText": "Die Stimme wird leiser und seltener. Am Ende stoppt alles von selbst.",
   "einschlafBeenden": "Einschlaf-Reise beenden?",
   "einschlafBeendenText": "Die Begleitung hört dann auf.",
+  "aufnahmenTitel": "Aufnahmen",
+  "aufnahmenText": "Die gesprochenen Aufnahmen von Victoria und Martin lädst du hier nach, am besten im WLAN. Ohne sie liest die Stimme deines Handys vor.",
+  "aufnahmenLektionen": "Lektionen",
+  "aufnahmenGefuehrt": "Geführte Audios",
+  "aufnahmenGroesse": "{mb} MB",
+  "@aufnahmenGroesse": {
+    "placeholders": {
+      "mb": {
+        "type": "int"
+      }
+    }
+  },
+  "aufnahmenInstalliert": "geladen, {mb} MB",
+  "@aufnahmenInstalliert": {
+    "placeholders": {
+      "mb": {
+        "type": "int"
+      }
+    }
+  },
+  "aufnahmenLaden": "Laden",
+  "aufnahmenAlleLaden": "Alle laden ({mb} MB)",
+  "@aufnahmenAlleLaden": {
+    "placeholders": {
+      "mb": {
+        "type": "int"
+      }
+    }
+  },
+  "aufnahmenFertig": "Aufnahmen geladen.",
+  "aufnahmenFehler": "Laden hat nicht geklappt. Bitte prüfe die Internetverbindung und versuch es noch einmal.",
+  "aufnahmenNichtErreichbar": "Das Verzeichnis der Aufnahmen ist gerade nicht erreichbar. Bitte später noch einmal versuchen.",
+  "aufnahmenHinweisTitel": "Aufnahmen laden",
+  "aufnahmenHinweisText": "Damit Victoria und Martin die Lektionen und geführten Audios sprechen, lade einmal die Aufnahmen. Bis dahin liest die Stimme deines Handys vor.",
+  "aufnahmenSpaeter": "Später",
+  "aufnahmenAnsehen": "Ansehen",
   "fotoErneutVersuchen": "Jetzt erneut versuchen",
   "fotoStatusWeg": "Foto nicht mehr verfügbar"
 }

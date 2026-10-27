@@ -3362,6 +3362,61 @@ class AppLocalizationsDe extends AppLocalizations {
   String get einschlafBeendenText => 'Die Begleitung hört dann auf.';
 
   @override
+  String get aufnahmenTitel => 'Aufnahmen';
+
+  @override
+  String get aufnahmenText =>
+      'Die gesprochenen Aufnahmen von Victoria und Martin lädst du hier nach, am besten im WLAN. Ohne sie liest die Stimme deines Handys vor.';
+
+  @override
+  String get aufnahmenLektionen => 'Lektionen';
+
+  @override
+  String get aufnahmenGefuehrt => 'Geführte Audios';
+
+  @override
+  String aufnahmenGroesse(int mb) {
+    return '$mb MB';
+  }
+
+  @override
+  String aufnahmenInstalliert(int mb) {
+    return 'geladen, $mb MB';
+  }
+
+  @override
+  String get aufnahmenLaden => 'Laden';
+
+  @override
+  String aufnahmenAlleLaden(int mb) {
+    return 'Alle laden ($mb MB)';
+  }
+
+  @override
+  String get aufnahmenFertig => 'Aufnahmen geladen.';
+
+  @override
+  String get aufnahmenFehler =>
+      'Laden hat nicht geklappt. Bitte prüfe die Internetverbindung und versuch es noch einmal.';
+
+  @override
+  String get aufnahmenNichtErreichbar =>
+      'Das Verzeichnis der Aufnahmen ist gerade nicht erreichbar. Bitte später noch einmal versuchen.';
+
+  @override
+  String get aufnahmenHinweisTitel => 'Aufnahmen laden';
+
+  @override
+  String get aufnahmenHinweisText =>
+      'Damit Victoria und Martin die Lektionen und geführten Audios sprechen, lade einmal die Aufnahmen. Bis dahin liest die Stimme deines Handys vor.';
+
+  @override
+  String get aufnahmenSpaeter => 'Später';
+
+  @override
+  String get aufnahmenAnsehen => 'Ansehen';
+
+  @override
   String get fotoErneutVersuchen => 'Jetzt erneut versuchen';
 
   @override

@@ -13,7 +13,7 @@ import '../../theme/app_theme.dart';
 import '../main_navigation_screen.dart';
 import '../../l10n/t.dart';
 import '../../services/sprache.dart';
-import '../../widgets/audio_paket_karte.dart';
+import '../../widgets/aufnahmen_karte.dart';
 import '../../widgets/spicy_modus_dialog.dart';
 import '../anleitung_screen.dart';
 import '../rueckmeldung_screen.dart';
@@ -1102,7 +1102,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
             ]),
           ),
-          if (Sprache.englisch) const AudioPaketKarte(),
+          const AufnahmenKarte(),
         ],
       ),
     );

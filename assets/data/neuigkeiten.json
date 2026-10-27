@@ -364,6 +364,17 @@
           "text": "Nachrichten gehen jetzt versiegelt (NIP-17), sobald auch das Handy deines Gegenübers diese Version hat: Die Server sehen dann nicht mehr, wer wem wann schreibt, und auch die Länge verrät weniger. Das stellt sich nach der ersten Nachricht von selbst ein. Mit einer älteren Version schreibt ihr weiter wie bisher."
         }
       ]
+    },
+    {
+      "build": 45,
+      "version": "4.10.0-beta.1",
+      "punkte": [
+        {
+          "icon": "record_voice_over",
+          "titel": "Aufnahmen zum Nachladen",
+          "text": "Die Stimmen von Victoria und Martin sind nicht mehr in der App selbst, sondern kommen als Pakete nach: Lektionen und geführte Audios, auf Deutsch und Englisch. Die App wird dadurch viel kleiner, und korrigierte Aufnahmen kommen ohne Update. Einmal im Profil unter „Aufnahmen“ laden, am besten im WLAN."
+        }
+      ]
     }
   ]
 }
