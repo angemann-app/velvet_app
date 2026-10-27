@@ -34,9 +34,10 @@ Paketverwaltung mit signierter `audio-index.json` (englisches Paket muss weiter 
 Upload-Workflow nach Cloudflare R2. Danach in eigener Sitzung das Traumtagebuch.
 Details: `docs/konzepte/traum-reise.md`.
 
-## Laufend: Aussprache korrigieren (täglich)
+## Laufend: Aussprache korrigieren (täglich) → AG-1
 
-Übernimmt Antigravity als Auftrag **AG-1** in `AG.md` (dort der genaue Ablauf). Kurzfassung:
+Übernimmt Antigravity als Auftrag **AG-1** in `AG.md` (dort der genaue Ablauf, auch das Nachsprechen aller
+betroffenen Aufnahmen in Schritt B). Kurzfassung:
 
 Nutzer melden falsch ausgesprochene Wörter in der App („Wort falsch ausgesprochen?“) oder als Issue.
 
