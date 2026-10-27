@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
+import 'audio_ausgabe.dart';
 import 'sprachausgabe.dart';
+import 'storage_service.dart';
 import 'tts_service.dart';
 
 class AudioService {
@@ -29,6 +31,7 @@ class AudioService {
   StreamSubscription? _stateSub;
   StreamSubscription? _posSub;
   StreamSubscription? _durSub;
+  StreamSubscription? _kopfhoererSub;
 
   void _init() {
     if (_initialized) return;
@@ -59,6 +62,14 @@ class AudioService {
         TtsPlaybackState.paused => PlayerState.paused,
         TtsPlaybackState.stopped => PlayerState.stopped,
       };
+    });
+
+    AudioAusgabe.instanz.initialisieren();
+    _kopfhoererSub = AudioAusgabe.instanz.onKopfhoererGetrennt.listen((_) {
+      if (StorageService.getPausiereBeiKopfhoererGetrennt() &&
+          stateNotifier.value == PlayerState.playing) {
+        pause();
+      }
     });
 
     _initialized = true;
@@ -180,6 +191,7 @@ class AudioService {
     _stateSub?.cancel();
     _posSub?.cancel();
     _durSub?.cancel();
+    _kopfhoererSub?.cancel();
     _player.dispose();
   }
 }

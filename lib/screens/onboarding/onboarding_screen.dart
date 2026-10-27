@@ -47,6 +47,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   bool _personalizeNames = StorageService.personalizeNames();
   bool _spicyMode = StorageService.spicyMode();
   bool _lockSupported = false;
+  bool _frageVorLautsprecher = StorageService.getFrageVorLautsprecher();
+  bool _pausiereBeiKopfhoererGetrennt = StorageService.getPausiereBeiKopfhoererGetrennt();
 
   @override
   void initState() {
@@ -1004,6 +1006,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         _lockEnabled = lock;
         _discreetIcon = discreet;
         _lockSupported = supported;
+        _frageVorLautsprecher = StorageService.getFrageVorLautsprecher();
+        _pausiereBeiKopfhoererGetrennt = StorageService.getPausiereBeiKopfhoererGetrennt();
       });
     }
   }
@@ -1212,6 +1216,34 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             subtitle: Text(
               t.onboardingEvenWhenTheAppIs,
               style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+            ),
+          ),
+          SwitchListTile(
+            contentPadding: const EdgeInsets.only(right: 8),
+            value: _frageVorLautsprecher,
+            activeThumbColor: AppTheme.sageGreen,
+            onChanged: (value) async {
+              await StorageService.setFrageVorLautsprecher(value);
+              if (mounted) setState(() => _frageVorLautsprecher = value);
+            },
+            title: Text(t.lautsprecherEinstellungFrageTitel, style: const TextStyle(fontSize: 14)),
+            subtitle: Text(
+              t.lautsprecherEinstellungFrageText,
+              style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+            ),
+          ),
+          SwitchListTile(
+            contentPadding: const EdgeInsets.only(right: 8),
+            value: _pausiereBeiKopfhoererGetrennt,
+            activeThumbColor: AppTheme.sageGreen,
+            onChanged: (value) async {
+              await StorageService.setPausiereBeiKopfhoererGetrennt(value);
+              if (mounted) setState(() => _pausiereBeiKopfhoererGetrennt = value);
+            },
+            title: Text(t.lautsprecherEinstellungPauseTitel, style: const TextStyle(fontSize: 14)),
+            subtitle: Text(
+              t.lautsprecherEinstellungPauseText,
+              style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),
         ],

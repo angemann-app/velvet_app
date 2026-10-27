@@ -1848,5 +1848,16 @@
   "weckenLaeuftText": "Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst.",
   "testmodusAn": "Testmodus an: kurze Pausen, alles frei.",
   "testmodusAus": "Testmodus aus.",
-  "testmodusSchild": "Testmodus: kurze Pausen, alles frei. Ausschalten: siebenmal auf die Versionsnummer im Profil tippen."
+  "testmodusSchild": "Testmodus: kurze Pausen, alles frei. Ausschalten: siebenmal auf die Versionsnummer im Profil tippen.",
+  "lautsprecherFrageTitel": "Lautsprecher",
+  "lautsprecherFrageNachricht": "Die Wiedergabe läuft über den Lautsprecher. Trotzdem abspielen?",
+  "lautsprecherAbspielen": "Abspielen",
+  "lautsprecherAbbrechen": "Abbrechen",
+  "lautsprecherNichtMehrFragen": "Nicht mehr fragen",
+  "lautsprecherEinstellungFrageTitel": "Vor Lautsprecher-Wiedergabe fragen",
+  "lautsprecherEinstellungFrageText": "Fragt vor dem Abspielen, wenn keine Kopfhörer angeschlossen sind.",
+  "lautsprecherEinstellungPauseTitel": "Pausieren, wenn Kopfhörer getrennt werden",
+  "lautsprecherEinstellungPauseText": "Hält die Wiedergabe an, sobald Kabel- oder Bluetooth-Kopfhörer getrennt werden.",
+  "realitaetStatusEin": "Ein",
+  "realitaetStatusAus": "Aus"
 }

@@ -3932,4 +3932,41 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get testmodusSchild =>
       'Test mode: short pauses, everything unlocked. To turn off, tap the version number in the profile seven times.';
+
+  @override
+  String get lautsprecherFrageTitel => 'Speaker';
+
+  @override
+  String get lautsprecherFrageNachricht =>
+      'Playback will play through the speaker. Play anyway?';
+
+  @override
+  String get lautsprecherAbspielen => 'Play';
+
+  @override
+  String get lautsprecherAbbrechen => 'Cancel';
+
+  @override
+  String get lautsprecherNichtMehrFragen => 'Do not ask again';
+
+  @override
+  String get lautsprecherEinstellungFrageTitel => 'Ask before speaker playback';
+
+  @override
+  String get lautsprecherEinstellungFrageText =>
+      'Asks before playing if no headphones are connected.';
+
+  @override
+  String get lautsprecherEinstellungPauseTitel =>
+      'Pause when headphones are disconnected';
+
+  @override
+  String get lautsprecherEinstellungPauseText =>
+      'Pauses playback as soon as wired or Bluetooth headphones are disconnected.';
+
+  @override
+  String get realitaetStatusEin => 'On';
+
+  @override
+  String get realitaetStatusAus => 'Off';
 }

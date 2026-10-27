@@ -49,6 +49,9 @@ class BackupCodec {
     'realitaetschecks': Map,
     // Zeitpunkte des nächtlichen Weckens (Liste von ISO-8601-Strings für die 2x/Woche-Regel).
     'naechtlichesWecken': List,
+    // Lautsprecher-Abfrage und Pause beim Trennen der Kopfhörer.
+    'frageVorLautsprecher': bool,
+    'pausiereBeiKopfhoererGetrennt': bool,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.
@@ -131,6 +134,7 @@ class BackupCodec {
         const (List) => value is List,
         const (String) => value is String,
         const (int) => value is int,
+        const (bool) => value is bool,
         _ => false,
       };
 

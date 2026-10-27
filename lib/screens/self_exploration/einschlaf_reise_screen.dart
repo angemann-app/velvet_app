@@ -10,14 +10,17 @@ import '../../models/einschlaf_reise.dart';
 import '../../models/lust_im_traum.dart';
 import '../../models/traum_reise.dart';
 import '../../models/paar_abend.dart';
+import '../../services/audio_ausgabe.dart';
 import '../../services/naechtliches_wecken.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../services/testmodus.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
+import '../../widgets/lautsprecher_frage.dart';
 import '../../widgets/player_steuerung.dart';
 import 'lust_im_traum_screen.dart' show lustFolgeTitel;
+import 'realitaetscheck_screen.dart';
 import 'traum_tagebuch_screen.dart';
 
 /// Einschlaf-Reise: eine lange, ruhige Begleitung in den Schlaf (lib/models/einschlaf_reise.dart,
@@ -81,9 +84,11 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
   bool _pausiert = false;
   bool _fertig = false;
   int _lauf = 0;
+  bool get _laeuft => _ablauf != null && !_fertig;
 
   final AudioPlayer _stimmePlayer = AudioPlayer();
   final AudioPlayer _teppichPlayer = AudioPlayer();
+  StreamSubscription<void>? _kopfhoererSub;
 
   @override
   void initState() {
@@ -92,6 +97,13 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
     _stimmePlayer.setAudioContext(ohneFokus).catchError((_) {});
     _teppichPlayer.setAudioContext(ohneFokus).catchError((_) {});
     _teppichPlayer.setReleaseMode(ReleaseMode.loop).catchError((_) {});
+    AudioAusgabe.instanz.initialisieren();
+    _kopfhoererSub = AudioAusgabe.instanz.onKopfhoererGetrennt.listen((_) {
+      if (!mounted) return;
+      if (StorageService.getPausiereBeiKopfhoererGetrennt() && _laeuft && !_pausiert) {
+        _pauseUmschalten();
+      }
+    });
     _laden();
   }
 
@@ -119,6 +131,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
   @override
   void dispose() {
     _lauf++;
+    _kopfhoererSub?.cancel();
     Sprachausgabe.vorlesenBeenden();
     _stimmePlayer.dispose();
     _teppichPlayer.dispose();
@@ -128,6 +141,8 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
   Future<void> _starten() async {
     final daten = _daten;
     if (daten == null) return;
+    final darf = await frageVorLautsprecher(context);
+    if (!darf) return;
     HapticFeedback.mediumImpact();
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt(_keyMinuten, _minuten);
@@ -451,6 +466,8 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         ),
         const SizedBox(height: 14),
         if (widget.traum) ...[
+          _buildRealitaetscheckZeile(),
+          const SizedBox(height: 14),
           _buildWeckenSchalter(),
           const SizedBox(height: 14),
         ],
@@ -475,6 +492,54 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildRealitaetscheckZeile() {
+    final aktiv = StorageService.getRealitaetschecks().aktiv;
+    return InkWell(
+      onTap: () async {
+        await Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const RealitaetscheckScreen()),
+        );
+        if (mounted) setState(() {});
+      },
+      borderRadius: BorderRadius.circular(14),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: AppTheme.surface,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: AppTheme.border),
+        ),
+        child: Row(
+          children: [
+            const Icon(Icons.touch_app_outlined, color: AppTheme.sageGreen, size: 22),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    t.realitaetTitel,
+                    style: const TextStyle(
+                      fontSize: 14.5,
+                      fontWeight: FontWeight.w700,
+                      color: AppTheme.textPrimary,
+                    ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    aktiv ? t.realitaetStatusEin : t.realitaetStatusAus,
+                    style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
+          ],
+        ),
+      ),
     );
   }
 

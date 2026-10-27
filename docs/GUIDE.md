@@ -53,7 +53,7 @@ Dream evening: 30, 45 or 60 minutes before sleep, with a dream image of your cho
 
 Dream journal: In the morning after a dream evening, a card asks „What do you remember?“. A few keywords and marks such as lucid or sensual are enough, and „Nothing remembered“ counts too. The journal is private and part of your encrypted backup; in discretion mode the card just says Morning note.
 
-In the dream journal, „This week“ shows a calm overview without scores. From its menu you can switch on reality checks: two to four reminders a day, neutrally worded „A brief moment for you“, off by default. In the dream evening, „Wake me tonight“ sets the clock app's alarm for that one night, at most twice a week; afterwards a voice accompanies you back to sleep.
+In the dream journal, „This week“ shows a calm overview without scores. Below it and on the dream evening setup page you can switch on reality checks: two to four reminders a day, neutrally worded „A brief moment for you“, off by default. In the dream evening, „Wake me tonight“ sets the clock app's alarm for that one night, at most twice a week; afterwards a voice accompanies you back to sleep.
 
 Pleasure in dreams (spicy mode only): eight evenings that build on each other, from a pleasurable body as you fall asleep to the lucid, sensual dream. The next episode unlocks after two evenings. From episode three you choose your body in the dream and with whom pleasure may unfold. The recordings come as a separate package.
 
@@ -116,6 +116,8 @@ The example questions adapt to your profile.
 Everything you enter stays on your phone. Secrets such as keys are kept in Android's protected storage.
 
 In your profile you can lock the app with your fingerprint; content is then also hidden in the app overview and screenshots are blocked. The discreet app icon shows a neutral name instead of VelvetPulse.
+
+The app asks before playing through the speaker, and pauses if headphones are disconnected.
 
 “Export backup” creates a password-protected backup that you can transfer to a new phone.
 
