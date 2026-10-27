@@ -10,6 +10,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:nostr_tools/nostr_tools.dart';
+import 'package:velvetpulse/services/gift_wrap.dart';
 import 'package:velvetpulse/services/nostr_event_check.dart';
 
 const relays = [
@@ -34,32 +35,43 @@ Future<void> main(List<String> args) async {
     if (gesehenDatei.existsSync() && !alle) ...(jsonDecode(gesehenDatei.readAsStringSync()) as List).cast<String>(),
   };
 
+  // kind 4: NIP-04 (Versionen vor der Umstellung), kind 1059: NIP-17 (Gift Wrap, echter Zeitpunkt in der Rumor).
   final events = await holen({
-    'kinds': [4],
+    'kinds': [4, NostrEventCheck.giftWrapKind],
     '#p': [oeffentlich],
     'limit': 500
   });
 
-  final neu = [
-    for (final ev in events.values)
-      if (!gesehen.contains(ev['id']) && NostrEventCheck.isValidDirectMessage(ev, recipient: oeffentlich)) ev
-  ]..sort((a, b) => (a['created_at'] as int).compareTo(b['created_at'] as int));
+  final neu = <({String id, int zeit, String text})>[];
+  for (final ev in events.values) {
+    final id = ev['id'] as String;
+    if (gesehen.contains(id)) continue;
+    if (ev['kind'] == 4 && NostrEventCheck.isValidDirectMessage(ev, recipient: oeffentlich)) {
+      String text;
+      try {
+        text = Nip04().decrypt(privat, ev['pubkey'] as String, ev['content'] as String);
+      } catch (_) {
+        text = '(nicht entschlüsselbar)';
+      }
+      neu.add((id: id, zeit: ev['created_at'] as int, text: text));
+    } else if (ev['kind'] == NostrEventCheck.giftWrapKind) {
+      final offen = GiftWrap.auspacken(ev, meinPrivat: privat, meinPub: oeffentlich);
+      if (offen == null) continue; // gefälscht oder nicht lesbar
+      neu.add((id: id, zeit: offen.rumor['created_at'] as int, text: offen.rumor['content'] as String));
+    }
+  }
+  neu.sort((a, b) => a.zeit.compareTo(b.zeit));
 
   final protokoll = StringBuffer();
   for (final ev in neu) {
-    String text;
-    try {
-      text = Nip04().decrypt(privat, ev['pubkey'] as String, ev['content'] as String);
-    } catch (_) {
-      text = '(nicht entschlüsselbar)';
-    }
-    final zeit = DateTime.fromMillisecondsSinceEpoch((ev['created_at'] as int) * 1000).toLocal();
+    final text = ev.text;
+    final zeit = DateTime.fromMillisecondsSinceEpoch(ev.zeit * 1000).toLocal();
     protokoll
-      ..writeln('## ${zeit.toIso8601String().substring(0, 16).replaceFirst('T', ' ')}  (${(ev['id'] as String).substring(0, 8)})')
+      ..writeln('## ${zeit.toIso8601String().substring(0, 16).replaceFirst('T', ' ')}  (${ev.id.substring(0, 8)})')
       ..writeln()
       ..writeln(text)
       ..writeln();
-    gesehen.add(ev['id'] as String);
+    gesehen.add(ev.id);
   }
   stdout.writeln(neu.isEmpty ? 'Keine neuen Rückmeldungen.' : '${neu.length} neue Rückmeldung(en):\n\n$protokoll');
   if (neu.isNotEmpty && !alle) {

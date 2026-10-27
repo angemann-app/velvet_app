@@ -22,6 +22,7 @@ verlieren.
 
 - **Stufe 1:** Versions- und Fähigkeitsaushandlung. Die App versteht beide Verfahren, kündigt an, was sie
   kann, und sendet NIP-17 nur, wenn das Gegenüber es sicher kann. Sonst Rückfall auf NIP-04.
+  Umgesetzt im Branch `feature/nip17` (27.10.2026); offen: Beta und Test auf zwei Handys (alt und neu).
 - **Stufe 2 (späteres Release):** NIP-04 abschalten, wenn beide Geräte umgestellt sind bzw. nach einer
   Übergangszeit.
 - Regeln aus `docs/SICHERHEIT_AUDIT_BASELINE.md` gelten: eingehende Events immer durch `NostrEventCheck`,

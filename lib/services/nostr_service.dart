@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:nostr_tools/nostr_tools.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/couple_channel_models.dart';
+import 'gift_wrap.dart';
 import 'message_notifier.dart';
 import 'nostr_event_check.dart';
 import 'nostr_keys.dart';
@@ -42,6 +43,24 @@ class NostrService {
   static const String _keyReadReceipts = 'velvet_read_receipts';
   static const String _keyPartnerReadUntil = 'velvet_partner_read_until';
   static const String _keyReadSentUntil = 'velvet_read_sent_until';
+
+  // NIP-17 (docs/konzepte/nip17.md, Stufe 1): Empfangen wird immer beides. Gesendet wird per NIP-17
+  // (Gift Wrap) erst, wenn das Gegenüber angekündigt hat, dass es das versteht. Gespeichert wird der
+  // Schlüssel des Gegenübers, für das die Ankündigung gilt: Wechselt das Gegenüber auf welchem Weg auch
+  // immer (Trennen, neue Kopplung, Sicherung), gilt sie automatisch nicht mehr.
+  static const String keyPartnerNip17 = 'velvet_partner_nip17';
+
+  /// Zeitpunkt (created_at des Gegenübers) der neuesten Ankündigung. Kommt danach eine NIP-04-Nachricht
+  /// ohne Ankündigung, hat das Gegenüber wieder eine ältere Version: zurück auf NIP-04. Ältere, erneut
+  /// abgeholte Nachrichten lösen das nicht aus.
+  static const String _keyNip17Seit = 'velvet_partner_nip17_seit';
+
+  /// Feld im verschlüsselten JSON jeder per NIP-04 gesendeten Nachricht: „ich verstehe NIP-17“.
+  /// Ältere Versionen ignorieren unbekannte Felder.
+  static const String nip17Feld = 'nip17';
+
+  /// Flüchtiges Signal beim Start mit derselben Ankündigung (ältere Versionen ignorieren unbekannte Signale).
+  static const String faehigSignal = 'faehig';
 
   static const List<String> fallbackRelays = [
     'wss://relay.primal.net',
@@ -116,6 +135,20 @@ class NostrService {
   final Set<String> _processedEventIds = {};
 
   int? _inboxSince;
+
+  /// Für welches Gegenüber (öffentlicher Schlüssel) NIP-17 angekündigt wurde.
+  String? _nip17Fuer;
+  int _nip17Seit = 0;
+
+  /// Hat sich auf eine offene Einladung hin jemand gemeldet, der NIP-17 versteht? Gilt nach dem Annehmen.
+  String? _nip17Anfrage;
+
+  bool _faehigGesendet = false;
+  Timer? _faehigTimer;
+  int _letzteFaehigAntwort = 0;
+
+  /// Versteht das jetzige Gegenüber NIP-17? Dann gehen Nachrichten als Gift Wrap raus.
+  bool get partnerNip17 => isPaired && _nip17Fuer == _partnerPublicKey;
 
   /// Ist der Nachrichten-Bereich des Paar-Kanals gerade auf dem Bildschirm? (setzt die Navigation)
   final ValueNotifier<bool> paarKanalSichtbar = ValueNotifier<bool>(false);
@@ -253,6 +286,13 @@ class NostrService {
     _partnerName = prefs.getString(_keyPartnerName) ?? 'Partner';
     inviteNameNotifier.value = prefs.getString(_keyInviteName);
     _inboxSince = prefs.getInt(_keyInboxSince);
+    _nip17Fuer = prefs.getString(keyPartnerNip17);
+    _nip17Seit = prefs.getInt(_keyNip17Seit) ?? 0;
+    _nip17Anfrage = null;
+    _faehigGesendet = false;
+    // Schon geöffnete Hüllen nicht bei jedem Start erneut entschlüsseln (sie kommen wegen der
+    // zurückgesetzten Zeitstempel bis zu zwei Tage lang wieder).
+    _processedEventIds.addAll(prefs.getStringList(MessageNotifier.keySeenWraps) ?? const []);
     _partnerVoteTimes.clear();
     readReceiptsEnabled.value = prefs.getBool(_keyReadReceipts) ?? true;
     partnerReadUntil.value = prefs.getInt(_keyPartnerReadUntil);
@@ -364,6 +404,7 @@ class NostrService {
       );
       debugPrint('Nostr: verbunden mit ${relay.url}');
       _subscribeToInbox(relay);
+      _faehigkeitAnkuendigen();
     } catch (e) {
       debugPrint('Nostr: ${relay.url} nicht erreichbar (${e.runtimeType})');
       if (relay.epoch == epoch) _scheduleReconnect(relay);
@@ -421,6 +462,14 @@ class NostrService {
         if (since != null) 'since': since - _inboxOverlapSeconds,
         'limit': since != null ? 500 : 100,
       },
+      // NIP-17: Hüllen tragen einen zufällig bis zu zwei Tage zurückgesetzten Zeitstempel und einen
+      // Wegwerf-Absender. Darum ohne authors und entsprechend früher; Doppeltes fällt über die id heraus.
+      {
+        'kinds': [NostrEventCheck.giftWrapKind],
+        '#p': [_myPublicKey!],
+        if (since != null) 'since': since - GiftWrap.maxZurueck.inSeconds - _inboxOverlapSeconds,
+        'limit': since != null ? 500 : 100,
+      },
       if (isPaired)
         {
           'kinds': [readReceiptKind],
@@ -460,6 +509,8 @@ class NostrService {
           final eventMap = decoded[2] as Map<String, dynamic>;
           if (eventMap['kind'] == 4) {
             _handleIncomingKind4Map(eventMap);
+          } else if (eventMap['kind'] == NostrEventCheck.giftWrapKind) {
+            _handleGiftWrap(eventMap);
           } else if (eventMap['kind'] == readReceiptKind) {
             _handleReadReceipt(eventMap);
           } else if (eventMap['kind'] == signalKind) {
@@ -510,26 +561,132 @@ class NostrService {
       return;
     }
     _processedEventIds.add(id);
+
+    final String decrypted;
+    try {
+      decrypted = _nip04.decrypt(_myPrivateKey!, senderPubkey, content);
+    } catch (e) {
+      debugPrint('Nostr: Nachricht von ${senderPubkey.substring(0, 8)}… nicht entschlüsselbar (${e.runtimeType})');
+      return;
+    }
+    _nip04Ankuendigung(senderPubkey, decrypted, createdAt);
+    _eingangVerarbeiten(id: id, senderPubkey: senderPubkey, decrypted: decrypted, createdAt: createdAt);
+  }
+
+  /// Gemeinsamer Teil für kind 4 und NIP-17, nach Prüfen und Entschlüsseln.
+  void _eingangVerarbeiten({
+    required String id,
+    required String senderPubkey,
+    required String decrypted,
+    required int createdAt,
+  }) {
     if (isPaired && (_inboxSince == null || createdAt > _inboxSince!)) {
       _inboxSince = createdAt;
       unawaited(SharedPreferences.getInstance().then((p) => p.setInt(_keyInboxSince, createdAt)));
     }
-
-    try {
-      final decrypted = _nip04.decrypt(_myPrivateKey!, senderPubkey, content);
-      if (!isPaired && inviteNameNotifier.value != null && senderPubkey.length == 64) {
-        joinRequestNotifier.value = senderPubkey;
-      }
-      _parseAndAddMessage(
-        eventId: id,
-        senderPubkey: senderPubkey,
-        isMe: false,
-        decryptedText: decrypted,
-        timestamp: DateTime.fromMillisecondsSinceEpoch(createdAt * 1000),
-      );
-    } catch (e) {
-      debugPrint('Nostr: Nachricht von ${senderPubkey.substring(0, 8)}… nicht entschlüsselbar (${e.runtimeType})');
+    if (!isPaired && inviteNameNotifier.value != null && senderPubkey.length == 64) {
+      joinRequestNotifier.value = senderPubkey;
     }
+    _parseAndAddMessage(
+      eventId: id,
+      senderPubkey: senderPubkey,
+      isMe: false,
+      decryptedText: decrypted,
+      timestamp: DateTime.fromMillisecondsSinceEpoch(createdAt * 1000),
+    );
+  }
+
+  /// NIP-17: Hülle (kind 1059) öffnen. Alle drei Stufen prüft NostrEventCheck (über GiftWrap.auspacken);
+  /// als verarbeitet gemerkt wird erst danach, damit eine gefälschte Hülle mit fremder id nichts blockiert.
+  /// Die Nachricht trägt die id und den echten Zeitpunkt der Rumor.
+  @visibleForTesting
+  Future<void> handleGiftWrap(Map<String, dynamic> ev) => _handleGiftWrap(ev);
+
+  Future<void> _handleGiftWrap(Map<String, dynamic> ev) async {
+    if (_myPublicKey == null || _myPrivateKey == null) return;
+    final Object? huellenId = ev['id'];
+    if (huellenId is! String || _processedEventIds.contains(huellenId)) return;
+    // Ohne Partner nimmt nur eine offene Einladung Fremde an (wie bei kind 4).
+    if (!isPaired && inviteNameNotifier.value == null) return;
+    final offen = GiftWrap.auspacken(
+      ev,
+      meinPrivat: _myPrivateKey!,
+      meinPub: _myPublicKey!,
+      erwarteterAbsender: isPaired ? _partnerPublicKey : null,
+    );
+    if (offen == null) {
+      // Nur eine echt signierte Hülle als erledigt merken (z. B. nicht von unserem Gegenüber).
+      if (NostrEventCheck.isValidGiftWrap(ev, recipient: _myPublicKey!)) _huelleGesehen(huellenId);
+      debugPrint('Nostr: Hülle verworfen');
+      return;
+    }
+    _huelleGesehen(huellenId);
+    final rumor = offen.rumor;
+    final rumorId = rumor['id'] as String;
+    if (!_processedEventIds.add(rumorId)) return;
+    // Eine NIP-17-Nachricht ist selbst die beste Ankündigung.
+    _nip17Merken(offen.absender, zeit: rumor['created_at'] as int);
+    _eingangVerarbeiten(
+      id: rumorId,
+      senderPubkey: offen.absender,
+      decrypted: rumor['content'] as String,
+      createdAt: rumor['created_at'] as int,
+    );
+  }
+
+  void _huelleGesehen(String id) {
+    _processedEventIds.add(id);
+    unawaited(MessageNotifier.markWrapsSeen([id]));
+  }
+
+  bool _kuendigtNip17An(String klartext) {
+    try {
+      final daten = jsonDecode(klartext);
+      return daten is Map && daten[nip17Feld] == 1;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  /// Eine per NIP-04 empfangene Nachricht, Lesebestätigung oder ein Signal: mit `"nip17": 1` eine
+  /// Ankündigung; ohne, und neuer als die letzte Ankündigung, der Rückfall auf NIP-04 (das Gegenüber hat
+  /// wieder eine ältere Version, denn neue Versionen schicken das Feld bei NIP-04 immer mit).
+  void _nip04Ankuendigung(String absender, String klartext, int zeit) {
+    if (_kuendigtNip17An(klartext)) {
+      _nip17Merken(absender, zeit: zeit);
+    } else if (partnerNip17 && absender == _partnerPublicKey && zeit > _nip17Seit) {
+      debugPrint('Nostr: Gegenüber schreibt wieder nur NIP-04, sende ab jetzt wieder so');
+      _nip17Fuer = null;
+      unawaited(SharedPreferences.getInstance().then((p) => p.remove(keyPartnerNip17)));
+    }
+  }
+
+  /// Das Gegenüber [absender] versteht NIP-17 (Stand [zeit], created_at des Gegenübers). Während einer
+  /// offenen Einladung gilt das erst nach dem Annehmen.
+  void _nip17Merken(String absender, {int? zeit}) {
+    if (!isPaired) {
+      _nip17Anfrage = absender;
+      return;
+    }
+    if (absender != _partnerPublicKey) return;
+    if (zeit != null && zeit > _nip17Seit) {
+      _nip17Seit = zeit;
+      unawaited(SharedPreferences.getInstance().then((p) => p.setInt(_keyNip17Seit, zeit)));
+    }
+    if (_nip17Fuer == absender) return;
+    _nip17Fuer = absender;
+    debugPrint('Nostr: Gegenüber versteht NIP-17, sende ab jetzt per Gift Wrap');
+    unawaited(SharedPreferences.getInstance().then((p) => p.setString(keyPartnerNip17, absender)));
+  }
+
+  /// Einmal je Start (bzw. nach einer neuen Kopplung) das Signal „ich verstehe NIP-17“ senden. Kurz warten,
+  /// damit bis dahin mehrere Server verbunden sind; Signale speichern die Server nicht.
+  void _faehigkeitAnkuendigen() {
+    if (_faehigGesendet || !isPaired || _faehigTimer?.isActive == true) return;
+    _faehigTimer = Timer(const Duration(seconds: 3), () async {
+      if (_faehigGesendet || !isPaired) return;
+      _faehigGesendet = await sendSignal({'t': faehigSignal, nip17Feld: 1});
+    });
   }
 
   void _parseAndAddMessage({
@@ -741,6 +898,9 @@ class NostrService {
 
     await prefs.setString(_keyPartnerPubKey, _partnerPublicKey!);
     await prefs.setString(_keyPartnerName, _partnerName);
+    // Hat die angenommene Verbindungsanfrage schon NIP-17 angekündigt, gilt das jetzt.
+    if (_nip17Anfrage == cleanKey) _nip17Merken(cleanKey);
+    _nip17Anfrage = null;
 
     partnerPubKeyNotifier.value = _partnerPublicKey;
     partnerNameNotifier.value = _partnerName;
@@ -750,6 +910,7 @@ class NostrService {
 
     // Refresh inbox subscription
     _subscribeToInbox();
+    _faehigkeitAnkuendigen();
 
     return true;
   }
@@ -797,6 +958,12 @@ class NostrService {
     await prefs.remove(_keyPartnerReadUntil);
     _readSentUntil = 0;
     await prefs.remove(_keyReadSentUntil);
+    // Die Ankündigung gilt nur für die bisherige Person; die neue kündigt selbst an.
+    _nip17Fuer = null;
+    await prefs.remove(keyPartnerNip17);
+    _nip17Seit = 0;
+    await prefs.remove(_keyNip17Seit);
+    _faehigGesendet = false;
   }
 
   /// Fehlen Name oder Geschlecht des Gegenübers, fragt der Paar-Kanal einmal nach.
@@ -845,7 +1012,7 @@ class NostrService {
     if (!isPaired) return false;
     final payload = jsonEncode(
         {'type': 'chat', ...fields, ...extra, 'timestamp': DateTime.now().millisecondsSinceEpoch});
-    return _sendKind4(payload, (eventId) {
+    return _senden(payload, (eventId) {
       _parseAndAddMessage(
         eventId: eventId,
         senderPubkey: _myPublicKey!,
@@ -874,7 +1041,7 @@ class NostrService {
       'timestamp': DateTime.now().millisecondsSinceEpoch,
     });
 
-    return _sendKind4(payload, extraTags: verschwindet ? _ablaufTag() : const [], (eventId) {
+    return _senden(payload, extraTags: verschwindet ? _ablaufTag() : const [], (eventId) {
       _parseAndAddMessage(
         eventId: eventId,
         senderPubkey: _myPublicKey!,
@@ -895,7 +1062,7 @@ class NostrService {
       'timestamp': DateTime.now().millisecondsSinceEpoch,
     });
 
-    return _sendKind4(payload, extraTags: verschwindet ? _ablaufTag() : const [], (eventId) {
+    return _senden(payload, extraTags: verschwindet ? _ablaufTag() : const [], (eventId) {
       _parseAndAddMessage(
         eventId: eventId,
         senderPubkey: _myPublicKey!,
@@ -945,7 +1112,7 @@ class NostrService {
       'timestamp': DateTime.now().millisecondsSinceEpoch,
     });
 
-    return _sendKind4(payload, (eventId) {
+    return _senden(payload, (eventId) {
       _processedEventIds.add(eventId);
     });
   }
@@ -961,15 +1128,15 @@ class NostrService {
 
     // Übergang: Versionen bis 4.3 kennen nur Einzelstimmen. Solange das Gegenüber noch so eine
     // Version haben kann, gehen sie zusätzlich raus (neue Versionen werten sie gleich aus).
-    // Kann entfallen, wenn 4.4 stabil ist und alle aktualisiert haben.
-    for (final entry in answers.entries) {
+    // Kann entfallen, wenn 4.4 stabil ist und alle aktualisiert haben. Wer NIP-17 versteht, ist neuer.
+    for (final entry in partnerNip17 ? const <MapEntry<String, String>>[] : answers.entries) {
       final payload = jsonEncode({
         'type': 'fantasy_vote',
         'fantasyId': entry.key,
         'vote': entry.value,
         'timestamp': DateTime.now().millisecondsSinceEpoch,
       });
-      await _sendKind4(payload, _processedEventIds.add);
+      await _senden(payload, _processedEventIds.add);
     }
 
     final ok = await _sendLearning({
@@ -978,17 +1145,53 @@ class NostrService {
     return ok ? answers.length : 0;
   }
 
-  Future<bool> _sendKind4(String plaintext, void Function(String eventId) onSuccess,
-      {int kind = 4, List<List<String>> extraTags = const []}) async {
+  /// Nur für Tests: ersetzt das Verschicken an die Server (true = angenommen).
+  @visibleForTesting
+  bool Function(Map<String, dynamic> event)? senderFuerTest;
+
+  /// Schickt eine Nachricht an das Gegenüber. Versteht es NIP-17 ([partnerNip17]), als Gift Wrap
+  /// (Rumor kind 14 → Siegel → Hülle kind 1059), sonst wie bisher als kind 4 mit NIP-04 und der
+  /// Ankündigung `"nip17": 1`. [onSuccess] bekommt die id, unter der die Nachricht im Verlauf steht
+  /// (bei NIP-17 die der Rumor). [extraTags] (z. B. `expiration`) kommen bei NIP-17 auf die Hülle.
+  Future<bool> _senden(String plaintext, void Function(String eventId) onSuccess,
+      {List<List<String>> extraTags = const []}) async {
     if (_myPrivateKey == null || _partnerPublicKey == null) return false;
-    final sockets = [for (final r in _relays.values) if (r.socket != null) r.socket!];
-    if (sockets.isEmpty) {
-      debugPrint('Nostr: kein Server verbunden, Nachricht nicht gesendet');
+    if (!partnerNip17) {
+      return _sendeEvent(kind: 4, plaintext: plaintext, onSuccess: onSuccess, extraTags: extraTags);
+    }
+    try {
+      final rumor = GiftWrap.rumor(absenderPub: _myPublicKey!, empfaengerPub: _partnerPublicKey!, inhalt: plaintext);
+      final huelle = GiftWrap.einpacken(
+        rumor: rumor,
+        absenderPrivat: _myPrivateKey!,
+        empfaengerPub: _partnerPublicKey!,
+        huellenTags: extraTags,
+      );
+      final rumorId = rumor['id'] as String;
+      _processedEventIds.add(rumorId);
+      _processedEventIds.add(huelle['id'] as String);
+      if (!_verschicken(huelle)) return false;
+      onSuccess(rumorId);
+      return true;
+    } catch (e) {
+      debugPrint('Nostr: Gift Wrap nicht gesendet (${e.runtimeType})');
       return false;
     }
+  }
 
+  /// Ein vom eigenen Schlüssel signiertes Event an das Gegenüber (kind 4, Lesebestätigung, Signal).
+  /// Inhalt per NIP-44, wenn das Gegenüber NIP-17 angekündigt hat, sonst NIP-04 mit Ankündigung.
+  Future<bool> _sendeEvent({
+    required int kind,
+    required String plaintext,
+    required void Function(String eventId) onSuccess,
+    List<List<String>> extraTags = const [],
+  }) async {
+    if (_myPrivateKey == null || _partnerPublicKey == null) return false;
     try {
-      final encrypted = _nip04.encrypt(_myPrivateKey!, _partnerPublicKey!, plaintext);
+      final encrypted = partnerNip17 && kind != 4
+          ? GiftWrap.verschluesseln(plaintext, _myPrivateKey!, _partnerPublicKey!)
+          : _nip04.encrypt(_myPrivateKey!, _partnerPublicKey!, _mitAnkuendigung(plaintext));
       final event = Event(
         kind: kind,
         tags: [
@@ -1002,32 +1205,56 @@ class NostrService {
 
       final signedEvent = _eventApi.finishEvent(event, _myPrivateKey!);
       _processedEventIds.add(signedEvent.id);
-
-      final eventMap = {
-        'id': signedEvent.id,
-        'pubkey': signedEvent.pubkey,
-        'created_at': signedEvent.created_at,
-        'kind': signedEvent.kind,
-        'tags': signedEvent.tags,
-        'content': signedEvent.content,
-        'sig': signedEvent.sig,
-      };
-
-      final message = jsonEncode(['EVENT', eventMap]);
-      var sent = 0;
-      for (final socket in sockets) {
-        try {
-          socket.add(message);
-          sent++;
-        } catch (_) {}
-      }
-      if (sent == 0) return false;
+      if (!_verschicken(signedEvent.toJson())) return false;
       onSuccess(signedEvent.id);
       return true;
     } catch (e) {
-      debugPrint('Error sending Nostr Kind 4 event: $e');
+      debugPrint('Nostr: Event (kind $kind) nicht gesendet (${e.runtimeType})');
       return false;
     }
+  }
+
+  /// An alle verbundenen Server. true, wenn es mindestens einer angenommen hat (bzw. der Test-Sender).
+  bool _verschicken(Map<String, dynamic> eventMap) {
+    if (senderFuerTest != null) return senderFuerTest!(eventMap);
+    final sockets = [for (final r in _relays.values) if (r.socket != null) r.socket!];
+    if (sockets.isEmpty) {
+      debugPrint('Nostr: kein Server verbunden, Nachricht nicht gesendet');
+      return false;
+    }
+    final message = jsonEncode(['EVENT', eventMap]);
+    var sent = 0;
+    for (final socket in sockets) {
+      try {
+        socket.add(message);
+        sent++;
+      } catch (_) {}
+    }
+    return sent > 0;
+  }
+
+  /// Fügt einem JSON-Objekt die Ankündigung `"nip17": 1` hinzu (nur für NIP-04, siehe [nip17Feld]).
+  static String _mitAnkuendigung(String plaintext) {
+    try {
+      final daten = jsonDecode(plaintext);
+      if (daten is Map<String, dynamic>) return jsonEncode({...daten, nip17Feld: 1});
+    } catch (_) {}
+    return plaintext;
+  }
+
+  /// Inhalt einer Lesebestätigung oder eines Signals des Gegenübers: NIP-04 erkennt man an `?iv=`,
+  /// alles andere ist NIP-44. Beide kündigen ggf. NIP-17 an.
+  String _entschluesselnVomPartner(Map<String, dynamic> ev) {
+    final content = ev['content'] as String;
+    final zeit = ev['created_at'] as int;
+    if (content.contains('?iv=')) {
+      final klartext = _nip04.decrypt(_myPrivateKey!, _partnerPublicKey!, content);
+      _nip04Ankuendigung(_partnerPublicKey!, klartext, zeit);
+      return klartext;
+    }
+    final klartext = GiftWrap.entschluesseln(content, _myPrivateKey!, _partnerPublicKey!);
+    _nip17Merken(_partnerPublicKey!, zeit: zeit);
+    return klartext;
   }
 
   // ---------------------------------------------------------------------------
@@ -1065,9 +1292,9 @@ class NostrService {
     }
   }
 
-  Future<bool> _sendReadReceipt(Map<String, Object> fields) => _sendKind4(
-        jsonEncode(fields),
-        _processedEventIds.add,
+  Future<bool> _sendReadReceipt(Map<String, Object> fields) => _sendeEvent(
+        plaintext: jsonEncode(fields),
+        onSuccess: _processedEventIds.add,
         kind: readReceiptKind,
         extraTags: [
           ['d', _readReceiptTag]
@@ -1083,7 +1310,7 @@ class NostrService {
     final tags = ev['tags'] as List;
     if (!tags.any((t) => t is List && t.length >= 2 && t[0] == 'd' && t[1] == _readReceiptTag)) return;
     try {
-      final data = jsonDecode(_nip04.decrypt(_myPrivateKey!, _partnerPublicKey!, ev['content'] as String));
+      final data = jsonDecode(_entschluesselnVomPartner(ev));
       if (data is! Map) return;
       final prefs = await SharedPreferences.getInstance();
       if (data['off'] == true) {
@@ -1114,8 +1341,10 @@ class NostrService {
   /// Entschlüsselte Signale des Gegenübers, z. B. „bist du da?“ oder der Verbindungsaufbau für ein Foto.
   Stream<Map<String, dynamic>> get signale => _signale.stream;
 
+  /// Inhalt per NIP-44, sobald das Gegenüber NIP-17 angekündigt hat, sonst NIP-04 (keine Hülle:
+  /// Signale sind flüchtig und zeitkritisch, Konzept Entscheidung 3).
   Future<bool> sendSignal(Map<String, Object?> daten) =>
-      _sendKind4(jsonEncode(daten), _processedEventIds.add, kind: signalKind);
+      _sendeEvent(kind: signalKind, plaintext: jsonEncode(daten), onSuccess: _processedEventIds.add);
 
   @visibleForTesting
   void handleSignal(Map<String, dynamic> ev) {
@@ -1127,11 +1356,27 @@ class NostrService {
     final id = ev['id'] as String;
     if (!_processedEventIds.add(id)) return;
     try {
-      final daten = jsonDecode(_nip04.decrypt(_myPrivateKey!, _partnerPublicKey!, ev['content'] as String));
-      if (daten is Map<String, dynamic>) _signale.add(daten);
+      final daten = jsonDecode(_entschluesselnVomPartner(ev));
+      if (daten is! Map<String, dynamic>) return;
+      if (daten['t'] == faehigSignal) {
+        _faehigBeantworten(daten);
+        return;
+      }
+      _signale.add(daten);
     } catch (e) {
       debugPrint('Nostr: Signal nicht lesbar (${e.runtimeType})');
     }
+  }
+
+  /// Das Gegenüber hat gerade gestartet und kündigt NIP-17 an (gemerkt hat es schon
+  /// [_entschluesselnVomPartner]). Einmal antworten, damit es auch umgekehrt sofort Bescheid weiß;
+  /// auf eine Antwort wird nicht geantwortet, und höchstens einmal pro Minute.
+  void _faehigBeantworten(Map<String, dynamic> daten) {
+    if (daten['antwort'] == 1) return;
+    final jetzt = DateTime.now().millisecondsSinceEpoch ~/ 1000;
+    if (jetzt - _letzteFaehigAntwort < 60) return;
+    _letzteFaehigAntwort = jetzt;
+    unawaited(sendSignal({'t': faehigSignal, nip17Feld: 1, 'antwort': 1}));
   }
 
   // ---------------------------------------------------------------------------

@@ -28,6 +28,9 @@ Auftrag mit klarer Notiz als ein ganzer mit Vermutungen.
 - `lib/services/foto_kanal.dart`, `lib/services/foto_verbindung.dart`, `lib/services/nostr_service.dart`,
   `lib/services/nostr_event_check.dart`, `lib/services/sprachausgabe.dart`, `.github/workflows/`
   (Aufgaben 1 bis 3 aus `docs/AUFGABEN.md`)
+- seit 27.10.2026: `lib/services/nostr_service.dart`, `lib/services/nostr_event_check.dart`,
+  `lib/services/rueckmeldung.dart`, `lib/services/message_notifier.dart`, `lib/services/nip44.dart`,
+  `lib/services/gift_wrap.dart` (Umstellung Paar-Kanal auf NIP-17, Branch `feature/nip17`)
 
 ## Offene Aufträge
 

@@ -101,14 +101,14 @@ msgid "Paar-Kanal"
 msgstr ""
 
 #. Abschnitt der Anleitung
-#. EN: In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted.
+#. EN: In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.
 #. EN: Sparks: with one tap you show what you're in the mood for today, or not.
 #. EN: Messages: with read receipts, which you can switch off in the menu.
 #. EN: Wishes: in the yes/maybe/no list, each of you votes separately. Only what you both want becomes visible.
 #. EN: Learning together: share lessons and exchange answers to the reflection questions.
 msgctxt "guide:paar#text"
 msgid ""
-"Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt.\n"
+"Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt. Haben beide Handys eine neue Version, gehen sie versiegelt (NIP-17): Die Server sehen dann nicht mehr, wer wem wann schreibt. Das stellt sich von selbst ein, mit älteren Versionen klappt es weiter wie bisher.\n"
 "Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.\n"
 "Nachrichten: mit Lesebestätigung, die ihr im Menü abschalten könnt.\n"
 "Wünsche: In der Ja/Vielleicht/Nein-Liste stimmt jeder für sich ab. Sichtbar wird nur, was ihr beide wollt.\n"

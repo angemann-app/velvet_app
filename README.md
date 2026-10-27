@@ -8,7 +8,7 @@
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-emerald.svg)](LICENSE)
 [![Content: CC BY-NC-SA 4.0](https://img.shields.io/badge/Content-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE-CONTENT.md)
 [![Android](https://img.shields.io/badge/Android-7%2B-3ddc84.svg)](https://github.com/angemann-app/velvet_app/releases/latest)
-[![Nostr](https://img.shields.io/badge/Nostr-NIP--04-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/04.md)
+[![Nostr](https://img.shields.io/badge/Nostr-NIP--17-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/17.md)
 [![Languages: Deutsch · English](https://img.shields.io/badge/App-Deutsch%20%C2%B7%20English-blue.svg)](translations/en/)
 
 [Deutsch](README.de.md) · **English**
@@ -100,6 +100,8 @@ English recordings are an optional download inside the app; until then, your pho
   online, the photo waits encrypted on your own phone for up to seven days.
 - **Notification of new messages**, even when the app is closed, without content and without names.
 - Connected to all Nostr relays at once; every message is checked for signature and sender.
+- **Sealed messages (NIP-17)** as soon as both phones support it: the relays no longer see who writes to whom
+  and when. Older versions keep working via NIP-04.
 
 ### Discretion and updates
 - **App lock by fingerprint**; content is hidden in the app switcher.
@@ -118,8 +120,8 @@ English recordings are an optional download inside the app; until then, your pho
 | API key, couple channel private key | encrypted in the Android Keystore, not in the cloud backup and not in the normal backup |
 | Automatic backup | the app's private storage (not readable by other apps), without secrets, backed up via Android's cloud backup |
 | Photos in the couple chat | encrypted with AES-256-GCM, directly from phone to phone (WebRTC). To set up the connection, a public STUN server run by Google sees the IP addresses, never the photo. Viewable only once by the recipient, screenshots blocked. |
-| Couple channel | NIP-04 encrypted over public Nostr relays. They cannot read the content, but they can see the public keys of sender and recipient, the time and size of every message, the IP address and, for read receipts, that an app entry was updated. Incoming messages are checked for ID, signature, recipient and sender. |
-| Feedback (*Send feedback*) | only what you type, plus app version and language, NIP-04 encrypted over the Nostr relays to the project's feedback inbox, from a fresh one-time key with no link to the couple channel. The relays see the IP address, not the content. |
+| Couple channel | NIP-17 over public Nostr relays (gift wrap with NIP-44, as soon as both phones support it; until then NIP-04). The relays cannot read the content. With NIP-17 they only see that someone writes to this recipient: not the sender, not the real time (the visible timestamp is moved back randomly by up to two days), and the length only roughly (padding). With NIP-04 they see the public keys of sender and recipient, the time and size of every message. Always visible: the IP address and, for read receipts and the short-lived photo signals, that this pair is active (their content is NIP-44 encrypted). Incoming messages are checked for ID, signature, recipient and sender, with NIP-17 at all three layers (wrap, seal, rumor). No forward secrecy: whoever obtains a private key can still open old messages stored on the relays. |
+| Feedback (*Send feedback*) | only what you type, plus app version and language, as a NIP-17 message over the Nostr relays to the project's feedback inbox, from a fresh one-time key with no link to the couple channel (the wrap uses yet another fresh key). The relays see the IP address, not the content. |
 | AI coach | messages, name, age, gender, relationship status and focus are sent to Google Gemini, only if you add your own API key |
 
 There are no user accounts, no tracking and no server of our own.

@@ -375,6 +375,7 @@ class StorageService {
       'partnerFantasyVotes': _prefs?.getString(_keyPartnerVotes),
       'partnerReflections': _prefs?.getString(_keyPartnerReflections),
       'nostrPartnerGender': _prefs?.getString(_keyPartnerGender),
+      'nostrPartnerNip17': _prefs?.getString(NostrService.keyPartnerNip17),
     };
   }
 
@@ -480,6 +481,7 @@ class StorageService {
         ('partnerFantasyVotes', _keyPartnerVotes),
         ('partnerReflections', _keyPartnerReflections),
         ('nostrPartnerGender', _keyPartnerGender),
+        ('nostrPartnerNip17', NostrService.keyPartnerNip17),
       ]) {
         final value = d[field];
         if (value is String && value.isNotEmpty) writes[key] = value;

@@ -41,7 +41,7 @@
       "icon": "favorite",
       "titel": "Couple channel",
       "bild": "04_paarkanal_verbunden.png",
-      "text": "In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted.\nSparks: with one tap you show what you're in the mood for today, or not.\nMessages: with read receipts, which you can switch off in the menu.\nWishes: in the yes/maybe/no list, each of you votes separately. Only what you both want becomes visible.\nLearning together: share lessons and exchange answers to the reflection questions."
+      "text": "In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.\nSparks: with one tap you show what you're in the mood for today, or not.\nMessages: with read receipts, which you can switch off in the menu.\nWishes: in the yes/maybe/no list, each of you votes separately. Only what you both want becomes visible.\nLearning together: share lessons and exchange answers to the reflection questions."
     },
     {
       "id": "spicy",
@@ -92,7 +92,7 @@
     "guide:gefuehrt": "cd7e54c13f2a00dd",
     "guide:hilfe": "0f67b34ec65bbd7e",
     "guide:kurse": "e619b5e83f74493c",
-    "guide:paar": "a32d29ccbd8bb1ec",
+    "guide:paar": "cc5bcd0b0081f040",
     "guide:reframing": "220d1604fa3c086a",
     "guide:spicy": "3c41844c35e12771",
     "guide:sprache": "f25a4dfd7db85ffd",

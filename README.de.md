@@ -8,7 +8,7 @@
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-emerald.svg)](LICENSE)
 [![Inhalte: CC BY-NC-SA 4.0](https://img.shields.io/badge/Inhalte-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE-CONTENT.md)
 [![Android](https://img.shields.io/badge/Android-7%2B-3ddc84.svg)](https://github.com/angemann-app/velvet_app/releases/latest)
-[![Nostr](https://img.shields.io/badge/Nostr-NIP--04-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/04.md)
+[![Nostr](https://img.shields.io/badge/Nostr-NIP--17-purple.svg)](https://github.com/nostr-protocol/nips/blob/master/17.md)
 [![Sprache: Deutsch · English](https://img.shields.io/badge/App-Deutsch%20%C2%B7%20English-blue.svg)](translations/en/)
 
 **Deutsch** · [English](README.md)
@@ -100,6 +100,8 @@ man bei Bedarf in der App herunter.
   Ist das Gegenüber gerade nicht da, wartet das Foto verschlüsselt auf dem eigenen Handy, höchstens sieben Tage.
 - **Hinweis bei neuen Nachrichten**, auch bei geschlossener App – ohne Inhalt und ohne Namen.
 - Verbindung über alle Nostr-Server gleichzeitig; jede Nachricht wird auf Signatur und Absender geprüft.
+- **Versiegelte Nachrichten (NIP-17)**, sobald beide Handys es können: Die Server sehen nicht mehr, wer wem
+  wann schreibt. Ältere Versionen funktionieren weiter über NIP-04.
 
 ### Diskretion und Updates
 - **App-Sperre per Fingerabdruck**; Inhalte sind in der App-Übersicht verborgen.
@@ -118,8 +120,8 @@ man bei Bedarf in der App herunter.
 | API-Key, privater Schlüssel des Paar-Kanals | im Android-Keystore verschlüsselt, nicht im Cloud-Backup und nicht im normalen Backup |
 | Automatisches Backup | privater App-Speicher (für andere Apps nicht lesbar), ohne Geheimnisse, über Androids Cloud-Backup gesichert |
 | Fotos im Paar-Chat | AES-256-GCM-verschlüsselt, direkt von Handy zu Handy (WebRTC). Für den Verbindungsaufbau sieht ein öffentlicher STUN-Server von Google die IP-Adressen, nie das Foto. Beim Empfänger nur einmal ansehbar, Bildschirmfotos gesperrt. |
-| Paar-Kanal | NIP-04-verschlüsselt über öffentliche Nostr-Server. Den Inhalt können sie nicht lesen; sichtbar sind aber die öffentlichen Schlüssel von Absender und Empfänger, Zeitpunkt und Größe jeder Nachricht, die IP-Adresse und – bei Lesebestätigungen – dass ein App-Eintrag aktualisiert wurde. Eingehende Nachrichten werden auf ID, Signatur, Empfänger und Absender geprüft. |
-| Rückmeldung (*Rückmeldung senden*) | nur was man eintippt, dazu App-Version und Sprache, NIP-04-verschlüsselt über die Nostr-Server an das Rückmelde-Postfach des Projekts, von einem frischen Einmal-Schlüssel ohne Bezug zum Paar-Kanal. Die Server sehen die IP-Adresse, nicht den Inhalt. |
+| Paar-Kanal | NIP-17 über öffentliche Nostr-Server (Gift Wrap mit NIP-44, sobald beide Handys es können; bis dahin NIP-04). Den Inhalt können die Server nicht lesen. Mit NIP-17 sehen sie nur, dass jemand an diesen Empfänger schreibt: nicht den Absender, nicht den echten Zeitpunkt (der sichtbare Zeitstempel ist zufällig bis zu zwei Tage zurückgesetzt) und die Länge nur grob (Auffüllung). Mit NIP-04 sehen sie die öffentlichen Schlüssel von Absender und Empfänger, Zeitpunkt und Größe jeder Nachricht. Immer sichtbar: die IP-Adresse und bei Lesebestätigungen und den flüchtigen Foto-Signalen, dass dieses Paar aktiv ist (deren Inhalt ist NIP-44-verschlüsselt). Eingehende Nachrichten werden auf ID, Signatur, Empfänger und Absender geprüft, bei NIP-17 auf allen drei Stufen (Hülle, Siegel, Rumor). Keine Vorwärtssicherheit: Wer einen privaten Schlüssel erbeutet, kann alte, noch gespeicherte Nachrichten weiterhin öffnen. |
+| Rückmeldung (*Rückmeldung senden*) | nur was man eintippt, dazu App-Version und Sprache, als NIP-17-Nachricht über die Nostr-Server an das Rückmelde-Postfach des Projekts, von einem frischen Einmal-Schlüssel ohne Bezug zum Paar-Kanal (die Hülle von noch einem anderen frischen Schlüssel). Die Server sehen die IP-Adresse, nicht den Inhalt. |
 | KI-Coach | Nachrichten, Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen an Google Gemini – nur wenn du einen eigenen API-Key hinterlegst |
 
 Es gibt keine Benutzerkonten, kein Tracking und keinen eigenen Server.

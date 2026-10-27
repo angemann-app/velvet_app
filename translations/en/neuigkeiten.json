@@ -342,6 +342,17 @@
           "text": "A long, quiet companion into sleep, 60, 90 or 120 minutes. You choose a focus or let yourself be surprised. The voice grows quieter and rarer, and in the end a soft sound remains. Find it with the guided audios on the start page. German recordings now, the English ones follow with a later audio package."
         }
       ]
+    },
+    {
+      "build": 44,
+      "version": "4.10.0-beta.1",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Couple channel even more private",
+          "text": "Messages now travel sealed (NIP-17) as soon as your partner's phone has this version too: the relays can no longer see who writes to whom and when, and the length gives away less. This sets itself up after the first message. With an older version you keep writing as before."
+        }
+      ]
     }
   ],
   "_source": {
@@ -361,6 +372,7 @@
     "news:39": "04594a31ae0808e7",
     "news:40": "dfabcaebe3b5aede",
     "news:41": "bbf1744d4af75ae9",
-    "news:42": "bc76081269606aeb"
+    "news:42": "bc76081269606aeb",
+    "news:44": "d89c7d4589101e92"
   }
 }
