@@ -275,12 +275,14 @@ PAAR_JSON = ROOT / "assets" / "data" / "paar_abend.json"
 SELBST_JSON = ROOT / "assets" / "data" / "selbst_reise.json"
 
 
-def generate_blocks(only=None, source=PAAR_JSON, folder="paar", voices=None, pause=False):
+def generate_blocks(only=None, source=PAAR_JSON, folder="paar", voices=None, pause=False, blocks=None, out_dir=None):
     # Bausteine für den Paar-Abend (lib/screens/couples_channel/paar_abend_screen.dart) bzw. die
     # geführte Selbsterkundung (lib/screens/self_exploration/selbst_reise_screen.dart), jeweils beide Stimmen.
-    out_dir = AUDIO_DIR / folder
-    out_dir.mkdir(exist_ok=True)
-    blocks = json.loads(source.read_text(encoding="utf-8"))["bausteine"]
+    # Mit blocks und out_dir für Inhalte außerhalb des Repositorys (siehe generate_lust).
+    out_dir = out_dir or AUDIO_DIR / folder
+    out_dir.mkdir(parents=True, exist_ok=True)
+    if blocks is None:
+        blocks = json.loads(source.read_text(encoding="utf-8"))["bausteine"]
     if only:
         blocks = [b for b in blocks if b["id"] in only]
     import soundfile as sf
@@ -308,16 +310,26 @@ def generate_blocks(only=None, source=PAAR_JSON, folder="paar", voices=None, pau
 EINSCHLAF_JSON = ROOT / "assets" / "data" / "einschlaf_reise.json"
 
 
-def generate_einschlaf(only=None, voices=None, source=None, folder="einschlaf"):
+def generate_einschlaf(only=None, voices=None, source=None, folder="einschlaf", blocks=None, out_dir=None):
     """Einschlaf-Reise (lib/screens/self_exploration/einschlaf_reise_screen.dart): wie die Selbsterkundung,
     aber deutlich langsamer gesprochen und mit längeren Pausen zwischen den Absätzen."""
     global SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S
     alt = SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S
     SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S = 0.75, {"martin": 0.7}, 1.5
     try:
-        generate_blocks(only, source or EINSCHLAF_JSON, folder, voices, pause=True)
+        generate_blocks(only, source or EINSCHLAF_JSON, folder, voices, pause=True, blocks=blocks, out_dir=out_dir)
     finally:
         SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S = alt
+
+
+# „Lust im Traum“ (docs/konzepte/lust-im-traum.md): Texte und Aufnahmen bleiben außerhalb des Repositorys und
+# kommen nur als Paket über Cloudflare R2. Ausgabe nennt nur Dateinamen, keine Texte.
+LUST_ORDNER = Path(r"C:\TOOLS\velvet-inhalte\lust")
+
+
+def generate_lust(only=None, voices=None):
+    blocks = json.loads((LUST_ORDNER / "lust.json").read_text(encoding="utf-8"))["de"]
+    generate_einschlaf(only, voices, blocks=blocks, out_dir=LUST_ORDNER / "audio")
 
 
 def generate_sounds():
@@ -392,6 +404,8 @@ def main():
                         help="Bausteine der Traum-Reise erzeugen (assets/audio/traum/, Tempo wie Einschlaf-Reise), optional nur die genannten ids")
     parser.add_argument("--einschlaf", action="store_true",
                         help="Bausteine der Einschlaf-Reise erzeugen (assets/audio/einschlaf/), optional nur die genannten ids")
+    parser.add_argument("--lust", action="store_true",
+                        help="„Lust im Traum“ erzeugen (aus und nach C:\\TOOLS\\velvet-inhalte\\lust, nie ins Repository), optional nur die genannten ids")
     parser.add_argument("--klang", action="store_true", help="Klangschale und Klangteppich erzeugen")
     parser.add_argument("--stimme", choices=list(KOKORO_VOICES),
                         help="nur Aufnahmen mit dieser Stimme erneuern (Lektionen im Wechsel zählen mit)")
@@ -411,6 +425,9 @@ def main():
         return
     if args.traum:
         generate_einschlaf(set(args.ids), voices, ROOT / "assets" / "data" / "traum_reise.json", "traum")
+        return
+    if args.lust:
+        generate_lust(set(args.ids), voices)
         return
     if args.courses and len(args.courses) == 1:
         args.courses = (args.courses[0], args.courses[0])
