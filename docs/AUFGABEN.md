@@ -10,6 +10,8 @@ Serie, Traumtagebuch und Paket sind gebaut (siehe Konzept, „Umsetzung“). Off
 - Wochenrückblick des Traumtagebuchs → AG-5
 - Realitätschecks mit Motiven als Auslöser → AG-6
 - Nächtliches Wecken (Folge 5) → AG-7
+- Nachfrage vor Lautsprecher-Wiedergabe, Pause beim Abziehen der Kopfhörer → AG-8
+  (`docs/konzepte/lautsprecher.md`)
 
 ## Laufend: Aussprache korrigieren (täglich) → OpenCode
 
