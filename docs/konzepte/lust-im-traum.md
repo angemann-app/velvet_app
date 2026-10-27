@@ -56,6 +56,31 @@ wiederkehrenden Wellen mehr Raum; mehrere Höhepunkte sind hier häufiger und we
 Die Männer-Fassungen arbeiten mit Wärme und Fülle im Becken und mit dem Loslassen von Leistung; in Folge 7 wird
 ein Höhepunkt ohne Samenerguss ausdrücklich als Möglichkeit genannt, nicht als Technik oder Ziel.
 
+## Traumkörper: der eigene oder der andere (Körperwechsel)
+
+Im Traum darf der Körper ein anderer sein. Ab Folge 3 wählt man den **Traumkörper**:
+
+| Im Bett | Im Traum | Fassung der Traum-Teile |
+|---|---|---|
+| Frau | als Frau | Frauen-Fassung |
+| Mann | als Mann | Männer-Fassung |
+| Mann | **als Frau** | Frauen-Fassung, mit Übergang |
+| Frau | **als Mann** | Männer-Fassung, mit Übergang |
+
+- **Folgen 1 und 2** (Lust im Körper, Die Welle) spielen im echten Körper im Bett und richten sich immer nach dem
+  Körper im Profil.
+- **Ab Folge 3** (Traum einladen bis Eigene Wege) richten sich die Traum-Teile nach dem gewählten Traumkörper. Die
+  Wahl gilt pro Abend und lässt sich jederzeit ändern; Standard ist der eigene Körper.
+- **Übergang beim Wechsel:** ein eigener kurzer Baustein, bevor das Traumbild beginnt. Der Körper wird im Traum
+  langsam ein anderer: andere Haut, anderes Gewicht, eine andere Art, Lust zu spüren. Kern ist das Staunen über
+  den Unterschied, wie bei „Selbstwahrnehmung im anderen Körper“ in der Traum-Reise.
+- In den Absichten heißt es dann z. B. „Im Traum spüre ich Lust in meinem Frauenkörper“ bzw. „… in meinem
+  Männerkörper“.
+- **Ehrlich in der App:** Was der Traumkörper erlebt, ist ein Traumerlebnis. Reagiert der Körper im Bett mit, dann
+  so, wie er gebaut ist; auch das ist schön und richtig.
+- Solche Fantasien sind sehr verbreitet, auch in glücklichen Beziehungen, und sagen wenig über Wünsche oder
+  Identität im Wachleben. Die Serie lädt sie ohne Wertung ein.
+
 ## Grenze für die Texte (Entscheidung 27.10.2026)
 
 Der Höhepunkt darf als **Absicht und Erlaubnis** vorkommen und benannt werden. Er wird **im Audio nicht
@@ -88,3 +113,5 @@ Alle Figuren erwachsen, alles gewollt, keine echten Personen.
 3. **Aufbauend:** Die nächste Folge wird erst nach mindestens zwei gehörten Abenden der vorigen frei.
 4. **Alle Folgen in eigenen Fassungen für Frauen und für Männer**, weil Sexualität bei Frauen und Männern
    unterschiedlich ist.
+5. **Körperwechsel:** Ab Folge 3 ist der Traumkörper wählbar, auch als Mann eine Frau und als Frau ein Mann zu
+   erleben (siehe „Traumkörper“).
