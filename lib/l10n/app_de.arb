@@ -1486,7 +1486,7 @@
   "fotoSicherheitHinweis": "Das Foto geht verschlüsselt direkt von Handy zu Handy und lässt sich nur einmal ansehen. Am sichersten ohne Gesicht und ohne erkennbare Umgebung. Ein zweites Handy kann den Bildschirm trotzdem abfotografieren.",
   "fotoNichtDa": "Dein Gegenüber hat VelvetPulse gerade nicht offen. Das Foto bleibt verschlüsselt bei dir und geht raus, sobald ihr beide die App offen habt.",
   "fotoFehler": "Das Foto konnte nicht angekündigt werden. Bitte später noch einmal versuchen.",
-  "fotoStatusWartet": "Foto wartet: öffnet beide VelvetPulse",
+  "fotoStatusWartet": "Foto kommt, sobald ihr beide die App offen habt",
   "fotoStatusLaedt": "Foto wird übertragen …",
   "fotoAnsehen": "Foto ansehen (nur einmal)",
   "fotoStatusAngesehen": "Foto angesehen",
@@ -1589,5 +1589,7 @@
   "aufnahmenHinweisTitel": "Aufnahmen laden",
   "aufnahmenHinweisText": "Damit Victoria und Martin die Lektionen und geführten Audios sprechen, lade einmal die Aufnahmen. Bis dahin liest die Stimme deines Handys vor.",
   "aufnahmenSpaeter": "Später",
-  "aufnahmenAnsehen": "Ansehen"
+  "aufnahmenAnsehen": "Ansehen",
+  "fotoErneutVersuchen": "Jetzt erneut versuchen",
+  "fotoStatusWeg": "Foto nicht mehr verfügbar"
 }

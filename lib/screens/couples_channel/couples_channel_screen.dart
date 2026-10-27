@@ -247,12 +247,31 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             (_, 'angesehen') => t.fotoStatusAngesehen,
             (true, 'zugestellt') => t.fotoStatusZugestellt,
             (true, 'fehler') => t.fotoStatusFehler,
+            (false, 'fehler') => t.fotoStatusWeg,
             (true, _) => t.fotoStatusWartetRaus,
             (false, _) => t.fotoStatusWartet,
           };
           return Padding(
             padding: const EdgeInsets.only(top: 4),
-            child: Text(text, style: TextStyle(fontSize: 11.5, color: farbe, fontStyle: FontStyle.italic)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(text, style: TextStyle(fontSize: 11.5, color: farbe, fontStyle: FontStyle.italic)),
+                // Wartet es noch, kann man sofort einen neuen Versuch anstoßen (sonst alle 30 Sekunden von selbst).
+                if (z == 'wartet')
+                  TextButton.icon(
+                    onPressed: () => FotoKanal.instanz.abgleichen(),
+                    icon: Icon(Icons.refresh_rounded, size: 16, color: farbe),
+                    label: Text(t.fotoErneutVersuchen, style: TextStyle(fontSize: 12, color: farbe)),
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                      minimumSize: const Size(0, 32),
+                      visualDensity: VisualDensity.compact,
+                    ),
+                  ),
+              ],
+            ),
           );
         },
       ),

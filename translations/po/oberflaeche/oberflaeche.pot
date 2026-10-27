@@ -5340,9 +5340,9 @@ msgid "Das Foto konnte nicht angekündigt werden. Bitte später noch einmal vers
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Photo waiting: both of you open VelvetPulse
+#. EN: Photo arrives once you both have the app open
 msgctxt "ui:fotoStatusWartet#text"
-msgid "Foto wartet: öffnet beide VelvetPulse"
+msgid "Foto kommt, sobald ihr beide die App offen habt"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5835,4 +5835,16 @@ msgstr ""
 #. EN: View
 msgctxt "ui:aufnahmenAnsehen#text"
 msgid "Ansehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Try again now
+msgctxt "ui:fotoErneutVersuchen#text"
+msgid "Jetzt erneut versuchen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Photo no longer available
+msgctxt "ui:fotoStatusWeg#text"
+msgid "Foto nicht mehr verfügbar"
 msgstr ""

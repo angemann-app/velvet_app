@@ -5322,7 +5322,7 @@ abstract class AppLocalizations {
   /// No description provided for @fotoStatusWartet.
   ///
   /// In de, this message translates to:
-  /// **'Foto wartet: öffnet beide VelvetPulse'**
+  /// **'Foto kommt, sobald ihr beide die App offen habt'**
   String get fotoStatusWartet;
 
   /// No description provided for @fotoStatusLaedt.
@@ -5816,6 +5816,18 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Ansehen'**
   String get aufnahmenAnsehen;
+
+  /// No description provided for @fotoErneutVersuchen.
+  ///
+  /// In de, this message translates to:
+  /// **'Jetzt erneut versuchen'**
+  String get fotoErneutVersuchen;
+
+  /// No description provided for @fotoStatusWeg.
+  ///
+  /// In de, this message translates to:
+  /// **'Foto nicht mehr verfügbar'**
+  String get fotoStatusWeg;
 }
 
 class _AppLocalizationsDelegate
