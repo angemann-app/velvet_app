@@ -3140,7 +3140,8 @@ class AppLocalizationsDe extends AppLocalizations {
       'Das Foto konnte nicht angekündigt werden. Bitte später noch einmal versuchen.';
 
   @override
-  String get fotoStatusWartet => 'Foto wartet: öffnet beide VelvetPulse';
+  String get fotoStatusWartet =>
+      'Foto kommt, sobald ihr beide die App offen habt';
 
   @override
   String get fotoStatusLaedt => 'Foto wird übertragen …';
@@ -3359,4 +3360,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get einschlafBeendenText => 'Die Begleitung hört dann auf.';
+
+  @override
+  String get fotoErneutVersuchen => 'Jetzt erneut versuchen';
+
+  @override
+  String get fotoStatusWeg => 'Foto nicht mehr verfügbar';
 }

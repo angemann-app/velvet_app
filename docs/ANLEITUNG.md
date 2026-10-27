@@ -89,7 +89,7 @@ Gemeinsam lernen: Lektionen teilen und Antworten auf die Reflexionsfragen austau
 
 Den Spicy-Modus schaltest du im Profil ein, nur mit Bestätigung, dass du volljährig bist. Er schaltet frei: die Stufen „Spicy“ und „Sehr spicy“ in Körperreise und Gemeinsamem Abend, die Kurse 26 und 27, Spicy-Lektionen in weiteren Kursen und zusätzliche Fragen in der Ja/Vielleicht/Nein-Liste. Die App bekommt dann einen roten Look.
 
-Im Paar-Chat kommen heiße Funken dazu, Nachrichten, die nach dem Lesen verschwinden, und Fotos, die verschlüsselt direkt von Handy zu Handy gehen und sich nur einmal ansehen lassen. Für den Verbindungsaufbau sieht ein öffentlicher Hilfsserver (STUN, von Google) eure IP-Adressen, aber nie das Foto. Die Fotos sind noch experimentell: In manchen Mobilfunknetzen kommt die direkte Verbindung nicht zustande. Wer mag, findet dort jeden Tag eine Foto-Idee, ganz freiwillig und mit „Heute nicht“ sofort weg. Über das Menü im Chat lädst du dein Gegenüber zum Spicy-Modus ein.
+Im Paar-Chat kommen heiße Funken dazu, Nachrichten, die nach dem Lesen verschwinden, und Fotos, die verschlüsselt direkt von Handy zu Handy gehen und sich nur einmal ansehen lassen. Für den Verbindungsaufbau sieht ein öffentlicher Hilfsserver (STUN, von Google) eure IP-Adressen, aber nie das Foto. Die Fotos sind noch experimentell: In manchen Mobilfunknetzen kommt die direkte Verbindung nicht zustande. Wartet ein Foto, versucht die App es von selbst immer wieder, solange sie offen ist; mit „Jetzt erneut versuchen“ geht es sofort. Wer mag, findet dort jeden Tag eine Foto-Idee, ganz freiwillig und mit „Heute nicht“ sofort weg. Über das Menü im Chat lädst du dein Gegenüber zum Spicy-Modus ein.
 
 Ausschalten geht jederzeit, dann ist alles davon sofort verschwunden.
 

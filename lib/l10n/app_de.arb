@@ -1486,7 +1486,7 @@
   "fotoSicherheitHinweis": "Das Foto geht verschlüsselt direkt von Handy zu Handy und lässt sich nur einmal ansehen. Am sichersten ohne Gesicht und ohne erkennbare Umgebung. Ein zweites Handy kann den Bildschirm trotzdem abfotografieren.",
   "fotoNichtDa": "Dein Gegenüber hat VelvetPulse gerade nicht offen. Das Foto bleibt verschlüsselt bei dir und geht raus, sobald ihr beide die App offen habt.",
   "fotoFehler": "Das Foto konnte nicht angekündigt werden. Bitte später noch einmal versuchen.",
-  "fotoStatusWartet": "Foto wartet: öffnet beide VelvetPulse",
+  "fotoStatusWartet": "Foto kommt, sobald ihr beide die App offen habt",
   "fotoStatusLaedt": "Foto wird übertragen …",
   "fotoAnsehen": "Foto ansehen (nur einmal)",
   "fotoStatusAngesehen": "Foto angesehen",
@@ -1553,5 +1553,7 @@
   "einschlafLaeuft": "Du darfst einschlafen",
   "einschlafLaeuftText": "Die Stimme wird leiser und seltener. Am Ende stoppt alles von selbst.",
   "einschlafBeenden": "Einschlaf-Reise beenden?",
-  "einschlafBeendenText": "Die Begleitung hört dann auf."
+  "einschlafBeendenText": "Die Begleitung hört dann auf.",
+  "fotoErneutVersuchen": "Jetzt erneut versuchen",
+  "fotoStatusWeg": "Foto nicht mehr verfügbar"
 }

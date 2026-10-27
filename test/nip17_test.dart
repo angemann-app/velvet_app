@@ -389,6 +389,13 @@ void main() {
       expect(gesendet.single['pubkey'], myPub, reason: 'Signale ohne Hülle');
       expect(gesendet.single['content'], isNot(contains('?iv=')));
       expect(lesen(gesendet.single), {'t': 'da?'});
+      // Auch die Signale der Bildübertragung (FotoKanal) gehen dann per NIP-44.
+      for (final s in [{'t': 'weg', 'id': 'f1'}, {'t': 'erhalten', 'id': 'f1'}]) {
+        gesendet.clear();
+        await nostr.sendSignal(s);
+        expect(gesendet.single['content'], isNot(contains('?iv=')));
+        expect(lesen(gesendet.single), s);
+      }
 
       // Lesebestätigung des Gegenübers per NIP-44.
       final receipt = events

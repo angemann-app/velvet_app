@@ -344,6 +344,17 @@
       ]
     },
     {
+      "build": 43,
+      "version": "4.9.1-beta.1",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Photos arrive more reliably",
+          "text": "A waiting photo now also arrives when you're both online again after being offline. The app keeps trying on its own, and “Try again now” tries right away. If the sender no longer has a photo, the app now says so clearly."
+        }
+      ]
+    },
+    {
       "build": 44,
       "version": "4.10.0-beta.1",
       "punkte": [
@@ -373,6 +384,7 @@
     "news:40": "dfabcaebe3b5aede",
     "news:41": "bbf1744d4af75ae9",
     "news:42": "bc76081269606aeb",
+    "news:43": "b3d7e781fd2801a9",
     "news:44": "d89c7d4589101e92"
   }
 }

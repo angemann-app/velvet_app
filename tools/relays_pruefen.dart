@@ -1,5 +1,5 @@
-// Prüft jeden Server des Paar-Kanals: Nimmt er eine verschlüsselte Direktnachricht (kind 4) an,
-// und reicht er sie an ein zweites, frisches Gegenüber weiter? Genau das passiert bei der Kopplung.
+// Prüft jeden Server des Paar-Kanals: Nimmt er eine verschlüsselte Direktnachricht (kind 4) und ein
+// flüchtiges Signal (kind 21555, Foto-Übertragung) an und reicht beides live an ein Gegenüber weiter?
 // Danach dasselbe für NIP-17 (Gift Wrap, kind 1059, Zeitstempel bis zu zwei Tage zurück): angenommen,
 // live weitergereicht und später noch abrufbar?
 //
@@ -26,8 +26,10 @@ Future<void> main() async {
   final a = keys.generatePrivateKey(), b = keys.generatePrivateKey();
   final aPub = keys.getPublicKey(a), bPub = keys.getPublicKey(b);
 
+  // kind 4: Direktnachrichten (Kopplung, Chat); kind 21555: flüchtige Signale (Foto-Übertragung).
+  for (final kind in [4, 21555])
   for (final url in relays) {
-    final ergebnis = StringBuffer('$url: ');
+    final ergebnis = StringBuffer('kind $kind  $url: ');
     try {
       final empfaenger = await WebSocket.connect(url).timeout(const Duration(seconds: 8));
       final sender = await WebSocket.connect(url).timeout(const Duration(seconds: 8));
@@ -44,12 +46,12 @@ Future<void> main() async {
         if (m[0] == 'NOTICE') ergebnis.write('[Sender NOTICE: ${m.last}] ');
       });
       empfaenger.add(jsonEncode([
-        'REQ', 'test', {'kinds': [4], '#p': [bPub], 'since': DateTime.now().millisecondsSinceEpoch ~/ 1000 - 30}
+        'REQ', 'test', {'kinds': [kind], if (kind != 4) 'authors': [aPub], '#p': [bPub], 'since': DateTime.now().millisecondsSinceEpoch ~/ 1000 - 60}
       ]));
       await Future.delayed(const Duration(seconds: 1));
       final ev = events.finishEvent(
           Event(
-            kind: 4,
+            kind: kind,
             tags: [['p', bPub]],
             content: nip04.encrypt(a, bPub, 'Test'),
             created_at: DateTime.now().millisecondsSinceEpoch ~/ 1000,

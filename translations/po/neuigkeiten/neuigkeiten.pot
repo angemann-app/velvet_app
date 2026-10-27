@@ -587,6 +587,18 @@ msgctxt "news:42#0.text"
 msgid "Eine lange, ruhige Begleitung in den Schlaf, 60, 90 oder 120 Minuten. Du wählst einen Schwerpunkt oder lässt dich überraschen. Die Stimme wird immer leiser und seltener, am Ende bleibt ein leiser Klang. Zu finden bei den geführten Audios auf der Startseite. Deutsche Aufnahmen, die englischen folgen mit einem späteren Audiopaket."
 msgstr ""
 
+#. Was ist neu in Version 4.9.1-beta.1
+#. EN: Photos arrive more reliably
+msgctxt "news:43#0.titel"
+msgid "Fotos kommen zuverlässiger an"
+msgstr ""
+
+#. Was ist neu in Version 4.9.1-beta.1
+#. EN: A waiting photo now also arrives when you're both online again after being offline. The app keeps trying on its own, and “Try again now” tries right away. If the sender no longer has a photo, the app now says so clearly.
+msgctxt "news:43#0.text"
+msgid "Ein wartendes Foto kommt jetzt auch an, wenn ihr erst nach einer Offline-Zeit beide online seid. Die App versucht es von selbst immer wieder, und mit „Jetzt erneut versuchen“ geht es sofort. Liegt ein Foto beim Absender nicht mehr, steht das jetzt klar da."
+msgstr ""
+
 #. Was ist neu in Version 4.10.0-beta.1
 #. EN: Couple channel even more private
 msgctxt "news:44#0.titel"
