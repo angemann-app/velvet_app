@@ -19,7 +19,7 @@ Serie, Traumtagebuch und Paket sind gebaut (siehe Konzept, „Umsetzung“). Off
   (AG-8 ändert diese Datei).
 - **Kotlin und Gradle** auf die von Flutter verlangten Versionen heben (Build-Warnungen: Kotlin 2.2.20, Gradle
   8.10.2 älter als das Minimum). R8 bleibt aus. Danach auf dem Handy prüfen.
-- CI: Screen-Test mit Bildern als Artefakt (erledigt 27.10.).
+- CI: Screen-Test läuft, scheitert dort aber (Zeitüberschreitung nach 10 Minuten, vermutlich Netzzugriffe von Nostr/HTTP); bis zur Reparatur nicht blockierend. Netz im Test abschalten bzw. Dienste attrappen.
 
 ## 3. Pflege: Inhalte, Schwerpunkt für Schwerpunkt
 

@@ -20,7 +20,10 @@ jobs:
       # Enthält die Sicherheits-Regressionstests (test/security_test.dart).
       - run: flutter test
       # Rendert alle Screens (build/screens/) und protokolliert Layout-Überläufe; Bilder als Artefakt.
+      # Noch nicht blockierend: in der CI hängt der Test (Netzzugriffe, Zeitüberschreitung), siehe docs/AUFGABEN.md.
       - run: flutter test test_screens/screens_test.dart
+        continue-on-error: true
+        timeout-minutes: 12
       - uses: actions/upload-artifact@v4
         if: always()
         with:
