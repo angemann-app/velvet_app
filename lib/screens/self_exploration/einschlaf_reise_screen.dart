@@ -13,6 +13,7 @@ import '../../models/paar_abend.dart';
 import '../../services/naechtliches_wecken.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
+import '../../services/testmodus.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
 import '../../widgets/player_steuerung.dart';
@@ -188,7 +189,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
     _lustGezaehlt = false;
 
     setState(() {
-      _ablauf = ablauf;
+      _ablauf = Testmodus.kuerzen(ablauf);
       _index = 0;
       _imSchritt = Duration.zero;
       _pausiert = false;
@@ -223,7 +224,8 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
             : (_traumDaten?.istTraum(id) == true ? 'traum' : 'einschlaf');
         // Ein Abend der Serie zählt als gehört, sobald die Folge selbst beginnt.
         final lust = widget.lust;
-        if (lust != null && !_lustGezaehlt && id.startsWith('f${lust.folge}_')) {
+        // Im Testmodus zählt nichts, damit der echte Fortschritt stimmt.
+        if (lust != null && !_lustGezaehlt && !Testmodus.an && id.startsWith('f${lust.folge}_')) {
           _lustGezaehlt = true;
           StorageService.lustAbendGehoert(lust.folge);
         }

@@ -6602,6 +6602,24 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst.'**
   String get weckenLaeuftText;
+
+  /// No description provided for @testmodusAn.
+  ///
+  /// In de, this message translates to:
+  /// **'Testmodus an: kurze Pausen, alles frei.'**
+  String get testmodusAn;
+
+  /// No description provided for @testmodusAus.
+  ///
+  /// In de, this message translates to:
+  /// **'Testmodus aus.'**
+  String get testmodusAus;
+
+  /// No description provided for @testmodusSchild.
+  ///
+  /// In de, this message translates to:
+  /// **'Testmodus: kurze Pausen, alles frei. Ausschalten: siebenmal auf die Versionsnummer im Profil tippen.'**
+  String get testmodusSchild;
 }
 
 class _AppLocalizationsDelegate

@@ -13,6 +13,7 @@ import 'auto_backup_service.dart';
 import 'backup_codec.dart';
 import 'nostr_service.dart';
 import 'secret_store.dart';
+import 'testmodus.dart';
 import '../l10n/t.dart';
 
 class StorageService {
@@ -51,6 +52,7 @@ class StorageService {
     try {
       _prefs ??= await SharedPreferences.getInstance();
       spicyAenderung.value = spicyMode();
+      Testmodus.init(_prefs!);
       await SecretStore.init(_prefs!);
       final profStr = _prefs?.getString(_keyUserProfile);
       if (profStr != null && profStr.isNotEmpty) {

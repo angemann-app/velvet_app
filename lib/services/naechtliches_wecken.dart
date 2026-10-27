@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../l10n/t.dart';
+import 'testmodus.dart';
 import '../models/paar_abend.dart';
 import '../models/traum_reise.dart';
 import 'storage_service.dart';
@@ -30,6 +31,7 @@ class NaechtlichesWecken {
 
   /// Prüft die Wochenregel: Höchstens [maxProWoche] (2) Mal innerhalb von sieben Tagen.
   static bool darfHeuteWecken(List<DateTime> verlauf, {DateTime? jetzt}) {
+    if (Testmodus.an) return true;
     return anzahlInLetzterWoche(verlauf, jetzt: jetzt) < maxProWoche;
   }
 

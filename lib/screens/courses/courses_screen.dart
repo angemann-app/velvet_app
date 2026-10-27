@@ -4,6 +4,7 @@ import '../../models/content_models.dart';
 import '../../models/user_profile.dart';
 import '../../services/data_service.dart';
 import '../../services/storage_service.dart';
+import '../../services/testmodus.dart';
 import '../../widgets/aufnahmen_karte.dart';
 import '../../widgets/gefuehrte_audios.dart';
 import '../../theme/app_theme.dart';
@@ -176,6 +177,25 @@ class _CoursesScreenState extends State<CoursesScreen> {
       child: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         children: [
+          ValueListenableBuilder<bool>(
+            valueListenable: Testmodus.aktiv,
+            builder: (context, an, _) => an
+                ? Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: AppTheme.amber.withValues(alpha: 0.15),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: AppTheme.amber.withValues(alpha: 0.6)),
+                      ),
+                      child: Text(t.testmodusSchild,
+                          style: const TextStyle(color: AppTheme.amber, fontSize: 12, fontWeight: FontWeight.w700)),
+                    ),
+                  )
+                : const SizedBox.shrink(),
+          ),
+
           // Welcome & Daily Streak Banner
           _buildHeroHeader(completedCount, totalLessons, overallProgress),
 

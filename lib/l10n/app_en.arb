@@ -1094,5 +1094,8 @@
   "weckenBegleitungStarten": "Start guidance",
   "weckenTraumNotieren": "Note dream briefly",
   "weckenLaeuft": "Good night",
-  "weckenLaeuftText": "Set your device aside and close your eyes. The guidance stops on its own."
+  "weckenLaeuftText": "Set your device aside and close your eyes. The guidance stops on its own.",
+  "testmodusAn": "Test mode on: short pauses, everything unlocked.",
+  "testmodusAus": "Test mode off.",
+  "testmodusSchild": "Test mode: short pauses, everything unlocked. To turn off, tap the version number in the profile seven times."
 }

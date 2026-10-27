@@ -3940,4 +3940,14 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get weckenLaeuftText =>
       'Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst.';
+
+  @override
+  String get testmodusAn => 'Testmodus an: kurze Pausen, alles frei.';
+
+  @override
+  String get testmodusAus => 'Testmodus aus.';
+
+  @override
+  String get testmodusSchild =>
+      'Testmodus: kurze Pausen, alles frei. Ausschalten: siebenmal auf die Versionsnummer im Profil tippen.';
 }

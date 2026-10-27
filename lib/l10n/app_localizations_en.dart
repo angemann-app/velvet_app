@@ -3922,4 +3922,14 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get weckenLaeuftText =>
       'Set your device aside and close your eyes. The guidance stops on its own.';
+
+  @override
+  String get testmodusAn => 'Test mode on: short pauses, everything unlocked.';
+
+  @override
+  String get testmodusAus => 'Test mode off.';
+
+  @override
+  String get testmodusSchild =>
+      'Test mode: short pauses, everything unlocked. To turn off, tap the version number in the profile seven times.';
 }

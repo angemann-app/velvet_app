@@ -1845,5 +1845,8 @@
   "weckenBegleitungStarten": "Begleitung starten",
   "weckenTraumNotieren": "Traum kurz festhalten",
   "weckenLaeuft": "Gute Nacht",
-  "weckenLaeuftText": "Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst."
+  "weckenLaeuftText": "Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst.",
+  "testmodusAn": "Testmodus an: kurze Pausen, alles frei.",
+  "testmodusAus": "Testmodus aus.",
+  "testmodusSchild": "Testmodus: kurze Pausen, alles frei. Ausschalten: siebenmal auf die Versionsnummer im Profil tippen."
 }

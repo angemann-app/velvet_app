@@ -6622,3 +6622,21 @@ msgstr ""
 msgctxt "ui:weckenLaeuftText#text"
 msgid "Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Test mode on: short pauses, everything unlocked.
+msgctxt "ui:testmodusAn#text"
+msgid "Testmodus an: kurze Pausen, alles frei."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Test mode off.
+msgctxt "ui:testmodusAus#text"
+msgid "Testmodus aus."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Test mode: short pauses, everything unlocked. To turn off, tap the version number in the profile seven times.
+msgctxt "ui:testmodusSchild#text"
+msgid "Testmodus: kurze Pausen, alles frei. Ausschalten: siebenmal auf die Versionsnummer im Profil tippen."
+msgstr ""

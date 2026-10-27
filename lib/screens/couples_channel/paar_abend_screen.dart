@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/paar_abend.dart';
 import '../../services/nostr_service.dart';
+import '../../services/testmodus.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
@@ -114,7 +115,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     await prefs.setStringList(_keyZuletzt, [...neu, ...zuletzt].take(60).toList());
 
     setState(() {
-      _ablauf = ablauf;
+      _ablauf = Testmodus.kuerzen(ablauf);
       _index = 0;
       _imSchritt = Duration.zero;
       _pausiert = false;

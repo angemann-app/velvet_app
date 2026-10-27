@@ -9,6 +9,7 @@ import '../../l10n/t.dart';
 import '../../models/paar_abend.dart';
 import '../../models/traum_reise.dart';
 import '../../services/naechtliches_wecken.dart';
+import '../../services/testmodus.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
@@ -88,7 +89,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
     );
 
     setState(() {
-      _ablauf = ablauf;
+      _ablauf = Testmodus.kuerzen(ablauf);
       _index = 0;
       _imSchritt = Duration.zero;
       _pausiert = false;
