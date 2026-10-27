@@ -109,6 +109,12 @@ void main() {
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
 
+    // Ohne Audio-Plugin wirft AudioPlayer.dispose asynchron; das übergeht unseren Fehler-Sammler und bricht den
+    // Test ab. Die Kanäle antworten deshalb hier einfach leer.
+    for (final kanal in ['xyz.luan/audioplayers', 'xyz.luan/audioplayers.global']) {
+      tester.binding.defaultBinaryMessenger.setMockMethodCallHandler(MethodChannel(kanal), (_) async => null);
+    }
+
     final errors = <String>[];
     final oldHandler = FlutterError.onError;
     FlutterError.onError = (d) => errors.add(d.exceptionAsString().split('\n').first);
