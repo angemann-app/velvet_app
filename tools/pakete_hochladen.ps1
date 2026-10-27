@@ -1,11 +1,13 @@
-# Baut die Audio-Pakete, signiert das Verzeichnis und veröffentlicht beides:
+﻿# Baut die Audio-Pakete, signiert das Verzeichnis und veröffentlicht beides:
 # 1. tools/pakete_bauen.py  2. tools/pakete_verzeichnis.dart  3. GitHub-Release „pakete“ (zweite Adresse)
 # 4. Workflow „Pakete nach R2“ kopiert alles nach Cloudflare R2 (erste Adresse).
 # Ältere Pakete bleiben im Release liegen (ältere App-Versionen und das alte Verzeichnis zeigen auf sie).
 #
 #   powershell -ExecutionPolicy Bypass -File tools\pakete_hochladen.ps1 [-EnQuelle C:\TOOLS\workspace\mojo\build\audio_en]
 param([string] $EnQuelle = "")
-$ErrorActionPreference = "Stop"
+# Nicht "Stop": PowerShell 5.1 behandelt jede Ausgabe nativer Programme auf stderr (z. B. gh „release not
+# found“) sonst als Abbruch. Fehler werden unten über $LASTEXITCODE geprüft.
+$ErrorActionPreference = "Continue"
 $root = Split-Path $PSScriptRoot
 Set-Location $root
 $gh = "C:\TOOLS\gh\bin\gh.exe"
