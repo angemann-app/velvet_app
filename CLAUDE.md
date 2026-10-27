@@ -47,6 +47,8 @@ Modell `opencode/deepseek-v4.1-flash-free`. Soll AG langfristig als Arbeitstier 
 - **Rechte** stehen in `~/.config/opencode/opencode.jsonc` (Vorlage `tools/opencode/opencode.jsonc`): kein
   Zugriff außerhalb des Projekts, Shell nur `flutter test/analyze/gen-l10n/pub get`, `dart format` und Git lesen.
   Beim Lockern daran denken: Über die Shell lässt sich jede Datei lesen.
+- **Aussprache-Pflege** (früher AG-1) läuft so: Ablauf in `docs/AUSSPRACHE.md`. Dafür darf OpenCode
+  `tools/generate_audio.py` mit dem venv-Python starten (Kokoro läuft lokal), sonst kein Python.
 
 **Grundsatz Inhalte:** Langfristig werden alle Inhalte (Texte und Audios) getrennt von der App als
 signierte Pakete angeboten. Neue Inhalte deshalb so anlegen, dass sie in ein Paket wandern können; nur

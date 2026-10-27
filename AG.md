@@ -118,39 +118,10 @@ und Ids in `de` und `en` gleich.
 
 **Abschluss:** kein Pull Request. Dem Nutzer melden: Datei fertig, Anzahl der Bausteine, offene Fragen.
 
-### AG-1: Aussprache korrigieren (laufend, täglich)
+### AG-1: Aussprache korrigieren (beendet)
 
-**Branch:** `aussprache/<JJJJ-MM-TT>`
-**Darf ändern:** `tools/aussprache.json`, neu erzeugte Dateien unter `assets/audio/` (nur die betroffenen)
-samt der zugehörigen `dauer.json` (`assets/audio/paar/`, `selbst/`, `einschlaf/`).
-
-1. Neue Meldungen abholen, **mit eigenem Lesestand**:
-   `C:\TOOLS\flutter\bin\dart.bat run tools/rueckmeldungen_abholen.dart --leser ag`
-   Dazu offene GitHub-Issues mit der Vorlage „Aussprache“ ansehen.
-2. Nur Aussprache-Meldungen bearbeiten (Wort, Stimme, Lektion, Minute). Andere Rückmeldungen nicht
-   bearbeiten; im Pull Request nur ihre Anzahl nennen. Um die kümmert sich Claude.
-3. Je Wort die aktuelle Lautschrift ansehen:
-   `C:\TOOLS\kikiri-venv\Scripts\python.exe tools/generate_audio.py --zeige "<Wort>"`
-   Dann einen Eintrag in `tools/aussprache.json` ergänzen oder korrigieren und mit `--zeige` erneut prüfen.
-   **Jeder Eintrag braucht eine Hauptbetonung `ˈ`** (eine Nebenbetonung `ˌ` allein klingt flach).
-   Bei Unsicherheit zwei Varianten als Hörproben erzeugen und den Nutzer wählen lassen, statt zu raten.
-4. Ein Lexikon-Eintrag gilt für **alle** künftigen Aufnahmen. Deshalb zwei Schritte:
-   - **Schritt A (dieser Pull Request):** Eintrag plus die gemeldeten Aufnahmen neu einsprechen; im Pull
-     Request alle übrigen betroffenen Aufnahmen auflisten.
-   - **Schritt B (nächster Lauf, nachdem der Nutzer Schritt A zusammengeführt hat):** die übrigen
-     Aufnahmen mit diesen Wörtern gebündelt neu einsprechen, eigener Pull Request
-     `aussprache/<datum>-nachsprechen`, im Bericht nur Stichproben zum Anhören.
-5. Neu einsprechen, z. B. `C:\TOOLS\kikiri-venv\Scripts\python.exe tools/generate_audio.py <lektions-id>`,
-   bzw. `--paar`, `--selbst`, `--einschlaf` mit `--stimme` für geführte Audios. Geänderte `dauer.json`
-   mit committen.
-6. Im Pull Request eine **Anhörliste**: Datei, Wort, ungefähre Stelle.
-
-**Datenschutz:** Den Inhalt der Rückmeldungen nie in Commits, Pull Requests oder Issues kopieren, nur das
-betroffene Wort, die Stimme und die Lektion. `C:\TOOLS\velvet-feedback\` und der Schlüssel dort bleiben
-außerhalb des Repositorys.
-
-**Wenn nichts Neues gemeldet ist** und kein Schritt B offen ist: nichts ändern, keinen Branch anlegen, dem
-Nutzer „keine neuen Aussprache-Meldungen“ melden.
+Seit 27.10.2026 erledigt das Claude Code mit OpenCode (Ablauf in `docs/AUSSPRACHE.md`). Antigravity holt
+keine Aussprache-Meldungen mehr ab und legt keine `aussprache/`-Branches mehr an.
 
 ## Erledigt
 
