@@ -1,0 +1,321 @@
+{
+  "_hinweis": "English version of assets/data/traum_reise.json.",
+  "bausteine": [
+    {
+      "id": "sinken_traum_1",
+      "phase": "sinken",
+      "text": "With every breath out, your body gives up a little more weight to the bed. Your forehead grows smooth, your jaw loosens, and your shoulders sink deep into the mattress.\nYour belly becomes soft and moves calmly with your breath. Deep within your pelvis, everything may now loosen and widen too, like a warm bowl gently opening.\nYour pelvic floor rests heavy, warm, and at ease. Your whole lower body is held by the bed, and the night takes you in gently."
+    },
+    {
+      "id": "sinken_traum_2",
+      "phase": "sinken",
+      "text": "The warmth beneath the blanket spreads slowly across your skin. Your eyes rest behind heavy lids, your tongue lies soft in your mouth, and your throat grows wide.\nWith every long breath out, calm sinks deeper through your chest and your belly down into your pelvis. Everything in your pelvis becomes broad, heavy, and soft.\nYour legs and your feet lie warm and still. Your body may let go completely while the night carries you in peace."
+    },
+    {
+      "id": "warmes_wasser_v1",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v1",
+      "text": "You are lying in still, warm water that carries you effortlessly. All around you is quiet, and deep beneath you a warm golden light shimmers through the water.\nThe water knows your body. It surrounds your shoulders, your back, and your soft, heavy pelvis. Small waves lift you gently and lower you again.\nBelow you, the calm gold glows through the depth, the way light glows only in a dream. This warm water may accompany you into your dreams. There you may let yourself be carried, soft and weightless."
+    },
+    {
+      "id": "warmes_wasser_v2",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v2",
+      "text": "A quiet bay at night surrounds your body with gentle, warm water. Deep on the seabed, a soft golden light shimmers upward and colors the waves with warmth.\nYour pelvis rests wide and relaxed in the water, and every gentle motion rocks you calmly to and fro. This golden glow beneath the water accompanies you over into your dream."
+    },
+    {
+      "id": "warmes_wasser_v3",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v3",
+      "text": "Warm water carries your whole body, and deep beneath the surface a calm golden light is shimmering.\nSoft waves rock you gently into your dream."
+    },
+    {
+      "id": "warmes_wasser_f",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "f",
+      "text": "In my dream, I may let myself be carried."
+    },
+    {
+      "id": "warmes_wasser_s_vulva",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "You are drifting in dark, warm water, while deep beneath you a soft golden light shimmers through the depth.\nEvery small movement of the water glides like a tender touch across your bare skin, over your chest, your soft belly, and between your thighs. Your pelvis is wide and relaxed, your vulva and your labia resting warm in the water.\nWith every gentle wave, your pelvis responds with a quiet, warm pull, and your clitoris grows softly warm. These sensual waves and the golden shimmer may accompany you right into your dreams."
+    },
+    {
+      "id": "warmes_wasser_s_penis",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "You are drifting in dark, warm water, while deep beneath you a soft golden light shimmers through the depth.\nEvery small movement of the water glides like a tender touch across your bare skin, over your chest, your soft belly, and between your thighs. Your pelvis is wide and relaxed, and your sex rests warm and heavy in the water.\nWith every gentle wave, your pelvis responds with a quiet, warm pull, and your penis slowly grows fuller and warmer. These sensual waves and the golden shimmer may accompany you right into your dreams."
+    },
+    {
+      "id": "ort_fuer_mich_v1",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v1",
+      "text": "A quiet, sheltered room opens before you, a space that is here entirely for you. Soft pillows, dim light, and warm air surround you.\nOutside the open window, small glowing sparks float very slowly upward into the dark night sky. It is a quiet sign of the dream world.\nIn here, time belongs completely to you. Your skin grows warm, your breath flows calmly, and your soft pelvis settles into this safety."
+    },
+    {
+      "id": "ort_fuer_mich_v2",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v2",
+      "text": "A quiet attic room with soft blankets welcomes you in the night. Outside the wide window, warm sparks of light rise gently from the ground up toward the stars.\nYour whole body sinks deep into the soft cushions, your pelvis lets go, and a calm warmth fills the room. This sheltered place accompanies you into your dream."
+    },
+    {
+      "id": "ort_fuer_mich_v3",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v3",
+      "text": "A warm, sheltered room surrounds you, and outside the window glowing sparks float slowly upward into the night.\nHere your body rests deep and safe on its way into the dream."
+    },
+    {
+      "id": "ort_fuer_mich_f",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "f",
+      "text": "In my dream, I find a place where I can enjoy."
+    },
+    {
+      "id": "ort_fuer_mich_s_vulva",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "You are lying bare beneath a light blanket in a room that belongs entirely to you. Outside the open window, warm sparks of light drift slowly up into the night.\nYour skin is awake and sensitive to the soft fabric on your chest, your belly, and your hips. Your pelvis lies wide and heavy on the cushions.\nBetween your legs, a calm, pleasant warmth gathers in your vulva, your labia, and your clitoris. This quiet arousal may simply be there and gently accompany you into your dream."
+    },
+    {
+      "id": "ort_fuer_mich_s_penis",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "You are lying bare beneath a light blanket in a room that belongs entirely to you. Outside the open window, warm sparks of light drift slowly up into the night.\nYour skin is awake and sensitive to the soft fabric on your chest, your belly, and your hips. Your pelvis lies wide and heavy on the cushions, and your pelvic floor is completely soft.\nBetween your legs, a calm, pleasant warmth spreads. Your penis quietly grows fuller, without any hurry. This quiet arousal may simply be there and gently accompany you into your dream."
+    },
+    {
+      "id": "koerper_im_licht_v1",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v1",
+      "text": "A soft amber light fills the room, a calm, friendly light that illuminates the whole space evenly without any shadow.\nIt settles over your skin like a warm blanket. Everywhere this light touches you, your body grows soft and calm.\nYour shoulders, your belly, your wide pelvis, and your legs are wrapped in this golden warmth. Your body, just as it lies here right now, is completely welcome."
+    },
+    {
+      "id": "koerper_im_licht_v2",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v2",
+      "text": "Amber light glows gently from all sides at once, leaving the entire room free of shadows. The mild warmth glides across your face, your chest, and your belly.\nYour pelvis grows wide and heavy in this light, and every part of your body may feel accepted and at ease."
+    },
+    {
+      "id": "koerper_im_licht_v3",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v3",
+      "text": "A warm, gentle amber light without any shadow wraps your whole body in warmth.\nYour skin and your soft pelvis rest warm and completely welcome on the way into your dream."
+    },
+    {
+      "id": "koerper_im_licht_f",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "f",
+      "text": "In my dream, I feel good in my own skin."
+    },
+    {
+      "id": "koerper_im_licht_s_vulva",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "A warm amber light without any shadow glides slowly across your bare body. The gentle warmth rests on your chest, on your soft belly, and deep between your legs.\nYour pelvis opens to this warm light all on its own, soft and receptive. Your vulva, your labia, and your clitoris rest warm and alive in this mild golden glow.\nA quiet tingling spreads beneath your skin, and your whole body may feel warm, alive, and desirable as you drift into your dream."
+    },
+    {
+      "id": "koerper_im_licht_s_penis",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "A warm amber light without shadows glides slowly across your bare body. The warmth rests on your chest, on your soft belly, and deep between your legs.\nYour pelvis grows wide and relaxed in this light, and your pelvic floor lets go completely. Your penis rests warm and alive in this gentle glow, and the warmth gathers softly within it.\nA quiet tingling spreads beneath your skin, and your whole body may feel warm and desirable as you drift into your dream."
+    },
+    {
+      "id": "begegnung_v1",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v1",
+      "text": "You are in a quiet, warm place at twilight. From afar, a single deep bell tone rings out, and you feel it like a warm breath across your skin.\nA kind, attentive closeness fills the space. It is the calm feeling of being held, seen, and tenderly touched.\nYour breath flows deep, your pelvis grows soft and wide, and this gentle connection may accompany you over into your dream."
+    },
+    {
+      "id": "begegnung_v2",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v2",
+      "text": "In the warm evening twilight, a deep, soft chime moves through the air and settles like warmth upon your skin. A quiet, loving presence is very close to you.\nYour shoulders and your pelvis sink softly into peace, carried by the feeling of gentle closeness and tenderness."
+    },
+    {
+      "id": "begegnung_v3",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v3",
+      "text": "A deep, warm tone sounds through the twilight and gently touches your skin.\nA calm, tender closeness accompanies you gently into your dream."
+    },
+    {
+      "id": "begegnung_f",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "f",
+      "text": "In my dream, tenderness may come to me."
+    },
+    {
+      "id": "begegnung_s_vulva",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "In the warm twilight, a deep, soft sound resonates and runs like a gentle shiver across your skin. A familiar, desiring closeness is right beside you.\nWarm breath brushes your neck, and a calm hand rests warmly on your hip. Your pelvis lets go completely and becomes wide and soft.\nBetween your legs, your vulva, your labia, and your clitoris respond with a deep, drawing warmth that accompanies you calmly into your dream."
+    },
+    {
+      "id": "begegnung_s_penis",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "In the warm twilight, a deep, soft sound resonates and runs like a gentle shiver across your skin. A familiar, desiring closeness is right beside you.\nWarm breath brushes your neck, and a calm hand rests warmly on your hip. Your pelvis lets go completely, and your pelvic floor becomes wide and soft.\nBetween your legs, your penis responds with a deep, drawing warmth that slowly grows and accompanies you calmly into your dream."
+    },
+    {
+      "id": "klarheit_v1",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v1",
+      "text": "Dreams are like a second room in the night. Before you stands a door left slightly ajar, and through the narrow gap a calm violet starlight shines in.\nYour gaze falls briefly upon your own hands, and you feel how clear and calm your mind is while your body sleeps deeply and safely.\nIn this stillness, a friendly, effortless realization arises that this space is your dream and belongs entirely to you."
+    },
+    {
+      "id": "klarheit_v2",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v2",
+      "text": "At the end of a quiet hallway, a door stands slightly open, and violet starlight flows softly across the floor. You see your hands in this unusual glow.\nWhile your body rests deeply in bed, your mind calmly realizes that you are right in the middle of a dream."
+    },
+    {
+      "id": "klarheit_v3",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v3",
+      "text": "Through the gap of a door left ajar, calm violet starlight falls upon your hands.\nWith quiet ease, you realize in your sleep that you are dreaming."
+    },
+    {
+      "id": "klarheit_f",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "f",
+      "text": "When I am dreaming, I recognize it."
+    },
+    {
+      "id": "klarheit_s_vulva",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "Through the gap of a door left ajar, violet starlight falls onto your bare skin. Your gaze rests on your hands, and with calm joy you realize that you are dreaming.\nIn this dream world, your body is free, soft, and full of pleasure. Your pelvis is wide and relaxed, and a calm, living warmth pulses in your vulva and your clitoris.\nYour breath keeps flowing gently, and this wide dream space is completely open to your sensuality."
+    },
+    {
+      "id": "klarheit_s_penis",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "Through the gap of a door left ajar, violet starlight falls onto your bare skin. Your gaze rests on your hands, and with calm joy you realize that you are dreaming.\nIn this dream world, your body is free, soft, and full of pleasure. Your pelvis and your pelvic floor are wide and relaxed, and a calm, living warmth pulses in your penis.\nYour breath keeps flowing gently, and this wide dream space is completely open to your sensuality."
+    },
+    {
+      "id": "wach_1",
+      "phase": "wach",
+      "text": "Your dream is noted down, and everything around you is quiet and safe. Your body may immediately grow heavy again and sink back into the warmth of the bed.\nYour breath flows long and gentle, all on its own. Your belly is soft, and your pelvis rests wide and relaxed on the mattress.\nYou are lying right at the threshold where the longest and calmest dreams of the night arise. Behind your closed eyelids, the image from the evening may quietly appear once more.\nPerhaps the unusual light will meet you again in your dream, and you will calmly recognize where you are."
+    },
+    {
+      "id": "wach_2",
+      "phase": "wach",
+      "text": "The brief pause in the night is over, and the blanket holds you warm again. Your shoulders, your back, and your soft pelvis sink deep back into the bed.\nYour breath moves quietly in and slowly out again. With every breath, you glide closer to the dream world while your mind remains gentle and aware.\nThe dream image from the evening accompanies you quietly across the threshold back into sleep."
+    },
+    {
+      "id": "wach_absicht_1",
+      "phase": "absicht",
+      "text": "When I am dreaming, I recognize it. In my dream, I may enjoy."
+    },
+    {
+      "id": "hinweis_einstieg",
+      "phase": "hinweis",
+      "text": "Dreams can be invited, not controlled. With a little practice you remember more, and sometimes you notice in the dream that you are dreaming. What happens then is all yours."
+    },
+    {
+      "id": "hinweis_schlafparalyse",
+      "phase": "hinweis",
+      "text": "During the transition between waking and dreaming, it can occasionally happen that your mind is already awake while your body is still resting in its natural sleep stillness. This is usually harmless, and your breathing continues normally. A calm breath through the nose and a gentle movement of a finger or a toe easily dissolve the heaviness, or you close your eyes and glide straight back into your dream. If it happens often or troubles you, talk to a doctor."
+    },
+    {
+      "id": "hinweis_tagebuch_sinnlich",
+      "phase": "hinweis",
+      "text": "Sensual dreams and nighttime climaxes are a natural response of your body and a sign that your desire is alive and well. Who appears in a dream and what happens there need not have any meaning at all for your waking life. You may simply enjoy the memory or calmly let it pass on."
+    },
+    {
+      "id": "hinweis_klartraum",
+      "phase": "hinweis",
+      "text": "When you notice that you are dreaming, you can breathe slowly, look at your hands, feel the ground beneath you, and then return to the scene from the evening or see what you wish for."
+    }
+  ],
+  "_source": {
+    "dream_block:begegnung_f": "fcbc91ad41201afc",
+    "dream_block:begegnung_s_penis": "8ae66dbe3c8bc043",
+    "dream_block:begegnung_s_vulva": "170f887bfca334ca",
+    "dream_block:begegnung_v1": "eddc972ccb812eee",
+    "dream_block:begegnung_v2": "53732064e4df4d55",
+    "dream_block:begegnung_v3": "9b7172c7ad9fd398",
+    "dream_block:hinweis_einstieg": "6eb84cab0f29d50a",
+    "dream_block:hinweis_klartraum": "4d28cd4842045bd7",
+    "dream_block:hinweis_schlafparalyse": "296f2ae32baa039a",
+    "dream_block:hinweis_tagebuch_sinnlich": "c784aa92de3f49d6",
+    "dream_block:klarheit_f": "e6480342dfbf2c6d",
+    "dream_block:klarheit_s_penis": "59bdf02ddfe3c455",
+    "dream_block:klarheit_s_vulva": "4a5ea4d69d7fc751",
+    "dream_block:klarheit_v1": "778b225c900f50ef",
+    "dream_block:klarheit_v2": "0e800cbb228bde16",
+    "dream_block:klarheit_v3": "0497567708e071e5",
+    "dream_block:koerper_im_licht_f": "d5b9727093fb1544",
+    "dream_block:koerper_im_licht_s_penis": "c752647fc3744d68",
+    "dream_block:koerper_im_licht_s_vulva": "dbdac57e42fb0245",
+    "dream_block:koerper_im_licht_v1": "b7569b99ca45ef3a",
+    "dream_block:koerper_im_licht_v2": "c53663f8a2985abd",
+    "dream_block:koerper_im_licht_v3": "aad23e9a28619f84",
+    "dream_block:ort_fuer_mich_f": "3ef2479f91a40790",
+    "dream_block:ort_fuer_mich_s_penis": "d6d339f4e981a9ad",
+    "dream_block:ort_fuer_mich_s_vulva": "8e63b2730996ab09",
+    "dream_block:ort_fuer_mich_v1": "47a05ffc9c26a0c9",
+    "dream_block:ort_fuer_mich_v2": "93754b9099e001ba",
+    "dream_block:ort_fuer_mich_v3": "0f2bc7c4a1ade962",
+    "dream_block:sinken_traum_1": "5237787d550e7fed",
+    "dream_block:sinken_traum_2": "4c49172446284693",
+    "dream_block:wach_1": "055f4ce5f8deb6f7",
+    "dream_block:wach_2": "eff304cd08c8b6fd",
+    "dream_block:wach_absicht_1": "37f0888f893f8b1f",
+    "dream_block:warmes_wasser_f": "c2a38e9ed3772834",
+    "dream_block:warmes_wasser_s_penis": "3866c9a954f046b8",
+    "dream_block:warmes_wasser_s_vulva": "b99d21e73318bc02",
+    "dream_block:warmes_wasser_v1": "2dd82a60bf12c876",
+    "dream_block:warmes_wasser_v2": "d7b5d38a9fd75dd4",
+    "dream_block:warmes_wasser_v3": "0df11f4e8703fc01"
+  }
+}

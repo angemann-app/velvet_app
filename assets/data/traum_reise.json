@@ -1,0 +1,280 @@
+{
+  "_hinweis": "Bausteine der Traum-Reise (docs/konzepte/traum-reise.md), sanfter Teil: sinken, traumbild (bild, teil: v1 lang, v2 mittel, v3 kurz, f Absicht; stufe spicy mit koerper vulva|penis), wach, hinweis. Quelle: tools/content/traum/sanft.json. Ankommen, Atem und Ausklang kommen aus der Einschlaf-Reise. Englisch in translations/en/traum_reise.json. Audio: assets/audio/traum/ (tools/generate_audio.py --traum).",
+  "bausteine": [
+    {
+      "id": "sinken_traum_1",
+      "phase": "sinken",
+      "text": "Mit jedem Ausatmen gibt dein Körper ein Stück Gewicht an das Bett ab. Deine Stirn wird glatt, dein Kiefer löst sich, und deine Schultern sinken tief in die Unterlage.\nDein Bauch wird weich und bewegt sich ruhig mit dem Atem. Auch tief in deinem Becken darf sich jetzt alles lösen und weit werden, wie eine warme Schale, die sich öffnet.\nDein Beckenboden ruht schwer, warm und gelassen. Dein ganzer Unterkörper wird vom Bett getragen, und die Nacht nimmt dich behutsam auf."
+    },
+    {
+      "id": "sinken_traum_2",
+      "phase": "sinken",
+      "text": "Die Wärme unter der Decke breitet sich langsam über deine Haut aus. Deine Augen ruhen hinter schweren Lidern, deine Zunge liegt weich im Mund, und dein Hals wird weit.\nMit jedem langen Ausatmen sinkt die Ruhe tiefer durch deine Brust und deinen Bauch bis in dein Becken. Alles im Becken wird breit, schwer und weich.\nDeine Beine und deine Füße liegen warm und still. Dein Körper darf ganz loslassen, während die Nacht dich ruhig trägt."
+    },
+    {
+      "id": "warmes_wasser_v1",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v1",
+      "text": "Du liegst in stillem, körperwarmem Wasser, das dich mühelos trägt. Um dich herum ist es ruhig, und tief unter dir schimmert ein warmes, goldenes Licht durch das Wasser.\nDas Wasser kennt deinen Körper. Es umschließt deine Schultern, deinen Rücken und dein weiches, schweres Becken. Kleine Wellen heben dich sacht an und senken dich wieder.\nUnter dir leuchtet das ruhige Gold durch die Tiefe, so wie es nur im Traum leuchtet. Dieses warme Wasser darf dich in deine Träume begleiten. Dort darfst du dich tragen lassen, weich und schwerelos."
+    },
+    {
+      "id": "warmes_wasser_v2",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v2",
+      "text": "Eine stille Bucht in der Nacht umgibt deinen Körper mit lauwarmem Wasser. Tief am Grund schimmert ein sanftes, goldenes Licht herauf und färbt die Wellen warm.\nDein Becken ruht weit und gelöst im Wasser, und jede sanfte Bewegung wiegt dich ruhig hin und her. Dieses goldene Leuchten unter dem Wasser begleitet dich hinüber in deinen Traum."
+    },
+    {
+      "id": "warmes_wasser_v3",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v3",
+      "text": "Warmes Wasser trägt deinen ganzen Körper, und tief unter der Oberfläche schimmert ein ruhiges, goldenes Licht.\nWeiche Wellen wiegen dich sanft in deinen Traum hinein."
+    },
+    {
+      "id": "warmes_wasser_f",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "f",
+      "text": "Im Traum darf ich mich tragen lassen."
+    },
+    {
+      "id": "warmes_wasser_s_vulva",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "Du treibst in dunklem, körperwarmem Wasser, unter dem tief unten ein sanftes, goldenes Licht schimmert.\nJede kleine Bewegung des Wassers streicht wie eine zärtliche Berührung über deine nackte Haut, über deine Brust, deinen weichen Bauch und zwischen deine Schenkel. Dein Becken ist weit und gelöst, deine Vulva und deine Schamlippen ruhen warm im Wasser.\nMit jeder sanften Welle antwortet dein Becken mit einem leisen, warmen Ziehen, und deine Klitoris wird sanft durchströmt. Diese sinnlichen Wellen und das goldene Schimmern dürfen dich bis in deine Träume begleiten."
+    },
+    {
+      "id": "warmes_wasser_s_penis",
+      "phase": "traumbild",
+      "bild": "warmes_wasser",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "Du treibst in dunklem, körperwarmem Wasser, unter dem tief unten ein sanftes, goldenes Licht schimmert.\nJede kleine Bewegung des Wassers streicht wie eine zärtliche Berührung über deine nackte Haut, über deine Brust, deinen weichen Bauch und zwischen deine Schenkel. Dein Becken ist weit und gelöst, und dein Geschlecht ruht warm und schwer im Wasser.\nMit jeder sanften Welle antwortet dein Becken mit einem leisen, warmen Ziehen, und dein Penis wird langsam voller und wärmer. Diese sinnlichen Wellen und das goldene Schimmern dürfen dich bis in deine Träume begleiten."
+    },
+    {
+      "id": "ort_fuer_mich_v1",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v1",
+      "text": "Vor dir öffnet sich ein ruhiger, geschützter Raum, der ganz für dich da ist. Weiche Kissen, gedämpftes Licht und warme Luft umgeben dich.\nDraußen vor dem offenen Fenster schweben kleine, leuchtende Funken ganz langsam nach oben in den dunklen Nachthimmel. Es ist ein stilles Zeichen der Traumwelt.\nHier drinnen gehört die Zeit ganz dir. Deine Haut wird warm, dein Atem fließt ruhig, und dein weiches Becken breitet sich in dieser Geborgenheit aus."
+    },
+    {
+      "id": "ort_fuer_mich_v2",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v2",
+      "text": "Ein stilles Dachzimmer mit weichen Decken empfängt dich in der Nacht. Vor dem weiten Fenster steigen warme Lichtfunken leise vom Boden hinauf zu den Sternen.\nDein ganzer Körper sinkt tief in die weichen Polster, dein Becken lässt los, und eine ruhige Wärme füllt den Raum. Dieser geschützte Ort begleitet dich in deinen Traum."
+    },
+    {
+      "id": "ort_fuer_mich_v3",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v3",
+      "text": "Ein warmer, geschützter Raum umgibt dich, und vor dem Fenster schweben leuchtende Funken langsam nach oben in die Nacht.\nHier ruht dein Körper tief und geborgen auf dem Weg in den Traum."
+    },
+    {
+      "id": "ort_fuer_mich_f",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "f",
+      "text": "Im Traum finde ich einen Ort, an dem ich genieße."
+    },
+    {
+      "id": "ort_fuer_mich_s_vulva",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "Du liegst unbekleidet unter einer federleichten Decke in einem Raum, der ganz dir gehört. Vor dem offenen Fenster steigen langsam warme Lichtfunken in die Nacht hinauf.\nDeine Haut ist wach und empfindlich für den weichen Stoff auf deiner Brust, deinem Bauch und deinen Hüften. Dein Becken liegt weit und schwer auf den Kissen.\nZwischen deinen Beinen sammelt sich in deiner Vulva, deinen Schamlippen und deiner Klitoris eine ruhige, angenehme Wärme. Diese stille Erregung darf einfach da sein und dich sanft in deinen Traum begleiten."
+    },
+    {
+      "id": "ort_fuer_mich_s_penis",
+      "phase": "traumbild",
+      "bild": "ort_fuer_mich",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "Du liegst unbekleidet unter einer federleichten Decke in einem Raum, der ganz dir gehört. Vor dem offenen Fenster steigen langsam warme Lichtfunken in die Nacht hinauf.\nDeine Haut ist wach und empfindlich für den weichen Stoff auf deiner Brust, deinem Bauch und deinen Hüften. Dein Becken liegt weit und schwer auf den Kissen, dein Beckenboden ist ganz weich.\nZwischen deinen Beinen breitet sich eine ruhige, angenehme Wärme aus. Dein Penis wird leise voller, ganz ohne Eile. Diese stille Erregung darf einfach da sein und dich sanft in deinen Traum begleiten."
+    },
+    {
+      "id": "koerper_im_licht_v1",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v1",
+      "text": "Ein weiches, bernsteinfarbenes Licht füllt den Raum, ein ruhiges, freundliches Licht, das den ganzen Raum gleichmäßig ohne jeden Schatten erhellt.\nEs legt sich wie eine warme Decke über deine Haut. Überall, wo dieses Licht dich berührt, wird dein Körper weich und ruhig.\nDeine Schultern, dein Bauch, dein weites Becken und deine Beine werden von dieser goldenen Wärme eingehüllt. Dein Körper ist genauso, wie er jetzt hier liegt, vollkommen willkommen."
+    },
+    {
+      "id": "koerper_im_licht_v2",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v2",
+      "text": "Bernsteinfarbenes Licht leuchtet sanft von allen Seiten zugleich, sodass nirgends im Raum ein Schatten entsteht. Die milde Wärme streicht über dein Gesicht, deine Brust und deinen Bauch.\nDein Becken wird in diesem Licht weit und schwer, und jede Faser deines Körpers darf sich angenommen und wohl fühlen."
+    },
+    {
+      "id": "koerper_im_licht_v3",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v3",
+      "text": "Ein warmes, bernsteinfarbenes Licht ohne Schatten hüllt deinen ganzen Körper ein.\nDeine Haut und dein weiches Becken ruhen warm und willkommen auf dem Weg in den Traum."
+    },
+    {
+      "id": "koerper_im_licht_f",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "f",
+      "text": "Im Traum fühle ich mich wohl in meiner Haut."
+    },
+    {
+      "id": "koerper_im_licht_s_vulva",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "Ein warmes, bernsteinfarbenes Licht ohne Schatten streicht langsam über deinen unbekleideten Körper. Die Wärme liegt auf deiner Brust, auf deinem weichen Bauch und tief zwischen deinen Beinen.\nDein Becken öffnet sich diesem Licht ganz von selbst, weich und empfänglich. Deine Vulva, deine Schamlippen und deine Klitoris ruhen warm und lebendig in diesem milden Schein.\nEin leises Kribbeln breitet sich unter deiner Haut aus, und dein ganzer Körper darf sich in den Traum hinein als warm und begehrenswert spüren."
+    },
+    {
+      "id": "koerper_im_licht_s_penis",
+      "phase": "traumbild",
+      "bild": "koerper_im_licht",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "Ein warmes, bernsteinfarbenes Licht ohne Schatten streicht langsam über deinen unbekleideten Körper. Die Wärme liegt auf deiner Brust, auf deinem weichen Bauch und tief zwischen deinen Beinen.\nDein Becken wird in diesem Licht weit und gelöst, dein Beckenboden lässt ganz los. Dein Penis ruht warm und lebendig in diesem milden Schein, und die Wärme sammelt sich sanft in ihm.\nEin leises Kribbeln breitet sich unter deiner Haut aus, und dein ganzer Körper darf sich in den Traum hinein als warm und begehrenswert spüren."
+    },
+    {
+      "id": "begegnung_v1",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v1",
+      "text": "Du bist an einem stillen, warmen Ort in der Dämmerung. Aus der Ferne klingt ein einzelner, tiefer Glockenton herüber, der wie ein warmer Hauch auf deiner Haut spürbar ist.\nEine freundliche, zugewandte Nähe füllt den Raum. Es ist das ruhige Gefühl, gehalten, gesehen und zärtlich berührt zu werden.\nDein Atem geht tief, dein Becken wird weich und weit, und diese sanfte Verbundenheit darf dich hinüber in deinen Traum begleiten."
+    },
+    {
+      "id": "begegnung_v2",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v2",
+      "text": "In der warmen Abenddämmerung schwingt ein tiefer, weicher Klang durch die Luft und legt sich wie Wärme auf deine Haut. Eine stille, liebevolle Gegenwart ist ganz nah bei dir.\nDeine Schultern und dein Becken sinken weich in die Ruhe, getragen von dem Gefühl sanfter Nähe und Zärtlichkeit."
+    },
+    {
+      "id": "begegnung_v3",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v3",
+      "text": "Ein tiefer, warmer Ton klingt durch die Dämmerung und berührt sanft deine Haut.\nEine ruhige, zärtliche Nähe begleitet dich behutsam in deinen Traum."
+    },
+    {
+      "id": "begegnung_f",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "f",
+      "text": "Im Traum darf mir Zärtlichkeit begegnen."
+    },
+    {
+      "id": "begegnung_s_vulva",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "In der warmen Dämmerung schwingt ein tiefer, weicher Klang, der wie ein sanfter Schauer über deine Haut läuft. Eine vertraute, begehrende Nähe ist dicht bei dir.\nEin warmer Atem streift deinen Hals, und eine ruhige Hand liegt warm auf deiner Hüfte. Dein Becken lässt vollkommen los und wird weit und weich.\nZwischen deinen Beinen antworten deine Vulva, deine Schamlippen und deine Klitoris mit einer tiefen, ziehenden Wärme, die dich ruhig in deinen Traum begleitet."
+    },
+    {
+      "id": "begegnung_s_penis",
+      "phase": "traumbild",
+      "bild": "begegnung",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "In der warmen Dämmerung schwingt ein tiefer, weicher Klang, der wie ein sanfter Schauer über deine Haut läuft. Eine vertraute, begehrende Nähe ist dicht bei dir.\nEin warmer Atem streift deinen Hals, und eine ruhige Hand liegt warm auf deiner Hüfte. Dein Becken lässt vollkommen los, dein Beckenboden wird weit und weich.\nZwischen deinen Beinen antwortet dein Penis mit einer tiefen, ziehenden Wärme, die langsam wächst und dich ruhig in deinen Traum begleitet."
+    },
+    {
+      "id": "klarheit_v1",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v1",
+      "text": "Träume sind wie ein zweites Zimmer in der Nacht. Vor dir steht eine angelehnte Tür, und durch den schmalen Spalt fällt ein ruhiges, violettes Sternenlicht herein.\nDein Blick fällt kurz auf deine eigenen Hände, und du spürst, wie klar und ruhig dein Geist ist, während dein Körper tief und sicher schläft.\nIn dieser Stille entsteht ein freundliches, müheloses Erkennen, dass dieser Raum dein Traum ist und dir ganz gehört."
+    },
+    {
+      "id": "klarheit_v2",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v2",
+      "text": "Am Ende eines stillen Flurs steht eine Tür einen Spalt weit offen, und violettes Sternenlicht fließt weich über den Boden. Du siehst deine Hände in diesem besonderen Schimmer.\nWährend dein Körper tief im Bett ruht, wird deinem Geist in aller Ruhe klar, dass du mitten in einem Traum bist."
+    },
+    {
+      "id": "klarheit_v3",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v3",
+      "text": "Durch den Spalt einer angelehnten Tür fällt ruhiges, violettes Sternenlicht auf deine Hände.\nMit stiller Leichtigkeit erkennst du im Schlaf, dass du träumst."
+    },
+    {
+      "id": "klarheit_f",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "f",
+      "text": "Wenn ich träume, erkenne ich es."
+    },
+    {
+      "id": "klarheit_s_vulva",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "vulva",
+      "text": "Durch den Spalt einer angelehnten Tür fällt violettes Sternenlicht auf deine nackte Haut. Dein Blick ruht auf deinen Händen, und mit ruhiger Freude wird dir bewusst, dass du träumst.\nIn dieser Traumwelt ist dein Körper frei, weich und voller Lust. Dein Becken ist weit gelöst, und in deiner Vulva und deiner Klitoris pulsiert eine ruhige, lebendige Wärme.\nDein Atem fließt sanft weiter, und dieser weite Traumraum steht deiner Sinnlichkeit ganz offen."
+    },
+    {
+      "id": "klarheit_s_penis",
+      "phase": "traumbild",
+      "bild": "klarheit",
+      "teil": "v1",
+      "stufe": "spicy",
+      "koerper": "penis",
+      "text": "Durch den Spalt einer angelehnten Tür fällt violettes Sternenlicht auf deine nackte Haut. Dein Blick ruht auf deinen Händen, und mit ruhiger Freude wird dir bewusst, dass du träumst.\nIn dieser Traumwelt ist dein Körper frei, weich und voller Lust. Dein Becken und dein Beckenboden sind weit gelöst, und in deinem Penis pulsiert eine ruhige, lebendige Wärme.\nDein Atem fließt sanft weiter, und dieser weite Traumraum steht deiner Sinnlichkeit ganz offen."
+    },
+    {
+      "id": "wach_1",
+      "phase": "wach",
+      "text": "Dein Traum ist festgehalten, und alles um dich her ist still und sicher. Dein Körper darf sofort wieder schwer werden und zurück in die Wärme des Bettes sinken.\nDein Atem fließt lang und flach, ganz von allein. Dein Bauch ist weich, und dein Becken ruht weit und gelöst auf der Matratze.\nDu liegst genau an der Schwelle, an der die längsten und ruhigsten Träume der Nacht entstehen. Hinter deinen geschlossenen Lidern darf das Bild vom Abend noch einmal leise auftauchen.\nVielleicht begegnet dir im Traum wieder das besondere Licht, und du erkennst ganz ruhig, wo du bist."
+    },
+    {
+      "id": "wach_2",
+      "phase": "wach",
+      "text": "Die kurze Pause in der Nacht ist vorbei, und die Decke hält dich wieder warm. Deine Schultern, dein Rücken und dein weiches Becken sinken tief in die Unterlage zurück.\nDer Atem geht leise ein und lang wieder aus. Mit jedem Atemzug gleitest du näher an die Traumwelt heran, während dein Geist sanft und wachsam bleibt.\nDas Traumbild vom Abend begleitet dich leise über die Schwelle zurück in den Schlaf."
+    },
+    {
+      "id": "wach_absicht_1",
+      "phase": "absicht",
+      "text": "Wenn ich träume, erkenne ich es. Im Traum darf ich genießen."
+    },
+    {
+      "id": "hinweis_einstieg",
+      "phase": "hinweis",
+      "text": "Träume lassen sich einladen, nicht steuern. Mit etwas Übung erinnerst du mehr, und manchmal merkst du mitten im Traum, dass du träumst. Was dann geschieht, gehört ganz dir."
+    },
+    {
+      "id": "hinweis_schlafparalyse",
+      "phase": "hinweis",
+      "text": "Beim Übergang zwischen Wachen und Träumen kann es selten vorkommen, dass dein Geist schon wach ist, während dein Körper noch in der natürlichen Schlafruhe liegt. Das ist in aller Regel harmlos, und deine Atmung fließt ganz normal weiter. Ein ruhiger Atemzug durch die Nase und eine sanfte Bewegung mit einem Finger oder einer Zehe lösen die Schwere leicht auf, oder du schließt die Augen und gleitest direkt zurück in deinen Traum. Wenn es häufig vorkommt oder dich belastet, sprich mit einer Ärztin oder einem Arzt."
+    },
+    {
+      "id": "hinweis_tagebuch_sinnlich",
+      "phase": "hinweis",
+      "text": "Sinnliche Träume und nächtliche Höhepunkte sind eine natürliche Reaktion deines Körpers und ein Zeichen, dass deine Lust lebendig ist. Wer im Traum vorkommt und was dort geschieht, braucht im Wachleben keinerlei Bedeutung zu haben. Du darfst die Erinnerung einfach genießen oder ruhig weiterziehen lassen."
+    },
+    {
+      "id": "hinweis_klartraum",
+      "phase": "hinweis",
+      "text": "Wenn du merkst, dass du träumst, kannst du langsam atmen, deine Hände ansehen, den Boden unter dir spüren und dann zu der Szene vom Abend zurückkehren oder schauen, was du dir wünschst."
+    }
+  ]
+}

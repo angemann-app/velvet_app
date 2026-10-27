@@ -308,14 +308,14 @@ def generate_blocks(only=None, source=PAAR_JSON, folder="paar", voices=None, pau
 EINSCHLAF_JSON = ROOT / "assets" / "data" / "einschlaf_reise.json"
 
 
-def generate_einschlaf(only=None, voices=None):
+def generate_einschlaf(only=None, voices=None, source=None, folder="einschlaf"):
     """Einschlaf-Reise (lib/screens/self_exploration/einschlaf_reise_screen.dart): wie die Selbsterkundung,
     aber deutlich langsamer gesprochen und mit längeren Pausen zwischen den Absätzen."""
     global SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S
     alt = SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S
     SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S = 0.75, {"martin": 0.7}, 1.5
     try:
-        generate_blocks(only, EINSCHLAF_JSON, "einschlaf", voices, pause=True)
+        generate_blocks(only, source or EINSCHLAF_JSON, folder, voices, pause=True)
     finally:
         SPEED, VOICE_SPEED, PARAGRAPH_PAUSE_S = alt
 
@@ -388,6 +388,8 @@ def main():
                         help="Bausteine des Paar-Abends erzeugen (assets/audio/paar/), optional nur die genannten ids")
     parser.add_argument("--selbst", action="store_true",
                         help="Bausteine der Selbsterkundung erzeugen (assets/audio/selbst/), optional nur die genannten ids")
+    parser.add_argument("--traum", action="store_true",
+                        help="Bausteine der Traum-Reise erzeugen (assets/audio/traum/, Tempo wie Einschlaf-Reise), optional nur die genannten ids")
     parser.add_argument("--einschlaf", action="store_true",
                         help="Bausteine der Einschlaf-Reise erzeugen (assets/audio/einschlaf/), optional nur die genannten ids")
     parser.add_argument("--klang", action="store_true", help="Klangschale und Klangteppich erzeugen")
@@ -406,6 +408,9 @@ def main():
         return
     if args.einschlaf:
         generate_einschlaf(set(args.ids), voices)
+        return
+    if args.traum:
+        generate_einschlaf(set(args.ids), voices, ROOT / "assets" / "data" / "traum_reise.json", "traum")
         return
     if args.courses and len(args.courses) == 1:
         args.courses = (args.courses[0], args.courses[0])
