@@ -1,6 +1,6 @@
 # Konzept: Lust im Traum (aufbauende Serie)
 
-Stand: Entwurf vom 27.10.2026, noch nicht abgestimmt. Offene Fragen am Ende.
+Stand: abgestimmt am 27.10.2026, noch nicht umgesetzt. Entscheidungen am Ende.
 
 ## Idee
 
@@ -33,8 +33,12 @@ richtig.“
 ## Die Folgen
 
 Jede Folge ist ein Abend-Audio (Einschlafen, wie die Einschlaf-Reise) plus eine kleine Übung für den Tag. Die
-nächste Folge wird frei, wenn die vorige mindestens an zwei Abenden gehört wurde. Zurückgehen und Wiederholen
-geht jederzeit; man darf auch beliebig lange bei einer Folge bleiben.
+Folgen bauen aufeinander auf: Die nächste wird frei, wenn die vorige mindestens an zwei Abenden gehört wurde.
+Zurückgehen und Wiederholen geht jederzeit; man darf auch beliebig lange bei einer Folge bleiben.
+
+**Alle Folgen gibt es in zwei eigenen Fassungen, für Frauen (Vulva) und für Männer (Penis).** Lust, Erregung
+und Höhepunkt erleben Frauen und Männer unterschiedlich; das zeigt sich in Bildern, Körperstellen und Absichten,
+nicht nur in einzelnen Wörtern. Gewählt wird nach dem Körper im Profil (wie bei der Selbsterkundung), umstellbar.
 
 | Folge | Thema | Abend | Für den Tag |
 |---|---|---|---|
@@ -47,8 +51,10 @@ geht jederzeit; man darf auch beliebig lange bei einer Folge bleiben.
 | 7 | Mehr als einmal | nach einem Höhepunkt im Traum ruhig bleiben, die nächste Welle kommen lassen | wie 6 |
 | 8 | Eigene Wege | eigene Absicht und eigenes Traumbild wählen, freie Wiederholung | wie 6 |
 
-Folge 7 hat eigene Fassungen für Vulva und Penis; bei Penis wird ein Höhepunkt ohne Samenerguss ausdrücklich als
-Möglichkeit genannt, nicht als Technik oder Ziel.
+Beispiele für die Unterschiede: Die Frauen-Fassungen geben dem ganzen Körper, den Brüsten und langsamen,
+wiederkehrenden Wellen mehr Raum; mehrere Höhepunkte sind hier häufiger und werden selbstverständlich benannt.
+Die Männer-Fassungen arbeiten mit Wärme und Fülle im Becken und mit dem Loslassen von Leistung; in Folge 7 wird
+ein Höhepunkt ohne Samenerguss ausdrücklich als Möglichkeit genannt, nicht als Technik oder Ziel.
 
 ## Grenze für die Texte (Entscheidung 27.10.2026)
 
@@ -75,9 +81,10 @@ Alle Figuren erwachsen, alles gewollt, keine echten Personen.
 - Nächtliches Wecken ist freiwillig und nicht jede Nacht.
 - Männer: Ein Handtuch in Reichweite ist kein schlechter Gedanke.
 
-## Offene Fragen
+## Entscheidungen (27.10.2026)
 
-1. **Name** der Serie: „Lust im Traum“ oder etwas anderes?
-2. **Acht Folgen** wie oben, oder kürzer/länger?
-3. **Freischalten** nach zwei gehörten Abenden, oder alle Folgen sofort frei (nur empfohlene Reihenfolge)?
-4. **Eigene Fassungen** nur in Folge 7 nach Körper, oder durchgehend (Vulva/Penis) wie bei den Spicy-Texten?
+1. **Name:** Lust im Traum.
+2. **Acht Folgen.**
+3. **Aufbauend:** Die nächste Folge wird erst nach mindestens zwei gehörten Abenden der vorigen frei.
+4. **Alle Folgen in eigenen Fassungen für Frauen und für Männer**, weil Sexualität bei Frauen und Männern
+   unterschiedlich ist.
