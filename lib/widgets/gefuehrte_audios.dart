@@ -5,8 +5,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../l10n/t.dart';
 import '../screens/couples_channel/paar_abend_screen.dart';
 import '../screens/self_exploration/einschlaf_reise_screen.dart';
+import '../screens/self_exploration/lust_im_traum_screen.dart';
 import '../screens/self_exploration/selbst_reise_screen.dart';
+import '../screens/self_exploration/traum_tagebuch_screen.dart';
 import '../services/privacy_service.dart';
+import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
 
 /// Die geführten Audios gut sichtbar: Körperreise für dich, Gemeinsamer Abend für Paare.
@@ -38,8 +41,14 @@ class GefuehrteAudios extends StatelessWidget {
             text: t.gefuehrtSelbstText,
             onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SelbstReiseScreen())),
           ),
+        if (mitSelbst) const _TagebuchKarte(),
         if (mitSelbst) const _EinschlafKarte(),
         if (mitSelbst) const _TraumKarte(),
+        if (mitSelbst)
+          ValueListenableBuilder<bool>(
+            valueListenable: StorageService.spicyAenderung,
+            builder: (context, spicy, _) => spicy ? const _LustKarte() : const SizedBox.shrink(),
+          ),
         if (mitPaar)
           GefuehrtKarte(
             bild: 'assets/images/guided_paar.svg',
@@ -65,6 +74,48 @@ class _EinschlafKarte extends StatelessWidget {
         titel: snapshot.data == true ? t.einschlafKarteTitelNeutral : t.einschlafKarteTitel,
         text: t.einschlafKarteText,
         onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const EinschlafReiseScreen())),
+      ),
+    );
+  }
+}
+
+/// Morgens nach einem Traum-Abend bzw. einem Abend „Lust im Traum“: ein Tipp zum Traumtagebuch.
+/// Verschwindet mittags oder sobald seit dem Abend etwas eingetragen ist.
+class _TagebuchKarte extends StatelessWidget {
+  const _TagebuchKarte();
+
+  @override
+  Widget build(BuildContext context) {
+    final jetzt = DateTime.now();
+    if (jetzt.hour >= 12 || jetzt.hour < 4 || StorageService.letzterAbend() == null) return const SizedBox.shrink();
+    final heute = DateTime(jetzt.year, jetzt.month, jetzt.day);
+    if (StorageService.getTraumEintraege().any((e) => e.zeit.isAfter(heute))) return const SizedBox.shrink();
+    return FutureBuilder<bool>(
+      future: PrivacyService.isDiscreetIcon(),
+      builder: (context, snapshot) => GefuehrtKarte(
+        bild: 'assets/images/guided_einschlaf.svg',
+        titel: snapshot.data == true ? t.tagebuchKarteTitelNeutral : t.tagebuchKarteTitel,
+        text: snapshot.data == true ? t.tagebuchKarteTextNeutral : t.tagebuchKarteText,
+        onTap: () => Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => const TraumTagebuchScreen(neuOeffnen: true))),
+      ),
+    );
+  }
+}
+
+/// Serie „Lust im Traum“, nur im Spicy-Modus. Im Diskretions-Modus neutral.
+class _LustKarte extends StatelessWidget {
+  const _LustKarte();
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<bool>(
+      future: PrivacyService.isDiscreetIcon(),
+      builder: (context, snapshot) => GefuehrtKarte(
+        bild: 'assets/images/guided_einschlaf.svg',
+        titel: snapshot.data == true ? t.lustKarteTitelNeutral : t.lustKarteTitel,
+        text: snapshot.data == true ? t.lustKarteTextNeutral : t.lustKarteText,
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LustImTraumScreen())),
       ),
     );
   }

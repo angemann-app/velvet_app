@@ -386,6 +386,22 @@
           "text": "A new guided audio for the night: you choose a dream image, the voice accompanies you into sleep and gives you a gentle dream intention. 30 to 60 minutes, on the home screen with the guided audios. The recordings come with the guided audio pack."
         }
       ]
+    },
+    {
+      "build": 47,
+      "version": "4.12.0-beta.1",
+      "punkte": [
+        {
+          "icon": "edit",
+          "titel": "Dream journal",
+          "text": "Briefly note in the morning what you remember, with marks such as lucid or sensual. Private and part of your backup."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Pleasure in dreams",
+          "text": "In spicy mode: eight evenings that build on each other up to the lucid, sensual dream, for women and men, with a free choice of dream body and partner. The recordings come as a separate package."
+        }
+      ]
     }
   ],
   "_source": {
@@ -409,6 +425,7 @@
     "news:43": "b3d7e781fd2801a9",
     "news:44": "d89c7d4589101e92",
     "news:45": "2e980f20ba35645c",
-    "news:46": "3ad1a4437492b249"
+    "news:46": "3ad1a4437492b249",
+    "news:47": "b439804861d14cc0"
   }
 }

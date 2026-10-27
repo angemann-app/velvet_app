@@ -25,7 +25,15 @@ if ($LASTEXITCODE -ne 0) {
         --notes "Aufnahmen für VelvetPulse, werden in der App nachgeladen (signiertes Verzeichnis audio-index.json). Kein App-Update."
     if ($LASTEXITCODE -ne 0) { throw "Release pakete konnte nicht angelegt werden." }
 }
-$dateien = @(Get-ChildItem build\pakete\*.zip | ForEach-Object FullName) + @("build\pakete\audio-index.json.sig", "build\pakete\audio-index.json")
+# Pakete nur für R2 (Lust im Traum) gehen nur verschlüsselt ins Release; der Workflow entschlüsselt und löscht sie.
+$nurR2 = @(Get-ChildItem build\pakete\*-lust-v*.zip)
+foreach ($z in $nurR2) {
+    & C:\TOOLS\flutter\bin\dart.bat run tools/paket_transport.dart verschluesseln $z.FullName "$($z.FullName).enc"
+    if ($LASTEXITCODE -ne 0) { throw "Verschlüsseln von $($z.Name) fehlgeschlagen." }
+}
+$dateien = @(Get-ChildItem build\pakete\*.zip | Where-Object { $_.Name -notlike "*-lust-v*" } | ForEach-Object FullName) +
+    @(Get-ChildItem build\pakete\*.zip.enc -ErrorAction SilentlyContinue | ForEach-Object FullName) +
+    @("build\pakete\audio-index.json.sig", "build\pakete\audio-index.json")
 & $gh release upload pakete @dateien --repo $repo --clobber
 if ($LASTEXITCODE -ne 0) { throw "Hochladen nach GitHub fehlgeschlagen." }
 

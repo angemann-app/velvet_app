@@ -12,8 +12,9 @@ on:
         default: velvetpulse-pakete
         required: true
 
+# write: verschlüsselte Nur-R2-Pakete werden nach dem Kopieren aus dem Release gelöscht.
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   kopieren:
@@ -29,6 +30,27 @@ jobs:
       - name: Dateien aus dem Release holen
         run: gh release download pakete --repo "$GITHUB_REPOSITORY" --dir pakete
 
+      # Nur-R2-Pakete (*.zip.enc, tools/paket_transport.dart): AES-256-GCM, Nonce | Geheimtext | Tag.
+      - name: Nur-R2-Pakete entschlüsseln
+        env:
+          PAKETE_TRANSPORT_KEY: ${{ secrets.PAKETE_TRANSPORT_KEY }}
+        run: |
+          set -euo pipefail
+          cd pakete
+          if ls *.zip.enc >/dev/null 2>&1; then
+            pip install --quiet cryptography
+            python3 - <<'PY'
+          import base64, glob, os
+          from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+          aes = AESGCM(base64.b64decode(os.environ["PAKETE_TRANSPORT_KEY"]))
+          for f in glob.glob("*.zip.enc"):
+              d = open(f, "rb").read()
+              open(f[:-4], "wb").write(aes.decrypt(d[:12], d[12:], None))
+              os.remove(f)
+              print("entschlüsselt:", f[:-4])
+          PY
+          fi
+
       - name: Nach R2 kopieren (Verzeichnis zuletzt)
         run: |
           set -euo pipefail
@@ -43,3 +65,10 @@ jobs:
           done
           echo "### Pakete nach R2 kopiert ✅" >> "$GITHUB_STEP_SUMMARY"
           ls -l >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Verschlüsselte Nur-R2-Pakete aus dem Release löschen
+        run: |
+          set -euo pipefail
+          for a in $(gh release view pakete --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | grep '\.zip\.enc$' || true); do
+            gh release delete-asset pakete "$a" --repo "$GITHUB_REPOSITORY" --yes
+          done

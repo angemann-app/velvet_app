@@ -5894,6 +5894,330 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Foto nicht mehr verfügbar'**
   String get fotoStatusWeg;
+
+  /// No description provided for @tagebuchTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Traumtagebuch'**
+  String get tagebuchTitel;
+
+  /// No description provided for @tagebuchTipp.
+  ///
+  /// In de, this message translates to:
+  /// **'Gleich nach dem Aufwachen kurz still liegen bleiben und den Traum zurückholen, bevor du dich bewegst. Ein paar Stichworte reichen. Auch „nichts erinnert“ zählt.'**
+  String get tagebuchTipp;
+
+  /// No description provided for @tagebuchPause.
+  ///
+  /// In de, this message translates to:
+  /// **'Zuletzt hast du öfter unangenehme Träume oder schlechten Schlaf notiert. Das ist normal und kein Fehler. Vielleicht tut dir eine Pause gut oder nur Tagebuch und sanfte Traumbilder. Wenn dich etwas belastet, hilft der SOS-Knopf.'**
+  String get tagebuchPause;
+
+  /// No description provided for @tagebuchWoranErinnerst.
+  ///
+  /// In de, this message translates to:
+  /// **'Woran erinnerst du dich?'**
+  String get tagebuchWoranErinnerst;
+
+  /// No description provided for @tagebuchNichtsErinnert.
+  ///
+  /// In de, this message translates to:
+  /// **'Nichts erinnert'**
+  String get tagebuchNichtsErinnert;
+
+  /// No description provided for @tagebuchPrivat.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an den KI-Coach und nicht an dein Gegenüber; sie sind Teil deiner verschlüsselten Sicherung.'**
+  String get tagebuchPrivat;
+
+  /// No description provided for @tagebuchHinweisText.
+  ///
+  /// In de, this message translates to:
+  /// **'Stichworte, ein Bild, ein Gefühl …'**
+  String get tagebuchHinweisText;
+
+  /// No description provided for @tagebuchLoeschen.
+  ///
+  /// In de, this message translates to:
+  /// **'Löschen'**
+  String get tagebuchLoeschen;
+
+  /// No description provided for @tagebuchSpeichern.
+  ///
+  /// In de, this message translates to:
+  /// **'Speichern'**
+  String get tagebuchSpeichern;
+
+  /// No description provided for @tagebuchMarkeErinnert.
+  ///
+  /// In de, this message translates to:
+  /// **'erinnert'**
+  String get tagebuchMarkeErinnert;
+
+  /// No description provided for @tagebuchMarkeLuzide.
+  ///
+  /// In de, this message translates to:
+  /// **'luzide'**
+  String get tagebuchMarkeLuzide;
+
+  /// No description provided for @tagebuchMarkeSinnlich.
+  ///
+  /// In de, this message translates to:
+  /// **'sinnlich'**
+  String get tagebuchMarkeSinnlich;
+
+  /// No description provided for @tagebuchMarkeHoehepunkt.
+  ///
+  /// In de, this message translates to:
+  /// **'Höhepunkt'**
+  String get tagebuchMarkeHoehepunkt;
+
+  /// No description provided for @tagebuchMarkeUnangenehm.
+  ///
+  /// In de, this message translates to:
+  /// **'unangenehm'**
+  String get tagebuchMarkeUnangenehm;
+
+  /// No description provided for @tagebuchMarkeSchlechtGeschlafen.
+  ///
+  /// In de, this message translates to:
+  /// **'schlecht geschlafen'**
+  String get tagebuchMarkeSchlechtGeschlafen;
+
+  /// No description provided for @tagebuchKarteTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Woran erinnerst du dich?'**
+  String get tagebuchKarteTitel;
+
+  /// No description provided for @tagebuchKarteTitelNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Morgennotiz'**
+  String get tagebuchKarteTitelNeutral;
+
+  /// No description provided for @tagebuchKarteText.
+  ///
+  /// In de, this message translates to:
+  /// **'Halte deinen Traum fest, solange er noch nah ist. Ein paar Worte genügen.'**
+  String get tagebuchKarteText;
+
+  /// No description provided for @tagebuchKarteTextNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein paar Worte für dich, gleich am Morgen.'**
+  String get tagebuchKarteTextNeutral;
+
+  /// No description provided for @lustTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust im Traum'**
+  String get lustTitel;
+
+  /// No description provided for @lustFolgeN.
+  ///
+  /// In de, this message translates to:
+  /// **'Folge {n}'**
+  String lustFolgeN(int n);
+
+  /// No description provided for @lustFolge1.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust im Körper'**
+  String get lustFolge1;
+
+  /// No description provided for @lustFolge2.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Welle'**
+  String get lustFolge2;
+
+  /// No description provided for @lustFolge3.
+  ///
+  /// In de, this message translates to:
+  /// **'Den Traum einladen'**
+  String get lustFolge3;
+
+  /// No description provided for @lustFolge4.
+  ///
+  /// In de, this message translates to:
+  /// **'Erkennen'**
+  String get lustFolge4;
+
+  /// No description provided for @lustFolge5.
+  ///
+  /// In de, this message translates to:
+  /// **'Im Klartraum bleiben'**
+  String get lustFolge5;
+
+  /// No description provided for @lustFolge6.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust im Traum entfalten'**
+  String get lustFolge6;
+
+  /// No description provided for @lustFolge7.
+  ///
+  /// In de, this message translates to:
+  /// **'Mehr als einmal'**
+  String get lustFolge7;
+
+  /// No description provided for @lustFolge8.
+  ///
+  /// In de, this message translates to:
+  /// **'Eigene Wege'**
+  String get lustFolge8;
+
+  /// No description provided for @lustSerieEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Acht Abende, die aufeinander aufbauen: vom entspannten, lustvollen Körper beim Einschlafen über das Erinnern und Erkennen von Träumen bis zum luziden, sinnlichen Traum. Die nächste Folge wird frei, wenn du die vorige an zwei Abenden gehört hast. Zurückgehen und Wiederholen geht jederzeit.'**
+  String get lustSerieEinleitung;
+
+  /// No description provided for @lustEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine Stimme begleitet dich in den Schlaf und in die Folge dieses Abends. Danach wiederholt sie leise die Absicht, mit immer längeren Pausen, bis nur Stille bleibt. Du darfst dabei einschlafen.'**
+  String get lustEinleitung;
+
+  /// No description provided for @lustEhrlich.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Höhepunkt im Traum lässt sich einladen, nicht erzwingen. Manche erleben ihn nach wenigen Nächten, manche nach vielen, manche erleben dafür sinnliche Träume ohne Höhepunkt. Alles davon ist richtig.'**
+  String get lustEhrlich;
+
+  /// No description provided for @lustFolgen.
+  ///
+  /// In de, this message translates to:
+  /// **'Folgen'**
+  String get lustFolgen;
+
+  /// No description provided for @lustTraumkoerper.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Körper im Traum'**
+  String get lustTraumkoerper;
+
+  /// No description provided for @lustTraumkoerperEigener.
+  ///
+  /// In de, this message translates to:
+  /// **'Mein eigener'**
+  String get lustTraumkoerperEigener;
+
+  /// No description provided for @lustTraumkoerperFrau.
+  ///
+  /// In de, this message translates to:
+  /// **'Frauenkörper'**
+  String get lustTraumkoerperFrau;
+
+  /// No description provided for @lustTraumkoerperMann.
+  ///
+  /// In de, this message translates to:
+  /// **'Männerkörper'**
+  String get lustTraumkoerperMann;
+
+  /// No description provided for @lustGegenueber.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit wem im Traum'**
+  String get lustGegenueber;
+
+  /// No description provided for @lustGegenueberNiemand.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur ich'**
+  String get lustGegenueberNiemand;
+
+  /// No description provided for @lustGegenueberFrau.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine Frau'**
+  String get lustGegenueberFrau;
+
+  /// No description provided for @lustGegenueberMann.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Mann'**
+  String get lustGegenueberMann;
+
+  /// No description provided for @lustGegenueberOffen.
+  ///
+  /// In de, this message translates to:
+  /// **'Offen'**
+  String get lustGegenueberOffen;
+
+  /// No description provided for @lustWeiter.
+  ///
+  /// In de, this message translates to:
+  /// **'Weiter zum Abend'**
+  String get lustWeiter;
+
+  /// No description provided for @lustHinweise.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur ab achtzehn. Kein Ersatz für eine Behandlung bei Schlafstörungen; bei häufigen Albträumen, Epilepsie oder schwerem Schlafmangel lieber nicht. Starke Erregung weckt oft auf, das ist normal. Was im Traum geschieht, ist ein Traumerlebnis; Fantasien darin sagen wenig über Wünsche im Wachleben.'**
+  String get lustHinweise;
+
+  /// No description provided for @lustHinweisHandtuch.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Handtuch in Reichweite ist kein schlechter Gedanke.'**
+  String get lustHinweisHandtuch;
+
+  /// No description provided for @lustAbendeGehoert.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =0{noch nicht gehört} =1{an einem Abend gehört} other{an {n} Abenden gehört}}'**
+  String lustAbendeGehoert(int n);
+
+  /// No description provided for @lustGesperrt.
+  ///
+  /// In de, this message translates to:
+  /// **'Frei nach zwei Abenden mit Folge {n}'**
+  String lustGesperrt(int n);
+
+  /// No description provided for @lustPaketFehlt.
+  ///
+  /// In de, this message translates to:
+  /// **'Für diese Serie fehlen noch die Aufnahmen. Sie kommen als eigenes Paket, am besten im WLAN laden.'**
+  String get lustPaketFehlt;
+
+  /// No description provided for @lustPaketLaden.
+  ///
+  /// In de, this message translates to:
+  /// **'Aufnahmen laden'**
+  String get lustPaketLaden;
+
+  /// No description provided for @lustLadenFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Laden hat nicht geklappt. Bitte später noch einmal versuchen.'**
+  String get lustLadenFehler;
+
+  /// No description provided for @lustKarteTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust im Traum'**
+  String get lustKarteTitel;
+
+  /// No description provided for @lustKarteTitelNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Abendserie'**
+  String get lustKarteTitelNeutral;
+
+  /// No description provided for @lustKarteText.
+  ///
+  /// In de, this message translates to:
+  /// **'Acht Abende, die aufeinander aufbauen, bis zum luziden, sinnlichen Traum.'**
+  String get lustKarteText;
+
+  /// No description provided for @lustKarteTextNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Acht ruhige Abende, die aufeinander aufbauen.'**
+  String get lustKarteTextNeutral;
 }
 
 class _AppLocalizationsDelegate

@@ -1,6 +1,6 @@
 # Konzept: Lust im Traum (aufbauende Serie)
 
-Stand: abgestimmt am 27.10.2026, noch nicht umgesetzt. Entscheidungen am Ende.
+Stand: abgestimmt am 27.10.2026, umgesetzt am 27.10.2026 (4.12.0-beta.1). Entscheidungen und Umsetzung am Ende.
 
 ## Idee
 
@@ -114,7 +114,7 @@ Alle Figuren erwachsen, alles gewollt, keine echten Personen.
 - Bausteine wie bei der Einschlaf-Reise (`phase`, `folge`, `koerper`, `stufe`), Planer stellt den Abend zusammen.
 - Fortschritt pro Folge (gehört an n Abenden) nur lokal, ohne Serien-Zähler oder Erinnerungen mit Druck.
 - Inhalte als eigenes Paket, Ablage wie die Fantasie-Pakete (nur Cloudflare R2), nicht in der APK.
-- Traumtagebuch: Markierung „Höhepunkt“ gibt es schon; eine ruhige Übersicht ohne Bewertung, passend zur
+- Traumtagebuch: Markierung „Höhepunkt“ (seit 4.12.0); eine ruhige Übersicht ohne Bewertung, passend zur
   geplanten Statistik Selbstliebe.
 - Diskretion: neutrale Titel und Benachrichtigungen, App-Sperre gilt.
 
@@ -135,3 +135,21 @@ Alle Figuren erwachsen, alles gewollt, keine echten Personen.
    erleben (siehe „Traumkörper“).
 6. **Gegenüber im Traum** wählbar (niemand, Frau, Mann, offen), ausdrücklich auch gleichgeschlechtlich (siehe
    „Gegenüber im Traum“).
+
+## Umsetzung (27.10.2026)
+
+- **Texte und Aufnahmen** liegen nur lokal (`C:\TOOLS\velvet-inhalte\lust\`: `lust.json` mit `de`/`en`,
+  `audio/`, `audio_en/`), geschrieben von Claude Code (der Inhaltsfilter von Antigravity bricht solche Texte ab),
+  eingesprochen über OpenCode mit `tools/generate_audio.py --lust` bzw. `tools/generate_audio_en.py --lust`; die
+  Ausgabe nennt nur Dateinamen.
+- **Paket** `<sprache>-lust` (`tools/pakete_bauen.py`): `lust/lust.json` und `audio/lust/`. Im Verzeichnis nur mit
+  der R2-Adresse („nur_r2“). Transport: verschlüsselt (AES-256-GCM, `tools/paket_transport.dart`, Schlüssel
+  `C:\TOOLS\velvet-pakete\transport_key.txt` und Secret `PAKETE_TRANSPORT_KEY`) ins Release, der Workflow
+  „Pakete nach R2“ entschlüsselt, kopiert nach R2 und löscht die verschlüsselte Datei.
+- **App:** `lib/models/lust_im_traum.dart` (Planer, Freischaltung), `lib/screens/self_exploration/lust_im_traum_screen.dart`
+  (Folgen, Körper im Bett, Traumkörper, Gegenüber, Tagesübung als Text), Abspielen im Einschlaf-Bildschirm
+  (`EinschlafReiseScreen(lust: …)`). Ein Abend zählt, sobald die Folge selbst beginnt. Fortschritt in Sicherung und
+  Backup-Merge (je Folge der größere Stand).
+- **Traumtagebuch** (`lib/models/traum_eintrag.dart`, `traum_tagebuch_screen.dart`): Karte morgens nach einem
+  Traum- oder Lust-Abend, Markierungen, „Nichts erinnert“, Pause-Hinweis bei Häufung von „unangenehm“ oder
+  „schlecht geschlafen“. Realitätschecks und nächtliches Wecken folgen später.

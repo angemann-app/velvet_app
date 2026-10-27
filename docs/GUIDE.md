@@ -51,6 +51,10 @@ Falling asleep: 60, 90 or 120 minutes in bed, with a focus of your choice or as 
 
 Dream evening: 30, 45 or 60 minutes before sleep, with a dream image of your choice or as a surprise. The voice accompanies you into sleep, paints the dream image and quietly repeats a dream intention so it comes with you into the night. In spicy mode there is a more explicit version for your body. If you are prone to sleep paralysis, better leave out lucid exercises. In discretion mode the card just says Calm.
 
+Dream journal: In the morning after a dream evening, a card asks „What do you remember?“. A few keywords and marks such as lucid or sensual are enough, and „Nothing remembered“ counts too. The journal is private and part of your encrypted backup; in discretion mode the card just says Morning note.
+
+Pleasure in dreams (spicy mode only): eight evenings that build on each other, from a pleasurable body as you fall asleep to the lucid, sensual dream. The next episode unlocks after two evenings. From episode three you choose your body in the dream and with whom pleasure may unfold. The recordings come as a separate package.
+
 All of them are put together anew every time. You can pause, skip and stop at any time.
 
 

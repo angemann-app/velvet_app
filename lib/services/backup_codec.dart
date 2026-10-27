@@ -42,6 +42,9 @@ class BackupCodec {
     'nostrPartnerGender': String,
     // Für welches Gegenüber NIP-17 angekündigt wurde (öffentlicher Schlüssel, siehe NostrService).
     'nostrPartnerNip17': String,
+    // Traumtagebuch (Liste von TraumEintrag) und Fortschritt der Serie „Lust im Traum“ (JSON {Folge: Abende}).
+    'traumTagebuch': List,
+    'lustFortschritt': String,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.

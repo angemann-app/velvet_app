@@ -20,7 +20,9 @@ import 'package:velvetpulse/screens/courses/lesson_detail_screen.dart';
 import 'package:velvetpulse/screens/main_navigation_screen.dart';
 import 'package:velvetpulse/screens/onboarding/onboarding_screen.dart';
 import 'package:velvetpulse/screens/self_exploration/lust_profile_screen.dart';
+import 'package:velvetpulse/screens/self_exploration/lust_im_traum_screen.dart';
 import 'package:velvetpulse/screens/self_exploration/selbst_reise_screen.dart';
+import 'package:velvetpulse/screens/self_exploration/traum_tagebuch_screen.dart';
 import 'package:velvetpulse/screens/whats_new_screen.dart';
 import 'package:velvetpulse/services/whats_new.dart';
 import 'package:velvetpulse/screens/yes_no_maybe/yes_no_maybe_screen.dart';
@@ -250,6 +252,17 @@ void main() {
     await _shot(tester, '13_selbst_reise', errors);
     await tester.drag(find.byType(Scrollable).first, const Offset(0, -700));
     await _shot(tester, '13_selbst_reise_unten', errors);
+
+    await tester.pumpWidget(const SizedBox());
+    await tester.pumpWidget(_app(const TraumTagebuchScreen()));
+    await _shot(tester, '14_traumtagebuch', errors);
+    await tester.pumpWidget(const SizedBox());
+    await tester.pumpWidget(_app(const LustImTraumScreen()));
+    for (var i = 0; i < 10 && find.text(t.lustFolgen).evaluate().isEmpty; i++) {
+      await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 300)));
+      await tester.pump();
+    }
+    await _shot(tester, '15_lust_im_traum', errors);
 
     await tester.pumpWidget(const SizedBox());
     NostrService().dispose();
