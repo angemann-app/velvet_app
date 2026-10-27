@@ -1,6 +1,5 @@
 // ignore: unused_import
 import 'package:intl/intl.dart' as intl;
-
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -191,9 +190,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String coursesOverallProgressCompletedcountOfTotallessons(
-    Object completedCount,
-    Object totalLessons,
-  ) {
+      Object completedCount, Object totalLessons) {
     return 'Overall progress: $completedCount of $totalLessons lessons';
   }
 
@@ -481,9 +478,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String sosModalCheckedlengthImmediatestepslengthDone(
-    Object checkedLength,
-    Object immediateStepsLength,
-  ) {
+      Object checkedLength, Object immediateStepsLength) {
     return '$checkedLength/$immediateStepsLength done';
   }
 
@@ -682,10 +677,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String couplesChannelTheHistoryWithNameName(
-    Object name,
-    Object name2,
-    Object name3,
-  ) {
+      Object name, Object name2, Object name3) {
     return 'The history with $name, $name2\'s answers to the yes/no list and the shared reflections will be deleted on this phone. Your own answers are kept.\n\nNothing changes on $name3\'s phone.';
   }
 
@@ -811,9 +803,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String paarAbendPartnernamePartnernameGivesYouReceive(
-    Object partnerName,
-    Object partnerName2,
-  ) {
+      Object partnerName, Object partnerName2) {
     return '$partnerName$partnerName2 gives · you receive';
   }
 
@@ -918,10 +908,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String pairingModalYouReCurrentlyConnectedWith(
-    Object old,
-    Object old2,
-    Object old3,
-  ) {
+      Object old, Object old2, Object old3) {
     return 'You\'re currently connected with $old. This connection will be replaced, and the history with $old2, $old3\'s answers and the shared reflections will be deleted on this phone.';
   }
 
@@ -1244,9 +1231,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String yesNoMaybeQuestionsAnsweredcountTotalitems(
-    Object answeredCount,
-    Object totalItems,
-  ) {
+      Object answeredCount, Object totalItems) {
     return 'Questions ($answeredCount/$totalItems)';
   }
 
@@ -1311,9 +1296,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(
-    Object yesMatchesLength,
-    Object curiosityMatchesLength,
-  ) {
+      Object yesMatchesLength, Object curiosityMatchesLength) {
     return '$yesMatchesLength shared yeses & $curiosityMatchesLength points of curiosity discovered!';
   }
 
@@ -1472,9 +1455,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String beliefLibraryViewRealitycheckPracticalShiftPracticalshift(
-    Object realityCheck,
-    Object practicalShift,
-  ) {
+      Object realityCheck, Object practicalShift) {
     return '$realityCheck\n\nPractical shift: $practicalShift';
   }
 
@@ -1634,17 +1615,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String kegelTimerViewRoundCurrentroundOfTotalrounds(
-    Object currentRound,
-    Object totalRounds,
-  ) {
+      Object currentRound, Object totalRounds) {
     return 'Round $currentRound of $totalRounds';
   }
 
   @override
   String kegelTimerViewPhaseCurrentphaseindexPhaseslength(
-    Object currentPhaseIndex,
-    Object phasesLength,
-  ) {
+      Object currentPhaseIndex, Object phasesLength) {
     return 'Phase $currentPhaseIndex/$phasesLength';
   }
 
@@ -2051,9 +2028,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String dailyCheckinCardStressStresslevelPressurePressurelevel(
-    Object stressLevel,
-    Object pressureLevel,
-  ) {
+      Object stressLevel, Object pressureLevel) {
     return 'Stress: $stressLevel • Pressure: $pressureLevel';
   }
 
@@ -2743,9 +2718,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String aiServiceConnectionSuccessfulModelslengthModelsAvailable(
-    Object modelsLength,
-    Object join,
-  ) {
+      Object modelsLength, Object join) {
     return 'Connection successful! $modelsLength models available (e.g. $join).';
   }
 
@@ -2759,12 +2732,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String aiServiceUserContextNameProfilenameGender(
-    Object profileName,
-    Object genderLabel,
-    Object age,
-    Object relationshipLabel,
-    Object goalLabel,
-  ) {
+      Object profileName,
+      Object genderLabel,
+      Object age,
+      Object relationshipLabel,
+      Object goalLabel) {
     return '\n\nUSER CONTEXT:\n- Name: $profileName\n- Gender: $genderLabel\n- Age: $age years\n- Relationship status: $relationshipLabel\n- Main focus: $goalLabel\nAddress the person confidentially by their name, and tailor your psychological and somatic explanations to their gender, age and relationship status.';
   }
 
@@ -2835,9 +2807,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String nostrServiceCountOfFallbackrelayslengthServers(
-    Object count,
-    Object fallbackRelaysLength,
-  ) {
+      Object count, Object fallbackRelaysLength) {
     return '$count of $fallbackRelaysLength servers';
   }
 
@@ -2847,9 +2817,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String nostrServiceHaveAReadLessontitleCoursetitle(
-    Object lessonTitle,
-    Object courseTitle,
-  ) {
+      Object lessonTitle, Object courseTitle) {
     return '📖 Have a read: “$lessonTitle” ($courseTitle)';
   }
 
@@ -3713,7 +3681,6 @@ class AppLocalizationsEn extends AppLocalizations {
       'Fantasies, leading and surrendering, mind movies and toys.';
 
   @override
-<<<<<<< HEAD
   String get rueckblickTitel => 'This week';
 
   @override
@@ -3897,7 +3864,8 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get realitaetKanalBeschreibung =>
       'Reminders for daytime reality checks';
-=======
+
+  @override
   String get weckenTitel => 'Wake me tonight';
 
   @override
@@ -3954,5 +3922,4 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get weckenLaeuftText =>
       'Set your device aside and close your eyes. The guidance stops on its own.';
->>>>>>> origin/ag/7-naechtliches-wecken
 }

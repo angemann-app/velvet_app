@@ -63,7 +63,7 @@ import 'app_localizations_en.dart';
 /// property.
 abstract class AppLocalizations {
   AppLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -86,16 +86,16 @@ abstract class AppLocalizations {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-        delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ];
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('de'),
-    Locale('en'),
+    Locale('en')
   ];
 
   /// No description provided for @appName.
@@ -415,9 +415,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Gesamtfortschritt: {completedCount} von {totalLessons} Lektionen'**
   String coursesOverallProgressCompletedcountOfTotallessons(
-    Object completedCount,
-    Object totalLessons,
-  );
+      Object completedCount, Object totalLessons);
 
   /// No description provided for @coursesDurationminMin.
   ///
@@ -898,9 +896,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'{checkedLength}/{immediateStepsLength} erledigt'**
   String sosModalCheckedlengthImmediatestepslengthDone(
-    Object checkedLength,
-    Object immediateStepsLength,
-  );
+      Object checkedLength, Object immediateStepsLength);
 
   /// No description provided for @appLockLocked.
   ///
@@ -1231,10 +1227,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Der Verlauf mit {name}, die Antworten von {name2} auf die Ja/Nein-Liste und die geteilten Reflexionen werden auf diesem Handy gelöscht. Deine eigenen Antworten bleiben erhalten.\n\nAuf dem Handy von {name3} ändert sich nichts.'**
   String couplesChannelTheHistoryWithNameName(
-    Object name,
-    Object name2,
-    Object name3,
-  );
+      Object name, Object name2, Object name3);
 
   /// No description provided for @couplesChannelDisconnect3.
   ///
@@ -1451,9 +1444,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'{partnerName}{partnerName2} gibt · du empfängst'**
   String paarAbendPartnernamePartnernameGivesYouReceive(
-    Object partnerName,
-    Object partnerName2,
-  );
+      Object partnerName, Object partnerName2);
 
   /// No description provided for @paarAbendArriving.
   ///
@@ -1622,10 +1613,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Du bist gerade mit {old} verbunden. Diese Verbindung wird ersetzt, und der Verlauf mit {old2}, die Antworten von {old3} und die geteilten Reflexionen werden auf diesem Handy gelöscht.'**
   String pairingModalYouReCurrentlyConnectedWith(
-    Object old,
-    Object old2,
-    Object old3,
-  );
+      Object old, Object old2, Object old3);
 
   /// No description provided for @pairingModalReplace.
   ///
@@ -2172,9 +2160,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Fragenkatalog ({answeredCount}/{totalItems})'**
   String yesNoMaybeQuestionsAnsweredcountTotalitems(
-    Object answeredCount,
-    Object totalItems,
-  );
+      Object answeredCount, Object totalItems);
 
   /// No description provided for @yesNoMaybeMatchesMatchcount.
   ///
@@ -2271,9 +2257,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'{yesMatchesLength} gemeinsame Ja-Übereinstimmungen & {curiosityMatchesLength} Neugier-Punkte entdeckt!'**
   String yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(
-    Object yesMatchesLength,
-    Object curiosityMatchesLength,
-  );
+      Object yesMatchesLength, Object curiosityMatchesLength);
 
   /// No description provided for @yesNoMaybeNoRejectionAllLimitsWere.
   ///
@@ -2538,9 +2522,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'{realityCheck}\n\nPraktischer Shift: {practicalShift}'**
   String beliefLibraryViewRealitycheckPracticalShiftPracticalshift(
-    Object realityCheck,
-    Object practicalShift,
-  );
+      Object realityCheck, Object practicalShift);
 
   /// No description provided for @beliefLibraryViewBeliefToolkit.
   ///
@@ -2817,18 +2799,14 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Runde {currentRound} von {totalRounds}'**
   String kegelTimerViewRoundCurrentroundOfTotalrounds(
-    Object currentRound,
-    Object totalRounds,
-  );
+      Object currentRound, Object totalRounds);
 
   /// No description provided for @kegelTimerViewPhaseCurrentphaseindexPhaseslength.
   ///
   /// In de, this message translates to:
   /// **'Phase {currentPhaseIndex}/{phasesLength}'**
   String kegelTimerViewPhaseCurrentphaseindexPhaseslength(
-    Object currentPhaseIndex,
-    Object phasesLength,
-  );
+      Object currentPhaseIndex, Object phasesLength);
 
   /// No description provided for @kegelTimerViewGuidePracticePlan.
   ///
@@ -3519,9 +3497,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Stress: {stressLevel} • Druck: {pressureLevel}'**
   String dailyCheckinCardStressStresslevelPressurePressurelevel(
-    Object stressLevel,
-    Object pressureLevel,
-  );
+      Object stressLevel, Object pressureLevel);
 
   /// No description provided for @dailyCheckinCardHowDoStressPerformancePressure.
   ///
@@ -4668,9 +4644,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Verbindung erfolgreich! {modelsLength} Modelle verfügbar (z. B. {join}).'**
   String aiServiceConnectionSuccessfulModelslengthModelsAvailable(
-    Object modelsLength,
-    Object join,
-  );
+      Object modelsLength, Object join);
 
   /// No description provided for @aiServiceNoAvailableTextModelsFound.
   ///
@@ -4689,12 +4663,11 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'\n\nKONTEXT DES NUTZERS:\n- Name/Rufname: {profileName}\n- Geschlecht: {genderLabel}\n- Alter: {age} Jahre\n- Beziehungsstatus: {relationshipLabel}\n- Hauptfokus: {goalLabel}\nSprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an.'**
   String aiServiceUserContextNameProfilenameGender(
-    Object profileName,
-    Object genderLabel,
-    Object age,
-    Object relationshipLabel,
-    Object goalLabel,
-  );
+      Object profileName,
+      Object genderLabel,
+      Object age,
+      Object relationshipLabel,
+      Object goalLabel);
 
   /// No description provided for @aiServiceReceivedAnEmptyAnswerFrom.
   ///
@@ -4803,9 +4776,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'{count} von {fallbackRelaysLength} Servern'**
   String nostrServiceCountOfFallbackrelayslengthServers(
-    Object count,
-    Object fallbackRelaysLength,
-  );
+      Object count, Object fallbackRelaysLength);
 
   /// No description provided for @nostrServiceVotedOnTheFantasySelection.
   ///
@@ -4818,9 +4789,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'📖 Lies mal: „{lessonTitle}“ ({courseTitle})'**
   String nostrServiceHaveAReadLessontitleCoursetitle(
-    Object lessonTitle,
-    Object courseTitle,
-  );
+      Object lessonTitle, Object courseTitle);
 
   /// No description provided for @nostrServiceIVeSharedMyThoughts.
   ///
@@ -6334,7 +6303,6 @@ abstract class AppLocalizations {
   /// **'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.'**
   String get schwerpunktFantasieText;
 
-<<<<<<< HEAD
   /// No description provided for @rueckblickTitel.
   ///
   /// In de, this message translates to:
@@ -6538,7 +6506,7 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Erinnerungen für den Realitätscheck am Tag'**
   String get realitaetKanalBeschreibung;
-=======
+
   /// No description provided for @weckenTitel.
   ///
   /// In de, this message translates to:
@@ -6634,7 +6602,6 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst.'**
   String get weckenLaeuftText;
->>>>>>> origin/ag/7-naechtliches-wecken
 }
 
 class _AppLocalizationsDelegate
@@ -6664,9 +6631,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   }
 
   throw FlutterError(
-    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.',
-  );
+      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }

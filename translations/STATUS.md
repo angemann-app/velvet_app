@@ -12,12 +12,12 @@ Generated automatically, do not edit. Percentages by words of the German source;
 
 | Bereich / Area | Aktuell / Up to date | Überholt / Outdated | Fehlt / Missing | Datei / File |
 |---|---|---|---|---|
-| Oberfläche (Knöpfe, Menüs, Meldungen) | 1043 | 0 | 0 | (direkt gepflegt) |
+| Oberfläche (Knöpfe, Menüs, Meldungen) | 1081 | 0 | 0 | (direkt gepflegt) |
 | Kurse und Lektionen | 651 | 0 | 0 | (direkt gepflegt) |
 | Ja/Nein/Vielleicht-Liste und Fantasie-Karten | 214 | 0 | 0 | (direkt gepflegt) |
 | Geführte Selbsterkundung (Audio-Bausteine) | 100 | 0 | 0 | (direkt gepflegt) |
 | Einschlaf-Reise (Audio-Bausteine) | 119 | 0 | 0 | (direkt gepflegt) |
-| Traum-Reise (Audio-Bausteine) | 39 | 0 | 0 | (direkt gepflegt) |
+| Traum-Reise (Audio-Bausteine) | 43 | 0 | 0 | (direkt gepflegt) |
 | Gemeinsamer Abend (Audio-Bausteine) | 110 | 0 | 0 | (direkt gepflegt) |
 | Anleitung in der App | 24 | 0 | 0 | (direkt gepflegt) |
 | Was ist neu (nach Updates) | 110 | 0 | 0 | (direkt gepflegt) |
