@@ -1030,5 +1030,17 @@
   "schwerpunktBeruehrung": "Touch",
   "schwerpunktBeruehrungText": "Touch for her and for him, intimate massage, voice and relaxed positions.",
   "schwerpunktFantasie": "Fantasy and play",
-  "schwerpunktFantasieText": "Fantasies, leading and surrendering, mind movies and toys."
+  "schwerpunktFantasieText": "Fantasies, leading and surrendering, mind movies and toys.",
+  "rueckblickTitel": "This week",
+  "rueckblickKeineEintraege": "No notes in the past seven days.",
+  "rueckblickEintraegeGesamt": "{n, plural, =1{1 note in the past seven days} other{{n} notes in the past seven days}}",
+  "rueckblickErinnertMorgen": "{n, plural, =1{Remembered on 1 morning} other{Remembered on {n} mornings}}",
+  "rueckblickNichtsErinnertMorgen": "{n, plural, =1{Nothing remembered 1 time} other{Nothing remembered {n} times}}",
+  "rueckblickMarkeLuzide": "{n, plural, =1{1 time lucid} other{{n} times lucid}}",
+  "rueckblickMarkeSinnlich": "{n, plural, =1{1 time sensual} other{{n} times sensual}}",
+  "rueckblickMarkeHoehepunkt": "{n, plural, =1{1 time climax} other{{n} times climax}}",
+  "rueckblickMarkeUnangenehm": "{n, plural, =1{1 time uncomfortable} other{{n} times uncomfortable}}",
+  "rueckblickMarkeSchlechtGeschlafen": "{n, plural, =1{1 time slept poorly} other{{n} times slept poorly}}",
+  "rueckblickNachAbenden": "Following the evenings",
+  "rueckblickKeineMarken": "without tags"
 }

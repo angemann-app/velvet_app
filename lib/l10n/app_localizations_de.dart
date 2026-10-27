@@ -3695,4 +3695,105 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get schwerpunktFantasieText =>
       'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.';
+
+  @override
+  String get rueckblickTitel => 'Diese Woche';
+
+  @override
+  String get rueckblickKeineEintraege =>
+      'Keine Notizen in den letzten sieben Tagen.';
+
+  @override
+  String rueckblickEintraegeGesamt(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Notizen in den letzten sieben Tagen',
+      one: '1 Notiz in den letzten sieben Tagen',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickErinnertMorgen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'An $n Morgen erinnert',
+      one: 'An 1 Morgen erinnert',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickNichtsErinnertMorgen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal nichts erinnert',
+      one: '1 Mal nichts erinnert',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeLuzide(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal luzide',
+      one: '1 Mal luzide',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeSinnlich(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal sinnlich',
+      one: '1 Mal sinnlich',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeHoehepunkt(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal Höhepunkt',
+      one: '1 Mal Höhepunkt',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeUnangenehm(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal unangenehm',
+      one: '1 Mal unangenehm',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeSchlechtGeschlafen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal schlecht geschlafen',
+      one: '1 Mal schlecht geschlafen',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get rueckblickNachAbenden => 'Nach den Abenden';
+
+  @override
+  String get rueckblickKeineMarken => 'ohne Markierung';
 }

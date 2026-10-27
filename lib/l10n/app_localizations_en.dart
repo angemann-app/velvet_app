@@ -3679,4 +3679,104 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get schwerpunktFantasieText =>
       'Fantasies, leading and surrendering, mind movies and toys.';
+
+  @override
+  String get rueckblickTitel => 'This week';
+
+  @override
+  String get rueckblickKeineEintraege => 'No notes in the past seven days.';
+
+  @override
+  String rueckblickEintraegeGesamt(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n notes in the past seven days',
+      one: '1 note in the past seven days',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickErinnertMorgen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'Remembered on $n mornings',
+      one: 'Remembered on 1 morning',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickNichtsErinnertMorgen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'Nothing remembered $n times',
+      one: 'Nothing remembered 1 time',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeLuzide(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times lucid',
+      one: '1 time lucid',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeSinnlich(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times sensual',
+      one: '1 time sensual',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeHoehepunkt(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times climax',
+      one: '1 time climax',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeUnangenehm(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times uncomfortable',
+      one: '1 time uncomfortable',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeSchlechtGeschlafen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times slept poorly',
+      one: '1 time slept poorly',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get rueckblickNachAbenden => 'Following the evenings';
+
+  @override
+  String get rueckblickKeineMarken => 'without tags';
 }
