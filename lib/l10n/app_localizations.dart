@@ -5637,6 +5637,72 @@ abstract class AppLocalizations {
   /// **'Schwerpunkt'**
   String get einschlafSchwerpunkt;
 
+  /// No description provided for @traumKarteTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Traum-Abend'**
+  String get traumKarteTitel;
+
+  /// No description provided for @traumKarteTitelNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Ruhe'**
+  String get traumKarteTitelNeutral;
+
+  /// No description provided for @traumKarteText.
+  ///
+  /// In de, this message translates to:
+  /// **'Sanft in den Schlaf und in einen sinnlichen Traum: 30 bis 60 Minuten mit einem Traumbild deiner Wahl.'**
+  String get traumKarteText;
+
+  /// No description provided for @traumTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Traum-Abend'**
+  String get traumTitel;
+
+  /// No description provided for @traumEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine Stimme begleitet dich in den Schlaf und legt dir ein Traumbild nahe. Danach wiederholt sie leise deine Traum-Absicht, mit immer längeren Pausen, bis nur Stille bleibt. Du darfst dabei einschlafen.'**
+  String get traumEinleitung;
+
+  /// No description provided for @traumBild.
+  ///
+  /// In de, this message translates to:
+  /// **'Traumbild'**
+  String get traumBild;
+
+  /// No description provided for @traumBildWarmesWasser.
+  ///
+  /// In de, this message translates to:
+  /// **'Warmes Wasser'**
+  String get traumBildWarmesWasser;
+
+  /// No description provided for @traumBildOrtFuerMich.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Ort für mich'**
+  String get traumBildOrtFuerMich;
+
+  /// No description provided for @traumBildKoerperImLicht.
+  ///
+  /// In de, this message translates to:
+  /// **'Körper im Licht'**
+  String get traumBildKoerperImLicht;
+
+  /// No description provided for @traumBildBegegnung.
+  ///
+  /// In de, this message translates to:
+  /// **'Begegnung'**
+  String get traumBildBegegnung;
+
+  /// No description provided for @traumBildKlarheit.
+  ///
+  /// In de, this message translates to:
+  /// **'Klarheit'**
+  String get traumBildKlarheit;
+
   /// No description provided for @einschlafUeberrasch.
   ///
   /// In de, this message translates to:

@@ -49,6 +49,8 @@ Gemeinsamer Abend: 20 bis 45 Minuten für zwei. Ihr wechselt euch beim Geben und
 
 Einschlafen: 60, 90 oder 120 Minuten im Bett, mit einem Schwerpunkt deiner Wahl oder als Überraschung. Die Stimme wird immer leiser und seltener, die Sätze kehren in Runden wieder, am Ende bleibt nur ein leiser Klang. Du darfst einschlafen. Am besten mit Ladekabel; auf der Karte steht im Diskretions-Modus nur Entspannung.
 
+Traum-Abend: 30, 45 oder 60 Minuten vor dem Schlafen, mit einem Traumbild deiner Wahl oder als Überraschung. Die Stimme begleitet dich in den Schlaf, malt das Traumbild aus und wiederholt leise eine Traum-Absicht, damit sie dich in die Nacht begleitet. Im Spicy-Modus gibt es eine deutlichere Fassung für deinen Körper. Wer zu Schlafparalyse neigt, lässt luzide Übungen lieber weg. Auf der Karte steht im Diskretions-Modus nur Ruhe.
+
 Alle werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden.
 
 

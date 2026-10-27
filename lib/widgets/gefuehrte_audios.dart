@@ -39,6 +39,7 @@ class GefuehrteAudios extends StatelessWidget {
             onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SelbstReiseScreen())),
           ),
         if (mitSelbst) const _EinschlafKarte(),
+        if (mitSelbst) const _TraumKarte(),
         if (mitPaar)
           GefuehrtKarte(
             bild: 'assets/images/guided_paar.svg',
@@ -64,6 +65,25 @@ class _EinschlafKarte extends StatelessWidget {
         titel: snapshot.data == true ? t.einschlafKarteTitelNeutral : t.einschlafKarteTitel,
         text: t.einschlafKarteText,
         onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const EinschlafReiseScreen())),
+      ),
+    );
+  }
+}
+
+/// Traum-Abend (Traum-Reise, erster Teil). Im Diskretions-Modus mit neutralem Titel.
+class _TraumKarte extends StatelessWidget {
+  const _TraumKarte();
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<bool>(
+      future: PrivacyService.isDiscreetIcon(),
+      builder: (context, snapshot) => GefuehrtKarte(
+        bild: 'assets/images/guided_einschlaf.svg',
+        titel: snapshot.data == true ? t.traumKarteTitelNeutral : t.traumKarteTitel,
+        text: t.traumKarteText,
+        onTap: () =>
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const EinschlafReiseScreen(traum: true))),
       ),
     );
   }

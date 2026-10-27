@@ -375,6 +375,17 @@
           "text": "Die Stimmen von Victoria und Martin sind nicht mehr in der App selbst, sondern kommen als Pakete nach: Lektionen und geführte Audios, auf Deutsch und Englisch. Die App wird dadurch viel kleiner, und korrigierte Aufnahmen kommen ohne Update. Einmal im Profil unter „Aufnahmen“ laden, am besten im WLAN."
         }
       ]
+    },
+    {
+      "build": 46,
+      "version": "4.11.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Traum-Abend",
+          "text": "Ein neues geführtes Audio für die Nacht: Du wählst ein Traumbild, die Stimme begleitet dich in den Schlaf und gibt dir eine sanfte Traum-Absicht mit. 30 bis 60 Minuten, auf der Startseite bei den geführten Audios. Die Aufnahmen kommen mit dem Paket der geführten Audios."
+        }
+      ]
     }
   ]
 }
