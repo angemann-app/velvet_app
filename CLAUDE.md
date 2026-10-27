@@ -31,6 +31,23 @@ Dateien, an denen Claude Code gerade arbeitet, mit Datum unter „Gesperrt“ ei
 wieder freigeben. Rückmeldungen holt Claude mit `tools/rueckmeldungen_abholen.dart` (eigener Lesestand),
 Antigravity mit `--leser ag`.
 
+**OpenCode (Routine abgeben, spart Tokens):** Über das MCP-Werkzeug `opencode_auftrag` (`.mcp.json`,
+`tools/opencode_mcp.py`) erledigt OpenCode 2 (`C:\TOOLS\opencode\opencode.exe`) Aufgaben mit dem kostenlosen
+Modell `opencode/deepseek-v4.1-flash-free`. Soll AG langfristig als Arbeitstier ablösen.
+- **Abgeben:** klar abgegrenzte, mechanische Arbeit mit eindeutigem Prüfbefehl, z. B. Tests an geänderte Stellen
+  anpassen, Umbenennungen über viele Dateien, englische Fassungen von App-Texten (ARB, `translations/en/`)
+  entwerfen, Doku nachziehen, Fehlerausgaben auswerten. Der Auftrag nennt Ziel, erlaubte Dateien und den
+  Prüfbefehl; vorher eigenen Branch anlegen.
+- **Nicht abgeben** (das Modell läuft in der Cloud): Fantasie-Räume, „Lust im Traum“ und alles aus
+  `C:\TOOLS\velvet-inhalte`, Rückmeldungen und Postfach, Schlüssel und Geheimnisse, Sicherheitscode
+  (`SecretStore`, `BackupCodec`, `NostrEventCheck`, Krypto), neue Inhaltstexte und Entscheidungen aus
+  „Offene Fragen“.
+- **Danach immer selbst prüfen:** `git diff` lesen, Tests laufen lassen, erst dann committen. OpenCode
+  committet, pusht und veröffentlicht nie.
+- **Rechte** stehen in `~/.config/opencode/opencode.jsonc` (Vorlage `tools/opencode/opencode.jsonc`): kein
+  Zugriff außerhalb des Projekts, Shell nur `flutter test/analyze/gen-l10n/pub get`, `dart format` und Git lesen.
+  Beim Lockern daran denken: Über die Shell lässt sich jede Datei lesen.
+
 **Grundsatz Inhalte:** Langfristig werden alle Inhalte (Texte und Audios) getrennt von der App als
 signierte Pakete angeboten. Neue Inhalte deshalb so anlegen, dass sie in ein Paket wandern können; nur
 Onboarding, SOS, Sicherheits- und Gesundheitshinweise, Datenschutz und Anleitung bleiben fest in der App.

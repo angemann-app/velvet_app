@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "opencode": {
+      "type": "stdio",
+      "command": "C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe",
+      "args": ["-X", "utf8", "tools/opencode_mcp.py"]
+    }
+  }
+}
