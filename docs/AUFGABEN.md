@@ -6,11 +6,10 @@ Für jede Aufgabe eine eigene Sitzung und ein eigener Branch.
 ## 1. Lust im Traum: Rest
 
 Serie, Traumtagebuch und Paket sind gebaut (siehe Konzept, „Umsetzung“). Offen:
-- Secret `PAKETE_TRANSPORT_KEY` im Repository anlegen, dann Paket `de-lust` (und `en-lust`, sobald die
-  englischen Aufnahmen fertig sind) hochladen.
 - Auf dem Handy testen: Paket laden, Folge 1, Freischaltung, Traumkörper und Gegenüber ab Folge 3.
-- Realitätschecks (Benachrichtigungen, Standard aus) und nächtliches Wecken (Folge 5) aus der Traum-Reise.
-- Wochenrückblick des Traumtagebuchs, Motive als Realitätscheck-Auslöser.
+- Wochenrückblick des Traumtagebuchs → AG-5
+- Realitätschecks mit Motiven als Auslöser → AG-6
+- Nächtliches Wecken (Folge 5) → AG-7
 
 ## Laufend: Aussprache korrigieren (täglich) → OpenCode
 
