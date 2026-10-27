@@ -71,6 +71,53 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
+### AG-4: Traum-Reise einsprechen (einmalig, heute zuerst)
+
+**Branch:** `ag/4-traum-aufnahmen`
+**Darf ändern:** neue Dateien unter `assets/audio/traum/` (Aufnahmen und `dauer.json`), nichts sonst.
+
+1. Einsprechen, beide Stimmen (dauert eine Weile, im Hintergrund laufen lassen):
+   `C:\TOOLS\kikiri-venv\Scripts\python.exe tools/generate_audio.py --traum`
+   Das nimmt alle 39 Bausteine aus `assets/data/traum_reise.json` langsam wie die Einschlaf-Reise auf.
+2. Stichprobe anhören bzw. mit `--zeige "<Wort>"` die Aussprache auffälliger Wörter prüfen (Vulva, Klitoris,
+   Schamlippen, Eichel, Beckenboden, luzide). Falsches als Lexikon-Eintrag in `tools/aussprache.json` vorschlagen
+   und nur im Pull Request nennen (nicht selbst ändern, der Auftrag erlaubt nur Audio).
+3. Pull Request mit Anhörliste: je ein Traumbild sanft und spicy (Vulva und Penis) für beide Stimmen.
+
+### AG-3: Texte für „Lust im Traum“ schreiben (einmalig, nach AG-4)
+
+**Vorher lesen:** `docs/konzepte/lust-im-traum.md` (alle Abschnitte, besonders „Die Folgen“, „Traumkörper“,
+„Gegenüber im Traum“, „Grenze für die Texte“, „Entscheidungen“), `docs/konzepte/traum-reise.md` („Sprache und
+Stil“, „Selbstwahrnehmung im anderen Körper“) und `docs/konzepte/einschlaf-reise-textvorgabe.md` (verbindlicher
+Stil). Format wie `tools/content/traum/sanft.json`.
+
+**Ablage:** `C:\TOOLS\velvet-inhalte\lust\lust.json`, **nie ins Repository** (auch nicht als Entwurf, Issue
+oder Pull Request), wie die Fantasie-Räume.
+
+**Format:** JSON (UTF-8 ohne BOM) mit Listen `de` und `en`, Ids und Felder in beiden identisch, Absätze mit `\n`.
+Felder: `id`, `phase` (`folge`), `folge` (1 bis 8), `koerper` (`vulva` | `penis`), `teil` (`v1` lang, `v2`
+mittel, `v3` kurz, `f` Absicht als Kurzformel, `tag` Übung für den Tag), ab Folge 3 zusätzlich `gegenueber`
+(`niemand` | `frau` | `mann` | `offen`) und eigene Bausteine `phase: "uebergang"` mit `koerper` = Zielkörper
+(zwei Fassungen je Zielkörper) für den Körperwechsel.
+
+**Umfang je Sprache:** jede Folge (1 bis 8) für Vulva und für Penis: `v1`, `v2`, `v3`, `f`, `tag`. Ab Folge 3
+zusätzlich je Körper eine `v1`-Fassung für `frau`, `mann` und `offen` (die Standard-Fassungen gelten für
+`niemand`). Die Texte für Begegnungen so schreiben, dass sie für gleich- und gegengeschlechtliche Begegnungen
+gleichermaßen tragen. Frauen- und Männerfassungen unterscheiden sich wirklich (siehe Konzept: Frauen mehr ganzer
+Körper, Brüste, wiederkehrende Wellen, mehrere Höhepunkte selbstverständlich; Männer Wärme und Fülle im Becken,
+Leistung loslassen, in Folge 7 Höhepunkt ohne Samenerguss als Möglichkeit).
+
+**Grenze:** Der Höhepunkt darf als Absicht und Erlaubnis vorkommen, wird aber nicht ausgemalt: keine Handlung,
+keine Steigerung bis zum Höhepunkt, kein Dirty Talk, keine Geräusche. Keine Versprechen („du wirst …“), keine
+pseudowissenschaftlichen Begründungen. Alle Figuren erwachsen, alles gewollt, keine echten oder benannten Personen.
+Textvorgabe: keine Gedankenstriche, Anführungszeichen, Klammern, Ziffern; im Traumteil keine Aufforderungen.
+Englisch gleiche Funktion und Länge (±15 %).
+
+**Prüfen:** `python -c "import json;d=json.load(open(r'C:\TOOLS\velvet-inhalte\lust\lust.json',encoding='utf-8'));print(len(d['de']),len(d['en']))"`
+und Ids in `de` und `en` gleich.
+
+**Abschluss:** kein Pull Request. Dem Nutzer melden: Datei fertig, Anzahl der Bausteine, offene Fragen.
+
 ### AG-1: Aussprache korrigieren (laufend, täglich)
 
 **Branch:** `aussprache/<JJJJ-MM-TT>`

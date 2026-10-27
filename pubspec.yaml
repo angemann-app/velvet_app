@@ -50,6 +50,7 @@ flutter:
     - assets/data/paar_abend.json
     - assets/data/selbst_reise.json
     - assets/data/einschlaf_reise.json
+    - assets/data/traum_reise.json
     - assets/data/neuigkeiten.json
     - assets/data/anleitung.json
     - assets/data/foto_ideen.json
@@ -58,6 +59,7 @@ flutter:
     - translations/en/paar_abend.json
     - translations/en/selbst_reise.json
     - translations/en/einschlaf_reise.json
+    - translations/en/traum_reise.json
     - translations/en/neuigkeiten.json
     - translations/en/yes_no_maybe.json
     - translations/en/fantasy_options.json
@@ -74,3 +76,4 @@ flutter:
     - assets/audio/paar/dauer.json
     - assets/audio/selbst/dauer.json
     - assets/audio/einschlaf/dauer.json
+    - assets/audio/traum/dauer.json

@@ -148,6 +148,8 @@ List<Bereich> bereiche() {
         bausteine('selbst_reise.json', 'self_block', 'Baustein der geführten Selbsterkundung')),
     Bereich('einschlaf_reise', 'Einschlaf-Reise (Audio-Bausteine)', 'assets/data/einschlaf_reise.json', true,
         bausteine('einschlaf_reise.json', 'sleep_block', 'Baustein der Einschlaf-Reise')),
+    Bereich('traum_reise', 'Traum-Reise (Audio-Bausteine)', 'assets/data/traum_reise.json', true,
+        bausteine('traum_reise.json', 'dream_block', 'Baustein der Traum-Reise')),
     Bereich('paar_abend', 'Gemeinsamer Abend (Audio-Bausteine)', 'assets/data/paar_abend.json', true,
         bausteine('paar_abend.json', 'block', 'Baustein des gemeinsamen Abends')),
     Bereich('anleitung', 'Anleitung in der App', 'assets/data/anleitung.json', false, [
@@ -234,6 +236,9 @@ Map<String, String> felderLesen(String ordner, {String? arb}) {
   for (final b in datei('einschlaf_reise.json')?['bausteine'] as List? ?? const []) {
     setzen('sleep_block:${b['id']}#text', b['text']);
   }
+  for (final b in datei('traum_reise.json')?['bausteine'] as List? ?? const []) {
+    setzen('dream_block:${b['id']}#text', b['text']);
+  }
   for (final b in datei('paar_abend.json')?['bausteine'] as List? ?? const []) {
     setzen('block:${b['id']}#text', b['text']);
   }
@@ -269,6 +274,7 @@ Map<String, String> stempelLesen(String ordner) {
     'fantasy_options.json',
     'selbst_reise.json',
     'einschlaf_reise.json',
+    'traum_reise.json',
     'paar_abend.json',
     'anleitung.json',
     'neuigkeiten.json',
@@ -372,7 +378,7 @@ void uebersetzungSchreiben(String ordner, String sprache, Map<String, String> fe
     '_source': quelle(const ['fantasy']),
   });
 
-  for (final (datei, praefix) in const [('selbst_reise.json', 'self_block'), ('einschlaf_reise.json', 'sleep_block'), ('paar_abend.json', 'block')]) {
+  for (final (datei, praefix) in const [('selbst_reise.json', 'self_block'), ('einschlaf_reise.json', 'sleep_block'), ('traum_reise.json', 'dream_block'), ('paar_abend.json', 'block')]) {
     _jsonSchreiben('$ordner/$datei', {
       '_hinweis': hinweis,
       'bausteine': [

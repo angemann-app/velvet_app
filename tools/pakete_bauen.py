@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 ZIEL = ROOT / "build" / "pakete"
-GEFUEHRT = ("paar", "selbst", "einschlaf")
+GEFUEHRT = ("paar", "selbst", "einschlaf", "traum")
 NICHT_INS_PAKET = {"klangschale.opus", "klangteppich.opus"}
 
 
