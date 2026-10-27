@@ -81,6 +81,24 @@ Im Traum darf der Körper ein anderer sein. Ab Folge 3 wählt man den **Traumkö
 - Solche Fantasien sind sehr verbreitet, auch in glücklichen Beziehungen, und sagen wenig über Wünsche oder
   Identität im Wachleben. Die Serie lädt sie ohne Wertung ein.
 
+## Gegenüber im Traum (auch gleichgeschlechtlich)
+
+Ab Folge 3 wählt man außerdem, **mit wem** die Lust im Traum sich entfalten darf, unabhängig vom Traumkörper:
+
+- **niemand:** nur du und dein Traumkörper (Standard)
+- **eine Frau**
+- **ein Mann**
+- **offen:** der Traum entscheidet
+
+Damit sind alle Kombinationen möglich, ausdrücklich auch **gleichgeschlechtliche**: eine Frau mit einer Frau,
+ein Mann mit einem Mann, und zusammen mit dem Körperwechsel z. B. ein Mann, der als Frau einem Mann begegnet.
+Die Begegnung bleibt eine Gegenwart und Nähe im Traumbild (Atem, Hände, Wärme, Begehren), im Rahmen der „Grenze
+für die Texte“. Alle Figuren erwachsen, gewollt, ohne echte oder benannte Personen. Die Auswahl wird nicht
+bewertet und nicht kommentiert; sie bleibt nur auf dem Gerät.
+
+Die Traumbilder mit Gegenüber gibt es je Traumkörper (Frau/Mann) und je Gegenüber (Frau/Mann/offen); die Texte
+sind so geschrieben, dass sie für gleich- und gegengeschlechtliche Begegnungen gleichermaßen tragen.
+
 ## Grenze für die Texte (Entscheidung 27.10.2026)
 
 Der Höhepunkt darf als **Absicht und Erlaubnis** vorkommen und benannt werden. Er wird **im Audio nicht
@@ -115,3 +133,5 @@ Alle Figuren erwachsen, alles gewollt, keine echten Personen.
    unterschiedlich ist.
 5. **Körperwechsel:** Ab Folge 3 ist der Traumkörper wählbar, auch als Mann eine Frau und als Frau ein Mann zu
    erleben (siehe „Traumkörper“).
+6. **Gegenüber im Traum** wählbar (niemand, Frau, Mann, offen), ausdrücklich auch gleichgeschlechtlich (siehe
+   „Gegenüber im Traum“).
