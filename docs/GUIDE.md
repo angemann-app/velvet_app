@@ -30,7 +30,7 @@ You can reach your profile at any time via the person icon at the top of the sta
 
 <img src="anleitung/01_kurse.png" width="260" alt="Courses and lessons">
 
-The Courses tab contains all courses, sorted into basics, practice and deepening. Use the filters at the top to choose, for example, “For her”, “For him” or “For couples”.
+The Courses tab contains all courses, grouped into six focus areas: Foundations, Accepting and letting go, Discovering yourself, Desire as a couple, Touch, and Fantasy and play. Tapping a focus area opens its courses; at first the one matching your focus is open. Use the filters above to choose, for example, “For her”, “For him” or “For couples”.
 
 Every lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.
 
@@ -41,7 +41,7 @@ Tapping “Mark as completed” counts towards your progress.
 
 <img src="anleitung/13_selbst_reise.png" width="260" alt="Guided audio">
 
-The guided audios sit at the very top of the start page.
+The guided audios sit on the start page as a row to swipe through.
 
 Body journey: 10 to 30 minutes just for you. You choose how close you want to come to yourself, and a voice guides you across your body. Most of the time is silence, so you can feel.
 

@@ -30,7 +30,7 @@ Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Starts
 
 <img src="anleitung/01_kurse.png" width="260" alt="Kurse und Lektionen">
 
-Im Tab Kurse findest du alle Kurse, sortiert nach Grundlagen, Praxis und Vertiefung. Mit den Filtern oben wählst du zum Beispiel „Für Sie“, „Für Ihn“ oder „Für Paare“.
+Im Tab Kurse findest du alle Kurse, geordnet nach sechs Schwerpunkten: Grundlagen, Annehmen und Lösen, Sich selbst entdecken, Lust als Paar, Berührung sowie Fantasie und Spiel. Ein Tipp auf einen Schwerpunkt klappt seine Kurse auf; anfangs ist der offen, der zu deinem Fokus passt. Mit den Filtern darüber wählst du zum Beispiel „Für Sie“, „Für Ihn“ oder „Für Paare“.
 
 Jede Lektion hat einen Text, eine Aufnahme zum Anhören und am Ende eine Frage zum Nachdenken. Manche Lektionen haben unten einen Knopf, der dich direkt zur passenden Übung bringt, etwa zum Beckenboden-Timer oder zu einem geführten Audio.
 
@@ -41,7 +41,7 @@ Mit „Als abgeschlossen markieren“ zählt dein Fortschritt.
 
 <img src="anleitung/13_selbst_reise.png" width="260" alt="Geführte Audios">
 
-Ganz oben auf der Startseite liegen die geführten Audios.
+Auf der Startseite liegen die geführten Audios als Reihe zum Wischen.
 
 Körperreise: 10 bis 30 Minuten nur für dich. Du wählst, wie nah du dir kommen möchtest, und eine Stimme führt dich über deinen Körper. Die meiste Zeit ist Stille, damit du spüren kannst.
 

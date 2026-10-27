@@ -1677,5 +1677,29 @@
   "lustKarteTitel": "Lust im Traum",
   "lustKarteTitelNeutral": "Abendserie",
   "lustKarteText": "Acht Abende, die aufeinander aufbauen, bis zum luziden, sinnlichen Traum.",
-  "lustKarteTextNeutral": "Acht ruhige Abende, die aufeinander aufbauen."
+  "lustKarteTextNeutral": "Acht ruhige Abende, die aufeinander aufbauen.",
+  "startSchwerpunkte": "KURSE NACH SCHWERPUNKTEN",
+  "startLektionenVon": "{n} von {m} Lektionen",
+  "@startLektionenVon": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "m": {
+        "type": "int"
+      }
+    }
+  },
+  "schwerpunktGrundlagen": "Grundlagen",
+  "schwerpunktGrundlagenText": "Wie Kopf und Körper zusammenspielen, wie Erregung funktioniert und warum dein Körper gut ist, wie er ist.",
+  "schwerpunktAnnehmen": "Annehmen und Lösen",
+  "schwerpunktAnnehmenText": "Schmerz, Scham und Druck verstehen, freundlich mit dir sein, den Beckenboden lösen und stärken.",
+  "schwerpunktEntdecken": "Sich selbst entdecken",
+  "schwerpunktEntdeckenText": "Den eigenen Körper erkunden: weibliche Lust, neue Reize, Prostata und Damm.",
+  "schwerpunktPaar": "Lust als Paar",
+  "schwerpunktPaarText": "Reden, unterschiedliche Lust, Lebensphasen, Vorfreude und Erotik im Alltag.",
+  "schwerpunktBeruehrung": "Berührung",
+  "schwerpunktBeruehrungText": "Berührung für sie und für ihn, Intim-Massage, Stimme und entspannte Stellungen.",
+  "schwerpunktFantasie": "Fantasie und Spiel",
+  "schwerpunktFantasieText": "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug."
 }

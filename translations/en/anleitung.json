@@ -13,14 +13,14 @@
       "icon": "school",
       "titel": "Courses and lessons",
       "bild": "01_kurse.png",
-      "text": "The Courses tab contains all courses, sorted into basics, practice and deepening. Use the filters at the top to choose, for example, “For her”, “For him” or “For couples”.\nEvery lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.\nTapping “Mark as completed” counts towards your progress."
+      "text": "The Courses tab contains all courses, grouped into six focus areas: Foundations, Accepting and letting go, Discovering yourself, Desire as a couple, Touch, and Fantasy and play. Tapping a focus area opens its courses; at first the one matching your focus is open. Use the filters above to choose, for example, “For her”, “For him” or “For couples”.\nEvery lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.\nTapping “Mark as completed” counts towards your progress."
     },
     {
       "id": "gefuehrt",
       "icon": "spa",
       "titel": "Guided audio",
       "bild": "13_selbst_reise.png",
-      "text": "The guided audios sit at the very top of the start page.\nBody journey: 10 to 30 minutes just for you. You choose how close you want to come to yourself, and a voice guides you across your body. Most of the time is silence, so you can feel.\nShared evening: 20 to 45 minutes for two. You take turns giving and receiving, and a singing bowl marks the transitions. Agree on a stop word beforehand.\nFalling asleep: 60, 90 or 120 minutes in bed, with a focus of your choice or as a surprise. The voice grows quieter and rarer, the sentences return in rounds, and in the end only a soft sound remains. You may fall asleep. Best with the charger plugged in; in discretion mode the card just says Relaxation.\nDream evening: 30, 45 or 60 minutes before sleep, with a dream image of your choice or as a surprise. The voice accompanies you into sleep, paints the dream image and quietly repeats a dream intention so it comes with you into the night. In spicy mode there is a more explicit version for your body. If you are prone to sleep paralysis, better leave out lucid exercises. In discretion mode the card just says Calm.\nDream journal: In the morning after a dream evening, a card asks „What do you remember?“. A few keywords and marks such as lucid or sensual are enough, and „Nothing remembered“ counts too. The journal is private and part of your encrypted backup; in discretion mode the card just says Morning note.\nPleasure in dreams (spicy mode only): eight evenings that build on each other, from a pleasurable body as you fall asleep to the lucid, sensual dream. The next episode unlocks after two evenings. From episode three you choose your body in the dream and with whom pleasure may unfold. The recordings come as a separate package.\nAll of them are put together anew every time. You can pause, skip and stop at any time."
+      "text": "The guided audios sit on the start page as a row to swipe through.\nBody journey: 10 to 30 minutes just for you. You choose how close you want to come to yourself, and a voice guides you across your body. Most of the time is silence, so you can feel.\nShared evening: 20 to 45 minutes for two. You take turns giving and receiving, and a singing bowl marks the transitions. Agree on a stop word beforehand.\nFalling asleep: 60, 90 or 120 minutes in bed, with a focus of your choice or as a surprise. The voice grows quieter and rarer, the sentences return in rounds, and in the end only a soft sound remains. You may fall asleep. Best with the charger plugged in; in discretion mode the card just says Relaxation.\nDream evening: 30, 45 or 60 minutes before sleep, with a dream image of your choice or as a surprise. The voice accompanies you into sleep, paints the dream image and quietly repeats a dream intention so it comes with you into the night. In spicy mode there is a more explicit version for your body. If you are prone to sleep paralysis, better leave out lucid exercises. In discretion mode the card just says Calm.\nDream journal: In the morning after a dream evening, a card asks „What do you remember?“. A few keywords and marks such as lucid or sensual are enough, and „Nothing remembered“ counts too. The journal is private and part of your encrypted backup; in discretion mode the card just says Morning note.\nPleasure in dreams (spicy mode only): eight evenings that build on each other, from a pleasurable body as you fall asleep to the lucid, sensual dream. The next episode unlocks after two evenings. From episode three you choose your body in the dream and with whom pleasure may unfold. The recordings come as a separate package.\nAll of them are put together anew every time. You can pause, skip and stop at any time."
     },
     {
       "id": "training",
@@ -89,9 +89,9 @@
   "_source": {
     "guide:coach": "6528d2614ac06be6",
     "guide:diskretion": "868ef89b67a65ec3",
-    "guide:gefuehrt": "453361b152f064e0",
+    "guide:gefuehrt": "fc593164a90ea38a",
     "guide:hilfe": "0f67b34ec65bbd7e",
-    "guide:kurse": "e619b5e83f74493c",
+    "guide:kurse": "22661e634df5a958",
     "guide:paar": "cc5bcd0b0081f040",
     "guide:reframing": "220d1604fa3c086a",
     "guide:spicy": "d8bdd6ab7baa084b",

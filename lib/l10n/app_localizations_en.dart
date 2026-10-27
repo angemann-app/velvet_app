@@ -3629,4 +3629,54 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get lustKarteTextNeutral =>
       'Eight calm evenings that build on each other.';
+
+  @override
+  String get startSchwerpunkte => 'COURSES BY FOCUS';
+
+  @override
+  String startLektionenVon(int n, int m) {
+    return '$n of $m lessons';
+  }
+
+  @override
+  String get schwerpunktGrundlagen => 'Foundations';
+
+  @override
+  String get schwerpunktGrundlagenText =>
+      'How mind and body work together, how arousal works and why your body is good as it is.';
+
+  @override
+  String get schwerpunktAnnehmen => 'Accepting and letting go';
+
+  @override
+  String get schwerpunktAnnehmenText =>
+      'Understanding pain, shame and pressure, being kind to yourself, relaxing and strengthening the pelvic floor.';
+
+  @override
+  String get schwerpunktEntdecken => 'Discovering yourself';
+
+  @override
+  String get schwerpunktEntdeckenText =>
+      'Exploring your own body: female pleasure, new stimulation, prostate and perineum.';
+
+  @override
+  String get schwerpunktPaar => 'Desire as a couple';
+
+  @override
+  String get schwerpunktPaarText =>
+      'Talking, different levels of desire, life phases, anticipation and everyday eroticism.';
+
+  @override
+  String get schwerpunktBeruehrung => 'Touch';
+
+  @override
+  String get schwerpunktBeruehrungText =>
+      'Touch for her and for him, intimate massage, voice and relaxed positions.';
+
+  @override
+  String get schwerpunktFantasie => 'Fantasy and play';
+
+  @override
+  String get schwerpunktFantasieText =>
+      'Fantasies, leading and surrendering, mind movies and toys.';
 }

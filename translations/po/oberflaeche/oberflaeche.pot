@@ -6238,3 +6238,87 @@ msgstr ""
 msgctxt "ui:lustKarteTextNeutral#text"
 msgid "Acht ruhige Abende, die aufeinander aufbauen."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: COURSES BY FOCUS
+msgctxt "ui:startSchwerpunkte#text"
+msgid "KURSE NACH SCHWERPUNKTEN"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}, {m}
+#. EN: {n} of {m} lessons
+msgctxt "ui:startLektionenVon#text"
+msgid "{n} von {m} Lektionen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Foundations
+msgctxt "ui:schwerpunktGrundlagen#text"
+msgid "Grundlagen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How mind and body work together, how arousal works and why your body is good as it is.
+msgctxt "ui:schwerpunktGrundlagenText#text"
+msgid "Wie Kopf und Körper zusammenspielen, wie Erregung funktioniert und warum dein Körper gut ist, wie er ist."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Accepting and letting go
+msgctxt "ui:schwerpunktAnnehmen#text"
+msgid "Annehmen und Lösen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Understanding pain, shame and pressure, being kind to yourself, relaxing and strengthening the pelvic floor.
+msgctxt "ui:schwerpunktAnnehmenText#text"
+msgid "Schmerz, Scham und Druck verstehen, freundlich mit dir sein, den Beckenboden lösen und stärken."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Discovering yourself
+msgctxt "ui:schwerpunktEntdecken#text"
+msgid "Sich selbst entdecken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Exploring your own body: female pleasure, new stimulation, prostate and perineum.
+msgctxt "ui:schwerpunktEntdeckenText#text"
+msgid "Den eigenen Körper erkunden: weibliche Lust, neue Reize, Prostata und Damm."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Desire as a couple
+msgctxt "ui:schwerpunktPaar#text"
+msgid "Lust als Paar"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Talking, different levels of desire, life phases, anticipation and everyday eroticism.
+msgctxt "ui:schwerpunktPaarText#text"
+msgid "Reden, unterschiedliche Lust, Lebensphasen, Vorfreude und Erotik im Alltag."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Touch
+msgctxt "ui:schwerpunktBeruehrung#text"
+msgid "Berührung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Touch for her and for him, intimate massage, voice and relaxed positions.
+msgctxt "ui:schwerpunktBeruehrungText#text"
+msgid "Berührung für sie und für ihn, Intim-Massage, Stimme und entspannte Stellungen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Fantasy and play
+msgctxt "ui:schwerpunktFantasie#text"
+msgid "Fantasie und Spiel"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Fantasies, leading and surrendering, mind movies and toys.
+msgctxt "ui:schwerpunktFantasieText#text"
+msgid "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug."
+msgstr ""

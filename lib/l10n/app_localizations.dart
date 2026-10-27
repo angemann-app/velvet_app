@@ -6218,6 +6218,90 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Acht ruhige Abende, die aufeinander aufbauen.'**
   String get lustKarteTextNeutral;
+
+  /// No description provided for @startSchwerpunkte.
+  ///
+  /// In de, this message translates to:
+  /// **'KURSE NACH SCHWERPUNKTEN'**
+  String get startSchwerpunkte;
+
+  /// No description provided for @startLektionenVon.
+  ///
+  /// In de, this message translates to:
+  /// **'{n} von {m} Lektionen'**
+  String startLektionenVon(int n, int m);
+
+  /// No description provided for @schwerpunktGrundlagen.
+  ///
+  /// In de, this message translates to:
+  /// **'Grundlagen'**
+  String get schwerpunktGrundlagen;
+
+  /// No description provided for @schwerpunktGrundlagenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie Kopf und Körper zusammenspielen, wie Erregung funktioniert und warum dein Körper gut ist, wie er ist.'**
+  String get schwerpunktGrundlagenText;
+
+  /// No description provided for @schwerpunktAnnehmen.
+  ///
+  /// In de, this message translates to:
+  /// **'Annehmen und Lösen'**
+  String get schwerpunktAnnehmen;
+
+  /// No description provided for @schwerpunktAnnehmenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Schmerz, Scham und Druck verstehen, freundlich mit dir sein, den Beckenboden lösen und stärken.'**
+  String get schwerpunktAnnehmenText;
+
+  /// No description provided for @schwerpunktEntdecken.
+  ///
+  /// In de, this message translates to:
+  /// **'Sich selbst entdecken'**
+  String get schwerpunktEntdecken;
+
+  /// No description provided for @schwerpunktEntdeckenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Den eigenen Körper erkunden: weibliche Lust, neue Reize, Prostata und Damm.'**
+  String get schwerpunktEntdeckenText;
+
+  /// No description provided for @schwerpunktPaar.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust als Paar'**
+  String get schwerpunktPaar;
+
+  /// No description provided for @schwerpunktPaarText.
+  ///
+  /// In de, this message translates to:
+  /// **'Reden, unterschiedliche Lust, Lebensphasen, Vorfreude und Erotik im Alltag.'**
+  String get schwerpunktPaarText;
+
+  /// No description provided for @schwerpunktBeruehrung.
+  ///
+  /// In de, this message translates to:
+  /// **'Berührung'**
+  String get schwerpunktBeruehrung;
+
+  /// No description provided for @schwerpunktBeruehrungText.
+  ///
+  /// In de, this message translates to:
+  /// **'Berührung für sie und für ihn, Intim-Massage, Stimme und entspannte Stellungen.'**
+  String get schwerpunktBeruehrungText;
+
+  /// No description provided for @schwerpunktFantasie.
+  ///
+  /// In de, this message translates to:
+  /// **'Fantasie und Spiel'**
+  String get schwerpunktFantasie;
+
+  /// No description provided for @schwerpunktFantasieText.
+  ///
+  /// In de, this message translates to:
+  /// **'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.'**
+  String get schwerpunktFantasieText;
 }
 
 class _AppLocalizationsDelegate

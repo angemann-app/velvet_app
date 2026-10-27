@@ -166,7 +166,6 @@ class _CoursesScreenState extends State<CoursesScreen> {
         return c.isForMen || c.category == 'all' || (showCouples && c.isForCouples);
       }
       if (_selectedCategory == 'couples') return c.isForCouples || c.category == 'all';
-      if (_selectedCategory == 'touch') return c.id.contains('touch') || c.id == 'course_self_exploration';
       return true;
     }).toList();
 
@@ -182,31 +181,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
           const SizedBox(height: 18),
 
-          // Geführte Audios gut sichtbar statt versteckt in einzelnen Lektionen.
           const AufnahmenHinweis(),
-          GefuehrteAudios(mitPaar: showCouples),
-
-          const SizedBox(height: 6),
-
-          // Category Filter Chips
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                _buildCategoryChip('all', t.coursesAllCourses, Icons.apps_rounded),
-                const SizedBox(width: 8),
-                _buildCategoryChip('touch', t.coursesTouch, Icons.touch_app_rounded),
-                const SizedBox(width: 8),
-                _buildCategoryChip('women', t.coursesForHer, Icons.spa_rounded),
-                const SizedBox(width: 8),
-                _buildCategoryChip('men', t.coursesForHim, Icons.male_rounded),
-                const SizedBox(width: 8),
-                _buildCategoryChip('couples', t.coursesForCouples, Icons.favorite_rounded),
-              ],
-            ),
-          ),
-
-          const SizedBox(height: 16),
 
           // Daily 30-Second Micro-Journaling Check-in
           DailyCheckInCard(
@@ -222,104 +197,37 @@ class _CoursesScreenState extends State<CoursesScreen> {
           // Daily Simmering / Erotik-Funke Card
           const DailySimmeringCard(),
 
-          // Couples Channel Teaser Banner
-          Container(
-            margin: const EdgeInsets.only(bottom: 16),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  const Color(0xFF1E293B),
-                  const Color(0xFF4C0519).withValues(alpha: 0.35),
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                color: const Color(0xFFFB7185).withValues(alpha: 0.35),
-              ),
-            ),
-            child: Material(
-              color: Colors.transparent,
-              child: InkWell(
-                onTap: () => widget.onNavigateToTool(3),
-                borderRadius: BorderRadius.circular(16),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                  child: Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFE11D48).withValues(alpha: 0.18),
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(
-                          Icons.favorite_rounded,
-                          color: Color(0xFFFB7185),
-                          size: 22,
-                        ),
-                      ),
-                      const SizedBox(width: 14),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  t.coursesCoupleChannel,
-                                  style: TextStyle(
-                                    color: Color(0xFFFB7185),
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w800,
-                                    letterSpacing: 0.8,
-                                  ),
-                                ),
-                                const SizedBox(width: 6),
-                                const Icon(Icons.lock_rounded, size: 12, color: AppTheme.sageGreen),
-                              ],
-                            ),
-                            const SizedBox(height: 2),
-                            Text(
-                              t.coursesYourPrivateSpace,
-                              style: TextStyle(
-                                color: AppTheme.textPrimary,
-                                fontSize: 13.5,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                            const SizedBox(height: 2),
-                            Text(
-                              t.coursesSendSparksSecretlyMatchWishes,
-                              style: TextStyle(
-                                color: AppTheme.textMuted,
-                                fontSize: 11.5,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const Icon(
-                        Icons.arrow_forward_ios_rounded,
-                        color: AppTheme.textMuted,
-                        size: 15,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+          // Geführte Audios als Reihe kleiner Kacheln.
+          GefuehrteAudios(mitPaar: showCouples, kompakt: true),
+
+          const SizedBox(height: 18),
+
+          // Filter nach Zielgruppe
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                _buildCategoryChip('all', t.coursesAllCourses, Icons.apps_rounded),
+                const SizedBox(width: 8),
+                _buildCategoryChip('women', t.coursesForHer, Icons.spa_rounded),
+                const SizedBox(width: 8),
+                _buildCategoryChip('men', t.coursesForHim, Icons.male_rounded),
+                const SizedBox(width: 8),
+                _buildCategoryChip('couples', t.coursesForCouples, Icons.favorite_rounded),
+              ],
             ),
           ),
 
-          // Courses List Header
+          const SizedBox(height: 8),
+
+          // Kurse nach Schwerpunkten (docs/konzepte/startseite.md)
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  t.coursesYourCurriculum,
+                  t.startSchwerpunkte,
                   style: TextStyle(
                     color: AppTheme.textMuted,
                     fontSize: 12,
@@ -340,8 +248,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
           const SizedBox(height: 8),
 
-          // Course Cards
-          ...filteredCourses.map((course) => _buildCourseCard(course)),
+          for (final s in Course.schwerpunkte)
+            if (filteredCourses.any((c) => c.schwerpunkt == s))
+              _buildSchwerpunkt(s, [for (final c in filteredCourses) if (c.schwerpunkt == s) c]),
 
           const SizedBox(height: 24),
         ],
@@ -516,7 +425,109 @@ class _CoursesScreenState extends State<CoursesScreen> {
     );
   }
 
-  Widget _buildCourseCard(Course course) {
+  /// Welche Schwerpunkte aufgeklappt sind; anfangs der zum Fokus im Profil passende, oder der erste mit
+  /// offenen Lektionen, wenn der schon fertig ist.
+  Set<String>? _offen;
+
+  static const _schwerpunktZumFokus = {
+    'performance_anxiety': 'grundlagen',
+    'pelvic_somatics': 'annehmen',
+    'body_pleasure': 'entdecken',
+    'couple_intimacy': 'paar',
+  };
+
+  bool _fertig(String schwerpunkt) => _courses
+      .where((c) => c.schwerpunkt == schwerpunkt)
+      .every((c) => c.lessons.every((l) => _completedLessonIds.contains(l.id)));
+
+  Set<String> _startOffen() {
+    final fokus = _schwerpunktZumFokus[_profile?.primaryGoal];
+    if (fokus != null && !_fertig(fokus)) return {fokus};
+    final offen = Course.schwerpunkte.where((s) => !_fertig(s));
+    return offen.isEmpty ? {} : {offen.first};
+  }
+
+  String _schwerpunktName(String s) => switch (s) {
+        'grundlagen' => t.schwerpunktGrundlagen,
+        'annehmen' => t.schwerpunktAnnehmen,
+        'entdecken' => t.schwerpunktEntdecken,
+        'paar' => t.schwerpunktPaar,
+        'beruehrung' => t.schwerpunktBeruehrung,
+        _ => t.schwerpunktFantasie,
+      };
+
+  String _schwerpunktText(String s) => switch (s) {
+        'grundlagen' => t.schwerpunktGrundlagenText,
+        'annehmen' => t.schwerpunktAnnehmenText,
+        'entdecken' => t.schwerpunktEntdeckenText,
+        'paar' => t.schwerpunktPaarText,
+        'beruehrung' => t.schwerpunktBeruehrungText,
+        _ => t.schwerpunktFantasieText,
+      };
+
+  Widget _buildSchwerpunkt(String s, List<Course> kurse) {
+    final offen = (_offen ??= _startOffen()).contains(s);
+    final lektionen = [for (final c in kurse) ...c.lessons];
+    final erledigt = lektionen.where((l) => _completedLessonIds.contains(l.id)).length;
+    final fortschritt = lektionen.isEmpty ? 0.0 : erledigt / lektionen.length;
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: offen ? AppTheme.sageGreen.withValues(alpha: 0.45) : AppTheme.border),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        Material(
+          type: MaterialType.transparency,
+          child: InkWell(
+            borderRadius: BorderRadius.circular(18),
+            onTap: () => setState(() => _offen = offen ? ({..._offen!}..remove(s)) : {..._offen!, s}),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(16, 14, 12, 14),
+              child: Row(children: [
+                Expanded(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Text(_schwerpunktName(s),
+                        style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+                    const SizedBox(height: 3),
+                    Text(_schwerpunktText(s),
+                        style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3)),
+                    const SizedBox(height: 8),
+                    Row(children: [
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: LinearProgressIndicator(
+                            value: fortschritt,
+                            minHeight: 4,
+                            backgroundColor: AppTheme.surfaceLight,
+                            valueColor: const AlwaysStoppedAnimation(AppTheme.sageGreen),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Text(t.startLektionenVon(erledigt, lektionen.length),
+                          style: const TextStyle(fontSize: 11, color: AppTheme.textMuted)),
+                    ]),
+                  ]),
+                ),
+                const SizedBox(width: 6),
+                Icon(offen ? Icons.expand_less_rounded : Icons.expand_more_rounded, color: AppTheme.textMuted),
+              ]),
+            ),
+          ),
+        ),
+        if (offen)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(10, 0, 10, 2),
+            child: Column(children: [for (final c in kurse) _buildCourseCard(c, mitBild: false)]),
+          ),
+      ]),
+    );
+  }
+
+  Widget _buildCourseCard(Course course, {bool mitBild = true}) {
     final completedInCourse = course.lessons.where((l) => _completedLessonIds.contains(l.id)).length;
     final totalInCourse = course.lessons.length;
     final progress = totalInCourse > 0 ? (completedInCourse / totalInCourse) : 0.0;
@@ -534,7 +545,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
     }
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 16),
+      margin: EdgeInsets.only(bottom: mitBild ? 16 : 10),
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: AppTheme.surface,
@@ -547,7 +558,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Thematic Image Banner
-          if (course.image != null)
+          if (course.image != null && mitBild)
             Stack(
               children: [
                 SizedBox(

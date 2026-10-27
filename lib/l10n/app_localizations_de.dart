@@ -3645,4 +3645,54 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get lustKarteTextNeutral =>
       'Acht ruhige Abende, die aufeinander aufbauen.';
+
+  @override
+  String get startSchwerpunkte => 'KURSE NACH SCHWERPUNKTEN';
+
+  @override
+  String startLektionenVon(int n, int m) {
+    return '$n von $m Lektionen';
+  }
+
+  @override
+  String get schwerpunktGrundlagen => 'Grundlagen';
+
+  @override
+  String get schwerpunktGrundlagenText =>
+      'Wie Kopf und Körper zusammenspielen, wie Erregung funktioniert und warum dein Körper gut ist, wie er ist.';
+
+  @override
+  String get schwerpunktAnnehmen => 'Annehmen und Lösen';
+
+  @override
+  String get schwerpunktAnnehmenText =>
+      'Schmerz, Scham und Druck verstehen, freundlich mit dir sein, den Beckenboden lösen und stärken.';
+
+  @override
+  String get schwerpunktEntdecken => 'Sich selbst entdecken';
+
+  @override
+  String get schwerpunktEntdeckenText =>
+      'Den eigenen Körper erkunden: weibliche Lust, neue Reize, Prostata und Damm.';
+
+  @override
+  String get schwerpunktPaar => 'Lust als Paar';
+
+  @override
+  String get schwerpunktPaarText =>
+      'Reden, unterschiedliche Lust, Lebensphasen, Vorfreude und Erotik im Alltag.';
+
+  @override
+  String get schwerpunktBeruehrung => 'Berührung';
+
+  @override
+  String get schwerpunktBeruehrungText =>
+      'Berührung für sie und für ihn, Intim-Massage, Stimme und entspannte Stellungen.';
+
+  @override
+  String get schwerpunktFantasie => 'Fantasie und Spiel';
+
+  @override
+  String get schwerpunktFantasieText =>
+      'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.';
 }
