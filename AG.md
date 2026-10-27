@@ -95,6 +95,10 @@ bzw. „Geführte Audios“).
    abspielen?“, Knöpfe „Abspielen“ / „Abbrechen“, Häkchen „Nicht mehr fragen“. Ein ganzer Abend fragt nur einmal.
 3. Pausieren beim Trennen (abschaltbar): Stimme und Klangteppich pausieren, Fortsetzen nur per Tipp.
 4. Übersetzung stempeln und PO abgleichen, „Was ist neu“ nur, wenn Claude es im Pull Request bestätigt.
+5. **Zusatz: Realitätschecks sichtbarer machen** (Wunsch des Nutzers, 27.10.2026). Auf der Einrichtungsseite
+   des Traum-Abends (`einschlaf_reise_screen.dart`, nur im Traum-Modus) eine Zeile „Realitätschecks“ mit
+   Ein/Aus-Anzeige, die den `RealitaetscheckScreen` öffnet. Im Traumtagebuch (`traum_tagebuch_screen.dart`, dafür
+   zusätzlich erlaubt) den Eintrag aus dem Drei-Punkte-Menü als eigene Zeile unter den Wochenrückblick holen.
 
 **Prüfen:** `flutter analyze --no-fatal-infos --no-fatal-warnings`, `flutter test`, Screen-Test; Tests für die
 Entscheidungslogik (Lautsprecher → Dialog, Kopfhörer/Bluetooth → kein Dialog, abgeschaltet → kein Dialog).
