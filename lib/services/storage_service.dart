@@ -41,6 +41,8 @@ class StorageService {
   static const String _keyLustFortschritt = 'lust_fortschritt';
   // Was am letzten Abend lief (für das Traumtagebuch am Morgen); flüchtig, nicht in der Sicherung.
   static const String _keyLetzterAbend = 'traum_letzter_abend';
+  static const String _keyNaechtlichesWecken = 'naechtliches_wecken';
+  static const String _keyWeckenHeuteNacht = 'traum_wecken_heute_nacht';
 
   static SharedPreferences? _prefs;
   static UserProfile? _inMemoryProfile;
@@ -219,6 +221,51 @@ class StorageService {
     } catch (_) {
       return null;
     }
+  }
+
+  // Nächtliches Wecken (lib/services/naechtliches_wecken.dart): Zeitpunkte der letzten Weck-Nächte.
+  static List<DateTime> getNaechtlichesWecken() {
+    final zeiten = <DateTime>[];
+    for (final raw in _prefs?.getStringList(_keyNaechtlichesWecken) ?? const <String>[]) {
+      try {
+        zeiten.add(DateTime.parse(raw));
+      } catch (_) {}
+    }
+    zeiten.sort((a, b) => b.compareTo(a));
+    return zeiten;
+  }
+
+  static Future<void> saveNaechtlichesWecken(DateTime zeit) async {
+    final prefs = await _ensurePrefs();
+    final grenze = zeit.subtract(const Duration(days: 30));
+    final alle = <String, DateTime>{
+      for (final z in getNaechtlichesWecken())
+        if (z.isAfter(grenze)) z.toIso8601String(): z,
+      zeit.toIso8601String(): zeit,
+    }.values.toList()
+      ..sort((a, b) => b.compareTo(a));
+    await prefs.setStringList(_keyNaechtlichesWecken, alle.map((z) => z.toIso8601String()).toList());
+    await prefs.setString(_keyWeckenHeuteNacht, zeit.toIso8601String());
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  /// Das für diese Nacht geplante Wecken (innerhalb eines 14-Stunden-Fensters), oder null.
+  static DateTime? aktivesWecken({DateTime? jetzt}) {
+    final raw = _prefs?.getString(_keyWeckenHeuteNacht);
+    if (raw == null || raw.isEmpty) return null;
+    try {
+      final ziel = DateTime.parse(raw);
+      final nun = jetzt ?? DateTime.now();
+      if (nun.difference(ziel).abs() > const Duration(hours: 14)) return null;
+      return ziel;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  static Future<void> clearAktivesWecken() async {
+    final prefs = await _ensurePrefs();
+    await prefs.remove(_keyWeckenHeuteNacht);
   }
 
   // Lust im Traum: an wie vielen Abenden jede Folge gehört wurde ({"1": 2, "2": 1}).
@@ -454,6 +501,7 @@ class StorageService {
       'cbtEntries': getCbtEntries().map((e) => e.toJson()).toList(),
       'traumTagebuch': getTraumEintraege().map((e) => e.toJson()).toList(),
       'realitaetschecks': getRealitaetschecks().toJson(),
+      'naechtlichesWecken': getNaechtlichesWecken().map((z) => z.toIso8601String()).toList(),
       'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
       'dailyCheckIns': _prefs?.getStringList(_keyDailyCheckIns),
       'yesNoMaybe': _prefs?.getString(_keyYesNoMaybe),
@@ -551,6 +599,21 @@ class StorageService {
       }
       final sortiert = eintraege.values.toList()..sort((a, b) => b.zeit.compareTo(a.zeit));
       writes[_keyTraumTagebuch] = sortiert.map((e) => jsonEncode(e.toJson())).toList();
+    }
+    if (d['naechtlichesWecken'] is List) {
+      final zeiten = <String, DateTime>{
+        for (final z in getNaechtlichesWecken()) z.toIso8601String(): z,
+      };
+      try {
+        for (final item in d['naechtlichesWecken'] as List) {
+          final parsed = DateTime.parse(item as String);
+          zeiten[parsed.toIso8601String()] = parsed;
+        }
+      } catch (_) {
+        throw BackupException(t.storageServiceTheBackupIsDamagedFeld('naechtlichesWecken'));
+      }
+      final sortiert = zeiten.values.toList()..sort((a, b) => b.compareTo(a));
+      writes[_keyNaechtlichesWecken] = sortiert.map((z) => z.toIso8601String()).toList();
     }
     // Fortschritt: je Folge der größere Stand, damit nichts wieder gesperrt wird.
     if (d['lustFortschritt'] is String && (d['lustFortschritt'] as String).isNotEmpty) {

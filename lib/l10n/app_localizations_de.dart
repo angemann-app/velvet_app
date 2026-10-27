@@ -3729,6 +3729,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.';
 
   @override
+<<<<<<< HEAD
   String get rueckblickTitel => 'Diese Woche';
 
   @override
@@ -3914,4 +3915,62 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get realitaetKanalBeschreibung =>
       'Erinnerungen für den Realitätscheck am Tag';
+=======
+  String get weckenTitel => 'Heute Nacht wecken';
+
+  @override
+  String get weckenUntertitel =>
+      'Einmaliger System-Wecker nach etwa fünf Stunden Schlaf';
+
+  @override
+  String weckenUhrzeit(String zeit) {
+    return 'Weckzeit: $zeit Uhr';
+  }
+
+  @override
+  String get weckenAendern => 'Zeit ändern';
+
+  @override
+  String get weckenWeckerName => 'Kurzer Moment';
+
+  @override
+  String get weckenGesperrt =>
+      'Du hast das nächtliche Wecken in den letzten sieben Tagen bereits zweimal genutzt. Dein Schlaf geht vor.';
+
+  @override
+  String get weckenSicherheit =>
+      'Höchstens zweimal pro Woche. Nicht nutzen bei Schichtarbeit, in der Schwangerschaft, mit einem Baby, das nachts weckt, oder bei Schlafmangel. Beim Wiedereinschlafen kann selten eine harmlose Schlafparalyse auftreten: ruhig atmen und einen Finger bewegen.';
+
+  @override
+  String weckenWeckerGesetzt(String zeit) {
+    return 'System-Wecker für $zeit Uhr geöffnet';
+  }
+
+  @override
+  String get weckenBegleitungTitel => 'Wiedereinschlafen';
+
+  @override
+  String get weckenBegleitungEinleitung =>
+      'Halte deinen Traum kurz in Stichworten fest und lass dich danach ruhig zurück in den Schlaf begleiten.';
+
+  @override
+  String get weckenTagebuchKarteTitel => 'Nach dem Wecken weiterschlafen';
+
+  @override
+  String get weckenTagebuchKarteText =>
+      'Kurze, leise Begleitung zurück in den Traum (ca. 15 Min.)';
+
+  @override
+  String get weckenBegleitungStarten => 'Begleitung starten';
+
+  @override
+  String get weckenTraumNotieren => 'Traum kurz festhalten';
+
+  @override
+  String get weckenLaeuft => 'Gute Nacht';
+
+  @override
+  String get weckenLaeuftText =>
+      'Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst.';
+>>>>>>> origin/ag/7-naechtliches-wecken
 }

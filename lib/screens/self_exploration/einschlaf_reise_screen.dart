@@ -10,6 +10,7 @@ import '../../models/einschlaf_reise.dart';
 import '../../models/lust_im_traum.dart';
 import '../../models/traum_reise.dart';
 import '../../models/paar_abend.dart';
+import '../../services/naechtliches_wecken.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
@@ -70,6 +71,8 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
   bool _spicy = false;
   String _stimme = 'victoria';
   bool _teppich = true;
+  bool _heuteWecken = false;
+  late DateTime _weckenZeit = NaechtlichesWecken.schlageWeckzeitVor();
 
   List<PaarSchritt>? _ablauf;
   int _index = 0;
@@ -178,6 +181,9 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
     } else if (widget.traum) {
       final bild = TraumDaten.bilder.where((b) => neu.any((id) => id.startsWith('${b}_'))).firstOrNull;
       await StorageService.merkeAbend('traum:${bild ?? ''}');
+      if (_heuteWecken) {
+        await NaechtlichesWecken.planen(_weckenZeit);
+      }
     }
     _lustGezaehlt = false;
 
@@ -442,6 +448,10 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
               style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5)),
         ),
         const SizedBox(height: 14),
+        if (widget.traum) ...[
+          _buildWeckenSchalter(),
+          const SizedBox(height: 14),
+        ],
         Text(t.einschlafHinweise, style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
         if ((widget.traum || widget.lust != null) && _traumDaten?.hinweis('hinweis_schlafparalyse') != null) ...[
           const SizedBox(height: 10),
@@ -464,6 +474,71 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         ),
       ],
     );
+  }
+
+  Widget _buildWeckenSchalter() {
+    final darfWecken = NaechtlichesWecken.darfHeuteWecken(StorageService.getNaechtlichesWecken());
+    final aktiv = darfWecken && _heuteWecken;
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: aktiv ? AppTheme.rose.withValues(alpha: 0.5) : AppTheme.border),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SwitchListTile(
+            contentPadding: EdgeInsets.zero,
+            value: aktiv,
+            activeThumbColor: AppTheme.rose,
+            onChanged: darfWecken
+                ? (v) => setState(() {
+                      _heuteWecken = v;
+                      if (v) _weckenZeit = NaechtlichesWecken.schlageWeckzeitVor();
+                    })
+                : null,
+            title: Text(t.weckenTitel, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+            subtitle: Text(
+              darfWecken ? t.weckenUntertitel : t.weckenGesperrt,
+              style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
+            ),
+          ),
+          if (aktiv) ...[
+            const SizedBox(height: 6),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  t.weckenUhrzeit(NaechtlichesWecken.formatUhrzeit(_weckenZeit)),
+                  style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600, color: AppTheme.textPrimary),
+                ),
+                TextButton(
+                  onPressed: _weckzeitWaehlen,
+                  child: Text(t.weckenAendern, style: const TextStyle(color: AppTheme.rose)),
+                ),
+              ],
+            ),
+            const SizedBox(height: 4),
+            Text(
+              t.weckenSicherheit,
+              style: const TextStyle(fontSize: 12, color: AppTheme.textMuted, height: 1.45),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Future<void> _weckzeitWaehlen() async {
+    final gewaehlt = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay(hour: _weckenZeit.hour, minute: _weckenZeit.minute),
+    );
+    if (gewaehlt != null && mounted) {
+      setState(() => _weckenZeit = NaechtlichesWecken.berechneZielZeit(gewaehlt));
+    }
   }
 
   Widget _titel(String text) => Padding(

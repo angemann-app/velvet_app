@@ -47,6 +47,8 @@ class BackupCodec {
     'lustFortschritt': String,
     // Realitätschecks (Einstellungen als Map).
     'realitaetschecks': Map,
+    // Zeitpunkte des nächtlichen Weckens (Liste von ISO-8601-Strings für die 2x/Woche-Regel).
+    'naechtlichesWecken': List,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.

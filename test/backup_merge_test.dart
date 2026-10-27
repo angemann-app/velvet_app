@@ -154,4 +154,20 @@ void main() {
     expect(eintraege['a']!.text, 'aus Sicherung');
     expect(StorageService.getLustFortschritt(), {1: 2, 2: 3});
   });
+
+  test('Nächtliches Wecken ist in der Sicherung enthalten und wird beim Einspielen zusammengeführt', () async {
+    final z1 = DateTime(2026, 10, 25, 4, 0);
+    final z2 = DateTime(2026, 10, 27, 4, 15);
+    await StorageService.saveNaechtlichesWecken(z1);
+
+    final export = StorageService.exportAllUserData();
+    expect(export['naechtlichesWecken'], [z1.toIso8601String()]);
+
+    final backup = StorageService.exportAllUserData()
+      ..['naechtlichesWecken'] = [z2.toIso8601String()];
+    expect(await StorageService.importUserData(backup), isTrue);
+
+    final zusammengefuehrt = StorageService.getNaechtlichesWecken();
+    expect(zusammengefuehrt, [z2, z1]);
+  });
 }

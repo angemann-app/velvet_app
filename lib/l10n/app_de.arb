@@ -1815,5 +1815,35 @@
   "realitaetMitteilungText": "Nimm dir einen kurzen Augenblick Zeit.",
   "realitaetHinweisXiaomi": "Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein.",
   "realitaetKanalName": "Achtsamkeit",
-  "realitaetKanalBeschreibung": "Erinnerungen für den Realitätscheck am Tag"
+  "realitaetKanalBeschreibung": "Erinnerungen für den Realitätscheck am Tag",
+  "weckenTitel": "Heute Nacht wecken",
+  "weckenUntertitel": "Einmaliger System-Wecker nach etwa fünf Stunden Schlaf",
+  "weckenUhrzeit": "Weckzeit: {zeit} Uhr",
+  "@weckenUhrzeit": {
+    "placeholders": {
+      "zeit": {
+        "type": "String"
+      }
+    }
+  },
+  "weckenAendern": "Zeit ändern",
+  "weckenWeckerName": "Kurzer Moment",
+  "weckenGesperrt": "Du hast das nächtliche Wecken in den letzten sieben Tagen bereits zweimal genutzt. Dein Schlaf geht vor.",
+  "weckenSicherheit": "Höchstens zweimal pro Woche. Nicht nutzen bei Schichtarbeit, in der Schwangerschaft, mit einem Baby, das nachts weckt, oder bei Schlafmangel. Beim Wiedereinschlafen kann selten eine harmlose Schlafparalyse auftreten: ruhig atmen und einen Finger bewegen.",
+  "weckenWeckerGesetzt": "System-Wecker für {zeit} Uhr geöffnet",
+  "@weckenWeckerGesetzt": {
+    "placeholders": {
+      "zeit": {
+        "type": "String"
+      }
+    }
+  },
+  "weckenBegleitungTitel": "Wiedereinschlafen",
+  "weckenBegleitungEinleitung": "Halte deinen Traum kurz in Stichworten fest und lass dich danach ruhig zurück in den Schlaf begleiten.",
+  "weckenTagebuchKarteTitel": "Nach dem Wecken weiterschlafen",
+  "weckenTagebuchKarteText": "Kurze, leise Begleitung zurück in den Traum (ca. 15 Min.)",
+  "weckenBegleitungStarten": "Begleitung starten",
+  "weckenTraumNotieren": "Traum kurz festhalten",
+  "weckenLaeuft": "Gute Nacht",
+  "weckenLaeuftText": "Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst."
 }
