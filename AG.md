@@ -7,8 +7,8 @@ unten.
 
 | Wer | Aufgabe |
 |---|---|
-| **Nutzer** | entscheidet, hört an, liest gegen, führt Pull Requests zusammen, gibt Releases frei |
-| **Claude Code** | Konzepte, Code, Aufgabenliste `docs/AUFGABEN.md`; schreibt Aufträge in diese Datei; prüft die Pull Requests von Antigravity vor dem Zusammenführen; pflegt „Gesperrt“ und „Erledigt“; baut und veröffentlicht Releases nach Freigabe |
+| **Nutzer** | entscheidet, hört an, liest gegen, gibt Releases frei |
+| **Claude Code** | Konzepte, Code, Aufgabenliste `docs/AUFGABEN.md`; schreibt Aufträge in diese Datei; prüft die Pull Requests von Antigravity vor dem Zusammenführen; führt alle Pull Requests zusammen (bei Aufnahmen und Texten erst nach dem OK des Nutzers); pflegt „Gesperrt“ und „Erledigt“; baut und veröffentlicht Releases nach Freigabe |
 | **Antigravity** | arbeitet die Aufträge in dieser Datei ab, jeder in eigenem Branch und eigenem Pull Request |
 
 `docs/AUFGABEN.md` ist die Prioritätenliste des Projekts. Was davon an Antigravity geht, steht hier als
@@ -28,7 +28,7 @@ Auftrag (AG-n) und dort mit Verweis „→ AG-n“.
 6. **Diese Datei (`AG.md`) im Auftrags-Branch nicht ändern.** Sonst kommen sich parallele Pull Requests in
    die Quere. „Erledigt“ trägt Claude nach dem Zusammenführen ein.
 7. Prüfen, wie im Auftrag beschrieben (mindestens `flutter test`, wenn Code oder Inhalte betroffen sind).
-8. Commit, Push, Pull Request gegen `main`. **Nicht selbst zusammenführen.**
+8. Commit, Push, Pull Request gegen `main`. **Nicht selbst zusammenführen** (das macht Claude).
 9. Die Beschreibung des Pull Requests nach der Vorlage unten schreiben. Kurz, keine Liste der Git-Befehle.
 
 Wenn etwas unklar ist oder schiefgeht: anhalten und den Nutzer fragen statt raten. Lieber ein halber
@@ -55,8 +55,8 @@ Auftrag: AG-n
 ### Nach dem Pull Request
 
 Claude prüft ihn (Nutzer: „Prüf die AG-Pull-Requests“), schreibt das Ergebnis als Kommentar in den Pull
-Request und bessert Kleinigkeiten auf Wunsch direkt im Branch nach. Danach hört bzw. liest der Nutzer und
-führt zusammen. Claude trägt den Auftrag dann unter „Erledigt“ ein und entfernt einmalige Aufträge.
+Request und bessert Kleinigkeiten auf Wunsch direkt im Branch nach. Danach hört bzw. liest der Nutzer; nach
+seinem OK führt Claude zusammen, trägt den Auftrag unter „Erledigt“ ein und entfernt einmalige Aufträge.
 
 ## Gesperrt (hier arbeitet gerade Claude Code)
 
