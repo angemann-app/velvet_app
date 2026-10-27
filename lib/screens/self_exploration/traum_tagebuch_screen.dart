@@ -4,7 +4,9 @@ import 'package:flutter/services.dart';
 import '../../l10n/t.dart';
 import '../../models/traum_eintrag.dart';
 import '../../services/storage_service.dart';
+import '../../services/naechtliches_wecken.dart';
 import '../../theme/app_theme.dart';
+import 'wecken_screen.dart';
 
 /// Traumtagebuch (docs/konzepte/traum-reise.md, „Traumtagebuch“): morgens kurz festhalten, woran man sich
 /// erinnert, mit Markierungen. Ruhig und dunkel; „Nichts erinnert“ zählt auch.
@@ -66,6 +68,7 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
       abend: StorageService.letzterAbend(),
     ));
     _neuLaden();
+    _pruefeWeckenBegleitung();
   }
 
   Future<void> _bearbeiten(TraumEintrag? eintrag) async {
@@ -76,7 +79,17 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (_) => _Editor(eintrag: eintrag),
     );
-    if (geaendert == true) _neuLaden();
+    if (geaendert == true) {
+      _neuLaden();
+      _pruefeWeckenBegleitung();
+    }
+  }
+
+  void _pruefeWeckenBegleitung() {
+    if (!mounted || !NaechtlichesWecken.istWeckenAktiv()) return;
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (_) => const WeckenScreen()))
+        .then((_) => _neuLaden());
   }
 
   String _datum(DateTime d) =>
@@ -92,6 +105,48 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
           padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
           children: [
             Text(t.tagebuchTipp, style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.5)),
+            if (NaechtlichesWecken.istWeckenAktiv()) ...[
+              const SizedBox(height: 16),
+              InkWell(
+                borderRadius: BorderRadius.circular(14),
+                onTap: _pruefeWeckenBegleitung,
+                child: Container(
+                  padding: const EdgeInsets.all(14),
+                  decoration: BoxDecoration(
+                    color: AppTheme.surface,
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: AppTheme.rose.withValues(alpha: 0.6)),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.nights_stay_rounded, color: AppTheme.rose, size: 22),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              t.weckenTagebuchKarteTitel,
+                              style: const TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                                color: AppTheme.textPrimary,
+                              ),
+                            ),
+                            const SizedBox(height: 2),
+                            Text(
+                              t.weckenTagebuchKarteText,
+                              style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
+                    ],
+                  ),
+                ),
+              ),
+            ],
             const SizedBox(height: 16),
             if (TraumEintrag.pauseRaten(_eintraege)) ...[
               Container(

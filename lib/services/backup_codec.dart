@@ -45,6 +45,8 @@ class BackupCodec {
     // Traumtagebuch (Liste von TraumEintrag) und Fortschritt der Serie „Lust im Traum“ (JSON {Folge: Abende}).
     'traumTagebuch': List,
     'lustFortschritt': String,
+    // Zeitpunkte des nächtlichen Weckens (Liste von ISO-8601-Strings für die 2x/Woche-Regel).
+    'naechtlichesWecken': List,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.

@@ -3679,4 +3679,62 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get schwerpunktFantasieText =>
       'Fantasies, leading and surrendering, mind movies and toys.';
+
+  @override
+  String get weckenTitel => 'Wake me tonight';
+
+  @override
+  String get weckenUntertitel =>
+      'One-time system alarm after about five hours of sleep';
+
+  @override
+  String weckenUhrzeit(String zeit) {
+    return 'Wake-up time: $zeit';
+  }
+
+  @override
+  String get weckenAendern => 'Change time';
+
+  @override
+  String get weckenWeckerName => 'Brief moment';
+
+  @override
+  String get weckenGesperrt =>
+      'You have already used nighttime waking twice in the past seven days. Your sleep comes first.';
+
+  @override
+  String get weckenSicherheit =>
+      'At most twice a week. Do not use during shift work, pregnancy, with a baby that wakes at night, or when sleep-deprived. When falling back asleep, harmless sleep paralysis can rarely occur: breathe calmly and move a finger.';
+
+  @override
+  String weckenWeckerGesetzt(String zeit) {
+    return 'System alarm opened for $zeit';
+  }
+
+  @override
+  String get weckenBegleitungTitel => 'Falling back asleep';
+
+  @override
+  String get weckenBegleitungEinleitung =>
+      'Briefly note your dream in a few words, then let yourself be guided calmly back to sleep.';
+
+  @override
+  String get weckenTagebuchKarteTitel => 'Back to sleep after waking';
+
+  @override
+  String get weckenTagebuchKarteText =>
+      'Short, quiet guidance back into your dream (approx. 15 min)';
+
+  @override
+  String get weckenBegleitungStarten => 'Start guidance';
+
+  @override
+  String get weckenTraumNotieren => 'Note dream briefly';
+
+  @override
+  String get weckenLaeuft => 'Good night';
+
+  @override
+  String get weckenLaeuftText =>
+      'Set your device aside and close your eyes. The guidance stops on its own.';
 }

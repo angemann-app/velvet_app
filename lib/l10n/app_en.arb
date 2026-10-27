@@ -1030,5 +1030,35 @@
   "schwerpunktBeruehrung": "Touch",
   "schwerpunktBeruehrungText": "Touch for her and for him, intimate massage, voice and relaxed positions.",
   "schwerpunktFantasie": "Fantasy and play",
-  "schwerpunktFantasieText": "Fantasies, leading and surrendering, mind movies and toys."
+  "schwerpunktFantasieText": "Fantasies, leading and surrendering, mind movies and toys.",
+  "weckenTitel": "Wake me tonight",
+  "weckenUntertitel": "One-time system alarm after about five hours of sleep",
+  "weckenUhrzeit": "Wake-up time: {zeit}",
+  "@weckenUhrzeit": {
+    "placeholders": {
+      "zeit": {
+        "type": "String"
+      }
+    }
+  },
+  "weckenAendern": "Change time",
+  "weckenWeckerName": "Brief moment",
+  "weckenGesperrt": "You have already used nighttime waking twice in the past seven days. Your sleep comes first.",
+  "weckenSicherheit": "At most twice a week. Do not use during shift work, pregnancy, with a baby that wakes at night, or when sleep-deprived. When falling back asleep, harmless sleep paralysis can rarely occur: breathe calmly and move a finger.",
+  "weckenWeckerGesetzt": "System alarm opened for {zeit}",
+  "@weckenWeckerGesetzt": {
+    "placeholders": {
+      "zeit": {
+        "type": "String"
+      }
+    }
+  },
+  "weckenBegleitungTitel": "Falling back asleep",
+  "weckenBegleitungEinleitung": "Briefly note your dream in a few words, then let yourself be guided calmly back to sleep.",
+  "weckenTagebuchKarteTitel": "Back to sleep after waking",
+  "weckenTagebuchKarteText": "Short, quiet guidance back into your dream (approx. 15 min)",
+  "weckenBegleitungStarten": "Start guidance",
+  "weckenTraumNotieren": "Note dream briefly",
+  "weckenLaeuft": "Good night",
+  "weckenLaeuftText": "Set your device aside and close your eyes. The guidance stops on its own."
 }

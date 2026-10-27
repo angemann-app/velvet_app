@@ -6302,6 +6302,102 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.'**
   String get schwerpunktFantasieText;
+
+  /// No description provided for @weckenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute Nacht wecken'**
+  String get weckenTitel;
+
+  /// No description provided for @weckenUntertitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Einmaliger System-Wecker nach etwa fünf Stunden Schlaf'**
+  String get weckenUntertitel;
+
+  /// No description provided for @weckenUhrzeit.
+  ///
+  /// In de, this message translates to:
+  /// **'Weckzeit: {zeit} Uhr'**
+  String weckenUhrzeit(String zeit);
+
+  /// No description provided for @weckenAendern.
+  ///
+  /// In de, this message translates to:
+  /// **'Zeit ändern'**
+  String get weckenAendern;
+
+  /// No description provided for @weckenWeckerName.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurzer Moment'**
+  String get weckenWeckerName;
+
+  /// No description provided for @weckenGesperrt.
+  ///
+  /// In de, this message translates to:
+  /// **'Du hast das nächtliche Wecken in den letzten sieben Tagen bereits zweimal genutzt. Dein Schlaf geht vor.'**
+  String get weckenGesperrt;
+
+  /// No description provided for @weckenSicherheit.
+  ///
+  /// In de, this message translates to:
+  /// **'Höchstens zweimal pro Woche. Nicht nutzen bei Schichtarbeit, in der Schwangerschaft, mit einem Baby, das nachts weckt, oder bei Schlafmangel. Beim Wiedereinschlafen kann selten eine harmlose Schlafparalyse auftreten: ruhig atmen und einen Finger bewegen.'**
+  String get weckenSicherheit;
+
+  /// No description provided for @weckenWeckerGesetzt.
+  ///
+  /// In de, this message translates to:
+  /// **'System-Wecker für {zeit} Uhr geöffnet'**
+  String weckenWeckerGesetzt(String zeit);
+
+  /// No description provided for @weckenBegleitungTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Wiedereinschlafen'**
+  String get weckenBegleitungTitel;
+
+  /// No description provided for @weckenBegleitungEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Halte deinen Traum kurz in Stichworten fest und lass dich danach ruhig zurück in den Schlaf begleiten.'**
+  String get weckenBegleitungEinleitung;
+
+  /// No description provided for @weckenTagebuchKarteTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Nach dem Wecken weiterschlafen'**
+  String get weckenTagebuchKarteTitel;
+
+  /// No description provided for @weckenTagebuchKarteText.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurze, leise Begleitung zurück in den Traum (ca. 15 Min.)'**
+  String get weckenTagebuchKarteText;
+
+  /// No description provided for @weckenBegleitungStarten.
+  ///
+  /// In de, this message translates to:
+  /// **'Begleitung starten'**
+  String get weckenBegleitungStarten;
+
+  /// No description provided for @weckenTraumNotieren.
+  ///
+  /// In de, this message translates to:
+  /// **'Traum kurz festhalten'**
+  String get weckenTraumNotieren;
+
+  /// No description provided for @weckenLaeuft.
+  ///
+  /// In de, this message translates to:
+  /// **'Gute Nacht'**
+  String get weckenLaeuft;
+
+  /// No description provided for @weckenLaeuftText.
+  ///
+  /// In de, this message translates to:
+  /// **'Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst.'**
+  String get weckenLaeuftText;
 }
 
 class _AppLocalizationsDelegate

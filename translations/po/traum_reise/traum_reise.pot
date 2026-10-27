@@ -372,3 +372,45 @@ msgstr ""
 msgctxt "dream_block:hinweis_klartraum#text"
 msgid "Wenn du merkst, dass du träumst, kannst du langsam atmen, deine Hände ansehen, den Boden unter dir spüren und dann zu der Szene vom Abend zurückkehren oder schauen, was du dir wünschst."
 msgstr ""
+
+#. Baustein der Traum-Reise, phase: wecken
+#. EN: The night around you is quiet and dark. A brief awakening rests like a calm island in the middle of your sleep.
+#. EN: A few quiet words from your dream may briefly surface and remain safe. Afterward, your body settles back heavy and warm beneath the blanket.
+#. EN: Your eyes close gently, your shoulders yield, and the stillness of the night receives you once more.
+msgctxt "dream_block:wecken_notieren#text"
+msgid ""
+"Die Nacht um dich her ist still und dunkel. Ein kurzes Erwachen liegt wie eine ruhige Insel mitten im Schlaf.\n"
+"Ein paar leise Stichworte aus deinem Traum dürfen kurz auftauchen und bewahrt bleiben. Danach legt sich dein Körper wieder schwer und warm unter die Decke.\n"
+"Deine Augen schließen sich sanft, deine Schultern geben nach, und die Ruhe der Nacht nimmt dich wieder auf."
+msgstr ""
+
+#. Baustein der Traum-Reise, phase: wecken
+#. EN: Your head sinks deep into the soft pillow, and your limbs grow heavy and warm. Every breath flows quietly in and streams out even longer.
+#. EN: Your belly and your pelvis let go completely and rest wide upon the mattress. The warmth beneath the blanket wraps your skin in calm.
+#. EN: At this quiet threshold between waking and sleeping, the space for your dreams opens all on its own.
+msgctxt "dream_block:wecken_sinken_1#text"
+msgid ""
+"Dein Kopf sinkt tief in das weiche Kissen, und deine Glieder werden schwer und warm. Jeder Atemzug strömt leise ein und fließt noch länger wieder aus.\n"
+"Dein Bauch und dein Becken lassen ganz los und ruhen weit auf der Unterlage. Die Wärme unter der Decke hüllt deine Haut ruhig ein.\n"
+"An dieser stillen Schwelle zwischen Wachen und Schlafen öffnet sich der Raum für deine Träume ganz von allein."
+msgstr ""
+
+#. Baustein der Traum-Reise, phase: wecken
+#. EN: When I am dreaming, I recognize it. My mind stays gentle and clear while my body sleeps deeply.
+#. EN: In my dream, I may feel carried and enjoy.
+msgctxt "dream_block:wecken_absicht#text"
+msgid ""
+"Wenn ich träume, erkenne ich es. Mein Geist bleibt sanft und klar, während mein Körper tief weiterschläft.\n"
+"Im Traum darf ich mich tragen lassen und genießen."
+msgstr ""
+
+#. Baustein der Traum-Reise, phase: wecken
+#. EN: The stillness carries you softly across into the second half of the night. Your breath moves shallow and steady like waves on a quiet shore.
+#. EN: Behind your closed eyelids, the familiar image from the evening may quietly return. A mild glow accompanies you gently into the deep.
+#. EN: Your whole body sleeps calmly on, safe in the warm darkness.
+msgctxt "dream_block:wecken_sinken_2#text"
+msgid ""
+"Die Stille trägt dich weich hinüber in die zweite Hälfte der Nacht. Dein Atem geht flach und gleichmäßig wie Wellen an einem ruhigen Ufer.\n"
+"Hinter deinen geschlossenen Lidern darf das vertraute Bild vom Abend leise wiederkehren. Ein milder Schimmer begleitet dich sanft in die Tiefe.\n"
+"Dein ganzer Körper schläft ruhig weiter, geborgen in der warmen Dunkelheit."
+msgstr ""

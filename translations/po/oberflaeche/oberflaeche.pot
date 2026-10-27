@@ -6322,3 +6322,99 @@ msgstr ""
 msgctxt "ui:schwerpunktFantasieText#text"
 msgid "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Wake me tonight
+msgctxt "ui:weckenTitel#text"
+msgid "Heute Nacht wecken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: One-time system alarm after about five hours of sleep
+msgctxt "ui:weckenUntertitel#text"
+msgid "Einmaliger System-Wecker nach etwa fünf Stunden Schlaf"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {zeit}
+#. EN: Wake-up time: {zeit}
+msgctxt "ui:weckenUhrzeit#text"
+msgid "Weckzeit: {zeit} Uhr"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Change time
+msgctxt "ui:weckenAendern#text"
+msgid "Zeit ändern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Brief moment
+msgctxt "ui:weckenWeckerName#text"
+msgid "Kurzer Moment"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You have already used nighttime waking twice in the past seven days. Your sleep comes first.
+msgctxt "ui:weckenGesperrt#text"
+msgid "Du hast das nächtliche Wecken in den letzten sieben Tagen bereits zweimal genutzt. Dein Schlaf geht vor."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: At most twice a week. Do not use during shift work, pregnancy, with a baby that wakes at night, or when sleep-deprived. When falling back asleep, harmless sleep paralysis can rarely occur: breathe calmly and move a finger.
+msgctxt "ui:weckenSicherheit#text"
+msgid "Höchstens zweimal pro Woche. Nicht nutzen bei Schichtarbeit, in der Schwangerschaft, mit einem Baby, das nachts weckt, oder bei Schlafmangel. Beim Wiedereinschlafen kann selten eine harmlose Schlafparalyse auftreten: ruhig atmen und einen Finger bewegen."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {zeit}
+#. EN: System alarm opened for {zeit}
+msgctxt "ui:weckenWeckerGesetzt#text"
+msgid "System-Wecker für {zeit} Uhr geöffnet"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Falling back asleep
+msgctxt "ui:weckenBegleitungTitel#text"
+msgid "Wiedereinschlafen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Briefly note your dream in a few words, then let yourself be guided calmly back to sleep.
+msgctxt "ui:weckenBegleitungEinleitung#text"
+msgid "Halte deinen Traum kurz in Stichworten fest und lass dich danach ruhig zurück in den Schlaf begleiten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Back to sleep after waking
+msgctxt "ui:weckenTagebuchKarteTitel#text"
+msgid "Nach dem Wecken weiterschlafen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Short, quiet guidance back into your dream (approx. 15 min)
+msgctxt "ui:weckenTagebuchKarteText#text"
+msgid "Kurze, leise Begleitung zurück in den Traum (ca. 15 Min.)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start guidance
+msgctxt "ui:weckenBegleitungStarten#text"
+msgid "Begleitung starten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Note dream briefly
+msgctxt "ui:weckenTraumNotieren#text"
+msgid "Traum kurz festhalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Good night
+msgctxt "ui:weckenLaeuft#text"
+msgid "Gute Nacht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Set your device aside and close your eyes. The guidance stops on its own.
+msgctxt "ui:weckenLaeuftText#text"
+msgid "Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst."
+msgstr ""
