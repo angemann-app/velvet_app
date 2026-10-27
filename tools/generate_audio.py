@@ -328,8 +328,11 @@ LUST_ORDNER = Path(r"C:\TOOLS\velvet-inhalte\lust")
 
 
 def generate_lust(only=None, voices=None):
+    """Die genannten ids gelten hier als Anfänge, z. B. f3_ für alle Bausteine der dritten Folge."""
     blocks = json.loads((LUST_ORDNER / "lust.json").read_text(encoding="utf-8"))["de"]
-    generate_einschlaf(only, voices, blocks=blocks, out_dir=LUST_ORDNER / "audio")
+    if only:
+        blocks = [b for b in blocks if b["id"].startswith(tuple(only))]
+    generate_einschlaf(None, voices, blocks=blocks, out_dir=LUST_ORDNER / "audio")
 
 
 def generate_sounds():
