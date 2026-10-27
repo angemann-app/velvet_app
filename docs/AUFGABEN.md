@@ -12,6 +12,28 @@ Serie, Traumtagebuch und Paket sind gebaut (siehe Konzept, „Umsetzung“). Off
 - Freiwilliges anonymes „Hallo“ (`docs/konzepte/hallo.md`) → AG-9
   (`docs/konzepte/lautsprecher.md`)
 
+## 2. Pflege: technische Schulden (nach AG-8 und AG-9)
+
+- **Abspieler entflechten:** `einschlaf_reise_screen.dart` trägt Einschlafen, Traum-Abend, Lust im Traum und
+  Wecken. Gemeinsamer Abspieler plus schlanke Einrichtungsseiten. Erst wenn AG-8/AG-9 zusammengeführt sind
+  (AG-8 ändert diese Datei).
+- **Kotlin und Gradle** auf die von Flutter verlangten Versionen heben (Build-Warnungen: Kotlin 2.2.20, Gradle
+  8.10.2 älter als das Minimum). R8 bleibt aus. Danach auf dem Handy prüfen.
+- CI: Screen-Test mit Bildern als Artefakt (erledigt 27.10.).
+
+## 3. Pflege: Inhalte, Schwerpunkt für Schwerpunkt
+
+Je Schwerpunkt (Grundlagen, Annehmen und Lösen, Sich selbst entdecken, Lust als Paar, Berührung, Fantasie und
+Spiel) eine Prüfliste: Ton und Länge einheitlich, fachlich aktuell, Englisch gleichwertig, Aufnahmen Deutsch und
+Englisch (Stichproben anhören, Aussprache über OpenCode), Anleitung, Handytest. Dazu Startseite: Kurskarten in den
+Schwerpunkten kompakter, Check-in und Funke nebeneinander.
+
+## Später
+
+- Eigene Domain für R2 statt `r2.dev` (bewusst aufgeschoben).
+- Stabile Version nach den Handytests (Nutzer testet, Testmodus hilft).
+- Fantasie-Räume, Statistik Selbstliebe, NIP-17 Stufe 2 (nach fünf stabilen Versionen).
+
 ## Laufend: Aussprache korrigieren (täglich) → OpenCode
 
 Claude Code holt die Meldungen, OpenCode pflegt `tools/aussprache.json` und spricht neu ein, Claude prüft und

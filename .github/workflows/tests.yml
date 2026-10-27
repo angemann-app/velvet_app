@@ -19,3 +19,11 @@ jobs:
       - run: flutter analyze --no-fatal-infos --no-fatal-warnings
       # Enthält die Sicherheits-Regressionstests (test/security_test.dart).
       - run: flutter test
+      # Rendert alle Screens (build/screens/) und protokolliert Layout-Überläufe; Bilder als Artefakt.
+      - run: flutter test test_screens/screens_test.dart
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screens
+          path: build/screens/
+          retention-days: 14
