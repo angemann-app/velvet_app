@@ -28,6 +28,9 @@
     { "action": "shell", "resource": "git status *", "effect": "allow" },
     { "action": "shell", "resource": "git diff *", "effect": "allow" },
     { "action": "shell", "resource": "git log *", "effect": "allow" },
+    // Aussprache-Pflege: nur das Aufnahme-Werkzeug (Kokoro läuft lokal), kein anderes Python.
+    { "action": "shell", "resource": "C:\\TOOLS\\kikiri-venv\\Scripts\\python.exe tools/generate_audio.py *", "effect": "allow" },
+    { "action": "shell", "resource": "C:/TOOLS/kikiri-venv/Scripts/python.exe tools/generate_audio.py *", "effect": "allow" },
     // Auch in erlaubten Befehlen keine privaten Pfade.
     { "action": "shell", "resource": "*velvet-inhalte*", "effect": "deny" },
     { "action": "shell", "resource": "*velvet-feedback*", "effect": "deny" },
