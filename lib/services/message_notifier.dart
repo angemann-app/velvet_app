@@ -1,3 +1,4 @@
+import 'realitaetscheck.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -34,6 +35,8 @@ class MessageNotifier {
   static final FlutterLocalNotificationsPlugin _plugin = FlutterLocalNotificationsPlugin();
   static bool _pluginReady = false;
 
+  static FlutterLocalNotificationsPlugin get plugin => _plugin;
+
   static bool get _supported => !kIsWeb && Platform.isAndroid;
 
   static Future<void> init() async {
@@ -47,6 +50,11 @@ class MessageNotifier {
     if (_pluginReady) return;
     await _plugin.initialize(
       settings: const InitializationSettings(android: AndroidInitializationSettings('ic_notification')),
+      onDidReceiveNotificationResponse: (response) {
+        if (response.payload == 'realitaetscheck') {
+          RealitaetscheckService.oeffneScreen();
+        }
+      },
     );
     _pluginReady = true;
   }

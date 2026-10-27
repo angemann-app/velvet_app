@@ -6302,6 +6302,306 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.'**
   String get schwerpunktFantasieText;
+
+  /// No description provided for @rueckblickTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Diese Woche'**
+  String get rueckblickTitel;
+
+  /// No description provided for @rueckblickKeineEintraege.
+  ///
+  /// In de, this message translates to:
+  /// **'Keine Notizen in den letzten sieben Tagen.'**
+  String get rueckblickKeineEintraege;
+
+  /// No description provided for @rueckblickEintraegeGesamt.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Notiz in den letzten sieben Tagen} other{{n} Notizen in den letzten sieben Tagen}}'**
+  String rueckblickEintraegeGesamt(int n);
+
+  /// No description provided for @rueckblickErinnertMorgen.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{An 1 Morgen erinnert} other{An {n} Morgen erinnert}}'**
+  String rueckblickErinnertMorgen(int n);
+
+  /// No description provided for @rueckblickNichtsErinnertMorgen.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal nichts erinnert} other{{n} Mal nichts erinnert}}'**
+  String rueckblickNichtsErinnertMorgen(int n);
+
+  /// No description provided for @rueckblickMarkeLuzide.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal luzide} other{{n} Mal luzide}}'**
+  String rueckblickMarkeLuzide(int n);
+
+  /// No description provided for @rueckblickMarkeSinnlich.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal sinnlich} other{{n} Mal sinnlich}}'**
+  String rueckblickMarkeSinnlich(int n);
+
+  /// No description provided for @rueckblickMarkeHoehepunkt.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal Höhepunkt} other{{n} Mal Höhepunkt}}'**
+  String rueckblickMarkeHoehepunkt(int n);
+
+  /// No description provided for @rueckblickMarkeUnangenehm.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal unangenehm} other{{n} Mal unangenehm}}'**
+  String rueckblickMarkeUnangenehm(int n);
+
+  /// No description provided for @rueckblickMarkeSchlechtGeschlafen.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal schlecht geschlafen} other{{n} Mal schlecht geschlafen}}'**
+  String rueckblickMarkeSchlechtGeschlafen(int n);
+
+  /// No description provided for @rueckblickNachAbenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Nach den Abenden'**
+  String get rueckblickNachAbenden;
+
+  /// No description provided for @rueckblickKeineMarken.
+  ///
+  /// In de, this message translates to:
+  /// **'ohne Markierung'**
+  String get rueckblickKeineMarken;
+
+  /// No description provided for @realitaetTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Realitätscheck'**
+  String get realitaetTitel;
+
+  /// No description provided for @realitaetFrage.
+  ///
+  /// In de, this message translates to:
+  /// **'Träume ich gerade?'**
+  String get realitaetFrage;
+
+  /// No description provided for @realitaetEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein kurzer Moment der Achtsamkeit. Wenn du dich tagsüber fragst, ob du wach bist, taucht diese Gewohnheit auch im Traum auf.'**
+  String get realitaetEinleitung;
+
+  /// No description provided for @realitaetUebungHaendeTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf die Hände schauen'**
+  String get realitaetUebungHaendeTitel;
+
+  /// No description provided for @realitaetUebungHaendeText.
+  ///
+  /// In de, this message translates to:
+  /// **'Sieh dir deine Handflächen und Finger aufmerksam an. Im Traum verändern Hände oft ihre Form oder Linien.'**
+  String get realitaetUebungHaendeText;
+
+  /// No description provided for @realitaetUebungFingerTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Finger durch die Handfläche'**
+  String get realitaetUebungFingerTitel;
+
+  /// No description provided for @realitaetUebungFingerText.
+  ///
+  /// In de, this message translates to:
+  /// **'Drücke sanft mit einem Finger gegen deine andere Handfläche. Stell dir vor, hindurchzugleiten. Im Traum gibt feste Materie manchmal nach.'**
+  String get realitaetUebungFingerText;
+
+  /// No description provided for @realitaetUebungTextTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Text zweimal lesen'**
+  String get realitaetUebungTextTitel;
+
+  /// No description provided for @realitaetUebungTextText.
+  ///
+  /// In de, this message translates to:
+  /// **'Lies eine Zeile oder eine Uhrzeit, schau kurz weg und lies noch einmal. Im Traum wechseln Buchstaben und Ziffern oft ihr Aussehen.'**
+  String get realitaetUebungTextText;
+
+  /// No description provided for @realitaetBestaetigenWach.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich bin wach'**
+  String get realitaetBestaetigenWach;
+
+  /// No description provided for @realitaetBestaetigenTraum.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich träume!'**
+  String get realitaetBestaetigenTraum;
+
+  /// No description provided for @realitaetErinnerungenAktiv.
+  ///
+  /// In de, this message translates to:
+  /// **'Erinnerungen am Tag'**
+  String get realitaetErinnerungenAktiv;
+
+  /// No description provided for @realitaetZeitfenster.
+  ///
+  /// In de, this message translates to:
+  /// **'Zeitfenster: {von} bis {bis} Uhr'**
+  String realitaetZeitfenster(int von, int bis);
+
+  /// No description provided for @realitaetAnzahlTag.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Erinnerung pro Tag} other{{n} Erinnerungen pro Tag}}'**
+  String realitaetAnzahlTag(int n);
+
+  /// No description provided for @realitaetMotiveTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Motive aus deinem Tagebuch'**
+  String get realitaetMotiveTitel;
+
+  /// No description provided for @realitaetMotiveKeine.
+  ///
+  /// In de, this message translates to:
+  /// **'Sobald du mehr Notizen im Tagebuch hast, schlägt die App hier wiederkehrende Bilder als Auslöser vor.'**
+  String get realitaetMotiveKeine;
+
+  /// No description provided for @realitaetMotivSatz.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn ich {wort} sehe, frage ich mich, ob ich träume.'**
+  String realitaetMotivSatz(String wort);
+
+  /// No description provided for @realitaetMitteilungTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurzer Moment für dich'**
+  String get realitaetMitteilungTitel;
+
+  /// No description provided for @realitaetMitteilungText.
+  ///
+  /// In de, this message translates to:
+  /// **'Nimm dir einen kurzen Augenblick Zeit.'**
+  String get realitaetMitteilungText;
+
+  /// No description provided for @realitaetHinweisXiaomi.
+  ///
+  /// In de, this message translates to:
+  /// **'Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein.'**
+  String get realitaetHinweisXiaomi;
+
+  /// No description provided for @realitaetKanalName.
+  ///
+  /// In de, this message translates to:
+  /// **'Achtsamkeit'**
+  String get realitaetKanalName;
+
+  /// No description provided for @realitaetKanalBeschreibung.
+  ///
+  /// In de, this message translates to:
+  /// **'Erinnerungen für den Realitätscheck am Tag'**
+  String get realitaetKanalBeschreibung;
+
+  /// No description provided for @weckenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute Nacht wecken'**
+  String get weckenTitel;
+
+  /// No description provided for @weckenUntertitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Einmaliger System-Wecker nach etwa fünf Stunden Schlaf'**
+  String get weckenUntertitel;
+
+  /// No description provided for @weckenUhrzeit.
+  ///
+  /// In de, this message translates to:
+  /// **'Weckzeit: {zeit} Uhr'**
+  String weckenUhrzeit(String zeit);
+
+  /// No description provided for @weckenAendern.
+  ///
+  /// In de, this message translates to:
+  /// **'Zeit ändern'**
+  String get weckenAendern;
+
+  /// No description provided for @weckenWeckerName.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurzer Moment'**
+  String get weckenWeckerName;
+
+  /// No description provided for @weckenGesperrt.
+  ///
+  /// In de, this message translates to:
+  /// **'Du hast das nächtliche Wecken in den letzten sieben Tagen bereits zweimal genutzt. Dein Schlaf geht vor.'**
+  String get weckenGesperrt;
+
+  /// No description provided for @weckenSicherheit.
+  ///
+  /// In de, this message translates to:
+  /// **'Höchstens zweimal pro Woche. Nicht nutzen bei Schichtarbeit, in der Schwangerschaft, mit einem Baby, das nachts weckt, oder bei Schlafmangel. Beim Wiedereinschlafen kann selten eine harmlose Schlafparalyse auftreten: ruhig atmen und einen Finger bewegen.'**
+  String get weckenSicherheit;
+
+  /// No description provided for @weckenWeckerGesetzt.
+  ///
+  /// In de, this message translates to:
+  /// **'System-Wecker für {zeit} Uhr geöffnet'**
+  String weckenWeckerGesetzt(String zeit);
+
+  /// No description provided for @weckenBegleitungTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Wiedereinschlafen'**
+  String get weckenBegleitungTitel;
+
+  /// No description provided for @weckenBegleitungEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Halte deinen Traum kurz in Stichworten fest und lass dich danach ruhig zurück in den Schlaf begleiten.'**
+  String get weckenBegleitungEinleitung;
+
+  /// No description provided for @weckenTagebuchKarteTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Nach dem Wecken weiterschlafen'**
+  String get weckenTagebuchKarteTitel;
+
+  /// No description provided for @weckenTagebuchKarteText.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurze, leise Begleitung zurück in den Traum (ca. 15 Min.)'**
+  String get weckenTagebuchKarteText;
+
+  /// No description provided for @weckenBegleitungStarten.
+  ///
+  /// In de, this message translates to:
+  /// **'Begleitung starten'**
+  String get weckenBegleitungStarten;
+
+  /// No description provided for @weckenTraumNotieren.
+  ///
+  /// In de, this message translates to:
+  /// **'Traum kurz festhalten'**
+  String get weckenTraumNotieren;
+
+  /// No description provided for @weckenLaeuft.
+  ///
+  /// In de, this message translates to:
+  /// **'Gute Nacht'**
+  String get weckenLaeuft;
+
+  /// No description provided for @weckenLaeuftText.
+  ///
+  /// In de, this message translates to:
+  /// **'Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst.'**
+  String get weckenLaeuftText;
 }
 
 class _AppLocalizationsDelegate

@@ -1701,5 +1701,149 @@
   "schwerpunktBeruehrung": "Berührung",
   "schwerpunktBeruehrungText": "Berührung für sie und für ihn, Intim-Massage, Stimme und entspannte Stellungen.",
   "schwerpunktFantasie": "Fantasie und Spiel",
-  "schwerpunktFantasieText": "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug."
+  "schwerpunktFantasieText": "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.",
+  "rueckblickTitel": "Diese Woche",
+  "rueckblickKeineEintraege": "Keine Notizen in den letzten sieben Tagen.",
+  "rueckblickEintraegeGesamt": "{n, plural, =1{1 Notiz in den letzten sieben Tagen} other{{n} Notizen in den letzten sieben Tagen}}",
+  "@rueckblickEintraegeGesamt": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickErinnertMorgen": "{n, plural, =1{An 1 Morgen erinnert} other{An {n} Morgen erinnert}}",
+  "@rueckblickErinnertMorgen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickNichtsErinnertMorgen": "{n, plural, =1{1 Mal nichts erinnert} other{{n} Mal nichts erinnert}}",
+  "@rueckblickNichtsErinnertMorgen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeLuzide": "{n, plural, =1{1 Mal luzide} other{{n} Mal luzide}}",
+  "@rueckblickMarkeLuzide": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeSinnlich": "{n, plural, =1{1 Mal sinnlich} other{{n} Mal sinnlich}}",
+  "@rueckblickMarkeSinnlich": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeHoehepunkt": "{n, plural, =1{1 Mal Höhepunkt} other{{n} Mal Höhepunkt}}",
+  "@rueckblickMarkeHoehepunkt": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeUnangenehm": "{n, plural, =1{1 Mal unangenehm} other{{n} Mal unangenehm}}",
+  "@rueckblickMarkeUnangenehm": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeSchlechtGeschlafen": "{n, plural, =1{1 Mal schlecht geschlafen} other{{n} Mal schlecht geschlafen}}",
+  "@rueckblickMarkeSchlechtGeschlafen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickNachAbenden": "Nach den Abenden",
+  "rueckblickKeineMarken": "ohne Markierung",
+  "realitaetTitel": "Realitätscheck",
+  "realitaetFrage": "Träume ich gerade?",
+  "realitaetEinleitung": "Ein kurzer Moment der Achtsamkeit. Wenn du dich tagsüber fragst, ob du wach bist, taucht diese Gewohnheit auch im Traum auf.",
+  "realitaetUebungHaendeTitel": "Auf die Hände schauen",
+  "realitaetUebungHaendeText": "Sieh dir deine Handflächen und Finger aufmerksam an. Im Traum verändern Hände oft ihre Form oder Linien.",
+  "realitaetUebungFingerTitel": "Finger durch die Handfläche",
+  "realitaetUebungFingerText": "Drücke sanft mit einem Finger gegen deine andere Handfläche. Stell dir vor, hindurchzugleiten. Im Traum gibt feste Materie manchmal nach.",
+  "realitaetUebungTextTitel": "Text zweimal lesen",
+  "realitaetUebungTextText": "Lies eine Zeile oder eine Uhrzeit, schau kurz weg und lies noch einmal. Im Traum wechseln Buchstaben und Ziffern oft ihr Aussehen.",
+  "realitaetBestaetigenWach": "Ich bin wach",
+  "realitaetBestaetigenTraum": "Ich träume!",
+  "realitaetErinnerungenAktiv": "Erinnerungen am Tag",
+  "realitaetZeitfenster": "Zeitfenster: {von} bis {bis} Uhr",
+  "@realitaetZeitfenster": {
+    "placeholders": {
+      "von": {
+        "type": "int"
+      },
+      "bis": {
+        "type": "int"
+      }
+    }
+  },
+  "realitaetAnzahlTag": "{n, plural, =1{1 Erinnerung pro Tag} other{{n} Erinnerungen pro Tag}}",
+  "@realitaetAnzahlTag": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "realitaetMotiveTitel": "Motive aus deinem Tagebuch",
+  "realitaetMotiveKeine": "Sobald du mehr Notizen im Tagebuch hast, schlägt die App hier wiederkehrende Bilder als Auslöser vor.",
+  "realitaetMotivSatz": "Wenn ich {wort} sehe, frage ich mich, ob ich träume.",
+  "@realitaetMotivSatz": {
+    "placeholders": {
+      "wort": {
+        "type": "String"
+      }
+    }
+  },
+  "realitaetMitteilungTitel": "Kurzer Moment für dich",
+  "realitaetMitteilungText": "Nimm dir einen kurzen Augenblick Zeit.",
+  "realitaetHinweisXiaomi": "Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein.",
+  "realitaetKanalName": "Achtsamkeit",
+  "realitaetKanalBeschreibung": "Erinnerungen für den Realitätscheck am Tag",
+  "weckenTitel": "Heute Nacht wecken",
+  "weckenUntertitel": "Einmaliger System-Wecker nach etwa fünf Stunden Schlaf",
+  "weckenUhrzeit": "Weckzeit: {zeit} Uhr",
+  "@weckenUhrzeit": {
+    "placeholders": {
+      "zeit": {
+        "type": "String"
+      }
+    }
+  },
+  "weckenAendern": "Zeit ändern",
+  "weckenWeckerName": "Kurzer Moment",
+  "weckenGesperrt": "Du hast das nächtliche Wecken in den letzten sieben Tagen bereits zweimal genutzt. Dein Schlaf geht vor.",
+  "weckenSicherheit": "Höchstens zweimal pro Woche. Nicht nutzen bei Schichtarbeit, in der Schwangerschaft, mit einem Baby, das nachts weckt, oder bei Schlafmangel. Beim Wiedereinschlafen kann selten eine harmlose Schlafparalyse auftreten: ruhig atmen und einen Finger bewegen.",
+  "weckenWeckerGesetzt": "System-Wecker für {zeit} Uhr geöffnet",
+  "@weckenWeckerGesetzt": {
+    "placeholders": {
+      "zeit": {
+        "type": "String"
+      }
+    }
+  },
+  "weckenBegleitungTitel": "Wiedereinschlafen",
+  "weckenBegleitungEinleitung": "Halte deinen Traum kurz in Stichworten fest und lass dich danach ruhig zurück in den Schlaf begleiten.",
+  "weckenTagebuchKarteTitel": "Nach dem Wecken weiterschlafen",
+  "weckenTagebuchKarteText": "Kurze, leise Begleitung zurück in den Traum (ca. 15 Min.)",
+  "weckenBegleitungStarten": "Begleitung starten",
+  "weckenTraumNotieren": "Traum kurz festhalten",
+  "weckenLaeuft": "Gute Nacht",
+  "weckenLaeuftText": "Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst."
 }

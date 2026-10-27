@@ -5,6 +5,7 @@ import 'services/data_service.dart';
 import 'services/storage_service.dart';
 import 'services/auto_backup_service.dart';
 import 'services/message_notifier.dart';
+import 'services/realitaetscheck.dart';
 import 'services/nostr_service.dart';
 import 'services/pakete.dart';
 import 'services/privacy_service.dart';
@@ -39,6 +40,8 @@ void main() async {
 }
 
 class VelvetPulseApp extends StatefulWidget {
+  static final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
   const VelvetPulseApp({super.key});
 
   @override
@@ -82,6 +85,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
 
     try {
       await MessageNotifier.init();
+      await RealitaetscheckService.init();
     } catch (e) {
       debugPrint('Notification init error: $e');
     }
@@ -131,6 +135,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: VelvetPulseApp.navigatorKey,
       // Neuer Schlüssel je Sprache: Die ganze App wird neu aufgebaut, kein Text bleibt in der alten Sprache.
       key: ValueKey(Sprache.code),
       title: 'VelvetPulse',

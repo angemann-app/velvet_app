@@ -6322,3 +6322,303 @@ msgstr ""
 msgctxt "ui:schwerpunktFantasieText#text"
 msgid "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: This week
+msgctxt "ui:rueckblickTitel#text"
+msgid "Diese Woche"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No notes in the past seven days.
+msgctxt "ui:rueckblickKeineEintraege#text"
+msgid "Keine Notizen in den letzten sieben Tagen."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 note in the past seven days} other{{n} notes in the past seven days}}
+msgctxt "ui:rueckblickEintraegeGesamt#text"
+msgid "{n, plural, =1{1 Notiz in den letzten sieben Tagen} other{{n} Notizen in den letzten sieben Tagen}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{Remembered on 1 morning} other{Remembered on {n} mornings}}
+msgctxt "ui:rueckblickErinnertMorgen#text"
+msgid "{n, plural, =1{An 1 Morgen erinnert} other{An {n} Morgen erinnert}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{Nothing remembered 1 time} other{Nothing remembered {n} times}}
+msgctxt "ui:rueckblickNichtsErinnertMorgen#text"
+msgid "{n, plural, =1{1 Mal nichts erinnert} other{{n} Mal nichts erinnert}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time lucid} other{{n} times lucid}}
+msgctxt "ui:rueckblickMarkeLuzide#text"
+msgid "{n, plural, =1{1 Mal luzide} other{{n} Mal luzide}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time sensual} other{{n} times sensual}}
+msgctxt "ui:rueckblickMarkeSinnlich#text"
+msgid "{n, plural, =1{1 Mal sinnlich} other{{n} Mal sinnlich}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time climax} other{{n} times climax}}
+msgctxt "ui:rueckblickMarkeHoehepunkt#text"
+msgid "{n, plural, =1{1 Mal Höhepunkt} other{{n} Mal Höhepunkt}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time uncomfortable} other{{n} times uncomfortable}}
+msgctxt "ui:rueckblickMarkeUnangenehm#text"
+msgid "{n, plural, =1{1 Mal unangenehm} other{{n} Mal unangenehm}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time slept poorly} other{{n} times slept poorly}}
+msgctxt "ui:rueckblickMarkeSchlechtGeschlafen#text"
+msgid "{n, plural, =1{1 Mal schlecht geschlafen} other{{n} Mal schlecht geschlafen}}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Following the evenings
+msgctxt "ui:rueckblickNachAbenden#text"
+msgid "Nach den Abenden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: without tags
+msgctxt "ui:rueckblickKeineMarken#text"
+msgid "ohne Markierung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reality check
+msgctxt "ui:realitaetTitel#text"
+msgid "Realitätscheck"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Am I dreaming right now?
+msgctxt "ui:realitaetFrage#text"
+msgid "Träume ich gerade?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A brief moment of mindfulness. When you question your waking state during the day, this habit carries over into your dreams.
+msgctxt "ui:realitaetEinleitung#text"
+msgid "Ein kurzer Moment der Achtsamkeit. Wenn du dich tagsüber fragst, ob du wach bist, taucht diese Gewohnheit auch im Traum auf."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Look at your hands
+msgctxt "ui:realitaetUebungHaendeTitel#text"
+msgid "Auf die Hände schauen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Look closely at your palms and fingers. In dreams, hands often change their shape or lines.
+msgctxt "ui:realitaetUebungHaendeText#text"
+msgid "Sieh dir deine Handflächen und Finger aufmerksam an. Im Traum verändern Hände oft ihre Form oder Linien."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Finger through the palm
+msgctxt "ui:realitaetUebungFingerTitel#text"
+msgid "Finger durch die Handfläche"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gently press a finger against your opposite palm. Imagine slipping through. In dreams, solid matter sometimes yields.
+msgctxt "ui:realitaetUebungFingerText#text"
+msgid "Drücke sanft mit einem Finger gegen deine andere Handfläche. Stell dir vor, hindurchzugleiten. Im Traum gibt feste Materie manchmal nach."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Read text twice
+msgctxt "ui:realitaetUebungTextTitel#text"
+msgid "Text zweimal lesen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Read a line of text or a clock, look away briefly, and read it again. In dreams, letters and numbers often shift.
+msgctxt "ui:realitaetUebungTextText#text"
+msgid "Lies eine Zeile oder eine Uhrzeit, schau kurz weg und lies noch einmal. Im Traum wechseln Buchstaben und Ziffern oft ihr Aussehen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I am awake
+msgctxt "ui:realitaetBestaetigenWach#text"
+msgid "Ich bin wach"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I am dreaming!
+msgctxt "ui:realitaetBestaetigenTraum#text"
+msgid "Ich träume!"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Daytime reminders
+msgctxt "ui:realitaetErinnerungenAktiv#text"
+msgid "Erinnerungen am Tag"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {von}, {bis}
+#. EN: Time window: {von}:00 to {bis}:00
+msgctxt "ui:realitaetZeitfenster#text"
+msgid "Zeitfenster: {von} bis {bis} Uhr"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 reminder per day} other{{n} reminders per day}}
+msgctxt "ui:realitaetAnzahlTag#text"
+msgid "{n, plural, =1{1 Erinnerung pro Tag} other{{n} Erinnerungen pro Tag}}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Themes from your dream journal
+msgctxt "ui:realitaetMotiveTitel#text"
+msgid "Motive aus deinem Tagebuch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: As you record more journal entries, the app will suggest recurring motifs as triggers here.
+msgctxt "ui:realitaetMotiveKeine#text"
+msgid "Sobald du mehr Notizen im Tagebuch hast, schlägt die App hier wiederkehrende Bilder als Auslöser vor."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {wort}
+#. EN: When I see {wort}, I ask myself if I am dreaming.
+msgctxt "ui:realitaetMotivSatz#text"
+msgid "Wenn ich {wort} sehe, frage ich mich, ob ich träume."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A brief moment for you
+msgctxt "ui:realitaetMitteilungTitel#text"
+msgid "Kurzer Moment für dich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Take a brief moment for yourself.
+msgctxt "ui:realitaetMitteilungText#text"
+msgid "Nimm dir einen kurzen Augenblick Zeit."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Note for Xiaomi and MIUI devices: To receive reminders reliably, battery optimization and autostart should be granted for the app in phone settings.
+msgctxt "ui:realitaetHinweisXiaomi#text"
+msgid "Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Mindfulness
+msgctxt "ui:realitaetKanalName#text"
+msgid "Achtsamkeit"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reminders for daytime reality checks
+msgctxt "ui:realitaetKanalBeschreibung#text"
+msgid "Erinnerungen für den Realitätscheck am Tag"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Wake me tonight
+msgctxt "ui:weckenTitel#text"
+msgid "Heute Nacht wecken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: One-time system alarm after about five hours of sleep
+msgctxt "ui:weckenUntertitel#text"
+msgid "Einmaliger System-Wecker nach etwa fünf Stunden Schlaf"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {zeit}
+#. EN: Wake-up time: {zeit}
+msgctxt "ui:weckenUhrzeit#text"
+msgid "Weckzeit: {zeit} Uhr"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Change time
+msgctxt "ui:weckenAendern#text"
+msgid "Zeit ändern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Brief moment
+msgctxt "ui:weckenWeckerName#text"
+msgid "Kurzer Moment"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You have already used nighttime waking twice in the past seven days. Your sleep comes first.
+msgctxt "ui:weckenGesperrt#text"
+msgid "Du hast das nächtliche Wecken in den letzten sieben Tagen bereits zweimal genutzt. Dein Schlaf geht vor."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: At most twice a week. Do not use during shift work, pregnancy, with a baby that wakes at night, or when sleep-deprived. When falling back asleep, harmless sleep paralysis can rarely occur: breathe calmly and move a finger.
+msgctxt "ui:weckenSicherheit#text"
+msgid "Höchstens zweimal pro Woche. Nicht nutzen bei Schichtarbeit, in der Schwangerschaft, mit einem Baby, das nachts weckt, oder bei Schlafmangel. Beim Wiedereinschlafen kann selten eine harmlose Schlafparalyse auftreten: ruhig atmen und einen Finger bewegen."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {zeit}
+#. EN: System alarm opened for {zeit}
+msgctxt "ui:weckenWeckerGesetzt#text"
+msgid "System-Wecker für {zeit} Uhr geöffnet"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Falling back asleep
+msgctxt "ui:weckenBegleitungTitel#text"
+msgid "Wiedereinschlafen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Briefly note your dream in a few words, then let yourself be guided calmly back to sleep.
+msgctxt "ui:weckenBegleitungEinleitung#text"
+msgid "Halte deinen Traum kurz in Stichworten fest und lass dich danach ruhig zurück in den Schlaf begleiten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Back to sleep after waking
+msgctxt "ui:weckenTagebuchKarteTitel#text"
+msgid "Nach dem Wecken weiterschlafen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Short, quiet guidance back into your dream (approx. 15 min)
+msgctxt "ui:weckenTagebuchKarteText#text"
+msgid "Kurze, leise Begleitung zurück in den Traum (ca. 15 Min.)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start guidance
+msgctxt "ui:weckenBegleitungStarten#text"
+msgid "Begleitung starten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Note dream briefly
+msgctxt "ui:weckenTraumNotieren#text"
+msgid "Traum kurz festhalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Good night
+msgctxt "ui:weckenLaeuft#text"
+msgid "Gute Nacht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Set your device aside and close your eyes. The guidance stops on its own.
+msgctxt "ui:weckenLaeuftText#text"
+msgid "Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst."
+msgstr ""

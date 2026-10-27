@@ -3695,4 +3695,249 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get schwerpunktFantasieText =>
       'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.';
+
+  @override
+  String get rueckblickTitel => 'Diese Woche';
+
+  @override
+  String get rueckblickKeineEintraege =>
+      'Keine Notizen in den letzten sieben Tagen.';
+
+  @override
+  String rueckblickEintraegeGesamt(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Notizen in den letzten sieben Tagen',
+      one: '1 Notiz in den letzten sieben Tagen',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickErinnertMorgen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'An $n Morgen erinnert',
+      one: 'An 1 Morgen erinnert',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickNichtsErinnertMorgen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal nichts erinnert',
+      one: '1 Mal nichts erinnert',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeLuzide(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal luzide',
+      one: '1 Mal luzide',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeSinnlich(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal sinnlich',
+      one: '1 Mal sinnlich',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeHoehepunkt(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal Höhepunkt',
+      one: '1 Mal Höhepunkt',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeUnangenehm(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal unangenehm',
+      one: '1 Mal unangenehm',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeSchlechtGeschlafen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Mal schlecht geschlafen',
+      one: '1 Mal schlecht geschlafen',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get rueckblickNachAbenden => 'Nach den Abenden';
+
+  @override
+  String get rueckblickKeineMarken => 'ohne Markierung';
+
+  @override
+  String get realitaetTitel => 'Realitätscheck';
+
+  @override
+  String get realitaetFrage => 'Träume ich gerade?';
+
+  @override
+  String get realitaetEinleitung =>
+      'Ein kurzer Moment der Achtsamkeit. Wenn du dich tagsüber fragst, ob du wach bist, taucht diese Gewohnheit auch im Traum auf.';
+
+  @override
+  String get realitaetUebungHaendeTitel => 'Auf die Hände schauen';
+
+  @override
+  String get realitaetUebungHaendeText =>
+      'Sieh dir deine Handflächen und Finger aufmerksam an. Im Traum verändern Hände oft ihre Form oder Linien.';
+
+  @override
+  String get realitaetUebungFingerTitel => 'Finger durch die Handfläche';
+
+  @override
+  String get realitaetUebungFingerText =>
+      'Drücke sanft mit einem Finger gegen deine andere Handfläche. Stell dir vor, hindurchzugleiten. Im Traum gibt feste Materie manchmal nach.';
+
+  @override
+  String get realitaetUebungTextTitel => 'Text zweimal lesen';
+
+  @override
+  String get realitaetUebungTextText =>
+      'Lies eine Zeile oder eine Uhrzeit, schau kurz weg und lies noch einmal. Im Traum wechseln Buchstaben und Ziffern oft ihr Aussehen.';
+
+  @override
+  String get realitaetBestaetigenWach => 'Ich bin wach';
+
+  @override
+  String get realitaetBestaetigenTraum => 'Ich träume!';
+
+  @override
+  String get realitaetErinnerungenAktiv => 'Erinnerungen am Tag';
+
+  @override
+  String realitaetZeitfenster(int von, int bis) {
+    return 'Zeitfenster: $von bis $bis Uhr';
+  }
+
+  @override
+  String realitaetAnzahlTag(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Erinnerungen pro Tag',
+      one: '1 Erinnerung pro Tag',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get realitaetMotiveTitel => 'Motive aus deinem Tagebuch';
+
+  @override
+  String get realitaetMotiveKeine =>
+      'Sobald du mehr Notizen im Tagebuch hast, schlägt die App hier wiederkehrende Bilder als Auslöser vor.';
+
+  @override
+  String realitaetMotivSatz(String wort) {
+    return 'Wenn ich $wort sehe, frage ich mich, ob ich träume.';
+  }
+
+  @override
+  String get realitaetMitteilungTitel => 'Kurzer Moment für dich';
+
+  @override
+  String get realitaetMitteilungText =>
+      'Nimm dir einen kurzen Augenblick Zeit.';
+
+  @override
+  String get realitaetHinweisXiaomi =>
+      'Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein.';
+
+  @override
+  String get realitaetKanalName => 'Achtsamkeit';
+
+  @override
+  String get realitaetKanalBeschreibung =>
+      'Erinnerungen für den Realitätscheck am Tag';
+
+  @override
+  String get weckenTitel => 'Heute Nacht wecken';
+
+  @override
+  String get weckenUntertitel =>
+      'Einmaliger System-Wecker nach etwa fünf Stunden Schlaf';
+
+  @override
+  String weckenUhrzeit(String zeit) {
+    return 'Weckzeit: $zeit Uhr';
+  }
+
+  @override
+  String get weckenAendern => 'Zeit ändern';
+
+  @override
+  String get weckenWeckerName => 'Kurzer Moment';
+
+  @override
+  String get weckenGesperrt =>
+      'Du hast das nächtliche Wecken in den letzten sieben Tagen bereits zweimal genutzt. Dein Schlaf geht vor.';
+
+  @override
+  String get weckenSicherheit =>
+      'Höchstens zweimal pro Woche. Nicht nutzen bei Schichtarbeit, in der Schwangerschaft, mit einem Baby, das nachts weckt, oder bei Schlafmangel. Beim Wiedereinschlafen kann selten eine harmlose Schlafparalyse auftreten: ruhig atmen und einen Finger bewegen.';
+
+  @override
+  String weckenWeckerGesetzt(String zeit) {
+    return 'System-Wecker für $zeit Uhr geöffnet';
+  }
+
+  @override
+  String get weckenBegleitungTitel => 'Wiedereinschlafen';
+
+  @override
+  String get weckenBegleitungEinleitung =>
+      'Halte deinen Traum kurz in Stichworten fest und lass dich danach ruhig zurück in den Schlaf begleiten.';
+
+  @override
+  String get weckenTagebuchKarteTitel => 'Nach dem Wecken weiterschlafen';
+
+  @override
+  String get weckenTagebuchKarteText =>
+      'Kurze, leise Begleitung zurück in den Traum (ca. 15 Min.)';
+
+  @override
+  String get weckenBegleitungStarten => 'Begleitung starten';
+
+  @override
+  String get weckenTraumNotieren => 'Traum kurz festhalten';
+
+  @override
+  String get weckenLaeuft => 'Gute Nacht';
+
+  @override
+  String get weckenLaeuftText =>
+      'Leg das Gerät weg und schließ die Augen. Die Begleitung endet von selbst.';
 }

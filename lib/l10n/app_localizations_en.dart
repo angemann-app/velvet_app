@@ -3679,4 +3679,247 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get schwerpunktFantasieText =>
       'Fantasies, leading and surrendering, mind movies and toys.';
+
+  @override
+  String get rueckblickTitel => 'This week';
+
+  @override
+  String get rueckblickKeineEintraege => 'No notes in the past seven days.';
+
+  @override
+  String rueckblickEintraegeGesamt(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n notes in the past seven days',
+      one: '1 note in the past seven days',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickErinnertMorgen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'Remembered on $n mornings',
+      one: 'Remembered on 1 morning',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickNichtsErinnertMorgen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'Nothing remembered $n times',
+      one: 'Nothing remembered 1 time',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeLuzide(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times lucid',
+      one: '1 time lucid',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeSinnlich(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times sensual',
+      one: '1 time sensual',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeHoehepunkt(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times climax',
+      one: '1 time climax',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeUnangenehm(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times uncomfortable',
+      one: '1 time uncomfortable',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String rueckblickMarkeSchlechtGeschlafen(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n times slept poorly',
+      one: '1 time slept poorly',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get rueckblickNachAbenden => 'Following the evenings';
+
+  @override
+  String get rueckblickKeineMarken => 'without tags';
+
+  @override
+  String get realitaetTitel => 'Reality check';
+
+  @override
+  String get realitaetFrage => 'Am I dreaming right now?';
+
+  @override
+  String get realitaetEinleitung =>
+      'A brief moment of mindfulness. When you question your waking state during the day, this habit carries over into your dreams.';
+
+  @override
+  String get realitaetUebungHaendeTitel => 'Look at your hands';
+
+  @override
+  String get realitaetUebungHaendeText =>
+      'Look closely at your palms and fingers. In dreams, hands often change their shape or lines.';
+
+  @override
+  String get realitaetUebungFingerTitel => 'Finger through the palm';
+
+  @override
+  String get realitaetUebungFingerText =>
+      'Gently press a finger against your opposite palm. Imagine slipping through. In dreams, solid matter sometimes yields.';
+
+  @override
+  String get realitaetUebungTextTitel => 'Read text twice';
+
+  @override
+  String get realitaetUebungTextText =>
+      'Read a line of text or a clock, look away briefly, and read it again. In dreams, letters and numbers often shift.';
+
+  @override
+  String get realitaetBestaetigenWach => 'I am awake';
+
+  @override
+  String get realitaetBestaetigenTraum => 'I am dreaming!';
+
+  @override
+  String get realitaetErinnerungenAktiv => 'Daytime reminders';
+
+  @override
+  String realitaetZeitfenster(int von, int bis) {
+    return 'Time window: $von:00 to $bis:00';
+  }
+
+  @override
+  String realitaetAnzahlTag(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n reminders per day',
+      one: '1 reminder per day',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get realitaetMotiveTitel => 'Themes from your dream journal';
+
+  @override
+  String get realitaetMotiveKeine =>
+      'As you record more journal entries, the app will suggest recurring motifs as triggers here.';
+
+  @override
+  String realitaetMotivSatz(String wort) {
+    return 'When I see $wort, I ask myself if I am dreaming.';
+  }
+
+  @override
+  String get realitaetMitteilungTitel => 'A brief moment for you';
+
+  @override
+  String get realitaetMitteilungText => 'Take a brief moment for yourself.';
+
+  @override
+  String get realitaetHinweisXiaomi =>
+      'Note for Xiaomi and MIUI devices: To receive reminders reliably, battery optimization and autostart should be granted for the app in phone settings.';
+
+  @override
+  String get realitaetKanalName => 'Mindfulness';
+
+  @override
+  String get realitaetKanalBeschreibung =>
+      'Reminders for daytime reality checks';
+
+  @override
+  String get weckenTitel => 'Wake me tonight';
+
+  @override
+  String get weckenUntertitel =>
+      'One-time system alarm after about five hours of sleep';
+
+  @override
+  String weckenUhrzeit(String zeit) {
+    return 'Wake-up time: $zeit';
+  }
+
+  @override
+  String get weckenAendern => 'Change time';
+
+  @override
+  String get weckenWeckerName => 'Brief moment';
+
+  @override
+  String get weckenGesperrt =>
+      'You have already used nighttime waking twice in the past seven days. Your sleep comes first.';
+
+  @override
+  String get weckenSicherheit =>
+      'At most twice a week. Do not use during shift work, pregnancy, with a baby that wakes at night, or when sleep-deprived. When falling back asleep, harmless sleep paralysis can rarely occur: breathe calmly and move a finger.';
+
+  @override
+  String weckenWeckerGesetzt(String zeit) {
+    return 'System alarm opened for $zeit';
+  }
+
+  @override
+  String get weckenBegleitungTitel => 'Falling back asleep';
+
+  @override
+  String get weckenBegleitungEinleitung =>
+      'Briefly note your dream in a few words, then let yourself be guided calmly back to sleep.';
+
+  @override
+  String get weckenTagebuchKarteTitel => 'Back to sleep after waking';
+
+  @override
+  String get weckenTagebuchKarteText =>
+      'Short, quiet guidance back into your dream (approx. 15 min)';
+
+  @override
+  String get weckenBegleitungStarten => 'Start guidance';
+
+  @override
+  String get weckenTraumNotieren => 'Note dream briefly';
+
+  @override
+  String get weckenLaeuft => 'Good night';
+
+  @override
+  String get weckenLaeuftText =>
+      'Set your device aside and close your eyes. The guidance stops on its own.';
 }

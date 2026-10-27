@@ -275,6 +275,26 @@
       "id": "hinweis_klartraum",
       "phase": "hinweis",
       "text": "Wenn du merkst, dass du träumst, kannst du langsam atmen, deine Hände ansehen, den Boden unter dir spüren und dann zu der Szene vom Abend zurückkehren oder schauen, was du dir wünschst."
+    },
+    {
+      "id": "wecken_notieren",
+      "phase": "wecken",
+      "text": "Die Nacht um dich her ist still und dunkel. Ein kurzes Erwachen liegt wie eine ruhige Insel mitten im Schlaf.\nEin paar leise Stichworte aus deinem Traum dürfen kurz auftauchen und bewahrt bleiben. Danach legt sich dein Körper wieder schwer und warm unter die Decke.\nDeine Augen schließen sich sanft, deine Schultern geben nach, und die Ruhe der Nacht nimmt dich wieder auf."
+    },
+    {
+      "id": "wecken_sinken_1",
+      "phase": "wecken",
+      "text": "Dein Kopf sinkt tief in das weiche Kissen, und deine Glieder werden schwer und warm. Jeder Atemzug strömt leise ein und fließt noch länger wieder aus.\nDein Bauch und dein Becken lassen ganz los und ruhen weit auf der Unterlage. Die Wärme unter der Decke hüllt deine Haut ruhig ein.\nAn dieser stillen Schwelle zwischen Wachen und Schlafen öffnet sich der Raum für deine Träume ganz von allein."
+    },
+    {
+      "id": "wecken_absicht",
+      "phase": "wecken",
+      "text": "Wenn ich träume, erkenne ich es. Mein Geist bleibt sanft und klar, während mein Körper tief weiterschläft.\nIm Traum darf ich mich tragen lassen und genießen."
+    },
+    {
+      "id": "wecken_sinken_2",
+      "phase": "wecken",
+      "text": "Die Stille trägt dich weich hinüber in die zweite Hälfte der Nacht. Dein Atem geht flach und gleichmäßig wie Wellen an einem ruhigen Ufer.\nHinter deinen geschlossenen Lidern darf das vertraute Bild vom Abend leise wiederkehren. Ein milder Schimmer begleitet dich sanft in die Tiefe.\nDein ganzer Körper schläft ruhig weiter, geborgen in der warmen Dunkelheit."
     }
   ]
 }

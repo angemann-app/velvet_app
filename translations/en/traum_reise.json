@@ -275,6 +275,26 @@
       "id": "hinweis_klartraum",
       "phase": "hinweis",
       "text": "When you notice that you are dreaming, you can breathe slowly, look at your hands, feel the ground beneath you, and then return to the scene from the evening or see what you wish for."
+    },
+    {
+      "id": "wecken_notieren",
+      "phase": "wecken",
+      "text": "The night around you is quiet and dark. A brief awakening rests like a calm island in the middle of your sleep.\nA few quiet words from your dream may briefly surface and remain safe. Afterward, your body settles back heavy and warm beneath the blanket.\nYour eyes close gently, your shoulders yield, and the stillness of the night receives you once more."
+    },
+    {
+      "id": "wecken_sinken_1",
+      "phase": "wecken",
+      "text": "Your head sinks deep into the soft pillow, and your limbs grow heavy and warm. Every breath flows quietly in and streams out even longer.\nYour belly and your pelvis let go completely and rest wide upon the mattress. The warmth beneath the blanket wraps your skin in calm.\nAt this quiet threshold between waking and sleeping, the space for your dreams opens all on its own."
+    },
+    {
+      "id": "wecken_absicht",
+      "phase": "wecken",
+      "text": "When I am dreaming, I recognize it. My mind stays gentle and clear while my body sleeps deeply.\nIn my dream, I may feel carried and enjoy."
+    },
+    {
+      "id": "wecken_sinken_2",
+      "phase": "wecken",
+      "text": "The stillness carries you softly across into the second half of the night. Your breath moves shallow and steady like waves on a quiet shore.\nBehind your closed eyelids, the familiar image from the evening may quietly return. A mild glow accompanies you gently into the deep.\nYour whole body sleeps calmly on, safe in the warm darkness."
     }
   ],
   "_source": {
@@ -316,6 +336,10 @@
     "dream_block:warmes_wasser_s_vulva": "b99d21e73318bc02",
     "dream_block:warmes_wasser_v1": "2dd82a60bf12c876",
     "dream_block:warmes_wasser_v2": "d7b5d38a9fd75dd4",
-    "dream_block:warmes_wasser_v3": "0df11f4e8703fc01"
+    "dream_block:warmes_wasser_v3": "0df11f4e8703fc01",
+    "dream_block:wecken_absicht": "8fd5a90ba1340190",
+    "dream_block:wecken_notieren": "343f719ac9d324b5",
+    "dream_block:wecken_sinken_1": "f7d680a14c32baf1",
+    "dream_block:wecken_sinken_2": "1ce83a958e85f5da"
   }
 }
