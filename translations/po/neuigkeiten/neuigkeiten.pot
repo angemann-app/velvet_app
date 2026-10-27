@@ -622,3 +622,15 @@ msgstr ""
 msgctxt "news:45#0.text"
 msgid "Die Stimmen von Victoria und Martin sind nicht mehr in der App selbst, sondern kommen als Pakete nach: Lektionen und geführte Audios, auf Deutsch und Englisch. Die App wird dadurch viel kleiner, und korrigierte Aufnahmen kommen ohne Update. Einmal im Profil unter „Aufnahmen“ laden, am besten im WLAN."
 msgstr ""
+
+#. Was ist neu in Version 4.11.0-beta.1
+#. EN: Dream evening
+msgctxt "news:46#0.titel"
+msgid "Traum-Abend"
+msgstr ""
+
+#. Was ist neu in Version 4.11.0-beta.1
+#. EN: A new guided audio for the night: you choose a dream image, the voice accompanies you into sleep and gives you a gentle dream intention. 30 to 60 minutes, on the home screen with the guided audios. The recordings come with the guided audio pack.
+msgctxt "news:46#0.text"
+msgid "Ein neues geführtes Audio für die Nacht: Du wählst ein Traumbild, die Stimme begleitet dich in den Schlaf und gibt dir eine sanfte Traum-Absicht mit. 30 bis 60 Minuten, auf der Startseite bei den geführten Audios. Die Aufnahmen kommen mit dem Paket der geführten Audios."
+msgstr ""

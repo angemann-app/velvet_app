@@ -49,6 +49,8 @@ Shared evening: 20 to 45 minutes for two. You take turns giving and receiving, a
 
 Falling asleep: 60, 90 or 120 minutes in bed, with a focus of your choice or as a surprise. The voice grows quieter and rarer, the sentences return in rounds, and in the end only a soft sound remains. You may fall asleep. Best with the charger plugged in; in discretion mode the card just says Relaxation.
 
+Dream evening: 30, 45 or 60 minutes before sleep, with a dream image of your choice or as a surprise. The voice accompanies you into sleep, paints the dream image and quietly repeats a dream intention so it comes with you into the night. In spicy mode there is a more explicit version for your body. If you are prone to sleep paralysis, better leave out lucid exercises. In discretion mode the card just says Calm.
+
 All of them are put together anew every time. You can pause, skip and stop at any time.
 
 

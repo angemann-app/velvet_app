@@ -5658,6 +5658,72 @@ msgid "Schwerpunkt"
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: Dream evening
+msgctxt "ui:traumKarteTitel#text"
+msgid "Traum-Abend"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Calm
+msgctxt "ui:traumKarteTitelNeutral#text"
+msgid "Ruhe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gently into sleep and into a sensual dream: 30 to 60 minutes with a dream image of your choice.
+msgctxt "ui:traumKarteText#text"
+msgid "Sanft in den Schlaf und in einen sinnlichen Traum: 30 bis 60 Minuten mit einem Traumbild deiner Wahl."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Dream evening
+msgctxt "ui:traumTitel#text"
+msgid "Traum-Abend"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A voice accompanies you into sleep and offers you a dream image. Then it quietly repeats your dream intention, with ever longer pauses, until only silence remains. You may fall asleep along the way.
+msgctxt "ui:traumEinleitung#text"
+msgid "Eine Stimme begleitet dich in den Schlaf und legt dir ein Traumbild nahe. Danach wiederholt sie leise deine Traum-Absicht, mit immer längeren Pausen, bis nur Stille bleibt. Du darfst dabei einschlafen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Dream image
+msgctxt "ui:traumBild#text"
+msgid "Traumbild"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Warm water
+msgctxt "ui:traumBildWarmesWasser#text"
+msgid "Warmes Wasser"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A place for me
+msgctxt "ui:traumBildOrtFuerMich#text"
+msgid "Ein Ort für mich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Body in light
+msgctxt "ui:traumBildKoerperImLicht#text"
+msgid "Körper im Licht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Encounter
+msgctxt "ui:traumBildBegegnung#text"
+msgid "Begegnung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Clarity
+msgctxt "ui:traumBildKlarheit#text"
+msgid "Klarheit"
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Surprise me
 msgctxt "ui:einschlafUeberrasch#text"
 msgid "Überrasch mich"

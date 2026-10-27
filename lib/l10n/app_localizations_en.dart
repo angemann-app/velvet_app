@@ -3301,6 +3301,41 @@ class AppLocalizationsEn extends AppLocalizations {
   String get einschlafSchwerpunkt => 'Focus';
 
   @override
+  String get traumKarteTitel => 'Dream evening';
+
+  @override
+  String get traumKarteTitelNeutral => 'Calm';
+
+  @override
+  String get traumKarteText =>
+      'Gently into sleep and into a sensual dream: 30 to 60 minutes with a dream image of your choice.';
+
+  @override
+  String get traumTitel => 'Dream evening';
+
+  @override
+  String get traumEinleitung =>
+      'A voice accompanies you into sleep and offers you a dream image. Then it quietly repeats your dream intention, with ever longer pauses, until only silence remains. You may fall asleep along the way.';
+
+  @override
+  String get traumBild => 'Dream image';
+
+  @override
+  String get traumBildWarmesWasser => 'Warm water';
+
+  @override
+  String get traumBildOrtFuerMich => 'A place for me';
+
+  @override
+  String get traumBildKoerperImLicht => 'Body in light';
+
+  @override
+  String get traumBildBegegnung => 'Encounter';
+
+  @override
+  String get traumBildKlarheit => 'Clarity';
+
+  @override
   String get einschlafUeberrasch => 'Surprise me';
 
   @override

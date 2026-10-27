@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../l10n/t.dart';
 import '../../models/einschlaf_reise.dart';
+import '../../models/traum_reise.dart';
 import '../../models/paar_abend.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
@@ -18,19 +19,22 @@ import '../../widgets/player_steuerung.dart';
 /// Texte in assets/data/einschlaf_reise.json). Die Stimme wird über die Reise leiser, der Klangteppich
 /// blendet in der Schlussstille aus; danach stoppt alles von selbst.
 class EinschlafReiseScreen extends StatefulWidget {
-  const EinschlafReiseScreen({super.key});
+  /// Traum-Abend statt Einschlaf-Reise: Traumbild statt Schwerpunkt (lib/models/traum_reise.dart).
+  final bool traum;
+
+  const EinschlafReiseScreen({super.key, this.traum = false});
 
   @override
   State<EinschlafReiseScreen> createState() => _EinschlafReiseScreenState();
 }
 
 class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
-  static const _keyMinuten = 'einschlaf_minuten';
-  static const _keyThema = 'einschlaf_thema';
-  static const _keyKoerper = 'einschlaf_koerper';
-  static const _keySpicy = 'einschlaf_spicy';
-  static const _keyStimme = 'einschlaf_stimme';
-  static const _keyZuletzt = 'einschlaf_zuletzt';
+  String get _keyMinuten => '${widget.traum ? 'traum' : 'einschlaf'}_minuten';
+  String get _keyThema => '${widget.traum ? 'traum' : 'einschlaf'}_thema';
+  String get _keyKoerper => '${widget.traum ? 'traum' : 'einschlaf'}_koerper';
+  String get _keySpicy => '${widget.traum ? 'traum' : 'einschlaf'}_spicy';
+  String get _keyStimme => '${widget.traum ? 'traum' : 'einschlaf'}_stimme';
+  String get _keyZuletzt => '${widget.traum ? 'traum' : 'einschlaf'}_zuletzt';
 
   /// Lautstärke des Klangteppichs, solange er nicht ausblendet.
   static const _teppichLaut = 0.3;
@@ -39,6 +43,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
   static const _ausblenden = Duration(minutes: 10);
 
   EinschlafDaten? _daten;
+  TraumDaten? _traumDaten;
   int _minuten = 90;
   String? _thema; // null = Überrasch mich
   String _koerper = 'neutral';
@@ -69,14 +74,16 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
   Future<void> _laden() async {
     final prefs = await SharedPreferences.getInstance();
     final daten = await EinschlafDaten.laden();
+    final traumDaten = widget.traum ? await TraumDaten.laden() : null;
     final profil = StorageService.getUserProfile();
     if (!mounted) return;
     setState(() {
       _daten = daten;
+      _traumDaten = traumDaten;
       final m = prefs.getInt(_keyMinuten);
-      _minuten = EinschlafDaten.laengen.contains(m) ? m! : 90;
+      _minuten = _laengen.contains(m) ? m! : (widget.traum ? 45 : 90);
       final th = prefs.getString(_keyThema);
-      _thema = EinschlafDaten.themen.contains(th) ? th : null;
+      _thema = _themen.contains(th) ? th : null;
       _koerper = prefs.getString(_keyKoerper) ?? 'neutral';
       _spicy = StorageService.spicyMode() && (prefs.getBool(_keySpicy) ?? false);
       _stimme = prefs.getString(_keyStimme) ?? (profil?.isMale == true ? 'martin' : 'victoria');
@@ -107,14 +114,25 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
     await prefs.setBool(_keySpicy, _spicy);
     await prefs.setString(_keyStimme, _stimme);
     final zuletzt = prefs.getStringList(_keyZuletzt) ?? [];
-    final ablauf = daten.planen(
-      minuten: _minuten,
-      thema: _thema,
-      koerper: _koerper,
-      spicy: _spicy && StorageService.spicyMode(),
-      stimme: _stimme,
-      zuletzt: zuletzt.toSet(),
-    );
+    final traumDaten = _traumDaten;
+    final ablauf = traumDaten != null
+        ? traumDaten.planen(
+            einschlaf: daten,
+            minuten: _minuten,
+            bild: _thema,
+            koerper: _koerper,
+            spicy: _spicy && StorageService.spicyMode(),
+            stimme: _stimme,
+            zuletzt: zuletzt.toSet(),
+          )
+        : daten.planen(
+            minuten: _minuten,
+            thema: _thema,
+            koerper: _koerper,
+            spicy: _spicy && StorageService.spicyMode(),
+            stimme: _stimme,
+            zuletzt: zuletzt.toSet(),
+          );
     final neu = [for (final s in ablauf) if (s.baustein != null) s.baustein!.id];
     await prefs.setStringList(_keyZuletzt, [...neu, ...zuletzt].take(60).toList());
 
@@ -148,7 +166,8 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
       final letzter = _index == ablauf.length - 1;
       if (schritt.baustein != null) {
         _stimmePlayer.setVolume(_stimmeLautstaerke()).catchError((_) {});
-        Sprachausgabe.sprich(_stimmePlayer, 'audio/einschlaf/${_stimme}_${schritt.baustein!.id}.opus',
+        final ordner = _traumDaten?.istTraum(schritt.baustein!.id) == true ? 'traum' : 'einschlaf';
+        Sprachausgabe.sprich(_stimmePlayer, 'audio/$ordner/${_stimme}_${schritt.baustein!.id}.opus',
             schritt.baustein!.text);
       }
       // Ausblenden: In der Schlussstille wird der Klangteppich leiser, bis er verschwindet.
@@ -230,7 +249,15 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
   String _fmt(Duration d) =>
       '${d.inHours}:${d.inMinutes.remainder(60).toString().padLeft(2, '0')}:${d.inSeconds.remainder(60).toString().padLeft(2, '0')}';
 
+  List<int> get _laengen => widget.traum ? TraumDaten.laengen : EinschlafDaten.laengen;
+  List<String> get _themen => widget.traum ? TraumDaten.bilder : EinschlafDaten.themen;
+
   String _themaName(String id) => switch (id) {
+        'warmes_wasser' => t.traumBildWarmesWasser,
+        'ort_fuer_mich' => t.traumBildOrtFuerMich,
+        'koerper_im_licht' => t.traumBildKoerperImLicht,
+        'begegnung' => t.traumBildBegegnung,
+        'klarheit' => t.traumBildKlarheit,
         'koerper' => t.einschlafThemaKoerper,
         'welle' => t.einschlafThemaWelle,
         'gaspedal' => t.einschlafThemaGaspedal,
@@ -249,7 +276,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
       },
       child: Scaffold(
         backgroundColor: AppTheme.background,
-        appBar: AppBar(backgroundColor: AppTheme.background, title: Text(t.einschlafTitel)),
+        appBar: AppBar(backgroundColor: AppTheme.background, title: Text(widget.traum ? t.traumTitel : t.einschlafTitel)),
         body: SafeArea(
           child: _daten == null
               ? const Center(child: CircularProgressIndicator(color: AppTheme.rose))
@@ -280,7 +307,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
       children: [
-        Text(t.einschlafEinleitung, style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5)),
+        Text(widget.traum ? t.traumEinleitung : t.einschlafEinleitung, style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5)),
         const SizedBox(height: 14),
         Container(
           padding: const EdgeInsets.all(14),
@@ -289,18 +316,18 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
             borderRadius: BorderRadius.circular(14),
             border: Border.all(color: AppTheme.border),
           ),
-          child: Text(t.einschlafWirkung, style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.5)),
+          child: Text(widget.traum ? (_traumDaten?.hinweis('hinweis_einstieg') ?? '') : t.einschlafWirkung, style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.5)),
         ),
         const SizedBox(height: 22),
         _titel(t.einschlafLaenge),
         Wrap(spacing: 8, children: [
-          for (final m in EinschlafDaten.laengen) _chip(t.selbstReiseMMin(m), _minuten == m, () => setState(() => _minuten = m)),
+          for (final m in _laengen) _chip(t.selbstReiseMMin(m), _minuten == m, () => setState(() => _minuten = m)),
         ]),
         const SizedBox(height: 20),
-        _titel(t.einschlafSchwerpunkt),
+        _titel(widget.traum ? t.traumBild : t.einschlafSchwerpunkt),
         Wrap(spacing: 8, runSpacing: 4, children: [
           _chip(t.einschlafUeberrasch, _thema == null, () => setState(() => _thema = null)),
-          for (final th in EinschlafDaten.themen) _chip(_themaName(th), _thema == th, () => setState(() => _thema = th)),
+          for (final th in _themen) _chip(_themaName(th), _thema == th, () => setState(() => _thema = th)),
         ]),
         if (spicyModus) ...[
           const SizedBox(height: 20),
@@ -338,6 +365,11 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         ),
         const SizedBox(height: 14),
         Text(t.einschlafHinweise, style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
+        if (widget.traum && _traumDaten?.hinweis('hinweis_schlafparalyse') != null) ...[
+          const SizedBox(height: 10),
+          Text(_traumDaten!.hinweis('hinweis_schlafparalyse')!,
+              style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
+        ],
         const SizedBox(height: 22),
         SizedBox(
           height: 54,
