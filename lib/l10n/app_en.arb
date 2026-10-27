@@ -867,7 +867,7 @@
   "fotoSicherheitHinweis": "The photo travels encrypted directly from phone to phone and can be viewed only once. Safest without your face or recognisable surroundings. A second phone can still photograph the screen.",
   "fotoNichtDa": "Your partner doesn't have VelvetPulse open right now. The photo stays encrypted on your phone and goes out as soon as you both have the app open.",
   "fotoFehler": "The photo couldn't be announced. Please try again later.",
-  "fotoStatusWartet": "Photo waiting: both of you open VelvetPulse",
+  "fotoStatusWartet": "Photo arrives once you both have the app open",
   "fotoStatusLaedt": "Transferring photo …",
   "fotoAnsehen": "View photo (only once)",
   "fotoStatusAngesehen": "Photo viewed",
@@ -934,5 +934,7 @@
   "einschlafLaeuft": "You may fall asleep",
   "einschlafLaeuftText": "The voice grows quieter and rarer. In the end everything stops by itself.",
   "einschlafBeenden": "End the drift-off journey?",
-  "einschlafBeendenText": "The guidance will then stop."
+  "einschlafBeendenText": "The guidance will then stop.",
+  "fotoErneutVersuchen": "Try again now",
+  "fotoStatusWeg": "Photo no longer available"
 }

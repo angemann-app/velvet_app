@@ -342,6 +342,17 @@
           "text": "A long, quiet companion into sleep, 60, 90 or 120 minutes. You choose a focus or let yourself be surprised. The voice grows quieter and rarer, and in the end a soft sound remains. Find it with the guided audios on the start page. German recordings now, the English ones follow with a later audio package."
         }
       ]
+    },
+    {
+      "build": 43,
+      "version": "4.9.1-beta.1",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Photos arrive more reliably",
+          "text": "A waiting photo now also arrives when you're both online again after being offline. The app keeps trying on its own, and “Try again now” tries right away. If the sender no longer has a photo, the app now says so clearly."
+        }
+      ]
     }
   ],
   "_source": {
@@ -361,6 +372,7 @@
     "news:39": "04594a31ae0808e7",
     "news:40": "dfabcaebe3b5aede",
     "news:41": "bbf1744d4af75ae9",
-    "news:42": "bc76081269606aeb"
+    "news:42": "bc76081269606aeb",
+    "news:43": "b3d7e781fd2801a9"
   }
 }

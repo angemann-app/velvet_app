@@ -342,6 +342,17 @@
           "text": "Eine lange, ruhige Begleitung in den Schlaf, 60, 90 oder 120 Minuten. Du wählst einen Schwerpunkt oder lässt dich überraschen. Die Stimme wird immer leiser und seltener, am Ende bleibt ein leiser Klang. Zu finden bei den geführten Audios auf der Startseite. Deutsche Aufnahmen, die englischen folgen mit einem späteren Audiopaket."
         }
       ]
+    },
+    {
+      "build": 43,
+      "version": "4.9.1-beta.1",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Fotos kommen zuverlässiger an",
+          "text": "Ein wartendes Foto kommt jetzt auch an, wenn ihr erst nach einer Offline-Zeit beide online seid. Die App versucht es von selbst immer wieder, und mit „Jetzt erneut versuchen“ geht es sofort. Liegt ein Foto beim Absender nicht mehr, steht das jetzt klar da."
+        }
+      ]
     }
   ]
 }
