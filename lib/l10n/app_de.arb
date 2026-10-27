@@ -1701,5 +1701,51 @@
   "schwerpunktBeruehrung": "Berührung",
   "schwerpunktBeruehrungText": "Berührung für sie und für ihn, Intim-Massage, Stimme und entspannte Stellungen.",
   "schwerpunktFantasie": "Fantasie und Spiel",
-  "schwerpunktFantasieText": "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug."
+  "schwerpunktFantasieText": "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.",
+  "realitaetTitel": "Realitätscheck",
+  "realitaetFrage": "Träume ich gerade?",
+  "realitaetEinleitung": "Ein kurzer Moment der Achtsamkeit. Wenn du dich tagsüber fragst, ob du wach bist, taucht diese Gewohnheit auch im Traum auf.",
+  "realitaetUebungHaendeTitel": "Auf die Hände schauen",
+  "realitaetUebungHaendeText": "Sieh dir deine Handflächen und Finger aufmerksam an. Im Traum verändern Hände oft ihre Form oder Linien.",
+  "realitaetUebungFingerTitel": "Finger durch die Handfläche",
+  "realitaetUebungFingerText": "Drücke sanft mit einem Finger gegen deine andere Handfläche. Stell dir vor, hindurchzugleiten. Im Traum gibt feste Materie manchmal nach.",
+  "realitaetUebungTextTitel": "Text zweimal lesen",
+  "realitaetUebungTextText": "Lies eine Zeile oder eine Uhrzeit, schau kurz weg und lies noch einmal. Im Traum wechseln Buchstaben und Ziffern oft ihr Aussehen.",
+  "realitaetBestaetigenWach": "Ich bin wach",
+  "realitaetBestaetigenTraum": "Ich träume!",
+  "realitaetErinnerungenAktiv": "Erinnerungen am Tag",
+  "realitaetZeitfenster": "Zeitfenster: {von} bis {bis} Uhr",
+  "@realitaetZeitfenster": {
+    "placeholders": {
+      "von": {
+        "type": "int"
+      },
+      "bis": {
+        "type": "int"
+      }
+    }
+  },
+  "realitaetAnzahlTag": "{n, plural, =1{1 Erinnerung pro Tag} other{{n} Erinnerungen pro Tag}}",
+  "@realitaetAnzahlTag": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "realitaetMotiveTitel": "Motive aus deinem Tagebuch",
+  "realitaetMotiveKeine": "Sobald du mehr Notizen im Tagebuch hast, schlägt die App hier wiederkehrende Bilder als Auslöser vor.",
+  "realitaetMotivSatz": "Wenn ich {wort} sehe, frage ich mich, ob ich träume.",
+  "@realitaetMotivSatz": {
+    "placeholders": {
+      "wort": {
+        "type": "String"
+      }
+    }
+  },
+  "realitaetMitteilungTitel": "Kurzer Moment für dich",
+  "realitaetMitteilungText": "Nimm dir einen kurzen Augenblick Zeit.",
+  "realitaetHinweisXiaomi": "Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein.",
+  "realitaetKanalName": "Achtsamkeit",
+  "realitaetKanalBeschreibung": "Erinnerungen für den Realitätscheck am Tag"
 }

@@ -3679,4 +3679,89 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get schwerpunktFantasieText =>
       'Fantasies, leading and surrendering, mind movies and toys.';
+
+  @override
+  String get realitaetTitel => 'Reality check';
+
+  @override
+  String get realitaetFrage => 'Am I dreaming right now?';
+
+  @override
+  String get realitaetEinleitung =>
+      'A brief moment of mindfulness. When you question your waking state during the day, this habit carries over into your dreams.';
+
+  @override
+  String get realitaetUebungHaendeTitel => 'Look at your hands';
+
+  @override
+  String get realitaetUebungHaendeText =>
+      'Look closely at your palms and fingers. In dreams, hands often change their shape or lines.';
+
+  @override
+  String get realitaetUebungFingerTitel => 'Finger through the palm';
+
+  @override
+  String get realitaetUebungFingerText =>
+      'Gently press a finger against your opposite palm. Imagine slipping through. In dreams, solid matter sometimes yields.';
+
+  @override
+  String get realitaetUebungTextTitel => 'Read text twice';
+
+  @override
+  String get realitaetUebungTextText =>
+      'Read a line of text or a clock, look away briefly, and read it again. In dreams, letters and numbers often shift.';
+
+  @override
+  String get realitaetBestaetigenWach => 'I am awake';
+
+  @override
+  String get realitaetBestaetigenTraum => 'I am dreaming!';
+
+  @override
+  String get realitaetErinnerungenAktiv => 'Daytime reminders';
+
+  @override
+  String realitaetZeitfenster(int von, int bis) {
+    return 'Time window: $von:00 to $bis:00';
+  }
+
+  @override
+  String realitaetAnzahlTag(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n reminders per day',
+      one: '1 reminder per day',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get realitaetMotiveTitel => 'Themes from your dream journal';
+
+  @override
+  String get realitaetMotiveKeine =>
+      'As you record more journal entries, the app will suggest recurring motifs as triggers here.';
+
+  @override
+  String realitaetMotivSatz(String wort) {
+    return 'When I see $wort, I ask myself if I am dreaming.';
+  }
+
+  @override
+  String get realitaetMitteilungTitel => 'A brief moment for you';
+
+  @override
+  String get realitaetMitteilungText => 'Take a brief moment for yourself.';
+
+  @override
+  String get realitaetHinweisXiaomi =>
+      'Note for Xiaomi and MIUI devices: To receive reminders reliably, battery optimization and autostart should be granted for the app in phone settings.';
+
+  @override
+  String get realitaetKanalName => 'Mindfulness';
+
+  @override
+  String get realitaetKanalBeschreibung =>
+      'Reminders for daytime reality checks';
 }

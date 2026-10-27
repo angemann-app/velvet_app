@@ -7,6 +7,7 @@ import '../models/journal_entry.dart';
 import '../models/chat_message.dart';
 import '../models/daily_checkin.dart';
 import '../models/traum_eintrag.dart';
+import 'realitaetscheck.dart';
 import '../models/user_profile.dart';
 import 'auto_backup_service.dart';
 import 'backup_codec.dart';
@@ -36,6 +37,7 @@ class StorageService {
   static const String _keyPartnerReflections = 'velvet_partner_reflections';
   static const String _keyPartnerGender = 'velvet_partner_gender';
   static const String _keyTraumTagebuch = 'traum_tagebuch';
+  static const String _keyRealitaetschecks = 'realitaetschecks_einstellungen';
   static const String _keyLustFortschritt = 'lust_fortschritt';
   // Was am letzten Abend lief (für das Traumtagebuch am Morgen); flüchtig, nicht in der Sicherung.
   static const String _keyLetzterAbend = 'traum_letzter_abend';
@@ -154,6 +156,23 @@ class StorageService {
     if (triggerBackup) {
       await AutoBackupService.saveAutoBackup();
     }
+  }
+
+  // Realitätschecks (lib/services/realitaetscheck.dart)
+  static RealitaetscheckEinstellungen getRealitaetschecks() {
+    final raw = _prefs?.getString(_keyRealitaetschecks);
+    if (raw == null || raw.isEmpty) return const RealitaetscheckEinstellungen();
+    try {
+      return RealitaetscheckEinstellungen.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+    } catch (_) {
+      return const RealitaetscheckEinstellungen();
+    }
+  }
+
+  static Future<void> saveRealitaetschecks(RealitaetscheckEinstellungen einstellungen) async {
+    final prefs = await _ensurePrefs();
+    await prefs.setString(_keyRealitaetschecks, jsonEncode(einstellungen.toJson()));
+    await AutoBackupService.saveAutoBackup();
   }
 
   // Traumtagebuch (lib/models/traum_eintrag.dart)
@@ -434,6 +453,7 @@ class StorageService {
       'reflectionAnswers': _prefs?.getString(_keyReflectionAnswers),
       'cbtEntries': getCbtEntries().map((e) => e.toJson()).toList(),
       'traumTagebuch': getTraumEintraege().map((e) => e.toJson()).toList(),
+      'realitaetschecks': getRealitaetschecks().toJson(),
       'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
       'dailyCheckIns': _prefs?.getStringList(_keyDailyCheckIns),
       'yesNoMaybe': _prefs?.getString(_keyYesNoMaybe),
@@ -511,6 +531,14 @@ class StorageService {
       }
       final sorted = entries.values.toList()..sort((a, b) => b.timestamp.compareTo(a.timestamp));
       writes[_keyCbtEntries] = sorted.map((e) => jsonEncode(e.toJson())).toList();
+    }
+    if (d['realitaetschecks'] is Map) {
+      try {
+        final rc = RealitaetscheckEinstellungen.fromJson(Map<String, dynamic>.from(d['realitaetschecks'] as Map));
+        writes[_keyRealitaetschecks] = jsonEncode(rc.toJson());
+      } catch (_) {
+        throw BackupException(t.storageServiceTheBackupIsDamagedFeld('realitaetschecks'));
+      }
     }
     if (d['traumTagebuch'] is List) {
       final eintraege = {for (final e in getTraumEintraege()) e.id: e};

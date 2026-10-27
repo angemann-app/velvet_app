@@ -8,6 +8,7 @@ import 'package:velvetpulse/services/backup_codec.dart';
 import 'package:velvetpulse/services/nostr_service.dart';
 import 'package:velvetpulse/services/secret_store.dart';
 import 'package:velvetpulse/services/storage_service.dart';
+import 'package:velvetpulse/services/realitaetscheck.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +29,32 @@ void main() {
     StorageService.resetForTest();
     await StorageService.init();
     await NostrService().reloadKeysFromPrefs();
+  });
+
+  test('Realitätscheck-Einstellungen sind in der Sicherung und werden wiederhergestellt', () async {
+    await StorageService.saveRealitaetschecks(const RealitaetscheckEinstellungen(
+      aktiv: true,
+      vonStunde: 10,
+      bisStunde: 20,
+      anzahlProTag: 4,
+    ));
+    final export = StorageService.exportAllUserData();
+    expect(export['realitaetschecks'], {
+      'aktiv': true,
+      'vonStunde': 10,
+      'bisStunde': 20,
+      'anzahlProTag': 4,
+    });
+
+    await StorageService.saveRealitaetschecks(const RealitaetscheckEinstellungen(aktiv: false));
+    expect(StorageService.getRealitaetschecks().aktiv, isFalse);
+
+    await StorageService.importBackup(BackupCodec.validate(export));
+    final restored = StorageService.getRealitaetschecks();
+    expect(restored.aktiv, isTrue);
+    expect(restored.vonStunde, 10);
+    expect(restored.bisStunde, 20);
+    expect(restored.anzahlProTag, 4);
   });
 
   test('Die Ja/Nein-Liste ist in der Sicherung enthalten', () {

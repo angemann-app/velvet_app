@@ -6322,3 +6322,135 @@ msgstr ""
 msgctxt "ui:schwerpunktFantasieText#text"
 msgid "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reality check
+msgctxt "ui:realitaetTitel#text"
+msgid "Realitätscheck"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Am I dreaming right now?
+msgctxt "ui:realitaetFrage#text"
+msgid "Träume ich gerade?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A brief moment of mindfulness. When you question your waking state during the day, this habit carries over into your dreams.
+msgctxt "ui:realitaetEinleitung#text"
+msgid "Ein kurzer Moment der Achtsamkeit. Wenn du dich tagsüber fragst, ob du wach bist, taucht diese Gewohnheit auch im Traum auf."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Look at your hands
+msgctxt "ui:realitaetUebungHaendeTitel#text"
+msgid "Auf die Hände schauen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Look closely at your palms and fingers. In dreams, hands often change their shape or lines.
+msgctxt "ui:realitaetUebungHaendeText#text"
+msgid "Sieh dir deine Handflächen und Finger aufmerksam an. Im Traum verändern Hände oft ihre Form oder Linien."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Finger through the palm
+msgctxt "ui:realitaetUebungFingerTitel#text"
+msgid "Finger durch die Handfläche"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gently press a finger against your opposite palm. Imagine slipping through. In dreams, solid matter sometimes yields.
+msgctxt "ui:realitaetUebungFingerText#text"
+msgid "Drücke sanft mit einem Finger gegen deine andere Handfläche. Stell dir vor, hindurchzugleiten. Im Traum gibt feste Materie manchmal nach."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Read text twice
+msgctxt "ui:realitaetUebungTextTitel#text"
+msgid "Text zweimal lesen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Read a line of text or a clock, look away briefly, and read it again. In dreams, letters and numbers often shift.
+msgctxt "ui:realitaetUebungTextText#text"
+msgid "Lies eine Zeile oder eine Uhrzeit, schau kurz weg und lies noch einmal. Im Traum wechseln Buchstaben und Ziffern oft ihr Aussehen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I am awake
+msgctxt "ui:realitaetBestaetigenWach#text"
+msgid "Ich bin wach"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: I am dreaming!
+msgctxt "ui:realitaetBestaetigenTraum#text"
+msgid "Ich träume!"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Daytime reminders
+msgctxt "ui:realitaetErinnerungenAktiv#text"
+msgid "Erinnerungen am Tag"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {von}, {bis}
+#. EN: Time window: {von}:00 to {bis}:00
+msgctxt "ui:realitaetZeitfenster#text"
+msgid "Zeitfenster: {von} bis {bis} Uhr"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 reminder per day} other{{n} reminders per day}}
+msgctxt "ui:realitaetAnzahlTag#text"
+msgid "{n, plural, =1{1 Erinnerung pro Tag} other{{n} Erinnerungen pro Tag}}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Themes from your dream journal
+msgctxt "ui:realitaetMotiveTitel#text"
+msgid "Motive aus deinem Tagebuch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: As you record more journal entries, the app will suggest recurring motifs as triggers here.
+msgctxt "ui:realitaetMotiveKeine#text"
+msgid "Sobald du mehr Notizen im Tagebuch hast, schlägt die App hier wiederkehrende Bilder als Auslöser vor."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {wort}
+#. EN: When I see {wort}, I ask myself if I am dreaming.
+msgctxt "ui:realitaetMotivSatz#text"
+msgid "Wenn ich {wort} sehe, frage ich mich, ob ich träume."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A brief moment for you
+msgctxt "ui:realitaetMitteilungTitel#text"
+msgid "Kurzer Moment für dich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Take a brief moment for yourself.
+msgctxt "ui:realitaetMitteilungText#text"
+msgid "Nimm dir einen kurzen Augenblick Zeit."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Note for Xiaomi and MIUI devices: To receive reminders reliably, battery optimization and autostart should be granted for the app in phone settings.
+msgctxt "ui:realitaetHinweisXiaomi#text"
+msgid "Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Mindfulness
+msgctxt "ui:realitaetKanalName#text"
+msgid "Achtsamkeit"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reminders for daytime reality checks
+msgctxt "ui:realitaetKanalBeschreibung#text"
+msgid "Erinnerungen für den Realitätscheck am Tag"
+msgstr ""

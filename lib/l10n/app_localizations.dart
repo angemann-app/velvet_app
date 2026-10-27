@@ -6302,6 +6302,138 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.'**
   String get schwerpunktFantasieText;
+
+  /// No description provided for @realitaetTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Realitätscheck'**
+  String get realitaetTitel;
+
+  /// No description provided for @realitaetFrage.
+  ///
+  /// In de, this message translates to:
+  /// **'Träume ich gerade?'**
+  String get realitaetFrage;
+
+  /// No description provided for @realitaetEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein kurzer Moment der Achtsamkeit. Wenn du dich tagsüber fragst, ob du wach bist, taucht diese Gewohnheit auch im Traum auf.'**
+  String get realitaetEinleitung;
+
+  /// No description provided for @realitaetUebungHaendeTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf die Hände schauen'**
+  String get realitaetUebungHaendeTitel;
+
+  /// No description provided for @realitaetUebungHaendeText.
+  ///
+  /// In de, this message translates to:
+  /// **'Sieh dir deine Handflächen und Finger aufmerksam an. Im Traum verändern Hände oft ihre Form oder Linien.'**
+  String get realitaetUebungHaendeText;
+
+  /// No description provided for @realitaetUebungFingerTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Finger durch die Handfläche'**
+  String get realitaetUebungFingerTitel;
+
+  /// No description provided for @realitaetUebungFingerText.
+  ///
+  /// In de, this message translates to:
+  /// **'Drücke sanft mit einem Finger gegen deine andere Handfläche. Stell dir vor, hindurchzugleiten. Im Traum gibt feste Materie manchmal nach.'**
+  String get realitaetUebungFingerText;
+
+  /// No description provided for @realitaetUebungTextTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Text zweimal lesen'**
+  String get realitaetUebungTextTitel;
+
+  /// No description provided for @realitaetUebungTextText.
+  ///
+  /// In de, this message translates to:
+  /// **'Lies eine Zeile oder eine Uhrzeit, schau kurz weg und lies noch einmal. Im Traum wechseln Buchstaben und Ziffern oft ihr Aussehen.'**
+  String get realitaetUebungTextText;
+
+  /// No description provided for @realitaetBestaetigenWach.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich bin wach'**
+  String get realitaetBestaetigenWach;
+
+  /// No description provided for @realitaetBestaetigenTraum.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich träume!'**
+  String get realitaetBestaetigenTraum;
+
+  /// No description provided for @realitaetErinnerungenAktiv.
+  ///
+  /// In de, this message translates to:
+  /// **'Erinnerungen am Tag'**
+  String get realitaetErinnerungenAktiv;
+
+  /// No description provided for @realitaetZeitfenster.
+  ///
+  /// In de, this message translates to:
+  /// **'Zeitfenster: {von} bis {bis} Uhr'**
+  String realitaetZeitfenster(int von, int bis);
+
+  /// No description provided for @realitaetAnzahlTag.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Erinnerung pro Tag} other{{n} Erinnerungen pro Tag}}'**
+  String realitaetAnzahlTag(int n);
+
+  /// No description provided for @realitaetMotiveTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Motive aus deinem Tagebuch'**
+  String get realitaetMotiveTitel;
+
+  /// No description provided for @realitaetMotiveKeine.
+  ///
+  /// In de, this message translates to:
+  /// **'Sobald du mehr Notizen im Tagebuch hast, schlägt die App hier wiederkehrende Bilder als Auslöser vor.'**
+  String get realitaetMotiveKeine;
+
+  /// No description provided for @realitaetMotivSatz.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn ich {wort} sehe, frage ich mich, ob ich träume.'**
+  String realitaetMotivSatz(String wort);
+
+  /// No description provided for @realitaetMitteilungTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurzer Moment für dich'**
+  String get realitaetMitteilungTitel;
+
+  /// No description provided for @realitaetMitteilungText.
+  ///
+  /// In de, this message translates to:
+  /// **'Nimm dir einen kurzen Augenblick Zeit.'**
+  String get realitaetMitteilungText;
+
+  /// No description provided for @realitaetHinweisXiaomi.
+  ///
+  /// In de, this message translates to:
+  /// **'Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein.'**
+  String get realitaetHinweisXiaomi;
+
+  /// No description provided for @realitaetKanalName.
+  ///
+  /// In de, this message translates to:
+  /// **'Achtsamkeit'**
+  String get realitaetKanalName;
+
+  /// No description provided for @realitaetKanalBeschreibung.
+  ///
+  /// In de, this message translates to:
+  /// **'Erinnerungen für den Realitätscheck am Tag'**
+  String get realitaetKanalBeschreibung;
 }
 
 class _AppLocalizationsDelegate

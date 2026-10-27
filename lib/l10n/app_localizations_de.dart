@@ -3695,4 +3695,90 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get schwerpunktFantasieText =>
       'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.';
+
+  @override
+  String get realitaetTitel => 'Realitätscheck';
+
+  @override
+  String get realitaetFrage => 'Träume ich gerade?';
+
+  @override
+  String get realitaetEinleitung =>
+      'Ein kurzer Moment der Achtsamkeit. Wenn du dich tagsüber fragst, ob du wach bist, taucht diese Gewohnheit auch im Traum auf.';
+
+  @override
+  String get realitaetUebungHaendeTitel => 'Auf die Hände schauen';
+
+  @override
+  String get realitaetUebungHaendeText =>
+      'Sieh dir deine Handflächen und Finger aufmerksam an. Im Traum verändern Hände oft ihre Form oder Linien.';
+
+  @override
+  String get realitaetUebungFingerTitel => 'Finger durch die Handfläche';
+
+  @override
+  String get realitaetUebungFingerText =>
+      'Drücke sanft mit einem Finger gegen deine andere Handfläche. Stell dir vor, hindurchzugleiten. Im Traum gibt feste Materie manchmal nach.';
+
+  @override
+  String get realitaetUebungTextTitel => 'Text zweimal lesen';
+
+  @override
+  String get realitaetUebungTextText =>
+      'Lies eine Zeile oder eine Uhrzeit, schau kurz weg und lies noch einmal. Im Traum wechseln Buchstaben und Ziffern oft ihr Aussehen.';
+
+  @override
+  String get realitaetBestaetigenWach => 'Ich bin wach';
+
+  @override
+  String get realitaetBestaetigenTraum => 'Ich träume!';
+
+  @override
+  String get realitaetErinnerungenAktiv => 'Erinnerungen am Tag';
+
+  @override
+  String realitaetZeitfenster(int von, int bis) {
+    return 'Zeitfenster: $von bis $bis Uhr';
+  }
+
+  @override
+  String realitaetAnzahlTag(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: '$n Erinnerungen pro Tag',
+      one: '1 Erinnerung pro Tag',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get realitaetMotiveTitel => 'Motive aus deinem Tagebuch';
+
+  @override
+  String get realitaetMotiveKeine =>
+      'Sobald du mehr Notizen im Tagebuch hast, schlägt die App hier wiederkehrende Bilder als Auslöser vor.';
+
+  @override
+  String realitaetMotivSatz(String wort) {
+    return 'Wenn ich $wort sehe, frage ich mich, ob ich träume.';
+  }
+
+  @override
+  String get realitaetMitteilungTitel => 'Kurzer Moment für dich';
+
+  @override
+  String get realitaetMitteilungText =>
+      'Nimm dir einen kurzen Augenblick Zeit.';
+
+  @override
+  String get realitaetHinweisXiaomi =>
+      'Hinweis für Xiaomi- und MIUI-Geräte: Damit Erinnerungen verlässlich eintreffen, sollten Akku-Optimierung und Autostart in den Telefoneinstellungen für die App freigegeben sein.';
+
+  @override
+  String get realitaetKanalName => 'Achtsamkeit';
+
+  @override
+  String get realitaetKanalBeschreibung =>
+      'Erinnerungen für den Realitätscheck am Tag';
 }
