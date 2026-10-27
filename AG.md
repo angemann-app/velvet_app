@@ -67,11 +67,7 @@ seinem OK führt Claude zusammen, trägt den Auftrag unter „Erledigt“ ein un
 Jede Zeile mit Datum. Einträge, die älter als drei Tage sind, fragt Antigravity beim Nutzer nach, statt sie
 stillschweigend zu übergehen.
 
-- seit 27.10.2026, Aufgabe 1 (Bildübertragung, PR #14): `lib/services/foto_kanal.dart`,
-  `lib/services/foto_verbindung.dart`, `test/foto_kanal_test.dart`
-- seit 27.10.2026, Aufgabe 2 (NIP-17, eigene Sitzung): `lib/services/nostr_service.dart`,
-  `lib/services/nostr_event_check.dart`, `lib/services/rueckmeldung.dart`, `lib/services/nip44.dart`,
-  `lib/services/gift_wrap.dart`, `lib/services/message_notifier.dart` (Branch `feature/nip17`, PR #17)
+(zurzeit nichts gesperrt)
 
 ## Offene Aufträge
 
@@ -112,6 +108,7 @@ Nutzer „keine neuen Aussprache-Meldungen“ melden.
 ## Erledigt
 
 - 26.10.2026, AG-1 Schritt A (`aussprache/2026-10-26`, PR #12): 16 Lexikon-Einträge, 8 Aufnahmen neu.
-  Schritt B (übrige Aufnahmen mit diesen Wörtern) folgt nach dem Zusammenführen.
 - 26.10.2026, AG-2 (`ag/2-traum-sanft`, PR #11): sanfte Texte der Traum-Reise, 39 Bausteine je Sprache;
   Fantasie-Räume (31 Bausteine) lokal unter `C:\TOOLS\velvet-inhalte\traum\fantasie.json` zum Gegenlesen.
+- 27.10.2026, AG-1 Schritt B (`aussprache/2026-10-27-nachsprechen`, PR #20): 96 übrige Aufnahmen
+  mit den Wörtern aus Schritt A nachgesprochen (55 Lektionen, 41 geführte Bausteine).
