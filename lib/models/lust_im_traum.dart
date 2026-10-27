@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 
 import '../services/pakete.dart';
+import '../services/testmodus.dart';
 import 'einschlaf_reise.dart';
 import 'paar_abend.dart';
 import 'traum_reise.dart';
@@ -83,7 +84,7 @@ class LustDaten {
   /// Ist die Folge frei? Folge 1 immer; sonst nach [abendeFuerNaechste] Abenden der vorigen, oder wenn eine
   /// spätere schon gehört wurde.
   static bool frei(int folge, Map<int, int> fortschritt) {
-    if (folge <= 1) return true;
+    if (folge <= 1 || Testmodus.an) return true;
     if ((fortschritt[folge - 1] ?? 0) >= abendeFuerNaechste) return true;
     return fortschritt.entries.any((e) => e.key >= folge && e.value > 0);
   }

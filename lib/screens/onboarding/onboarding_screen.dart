@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../models/user_profile.dart';
 import '../../services/storage_service.dart';
+import '../../services/testmodus.dart';
 import '../../services/auto_backup_service.dart';
 import '../../services/backup_codec.dart';
 import '../../services/message_notifier.dart';
@@ -1022,11 +1023,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const Icon(Icons.system_update_rounded, color: AppTheme.sageGreen, size: 20),
               const SizedBox(width: 10),
               Expanded(
-                child: FutureBuilder<String>(
-                  future: UpdateService.installedVersion(),
-                  builder: (context, snap) => Text(
-                    t.onboardingVersionData(snap.data ?? '…'),
-                    style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+                child: GestureDetector(
+                  // Siebenmal tippen: Testmodus an/aus (lib/services/testmodus.dart).
+                  onTap: () {
+                    final neu = Testmodus.tippen();
+                    if (neu == null) return;
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(SnackBar(content: Text(neu ? t.testmodusAn : t.testmodusAus)));
+                  },
+                  child: FutureBuilder<String>(
+                    future: UpdateService.installedVersion(),
+                    builder: (context, snap) => Text(
+                      t.onboardingVersionData(snap.data ?? '…'),
+                      style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+                    ),
                   ),
                 ),
               ),

@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../models/paar_abend.dart';
 import '../../models/selbst_reise.dart';
 import '../../services/sprachausgabe.dart';
+import '../../services/testmodus.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
@@ -100,7 +101,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
     await prefs.setStringList(_keyZuletzt, [...neu, ...zuletzt].take(30).toList());
 
     setState(() {
-      _ablauf = ablauf;
+      _ablauf = Testmodus.kuerzen(ablauf);
       _index = 0;
       _imSchritt = Duration.zero;
       _pausiert = false;
