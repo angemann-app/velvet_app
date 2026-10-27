@@ -1,6 +1,6 @@
 # Konzept: Paar-Kanal von NIP-04 auf NIP-17
 
-Stand: Entwurf vom 27.10.2026, noch nicht abgestimmt. Offene Fragen am Ende. Aufgabe 2 in `docs/AUFGABEN.md`.
+Stand: abgestimmt am 27.10.2026, noch nicht umgesetzt. Entscheidungen am Ende. Aufgabe 2 in `docs/AUFGABEN.md`.
 Öffentlich angekündigt im Nostr-Beitrag vom 25.10.2026 („Moving to NIP-17 is on the list“).
 
 ## Warum
@@ -42,14 +42,17 @@ Die Nachrichteninhalte selbst (JSON mit `type`, `text`, `vote` …) bleiben glei
 
 **Stufe 1 (eine Beta, dann stabil):**
 - Die App **versteht beide Verfahren** beim Empfangen, immer.
-- Sie **kündigt an**, was sie kann: Beim Start und nach dem Koppeln schickt sie (noch per NIP-04) eine
-  unsichtbare Nachricht `{"type": "faehig", "nip17": 1}`. Ältere Versionen ignorieren unbekannte Typen.
+- Sie **kündigt an**, was sie kann: Jede Nachricht, die sie noch per NIP-04 schickt, trägt zusätzlich das Feld
+  `"nip17": 1` im verschlüsselten Inhalt (ältere Versionen ignorieren unbekannte Felder, eine eigene
+  Nachrichtenart könnte dort als Text auftauchen). Dazu ein flüchtiges Signal `{"t": "faehig", "nip17": 1}`
+  beim Start, damit es auch ohne Chatnachricht schnell geht (ältere Versionen ignorieren unbekannte Signale).
 - Sie **sendet NIP-17 erst**, wenn vom Gegenüber eine solche Ankündigung kam (gespeichert pro Paar). Sonst
   bleibt sie bei NIP-04. Kommt eine NIP-17-Nachricht vom Gegenüber, gilt das ebenfalls als Ankündigung.
 - Neue Kopplungen zwischen zwei neuen Versionen sind damit nach der ersten Nachricht auf NIP-17.
 
 **Stufe 2 (späteres Release):** NIP-04 beim Senden ganz abschalten, beim Empfangen noch eine Weile lesen
-(alte Nachrichten auf den Servern, Rückfall), danach entfernen. Zeitpunkt siehe Frage 2.
+(alte Nachrichten auf den Servern, Rückfall), danach entfernen. **Frühestens fünf stabile Versionen nach
+Stufe 1**, weil Updates nur angeboten und nie erzwungen werden; vorher bleibt der Rückfall auf NIP-04.
 
 ## Technik
 
@@ -79,17 +82,15 @@ Mittel bis groß: NIP-44 mit Testvektoren, Gift Wrap, Aushandlung, Umbau von `no
 Abo, Empfang), Tests. Eher eine Aufgabe für Opus. Danach eine Beta und ein Test auf zwei Handys mit einer
 alten und einer neuen Version.
 
-## Offene Fragen
+## Entscheidungen (27.10.2026)
 
-1. **Einverstanden mit dem Weg** „Stufe 1: beides verstehen, NIP-17 nur senden, wenn das Gegenüber es
-   ankündigt“?
-2. **Wann Stufe 2** (NIP-04 nicht mehr senden)? Vorschlag: mit der übernächsten stabilen Version, frühestens
-   vier Wochen nach Stufe 1.
-3. **Signale und Lesebestätigungen:** Vorschlag: nur auf NIP-44 umstellen, nicht in Hüllen packen. Signale
-   sind flüchtig (Server speichern sie nicht), eine Hülle pro Signal würde die Foto-Übertragung bremsen. Dafür
-   bleibt bei ihnen sichtbar, dass dieses Paar gerade online ist. Alternative: auch sie in Hüllen (mehr
-   Schutz, etwas langsamer).
-4. **Rückmelde-Postfach** gleich mit auf NIP-17 umstellen? Vorschlag: ja; das Abhol-Skript liest dann beides.
-5. **Kopie an sich selbst** mitsenden (Standard bei NIP-17)? Vorschlag: nein, solange es keine
-   Geräte-Wiederherstellung über die Server gibt. Das halbiert den Datenverkehr und es liegt weniger auf den
-   Servern.
+1. **Übergang:** Stufe 1 wie beschrieben: beides verstehen, NIP-17 erst senden, wenn das Gegenüber es angekündigt hat.
+2. **Stufe 2** (NIP-04 nicht mehr senden) erst, wenn wirklich alle umgestellt sind: frühestens **fünf stabile
+   Versionen** nach Stufe 1, weil Updates nur angeboten werden.
+3. **Signale und Lesebestätigungen** (Entscheidung Claude): nur auf NIP-44 umstellen, keine Hüllen. Signale sind
+   flüchtig und zeitkritisch (Foto-Übertragung); eine Hülle je Signal brächte wenig und bremst. Lesebestätigungen
+   sind ersetzbare Events (kind 30078) und brauchen ihren festen Absender. Sichtbar bleibt dort, dass dieses Paar
+   aktiv ist; die Inhalte sind geschützt. NIP-44 nur, wenn das Gegenüber NIP-17 angekündigt hat, sonst NIP-04.
+4. **Rückmelde-Postfach** wird mit umgestellt; das Abhol-Skript liest beides.
+5. **Keine Kopie an sich selbst** (Entscheidung Claude), solange es keine Wiederherstellung über die Server gibt:
+   halber Datenverkehr, weniger auf den Servern.
