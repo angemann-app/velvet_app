@@ -413,6 +413,27 @@
           "text": "Courses are now grouped into six focus areas that fold open, with the guided audios as a row to swipe through above them."
         }
       ]
+    },
+    {
+      "build": 49,
+      "version": "4.13.0-beta.1",
+      "punkte": [
+        {
+          "icon": "edit",
+          "titel": "Weekly review",
+          "text": "The dream journal now calmly shows what the week brought, without scores or rankings."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Reality checks",
+          "text": "If you like, the app reminds you two to four times a day of a brief moment for yourself. Off by default."
+        },
+        {
+          "icon": "spa",
+          "titel": "Waking at night",
+          "text": "In the dream evening you can be woken for one night and are then gently guided back to sleep. At most twice a week."
+        }
+      ]
     }
   ],
   "_source": {
@@ -438,6 +459,7 @@
     "news:45": "2e980f20ba35645c",
     "news:46": "3ad1a4437492b249",
     "news:47": "b439804861d14cc0",
-    "news:48": "e6e4b06f58104a52"
+    "news:48": "e6e4b06f58104a52",
+    "news:49": "9bfe371fc494e8b4"
   }
 }
