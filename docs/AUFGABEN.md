@@ -17,6 +17,8 @@ angezeigt werden.
 
 ## 2. Nostr-Migration auf NIP-17
 
+Konzept: `docs/konzepte/nip17.md` (abgestimmt, Entscheidungen am Ende).
+
 Von NIP-04 auf NIP-17 (Gift-Wrap) umstellen, ohne dass Paare mit unterschiedlichen App-Versionen sich
 verlieren.
 
@@ -33,11 +35,18 @@ verlieren.
 
 Paketverwaltung mit signierter `audio-index.json` (englisches Paket muss weiter funktionieren) und
 Upload-Workflow nach Cloudflare R2. Danach in eigener Sitzung das Traumtagebuch.
-Details: `docs/konzepte/traum-reise.md`.
+Details: `docs/konzepte/traum-reise.md` (inkl. Schutz vor Zurückrollen: Laufnummer im signierten
+Verzeichnis, Prüfschlüssel fest in der App).
 
-## Laufend: Aussprache korrigieren (täglich)
+## 4. Lust im Traum (aufbauende Serie)
 
-Übernimmt Antigravity als Auftrag **AG-1** in `AG.md` (dort der genaue Ablauf). Kurzfassung:
+Konzept (abgestimmt): `docs/konzepte/lust-im-traum.md`. Baut auf Traum-Reise Schritt 1,
+Traumtagebuch und nächtlichem Wecken auf, kommt daher danach.
+
+## Laufend: Aussprache korrigieren (täglich) → AG-1
+
+Übernimmt Antigravity als Auftrag **AG-1** in `AG.md` (dort der genaue Ablauf, auch das Nachsprechen aller
+betroffenen Aufnahmen in Schritt B). Kurzfassung:
 
 Nutzer melden falsch ausgesprochene Wörter in der App („Wort falsch ausgesprochen?“) oder als Issue.
 

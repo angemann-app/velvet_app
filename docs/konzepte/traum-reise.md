@@ -32,6 +32,8 @@ und selten.
 - **Orgasmus im Schlaf:** Kommt bei Menschen jeden Geschlechts natürlicherweise vor. **Er lässt sich weder
   auslösen noch üben** und ist kein Ziel des Programms. Die App erwähnt ihn als schöne Möglichkeit und
   normalisiert ihn (keine Scham, kein „Problem“), mehr nicht.
+  Wer den Höhepunkt im Traum ausdrücklich einladen möchte, findet dafür die eigene Serie „Lust im Traum“
+  (`docs/konzepte/lust-im-traum.md`).
 - Kein Versprechen von Heilung, besserer Beziehung oder mehr Lust im Wachleben.
 
 Formulierung in der App (Vorschlag): „Träume lassen sich einladen, nicht steuern. Mit etwas Übung
@@ -326,6 +328,16 @@ Name, Sprache, Version, Größe, SHA-256 und Adresse. Die App kennt nur die Adre
 kommen neue Pakete und korrigierte Aufnahmen **ohne App-Update**. Das Verzeichnis wird mit einem
 Ed25519-Schlüssel signiert (`cryptography` ist schon dabei), damit niemand fremde Audios unterschieben kann,
 auch wenn die Pakete einmal woanders liegen als auf GitHub.
+
+Ergänzt nach Hinweisen aus der Nostr-Community (26.10.2026):
+- **Prüfschlüssel fest in der App:** Der öffentliche Ed25519-Schlüssel steckt im Code, er wird nie zusammen
+  mit den Paketen geladen. Der private Schlüssel liegt nur außerhalb des Repositorys (wie der Signierschlüssel
+  der App).
+- **Schutz vor Zurückrollen:** Im signierten Verzeichnis stehen eine **Formatversion** und eine **stetig
+  steigende Laufnummer**. Die App merkt sich die höchste angenommene Laufnummer und lehnt jedes Verzeichnis mit
+  kleinerer Nummer ab, auch wenn es gültig signiert ist. So lässt sich kein altes Paket als „Update“
+  unterschieben.
+- **Prüfung offline:** Signatur und SHA-256 werden auf dem Gerät geprüft, ohne Dienst im Netz.
 
 **Pakete können klein sein:** Nicht ein großes ZIP pro Sprache, sondern ein Paket pro Thema. Wer nur die
 Traum-Reise auf Deutsch will, lädt nur diese, und eine korrigierte Aufnahme erneuert nur ihr Paket.

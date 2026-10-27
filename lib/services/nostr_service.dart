@@ -964,6 +964,7 @@ class NostrService {
     _nip17Seit = 0;
     await prefs.remove(_keyNip17Seit);
     _faehigGesendet = false;
+    _letzteFaehigAntwort = 0;
   }
 
   /// Fehlen Name oder Geschlecht des Gegenübers, fragt der Paar-Kanal einmal nach.

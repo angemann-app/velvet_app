@@ -338,7 +338,9 @@ void main() {
       nostr.handleSignal(dm({'t': 'faehig', 'nip17': 1}, kind: NostrService.signalKind));
       expect(nostr.partnerNip17, isTrue);
       await Future<void>.delayed(Duration.zero);
-      final antworten = gesendet.where((e) => e['kind'] == NostrService.signalKind).toList();
+      // Nur Antworten zählen (das eigene Start-Signal aus dem Zeitgeber kann dazwischenkommen).
+      final antworten =
+          gesendet.where((e) => e['kind'] == NostrService.signalKind && lesen(e)['antwort'] == 1).toList();
       expect(antworten, hasLength(1));
       expect(antworten.single['content'], isNot(contains('?iv=')), reason: 'NIP-44');
       expect(lesen(antworten.single), {'t': 'faehig', 'nip17': 1, 'antwort': 1});
@@ -347,7 +349,7 @@ void main() {
       gesendet.clear();
       nostr.handleSignal(dm({'t': 'faehig', 'nip17': 1, 'antwort': 1}, kind: NostrService.signalKind));
       await Future<void>.delayed(Duration.zero);
-      expect(gesendet.where((e) => e['kind'] == NostrService.signalKind), isEmpty);
+      expect(gesendet.where((e) => e['kind'] == NostrService.signalKind && lesen(e)['antwort'] == 1), isEmpty);
     });
 
     test('Signale und Lesebestätigungen: NIP-04 vor, NIP-44 nach der Ankündigung, Empfang beider Formate', () async {

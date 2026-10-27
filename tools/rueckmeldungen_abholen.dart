@@ -3,8 +3,13 @@
 // Neue Rückmeldungen werden ausgegeben und an C:\TOOLS\velvet-feedback\rueckmeldungen.md angehängt,
 // danach öffentliche Antworten und Erwähnungen des Projekt-Profils (nur lesen).
 //
-//   C:\TOOLS\flutter\bin\dart.bat run tools/rueckmeldungen_abholen.dart          (nur neue)
-//   C:\TOOLS\flutter\bin\dart.bat run tools/rueckmeldungen_abholen.dart --alle   (alle, die die Server noch haben)
+//   C:\TOOLS\flutter\bin\dart.bat run tools/rueckmeldungen_abholen.dart             (nur neue)
+//   C:\TOOLS\flutter\bin\dart.bat run tools/rueckmeldungen_abholen.dart --alle      (alle, die die Server noch haben)
+//   C:\TOOLS\flutter\bin\dart.bat run tools/rueckmeldungen_abholen.dart --leser ag  (eigener Lesestand)
+//
+// Jeder Leser hat seinen eigenen Lesestand (gesehen_<leser>.json), damit Antigravity und Claude sich
+// die Meldungen nicht gegenseitig „wegholen“. Ohne --leser gilt gesehen.json (Claude). Nur dieser
+// Standard-Leser hängt an rueckmeldungen.md an, damit dort nichts doppelt steht.
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -30,7 +35,12 @@ Future<void> main(List<String> args) async {
   final schluessel = jsonDecode(File('$ordner\\feedback_key.json').readAsStringSync()) as Map<String, dynamic>;
   final privat = Nip19().decode(schluessel['nsec'] as String)['data'] as String;
   final oeffentlich = schluessel['hex_public'] as String;
-  final gesehenDatei = File('$ordner\\gesehen.json');
+  final lesePos = args.indexOf('--leser');
+  final leser = lesePos >= 0 && lesePos + 1 < args.length ? args[lesePos + 1] : null;
+  final gesehenDatei = File(leser == null ? '$ordner\\gesehen.json' : '$ordner\\gesehen_$leser.json');
+  // Neuer Leser: beginnt beim gemeinsamen Stand von bisher, statt alles Alte noch einmal zu melden.
+  final gemeinsam = File('$ordner\\gesehen.json');
+  if (leser != null && !gesehenDatei.existsSync() && gemeinsam.existsSync()) gemeinsam.copySync(gesehenDatei.path);
   final gesehen = <String>{
     if (gesehenDatei.existsSync() && !alle) ...(jsonDecode(gesehenDatei.readAsStringSync()) as List).cast<String>(),
   };
@@ -74,7 +84,7 @@ Future<void> main(List<String> args) async {
     gesehen.add(ev.id);
   }
   stdout.writeln(neu.isEmpty ? 'Keine neuen Rückmeldungen.' : '${neu.length} neue Rückmeldung(en):\n\n$protokoll');
-  if (neu.isNotEmpty && !alle) {
+  if (neu.isNotEmpty && !alle && leser == null) {
     File('$ordner\\rueckmeldungen.md').writeAsStringSync(protokoll.toString(), mode: FileMode.append);
   }
   // Öffentliche Antworten und Erwähnungen am Projekt-Profil (kind 1, ohne eigene Beiträge).

@@ -17,14 +17,19 @@ einer Funktion das passende Konzept lesen, besonders den Abschnitt „Entscheidu
 Ist eine Frage für den aktuellen Schritt noch offen, nachfragen statt raten.
 
 - Einschlaf-Reise: `docs/konzepte/einschlaf-reise.md`, Texte nach `docs/konzepte/einschlaf-reise-textvorgabe.md`
+- Lust im Traum: `docs/konzepte/lust-im-traum.md` (abgestimmt, Entscheidungen am Ende)
 - Traum-Reise: `docs/konzepte/traum-reise.md` (abgestimmt, Entscheidungen am Ende; Reihenfolge: Paketverwaltung und Traumtagebuch,
   dann sanfte Traum-Absicht, dann Fantasie-Räume, dann nächtliches Wecken)
 
 **Aufgabenliste:** `docs/AUFGABEN.md` (Reihenfolge = Priorität). Erledigtes dort nach unten verschieben.
 
-**Antigravity:** Arbeitet parallel auf dem Rechner des Nutzers nach `AG.md`. Aufträge für Antigravity dort
-eintragen (klar abgegrenzt, mit erlaubten Dateien); Dateien, an denen Claude Code gerade arbeitet, unter
-„Gesperrt“ eintragen und nach Abschluss wieder freigeben.
+**Antigravity:** Arbeitet parallel auf dem Rechner des Nutzers nach `AG.md` (dort „Wer macht was“).
+Claude schreibt die Aufträge (klar abgegrenzt, mit erlaubten Dateien), prüft die Pull Requests von
+Antigravity (Kommentar im PR, Kleinigkeiten auf Wunsch im Branch nachbessern), führt **alle** Pull Requests
+selbst zusammen (bei Aufnahmen und Texten erst nach dem OK des Nutzers) und trägt unter „Erledigt“ ein. Antigravity ändert `AG.md` in seinen Branches nicht.
+Dateien, an denen Claude Code gerade arbeitet, mit Datum unter „Gesperrt“ eintragen und nach Abschluss
+wieder freigeben. Rückmeldungen holt Claude mit `tools/rueckmeldungen_abholen.dart` (eigener Lesestand),
+Antigravity mit `--leser ag`.
 
 **Grundsatz Inhalte:** Langfristig werden alle Inhalte (Texte und Audios) getrennt von der App als
 signierte Pakete angeboten. Neue Inhalte deshalb so anlegen, dass sie in ein Paket wandern können; nur
@@ -76,4 +81,6 @@ flutter test test_screens/screens_test.dart   # rendert alle Screens nach build/
 ## Git
 
 - Größere Änderungen auf einem eigenen Branch, nicht direkt auf `main`.
-- Releases baut der Nutzer selbst mit `tools/release.ps1`; Build-Nummer steigt immer.
+- Releases baut und veröffentlicht Claude Code mit `tools/release.ps1`, aber nur nach ausdrücklicher
+  Freigabe des Nutzers für genau dieses Release (Version und Build-Nummer). Die Build-Nummer steigt immer,
+  über Beta und Stabil hinweg; vorher braucht es einen „Was ist neu“-Eintrag für diese Build-Nummer.
