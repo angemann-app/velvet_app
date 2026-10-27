@@ -40,6 +40,8 @@ class BackupCodec {
     'partnerFantasyVotes': String,
     'partnerReflections': String,
     'nostrPartnerGender': String,
+    // Für welches Gegenüber NIP-17 angekündigt wurde (öffentlicher Schlüssel, siehe NostrService).
+    'nostrPartnerNip17': String,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.
@@ -74,7 +76,7 @@ class BackupCodec {
       _checkSize(value, entry.key);
       clean[entry.key] = value;
     }
-    for (final field in ['nostrPubKey', 'nostrPartnerPubKey']) {
+    for (final field in ['nostrPubKey', 'nostrPartnerPubKey', 'nostrPartnerNip17']) {
       final key = clean[field] as String?;
       if (key != null && key.isNotEmpty && !isValidPublicKeyHex(key)) {
         throw BackupException(t.backupCodecTheBackupContainsAnInvalid);

@@ -355,6 +355,17 @@
       ]
     },
     {
+      "build": 44,
+      "version": "4.10.0-beta.1",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Paar-Kanal noch privater",
+          "text": "Nachrichten gehen jetzt versiegelt (NIP-17), sobald auch das Handy deines Gegenübers diese Version hat: Die Server sehen dann nicht mehr, wer wem wann schreibt, und auch die Länge verrät weniger. Das stellt sich nach der ersten Nachricht von selbst ein. Mit einer älteren Version schreibt ihr weiter wie bisher."
+        }
+      ]
+    },
+    {
       "build": 45,
       "version": "4.10.0-beta.1",
       "punkte": [

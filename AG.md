@@ -71,7 +71,7 @@ stillschweigend zu übergehen.
   `lib/services/foto_verbindung.dart`, `test/foto_kanal_test.dart`
 - seit 27.10.2026, Aufgabe 2 (NIP-17, eigene Sitzung): `lib/services/nostr_service.dart`,
   `lib/services/nostr_event_check.dart`, `lib/services/rueckmeldung.dart`, `lib/services/nip44.dart`,
-  `lib/services/gift_wrap.dart`
+  `lib/services/gift_wrap.dart`, `lib/services/message_notifier.dart` (Branch `feature/nip17`, PR #17)
 
 ## Offene Aufträge
 

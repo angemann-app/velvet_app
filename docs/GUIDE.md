@@ -74,7 +74,7 @@ The start page also has the 30-second check-in: how do stress and desire relate 
 
 <img src="anleitung/04_paarkanal_verbunden.png" width="260" alt="Couple channel">
 
-In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted.
+In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.
 
 Sparks: with one tap you show what you're in the mood for today, or not.
 

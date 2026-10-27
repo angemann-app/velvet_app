@@ -74,7 +74,7 @@ Auf der Startseite wartet außerdem der 30-Sekunden-Check-in: Wie stehen Stress 
 
 <img src="anleitung/04_paarkanal_verbunden.png" width="260" alt="Paar-Kanal">
 
-Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt.
+Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt. Haben beide Handys eine neue Version, gehen sie versiegelt (NIP-17): Die Server sehen dann nicht mehr, wer wem wann schreibt. Das stellt sich von selbst ein, mit älteren Versionen klappt es weiter wie bisher.
 
 Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.
 
