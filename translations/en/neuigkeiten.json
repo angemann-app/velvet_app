@@ -402,6 +402,17 @@
           "text": "In spicy mode: eight evenings that build on each other up to the lucid, sensual dream, for women and men, with a free choice of dream body and partner. The recordings come as a separate package."
         }
       ]
+    },
+    {
+      "build": 48,
+      "version": "4.12.0-beta.2",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "A clearer home screen",
+          "text": "Courses are now grouped into six focus areas that fold open, with the guided audios as a row to swipe through above them."
+        }
+      ]
     }
   ],
   "_source": {
@@ -426,6 +437,7 @@
     "news:44": "d89c7d4589101e92",
     "news:45": "2e980f20ba35645c",
     "news:46": "3ad1a4437492b249",
-    "news:47": "b439804861d14cc0"
+    "news:47": "b439804861d14cc0",
+    "news:48": "e6e4b06f58104a52"
   }
 }

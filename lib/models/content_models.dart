@@ -65,7 +65,12 @@ class Course {
 
   /// Nur mit eingeschaltetem Spicy-Modus sichtbar (Feld "spicy" in velvet_content.json).
   final bool spicy;
+
+  /// Schwerpunkt auf der Startseite (docs/konzepte/startseite.md), einer aus [schwerpunkte].
+  final String schwerpunkt;
   final List<Lesson> lessons;
+
+  static const schwerpunkte = ['grundlagen', 'annehmen', 'entdecken', 'paar', 'beruehrung', 'fantasie'];
 
   Course({
     required this.id,
@@ -76,6 +81,7 @@ class Course {
     this.image,
     this.titleColor,
     this.spicy = false,
+    this.schwerpunkt = 'grundlagen',
     required this.lessons,
   });
 
@@ -89,6 +95,7 @@ class Course {
         image: image,
         titleColor: titleColor,
         spicy: spicy,
+        schwerpunkt: schwerpunkt,
         lessons: [for (final l in lessons) if (!l.spicy) l],
       );
 
@@ -137,6 +144,7 @@ class Course {
       image: json['image'] as String?,
       titleColor: json['title_color'] as String?,
       spicy: json['spicy'] as bool? ?? false,
+      schwerpunkt: json['schwerpunkt'] as String? ?? 'grundlagen',
       lessons: (json['lessons'] as List<dynamic>?)
               ?.map((e) => Lesson.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -153,6 +161,7 @@ class Course {
         'image': image,
         if (titleColor != null) 'title_color': titleColor,
         if (spicy) 'spicy': true,
+        'schwerpunkt': schwerpunkt,
         'lessons': lessons.map((e) => e.toJson()).toList(),
       };
 }

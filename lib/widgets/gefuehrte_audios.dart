@@ -21,19 +21,39 @@ class GefuehrteAudios extends StatelessWidget {
   /// Ohne Körperreise, z. B. im Paar-Kanal.
   final bool mitSelbst;
 
-  const GefuehrteAudios({super.key, this.mitPaar = true, this.mitSelbst = true});
+  /// Startseite: kleine Kacheln in einer Reihe zum Wischen (docs/konzepte/startseite.md).
+  final bool kompakt;
+
+  const GefuehrteAudios({super.key, this.mitPaar = true, this.mitSelbst = true, this.kompakt = false});
 
   @override
   Widget build(BuildContext context) {
+    final karten = _karten(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (mitSelbst && mitPaar)
+        if (mitSelbst && (mitPaar || kompakt))
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: Text(t.gefuehrtTitel,
                 style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
           ),
+        if (mitSelbst) const _TagebuchKarte(),
+        if (kompakt)
+          _Kompakt(
+            child: SizedBox(
+              height: 150,
+              child: ListView(scrollDirection: Axis.horizontal, children: karten),
+            ),
+          )
+        else
+          ...karten,
+      ],
+    );
+  }
+
+  List<Widget> _karten(BuildContext context) {
+    return [
         if (mitSelbst)
           GefuehrtKarte(
             bild: 'assets/images/guided_selbst.svg',
@@ -41,7 +61,6 @@ class GefuehrteAudios extends StatelessWidget {
             text: t.gefuehrtSelbstText,
             onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SelbstReiseScreen())),
           ),
-        if (mitSelbst) const _TagebuchKarte(),
         if (mitSelbst) const _EinschlafKarte(),
         if (mitSelbst) const _TraumKarte(),
         if (mitSelbst)
@@ -56,9 +75,18 @@ class GefuehrteAudios extends StatelessWidget {
             text: t.couplesChannelGuidedTouchForTheTwo,
             onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PaarAbendScreen())),
           ),
-      ],
-    );
+    ];
   }
+}
+
+/// Markiert die kompakte Darstellung für die Karten darunter.
+class _Kompakt extends InheritedWidget {
+  const _Kompakt({required super.child});
+
+  static bool von(BuildContext context) => context.dependOnInheritedWidgetOfExactType<_Kompakt>() != null;
+
+  @override
+  bool updateShouldNotify(_Kompakt oldWidget) => false;
 }
 
 /// Die Einschlaf-Reise; im Diskretions-Modus steht auf der Karte nur „Entspannung“.
@@ -150,8 +178,9 @@ class GefuehrtKarte extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final kompakt = _Kompakt.von(context);
     return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
+      padding: kompakt ? const EdgeInsets.only(right: 10) : const EdgeInsets.only(bottom: 12),
       child: Semantics(
         button: true,
         label: titel,
@@ -165,7 +194,8 @@ class GefuehrtKarte extends StatelessWidget {
               onTap();
             },
             child: SizedBox(
-              height: 128,
+              height: kompakt ? 150 : 128,
+              width: kompakt ? 168 : null,
               child: Stack(fit: StackFit.expand, children: [
                 SvgPicture.asset(bild, fit: BoxFit.cover),
                 // Verlauf nach unten, damit der Text auf dem Bild lesbar bleibt.
@@ -187,10 +217,13 @@ class GefuehrtKarte extends StatelessWidget {
                     Expanded(
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                         Text(titel,
-                            style: const TextStyle(
-                                fontSize: 17, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
-                        const SizedBox(height: 2),
-                        Text(text,
+                            maxLines: kompakt ? 2 : null,
+                            overflow: kompakt ? TextOverflow.ellipsis : null,
+                            style: TextStyle(
+                                fontSize: kompakt ? 15 : 17, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+                        if (!kompakt) const SizedBox(height: 2),
+                        if (!kompakt)
+                          Text(text,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3)),

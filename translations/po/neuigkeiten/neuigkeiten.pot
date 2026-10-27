@@ -658,3 +658,15 @@ msgstr ""
 msgctxt "news:47#1.text"
 msgid "Im Spicy-Modus: acht aufeinander aufbauende Abende bis zum luziden, sinnlichen Traum, für Frauen und Männer, mit freier Wahl von Traumkörper und Gegenüber. Die Aufnahmen kommen als eigenes Paket."
 msgstr ""
+
+#. Was ist neu in Version 4.12.0-beta.2
+#. EN: A clearer home screen
+msgctxt "news:48#0.titel"
+msgid "Übersichtliche Startseite"
+msgstr ""
+
+#. Was ist neu in Version 4.12.0-beta.2
+#. EN: Courses are now grouped into six focus areas that fold open, with the guided audios as a row to swipe through above them.
+msgctxt "news:48#0.text"
+msgid "Die Kurse sind jetzt nach sechs Schwerpunkten geordnet und klappen auf, die geführten Audios liegen als Reihe zum Wischen darüber."
+msgstr ""

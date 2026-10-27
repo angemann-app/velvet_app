@@ -402,6 +402,17 @@
           "text": "Im Spicy-Modus: acht aufeinander aufbauende Abende bis zum luziden, sinnlichen Traum, für Frauen und Männer, mit freier Wahl von Traumkörper und Gegenüber. Die Aufnahmen kommen als eigenes Paket."
         }
       ]
+    },
+    {
+      "build": 48,
+      "version": "4.12.0-beta.2",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "Übersichtliche Startseite",
+          "text": "Die Kurse sind jetzt nach sechs Schwerpunkten geordnet und klappen auf, die geführten Audios liegen als Reihe zum Wischen darüber."
+        }
+      ]
     }
   ]
 }
