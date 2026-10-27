@@ -1,3 +1,4 @@
+// ignore_for_file: invalid_use_of_visible_for_testing_member
 // Echter Durchlauf gegen R2/GitHub: signiertes Verzeichnis laden und prüfen, ein Paket herunterladen und
 // installieren. Läuft nicht automatisch:  flutter test test_live/pakete_live_test.dart
 import 'dart:io';

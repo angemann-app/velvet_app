@@ -1,44 +1,9 @@
 # Aufgaben
 
-Stand: 26.10.2026. Reihenfolge = Priorität. Erledigtes nach unten unter „Erledigt“ verschieben.
+Stand: 27.10.2026. Reihenfolge = Priorität. Erledigtes nach unten unter „Erledigt“ verschieben.
 Für jede Aufgabe eine eigene Sitzung und ein eigener Branch.
 
-## 1. Bildübertragung reparieren (Fehler, zuerst)
-
-Bilder im Paar-Kanal lassen sich nach Offline-Phasen teilweise nicht mehr abrufen, obwohl sie als vorhanden
-angezeigt werden.
-
-- Zuerst die Ursache finden, nicht raten: Was passiert beim Wiederverbinden? Wird ein Bild als vorhanden
-  markiert, bevor es vollständig übertragen und gespeichert ist? Was passiert bei abgebrochener Übertragung?
-- Betroffene Stellen vermutlich `lib/services/foto_kanal.dart`, `foto_verbindung.dart`, `nostr_service.dart`,
-  `lib/screens/couples_channel/foto_ansicht.dart`.
-- Einen Test schreiben, der den Fehler nachstellt (`test/foto_kanal_test.dart`), dann beheben.
-- Bereits betroffene Bilder: erneut anfordern können statt dauerhaft „vorhanden, aber leer“.
-
-## 2. Nostr-Migration auf NIP-17
-
-Konzept: `docs/konzepte/nip17.md` (abgestimmt, Entscheidungen am Ende).
-
-Von NIP-04 auf NIP-17 (Gift-Wrap) umstellen, ohne dass Paare mit unterschiedlichen App-Versionen sich
-verlieren.
-
-- **Stufe 1:** Versions- und Fähigkeitsaushandlung. Die App versteht beide Verfahren, kündigt an, was sie
-  kann, und sendet NIP-17 nur, wenn das Gegenüber es sicher kann. Sonst Rückfall auf NIP-04.
-  Umgesetzt im Branch `feature/nip17` (27.10.2026); offen: Beta und Test auf zwei Handys (alt und neu).
-- **Stufe 2 (späteres Release):** NIP-04 abschalten, wenn beide Geräte umgestellt sind bzw. nach einer
-  Übergangszeit.
-- Regeln aus `docs/SICHERHEIT_AUDIT_BASELINE.md` gelten: eingehende Events immer durch `NostrEventCheck`,
-  Schlüssel nur über `SecretStore`. `test/security_test.dart` und `test/paar_kanal_test.dart` müssen grün
-  bleiben; neue Tests für Aushandlung und Rückfall. Live-Prüfung mit `test_live/relay_live_test.dart`.
-
-## 3. Traum-Reise, Schritt 1
-
-Paketverwaltung mit signierter `audio-index.json` (englisches Paket muss weiter funktionieren) und
-Upload-Workflow nach Cloudflare R2. Danach in eigener Sitzung das Traumtagebuch.
-Details: `docs/konzepte/traum-reise.md` (inkl. Schutz vor Zurückrollen: Laufnummer im signierten
-Verzeichnis, Prüfschlüssel fest in der App).
-
-## 4. Lust im Traum (aufbauende Serie)
+## 1. Lust im Traum (aufbauende Serie)
 
 Konzept (abgestimmt): `docs/konzepte/lust-im-traum.md`. Baut auf Traum-Reise Schritt 1,
 Traumtagebuch und nächtlichem Wecken auf, kommt daher danach.
@@ -64,3 +29,6 @@ Diese Routine kann auch von einem anderen Werkzeug (z. B. Antigravity) übernomm
 
 - 26.10.2026: Konzept Traum-Reise abgestimmt, `CLAUDE.md` angelegt, Cloudflare R2 eingerichtet und
   Verbindung geprüft.
+- 27.10.2026: Bildübertragung repariert (PR #14), NIP-17 Stufe 1 im Paar-Kanal (PR #17), signierte
+  Paketverwaltung und alle Aufnahmen ausgelagert, Deutsch und Englisch (PR #18, #19), Konzepte NIP-17 und
+  Lust im Traum (PR #15, #16), Zusammenarbeit mit Antigravity neu geregelt (PR #13).
