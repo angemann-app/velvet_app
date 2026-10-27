@@ -17,7 +17,7 @@ einer Funktion das passende Konzept lesen, besonders den Abschnitt „Entscheidu
 Ist eine Frage für den aktuellen Schritt noch offen, nachfragen statt raten.
 
 - Einschlaf-Reise: `docs/konzepte/einschlaf-reise.md`, Texte nach `docs/konzepte/einschlaf-reise-textvorgabe.md`
-- Lust im Traum: `docs/konzepte/lust-im-traum.md` (Entwurf, offene Fragen)
+- Lust im Traum: `docs/konzepte/lust-im-traum.md` (abgestimmt, Entscheidungen am Ende)
 - Traum-Reise: `docs/konzepte/traum-reise.md` (abgestimmt, Entscheidungen am Ende; Reihenfolge: Paketverwaltung und Traumtagebuch,
   dann sanfte Traum-Absicht, dann Fantasie-Räume, dann nächtliches Wecken)
 
