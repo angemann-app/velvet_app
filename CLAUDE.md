@@ -80,4 +80,6 @@ flutter test test_screens/screens_test.dart   # rendert alle Screens nach build/
 ## Git
 
 - Größere Änderungen auf einem eigenen Branch, nicht direkt auf `main`.
-- Releases baut der Nutzer selbst mit `tools/release.ps1`; Build-Nummer steigt immer.
+- Releases baut und veröffentlicht Claude Code mit `tools/release.ps1`, aber nur nach ausdrücklicher
+  Freigabe des Nutzers für genau dieses Release (Version und Build-Nummer). Die Build-Nummer steigt immer,
+  über Beta und Stabil hinweg; vorher braucht es einen „Was ist neu“-Eintrag für diese Build-Nummer.

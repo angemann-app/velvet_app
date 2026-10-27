@@ -7,8 +7,8 @@ unten.
 
 | Wer | Aufgabe |
 |---|---|
-| **Nutzer** | entscheidet, hört an, liest gegen, führt Pull Requests zusammen, baut Releases |
-| **Claude Code** | Konzepte, Code, Aufgabenliste `docs/AUFGABEN.md`; schreibt Aufträge in diese Datei; prüft die Pull Requests von Antigravity vor dem Zusammenführen; pflegt „Gesperrt“ und „Erledigt“ |
+| **Nutzer** | entscheidet, hört an, liest gegen, führt Pull Requests zusammen, gibt Releases frei |
+| **Claude Code** | Konzepte, Code, Aufgabenliste `docs/AUFGABEN.md`; schreibt Aufträge in diese Datei; prüft die Pull Requests von Antigravity vor dem Zusammenführen; pflegt „Gesperrt“ und „Erledigt“; baut und veröffentlicht Releases nach Freigabe |
 | **Antigravity** | arbeitet die Aufträge in dieser Datei ab, jeder in eigenem Branch und eigenem Pull Request |
 
 `docs/AUFGABEN.md` ist die Prioritätenliste des Projekts. Was davon an Antigravity geht, steht hier als
