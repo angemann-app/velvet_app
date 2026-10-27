@@ -25,6 +25,10 @@ abstract class FotoBote {
 
   /// ids der Fotos, die das Gegenüber geschickt hat (aus dem Nachrichtenverlauf).
   List<String> get empfangeneFotoIds;
+
+  /// Meldet sich, wenn neue Nachrichten ankommen oder sich die Verbindung zu den Servern ändert.
+  /// Dann lohnt ein neuer Abgleich (z. B. kam die Foto-Nachricht erst nach dem Start an).
+  Listenable get anlass;
 }
 
 class _NostrBote implements FotoBote {
@@ -45,6 +49,8 @@ class _NostrBote implements FotoBote {
   @override
   List<String> get empfangeneFotoIds =>
       [for (final m in _n.messagesNotifier.value) if (!m.isMe && m.fotoId != null) m.fotoId!];
+  @override
+  Listenable get anlass => Listenable.merge([_n.messagesNotifier, _n.statusNotifier]);
 }
 
 /// Fotos im Paar-Kanal: verschlüsselt direkt von Handy zu Handy, ohne Server dazwischen.
@@ -53,25 +59,36 @@ class _NostrBote implements FotoBote {
 ///    Ende-zu-Ende-verschlüsselten Nostr-Nachricht. Das verschlüsselte Foto bleibt bei ihm liegen.
 /// 2. Ist das Gegenüber erreichbar (unsichtbares „bist du da?“ über flüchtige Signale), bauen
 ///    beide über Signale eine WebRTC-Verbindung auf und das Foto geht direkt hinüber.
-/// 3. Sonst wartet es verschlüsselt beim Absender, bis beide den Paar-Kanal gleichzeitig offen
-///    haben (höchstens [aufbewahrung]).
+/// 3. Sonst wartet es verschlüsselt beim Absender, bis beide die App gleichzeitig offen haben
+///    (höchstens [aufbewahrung]). Solange die App offen ist, gleicht der Kanal regelmäßig ab
+///    ([abgleichen]): Signale können verloren gehen, Nachrichten kommen nach einer Offline-Zeit
+///    erst nach dem Start an, und die Server verbinden sich erst nach und nach.
 /// 4. Beim Gegenüber lässt es sich einmal ansehen; danach sind Datei und Schlüssel weg.
 class FotoKanal {
-  FotoKanal._(this._nostr, this._fabrik, this._ordner, [String praefix = ''])
+  FotoKanal._(this._nostr, this._fabrik, this._ordner, this._taktDauer, [String praefix = ''])
       : _keyAusgang = '${praefix}velvet_fotos_ausgang',
         _keyStatus = '${praefix}velvet_fotos_status';
 
-  static final FotoKanal instanz = FotoKanal._(_NostrBote(NostrService()), webRtcVerbindung, _standardOrdner);
+  static final FotoKanal instanz =
+      FotoKanal._(_NostrBote(NostrService()), webRtcVerbindung, _standardOrdner, const Duration(seconds: 30));
 
   /// Für Tests: zwei Kanäle in einem Prozess brauchen eigene Schlüssel in den Einstellungen.
+  /// Ohne [takt] gibt es keinen regelmäßigen Abgleich (nur Start, Anlässe und Signale).
   @visibleForTesting
   factory FotoKanal.fuerTest(FotoBote bote, FotoVerbindungFabrik fabrik, Future<String> Function() ordner,
-          String praefix) =>
-      FotoKanal._(bote, fabrik, ordner, praefix);
+          String praefix, {Duration? takt}) =>
+      FotoKanal._(bote, fabrik, ordner, takt, praefix);
 
   final FotoBote _nostr;
   final FotoVerbindungFabrik _fabrik;
   final Future<String> Function() _ordner;
+  final Duration? _taktDauer;
+
+  Timer? _takt;
+  Timer? _anlassTimer;
+  bool _gestartet = false;
+  bool _abgleichLaeuft = false;
+  bool _nochmal = false;
 
   static const aufbewahrung = Duration(days: 7);
   final String _keyAusgang; // id -> Zeitpunkt (ms)
@@ -106,35 +123,66 @@ class FotoKanal {
   // ---------------------------------------------------------------------------
   // Start und Signale
 
-  /// Beim Start der App: auf Signale hören, Wartendes ausliefern bzw. abholen. Auch erneut
-  /// aufrufbar, z. B. wenn eine neue Foto-Nachricht angekommen ist.
+  /// Beim Start der App: auf Signale hören und abgleichen. Danach gleicht der Kanal von selbst
+  /// erneut ab: bei neuen Nachrichten, bei neuer Server-Verbindung und im festen Takt.
   Future<void> start() async {
     _abo ??= _nostr.signale.listen(_signal);
-    try {
-      await _starten();
-    } catch (e) {
-      debugPrint('FotoKanal: Start nicht möglich (${e.runtimeType})');
+    if (!_gestartet) {
+      _gestartet = true;
+      _nostr.anlass.addListener(_anlassGekommen);
+      final takt = _taktDauer;
+      if (takt != null) _takt = Timer.periodic(takt, (_) => abgleichen());
     }
-  }
-
-  Future<void> _starten() async {
-    await _statusLaden();
-    await _aufraeumen();
-    // Als Empfänger: dem Gegenüber sagen, welche Fotos hier noch fehlen.
-    final fehlend = await _fehlendeFotos();
-    if (fehlend.isNotEmpty) await _nostr.sendSignal({'t': 'hallo', 'ids': fehlend});
-    // Als Absender: Wartendes ausliefern, falls das Gegenüber gerade da ist.
-    final ausgang = await _ausgang();
-    if (ausgang.isNotEmpty && await gegenueberDa()) {
-      for (final id in ausgang.keys) {
-        unawaited(_senden(id));
-      }
-    }
+    await abgleichen();
   }
 
   void stop() {
     _abo?.cancel();
     _abo = null;
+    _takt?.cancel();
+    _takt = null;
+    _anlassTimer?.cancel();
+    if (_gestartet) _nostr.anlass.removeListener(_anlassGekommen);
+    _gestartet = false;
+  }
+
+  /// Mehrere Anlässe kurz hintereinander (z. B. viele Nachrichten beim Abholen) ergeben einen Abgleich.
+  void _anlassGekommen() {
+    _anlassTimer?.cancel();
+    _anlassTimer = Timer(const Duration(milliseconds: 800), abgleichen);
+  }
+
+  /// Als Empfänger fehlende Fotos anfordern, als Absender Wartendes ausliefern, wenn das Gegenüber da
+  /// ist. Läuft nie doppelt; kommt währenddessen ein Anlass, folgt direkt ein weiterer Durchgang.
+  /// Auch für den Knopf „Jetzt erneut versuchen“.
+  Future<void> abgleichen() async {
+    if (_abgleichLaeuft) {
+      _nochmal = true;
+      return;
+    }
+    _abgleichLaeuft = true;
+    try {
+      do {
+        _nochmal = false;
+        await _statusLaden();
+        await _aufraeumen();
+        // Als Empfänger: dem Gegenüber sagen, welche Fotos hier noch fehlen. Geht das Signal verloren
+        // (Server noch nicht verbunden), fragt der nächste Abgleich erneut.
+        final fehlend = await _fehlendeFotos();
+        if (fehlend.isNotEmpty) await _nostr.sendSignal({'t': 'hallo', 'ids': fehlend});
+        // Als Absender: Wartendes ausliefern, falls das Gegenüber gerade da ist.
+        final offen = (await _ausgang()).keys.where((id) => !_verbindungen.containsKey(id)).toList();
+        if (offen.isNotEmpty && await gegenueberDa()) {
+          for (final id in offen) {
+            unawaited(_senden(id));
+          }
+        }
+      } while (_nochmal && _gestartet);
+    } catch (e) {
+      debugPrint('FotoKanal: Abgleich nicht möglich (${e.runtimeType})');
+    } finally {
+      _abgleichLaeuft = false;
+    }
   }
 
   /// Unsichtbare Anfrage: Ist die App beim Gegenüber gerade offen?
@@ -166,7 +214,19 @@ class FotoKanal {
       case 'hallo':
         final ausgang = await _ausgang();
         for (final x in (s['ids'] as List? ?? const [])) {
-          if (x is String && ausgang.containsKey(x)) unawaited(_senden(x));
+          if (x is! String) continue;
+          if (ausgang.containsKey(x)) {
+            unawaited(_senden(x));
+          } else {
+            // Liegt hier nicht mehr (zugestellt und gelöscht, oder nach der Aufbewahrungszeit):
+            // sagen, damit das Gegenüber nicht ewig wartet.
+            await _nostr.sendSignal({'t': 'weg', 'id': x});
+          }
+        }
+      case 'weg' when id != null:
+        if (!(await _datei('rein', id)).existsSync()) {
+          await _nostr.fotoVergessen(id);
+          _setzen(id, 'fehler', merken: true);
         }
       case 'angebot' when id != null:
         await _empfangen(id, s['sdp'] as String? ?? '');
@@ -261,7 +321,13 @@ class FotoKanal {
       await _nostr.sendSignal({'t': 'fehlt', 'id': id});
       return;
     }
-    if ((await _datei('rein', id)).existsSync() || _verbindungen.containsKey(id)) return;
+    if (_verbindungen.containsKey(id)) return;
+    if ((await _datei('rein', id)).existsSync()) {
+      // Schon da; die Bestätigung ist wohl verloren gegangen. Noch einmal schicken, sonst bietet
+      // der Absender das Foto immer wieder an.
+      await _nostr.sendSignal({'t': 'erhalten', 'id': id});
+      return;
+    }
     final teile = BytesBuilder(copy: false);
     final fertig = Completer<void>();
     final v = _fabrik(
@@ -315,7 +381,7 @@ class FotoKanal {
   /// Zustand eines Fotos für die Anzeige (Empfänger leitet ihn aus Datei und Schlüssel ab).
   Future<String> zustand(String id, {required bool vonMir}) async {
     final bekannt = status.value[id];
-    if (vonMir || bekannt == 'laedt' || bekannt == 'angesehen') return bekannt ?? 'wartet';
+    if (vonMir || bekannt == 'laedt' || bekannt == 'angesehen' || bekannt == 'fehler') return bekannt ?? 'wartet';
     if (await _nostr.fotoAngebot(id) == null) return 'angesehen';
     return (await _datei('rein', id)).existsSync() ? 'bereit' : 'wartet';
   }
@@ -323,7 +389,10 @@ class FotoKanal {
   Future<List<String>> _fehlendeFotos() async {
     return [
       for (final id in _nostr.empfangeneFotoIds)
-        if (await _nostr.fotoAngebot(id) != null && !(await _datei('rein', id)).existsSync()) id,
+        if (status.value[id] != 'fehler' &&
+            await _nostr.fotoAngebot(id) != null &&
+            !(await _datei('rein', id)).existsSync())
+          id,
     ];
   }
 
