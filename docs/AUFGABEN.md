@@ -9,6 +9,7 @@ Serie, Traumtagebuch und Paket sind gebaut (siehe Konzept, „Umsetzung“). Off
 - Auf dem Handy testen: Paket laden, Folge 1, Freischaltung, Traumkörper und Gegenüber ab Folge 3.
 - Nachfrage vor Lautsprecher-Wiedergabe, Pause beim Abziehen der Kopfhörer → AG-8
 - Realitätschecks sichtbarer (Zeile im Traum-Abend und im Tagebuch) → mit AG-8, für die nächste Beta
+- Freiwilliges anonymes „Hallo“ (`docs/konzepte/hallo.md`) → AG-9
   (`docs/konzepte/lautsprecher.md`)
 
 ## Laufend: Aussprache korrigieren (täglich) → OpenCode
