@@ -670,3 +670,39 @@ msgstr ""
 msgctxt "news:48#0.text"
 msgid "Die Kurse sind jetzt nach sechs Schwerpunkten geordnet und klappen auf, die geführten Audios liegen als Reihe zum Wischen darüber."
 msgstr ""
+
+#. Was ist neu in Version 4.13.0-beta.1
+#. EN: Weekly review
+msgctxt "news:49#0.titel"
+msgid "Wochenrückblick"
+msgstr ""
+
+#. Was ist neu in Version 4.13.0-beta.1
+#. EN: The dream journal now calmly shows what the week brought, without scores or rankings.
+msgctxt "news:49#0.text"
+msgid "Im Traumtagebuch siehst du jetzt ruhig, was die Woche gebracht hat, ganz ohne Punkte oder Ranglisten."
+msgstr ""
+
+#. Was ist neu in Version 4.13.0-beta.1
+#. EN: Reality checks
+msgctxt "news:49#1.titel"
+msgid "Realitätschecks"
+msgstr ""
+
+#. Was ist neu in Version 4.13.0-beta.1
+#. EN: If you like, the app reminds you two to four times a day of a brief moment for yourself. Off by default.
+msgctxt "news:49#1.text"
+msgid "Wenn du magst, erinnert dich die App zwei- bis viermal am Tag an einen kurzen Moment für dich. Standardmäßig aus."
+msgstr ""
+
+#. Was ist neu in Version 4.13.0-beta.1
+#. EN: Waking at night
+msgctxt "news:49#2.titel"
+msgid "Nächtliches Wecken"
+msgstr ""
+
+#. Was ist neu in Version 4.13.0-beta.1
+#. EN: In the dream evening you can be woken for one night and are then gently guided back to sleep. At most twice a week.
+msgctxt "news:49#2.text"
+msgid "Im Traum-Abend kannst du dich für eine Nacht wecken lassen und wirst danach sanft zurück in den Schlaf begleitet. Höchstens zweimal pro Woche."
+msgstr ""

@@ -413,6 +413,27 @@
           "text": "Die Kurse sind jetzt nach sechs Schwerpunkten geordnet und klappen auf, die geführten Audios liegen als Reihe zum Wischen darüber."
         }
       ]
+    },
+    {
+      "build": 49,
+      "version": "4.13.0-beta.1",
+      "punkte": [
+        {
+          "icon": "edit",
+          "titel": "Wochenrückblick",
+          "text": "Im Traumtagebuch siehst du jetzt ruhig, was die Woche gebracht hat, ganz ohne Punkte oder Ranglisten."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Realitätschecks",
+          "text": "Wenn du magst, erinnert dich die App zwei- bis viermal am Tag an einen kurzen Moment für dich. Standardmäßig aus."
+        },
+        {
+          "icon": "spa",
+          "titel": "Nächtliches Wecken",
+          "text": "Im Traum-Abend kannst du dich für eine Nacht wecken lassen und wirst danach sanft zurück in den Schlaf begleitet. Höchstens zweimal pro Woche."
+        }
+      ]
     }
   ]
 }

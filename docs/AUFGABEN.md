@@ -7,9 +7,6 @@ Für jede Aufgabe eine eigene Sitzung und ein eigener Branch.
 
 Serie, Traumtagebuch und Paket sind gebaut (siehe Konzept, „Umsetzung“). Offen:
 - Auf dem Handy testen: Paket laden, Folge 1, Freischaltung, Traumkörper und Gegenüber ab Folge 3.
-- Wochenrückblick des Traumtagebuchs → AG-5
-- Realitätschecks mit Motiven als Auslöser → AG-6
-- Nächtliches Wecken (Folge 5) → AG-7
 - Nachfrage vor Lautsprecher-Wiedergabe, Pause beim Abziehen der Kopfhörer → AG-8
   (`docs/konzepte/lautsprecher.md`)
 
@@ -27,4 +24,5 @@ führt nach dem OK des Nutzers zusammen. Ablauf in `docs/AUSSPRACHE.md` (früher
   Lust im Traum (PR #15, #16), Zusammenarbeit mit Antigravity neu geregelt (PR #13).
 - 27.10.2026: Traum-Abend in der App (PR #23), Traum-Aufnahmen (PR #27), Beta 4.11.0-beta.1 (Build 46),
   OpenCode als Helfer (PR #25, #26), Texte und deutsche Aufnahmen „Lust im Traum“ (lokal), Serie „Lust im
-  Traum“ und Traumtagebuch in der App.
+  Traum“ und Traumtagebuch in der App, Startseite mit Schwerpunkten (PR #35), Wochenrückblick, Realitätschecks
+  und nächtliches Wecken von Antigravity (AG-5 bis AG-7, PR #42).

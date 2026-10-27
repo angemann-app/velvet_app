@@ -71,91 +71,6 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
-### AG-5: Wochenrückblick im Traumtagebuch (einmalig, zuerst)
-
-**Branch:** `ag/5-wochenrueckblick`
-**Darf ändern:** `lib/screens/self_exploration/traum_tagebuch_screen.dart`, neue Datei
-`lib/models/traum_rueckblick.dart`, neuer Test `test/traum_rueckblick_test.dart`, `lib/l10n/app_de.arb` und
-`app_en.arb` (nur neue Schlüssel mit Präfix `rueckblick`), erzeugte `lib/l10n/app_localizations*.dart`.
-
-**Vorher lesen:** `docs/konzepte/traum-reise.md` (Tabelle „Bausteine“, Punkt 5; „Entscheidungen“ Punkt 6),
-`lib/models/traum_eintrag.dart`, `lib/screens/self_exploration/traum_tagebuch_screen.dart`.
-
-1. `lib/models/traum_rueckblick.dart`: reine Funktion, die aus einer Liste `TraumEintrag` für die letzten
-   sieben Tage zählt: Einträge, erinnerte Träume (Marke `erinnert`), „Nichts erinnert“, je Markierung die
-   Anzahl und je Abend (`abend`, z. B. `traum:warmes_wasser`) die Markierungen danach. Keine Wertung.
-2. Im Tagebuch oben eine ruhige, zuklappbare Karte „Diese Woche“ mit diesen Zahlen in Sätzen
-   (z. B. „An 4 Morgen erinnert, 2 Mal luzide“). Ab dem ersten Eintrag sichtbar.
-3. **Grenzen (Konzept):** kein Punktestand, keine Serien, keine Rangliste, keine Hervorhebung oder Empfehlung
-   „mehr davon“. Die Zuordnung Abend → Markierungen nur als stille Liste.
-4. Texte über ARB, Deutsch und Englisch; Englisch danach mit
-   `flutter test test/uebersetzung_test.dart --dart-define=PO=sync` abgleichen.
-
-**Prüfen:** `flutter analyze --no-fatal-infos --no-fatal-warnings`, `flutter test`,
-`flutter test test_screens/screens_test.dart` (Screen `14_traumtagebuch` ohne Überlauf).
-
-### AG-6: Realitätschecks (einmalig, nach AG-5)
-
-**Branch:** `ag/6-realitaetschecks`
-**Darf ändern:** neue Dateien `lib/services/realitaetscheck.dart`,
-`lib/screens/self_exploration/realitaetscheck_screen.dart`, `test/realitaetscheck_test.dart`;
-`lib/services/message_notifier.dart` (nur falls die Initialisierung geteilt werden muss),
-`lib/screens/self_exploration/traum_tagebuch_screen.dart` (nur ein Eintrag „Realitätschecks“ ins Menü),
-`lib/main.dart` (nur Initialisierung), `pubspec.yaml` (nur `timezone`, falls nötig),
-`android/app/src/main/AndroidManifest.xml` (nur nötige Berechtigungen), ARB-Dateien (Präfix `realitaet`),
-erzeugte `app_localizations*.dart`, `lib/services/storage_service.dart` und `test/backup_merge_test.dart` (nur die
-Einstellungen der Realitätschecks in Sicherung und Backup-Merge).
-
-**Vorher lesen:** `docs/konzepte/traum-reise.md`, Abschnitte „Realitätschecks“, „Traumtagebuch“ (Motive) und
-„Technik“; CLAUDE.md „Diskretion“.
-
-1. Einstellungen: an/aus (**Standard aus**), Zeitfenster (Standard 9 bis 21 Uhr), Anzahl pro Tag (2 bis 4).
-   Gespeichert lokal und Teil der Sicherung (siehe CLAUDE.md „Neue gespeicherte Daten“).
-2. Benachrichtigungen mit `flutter_local_notifications` (schon im Projekt, siehe `message_notifier.dart`),
-   zufällig im Zeitfenster, für die nächsten Tage vorausgeplant; beim Ausschalten alle löschen.
-3. **Texte neutral:** Benachrichtigung „Kurzer Moment für dich“ ohne jeden Bezug auf Träume, Lust oder Sex,
-   auch nicht im Text darunter. Ein Tipp öffnet einen kleinen Bildschirm mit der Übung (auf die Hand schauen,
-   Finger durch die Handfläche drücken wollen, einen Text zweimal lesen) und der Frage „Träume ich gerade?“.
-4. Motive: Wörter, die in Tagebuch-Einträgen der letzten 30 Tage mindestens dreimal vorkommen (einfache
-   Wortsuche, Füllwörter ignorieren, keine KI), werden im Bildschirm als eigene Auslöser angeboten
-   („Wenn ich Wasser sehe, frage ich mich, ob ich träume“). Nur Vorschlag, nichts automatisch.
-5. Erreichbar über ein Menü im Traumtagebuch und im Traum-Abend.
-6. Auf Xiaomi/MIUI werden Benachrichtigungen oft gebremst: im Bildschirm einen kurzen Hinweis, dass Akku-
-   Optimierung und Autostart für die App freigegeben sein sollten. Telefoneinstellungen ändert der Nutzer selbst.
-
-**Prüfen:** wie AG-5, dazu ein Test für die Planung (Zeiten im Fenster, Anzahl, Ausschalten löscht) und für die
-Motiv-Suche. Im Pull Request unter „Für den Nutzer“: was auf dem Handy zu testen ist.
-
-### AG-7: Nächtliches Wecken (einmalig, nach AG-6)
-
-**Branch:** `ag/7-naechtliches-wecken`
-**Darf ändern:** neue Dateien `lib/services/naechtliches_wecken.dart`,
-`lib/screens/self_exploration/wecken_screen.dart`, `test/naechtliches_wecken_test.dart`; Einträge im
-Traum-Abend (`einschlaf_reise_screen.dart`, nur ein Schalter „Heute Nacht wecken“ im Traum-Modus) und im
-Traumtagebuch (nur Öffnen nach dem Wecken); `assets/data/traum_reise.json` und
-`translations/en/traum_reise.json` (nur neue Bausteine mit `phase: "wecken"`); `pubspec.yaml` (nur falls ein
-Paket für den System-Wecker nötig ist, vorher im Pull Request begründen); ARB (Präfix `wecken`); Sicherung
-und Backup-Merge wie bei AG-6.
-
-**Vorher lesen:** `docs/konzepte/traum-reise.md`, Abschnitte „Bausteine“ (Punkt 4), „Sicherheit und Hinweise“,
-„Technik“ (Nächtliches Wecken), „Sprache und Stil“; `docs/konzepte/einschlaf-reise-textvorgabe.md`.
-
-1. Im Traum-Abend vor dem Start ein Schalter „Heute Nacht wecken“ (Standard aus) mit Uhrzeit, vorgeschlagen
-   etwa fünf Stunden nach dem Start. Gilt nur für genau diese Nacht.
-2. Wecken über den System-Wecker (Intent an die Uhr-App) mit neutralem Namen „Kurzer Moment“. Ein Tipp auf die
-   Benachrichtigung bzw. das Öffnen der App danach zeigt Tagebuch und eine kurze Begleitung zum
-   Wiedereinschlafen.
-3. **Sicherheitsregeln:** höchstens zweimal pro Woche (danach Schalter gesperrt mit Erklärung), Hinweis auf
-   Schichtarbeit, Schwangerschaft, Baby, Schlafmangel und Schlafparalyse, wie im Konzept. Kein Ton-Signal im
-   REM-Schlaf.
-4. Texte für die Begleitung (`phase: "wecken"`, drei bis vier Bausteine: kurz notieren, Absicht wiederholen,
-   wieder sinken) **sanft und nicht erotisch**, nach der Textvorgabe, Deutsch und Englisch. Danach
-   Übersetzung stempeln und PO abgleichen.
-5. Einsprechen: `C:\TOOLS\kikiri-venv\Scripts\python.exe tools/generate_audio.py --traum <ids>` nur, wenn
-   gerade keine andere Aufnahme läuft; Aufnahmen und `dauer.json` mit in den Pull Request.
-
-**Prüfen:** wie AG-5, dazu ein Test für die Wochenregel. Im Pull Request: was auf dem Handy zu testen ist.
-
 ### AG-8: Nachfrage vor Lautsprecher-Wiedergabe (einmalig, nach AG-7)
 
 **Branch:** `ag/8-lautsprecher`
@@ -205,3 +120,5 @@ keine Aussprache-Meldungen mehr ab und legt keine `aussprache/`-Branches mehr an
   mit den Wörtern aus Schritt A nachgesprochen (55 Lektionen, 41 geführte Bausteine).
 - 27.10.2026, AG-4 (`ag/4-traum-aufnahmen`, PR #27): Traum-Reise eingesprochen, 39 Bausteine für beide
   Stimmen (78 Aufnahmen) samt `dauer.json`.
+- 27.10.2026, AG-5 bis AG-7 (PR #38, #40, #41, zusammen über #42): Wochenrückblick, Realitätschecks,
+  nächtliches Wecken samt Texten und Aufnahmen. Claude ergänzte die SET_ALARM-Berechtigung.
