@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../../l10n/t.dart';
 import '../../models/traum_eintrag.dart';
+import '../../models/traum_rueckblick.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 
@@ -93,6 +94,10 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
           children: [
             Text(t.tagebuchTipp, style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.5)),
             const SizedBox(height: 16),
+            if (_eintraege.isNotEmpty) ...[
+              _WochenrueckblickKarte(eintraege: _eintraege),
+              const SizedBox(height: 16),
+            ],
             if (TraumEintrag.pauseRaten(_eintraege)) ...[
               Container(
                 padding: const EdgeInsets.all(14),
@@ -275,6 +280,152 @@ class _EditorState extends State<_Editor> {
             ),
           ]),
         ]),
+      ),
+    );
+  }
+}
+
+
+class _WochenrueckblickKarte extends StatelessWidget {
+  final List<TraumEintrag> eintraege;
+
+  const _WochenrueckblickKarte({required this.eintraege});
+
+  String _formatMarken(Map<String, int> marken) {
+    if (marken.isEmpty) return t.rueckblickKeineMarken;
+    final teile = <String>[];
+    for (final m in TraumEintrag.markierungen) {
+      if (marken.containsKey(m)) {
+        teile.add('${marken[m]}× ${traumMarkeName(m)}');
+      }
+    }
+    if (marken.containsKey(TraumEintrag.nichts)) {
+      teile.add('${marken[TraumEintrag.nichts]}× ${traumMarkeName(TraumEintrag.nichts)}');
+    }
+    return teile.isEmpty ? t.rueckblickKeineMarken : teile.join(', ');
+  }
+
+  String _kurztext(TraumRueckblick r) {
+    if (r.eintraegeGesamt == 0) return t.rueckblickKeineEintraege;
+    final teile = <String>[];
+    if (r.erinnert > 0) {
+      teile.add(t.rueckblickErinnertMorgen(r.erinnert));
+    } else if (r.nichtsErinnert > 0) {
+      teile.add(t.rueckblickNichtsErinnertMorgen(r.nichtsErinnert));
+    }
+    for (final m in ['luzide', 'sinnlich', 'hoehepunkt']) {
+      final anzahl = r.markenZaehlung[m];
+      if (anzahl != null && anzahl > 0) {
+        final markeText = switch (m) {
+          'luzide' => t.rueckblickMarkeLuzide(anzahl),
+          'sinnlich' => t.rueckblickMarkeSinnlich(anzahl),
+          'hoehepunkt' => t.rueckblickMarkeHoehepunkt(anzahl),
+          _ => '${anzahl}× ${traumMarkeName(m)}',
+        };
+        teile.add(markeText);
+        break;
+      }
+    }
+    if (teile.isEmpty) {
+      return t.rueckblickEintraegeGesamt(r.eintraegeGesamt);
+    }
+    return teile.join(', ');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final r = TraumRueckblick.berechnen(eintraege);
+
+    return Container(
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: Theme(
+        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+        child: ExpansionTile(
+          tilePadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 2),
+          childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+          iconColor: AppTheme.rose,
+          collapsedIconColor: AppTheme.textMuted,
+          title: Text(
+            t.rueckblickTitel,
+            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+          ),
+          subtitle: Text(
+            _kurztext(r),
+            style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3),
+          ),
+          children: [
+            if (r.eintraegeGesamt == 0)
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(t.rueckblickKeineEintraege,
+                    style: const TextStyle(fontSize: 13, color: AppTheme.textMuted)),
+              )
+            else ...[
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  [
+                    t.rueckblickEintraegeGesamt(r.eintraegeGesamt),
+                    if (r.erinnert > 0) t.rueckblickErinnertMorgen(r.erinnert),
+                    if (r.nichtsErinnert > 0) t.rueckblickNichtsErinnertMorgen(r.nichtsErinnert),
+                  ].join('. ') + '.',
+                  style: const TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.4),
+                ),
+              ),
+              if (r.markenZaehlung.isNotEmpty) ...[
+                const SizedBox(height: 10),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Wrap(
+                    spacing: 6,
+                    runSpacing: 6,
+                    children: [
+                      for (final m in TraumEintrag.markierungen)
+                        if (r.markenZaehlung.containsKey(m))
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: AppTheme.surfaceLight,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Text(
+                              '${r.markenZaehlung[m]}× ${traumMarkeName(m)}',
+                              style: const TextStyle(fontSize: 11.5, color: AppTheme.textSecondary),
+                            ),
+                          ),
+                    ],
+                  ),
+                ),
+              ],
+              if (r.abendMarken.isNotEmpty) ...[
+                const SizedBox(height: 14),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    t.rueckblickNachAbenden,
+                    style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppTheme.textMuted),
+                  ),
+                ),
+                const SizedBox(height: 6),
+                for (final entry in r.abendMarken.entries)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 4),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        '• ${traumAbendName(entry.key)}: ${_formatMarken(entry.value)}',
+                        style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35),
+                      ),
+                    ),
+                  ),
+              ],
+            ],
+          ],
+        ),
       ),
     );
   }

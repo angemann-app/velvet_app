@@ -6302,6 +6302,78 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.'**
   String get schwerpunktFantasieText;
+
+  /// No description provided for @rueckblickTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Diese Woche'**
+  String get rueckblickTitel;
+
+  /// No description provided for @rueckblickKeineEintraege.
+  ///
+  /// In de, this message translates to:
+  /// **'Keine Notizen in den letzten sieben Tagen.'**
+  String get rueckblickKeineEintraege;
+
+  /// No description provided for @rueckblickEintraegeGesamt.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Notiz in den letzten sieben Tagen} other{{n} Notizen in den letzten sieben Tagen}}'**
+  String rueckblickEintraegeGesamt(int n);
+
+  /// No description provided for @rueckblickErinnertMorgen.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{An 1 Morgen erinnert} other{An {n} Morgen erinnert}}'**
+  String rueckblickErinnertMorgen(int n);
+
+  /// No description provided for @rueckblickNichtsErinnertMorgen.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal nichts erinnert} other{{n} Mal nichts erinnert}}'**
+  String rueckblickNichtsErinnertMorgen(int n);
+
+  /// No description provided for @rueckblickMarkeLuzide.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal luzide} other{{n} Mal luzide}}'**
+  String rueckblickMarkeLuzide(int n);
+
+  /// No description provided for @rueckblickMarkeSinnlich.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal sinnlich} other{{n} Mal sinnlich}}'**
+  String rueckblickMarkeSinnlich(int n);
+
+  /// No description provided for @rueckblickMarkeHoehepunkt.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal Höhepunkt} other{{n} Mal Höhepunkt}}'**
+  String rueckblickMarkeHoehepunkt(int n);
+
+  /// No description provided for @rueckblickMarkeUnangenehm.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal unangenehm} other{{n} Mal unangenehm}}'**
+  String rueckblickMarkeUnangenehm(int n);
+
+  /// No description provided for @rueckblickMarkeSchlechtGeschlafen.
+  ///
+  /// In de, this message translates to:
+  /// **'{n, plural, =1{1 Mal schlecht geschlafen} other{{n} Mal schlecht geschlafen}}'**
+  String rueckblickMarkeSchlechtGeschlafen(int n);
+
+  /// No description provided for @rueckblickNachAbenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Nach den Abenden'**
+  String get rueckblickNachAbenden;
+
+  /// No description provided for @rueckblickKeineMarken.
+  ///
+  /// In de, this message translates to:
+  /// **'ohne Markierung'**
+  String get rueckblickKeineMarken;
 }
 
 class _AppLocalizationsDelegate

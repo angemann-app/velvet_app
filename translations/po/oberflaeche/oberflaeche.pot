@@ -6322,3 +6322,75 @@ msgstr ""
 msgctxt "ui:schwerpunktFantasieText#text"
 msgid "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: This week
+msgctxt "ui:rueckblickTitel#text"
+msgid "Diese Woche"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No notes in the past seven days.
+msgctxt "ui:rueckblickKeineEintraege#text"
+msgid "Keine Notizen in den letzten sieben Tagen."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 note in the past seven days} other{{n} notes in the past seven days}}
+msgctxt "ui:rueckblickEintraegeGesamt#text"
+msgid "{n, plural, =1{1 Notiz in den letzten sieben Tagen} other{{n} Notizen in den letzten sieben Tagen}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{Remembered on 1 morning} other{Remembered on {n} mornings}}
+msgctxt "ui:rueckblickErinnertMorgen#text"
+msgid "{n, plural, =1{An 1 Morgen erinnert} other{An {n} Morgen erinnert}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{Nothing remembered 1 time} other{Nothing remembered {n} times}}
+msgctxt "ui:rueckblickNichtsErinnertMorgen#text"
+msgid "{n, plural, =1{1 Mal nichts erinnert} other{{n} Mal nichts erinnert}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time lucid} other{{n} times lucid}}
+msgctxt "ui:rueckblickMarkeLuzide#text"
+msgid "{n, plural, =1{1 Mal luzide} other{{n} Mal luzide}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time sensual} other{{n} times sensual}}
+msgctxt "ui:rueckblickMarkeSinnlich#text"
+msgid "{n, plural, =1{1 Mal sinnlich} other{{n} Mal sinnlich}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time climax} other{{n} times climax}}
+msgctxt "ui:rueckblickMarkeHoehepunkt#text"
+msgid "{n, plural, =1{1 Mal Höhepunkt} other{{n} Mal Höhepunkt}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time uncomfortable} other{{n} times uncomfortable}}
+msgctxt "ui:rueckblickMarkeUnangenehm#text"
+msgid "{n, plural, =1{1 Mal unangenehm} other{{n} Mal unangenehm}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =1{1 time slept poorly} other{{n} times slept poorly}}
+msgctxt "ui:rueckblickMarkeSchlechtGeschlafen#text"
+msgid "{n, plural, =1{1 Mal schlecht geschlafen} other{{n} Mal schlecht geschlafen}}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Following the evenings
+msgctxt "ui:rueckblickNachAbenden#text"
+msgid "Nach den Abenden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: without tags
+msgctxt "ui:rueckblickKeineMarken#text"
+msgid "ohne Markierung"
+msgstr ""

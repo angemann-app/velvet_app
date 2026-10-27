@@ -1701,5 +1701,73 @@
   "schwerpunktBeruehrung": "Berührung",
   "schwerpunktBeruehrungText": "Berührung für sie und für ihn, Intim-Massage, Stimme und entspannte Stellungen.",
   "schwerpunktFantasie": "Fantasie und Spiel",
-  "schwerpunktFantasieText": "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug."
+  "schwerpunktFantasieText": "Fantasien, Führung und Hingabe, Kopfkino und Spielzeug.",
+  "rueckblickTitel": "Diese Woche",
+  "rueckblickKeineEintraege": "Keine Notizen in den letzten sieben Tagen.",
+  "rueckblickEintraegeGesamt": "{n, plural, =1{1 Notiz in den letzten sieben Tagen} other{{n} Notizen in den letzten sieben Tagen}}",
+  "@rueckblickEintraegeGesamt": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickErinnertMorgen": "{n, plural, =1{An 1 Morgen erinnert} other{An {n} Morgen erinnert}}",
+  "@rueckblickErinnertMorgen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickNichtsErinnertMorgen": "{n, plural, =1{1 Mal nichts erinnert} other{{n} Mal nichts erinnert}}",
+  "@rueckblickNichtsErinnertMorgen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeLuzide": "{n, plural, =1{1 Mal luzide} other{{n} Mal luzide}}",
+  "@rueckblickMarkeLuzide": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeSinnlich": "{n, plural, =1{1 Mal sinnlich} other{{n} Mal sinnlich}}",
+  "@rueckblickMarkeSinnlich": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeHoehepunkt": "{n, plural, =1{1 Mal Höhepunkt} other{{n} Mal Höhepunkt}}",
+  "@rueckblickMarkeHoehepunkt": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeUnangenehm": "{n, plural, =1{1 Mal unangenehm} other{{n} Mal unangenehm}}",
+  "@rueckblickMarkeUnangenehm": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickMarkeSchlechtGeschlafen": "{n, plural, =1{1 Mal schlecht geschlafen} other{{n} Mal schlecht geschlafen}}",
+  "@rueckblickMarkeSchlechtGeschlafen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "rueckblickNachAbenden": "Nach den Abenden",
+  "rueckblickKeineMarken": "ohne Markierung"
 }
