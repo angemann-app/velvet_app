@@ -41,7 +41,7 @@
       "icon": "favorite",
       "titel": "Paar-Kanal",
       "bild": "04_paarkanal_verbunden.png",
-      "text": "Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt.\nFunken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.\nNachrichten: mit Lesebestätigung, die ihr im Menü abschalten könnt.\nWünsche: In der Ja/Vielleicht/Nein-Liste stimmt jeder für sich ab. Sichtbar wird nur, was ihr beide wollt.\nGemeinsam lernen: Lektionen teilen und Antworten auf die Reflexionsfragen austauschen."
+      "text": "Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt. Haben beide Handys eine neue Version, gehen sie versiegelt (NIP-17): Die Server sehen dann nicht mehr, wer wem wann schreibt. Das stellt sich von selbst ein, mit älteren Versionen klappt es weiter wie bisher.\nFunken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.\nNachrichten: mit Lesebestätigung, die ihr im Menü abschalten könnt.\nWünsche: In der Ja/Vielleicht/Nein-Liste stimmt jeder für sich ab. Sichtbar wird nur, was ihr beide wollt.\nGemeinsam lernen: Lektionen teilen und Antworten auf die Reflexionsfragen austauschen."
     },
     {
       "id": "spicy",

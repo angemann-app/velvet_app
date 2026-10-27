@@ -17,13 +17,14 @@ angezeigt werden.
 
 ## 2. Nostr-Migration auf NIP-17
 
-Konzept: `docs/konzepte/nip17.md` (offene Fragen dort zuerst klären).
+Konzept: `docs/konzepte/nip17.md` (abgestimmt, Entscheidungen am Ende).
 
 Von NIP-04 auf NIP-17 (Gift-Wrap) umstellen, ohne dass Paare mit unterschiedlichen App-Versionen sich
 verlieren.
 
 - **Stufe 1:** Versions- und Fähigkeitsaushandlung. Die App versteht beide Verfahren, kündigt an, was sie
   kann, und sendet NIP-17 nur, wenn das Gegenüber es sicher kann. Sonst Rückfall auf NIP-04.
+  Umgesetzt im Branch `feature/nip17` (27.10.2026); offen: Beta und Test auf zwei Handys (alt und neu).
 - **Stufe 2 (späteres Release):** NIP-04 abschalten, wenn beide Geräte umgestellt sind bzw. nach einer
   Übergangszeit.
 - Regeln aus `docs/SICHERHEIT_AUDIT_BASELINE.md` gelten: eingehende Events immer durch `NostrEventCheck`,

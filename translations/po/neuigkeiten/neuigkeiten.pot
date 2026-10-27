@@ -598,3 +598,15 @@ msgstr ""
 msgctxt "news:43#0.text"
 msgid "Ein wartendes Foto kommt jetzt auch an, wenn ihr erst nach einer Offline-Zeit beide online seid. Die App versucht es von selbst immer wieder, und mit „Jetzt erneut versuchen“ geht es sofort. Liegt ein Foto beim Absender nicht mehr, steht das jetzt klar da."
 msgstr ""
+
+#. Was ist neu in Version 4.10.0-beta.1
+#. EN: Couple channel even more private
+msgctxt "news:44#0.titel"
+msgid "Paar-Kanal noch privater"
+msgstr ""
+
+#. Was ist neu in Version 4.10.0-beta.1
+#. EN: Messages now travel sealed (NIP-17) as soon as your partner's phone has this version too: the relays can no longer see who writes to whom and when, and the length gives away less. This sets itself up after the first message. With an older version you keep writing as before.
+msgctxt "news:44#0.text"
+msgid "Nachrichten gehen jetzt versiegelt (NIP-17), sobald auch das Handy deines Gegenübers diese Version hat: Die Server sehen dann nicht mehr, wer wem wann schreibt, und auch die Länge verrät weniger. Das stellt sich nach der ersten Nachricht von selbst ein. Mit einer älteren Version schreibt ihr weiter wie bisher."
+msgstr ""

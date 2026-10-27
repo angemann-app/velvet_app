@@ -1,6 +1,7 @@
-// Rückmeldungen gehen verschlüsselt und mit Einmal-Schlüssel ans Rückmelde-Postfach.
+// Rückmeldungen gehen per NIP-17 (Gift Wrap) und mit Einmal-Schlüsseln ans Rückmelde-Postfach.
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nostr_tools/nostr_tools.dart';
+import 'package:velvetpulse/services/gift_wrap.dart';
 import 'package:velvetpulse/services/nostr_event_check.dart';
 import 'package:velvetpulse/services/rueckmeldung.dart';
 import 'package:velvetpulse/widgets/aussprache_melden.dart';
@@ -25,15 +26,23 @@ void main() {
     expect(text, isNot(contains('Kontakt')), reason: 'leerer Kontakt wird weggelassen');
   });
 
-  test('Nur das Postfach kann die Nachricht lesen, jede hat einen eigenen Absender-Schlüssel', () {
+  test('Nur das Postfach kann die Nachricht lesen (NIP-17), jede hat eigene Einmal-Schlüssel', () {
     final postfachPrivat = keys.generatePrivateKey();
     final postfach = keys.getPublicKey(postfachPrivat);
     final a = Rueckmeldung.event('Hallo', empfaenger: postfach);
     final b = Rueckmeldung.event('Hallo', empfaenger: postfach);
-    expect(NostrEventCheck.isValidDirectMessage(a, recipient: postfach), isTrue);
+    expect(a['kind'], 1059);
+    expect(NostrEventCheck.isValidGiftWrap(a, recipient: postfach), isTrue);
     expect(a['pubkey'], isNot(b['pubkey']));
     expect(a['content'], isNot(contains('Hallo')));
-    expect(Nip04().decrypt(postfachPrivat, a['pubkey'] as String, a['content'] as String), 'Hallo');
+    final offenA = GiftWrap.auspacken(a, meinPrivat: postfachPrivat, meinPub: postfach)!;
+    final offenB = GiftWrap.auspacken(b, meinPrivat: postfachPrivat, meinPub: postfach)!;
+    expect(offenA.rumor['content'], 'Hallo');
+    // Absender der Rumor ist ein Einmal-Schlüssel, die Hülle stammt von noch einem anderen.
+    expect(offenA.absender, isNot(offenB.absender));
+    expect(offenA.absender, isNot(a['pubkey']));
+    final fremd = keys.generatePrivateKey();
+    expect(GiftWrap.auspacken(a, meinPrivat: fremd, meinPub: keys.getPublicKey(fremd)), isNull);
   });
 
   test('Das eingebaute Postfach ist ein gültiger öffentlicher Schlüssel', () {

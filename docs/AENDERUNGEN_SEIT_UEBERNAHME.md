@@ -37,6 +37,20 @@ Entscheidungen dahinterstehen und welche Stolperfallen man kennen muss, bevor ma
   - Eingehende Nostr-Events laufen immer durch `NostrEventCheck`.
   - `test/security_test.dart` muss grün bleiben.
 
+- **Paar-Kanal NIP-17, Stufe 1 (ab Build 44):** Konzept `docs/konzepte/nip17.md`.
+  - NIP-44 ist selbst umgesetzt (`lib/services/nip44.dart`, pointycastle + crypto, synchron) und gegen die
+    offiziellen Testvektoren geprüft (`test/nip44_test.dart`, `test/daten/nip44.vectors.json`).
+  - Gift Wrap in `lib/services/gift_wrap.dart`; Prüfung von Hülle, Siegel und Rumor in `NostrEventCheck`.
+  - Aushandlung: Jede NIP-04-Nachricht trägt `"nip17": 1`, dazu das Signal `{"t":"faehig"}` beim Start.
+    Gespeichert wird der Schlüssel des Gegenübers, für das die Ankündigung gilt (`velvet_partner_nip17`,
+    auch in der Sicherung); ein anderes Gegenüber gilt damit automatisch als „kann nur NIP-04“.
+  - Stolperfallen: Hüllen haben einen Wegwerf-Absender und einen bis zu zwei Tage zurückgesetzten
+    Zeitstempel. Abo und Hintergrund-Hinweis fragen darum ohne `authors` und zwei Tage früher ab; Doppeltes
+    fällt über die Rumor-id (Nachrichten) bzw. gemerkte Hüllen-ids (`velvet_seen_wraps`) heraus. Die id
+    einer NIP-17-Nachricht im Verlauf ist die der Rumor. Signale und Lesebestätigungen bleiben ohne Hülle,
+    nur ihr Inhalt wird NIP-44 (zu erkennen am fehlenden `?iv=`).
+  - Stufe 2 (NIP-04 nicht mehr senden) frühestens fünf stabile Versionen später.
+
 ## 3. Technik und Build
 
 - **Werkzeuge:** AGP 8.11.1, Gradle 8.14.3, Kotlin 2.2.20, Flutter 3.47.

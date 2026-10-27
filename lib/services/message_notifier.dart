@@ -8,6 +8,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:workmanager/workmanager.dart';
 
+import 'gift_wrap.dart';
 import 'nostr_event_check.dart';
 import 'nostr_service.dart';
 import 'sprache.dart';
@@ -22,6 +23,11 @@ import '../l10n/t.dart';
 class MessageNotifier {
   static const String keyEnabled = 'notify_messages';
   static const String keyNotifiedUntil = 'velvet_notified_until';
+
+  /// ids schon bekannter NIP-17-Hüllen (kind 1059). Ihr Zeitstempel ist zufällig bis zu zwei Tage
+  /// zurückgesetzt und ihr Absender ein Wegwerf-Schlüssel, darum zählt hier die id statt der Zeit.
+  static const String keySeenWraps = 'velvet_seen_wraps';
+  static const int _maxSeenWraps = 500;
   static const String _task = 'velvet_message_check';
   static const int _notificationId = 4711;
 
@@ -89,6 +95,17 @@ class MessageNotifier {
     }
   }
 
+  /// Merkt sich geöffnete bzw. gemeldete Hüllen (die neuesten [_maxSeenWraps]).
+  static Future<void> markWrapsSeen(Iterable<String> ids) async {
+    final prefs = await SharedPreferences.getInstance();
+    final liste = [...?prefs.getStringList(keySeenWraps)];
+    for (final id in ids) {
+      if (!liste.contains(id)) liste.add(id);
+    }
+    await prefs.setStringList(
+        keySeenWraps, liste.length > _maxSeenWraps ? liste.sublist(liste.length - _maxSeenWraps) : liste);
+  }
+
   /// Vom NostrService bei jeder Nachricht des Partners: Hinweis nur, wenn die App nicht im Vordergrund ist.
   static Future<void> notifyIfInBackground(int createdAt) async {
     await markSeen(createdAt);
@@ -137,8 +154,14 @@ class MessageNotifier {
     if (me == null || partner == null || partner.isEmpty) return 0;
     final now = DateTime.now().millisecondsSinceEpoch ~/ 1000;
     final since = prefs.getInt(keyNotifiedUntil) ?? now - 3600;
+    // NIP-17: Hüllen nur abfragen, wenn das Gegenüber NIP-17 angekündigt hat (sonst schickt es keine).
+    // Ohne Entschlüsseln ist der Absender nicht zu sehen; gezählt werden noch unbekannte, gültig
+    // signierte Hüllen an mich.
+    final nip17 = prefs.getString(NostrService.keyPartnerNip17) == partner;
+    final seenWraps = (prefs.getStringList(keySeenWraps) ?? const <String>[]).toSet();
 
     final found = <String, int>{};
+    final wraps = <String>{};
     await Future.wait(NostrService.fallbackRelays.map((url) async {
       try {
         final ws = await WebSocket.connect(url).timeout(timeout);
@@ -152,6 +175,11 @@ class MessageNotifier {
                   (ev['created_at'] as int) > since &&
                   NostrEventCheck.isValidDirectMessage(ev, recipient: me)) {
                 found[ev['id'] as String] = ev['created_at'] as int;
+              } else if (nip17 &&
+                  ev['kind'] == NostrEventCheck.giftWrapKind &&
+                  !seenWraps.contains(ev['id']) &&
+                  NostrEventCheck.isValidGiftWrap(ev, recipient: me)) {
+                wraps.add(ev['id'] as String);
               }
             } else if (msg is List && (msg[0] == 'EOSE' || msg[0] == 'CLOSED') && !done.isCompleted) {
               done.complete();
@@ -169,16 +197,23 @@ class MessageNotifier {
             '#p': [me],
             'since': since + 1,
             'limit': 20,
-          }
+          },
+          if (nip17)
+            {
+              'kinds': [NostrEventCheck.giftWrapKind],
+              '#p': [me],
+              'since': since - GiftWrap.maxZurueck.inSeconds,
+              'limit': 50,
+            },
         ]));
         await done.future.timeout(timeout, onTimeout: () {});
         await ws.close();
       } catch (_) {}
     }));
 
-    if (found.isEmpty) return 0;
-    await prefs.setInt(keyNotifiedUntil, found.values.reduce((a, b) => a > b ? a : b));
-    return found.length;
+    if (wraps.isNotEmpty) await markWrapsSeen(wraps);
+    if (found.isNotEmpty) await prefs.setInt(keyNotifiedUntil, found.values.reduce((a, b) => a > b ? a : b));
+    return found.length + wraps.length;
   }
 }
 

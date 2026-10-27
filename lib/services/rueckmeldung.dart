@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:nostr_tools/nostr_tools.dart';
 
+import 'gift_wrap.dart';
 import 'nostr_service.dart';
 
 /// Worum es in einer Rückmeldung geht.
@@ -52,30 +53,19 @@ class Rueckmeldung {
     return b.toString().trim();
   }
 
-  /// Signiertes, mit NIP-04 verschlüsseltes Event an das Postfach, von einem frischen Einmal-Schlüssel.
-  static Map<String, dynamic> event(String klartext, {String? einmalSchluessel, String empfaenger = postfachHex}) {
+  /// NIP-17-Nachricht an das Postfach (Gift Wrap, kind 1059): Die Rumor stammt von einem frischen
+  /// Einmal-Schlüssel, die Hülle von einem weiteren frischen Schlüssel. Die Server sehen nur „jemand schreibt
+  /// an das Postfach“, nicht wann genau. Abgeholt wird kind 4 (ältere Versionen) und kind 1059.
+  static Map<String, dynamic> event(String klartext,
+      {String? einmalSchluessel, String? huellenSchluessel, String empfaenger = postfachHex}) {
     final privat = einmalSchluessel ?? KeyApi().generatePrivateKey();
-    final ev = EventApi().finishEvent(
-      Event(
-        kind: 4,
-        tags: [
-          ['p', empfaenger]
-        ],
-        content: Nip04().encrypt(privat, empfaenger, klartext),
-        created_at: DateTime.now().millisecondsSinceEpoch ~/ 1000,
-        pubkey: KeyApi().getPublicKey(privat),
-      ),
-      privat,
+    final rumor = GiftWrap.rumor(absenderPub: KeyApi().getPublicKey(privat), empfaengerPub: empfaenger, inhalt: klartext);
+    return GiftWrap.einpacken(
+      rumor: rumor,
+      absenderPrivat: privat,
+      empfaengerPub: empfaenger,
+      wegwerfSchluessel: huellenSchluessel,
     );
-    return {
-      'id': ev.id,
-      'pubkey': ev.pubkey,
-      'created_at': ev.created_at,
-      'kind': ev.kind,
-      'tags': ev.tags,
-      'content': ev.content,
-      'sig': ev.sig,
-    };
   }
 
   /// Nur für Tests: ersetzt das Verschicken an die Server.
