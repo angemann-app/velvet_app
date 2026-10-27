@@ -35,7 +35,8 @@ Future<void> main() async {
           'version': e['version'],
           'groesse': e['groesse'],
           'sha256': e['sha256'],
-          'adressen': ['$r2/${e['datei']}', '$github/${e['datei']}'],
+          // Pakete mit „nur_r2“ (z. B. Lust im Traum) liegen nicht auf GitHub.
+          'adressen': ['$r2/${e['datei']}', if (e['nur_r2'] != true) '$github/${e['datei']}'],
         },
     ],
   };

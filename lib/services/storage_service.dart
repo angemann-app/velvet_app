@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/journal_entry.dart';
 import '../models/chat_message.dart';
 import '../models/daily_checkin.dart';
+import '../models/traum_eintrag.dart';
 import '../models/user_profile.dart';
 import 'auto_backup_service.dart';
 import 'backup_codec.dart';
@@ -34,6 +35,10 @@ class StorageService {
   static const String _keyPartnerVotes = 'velvet_partner_fantasy_votes';
   static const String _keyPartnerReflections = 'velvet_partner_reflections';
   static const String _keyPartnerGender = 'velvet_partner_gender';
+  static const String _keyTraumTagebuch = 'traum_tagebuch';
+  static const String _keyLustFortschritt = 'lust_fortschritt';
+  // Was am letzten Abend lief (für das Traumtagebuch am Morgen); flüchtig, nicht in der Sicherung.
+  static const String _keyLetzterAbend = 'traum_letzter_abend';
 
   static SharedPreferences? _prefs;
   static UserProfile? _inMemoryProfile;
@@ -149,6 +154,70 @@ class StorageService {
     if (triggerBackup) {
       await AutoBackupService.saveAutoBackup();
     }
+  }
+
+  // Traumtagebuch (lib/models/traum_eintrag.dart)
+  static List<TraumEintrag> getTraumEintraege() {
+    final eintraege = <TraumEintrag>[];
+    for (final item in _prefs?.getStringList(_keyTraumTagebuch) ?? const <String>[]) {
+      try {
+        eintraege.add(TraumEintrag.fromJson(jsonDecode(item) as Map<String, dynamic>));
+      } catch (_) {}
+    }
+    eintraege.sort((a, b) => b.zeit.compareTo(a.zeit));
+    return eintraege;
+  }
+
+  static Future<void> saveTraumEintrag(TraumEintrag eintrag) async {
+    final prefs = await _ensurePrefs();
+    final eintraege = getTraumEintraege()..removeWhere((e) => e.id == eintrag.id);
+    eintraege.add(eintrag);
+    eintraege.sort((a, b) => b.zeit.compareTo(a.zeit));
+    await prefs.setStringList(_keyTraumTagebuch, eintraege.map((e) => jsonEncode(e.toJson())).toList());
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  static Future<void> deleteTraumEintrag(String id) async {
+    final prefs = await _ensurePrefs();
+    final eintraege = getTraumEintraege()..removeWhere((e) => e.id == id);
+    await prefs.setStringList(_keyTraumTagebuch, eintraege.map((e) => jsonEncode(e.toJson())).toList());
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  /// Merkt sich, was heute Abend lief (z. B. 'traum:warmes_wasser', 'lust:3').
+  static Future<void> merkeAbend(String abend) async {
+    final prefs = await _ensurePrefs();
+    await prefs.setString(_keyLetzterAbend, jsonEncode({'abend': abend, 'zeit': DateTime.now().toIso8601String()}));
+  }
+
+  /// Der Abend der letzten 18 Stunden, oder null.
+  static String? letzterAbend({DateTime? jetzt}) {
+    try {
+      final m = jsonDecode(_prefs?.getString(_keyLetzterAbend) ?? '') as Map;
+      final zeit = DateTime.parse(m['zeit'] as String);
+      if ((jetzt ?? DateTime.now()).difference(zeit) > const Duration(hours: 18)) return null;
+      return m['abend'] as String?;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  // Lust im Traum: an wie vielen Abenden jede Folge gehört wurde ({"1": 2, "2": 1}).
+  static Map<int, int> getLustFortschritt() {
+    try {
+      final m = jsonDecode(_prefs?.getString(_keyLustFortschritt) ?? '{}') as Map;
+      return m.map((k, v) => MapEntry(int.parse(k.toString()), v as int));
+    } catch (_) {
+      return {};
+    }
+  }
+
+  static Future<void> lustAbendGehoert(int folge) async {
+    final prefs = await _ensurePrefs();
+    final f = getLustFortschritt();
+    f[folge] = (f[folge] ?? 0) + 1;
+    await prefs.setString(_keyLustFortschritt, jsonEncode(f.map((k, v) => MapEntry('$k', v))));
+    await AutoBackupService.saveAutoBackup();
   }
 
   static Future<void> deleteCbtEntry(String id) async {
@@ -364,6 +433,8 @@ class StorageService {
       'completedLessons': getCompletedLessons().toList(),
       'reflectionAnswers': _prefs?.getString(_keyReflectionAnswers),
       'cbtEntries': getCbtEntries().map((e) => e.toJson()).toList(),
+      'traumTagebuch': getTraumEintraege().map((e) => e.toJson()).toList(),
+      'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
       'dailyCheckIns': _prefs?.getStringList(_keyDailyCheckIns),
       'yesNoMaybe': _prefs?.getString(_keyYesNoMaybe),
       'streakCount': getStreakCount(),
@@ -440,6 +511,33 @@ class StorageService {
       }
       final sorted = entries.values.toList()..sort((a, b) => b.timestamp.compareTo(a.timestamp));
       writes[_keyCbtEntries] = sorted.map((e) => jsonEncode(e.toJson())).toList();
+    }
+    if (d['traumTagebuch'] is List) {
+      final eintraege = {for (final e in getTraumEintraege()) e.id: e};
+      for (final item in d['traumTagebuch'] as List) {
+        if (item is! Map) continue;
+        try {
+          final e = TraumEintrag.fromJson(Map<String, dynamic>.from(item));
+          eintraege[e.id] = e;
+        } catch (_) {}
+      }
+      final sortiert = eintraege.values.toList()..sort((a, b) => b.zeit.compareTo(a.zeit));
+      writes[_keyTraumTagebuch] = sortiert.map((e) => jsonEncode(e.toJson())).toList();
+    }
+    // Fortschritt: je Folge der größere Stand, damit nichts wieder gesperrt wird.
+    if (d['lustFortschritt'] is String && (d['lustFortschritt'] as String).isNotEmpty) {
+      final f = getLustFortschritt();
+      try {
+        final importiert = jsonDecode(d['lustFortschritt'] as String) as Map;
+        for (final e in importiert.entries) {
+          final folge = int.parse(e.key.toString());
+          final n = e.value as int;
+          if (n > (f[folge] ?? 0)) f[folge] = n;
+        }
+      } catch (_) {
+        throw BackupException(t.storageServiceTheBackupIsDamagedFeld('lustFortschritt'));
+      }
+      writes[_keyLustFortschritt] = jsonEncode(f.map((k, v) => MapEntry('$k', v)));
     }
     // Wie bei den Reflexionen: zusammenführen statt überschreiben. Bei gleichem Tag bzw.
     // gleicher Frage gilt die Sicherung, alles nur lokal Vorhandene bleibt.

@@ -23,6 +23,10 @@ class Pakete {
   static const gefuehrt = 'gefuehrt';
   static const arten = [lektionen, gefuehrt];
 
+  /// „Lust im Traum“ (nur Spicy, nur über R2): eigenes Paket, zählt nicht zu den Pflicht-Paketen.
+  static const lust = 'lust';
+  static const _alle = [...arten, lust];
+
   /// Name im Verzeichnis, z. B. „de-lektionen“.
   static String name(String art, [String? sprache]) => '${sprache ?? Sprache.code}-$art';
 
@@ -50,7 +54,7 @@ class Pakete {
   /// Vollständiger Pfad einer Aufnahme (z. B. 'audio/paar/victoria_ankommen_1.opus') in der aktuellen Sprache,
   /// oder null. Englisch fällt zusätzlich auf das alte Audiopaket zurück, damit nichts verloren geht.
   static String? datei(String pfad) {
-    for (final art in arten) {
+    for (final art in _alle) {
       final o = _ordner(name(art));
       if (o == null) break;
       final f = File('$o/$pfad');

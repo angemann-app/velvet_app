@@ -386,6 +386,22 @@
           "text": "Ein neues geführtes Audio für die Nacht: Du wählst ein Traumbild, die Stimme begleitet dich in den Schlaf und gibt dir eine sanfte Traum-Absicht mit. 30 bis 60 Minuten, auf der Startseite bei den geführten Audios. Die Aufnahmen kommen mit dem Paket der geführten Audios."
         }
       ]
+    },
+    {
+      "build": 47,
+      "version": "4.12.0-beta.1",
+      "punkte": [
+        {
+          "icon": "edit",
+          "titel": "Traumtagebuch",
+          "text": "Morgens kurz festhalten, woran du dich erinnerst, mit Markierungen wie luzide oder sinnlich. Privat und Teil deiner Sicherung."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Lust im Traum",
+          "text": "Im Spicy-Modus: acht aufeinander aufbauende Abende bis zum luziden, sinnlichen Traum, für Frauen und Männer, mit freier Wahl von Traumkörper und Gegenüber. Die Aufnahmen kommen als eigenes Paket."
+        }
+      ]
     }
   ]
 }

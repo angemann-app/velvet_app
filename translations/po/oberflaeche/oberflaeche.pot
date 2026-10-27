@@ -5914,3 +5914,327 @@ msgstr ""
 msgctxt "ui:fotoStatusWeg#text"
 msgid "Foto nicht mehr verfügbar"
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Dream journal
+msgctxt "ui:tagebuchTitel#text"
+msgid "Traumtagebuch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Right after waking, lie still for a moment and bring the dream back before you move. A few keywords are enough. „Nothing remembered“ counts too.
+msgctxt "ui:tagebuchTipp#text"
+msgid "Gleich nach dem Aufwachen kurz still liegen bleiben und den Traum zurückholen, bevor du dich bewegst. Ein paar Stichworte reichen. Auch „nichts erinnert“ zählt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Lately you have noted unpleasant dreams or poor sleep more often. That is normal and not a failure. A break might do you good, or just the journal and gentle dream images. If something weighs on you, the SOS button helps.
+msgctxt "ui:tagebuchPause#text"
+msgid "Zuletzt hast du öfter unangenehme Träume oder schlechten Schlaf notiert. Das ist normal und kein Fehler. Vielleicht tut dir eine Pause gut oder nur Tagebuch und sanfte Traumbilder. Wenn dich etwas belastet, hilft der SOS-Knopf."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What do you remember?
+msgctxt "ui:tagebuchWoranErinnerst#text"
+msgid "Woran erinnerst du dich?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Nothing remembered
+msgctxt "ui:tagebuchNichtsErinnert#text"
+msgid "Nichts erinnert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your dream journal is private. Sensual dreams are a sign that your desire is alive. Who appears in them and what happens need not mean anything. Entries are not shared with the AI coach or your partner; they are part of your encrypted backup.
+msgctxt "ui:tagebuchPrivat#text"
+msgid "Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an den KI-Coach und nicht an dein Gegenüber; sie sind Teil deiner verschlüsselten Sicherung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Keywords, an image, a feeling …
+msgctxt "ui:tagebuchHinweisText#text"
+msgid "Stichworte, ein Bild, ein Gefühl …"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Delete
+msgctxt "ui:tagebuchLoeschen#text"
+msgid "Löschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Save
+msgctxt "ui:tagebuchSpeichern#text"
+msgid "Speichern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: remembered
+msgctxt "ui:tagebuchMarkeErinnert#text"
+msgid "erinnert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: lucid
+msgctxt "ui:tagebuchMarkeLuzide#text"
+msgid "luzide"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: sensual
+msgctxt "ui:tagebuchMarkeSinnlich#text"
+msgid "sinnlich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: climax
+msgctxt "ui:tagebuchMarkeHoehepunkt#text"
+msgid "Höhepunkt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: unpleasant
+msgctxt "ui:tagebuchMarkeUnangenehm#text"
+msgid "unangenehm"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: slept badly
+msgctxt "ui:tagebuchMarkeSchlechtGeschlafen#text"
+msgid "schlecht geschlafen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What do you remember?
+msgctxt "ui:tagebuchKarteTitel#text"
+msgid "Woran erinnerst du dich?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Morning note
+msgctxt "ui:tagebuchKarteTitelNeutral#text"
+msgid "Morgennotiz"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Capture your dream while it is still close. A few words are enough.
+msgctxt "ui:tagebuchKarteText#text"
+msgid "Halte deinen Traum fest, solange er noch nah ist. Ein paar Worte genügen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A few words for yourself, first thing in the morning.
+msgctxt "ui:tagebuchKarteTextNeutral#text"
+msgid "Ein paar Worte für dich, gleich am Morgen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pleasure in dreams
+msgctxt "ui:lustTitel#text"
+msgid "Lust im Traum"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: Episode {n}
+msgctxt "ui:lustFolgeN#text"
+msgid "Folge {n}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pleasure in the body
+msgctxt "ui:lustFolge1#text"
+msgid "Lust im Körper"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The wave
+msgctxt "ui:lustFolge2#text"
+msgid "Die Welle"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Inviting the dream
+msgctxt "ui:lustFolge3#text"
+msgid "Den Traum einladen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Recognising
+msgctxt "ui:lustFolge4#text"
+msgid "Erkennen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Staying in the lucid dream
+msgctxt "ui:lustFolge5#text"
+msgid "Im Klartraum bleiben"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Letting pleasure unfold
+msgctxt "ui:lustFolge6#text"
+msgid "Lust im Traum entfalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: More than once
+msgctxt "ui:lustFolge7#text"
+msgid "Mehr als einmal"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your own way
+msgctxt "ui:lustFolge8#text"
+msgid "Eigene Wege"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Eight evenings that build on each other: from a relaxed, pleasurable body as you fall asleep, through remembering and recognising dreams, to the lucid, sensual dream. The next episode unlocks once you have listened to the previous one on two evenings. Going back and repeating is always possible.
+msgctxt "ui:lustSerieEinleitung#text"
+msgid "Acht Abende, die aufeinander aufbauen: vom entspannten, lustvollen Körper beim Einschlafen über das Erinnern und Erkennen von Träumen bis zum luziden, sinnlichen Traum. Die nächste Folge wird frei, wenn du die vorige an zwei Abenden gehört hast. Zurückgehen und Wiederholen geht jederzeit."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A voice accompanies you into sleep and into tonight's episode. Then it quietly repeats the intention, with ever longer pauses, until only silence remains. You may fall asleep along the way.
+msgctxt "ui:lustEinleitung#text"
+msgid "Eine Stimme begleitet dich in den Schlaf und in die Folge dieses Abends. Danach wiederholt sie leise die Absicht, mit immer längeren Pausen, bis nur Stille bleibt. Du darfst dabei einschlafen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A climax in a dream can be invited, not forced. Some experience it after a few nights, some after many, and some have sensual dreams without a climax instead. All of it is right.
+msgctxt "ui:lustEhrlich#text"
+msgid "Ein Höhepunkt im Traum lässt sich einladen, nicht erzwingen. Manche erleben ihn nach wenigen Nächten, manche nach vielen, manche erleben dafür sinnliche Träume ohne Höhepunkt. Alles davon ist richtig."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Episodes
+msgctxt "ui:lustFolgen#text"
+msgid "Folgen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your body in the dream
+msgctxt "ui:lustTraumkoerper#text"
+msgid "Dein Körper im Traum"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: My own
+msgctxt "ui:lustTraumkoerperEigener#text"
+msgid "Mein eigener"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A woman's body
+msgctxt "ui:lustTraumkoerperFrau#text"
+msgid "Frauenkörper"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A man's body
+msgctxt "ui:lustTraumkoerperMann#text"
+msgid "Männerkörper"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: With whom in the dream
+msgctxt "ui:lustGegenueber#text"
+msgid "Mit wem im Traum"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Just me
+msgctxt "ui:lustGegenueberNiemand#text"
+msgid "Nur ich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A woman
+msgctxt "ui:lustGegenueberFrau#text"
+msgid "Eine Frau"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A man
+msgctxt "ui:lustGegenueberMann#text"
+msgid "Ein Mann"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open
+msgctxt "ui:lustGegenueberOffen#text"
+msgid "Offen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Continue to the evening
+msgctxt "ui:lustWeiter#text"
+msgid "Weiter zum Abend"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Adults only. Not a substitute for treatment of sleep disorders; better not with frequent nightmares, epilepsy or severe sleep deprivation. Strong arousal often wakes you, that is normal. What happens in a dream is a dream experience; fantasies there say little about wishes in waking life.
+msgctxt "ui:lustHinweise#text"
+msgid "Nur ab achtzehn. Kein Ersatz für eine Behandlung bei Schlafstörungen; bei häufigen Albträumen, Epilepsie oder schwerem Schlafmangel lieber nicht. Starke Erregung weckt oft auf, das ist normal. Was im Traum geschieht, ist ein Traumerlebnis; Fantasien darin sagen wenig über Wünsche im Wachleben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A towel within reach is not a bad idea.
+msgctxt "ui:lustHinweisHandtuch#text"
+msgid "Ein Handtuch in Reichweite ist kein schlechter Gedanke."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n, plural, =0{not listened to yet} =1{listened to on one evening} other{listened to on {n} evenings}}
+msgctxt "ui:lustAbendeGehoert#text"
+msgid "{n, plural, =0{noch nicht gehört} =1{an einem Abend gehört} other{an {n} Abenden gehört}}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: Unlocks after two evenings with episode {n}
+msgctxt "ui:lustGesperrt#text"
+msgid "Frei nach zwei Abenden mit Folge {n}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The recordings for this series are still missing. They come as a separate package, best downloaded over Wi-Fi.
+msgctxt "ui:lustPaketFehlt#text"
+msgid "Für diese Serie fehlen noch die Aufnahmen. Sie kommen als eigenes Paket, am besten im WLAN laden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download recordings
+msgctxt "ui:lustPaketLaden#text"
+msgid "Aufnahmen laden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download failed. Please try again later.
+msgctxt "ui:lustLadenFehler#text"
+msgid "Laden hat nicht geklappt. Bitte später noch einmal versuchen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pleasure in dreams
+msgctxt "ui:lustKarteTitel#text"
+msgid "Lust im Traum"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Evening series
+msgctxt "ui:lustKarteTitelNeutral#text"
+msgid "Abendserie"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Eight evenings that build on each other, up to the lucid, sensual dream.
+msgctxt "ui:lustKarteText#text"
+msgid "Acht Abende, die aufeinander aufbauen, bis zum luziden, sinnlichen Traum."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Eight calm evenings that build on each other.
+msgctxt "ui:lustKarteTextNeutral#text"
+msgid "Acht ruhige Abende, die aufeinander aufbauen."
+msgstr ""

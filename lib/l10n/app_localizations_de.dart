@@ -3456,4 +3456,193 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get fotoStatusWeg => 'Foto nicht mehr verfügbar';
+
+  @override
+  String get tagebuchTitel => 'Traumtagebuch';
+
+  @override
+  String get tagebuchTipp =>
+      'Gleich nach dem Aufwachen kurz still liegen bleiben und den Traum zurückholen, bevor du dich bewegst. Ein paar Stichworte reichen. Auch „nichts erinnert“ zählt.';
+
+  @override
+  String get tagebuchPause =>
+      'Zuletzt hast du öfter unangenehme Träume oder schlechten Schlaf notiert. Das ist normal und kein Fehler. Vielleicht tut dir eine Pause gut oder nur Tagebuch und sanfte Traumbilder. Wenn dich etwas belastet, hilft der SOS-Knopf.';
+
+  @override
+  String get tagebuchWoranErinnerst => 'Woran erinnerst du dich?';
+
+  @override
+  String get tagebuchNichtsErinnert => 'Nichts erinnert';
+
+  @override
+  String get tagebuchPrivat =>
+      'Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an den KI-Coach und nicht an dein Gegenüber; sie sind Teil deiner verschlüsselten Sicherung.';
+
+  @override
+  String get tagebuchHinweisText => 'Stichworte, ein Bild, ein Gefühl …';
+
+  @override
+  String get tagebuchLoeschen => 'Löschen';
+
+  @override
+  String get tagebuchSpeichern => 'Speichern';
+
+  @override
+  String get tagebuchMarkeErinnert => 'erinnert';
+
+  @override
+  String get tagebuchMarkeLuzide => 'luzide';
+
+  @override
+  String get tagebuchMarkeSinnlich => 'sinnlich';
+
+  @override
+  String get tagebuchMarkeHoehepunkt => 'Höhepunkt';
+
+  @override
+  String get tagebuchMarkeUnangenehm => 'unangenehm';
+
+  @override
+  String get tagebuchMarkeSchlechtGeschlafen => 'schlecht geschlafen';
+
+  @override
+  String get tagebuchKarteTitel => 'Woran erinnerst du dich?';
+
+  @override
+  String get tagebuchKarteTitelNeutral => 'Morgennotiz';
+
+  @override
+  String get tagebuchKarteText =>
+      'Halte deinen Traum fest, solange er noch nah ist. Ein paar Worte genügen.';
+
+  @override
+  String get tagebuchKarteTextNeutral =>
+      'Ein paar Worte für dich, gleich am Morgen.';
+
+  @override
+  String get lustTitel => 'Lust im Traum';
+
+  @override
+  String lustFolgeN(int n) {
+    return 'Folge $n';
+  }
+
+  @override
+  String get lustFolge1 => 'Lust im Körper';
+
+  @override
+  String get lustFolge2 => 'Die Welle';
+
+  @override
+  String get lustFolge3 => 'Den Traum einladen';
+
+  @override
+  String get lustFolge4 => 'Erkennen';
+
+  @override
+  String get lustFolge5 => 'Im Klartraum bleiben';
+
+  @override
+  String get lustFolge6 => 'Lust im Traum entfalten';
+
+  @override
+  String get lustFolge7 => 'Mehr als einmal';
+
+  @override
+  String get lustFolge8 => 'Eigene Wege';
+
+  @override
+  String get lustSerieEinleitung =>
+      'Acht Abende, die aufeinander aufbauen: vom entspannten, lustvollen Körper beim Einschlafen über das Erinnern und Erkennen von Träumen bis zum luziden, sinnlichen Traum. Die nächste Folge wird frei, wenn du die vorige an zwei Abenden gehört hast. Zurückgehen und Wiederholen geht jederzeit.';
+
+  @override
+  String get lustEinleitung =>
+      'Eine Stimme begleitet dich in den Schlaf und in die Folge dieses Abends. Danach wiederholt sie leise die Absicht, mit immer längeren Pausen, bis nur Stille bleibt. Du darfst dabei einschlafen.';
+
+  @override
+  String get lustEhrlich =>
+      'Ein Höhepunkt im Traum lässt sich einladen, nicht erzwingen. Manche erleben ihn nach wenigen Nächten, manche nach vielen, manche erleben dafür sinnliche Träume ohne Höhepunkt. Alles davon ist richtig.';
+
+  @override
+  String get lustFolgen => 'Folgen';
+
+  @override
+  String get lustTraumkoerper => 'Dein Körper im Traum';
+
+  @override
+  String get lustTraumkoerperEigener => 'Mein eigener';
+
+  @override
+  String get lustTraumkoerperFrau => 'Frauenkörper';
+
+  @override
+  String get lustTraumkoerperMann => 'Männerkörper';
+
+  @override
+  String get lustGegenueber => 'Mit wem im Traum';
+
+  @override
+  String get lustGegenueberNiemand => 'Nur ich';
+
+  @override
+  String get lustGegenueberFrau => 'Eine Frau';
+
+  @override
+  String get lustGegenueberMann => 'Ein Mann';
+
+  @override
+  String get lustGegenueberOffen => 'Offen';
+
+  @override
+  String get lustWeiter => 'Weiter zum Abend';
+
+  @override
+  String get lustHinweise =>
+      'Nur ab achtzehn. Kein Ersatz für eine Behandlung bei Schlafstörungen; bei häufigen Albträumen, Epilepsie oder schwerem Schlafmangel lieber nicht. Starke Erregung weckt oft auf, das ist normal. Was im Traum geschieht, ist ein Traumerlebnis; Fantasien darin sagen wenig über Wünsche im Wachleben.';
+
+  @override
+  String get lustHinweisHandtuch =>
+      'Ein Handtuch in Reichweite ist kein schlechter Gedanke.';
+
+  @override
+  String lustAbendeGehoert(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'an $n Abenden gehört',
+      one: 'an einem Abend gehört',
+      zero: 'noch nicht gehört',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String lustGesperrt(int n) {
+    return 'Frei nach zwei Abenden mit Folge $n';
+  }
+
+  @override
+  String get lustPaketFehlt =>
+      'Für diese Serie fehlen noch die Aufnahmen. Sie kommen als eigenes Paket, am besten im WLAN laden.';
+
+  @override
+  String get lustPaketLaden => 'Aufnahmen laden';
+
+  @override
+  String get lustLadenFehler =>
+      'Laden hat nicht geklappt. Bitte später noch einmal versuchen.';
+
+  @override
+  String get lustKarteTitel => 'Lust im Traum';
+
+  @override
+  String get lustKarteTitelNeutral => 'Abendserie';
+
+  @override
+  String get lustKarteText =>
+      'Acht Abende, die aufeinander aufbauen, bis zum luziden, sinnlichen Traum.';
+
+  @override
+  String get lustKarteTextNeutral =>
+      'Acht ruhige Abende, die aufeinander aufbauen.';
 }

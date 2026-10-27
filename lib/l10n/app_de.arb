@@ -1602,5 +1602,80 @@
   "aufnahmenSpaeter": "Später",
   "aufnahmenAnsehen": "Ansehen",
   "fotoErneutVersuchen": "Jetzt erneut versuchen",
-  "fotoStatusWeg": "Foto nicht mehr verfügbar"
+  "fotoStatusWeg": "Foto nicht mehr verfügbar",
+  "tagebuchTitel": "Traumtagebuch",
+  "tagebuchTipp": "Gleich nach dem Aufwachen kurz still liegen bleiben und den Traum zurückholen, bevor du dich bewegst. Ein paar Stichworte reichen. Auch „nichts erinnert“ zählt.",
+  "tagebuchPause": "Zuletzt hast du öfter unangenehme Träume oder schlechten Schlaf notiert. Das ist normal und kein Fehler. Vielleicht tut dir eine Pause gut oder nur Tagebuch und sanfte Traumbilder. Wenn dich etwas belastet, hilft der SOS-Knopf.",
+  "tagebuchWoranErinnerst": "Woran erinnerst du dich?",
+  "tagebuchNichtsErinnert": "Nichts erinnert",
+  "tagebuchPrivat": "Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an den KI-Coach und nicht an dein Gegenüber; sie sind Teil deiner verschlüsselten Sicherung.",
+  "tagebuchHinweisText": "Stichworte, ein Bild, ein Gefühl …",
+  "tagebuchLoeschen": "Löschen",
+  "tagebuchSpeichern": "Speichern",
+  "tagebuchMarkeErinnert": "erinnert",
+  "tagebuchMarkeLuzide": "luzide",
+  "tagebuchMarkeSinnlich": "sinnlich",
+  "tagebuchMarkeHoehepunkt": "Höhepunkt",
+  "tagebuchMarkeUnangenehm": "unangenehm",
+  "tagebuchMarkeSchlechtGeschlafen": "schlecht geschlafen",
+  "tagebuchKarteTitel": "Woran erinnerst du dich?",
+  "tagebuchKarteTitelNeutral": "Morgennotiz",
+  "tagebuchKarteText": "Halte deinen Traum fest, solange er noch nah ist. Ein paar Worte genügen.",
+  "tagebuchKarteTextNeutral": "Ein paar Worte für dich, gleich am Morgen.",
+  "lustTitel": "Lust im Traum",
+  "lustFolgeN": "Folge {n}",
+  "@lustFolgeN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "lustFolge1": "Lust im Körper",
+  "lustFolge2": "Die Welle",
+  "lustFolge3": "Den Traum einladen",
+  "lustFolge4": "Erkennen",
+  "lustFolge5": "Im Klartraum bleiben",
+  "lustFolge6": "Lust im Traum entfalten",
+  "lustFolge7": "Mehr als einmal",
+  "lustFolge8": "Eigene Wege",
+  "lustSerieEinleitung": "Acht Abende, die aufeinander aufbauen: vom entspannten, lustvollen Körper beim Einschlafen über das Erinnern und Erkennen von Träumen bis zum luziden, sinnlichen Traum. Die nächste Folge wird frei, wenn du die vorige an zwei Abenden gehört hast. Zurückgehen und Wiederholen geht jederzeit.",
+  "lustEinleitung": "Eine Stimme begleitet dich in den Schlaf und in die Folge dieses Abends. Danach wiederholt sie leise die Absicht, mit immer längeren Pausen, bis nur Stille bleibt. Du darfst dabei einschlafen.",
+  "lustEhrlich": "Ein Höhepunkt im Traum lässt sich einladen, nicht erzwingen. Manche erleben ihn nach wenigen Nächten, manche nach vielen, manche erleben dafür sinnliche Träume ohne Höhepunkt. Alles davon ist richtig.",
+  "lustFolgen": "Folgen",
+  "lustTraumkoerper": "Dein Körper im Traum",
+  "lustTraumkoerperEigener": "Mein eigener",
+  "lustTraumkoerperFrau": "Frauenkörper",
+  "lustTraumkoerperMann": "Männerkörper",
+  "lustGegenueber": "Mit wem im Traum",
+  "lustGegenueberNiemand": "Nur ich",
+  "lustGegenueberFrau": "Eine Frau",
+  "lustGegenueberMann": "Ein Mann",
+  "lustGegenueberOffen": "Offen",
+  "lustWeiter": "Weiter zum Abend",
+  "lustHinweise": "Nur ab achtzehn. Kein Ersatz für eine Behandlung bei Schlafstörungen; bei häufigen Albträumen, Epilepsie oder schwerem Schlafmangel lieber nicht. Starke Erregung weckt oft auf, das ist normal. Was im Traum geschieht, ist ein Traumerlebnis; Fantasien darin sagen wenig über Wünsche im Wachleben.",
+  "lustHinweisHandtuch": "Ein Handtuch in Reichweite ist kein schlechter Gedanke.",
+  "lustAbendeGehoert": "{n, plural, =0{noch nicht gehört} =1{an einem Abend gehört} other{an {n} Abenden gehört}}",
+  "@lustAbendeGehoert": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "lustGesperrt": "Frei nach zwei Abenden mit Folge {n}",
+  "@lustGesperrt": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "lustPaketFehlt": "Für diese Serie fehlen noch die Aufnahmen. Sie kommen als eigenes Paket, am besten im WLAN laden.",
+  "lustPaketLaden": "Aufnahmen laden",
+  "lustLadenFehler": "Laden hat nicht geklappt. Bitte später noch einmal versuchen.",
+  "lustKarteTitel": "Lust im Traum",
+  "lustKarteTitelNeutral": "Abendserie",
+  "lustKarteText": "Acht Abende, die aufeinander aufbauen, bis zum luziden, sinnlichen Traum.",
+  "lustKarteTextNeutral": "Acht ruhige Abende, die aufeinander aufbauen."
 }

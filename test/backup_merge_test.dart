@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:velvetpulse/models/traum_eintrag.dart';
 import 'package:velvetpulse/services/backup_codec.dart';
 import 'package:velvetpulse/services/nostr_service.dart';
 import 'package:velvetpulse/services/secret_store.dart';
@@ -88,5 +89,42 @@ void main() {
     ]) {
       await expectLater(BackupCodec.decryptSecrets(block, 'egal'), throwsA(isA<BackupException>()));
     }
+  });
+
+  test('Traumtagebuch und Lust-Fortschritt sind in der Sicherung enthalten', () async {
+    final eintrag = TraumEintrag(
+      id: 'a',
+      zeit: DateTime(2026, 10, 27, 7),
+      text: 'Wasser',
+      marken: {'erinnert'},
+    );
+    await StorageService.saveTraumEintrag(eintrag);
+    await StorageService.lustAbendGehoert(1);
+    await StorageService.lustAbendGehoert(1);
+
+    final export = StorageService.exportAllUserData();
+    expect(export['traumTagebuch'], [eintrag.toJson()]);
+    expect(jsonDecode(export['lustFortschritt'] as String), {'1': 2});
+  });
+
+  test('Einspielen führt Traumtagebuch und Lust-Fortschritt zusammen', () async {
+    final a = TraumEintrag(id: 'a', zeit: DateTime(2026, 10, 27, 7), text: 'lokal', marken: {'erinnert'});
+    await StorageService.saveTraumEintrag(a);
+    await StorageService.saveTraumEintrag(TraumEintrag(id: 'b', zeit: DateTime(2026, 10, 26, 7)));
+    await StorageService.lustAbendGehoert(1);
+    await StorageService.lustAbendGehoert(1);
+
+    final backup = StorageService.exportAllUserData()
+      ..['traumTagebuch'] = [
+        a.mit(text: 'aus Sicherung').toJson(),
+        TraumEintrag(id: 'c', zeit: DateTime(2026, 10, 25, 7)).toJson(),
+      ]
+      ..['lustFortschritt'] = jsonEncode({'1': 1, '2': 3});
+    expect(await StorageService.importUserData(backup), isTrue);
+
+    final eintraege = {for (final e in StorageService.getTraumEintraege()) e.id: e};
+    expect(eintraege.keys, containsAll(['a', 'b', 'c']));
+    expect(eintraege['a']!.text, 'aus Sicherung');
+    expect(StorageService.getLustFortschritt(), {1: 2, 2: 3});
   });
 }

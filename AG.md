@@ -67,7 +67,7 @@ seinem OK führt Claude zusammen, trägt den Auftrag unter „Erledigt“ ein un
 Jede Zeile mit Datum. Einträge, die älter als drei Tage sind, fragt Antigravity beim Nutzer nach, statt sie
 stillschweigend zu übergehen.
 
-- 27.10.2026: `C:\TOOLS\velvet-inhalte\lust\` (Claude Code schreibt „Lust im Traum“)
+- 27.10.2026: `C:\TOOLS\velvet-inhalte\lust\` (Aufnahmen über OpenCode laufen; nicht anfassen)
 
 ## Offene Aufträge
 

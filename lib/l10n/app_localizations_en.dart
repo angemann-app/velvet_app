@@ -3442,4 +3442,191 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get fotoStatusWeg => 'Photo no longer available';
+
+  @override
+  String get tagebuchTitel => 'Dream journal';
+
+  @override
+  String get tagebuchTipp =>
+      'Right after waking, lie still for a moment and bring the dream back before you move. A few keywords are enough. „Nothing remembered“ counts too.';
+
+  @override
+  String get tagebuchPause =>
+      'Lately you have noted unpleasant dreams or poor sleep more often. That is normal and not a failure. A break might do you good, or just the journal and gentle dream images. If something weighs on you, the SOS button helps.';
+
+  @override
+  String get tagebuchWoranErinnerst => 'What do you remember?';
+
+  @override
+  String get tagebuchNichtsErinnert => 'Nothing remembered';
+
+  @override
+  String get tagebuchPrivat =>
+      'Your dream journal is private. Sensual dreams are a sign that your desire is alive. Who appears in them and what happens need not mean anything. Entries are not shared with the AI coach or your partner; they are part of your encrypted backup.';
+
+  @override
+  String get tagebuchHinweisText => 'Keywords, an image, a feeling …';
+
+  @override
+  String get tagebuchLoeschen => 'Delete';
+
+  @override
+  String get tagebuchSpeichern => 'Save';
+
+  @override
+  String get tagebuchMarkeErinnert => 'remembered';
+
+  @override
+  String get tagebuchMarkeLuzide => 'lucid';
+
+  @override
+  String get tagebuchMarkeSinnlich => 'sensual';
+
+  @override
+  String get tagebuchMarkeHoehepunkt => 'climax';
+
+  @override
+  String get tagebuchMarkeUnangenehm => 'unpleasant';
+
+  @override
+  String get tagebuchMarkeSchlechtGeschlafen => 'slept badly';
+
+  @override
+  String get tagebuchKarteTitel => 'What do you remember?';
+
+  @override
+  String get tagebuchKarteTitelNeutral => 'Morning note';
+
+  @override
+  String get tagebuchKarteText =>
+      'Capture your dream while it is still close. A few words are enough.';
+
+  @override
+  String get tagebuchKarteTextNeutral =>
+      'A few words for yourself, first thing in the morning.';
+
+  @override
+  String get lustTitel => 'Pleasure in dreams';
+
+  @override
+  String lustFolgeN(int n) {
+    return 'Episode $n';
+  }
+
+  @override
+  String get lustFolge1 => 'Pleasure in the body';
+
+  @override
+  String get lustFolge2 => 'The wave';
+
+  @override
+  String get lustFolge3 => 'Inviting the dream';
+
+  @override
+  String get lustFolge4 => 'Recognising';
+
+  @override
+  String get lustFolge5 => 'Staying in the lucid dream';
+
+  @override
+  String get lustFolge6 => 'Letting pleasure unfold';
+
+  @override
+  String get lustFolge7 => 'More than once';
+
+  @override
+  String get lustFolge8 => 'Your own way';
+
+  @override
+  String get lustSerieEinleitung =>
+      'Eight evenings that build on each other: from a relaxed, pleasurable body as you fall asleep, through remembering and recognising dreams, to the lucid, sensual dream. The next episode unlocks once you have listened to the previous one on two evenings. Going back and repeating is always possible.';
+
+  @override
+  String get lustEinleitung =>
+      'A voice accompanies you into sleep and into tonight\'s episode. Then it quietly repeats the intention, with ever longer pauses, until only silence remains. You may fall asleep along the way.';
+
+  @override
+  String get lustEhrlich =>
+      'A climax in a dream can be invited, not forced. Some experience it after a few nights, some after many, and some have sensual dreams without a climax instead. All of it is right.';
+
+  @override
+  String get lustFolgen => 'Episodes';
+
+  @override
+  String get lustTraumkoerper => 'Your body in the dream';
+
+  @override
+  String get lustTraumkoerperEigener => 'My own';
+
+  @override
+  String get lustTraumkoerperFrau => 'A woman\'s body';
+
+  @override
+  String get lustTraumkoerperMann => 'A man\'s body';
+
+  @override
+  String get lustGegenueber => 'With whom in the dream';
+
+  @override
+  String get lustGegenueberNiemand => 'Just me';
+
+  @override
+  String get lustGegenueberFrau => 'A woman';
+
+  @override
+  String get lustGegenueberMann => 'A man';
+
+  @override
+  String get lustGegenueberOffen => 'Open';
+
+  @override
+  String get lustWeiter => 'Continue to the evening';
+
+  @override
+  String get lustHinweise =>
+      'Adults only. Not a substitute for treatment of sleep disorders; better not with frequent nightmares, epilepsy or severe sleep deprivation. Strong arousal often wakes you, that is normal. What happens in a dream is a dream experience; fantasies there say little about wishes in waking life.';
+
+  @override
+  String get lustHinweisHandtuch => 'A towel within reach is not a bad idea.';
+
+  @override
+  String lustAbendeGehoert(int n) {
+    String _temp0 = intl.Intl.pluralLogic(
+      n,
+      locale: localeName,
+      other: 'listened to on $n evenings',
+      one: 'listened to on one evening',
+      zero: 'not listened to yet',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String lustGesperrt(int n) {
+    return 'Unlocks after two evenings with episode $n';
+  }
+
+  @override
+  String get lustPaketFehlt =>
+      'The recordings for this series are still missing. They come as a separate package, best downloaded over Wi-Fi.';
+
+  @override
+  String get lustPaketLaden => 'Download recordings';
+
+  @override
+  String get lustLadenFehler => 'Download failed. Please try again later.';
+
+  @override
+  String get lustKarteTitel => 'Pleasure in dreams';
+
+  @override
+  String get lustKarteTitelNeutral => 'Evening series';
+
+  @override
+  String get lustKarteText =>
+      'Eight evenings that build on each other, up to the lucid, sensual dream.';
+
+  @override
+  String get lustKarteTextNeutral =>
+      'Eight calm evenings that build on each other.';
 }
