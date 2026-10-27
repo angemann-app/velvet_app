@@ -1,7 +1,7 @@
 {
   "_hinweis": "Version je Audio-Paket (tools/pakete_bauen.py). Nach neu eingesprochenen Aufnahmen hochzählen, dann bauen, signieren und hochladen (tools/pakete_hochladen.ps1).",
   "de-lektionen": 2,
-  "de-gefuehrt": 2,
+  "de-gefuehrt": 3,
   "en-lektionen": 1,
   "en-gefuehrt": 1
 }
