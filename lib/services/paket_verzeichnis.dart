@@ -69,8 +69,8 @@ class PaketVerzeichnis {
 
   /// Wo das Verzeichnis liegt, in Reihenfolge. Leere Einträge werden übersprungen.
   static const adressen = [
-    // Cloudflare R2 (öffentliche Adresse des Buckets, sobald eingerichtet).
-    '',
+    // Cloudflare R2, öffentliche Entwicklungs-Adresse des Buckets velvetpulse-pakete (EU).
+    'https://pub-d8ea2c70c3a04c79b5af86a1f29599b4.r2.dev/audio-index.json',
     'https://github.com/angemann-app/velvet_app/releases/download/pakete/audio-index.json',
   ];
 
