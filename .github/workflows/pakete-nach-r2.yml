@@ -42,7 +42,7 @@ jobs:
             python3 - <<'PY'
           import base64, glob, os
           from cryptography.hazmat.primitives.ciphers.aead import AESGCM
-          aes = AESGCM(base64.b64decode(os.environ["PAKETE_TRANSPORT_KEY"]))
+          aes = AESGCM(base64.b64decode(os.environ["PAKETE_TRANSPORT_KEY"].strip().lstrip("\ufeff")))
           for f in glob.glob("*.zip.enc"):
               d = open(f, "rb").read()
               open(f[:-4], "wb").write(aes.decrypt(d[:12], d[12:], None))
