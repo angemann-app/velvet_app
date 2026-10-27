@@ -1,0 +1,59 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Kostenloses Modell von OpenCode Zen (Anbieter ohne Speicherung, kein Training mit den Daten).
+  "model": "opencode/deepseek-v4.1-flash-free",
+  // Auch Titel, Zusammenfassungen und Verdichtung über das kostenlose Modell, nie über bezahlte.
+  "agents": {
+    "title": { "model": "opencode/deepseek-v4.1-flash-free" },
+    "summary": { "model": "opencode/deepseek-v4.1-flash-free" },
+    "compaction": { "model": "opencode/deepseek-v4.1-flash-free" },
+  },
+  // Letzte passende Regel gewinnt. OpenCode arbeitet nur zu, Claude Code prüft, committet und veröffentlicht.
+  // Aufruf über tools/opencode_mcp.py mit --auto: Rückfragen würden bejaht, deshalb nur allow und deny.
+  "permissions": [
+    // Außerhalb des Projekts nichts, nur Flutter und der Pub-Cache zum Lesen.
+    { "action": "external_directory", "resource": "*", "effect": "deny" },
+    { "action": "external_directory", "resource": "C:/TOOLS/flutter/*", "effect": "allow" },
+    { "action": "external_directory", "resource": "~/AppData/Local/Pub/Cache/*", "effect": "allow" },
+    { "action": "edit", "resource": "C:/TOOLS/flutter/*", "effect": "deny" },
+    { "action": "edit", "resource": "~/AppData/Local/Pub/Cache/*", "effect": "deny" },
+
+    // Shell: grundsätzlich nein (über die Shell ließe sich jede Datei lesen), nur diese Befehle.
+    { "action": "shell", "resource": "*", "effect": "deny" },
+    { "action": "shell", "resource": "flutter test *", "effect": "allow" },
+    { "action": "shell", "resource": "flutter analyze *", "effect": "allow" },
+    { "action": "shell", "resource": "flutter gen-l10n *", "effect": "allow" },
+    { "action": "shell", "resource": "flutter pub get *", "effect": "allow" },
+    { "action": "shell", "resource": "dart format *", "effect": "allow" },
+    { "action": "shell", "resource": "git status *", "effect": "allow" },
+    { "action": "shell", "resource": "git diff *", "effect": "allow" },
+    { "action": "shell", "resource": "git log *", "effect": "allow" },
+    // Auch in erlaubten Befehlen keine privaten Pfade.
+    { "action": "shell", "resource": "*velvet-inhalte*", "effect": "deny" },
+    { "action": "shell", "resource": "*velvet-feedback*", "effect": "deny" },
+    { "action": "shell", "resource": "*velvet-pakete*", "effect": "deny" },
+    { "action": "shell", "resource": "*key.properties*", "effect": "deny" },
+    { "action": "shell", "resource": "*;*", "effect": "deny" },
+    { "action": "shell", "resource": "*|*", "effect": "deny" },
+    { "action": "shell", "resource": "*&*", "effect": "deny" },
+    { "action": "shell", "resource": "*>*", "effect": "deny" },
+    { "action": "shell", "resource": "*`*", "effect": "deny" },
+    { "action": "shell", "resource": "*$(*", "effect": "deny" },
+
+    // Geheimnisse im Projekt: nie lesen, nie ändern (gingen sonst an den Cloud-Dienst).
+    { "action": "read", "resource": "*key.properties", "effect": "deny" },
+    { "action": "read", "resource": "*.jks", "effect": "deny" },
+    { "action": "read", "resource": "*.keystore", "effect": "deny" },
+    { "action": "read", "resource": "*_key.json", "effect": "deny" },
+    { "action": "read", "resource": "*.env", "effect": "deny" },
+    { "action": "read", "resource": "*.env.*", "effect": "deny" },
+    { "action": "edit", "resource": "*key.properties", "effect": "deny" },
+    { "action": "edit", "resource": "android/app/build.gradle.kts", "effect": "deny" },
+    { "action": "edit", "resource": ".github/*", "effect": "deny" },
+    { "action": "edit", "resource": ".mcp.json", "effect": "deny" },
+    { "action": "edit", "resource": "tools/opencode_mcp.py", "effect": "deny" },
+
+    // Kein Nachladen aus dem Netz.
+    { "action": "webfetch", "resource": "*", "effect": "deny" },
+  ],
+}
