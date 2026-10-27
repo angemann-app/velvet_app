@@ -17,6 +17,8 @@ angezeigt werden.
 
 ## 2. Nostr-Migration auf NIP-17
 
+Konzept: `docs/konzepte/nip17.md` (offene Fragen dort zuerst klären).
+
 Von NIP-04 auf NIP-17 (Gift-Wrap) umstellen, ohne dass Paare mit unterschiedlichen App-Versionen sich
 verlieren.
 
@@ -32,7 +34,8 @@ verlieren.
 
 Paketverwaltung mit signierter `audio-index.json` (englisches Paket muss weiter funktionieren) und
 Upload-Workflow nach Cloudflare R2. Danach in eigener Sitzung das Traumtagebuch.
-Details: `docs/konzepte/traum-reise.md`.
+Details: `docs/konzepte/traum-reise.md` (inkl. Schutz vor Zurückrollen: Laufnummer im signierten
+Verzeichnis, Prüfschlüssel fest in der App).
 
 ## Laufend: Aussprache korrigieren (täglich)
 
