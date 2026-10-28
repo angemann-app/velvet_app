@@ -6,6 +6,11 @@ die Meldungen, OpenCode pflegt das Lexikon und spricht neu ein, Claude Code prü
 Nutzer melden falsch ausgesprochene Wörter in der App („Wort falsch ausgesprochen?“, kommt über das
 Rückmelde-Postfach) oder als GitHub-Issue mit der Vorlage „Aussprache“.
 
+**Fester Tag: Mittwoch** (Entscheidung des Nutzers, 28.10.2026). Meldungen werden täglich gesammelt, aber nur
+einmal pro Woche abgearbeitet: ein Lexikon-Stapel, ein Aufnahmelauf, eine Paketversion. Das spart doppelte
+Aufnahmen. Ausnahme: ein grober Fehler (Wort völlig falsch oder peinlich) darf sofort drankommen, das entscheidet
+Claude Code und sagt dem Nutzer Bescheid.
+
 ## 1. Meldungen holen (Claude Code)
 
 - Zuerst `C:\TOOLS\velvet-feedback\aussprache_offen.txt` lesen: Dort trägt die tägliche Nachrichten-Aufgabe

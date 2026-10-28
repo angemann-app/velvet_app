@@ -3952,6 +3952,109 @@ class AppLocalizationsDe extends AppLocalizations {
       'Testmodus: kurze Pausen, alles frei. Ausschalten: siebenmal auf die Versionsnummer im Profil tippen.';
 
   @override
+  String get reiheKarteTitel => 'Innenansichten';
+
+  @override
+  String get reiheKarteTitelNeutral => 'Hörgeschichte';
+
+  @override
+  String get reiheKarteText =>
+      'Lust von innen erzählt, in Soft und Spicy, auch aus zwei Perspektiven derselben Begegnung.';
+
+  @override
+  String get reiheKarteTextNeutral => 'Eine zusammenhängende Hörgeschichte.';
+
+  @override
+  String get reiheTitel => 'Innenansichten';
+
+  @override
+  String get reiheEinleitung =>
+      'Zusammenhängende Erzählungen von etwa 20 bis 30 Minuten, nicht zum Einschlafen. Sie beschreiben, wie sich Lust von innen anfühlen kann. Jeder Mensch erlebt das anders; nichts davon ist ein Maßstab oder ein Versprechen.';
+
+  @override
+  String get reiheFolgen => 'Folge';
+
+  @override
+  String get reiheVariante => 'Intensität';
+
+  @override
+  String get reiheSoft => 'Soft';
+
+  @override
+  String get reiheSpicy => 'Spicy';
+
+  @override
+  String get reihePerspektive => 'Perspektive';
+
+  @override
+  String get reihePerspektiveFrau => 'Sie';
+
+  @override
+  String get reihePerspektiveMann => 'Er';
+
+  @override
+  String reihePartnerHinweis(String name) {
+    return 'Die passende Gegenperspektive derselben Begegnung: $name. Beide folgen derselben Szenenfolge. Eine gemeinsame Wiedergabe lässt sich so starten, die App gleicht die Geräte aber nicht ab.';
+  }
+
+  @override
+  String reiheDauer(int minuten) {
+    return 'Etwa $minuten Minuten';
+  }
+
+  @override
+  String get reiheStart => 'Starten';
+
+  @override
+  String reiheSzene(int n, int m) {
+    return 'Szene $n von $m';
+  }
+
+  @override
+  String get reiheSzeneVor => 'Nächste Szene';
+
+  @override
+  String get reiheSzeneZurueck => 'Szene von vorn';
+
+  @override
+  String get reiheBeenden => 'Beenden';
+
+  @override
+  String get reiheBeendenFrage => 'Die Erzählung stoppen?';
+
+  @override
+  String get reiheBeendenText => 'Du kannst später neu beginnen.';
+
+  @override
+  String get reiheFertig =>
+      'Fertig. Nimm dir einen Moment, bevor du weitermachst.';
+
+  @override
+  String get reiheHinweise =>
+      'Nur ab achtzehn. Alle Figuren sind erwachsen, alles geschieht einvernehmlich. Nichts davon ist ein Leistungsmaßstab: Erregung, Höhepunkt und Zufriedenheit sind nicht dasselbe, und jeder Körper reagiert anders.';
+
+  @override
+  String get reiheLeer => 'Im Paket sind noch keine Folgen.';
+
+  @override
+  String get reihePaketFehlt =>
+      'Für diese Reihe fehlen noch die Aufnahmen. Sie kommen als eigenes Paket, am besten im WLAN laden. Danach läuft alles ohne Netz.';
+
+  @override
+  String get reihePaketLaden => 'Aufnahmen laden';
+
+  @override
+  String get reiheLadenFehler =>
+      'Laden hat nicht geklappt. Bitte später noch einmal versuchen.';
+
+  @override
+  String get reiheOffline => 'Offline verfügbar';
+
+  @override
+  String get reiheKeineAufnahme =>
+      'Zu dieser Fassung gibt es noch keine Aufnahme; die Geräte-Stimme liest vor.';
+
+  @override
   String get lautsprecherFrageTitel => 'Lautsprecher';
 
   @override

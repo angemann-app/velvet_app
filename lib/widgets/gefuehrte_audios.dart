@@ -6,6 +6,7 @@ import '../l10n/t.dart';
 import '../screens/couples_channel/paar_abend_screen.dart';
 import '../screens/self_exploration/einschlaf_reise_screen.dart';
 import '../screens/self_exploration/lust_im_traum_screen.dart';
+import '../screens/self_exploration/lust_reihe_screen.dart';
 import '../screens/self_exploration/selbst_reise_screen.dart';
 import '../screens/self_exploration/traum_tagebuch_screen.dart';
 import '../services/privacy_service.dart';
@@ -69,6 +70,7 @@ class GefuehrteAudios extends StatelessWidget {
             valueListenable: StorageService.spicyAenderung,
             builder: (context, spicy, _) => spicy ? const _LustKarte() : const SizedBox.shrink(),
           ),
+        if (mitSelbst) const _ReiheKarte(),
         if (mitPaar)
           GefuehrtKarte(
             bild: 'assets/images/guided_paar.svg',
@@ -148,6 +150,30 @@ class _LustKarte extends StatelessWidget {
         text: snapshot.data == true ? t.lustKarteTextNeutral : t.lustKarteText,
         onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LustImTraumScreen())),
       ),
+    );
+  }
+}
+
+/// Audioreihe „Innenansichten“ (docs/konzepte/lust-audioreihe.md). Im Diskretions-Modus neutral. Vorerst nur
+/// im Spicy-Modus sichtbar, auch die Soft-Fassungen (Entscheidung des Nutzers, 28.10.2026).
+class _ReiheKarte extends StatelessWidget {
+  const _ReiheKarte();
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<bool>(
+      valueListenable: StorageService.spicyAenderung,
+      builder: (context, spicy, _) => !spicy
+          ? const SizedBox.shrink()
+          : FutureBuilder<bool>(
+              future: PrivacyService.isDiscreetIcon(),
+              builder: (context, snapshot) => GefuehrtKarte(
+                bild: 'assets/images/guided_einschlaf.svg',
+                titel: snapshot.data == true ? t.reiheKarteTitelNeutral : t.reiheKarteTitel,
+                text: snapshot.data == true ? t.reiheKarteTextNeutral : t.reiheKarteText,
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const LustReiheScreen())),
+              ),
+            ),
     );
   }
 }

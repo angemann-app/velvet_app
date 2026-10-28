@@ -187,6 +187,26 @@ class Kokoro:
                 pieces.append(silence)
         return pieces
 
+    def _speak_ausdruck(self, szene, text, name):
+        """Satzweise mit Tempo und Lücke aus tools/reihe_ausdruck.py (nur Audioreihe)."""
+        import numpy as np
+        import reihe_ausdruck
+
+        pipeline, pack = self._load(name)
+        pieces = []
+        for satz, tempo, luecke in reihe_ausdruck.plan(szene, text, VOICE_SPEED.get(name, SPEED)):
+            for chunk in _chunks(self.phonemes(satz, name)):
+                for result in pipeline.generate_from_tokens(chunk, voice=pack, speed=tempo):
+                    pieces.append(result.audio.numpy())
+            pieces.append(np.zeros(int(luecke * SAMPLE_RATE), dtype=np.float32))
+        return pieces
+
+    def synthesize_ausdruck(self, szene, text, name, wav_path):
+        import numpy as np
+        import soundfile as sf
+
+        sf.write(wav_path, np.concatenate(self._speak_ausdruck(szene, text, name)), SAMPLE_RATE)
+
     def synthesize_wav(self, text, name, wav_path, pause=True):
         import numpy as np
         import soundfile as sf
@@ -335,6 +355,69 @@ def generate_lust(only=None, voices=None):
     generate_einschlaf(None, voices, blocks=blocks, out_dir=LUST_ORDNER / "audio")
 
 
+# Audioreihe „Innenansichten“ (docs/konzepte/lust-audioreihe.md): ebenfalls nur außerhalb des Repositorys.
+# Eine Aufnahme je Szene und Fassung, zusammenhängend erzählt (normales Tempo, kurze Absatzpausen).
+REIHE_ORDNER = Path(r"C:\TOOLS\velvet-inhalte\reihe")
+
+
+def reihe_auftraege(sprache):
+    """{Dateiname: (Text, Stimme)} für alle Szenen aller Fassungen, Name wie ReiheDaten.audioPfad."""
+    daten = json.loads((REIHE_ORDNER / "reihe.json").read_text(encoding="utf-8"))[sprache]
+    return {f"{fa['stimme']}_{folge['id']}_{fa['id']}_{seg['szene']}.opus": (seg["text"], fa["stimme"])
+            for folge in daten["folgen"] for fa in folge["fassungen"] for seg in fa["segmente"]}
+
+
+def reihe_szenen(sprache):
+    """{Dateiname: Szenen-ID}, Namen wie reihe_auftraege."""
+    daten = json.loads((REIHE_ORDNER / "reihe.json").read_text(encoding="utf-8"))[sprache]
+    return {f"{fa['stimme']}_{folge['id']}_{fa['id']}_{seg['szene']}.opus": seg["szene"]
+            for folge in daten["folgen"] for fa in folge["fassungen"] for seg in fa["segmente"]}
+
+
+def generate_reihe(only=None):
+    """Deutsch nach REIHE_ORDNER/audio. Setzt fort: nur neue oder geänderte Texte (Prüfsumme in
+    audio_de_texte.json). Die ids gelten als Anfänge des Dateinamens, z. B. martin_frau_mann_spicy_mann."""
+    import hashlib
+    import soundfile as sf
+
+    auf = reihe_auftraege("de")
+    if only:
+        auf = {k: v for k, v in auf.items() if k.startswith(tuple(only))}
+    out_dir = REIHE_ORDNER / "audio"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    texte_datei = REIHE_ORDNER / "audio_de_texte.json"
+    texte = json.loads(texte_datei.read_text(encoding="utf-8")) if texte_datei.exists() else {}
+    dauer_datei = out_dir / "dauer.json"
+    dauer = json.loads(dauer_datei.read_text(encoding="utf-8")) if dauer_datei.exists() else {}
+
+    import reihe_ausdruck
+
+    szenen = reihe_szenen("de")
+
+    def summe(text, name):
+        return hashlib.sha256(
+            f"{name}|{SPEED}|{VOICE_SPEED}|{reihe_ausdruck.PROFIL}|{text}".encode("utf-8")).hexdigest()[:16]
+
+    offen = [k for k, (t, n) in auf.items() if not (out_dir / k).exists() or texte.get(k) != summe(t, n)]
+    print(f"{len(offen)} von {len(auf)} Aufnahmen neu", flush=True)
+    if not offen:
+        return
+    engine = Kokoro()
+    for i, name in enumerate(offen, 1):
+        text, stimme = auf[name]
+        out = out_dir / name
+        # espeak-ng.dll bleibt unter Windows gesperrt; das Aufräumen darf die Aufnahme nicht abbrechen.
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
+            wav = Path(tmp) / "x.wav"
+            engine.synthesize_ausdruck(szenen[name], text, stimme, wav)
+            dauer[out.stem] = int(sf.info(str(wav)).duration * 1000)
+            to_opus(wav, out)
+        texte[name] = summe(text, stimme)
+        texte_datei.write_text(json.dumps(dict(sorted(texte.items())), indent=1), encoding="utf-8")
+        dauer_datei.write_text(json.dumps(dict(sorted(dauer.items())), indent=1), encoding="utf-8")
+        print(f"[{i}/{len(offen)}] {name} -> {out.stat().st_size // 1024} KB, {dauer[out.stem] // 1000} s", flush=True)
+
+
 def generate_sounds():
     """Klangschale für Übergänge und ein ruhiger, nahtlos loopender Klangteppich für die Stillen."""
     import numpy as np
@@ -409,6 +492,8 @@ def main():
                         help="Bausteine der Einschlaf-Reise erzeugen (assets/audio/einschlaf/), optional nur die genannten ids")
     parser.add_argument("--lust", action="store_true",
                         help="„Lust im Traum“ erzeugen (aus und nach C:\\TOOLS\\velvet-inhalte\\lust, nie ins Repository), optional nur die genannten ids")
+    parser.add_argument("--reihe", action="store_true",
+                        help="Audioreihe „Innenansichten“ erzeugen (aus und nach C:\\TOOLS\\velvet-inhalte\\reihe, nie ins Repository), optional nur Dateinamen mit den genannten Anfängen")
     parser.add_argument("--klang", action="store_true", help="Klangschale und Klangteppich erzeugen")
     parser.add_argument("--stimme", choices=list(KOKORO_VOICES),
                         help="nur Aufnahmen mit dieser Stimme erneuern (Lektionen im Wechsel zählen mit)")
@@ -431,6 +516,9 @@ def main():
         return
     if args.lust:
         generate_lust(set(args.ids), voices)
+        return
+    if args.reihe:
+        generate_reihe(set(args.ids))
         return
     if args.courses and len(args.courses) == 1:
         args.courses = (args.courses[0], args.courses[0])

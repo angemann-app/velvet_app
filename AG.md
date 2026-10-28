@@ -45,6 +45,7 @@ Auftrag: AG-n
 
 ### Erledigt
 
+- 28.10.2026, AG-9 (`ag/9-hallo`, PR #52): freiwilliges Hallo (einmalig), nur Version und Sprache, samt Sicherung, Abholwerkzeug und Tests.
 - 28.10.2026, AG-8 (`ag/8-lautsprecher`, PR #50): Nachfrage vor Lautsprecher-Wiedergabe, Pause beim Abziehen der
   Kopfhörer, zwei Schalter in Profil und Sicherung, Realitätschecks sichtbarer (Traum-Abend, Tagebuch).
 - (ein Punkt je Ergebnis)
@@ -74,28 +75,38 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
-### AG-9: Freiwilliges „Hallo“ (einmalig, nach AG-8)
+### AG-11: Probe Kursbilder, Pilotkurs „Toys“ (Normalfassung)
 
-**Branch:** `ag/9-hallo`
-**Vorher lesen:** `docs/konzepte/hallo.md` (alles), `lib/services/rueckmeldung.dart`, `lib/screens/rueckmeldung_screen.dart`.
-**Darf ändern:** `lib/services/rueckmeldung.dart` (nur eine Funktion für das Hallo, gleicher Versandweg),
-die Profil-Einstellungen (ein Eintrag „Einmal anonym Hallo sagen“), `lib/services/storage_service.dart`,
-`lib/services/backup_codec.dart` und `test/backup_merge_test.dart` (nur der Merker „gesendet am“),
-`tools/rueckmeldungen_abholen.dart` (Hallos getrennt zählen), neue Tests `test/hallo_test.dart`, ARB (Präfix
-`hallo`), erzeugte `app_localizations*.dart`, Anleitung (Datenschutz-Abschnitt in `assets/data/anleitung.json`,
-`translations/en/anleitung.json`, `docs/ANLEITUNG.md`, `docs/GUIDE.md`).
+**Branch:** `ag/11-kursbilder-probe`
+**Vorher lesen:** `docs/konzepte/kursbilder.md` (alles, besonders Abschnitte 4, 5 und 7), `tools/generate_diagrams.py`,
+`assets/images/diagram_yoni_clock.svg` und `assets/images/cover_27.svg` als Stilvorbild, Kurs 25 „Toys“ in
+`assets/data/velvet_content.json` (Lektionen `toys_2`, `toys_3`, `toys_4`).
+**Darf ändern:** nur neue Dateien in `docs/kursbilder-probe/` (kein Bild geht in die App, kein anderer Ordner).
+Nichts in `assets/`, `lib/`, `translations/`.
 
-1. Eintrag im Profil mit kurzem Text: was gesendet wird (nur Version und Sprache), wie (verschlüsselt, ohne
-   Absender) und dass es freiwillig ist. Knopf „Hallo sagen“; danach „Danke, gesendet am …“, kein zweites Mal.
-2. Versand wie bei den Rückmeldungen (NIP-17, Gift Wrap, Einmal-Schlüssel), mit einer eigenen Art `hallo`,
-   damit das Abholwerkzeug sie erkennt. Inhalt ausschließlich Version und Sprache.
-3. `tools/rueckmeldungen_abholen.dart`: Hallos am Ende als Zählung ausgeben („Hallo: 3 (de 2, en 1; 4.13.0: 3)“),
-   nicht einzeln. Den privaten Schlüssel nie ausgeben.
-4. Nie automatisch senden, auch nicht nach Updates oder Wiederherstellung.
+Das ist ein **Probeauftrag**. Er soll klären, ob und wie gut Antigravity Grafiken für die Kurse erzeugen kann.
 
-**Prüfen:** `flutter analyze --no-fatal-infos --no-fatal-warnings`, `flutter test`, Screen-Test; Tests: Inhalt
-enthält nur Version und Sprache, ohne Tipp wird nichts gesendet, nach dem Senden kein zweites Mal, Merker in
-Sicherung und Backup-Merge. Übersetzung stempeln und PO abgleichen.
+1. **Zuerst melden:** Kannst du Bilder mit einem Bildmodell erzeugen, oder nur SVG als Code schreiben? Schreibe es
+   in die erste Zeile von `docs/kursbilder-probe/README.md`. Verweigert dein Inhaltsfilter ein Motiv: **abbrechen,
+   nicht umgehen, nicht entschärfen**, das Ergebnis in der README festhalten und die übrigen Motive weiterführen.
+2. **Vier Motive** (neutral, ohne Körper, ohne Marken; ruhiger Stil wie die vorhandenen Diagramme, dunkle Töne
+   `#140D1C`/`#0F172A`, Akzent `#FB7185`):
+   a. `toys_uebersicht`: stilisierte, neutrale Silhouetten der Toy-Arten (Vibratoren, Massagestab, Ringe, Kugeln,
+      Gleitmittel) als Überblick, ohne Körper.
+   b. `toys_material`: Vergleich der Materialien (Silikon, Glas, Metall, ABS) mit je einem Pflegehinweis.
+   c. `toys_sicherheit`: Ampel- oder Merkbild „Wo es heikel wird“ (Hygiene, passendes Gleitmittel, Stopp-Signal).
+   d. `toys_titel`: Titelbild für Kurs 25 in Stimmung der anderen Titelbilder (840 × 300).
+3. **Jedes Motiv als SVG** (a bis c im Format 800 × 600, d 840 × 300), **Deutsch und Englisch**
+   (`<name>.svg`, `<name>_en.svg`). Wenn du ein Bildmodell hast: zusätzlich je Motiv ein Rasterbild
+   (`<name>_modell.webp`, höchstens 150 KB) zum Vergleich.
+4. `docs/kursbilder-probe/README.md`: erste Zeile Fähigkeit (siehe 1), dann eine kurze Tabelle: Motiv, SVG ja/nein,
+   Modellbild ja/nein, Dateigröße, was nicht klappte (Filter, Stil, Lesbarkeit, Beschriftung).
+
+**Nicht tun:** Spicy- oder körperbezogene Motive, Bilder von Personen, Marken, Produktfotos. Nichts an Claude oder
+andere Sitzungen weitergeben, was nicht in der README steht.
+
+**Prüfen:** SVGs öffnen sich im Browser, Text ist lesbar und nicht abgeschnitten. `flutter test` nicht nötig, es
+ändert sich kein App-Code. In den Pull Request: Hinweis, dass alles nur zum Ansehen ist.
 
 ### AG-3: Texte für „Lust im Traum“ (an Claude Code abgegeben)
 

@@ -3934,6 +3934,107 @@ class AppLocalizationsEn extends AppLocalizations {
       'Test mode: short pauses, everything unlocked. To turn off, tap the version number in the profile seven times.';
 
   @override
+  String get reiheKarteTitel => 'Inner views';
+
+  @override
+  String get reiheKarteTitelNeutral => 'Audio story';
+
+  @override
+  String get reiheKarteText =>
+      'Desire told from within, in Soft and Spicy, also from two perspectives of the same encounter.';
+
+  @override
+  String get reiheKarteTextNeutral => 'One continuous audio story.';
+
+  @override
+  String get reiheTitel => 'Inner views';
+
+  @override
+  String get reiheEinleitung =>
+      'Continuous stories of about 20 to 30 minutes, not for falling asleep. They describe how desire can feel from within. Everyone experiences this differently; none of it is a benchmark or a promise.';
+
+  @override
+  String get reiheFolgen => 'Episode';
+
+  @override
+  String get reiheVariante => 'Intensity';
+
+  @override
+  String get reiheSoft => 'Soft';
+
+  @override
+  String get reiheSpicy => 'Spicy';
+
+  @override
+  String get reihePerspektive => 'Perspective';
+
+  @override
+  String get reihePerspektiveFrau => 'Her';
+
+  @override
+  String get reihePerspektiveMann => 'Him';
+
+  @override
+  String reihePartnerHinweis(String name) {
+    return 'The matching perspective of the same encounter: $name. Both follow the same sequence of scenes. You can start a shared playback this way, but the app does not sync the devices.';
+  }
+
+  @override
+  String reiheDauer(int minuten) {
+    return 'About $minuten minutes';
+  }
+
+  @override
+  String get reiheStart => 'Start';
+
+  @override
+  String reiheSzene(int n, int m) {
+    return 'Scene $n of $m';
+  }
+
+  @override
+  String get reiheSzeneVor => 'Next scene';
+
+  @override
+  String get reiheSzeneZurueck => 'Scene from the start';
+
+  @override
+  String get reiheBeenden => 'End';
+
+  @override
+  String get reiheBeendenFrage => 'Stop the story?';
+
+  @override
+  String get reiheBeendenText => 'You can start again later.';
+
+  @override
+  String get reiheFertig => 'Done. Take a moment before you continue.';
+
+  @override
+  String get reiheHinweise =>
+      'Adults only. All characters are adults, and everything happens by mutual consent. None of it is a measure of performance: arousal, climax, and satisfaction are not the same, and every body responds differently.';
+
+  @override
+  String get reiheLeer => 'The package does not contain any episodes yet.';
+
+  @override
+  String get reihePaketFehlt =>
+      'The recordings for this series are not available yet. They come as a separate package; download it over Wi-Fi if possible. After that, everything works offline.';
+
+  @override
+  String get reihePaketLaden => 'Download recordings';
+
+  @override
+  String get reiheLadenFehler => 'Download failed. Please try again later.';
+
+  @override
+  String get reiheOffline => 'Available offline';
+
+  @override
+  String get reiheKeineAufnahme =>
+      'There is no recording for this version yet; the device voice reads it aloud.';
+
+  @override
   String get lautsprecherFrageTitel => 'Speaker';
 
   @override

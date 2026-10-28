@@ -59,6 +59,8 @@ Lust im Traum (nur im Spicy-Modus): acht Abende, die aufeinander aufbauen, vom l
 
 Alle werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden.
 
+Innenansichten (nur im Spicy-Modus, ab 18): zusammenhängende Hörgeschichten von rund 15 bis 25 Minuten, nicht zum Einschlafen. Sie erzählen eine Begegnung von innen. Du wählst Soft oder Spicy und eine Perspektive; die Gegenperspektive derselben Begegnung hat dieselbe Szenenfolge, so können zwei Menschen sie gemeinsam hören. Die App gleicht zwei Geräte allerdings nicht ab: Ihr startet selbst zusammen. Alle Figuren sind erwachsen, alles geschieht einvernehmlich, und nichts davon ist ein Maßstab: Jeder Körper erlebt Lust anders. Die Aufnahmen kommen als eigenes Paket und laufen danach ohne Netz. Im Player kannst du pausieren und Szenen überspringen. Auf der Karte steht im Diskretions-Modus nur Hörgeschichte.
+
 
 ## Training und Akuthilfe
 
