@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
 import 'aussprache_melden.dart';
+import 'lautsprecher_frage.dart';
 import '../l10n/t.dart';
 
 class AudioPlayerCard extends StatefulWidget {
@@ -236,12 +237,16 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
 
               // Central Play / Pause Button
               GestureDetector(
-                onTap: () {
+                onTap: () async {
                   if (isPlaying) {
                     _audioService.pause();
                   } else if (isPaused) {
+                    final darf = await frageVorLautsprecher(context);
+                    if (!darf) return;
                     _audioService.resume();
                   } else {
+                    final darf = await frageVorLautsprecher(context);
+                    if (!darf) return;
                     _audioService.playLesson(
                       widget.contextId,
                       fallbackText: widget.textToRead,

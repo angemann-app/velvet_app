@@ -1097,5 +1097,16 @@
   "weckenLaeuftText": "Set your device aside and close your eyes. The guidance stops on its own.",
   "testmodusAn": "Test mode on: short pauses, everything unlocked.",
   "testmodusAus": "Test mode off.",
-  "testmodusSchild": "Test mode: short pauses, everything unlocked. To turn off, tap the version number in the profile seven times."
+  "testmodusSchild": "Test mode: short pauses, everything unlocked. To turn off, tap the version number in the profile seven times.",
+  "lautsprecherFrageTitel": "Speaker",
+  "lautsprecherFrageNachricht": "Playback will play through the speaker. Play anyway?",
+  "lautsprecherAbspielen": "Play",
+  "lautsprecherAbbrechen": "Cancel",
+  "lautsprecherNichtMehrFragen": "Do not ask again",
+  "lautsprecherEinstellungFrageTitel": "Ask before speaker playback",
+  "lautsprecherEinstellungFrageText": "Asks before playing if no headphones are connected.",
+  "lautsprecherEinstellungPauseTitel": "Pause when headphones are disconnected",
+  "lautsprecherEinstellungPauseText": "Pauses playback as soon as wired or Bluetooth headphones are disconnected.",
+  "realitaetStatusEin": "On",
+  "realitaetStatusAus": "Off"
 }

@@ -57,6 +57,25 @@ void main() {
     expect(restored.anzahlProTag, 4);
   });
 
+  test('Lautsprecher-Einstellungen sind in der Sicherung und werden wiederhergestellt', () async {
+    expect(StorageService.getFrageVorLautsprecher(), isTrue);
+    expect(StorageService.getPausiereBeiKopfhoererGetrennt(), isTrue);
+
+    await StorageService.setFrageVorLautsprecher(false);
+    await StorageService.setPausiereBeiKopfhoererGetrennt(false);
+
+    final export = StorageService.exportAllUserData();
+    expect(export['frageVorLautsprecher'], isFalse);
+    expect(export['pausiereBeiKopfhoererGetrennt'], isFalse);
+
+    await StorageService.setFrageVorLautsprecher(true);
+    await StorageService.setPausiereBeiKopfhoererGetrennt(true);
+
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getFrageVorLautsprecher(), isFalse);
+    expect(StorageService.getPausiereBeiKopfhoererGetrennt(), isFalse);
+  });
+
   test('Die Ja/Nein-Liste ist in der Sicherung enthalten', () {
     final export = StorageService.exportAllUserData();
     expect(jsonDecode(export['yesNoMaybe'] as String), {'a': 'yes', 'c': 'no'});

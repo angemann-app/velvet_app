@@ -104,32 +104,6 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
       appBar: AppBar(
         backgroundColor: AppTheme.background,
         title: Text(t.tagebuchTitel),
-        actions: [
-          PopupMenuButton<String>(
-            icon: const Icon(Icons.more_vert_rounded, color: AppTheme.textSecondary),
-            color: AppTheme.surface,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            onSelected: (val) {
-              if (val == 'realitaetscheck') {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (_) => const RealitaetscheckScreen()),
-                );
-              }
-            },
-            itemBuilder: (_) => [
-              PopupMenuItem(
-                value: 'realitaetscheck',
-                child: Row(
-                  children: [
-                    const Icon(Icons.touch_app_outlined, size: 18, color: AppTheme.textSecondary),
-                    const SizedBox(width: 10),
-                    Text(t.realitaetTitel, style: const TextStyle(color: AppTheme.textPrimary)),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ],
       ),
       body: SafeArea(
         child: ListView(
@@ -183,6 +157,8 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
               _WochenrueckblickKarte(eintraege: _eintraege),
               const SizedBox(height: 16),
             ],
+            _RealitaetscheckZeile(onZurueck: _neuLaden),
+            const SizedBox(height: 16),
             if (TraumEintrag.pauseRaten(_eintraege)) ...[
               Container(
                 padding: const EdgeInsets.all(14),
@@ -370,7 +346,6 @@ class _EditorState extends State<_Editor> {
   }
 }
 
-
 class _WochenrueckblickKarte extends StatelessWidget {
   final List<TraumEintrag> eintraege;
 
@@ -509,6 +484,61 @@ class _WochenrueckblickKarte extends StatelessWidget {
                   ),
               ],
             ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _RealitaetscheckZeile extends StatelessWidget {
+  final VoidCallback onZurueck;
+
+  const _RealitaetscheckZeile({required this.onZurueck});
+
+  @override
+  Widget build(BuildContext context) {
+    final aktiv = StorageService.getRealitaetschecks().aktiv;
+    return InkWell(
+      onTap: () async {
+        await Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const RealitaetscheckScreen()),
+        );
+        onZurueck();
+      },
+      borderRadius: BorderRadius.circular(14),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: AppTheme.surface,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: AppTheme.border),
+        ),
+        child: Row(
+          children: [
+            const Icon(Icons.touch_app_outlined, color: AppTheme.sageGreen, size: 22),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    t.realitaetTitel,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                      color: AppTheme.textPrimary,
+                    ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    aktiv ? t.realitaetStatusEin : t.realitaetStatusAus,
+                    style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
           ],
         ),
       ),

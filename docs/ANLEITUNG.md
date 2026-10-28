@@ -53,7 +53,7 @@ Traum-Abend: 30, 45 oder 60 Minuten vor dem Schlafen, mit einem Traumbild deiner
 
 Traumtagebuch: Morgens nach einem Traum-Abend erscheint eine Karte „Woran erinnerst du dich?“. Ein paar Stichworte und Markierungen wie luzide oder sinnlich genügen, auch „Nichts erinnert“ zählt. Das Tagebuch ist privat und Teil deiner verschlüsselten Sicherung; im Diskretions-Modus heißt die Karte nur Morgennotiz.
 
-Im Traumtagebuch zeigt „Diese Woche“ eine ruhige Übersicht ohne Punkte. Über das Menü dort lassen sich Realitätschecks einschalten: zwei bis vier Erinnerungen am Tag, neutral „Kurzer Moment für dich“, standardmäßig aus. Im Traum-Abend kannst du mit „Heute Nacht wecken“ den Wecker der Uhr-App für diese eine Nacht stellen, höchstens zweimal pro Woche; danach begleitet dich eine Stimme zurück in den Schlaf.
+Im Traumtagebuch zeigt „Diese Woche“ eine ruhige Übersicht ohne Punkte. Darunter und auf der Einrichtungsseite des Traum-Abends lassen sich Realitätschecks einschalten: zwei bis vier Erinnerungen am Tag, neutral „Kurzer Moment für dich“, standardmäßig aus. Im Traum-Abend kannst du mit „Heute Nacht wecken“ den Wecker der Uhr-App für diese eine Nacht stellen, höchstens zweimal pro Woche; danach begleitet dich eine Stimme zurück in den Schlaf.
 
 Lust im Traum (nur im Spicy-Modus): acht Abende, die aufeinander aufbauen, vom lustvollen Körper beim Einschlafen bis zum luziden, sinnlichen Traum. Die nächste Folge wird nach zwei gehörten Abenden frei. Ab Folge drei wählst du deinen Körper im Traum und mit wem die Lust sich entfalten darf. Die Aufnahmen kommen als eigenes Paket.
 
@@ -116,6 +116,8 @@ Die Beispielfragen passen sich deinem Profil an.
 Alles, was du einträgst, bleibt auf deinem Handy. Geheimnisse wie Schlüssel liegen im geschützten Speicher von Android.
 
 Im Profil kannst du die App mit Fingerabdruck sperren; dann sind Inhalte auch in der App-Übersicht verborgen und Screenshots blockiert. Das diskrete App-Symbol zeigt statt VelvetPulse einen neutralen Namen.
+
+Vor der Wiedergabe über den Lautsprecher fragt die App nach, und wenn Kopfhörer getrennt werden, pausiert sie.
 
 Mit „Backup exportieren“ erstellst du eine passwortgeschützte Sicherung, die du auf ein neues Handy übertragen kannst.
 

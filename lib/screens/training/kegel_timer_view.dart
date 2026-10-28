@@ -3,9 +3,11 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../services/audio_ausgabe.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/lautsprecher_frage.dart';
 import 'kegel_guide_sheet.dart';
 import '../../l10n/t.dart';
 
@@ -59,6 +61,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
   Timer? _ticker;
   late AnimationController _animController;
   final AudioPlayer _cuePlayer = AudioPlayer();
+  StreamSubscription<void>? _kopfhoererSub;
 
   /// Haltezeit wächst mit der Stufe.
   int _hold(int base) => base + (_level.index * 2);
@@ -173,6 +176,14 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
     super.initState();
     _animController = AnimationController(vsync: this, duration: const Duration(seconds: 4));
     _secondsLeftInPhase = _phases[0].durationSeconds;
+    AudioAusgabe.instanz.initialisieren();
+    _kopfhoererSub = AudioAusgabe.instanz.onKopfhoererGetrennt.listen((_) {
+      if (!mounted) return;
+      if (StorageService.getPausiereBeiKopfhoererGetrennt() && _isRunning && _voiceCues) {
+        _pauseTraining();
+        Sprachausgabe.stopp(_cuePlayer);
+      }
+    });
     _loadSettings();
   }
 
@@ -196,6 +207,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
 
   @override
   void dispose() {
+    _kopfhoererSub?.cancel();
     _ticker?.cancel();
     _animController.dispose();
     Sprachausgabe.vorlesenBeenden();
@@ -240,7 +252,11 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
     _saveSettings();
   }
 
-  void _startTraining() {
+  Future<void> _startTraining() async {
+    if (_voiceCues) {
+      final darf = await frageVorLautsprecher(context);
+      if (!darf) return;
+    }
     final freshStart = _currentRound == 1 && _currentPhaseIndex == 0 &&
         _secondsLeftInPhase == _phases[0].durationSeconds;
     setState(() => _isRunning = true);
