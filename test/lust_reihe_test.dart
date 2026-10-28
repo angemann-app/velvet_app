@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:velvetpulse/models/lust_reihe.dart';
+import 'package:velvetpulse/services/pakete.dart';
 
 /// Szenen-IDs des gemeinsamen Szenenbuchs, in dieser Reihenfolge.
 const szenenIds = ['opening', 'attraction', 'afterglow'];
@@ -198,6 +201,19 @@ void main() {
 }
 
 void nameUndSolo() {
+  test('Szenenbilder liegen im sprachunabhängigen Paket reihe-bilder', () {
+    final ordner = Directory.systemTemp.createTempSync('pakete_bilder');
+    addTearDown(() {
+      Pakete.basisFuerTest = null;
+      ordner.deleteSync(recursive: true);
+    });
+    Pakete.basisFuerTest = ordner.path;
+    expect(Pakete.datei('bilder/f1_soft_opening.webp'), isNull);
+    final datei = File('${ordner.path}/${Pakete.reiheBilder}/bilder/f1_soft_opening.webp')
+      ..createSync(recursive: true);
+    expect(Pakete.datei('bilder/f1_soft_opening.webp'), datei.path);
+  });
+
   test('bildPfad gilt je Folge, Variante und Szene, nicht je Perspektive', () {
     final folge = _parseFolge();
     final frau = folge.fassungen[0], mann = folge.fassungen[1], spicy = folge.fassungen[2];
