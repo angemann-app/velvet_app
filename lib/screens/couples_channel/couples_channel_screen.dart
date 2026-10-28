@@ -1221,7 +1221,15 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
               ),
               const SizedBox(height: 16),
-              _buildInfoRow(t.couplesChannelEncryption, 'Nostr NIP-04'),
+              _buildInfoRow(t.couplesChannelEncryption,
+                  _nostr.partnerNip17 ? t.couplesChannelEncryptionSealed : 'Nostr NIP-04'),
+              if (_nostr.partnerNip17) ...[
+                const SizedBox(height: 8),
+                Text(
+                  t.couplesChannelSealedNote,
+                  style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4),
+                ),
+              ],
               _buildInfoRow(t.couplesChannelServers, _nostr.connectedRelaysLabel),
               for (final relay in _nostr.connectedRelays) _buildInfoRow('', relay),
               const SizedBox(height: 10),

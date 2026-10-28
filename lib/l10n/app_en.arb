@@ -193,6 +193,8 @@
   "couplesChannelHowItStaysPrivate": "How it stays private",
   "couplesChannelMessagesAreEncryptedOnYour": "Messages are encrypted on your phone and only become readable again on your partner's phone. In between they travel through public Nostr servers. These can't read the content. But they can see the keys of sender and recipient, the time and approximate size of each message and your IP address – so that, when and how often you write. The keys carry no names. There is no account, no phone number and no server of our own.",
   "couplesChannelEncryption": "Encryption",
+  "couplesChannelEncryptionSealed": "Nostr NIP-17 (sealed)",
+  "couplesChannelSealedNote": "When you both write with a new version, messages go out sealed: the servers cannot see who sends them and only get a vague time. They can still see that someone writes to one of you, your IP address and the approximate size.",
   "couplesChannelServers": "Servers",
   "couplesChannelYourConnectionCode": "Your connection code",
   "couplesChannelClose": "Close",

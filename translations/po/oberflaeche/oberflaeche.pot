@@ -1180,6 +1180,18 @@ msgid "Verschlüsselung"
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: Nostr NIP-17 (sealed)
+msgctxt "ui:couplesChannelEncryptionSealed#text"
+msgid "Nostr NIP-17 (versiegelt)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: When you both write with a new version, messages go out sealed: the servers cannot see who sends them and only get a vague time. They can still see that someone writes to one of you, your IP address and the approximate size.
+msgctxt "ui:couplesChannelSealedNote#text"
+msgid "Schreibt ihr beide mit einer neuen Version, gehen die Nachrichten versiegelt raus: Die Server sehen nicht, wer sie schickt, und nur einen ungenauen Zeitpunkt. Sichtbar bleiben für sie, dass jemand an einen von euch schreibt, deine IP-Adresse und die ungefähre Größe."
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Servers
 msgctxt "ui:couplesChannelServers#text"
 msgid "Server"

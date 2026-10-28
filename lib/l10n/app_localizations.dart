@@ -1259,6 +1259,18 @@ abstract class AppLocalizations {
   /// **'Verschlüsselung'**
   String get couplesChannelEncryption;
 
+  /// No description provided for @couplesChannelEncryptionSealed.
+  ///
+  /// In de, this message translates to:
+  /// **'Nostr NIP-17 (versiegelt)'**
+  String get couplesChannelEncryptionSealed;
+
+  /// No description provided for @couplesChannelSealedNote.
+  ///
+  /// In de, this message translates to:
+  /// **'Schreibt ihr beide mit einer neuen Version, gehen die Nachrichten versiegelt raus: Die Server sehen nicht, wer sie schickt, und nur einen ungenauen Zeitpunkt. Sichtbar bleiben für sie, dass jemand an einen von euch schreibt, deine IP-Adresse und die ungefähre Größe.'**
+  String get couplesChannelSealedNote;
+
   /// No description provided for @couplesChannelServers.
   ///
   /// In de, this message translates to:
