@@ -52,6 +52,8 @@ class BackupCodec {
     // Lautsprecher-Abfrage und Pause beim Trennen der Kopfhörer.
     'frageVorLautsprecher': bool,
     'pausiereBeiKopfhoererGetrennt': bool,
+    // Freiwilliges Hallo: wann einmal anonym gesendet wurde.
+    'halloGesendetAm': String,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.

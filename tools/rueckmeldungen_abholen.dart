@@ -53,21 +53,38 @@ Future<void> main(List<String> args) async {
   });
 
   final neu = <({String id, int zeit, String text})>[];
+  final hallos = <({String id, int zeit, String version, String sprache})>[];
   for (final ev in events.values) {
     final id = ev['id'] as String;
     if (gesehen.contains(id)) continue;
+    String? text;
+    int? zeit;
     if (ev['kind'] == 4 && NostrEventCheck.isValidDirectMessage(ev, recipient: oeffentlich)) {
-      String text;
+      zeit = ev['created_at'] as int;
       try {
         text = Nip04().decrypt(privat, ev['pubkey'] as String, ev['content'] as String);
       } catch (_) {
         text = '(nicht entschlüsselbar)';
       }
-      neu.add((id: id, zeit: ev['created_at'] as int, text: text));
     } else if (ev['kind'] == NostrEventCheck.giftWrapKind) {
       final offen = GiftWrap.auspacken(ev, meinPrivat: privat, meinPub: oeffentlich);
-      if (offen == null) continue; // gefälscht oder nicht lesbar
-      neu.add((id: id, zeit: offen.rumor['created_at'] as int, text: offen.rumor['content'] as String));
+      if (offen != null) {
+        zeit = offen.rumor['created_at'] as int;
+        text = offen.rumor['content'] as String;
+      }
+    }
+    if (text != null && zeit != null) {
+      if (text.startsWith('[VelvetPulse] Hallo')) {
+        final versionMatch = RegExp(r'Version:\s*([^\s,]+)').firstMatch(text);
+        final spracheMatch = RegExp(r'Sprache:\s*([^\s\n,]+)').firstMatch(text);
+        final rawVersion = versionMatch?.group(1) ?? 'unbekannt';
+        final baseVersion = rawVersion.split('+').first;
+        final sprache = spracheMatch?.group(1) ?? 'unbekannt';
+        hallos.add((id: id, zeit: zeit, version: baseVersion, sprache: sprache));
+        gesehen.add(id);
+      } else {
+        neu.add((id: id, zeit: zeit, text: text));
+      }
     }
   }
   neu.sort((a, b) => a.zeit.compareTo(b.zeit));
@@ -111,6 +128,24 @@ Future<void> main(List<String> args) async {
         ..writeln();
       gesehen.add(ev['id'] as String);
     }
+  }
+
+  if (hallos.isEmpty) {
+    stdout.writeln('Hallo: keine');
+  } else {
+    final sprachen = <String, int>{};
+    final versionen = <String, int>{};
+    for (final h in hallos) {
+      sprachen[h.sprache] = (sprachen[h.sprache] ?? 0) + 1;
+      versionen[h.version] = (versionen[h.version] ?? 0) + 1;
+    }
+    final sprachenList = sprachen.entries.toList()
+      ..sort((a, b) => b.value != a.value ? b.value.compareTo(a.value) : a.key.compareTo(b.key));
+    final versionenList = versionen.entries.toList()
+      ..sort((a, b) => b.value != a.value ? b.value.compareTo(a.value) : a.key.compareTo(b.key));
+    final sprachenTeil = sprachenList.map((e) => '${e.key} ${e.value}').join(', ');
+    final versionenTeil = versionenList.map((e) => '${e.key}: ${e.value}').join(', ');
+    stdout.writeln('Hallo: ${hallos.length} ($sprachenTeil; $versionenTeil)');
   }
 
   gesehenDatei.writeAsStringSync(jsonEncode(gesehen.toList()));

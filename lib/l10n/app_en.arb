@@ -1108,5 +1108,17 @@
   "lautsprecherEinstellungPauseTitel": "Pause when headphones are disconnected",
   "lautsprecherEinstellungPauseText": "Pauses playback as soon as wired or Bluetooth headphones are disconnected.",
   "realitaetStatusEin": "On",
-  "realitaetStatusAus": "Off"
+  "realitaetStatusAus": "Off",
+  "halloTitel": "Say an anonymous hello once",
+  "halloErklaerung": "Voluntary: If you like, you can say hello to us once. Only the app version and language are transmitted – encrypted and without a sender.",
+  "halloKnopf": "Say hello",
+  "halloDankeGesendet": "Thank you, sent on {datum}.",
+  "@halloDankeGesendet": {
+    "placeholders": {
+      "datum": {
+        "type": "String"
+      }
+    }
+  },
+  "halloGesendet": "Thank you for saying hello!"
 }

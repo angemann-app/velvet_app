@@ -46,6 +46,7 @@ class StorageService {
   static const String _keyWeckenHeuteNacht = 'traum_wecken_heute_nacht';
   static const String _keyFrageVorLautsprecher = 'frage_vor_lautsprecher';
   static const String _keyPausiereBeiKopfhoererGetrennt = 'pausiere_bei_kopfhoerer_getrennt';
+  static const String _keyHalloGesendetAm = 'hallo_gesendet_am';
 
   static SharedPreferences? _prefs;
   static UserProfile? _inMemoryProfile;
@@ -197,6 +198,18 @@ class StorageService {
   static Future<void> setPausiereBeiKopfhoererGetrennt(bool value) async {
     final prefs = await _ensurePrefs();
     await prefs.setBool(_keyPausiereBeiKopfhoererGetrennt, value);
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  static String? getHalloGesendetAm() => _prefs?.getString(_keyHalloGesendetAm);
+
+  static Future<void> setHalloGesendetAm(String? value) async {
+    final prefs = await _ensurePrefs();
+    if (value == null) {
+      await prefs.remove(_keyHalloGesendetAm);
+    } else {
+      await prefs.setString(_keyHalloGesendetAm, value);
+    }
     await AutoBackupService.saveAutoBackup();
   }
 
@@ -527,6 +540,7 @@ class StorageService {
       'naechtlichesWecken': getNaechtlichesWecken().map((z) => z.toIso8601String()).toList(),
       'frageVorLautsprecher': getFrageVorLautsprecher(),
       'pausiereBeiKopfhoererGetrennt': getPausiereBeiKopfhoererGetrennt(),
+      'halloGesendetAm': getHalloGesendetAm(),
       'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
       'dailyCheckIns': _prefs?.getStringList(_keyDailyCheckIns),
       'yesNoMaybe': _prefs?.getString(_keyYesNoMaybe),
@@ -645,6 +659,15 @@ class StorageService {
     }
     if (d['pausiereBeiKopfhoererGetrennt'] is bool) {
       writes[_keyPausiereBeiKopfhoererGetrennt] = d['pausiereBeiKopfhoererGetrennt'] as bool;
+    }
+    if (d.containsKey('halloGesendetAm') && d['halloGesendetAm'] is String) {
+      final lokal = _prefs?.getString(_keyHalloGesendetAm);
+      final backup = d['halloGesendetAm'] as String;
+      if (lokal == null || lokal.isEmpty) {
+        writes[_keyHalloGesendetAm] = backup;
+      } else {
+        writes[_keyHalloGesendetAm] = lokal.compareTo(backup) <= 0 ? lokal : backup;
+      }
     }
     // Fortschritt: je Folge der größere Stand, damit nichts wieder gesperrt wird.
     if (d['lustFortschritt'] is String && (d['lustFortschritt'] as String).isNotEmpty) {
