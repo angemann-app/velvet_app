@@ -4053,4 +4053,42 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get reiheKeineAufnahme =>
       'Zu dieser Fassung gibt es noch keine Aufnahme; die Geräte-Stimme liest vor.';
+
+  @override
+  String get lautsprecherFrageTitel => 'Lautsprecher';
+
+  @override
+  String get lautsprecherFrageNachricht =>
+      'Die Wiedergabe läuft über den Lautsprecher. Trotzdem abspielen?';
+
+  @override
+  String get lautsprecherAbspielen => 'Abspielen';
+
+  @override
+  String get lautsprecherAbbrechen => 'Abbrechen';
+
+  @override
+  String get lautsprecherNichtMehrFragen => 'Nicht mehr fragen';
+
+  @override
+  String get lautsprecherEinstellungFrageTitel =>
+      'Vor Lautsprecher-Wiedergabe fragen';
+
+  @override
+  String get lautsprecherEinstellungFrageText =>
+      'Fragt vor dem Abspielen, wenn keine Kopfhörer angeschlossen sind.';
+
+  @override
+  String get lautsprecherEinstellungPauseTitel =>
+      'Pausieren, wenn Kopfhörer getrennt werden';
+
+  @override
+  String get lautsprecherEinstellungPauseText =>
+      'Hält die Wiedergabe an, sobald Kabel- oder Bluetooth-Kopfhörer getrennt werden.';
+
+  @override
+  String get realitaetStatusEin => 'Ein';
+
+  @override
+  String get realitaetStatusAus => 'Aus';
 }

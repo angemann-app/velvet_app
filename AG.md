@@ -44,6 +44,9 @@ Auftrag mit klarer Notiz als ein ganzer mit Vermutungen.
 Auftrag: AG-n
 
 ### Erledigt
+
+- 28.10.2026, AG-8 (`ag/8-lautsprecher`, PR #50): Nachfrage vor Lautsprecher-Wiedergabe, Pause beim Abziehen der
+  Kopfhörer, zwei Schalter in Profil und Sicherung, Realitätschecks sichtbarer (Traum-Abend, Tagebuch).
 - (ein Punkt je Ergebnis)
 
 ### Für den Nutzer
@@ -70,40 +73,6 @@ stillschweigend zu übergehen.
 - 27.10.2026: `C:\TOOLS\velvet-inhalte\` (private Inhalte, nie anfassen)
 
 ## Offene Aufträge
-
-### AG-8: Nachfrage vor Lautsprecher-Wiedergabe (einmalig, nach AG-7)
-
-**Branch:** `ag/8-lautsprecher`
-**Vorher lesen:** `docs/konzepte/lautsprecher.md` (alles, besonders „Entscheidungen“).
-**Darf ändern:** neue Dateien `lib/services/audio_ausgabe.dart`, `lib/widgets/lautsprecher_frage.dart`,
-`test/audio_ausgabe_test.dart`; an den Abspielstellen nur der Aufruf der Nachfrage vor dem Start und das
-Pausieren beim Abziehen: `lib/services/audio_service.dart`, `lib/widgets/audio_player_card.dart`,
-`lib/screens/courses/lesson_detail_screen.dart`, `lib/screens/self_exploration/selbst_reise_screen.dart`,
-`lib/screens/couples_channel/paar_abend_screen.dart`, `lib/screens/self_exploration/einschlaf_reise_screen.dart`
-(gilt auch für Traum-Abend und Lust im Traum), `lib/screens/training/kegel_timer_view.dart`; die
-Profil-Einstellungen (zwei Schalter: „Vor Lautsprecher-Wiedergabe fragen“, „Pausieren, wenn Kopfhörer getrennt
-werden“, beide Standard an); `lib/services/storage_service.dart` und `test/backup_merge_test.dart` (die zwei
-Einstellungen in Sicherung und Backup-Merge); `pubspec.yaml` (nur `audio_session`, falls genutzt);
-`android/app/src/main/kotlin/**/MainActivity.kt` (nur falls ein MethodChannel nötig ist); ARB (Präfix
-`lautsprecher`), erzeugte `app_localizations*.dart`; Anleitung (`assets/data/anleitung.json`,
-`translations/en/anleitung.json`, `docs/ANLEITUNG.md`, `docs/GUIDE.md`, ein Satz im Abschnitt „Datenschutz“
-bzw. „Geführte Audios“).
-
-1. Dienst: aktuelles Ausgabegerät (eingebauter Lautsprecher ja/nein) und ein Strom „Kopfhörer getrennt“.
-   Bluetooth, Kabel und USB gelten als nicht Lautsprecher.
-2. Dialog vor jedem Start (Texte neutral, über ARB): „Die Wiedergabe läuft über den Lautsprecher. Trotzdem
-   abspielen?“, Knöpfe „Abspielen“ / „Abbrechen“, Häkchen „Nicht mehr fragen“. Ein ganzer Abend fragt nur einmal.
-3. Pausieren beim Trennen (abschaltbar): Stimme und Klangteppich pausieren, Fortsetzen nur per Tipp.
-4. Übersetzung stempeln und PO abgleichen, „Was ist neu“ nur, wenn Claude es im Pull Request bestätigt.
-5. **Zusatz: Realitätschecks sichtbarer machen** (Wunsch des Nutzers, 27.10.2026). Auf der Einrichtungsseite
-   des Traum-Abends (`einschlaf_reise_screen.dart`, nur im Traum-Modus) eine Zeile „Realitätschecks“ mit
-   Ein/Aus-Anzeige, die den `RealitaetscheckScreen` öffnet. Im Traumtagebuch (`traum_tagebuch_screen.dart`, dafür
-   zusätzlich erlaubt) den Eintrag aus dem Drei-Punkte-Menü als eigene Zeile unter den Wochenrückblick holen.
-
-**Prüfen:** `flutter analyze --no-fatal-infos --no-fatal-warnings`, `flutter test`, Screen-Test; Tests für die
-Entscheidungslogik (Lautsprecher → Dialog, Kopfhörer/Bluetooth → kein Dialog, abgeschaltet → kein Dialog).
-Im Pull Request unter „Für den Nutzer“: auf dem Handy testen mit und ohne Kopfhörer, Kopfhörer während eines
-Abends abziehen, Bluetooth aus- und einschalten.
 
 ### AG-9: Freiwilliges „Hallo“ (einmalig, nach AG-8)
 

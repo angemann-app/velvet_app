@@ -1130,5 +1130,16 @@
   "reiheKeineAufnahme": "There is no recording for this version yet; the device voice reads it aloud.",
   "@reiheDauer": { "placeholders": { "minuten": { "type": "int" } } },
   "@reiheSzene": { "placeholders": { "n": { "type": "int" }, "m": { "type": "int" } } },
-  "@reihePartnerHinweis": { "placeholders": { "name": { "type": "String" } } }
+  "@reihePartnerHinweis": { "placeholders": { "name": { "type": "String" } } },
+  "lautsprecherFrageTitel": "Speaker",
+  "lautsprecherFrageNachricht": "Playback will play through the speaker. Play anyway?",
+  "lautsprecherAbspielen": "Play",
+  "lautsprecherAbbrechen": "Cancel",
+  "lautsprecherNichtMehrFragen": "Do not ask again",
+  "lautsprecherEinstellungFrageTitel": "Ask before speaker playback",
+  "lautsprecherEinstellungFrageText": "Asks before playing if no headphones are connected.",
+  "lautsprecherEinstellungPauseTitel": "Pause when headphones are disconnected",
+  "lautsprecherEinstellungPauseText": "Pauses playback as soon as wired or Bluetooth headphones are disconnected.",
+  "realitaetStatusEin": "On",
+  "realitaetStatusAus": "Off"
 }

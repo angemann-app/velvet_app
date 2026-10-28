@@ -6820,3 +6820,69 @@ msgstr ""
 msgctxt "ui:reiheKeineAufnahme#text"
 msgid "Zu dieser Fassung gibt es noch keine Aufnahme; die Geräte-Stimme liest vor."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Speaker
+msgctxt "ui:lautsprecherFrageTitel#text"
+msgid "Lautsprecher"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Playback will play through the speaker. Play anyway?
+msgctxt "ui:lautsprecherFrageNachricht#text"
+msgid "Die Wiedergabe läuft über den Lautsprecher. Trotzdem abspielen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Play
+msgctxt "ui:lautsprecherAbspielen#text"
+msgid "Abspielen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Cancel
+msgctxt "ui:lautsprecherAbbrechen#text"
+msgid "Abbrechen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Do not ask again
+msgctxt "ui:lautsprecherNichtMehrFragen#text"
+msgid "Nicht mehr fragen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Ask before speaker playback
+msgctxt "ui:lautsprecherEinstellungFrageTitel#text"
+msgid "Vor Lautsprecher-Wiedergabe fragen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Asks before playing if no headphones are connected.
+msgctxt "ui:lautsprecherEinstellungFrageText#text"
+msgid "Fragt vor dem Abspielen, wenn keine Kopfhörer angeschlossen sind."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pause when headphones are disconnected
+msgctxt "ui:lautsprecherEinstellungPauseTitel#text"
+msgid "Pausieren, wenn Kopfhörer getrennt werden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pauses playback as soon as wired or Bluetooth headphones are disconnected.
+msgctxt "ui:lautsprecherEinstellungPauseText#text"
+msgid "Hält die Wiedergabe an, sobald Kabel- oder Bluetooth-Kopfhörer getrennt werden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: On
+msgctxt "ui:realitaetStatusEin#text"
+msgid "Ein"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Off
+msgctxt "ui:realitaetStatusAus#text"
+msgid "Aus"
+msgstr ""

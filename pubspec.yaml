@@ -16,6 +16,7 @@ dependencies:
   flutter_tts: ^4.0.2
   google_generative_ai: ^0.4.4
   audioplayers: ^6.1.0
+  audio_session: ^0.2.4
   nostr_tools: ^1.0.9
   qr_flutter: ^4.1.0
   mobile_scanner: 5.2.3

@@ -1881,5 +1881,16 @@
   "reiheKeineAufnahme": "Zu dieser Fassung gibt es noch keine Aufnahme; die Geräte-Stimme liest vor.",
   "@reiheDauer": { "placeholders": { "minuten": { "type": "int" } } },
   "@reiheSzene": { "placeholders": { "n": { "type": "int" }, "m": { "type": "int" } } },
-  "@reihePartnerHinweis": { "placeholders": { "name": { "type": "String" } } }
+  "@reihePartnerHinweis": { "placeholders": { "name": { "type": "String" } } },
+  "lautsprecherFrageTitel": "Lautsprecher",
+  "lautsprecherFrageNachricht": "Die Wiedergabe läuft über den Lautsprecher. Trotzdem abspielen?",
+  "lautsprecherAbspielen": "Abspielen",
+  "lautsprecherAbbrechen": "Abbrechen",
+  "lautsprecherNichtMehrFragen": "Nicht mehr fragen",
+  "lautsprecherEinstellungFrageTitel": "Vor Lautsprecher-Wiedergabe fragen",
+  "lautsprecherEinstellungFrageText": "Fragt vor dem Abspielen, wenn keine Kopfhörer angeschlossen sind.",
+  "lautsprecherEinstellungPauseTitel": "Pausieren, wenn Kopfhörer getrennt werden",
+  "lautsprecherEinstellungPauseText": "Hält die Wiedergabe an, sobald Kabel- oder Bluetooth-Kopfhörer getrennt werden.",
+  "realitaetStatusEin": "Ein",
+  "realitaetStatusAus": "Aus"
 }

@@ -6800,6 +6800,72 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Zu dieser Fassung gibt es noch keine Aufnahme; die Geräte-Stimme liest vor.'**
   String get reiheKeineAufnahme;
+
+  /// No description provided for @lautsprecherFrageTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Lautsprecher'**
+  String get lautsprecherFrageTitel;
+
+  /// No description provided for @lautsprecherFrageNachricht.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Wiedergabe läuft über den Lautsprecher. Trotzdem abspielen?'**
+  String get lautsprecherFrageNachricht;
+
+  /// No description provided for @lautsprecherAbspielen.
+  ///
+  /// In de, this message translates to:
+  /// **'Abspielen'**
+  String get lautsprecherAbspielen;
+
+  /// No description provided for @lautsprecherAbbrechen.
+  ///
+  /// In de, this message translates to:
+  /// **'Abbrechen'**
+  String get lautsprecherAbbrechen;
+
+  /// No description provided for @lautsprecherNichtMehrFragen.
+  ///
+  /// In de, this message translates to:
+  /// **'Nicht mehr fragen'**
+  String get lautsprecherNichtMehrFragen;
+
+  /// No description provided for @lautsprecherEinstellungFrageTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Vor Lautsprecher-Wiedergabe fragen'**
+  String get lautsprecherEinstellungFrageTitel;
+
+  /// No description provided for @lautsprecherEinstellungFrageText.
+  ///
+  /// In de, this message translates to:
+  /// **'Fragt vor dem Abspielen, wenn keine Kopfhörer angeschlossen sind.'**
+  String get lautsprecherEinstellungFrageText;
+
+  /// No description provided for @lautsprecherEinstellungPauseTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Pausieren, wenn Kopfhörer getrennt werden'**
+  String get lautsprecherEinstellungPauseTitel;
+
+  /// No description provided for @lautsprecherEinstellungPauseText.
+  ///
+  /// In de, this message translates to:
+  /// **'Hält die Wiedergabe an, sobald Kabel- oder Bluetooth-Kopfhörer getrennt werden.'**
+  String get lautsprecherEinstellungPauseText;
+
+  /// No description provided for @realitaetStatusEin.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein'**
+  String get realitaetStatusEin;
+
+  /// No description provided for @realitaetStatusAus.
+  ///
+  /// In de, this message translates to:
+  /// **'Aus'**
+  String get realitaetStatusAus;
 }
 
 class _AppLocalizationsDelegate

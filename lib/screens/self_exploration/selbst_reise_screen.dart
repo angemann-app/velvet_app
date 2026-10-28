@@ -7,11 +7,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/paar_abend.dart';
 import '../../models/selbst_reise.dart';
+import '../../services/audio_ausgabe.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/testmodus.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/aussprache_melden.dart';
+import '../../widgets/lautsprecher_frage.dart';
 import '../../widgets/player_steuerung.dart';
 import '../../l10n/t.dart';
 
@@ -50,6 +52,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
   final AudioPlayer _stimmePlayer = AudioPlayer();
   final AudioPlayer _klangPlayer = AudioPlayer();
   final AudioPlayer _teppichPlayer = AudioPlayer();
+  StreamSubscription<void>? _kopfhoererSub;
 
   @override
   void initState() {
@@ -58,6 +61,13 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
     _stimmePlayer.setAudioContext(ohneFokus).catchError((_) {});
     _klangPlayer.setAudioContext(ohneFokus).catchError((_) {});
     _teppichPlayer.setReleaseMode(ReleaseMode.loop).catchError((_) {});
+    AudioAusgabe.instanz.initialisieren();
+    _kopfhoererSub = AudioAusgabe.instanz.onKopfhoererGetrennt.listen((_) {
+      if (!mounted) return;
+      if (StorageService.getPausiereBeiKopfhoererGetrennt() && _ablauf != null && !_fertig && !_pausiert) {
+        _pauseUmschalten();
+      }
+    });
     _laden();
   }
 
@@ -78,6 +88,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
   @override
   void dispose() {
     _lauf++;
+    _kopfhoererSub?.cancel();
     Sprachausgabe.vorlesenBeenden();
     _stimmePlayer.dispose();
     _klangPlayer.dispose();
@@ -88,6 +99,8 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
   Future<void> _starten() async {
     final daten = _daten;
     if (daten == null) return;
+    final darf = await frageVorLautsprecher(context);
+    if (!darf) return;
     HapticFeedback.mediumImpact();
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt(_keyMinuten, _minuten);

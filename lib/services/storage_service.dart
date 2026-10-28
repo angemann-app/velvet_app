@@ -44,6 +44,8 @@ class StorageService {
   static const String _keyLetzterAbend = 'traum_letzter_abend';
   static const String _keyNaechtlichesWecken = 'naechtliches_wecken';
   static const String _keyWeckenHeuteNacht = 'traum_wecken_heute_nacht';
+  static const String _keyFrageVorLautsprecher = 'frage_vor_lautsprecher';
+  static const String _keyPausiereBeiKopfhoererGetrennt = 'pausiere_bei_kopfhoerer_getrennt';
 
   static SharedPreferences? _prefs;
   static UserProfile? _inMemoryProfile;
@@ -176,6 +178,25 @@ class StorageService {
   static Future<void> saveRealitaetschecks(RealitaetscheckEinstellungen einstellungen) async {
     final prefs = await _ensurePrefs();
     await prefs.setString(_keyRealitaetschecks, jsonEncode(einstellungen.toJson()));
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  // Lautsprecher & Kopfhörer
+  static bool getFrageVorLautsprecher() =>
+      _prefs?.getBool(_keyFrageVorLautsprecher) ?? true;
+
+  static Future<void> setFrageVorLautsprecher(bool value) async {
+    final prefs = await _ensurePrefs();
+    await prefs.setBool(_keyFrageVorLautsprecher, value);
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  static bool getPausiereBeiKopfhoererGetrennt() =>
+      _prefs?.getBool(_keyPausiereBeiKopfhoererGetrennt) ?? true;
+
+  static Future<void> setPausiereBeiKopfhoererGetrennt(bool value) async {
+    final prefs = await _ensurePrefs();
+    await prefs.setBool(_keyPausiereBeiKopfhoererGetrennt, value);
     await AutoBackupService.saveAutoBackup();
   }
 
@@ -504,6 +525,8 @@ class StorageService {
       'traumTagebuch': getTraumEintraege().map((e) => e.toJson()).toList(),
       'realitaetschecks': getRealitaetschecks().toJson(),
       'naechtlichesWecken': getNaechtlichesWecken().map((z) => z.toIso8601String()).toList(),
+      'frageVorLautsprecher': getFrageVorLautsprecher(),
+      'pausiereBeiKopfhoererGetrennt': getPausiereBeiKopfhoererGetrennt(),
       'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
       'dailyCheckIns': _prefs?.getStringList(_keyDailyCheckIns),
       'yesNoMaybe': _prefs?.getString(_keyYesNoMaybe),
@@ -616,6 +639,12 @@ class StorageService {
       }
       final sortiert = zeiten.values.toList()..sort((a, b) => b.compareTo(a));
       writes[_keyNaechtlichesWecken] = sortiert.map((z) => z.toIso8601String()).toList();
+    }
+    if (d['frageVorLautsprecher'] is bool) {
+      writes[_keyFrageVorLautsprecher] = d['frageVorLautsprecher'] as bool;
+    }
+    if (d['pausiereBeiKopfhoererGetrennt'] is bool) {
+      writes[_keyPausiereBeiKopfhoererGetrennt] = d['pausiereBeiKopfhoererGetrennt'] as bool;
     }
     // Fortschritt: je Folge der größere Stand, damit nichts wieder gesperrt wird.
     if (d['lustFortschritt'] is String && (d['lustFortschritt'] as String).isNotEmpty) {

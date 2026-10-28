@@ -4033,4 +4033,41 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get reiheKeineAufnahme =>
       'There is no recording for this version yet; the device voice reads it aloud.';
+
+  @override
+  String get lautsprecherFrageTitel => 'Speaker';
+
+  @override
+  String get lautsprecherFrageNachricht =>
+      'Playback will play through the speaker. Play anyway?';
+
+  @override
+  String get lautsprecherAbspielen => 'Play';
+
+  @override
+  String get lautsprecherAbbrechen => 'Cancel';
+
+  @override
+  String get lautsprecherNichtMehrFragen => 'Do not ask again';
+
+  @override
+  String get lautsprecherEinstellungFrageTitel => 'Ask before speaker playback';
+
+  @override
+  String get lautsprecherEinstellungFrageText =>
+      'Asks before playing if no headphones are connected.';
+
+  @override
+  String get lautsprecherEinstellungPauseTitel =>
+      'Pause when headphones are disconnected';
+
+  @override
+  String get lautsprecherEinstellungPauseText =>
+      'Pauses playback as soon as wired or Bluetooth headphones are disconnected.';
+
+  @override
+  String get realitaetStatusEin => 'On';
+
+  @override
+  String get realitaetStatusAus => 'Off';
 }
