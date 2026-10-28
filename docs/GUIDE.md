@@ -59,6 +59,8 @@ Pleasure in dreams (spicy mode only): eight evenings that build on each other, f
 
 All of them are put together anew every time. You can pause, skip and stop at any time.
 
+Inner views (spicy mode only, 18+): continuous audio stories of about 15 to 25 minutes, not for falling asleep. They tell an encounter from the inside. You choose Soft or Spicy and a perspective; the matching perspective of the same encounter follows the same sequence of scenes, so two people can listen together. The app does not sync two devices, though: you start together yourselves. All characters are adults, everything happens by mutual consent, and none of it is a benchmark: every body experiences pleasure differently. The recordings come as a separate package and then play without a network. In the player you can pause and skip scenes. On the card, discreet mode only shows Audio story.
+
 
 ## Training and quick help
 
