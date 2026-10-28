@@ -81,9 +81,7 @@ Empfehlung: 58 Bilder, Soft und Spicy getrennt, Perspektive geteilt. Bei Solo-Fo
 
 ## 7. Offene Fragen (vor dem ersten Bild klären)
 
-1. **Deutlichkeit der Spicy-Bilder:** reine Andeutung (Silhouetten, Stoff, Licht) oder deutlicher? Wo liegt die Grenze?
-   Sie gilt für alle 29 Szenen und hängt zusammen mit Frage 2 aus `kursbilder.md`.
-2. **Zuordnung:** ein Bild je Folge, Variante und Szene (Empfehlung) oder je Perspektive?
+1. **Zuordnung:** ein Bild je Folge, Variante und Szene (Empfehlung) oder je Perspektive?
 3. **Paket:** Bilder in beide Sprachpakete legen (einfach, doppelt etwa 6 MB) oder ein gemeinsames Paket
    `reihe-bilder` (neuer Paketweg, spart Platz und Upload)?
 4. **Gesichter und Körper:** nur Silhouetten und Details (Hände, Stoff, Raum), oder auch erkennbare Figuren?
@@ -94,3 +92,7 @@ Empfehlung: 58 Bilder, Soft und Spicy getrennt, Perspektive geteilt. Bei Solo-Fo
 
 - 28.10.2026: Wunsch geäußert, Konzept entworfen.
 - 28.10.2026: **Pilot ist die Folge „Zwischen Frau und Mann“** (gilt für die Reihe und damit auch für die Bilder).
+- 28.10.2026: **Deutlichkeit:** Spicy-Bilder sind deutlich, alle anderen (Soft) sinnlich. Es bleibt bei illustrativ,
+  nur Erwachsene, einvernehmlich, keine echten Personen, nur lokal erzeugt und nur im Nur-R2-Paket (Abschnitt 3).
+  Die Grenze zwischen „sinnlich“ und „deutlich“ im Einzelfall legt der Nutzer am Pilotsatz fest.
+- 28.10.2026: Player-Anzeige und `ReiheDaten.bildPfad` sind gebaut (Rückfall ohne Bild); Bilder fehlen noch.

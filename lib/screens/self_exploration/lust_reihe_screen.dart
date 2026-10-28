@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
@@ -306,6 +307,31 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     final szenen = fassung.segmente.length;
     final i = _index.clamp(0, szenen - 1);
     final szene = folge.szenen.where((s) => s.id == fassung.segmente[i].szene).firstOrNull;
+    final bild = Pakete.datei(ReiheDaten.bildPfad(folge, fassung, fassung.segmente[i]));
+    return Stack(fit: StackFit.expand, children: [
+      // Szenenbild als gedämpfter Hintergrund, beim Szenenwechsel übergeblendet; ohne Bild bleibt alles wie bisher.
+      AnimatedSwitcher(
+        duration: const Duration(milliseconds: 800),
+        child: bild == null
+            ? const SizedBox.expand(key: ValueKey('kein-bild'))
+            : Stack(key: ValueKey(bild), fit: StackFit.expand, children: [
+                Image.file(File(bild), fit: BoxFit.cover, errorBuilder: (_, __, ___) => const SizedBox.expand()),
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [AppTheme.background.withValues(alpha: 0.55), AppTheme.background.withValues(alpha: 0.85)],
+                    ),
+                  ),
+                ),
+              ]),
+      ),
+      _spielerInhalt(folge, fassung, i, szenen, szene),
+    ]);
+  }
+
+  Widget _spielerInhalt(ReiheFolge folge, ReiheFassung fassung, int i, int szenen, ReiheSzene? szene) {
     return Padding(
       padding: const EdgeInsets.all(24),
       child: Column(children: [

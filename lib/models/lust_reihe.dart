@@ -174,6 +174,11 @@ class ReiheDaten {
   static String audioPfad(ReiheFolge folge, ReiheFassung fassung, ReiheSegment s) =>
       'audio/reihe/${fassung.stimme}_${folge.id}_${fassung.id}_${s.szene}.opus';
 
+  /// Pfad des Szenenbilds im Paket. Ein Bild gehört zu Folge, Variante und Szene und wird von beiden Perspektiven
+  /// geteilt (docs/konzepte/lust-reihe-szenenbilder.md); fehlt es, zeigt der Player kein Bild.
+  static String bildPfad(ReiheFolge folge, ReiheFassung fassung, ReiheSegment s) =>
+      'bilder/${folge.id}_${fassung.variante}_${s.szene}.webp';
+
   /// Dauer eines Segments: gemessen, sonst aus der Textlänge geschätzt (rund zehn Zeichen je Sekunde).
   Duration dauerVon(ReiheFolge folge, ReiheFassung fassung, ReiheSegment s) {
     final ms = dauerMs['${fassung.stimme}_${folge.id}_${fassung.id}_${s.szene}'];

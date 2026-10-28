@@ -198,6 +198,14 @@ void main() {
 }
 
 void nameUndSolo() {
+  test('bildPfad gilt je Folge, Variante und Szene, nicht je Perspektive', () {
+    final folge = _parseFolge();
+    final frau = folge.fassungen[0], mann = folge.fassungen[1], spicy = folge.fassungen[2];
+    expect(ReiheDaten.bildPfad(folge, frau, frau.segmente.first), 'bilder/f1_soft_opening.webp');
+    expect(ReiheDaten.bildPfad(folge, mann, mann.segmente.first), 'bilder/f1_soft_opening.webp');
+    expect(ReiheDaten.bildPfad(folge, spicy, spicy.segmente.first), 'bilder/f1_spicy_opening.webp');
+  });
+
   test('name je Fassung ist optional, solo folgt aus dem Typ', () {
     final j = _folge();
     (j['fassungen'] as List)[0]['name'] = 'Die Gastgeberin';
