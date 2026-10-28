@@ -742,3 +742,39 @@ msgstr ""
 msgctxt "news:50#2.text"
 msgid "Wenn du magst, sagst du einmal anonym Hallo. Übertragen werden nur Version und Sprache der App."
 msgstr ""
+
+#. Was ist neu in Version 4.15.0-beta.1
+#. EN: Inner views grows
+msgctxt "news:51#0.titel"
+msgid "Innenansichten wächst"
+msgstr ""
+
+#. Was ist neu in Version 4.15.0-beta.1
+#. EN: Four new audio stories: Between two women, Between two men, In your own body and The other body. A calm picture now appears for each scene while you listen. You download the recordings and pictures once.
+msgctxt "news:51#0.text"
+msgid "Vier neue Hörgeschichten: Zwischen zwei Frauen, Zwischen zwei Männern, Im eigenen Körper und Der andere Körper. Zu jeder Szene erscheint beim Hören jetzt ein ruhiges Bild. Die Aufnahmen und Bilder lädst du einmal herunter."
+msgstr ""
+
+#. Was ist neu in Version 4.15.0-beta.1
+#. EN: More photo ideas
+msgctxt "news:51#1.titel"
+msgid "Mehr Foto-Ideen"
+msgstr ""
+
+#. Was ist neu in Version 4.15.0-beta.1
+#. EN: The couple chat has 16 new photo ideas, gentle and bold in turns. Only in Spicy mode and completely voluntary.
+msgctxt "news:51#1.text"
+msgid "Der Paar-Chat hat 16 neue Foto-Ideen, sanfte und deutliche im Wechsel. Nur im Spicy-Modus und ganz freiwillig."
+msgstr ""
+
+#. Was ist neu in Version 4.15.0-beta.1
+#. EN: Honest display of the encryption
+msgctxt "news:51#2.titel"
+msgid "Ehrliche Anzeige der Verschlüsselung"
+msgstr ""
+
+#. Was ist neu in Version 4.15.0-beta.1
+#. EN: Under “How it stays private” you now see whether your messages travel sealed (NIP-17) or the classic way (NIP-04).
+msgctxt "news:51#2.text"
+msgid "Unter „So bleibt es privat“ steht jetzt, ob eure Nachrichten versiegelt (NIP-17) oder noch klassisch (NIP-04) unterwegs sind."
+msgstr ""

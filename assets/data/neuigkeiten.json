@@ -455,6 +455,27 @@
           "text": "Wenn du magst, sagst du einmal anonym Hallo. Übertragen werden nur Version und Sprache der App."
         }
       ]
+    },
+    {
+      "build": 51,
+      "version": "4.15.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Innenansichten wächst",
+          "text": "Vier neue Hörgeschichten: Zwischen zwei Frauen, Zwischen zwei Männern, Im eigenen Körper und Der andere Körper. Zu jeder Szene erscheint beim Hören jetzt ein ruhiges Bild. Die Aufnahmen und Bilder lädst du einmal herunter."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Mehr Foto-Ideen",
+          "text": "Der Paar-Chat hat 16 neue Foto-Ideen, sanfte und deutliche im Wechsel. Nur im Spicy-Modus und ganz freiwillig."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Ehrliche Anzeige der Verschlüsselung",
+          "text": "Unter „So bleibt es privat“ steht jetzt, ob eure Nachrichten versiegelt (NIP-17) oder noch klassisch (NIP-04) unterwegs sind."
+        }
+      ]
     }
   ]
 }

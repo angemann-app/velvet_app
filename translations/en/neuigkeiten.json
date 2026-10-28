@@ -455,6 +455,27 @@
           "text": "If you like, say hello once, anonymously. Only the app version and language are sent."
         }
       ]
+    },
+    {
+      "build": 51,
+      "version": "4.15.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Inner views grows",
+          "text": "Four new audio stories: Between two women, Between two men, In your own body and The other body. A calm picture now appears for each scene while you listen. You download the recordings and pictures once."
+        },
+        {
+          "icon": "favorite",
+          "titel": "More photo ideas",
+          "text": "The couple chat has 16 new photo ideas, gentle and bold in turns. Only in Spicy mode and completely voluntary."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Honest display of the encryption",
+          "text": "Under “How it stays private” you now see whether your messages travel sealed (NIP-17) or the classic way (NIP-04)."
+        }
+      ]
     }
   ],
   "_source": {
@@ -482,6 +503,7 @@
     "news:47": "b439804861d14cc0",
     "news:48": "e6e4b06f58104a52",
     "news:49": "9bfe371fc494e8b4",
-    "news:50": "a3b0641866eea6b1"
+    "news:50": "a3b0641866eea6b1",
+    "news:51": "3e09b78b7e89959b"
   }
 }
