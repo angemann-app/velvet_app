@@ -447,3 +447,14 @@ Ihr besonderes Merkmal ist die Kombination aus:
 - einer zuverlässigen Integration in die bestehende App.
 
 **Die Priorität liegt zunächst auf einer überzeugenden, vollständig ausgearbeiteten Pilotfolge.** Sie soll als Maßstab für Dramaturgie, Sprachqualität, Synchronisation und Audio-Produktion dienen. Erst wenn dieser Maßstab erreicht ist, wird die gesamte Reihe systematisch erweitert.
+## 12. Entscheidungen und Stand (28.10.2026)
+
+1. **Sichtbarkeit:** Die ganze Reihe, auch die Soft-Fassungen, ist nur im Spicy-Modus sichtbar; im
+   Diskretions-Modus neutral („Hörgeschichte“).
+2. **Ablage:** Paket `<sprache>-reihe`, nur R2. Texte und Aufnahmen liegen nicht im Repository
+   (`C:\TOOLS\velvet-inhalte\reihe\`).
+3. **Synchronität:** Gemeinsames Szenenbuch mit Szenen-IDs und Zeitmarken; die App gleicht zwei Geräte nicht ab
+   („gemeinsam startbar“, keine Garantie).
+4. **Aufnahme:** `tools/generate_audio.py --reihe` (Deutsch) und `tools/generate_audio_en.py --reihe`
+   (Englisch), normales Tempo, kurze Absatzpausen, keine künstliche Stille. Gemessen: etwa 16 Zeichen je
+   Sekunde, die Pilotfassungen dauern daher rund 15 Minuten statt der geplanten 25.

@@ -155,7 +155,7 @@ class _LustKarte extends StatelessWidget {
 }
 
 /// Audioreihe „Innenansichten“ (docs/konzepte/lust-audioreihe.md). Im Diskretions-Modus neutral. Vorerst nur
-/// im Spicy-Modus sichtbar (auch die Soft-Fassungen), bis über die Sichtbarkeit von Soft entschieden ist.
+/// im Spicy-Modus sichtbar, auch die Soft-Fassungen (Entscheidung des Nutzers, 28.10.2026).
 class _ReiheKarte extends StatelessWidget {
   const _ReiheKarte();
 
