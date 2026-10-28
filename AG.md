@@ -45,9 +45,6 @@ Auftrag: AG-n
 
 ### Erledigt
 
-- 28.10.2026, AG-9 (`ag/9-hallo`, PR #52): freiwilliges Hallo (einmalig), nur Version und Sprache, samt Sicherung, Abholwerkzeug und Tests.
-- 28.10.2026, AG-8 (`ag/8-lautsprecher`, PR #50): Nachfrage vor Lautsprecher-Wiedergabe, Pause beim Abziehen der
-  Kopfhörer, zwei Schalter in Profil und Sicherung, Realitätschecks sichtbarer (Traum-Abend, Tagebuch).
 - (ein Punkt je Ergebnis)
 
 ### Für den Nutzer
@@ -74,65 +71,6 @@ stillschweigend zu übergehen.
 - 27.10.2026: `C:\TOOLS\velvet-inhalte\` (private Inhalte, nie anfassen)
 
 ## Offene Aufträge
-
-### AG-13: Hörprüfung von vier Aufnahmen der Reihe „Innenansichten“ (nur Bericht)
-
-**Kein Branch, kein Pull Request, kein Commit.** Ausnahme von der Sperre oben, mit ausdrücklichem Einverständnis des
-Nutzers (28.10.2026): Du darfst aus `C:\TOOLS\velvet-inhalte\reihe\audio\` nur die vier unten genannten Dateien
-**anhören (lesen)** und den Bericht `C:\TOOLS\velvet-inhalte\reihe\pruefung_ag.md` anlegen. Sonst nichts dort
-anfassen, nichts kopieren oder in das Repository bringen, keinen Text der Aufnahmen im Bericht abschreiben.
-**Vorher lesen:** `docs/konzepte/lust-audioreihe.md` (Abschnitte zu Stimme und Ton), `docs/AUSSPRACHE.md`,
-`tools/reihe_ausdruck.py` (nur lesen, nicht ändern).
-
-Die vier Dateien (neue Folgen, beide Stimmen, Soft und Spicy, Solo und Paar):
-
-1. `victoria_zwei_frauen_spicy_a_climax.opus`
-2. `martin_zwei_maenner_spicy_b_building_desire.opus`
-3. `martin_im_eigenen_koerper_soft_mann_opening.opus`
-4. `martin_der_andere_koerper_spicy_mann_other_body.opus`
-
-Bewerte je Datei kurz:
-
-- **Aussprache:** falsch gesprochene oder falsch betonte Wörter, mit Zeitmarke und dem Wort (ohne den Satz zu zitieren).
-  Fremdwörter, Eigennamen, Wörter auf „-chst“ und „-ig“ besonders beachten.
-- **Grundatmosphäre:** passt der Ton zur Szene (ruhig, warm, nah), kippt er irgendwo ins Flache oder Hastige?
-- **Sprechgeschwindigkeit:** zu schnell oder zu langsam, gleichmäßig oder dem Inhalt folgend?
-- **Pausenführung:** Lücken zwischen Sätzen und Absätzen, zu lang, zu kurz, unnatürliche Stille?
-- **Auffälliges:** Knackser, abgeschnittene Enden, Lautstärkesprünge.
-
-Am Ende eine kurze Gesamteinschätzung (drei Sätze) und eine Liste der Wörter, die in das Lexikon
-`tools/aussprache.json` sollten (nur Vorschlag, nicht eintragen).
-
-**Nicht tun:** Aufnahmen neu erzeugen, `tools/` oder `lib/` ändern, Texte ändern, andere Dateien anhören. Bricht dein
-Inhaltsfilter ab: **nicht umgehen**, den Abbruch im Bericht vermerken.
-**Prüfen:** nur der Bericht; Meldung an den Nutzer, sobald er liegt.
-
-### AG-12: Bildbedarf der Kurse sondieren (nur Analyse)
-
-**Branch:** `ag/12-bildbedarf`
-**Vorher lesen:** `docs/konzepte/kursbilder.md` (alles), `assets/data/velvet_content.json` (nur die Kurse 1 bis 25;
-die Spicy-Kurse 26 und 27 **nicht lesen und nicht bearbeiten**), die vorhandenen Bilder in `assets/images/`.
-**Darf ändern:** nur eine neue Datei `docs/kursbilder-bedarf.md`. Keine Bilder erzeugen, nichts in `assets/`, `lib/`,
-`translations/`.
-
-Ziel: herausfinden, **wo ein Bild mehr erklärt als Text**, damit wir die Kursbilder gezielt planen.
-
-1. Gehe jede Lektion der Kurse 1 bis 25 durch (124 Lektionen). Die 9 Lektionen, die schon ein Diagramm haben, nur
-   als „vorhanden“ aufführen.
-2. `docs/kursbilder-bedarf.md`: eine Tabelle mit einer Zeile je Lektion: Kurs, Lektions-ID, Titel, **Bild hilft**
-   (ja, optional, nein), **Art** (Diagramm, Stimmungsbild, Ablauf), **Motiv in einem Satz** (neutral, ohne Körper),
-   **Beschriftung nötig** (ja/nein, denn dann DE und EN), **Priorität** (hoch, mittel, niedrig), Bemerkung.
-   Maßstab: nur dort „ja“, wo ein Bild etwas erklärt (Anatomie, Ablauf, Haltung, Material, Atem). Höchstens etwa
-   40 % der Lektionen „ja“ oder „optional“.
-3. Am Ende: Zusammenfassung mit Anzahl je Art, den zehn wichtigsten Bildern und einem Vorschlag für die
-   Reihenfolge (Pilotkurs ist Kurs 25 „Toys“).
-4. Bricht dein Inhaltsfilter bei einer Lektion ab: **nicht umgehen**, die Lektion in der Datei vermerken
-   („Filter, übersprungen“) und weitermachen.
-
-**Nicht tun:** Bilder erzeugen, Texte ändern, Spicy-Kurse anfassen, Körperbilder vorschlagen.
-
-**Prüfen:** nur Markdown; jede der 124 Lektionen (minus die der Kurse 26 und 27) hat genau eine Zeile.
-`flutter test` nicht nötig, es ändert sich kein App-Code.
 
 ### AG-11: Probe Kursbilder, Pilotkurs „Toys“ (Normalfassung)
 
@@ -188,3 +126,9 @@ keine Aussprache-Meldungen mehr ab und legt keine `aussprache/`-Branches mehr an
   Stimmen (78 Aufnahmen) samt `dauer.json`.
 - 27.10.2026, AG-5 bis AG-7 (PR #38, #40, #41, zusammen über #42): Wochenrückblick, Realitätschecks,
   nächtliches Wecken samt Texten und Aufnahmen. Claude ergänzte die SET_ALARM-Berechtigung.
+- 28.10.2026, AG-8 (`ag/8-lautsprecher`, PR #50): Nachfrage vor Lautsprecher-Wiedergabe, Pause beim Abziehen der
+  Kopfhörer, zwei Schalter in Profil und Sicherung, Realitätschecks sichtbarer (Traum-Abend, Tagebuch).
+- 28.10.2026, AG-9 (`ag/9-hallo`, PR #52): freiwilliges Hallo (einmalig), nur Version und Sprache, samt Sicherung,
+  Abholwerkzeug und Tests.
+- 28.10.2026, AG-12 (`ag/12-bildbedarf`, PR #55): Bildbedarf der Kurse sondiert, `docs/kursbilder-bedarf.md`.
+- 28.10.2026, AG-13 (kein Branch): Hörprüfung von vier Aufnahmen der Reihe, Bericht `C:\TOOLS\velvet-inhalte\reihe\pruefung_ag.md`.
