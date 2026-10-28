@@ -99,3 +99,7 @@ Empfehlung: 58 Bilder, Soft und Spicy getrennt, Perspektive geteilt. Bei Solo-Fo
   entstehen, aber `de-reihe` und `en-reihe` werden erst gebaut und hochgeladen, wenn die Bilder (Pilotsatz, danach die
   übrigen Folgen) fertig sind, damit die Pakete nicht zweimal erscheinen.
 - 28.10.2026: Player-Anzeige und `ReiheDaten.bildPfad` sind gebaut (Rückfall ohne Bild); Bilder fehlen noch.
+- 28.10.2026: **Stilprobe `first_contact`:** Counterfeit-V3.0 (Anime) verworfen. Es gilt **`dreamshaper_8.safetensors`**
+  (halb-realistisch, malerisch-filmisch; lokal mit `sd-cli.exe` ARM64, CPU, 512 × 768). Gesichter dürfen erkennbar sein.
+  Spicy darf **etwas deutlicher** als die erste Probe werden (Nutzer); die Grenze zeigt die nächste Probe. Das MCP-Werkzeug
+  `sd-cli` hat das Modell fest eingetragen; für die Serie entweder `MODEL_PATH` umstellen oder `sd-cli.exe` direkt rufen.
