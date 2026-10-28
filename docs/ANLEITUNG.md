@@ -121,6 +121,8 @@ Im Profil kannst du die App mit Fingerabdruck sperren; dann sind Inhalte auch in
 
 Vor der Wiedergabe über den Lautsprecher fragt die App nach, und wenn Kopfhörer getrennt werden, pausiert sie.
 
+Wenn du magst, kannst du im Profil einmal anonym „Hallo“ sagen: Es überträgt ausschließlich Version und Sprache der App, verschlüsselt und ohne Absender, damit wir grob sehen, ob die App genutzt wird.
+
 Mit „Backup exportieren“ erstellst du eine passwortgeschützte Sicherung, die du auf ein neues Handy übertragen kannst.
 
 

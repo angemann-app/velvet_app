@@ -62,7 +62,7 @@
       "icon": "lock",
       "titel": "Privacy, discretion and backup",
       "bild": "",
-      "text": "Everything you enter stays on your phone. Secrets such as keys are kept in Android's protected storage.\nIn your profile you can lock the app with your fingerprint; content is then also hidden in the app overview and screenshots are blocked. The discreet app icon shows a neutral name instead of VelvetPulse.\nThe app asks before playing through the speaker, and pauses if headphones are disconnected.\n“Export backup” creates a password-protected backup that you can transfer to a new phone."
+      "text": "Everything you enter stays on your phone. Secrets such as keys are kept in Android's protected storage.\nIn your profile you can lock the app with your fingerprint; content is then also hidden in the app overview and screenshots are blocked. The discreet app icon shows a neutral name instead of VelvetPulse.\nThe app asks before playing through the speaker, and pauses if headphones are disconnected.\nIf you like, you can anonymously say “hello” once in your profile: It only transmits the app version and language, encrypted and without a sender, so we can roughly see whether the app is being used.\n“Export backup” creates a password-protected backup that you can transfer to a new phone."
     },
     {
       "id": "updates",
@@ -88,7 +88,7 @@
   ],
   "_source": {
     "guide:coach": "6528d2614ac06be6",
-    "guide:diskretion": "8ee078cf9d0a5af4",
+    "guide:diskretion": "9b4b4191fd610cb0",
     "guide:gefuehrt": "853498d186018823",
     "guide:hilfe": "0f67b34ec65bbd7e",
     "guide:kurse": "22661e634df5a958",

@@ -76,6 +76,20 @@ void main() {
     expect(StorageService.getPausiereBeiKopfhoererGetrennt(), isFalse);
   });
 
+  test('Hallo-Merker ist in der Sicherung und wird wiederhergestellt', () async {
+    expect(StorageService.getHalloGesendetAm(), isNull);
+
+    await StorageService.setHalloGesendetAm('2026-10-28T09:30:00.000');
+    final export = StorageService.exportAllUserData();
+    expect(export['halloGesendetAm'], '2026-10-28T09:30:00.000');
+
+    await StorageService.setHalloGesendetAm(null);
+    expect(StorageService.getHalloGesendetAm(), isNull);
+
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getHalloGesendetAm(), '2026-10-28T09:30:00.000');
+  });
+
   test('Die Ja/Nein-Liste ist in der Sicherung enthalten', () {
     final export = StorageService.exportAllUserData();
     expect(jsonDecode(export['yesNoMaybe'] as String), {'a': 'yes', 'c': 'no'});

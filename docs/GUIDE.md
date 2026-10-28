@@ -121,6 +121,8 @@ In your profile you can lock the app with your fingerprint; content is then also
 
 The app asks before playing through the speaker, and pauses if headphones are disconnected.
 
+If you like, you can anonymously say “hello” once in your profile: It only transmits the app version and language, encrypted and without a sender, so we can roughly see whether the app is being used.
+
 “Export backup” creates a password-protected backup that you can transfer to a new phone.
 
 

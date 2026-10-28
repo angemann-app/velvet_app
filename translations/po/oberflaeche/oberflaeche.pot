@@ -6886,3 +6886,33 @@ msgstr ""
 msgctxt "ui:realitaetStatusAus#text"
 msgid "Aus"
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Say an anonymous hello once
+msgctxt "ui:halloTitel#text"
+msgid "Einmal anonym Hallo sagen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Voluntary: If you like, you can say hello to us once. Only the app version and language are transmitted – encrypted and without a sender.
+msgctxt "ui:halloErklaerung#text"
+msgid "Freiwillig: Wenn du magst, sagst du uns einmal Hallo. Übertragen werden ausschließlich Version und Sprache der App – verschlüsselt und ohne Absender."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Say hello
+msgctxt "ui:halloKnopf#text"
+msgid "Hallo sagen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {datum}
+#. EN: Thank you, sent on {datum}.
+msgctxt "ui:halloDankeGesendet#text"
+msgid "Danke, gesendet am {datum}."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thank you for saying hello!
+msgctxt "ui:halloGesendet#text"
+msgid "Danke für dein Hallo!"
+msgstr ""

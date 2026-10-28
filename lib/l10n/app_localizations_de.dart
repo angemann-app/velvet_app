@@ -4091,4 +4091,22 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get realitaetStatusAus => 'Aus';
+
+  @override
+  String get halloTitel => 'Einmal anonym Hallo sagen';
+
+  @override
+  String get halloErklaerung =>
+      'Freiwillig: Wenn du magst, sagst du uns einmal Hallo. Übertragen werden ausschließlich Version und Sprache der App – verschlüsselt und ohne Absender.';
+
+  @override
+  String get halloKnopf => 'Hallo sagen';
+
+  @override
+  String halloDankeGesendet(String datum) {
+    return 'Danke, gesendet am $datum.';
+  }
+
+  @override
+  String get halloGesendet => 'Danke für dein Hallo!';
 }

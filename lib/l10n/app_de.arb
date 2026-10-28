@@ -1892,5 +1892,17 @@
   "lautsprecherEinstellungPauseTitel": "Pausieren, wenn Kopfhörer getrennt werden",
   "lautsprecherEinstellungPauseText": "Hält die Wiedergabe an, sobald Kabel- oder Bluetooth-Kopfhörer getrennt werden.",
   "realitaetStatusEin": "Ein",
-  "realitaetStatusAus": "Aus"
+  "realitaetStatusAus": "Aus",
+  "halloTitel": "Einmal anonym Hallo sagen",
+  "halloErklaerung": "Freiwillig: Wenn du magst, sagst du uns einmal Hallo. Übertragen werden ausschließlich Version und Sprache der App – verschlüsselt und ohne Absender.",
+  "halloKnopf": "Hallo sagen",
+  "halloDankeGesendet": "Danke, gesendet am {datum}.",
+  "@halloDankeGesendet": {
+    "placeholders": {
+      "datum": {
+        "type": "String"
+      }
+    }
+  },
+  "halloGesendet": "Danke für dein Hallo!"
 }
