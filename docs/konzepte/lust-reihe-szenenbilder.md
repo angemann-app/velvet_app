@@ -72,23 +72,25 @@ Empfehlung: 58 Bilder, Soft und Spicy getrennt, Perspektive geteilt. Bei Solo-Fo
 
 ## 6. Reihenfolge (Vorschlag)
 
-1. Eine Pilotfolge, Vorschlag **Frau und Mann** (Aufnahmen vorhanden, Szenen bekannt): 6 Szenen × Soft/Spicy = 12 Bilder.
+1. Pilotfolge ist **Frau und Mann**, wie im Reihenkonzept (`lust-audioreihe.md`, Abschnitt 9 und 11, „Die Priorität
+   liegt auf einer überzeugenden, vollständig ausgearbeiteten Pilotfolge“); Aufnahmen vorhanden, Szenen bekannt:
+   6 Szenen × Soft/Spicy = 12 Bilder.
 2. Player-Anzeige und `bildPfad` mit den Pilotbildern bauen und auf dem Gerät prüfen (Helligkeit, Lesbarkeit,
    Überblendung).
 3. Erst danach die übrigen vier Folgen (17 Szenen, 34 Bilder), parallel zum Einsprechen.
 
 ## 7. Offene Fragen (vor dem ersten Bild klären)
 
-1. **Pilotfolge:** Frau und Mann, wie vorgeschlagen, oder eine andere?
-2. **Deutlichkeit der Spicy-Bilder:** reine Andeutung (Silhouetten, Stoff, Licht) oder deutlicher? Wo liegt die Grenze?
+1. **Deutlichkeit der Spicy-Bilder:** reine Andeutung (Silhouetten, Stoff, Licht) oder deutlicher? Wo liegt die Grenze?
    Sie gilt für alle 29 Szenen und hängt zusammen mit Frage 2 aus `kursbilder.md`.
-3. **Zuordnung:** ein Bild je Folge, Variante und Szene (Empfehlung) oder je Perspektive?
-4. **Paket:** Bilder in beide Sprachpakete legen (einfach, doppelt etwa 6 MB) oder ein gemeinsames Paket
+2. **Zuordnung:** ein Bild je Folge, Variante und Szene (Empfehlung) oder je Perspektive?
+3. **Paket:** Bilder in beide Sprachpakete legen (einfach, doppelt etwa 6 MB) oder ein gemeinsames Paket
    `reihe-bilder` (neuer Paketweg, spart Platz und Upload)?
-5. **Gesichter und Körper:** nur Silhouetten und Details (Hände, Stoff, Raum), oder auch erkennbare Figuren?
-6. **Einstellung:** Soll es einen Schalter „Bilder aus“ geben, und gilt er für alle Folgen?
-7. **Titelbild je Folge** in der Einrichtungsansicht gewünscht? (Standard: nein, wegen Diskretion.)
+4. **Gesichter und Körper:** nur Silhouetten und Details (Hände, Stoff, Raum), oder auch erkennbare Figuren?
+5. **Einstellung:** Soll es einen Schalter „Bilder aus“ geben, und gilt er für alle Folgen?
+6. **Titelbild je Folge** in der Einrichtungsansicht gewünscht? (Standard: nein, wegen Diskretion.)
 
 ## 8. Entscheidungen
 
-- 28.10.2026: Wunsch geäußert, Konzept entworfen. Noch keine Entscheidungen.
+- 28.10.2026: Wunsch geäußert, Konzept entworfen.
+- 28.10.2026: **Pilot ist die Folge „Zwischen Frau und Mann“** (gilt für die Reihe und damit auch für die Bilder).
