@@ -476,9 +476,12 @@ Ihr besonderes Merkmal ist die Kombination aus:
 4. **Aufnahme:** `tools/generate_audio.py --reihe` (Deutsch) und `tools/generate_audio_en.py --reihe`
    (Englisch), normales Tempo, kurze Absatzpausen, keine künstliche Stille. Gemessen: etwa 16 Zeichen je
    Sekunde, die Pilotfassungen dauern daher rund 15 Minuten statt der geplanten 25.
-5. **Perspektiv-Namen:** Jede Fassung kann ein Feld `name` tragen („Die Gastgeberin“, „Der Gast“); fehlt es, gilt
+5. **Textstand:** Alle fünf Folgen (je vier Fassungen, DE und EN) sind als Text fertig und lektoriert (Angabe des
+   Nutzers, 28.10.2026); Synchronprüfung bestanden. Offen für das Einsprechen: Aussprache neuer Wörter, 92 Aufnahmen
+   je Sprache.
+6. **Perspektiv-Namen:** Jede Fassung kann ein Feld `name` tragen („Die Gastgeberin“, „Der Gast“); fehlt es, gilt
    Sie/Er. Bei Solo-Folgen (`typ: solo`) entfällt der Hinweis auf die Gegenperspektive.
-6. **Offen: Szenenbilder im Player** (Wunsch des Nutzers, 28.10.2026): je Szene ein Bild während der Wiedergabe.
+7. **Offen: Szenenbilder im Player** (Wunsch des Nutzers, 28.10.2026): je Szene ein Bild während der Wiedergabe.
    Ausgearbeitet in `docs/konzepte/lust-reihe-szenenbilder.md`; Pilot ist wie für die Reihe „Frau und Mann“.
    Vorab zu klären: Soft/Spicy-Bilder getrennt (Dual-Bild-Prinzip und R2 aus `docs/kursbilder-bedarf.md`), Erzeugung
    (lokal mit stable-diffusion.cpp), Ablage im Paket `<sprache>-reihe`, Umfang (eine Bildserie je Folge oder je
