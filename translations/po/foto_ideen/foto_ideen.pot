@@ -155,3 +155,99 @@ msgstr ""
 msgctxt "photo_idea:heiss_einladung#text"
 msgid "Eine Einladung, die keine Worte braucht."
 msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: Your bare feet, just the way they are standing or lying right now.
+msgctxt "photo_idea:fuesse#text"
+msgid "Deine nackten Füße, so wie sie gerade stehen oder liegen."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: The inside of your thigh.
+msgctxt "photo_idea:heiss_innenschenkel#text"
+msgid "Die Innenseite deines Oberschenkels."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: Your back, from shoulder to waist.
+msgctxt "photo_idea:ruecken#text"
+msgid "Dein Rücken, von der Schulter bis zur Taille."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: You from behind, naked, looking over your shoulder.
+msgctxt "photo_idea:heiss_rueckansicht#text"
+msgid "Du von hinten, nackt, mit dem Blick über die Schulter."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: A candle that will burn for us tonight.
+msgctxt "photo_idea:kerze#text"
+msgid "Eine Kerze, die heute Abend für uns brennen soll."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: The outline of your body under a thin sheet.
+msgctxt "photo_idea:heiss_laken#text"
+msgid "Die Konturen deines Körpers unter einem dünnen Laken."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: Something of mine on you.
+msgctxt "photo_idea:kleidung#text"
+msgid "Ein Kleidungsstück von mir an dir."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: Your shirt or blouse, half unbuttoned.
+msgctxt "photo_idea:heiss_hemd#text"
+msgid "Dein Hemd oder deine Bluse, halb aufgeknöpft."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: Your eyes, just before you smile.
+msgctxt "photo_idea:blick#text"
+msgid "Dein Blick, kurz bevor du lächelst."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: Your wrists, loosely wrapped in a scarf. Only if you like.
+msgctxt "photo_idea:heiss_tuch#text"
+msgid "Deine Handgelenke, locker von einem Tuch umschlungen. Nur wenn du magst."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: Your wrist, ready for a kiss.
+msgctxt "photo_idea:handgelenk#text"
+msgid "Dein Handgelenk, bereit für einen Kuss."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: You in the bath, with foam only where it belongs.
+msgctxt "photo_idea:heiss_wanne#text"
+msgid "Du in der Badewanne, Schaum nur da, wo er hingehört."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: Your hair, falling the way it does right now.
+msgctxt "photo_idea:haar#text"
+msgid "Dein Haar, wie es gerade fällt."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: A photo that shows how much you want me right now.
+msgctxt "photo_idea:heiss_verlangen#text"
+msgid "Ein Foto, das zeigt, wie sehr du mich jetzt willst."
+msgstr ""
+
+#. Foto-Idee, sanft
+#. EN: A bath we could take together today.
+msgctxt "photo_idea:bad#text"
+msgid "Ein Bad, das wir heute zusammen nehmen könnten."
+msgstr ""
+
+#. Foto-Idee, deutlich
+#. EN: You in the morning, still sleepy, still naked.
+msgctxt "photo_idea:heiss_morgen#text"
+msgid "Du am Morgen, noch verschlafen, noch nackt."
+msgstr ""

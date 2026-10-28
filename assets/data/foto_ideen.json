@@ -106,6 +106,78 @@
       "id": "heiss_einladung",
       "text": "Eine Einladung, die keine Worte braucht.",
       "heiss": true
+    },
+    {
+      "id": "fuesse",
+      "text": "Deine nackten Füße, so wie sie gerade stehen oder liegen."
+    },
+    {
+      "id": "heiss_innenschenkel",
+      "text": "Die Innenseite deines Oberschenkels.",
+      "heiss": true
+    },
+    {
+      "id": "ruecken",
+      "text": "Dein Rücken, von der Schulter bis zur Taille."
+    },
+    {
+      "id": "heiss_rueckansicht",
+      "text": "Du von hinten, nackt, mit dem Blick über die Schulter.",
+      "heiss": true
+    },
+    {
+      "id": "kerze",
+      "text": "Eine Kerze, die heute Abend für uns brennen soll."
+    },
+    {
+      "id": "heiss_laken",
+      "text": "Die Konturen deines Körpers unter einem dünnen Laken.",
+      "heiss": true
+    },
+    {
+      "id": "kleidung",
+      "text": "Ein Kleidungsstück von mir an dir."
+    },
+    {
+      "id": "heiss_hemd",
+      "text": "Dein Hemd oder deine Bluse, halb aufgeknöpft.",
+      "heiss": true
+    },
+    {
+      "id": "blick",
+      "text": "Dein Blick, kurz bevor du lächelst."
+    },
+    {
+      "id": "heiss_tuch",
+      "text": "Deine Handgelenke, locker von einem Tuch umschlungen. Nur wenn du magst.",
+      "heiss": true
+    },
+    {
+      "id": "handgelenk",
+      "text": "Dein Handgelenk, bereit für einen Kuss."
+    },
+    {
+      "id": "heiss_wanne",
+      "text": "Du in der Badewanne, Schaum nur da, wo er hingehört.",
+      "heiss": true
+    },
+    {
+      "id": "haar",
+      "text": "Dein Haar, wie es gerade fällt."
+    },
+    {
+      "id": "heiss_verlangen",
+      "text": "Ein Foto, das zeigt, wie sehr du mich jetzt willst.",
+      "heiss": true
+    },
+    {
+      "id": "bad",
+      "text": "Ein Bad, das wir heute zusammen nehmen könnten."
+    },
+    {
+      "id": "heiss_morgen",
+      "text": "Du am Morgen, noch verschlafen, noch nackt.",
+      "heiss": true
     }
   ]
 }
