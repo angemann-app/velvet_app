@@ -75,6 +75,38 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
+### AG-13: Hörprüfung von vier Aufnahmen der Reihe „Innenansichten“ (nur Bericht)
+
+**Kein Branch, kein Pull Request, kein Commit.** Ausnahme von der Sperre oben, mit ausdrücklichem Einverständnis des
+Nutzers (28.10.2026): Du darfst aus `C:\TOOLS\velvet-inhalte\reihe\audio\` nur die vier unten genannten Dateien
+**anhören (lesen)** und den Bericht `C:\TOOLS\velvet-inhalte\reihe\pruefung_ag.md` anlegen. Sonst nichts dort
+anfassen, nichts kopieren oder in das Repository bringen, keinen Text der Aufnahmen im Bericht abschreiben.
+**Vorher lesen:** `docs/konzepte/lust-audioreihe.md` (Abschnitte zu Stimme und Ton), `docs/AUSSPRACHE.md`,
+`tools/reihe_ausdruck.py` (nur lesen, nicht ändern).
+
+Die vier Dateien (neue Folgen, beide Stimmen, Soft und Spicy, Solo und Paar):
+
+1. `victoria_zwei_frauen_spicy_a_climax.opus`
+2. `martin_zwei_maenner_spicy_b_building_desire.opus`
+3. `martin_im_eigenen_koerper_soft_mann_opening.opus`
+4. `martin_der_andere_koerper_spicy_mann_other_body.opus`
+
+Bewerte je Datei kurz:
+
+- **Aussprache:** falsch gesprochene oder falsch betonte Wörter, mit Zeitmarke und dem Wort (ohne den Satz zu zitieren).
+  Fremdwörter, Eigennamen, Wörter auf „-chst“ und „-ig“ besonders beachten.
+- **Grundatmosphäre:** passt der Ton zur Szene (ruhig, warm, nah), kippt er irgendwo ins Flache oder Hastige?
+- **Sprechgeschwindigkeit:** zu schnell oder zu langsam, gleichmäßig oder dem Inhalt folgend?
+- **Pausenführung:** Lücken zwischen Sätzen und Absätzen, zu lang, zu kurz, unnatürliche Stille?
+- **Auffälliges:** Knackser, abgeschnittene Enden, Lautstärkesprünge.
+
+Am Ende eine kurze Gesamteinschätzung (drei Sätze) und eine Liste der Wörter, die in das Lexikon
+`tools/aussprache.json` sollten (nur Vorschlag, nicht eintragen).
+
+**Nicht tun:** Aufnahmen neu erzeugen, `tools/` oder `lib/` ändern, Texte ändern, andere Dateien anhören. Bricht dein
+Inhaltsfilter ab: **nicht umgehen**, den Abbruch im Bericht vermerken.
+**Prüfen:** nur der Bericht; Meldung an den Nutzer, sobald er liegt.
+
 ### AG-12: Bildbedarf der Kurse sondieren (nur Analyse)
 
 **Branch:** `ag/12-bildbedarf`
