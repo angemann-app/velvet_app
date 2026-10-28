@@ -479,6 +479,6 @@ Ihr besonderes Merkmal ist die Kombination aus:
 5. **Perspektiv-Namen:** Jede Fassung kann ein Feld `name` tragen („Die Gastgeberin“, „Der Gast“); fehlt es, gilt
    Sie/Er. Bei Solo-Folgen (`typ: solo`) entfällt der Hinweis auf die Gegenperspektive.
 6. **Offen: Szenenbilder im Player** (Wunsch des Nutzers, 28.10.2026): je Szene ein Bild während der Wiedergabe.
-   Vorab zu klären: Soft/Spicy-Bilder getrennt (Dual-Bild-Prinzip und R2 aus `docs/kursbilder-bedarf.md`), Erzeugung
+   Ausgearbeitet in `docs/konzepte/lust-reihe-szenenbilder.md`. Vorab zu klären: Soft/Spicy-Bilder getrennt (Dual-Bild-Prinzip und R2 aus `docs/kursbilder-bedarf.md`), Erzeugung
    (lokal mit stable-diffusion.cpp), Ablage im Paket `<sprache>-reihe`, Umfang (eine Bildserie je Folge oder je
    Fassung, 5 bis 6 Szenen).
