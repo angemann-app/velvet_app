@@ -107,6 +107,23 @@ flutter test test_screens/screens_test.dart   # rendert alle Screens nach build/
   eingesprochen, gilt dieser Weg (`synthesize_ausdruck`); für andere Texte zuerst ein passendes Profil ableiten und
   per Hörprobe abnehmen lassen.
 
+## Bilder (Szenenbilder der Audioreihe)
+
+Konzept: `docs/konzepte/lust-reihe-szenenbilder.md`. Die Bilder entstehen **nur lokal** und liegen **nie im Repository oder in
+der APK**, sondern später als `bilder/…` im Nur-R2-Paket der Reihe. Spicy-Motive nie an Cloud-Modelle (auch nicht AG oder OpenCode).
+
+- **Werkzeug:** `C:\AI\mcp-sd-server\bin-arm64\sd-cli.exe` (stable-diffusion.cpp, selbst gebauter ARM64-Build, nur CPU) mit
+  **`C:\AI\models\dreamshaper_8.safetensors`**, 512 × 768, 20 Schritte, `--cfg-scale 7.0`, fester Seed je Bild (`4100 + laufende Nummer`).
+  Das MCP-Werkzeug `sd-cli` hat Counterfeit (Anime) fest eingetragen und taugt für die Serie nicht; `sd-cli.exe` direkt rufen.
+- **Prompt:** englisch, Stilblock `oil painting, painterly illustration, soft edges, chiaroscuro, warm candlelight, deep rainy-night blue,
+  muted rose, no text, portrait` plus Motiv; Negativ gegen Foto, Text, Kinder, Anime. Soft = sinnlich (Negativ: nudity), Spicy = deutlich
+  (Negativ: clothed), ohne Nahaufnahme der Genitalien. Figuren immer ausdrücklich nennen („a man and a woman“, „two women“), sonst
+  entstehen falsche Paare. Jedes Bild ansehen, bevor es gezeigt wird.
+- **Ablage:** `C:\TOOLS\velvet-inhalte\reihe\bilder\roh\<folge>_<variante>_<szene>.png`, Protokoll `_log.txt`; passende Bilder anderer
+  Folgen unter `kandidaten\`. Danach WebP (768 × 1024, 80 bis 120 KB), erst nach Abnahme durch den Nutzer.
+- **Laufzeit:** rund 7 Minuten je Bild, ein Prozess belegt etwa 2,3 GB RAM (16 GB gesamt). **Nie zwei Läufe gleichzeitig** (Auslagern auf
+  die SSD macht beides langsamer). Windows-Energiemodus „Höchstleistung“ am Netz, sonst taktet die CPU niedrig. Läuft im Hintergrund.
+
 ## Git
 
 - Größere Änderungen auf einem eigenen Branch, nicht direkt auf `main`.
