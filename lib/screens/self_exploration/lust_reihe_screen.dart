@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -5,10 +7,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../l10n/t.dart';
 import '../../models/lust_reihe.dart';
+import '../../services/audio_ausgabe.dart';
 import '../../services/pakete.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/lautsprecher_frage.dart';
 
 /// Audioreihe „Innenansichten“ (docs/konzepte/lust-audioreihe.md): zusammenhängende Erzählungen, Soft und
 /// Spicy, Perspektiven derselben Begegnung mit gemeinsamen Szenen-IDs. Inhalte nur aus dem Paket
@@ -39,6 +43,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   bool _pausiert = false;
   bool _fertig = false;
   int _lauf = 0;
+  StreamSubscription<void>? _kopfhoererSub;
 
   String get _paket => Pakete.name(Pakete.reihe);
   bool get _paketDa => Pakete.version(_paket) > 0;
@@ -53,12 +58,20 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   @override
   void initState() {
     super.initState();
+    AudioAusgabe.instanz.initialisieren();
+    _kopfhoererSub = AudioAusgabe.instanz.onKopfhoererGetrennt.listen((_) {
+      if (!mounted) return;
+      if (StorageService.getPausiereBeiKopfhoererGetrennt() && _spiel != null && !_fertig && !_pausiert) {
+        _pauseUmschalten();
+      }
+    });
     _laden();
   }
 
   @override
   void dispose() {
     _lauf++;
+    _kopfhoererSub?.cancel();
     Sprachausgabe.vorlesenBeenden();
     _player.dispose();
     super.dispose();
@@ -98,6 +111,8 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     final folge = _folge;
     final fassung = folge == null ? null : _gewaehlt(folge);
     if (folge == null || fassung == null) return;
+    final darf = await frageVorLautsprecher(context);
+    if (!darf || !mounted) return;
     HapticFeedback.mediumImpact();
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(_keyFolge, folge.id);
