@@ -99,6 +99,11 @@ Empfehlung: 58 Bilder, Soft und Spicy getrennt, Perspektive geteilt. Bei Solo-Fo
   entstehen, aber `de-reihe` und `en-reihe` werden erst gebaut und hochgeladen, wenn die Bilder (Pilotsatz, danach die
   übrigen Folgen) fertig sind, damit die Pakete nicht zweimal erscheinen.
 - 28.10.2026: Player-Anzeige und `ReiheDaten.bildPfad` sind gebaut (Rückfall ohne Bild); Bilder fehlen noch.
+- 28.10.2026: **Paket:** Die Bilder liegen in einem **eigenen, sprachunabhängigen Paket `reihe-bilder`** (nur R2, nur Spicy), nicht
+  in den Sprachpaketen. Die App lädt es mit dem Reihen-Paket nach; fehlt es, bleibt der Player ohne Bild. Die **Pilotbilder**
+  (12, „Frau und Mann“) sind im Paket v1 und in der Beta 4.15.0-beta.1 (Build 51). Wer in der Szene vorkommt, gehört ins Bild.
+  Die übrigen 46 Bilder entstehen über Nacht (`C:\TOOLS\velvet-inhalte\reihe\bilder\nacht_bilder.py`), der Nutzer prüft sie
+  am 29.10.; bei Solo-Folgen ein gemeinsames Bild für beide Perspektiven (Person ohne Gesicht, Räume, Licht).
 - 28.10.2026: **Stilprobe `first_contact`:** Counterfeit-V3.0 (Anime) verworfen. Es gilt **`dreamshaper_8.safetensors`**
   (halb-realistisch, malerisch-filmisch; lokal mit `sd-cli.exe` ARM64, CPU, 512 × 768). Gesichter dürfen erkennbar sein.
   Spicy darf **etwas deutlicher** als die erste Probe werden (Nutzer); die Grenze zeigt die nächste Probe. Das MCP-Werkzeug
