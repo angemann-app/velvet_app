@@ -434,6 +434,27 @@
           "text": "Im Traum-Abend kannst du dich für eine Nacht wecken lassen und wirst danach sanft zurück in den Schlaf begleitet. Höchstens zweimal pro Woche."
         }
       ]
+    },
+    {
+      "build": 50,
+      "version": "4.14.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Innenansichten",
+          "text": "Neue Hörgeschichten für Erwachsene: dieselbe Begegnung aus zwei inneren Blickwinkeln, in Soft oder Spicy. Nur im Spicy-Modus zu finden; die Aufnahmen lädst du einmal herunter, danach laufen sie offline."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Nachfrage vor dem Lautsprecher",
+          "text": "Bevor etwas laut abgespielt wird, fragt die App kurz nach. Werden Kopfhörer getrennt, pausiert sie. Beides kannst du im Profil ausschalten."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Ein freiwilliges Hallo",
+          "text": "Wenn du magst, sagst du einmal anonym Hallo. Übertragen werden nur Version und Sprache der App."
+        }
+      ]
     }
   ]
 }

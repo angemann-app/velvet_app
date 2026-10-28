@@ -434,6 +434,27 @@
           "text": "In the dream evening you can be woken for one night and are then gently guided back to sleep. At most twice a week."
         }
       ]
+    },
+    {
+      "build": 50,
+      "version": "4.14.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Inner views",
+          "text": "New audio stories for adults: the same encounter from two inner perspectives, in Soft or Spicy. Only available in Spicy mode; you download the recordings once, then they play offline."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Asking before the speaker",
+          "text": "Before anything plays out loud, the app briefly asks first. If headphones are unplugged, it pauses. You can turn both off in your profile."
+        },
+        {
+          "icon": "favorite",
+          "titel": "A voluntary hello",
+          "text": "If you like, say hello once, anonymously. Only the app version and language are sent."
+        }
+      ]
     }
   ],
   "_source": {
@@ -460,6 +481,7 @@
     "news:46": "3ad1a4437492b249",
     "news:47": "b439804861d14cc0",
     "news:48": "e6e4b06f58104a52",
-    "news:49": "9bfe371fc494e8b4"
+    "news:49": "9bfe371fc494e8b4",
+    "news:50": "a3b0641866eea6b1"
   }
 }

@@ -706,3 +706,39 @@ msgstr ""
 msgctxt "news:49#2.text"
 msgid "Im Traum-Abend kannst du dich für eine Nacht wecken lassen und wirst danach sanft zurück in den Schlaf begleitet. Höchstens zweimal pro Woche."
 msgstr ""
+
+#. Was ist neu in Version 4.14.0-beta.1
+#. EN: Inner views
+msgctxt "news:50#0.titel"
+msgid "Innenansichten"
+msgstr ""
+
+#. Was ist neu in Version 4.14.0-beta.1
+#. EN: New audio stories for adults: the same encounter from two inner perspectives, in Soft or Spicy. Only available in Spicy mode; you download the recordings once, then they play offline.
+msgctxt "news:50#0.text"
+msgid "Neue Hörgeschichten für Erwachsene: dieselbe Begegnung aus zwei inneren Blickwinkeln, in Soft oder Spicy. Nur im Spicy-Modus zu finden; die Aufnahmen lädst du einmal herunter, danach laufen sie offline."
+msgstr ""
+
+#. Was ist neu in Version 4.14.0-beta.1
+#. EN: Asking before the speaker
+msgctxt "news:50#1.titel"
+msgid "Nachfrage vor dem Lautsprecher"
+msgstr ""
+
+#. Was ist neu in Version 4.14.0-beta.1
+#. EN: Before anything plays out loud, the app briefly asks first. If headphones are unplugged, it pauses. You can turn both off in your profile.
+msgctxt "news:50#1.text"
+msgid "Bevor etwas laut abgespielt wird, fragt die App kurz nach. Werden Kopfhörer getrennt, pausiert sie. Beides kannst du im Profil ausschalten."
+msgstr ""
+
+#. Was ist neu in Version 4.14.0-beta.1
+#. EN: A voluntary hello
+msgctxt "news:50#2.titel"
+msgid "Ein freiwilliges Hallo"
+msgstr ""
+
+#. Was ist neu in Version 4.14.0-beta.1
+#. EN: If you like, say hello once, anonymously. Only the app version and language are sent.
+msgctxt "news:50#2.text"
+msgid "Wenn du magst, sagst du einmal anonym Hallo. Übertragen werden nur Version und Sprache der App."
+msgstr ""
