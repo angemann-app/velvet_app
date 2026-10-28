@@ -6640,3 +6640,183 @@ msgstr ""
 msgctxt "ui:testmodusSchild#text"
 msgid "Testmodus: kurze Pausen, alles frei. Ausschalten: siebenmal auf die Versionsnummer im Profil tippen."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Inner views
+msgctxt "ui:reiheKarteTitel#text"
+msgid "Innenansichten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Audio story
+msgctxt "ui:reiheKarteTitelNeutral#text"
+msgid "Hörgeschichte"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Desire told from within, in Soft and Spicy, also from two perspectives of the same encounter.
+msgctxt "ui:reiheKarteText#text"
+msgid "Lust von innen erzählt, in Soft und Spicy, auch aus zwei Perspektiven derselben Begegnung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: One continuous audio story.
+msgctxt "ui:reiheKarteTextNeutral#text"
+msgid "Eine zusammenhängende Hörgeschichte."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Inner views
+msgctxt "ui:reiheTitel#text"
+msgid "Innenansichten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Continuous stories of about 20 to 30 minutes, not for falling asleep. They describe how desire can feel from within. Everyone experiences this differently; none of it is a benchmark or a promise.
+msgctxt "ui:reiheEinleitung#text"
+msgid "Zusammenhängende Erzählungen von etwa 20 bis 30 Minuten, nicht zum Einschlafen. Sie beschreiben, wie sich Lust von innen anfühlen kann. Jeder Mensch erlebt das anders; nichts davon ist ein Maßstab oder ein Versprechen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Episode
+msgctxt "ui:reiheFolgen#text"
+msgid "Folge"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Intensity
+msgctxt "ui:reiheVariante#text"
+msgid "Intensität"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Soft
+msgctxt "ui:reiheSoft#text"
+msgid "Soft"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Spicy
+msgctxt "ui:reiheSpicy#text"
+msgid "Spicy"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Perspective
+msgctxt "ui:reihePerspektive#text"
+msgid "Perspektive"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Her
+msgctxt "ui:reihePerspektiveFrau#text"
+msgid "Sie"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Him
+msgctxt "ui:reihePerspektiveMann#text"
+msgid "Er"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: The matching perspective of the same encounter: {name}. Both follow the same sequence of scenes. You can start a shared playback this way, but the app does not sync the devices.
+msgctxt "ui:reihePartnerHinweis#text"
+msgid "Die passende Gegenperspektive derselben Begegnung: {name}. Beide folgen derselben Szenenfolge. Eine gemeinsame Wiedergabe lässt sich so starten, die App gleicht die Geräte aber nicht ab."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {minuten}
+#. EN: About {minuten} minutes
+msgctxt "ui:reiheDauer#text"
+msgid "Etwa {minuten} Minuten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start
+msgctxt "ui:reiheStart#text"
+msgid "Starten"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}, {m}
+#. EN: Scene {n} of {m}
+msgctxt "ui:reiheSzene#text"
+msgid "Szene {n} von {m}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Next scene
+msgctxt "ui:reiheSzeneVor#text"
+msgid "Nächste Szene"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Scene from the start
+msgctxt "ui:reiheSzeneZurueck#text"
+msgid "Szene von vorn"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: End
+msgctxt "ui:reiheBeenden#text"
+msgid "Beenden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Stop the story?
+msgctxt "ui:reiheBeendenFrage#text"
+msgid "Die Erzählung stoppen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You can start again later.
+msgctxt "ui:reiheBeendenText#text"
+msgid "Du kannst später neu beginnen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Done. Take a moment before you continue.
+msgctxt "ui:reiheFertig#text"
+msgid "Fertig. Nimm dir einen Moment, bevor du weitermachst."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Adults only. All characters are adults, and everything happens by mutual consent. None of it is a measure of performance: arousal, climax, and satisfaction are not the same, and every body responds differently.
+msgctxt "ui:reiheHinweise#text"
+msgid "Nur ab achtzehn. Alle Figuren sind erwachsen, alles geschieht einvernehmlich. Nichts davon ist ein Leistungsmaßstab: Erregung, Höhepunkt und Zufriedenheit sind nicht dasselbe, und jeder Körper reagiert anders."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The package does not contain any episodes yet.
+msgctxt "ui:reiheLeer#text"
+msgid "Im Paket sind noch keine Folgen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The recordings for this series are not available yet. They come as a separate package; download it over Wi-Fi if possible. After that, everything works offline.
+msgctxt "ui:reihePaketFehlt#text"
+msgid "Für diese Reihe fehlen noch die Aufnahmen. Sie kommen als eigenes Paket, am besten im WLAN laden. Danach läuft alles ohne Netz."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download recordings
+msgctxt "ui:reihePaketLaden#text"
+msgid "Aufnahmen laden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download failed. Please try again later.
+msgctxt "ui:reiheLadenFehler#text"
+msgid "Laden hat nicht geklappt. Bitte später noch einmal versuchen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Available offline
+msgctxt "ui:reiheOffline#text"
+msgid "Offline verfügbar"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: There is no recording for this version yet; the device voice reads it aloud.
+msgctxt "ui:reiheKeineAufnahme#text"
+msgid "Zu dieser Fassung gibt es noch keine Aufnahme; die Geräte-Stimme liest vor."
+msgstr ""

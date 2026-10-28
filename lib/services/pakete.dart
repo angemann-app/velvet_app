@@ -25,7 +25,9 @@ class Pakete {
 
   /// „Lust im Traum“ (nur Spicy, nur über R2): eigenes Paket, zählt nicht zu den Pflicht-Paketen.
   static const lust = 'lust';
-  static const _alle = [...arten, lust];
+  /// Audioreihe „Lust“ (docs/konzepte/lust-audioreihe.md): ebenfalls nur über R2, eigenes Paket.
+  static const reihe = 'reihe';
+  static const _alle = [...arten, lust, reihe];
 
   /// Name im Verzeichnis, z. B. „de-lektionen“.
   static String name(String art, [String? sprache]) => '${sprache ?? Sprache.code}-$art';

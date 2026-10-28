@@ -77,6 +77,61 @@ def lust_bauen(sprache, version):
             "sha256": hashlib.sha256(daten).hexdigest(), "datei": datei.name, "nur_r2": True}
 
 
+REIHE_ORDNER = Path(r"C:\TOOLS\velvet-inhalte\reihe")
+
+
+def reihe_pruefen(texte):
+    """Prüft das gemeinsame Szenenbuch wie pruefeSynchronitaet in lib/models/lust_reihe.dart. Gibt die
+    Verstöße zurück, leer = in Ordnung."""
+    probleme = []
+    for folge in texte["folgen"]:
+        soll = [s["id"] for s in folge["szenen"]]
+        if len(set(soll)) != len(soll):
+            probleme.append(f"{folge['id']}: Szenen-IDs doppelt")
+        for s in folge["szenen"]:
+            if s["ende"] <= s["start"]:
+                probleme.append(f"{folge['id']}: Zeitmarke von {s['id']} unstimmig")
+        for fassung in folge["fassungen"]:
+            ist = [s["szene"] for s in fassung["segmente"]]
+            if ist != soll:
+                probleme.append(f"{folge['id']}/{fassung['id']}: Szenenfolge weicht vom Szenenbuch ab")
+            if any(not s["text"].strip() for s in fassung["segmente"]):
+                probleme.append(f"{folge['id']}/{fassung['id']}: leeres Segment")
+    return probleme
+
+
+def reihe_bauen(sprache, version):
+    """Audioreihe „Lust“: Texte (reihe/reihe.json) und Aufnahmen (audio/reihe/) aus dem privaten Ordner,
+    nie aus dem Repository. Nur bei synchronem Szenenbuch und vollständigen Aufnahmen; sonst None. Liegt nur
+    auf R2 („nur_r2“) und ist nur im Spicy-Modus sichtbar („spicy“)."""
+    texte = json.loads((REIHE_ORDNER / "reihe.json").read_text(encoding="utf-8"))[sprache]
+    probleme = reihe_pruefen(texte)
+    if probleme:
+        for p in probleme:
+            print(f"{sprache}-reihe: {p}")
+        return None
+    audio = REIHE_ORDNER / ("audio" if sprache == "de" else "audio_en")
+    namen = [f"{f['stimme']}_{folge['id']}_{f['id']}_{s['szene']}.opus"
+             for folge in texte["folgen"] for f in folge["fassungen"] for s in f["segmente"]]
+    fehlt = [n for n in namen if not (audio / n).exists()]
+    if fehlt or not (audio / "dauer.json").exists():
+        print(f"{sprache}-reihe: übersprungen, {len(fehlt)} Aufnahmen fehlen")
+        return None
+    name = f"{sprache}-reihe"
+    datei = ZIEL / f"{name}-v{version}.zip"
+    with zipfile.ZipFile(datei, "w", compression=zipfile.ZIP_STORED) as z:
+        z.writestr("paket.json", json.dumps({"name": name, "sprache": sprache, "version": version}))
+        z.writestr("reihe/reihe.json", json.dumps(texte, ensure_ascii=False))
+        for f in sorted(audio.glob("*")):
+            if f.is_file() and (f.suffix == ".opus" or f.name == "dauer.json"):
+                z.write(f, f"audio/reihe/{f.name}")
+    daten = datei.read_bytes()
+    print(f"{datei.name}: {len(namen)} Aufnahmen, {len(daten) / 1e6:.1f} MB (nur R2)")
+    return {"name": name, "sprache": sprache, "version": version, "groesse": len(daten),
+            "sha256": hashlib.sha256(daten).hexdigest(), "datei": datei.name,
+            "nur_r2": True, "spicy": True}
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--en-quelle", default=str(ROOT / "build" / "audio_en"))
@@ -86,12 +141,18 @@ def main():
     eintraege = []
     for alt in ZIEL.glob("*-lust-v*.zip"):
         alt.unlink()
+    for alt in ZIEL.glob("*-reihe-v*.zip"):
+        alt.unlink()
     for sprache in ("de", "en"):
         for art in ("lektionen", "gefuehrt"):
             name = f"{sprache}-{art}"
             eintraege.append(bauen(name, sprache, art, quellen[sprache], versionen[name]))
         if (LUST_ORDNER / "lust.json").exists() and f"{sprache}-lust" in versionen:
             e = lust_bauen(sprache, versionen[f"{sprache}-lust"])
+            if e:
+                eintraege.append(e)
+        if (REIHE_ORDNER / "reihe.json").exists() and f"{sprache}-reihe" in versionen:
+            e = reihe_bauen(sprache, versionen[f"{sprache}-reihe"])
             if e:
                 eintraege.append(e)
     (ZIEL / "eintraege.json").write_text(json.dumps(eintraege, indent=2), encoding="utf-8")

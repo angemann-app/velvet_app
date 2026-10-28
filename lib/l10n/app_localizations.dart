@@ -6620,6 +6620,186 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Testmodus: kurze Pausen, alles frei. Ausschalten: siebenmal auf die Versionsnummer im Profil tippen.'**
   String get testmodusSchild;
+
+  /// No description provided for @reiheKarteTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Innenansichten'**
+  String get reiheKarteTitel;
+
+  /// No description provided for @reiheKarteTitelNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Hörgeschichte'**
+  String get reiheKarteTitelNeutral;
+
+  /// No description provided for @reiheKarteText.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust von innen erzählt, in Soft und Spicy, auch aus zwei Perspektiven derselben Begegnung.'**
+  String get reiheKarteText;
+
+  /// No description provided for @reiheKarteTextNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine zusammenhängende Hörgeschichte.'**
+  String get reiheKarteTextNeutral;
+
+  /// No description provided for @reiheTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Innenansichten'**
+  String get reiheTitel;
+
+  /// No description provided for @reiheEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Zusammenhängende Erzählungen von etwa 20 bis 30 Minuten, nicht zum Einschlafen. Sie beschreiben, wie sich Lust von innen anfühlen kann. Jeder Mensch erlebt das anders; nichts davon ist ein Maßstab oder ein Versprechen.'**
+  String get reiheEinleitung;
+
+  /// No description provided for @reiheFolgen.
+  ///
+  /// In de, this message translates to:
+  /// **'Folge'**
+  String get reiheFolgen;
+
+  /// No description provided for @reiheVariante.
+  ///
+  /// In de, this message translates to:
+  /// **'Intensität'**
+  String get reiheVariante;
+
+  /// No description provided for @reiheSoft.
+  ///
+  /// In de, this message translates to:
+  /// **'Soft'**
+  String get reiheSoft;
+
+  /// No description provided for @reiheSpicy.
+  ///
+  /// In de, this message translates to:
+  /// **'Spicy'**
+  String get reiheSpicy;
+
+  /// No description provided for @reihePerspektive.
+  ///
+  /// In de, this message translates to:
+  /// **'Perspektive'**
+  String get reihePerspektive;
+
+  /// No description provided for @reihePerspektiveFrau.
+  ///
+  /// In de, this message translates to:
+  /// **'Sie'**
+  String get reihePerspektiveFrau;
+
+  /// No description provided for @reihePerspektiveMann.
+  ///
+  /// In de, this message translates to:
+  /// **'Er'**
+  String get reihePerspektiveMann;
+
+  /// No description provided for @reihePartnerHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Die passende Gegenperspektive derselben Begegnung: {name}. Beide folgen derselben Szenenfolge. Eine gemeinsame Wiedergabe lässt sich so starten, die App gleicht die Geräte aber nicht ab.'**
+  String reihePartnerHinweis(String name);
+
+  /// No description provided for @reiheDauer.
+  ///
+  /// In de, this message translates to:
+  /// **'Etwa {minuten} Minuten'**
+  String reiheDauer(int minuten);
+
+  /// No description provided for @reiheStart.
+  ///
+  /// In de, this message translates to:
+  /// **'Starten'**
+  String get reiheStart;
+
+  /// No description provided for @reiheSzene.
+  ///
+  /// In de, this message translates to:
+  /// **'Szene {n} von {m}'**
+  String reiheSzene(int n, int m);
+
+  /// No description provided for @reiheSzeneVor.
+  ///
+  /// In de, this message translates to:
+  /// **'Nächste Szene'**
+  String get reiheSzeneVor;
+
+  /// No description provided for @reiheSzeneZurueck.
+  ///
+  /// In de, this message translates to:
+  /// **'Szene von vorn'**
+  String get reiheSzeneZurueck;
+
+  /// No description provided for @reiheBeenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Beenden'**
+  String get reiheBeenden;
+
+  /// No description provided for @reiheBeendenFrage.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Erzählung stoppen?'**
+  String get reiheBeendenFrage;
+
+  /// No description provided for @reiheBeendenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Du kannst später neu beginnen.'**
+  String get reiheBeendenText;
+
+  /// No description provided for @reiheFertig.
+  ///
+  /// In de, this message translates to:
+  /// **'Fertig. Nimm dir einen Moment, bevor du weitermachst.'**
+  String get reiheFertig;
+
+  /// No description provided for @reiheHinweise.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur ab achtzehn. Alle Figuren sind erwachsen, alles geschieht einvernehmlich. Nichts davon ist ein Leistungsmaßstab: Erregung, Höhepunkt und Zufriedenheit sind nicht dasselbe, und jeder Körper reagiert anders.'**
+  String get reiheHinweise;
+
+  /// No description provided for @reiheLeer.
+  ///
+  /// In de, this message translates to:
+  /// **'Im Paket sind noch keine Folgen.'**
+  String get reiheLeer;
+
+  /// No description provided for @reihePaketFehlt.
+  ///
+  /// In de, this message translates to:
+  /// **'Für diese Reihe fehlen noch die Aufnahmen. Sie kommen als eigenes Paket, am besten im WLAN laden. Danach läuft alles ohne Netz.'**
+  String get reihePaketFehlt;
+
+  /// No description provided for @reihePaketLaden.
+  ///
+  /// In de, this message translates to:
+  /// **'Aufnahmen laden'**
+  String get reihePaketLaden;
+
+  /// No description provided for @reiheLadenFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Laden hat nicht geklappt. Bitte später noch einmal versuchen.'**
+  String get reiheLadenFehler;
+
+  /// No description provided for @reiheOffline.
+  ///
+  /// In de, this message translates to:
+  /// **'Offline verfügbar'**
+  String get reiheOffline;
+
+  /// No description provided for @reiheKeineAufnahme.
+  ///
+  /// In de, this message translates to:
+  /// **'Zu dieser Fassung gibt es noch keine Aufnahme; die Geräte-Stimme liest vor.'**
+  String get reiheKeineAufnahme;
 }
 
 class _AppLocalizationsDelegate
