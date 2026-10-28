@@ -179,9 +179,16 @@ Für folgende Kernlektionen ist eine Umschaltung zwischen Diagramm (Normal) und 
   - Spicy-Illustrationen wandern in das signierte Zusatzpaket `bilder-spicy.zip` auf Cloudflare R2 (verschlüsselt, kein Play-Store-Risiko, kein Aufblähen der Basis-App).
 - **App-Anzeige (`lesson_detail_screen.dart`):**
   - `final bildPfad = (_spicyAktiv && lektion.imageSpicy != null) ? lektion.imageSpicy! : lektion.image;`
+- **Lokale Bilderzeugung mit stable-diffusion.cpp:**
+  - Die sinnlichen Illustrationen und Spicy-Motive werden lokal über stable-diffusion.cpp erzeugt.
+  - **Vorteile:**
+    1. *Kein Inhaltsfilter:* Da die Inferenz vollständig lokal auf der eigenen Hardware läuft, gibt es keine Abbrüche durch Cloud-Richtlinien bei intimen oder sinnlichen Szenen.
+    2. *Automatisierbar:* Die schlanke CLI (sd.exe) lässt sich direkt über Python-Skripte (z. B. 	ools/generate_spicy_images.py) mit festem Seed, Prompts und Samplern reproduzierbar ansteuern.
+    3. *Stilkonstanz:* Gezielte Prompts und LoRAs sichern den gewünschten Stil (weiche Silhouetten, warmes Gegenlicht, Licht & Schatten, Tastfokus statt anatomischer Härte).
+    4. *WebP-Kompression:* Die gerenderten Bilder werden automatisiert in verlustarmes WebP konvertiert (Zielgröße: 80–120 KB je Bild) und in das R2-Paket gepackt.
 - **Wer macht was (Regel CLAUDE.md):**
-  - **Antigravity (AG):** Erzeugt und pflegt die neutralen SVGs, Schemata und Diagramme der Normalfassung.
-  - **Claude Code (offline / lokale Werkzeuge):** Erstellt und paketiert die Spicy-Illustrationen, da Cloud-Inhaltsfilter bei intimen Darstellungen abbrechen würden.
+  - **Antigravity (AG):** Erzeugt und pflegt die neutralen SVGs, Schemata und Diagramme der Normalfassung (als Code / Skripte).
+  - **Lokale Pipeline (Nutzer / Claude mit stable-diffusion.cpp):** Generiert die 37 sinnlichen Illustrationen und Spicy-Motive lokal, paketiert sie nach R2.
 
 ## Zusammenfassung der Bedarfsanalyse
 
