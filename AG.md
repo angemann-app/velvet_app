@@ -75,6 +75,33 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
+### AG-12: Bildbedarf der Kurse sondieren (nur Analyse)
+
+**Branch:** `ag/12-bildbedarf`
+**Vorher lesen:** `docs/konzepte/kursbilder.md` (alles), `assets/data/velvet_content.json` (nur die Kurse 1 bis 25;
+die Spicy-Kurse 26 und 27 **nicht lesen und nicht bearbeiten**), die vorhandenen Bilder in `assets/images/`.
+**Darf ändern:** nur eine neue Datei `docs/kursbilder-bedarf.md`. Keine Bilder erzeugen, nichts in `assets/`, `lib/`,
+`translations/`.
+
+Ziel: herausfinden, **wo ein Bild mehr erklärt als Text**, damit wir die Kursbilder gezielt planen.
+
+1. Gehe jede Lektion der Kurse 1 bis 25 durch (124 Lektionen). Die 9 Lektionen, die schon ein Diagramm haben, nur
+   als „vorhanden“ aufführen.
+2. `docs/kursbilder-bedarf.md`: eine Tabelle mit einer Zeile je Lektion: Kurs, Lektions-ID, Titel, **Bild hilft**
+   (ja, optional, nein), **Art** (Diagramm, Stimmungsbild, Ablauf), **Motiv in einem Satz** (neutral, ohne Körper),
+   **Beschriftung nötig** (ja/nein, denn dann DE und EN), **Priorität** (hoch, mittel, niedrig), Bemerkung.
+   Maßstab: nur dort „ja“, wo ein Bild etwas erklärt (Anatomie, Ablauf, Haltung, Material, Atem). Höchstens etwa
+   40 % der Lektionen „ja“ oder „optional“.
+3. Am Ende: Zusammenfassung mit Anzahl je Art, den zehn wichtigsten Bildern und einem Vorschlag für die
+   Reihenfolge (Pilotkurs ist Kurs 25 „Toys“).
+4. Bricht dein Inhaltsfilter bei einer Lektion ab: **nicht umgehen**, die Lektion in der Datei vermerken
+   („Filter, übersprungen“) und weitermachen.
+
+**Nicht tun:** Bilder erzeugen, Texte ändern, Spicy-Kurse anfassen, Körperbilder vorschlagen.
+
+**Prüfen:** nur Markdown; jede der 124 Lektionen (minus die der Kurse 26 und 27) hat genau eine Zeile.
+`flutter test` nicht nötig, es ändert sich kein App-Code.
+
 ### AG-11: Probe Kursbilder, Pilotkurs „Toys“ (Normalfassung)
 
 **Branch:** `ag/11-kursbilder-probe`
