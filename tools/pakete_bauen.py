@@ -191,6 +191,13 @@ def main():
         e = bilder_bauen(versionen["reihe-bilder"])
         if e:
             eintraege.append(e)
+    unveraendert = ROOT / "tools" / "pakete" / "unveraendert.json"
+    if unveraendert.exists():
+        gebaut = {e["name"] for e in eintraege}
+        for e in json.loads(unveraendert.read_text(encoding="utf-8"))["pakete"]:
+            if e["name"] not in gebaut:
+                print(f"{e['name']}: bleibt bei der veröffentlichten Version {e['version']}")
+                eintraege.append(e)
     (ZIEL / "eintraege.json").write_text(json.dumps(eintraege, indent=2), encoding="utf-8")
     print(f"eintraege.json: {len(eintraege)} Pakete")
 
