@@ -187,6 +187,26 @@ class Kokoro:
                 pieces.append(silence)
         return pieces
 
+    def _speak_ausdruck(self, szene, text, name):
+        """Satzweise mit Tempo und Lücke aus tools/reihe_ausdruck.py (nur Audioreihe)."""
+        import numpy as np
+        import reihe_ausdruck
+
+        pipeline, pack = self._load(name)
+        pieces = []
+        for satz, tempo, luecke in reihe_ausdruck.plan(szene, text, VOICE_SPEED.get(name, SPEED)):
+            for chunk in _chunks(self.phonemes(satz, name)):
+                for result in pipeline.generate_from_tokens(chunk, voice=pack, speed=tempo):
+                    pieces.append(result.audio.numpy())
+            pieces.append(np.zeros(int(luecke * SAMPLE_RATE), dtype=np.float32))
+        return pieces
+
+    def synthesize_ausdruck(self, szene, text, name, wav_path):
+        import numpy as np
+        import soundfile as sf
+
+        sf.write(wav_path, np.concatenate(self._speak_ausdruck(szene, text, name)), SAMPLE_RATE)
+
     def synthesize_wav(self, text, name, wav_path, pause=True):
         import numpy as np
         import soundfile as sf
@@ -347,6 +367,13 @@ def reihe_auftraege(sprache):
             for folge in daten["folgen"] for fa in folge["fassungen"] for seg in fa["segmente"]}
 
 
+def reihe_szenen(sprache):
+    """{Dateiname: Szenen-ID}, Namen wie reihe_auftraege."""
+    daten = json.loads((REIHE_ORDNER / "reihe.json").read_text(encoding="utf-8"))[sprache]
+    return {f"{fa['stimme']}_{folge['id']}_{fa['id']}_{seg['szene']}.opus": seg["szene"]
+            for folge in daten["folgen"] for fa in folge["fassungen"] for seg in fa["segmente"]}
+
+
 def generate_reihe(only=None):
     """Deutsch nach REIHE_ORDNER/audio. Setzt fort: nur neue oder geänderte Texte (Prüfsumme in
     audio_de_texte.json). Die ids gelten als Anfänge des Dateinamens, z. B. martin_frau_mann_spicy_mann."""
@@ -363,8 +390,13 @@ def generate_reihe(only=None):
     dauer_datei = out_dir / "dauer.json"
     dauer = json.loads(dauer_datei.read_text(encoding="utf-8")) if dauer_datei.exists() else {}
 
+    import reihe_ausdruck
+
+    szenen = reihe_szenen("de")
+
     def summe(text, name):
-        return hashlib.sha256(f"{name}|{SPEED}|{VOICE_SPEED}|{PARAGRAPH_PAUSE_S}|{text}".encode("utf-8")).hexdigest()[:16]
+        return hashlib.sha256(
+            f"{name}|{SPEED}|{VOICE_SPEED}|{reihe_ausdruck.PROFIL}|{text}".encode("utf-8")).hexdigest()[:16]
 
     offen = [k for k, (t, n) in auf.items() if not (out_dir / k).exists() or texte.get(k) != summe(t, n)]
     print(f"{len(offen)} von {len(auf)} Aufnahmen neu", flush=True)
@@ -374,9 +406,10 @@ def generate_reihe(only=None):
     for i, name in enumerate(offen, 1):
         text, stimme = auf[name]
         out = out_dir / name
-        with tempfile.TemporaryDirectory() as tmp:
+        # espeak-ng.dll bleibt unter Windows gesperrt; das Aufräumen darf die Aufnahme nicht abbrechen.
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
             wav = Path(tmp) / "x.wav"
-            engine.synthesize_wav(text, stimme, wav, pause=True)
+            engine.synthesize_ausdruck(szenen[name], text, stimme, wav)
             dauer[out.stem] = int(sf.info(str(wav)).duration * 1000)
             to_opus(wav, out)
         texte[name] = summe(text, stimme)

@@ -34,9 +34,9 @@ Schwerpunkten kompakter, Check-in und Funke nebeneinander.
 - Stabile Version nach den Handytests (Nutzer testet, Testmodus hilft).
 - Fantasie-Räume, Statistik Selbstliebe, NIP-17 Stufe 2 (nach fünf stabilen Versionen).
 
-## Laufend: Aussprache korrigieren (täglich) → OpenCode
+## Laufend: Aussprache korrigieren (wöchentlich, mittwochs) → OpenCode
 
-Claude Code holt die Meldungen, OpenCode pflegt `tools/aussprache.json` und spricht neu ein, Claude prüft und
+Meldungen werden täglich gesammelt, abgearbeitet wird einmal pro Woche am Mittwoch. Claude Code holt die Meldungen, OpenCode pflegt `tools/aussprache.json` und spricht neu ein, Claude prüft und
 führt nach dem OK des Nutzers zusammen. Ablauf in `docs/AUSSPRACHE.md` (früher AG-1).
 
 ## Erledigt

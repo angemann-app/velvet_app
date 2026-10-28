@@ -46,6 +46,18 @@ class Englisch:
         import numpy as np
         import soundfile as sf
 
+        if isinstance(pause, str) and pause.startswith("ausdruck:"):
+            # Audioreihe: Tempo und Lücke je Satz (tools/reihe_ausdruck.py), pause = "ausdruck:<Profil>:<Szene>"
+            import reihe_ausdruck
+            szene = pause.rsplit(":", 1)[1]
+            stuecke = []
+            for satz, tempo, luecke in reihe_ausdruck.plan(szene, text, de.SPEED):
+                for r in self.pipe(satz, voice=STIMMEN[name], speed=tempo):
+                    stuecke.append(r.audio.numpy())
+                stuecke.append(np.zeros(int(luecke * SR), dtype=np.float32))
+            audio = np.concatenate(stuecke)
+            sf.write(pfad, audio, SR)
+            return int(len(audio) / SR * 1000)
         # pause == LANGSAM: Tempo und Absatzpausen der Einschlaf-Reise (wie generate_audio.generate_einschlaf).
         langsam = pause == LANGSAM
         stille = np.zeros(int((1.5 if langsam else de.PARAGRAPH_PAUSE_S) * SR), dtype=np.float32)
@@ -154,7 +166,7 @@ def aufnehmen(auf, audio, texte_datei, texte, ordner_mit_dauer, hoechstens=None)
         text, name, pause = auf[pfad]
         ziel = audio / pfad
         ziel.parent.mkdir(parents=True, exist_ok=True)
-        with tempfile.TemporaryDirectory() as tmp:
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
             wav = Path(tmp) / "x.wav"
             ms = engine.wav(text, name, wav, pause=pause)
             de.to_opus(wav, ziel)
@@ -192,7 +204,10 @@ def lust(hoechstens=None):
 
 # Audioreihe „Innenansichten“: Englisch nach REIHE_ORDNER\audio_en, setzt fort (Prüfsumme je Aufnahme).
 def reihe(hoechstens=None):
-    auf = {k: (t, n, True) for k, (t, n) in de.reihe_auftraege("en").items()}
+    import reihe_ausdruck
+
+    szenen = de.reihe_szenen("en")
+    auf = {k: (t, n, f"ausdruck:{reihe_ausdruck.PROFIL}:{szenen[k]}") for k, (t, n) in de.reihe_auftraege("en").items()}
     texte_datei = de.REIHE_ORDNER / "audio_en_texte.json"
     texte = json.loads(texte_datei.read_text(encoding="utf-8")) if texte_datei.exists() else {}
     aufnehmen(auf, de.REIHE_ORDNER / "audio_en", texte_datei, texte, ("",), hoechstens)
