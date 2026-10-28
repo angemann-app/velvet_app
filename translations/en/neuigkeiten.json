@@ -476,6 +476,17 @@
           "text": "Under “How it stays private” you now see whether your messages travel sealed (NIP-17) or the classic way (NIP-04)."
         }
       ]
+    },
+    {
+      "build": 52,
+      "version": "4.15.0-beta.2",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "New episodes via Update",
+          "text": "If you already downloaded the Inner views recordings, the series now offers “Update”: that brings the four new episodes and the scene pictures."
+        }
+      ]
     }
   ],
   "_source": {
@@ -504,6 +515,7 @@
     "news:48": "e6e4b06f58104a52",
     "news:49": "9bfe371fc494e8b4",
     "news:50": "a3b0641866eea6b1",
-    "news:51": "3e09b78b7e89959b"
+    "news:51": "3e09b78b7e89959b",
+    "news:52": "ca9ee432b7e4c53d"
   }
 }

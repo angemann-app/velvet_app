@@ -778,3 +778,15 @@ msgstr ""
 msgctxt "news:51#2.text"
 msgid "Unter „So bleibt es privat“ steht jetzt, ob eure Nachrichten versiegelt (NIP-17) oder noch klassisch (NIP-04) unterwegs sind."
 msgstr ""
+
+#. Was ist neu in Version 4.15.0-beta.2
+#. EN: New episodes via Update
+msgctxt "news:52#0.titel"
+msgid "Neue Folgen per Aktualisieren"
+msgstr ""
+
+#. Was ist neu in Version 4.15.0-beta.2
+#. EN: If you already downloaded the Inner views recordings, the series now offers “Update”: that brings the four new episodes and the scene pictures.
+msgctxt "news:52#0.text"
+msgid "Hast du die Aufnahmen der Innenansichten schon geladen, bietet die Reihe jetzt „Aktualisieren“ an: Dann kommen die vier neuen Folgen und die Szenenbilder dazu."
+msgstr ""

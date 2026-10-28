@@ -476,6 +476,17 @@
           "text": "Unter „So bleibt es privat“ steht jetzt, ob eure Nachrichten versiegelt (NIP-17) oder noch klassisch (NIP-04) unterwegs sind."
         }
       ]
+    },
+    {
+      "build": 52,
+      "version": "4.15.0-beta.2",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Neue Folgen per Aktualisieren",
+          "text": "Hast du die Aufnahmen der Innenansichten schon geladen, bietet die Reihe jetzt „Aktualisieren“ an: Dann kommen die vier neuen Folgen und die Szenenbilder dazu."
+        }
+      ]
     }
   ]
 }
