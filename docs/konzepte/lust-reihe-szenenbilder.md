@@ -95,4 +95,7 @@ Empfehlung: 58 Bilder, Soft und Spicy getrennt, Perspektive geteilt. Bei Solo-Fo
 - 28.10.2026: **Deutlichkeit:** Spicy-Bilder sind deutlich, alle anderen (Soft) sinnlich. Es bleibt bei illustrativ,
   nur Erwachsene, einvernehmlich, keine echten Personen, nur lokal erzeugt und nur im Nur-R2-Paket (Abschnitt 3).
   Die Grenze zwischen „sinnlich“ und „deutlich“ im Einzelfall legt der Nutzer am Pilotsatz fest.
+- 28.10.2026: **Paketbau erst nach dem Gestalten der Bilder** (Entscheidung des Nutzers). Aufnahmen dürfen vorher
+  entstehen, aber `de-reihe` und `en-reihe` werden erst gebaut und hochgeladen, wenn die Bilder (Pilotsatz, danach die
+  übrigen Folgen) fertig sind, damit die Pakete nicht zweimal erscheinen.
 - 28.10.2026: Player-Anzeige und `ReiheDaten.bildPfad` sind gebaut (Rückfall ohne Bild); Bilder fehlen noch.
