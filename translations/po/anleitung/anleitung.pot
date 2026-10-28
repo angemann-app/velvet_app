@@ -165,12 +165,14 @@ msgstr ""
 #. EN: Everything you enter stays on your phone. Secrets such as keys are kept in Android's protected storage.
 #. EN: In your profile you can lock the app with your fingerprint; content is then also hidden in the app overview and screenshots are blocked. The discreet app icon shows a neutral name instead of VelvetPulse.
 #. EN: The app asks before playing through the speaker, and pauses if headphones are disconnected.
+#. EN: If you like, you can anonymously say “hello” once in your profile: It only transmits the app version and language, encrypted and without a sender, so we can roughly see whether the app is being used.
 #. EN: “Export backup” creates a password-protected backup that you can transfer to a new phone.
 msgctxt "guide:diskretion#text"
 msgid ""
 "Alles, was du einträgst, bleibt auf deinem Handy. Geheimnisse wie Schlüssel liegen im geschützten Speicher von Android.\n"
 "Im Profil kannst du die App mit Fingerabdruck sperren; dann sind Inhalte auch in der App-Übersicht verborgen und Screenshots blockiert. Das diskrete App-Symbol zeigt statt VelvetPulse einen neutralen Namen.\n"
 "Vor der Wiedergabe über den Lautsprecher fragt die App nach, und wenn Kopfhörer getrennt werden, pausiert sie.\n"
+"Wenn du magst, kannst du im Profil einmal anonym „Hallo“ sagen: Es überträgt ausschließlich Version und Sprache der App, verschlüsselt und ohne Absender, damit wir grob sehen, ob die App genutzt wird.\n"
 "Mit „Backup exportieren“ erstellst du eine passwortgeschützte Sicherung, die du auf ein neues Handy übertragen kannst."
 msgstr ""
 

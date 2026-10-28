@@ -6686,6 +6686,36 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Aus'**
   String get realitaetStatusAus;
+
+  /// No description provided for @halloTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Einmal anonym Hallo sagen'**
+  String get halloTitel;
+
+  /// No description provided for @halloErklaerung.
+  ///
+  /// In de, this message translates to:
+  /// **'Freiwillig: Wenn du magst, sagst du uns einmal Hallo. Übertragen werden ausschließlich Version und Sprache der App – verschlüsselt und ohne Absender.'**
+  String get halloErklaerung;
+
+  /// No description provided for @halloKnopf.
+  ///
+  /// In de, this message translates to:
+  /// **'Hallo sagen'**
+  String get halloKnopf;
+
+  /// No description provided for @halloDankeGesendet.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke, gesendet am {datum}.'**
+  String halloDankeGesendet(String datum);
+
+  /// No description provided for @halloGesendet.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke für dein Hallo!'**
+  String get halloGesendet;
 }
 
 class _AppLocalizationsDelegate

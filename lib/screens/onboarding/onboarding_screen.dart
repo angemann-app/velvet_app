@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import '../../services/rueckmeldung.dart';
 import '../../models/user_profile.dart';
 import '../../services/storage_service.dart';
 import '../../services/testmodus.dart';
@@ -49,6 +51,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   bool _lockSupported = false;
   bool _frageVorLautsprecher = StorageService.getFrageVorLautsprecher();
   bool _pausiereBeiKopfhoererGetrennt = StorageService.getPausiereBeiKopfhoererGetrennt();
+  String? _halloGesendetAm = StorageService.getHalloGesendetAm();
+  bool _halloSendet = false;
 
   @override
   void initState() {
@@ -837,6 +841,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 const SizedBox(height: 16),
                 _buildBackupSection(),
                 const SizedBox(height: 16),
+                _buildHalloSection(),
+                const SizedBox(height: 16),
                 _buildVersionSection(),
               ],
 
@@ -1008,6 +1014,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         _lockSupported = supported;
         _frageVorLautsprecher = StorageService.getFrageVorLautsprecher();
         _pausiereBeiKopfhoererGetrennt = StorageService.getPausiereBeiKopfhoererGetrennt();
+        _halloGesendetAm = StorageService.getHalloGesendetAm();
       });
     }
   }
@@ -1342,6 +1349,88 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ],
           ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _sendeHallo() async {
+    if (_halloSendet || _halloGesendetAm != null) return;
+    setState(() => _halloSendet = true);
+    final info = await PackageInfo.fromPlatform();
+    final version = info.version;
+    final sprache = Sprache.code;
+    final ok = await Rueckmeldung.halloSenden(version: version, sprache: sprache);
+    if (!mounted) return;
+    setState(() => _halloSendet = false);
+    if (ok) {
+      final jetzt = DateTime.now();
+      final datumStr =
+          '${jetzt.day.toString().padLeft(2, '0')}.${jetzt.month.toString().padLeft(2, '0')}.${jetzt.year}';
+      await StorageService.setHalloGesendetAm(datumStr);
+      if (mounted) {
+        setState(() => _halloGesendetAm = datumStr);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(t.halloGesendet), backgroundColor: AppTheme.sageGreen),
+        );
+      }
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(t.rueckmeldungFehler), backgroundColor: AppTheme.rose),
+      );
+    }
+  }
+
+  Widget _buildHalloSection() {
+    final gesendet = _halloGesendetAm;
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.waving_hand_rounded, color: AppTheme.amber, size: 20),
+              const SizedBox(width: 8),
+              Text(
+                t.halloTitel,
+                style: const TextStyle(
+                  color: AppTheme.textPrimary,
+                  fontSize: 14.5,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          Text(
+            t.halloErklaerung,
+            style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
+          ),
+          const SizedBox(height: 12),
+          if (gesendet != null)
+            Text(
+              t.halloDankeGesendet(gesendet),
+              style: const TextStyle(color: AppTheme.sageGreen, fontSize: 13, fontWeight: FontWeight.w600),
+            )
+          else
+            OutlinedButton.icon(
+              onPressed: _halloSendet ? null : _sendeHallo,
+              icon: _halloSendet
+                  ? const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2))
+                  : const Icon(Icons.send_rounded, size: 16),
+              label: Text(t.halloKnopf, style: const TextStyle(fontSize: 12.5)),
+              style: OutlinedButton.styleFrom(
+                side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.5)),
+                foregroundColor: AppTheme.sageGreen,
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              ),
+            ),
         ],
       ),
     );

@@ -9,7 +9,7 @@ import 'gift_wrap.dart';
 import 'nostr_service.dart';
 
 /// Worum es in einer Rückmeldung geht.
-enum RueckmeldungArt { wunsch, fehler, aussprache }
+enum RueckmeldungArt { wunsch, fehler, aussprache, hallo }
 
 /// Rückmeldungen (Funktionswünsche, Fehler, Aussprache) als verschlüsselte Nostr-Nachricht an das
 /// Rückmelde-Postfach von VelvetPulse. Jede Nachricht bekommt einen frischen Einmal-Schlüssel: Sie ist
@@ -23,6 +23,7 @@ class Rueckmeldung {
     RueckmeldungArt.wunsch: 'Funktionswunsch',
     RueckmeldungArt.fehler: 'Fehler',
     RueckmeldungArt.aussprache: 'Aussprache',
+    RueckmeldungArt.hallo: 'Hallo',
   };
 
   /// Lesbarer Text der Nachricht (so erscheint sie auch in jedem Nostr-Programm).
@@ -51,6 +52,24 @@ class Rueckmeldung {
       ..writeln('Version: $version, Sprache: $sprache');
     if (kontakt != null && kontakt.trim().isNotEmpty) b.writeln('Kontakt für Rückfragen: ${kontakt.trim()}');
     return b.toString().trim();
+  }
+
+  /// Lesbarer Text für das freiwillige Hallo (ausschließlich Version und Sprache).
+  static String halloText({
+    required String version,
+    required String sprache,
+  }) {
+    return '[VelvetPulse] ${_kennung[RueckmeldungArt.hallo]}\n\n'
+        'Version: $version, Sprache: $sprache';
+  }
+
+  /// Schickt ein einmaliges, freiwilliges Hallo über den gleichen NIP-17-Weg wie Rückmeldungen.
+  static Future<bool> halloSenden({
+    required String version,
+    required String sprache,
+  }) async {
+    final klartext = halloText(version: version, sprache: sprache);
+    return senden(klartext);
   }
 
   /// NIP-17-Nachricht an das Postfach (Gift Wrap, kind 1059): Die Rumor stammt von einem frischen
