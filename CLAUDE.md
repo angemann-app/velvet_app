@@ -102,6 +102,10 @@ flutter test test_screens/screens_test.dart   # rendert alle Screens nach build/
   die Geräte-Stimme. Das alte englische Paket (`AudioPaket`, Releases `audio-en-vN`) wird weiter gelesen;
   ältere Pakete und Releases nie löschen.
 - Aussprache-Korrekturen in `tools/aussprache.json`.
+- **Betonung beim Einsprechen:** Die Reihe „Innenansichten“ klingt dank `tools/reihe_ausdruck.py` (Tempo und Lücke
+  je Satz, ruhige Szenen langsamer, keine künstliche Stille) besser als die älteren Aufnahmen. Wird ein Text neu
+  eingesprochen, gilt dieser Weg (`synthesize_ausdruck`); für andere Texte zuerst ein passendes Profil ableiten und
+  per Hörprobe abnehmen lassen.
 
 ## Git
 
