@@ -118,7 +118,8 @@ der APK**, sondern später als `bilder/…` im Nur-R2-Paket der Reihe. Spicy-Mot
 - **Prompt:** englisch, Stilblock `oil painting, painterly illustration, soft edges, chiaroscuro, warm candlelight, deep rainy-night blue,
   muted rose, no text, portrait` plus Motiv; Negativ gegen Foto, Text, Kinder, Anime. Soft = sinnlich (Negativ: nudity), Spicy = deutlich
   (Negativ: clothed), ohne Nahaufnahme der Genitalien. Figuren immer ausdrücklich nennen („a man and a woman“, „two women“), sonst
-  entstehen falsche Paare. Jedes Bild ansehen, bevor es gezeigt wird.
+  entstehen falsche Paare. **Wer in der Szene vorkommt, gehört ins Bild** (Mann und Frau, auch bei Andeutungen). Jedes Bild ansehen,
+  bevor es gezeigt wird: Figurenzahl, Beine und Hände zählen, auf verwachsene Körper achten; Fehlgriffe neu erzeugen (anderer Seed).
 - **Ablage:** `C:\TOOLS\velvet-inhalte\reihe\bilder\roh\<folge>_<variante>_<szene>.png`, Protokoll `_log.txt`; passende Bilder anderer
   Folgen unter `kandidaten\`. Danach WebP (768 × 1024, 80 bis 120 KB), erst nach Abnahme durch den Nutzer.
 - **Laufzeit:** rund 7 Minuten je Bild, ein Prozess belegt etwa 2,3 GB RAM (16 GB gesamt). **Nie zwei Läufe gleichzeitig** (Auslagern auf
