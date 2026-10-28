@@ -85,6 +85,24 @@ Beide Perspektiven müssen dramaturgisch zusammenpassen. Die Erzählung darf nic
 
 **Zieldauer:** etwa 25 bis 30 Minuten je Fassung.
 
+### 3.2b Zwischen zwei Männern
+
+**Ziel:** Eine Begegnung zwischen zwei erwachsenen Männern aus den jeweiligen Innenperspektiven erzählen (ergänzt am
+28.10.2026 auf Wunsch des Nutzers, Gegenstück zu 3.2).
+
+Gleiche Struktur wie 3.2: zwei Perspektiven derselben Begegnung, gemeinsames Szenenbuch, Soft und Spicy. Die Erzählung
+darf nicht voraussetzen, dass beide gleich empfinden oder gleichzeitig zum Höhepunkt kommen.
+
+**Zieldauer:** etwa 25 bis 30 Minuten je Fassung (gemessen eher 15 bis 19 Minuten, siehe Abschnitt 12).
+
+### 3.2c Spätere Option: Begegnungen zu dritt (FFM und MMF)
+
+Idee des Nutzers vom 28.10.2026: **wenn die Reihe gut ankommt**, kommen Folgen zu dritt hinzu, einmal zwei Frauen und ein
+Mann (FFM), einmal zwei Männer und eine Frau (MMF). Jede Folge hätte drei Perspektiven derselben Begegnung. Noch nicht
+ausgearbeitet und nicht Teil der Beta. Vorab zu klären: Szenenbuch für drei Personen, Einvernehmen und Aufmerksamkeit
+füreinander als tragendes Thema, Datenmodell (drei statt zwei Perspektiven je Variante; `partnerVon` liefert schon eine
+Liste), Stimmen (nur Victoria und Martin vorhanden).
+
 ### 3.3 Zwischen Frau und Mann
 
 **Ziel:** Eine gemeinsame Begegnung aus weiblicher und männlicher Innenperspektive erzählen.
@@ -458,3 +476,9 @@ Ihr besonderes Merkmal ist die Kombination aus:
 4. **Aufnahme:** `tools/generate_audio.py --reihe` (Deutsch) und `tools/generate_audio_en.py --reihe`
    (Englisch), normales Tempo, kurze Absatzpausen, keine künstliche Stille. Gemessen: etwa 16 Zeichen je
    Sekunde, die Pilotfassungen dauern daher rund 15 Minuten statt der geplanten 25.
+5. **Perspektiv-Namen:** Jede Fassung kann ein Feld `name` tragen („Die Gastgeberin“, „Der Gast“); fehlt es, gilt
+   Sie/Er. Bei Solo-Folgen (`typ: solo`) entfällt der Hinweis auf die Gegenperspektive.
+6. **Offen: Szenenbilder im Player** (Wunsch des Nutzers, 28.10.2026): je Szene ein Bild während der Wiedergabe.
+   Vorab zu klären: Soft/Spicy-Bilder getrennt (Dual-Bild-Prinzip und R2 aus `docs/kursbilder-bedarf.md`), Erzeugung
+   (lokal mit stable-diffusion.cpp), Ablage im Paket `<sprache>-reihe`, Umfang (eine Bildserie je Folge oder je
+   Fassung, 5 bis 6 Szenen).

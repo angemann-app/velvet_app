@@ -55,6 +55,7 @@ void _erwarteProblem(List<String> probleme, String teil) {
 }
 
 void main() {
+  nameUndSolo();
   test('ReiheDaten.fromJson liest Folge, Szenen und alle Fassungen', () {
     final daten = ReiheDaten.fromJson({'folgen': [_folge()]});
     expect(daten.folgen, hasLength(1));
@@ -193,5 +194,18 @@ void main() {
     expect(abweichungen['opening'], 0);
     expect(abweichungen['attraction'], greaterThan(0));
     expect(abweichungen['afterglow'], greaterThan(0));
+  });
+}
+
+void nameUndSolo() {
+  test('name je Fassung ist optional, solo folgt aus dem Typ', () {
+    final j = _folge();
+    (j['fassungen'] as List)[0]['name'] = 'Die Gastgeberin';
+    j['typ'] = 'solo';
+    final folge = _parseFolge(j);
+    expect(folge.solo, isTrue);
+    expect(folge.fassungen[0].name, 'Die Gastgeberin');
+    expect(folge.fassungen[1].name, isNull);
+    expect(_parseFolge().solo, isFalse);
   });
 }

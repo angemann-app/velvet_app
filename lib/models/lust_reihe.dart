@@ -40,6 +40,9 @@ class ReiheFassung {
   final String variante;
   final String perspektive;
   final String stimme;
+
+  /// Anzeigename der Perspektive („Die Gastgeberin“); fehlt bei älteren Folgen, dann gilt die Perspektive.
+  final String? name;
   final List<ReiheSegment> segmente;
 
   const ReiheFassung({
@@ -48,6 +51,7 @@ class ReiheFassung {
     required this.perspektive,
     required this.stimme,
     required this.segmente,
+    this.name,
   });
 
   bool get spicy => variante == 'spicy';
@@ -57,6 +61,7 @@ class ReiheFassung {
         variante: j['variante'] as String,
         perspektive: j['perspektive'] as String,
         stimme: j['stimme'] as String,
+        name: j['name'] as String?,
         segmente: [for (final s in j['segmente'] as List) ReiheSegment.fromJson(s as Map<String, dynamic>)],
       );
 }
@@ -87,6 +92,9 @@ class ReiheFolge {
         szenen: [for (final s in j['szenen'] as List) ReiheSzene.fromJson(s as Map<String, dynamic>)],
         fassungen: [for (final f in j['fassungen'] as List) ReiheFassung.fromJson(f as Map<String, dynamic>)],
       );
+
+  /// Solo-Folgen („Im eigenen Körper“): die Fassungen gehören nicht zu einer gemeinsamen Begegnung.
+  bool get solo => typ == 'solo';
 
   /// Varianten dieser Folge; Spicy nur, wenn [spicyErlaubt].
   List<String> varianten({required bool spicyErlaubt}) {

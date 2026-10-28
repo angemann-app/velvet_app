@@ -163,18 +163,21 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   }
 
   /// Springt zu einer Szene (Anfang des Segments) und spielt von dort weiter.
-  void _springe(int index) {
+  Future<void> _springe(int index) async {
     final fassung = _fassung;
     if (fassung == null) return;
     HapticFeedback.selectionClick();
-    Sprachausgabe.stopp(_player);
+    final lauf = ++_lauf; // beendet den laufenden Durchgang sofort
     setState(() {
       _index = index.clamp(0, fassung.segmente.length - 1);
       _imSegment = Duration.zero;
       _pausiert = false;
       _fertig = false;
     });
-    _abspielen(++_lauf);
+    // Erst warten, bis das Stoppen durch ist: sonst würgt ein verspätetes stop() die neue Szene wieder ab.
+    await Sprachausgabe.stopp(_player);
+    if (_abgebrochen(lauf)) return; // inzwischen erneut gesprungen oder beendet
+    _abspielen(lauf);
   }
 
   void _beenden() {
@@ -224,19 +227,19 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     );
   }
 
-  String _perspektiveName(String p) => switch (p) {
+  String _perspektiveName(ReiheFassung f) =>
+      f.name ??
+      switch (f.perspektive) {
         'frau' => t.reihePerspektiveFrau,
         'mann' => t.reihePerspektiveMann,
-        _ => p,
+        final p => p,
       };
 
   Widget _einrichtung() {
     final folge = _folge;
     final fassung = folge == null ? null : _gewaehlt(folge);
-    final partner = folge == null || fassung == null ? <ReiheFassung>[] : folge.partnerVon(fassung);
-    final perspektiven = folge == null || fassung == null
-        ? <String>[]
-        : [for (final f in folge.fassungenVon(fassung.variante)) f.perspektive];
+    final partner = folge == null || fassung == null || folge.solo ? <ReiheFassung>[] : folge.partnerVon(fassung);
+    final perspektiven = folge == null || fassung == null ? <ReiheFassung>[] : folge.fassungenVon(fassung.variante);
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
       children: [
@@ -260,12 +263,13 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             _titel(t.reihePerspektive),
             Wrap(spacing: 8, children: [
               for (final p in perspektiven)
-                _chip(_perspektiveName(p), fassung.perspektive == p, () => setState(() => _perspektive = p)),
+                _chip(_perspektiveName(p), fassung.perspektive == p.perspektive,
+                    () => setState(() => _perspektive = p.perspektive)),
             ]),
             const SizedBox(height: 12),
           ],
           if (partner.isNotEmpty)
-            Text(t.reihePartnerHinweis(partner.map((p) => _perspektiveName(p.perspektive)).join(', ')),
+            Text(t.reihePartnerHinweis(partner.map(_perspektiveName).join(', ')),
                 style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
           const SizedBox(height: 8),
           Text(
@@ -310,7 +314,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             textAlign: TextAlign.center,
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
         const SizedBox(height: 6),
-        Text('${fassung.spicy ? t.reiheSpicy : t.reiheSoft} · ${_perspektiveName(fassung.perspektive)}',
+        Text('${fassung.spicy ? t.reiheSpicy : t.reiheSoft} · ${_perspektiveName(fassung)}',
             style: TextStyle(color: AppTheme.textMuted)),
         const Spacer(),
         Text(_fertig ? t.reiheFertig : t.reiheSzene(i + 1, szenen),
