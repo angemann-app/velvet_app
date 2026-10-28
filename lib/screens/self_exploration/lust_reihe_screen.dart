@@ -89,6 +89,8 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
       _variante = prefs.getString(_keyVariante) ?? 'soft';
       _perspektive = prefs.getString(_keyPerspektive);
     });
+    // Wer die Aufnahmen schon hat, bekommt die Bilder beim Öffnen nach, ohne dass etwas sichtbar wartet.
+    if (_paketDa && Pakete.version(Pakete.reiheBilder) == 0) unawaited(_bilderLaden());
   }
 
   Future<void> _paketLaden() async {
@@ -97,7 +99,17 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     } catch (_) {
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.reiheLadenFehler)));
     }
+    await _bilderLaden();
     await _laden();
+  }
+
+  /// Die Szenenbilder sind ein eigenes, sprachunabhängiges Paket. Ohne sie läuft der Player wie bisher; ein Fehler
+  /// beim Laden bleibt deshalb still.
+  Future<void> _bilderLaden() async {
+    if (Pakete.version(Pakete.reiheBilder) > 0) return;
+    try {
+      await Pakete.laden(Pakete.reiheBilder);
+    } catch (_) {}
   }
 
   /// Die gewählte Fassung; fällt auf die erste der Variante zurück, wenn die Perspektive dort fehlt.

@@ -29,6 +29,10 @@ class Pakete {
   static const reihe = 'reihe';
   static const _alle = [...arten, lust, reihe];
 
+  /// Szenenbilder der Audioreihe: sprachunabhängig, deshalb ein eigenes Paket ohne Sprachvorsatz, nur über R2
+  /// und nur im Spicy-Modus (docs/konzepte/lust-reihe-szenenbilder.md). Fehlt es, bleibt der Player ohne Bild.
+  static const reiheBilder = 'reihe-bilder';
+
   /// Name im Verzeichnis, z. B. „de-lektionen“.
   static String name(String art, [String? sprache]) => '${sprache ?? Sprache.code}-$art';
 
@@ -60,6 +64,11 @@ class Pakete {
       final o = _ordner(name(art));
       if (o == null) break;
       final f = File('$o/$pfad');
+      if (f.existsSync()) return f.path;
+    }
+    final bilder = _ordner(reiheBilder);
+    if (bilder != null) {
+      final f = File('$bilder/$pfad');
       if (f.existsSync()) return f.path;
     }
     return Sprache.englisch ? AudioPaket.datei(pfad) : null;

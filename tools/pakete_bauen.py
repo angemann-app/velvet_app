@@ -132,6 +132,36 @@ def reihe_bauen(sprache, version):
             "nur_r2": True, "spicy": True}
 
 
+BILDER_ORDNER = REIHE_ORDNER / "bilder" / "webp"
+
+
+def bilder_bauen(version):
+    """Szenenbilder der Audioreihe (tools/bilder_webp.py): ein sprachunabhängiges Paket „reihe-bilder“ mit
+    bilder/<folge>_<variante>_<szene>.webp, nur R2 und nur im Spicy-Modus. Mit ein paar Bildern kein Paket (None);
+    jedes Bild muss zu einer Szene der Reihe gehören, sonst bricht der Bau ab."""
+    bilder = sorted(BILDER_ORDNER.glob("*.webp"))
+    if not bilder:
+        print("reihe-bilder: übersprungen, keine Bilder")
+        return None
+    texte = json.loads((REIHE_ORDNER / "reihe.json").read_text(encoding="utf-8"))["de"]
+    gueltig = {f"{folge['id']}_{f['variante']}_{s['szene']}.webp"
+               for folge in texte["folgen"] for f in folge["fassungen"] for s in f["segmente"]}
+    unbekannt = [b.name for b in bilder if b.name not in gueltig]
+    if unbekannt:
+        raise SystemExit(f"reihe-bilder: Bilder ohne passende Szene: {', '.join(unbekannt)}")
+    name = "reihe-bilder"
+    datei = ZIEL / f"{name}-v{version}.zip"
+    with zipfile.ZipFile(datei, "w", compression=zipfile.ZIP_STORED) as z:  # WebP ist schon komprimiert
+        z.writestr("paket.json", json.dumps({"name": name, "sprache": "alle", "version": version}))
+        for b in bilder:
+            z.write(b, f"bilder/{b.name}")
+    daten = datei.read_bytes()
+    print(f"{datei.name}: {len(bilder)} Bilder, {len(daten) / 1e6:.1f} MB (nur R2)")
+    return {"name": name, "sprache": "alle", "version": version, "groesse": len(daten),
+            "sha256": hashlib.sha256(daten).hexdigest(), "datei": datei.name,
+            "nur_r2": True, "spicy": True}
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--en-quelle", default=str(ROOT / "build" / "audio_en"))
@@ -142,6 +172,8 @@ def main():
     for alt in ZIEL.glob("*-lust-v*.zip"):
         alt.unlink()
     for alt in ZIEL.glob("*-reihe-v*.zip"):
+        alt.unlink()
+    for alt in ZIEL.glob("reihe-bilder-v*.zip"):
         alt.unlink()
     for sprache in ("de", "en"):
         for art in ("lektionen", "gefuehrt"):
@@ -155,6 +187,10 @@ def main():
             e = reihe_bauen(sprache, versionen[f"{sprache}-reihe"])
             if e:
                 eintraege.append(e)
+    if (REIHE_ORDNER / "reihe.json").exists() and "reihe-bilder" in versionen:
+        e = bilder_bauen(versionen["reihe-bilder"])
+        if e:
+            eintraege.append(e)
     (ZIEL / "eintraege.json").write_text(json.dumps(eintraege, indent=2), encoding="utf-8")
     print(f"eintraege.json: {len(eintraege)} Pakete")
 
