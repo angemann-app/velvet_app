@@ -107,21 +107,6 @@ Der Inhaltsfilter von Antigravity bricht diese Texte ab. Claude Code schreibt si
 Seit 27.10.2026 erledigt das Claude Code mit OpenCode (Ablauf in `docs/AUSSPRACHE.md`). Antigravity holt
 keine Aussprache-Meldungen mehr ab und legt keine `aussprache/`-Branches mehr an.
 
-### AG-10: Anleitung für die Audioreihe „Innenansichten“ (einmalig, nach Merge von `feature/lust-reihe`)
-
-**Branch:** `ag/10-anleitung-reihe`
-**Vorher lesen:** `docs/konzepte/lust-audioreihe.md` (Abschnitte 1, 2, 4, 7), `lib/screens/self_exploration/lust_reihe_screen.dart`
-(nur zum Verstehen der Bedienung).
-**Darf ändern:** `assets/data/anleitung.json`, die zugehörige Datei in `translations/en/`, `docs/ANLEITUNG.md`,
-`docs/GUIDE.md`.
-**Aufgabe:** Einen kurzen Abschnitt „Innenansichten“ ergänzen: zusammenhängende Hörgeschichten von etwa 20 bis 30
-Minuten, nicht zum Einschlafen; Soft und Spicy (Spicy nur im Spicy-Modus); Perspektive wählen, die Gegenperspektive
-derselben Begegnung hat dieselbe Szenenfolge; Aufnahmen als eigenes Paket laden, danach offline; Szenen
-überspringen im Player; nur ab 18, alle Figuren erwachsen, einvernehmlich. **Nicht schreiben:** Inhalte der
-Geschichten, Wirkversprechen, „garantierte“ Synchronität zwischen zwei Handys (die App gleicht Geräte nicht ab).
-Neutral und sachlich formulieren. Deutsch und Englisch.
-**Prüfen:** `flutter test`. Wenn `test/translation_test.dart` fehlschlägt, anhalten und melden.
-
 ## Erledigt
 
 - 26.10.2026, AG-1 Schritt A (`aussprache/2026-10-26`, PR #12): 16 Lexikon-Einträge, 8 Aufnahmen neu.
