@@ -387,6 +387,8 @@
   "couplesChannelHowItStaysPrivate": "So bleibt es privat",
   "couplesChannelMessagesAreEncryptedOnYour": "Nachrichten werden auf deinem Handy verschlüsselt und erst auf dem Handy deines Gegenübers wieder lesbar. Dazwischen laufen sie über öffentliche Nostr-Server. Die können den Inhalt nicht lesen. Sichtbar sind für sie aber die Schlüssel von Absender und Empfänger, Zeitpunkt und ungefähre Größe jeder Nachricht sowie deine IP-Adresse – also dass, wann und wie oft ihr schreibt. Die Schlüssel tragen keinen Namen. Es gibt kein Konto, keine Telefonnummer und keinen Server von uns.",
   "couplesChannelEncryption": "Verschlüsselung",
+  "couplesChannelEncryptionSealed": "Nostr NIP-17 (versiegelt)",
+  "couplesChannelSealedNote": "Schreibt ihr beide mit einer neuen Version, gehen die Nachrichten versiegelt raus: Die Server sehen nicht, wer sie schickt, und nur einen ungenauen Zeitpunkt. Sichtbar bleiben für sie, dass jemand an einen von euch schreibt, deine IP-Adresse und die ungefähre Größe.",
   "couplesChannelServers": "Server",
   "couplesChannelYourConnectionCode": "Dein Verbindungscode",
   "couplesChannelClose": "Schließen",

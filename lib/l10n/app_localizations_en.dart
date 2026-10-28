@@ -698,6 +698,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get couplesChannelEncryption => 'Encryption';
 
   @override
+  String get couplesChannelEncryptionSealed => 'Nostr NIP-17 (sealed)';
+
+  @override
+  String get couplesChannelSealedNote =>
+      'When you both write with a new version, messages go out sealed: the servers cannot see who sends them and only get a vague time. They can still see that someone writes to one of you, your IP address and the approximate size.';
+
+  @override
   String get couplesChannelServers => 'Servers';
 
   @override

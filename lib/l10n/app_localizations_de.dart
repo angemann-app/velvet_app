@@ -705,6 +705,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get couplesChannelEncryption => 'Verschlüsselung';
 
   @override
+  String get couplesChannelEncryptionSealed => 'Nostr NIP-17 (versiegelt)';
+
+  @override
+  String get couplesChannelSealedNote =>
+      'Schreibt ihr beide mit einer neuen Version, gehen die Nachrichten versiegelt raus: Die Server sehen nicht, wer sie schickt, und nur einen ungenauen Zeitpunkt. Sichtbar bleiben für sie, dass jemand an einen von euch schreibt, deine IP-Adresse und die ungefähre Größe.';
+
+  @override
   String get couplesChannelServers => 'Server';
 
   @override
