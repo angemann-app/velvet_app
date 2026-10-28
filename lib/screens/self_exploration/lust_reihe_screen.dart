@@ -9,6 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../l10n/t.dart';
 import '../../models/lust_reihe.dart';
 import '../../services/audio_ausgabe.dart';
+import '../../services/paket_verzeichnis.dart';
 import '../../services/pakete.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
@@ -48,6 +49,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
 
   String get _paket => Pakete.name(Pakete.reihe);
   bool get _paketDa => Pakete.version(_paket) > 0;
+  bool _neueVersion = false;
   bool get _spicy => StorageService.spicyMode();
 
   ReiheFolge? get _folge {
@@ -91,6 +93,23 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     });
     // Wer die Aufnahmen schon hat, bekommt die Bilder beim Öffnen nach, ohne dass etwas sichtbar wartet.
     if (_paketDa && Pakete.version(Pakete.reiheBilder) == 0) unawaited(_bilderLaden());
+    unawaited(_aktualisierungPruefen());
+  }
+
+  /// Gibt es im Verzeichnis eine neuere Fassung des Reihen-Pakets (neue Folgen), zeigt die Karte „Aktualisieren“.
+  /// Neuere Bilder holt die App still nach. Offline oder ohne Verzeichnis bleibt alles, wie es ist.
+  Future<void> _aktualisierungPruefen() async {
+    if (!_paketDa) return;
+    final verzeichnis = await PaketVerzeichnis.laden();
+    if (verzeichnis == null || !mounted) return;
+    final neu = verzeichnis.paket(_paket);
+    final bilder = verzeichnis.paket(Pakete.reiheBilder);
+    setState(() => _neueVersion = neu != null && neu.version > Pakete.version(_paket));
+    if (bilder != null && bilder.version > Pakete.version(Pakete.reiheBilder)) {
+      try {
+        await Pakete.laden(Pakete.reiheBilder, verzeichnis: verzeichnis);
+      } catch (_) {}
+    }
   }
 
   Future<void> _paketLaden() async {
@@ -100,6 +119,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.reiheLadenFehler)));
     }
     await _bilderLaden();
+    _neueVersion = false;
     await _laden();
   }
 
@@ -258,7 +278,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
       children: [
         Text(t.reiheEinleitung, style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5)),
         const SizedBox(height: 14),
-        if (!_paketDa || _daten == null) ...[_paketKarte(), const SizedBox(height: 18)],
+        if (!_paketDa || _daten == null || _neueVersion) ...[_paketKarte(), const SizedBox(height: 18)],
         if (_daten != null && folge == null) Text(t.reiheLeer, style: TextStyle(color: AppTheme.textMuted)),
         if (folge != null && fassung != null) ...[
           _titel(t.reiheFolgen),
@@ -410,7 +430,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
               border: Border.all(color: AppTheme.rose.withValues(alpha: 0.5)),
             ),
             child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-              Text(t.reihePaketFehlt, style: TextStyle(fontSize: 13.5, color: AppTheme.textPrimary, height: 1.5)),
+              Text(_paketDa ? t.reihePaketNeu : t.reihePaketFehlt, style: TextStyle(fontSize: 13.5, color: AppTheme.textPrimary, height: 1.5)),
               const SizedBox(height: 10),
               if (laeuft != null)
                 LinearProgressIndicator(value: laeuft, color: AppTheme.rose, backgroundColor: AppTheme.surfaceLight)
@@ -418,7 +438,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
                 OutlinedButton(
                   onPressed: _paketLaden,
                   style: OutlinedButton.styleFrom(foregroundColor: AppTheme.rose, side: const BorderSide(color: AppTheme.rose)),
-                  child: Text(t.reihePaketLaden),
+                  child: Text(_paketDa ? t.audioPaketAktualisieren : t.reihePaketLaden),
                 ),
             ]),
           );

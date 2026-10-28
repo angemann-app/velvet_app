@@ -6816,6 +6816,12 @@ msgid "Aufnahmen laden"
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: There are new episodes and pictures for this series. Best to update on Wi-Fi. Afterwards everything works offline again.
+msgctxt "ui:reihePaketNeu#text"
+msgid "Es gibt neue Folgen und Bilder für diese Reihe. Am besten im WLAN aktualisieren. Danach läuft alles wieder ohne Netz."
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Download failed. Please try again later.
 msgctxt "ui:reiheLadenFehler#text"
 msgid "Laden hat nicht geklappt. Bitte später noch einmal versuchen."

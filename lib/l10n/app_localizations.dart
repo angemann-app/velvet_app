@@ -6795,6 +6795,12 @@ abstract class AppLocalizations {
   /// **'Aufnahmen laden'**
   String get reihePaketLaden;
 
+  /// No description provided for @reihePaketNeu.
+  ///
+  /// In de, this message translates to:
+  /// **'Es gibt neue Folgen und Bilder für diese Reihe. Am besten im WLAN aktualisieren. Danach läuft alles wieder ohne Netz.'**
+  String get reihePaketNeu;
+
   /// No description provided for @reiheLadenFehler.
   ///
   /// In de, this message translates to:

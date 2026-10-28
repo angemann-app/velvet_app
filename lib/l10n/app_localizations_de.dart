@@ -4051,6 +4051,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get reihePaketLaden => 'Aufnahmen laden';
 
   @override
+  String get reihePaketNeu =>
+      'Es gibt neue Folgen und Bilder für diese Reihe. Am besten im WLAN aktualisieren. Danach läuft alles wieder ohne Netz.';
+
+  @override
   String get reiheLadenFehler =>
       'Laden hat nicht geklappt. Bitte später noch einmal versuchen.';
 
