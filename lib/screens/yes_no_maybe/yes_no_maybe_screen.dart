@@ -11,6 +11,7 @@ import '../../services/data_service.dart';
 import '../../services/listen_uebersetzung.dart';
 import '../../services/nostr_service.dart';
 import '../../services/storage_service.dart';
+import '../../services/spicy_bild.dart';
 import '../../theme/app_theme.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../couples_channel/pairing_modal.dart';
@@ -474,7 +475,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   child: SizedBox(
                     height: 96,
                     width: double.infinity,
-                    child: SvgPicture.asset(category.image, fit: BoxFit.cover),
+                    child: SvgPicture.asset(spicyBild(category.image), fit: BoxFit.cover),
                   ),
                 ),
               ),

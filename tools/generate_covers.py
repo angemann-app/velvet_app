@@ -188,6 +188,32 @@ def scene(kind, pal):
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 300" width="840" height="300">\n{s}</svg>\n'
 
 
+# Spicy-Modus: dieselben Titelbilder, dezent intimer und wärmer (Weinrot und Rosé, mehr Nähe, schwebende Funken), weiterhin SVG.
+SPICY_PALETTES = {  # hellere Hauttöne und kräftige Lichtkante: die Körperformen sollen deutlich zu erkennen sein
+    "wine":  dict(bg1="#2A0A16", core="#FFC2CC", halo="#E11D48", body="#6A2A38", edge="#F0929C"),
+    "ember": dict(bg1="#2A1008", core="#FFD3A0", halo="#F43F5E", body="#6E3028", edge="#F2A06A"),
+    "plum":  dict(bg1="#220A22", core="#FBC4E4", halo="#C026D3", body="#5E2A58", edge="#E58ACB"),
+}
+SPICY_MOTIV = {  # Motiv der Normalfassung -> intimeres Motiv
+    "bust_single": "recline_sparks", "bust_single_f": "recline_sparks", "talk": "near_kiss", "near_kiss": "recline_pair",
+    "forehead": "recline_pair", "blindfold": "recline_pair", "massage": "recline_pair",
+    "back_f": "back_f", "back_m": "back_m", "recline_sparks": "recline_pair", "recline_pair": "recline_pair",
+}
+
+
+def spicy_scene(kind, nummer):
+    """Dezent spicy: gleiche Bildsprache wie scene(), aber intimeres Motiv, Weinrot oder Rosé und zusätzliche Funken."""
+    pal = ("wine", "ember", "plum")[nummer % 3]
+    PALETTES["spicy_" + pal] = SPICY_PALETTES[pal]
+    svg = scene(SPICY_MOTIV[kind], "spicy_" + pal)
+    # Konturen deutlicher: hellerer Verlaufsanfang der Haut statt fast Schwarz, kräftigere Lichtkante.
+    svg = svg.replace('stop-color="#120A16"', 'stop-color="#3A1624"').replace('stroke-width="2"', 'stroke-width="3"')
+    svg = svg.replace('fill="#160D16"', 'fill="#5A2434"')  # die Person im Schatten bleibt als Körper lesbar, nicht als schwarzer Fleck
+    if "funken" not in svg and "<circle" not in svg:  # Motive ohne Funken bekommen eine leise Funkenschicht
+        svg = svg.replace("</svg>", funken(SPICY_PALETTES[pal], 18, 20 + nummer) + "</svg>")
+    return svg
+
+
 # Kursnummer -> (Motiv, Farbstimmung)
 COVERS = {
     1: ("bust_single", "amber"),
@@ -242,6 +268,21 @@ GEFUEHRT = {
 }
 
 if __name__ == "__main__":
+    import sys
+
+    if "--spicy" in sys.argv:  # nur die Spicy-Fassungen (*_spicy.svg), die Normalfassungen bleiben unberührt
+        n = 0
+        for name, (kind, _) in GEFUEHRT.items():
+            (OUT / f"{name}_spicy.svg").write_text(spicy_scene(kind, n), encoding="utf-8", newline="\n")
+            n += 1
+        for nr, (kind, _) in COVERS.items():
+            (OUT / f"cover_{nr:02d}_spicy.svg").write_text(spicy_scene(kind, nr), encoding="utf-8", newline="\n")
+            n += 1
+        for category, (kind, _) in YES_NO_MAYBE.items():
+            (OUT / f"ynm_{category}_spicy.svg").write_text(spicy_scene(kind, n), encoding="utf-8", newline="\n")
+            n += 1
+        print(f"{n} Spicy-Fassungen geschrieben")
+        raise SystemExit
     for name, (kind, pal) in GEFUEHRT.items():
         path = OUT / f"{name}.svg"
         path.write_text(scene(kind, pal), encoding="utf-8")

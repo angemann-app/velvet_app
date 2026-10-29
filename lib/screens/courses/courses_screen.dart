@@ -4,6 +4,7 @@ import '../../models/content_models.dart';
 import '../../models/user_profile.dart';
 import '../../services/data_service.dart';
 import '../../services/storage_service.dart';
+import '../../services/spicy_bild.dart';
 import '../../services/testmodus.dart';
 import '../../widgets/aufnahmen_karte.dart';
 import '../../widgets/gefuehrte_audios.dart';
@@ -586,7 +587,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   width: double.infinity,
                   child: course.image!.endsWith('.svg')
                       ? SvgPicture.asset(
-                          course.image!,
+                          spicyBild(course.image!),
                           fit: BoxFit.cover,
                         )
                       : Image.asset(

@@ -88,3 +88,9 @@ Nicht Ziel: jede Lektion bebildern. Eine Lektion bekommt ein Bild nur, wenn es e
 - 28.10.2026: Lokale Bilderzeugung (B) **entfällt derzeit**. Stattdessen Probe mit Antigravity (C), Auftrag **AG-11**
   in `AG.md` (vier neutrale Motive, SVG DE/EN, optional Bildmodell zum Vergleich). Spicy-Bilder gehen nicht an AG.
 - Offen bleiben Frage 2 (Deutlichkeit der Spicy-Bilder) und 4 bis 6, bis die Probe ausgewertet ist.
+- 29.10.2026: Erklär-Diagramme der Kurse 1 bis 25 sind fertig (20 von OpenCode, 23 von AG, 9 schon vorhanden), eingebunden über das
+  Lektionsfeld `image`. Antworten des Nutzers zu den noch offenen Fragen: **Frage 5 (Titelbilder):** Im Spicy-Modus sollen die Titelbilder im
+  Menü **dezent spicy** aussehen, **weiterhin als SVG** (also als zweite, wärmere und intimere Fassung `cover_NN_spicy.svg`, nur im Spicy-Modus
+  sichtbar, in der APK). **Frage 4 (Stimmungsbilder):** Die Stimmungsbilder im Stil der Szenenbilder haben gefallen; sie sollen für die
+  **Spicy-Lektionen und für die Dual-Bild-Paare** (normale Lektionen mit zweiter Spicy-Bildfassung) entstehen, lokal erzeugt, im Nur-R2-Paket
+  `kurse-bilder-spicy`, im Spicy-Modus in der Lektion sichtbar (Lektionsfeld `bilder`).

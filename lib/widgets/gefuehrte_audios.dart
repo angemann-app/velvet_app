@@ -11,6 +11,7 @@ import '../screens/self_exploration/selbst_reise_screen.dart';
 import '../screens/self_exploration/traum_tagebuch_screen.dart';
 import '../services/privacy_service.dart';
 import '../services/storage_service.dart';
+import '../services/spicy_bild.dart';
 import '../services/testmodus.dart';
 import '../theme/app_theme.dart';
 
@@ -226,7 +227,7 @@ class GefuehrtKarte extends StatelessWidget {
               height: kompakt ? 150 : 128,
               width: kompakt ? 168 : null,
               child: Stack(fit: StackFit.expand, children: [
-                SvgPicture.asset(bild, fit: BoxFit.cover),
+                SvgPicture.asset(spicyBild(bild), fit: BoxFit.cover),
                 // Verlauf nach unten, damit der Text auf dem Bild lesbar bleibt.
                 DecoratedBox(
                   decoration: BoxDecoration(

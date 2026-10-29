@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 300" width="840" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A1008"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFD3A0" stop-opacity="0.95"/>
+      <stop offset="0.4" stop-color="#F43F5E" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#F43F5E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skinR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3A1624"/>
+      <stop offset="0.75" stop-color="#6E3028"/>
+      <stop offset="1" stop-color="#F2A06A"/>
+    </linearGradient>
+    <linearGradient id="skinT" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#3A1624"/>
+      <stop offset="0.7" stop-color="#6E3028"/>
+      <stop offset="1" stop-color="#F2A06A"/>
+    </linearGradient>
+    <linearGradient id="rimR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.45" stop-color="#FFD3A0" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFD3A0" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="rimT" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0.5" stop-color="#FFD3A0" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFD3A0" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="840" height="300" fill="url(#bg)"/>
+  <ellipse cx="470" cy="110" rx="300" ry="210" fill="url(#light)"/>
+  <g transform="translate(420 104) scale(0.64)"><path d="M-158 46 C-182 60 -188 110 -184 160 C-180 220 -186 320 -188 420 L-166 420 C-162 320 -158 220 -158 160 C-156 124 -150 96 -142 78 Z M158 46 C182 60 188 110 184 160 C180 220 186 320 188 420 L166 420 C162 320 158 220 158 160 C156 124 150 96 142 78 Z" fill="url(#skinR)" stroke="url(#rimR)" stroke-width="2.5"/><path d="M-22 -34 C-20 -16 -24 -4 -40 2 C-80 10 -142 12 -156 44 C-166 74 -150 120 -132 156 C-118 186 -108 214 -106 250 C-104 280 -104 300 -104 330 L104 330 C104 300 104 280 106 250 C108 214 118 186 132 156 C150 120 166 74 156 44 C142 12 80 10 40 2 C24 -4 20 -16 22 -34 Z" fill="url(#skinR)" stroke="url(#rimR)" stroke-width="2.5"/><path d="M0 -122 C28 -122 40 -98 38 -72 C36 -46 22 -28 0 -28 C-22 -28 -36 -46 -38 -72 C-40 -98 -28 -122 0 -122 Z" fill="url(#skinR)" stroke="url(#rimR)" stroke-width="2.5"/><path d="M0 -126 C30 -126 44 -104 40 -82 C30 -96 16 -102 0 -102 C-16 -102 -30 -96 -40 -82 C-44 -104 -30 -126 0 -126 Z" fill="#170D16"/><path d="M0 14 C-3 70 3 130 0 200" fill="none" stroke="#000000" stroke-opacity="0.22" stroke-width="4" stroke-linecap="round"/></g>
+  <circle cx="72" cy="140" r="1.2" fill="#FFD3A0" opacity="0.56"/>
+  <circle cx="782" cy="74" r="3.5" fill="#FFD3A0" opacity="0.63"/>
+  <circle cx="712" cy="14" r="3.0" fill="#FFD3A0" opacity="0.56"/>
+  <circle cx="499" cy="93" r="3.5" fill="#FFD3A0" opacity="0.64"/>
+  <circle cx="591" cy="160" r="2.5" fill="#FFD3A0" opacity="0.74"/>
+  <circle cx="508" cy="134" r="1.5" fill="#FFD3A0" opacity="0.58"/>
+  <circle cx="157" cy="139" r="2.2" fill="#FFD3A0" opacity="0.71"/>
+  <circle cx="488" cy="90" r="2.4" fill="#FFD3A0" opacity="0.38"/>
+  <circle cx="786" cy="198" r="2.1" fill="#FFD3A0" opacity="0.38"/>
+  <circle cx="379" cy="150" r="2.3" fill="#FFD3A0" opacity="0.81"/>
+  <circle cx="79" cy="85" r="2.4" fill="#FFD3A0" opacity="0.28"/>
+  <circle cx="394" cy="136" r="1.9" fill="#FFD3A0" opacity="0.85"/>
+  <circle cx="305" cy="91" r="2.6" fill="#FFD3A0" opacity="0.41"/>
+  <circle cx="398" cy="44" r="1.3" fill="#FFD3A0" opacity="0.66"/>
+  <circle cx="252" cy="45" r="1.8" fill="#FFD3A0" opacity="0.50"/>
+  <circle cx="152" cy="163" r="2.9" fill="#FFD3A0" opacity="0.83"/>
+  <circle cx="72" cy="79" r="2.8" fill="#FFD3A0" opacity="0.76"/>
+  <circle cx="228" cy="201" r="1.3" fill="#FFD3A0" opacity="0.58"/>
+</svg>
