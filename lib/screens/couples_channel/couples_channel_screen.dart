@@ -67,6 +67,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   /// Für den Haken im Menü; die Karte selbst fragt FotoIdeen direkt.
   bool _ideenAn = true;
 
+  /// Die Foto-Idee ist eingeklappt eine einzige Zeile und klappt auf Antippen auf (spart Platz im Chat).
+  bool _ideeOffen = false;
+
   @override
   void initState() {
     super.initState();
@@ -737,37 +740,54 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           final idee = snap.data;
           if (idee == null) return const SizedBox.shrink();
           return Container(
-            margin: const EdgeInsets.fromLTRB(16, 10, 16, 0),
-            padding: const EdgeInsets.fromLTRB(14, 10, 6, 6),
+            margin: const EdgeInsets.fromLTRB(16, 6, 16, 0),
+            padding: _ideeOffen ? const EdgeInsets.fromLTRB(14, 8, 6, 4) : const EdgeInsets.fromLTRB(12, 0, 4, 0),
             decoration: BoxDecoration(
               color: AppTheme.rose.withValues(alpha: 0.10),
               borderRadius: BorderRadius.circular(14),
               border: Border.all(color: AppTheme.rose.withValues(alpha: 0.4)),
             ),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Row(children: [
-                const Icon(Icons.photo_camera_outlined, size: 16, color: AppTheme.rose),
-                const SizedBox(width: 6),
-                Text(t.fotoIdeeTitel,
-                    style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, color: AppTheme.rose)),
-              ]),
-              const SizedBox(height: 4),
-              Text(idee.text,
-                  style: const TextStyle(fontSize: 14, color: AppTheme.textPrimary, fontWeight: FontWeight.w600)),
-              Text(idee.heiss ? t.fotoIdeeHinweisHeiss : t.fotoIdeeHinweis,
-                  style: TextStyle(
-                      fontSize: 11,
-                      color: idee.heiss ? AppTheme.rose : AppTheme.textMuted,
-                      fontWeight: idee.heiss ? FontWeight.w600 : FontWeight.w400)),
-              Wrap(spacing: 0, children: [
-                TextButton(onPressed: _fotoSenden, child: Text(t.fotoSenden)),
-                TextButton(onPressed: () => FotoIdeen.andereIdee(), child: Text(t.fotoIdeeAndere)),
-                TextButton(
-                  onPressed: () => FotoIdeen.heuteNicht(),
-                  style: TextButton.styleFrom(foregroundColor: AppTheme.textMuted),
-                  child: Text(t.fotoIdeeHeuteNicht),
+              // Eingeklappt nur eine Zeile mit der Idee, Antippen klappt auf.
+              InkWell(
+                onTap: () => setState(() => _ideeOffen = !_ideeOffen),
+                borderRadius: BorderRadius.circular(12),
+                child: SizedBox(
+                  height: _ideeOffen ? 28 : 40,
+                  child: Row(children: [
+                    const Icon(Icons.photo_camera_outlined, size: 16, color: AppTheme.rose),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: _ideeOffen
+                          ? Text(t.fotoIdeeTitel,
+                              style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, color: AppTheme.rose))
+                          : Text(idee.text,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(fontSize: 13.5, color: AppTheme.textPrimary, fontWeight: FontWeight.w600)),
+                    ),
+                    Icon(_ideeOffen ? Icons.expand_less_rounded : Icons.expand_more_rounded, size: 20, color: AppTheme.rose),
+                  ]),
                 ),
-              ]),
+              ),
+              if (_ideeOffen) ...[
+                Text(idee.text,
+                    style: const TextStyle(fontSize: 14, color: AppTheme.textPrimary, fontWeight: FontWeight.w600)),
+                Text(idee.heiss ? t.fotoIdeeHinweisHeiss : t.fotoIdeeHinweis,
+                    style: TextStyle(
+                        fontSize: 11,
+                        color: idee.heiss ? AppTheme.rose : AppTheme.textMuted,
+                        fontWeight: idee.heiss ? FontWeight.w600 : FontWeight.w400)),
+                Wrap(spacing: 0, children: [
+                  TextButton(onPressed: _fotoSenden, child: Text(t.fotoSenden)),
+                  TextButton(onPressed: () => FotoIdeen.andereIdee(), child: Text(t.fotoIdeeAndere)),
+                  TextButton(
+                    onPressed: () => FotoIdeen.heuteNicht(),
+                    style: TextButton.styleFrom(foregroundColor: AppTheme.textMuted),
+                    child: Text(t.fotoIdeeHeuteNicht),
+                  ),
+                ]),
+              ],
             ]),
           );
         },
