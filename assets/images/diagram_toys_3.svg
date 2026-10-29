@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Toy-Materialien im Vergleich</title>
+  <desc>Eigenschaften, Haptik und Pflege der vier Grundmaterialien</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140D1C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="siliconeG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#BE185D"/>
+    </linearGradient>
+    <linearGradient id="glassG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A5F3FC"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="steelG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F1F5F9"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="absG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- Titelzeile -->
+  <text x="400" y="40" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="22" font-weight="700">Toy-Materialien im Vergleich</text>
+  <text x="400" y="64" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Eigenschaften, Haptik und Pflege der vier Grundmaterialien</text>
+
+  <!-- Kachel 1: Silikon -->
+  <g transform="translate(25, 84)">
+    <rect width="365" height="240" rx="14" fill="url(#card)" stroke="#FB7185" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="44" cy="44" r="24" fill="url(#siliconeG)"/>
+    <path d="M36 38 C42 34 50 38 52 46 C52 52 44 54 38 50 C34 46 32 40 36 38 Z" fill="#FFF" opacity="0.6"/>
+    <text x="82" y="38" fill="#F1F5F9" font-family="sans-serif" font-size="19" font-weight="700">Medizinisches Silikon</text>
+    <text x="82" y="60" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="600">Weich, samtig &amp; körperwarm</text>
+    <text x="24" y="104" fill="#E2E8F0" font-family="sans-serif" font-size="16">✓ Flexibel, schmiegt sich an</text>
+    <!-- Pflegehinweis Kasten -->
+    <rect x="18" y="124" width="329" height="96" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="150" fill="#FDE68A" font-family="sans-serif" font-size="16" font-weight="700">⚠ Pflegehinweis:</text>
+    <text x="30" y="176" fill="#CBD5E1" font-family="sans-serif" font-size="16">Nur wasserbasiertes Gleitmittel.</text>
+    <text x="30" y="200" fill="#CBD5E1" font-family="sans-serif" font-size="16">Silikongel zerstört die Oberfläche.</text>
+  </g>
+
+  <!-- Kachel 2: Glas -->
+  <g transform="translate(410, 84)">
+    <rect width="365" height="240" rx="14" fill="url(#card)" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="44" cy="44" r="24" fill="url(#glassG)"/>
+    <path d="M34 52 L54 32 C56 30 56 38 52 44 L36 56 Z" fill="#FFF" opacity="0.75"/>
+    <text x="82" y="38" fill="#F1F5F9" font-family="sans-serif" font-size="19" font-weight="700">Borosilikatglas</text>
+    <text x="82" y="60" fill="#38BDF8" font-family="sans-serif" font-size="16" font-weight="600">Glatt, fest &amp; porenfrei</text>
+    <text x="24" y="104" fill="#E2E8F0" font-family="sans-serif" font-size="16">✓ Hält Wärme &amp; Kälte exzellent</text>
+    <!-- Pflegehinweis Kasten -->
+    <rect x="18" y="124" width="329" height="96" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="150" fill="#38BDF8" font-family="sans-serif" font-size="16" font-weight="700">★ Pflegehinweis:</text>
+    <text x="30" y="176" fill="#CBD5E1" font-family="sans-serif" font-size="16">Verträgt jedes Gleitmittel.</text>
+    <text x="30" y="200" fill="#CBD5E1" font-family="sans-serif" font-size="16">Auskochen &amp; desinfizieren möglich.</text>
+  </g>
+
+  <!-- Kachel 3: Edelstahl -->
+  <g transform="translate(25, 340)">
+    <rect width="365" height="240" rx="14" fill="url(#card)" stroke="#94A3B8" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="44" cy="44" r="24" fill="url(#steelG)"/>
+    <line x1="28" y1="28" x2="60" y2="60" stroke="#FFF" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <text x="82" y="38" fill="#F1F5F9" font-family="sans-serif" font-size="19" font-weight="700">Edelstahl</text>
+    <text x="82" y="60" fill="#CBD5E1" font-family="sans-serif" font-size="16" font-weight="600">Kühl, schwer &amp; nahtlos</text>
+    <text x="24" y="104" fill="#E2E8F0" font-family="sans-serif" font-size="16">✓ Intensive Druckübertragung</text>
+    <!-- Pflegehinweis Kasten -->
+    <rect x="18" y="124" width="329" height="96" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="150" fill="#CBD5E1" font-family="sans-serif" font-size="16" font-weight="700">★ Pflegehinweis:</text>
+    <text x="30" y="176" fill="#CBD5E1" font-family="sans-serif" font-size="16">Extrem langlebig &amp; porenfrei.</text>
+    <text x="30" y="200" fill="#CBD5E1" font-family="sans-serif" font-size="16">Vorab in warmes Wasser legen.</text>
+  </g>
+
+  <!-- Kachel 4: ABS-Kunststoff -->
+  <g transform="translate(410, 340)">
+    <rect width="365" height="240" rx="14" fill="url(#card)" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="44" cy="44" r="24" fill="url(#absG)"/>
+    <circle cx="44" cy="44" r="10" fill="#1E293B"/>
+    <line x1="44" y1="36" x2="44" y2="44" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
+    <text x="82" y="38" fill="#F1F5F9" font-family="sans-serif" font-size="19" font-weight="700">ABS-Kunststoff</text>
+    <text x="82" y="60" fill="#FBBF24" font-family="sans-serif" font-size="16" font-weight="600">Fest, glatt &amp; formstabil</text>
+    <text x="24" y="104" fill="#E2E8F0" font-family="sans-serif" font-size="16">✓ Überträgt Vibrationen direkt</text>
+    <!-- Pflegehinweis Kasten -->
+    <rect x="18" y="124" width="329" height="96" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="150" fill="#FDE68A" font-family="sans-serif" font-size="16" font-weight="700">⚠ Pflegehinweis:</text>
+    <text x="30" y="176" fill="#CBD5E1" font-family="sans-serif" font-size="16">Formstabil &amp; leicht zu reinigen.</text>
+    <text x="30" y="200" fill="#CBD5E1" font-family="sans-serif" font-size="16">Elektronik vor Wasser schützen.</text>
+  </g>
+</svg>
