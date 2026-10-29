@@ -157,3 +157,24 @@ Patienten- und Gesundheitsportale (für Praxis- und Sicherheitsfragen, keine Lei
 Nur zur Orientierung (Fragen und Mythen, nicht als Beleg): Herstellerblogs (Mystery Vibe, Flexfits, Promescent), IOL, mindbodygreen.
 
 Nicht gefunden und empfohlen zur Nachprüfung: pro familia, BZgA/Liebesleben, DGGG-Leitlinien, Cleveland Clinic, Planned Parenthood, Kinsey Institute; Jannini et al. (2012) „Female orgasm(s): one, two, several“ J Sex Med; Buisson/Jannini (2013) Echographie-Pilotstudie, J Sex Med.
+
+---
+
+## Nachtrag 29.10.2026: ZEITmagazin-Interview (Hinweis des Nutzers)
+
+Quelle: Interview der Redaktion (Jana Petersen) mit der Sexologin und Sex-Coach Olivia Bryant (Melbourne), ZEITmagazin online, 29.07.2016,
+https://www.zeit.de/zeit-magazin/leben/2016-07/zervix-sex-orgasmus-gebaermutterhals (85 Kommentare). Eine Coach-Aussage im Interview, keine Studie.
+Bryant leitet das Online-Programm „Awaken the Cervix“ (Februar 2016, über 1.000 Teilnehmerinnen), also ein kommerzielles Angebot.
+
+Was zur Recherche passt: Die Nervenversorgung (mehrere Nerven, auch der Vagusnerv) und die Orgasmen bei Rückenmarksverletzung nach Komisaruk
+entsprechen dem Stand der Recherche. Der Hinweis, dass Eingriffe an der Zervix die Empfindung verändern können, deckt sich mit den vorsichtigen
+Hinweisen zu Konisation und Operationen.
+
+Was nicht belegt ist und **nicht in die App gehört**: (1) Die Behauptung, die Zervix sei bei den meisten Frauen taub und „erwache“ durch Üben;
+(2) die Ausschüttung von DMT bei Zervixstimulation und eine Hormonrechnung (Prolaktin, Oxytocin, Serotonin) als Erklärung für „tiefere“ Orgasmen;
+(3) die Aussage, die neueste Forschung belege, Kinsey habe sich geirrt; (4) Nervenwachstum bei Stimulation nach Tierversuchen als Beleg für den Menschen;
+(5) das „De-Armouring“ mit innerem Druck gegen Schmerz, Taubheit und Verspannung, bei dem Schmerz am Anfang als normal und als Zeichen
+mangelnder Körperwahrnehmung gilt. Das widerspricht der Regel „Schmerz heißt Stopp“. Die Lektionen 8a und 8b benennen diese Behauptungen als nicht
+belegt.
+
+Ein Leserkommentar weist zu Recht darauf hin, dass DMT-Ausschüttung bei Geburt, Tod oder Orgasmus nicht belegt ist.

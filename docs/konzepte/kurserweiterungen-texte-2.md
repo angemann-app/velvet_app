@@ -142,7 +142,7 @@ Empfindungen
 Der Gebärmutterhals ist gut mit Nerven versorgt (Beckennerv, Hypogastrikusnerv und der Vagusnerv, der am Rückenmark vorbeiläuft). „Unempfindlich“ stimmt also nicht. Das heißt aber nicht, dass er für alle lustvoll ist. Viele empfinden Druck dort als neutral oder unangenehm, und das ist völlig normal.
 
 Gibt es einen Gebärmutterhals-Orgasmus?
-Es gibt glaubhafte Berichte von tiefen, langsam ansteigenden Empfindungen. Die Forschung dazu ist dünn: wenige kleine Studien, überwiegend von einer Arbeitsgruppe, zum Beispiel mit Frauen nach Rückenmarksverletzung, bei denen der Vagusnerv eine Rolle zu spielen scheint. Als eigener Orgasmustyp ist er nicht anerkannt, und es gibt keine verlässlichen Zahlen, wie oft er vorkommt. Du musst ihn nicht erleben, und er ist nicht „tiefer“ oder „besser“.
+Es gibt glaubhafte Berichte von tiefen, langsam ansteigenden Empfindungen. Die Forschung dazu ist dünn: wenige kleine Studien, überwiegend von einer Arbeitsgruppe, zum Beispiel mit Frauen nach Rückenmarksverletzung, bei denen der Vagusnerv eine Rolle zu spielen scheint. Als eigener Orgasmustyp ist er nicht anerkannt, und es gibt keine verlässlichen Zahlen, wie oft er vorkommt. Du musst ihn nicht erleben, und er ist nicht „tiefer“ oder „besser“. Manche Coaches und Ratgeber behaupten deutlich mehr: der Gebärmutterhals sei bei vielen taub und „erwache“ durch tägliches Üben, oder dabei würden besondere Botenstoffe frei. Das ist nicht belegt.
 
 Zyklus und Lebensphasen
 Um den Eisprung liegt der Gebärmutterhals eher höher und ist weicher, vor und während der Periode eher tiefer und fester. Viele spüren Tiefe an manchen Tagen schmerzhafter, das ist individuell. Nach den Wechseljahren wird das Gewebe trockener, Tiefe tut dann schneller weh. Gleitmittel und ärztlich verordnete lokale Östrogene helfen.
@@ -169,7 +169,7 @@ Sensations
 The cervix has a good nerve supply (pelvic nerve, hypogastric nerve and the vagus nerve, which bypasses the spinal cord). “Insensitive” is therefore wrong. That does not mean it is pleasurable for everyone. Many experience pressure there as neutral or unpleasant, and that is completely normal.
 
 Is there a cervical orgasm?
-There are credible reports of deep, slowly rising sensations. The research is thin: few small studies, mostly from one research group, for example with women after spinal cord injury, where the vagus nerve seems to play a role. It is not recognised as a separate type of orgasm, and there are no reliable figures on how often it occurs. You do not have to experience it, and it is not “deeper” or “better”.
+There are credible reports of deep, slowly rising sensations. The research is thin: few small studies, mostly from one research group, for example with women after spinal cord injury, where the vagus nerve seems to play a role. It is not recognised as a separate type of orgasm, and there are no reliable figures on how often it occurs. You do not have to experience it, and it is not “deeper” or “better”. Some coaches and guides claim much more: that the cervix is numb in many people and “wakes up” through daily practice, or that special messenger substances are released. That is not proven.
 
 Cycle and life phases
 Around ovulation the cervix sits higher and is softer, before and during the period lower and firmer. Many feel depth as more painful on some days; this is individual. After menopause the tissue becomes drier and depth hurts sooner. Lubricant and doctor-prescribed local oestrogen help.
@@ -186,7 +186,7 @@ Deep pain during sex can point to endometriosis, inflammation, cysts or tension.
 **Dauer:** 7 Minuten
 **Zusammenfassung:** Tiefe Berührung ohne Ziel: Sicherheit zuerst, die Person mit Gebärmutterhals steuert die Tiefe, getrennt für allein und zu zweit.
 
-Es gibt keine Studien zu dieser Praxis. Alles hier ist Erfahrungswissen und allgemeine Sexualmedizin. Tiefe ist kein Maßstab, und niemand muss sie mögen. **Schmerz, Krämpfe oder Druck mit Unwohlsein heißen Stopp**, immer, ohne Rechtfertigung. Weil Erregung Schmerz dämpft, kann er bei hoher Erregung später kommen: Nimm Schmerz nach dem Sex ernst.
+Es gibt keine Studien zu dieser Praxis. Alles hier ist Erfahrungswissen und allgemeine Sexualmedizin. Tiefe ist kein Maßstab, und niemand muss sie mögen. **Schmerz, Krämpfe oder Druck mit Unwohlsein heißen Stopp**, immer, ohne Rechtfertigung. Weil Erregung Schmerz dämpft, kann er bei hoher Erregung später kommen: Nimm Schmerz nach dem Sex ernst. Manche Programme sagen, Schmerz am Anfang gehöre zum Entdecken dazu oder zeige nur, dass man den Körper bisher zu wenig gespürt habe. Das stimmt nicht: Schmerz ist ein Signal, kein Übergangsritus.
 
 Wann nicht oder nur nach Absprache mit Ärztin oder Arzt
 Bei Blutungen außerhalb der Periode, Ausfluss mit Geruch, Fieber oder Unterbauchschmerz. In den ersten Wochen nach Geburt, Operation oder Konisation, bis sie dich freigeben. In der Schwangerschaft nur nach Rücksprache, bei Risikoschwangerschaft meist nicht. Mit Spirale spürst du eventuell die Fäden: Bei Schmerzen oder Blutung ärztlich nachsehen lassen, nicht selbst ziehen. An Tagen mit hoher Empfindlichkeit (um den Eisprung, kurz vor und während der Periode) flacher bleiben.
@@ -213,7 +213,7 @@ Wiederkehrende tiefe Schmerzen, Blutung nach Sex, Fieber oder Schmerz länger al
 **Title:** Spicy: deep touch, alone and together
 **Summary:** Deep touch without a goal: safety first, the person with the cervix controls depth, separate for alone and together.
 
-There are no studies on this practice. Everything here is experience and general sexual medicine. Depth is no yardstick, and nobody has to like it. **Pain, cramps or pressure with discomfort mean stop**, always, without justification. Because arousal dulls pain, it can show up later at high arousal: take pain after sex seriously.
+There are no studies on this practice. Everything here is experience and general sexual medicine. Depth is no yardstick, and nobody has to like it. **Pain, cramps or pressure with discomfort mean stop**, always, without justification. Because arousal dulls pain, it can show up later at high arousal: take pain after sex seriously. Some programmes say pain at the start is part of discovery or only shows you have not felt your body enough so far. That is not true: pain is a signal, not a rite of passage.
 
 When not, or only after talking to a doctor
 With bleeding outside your period, discharge with an odour, fever or lower abdominal pain. In the first weeks after birth, surgery or conisation, until you are cleared. In pregnancy only after consultation, usually not with a high-risk pregnancy. With a coil you may feel the threads: with pain or bleeding have it checked, do not pull it yourself. On days of high sensitivity (around ovulation, shortly before and during the period) stay shallower.
