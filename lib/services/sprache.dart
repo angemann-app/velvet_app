@@ -49,7 +49,7 @@ class Sprache {
 
   /// Anleitungsgrafiken mit Beschriftung gibt es auf Englisch als …_en.svg (tools/diagramme_en.py).
   static String bild(String pfad) =>
-      englisch && pfad.contains('/diagram_') && pfad.endsWith('.svg') ? pfad.replaceFirst(RegExp(r'\.svg$'), '_en.svg') : pfad;
+      englisch && (pfad.contains('/diagram_') || pfad.contains('/zeichnung_')) && pfad.endsWith('.svg') ? pfad.replaceFirst(RegExp(r'\.svg$'), '_en.svg') : pfad;
 
   /// Pfad einer Inhaltsdatei (z. B. 'velvet_content.json') in der aktuellen Sprache.
   static String inhalt(String datei) => englisch ? 'translations/en/$datei' : 'assets/data/$datei';

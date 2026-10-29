@@ -365,6 +365,29 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               ),
               const SizedBox(height: 16),
             ],
+            if (lesson.zeichnung != null) ...[
+              // Körperzeichnung (16:9) mit Beschriftung; Antippen öffnet sie zum Zoomen.
+              ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: GestureDetector(
+                  onTap: () => _openDiagram(lesson.zeichnung!),
+                  child: Stack(
+                    children: [
+                      AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: SvgPicture.asset(Sprache.bild(lesson.zeichnung!), fit: BoxFit.cover),
+                      ),
+                      const Positioned(
+                        right: 8,
+                        bottom: 8,
+                        child: Icon(Icons.zoom_in_rounded, color: Colors.black54, size: 22),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+            ],
             _spicyBilder(lesson),
 
             // Lesson Type & Duration

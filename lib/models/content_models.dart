@@ -177,6 +177,9 @@ class Lesson {
   final String reflectionQuestion;
   final String? image;
 
+  /// Beschriftete Körperzeichnung (Bleistift-Studie, SVG mit Beschriftung, `Sprache.bild` wählt `_en`), siehe tools/generate_zeichnungen.py.
+  final String? zeichnung;
+
   /// Spicy-Stimmungsbilder aus dem Nur-R2-Paket `kurse-bilder-spicy` (Pfade im Paket, zum Beispiel
   /// `kurse/touch_w_s2_allein_a.webp`). Bei Spicy-Lektionen und bei normalen Lektionen mit zweiter Spicy-Bildfassung, nur im
   /// Spicy-Modus; fehlt das Paket, bleibt die Lektion ohne Bild.
@@ -199,6 +202,7 @@ class Lesson {
     required this.content,
     required this.reflectionQuestion,
     this.image,
+    this.zeichnung,
     this.bilder = const [],
     this.perspective,
     this.spicy = false,
@@ -217,6 +221,7 @@ class Lesson {
       content: json['content'] as String? ?? '',
       reflectionQuestion: json['reflection_question'] as String? ?? '',
       image: json['image'] as String?,
+      zeichnung: json['zeichnung'] as String?,
       bilder: [for (final b in (json['bilder'] as List?) ?? const []) b as String],
       perspective: json['perspective'] as String?,
       spicy: json['spicy'] as bool? ?? false,
@@ -233,6 +238,7 @@ class Lesson {
         'content': content,
         'reflection_question': reflectionQuestion,
         'image': image,
+        'zeichnung': zeichnung,
         'bilder': bilder,
         'perspective': perspective,
         if (spicy) 'spicy': true,
