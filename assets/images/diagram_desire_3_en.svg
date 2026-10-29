@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>The Pleasure Menu: Five Levels of Intimacy</title>
+  <desc>A staircase with five levels: presence, tenderness, massage, erotic play and union. Every level can stand on its own.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrowP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FB7185"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="400" cy="330" rx="350" ry="235" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="30" font-weight="700">The Pleasure Menu: Five Levels of Intimacy</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">From presence to union</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Every level can stand alone – no main course needed</text>
+
+  <text x="30" y="140" fill="#94A3B8" font-family="sans-serif" font-size="16">Upward: more closeness and more time</text>
+
+  <!-- Five levels -->
+  <g>
+    <rect x="30" y="418" width="180" height="58" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2"/>
+    <circle cx="56" cy="447" r="14" fill="#FB7185"/>
+    <text x="56" y="453" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">1</text>
+    <text x="78" y="453" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Presence</text>
+
+    <rect x="170" y="352" width="180" height="58" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2"/>
+    <circle cx="196" cy="381" r="14" fill="#FB7185"/>
+    <text x="196" y="387" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">2</text>
+    <text x="218" y="387" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Tenderness</text>
+
+    <rect x="310" y="286" width="180" height="58" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2"/>
+    <circle cx="336" cy="315" r="14" fill="#FB7185"/>
+    <text x="336" y="321" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">3</text>
+    <text x="358" y="321" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Massage</text>
+
+    <rect x="450" y="220" width="180" height="58" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2"/>
+    <circle cx="476" cy="249" r="14" fill="#FB7185"/>
+    <text x="476" y="255" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">4</text>
+    <text x="498" y="255" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Erotic play</text>
+
+    <rect x="590" y="154" width="180" height="58" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2"/>
+    <circle cx="616" cy="183" r="14" fill="#FB7185"/>
+    <text x="616" y="189" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">5</text>
+    <text x="638" y="189" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Union</text>
+  </g>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Small, clear offers make a yes easier than all or nothing.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">A starter stays a starter – it promises no main course.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Whoever chooses a small step may stop there.</text>
+</svg>

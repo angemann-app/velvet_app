@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Das Neunzig-Prozent-Prinzip</title>
+  <desc>Zwei Erregungskurven im Vergleich: Wer bei etwa neunzig Prozent aufhört, hält die Vorfreude. Ohne Pause fällt die Kurve nach dem Höhepunkt steil ab.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="410" cy="320" rx="350" ry="235" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Das Neunzig-Prozent-Prinzip</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Aufhören, bevor es zu Ende geht</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Vorfreude bleibt, wenn der Moment offen endet</text>
+
+  <!-- Achsen -->
+  <line x1="100" y1="180" x2="100" y2="460" stroke="#64748B" stroke-width="2"/>
+  <line x1="100" y1="460" x2="730" y2="460" stroke="#64748B" stroke-width="2"/>
+  <text x="86" y="196" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">100</text>
+  <text x="86" y="222" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">90</text>
+  <text x="86" y="466" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">0</text>
+  <text x="54" y="320" transform="rotate(-90 54 320)" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="18">Erregung</text>
+  <text x="722" y="492" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="18">Zeit →</text>
+
+  <!-- Neunzig-Prozent-Marke -->
+  <line x1="100" y1="216" x2="320" y2="216" stroke="#34D399" stroke-width="2" stroke-dasharray="6 5" opacity="0.75"/>
+  <text x="112" y="202" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">bei 90 % aufhören</text>
+
+  <!-- Kurve mit Pause -->
+  <path d="M110 450 C160 444 210 392 258 326 C288 286 312 242 330 216 C352 250 374 276 402 283 C480 300 596 288 708 278" fill="none" stroke="#34D399" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="330" cy="216" r="7" fill="#34D399" stroke="#140D1C" stroke-width="2"/>
+
+  <!-- Kurve ohne Pause -->
+  <path d="M110 450 C172 440 232 378 290 300 C330 246 368 198 404 188 C424 183 440 204 456 246 C478 308 496 390 516 432 C542 450 604 448 708 446" fill="none" stroke="#FB7185" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Legende -->
+  <line x1="512" y1="158" x2="552" y2="158" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
+  <text x="560" y="164" fill="#F1F5F9" font-family="sans-serif" font-size="16">mit Pause</text>
+  <line x1="512" y1="184" x2="552" y2="184" stroke="#FB7185" stroke-width="4" stroke-linecap="round"/>
+  <text x="560" y="190" fill="#F1F5F9" font-family="sans-serif" font-size="16">ohne Pause</text>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Bei etwa 90 Prozent aufzuhören hält die Vorfreude lebendig.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Ohne Pause fällt die Kurve nach dem Höhepunkt steil ab.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Das Ende ohne Versprechen nimmt den Druck aus dem Moment.</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Layered Touch: Four Stimuli at Once</title>
+  <desc>Four stacked layers: rhythm, breathing, pressure and vibration. Each layer stays calm and steady.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrowP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FB7185"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="400" cy="330" rx="350" ry="235" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Layered Touch: Four Stimuli at Once</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">More fullness instead of more intensity</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Rhythm, breathing, pressure and vibration</text>
+
+  <text x="204" y="180" fill="#94A3B8" font-family="sans-serif" font-size="16">at the same time, not one after another</text>
+
+  <!-- Layer 1: Rhythm -->
+  <rect x="156" y="406" width="380" height="56" rx="12" fill="#0E0912" opacity="0.55"/>
+  <rect x="150" y="400" width="380" height="56" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.55"/>
+  <rect x="164" y="414" width="6" height="28" rx="3" fill="#FB7185"/>
+  <text x="180" y="435" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Rhythm</text>
+  <text x="512" y="435" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">steady</text>
+
+  <!-- Layer 2: Breathing -->
+  <rect x="174" y="338" width="380" height="56" rx="12" fill="#0E0912" opacity="0.55"/>
+  <rect x="168" y="332" width="380" height="56" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.55"/>
+  <rect x="182" y="346" width="6" height="28" rx="3" fill="#FB7185"/>
+  <text x="198" y="367" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Breathing</text>
+  <text x="530" y="367" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">calm, deep</text>
+
+  <!-- Layer 3: Pressure -->
+  <rect x="192" y="270" width="380" height="56" rx="12" fill="#0E0912" opacity="0.55"/>
+  <rect x="186" y="264" width="380" height="56" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.55"/>
+  <rect x="200" y="278" width="6" height="28" rx="3" fill="#FB7185"/>
+  <text x="216" y="299" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Pressure</text>
+  <text x="548" y="299" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">soft, broad</text>
+
+  <!-- Layer 4: Vibration -->
+  <rect x="210" y="202" width="380" height="56" rx="12" fill="#0E0912" opacity="0.55"/>
+  <rect x="204" y="196" width="380" height="56" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.55"/>
+  <rect x="218" y="210" width="6" height="28" rx="3" fill="#FB7185"/>
+  <text x="234" y="231" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Vibration</text>
+  <text x="566" y="231" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">fine, quiet</text>
+
+  <!-- Bracket left -->
+  <path d="M136 196 L120 196 L120 456 L136 456" fill="none" stroke="#64748B" stroke-width="2"/>
+  <text x="96" y="326" transform="rotate(-90 96 326)" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">all at once</text>
+
+  <!-- Arrow right -->
+  <path d="M648 456 L648 200" fill="none" stroke="#FB7185" stroke-width="3" marker-end="url(#arrowP)"/>
+  <text x="676" y="328" transform="rotate(-90 676 328)" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16">more fullness</text>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Each layer stays calm and steady on its own.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Four stimuli leave the observer no free attention.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Do not become stronger – become fuller.</text>
+</svg>
