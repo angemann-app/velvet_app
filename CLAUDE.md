@@ -105,7 +105,8 @@ flutter test test_screens/screens_test.dart   # rendert alle Screens nach build/
 - **Betonung beim Einsprechen:** Die Reihe „Innenansichten“ klingt dank `tools/reihe_ausdruck.py` (Tempo und Lücke
   je Satz, ruhige Szenen langsamer, keine künstliche Stille) besser als die älteren Aufnahmen. Wird ein Text neu
   eingesprochen, gilt dieser Weg (`synthesize_ausdruck`); für andere Texte zuerst ein passendes Profil ableiten und
-  per Hörprobe abnehmen lassen.
+  per Hörprobe abnehmen lassen. Neue Lektionen, die mit dem Profil gesprochen werden sollen, stehen in
+  `reihe_ausdruck.AUSDRUCK_LEKTIONEN` (Lektions-ID → Szene); `generate_audio.py` und `generate_audio_en.py` beachten das.
 
 ## Bilder (Szenenbilder der Audioreihe)
 

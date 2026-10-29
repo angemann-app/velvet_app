@@ -22,6 +22,16 @@ SZENE = {
     "afterglow": 0.92,
 }
 
+# Lektionen außerhalb der Reihe, die mit diesem Profil gesprochen werden (Szene bestimmt Tempo und Verlauf).
+# Wissens-Lektionen warm und sachlich (wie „attraction“), Spicy-Praxis ruhig und ausklingend (wie „afterglow“).
+# Ändert die Prüfsumme der Reihen-Aufnahmen nicht (PROFIL und SZENE bleiben gleich).
+AUSDRUCK_LEKTIONEN = {
+    "female_5": "attraction",
+    "female_6": "attraction",
+    "touch_w_s2": "afterglow",
+    "touch_w_s3": "afterglow",
+}
+
 SATZ_LUECKE_S = 0.18
 ABSATZ_LUECKE_S = 0.6
 KURZ_LUECKE_S = 0.42

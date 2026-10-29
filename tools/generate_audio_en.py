@@ -115,7 +115,11 @@ def auftraege(lesen):
                 auf[f"{ordner}/{name}_{b['id']}.opus"] = (b["text"], name, False)
     for kurs in json.loads(lesen("translations/en/velvet_content.json"))["courses"]:
         for lesson in kurs["lessons"]:
-            auf[f"{lesson['id']}.opus"] = (sprechtext(lesson), de.voice_for(kurs, lesson), True)
+            import reihe_ausdruck
+            # Neue Lektionen mit Ausdrucksprofil (Tempo und Lücke je Satz), siehe CLAUDE.md „Betonung beim Einsprechen“
+            szene = reihe_ausdruck.AUSDRUCK_LEKTIONEN.get(lesson["id"])
+            pause = f"ausdruck:{reihe_ausdruck.PROFIL}:{szene}" if szene else True
+            auf[f"{lesson['id']}.opus"] = (sprechtext(lesson), de.voice_for(kurs, lesson), pause)
     # Einschlaf- und Traum-Reise langsam; fehlen im Grundstand und kommen dort einfach nicht vor.
     for quelle, ordner in (("einschlaf_reise.json", "einschlaf"), ("traum_reise.json", "traum")):
         try:
