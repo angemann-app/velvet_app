@@ -136,6 +136,12 @@ Zeile je Lektion: Lektions-ID, Dateien, Beschriftung deutsch, Beschriftung engli
 („Filter, übersprungen“) und weitermachen.
 **Nicht tun:** Spicy-Inhalte, Körperfotos oder körpernahe Illustrationen, Texte der Lektionen ändern, Bilder für
 andere Lektionen erzeugen, die nicht in der Tabelle stehen.
+**Schon vergeben, nicht zeichnen** (macht OpenCode, einfache Schemata ohne Anatomie): `neuro_1`, `neuro_2`, `spec_1`,
+`pain_1`, `pain_3`, `pelvic_2`, `dopa_1`, `desire_1`, `desire_2`, `desire_3`, `tease_1`, `couples_1`, `couples_2`,
+`couples_3`, `touch_w_4`, `touch_m_5`, `fant_3`, `toys_5`, `toys_7`, `anat_5`. **Für AG bleiben die anatomischen und
+körpernahen Schemata:** `anat_1`, `anat_4`, `pain_2`, `pelvic_1`, `pelvic_3`, `female_1`, `female_3`, `female_4`, `prost_1`,
+`prost_2`, `prost_3`, `phase_2`, `touch_m_1`, `vocal_1`, `pos_2`, `pos_3`. Gibt es eine Datei `assets/images/diagram_<ID>.svg`
+schon, überspringe die Lektion.
 
 **AG-14, Stufe 1 (hohe Priorität: Grundmodelle und Anatomie).** Branch `ag/14-diagramme-stufe1`. Lektionen: Kurs 1
 (`neuro_1`, `neuro_2`), Kurs 9 (`female_3`, `female_4`), Kurs 11 (`prost_1`, `prost_2`), Kurs 2 (`anat_5`); dazu die übrigen

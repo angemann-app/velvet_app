@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Gaspedal und Bremse – das duale Kontrollmodell</title>
+  <desc>Schematische Waage: Anziehende Reize wirken als Gaspedal, hemmende Faktoren als Bremse. Beide Systeme arbeiten gleichzeitig und unabhängig voneinander.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="400" cy="310" rx="320" ry="250" fill="url(#glow)"/>
+
+  <text x="400" y="60" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Gaspedal und Bremse</text>
+  <text x="400" y="94" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Das duale Kontrollmodell</text>
+  <text x="400" y="134" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Zwei Systeme, die gleichzeitig arbeiten</text>
+
+  <!-- Waage: Ständer und Balken -->
+  <rect x="394" y="258" width="12" height="216" fill="#475569"/>
+  <rect x="330" y="474" width="140" height="12" rx="6" fill="#475569"/>
+  <line x1="200" y1="250" x2="600" y2="250" stroke="#E2E8F0" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="400,250 372,304 428,304" fill="#FB7185"/>
+
+  <!-- Aufhängung -->
+  <g stroke="#94A3B8" stroke-width="2">
+    <line x1="220" y1="254" x2="190" y2="330"/>
+    <line x1="280" y1="254" x2="310" y2="330"/>
+    <line x1="520" y1="254" x2="490" y2="330"/>
+    <line x1="580" y1="254" x2="610" y2="330"/>
+  </g>
+
+  <!-- Linke Waagschale: Gaspedal -->
+  <path d="M190 330 Q250 382 310 330 Z" fill="#1E293B" stroke="#94A3B8" stroke-width="3"/>
+  <g stroke="#FBBF24" stroke-width="4" stroke-linecap="round">
+    <line x1="222" y1="324" x2="222" y2="292"/>
+    <line x1="250" y1="324" x2="250" y2="292"/>
+    <line x1="278" y1="324" x2="278" y2="292"/>
+  </g>
+  <g fill="#FBBF24">
+    <polygon points="222,282 215,296 229,296"/>
+    <polygon points="250,282 243,296 257,296"/>
+    <polygon points="278,282 271,296 285,296"/>
+  </g>
+
+  <!-- Rechte Waagschale: Bremse -->
+  <path d="M490 330 Q550 382 610 330 Z" fill="#1E293B" stroke="#94A3B8" stroke-width="3"/>
+  <g fill="#64748B" stroke="#94A3B8" stroke-width="1">
+    <rect x="522" y="300" width="56" height="10" rx="2"/>
+    <rect x="522" y="314" width="56" height="10" rx="2"/>
+    <rect x="522" y="328" width="56" height="10" rx="2"/>
+  </g>
+
+  <!-- Beschriftung der Schalen -->
+  <text x="250" y="408" text-anchor="middle" fill="#FBBF24" font-family="sans-serif" font-size="24" font-weight="700">Gaspedal</text>
+  <text x="250" y="434" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="18">anziehende Reize</text>
+  <text x="250" y="458" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="17">Nähe, Duft, Fantasie</text>
+
+  <text x="550" y="408" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="24" font-weight="700">Bremse</text>
+  <text x="550" y="434" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="18">hemmende Faktoren</text>
+  <text x="550" y="458" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="17">Stress, Scham, Sorge</text>
+
+  <!-- Fazit -->
+  <text x="400" y="538" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Lust entsteht, wenn das Gaspedal stärker wirkt als die Bremse.</text>
+  <text x="400" y="568" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Nicht mehr Gas, sondern weniger Bremse ist das Ziel.</text>
+</svg>

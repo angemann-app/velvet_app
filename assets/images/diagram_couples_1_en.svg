@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Sensate Focus in three steps</title>
+  <desc>Staircase model with three steps: first touch without genitals, then the whole body without penetration, finally merging without obligation and with the way back always open.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.6" r="0.55">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="380" cy="380" rx="340" ry="230" fill="url(#glow)"/>
+
+  <text x="400" y="54" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Sensate Focus</text>
+  <text x="400" y="88" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Three steps back to ease</text>
+
+  <!-- Staircase -->
+  <rect x="60" y="390" width="200" height="110" fill="#1C1327" stroke="#3B2A4A" stroke-width="2"/>
+  <rect x="260" y="300" width="200" height="200" fill="#1C1327" stroke="#3B2A4A" stroke-width="2"/>
+  <rect x="460" y="210" width="200" height="290" fill="#1C1327" stroke="#3B2A4A" stroke-width="2"/>
+  <line x1="60" y1="390" x2="260" y2="390" stroke="#34D399" stroke-width="5"/>
+  <line x1="260" y1="300" x2="460" y2="300" stroke="#FBBF24" stroke-width="5"/>
+  <line x1="460" y1="210" x2="660" y2="210" stroke="#FB7185" stroke-width="5"/>
+  <line x1="40" y1="500" x2="760" y2="500" stroke="#334155" stroke-width="2"/>
+
+  <!-- Step numbers -->
+  <g fill="#FB7185" font-family="sans-serif" font-size="64" font-weight="800" text-anchor="middle" opacity="0.18">
+    <text x="160" y="480">1</text>
+    <text x="360" y="480">2</text>
+    <text x="560" y="480">3</text>
+  </g>
+
+  <!-- Step 1 -->
+  <text x="80" y="298" fill="#34D399" font-family="sans-serif" font-size="21" font-weight="700">Step 1</text>
+  <text x="80" y="324" fill="#F1F5F9" font-family="sans-serif" font-size="17">Touch without</text>
+  <text x="80" y="348" fill="#F1F5F9" font-family="sans-serif" font-size="17">genitals</text>
+  <text x="80" y="372" fill="#94A3B8" font-family="sans-serif" font-size="17">back, arms, feet</text>
+
+  <!-- Step 2 -->
+  <text x="280" y="208" fill="#FBBF24" font-family="sans-serif" font-size="21" font-weight="700">Step 2</text>
+  <text x="280" y="234" fill="#F1F5F9" font-family="sans-serif" font-size="17">The whole body</text>
+  <text x="280" y="258" fill="#F1F5F9" font-family="sans-serif" font-size="17">gently included</text>
+  <text x="280" y="282" fill="#94A3B8" font-family="sans-serif" font-size="17">no penetration</text>
+
+  <!-- Step 3 -->
+  <text x="480" y="122" fill="#FB7185" font-family="sans-serif" font-size="21" font-weight="700">Step 3</text>
+  <text x="480" y="148" fill="#F1F5F9" font-family="sans-serif" font-size="17">Merging without</text>
+  <text x="480" y="172" fill="#F1F5F9" font-family="sans-serif" font-size="17">obligation</text>
+  <text x="480" y="196" fill="#94A3B8" font-family="sans-serif" font-size="17">return anytime</text>
+
+  <!-- Explanation -->
+  <text x="400" y="534" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="19">Each step may take as long as you both need.</text>
+  <text x="400" y="560" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="17">Arousal and climax are explicitly not the goal.</text>
+  <text x="400" y="586" text-anchor="middle" fill="#64748B" font-family="sans-serif" font-size="16">After Masters and Johnson</text>
+</svg>
