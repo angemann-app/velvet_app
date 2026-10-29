@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Sichere Spiele in vier Schritten</title>
+  <desc>Vier Stationen von links nach rechts: Absprache, Signale, Spiel und Nachsorge. Ein Rückweg führt zum Gespräch vor dem nächsten Mal.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrowP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FB7185"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34D399"/>
+    </marker>
+  </defs>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="400" cy="320" rx="350" ry="235" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="31" font-weight="700">Sichere Spiele in vier Schritten</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Absprache, Signale, Spiel, Nachsorge</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Ein guter Rahmen macht das Spiel größer</text>
+
+  <g>
+    <rect x="40" y="195" width="168" height="178" rx="16" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.55"/>
+    <circle cx="124" cy="225" r="16" fill="#FB7185"/>
+    <text x="124" y="230" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">1</text>
+    <text x="124" y="266" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="19" font-weight="700">Absprache</text>
+    <line x1="58" y1="282" x2="190" y2="282" stroke="#FB7185" stroke-width="1.5" stroke-opacity="0.35"/>
+    <text x="124" y="310" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Was wollen wir?</text>
+    <text x="124" y="334" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Was ist tabu?</text>
+    <text x="124" y="358" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Wie lange?</text>
+  </g>
+
+  <g>
+    <rect x="236" y="195" width="168" height="178" rx="16" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.55"/>
+    <circle cx="320" cy="225" r="16" fill="#FB7185"/>
+    <text x="320" y="230" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">2</text>
+    <text x="320" y="266" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="19" font-weight="700">Signale</text>
+    <line x1="254" y1="282" x2="386" y2="282" stroke="#FB7185" stroke-width="1.5" stroke-opacity="0.35"/>
+    <text x="320" y="310" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="16">Grün: weiter</text>
+    <text x="320" y="334" text-anchor="middle" fill="#FBBF24" font-family="sans-serif" font-size="16">Gelb: langsamer</text>
+    <text x="320" y="358" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16">Rot: Stopp</text>
+  </g>
+
+  <g>
+    <rect x="432" y="195" width="168" height="178" rx="16" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.55"/>
+    <circle cx="516" cy="225" r="16" fill="#FB7185"/>
+    <text x="516" y="230" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">3</text>
+    <text x="516" y="266" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="19" font-weight="700">Spiel</text>
+    <line x1="450" y1="282" x2="582" y2="282" stroke="#FB7185" stroke-width="1.5" stroke-opacity="0.35"/>
+    <text x="516" y="310" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">achtsam bleiben</text>
+    <text x="516" y="334" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">nachfragen</text>
+    <text x="516" y="358" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Tempo halten</text>
+  </g>
+
+  <g>
+    <rect x="628" y="195" width="168" height="178" rx="16" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.55"/>
+    <circle cx="712" cy="225" r="16" fill="#FB7185"/>
+    <text x="712" y="230" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">4</text>
+    <text x="712" y="266" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="19" font-weight="700">Nachsorge</text>
+    <line x1="646" y1="282" x2="778" y2="282" stroke="#FB7185" stroke-width="1.5" stroke-opacity="0.35"/>
+    <text x="712" y="310" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Halten, Decke</text>
+    <text x="712" y="334" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Wasser, Worte</text>
+    <text x="712" y="358" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">danach fragen</text>
+  </g>
+
+  <g stroke="#FB7185" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M210 284 L232 284" marker-end="url(#arrowP)"/>
+    <path d="M406 284 L428 284" marker-end="url(#arrowP)"/>
+    <path d="M602 284 L624 284" marker-end="url(#arrowP)"/>
+  </g>
+
+  <path d="M712 375 L712 420 L124 420 L124 378" fill="none" stroke="#34D399" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrowG)"/>
+  <text x="418" y="447" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="17">Gespräch beim nächsten Mal</text>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Ein Rahmen vorher und Nähe danach machen intensive Spiele sicher.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Die Ampel gilt für beide – auch für die führende Person.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Nachsorge ist kein Extra, sondern Teil des Spiels.</text>
+</svg>

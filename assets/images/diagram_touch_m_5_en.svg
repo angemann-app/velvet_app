@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Peak and Ejaculation: Two Processes</title>
+  <desc>Two tracks on one shared timeline: orgasmic waves in the pelvic floor above, the motor reflex of ejaculation with a threshold below.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="400" cy="320" rx="350" ry="235" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="30" font-weight="700">Peak and Ejaculation</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Two processes on one timeline</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Orgasm is experience, ejaculation is a reflex</text>
+
+  <line x1="480" y1="170" x2="480" y2="460" stroke="#64748B" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="480" y="160" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">threshold</text>
+
+  <text x="110" y="206" fill="#FB7185" font-family="sans-serif" font-size="19" font-weight="700">Orgasm</text>
+  <text x="110" y="230" fill="#94A3B8" font-family="sans-serif" font-size="16">waves in the pelvic floor</text>
+  <path d="M180 300 Q202 280 224 300 Q246 320 268 300 Q290 272 312 300 Q334 328 356 300 Q378 255 400 300 Q422 345 444 300 Q466 235 488 300 Q510 365 532 300 Q554 240 576 300 Q598 340 620 300 Q642 270 664 300 Q686 285 700 300" fill="none" stroke="#FB7185" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="110" y="382" fill="#34D399" font-family="sans-serif" font-size="19" font-weight="700">Ejaculation</text>
+  <text x="110" y="406" fill="#94A3B8" font-family="sans-serif" font-size="16">motor reflex</text>
+  <path d="M180 424 L430 424 C450 424 458 372 480 372 C502 372 510 424 530 424 L700 424" fill="none" stroke="#34D399" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="480" cy="372" r="6" fill="#34D399"/>
+
+  <line x1="110" y1="470" x2="725" y2="470" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="180" y="500" fill="#94A3B8" font-family="sans-serif" font-size="17">arousal</text>
+  <text x="480" y="500" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="17">threshold</text>
+  <text x="620" y="500" fill="#94A3B8" font-family="sans-serif" font-size="17">afterwards</text>
+  <text x="725" y="500" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="17">time</text>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Orgasm and ejaculation are two processes that usually occur together.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">The peak is experience; ejaculation is a reflex in the spinal cord.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Separating them can buy time – without adding performance pressure.</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Solo with a Toy: Five Steps</title>
+  <desc>Five steps from bottom to top: curiosity, approach, waves, fantasy and without a toy. An arrow shows the direction upwards.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FB7185"/>
+    </marker>
+  </defs>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="400" cy="320" rx="350" ry="235" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="31" font-weight="700">Solo with a Toy: Five Steps</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">From cautious to brave</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Five evenings without pressure</text>
+
+  <line x1="100" y1="499" x2="100" y2="162" stroke="#FB7185" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="100" y1="192" x2="140" y2="192" stroke="#FB7185" stroke-width="2"/>
+  <line x1="100" y1="262" x2="140" y2="262" stroke="#FB7185" stroke-width="2"/>
+  <line x1="100" y1="332" x2="140" y2="332" stroke="#FB7185" stroke-width="2"/>
+  <line x1="100" y1="402" x2="140" y2="402" stroke="#FB7185" stroke-width="2"/>
+  <line x1="100" y1="472" x2="140" y2="472" stroke="#FB7185" stroke-width="2"/>
+
+  <g>
+    <rect x="140" y="165" width="560" height="54" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.6"/>
+    <circle cx="172" cy="192" r="16" fill="#FB7185"/>
+    <text x="172" y="197" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">5</text>
+    <text x="202" y="198" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Without toy</text>
+    <text x="380" y="198" fill="#94A3B8" font-family="sans-serif" font-size="16">carry it into your hand</text>
+  </g>
+
+  <g>
+    <rect x="140" y="235" width="560" height="54" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.5"/>
+    <circle cx="172" cy="262" r="16" fill="#FB7185"/>
+    <text x="172" y="267" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">4</text>
+    <text x="202" y="268" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Fantasy</text>
+    <text x="380" y="268" fill="#94A3B8" font-family="sans-serif" font-size="16">add your own scene</text>
+  </g>
+
+  <g>
+    <rect x="140" y="305" width="560" height="54" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.5"/>
+    <circle cx="172" cy="332" r="16" fill="#FB7185"/>
+    <text x="172" y="337" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">3</text>
+    <text x="202" y="338" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Waves</text>
+    <text x="380" y="338" fill="#94A3B8" font-family="sans-serif" font-size="16">edging: eight, pause, again</text>
+  </g>
+
+  <g>
+    <rect x="140" y="375" width="560" height="54" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.5"/>
+    <circle cx="172" cy="402" r="16" fill="#FB7185"/>
+    <text x="172" y="407" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">2</text>
+    <text x="202" y="408" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Approach</text>
+    <text x="380" y="408" fill="#94A3B8" font-family="sans-serif" font-size="16">place it and keep still</text>
+  </g>
+
+  <g>
+    <rect x="140" y="445" width="560" height="54" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.5"/>
+    <circle cx="172" cy="472" r="16" fill="#FB7185"/>
+    <text x="172" y="477" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">1</text>
+    <text x="202" y="478" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Curiosity</text>
+    <text x="380" y="478" fill="#94A3B8" font-family="sans-serif" font-size="16">outer skin only at first</text>
+  </g>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Each step may take as long as you like.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Skipping a step is not a competition.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">What matters is what your body tells you – not the toy.</text>
+</svg>
