@@ -62,39 +62,45 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     if (mounted) setState(() {});
   }
 
-  /// Stimmungsbilder der Spicy-Praxis-Lektionen: nur im Spicy-Modus und nur, wenn das Paket da ist.
+  /// Stimmungsbilder der Spicy-Lektionen und der Lektionen mit zweiter Spicy-Bildfassung: kleine Vorschau, die den Text begleitet
+  /// (Antippen vergrößert). Nur im Spicy-Modus und nur, wenn das Paket da ist.
   Widget _spicyBilder(Lesson l) {
     if (l.bilder.isEmpty || !StorageService.spicyMode()) return const SizedBox.shrink();
     final dateien = [
       for (final b in l.bilder)
-        if (Pakete.datei(b) case final pfad?) (pfad: pfad, beschriftung: b.contains('_allein') ? t.kursBildAllein : t.kursBildZuZweit),
+        if (Pakete.datei(b) case final pfad?)
+          (pfad: pfad, beschriftung: b.contains('_allein') ? t.kursBildAllein : (b.contains('_zweit') ? t.kursBildZuZweit : null)),
     ];
     if (dateien.isEmpty) return const SizedBox.shrink();
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.only(bottom: 14),
       child: SizedBox(
-        height: 240,
+        height: 96,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: dateien.length,
-          separatorBuilder: (_, __) => const SizedBox(width: 10),
-          itemBuilder: (_, i) => ClipRRect(
-            borderRadius: BorderRadius.circular(14),
-            child: AspectRatio(
-              aspectRatio: 2 / 3,
-              child: Stack(fit: StackFit.expand, children: [
-                Image.file(File(dateien[i].pfad), fit: BoxFit.cover),
-                Positioned(
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                    color: Colors.black54,
-                    child: Text(dateien[i].beschriftung, style: const TextStyle(color: Colors.white, fontSize: 12)),
-                  ),
-                ),
-              ]),
+          separatorBuilder: (_, __) => const SizedBox(width: 8),
+          itemBuilder: (_, i) => GestureDetector(
+            onTap: () => _spicyBildGross(dateien[i].pfad),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: SizedBox(
+                width: 96,
+                child: Stack(fit: StackFit.expand, children: [
+                  Image.file(File(dateien[i].pfad), fit: BoxFit.cover, alignment: Alignment.topCenter, cacheWidth: 300),
+                  if (dateien[i].beschriftung != null)
+                    Positioned(
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                        color: Colors.black54,
+                        child: Text(dateien[i].beschriftung!, style: const TextStyle(color: Colors.white, fontSize: 10.5)),
+                      ),
+                    ),
+                ]),
+              ),
             ),
           ),
         ),
@@ -102,6 +108,17 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     );
   }
 
+  void _spicyBildGross(String pfad) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+          backgroundColor: Colors.black,
+          appBar: AppBar(backgroundColor: Colors.black),
+          body: InteractiveViewer(maxScale: 4, child: Center(child: Image.file(File(pfad), fit: BoxFit.contain))),
+        ),
+      ),
+    );
+  }
   @override
   void dispose() {
     _reflectionController.dispose();
