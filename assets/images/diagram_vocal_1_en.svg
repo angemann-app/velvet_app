@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Axis: Jaw, Breath and Pelvic Floor</title>
+  <desc>Neurosomatic axis connecting jaw, vocal cords and pelvic floor relaxation</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">The Silent-Movie Pattern: Jaw, Breath &amp; Pelvis</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">The Neurosomatic Relaxation Axis</text>
+
+  <!-- Left: The 3-tier Axis -->
+  <rect x="40" y="105" width="345" height="430" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="138" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">The Somatic Chain</text>
+
+  <!-- Tier 1 -->
+  <rect x="60" y="155" width="305" height="95" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="75" y="180" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold">1. Jaw &amp; Mouth</text>
+  <text x="75" y="204" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Clenched teeth lock the torso.</text>
+    <text x="75" y="224" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Relaxed jaw opens the chain.</text>
+
+  <!-- Tier 2 -->
+  <rect x="60" y="265" width="305" height="95" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="75" y="290" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold">2. Throat &amp; Diaphragm</text>
+  <text x="75" y="314" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Holding breath traps pressure.</text>
+    <text x="75" y="334" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Audible exhaling lets the</text>
+    <text x="75" y="354" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">diaphragm oscillate freely.</text>
+
+  <!-- Tier 3 -->
+  <rect x="60" y="375" width="305" height="95" rx="10" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
+  <text x="75" y="400" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold">3. Pelvic Floor</text>
+  <text x="75" y="424" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Directly mirrors jaw tension.</text>
+    <text x="75" y="444" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Yields downward and outward;</text>
+    <text x="75" y="464" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">releases reflexively.</text>
+
+  <text x="60" y="505" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold">Soft jaw = Soft pelvis</text>
+
+  <!-- Right: Explanation Card -->
+  <rect x="415" y="105" width="345" height="430" rx="14" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
+  <text x="435" y="138" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Why Sounds Help</text>
+  <text x="435" y="180" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Audible pleasure is no show</text>
+    <text x="435" y="206" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">for others, but an invitation</text>
+    <text x="435" y="232" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">for your body to let go.</text>
+
+  <rect x="435" y="280" width="305" height="215" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+  <text x="450" y="320" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Pressed lips trigger the brake.</text>
+    <text x="450" y="346" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Sounds and unhindered breathing</text>
+    <text x="450" y="372" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">relax the pelvis noticeably</text>
+    <text x="450" y="398" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">and deepen pleasure.</text>
+
+  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematic, position and size vary</text>
+
+</svg>

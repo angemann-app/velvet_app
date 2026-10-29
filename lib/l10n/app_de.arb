@@ -1878,6 +1878,8 @@
   "reiheLeer": "Im Paket sind noch keine Folgen.",
   "reihePaketFehlt": "Für diese Reihe fehlen noch die Aufnahmen. Sie kommen als eigenes Paket, am besten im WLAN laden. Danach läuft alles ohne Netz.",
   "reihePaketLaden": "Aufnahmen laden",
+  "kursBildAllein": "Allein",
+  "kursBildZuZweit": "Zu zweit",
   "reihePaketNeu": "Es gibt neue Folgen und Bilder für diese Reihe. Am besten im WLAN aktualisieren. Danach läuft alles wieder ohne Netz.",
   "reiheLadenFehler": "Laden hat nicht geklappt. Bitte später noch einmal versuchen.",
   "reiheOffline": "Offline verfügbar",

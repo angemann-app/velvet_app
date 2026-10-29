@@ -4051,6 +4051,12 @@ class AppLocalizationsDe extends AppLocalizations {
   String get reihePaketLaden => 'Aufnahmen laden';
 
   @override
+  String get kursBildAllein => 'Allein';
+
+  @override
+  String get kursBildZuZweit => 'Zu zweit';
+
+  @override
   String get reihePaketNeu =>
       'Es gibt neue Folgen und Bilder für diese Reihe. Am besten im WLAN aktualisieren. Danach läuft alles wieder ohne Netz.';
 

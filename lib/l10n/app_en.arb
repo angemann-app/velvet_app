@@ -1127,6 +1127,8 @@
   "reiheLeer": "The package does not contain any episodes yet.",
   "reihePaketFehlt": "The recordings for this series are not available yet. They come as a separate package; download it over Wi-Fi if possible. After that, everything works offline.",
   "reihePaketLaden": "Download recordings",
+  "kursBildAllein": "Alone",
+  "kursBildZuZweit": "Together",
   "reihePaketNeu": "There are new episodes and pictures for this series. Best to update on Wi-Fi. Afterwards everything works offline again.",
   "reiheLadenFehler": "Download failed. Please try again later.",
   "reiheOffline": "Available offline",

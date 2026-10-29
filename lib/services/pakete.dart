@@ -33,6 +33,9 @@ class Pakete {
   /// und nur im Spicy-Modus (docs/konzepte/lust-reihe-szenenbilder.md). Fehlt es, bleibt der Player ohne Bild.
   static const reiheBilder = 'reihe-bilder';
 
+  /// Spicy-Stimmungsbilder zu Praxis-Lektionen der Kurse (nur R2, nur Spicy, sprachunabhängig), siehe `Lesson.bilder`.
+  static const kurseBilderSpicy = 'kurse-bilder-spicy';
+
   /// Name im Verzeichnis, z. B. „de-lektionen“.
   static String name(String art, [String? sprache]) => '${sprache ?? Sprache.code}-$art';
 
@@ -66,9 +69,10 @@ class Pakete {
       final f = File('$o/$pfad');
       if (f.existsSync()) return f.path;
     }
-    final bilder = _ordner(reiheBilder);
-    if (bilder != null) {
-      final f = File('$bilder/$pfad');
+    for (final sprachfrei in const [reiheBilder, kurseBilderSpicy]) {
+      final ordner = _ordner(sprachfrei);
+      if (ordner == null) continue;
+      final f = File('$ordner/$pfad');
       if (f.existsSync()) return f.path;
     }
     return Sprache.englisch ? AudioPaket.datei(pfad) : null;

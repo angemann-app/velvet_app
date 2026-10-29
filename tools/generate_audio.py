@@ -554,7 +554,12 @@ def main():
         with tempfile.TemporaryDirectory() as tmp:
             if engine:
                 src = Path(tmp) / "speech.wav"
-                engine.synthesize_wav(speech_text(lesson), name, src)
+                import reihe_ausdruck
+                if lesson["id"] in reihe_ausdruck.AUSDRUCK_LEKTIONEN:
+                    # Neue Lektionen mit Ausdrucksprofil (Tempo und Lücke je Satz), siehe CLAUDE.md „Betonung beim Einsprechen“
+                    engine.synthesize_ausdruck(reihe_ausdruck.AUSDRUCK_LEKTIONEN[lesson["id"]], speech_text(lesson), name, src)
+                else:
+                    engine.synthesize_wav(speech_text(lesson), name, src)
             else:
                 src = Path(tmp) / "speech.mp3"
                 asyncio.run(edge_synthesize(speech_text(lesson), "martin" if name == BOTH else name, src))

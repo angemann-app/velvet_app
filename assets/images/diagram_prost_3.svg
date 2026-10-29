@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Innere Annäherung an die Prostata</title>
+  <desc>Schrittweiser Ablauf: Vorbereitung, Ausatmen, Eintreten und Auffinden der Prostata</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Der Weg nach innen: Langsam, sicher, ohne Ziel</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Schrittweiser Ablauf für eine entspannte Annäherung</text>
+
+  <!-- 4 Step Cards (2x2 Grid) -->
+  <rect x="40" y="105" width="345" height="180" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <circle cx="70" cy="138" r="15" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2"/>
+  <text x="70" y="144" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">1</text>
+  <text x="96" y="144" fill="#F1F5F9" font-family="sans-serif" font-size="17px" font-weight="bold">1. Vorbereitung &amp; Gleitmittel</text>
+  <text x="65" y="180" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Sauberkeit, kurze Nägel, Handschuh.</text>
+    <text x="65" y="204" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Reichlich Gleitmittel verwenden.</text>
+    <text x="65" y="228" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Keinen Leistungsdruck aufbauen.</text>
+
+  <rect x="415" y="105" width="345" height="180" rx="12" fill="#1E293B" stroke="#34D399" stroke-width="1.5"/>
+  <circle cx="445" cy="138" r="15" fill="#34D399" fill-opacity="0.2" stroke="#34D399" stroke-width="2"/>
+  <text x="445" y="144" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">2</text>
+  <text x="471" y="144" fill="#F1F5F9" font-family="sans-serif" font-size="17px" font-weight="bold">2. Das Ausatem-Prinzip</text>
+  <text x="440" y="180" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Fingerkuppe nur außen auflegen.</text>
+    <text x="440" y="204" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Beim Ausatmen wird Schließmuskel</text>
+    <text x="440" y="228" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">weich und öffnet von innen heraus.</text>
+
+  <rect x="40" y="305" width="345" height="180" rx="12" fill="#1E293B" stroke="#C084FC" stroke-width="1.5"/>
+  <circle cx="70" cy="338" r="15" fill="#C084FC" fill-opacity="0.2" stroke="#C084FC" stroke-width="2"/>
+  <text x="70" y="344" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">3</text>
+  <text x="96" y="344" fill="#F1F5F9" font-family="sans-serif" font-size="17px" font-weight="bold">3. Zentimeter für Zentimeter</text>
+  <text x="65" y="380" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Nur im Takt des Ausatmens gleiten.</text>
+    <text x="65" y="404" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Nie gegen Widerstand drücken.</text>
+    <text x="65" y="428" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Bei Anspannung sofort pausieren.</text>
+
+  <rect x="415" y="305" width="345" height="180" rx="12" fill="#1E293B" stroke="#FB7185" stroke-width="1.5"/>
+  <circle cx="445" cy="338" r="15" fill="#FB7185" fill-opacity="0.2" stroke="#FB7185" stroke-width="2"/>
+  <text x="445" y="344" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">4</text>
+  <text x="471" y="344" fill="#FB7185" font-family="sans-serif" font-size="17px" font-weight="bold">4. Orientierung &amp; Lage</text>
+  <text x="440" y="380" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">4–5 cm tief an der Vorderwand:</text>
+    <text x="440" y="404" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Kastaniengroße, glatte Wölbung.</text>
+    <text x="440" y="428" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Sanfte Komm-her-Geste ausführen.</text>
+
+  <rect x="40" y="505" width="720" height="40" rx="8" fill="#F43F5E" fill-opacity="0.15" stroke="#FB7185" stroke-width="1.5"/>
+  <text x="400" y="531" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">Druck verschließt, Sicherheit öffnet. Bei Unwohlsein sofort stoppen.</text>
+
+  <text x="400" y="575" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematisch, Lage und Größe sind individuell</text>
+
+</svg>

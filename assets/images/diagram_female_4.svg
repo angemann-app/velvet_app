@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Der Zyklus und die Lustphasen</title>
+  <desc>Vier Zyklusphasen: Hormonverlauf von Östrogen und Progesteron sowie typische Lusttendenzen</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140D1C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDA4AF"/>
+      <stop offset="100%" stop-color="#E11D48"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <text x="400" y="38" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Der Zyklus und die Lustphasen</text>
+  <text x="400" y="62" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">schematisch, Lage und Größe sind individuell</text>
+
+  <!-- Hormonkurven Verlauf -->
+  <g transform="translate(30, 84)">
+    <rect width="740" height="150" rx="12" fill="url(#card)" stroke="#334155" stroke-width="1"/>
+    
+    <!-- Achse & Tagesmarken -->
+    <line x1="50" y1="115" x2="700" y2="115" stroke="#475569" stroke-width="1.5"/>
+    <text x="50" y="136" font-family="sans-serif" font-size="16" fill="#94A3B8">Tag 1</text>
+    <text x="210" y="136" font-family="sans-serif" font-size="16" fill="#94A3B8">Tag 7</text>
+    <text x="360" y="136" font-family="sans-serif" font-size="16" fill="#FB7185" font-weight="700">Tag 14 (Eisprung)</text>
+    <text x="540" y="136" font-family="sans-serif" font-size="16" fill="#94A3B8">Tag 21</text>
+    <text x="690" y="136" text-anchor="end" font-family="sans-serif" font-size="16" fill="#94A3B8">Tag 28</text>
+
+    <!-- Phasengrenzen gestrichelt -->
+    <line x1="140" y1="15" x2="140" y2="115" stroke="#334155" stroke-dasharray="4 4" stroke-width="1"/>
+    <line x1="330" y1="15" x2="330" y2="115" stroke="#334155" stroke-dasharray="4 4" stroke-width="1"/>
+    <line x1="430" y1="15" x2="430" y2="115" stroke="#334155" stroke-dasharray="4 4" stroke-width="1"/>
+
+    <!-- Östrogen Kurve (Pink) -->
+    <path d="M50 100 C120 100 240 70 375 28 C410 65 440 85 530 65 C600 50 650 95 690 110" fill="none" stroke="#FB7185" stroke-width="3.5" stroke-linecap="round"/>
+    
+    <!-- Progesteron Kurve (Gold) -->
+    <path d="M50 110 L350 110 C390 110 430 50 530 45 C600 40 650 85 690 110" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 4"/>
+
+    <!-- Kurven-Legende -->
+    <line x1="60" y1="26" x2="95" y2="26" stroke="#FB7185" stroke-width="3.5"/>
+    <text x="105" y="31" font-family="sans-serif" font-size="16" font-weight="700" fill="#FB7185">Östrogen</text>
+
+    <line x1="220" y1="26" x2="255" y2="26" stroke="#FBBF24" stroke-width="3" stroke-dasharray="6 4"/>
+    <text x="265" y="31" font-family="sans-serif" font-size="16" font-weight="700" fill="#FBBF24">Progesteron</text>
+  </g>
+
+  <!-- 4 Phasen Karten (2x2 Grid) -->
+  <g transform="translate(30, 246)">
+    <rect width="360" height="104" rx="10" fill="url(#card)" stroke="#94A3B8" stroke-width="1.6"/>
+    <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#94A3B8">Phase 1: Menstruation (Tage 1–5)</text>
+    <text x="16" y="48" font-family="sans-serif" font-size="16" fill="#F1F5F9">Hormone auf Basiskurs.</text>
+    <text x="16" y="70" font-family="sans-serif" font-size="16" fill="#F1F5F9">Bedürfnis nach Ruhe und</text>
+    <text x="16" y="92" font-family="sans-serif" font-size="16" fill="#94A3B8">körperlicher Sensibilität.</text>
+  </g>
+
+  <g transform="translate(410, 246)">
+    <rect width="360" height="104" rx="10" fill="url(#card)" stroke="#38BDF8" stroke-width="1.6"/>
+    <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#38BDF8">Phase 2: Follikelphase (Tage 6–12)</text>
+    <text x="16" y="48" font-family="sans-serif" font-size="16" fill="#F1F5F9">Östrogen steigt spürbar an.</text>
+    <text x="16" y="70" font-family="sans-serif" font-size="16" fill="#F1F5F9">Mehr Energie, Neugier</text>
+    <text x="16" y="92" font-family="sans-serif" font-size="16" fill="#94A3B8">und aktive Initiative.</text>
+  </g>
+
+  <g transform="translate(30, 360)">
+    <rect width="360" height="104" rx="10" fill="url(#card)" stroke="#FB7185" stroke-width="1.6"/>
+    <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#FB7185">Phase 3: Eisprung (Tage 13–16)</text>
+    <text x="16" y="48" font-family="sans-serif" font-size="16" fill="#F1F5F9">Östrogen-Höhepunkt.</text>
+    <text x="16" y="70" font-family="sans-serif" font-size="16" fill="#F1F5F9">Intensive Lustphase und</text>
+    <text x="16" y="92" font-family="sans-serif" font-size="16" fill="#94A3B8">stärkere Befeuchtung.</text>
+  </g>
+
+  <g transform="translate(410, 360)">
+    <rect width="360" height="104" rx="10" fill="url(#card)" stroke="#FBBF24" stroke-width="1.6"/>
+    <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#FBBF24">Phase 4: Lutealphase (Tage 17–28)</text>
+    <text x="16" y="48" font-family="sans-serif" font-size="16" fill="#F1F5F9">Progesteron dominiert.</text>
+    <text x="16" y="70" font-family="sans-serif" font-size="16" fill="#F1F5F9">Wunsch nach Geborgenheit;</text>
+    <text x="16" y="92" font-family="sans-serif" font-size="16" fill="#94A3B8">vor Periode PMS-sensibel.</text>
+  </g>
+
+  <rect x="30" y="480" width="740" height="76" rx="12" fill="#1E293B" fill-opacity="0.75" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="50" y="510" font-family="sans-serif" font-size="16" fill="#F1F5F9">Lust schwankt ganz natürlich im Monat. Hormonelle Verhütung, Stress und</text>
+  <text x="50" y="536" font-family="sans-serif" font-size="16" fill="#F1F5F9">Lebensphasen wie Schwangerschaft oder Wechseljahre formen den Rhythmus.</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Positions for Stamina and Erection</title>
+  <desc>Geometric relief, transferring bodyweight to mattress, and reducing pelvic tension</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Stamina &amp; Erection: Relaxing Positions</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Transferring Weight, Calm Breathing &amp; Soft Pelvic Floor</text>
+
+  <!-- Row 1: Spoons -->
+  <rect x="40" y="105" width="720" height="95" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <circle cx="68" cy="133" r="14" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2"/>
+  <text x="68" y="139" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">A</text>
+  <text x="94" y="139" fill="#F1F5F9" font-family="sans-serif" font-size="18px" font-weight="bold">1. Spoons (Side-lying)</text>
+  <text x="94" y="165" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">No need to hold weight in push-up posture; belly and glutes stay soft.</text>
+    <text x="94" y="187" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Side angle reduces glans friction; both hands remain completely free.</text>
+
+  <!-- Row 2: Leaning -->
+  <rect x="40" y="215" width="720" height="95" rx="12" fill="#1E293B" stroke="#C084FC" stroke-width="1.5"/>
+  <circle cx="68" cy="243" r="14" fill="#C084FC" fill-opacity="0.2" stroke="#C084FC" stroke-width="2"/>
+  <text x="68" y="249" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">B</text>
+  <text x="94" y="249" fill="#F1F5F9" font-family="sans-serif" font-size="18px" font-weight="bold">2. Partner on Top: Leaning</text>
+  <text x="94" y="275" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Upper body leans forward onto chest; horizontal grinding instead of bouncing.</text>
+    <text x="94" y="297" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Zero support load for him, allowing deep abdominal breathing.</text>
+
+  <!-- Row 3: Wedge -->
+  <rect x="40" y="325" width="720" height="95" rx="12" fill="#1E293B" stroke="#FB7185" stroke-width="1.5"/>
+  <circle cx="68" cy="353" r="14" fill="#FB7185" fill-opacity="0.2" stroke="#FB7185" stroke-width="2"/>
+  <text x="68" y="359" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">C</text>
+  <text x="94" y="359" fill="#F1F5F9" font-family="sans-serif" font-size="18px" font-weight="bold">3. The Wedge Pillow</text>
+  <text x="94" y="385" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Firm pillow under hips elevates pelvis gently.</text>
+    <text x="94" y="407" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">He kneels upright with full breath control and easily guides the angle.</text>
+
+  <!-- Bottom Principle Card -->
+  <rect x="40" y="435" width="720" height="105" rx="12" fill="#1E1B4B" stroke="#34D399" stroke-width="1.5"/>
+  <text x="65" y="465" fill="#34D399" font-family="sans-serif" font-size="18px" font-weight="bold">Biomechanical Principle</text>
+  <text x="65" y="495" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">High muscular tension in legs and torso speeds up ejaculation.</text>
+    <text x="65" y="519" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Positions transferring weight directly to the bed provide calm and stamina.</text>
+
+  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematic, position and size vary</text>
+
+</svg>

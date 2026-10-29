@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/content_models.dart';
 import '../../services/nostr_service.dart';
+import '../../services/pakete.dart';
 import '../../services/personalize.dart';
 import '../../services/storage_service.dart';
 import '../../services/audio_service.dart';
@@ -42,6 +45,61 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     _isCompleted = StorageService.isLessonCompleted(widget.lesson.id);
     final savedAnswer = StorageService.getReflectionAnswer(widget.lesson.id) ?? '';
     _reflectionController = TextEditingController(text: savedAnswer);
+    _spicyBilderLaden();
+  }
+
+  /// Spicy-Bilder kommen aus dem Nur-R2-Paket. Fehlt es, lädt die App es still nach (Fehler bleiben still, die Lektion
+  /// funktioniert ohne Bild).
+  Future<void> _spicyBilderLaden() async {
+    final l = widget.lesson;
+    if (!l.spicy || l.bilder.isEmpty || !StorageService.spicyMode()) return;
+    if (Pakete.version(Pakete.kurseBilderSpicy) > 0) return;
+    try {
+      await Pakete.laden(Pakete.kurseBilderSpicy);
+    } catch (_) {
+      return;
+    }
+    if (mounted) setState(() {});
+  }
+
+  /// Stimmungsbilder der Spicy-Praxis-Lektionen: nur im Spicy-Modus und nur, wenn das Paket da ist.
+  Widget _spicyBilder(Lesson l) {
+    if (!l.spicy || l.bilder.isEmpty || !StorageService.spicyMode()) return const SizedBox.shrink();
+    final dateien = [
+      for (final b in l.bilder)
+        if (Pakete.datei(b) case final pfad?) (pfad: pfad, beschriftung: b.contains('_allein') ? t.kursBildAllein : t.kursBildZuZweit),
+    ];
+    if (dateien.isEmpty) return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: SizedBox(
+        height: 240,
+        child: ListView.separated(
+          scrollDirection: Axis.horizontal,
+          itemCount: dateien.length,
+          separatorBuilder: (_, __) => const SizedBox(width: 10),
+          itemBuilder: (_, i) => ClipRRect(
+            borderRadius: BorderRadius.circular(14),
+            child: AspectRatio(
+              aspectRatio: 2 / 3,
+              child: Stack(fit: StackFit.expand, children: [
+                Image.file(File(dateien[i].pfad), fit: BoxFit.cover),
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    color: Colors.black54,
+                    child: Text(dateien[i].beschriftung, style: const TextStyle(color: Colors.white, fontSize: 12)),
+                  ),
+                ),
+              ]),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -290,6 +348,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               ),
               const SizedBox(height: 16),
             ],
+            _spicyBilder(lesson),
 
             // Lesson Type & Duration
             Row(

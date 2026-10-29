@@ -177,6 +177,10 @@ class Lesson {
   final String reflectionQuestion;
   final String? image;
 
+  /// Spicy-Stimmungsbilder aus dem Nur-R2-Paket `kurse-bilder-spicy` (Pfade im Paket, zum Beispiel
+  /// `kurse/touch_w_s2_allein_a.webp`). Nur bei Spicy-Lektionen, nur im Spicy-Modus; fehlt das Paket, bleibt die Lektion ohne Bild.
+  final List<String> bilder;
+
   /// "giver": Text spricht die gebende Person an; Rollen wie „sie“ meinen dann immer das Gegenüber
   /// (wichtig für gleichgeschlechtliche Paare, siehe lib/services/personalize.dart).
   final String? perspective;
@@ -194,6 +198,7 @@ class Lesson {
     required this.content,
     required this.reflectionQuestion,
     this.image,
+    this.bilder = const [],
     this.perspective,
     this.spicy = false,
   });
@@ -211,6 +216,7 @@ class Lesson {
       content: json['content'] as String? ?? '',
       reflectionQuestion: json['reflection_question'] as String? ?? '',
       image: json['image'] as String?,
+      bilder: [for (final b in (json['bilder'] as List?) ?? const []) b as String],
       perspective: json['perspective'] as String?,
       spicy: json['spicy'] as bool? ?? false,
     );
@@ -226,6 +232,7 @@ class Lesson {
         'content': content,
         'reflection_question': reflectionQuestion,
         'image': image,
+        'bilder': bilder,
         'perspective': perspective,
         if (spicy) 'spicy': true,
       };

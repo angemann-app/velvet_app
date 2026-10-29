@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Squirting: Where the Structures Lie (Section)</title>
+  <desc>Schematic side section: bladder, urethra, Skene glands, vaginal front wall and clitoris</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140D1C"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <text x="400" y="34" font-family="sans-serif" font-size="24" font-weight="700" fill="#F1F5F9" text-anchor="middle">Squirting: Where the Structures Lie (Section)</text>
+  <text x="400" y="60" font-family="sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">schematic, position and size vary</text>
+  <g transform="translate(-90 0)">
+    <!-- hinten: Schenkel und Schwellkörper -->
+    <path d="M256 248 C282 220 346 230 366 262 C380 284 388 318 386 360" fill="none" stroke="#FB7185" stroke-width="7" stroke-linecap="round" stroke-dasharray="3 9" opacity="0.8"/>
+    <ellipse cx="392" cy="372" rx="26" ry="12" transform="rotate(-30 392 372)" fill="#FB7185" fill-opacity="0.35" stroke="#FB7185" stroke-width="2" stroke-dasharray="4 4"/>
+    <!-- Vagina -->
+    <path d="M370 345 L472 218 L528 246 L422 372 Z" fill="#FB7185" fill-opacity="0.16" stroke="#FB7185" stroke-opacity="0.8" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M370 345 L472 218" fill="none" stroke="#FBBF24" stroke-width="5" stroke-linecap="round"/>
+    <!-- Harnblase und Harnröhre -->
+    <ellipse cx="360" cy="160" rx="62" ry="44" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2.5"/>
+    <path d="M352 202 C348 250 338 292 332 338" fill="none" stroke="#38BDF8" stroke-width="11" stroke-linecap="round" opacity="0.9"/>
+    <!-- Skene-Drüsen -->
+    <circle cx="316" cy="298" r="7" fill="#A78BFA"/><circle cx="314" cy="318" r="7" fill="#A78BFA"/>
+    <!-- Klitoris: Körper und Eichel -->
+    <path d="M246 326 C238 300 240 272 256 248" fill="none" stroke="#FB7185" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="246" cy="336" r="11" fill="#F4A6B4" stroke="#FB7185" stroke-width="2.5"/>
+    <circle cx="360" cy="160" r="13" fill="#38BDF8"/><text x="360" y="166" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">1</text><circle cx="312" cy="258" r="13" fill="#38BDF8"/><text x="312" y="264" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">2</text><circle cx="288" cy="308" r="13" fill="#A78BFA"/><text x="288" y="314" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text><circle cx="246" cy="368" r="13" fill="#FB7185"/><text x="246" y="374" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text><circle cx="222" cy="288" r="13" fill="#FB7185"/><text x="222" y="294" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">5</text><circle cx="418" cy="262" r="13" fill="#FBBF24"/><text x="418" y="268" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">6</text><circle cx="446" cy="312" r="13" fill="#FB7185"/><text x="446" y="318" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">7</text>
+  </g>
+  <circle cx="470" cy="110" r="13" fill="#38BDF8"/><text x="470" y="116" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">1</text>
+  <text x="494" y="116" font-family="sans-serif" font-size="16" fill="#F1F5F9">Bladder</text>
+  <circle cx="470" cy="140" r="13" fill="#38BDF8"/><text x="470" y="146" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">2</text>
+  <text x="494" y="146" font-family="sans-serif" font-size="16" fill="#F1F5F9">Urethra</text>
+  <circle cx="470" cy="170" r="13" fill="#A78BFA"/><text x="470" y="176" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text>
+  <text x="494" y="176" font-family="sans-serif" font-size="16" fill="#F1F5F9">Skene glands beside the</text>
+  <text x="494" y="197" font-family="sans-serif" font-size="16" fill="#F1F5F9">lower end of the urethra</text>
+  <circle cx="470" cy="221" r="13" fill="#FB7185"/><text x="470" y="227" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text>
+  <text x="494" y="227" font-family="sans-serif" font-size="16" fill="#F1F5F9">Clitoris: glans (outside)</text>
+  <circle cx="470" cy="251" r="13" fill="#FB7185"/><text x="470" y="257" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">5</text>
+  <text x="494" y="257" font-family="sans-serif" font-size="16" fill="#F1F5F9">Clitoris inside: crura</text>
+  <text x="494" y="278" font-family="sans-serif" font-size="16" fill="#F1F5F9">and erectile tissue</text>
+  <circle cx="470" cy="302" r="13" fill="#FBBF24"/><text x="470" y="308" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">6</text>
+  <text x="494" y="308" font-family="sans-serif" font-size="16" fill="#F1F5F9">Front wall of the vagina</text>
+  <circle cx="470" cy="332" r="13" fill="#FB7185"/><text x="470" y="338" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">7</text>
+  <text x="494" y="338" font-family="sans-serif" font-size="16" fill="#F1F5F9">Vagina</text>
+  <rect x="40" y="450" width="720" height="66" rx="12" fill="#1E293B" fill-opacity="0.7" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="58" y="480" font-family="sans-serif" font-size="16" fill="#F1F5F9">The front wall and the clitoris are connected; whether a separate</text>
+  <text x="58" y="504" font-family="sans-serif" font-size="16" fill="#F1F5F9">“G-spot” exists is disputed.</text>
+</svg>
