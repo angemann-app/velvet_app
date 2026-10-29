@@ -72,6 +72,44 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
+### AG-21: Erklärende Körperzeichnungen im Stil einer technischen Bleistift-Studie (8 Bilder, mit Beschriftungsvorschlägen)
+
+**Branch:** `ag/21-koerperzeichnungen`
+**Hintergrund:** Der Nutzer hat mit dir ein Muster erzeugt (erwachsene Frau liegt auf der Seite, Bleistift, feine Schraffur, blasses Raster mit
+Maßlinien und dünnen Pfeilen, off-white, ohne Text) und möchte diesen Stil für **erklärende** Bilder in Lektionen. Genau diesen Stil und
+diese Qualität wieder verwenden. Nackt, wenn dein Filter es zulässt (Entscheidung des Nutzers); **bricht dein Filter ab, nicht umgehen, nicht
+entschärfen**, das Motiv in der Liste als „Filter, übersprungen“ vermerken und mit dem nächsten weitermachen.
+**Darf ändern:** nur neue Dateien `assets/images/zeichnung_<Lektions-ID>.webp` und `docs/kursbilder-liste-ag21.md`. Nichts anderes.
+**Vorher lesen:** nur die jeweilige Lektion in `assets/data/velvet_content.json` (Felder title, summary, content; **keine Spicy-Lektionen**, keine
+Kurse 26 und 27), damit die Beschriftung zum Text passt.
+
+**Stil-Prompt (Grundlage, pro Motiv das Motiv ersetzen):** „detailed pencil drawing, technical illustration style, natural adult body with soft
+shading on skin and muscle, faint blueprint grid in the background with scale markers and thin dimension lines, thin non-obstructive arrows
+pointing to areas of the body, off-white paper, graphite with soft rose accents, no text, no labels, <Motiv>“.
+**Regeln:** nur Erwachsene; **keine Ähnlichkeit mit einer echten Person**; **keine Maße, Zahlen, Buchstaben oder Beschriftung im Bild**; natürliche,
+unterschiedliche Körper (nicht nur schlank und jung); keine Nahaufnahme von Genitalien; ruhig und sachlich, nicht erotisch inszeniert. Format Querformat,
+etwa 1024 × 576, WebP, höchstens 150 KB. Gesichter dürfen erkennbar sein, aber nicht an eine bekannte Person erinnern.
+
+**Die acht Motive:**
+1. `anat_1` (Kurs 2, Erregung als Ganzkörper-Ereignis): erwachsene Frau liegt entspannt auf der Seite, ganze Gestalt (wie das Muster).
+2. `anat_3` (Kurs 2, Rücken, Bauch, Kniekehlen, Füße): erwachsener Mann liegt auf dem Bauch, Rückenansicht, ganze Gestalt.
+3. `beauty_1` (Kurs 3, Mythos vom perfekten Körper): **vier erwachsene Körper nebeneinander** stehend, Rückenansicht oder Seitenansicht, sehr
+   unterschiedlich (schlank, kurvig, athletisch, älter), ruhige Haltung.
+4. `touch_w_1` (Kurs 18, Gleichmäßigkeit): eine Frau liegt auf dem Bauch, die flache Hand eines Mannes ruht auf ihrem unteren Rücken, Rückenansicht,
+   beide ganz sichtbar.
+5. `touch_m_1` (Kurs 19, Offene Hand): ein Mann liegt auf dem Rücken, die offene, flache Hand einer Frau ruht auf seiner Brust, beide ganz sichtbar.
+6. `mass_1` (Kurs 20, Einer gibt, einer empfängt): ein Mann liegt auf dem Bauch auf einem Tuch, eine Frau kniet daneben und streicht mit beiden Händen
+   über seinen Rücken, beide ganz sichtbar.
+7. `pos_2` (Kurs 22, Positionen für Ausdauer): ein Paar liegt im Löffelchen auf der Seite, sein Arm um sie, seitliche Ansicht, beide ganz sichtbar.
+8. `self_1` (Kurs 8, Warum sich selbst erkunden): eine erwachsene Frau sitzt entspannt im Schneidersitz, eine Hand auf dem Bauch, eine auf der
+   Brust, Vorderansicht.
+
+**Liste** `docs/kursbilder-liste-ag21.md`: je Bild vier bis sechs **Beschriftungsvorschläge** für spätere Pfeile und Texte, jeweils mit deutschem und
+englischem Text (kurz, höchstens vier Wörter), dem **Zielpunkt** am Körper (x, y in Prozent der Bildbreite und -höhe) und einer **Textposition**
+(x, y in Prozent), die weder Körper noch Linien verdeckt. Die Beschriftungen beschreiben Zonen und Berührungsarten, **keine Zentimeter oder Maße**.
+**Prüfen:** Bilder ansehen (Anatomie, Hände, Figurenzahl), Liste vollständig; `flutter test` nicht nötig. Im Pull Request: Hinweis, dass die Bilder noch nicht
+eingebunden sind (das macht Claude Code, die Texte legt er als SVG darüber).
+
 ### AG-3: Texte für „Lust im Traum“ (an Claude Code abgegeben)
 
 Der Inhaltsfilter von Antigravity bricht diese Texte ab. Claude Code schreibt sie (lokal unter
