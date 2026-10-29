@@ -105,6 +105,51 @@ andere Sitzungen weitergeben, was nicht in der README steht.
 **Prüfen:** SVGs öffnen sich im Browser, Text ist lesbar und nicht abgeschnitten. `flutter test` nicht nötig, es
 ändert sich kein App-Code. In den Pull Request: Hinweis, dass alles nur zum Ansehen ist.
 
+### AG-14, AG-15, AG-16: Erklär-Diagramme der Kurse als SVG (Deutsch und Englisch), in drei Stufen
+
+Gemeinsam für alle drei Aufträge. **Zuerst AG-11 abarbeiten** (Probe „Toys“): Stil und Maße dort festlegen, dann hier in
+derselben Art weiterarbeiten. Ergibt AG-11, dass du kein brauchbares SVG zeichnen kannst, halte an und frage den Nutzer.
+
+**Vorher lesen:** `docs/konzepte/kursbilder.md` (Abschnitte 3 bis 5), `docs/kursbilder-bedarf.md` (die Tabelle je Lektion und die
+Zusammenfassung am Ende), `tools/generate_diagrams.py`, `assets/images/diagram_yoni_clock.svg` und `_en.svg` als Stilvorbild.
+**Welche Lektionen:** Zeilen der Tabelle mit „Bild hilft“ = **ja** und mit „optional“, deren Art **Diagramm** oder **Ablauf** ist
+(zusammen 39). Reihenfolge und Zuordnung zu den Aufträgen unten. Die drei „optional“-Zeilen der Art **Stimmungsbild** und alle
+Titelbilder macht der Nutzer lokal, nicht du. Die neun Lektionen mit Status „vorhanden“ bleiben unberührt.
+**Lektionen aus den Kursen 26 und 27 (Spicy) nicht anfassen, nicht lesen.**
+
+**Dateien je Lektion** (nur neu anlegen, nichts ändern): `assets/images/diagram_<Lektions-ID>.svg` und
+`assets/images/diagram_<Lektions-ID>_en.svg` (zum Beispiel `diagram_neuro_1.svg`, `diagram_neuro_1_en.svg`).
+Beide Dateien haben dieselbe Zeichnung, nur die Beschriftung unterscheidet sich.
+**Form:** `viewBox="0 0 800 600"`, Hintergrund `#140D1C` oder `#0F172A`, Akzent `#FB7185`, Text hell (`#F1F5F9`), Schrift
+`font-family="sans-serif"` (keine Webfonts), Schriftgröße mindestens 16 (bezogen auf 800 Pixel Breite), Text nicht abgeschnitten
+und nicht über Linien. Jede Datei höchstens 20 KB, ohne Skripte, ohne eingebettete Bilder, mit `<title>` und `<desc>`
+(Deutsch bzw. Englisch). **Inhalt:** schematisch und neutral (Pfeile, Kurven, Skalen, Waagen, Schnitte, Stufen), keine
+fotorealistischen Körper, keine Marken, keine Personen. Anatomische Schemata so zurückhaltend wie
+`assets/images/diagram_selbst_vulva.svg`.
+**Liste:** je Auftrag eine Datei `docs/kursbilder-liste-<Auftrag>.md` (zum Beispiel `docs/kursbilder-liste-ag14.md`) mit einer
+Zeile je Lektion: Lektions-ID, Dateien, Beschriftung deutsch, Beschriftung englisch, Anmerkung.
+**Darf ändern:** nur die neuen SVG-Dateien und die Listendatei des Auftrags. Nichts in `lib/`, `assets/data/`, `translations/`,
+`pubspec.yaml`. Die Einbindung in die Lektionen macht Claude Code danach.
+**Prüfen:** SVGs im Browser öffnen (Text lesbar, nichts abgeschnitten); je Lektion zwei Dateien; Liste vollständig.
+`flutter test` nicht nötig. Im Pull Request: Hinweis, dass die Bilder noch nicht eingebunden sind.
+**Filter:** Bricht dein Inhaltsfilter bei einer Lektion ab, **nicht umgehen**, die Lektion in der Liste vermerken
+(„Filter, übersprungen“) und weitermachen.
+**Nicht tun:** Spicy-Inhalte, Körperfotos oder körpernahe Illustrationen, Texte der Lektionen ändern, Bilder für
+andere Lektionen erzeugen, die nicht in der Tabelle stehen.
+
+**AG-14, Stufe 1 (hohe Priorität: Grundmodelle und Anatomie).** Branch `ag/14-diagramme-stufe1`. Lektionen: Kurs 1
+(`neuro_1`, `neuro_2`), Kurs 9 (`female_3`, `female_4`), Kurs 11 (`prost_1`, `prost_2`), Kurs 2 (`anat_5`); dazu die übrigen
+Zeilen dieser Kurse, die in der Tabelle „ja“ sind.
+
+**AG-15, Stufe 2 (hohe Priorität: Körpermechanik und Entlastung).** Branch `ag/15-diagramme-stufe2`. Lektionen: Kurs 7
+(`pelvic_1`, `pelvic_2`, `pelvic_3`), Kurs 5 (`pain_1`, `pain_2`, `pain_3`), Kurs 10 (`dopa_1`); dazu die übrigen
+„ja“-Zeilen dieser Kurse.
+
+**AG-16, Stufe 3 (mittlere Priorität: Paardynamik, Haltung und Technik).** Branch `ag/16-diagramme-stufe3`. Alle übrigen
+Zeilen mit „ja“ oder „optional“ (Art Diagramm oder Ablauf), die in Stufe 1 und 2 nicht vorkommen, in der Reihenfolge der
+Prioritätsspalte der Tabelle, darunter Kurs 17 (`couples_1`), Kurs 22 (`pos_3`), Kurs 19, Kurs 13, Kurs 21 und Kurs 4.
+Die Toys-Lektionen (`toys_2`, `toys_3`, `toys_4`) gehören zu AG-11 und werden hier nicht noch einmal gemacht.
+
 ### AG-3: Texte für „Lust im Traum“ (an Claude Code abgegeben)
 
 Der Inhaltsfilter von Antigravity bricht diese Texte ab. Claude Code schreibt sie (lokal unter
