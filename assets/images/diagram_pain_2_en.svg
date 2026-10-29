@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Erection and the Nervous System</title>
+  <desc>Vascular mechanics and autonomic nervous system: rest mode (inflow) vs. alarm mode (outflow)</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140D1C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="bowlGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FB7185" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E11D48" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <text x="400" y="38" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Erection and the Nervous System</text>
+  <text x="400" y="62" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">schematic, interplay of two autonomic modes</text>
+  <!-- Ruhemodus links -->
+  <g transform="translate(35, 90)">
+    <rect width="350" height="370" rx="14" fill="url(#card)" stroke="#38BDF8" stroke-width="1.8"/>
+    <text x="175" y="32" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#38BDF8">REST MODE (Parasympathetic)</text>
+    <text x="175" y="56" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#34D399">✓ Enables the Erection</text>
+
+    <!-- Grafik: Weite Arterie & gefüllter Schwellkörper -->
+    <g transform="translate(175, 140)">
+      <!-- Blutgefäß weit (Blau/Grün) -->
+      <path d="M-110 -25 C-40 -40 40 -40 110 -25 L110 25 C40 40 -40 40 -110 25 Z" fill="#38BDF8" fill-opacity="0.3" stroke="#38BDF8" stroke-width="2"/>
+      
+      <!-- Einstrompfeile dick -->
+      <path d="M-80 0 L60 0" stroke="#34D399" stroke-width="5" stroke-linecap="round"/>
+      <polygon points="0,-8 16,0 0,8" fill="#34D399" transform="translate(68 0)"/>
+      <text x="0" y="-32" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#F1F5F9">Vessels dilate (inflow)</text>
+      
+      <!-- Schwellkörper prall gefüllt -->
+      <rect x="-80" y="40" width="160" height="30" rx="8" fill="url(#bowlGrad)" stroke="#FB7185" stroke-width="1.5"/>
+      <text x="0" y="61" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#F1F5F9">Erectile tissue fills</text>
+    </g>
+
+    <!-- Liste Bedingungen -->
+    <rect x="18" y="248" width="314" height="106" rx="8" fill="#0F172A" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="274" font-family="sans-serif" font-size="16" font-weight="700" fill="#34D399">Requirements:</text>
+    <text x="30" y="298" font-family="sans-serif" font-size="16" fill="#F1F5F9">• Physical ease and unhurried time</text>
+    <text x="30" y="322" font-family="sans-serif" font-size="16" fill="#F1F5F9">• Sensory touch without goal or test</text>
+    <text x="30" y="344" font-family="sans-serif" font-size="16" fill="#94A3B8">• Safety: No performance expected</text>
+  </g>
+  <!-- Alarmmodus rechts -->
+  <g transform="translate(415, 90)">
+    <rect width="350" height="370" rx="14" fill="url(#card)" stroke="#FB7185" stroke-width="1.8"/>
+    <text x="175" y="32" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#FB7185">ALARM MODE (Sympathetic)</text>
+    <text x="175" y="56" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#FBBF24">⚠ Blocks or ends erection</text>
+
+    <!-- Grafik: Enge Arterie & abfließendes Blut -->
+    <g transform="translate(175, 140)">
+      <!-- Blutgefäß eng verengt -->
+      <path d="M-110 -10 C-40 -12 40 -12 110 -10 L110 10 C40 12 -40 12 -110 10 Z" fill="#7F1D1D" fill-opacity="0.5" stroke="#FB7185" stroke-width="2"/>
+      
+      <!-- Engpass Pfeile von oben/unten (Kompression) -->
+      <path d="M0 -30 L0 -16" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="0,-5 10,0 0,5" fill="#FBBF24" transform="translate(0 -13) rotate(90)"/>
+      <path d="M0 30 L0 16" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="0,-5 10,0 0,5" fill="#FBBF24" transform="translate(0 13) rotate(-90)"/>
+      <text x="0" y="-36" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#FBBF24">Vessels constrict (spasm)</text>
+      
+      <!-- Schwellkörper schlaff -->
+      <rect x="-80" y="44" width="160" height="18" rx="6" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+      <text x="0" y="59" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">Blood does not enter / drains</text>
+    </g>
+
+    <!-- Liste Auslöser -->
+    <rect x="18" y="248" width="314" height="106" rx="8" fill="#0F172A" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="274" font-family="sans-serif" font-size="16" font-weight="700" fill="#FB7185">Typical Triggers:</text>
+    <text x="30" y="298" font-family="sans-serif" font-size="16" fill="#F1F5F9">• Performance anxiety &amp; worry</text>
+    <text x="30" y="322" font-family="sans-serif" font-size="16" fill="#F1F5F9">• Spectatoring: monitoring oneself</text>
+    <text x="30" y="344" font-family="sans-serif" font-size="16" fill="#94A3B8">• Cold, rush or cognitive tension</text>
+  </g>
+  <rect x="35" y="480" width="730" height="76" rx="12" fill="#1E293B" fill-opacity="0.75" stroke="#FBBF24" stroke-width="1.5"/>
+  <text x="55" y="510" font-family="sans-serif" font-size="16" fill="#F1F5F9">An erection cannot be forced through will; internal pressure triggers the alarm mode.</text>
+  <text x="55" y="536" font-family="sans-serif" font-size="16" fill="#F1F5F9">The solution: drop performance goals, slow down, and return to sensory connection.</text>
+</svg>

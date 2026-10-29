@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Passive Opening of Pelvis &amp; Hips</title>
+  <desc>Two postures for muscular relief of the pelvic floor, glutes and hip flexors</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140D1C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="bowlGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FB7185" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E11D48" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <text x="400" y="38" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Passive Opening of Pelvis &amp; Hips</text>
+  <text x="400" y="62" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">schematic, postures for muscular relief</text>
+  <!-- Haltung 1: Schmetterling links -->
+  <g transform="translate(35, 92)">
+    <rect width="350" height="365" rx="14" fill="url(#card)" stroke="#FBBF24" stroke-width="1.8"/>
+    <text x="175" y="32" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#FBBF24">Pose 1: Reclined Butterfly</text>
+    <text x="175" y="56" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">Supta Baddha Konasana</text>
+
+    <!-- Grafik: Rückenlage + angewinkelte Knie nach außen -->
+    <g transform="translate(175, 170)">
+      <!-- Matte / Bodenlinie -->
+      <line x1="-130" y1="65" x2="130" y2="65" stroke="#475569" stroke-width="2"/>
+      
+      <!-- Kissen unter Kopf/Rücken -->
+      <rect x="-110" y="35" width="55" height="28" rx="8" fill="#334155"/>
+      <circle cx="-85" cy="22" r="14" fill="#64748B"/> <!-- Kopf -->
+      <path d="-70 38 L-25 45 L0 48" stroke="#94A3B8" stroke-width="6" fill="none" stroke-linecap="round"/> <!-- Rumpf -->
+      
+      <!-- Becken -->
+      <circle cx="0" cy="48" r="10" fill="#FBBF24"/>
+
+      <!-- Beine nach außen gespreizt, Fußsohlen zusammen -->
+      <path d="M0 48 L-20 20 L-5 60" stroke="#FB7185" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 48 L20 20 L5 60" stroke="#FB7185" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Dehnungspfeile Adduktoren -->
+      <path d="M-25 22 L-48 22" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="0,-5 10,0 0,5" fill="#FBBF24" transform="translate(-52 22) rotate(180)"/>
+      <path d="M25 22 L48 22" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="0,-5 10,0 0,5" fill="#FBBF24" transform="translate(52 22) rotate(0)"/>
+      
+      <!-- Kissen unter Knien angedeutet -->
+      <ellipse cx="-35" cy="35" rx="16" ry="8" fill="#334155" opacity="0.7"/>
+      <ellipse cx="35" cy="35" rx="16" ry="8" fill="#334155" opacity="0.7"/>
+    </g>
+
+    <!-- Beschreibung -->
+    <rect x="18" y="260" width="314" height="88" rx="8" fill="#0F172A" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="286" font-family="sans-serif" font-size="16" fill="#F1F5F9">• Soles of the feet gently touch</text>
+    <text x="30" y="310" font-family="sans-serif" font-size="16" fill="#F1F5F9">• Cushions support outer thighs</text>
+    <text x="30" y="334" font-family="sans-serif" font-size="16" fill="#94A3B8">• Gravity opens without muscular force</text>
+  </g>
+  <!-- Haltung 2: Tiefe Hocke rechts -->
+  <g transform="translate(415, 92)">
+    <rect width="350" height="365" rx="14" fill="url(#card)" stroke="#38BDF8" stroke-width="1.8"/>
+    <text x="175" y="32" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#38BDF8">Pose 2: The Deep Squat</text>
+    <text x="175" y="56" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">Malasana / Beckenöffner</text>
+
+    <!-- Grafik: Tiefe Hocke -->
+    <g transform="translate(175, 170)">
+      <!-- Bodenlinie -->
+      <line x1="-130" y1="65" x2="130" y2="65" stroke="#475569" stroke-width="2"/>
+      
+      <!-- Kopf & aufrechter Oberkörper -->
+      <circle cx="0" cy="-40" r="14" fill="#64748B"/>
+      <path d="M0 -24 L0 25" stroke="#94A3B8" stroke-width="6" stroke-linecap="round"/>
+      
+      <!-- Hände vor Brust & Ellenbogen öffnen Knie -->
+      <path d="M-22 5 L0 -2 L22 5" stroke="#94A3B8" stroke-width="4" fill="none" stroke-linecap="round"/>
+      
+      <!-- Tiefe Kniebeuge: Oberschenkel nach außen, Schienbeine nach unten -->
+      <path d="M0 25 L-40 0 L-32 62" stroke="#38BDF8" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M0 25 L40 0 L32 62" stroke="#38BDF8" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Pfeile für Weitung des Damms nach unten -->
+      <path d="M0 32 L0 52" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="0,-5 10,0 0,5" fill="#34D399" transform="translate(0 56) rotate(90)"/>
+      <path d="M-15 42 L-32 42" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="0,-5 10,0 0,5" fill="#38BDF8" transform="translate(-36 42) rotate(180)"/>
+      <path d="M15 42 L32 42" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="0,-5 10,0 0,5" fill="#38BDF8" transform="translate(36 42) rotate(0)"/>
+    </g>
+
+    <!-- Beschreibung -->
+    <rect x="18" y="260" width="314" height="88" rx="8" fill="#0F172A" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+    <text x="30" y="286" font-family="sans-serif" font-size="16" fill="#F1F5F9">• Wide stance, heels firmly grounded</text>
+    <text x="30" y="310" font-family="sans-serif" font-size="16" fill="#F1F5F9">• Tailbone releases toward the floor</text>
+    <text x="30" y="334" font-family="sans-serif" font-size="16" fill="#94A3B8">• Opens perineum and sitz bones</text>
+  </g>
+  <rect x="35" y="480" width="730" height="76" rx="12" fill="#1E293B" fill-opacity="0.75" stroke="#34D399" stroke-width="1.5"/>
+  <text x="55" y="510" font-family="sans-serif" font-size="16" fill="#F1F5F9">Hip flexors and glutes endure chronic tension from prolonged sitting.</text>
+  <text x="55" y="536" font-family="sans-serif" font-size="16" fill="#F1F5F9">Passively opening the hips releases that mechanical drag from the pelvic floor.</text>
+</svg>
