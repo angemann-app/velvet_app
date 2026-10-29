@@ -89,7 +89,11 @@ Das ist ein **Probeauftrag**. Er soll klären, ob und wie gut Antigravity Grafik
 2. **Vier Motive** (neutral, ohne Körper, ohne Marken; ruhiger Stil wie die vorhandenen Diagramme, dunkle Töne
    `#140D1C`/`#0F172A`, Akzent `#FB7185`):
    a. `toys_uebersicht`: stilisierte, neutrale Silhouetten der Toy-Arten (Vibratoren, Massagestab, Ringe, Kugeln,
-      Gleitmittel) als Überblick, ohne Körper.
+      Gleitmittel) als Überblick, ohne Körper. **Wichtig (Wunsch des Nutzers, 29.10.2026):** Zeige verschiedene Arten
+      von Toys **für Männer und für Frauen**, in zwei deutlich getrennten Gruppen, jeweils als Silhouette oder
+      Produktform ohne Körper (zum Beispiel für Frauen: Auflege-, Druckwellen-, Stab- und Kugel-Formen; für Männer:
+      Ringe, Masturbatoren-Formen, Prostata-Stimulatoren; für alle: Gleitmittel). Das Bild ist zugleich der Toy-Katalog
+      der Lektion `toys_2`.
    b. `toys_material`: Vergleich der Materialien (Silikon, Glas, Metall, ABS) mit je einem Pflegehinweis.
    c. `toys_sicherheit`: Ampel- oder Merkbild „Wo es heikel wird“ (Hygiene, passendes Gleitmittel, Stopp-Signal).
    d. `toys_titel`: Titelbild für Kurs 25 in Stimmung der anderen Titelbilder (840 × 300).
