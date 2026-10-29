@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Der Teufelskreis der Erwartungsangst</title>
+  <desc>Fünf Stationen im Kreis: intime Situation, Erinnerung, Anspannung, Kontrolle und Bestätigung. Ein Ausstieg führt über das Prüfen der automatischen Gedanken.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrowP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FB7185"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34D399"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="370" cy="330" rx="330" ry="240" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Der Teufelskreis der Erwartungsangst</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Ein Kreis, der sich selbst bestätigt</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Vom einzelnen Erlebnis zur Prüfungsfrage vor dem Start</text>
+
+  <!-- Kreis mit fünf Stationen -->
+  <g>
+    <circle cx="350" cy="195" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="350" y="169" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">1 · Start</text>
+    <text x="350" y="195" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Intime</text>
+    <text x="350" y="219" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Situation</text>
+
+    <circle cx="488" cy="295" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="488" y="269" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">2 · Angst</text>
+    <text x="488" y="295" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Erinnerung</text>
+    <text x="488" y="319" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Anspannung</text>
+
+    <circle cx="435" cy="457" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="435" y="431" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">3 · Kontrolle</text>
+    <text x="435" y="457" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Körper</text>
+    <text x="435" y="481" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">beobachten</text>
+
+    <circle cx="265" cy="457" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="265" y="431" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">4 · Bremse</text>
+    <text x="265" y="457" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Funktion</text>
+    <text x="265" y="481" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">lässt nach</text>
+
+    <circle cx="212" cy="295" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="212" y="269" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">5 · Beweis</text>
+    <text x="212" y="295" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Angst</text>
+    <text x="212" y="319" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">bestätigt</text>
+  </g>
+
+  <!-- Pfeile im Kreis -->
+  <g stroke="#FB7185" stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M399 230 L439 260" marker-end="url(#arrowP)"/>
+    <path d="M469 352 L454 400" marker-end="url(#arrowP)"/>
+    <path d="M375 457 L325 457" marker-end="url(#arrowP)"/>
+    <path d="M247 400 L231 352" marker-end="url(#arrowP)"/>
+    <path d="M261 260 L301 230" marker-end="url(#arrowP)"/>
+  </g>
+
+  <text x="350" y="340" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="22" font-weight="700">Teufelskreis</text>
+  <text x="350" y="366" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">fünf Schritte</text>
+
+  <!-- Ausstieg -->
+  <path d="M548 295 L618 295" stroke="#34D399" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrowG)"/>
+  <rect x="620" y="235" width="160" height="120" rx="14" fill="#14251F" stroke="#34D399" stroke-width="2"/>
+  <text x="700" y="262" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="18" font-weight="700">Ausstieg</text>
+  <text x="700" y="290" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Gedanken</text>
+  <text x="700" y="312" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">prüfen</text>
+  <text x="700" y="334" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">neu bewerten</text>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Die Angst bestätigt sich, weil der Körper misstrauisch geprüft wird.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Ausstieg: den automatischen Gedanken prüfen und freundlicher formulieren.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Nicht der Körper ist das Problem, sondern die Bewertung.</text>
+</svg>

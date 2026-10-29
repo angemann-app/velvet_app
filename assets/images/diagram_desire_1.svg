@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Kein Defekt: Lust ist selten gleich verteilt</title>
+  <desc>Zwei Modelle im Vergleich: Reaktive Lust entsteht im Kreis über Nähe, Erregung und Verlangen. Das lineare Trieb-Modell führt von Verlangen über Erregung zum Höhepunkt.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrowP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FB7185"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34D399"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="400" cy="330" rx="350" ry="240" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Kein Defekt: Lust ist selten gleich verteilt</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Reaktive Lust im Kreis, spontane Lust in der Linie</text>
+  <text x="400" y="118" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Unterschiedlich viel Lust ist der Normalfall.</text>
+
+  <!-- Reaktive Lust -->
+  <rect x="40" y="145" width="340" height="345" rx="18" fill="#14251F" stroke="#2F4A3F" stroke-width="2"/>
+  <text x="210" y="177" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="20" font-weight="700">Reaktive Lust</text>
+  <text x="210" y="200" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Nähe kommt zuerst</text>
+
+  <circle cx="210" cy="262" r="50" fill="#1C1327" stroke="#34D399" stroke-width="2.5"/>
+  <text x="210" y="255" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">Nähe</text>
+  <text x="210" y="281" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Zuwendung</text>
+
+  <circle cx="298" cy="394" r="50" fill="#1C1327" stroke="#34D399" stroke-width="2.5"/>
+  <text x="298" y="387" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">Erregung</text>
+  <text x="298" y="413" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">spürbar</text>
+
+  <circle cx="122" cy="394" r="50" fill="#1C1327" stroke="#34D399" stroke-width="2.5"/>
+  <text x="122" y="387" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">Verlangen</text>
+  <text x="122" y="413" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">entsteht</text>
+
+  <g stroke="#34D399" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M238 304 L270 352" marker-end="url(#arrowG)"/>
+    <path d="M248 394 L172 394" marker-end="url(#arrowG)"/>
+    <path d="M150 352 L182 304" marker-end="url(#arrowG)"/>
+  </g>
+
+  <text x="210" y="340" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">reaktive</text>
+  <text x="210" y="364" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">Lust</text>
+
+  <!-- Trieb-Modell -->
+  <rect x="420" y="145" width="340" height="345" rx="18" fill="#241A31" stroke="#3B2A4A" stroke-width="2"/>
+  <text x="590" y="177" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Trieb-Modell</text>
+  <text x="590" y="200" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Verlangen kommt zuerst</text>
+
+  <rect x="490" y="220" width="200" height="52" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2"/>
+  <text x="590" y="254" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="18" font-weight="700">Verlangen</text>
+
+  <rect x="490" y="310" width="200" height="52" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2"/>
+  <text x="590" y="344" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="18" font-weight="700">Erregung</text>
+
+  <rect x="490" y="400" width="200" height="52" rx="12" fill="#1C1327" stroke="#FB7185" stroke-width="2"/>
+  <text x="590" y="434" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="18" font-weight="700">Höhepunkt</text>
+
+  <g stroke="#FB7185" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M590 272 L590 308" marker-end="url(#arrowP)"/>
+    <path d="M590 362 L590 398" marker-end="url(#arrowP)"/>
+  </g>
+  <text x="590" y="478" text-anchor="middle" fill="#64748B" font-family="sans-serif" font-size="16">Ende</text>
+
+  <circle cx="400" cy="350" r="18" fill="#140D1C" stroke="#334155" stroke-width="2"/>
+  <text x="400" y="356" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">vs</text>
+
+  <text x="400" y="536" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Reaktive Lust beginnt mit Nähe, nicht mit Verlangen.</text>
+  <text x="400" y="562" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Das lineare Modell passt für spontane Lust – viele erleben sie anders.</text>
+  <text x="400" y="588" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Wer reaktiv fühlt, braucht einen guten Einstieg, keinen Vorwurf.</text>
+</svg>

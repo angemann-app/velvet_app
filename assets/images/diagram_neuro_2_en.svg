@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>The Circle of Anticipatory Anxiety</title>
+  <desc>Five stations in a circle: intimate situation, memory, tension, checking and confirmation. The way out leads through examining automatic thoughts.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrowP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FB7185"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34D399"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="370" cy="330" rx="330" ry="240" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">The Circle of Anticipatory Anxiety</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">A circle that keeps confirming itself</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">From one experience to the question before the start</text>
+
+  <!-- Circle with five stations -->
+  <g>
+    <circle cx="350" cy="195" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="350" y="169" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">1 · Start</text>
+    <text x="350" y="195" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Intimate</text>
+    <text x="350" y="219" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">situation</text>
+
+    <circle cx="488" cy="295" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="488" y="269" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">2 · Fear</text>
+    <text x="488" y="295" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Memory</text>
+    <text x="488" y="319" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">tension</text>
+
+    <circle cx="435" cy="457" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="435" y="431" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">3 · Checking</text>
+    <text x="435" y="457" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Watching</text>
+    <text x="435" y="481" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">the body</text>
+
+    <circle cx="265" cy="457" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="265" y="431" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">4 · Brake</text>
+    <text x="265" y="457" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Function</text>
+    <text x="265" y="481" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">fades</text>
+
+    <circle cx="212" cy="295" r="60" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <text x="212" y="269" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">5 · Proof</text>
+    <text x="212" y="295" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Fear</text>
+    <text x="212" y="319" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">confirmed</text>
+  </g>
+
+  <!-- Arrows around the circle -->
+  <g stroke="#FB7185" stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M399 230 L439 260" marker-end="url(#arrowP)"/>
+    <path d="M469 352 L454 400" marker-end="url(#arrowP)"/>
+    <path d="M375 457 L325 457" marker-end="url(#arrowP)"/>
+    <path d="M247 400 L231 352" marker-end="url(#arrowP)"/>
+    <path d="M261 260 L301 230" marker-end="url(#arrowP)"/>
+  </g>
+
+  <text x="350" y="340" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="22" font-weight="700">Vicious circle</text>
+  <text x="350" y="366" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">five steps</text>
+
+  <!-- Way out -->
+  <path d="M548 295 L618 295" stroke="#34D399" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrowG)"/>
+  <rect x="620" y="235" width="160" height="120" rx="14" fill="#14251F" stroke="#34D399" stroke-width="2"/>
+  <text x="700" y="262" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="18" font-weight="700">Way out</text>
+  <text x="700" y="290" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Check the</text>
+  <text x="700" y="312" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">thought</text>
+  <text x="700" y="334" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">reframe it</text>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">The fear confirms itself because the body is watched with suspicion.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Way out: examine the automatic thought and phrase it more kindly.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">The body is not the problem – the judgement is.</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Anspannen und Öffnen: zwei Bewegungen</title>
+  <desc>Kurvendiagramm einer Kontraktion: Die Anspannung steigt kurz an, danach folgt eine deutlich längere Entspannungs- und Öffnungsphase. Waagerecht verläuft die Zeit, senkrecht die Spannung.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34D399"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="410" cy="320" rx="350" ry="230" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Anspannen und Öffnen: zwei Bewegungen</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Kurvendiagramm einer Kontraktion</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Waagerecht die Zeit, senkrecht die Spannung</text>
+
+  <!-- Achsen -->
+  <line x1="95" y1="195" x2="95" y2="410" stroke="#64748B" stroke-width="2"/>
+  <line x1="95" y1="410" x2="730" y2="410" stroke="#64748B" stroke-width="2"/>
+  <line x1="95" y1="300" x2="720" y2="300" stroke="#334155" stroke-width="1.5" stroke-dasharray="5 7"/>
+
+  <text x="82" y="205" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">hoch</text>
+  <text x="82" y="418" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">0</text>
+  <text x="55" y="300" transform="rotate(-90 55 300)" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="18">Spannung</text>
+  <text x="720" y="468" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="18">Zeit →</text>
+
+  <!-- Kurve -->
+  <path d="M 110 405 C 150 402 190 295 225 252 C 238 236 252 228 266 234 C 300 250 335 300 375 342 C 425 388 485 402 555 406 C 615 409 670 409 720 408" fill="none" stroke="#FB7185" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="250" cy="231" r="6" fill="#FB7185"/>
+
+  <text x="250" y="208" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="17" font-weight="700">kurz anspannen</text>
+
+  <!-- Lange Phase -->
+  <text x="500" y="270" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="18" font-weight="700">lange entspannen &amp; öffnen</text>
+  <text x="610" y="356" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="17">nachgeben</text>
+  <path d="M610 366 L610 400" stroke="#34D399" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowG)"/>
+
+  <!-- Phasenbänder -->
+  <rect x="110" y="414" width="142" height="28" rx="6" fill="#FB7185" opacity="0.18"/>
+  <rect x="252" y="414" width="468" height="28" rx="6" fill="#34D399" opacity="0.18"/>
+  <text x="181" y="434" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">Anspannen</text>
+  <text x="486" y="434" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="16" font-weight="700">Entspannen &amp; Öffnen</text>
+
+  <text x="400" y="520" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Anspannen ist kurz, Entspannen dauert länger.</text>
+  <text x="400" y="546" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Die Öffnung ist eine eigene Bewegung: nachgeben statt pressen.</text>
+  <text x="400" y="572" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="18">Üben: anspannen, vollständig loslassen, dann weit werden.</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Der Teufelskreis aus Drängen und Ausweichen</title>
+  <desc>Vier Stationen im Kreis: Initiative, Druckempfinden, Rückzug und Frustration. Ein Ausstiegsweg führt über Zärtlichkeit ohne Sex und ein freundliches Nein.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrowP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FB7185"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34D399"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="350" cy="320" rx="330" ry="230" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="30" font-weight="700">Der Teufelskreis aus Drängen und Ausweichen</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Initiative, Druck, Rückzug, Frustration</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Zwei liebevolle Menschen nehmen sich die Lust</text>
+
+  <!-- Vier Stationen -->
+  <g>
+    <circle cx="350" cy="192" r="64" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <circle cx="350" cy="154" r="13" fill="#FB7185"/>
+    <text x="350" y="159" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">1</text>
+    <text x="350" y="196" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="17" font-weight="700">Initiative</text>
+    <text x="350" y="220" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">fragt an</text>
+
+    <circle cx="498" cy="320" r="64" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <circle cx="498" cy="282" r="13" fill="#FB7185"/>
+    <text x="498" y="287" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">2</text>
+    <text x="498" y="324" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="17" font-weight="700">Druck</text>
+    <text x="498" y="348" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">spürbar</text>
+
+    <circle cx="350" cy="448" r="64" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <circle cx="350" cy="410" r="13" fill="#FB7185"/>
+    <text x="350" y="415" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">3</text>
+    <text x="350" y="452" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="17" font-weight="700">Rückzug</text>
+    <text x="350" y="476" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Abstand</text>
+
+    <circle cx="202" cy="320" r="64" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+    <circle cx="202" cy="282" r="13" fill="#FB7185"/>
+    <text x="202" y="287" text-anchor="middle" fill="#140D1C" font-family="sans-serif" font-size="16" font-weight="700">4</text>
+    <text x="202" y="324" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="17" font-weight="700">Frust</text>
+    <text x="202" y="348" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">abgelehnt</text>
+  </g>
+
+  <!-- Pfeile im Kreis -->
+  <g stroke="#FB7185" stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M398 234 L450 278" marker-end="url(#arrowP)"/>
+    <path d="M450 362 L398 406" marker-end="url(#arrowP)"/>
+    <path d="M302 406 L250 362" marker-end="url(#arrowP)"/>
+    <path d="M250 278 L302 234" marker-end="url(#arrowP)"/>
+  </g>
+
+  <text x="350" y="312" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="22" font-weight="700">Karussell</text>
+  <text x="350" y="338" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">ohne Ausgang</text>
+
+  <!-- Ausstieg -->
+  <path d="M562 320 L618 320" stroke="#34D399" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrowG)"/>
+  <rect x="620" y="248" width="160" height="154" rx="14" fill="#14251F" stroke="#34D399" stroke-width="2"/>
+  <text x="700" y="278" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="18" font-weight="700">Ausstieg</text>
+  <text x="700" y="306" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Zärtlichkeit</text>
+  <text x="700" y="328" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">ohne Sex</text>
+  <text x="700" y="356" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">freundliches</text>
+  <text x="700" y="378" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Nein</text>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Beide handeln aus guten Gründen – und beide verlieren Nähe.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Der eine sucht Bestätigung, der andere Schutz vor Druck.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Ausstieg: Zärtlichkeit ohne Sex und ein freundliches Nein.</text>
+</svg>
