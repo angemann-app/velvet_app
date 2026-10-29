@@ -72,6 +72,30 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
+### AG-17: Hörprüfung von vier englischen Aufnahmen der Reihe „Innenansichten“ (nur Bericht)
+
+**Kein Branch, kein Pull Request, kein Commit.** Wie AG-13, aber für die **englischen** Aufnahmen. Ausnahme von der Sperre oben,
+mit ausdrücklichem Einverständnis des Nutzers: Du darfst aus `C:\TOOLS\velvet-inhalte\reihe\audio_en\` nur die vier unten
+genannten Dateien **anhören (lesen)** und den Bericht `C:\TOOLS\velvet-inhalte\reihe\pruefung_ag_en.md` anlegen. Sonst
+nichts dort anfassen, nichts kopieren oder in das Repository bringen, keinen Text der Aufnahmen im Bericht abschreiben.
+**Vorher lesen:** `docs/konzepte/lust-audioreihe.md` (Abschnitte zu Stimme und Ton), `tools/reihe_ausdruck.py` (nur lesen).
+
+Die vier Dateien:
+1. `victoria_zwei_frauen_spicy_a_climax.opus`
+2. `martin_zwei_maenner_spicy_b_building_desire.opus`
+3. `martin_im_eigenen_koerper_soft_mann_opening.opus`
+4. `martin_der_andere_koerper_spicy_mann_other_body.opus`
+
+Bewerte je Datei kurz: **Aussprache** (falsch gesprochene oder falsch betonte englische Wörter, mit Zeitmarke und Wort, ohne den
+Satz zu zitieren; besonders Fremdwörter, Eigennamen, Obst und Kräuter wie apricot, rosemary, marzipan, Anatomiebegriffe),
+**Grundatmosphäre** (ruhig, warm, nah; kippt sie ins Flache oder Hastige?), **Sprechgeschwindigkeit**, **Pausenführung**,
+**Auffälliges** (Knackser, abgeschnittene Enden, Lautstärkesprünge). Am Ende eine Gesamteinschätzung (drei Sätze) und eine
+Liste von Wörtern, die in das Lexikon sollten (nur Vorschlag, nicht eintragen; das englische Lexikon liegt in
+`tools/aussprache.json` und `tools/generate_audio_en.py`).
+**Nicht tun:** Aufnahmen neu erzeugen, `tools/` oder `lib/` ändern, Texte ändern, andere Dateien anhören. Bricht dein Inhaltsfilter
+ab: nicht umgehen, im Bericht vermerken.
+**Prüfen:** nur der Bericht; Meldung an den Nutzer, sobald er liegt.
+
 ### AG-11: Probe Kursbilder, Pilotkurs „Toys“ (Normalfassung)
 
 **Branch:** `ag/11-kursbilder-probe`
