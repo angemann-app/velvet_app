@@ -790,3 +790,51 @@ msgstr ""
 msgctxt "news:52#0.text"
 msgid "Hast du die Aufnahmen der Innenansichten schon geladen, bietet die Reihe jetzt „Aktualisieren“ an: Dann kommen die vier neuen Folgen und die Szenenbilder dazu."
 msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: Two wishes from the community
+msgctxt "news:53#0.titel"
+msgid "Zwei Wünsche aus der Community"
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: New lessons on squirting and the cervix: first the knowledge, what is established and what stays open, and for adults in Spicy mode the practice, separate for alone and together. With audio.
+msgctxt "news:53#0.text"
+msgid "Neue Lektionen zu Squirting und zum Gebärmutterhals: erst das Wissen, was belegt ist und was offen bleibt, und für Erwachsene im Spicy-Modus die Praxis, getrennt für allein und zu zweit. Mit Aufnahme."
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: More pictures in the courses
+msgctxt "news:53#1.titel"
+msgid "Mehr Bilder in den Kursen"
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: Over 40 lessons now have a diagram that explains something: anatomy, pelvic floor, cycle, positions, toys and more, in German and English. Tap to enlarge.
+msgctxt "news:53#1.text"
+msgid "Über 40 Lektionen haben jetzt ein Diagramm, das etwas erklärt: Anatomie, Beckenboden, Zyklus, Positionen, Toys und mehr, auf Deutsch und Englisch. Zum Vergrößern antippen."
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: Pictures in the practice lessons
+msgctxt "news:53#2.titel"
+msgid "Bilder in den Praxis-Lektionen"
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: The two new Spicy practice lessons show calm mood pictures, for alone and for together. They are downloaded once and only visible in Spicy mode.
+msgctxt "news:53#2.text"
+msgid "Die beiden neuen Spicy-Praxis-Lektionen zeigen ruhige Stimmungsbilder, für allein und für zu zweit. Sie werden einmal geladen und sind nur im Spicy-Modus sichtbar."
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: Inner views in English
+msgctxt "news:53#3.titel"
+msgid "Innenansichten auch auf Englisch"
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: The four new audio stories are now available in English as well.
+msgctxt "news:53#3.text"
+msgid "Die vier neuen Hörgeschichten gibt es jetzt auch auf Englisch."
+msgstr ""

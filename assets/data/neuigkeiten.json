@@ -487,6 +487,32 @@
           "text": "Hast du die Aufnahmen der Innenansichten schon geladen, bietet die Reihe jetzt „Aktualisieren“ an: Dann kommen die vier neuen Folgen und die Szenenbilder dazu."
         }
       ]
+    },
+    {
+      "build": 53,
+      "version": "4.16.0-beta.1",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Zwei Wünsche aus der Community",
+          "text": "Neue Lektionen zu Squirting und zum Gebärmutterhals: erst das Wissen, was belegt ist und was offen bleibt, und für Erwachsene im Spicy-Modus die Praxis, getrennt für allein und zu zweit. Mit Aufnahme."
+        },
+        {
+          "icon": "school",
+          "titel": "Mehr Bilder in den Kursen",
+          "text": "Über 40 Lektionen haben jetzt ein Diagramm, das etwas erklärt: Anatomie, Beckenboden, Zyklus, Positionen, Toys und mehr, auf Deutsch und Englisch. Zum Vergrößern antippen."
+        },
+        {
+          "icon": "spa",
+          "titel": "Bilder in den Praxis-Lektionen",
+          "text": "Die beiden neuen Spicy-Praxis-Lektionen zeigen ruhige Stimmungsbilder, für allein und für zu zweit. Sie werden einmal geladen und sind nur im Spicy-Modus sichtbar."
+        },
+        {
+          "icon": "record_voice_over",
+          "titel": "Innenansichten auch auf Englisch",
+          "text": "Die vier neuen Hörgeschichten gibt es jetzt auch auf Englisch."
+        }
+      ]
     }
   ]
 }

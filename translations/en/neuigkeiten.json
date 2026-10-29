@@ -487,6 +487,32 @@
           "text": "If you already downloaded the Inner views recordings, the series now offers “Update”: that brings the four new episodes and the scene pictures."
         }
       ]
+    },
+    {
+      "build": 53,
+      "version": "4.16.0-beta.1",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Two wishes from the community",
+          "text": "New lessons on squirting and the cervix: first the knowledge, what is established and what stays open, and for adults in Spicy mode the practice, separate for alone and together. With audio."
+        },
+        {
+          "icon": "school",
+          "titel": "More pictures in the courses",
+          "text": "Over 40 lessons now have a diagram that explains something: anatomy, pelvic floor, cycle, positions, toys and more, in German and English. Tap to enlarge."
+        },
+        {
+          "icon": "spa",
+          "titel": "Pictures in the practice lessons",
+          "text": "The two new Spicy practice lessons show calm mood pictures, for alone and for together. They are downloaded once and only visible in Spicy mode."
+        },
+        {
+          "icon": "record_voice_over",
+          "titel": "Inner views in English",
+          "text": "The four new audio stories are now available in English as well."
+        }
+      ]
     }
   ],
   "_source": {
@@ -516,6 +542,7 @@
     "news:49": "9bfe371fc494e8b4",
     "news:50": "a3b0641866eea6b1",
     "news:51": "3e09b78b7e89959b",
-    "news:52": "ca9ee432b7e4c53d"
+    "news:52": "ca9ee432b7e4c53d",
+    "news:53": "2510e3c536fcbb29"
   }
 }
