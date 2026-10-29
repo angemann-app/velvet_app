@@ -59,24 +59,24 @@
     <g transform="translate(18, 55)">
       <rect width="304" height="88" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
       <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#38BDF8">1. Heben (Anspannen)</text>
-      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Zieht nach innen oben. Schließt di</text>
-      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8"> Öffnungen.</text>
+      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Zieht nach innen oben.</text>
+      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8">Schließt die Öffnungen.</text>
     </g>
 
     <!-- Box 2: Senken -->
     <g transform="translate(18, 155)">
       <rect width="304" height="88" rx="10" fill="#0F172A" stroke="#94A3B8" stroke-width="1.5"/>
       <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#94A3B8">2. Senken (Neutral)</text>
-      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Kehrt in Ruhelage zurück. Atmung f</text>
-      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8">ießt frei.</text>
+      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Kehrt in Ruhelage zurück.</text>
+      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8">Die Atmung fließt frei.</text>
     </g>
 
     <!-- Box 3: Weiten -->
     <g transform="translate(18, 255)">
       <rect width="304" height="96" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.8"/>
       <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#34D399">3. Weiten (Loslassen / Öffnen)</text>
-      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Gibt nach unten außen nach wie ein</text>
-      <text x="16" y="76" font-family="sans-serif" font-size="16" fill="#34D399">Voraussetzung für schmerzfreies Ankommen</text>
+      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Gibt nach unten und außen nach.</text>
+      <text x="16" y="76" font-family="sans-serif" font-size="16" fill="#34D399">Nötig für schmerzfreies Ankommen</text>
     </g>
   </g>
 

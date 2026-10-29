@@ -59,24 +59,24 @@
     <g transform="translate(18, 55)">
       <rect width="304" height="88" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
       <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#38BDF8">1. Lifting (Tension)</text>
-      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Draws upward inward. Closes the sp</text>
-      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8">incters.</text>
+      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Draws upward and inward.</text>
+      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8">Closes the sphincters.</text>
     </g>
 
     <!-- Box 2: Senken -->
     <g transform="translate(18, 155)">
       <rect width="304" height="88" rx="10" fill="#0F172A" stroke="#94A3B8" stroke-width="1.5"/>
       <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#94A3B8">2. Lowering (Neutral)</text>
-      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Returns to resting position. Breat</text>
-      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8"> flows freely.</text>
+      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Returns to resting position.</text>
+      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8">Breathing flows freely.</text>
     </g>
 
     <!-- Box 3: Weiten -->
     <g transform="translate(18, 255)">
       <rect width="304" height="96" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.8"/>
       <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#34D399">3. Expanding (Releasing / Opening)</text>
-      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Yields downward and outward like a</text>
-      <text x="16" y="76" font-family="sans-serif" font-size="16" fill="#34D399">Prerequisite for pain-free intimacy</text>
+      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Yields downward and outward.</text>
+      <text x="16" y="76" font-family="sans-serif" font-size="16" fill="#34D399">Needed for pain-free intimacy</text>
     </g>
   </g>
 
