@@ -72,6 +72,49 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
+### AG-23: Alle restlichen sanft-spicy Stimmungsbilder im Bleistift-Stil (45 Motive, in Etappen, mit Warten bei Kapazitätslimit)
+
+**Kein Branch, kein Pull Request, kein Commit.** Fortsetzung und Erweiterung von AG-22 (gleiche Ausnahme mit Einverständnis des Nutzers, 29.10.2026): Bilder nur in
+`C:\TOOLS\velvet-inhalte\kurse\bilder\ag_spicy\` schreiben, **nie ins Repository** und nie in `assets/`. Erledigt sind dort schon `touch_m_s1`, `mass_s1`, `scen_1`;
+**überspringe vorhandene Dateien**. Zuerst die offenen Motive aus AG-22 (`pos_s1`, `self_2`, `self_3`, `couples_1`), dann die Liste unten in dieser Reihenfolge.
+
+**Wichtig, das Warten:** Ist die **Bildgenerierung gerade nicht verfügbar** (Kapazitätslimit, Fehler 429, „Resource Exhausted“ oder Ähnliches), **brich nicht ab und melde
+nicht „fertig“.** Notiere es in `_liste.txt`, **warte** (die Wartezeit steht meist in der Fehlermeldung, sonst 30 Minuten) und **versuche dasselbe Motiv danach erneut**. Mach das so lange,
+bis **alle** Motive entweder erzeugt oder wegen deines Inhaltsfilters bewusst übersprungen sind. Schreibe nach **jedem** Bild eine Zeile in `ag_spicy\_liste.txt` (Datei, Status
+„erzeugt“, „Filter, übersprungen“ oder „wartet auf Kapazität“, Uhrzeit), damit bei einer Unterbrechung nichts verloren geht und du genau dort weitermachst. Meldung an den Nutzer erst
+am Ende oder wenn du dauerhaft nicht weiterkommst.
+
+**Stil (wie AG-21 und AG-22):** detailed pencil drawing, technical illustration style, natural adult bodies with soft shading, faint blueprint grid with thin dimension lines and thin arrows,
+off-white paper, graphite with soft rose accents, **no text, no labels**, sensual and tender. **Sanft spicy:** intim, nackt oder angedeutet, **keine Nahaufnahme von Genitalien, keine
+Darstellung der Vereinigung.** Erwachsene, keine Ähnlichkeit mit einer echten Person, natürliche Körper, **alle, die in der Szene vorkommen, ganz sichtbar**. Querformat 1024 × 576, WebP,
+höchstens 150 KB, Dateiname `<Lektions-ID>_spicy.webp`. **Bricht dein Inhaltsfilter ab: nicht umgehen, nicht entschärfen**, vermerken und weitermachen.
+
+**Teil A, Spicy-Lektionen (zuerst):**
+`touch_w_s1` a woman lying on her side, her partner's hand resting on her shoulder, tender (Ersatz für das abgelehnte Motiv) | `pos_s1` a nude couple in a deep embrace on a bed, side view, no close-up |
+`fant_s1` a man gently holding a woman's chin, she looks up devotedly | `scen_s1` a woman with silk scarves lightly draped around her wrists, a man leaning over her |
+`prost_s1` a man lying relaxed on his stomach, a woman beside him with her hand on his lower back | `vocal_s1` a couple embracing in backlight, her head thrown back |
+`alltag_6` a smartphone on a silk sheet showing a glowing message, a woman's bare hand beside it | `alltag_7` a man and a woman pressed against a wall in half shadow, passionate, clothed or nude |
+`alltag_8` a restaurant table, a woman's hand and a man's hand touching under the table | `alltag_10` a woman in elegant lace lingerie, torso crop |
+`toys_7` a woman lying in bed, a softly glowing smooth toy beside her hand | `toys_8` a man and a woman in bed together holding a smooth toy, laughing |
+`spsolo_1` a man sitting on the edge of a bed, tension in his body | `spsolo_2` a woman sitting on a bed holding a smooth toy, curious |
+`spsolo_3` a woman lying with closed eyes, her imagination as soft mist above her head | `spsolo_4` a man lying back with his mouth open in pleasure, a sheet at his hips |
+`spsolo_5` a woman on a bed in unusual light with silk and candles | `spduo_1` a man whispering into a woman's ear, she smiles |
+`spduo_2` a man kissing the inside of a woman's thigh, she lies back with a blissful face, sheet covering | `spduo_3` a woman with her hand flat on a man's chest holding him back playfully |
+`spduo_4` a woman with a blindfold and a soft silk tie lightly around her wrists, a man kissing her neck | `spduo_5` a man and a woman in bed laughing with a smooth toy between them |
+`spduo_6` a man and a woman, she guides his hand to her hip, leading and following.
+
+**Teil B, normale Lektionen mit zweiter Bildfassung (danach):**
+`anat_1` a nude woman standing in profile | `anat_4` a man and a woman, his hand resting on her lower back from behind | `beauty_6` lace and silk lingerie on a woman's collarbone, face out of frame |
+`pelvic_3` a woman lying on her back, knees relaxed and open, a pillow under her hips | `female_3` an opening orchid in warm light, still life without a person |
+`prost_2` a man lying on his side, a woman behind him with her hand on his hip | `tease_1` a man and a woman face to face, lips almost touching | `couples_1` a couple embracing, foreheads touching |
+`couples_2` a couple belly to belly, foreheads touching, at rest | `touch_w_2` a woman's bare back with a man's fingertips gently circling her skin |
+`touch_m_1` a man lying on his front, a woman's flat hands on his back | `touch_m_2` a man lying on his back, a woman's hand sliding across his chest |
+`mass_1` a nude woman lying on silk, a man kneeling beside her | `mass_2` a man's hand pouring warm oil on a woman's bare back | `mass_3` a woman lying on her stomach, a man stroking her lower back |
+`vocal_1` a woman's slightly open lips and bare throat as she breathes out | `pos_1` a man and a woman in a deep embrace, she wrapped around him |
+`pos_2` a couple in spoon position on white sheets | `pos_3` a woman with her hips raised on a wedge pillow, a man kneeling in front of her | `toys_2` an elegant ensemble of modern toys on a silk cloth, still life.
+
+**Nicht tun:** Bilder ins Repository oder in `assets/` legen, Lektionstexte lesen, die Bilder weitergeben, einen Filter umgehen.
+
 ### AG-22: Probe „sanfte Spicy-Version“ der Bleistift-Studien (acht Bilder, nur Bildsammlung)
 
 **Kein Branch, kein Pull Request, kein Commit.** Ausnahme von der Regel „Spicy-Motive nicht an Cloud-Modelle“ und von der Sperre oben, mit
