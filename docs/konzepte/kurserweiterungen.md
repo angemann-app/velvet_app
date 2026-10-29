@@ -40,6 +40,31 @@ bleibt Kurs 18, weil dort Berührung und Rückmeldung zusammen stehen.
 Beide gehören inhaltlich zu den weiblichen Lektionen und brauchen keine Audio-Praxis. Der Wunsch wird wie die anderen sechs
 Lektionen behandelt: Text erst nach Freigabe, Englisch gleichzeitig.
 
+## Vorgezogen: Squirting und Gebärmutterhals (Entscheidung des Nutzers, 29.10.2026)
+
+Der Nutzer zieht diese Themen vor, weil sie ausdrücklich gewünscht wurden. Es entstehen **vier Lektionen**, jede mit klarer
+Trennung **allein** und **zu zweit**:
+- **7a Squirting, Wissen** (normal, Kurs 9) und **7b Squirting, Praxis** (Spicy, Kurs 18, allein und zu zweit getrennt).
+- **8a Gebärmutterhals, Wissen** (normal, Kurs 9) und **8b Gebärmutterhals, Praxis** (Spicy, Kurs 18, allein und zu zweit
+  getrennt; zu zweit mit eigenem Abschnitt zu Tiefe, Position und Stoppsignal).
+
+**Recherche zuerst:** Zwei Unteragenten recherchieren Fachliteratur und Fachgesellschaften (Berichte nach Sitzung unter
+`recherche_squirting.md` und `recherche_cervix.md`, Quellenliste, Studienlage je Aussage). Die Texte entstehen erst daraus,
+ohne Heilsversprechen und mit klaren Warnhinweisen. Nach dem Gegenlesen durch den Nutzer kommen sie mit der nächsten Beta.
+
+**Bilder dazu** (Dual-Bild-Prinzip aus `kursbilder.md`, auch für die Spicy-Lektionen):
+- **Normalfassung (SVG, APK, Deutsch und Englisch):** je ein schematisches Diagramm zu 7a (Vorderwand der Vagina, Urethra,
+  Skene-Drüsen, Klitoris-Struktur im Querschnitt) und 8a (Lage von Gebärmutterhals, Zyklus- und Erregungsverlauf mit der
+  Anhebung des Uterus), dazu ein Ablaufbild „Entspannen statt Pressen“ und ein Ablaufbild „Tiefe und Stopp“ für 8b.
+  Diese Anatomie-Schemata zeichnet **AG** (Auftrag AG-18, erst nach der Recherche, damit die Beschriftung stimmt).
+- **Spicy-Fassung (illustrativ, lokal erzeugt, Nur-R2-Paket, nur im Spicy-Modus):** zu 7b und 8b je zwei bis drei
+  Stimmungsbilder, **allein** und **zu zweit** unterschieden (Person allein auf dem Bett, Paar in der jeweiligen Position,
+  ohne Nahaufnahme der Genitalien), deutlich nach der Regel „Spicy deutlich“, Stil wie die Szenenbilder der Reihe
+  (`dreamshaper_8`, `CLAUDE.md` Abschnitt „Bilder“). Diese Bilder gehen **nicht** an AG oder OpenCode.
+- **Technik offen:** Die Anzeige von Spicy-Bildern in Lektionen aus dem Nur-R2-Paket gibt es noch nicht (heute nur im Player
+  der Reihe). Dafür ist ein kleiner App-Teil nötig (Bildpfad der Lektion aus `Pakete.datei`, Rückfall ohne Bild), vorgeschlagen
+  im Paket `kurse-bilder-spicy`.
+
 ## Die sechs Lektionen (Arbeitstitel)
 
 1. **Kurs 17, „Nach dem Höhepunkt: Nachklang und Nähe“.** Was nach intensiver Nähe im Körper und Nervensystem passiert;
