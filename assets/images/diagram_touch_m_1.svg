@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Druckverteilung: Handhaltung</title>
+  <desc>Vergleich zwischen punktuell beengendem Klammergriff und flächig rezeptorschonender Berührung</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <!-- Header -->
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Offene Hand statt Klammergriff</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Druckverteilung &amp; Sensibilität des Nervensystems</text>
+
+  <!-- Left: Klammergriff -->
+  <rect x="40" y="105" width="345" height="305" rx="14" fill="#1E293B" stroke="#F43F5E" stroke-width="1.5"/>
+  <circle cx="68" cy="138" r="14" fill="#F43F5E" fill-opacity="0.2" stroke="#F43F5E" stroke-width="2"/>
+  <text x="68" y="144" fill="#F43F5E" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">!</text>
+  <text x="92" y="144" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Klammergriff (Gewöhnung)</text>
+
+  <!-- Schematic Pressure Arrows (Focused) -->
+  <g transform="translate(65, 165)">
+    <rect width="295" height="40" rx="6" fill="#0F172A" stroke="#334155"/>
+    <text x="147" y="25" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">Punktuelle Druckspitze</text>
+    <path d="M 147 50 L 147 68" stroke="#F43F5E" stroke-width="4" marker-end="url(#arrow)"/>
+  </g>
+  <text x="65" y="235" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Fester, trockener Griff mit Faust.</text>
+    <text x="65" y="259" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Starke punktuelle Druckspitzen.</text>
+    <text x="65" y="283" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Nervensystem stumpft mit der Zeit ab:</text>
+    <text x="65" y="307" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Gehirn verlangt immer mehr Druck,</text>
+    <text x="65" y="331" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">weiche Berührung wird als 'zu wenig' erlebt.</text>
+
+  <!-- Right: Offene Hand -->
+  <rect x="415" y="105" width="345" height="305" rx="14" fill="#1E1B4B" stroke="#34D399" stroke-width="1.5"/>
+  <circle cx="443" cy="138" r="14" fill="#34D399" fill-opacity="0.2" stroke="#34D399" stroke-width="2"/>
+  <text x="443" y="144" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">&#10003;</text>
+  <text x="467" y="144" fill="#34D399" font-family="sans-serif" font-size="18px" font-weight="bold">Offene Hand (Umlernen)</text>
+
+  <!-- Schematic Pressure Arrows (Broad) -->
+  <g transform="translate(440, 165)">
+    <rect width="295" height="40" rx="6" fill="#0F172A" stroke="#334155"/>
+    <text x="147" y="25" fill="#34D399" font-family="sans-serif" font-size="16px" text-anchor="middle">Flächige, weiche Verteilung</text>
+    <path d="M 60 50 L 60 68" stroke="#34D399" stroke-width="2"/>
+    <path d="M 147 50 L 147 68" stroke="#34D399" stroke-width="2"/>
+    <path d="M 235 50 L 235 68" stroke="#34D399" stroke-width="2"/>
+  </g>
+  <text x="440" y="235" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Flache Hand, Handballen &amp; Gleitmittel.</text>
+    <text x="440" y="259" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Gleichmäßig breite Druckverteilung.</text>
+    <text x="440" y="283" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Rezeptoren für feine Reize erholen sich:</text>
+    <text x="440" y="307" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Empfindsamkeit für Mund, Vagina und</text>
+    <text x="440" y="331" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">sanfte Partnerhände kehrt zurück.</text>
+
+  <!-- Bottom Recommendation Card -->
+  <rect x="40" y="425" width="720" height="110" rx="12" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="65" y="458" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">Zwei Wochen Solo-Umlernen</text>
+  <text x="65" y="488" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Keine geschlossene Faust. Reichlich Gleitmittel.</text>
+    <text x="65" y="514" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Mit sanftem, flächigem Druck unter der gewohnten Reizschwelle bleiben.</text>
+
+  <!-- Footer Notice -->
+  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematisch, Lage und Größe sind individuell</text>
+
+</svg>

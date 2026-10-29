@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Arousal as a Whole-Body Event</title>
+  <desc>Sensory zones, neural networking and the role of the parasympathetic system</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <!-- Header -->
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Arousal as a Whole-Body Event</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Sensory Networking &amp; Sequence of Touch</text>
+
+  <!-- Flow Section (4 horizontal stepped nodes) -->
+  <rect x="40" y="105" width="720" height="235" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="65" y="135" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">Sensory Zones Overview</text>
+
+  <!-- Node 1 -->
+  <rect x="65" y="155" width="155" height="160" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <circle cx="142" cy="185" r="16" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2"/>
+  <text x="142" y="191" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">A</text>
+  <text x="142" y="222" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">1. Head &amp; Senses</text>
+  <text x="142" y="252" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="middle">Mouth, lips, neck &amp; ears.</text>
+    <text x="142" y="274" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="middle">Parasympathetic switches to pleasure.</text>
+
+  <!-- Arrow 1-2 -->
+  <path d="M 226 235 L 240 235" stroke="#FB7185" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Node 2 -->
+  <rect x="246" y="155" width="155" height="160" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+  <circle cx="323" cy="185" r="16" fill="#C084FC" fill-opacity="0.2" stroke="#C084FC" stroke-width="2"/>
+  <text x="323" y="191" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">B</text>
+  <text x="323" y="222" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">2. Upper Body Axis</text>
+  <text x="323" y="252" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="middle">Chest, nipples &amp; deep breath.</text>
+    <text x="323" y="274" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="middle">Blood flow and warming of skin.</text>
+
+  <!-- Arrow 2-3 -->
+  <path d="M 407 235 L 421 235" stroke="#FB7185" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Node 3 -->
+  <rect x="427" y="155" width="155" height="160" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <circle cx="504" cy="185" r="16" fill="#34D399" fill-opacity="0.2" stroke="#34D399" stroke-width="2"/>
+  <text x="504" y="191" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">C</text>
+  <text x="504" y="222" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">3. Outer Touch</text>
+  <text x="504" y="252" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="middle">Hands, thighs &amp; buttocks.</text>
+    <text x="504" y="274" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="middle">Receptor fields prepare the center.</text>
+
+  <!-- Arrow 3-4 -->
+  <path d="M 588 235 L 602 235" stroke="#FB7185" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Node 4 -->
+  <rect x="608" y="155" width="135" height="160" rx="10" fill="#0F172A" stroke="#FB7185" stroke-width="2"/>
+  <circle cx="675" cy="185" r="16" fill="#FB7185" fill-opacity="0.2" stroke="#FB7185" stroke-width="2"/>
+  <text x="675" y="191" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">D</text>
+  <text x="675" y="222" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">4. Center &amp; Pelvis</text>
+  <text x="675" y="252" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="middle">Genitals &amp; erectile tissue.</text>
+    <text x="675" y="274" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="middle">Sensitivity rises through prior steps.</text>
+
+  <!-- Bottom Details 2 Cards -->
+  <rect x="40" y="360" width="345" height="175" rx="12" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
+  <text x="65" y="395" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">From Outside to Center</text>
+  <text x="65" y="430" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Touching outer zones removes pressure.</text>
+    <text x="65" y="456" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">What feels too intense initially becomes</text>
+    <text x="65" y="482" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">deeply pleasurable with rising arousal.</text>
+
+  <rect x="415" y="360" width="345" height="175" rx="12" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
+  <text x="440" y="395" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">The Entire Nervous System</text>
+  <text x="440" y="430" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Erectile tissue expands across the body.</text>
+    <text x="440" y="456" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Calm and safety dilate blood vessels;</text>
+    <text x="440" y="482" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">haste or goal-focus trigger the brake.</text>
+
+  <!-- Footer Notice -->
+  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematic, position and size vary</text>
+
+</svg>

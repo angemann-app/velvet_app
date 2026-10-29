@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Achse: Kiefer, Atem und Beckenboden</title>
+  <desc>Neurosomatische Verbindungslinie zwischen Kiefergelenk, Stimmritze und Beckenbodenentspannung</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <!-- Header -->
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Das Stummfilm-Muster: Kiefer, Atem &amp; Becken</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Die neurosomatische Entspannungsachse</text>
+
+  <!-- Left: The 3-tier Axis -->
+  <rect x="40" y="105" width="350" height="430" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="65" y="140" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">Die somatische Kette</text>
+
+  <!-- Tier 1 -->
+  <rect x="65" y="155" width="300" height="95" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="80" y="183" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold">1. Kiefer &amp; Mund</text>
+  <text x="80" y="207" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Zusammengebissene Zähne sperren den Rumpf.</text>
+    <text x="80" y="229" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Lockerer Unterkiefer öffnet die Kette.</text>
+
+  <!-- Connecting line -->
+  <path d="M 215 250 L 215 270" stroke="#C084FC" stroke-width="3" stroke-dasharray="4,4"/>
+
+  <!-- Tier 2 -->
+  <rect x="65" y="270" width="300" height="95" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="80" y="298" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold">2. Kehle, Stimmritze &amp; Zwerchfell</text>
+  <text x="80" y="322" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Luftanhalten erhöht Innendruck.</text>
+    <text x="80" y="344" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Hörbarer Ausatem lässt das Zwerchfell schwingen.</text>
+
+  <!-- Connecting line -->
+  <path d="M 215 365 L 215 385" stroke="#FB7185" stroke-width="3" stroke-dasharray="4,4"/>
+
+  <!-- Tier 3 -->
+  <rect x="65" y="385" width="300" height="95" rx="10" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
+  <text x="80" y="413" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold">3. Beckenboden</text>
+  <text x="80" y="437" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Spiegelt die Kieferspannung.</text>
+    <text x="80" y="459" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Weicht nach unten und außen, lässt los.</text>
+
+  <text x="65" y="515" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold">Kiefer weich = Becken weich</text>
+
+  <!-- Right: Explanation Card -->
+  <rect x="415" y="105" width="345" height="430" rx="14" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
+  <text x="440" y="140" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Warum Töne helfen</text>
+  <text x="440" y="185" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Hörbare Lust ist keine Vorstellung für</text>
+    <text x="440" y="211" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">das Gegenüber, sondern eine Einladung</text>
+    <text x="440" y="237" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">an den eigenen Körper, loszulassen.</text>
+
+  <rect x="440" y="285" width="295" height="225" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+  <text x="455" y="325" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Gepresste Lippen aktivieren die Bremse.</text>
+    <text x="455" y="351" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Töne und freier Atem entspannen das Becken,</text>
+    <text x="455" y="377" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">senken Druck und erleichtern das Genießen.</text>
+
+  <!-- Footer Notice -->
+  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematisch, Lage und Größe sind individuell</text>
+
+</svg>

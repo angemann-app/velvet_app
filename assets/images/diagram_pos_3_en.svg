@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Positions for Gentle Opening</title>
+  <desc>Protection against impact pain, wedge pillow angle schematic and control over depth and pace</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <!-- Header -->
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Tight Pelvis: Gentle Opening &amp; Safety</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Control Over Depth &amp; Pace Prevents Pain Reflexes</text>
+
+  <!-- 3 Column Cards -->
+  <!-- Card 1 -->
+  <rect x="40" y="105" width="230" height="305" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <circle cx="65" cy="138" r="14" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2"/>
+  <text x="65" y="144" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">1</text>
+  <text x="90" y="144" fill="#F1F5F9" font-family="sans-serif" font-size="17px" font-weight="bold">Melting</text>
+  <text x="60" y="185" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">She kneels above and dictates every</text>
+    <text x="60" y="210" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">millimeter and pace. He does not move.</text>
+    <text x="60" y="235" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Rub externally first until softness arises.</text>
+
+  <!-- Card 2 -->
+  <rect x="285" y="105" width="230" height="305" rx="12" fill="#1E293B" stroke="#34D399" stroke-width="1.5"/>
+  <circle cx="310" cy="138" r="14" fill="#34D399" fill-opacity="0.2" stroke="#34D399" stroke-width="2"/>
+  <text x="310" y="144" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">2</text>
+  <text x="335" y="144" fill="#F1F5F9" font-family="sans-serif" font-size="17px" font-weight="bold">Butterfly</text>
+  <text x="305" y="185" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Supine: Do not extend legs straight or</text>
+    <text x="305" y="210" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">hold them narrow. Pillows support knees</text>
+    <text x="305" y="235" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">wide outward, relaxing inner thighs.</text>
+
+  <!-- Card 3 -->
+  <rect x="530" y="105" width="230" height="305" rx="12" fill="#1E293B" stroke="#FB7185" stroke-width="1.5"/>
+  <circle cx="555" cy="138" r="14" fill="#FB7185" fill-opacity="0.2" stroke="#FB7185" stroke-width="2"/>
+  <text x="555" y="144" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">3</text>
+  <text x="580" y="144" fill="#FB7185" font-family="sans-serif" font-size="17px" font-weight="bold">Side T-Position</text>
+  <text x="550" y="185" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Shallow angle avoids bumping against cervix.</text>
+    <text x="550" y="210" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Allows gentle glide without pressure</text>
+    <text x="550" y="235" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">on the sensitive pelvic floor.</text>
+
+  <!-- Bottom Golden Rule -->
+  <rect x="40" y="425" width="720" height="110" rx="12" fill="#1E1B4B" stroke="#FB7185" stroke-width="1.5"/>
+  <text x="65" y="458" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Golden Rule for Pelvic Tightness</text>
+  <text x="65" y="488" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Control creates safety – Safety dissolves the pain brake.</text>
+    <text x="65" y="514" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">The partner with pelvic sensitivity always determines depth, angle and rhythm.</text>
+
+  <!-- Footer Notice -->
+  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematic, position and size vary</text>
+
+</svg>
