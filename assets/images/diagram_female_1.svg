@@ -26,52 +26,54 @@
   </defs>
 
   
-  <!-- Header -->
   <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Der weibliche Beckenboden: Öffnen statt Halten</text>
   <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Drei Schichten &amp; das Prinzip des sanften Nachgebens</text>
 
   <!-- Left: 3 Layers -->
   <rect x="40" y="105" width="350" height="430" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
-  <text x="65" y="140" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">Die drei Muskelschichten</text>
+  <text x="60" y="138" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">Die drei Muskelschichten</text>
 
   <!-- Layer 1 -->
-  <rect x="65" y="160" width="300" height="95" rx="10" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
-  <text x="80" y="188" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold">1. Äußere Schließschicht</text>
-  <text x="80" y="212" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Umgibt Scheideneingang und Klitoris.</text>
-    <text x="80" y="234" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Neigt bei Anspannung zu Vaginismus.</text>
+  <rect x="60" y="155" width="310" height="90" rx="10" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
+  <text x="75" y="180" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold">1. Äußere Schließschicht</text>
+  <text x="75" y="204" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Umgibt Scheideneingang &amp; Klitoris.</text>
+    <text x="75" y="226" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Neigt bei Anspannung zu Vaginismus.</text>
 
   <!-- Layer 2 -->
-  <rect x="65" y="275" width="300" height="95" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
-  <text x="80" y="303" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold">2. Mittlere Schicht (Diaphragma urogenitale)</text>
-  <text x="80" y="327" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Dreieckige Muskelplatte zwischen den Sitzbeinen.</text>
-    <text x="80" y="349" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Stabilisiert und federt Druck elastisch ab.</text>
+  <rect x="60" y="255" width="310" height="105" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="75" y="280" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold">2. Mittlere Schicht</text>
+  <text x="75" y="302" fill="#94A3B8" font-family="sans-serif" font-size="16px">(Diaphragma urogenitale)</text>
+  <text x="75" y="326" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Dreieckige elastische Muskelplatte.</text>
+    <text x="75" y="348" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Stabilisiert und federt Druck ab.</text>
 
   <!-- Layer 3 -->
-  <rect x="65" y="390" width="300" height="125" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
-  <text x="80" y="418" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold">3. Tiefe Schicht (Levator ani)</text>
-  <text x="80" y="442" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Große Muskelschlinge im Beckeninneren.</text>
-    <text x="80" y="464" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Hebt und senkt sich synchron mit dem Zwerchfell.</text>
+  <rect x="60" y="370" width="310" height="105" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="75" y="395" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold">3. Tiefe Schicht</text>
+  <text x="75" y="417" fill="#94A3B8" font-family="sans-serif" font-size="16px">(Levator ani Schlinge)</text>
+  <text x="75" y="441" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Große Schlinge im Beckeninneren.</text>
+    <text x="75" y="463" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Hebt &amp; senkt sich synchron mit Atem.</text>
 
-  <!-- Right: Blossom Exercise / Breathing -->
+  <text x="60" y="505" fill="#34D399" font-family="sans-serif" font-size="16px">Drei elastisch verschränkte Schichten</text>
+
+  <!-- Right: Blossom Exercise -->
   <rect x="410" y="105" width="350" height="430" rx="14" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
-  <text x="435" y="140" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Die Knospen-Übung</text>
+  <text x="430" y="138" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Die Knospen-Übung</text>
 
-  <rect x="435" y="160" width="300" height="160" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
-  <text x="450" y="190" fill="#38BDF8" font-family="sans-serif" font-size="17px" font-weight="bold">Einatmen: Nachgeben</text>
-  <text x="450" y="220" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Tief in den Bauch atmen.</text>
-    <text x="450" y="244" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Vorstellung: Scheideneingang und</text>
-    <text x="450" y="268" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Damm werden weich und geben sanft</text>
-    <text x="450" y="292" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">nach unten nach (wie eine Knospe).</text>
+  <rect x="430" y="155" width="310" height="160" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="445" y="185" fill="#38BDF8" font-family="sans-serif" font-size="17px" font-weight="bold">Einatmen: Nachgeben</text>
+  <text x="445" y="215" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Tief in den Bauch atmen.</text>
+    <text x="445" y="239" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Vorstellung: Scheideneingang</text>
+    <text x="445" y="263" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">und Damm werden weich und geben</text>
+    <text x="445" y="287" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">sanft nach außen nach (Knospe).</text>
 
-  <rect x="435" y="340" width="300" height="145" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
-  <text x="450" y="370" fill="#34D399" font-family="sans-serif" font-size="17px" font-weight="bold">Ausatmen: Weich bleiben</text>
-  <text x="450" y="400" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Kein Gegendruck, kein Hochziehen.</text>
-    <text x="450" y="424" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Der Beckenboden bleibt entspannt.</text>
-    <text x="450" y="448" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Bessere Durchblutung &amp; mehr Spielraum.</text>
+  <rect x="430" y="330" width="310" height="145" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+  <text x="445" y="360" fill="#34D399" font-family="sans-serif" font-size="17px" font-weight="bold">Ausatmen: Weich bleiben</text>
+  <text x="445" y="390" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Kein Gegendruck, kein Hochziehen.</text>
+    <text x="445" y="414" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Der Beckenboden bleibt entspannt.</text>
+    <text x="445" y="438" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Bessere Durchblutung &amp; Spielraum.</text>
 
-  <text x="435" y="515" fill="#FB7185" font-family="sans-serif" font-size="16px">Druck verschließt – Sicherheit öffnet</text>
+  <text x="430" y="505" fill="#FB7185" font-family="sans-serif" font-size="16px">Druck verschließt – Sicherheit öffnet</text>
 
-  <!-- Footer Notice -->
   <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematisch, Lage und Größe sind individuell</text>
 
 </svg>
