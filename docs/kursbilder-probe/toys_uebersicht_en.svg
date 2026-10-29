@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Overview of Toy Types</title>
+  <desc>Stylized silhouettes by function, separated for women and men</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140D1C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="rose" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#E11D48"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- Titelzeile -->
+  <text x="400" y="38" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="22" font-weight="700">Overview of Toy Types</text>
+  <text x="400" y="60" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="14">Stylized silhouettes by function, separated for women and men</text>
+
+  <!-- GRUPPE FRAUEN -->
+  <g transform="translate(30, 78)">
+    <rect width="355" height="402" rx="14" fill="url(#card)" stroke="#FB7185" stroke-width="1.5" stroke-opacity="0.4"/>
+    <rect width="355" height="38" rx="14" fill="#FB7185" fill-opacity="0.15"/>
+    <text x="16" y="24" fill="#FB7185" font-family="sans-serif" font-size="14" font-weight="700" letter-spacing="0.5">FOR WOMEN (VULVA &amp; CLITORIS)</text>
+
+    <!-- W1: Auflege-Vibrator -->
+    <g transform="translate(14, 48)">
+      <rect width="327" height="76" rx="10" fill="#0F172A" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+      <path d="M26 22 C42 22 56 32 54 48 C52 58 40 62 26 60 C14 58 8 48 10 34 C12 24 18 22 26 22 Z" fill="url(#rose)"/>
+      <circle cx="24" cy="34" r="4" fill="#FFF" opacity="0.6"/>
+      <path d="M60 30 C64 35 64 45 60 50" fill="none" stroke="#FB7185" stroke-width="2" stroke-linecap="round"/>
+      <path d="M66 26 C72 34 72 46 66 54" fill="none" stroke="#FB7185" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+      <text x="82" y="34" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">External Vibrator</text>
+      <text x="82" y="54" fill="#94A3B8" font-family="sans-serif" font-size="13">Targeted or broad vibration</text>
+    </g>
+
+    <!-- W2: Druckwellen-Toy -->
+    <g transform="translate(14, 134)">
+      <rect width="327" height="76" rx="10" fill="#0F172A" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+      <path d="M18 54 C14 38 22 24 36 22 C48 20 54 28 48 40 C42 50 46 56 52 58 L32 60 C24 60 20 58 18 54 Z" fill="url(#rose)"/>
+      <ellipse cx="46" cy="30" rx="4" ry="7" fill="#0F172A" stroke="#FDE68A" stroke-width="1.5"/>
+      <circle cx="58" cy="30" r="5" fill="none" stroke="#FDE68A" stroke-width="1.5" opacity="0.8" stroke-dasharray="2 2"/>
+      <circle cx="66" cy="30" r="9" fill="none" stroke="#FDE68A" stroke-width="1.2" opacity="0.5" stroke-dasharray="2 3"/>
+      <text x="82" y="34" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Air-Pulse Toy</text>
+      <text x="82" y="54" fill="#94A3B8" font-family="sans-serif" font-size="13">Contactless air waves</text>
+    </g>
+
+    <!-- W3: Stab-Vibrator -->
+    <g transform="translate(14, 220)">
+      <rect width="327" height="76" rx="10" fill="#0F172A" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+      <circle cx="34" cy="30" r="15" fill="url(#rose)"/>
+      <rect x="30" y="42" width="8" height="24" rx="4" fill="#E2E8F0" opacity="0.85"/>
+      <path d="M22 12 C28 8 40 8 46 12" fill="none" stroke="#FB7185" stroke-width="2" stroke-linecap="round"/>
+      <text x="82" y="34" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Wand Massager</text>
+      <text x="82" y="54" fill="#94A3B8" font-family="sans-serif" font-size="13">Broad, deep massage</text>
+    </g>
+
+    <!-- W4: Liebeskugeln -->
+    <g transform="translate(14, 306)">
+      <rect width="327" height="76" rx="10" fill="#0F172A" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+      <circle cx="24" cy="38" r="12" fill="url(#rose)"/>
+      <rect x="34" y="36" width="12" height="4" rx="2" fill="#FDA4AF"/>
+      <circle cx="56" cy="38" r="12" fill="url(#rose)"/>
+      <path d="M68 38 C74 38 76 46 76 56" fill="none" stroke="#FDA4AF" stroke-width="2" stroke-linecap="round"/>
+      <text x="86" y="34" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Kegel Balls</text>
+      <text x="86" y="54" fill="#94A3B8" font-family="sans-serif" font-size="13">Pelvic floor conditioning</text>
+    </g>
+  </g>
+
+  <!-- GRUPPE MÄNNER -->
+  <g transform="translate(415, 78)">
+    <rect width="355" height="402" rx="14" fill="url(#card)" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.4"/>
+    <rect width="355" height="38" rx="14" fill="#38BDF8" fill-opacity="0.15"/>
+    <text x="16" y="24" fill="#38BDF8" font-family="sans-serif" font-size="14" font-weight="700" letter-spacing="0.5">FOR MEN (PENIS &amp; PROSTATE)</text>
+
+    <!-- M1: Penisring -->
+    <g transform="translate(14, 48)">
+      <rect width="327" height="76" rx="10" fill="#0F172A" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+      <ellipse cx="38" cy="38" rx="18" ry="22" fill="none" stroke="url(#blue)" stroke-width="7"/>
+      <ellipse cx="38" cy="38" rx="18" ry="22" fill="none" stroke="#BAE6FD" stroke-width="1.5" opacity="0.6"/>
+      <text x="82" y="34" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Constriction Ring</text>
+      <text x="82" y="54" fill="#94A3B8" font-family="sans-serif" font-size="13">Maintains blood flow &amp; firmness</text>
+    </g>
+
+    <!-- M2: Masturbator / Sleeve -->
+    <g transform="translate(14, 134)">
+      <rect width="327" height="76" rx="10" fill="#0F172A" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+      <path d="M22 22 C26 18 50 18 54 22 C58 30 52 44 56 52 L18 52 C22 44 18 30 22 22 Z" fill="url(#blue)"/>
+      <line x1="26" y1="28" x2="50" y2="28" stroke="#BAE6FD" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+      <line x1="24" y1="36" x2="52" y2="36" stroke="#BAE6FD" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+      <line x1="22" y1="44" x2="54" y2="44" stroke="#BAE6FD" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+      <text x="82" y="34" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Masturbator / Sleeve</text>
+      <text x="82" y="54" fill="#94A3B8" font-family="sans-serif" font-size="13">Textured inner chamber</text>
+    </g>
+
+    <!-- M3: Prostata-Stimulator -->
+    <g transform="translate(14, 220)">
+      <rect width="327" height="76" rx="10" fill="#0F172A" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+      <path d="M50 18 C38 16 26 26 28 36 C30 44 38 46 40 50 L16 52 C12 52 12 56 16 56 L62 56 C66 56 66 52 62 52 L46 50 C44 44 54 38 54 28 C54 20 52 18 50 18 Z" fill="url(#blue)"/>
+      <line x1="16" y1="54" x2="62" y2="54" stroke="#FDE68A" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="82" y="34" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Prostate Massager</text>
+      <text x="82" y="54" fill="#94A3B8" font-family="sans-serif" font-size="13">Ergonomic curve with flared base</text>
+    </g>
+
+    <!-- M4: Vibrationsring -->
+    <g transform="translate(14, 306)">
+      <rect width="327" height="76" rx="10" fill="#0F172A" fill-opacity="0.7" stroke="#334155" stroke-width="1"/>
+      <circle cx="36" cy="46" r="16" fill="none" stroke="url(#blue)" stroke-width="6"/>
+      <rect x="26" y="16" width="20" height="14" rx="6" fill="url(#gold)"/>
+      <path d="M22 14 C26 10 46 10 50 14" fill="none" stroke="#FDE68A" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="82" y="34" fill="#F1F5F9" font-family="sans-serif" font-size="16" font-weight="700">Vibrating Ring</text>
+      <text x="82" y="54" fill="#94A3B8" font-family="sans-serif" font-size="13">Mutual stimulation during intimacy</text>
+    </g>
+  </g>
+
+  <!-- GEMEINSAM: GLEITMITTEL -->
+  <g transform="translate(30, 492)">
+    <rect width="740" height="88" rx="12" fill="url(#card)" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.4"/>
+    <g transform="translate(24, 16)">
+      <rect x="6" y="18" width="22" height="38" rx="5" fill="url(#gold)"/>
+      <rect x="13" y="10" width="8" height="8" fill="#E2E8F0"/>
+      <path d="M13 10 L6 10 L6 6 L21 6 L21 10 Z" fill="#CBD5E1"/>
+      <path d="M42 32 C42 24 48 14 48 14 C48 14 54 24 54 32 C54 36 51 40 48 40 C45 40 42 36 42 32 Z" fill="#38BDF8"/>
+    </g>
+    <text x="96" y="38" fill="#FDE68A" font-family="sans-serif" font-size="17" font-weight="700">FOR EVERYONE: LUBRICANT &amp; CARE</text>
+    <text x="96" y="62" fill="#CBD5E1" font-family="sans-serif" font-size="14">Water-based for silicone · Non-porous cleaning · Dry gently</text>
+  </g>
+</svg>
