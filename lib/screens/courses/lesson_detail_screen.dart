@@ -62,8 +62,8 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     if (mounted) setState(() {});
   }
 
-  /// Stimmungsbilder der Spicy-Lektionen und der Lektionen mit zweiter Spicy-Bildfassung: kleine Vorschau, die den Text begleitet
-  /// (Antippen vergrößert). Nur im Spicy-Modus und nur, wenn das Paket da ist.
+  /// Stimmungsbilder der Spicy-Lektionen und der Lektionen mit zweiter Spicy-Bildfassung: 240 hoch, nebeneinander, den Text
+  /// begleitend (Antippen vergrößert). Nur im Spicy-Modus und nur, wenn das Paket da ist.
   Widget _spicyBilder(Lesson l) {
     if (l.bilder.isEmpty || !StorageService.spicyMode()) return const SizedBox.shrink();
     final dateien = [
@@ -75,7 +75,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 14),
       child: SizedBox(
-        height: 96,
+        height: 240,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: dateien.length,
@@ -85,9 +85,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: SizedBox(
-                width: 96,
+                width: 160,
                 child: Stack(fit: StackFit.expand, children: [
-                  Image.file(File(dateien[i].pfad), fit: BoxFit.cover, alignment: Alignment.topCenter, cacheWidth: 300),
+                  Image.file(File(dateien[i].pfad), fit: BoxFit.cover, cacheWidth: 480),
                   if (dateien[i].beschriftung != null)
                     Positioned(
                       left: 0,
@@ -96,7 +96,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                       child: Container(
                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
                         color: Colors.black54,
-                        child: Text(dateien[i].beschriftung!, style: const TextStyle(color: Colors.white, fontSize: 10.5)),
+                        child: Text(dateien[i].beschriftung!, style: const TextStyle(color: Colors.white, fontSize: 12)),
                       ),
                     ),
                 ]),
