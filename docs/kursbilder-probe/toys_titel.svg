@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 300" width="840" height="300">
+  <title>25. Toys: Spielzeug mit Köpfchen</title>
+  <desc>Auswahl, Haptik, Hygiene und Sicherheit</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140D1C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0%" stop-color="#FEF3C7" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#FB7185" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rimGlow" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#1E1B2E"/>
+      <stop offset="60%" stop-color="#3B2647"/>
+      <stop offset="100%" stop-color="#FDA4AF"/>
+    </linearGradient>
+    <linearGradient id="goldRim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FDE68A" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="840" height="300" fill="url(#bg)"/>
+
+  <!-- Ambient-Lichtkegel mittig -->
+  <ellipse cx="440" cy="115" rx="340" ry="160" fill="url(#light)"/>
+
+  <!-- Schwebende Lichtstaub-Partikel -->
+  <circle cx="210" cy="54" r="2.2" fill="#FEF3C7" opacity="0.6"/>
+  <circle cx="340" cy="88" r="1.5" fill="#FEF3C7" opacity="0.7"/>
+  <circle cx="490" cy="42" r="2.8" fill="#FEF3C7" opacity="0.5"/>
+  <circle cx="620" cy="74" r="1.8" fill="#FEF3C7" opacity="0.65"/>
+  <circle cx="280" cy="160" r="1.4" fill="#FB7185" opacity="0.5"/>
+  <circle cx="560" cy="140" r="2.5" fill="#FB7185" opacity="0.55"/>
+
+  <!-- Stilisierte, elegante Toy-Silhouetten im Gegenlicht -->
+  <!-- 1. Sanfter geschwungener Stab (Wand) links -->
+  <g transform="translate(180, 75) rotate(-22)">
+    <circle cx="30" cy="30" r="24" fill="url(#rimGlow)" stroke="url(#goldRim)" stroke-width="2"/>
+    <rect x="22" y="52" width="16" height="74" rx="8" fill="url(#rimGlow)" stroke="#FDA4AF" stroke-width="1.5" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- 2. Ergonomischer Ring mittig -->
+  <g transform="translate(380, 95)">
+    <ellipse cx="40" cy="40" rx="36" ry="44" fill="none" stroke="url(#rimGlow)" stroke-width="14"/>
+    <ellipse cx="40" cy="40" rx="36" ry="44" fill="none" stroke="#FDE68A" stroke-width="2" opacity="0.8"/>
+  </g>
+
+  <!-- 3. Eleganter flächiger Kiesel / Druckwellen-Silhouette rechts -->
+  <g transform="translate(520, 60) rotate(16)">
+    <path d="M40 20 C70 20 90 40 85 70 C80 95 55 110 35 105 C15 100 5 80 10 50 C15 30 25 20 40 20 Z" fill="url(#rimGlow)" stroke="url(#goldRim)" stroke-width="2"/>
+    <ellipse cx="60" cy="50" rx="7" ry="12" fill="#0F172A" stroke="#FDE68A" stroke-width="1.5"/>
+  </g>
+
+  <!-- Abgesetzter Infobalken am unteren Bildrand -->
+  <rect x="0" y="235" width="840" height="65" fill="#0A0610" fill-opacity="0.75"/>
+  <line x1="0" y1="235" x2="840" y2="235" stroke="#FB7185" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="40" y="265" fill="#F1F5F9" font-family="sans-serif" font-size="18" font-weight="700">25. Toys: Spielzeug mit Köpfchen</text>
+  <text x="40" y="286" fill="#94A3B8" font-family="sans-serif" font-size="13">Auswahl, Haptik, Hygiene und Sicherheit</text>
+  <text x="800" y="274" text-anchor="end" fill="#FB7185" font-family="sans-serif" font-size="13" font-weight="600">VelvetPulse</text>
+</svg>
