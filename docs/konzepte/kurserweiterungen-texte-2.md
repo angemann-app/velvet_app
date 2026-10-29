@@ -18,6 +18,8 @@ Ton: „kann“, „manche“, „viele berichten“, kein „du wirst“; kein 
 **Dauer:** 6 Minuten
 **Zusammenfassung:** Weibliche Ejakulation, Squirting und Harnverlust sind nicht dasselbe. Was Studien zeigen, was offen ist, und warum niemand es erleben muss.
 
+Dieses Thema ist ein Wunsch aus der Community.
+
 Über kaum etwas gibt es so viele Behauptungen wie über Squirting. Hier das, was belegt ist, und das, was offen bleibt.
 
 Drei Begriffe, die oft vermischt werden
@@ -44,6 +46,8 @@ Bei Brennen beim Wasserlassen, Blut im Urin, Schmerzen beim Sex oder ungewolltem
 
 **Title:** Squirting: what we know and what we don’t
 **Summary:** Female ejaculation, squirting and urine leakage are not the same thing. What studies show, what is open, and why nobody has to experience it.
+
+This topic is a wish from the community.
 
 Few topics come with as many claims as squirting. Here is what is established and what stays open.
 
@@ -74,6 +78,8 @@ For burning when passing urine, blood in the urine, pain during sex, or unwanted
 **Dauer:** 7 Minuten
 **Zusammenfassung:** Keine Technik mit Erfolgsgarantie, sondern Möglichkeiten zum Neugierigsein: getrennt für allein und zu zweit, mit Stopp und ohne Ziel.
 
+Dieses Thema ist ein Wunsch aus der Community.
+
 Zuerst: Es gibt keine Studien zu Techniken. Was hier steht, ist Erfahrungswissen aus Sexualtherapie und Ratgebern. Nichts davon ist ein Weg zum Ziel. Wenn nichts passiert, war es trotzdem ein gültiger Versuch. Schmerz, Brennen oder Unbehagen heißen Stopp.
 
 Vorbereitung für beide Wege
@@ -100,6 +106,8 @@ Brennen, Blut, anhaltende Schmerzen oder Harnverlust, der dich belastet: ärztli
 
 **Title:** Spicy: trying squirting, alone and together
 **Summary:** No technique with a success guarantee, just possibilities to be curious: separate for alone and together, with stop and without a goal.
+
+This topic is a wish from the community.
 
 First: there are no studies on techniques. What follows is experience from sex therapy and guides. None of it is a path to a goal. If nothing happens, it was still a valid try. Pain, burning or discomfort mean stop.
 
@@ -130,6 +138,8 @@ Burning, blood, lasting pain or urine loss that bothers you: have it checked by 
 **Dauer:** 6 Minuten
 **Zusammenfassung:** Was der Gebärmutterhals ist, was Forschung über Empfindungen und „Gebärmutterhals-Orgasmen“ sagt, und warum Tiefe kein Maßstab ist.
 
+Dieses Thema ist ein Wunsch aus der Community.
+
 Der Gebärmutterhals (Cervix) ist der untere, schmale Teil der Gebärmutter und ragt oben in die Scheide. Du kannst ihn mit dem Finger als festen Knubbel mit einer kleinen Öffnung ertasten, dem Muttermund.
 
 Anatomie, kurz und klar
@@ -156,6 +166,8 @@ Tiefe Schmerzen beim Sex können auf Endometriose, Entzündungen, Zysten oder Ve
 
 **Title:** The cervix: anatomy, sensations, caution
 **Summary:** What the cervix is, what research says about sensations and “cervical orgasms”, and why depth is no yardstick.
+
+This topic is a wish from the community.
 
 The cervix is the lower, narrow part of the womb and reaches into the top of the vagina. With a finger you can feel it as a firm bump with a small opening, the cervical os.
 
@@ -186,6 +198,8 @@ Deep pain during sex can point to endometriosis, inflammation, cysts or tension.
 **Dauer:** 7 Minuten
 **Zusammenfassung:** Tiefe Berührung ohne Ziel: Sicherheit zuerst, die Person mit Gebärmutterhals steuert die Tiefe, getrennt für allein und zu zweit.
 
+Dieses Thema ist ein Wunsch aus der Community.
+
 Es gibt keine Studien zu dieser Praxis. Alles hier ist Erfahrungswissen und allgemeine Sexualmedizin. Tiefe ist kein Maßstab, und niemand muss sie mögen. **Schmerz, Krämpfe oder Druck mit Unwohlsein heißen Stopp**, immer, ohne Rechtfertigung. Weil Erregung Schmerz dämpft, kann er bei hoher Erregung später kommen: Nimm Schmerz nach dem Sex ernst. Manche Programme sagen, Schmerz am Anfang gehöre zum Entdecken dazu oder zeige nur, dass man den Körper bisher zu wenig gespürt habe. Das stimmt nicht: Schmerz ist ein Signal, kein Übergangsritus.
 
 Wann nicht oder nur nach Absprache mit Ärztin oder Arzt
@@ -212,6 +226,8 @@ Wiederkehrende tiefe Schmerzen, Blutung nach Sex, Fieber oder Schmerz länger al
 
 **Title:** Spicy: deep touch, alone and together
 **Summary:** Deep touch without a goal: safety first, the person with the cervix controls depth, separate for alone and together.
+
+This topic is a wish from the community.
 
 There are no studies on this practice. Everything here is experience and general sexual medicine. Depth is no yardstick, and nobody has to like it. **Pain, cramps or pressure with discomfort mean stop**, always, without justification. Because arousal dulls pain, it can show up later at high arousal: take pain after sex seriously. Some programmes say pain at the start is part of discovery or only shows you have not felt your body enough so far. That is not true: pain is a signal, not a rite of passage.
 

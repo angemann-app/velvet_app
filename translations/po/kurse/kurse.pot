@@ -2080,6 +2080,8 @@ msgid "Weibliche Ejakulation, Squirting und Harnverlust sind nicht dasselbe. Was
 msgstr ""
 
 #. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. EN: This topic is a wish from the community.
+#. EN:
 #. EN: Few topics come with as many claims as squirting. Here is what is established and what stays open.
 #. EN:
 #. EN: Three terms that often get mixed up
@@ -2101,6 +2103,8 @@ msgstr ""
 #. EN: For burning when passing urine, blood in the urine, pain during sex, or unwanted loss of urine in daily life or during sex that bothers you, talk to a doctor. Pelvic floor training can help.
 msgctxt "lesson:female_5#content"
 msgid ""
+"Dieses Thema ist ein Wunsch aus der Community.\n"
+"\n"
 "Über kaum etwas gibt es so viele Behauptungen wie über Squirting. Hier das, was belegt ist, und das, was offen bleibt.\n"
 "\n"
 "Drei Begriffe, die oft vermischt werden\n"
@@ -2141,6 +2145,8 @@ msgid "Was der Gebärmutterhals ist, was Forschung über Empfindungen und „Geb
 msgstr ""
 
 #. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. EN: This topic is a wish from the community.
+#. EN:
 #. EN: The cervix is the lower, narrow part of the womb and reaches into the top of the vagina. With a finger you can feel it as a firm bump with a small opening, the cervical os.
 #. EN:
 #. EN: Anatomy, short and clear
@@ -2162,6 +2168,8 @@ msgstr ""
 #. EN: Deep pain during sex can point to endometriosis, inflammation, cysts or tension. Bleeding after sex outside your period, discharge with an odour, fever or lower abdominal pain should be checked by a doctor. Do not “push through”.
 msgctxt "lesson:female_6#content"
 msgid ""
+"Dieses Thema ist ein Wunsch aus der Community.\n"
+"\n"
 "Der Gebärmutterhals (Cervix) ist der untere, schmale Teil der Gebärmutter und ragt oben in die Scheide. Du kannst ihn mit dem Finger als festen Knubbel mit einer kleinen Öffnung ertasten, dem Muttermund.\n"
 "\n"
 "Anatomie, kurz und klar\n"
@@ -4494,6 +4502,8 @@ msgid "Keine Technik mit Erfolgsgarantie, sondern Möglichkeiten zum Neugierigse
 msgstr ""
 
 #. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. EN: This topic is a wish from the community.
+#. EN:
 #. EN: First: there are no studies on techniques. What follows is experience from sex therapy and guides. None of it is a path to a goal. If nothing happens, it was still a valid try. Pain, burning or discomfort mean stop.
 #. EN:
 #. EN: Preparation for both paths
@@ -4515,6 +4525,8 @@ msgstr ""
 #. EN: Burning, blood, lasting pain or urine loss that bothers you: have it checked by a doctor.
 msgctxt "lesson:touch_w_s2#content"
 msgid ""
+"Dieses Thema ist ein Wunsch aus der Community.\n"
+"\n"
 "Zuerst: Es gibt keine Studien zu Techniken. Was hier steht, ist Erfahrungswissen aus Sexualtherapie und Ratgebern. Nichts davon ist ein Weg zum Ziel. Wenn nichts passiert, war es trotzdem ein gültiger Versuch. Schmerz, Brennen oder Unbehagen heißen Stopp.\n"
 "\n"
 "Vorbereitung für beide Wege\n"
@@ -4555,6 +4567,8 @@ msgid "Tiefe Berührung ohne Ziel: Sicherheit zuerst, die Person mit Gebärmutte
 msgstr ""
 
 #. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. EN: This topic is a wish from the community.
+#. EN:
 #. EN: There are no studies on this practice. Everything here is experience and general sexual medicine. Depth is no yardstick, and nobody has to like it. **Pain, cramps or pressure with discomfort mean stop**, always, without justification. Because arousal dulls pain, it can show up later at high arousal: take pain after sex seriously. Some programmes say pain at the start is part of discovery or only shows you have not felt your body enough so far. That is not true: pain is a signal, not a rite of passage.
 #. EN:
 #. EN: When not, or only after talking to a doctor
@@ -4576,6 +4590,8 @@ msgstr ""
 #. EN: Recurring deep pain, bleeding after sex, fever, or pain lasting longer than a week after sex: have it checked by a doctor.
 msgctxt "lesson:touch_w_s3#content"
 msgid ""
+"Dieses Thema ist ein Wunsch aus der Community.\n"
+"\n"
 "Es gibt keine Studien zu dieser Praxis. Alles hier ist Erfahrungswissen und allgemeine Sexualmedizin. Tiefe ist kein Maßstab, und niemand muss sie mögen. **Schmerz, Krämpfe oder Druck mit Unwohlsein heißen Stopp**, immer, ohne Rechtfertigung. Weil Erregung Schmerz dämpft, kann er bei hoher Erregung später kommen: Nimm Schmerz nach dem Sex ernst. Manche Programme sagen, Schmerz am Anfang gehöre zum Entdecken dazu oder zeige nur, dass man den Körper bisher zu wenig gespürt habe. Das stimmt nicht: Schmerz ist ein Signal, kein Übergangsritus.\n"
 "\n"
 "Wann nicht oder nur nach Absprache mit Ärztin oder Arzt\n"
