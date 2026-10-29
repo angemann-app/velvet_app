@@ -26,12 +26,12 @@ if ($LASTEXITCODE -ne 0) {
     if ($LASTEXITCODE -ne 0) { throw "Release pakete konnte nicht angelegt werden." }
 }
 # Pakete nur für R2 (Lust im Traum, Innenansichten) gehen nur verschlüsselt ins Release; der Workflow entschlüsselt und löscht sie.
-$nurR2 = @(Get-ChildItem build\pakete\*-lust-v*.zip, build\pakete\*-reihe-v*.zip, build\pakete\reihe-bilder-v*.zip -ErrorAction SilentlyContinue)
+$nurR2 = @(Get-ChildItem build\pakete\*-lust-v*.zip, build\pakete\*-reihe-v*.zip, build\pakete\reihe-bilder-v*.zip, build\pakete\kurse-bilder-spicy-v*.zip -ErrorAction SilentlyContinue)
 foreach ($z in $nurR2) {
     & C:\TOOLS\flutter\bin\dart.bat run tools/paket_transport.dart verschluesseln $z.FullName "$($z.FullName).enc"
     if ($LASTEXITCODE -ne 0) { throw "Verschlüsseln von $($z.Name) fehlgeschlagen." }
 }
-$dateien = @(Get-ChildItem build\pakete\*.zip | Where-Object { $_.Name -notlike "*-lust-v*" -and $_.Name -notlike "*-reihe-v*" -and $_.Name -notlike "reihe-bilder-v*" } | ForEach-Object FullName) +
+$dateien = @(Get-ChildItem build\pakete\*.zip | Where-Object { $_.Name -notlike "*-lust-v*" -and $_.Name -notlike "*-reihe-v*" -and $_.Name -notlike "reihe-bilder-v*" -and $_.Name -notlike "kurse-bilder-spicy-v*" } | ForEach-Object FullName) +
     @(Get-ChildItem build\pakete\*.zip.enc -ErrorAction SilentlyContinue | ForEach-Object FullName) +
     @("build\pakete\audio-index.json.sig", "build\pakete\audio-index.json")
 & $gh release upload pakete @dateien --repo $repo --clobber

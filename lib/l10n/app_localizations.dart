@@ -6795,6 +6795,18 @@ abstract class AppLocalizations {
   /// **'Aufnahmen laden'**
   String get reihePaketLaden;
 
+  /// No description provided for @kursBildAllein.
+  ///
+  /// In de, this message translates to:
+  /// **'Allein'**
+  String get kursBildAllein;
+
+  /// No description provided for @kursBildZuZweit.
+  ///
+  /// In de, this message translates to:
+  /// **'Zu zweit'**
+  String get kursBildZuZweit;
+
   /// No description provided for @reihePaketNeu.
   ///
   /// In de, this message translates to:

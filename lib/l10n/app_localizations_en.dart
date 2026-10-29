@@ -4032,6 +4032,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get reihePaketLaden => 'Download recordings';
 
   @override
+  String get kursBildAllein => 'Alone';
+
+  @override
+  String get kursBildZuZweit => 'Together';
+
+  @override
   String get reihePaketNeu =>
       'There are new episodes and pictures for this series. Best to update on Wi-Fi. Afterwards everything works offline again.';
 

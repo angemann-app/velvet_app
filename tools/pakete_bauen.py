@@ -162,6 +162,35 @@ def bilder_bauen(version):
             "nur_r2": True, "spicy": True}
 
 
+KURSE_BILDER_ORDNER = Path(r"C:\TOOLS\velvet-inhalte\kurse\bilder\final")
+
+
+def kurse_bilder_bauen(version):
+    """Spicy-Stimmungsbilder zu Praxis-Lektionen der Kurse („kurse-bilder-spicy“, sprachunabhängig, nur R2, nur Spicy).
+    Quelle: kurse\\bilder\\final\\*.webp außerhalb des Repositorys. Jedes Bild muss in einer Lektion unter „bilder“ stehen
+    (kurse/<Datei>), sonst bricht der Bau ab; ohne Bilder gibt es kein Paket (None)."""
+    bilder = sorted(KURSE_BILDER_ORDNER.glob("*.webp"))
+    if not bilder:
+        print("kurse-bilder-spicy: übersprungen, keine Bilder")
+        return None
+    inhalt = json.loads((ROOT / "assets" / "data" / "velvet_content.json").read_text(encoding="utf-8"))
+    genannt = {b for k in inhalt["courses"] for l in k["lessons"] for b in l.get("bilder", [])}
+    unbekannt = [b.name for b in bilder if f"kurse/{b.name}" not in genannt]
+    fehlt = sorted(g for g in genannt if not (KURSE_BILDER_ORDNER / g.split("/", 1)[1]).exists())
+    if unbekannt or fehlt:
+        raise SystemExit(f"kurse-bilder-spicy: nicht in Lektionen: {unbekannt}; Bild fehlt: {fehlt}")
+    name = "kurse-bilder-spicy"
+    datei = ZIEL / f"{name}-v{version}.zip"
+    with zipfile.ZipFile(datei, "w", compression=zipfile.ZIP_STORED) as z:
+        z.writestr("paket.json", json.dumps({"name": name, "sprache": "alle", "version": version}))
+        for b in bilder:
+            z.write(b, f"kurse/{b.name}")
+    daten = datei.read_bytes()
+    print(f"{datei.name}: {len(bilder)} Bilder, {len(daten) / 1e6:.1f} MB (nur R2)")
+    return {"name": name, "sprache": "alle", "version": version, "groesse": len(daten),
+            "sha256": hashlib.sha256(daten).hexdigest(), "datei": datei.name, "nur_r2": True, "spicy": True}
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--en-quelle", default=str(ROOT / "build" / "audio_en"))
@@ -187,6 +216,12 @@ def main():
             e = reihe_bauen(sprache, versionen[f"{sprache}-reihe"])
             if e:
                 eintraege.append(e)
+    for alt in ZIEL.glob("kurse-bilder-spicy-v*.zip"):
+        alt.unlink()
+    if "kurse-bilder-spicy" in versionen:
+        e = kurse_bilder_bauen(versionen["kurse-bilder-spicy"])
+        if e:
+            eintraege.append(e)
     if (REIHE_ORDNER / "reihe.json").exists() and "reihe-bilder" in versionen:
         e = bilder_bauen(versionen["reihe-bilder"])
         if e:
