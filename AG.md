@@ -72,29 +72,21 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
-### AG-17: Hörprüfung von vier englischen Aufnahmen der Reihe „Innenansichten“ (nur Bericht)
+### AG-19: Toys-Diagramme für die Produktion (aus der Probe AG-11)
 
-**Kein Branch, kein Pull Request, kein Commit.** Wie AG-13, aber für die **englischen** Aufnahmen. Ausnahme von der Sperre oben,
-mit ausdrücklichem Einverständnis des Nutzers: Du darfst aus `C:\TOOLS\velvet-inhalte\reihe\audio_en\` nur die vier unten
-genannten Dateien **anhören (lesen)** und den Bericht `C:\TOOLS\velvet-inhalte\reihe\pruefung_ag_en.md` anlegen. Sonst
-nichts dort anfassen, nichts kopieren oder in das Repository bringen, keinen Text der Aufnahmen im Bericht abschreiben.
-**Vorher lesen:** `docs/konzepte/lust-audioreihe.md` (Abschnitte zu Stimme und Ton), `tools/reihe_ausdruck.py` (nur lesen).
+**Branch:** `ag/19-toys-diagramme`
+**Vorher lesen:** `docs/kursbilder-probe/README.md` und die vier SVG-Paare dort (deine eigene Probe), die Regeln von AG-14 bis AG-16.
+**Darf ändern:** nur neue Dateien `assets/images/diagram_toys_2.svg` und `_en.svg` (aus `toys_uebersicht`), `diagram_toys_3.svg` und `_en.svg`
+(aus `toys_material`), `diagram_toys_4.svg` und `_en.svg` (aus `toys_sicherheit`) und `docs/kursbilder-liste-ag19.md`. Die Probedateien nicht ändern.
 
-Die vier Dateien:
-1. `victoria_zwei_frauen_spicy_a_climax.opus`
-2. `martin_zwei_maenner_spicy_b_building_desire.opus`
-3. `martin_im_eigenen_koerper_soft_mann_opening.opus`
-4. `martin_der_andere_koerper_spicy_mann_other_body.opus`
-
-Bewerte je Datei kurz: **Aussprache** (falsch gesprochene oder falsch betonte englische Wörter, mit Zeitmarke und Wort, ohne den
-Satz zu zitieren; besonders Fremdwörter, Eigennamen, Obst und Kräuter wie apricot, rosemary, marzipan, Anatomiebegriffe),
-**Grundatmosphäre** (ruhig, warm, nah; kippt sie ins Flache oder Hastige?), **Sprechgeschwindigkeit**, **Pausenführung**,
-**Auffälliges** (Knackser, abgeschnittene Enden, Lautstärkesprünge). Am Ende eine Gesamteinschätzung (drei Sätze) und eine
-Liste von Wörtern, die in das Lexikon sollten (nur Vorschlag, nicht eintragen; das englische Lexikon liegt in
-`tools/aussprache.json` und `tools/generate_audio_en.py`).
-**Nicht tun:** Aufnahmen neu erzeugen, `tools/` oder `lib/` ändern, Texte ändern, andere Dateien anhören. Bricht dein Inhaltsfilter
-ab: nicht umgehen, im Bericht vermerken.
-**Prüfen:** nur der Bericht; Meldung an den Nutzer, sobald er liegt.
+Übernimm die Motive der Probe, auch die Trennung der Toy-Arten **für Frauen und für Männer** in `toys_2` (so wie vom Nutzer gewünscht),
+und behebe diesen **Fehler aus der Probe**: In `toys_material.svg` und `_en.svg` bricht der Text in den Pflegehinweisen **mitten im
+Wort** um („Silikongel z / erstört“, „un / d“, „Elektr / onik“). Setze Zeilenumbrüche nur **zwischen Wörtern**, plane breitere Kästen oder
+kürzere Zeilen ein und prüfe jedes Wort am rechten Rand. Prüfe außerdem alle sechs Dateien, ob Text über den Kastenrand ragt.
+Die Form wie bei AG-14 bis AG-16 (`viewBox 0 0 800 600`, Palette, Schrift mindestens 16, höchstens 20 KB, Deutsch und Englisch). Der Titel
+`toys_titel` ist kein Lektionsbild und bleibt ein Vorschlag; ihn übernimmt der Nutzer später.
+**Prüfen:** SVGs im Browser öffnen, jedes Wort am Rand lesen. Im Pull Request: nur zur Einbindung durch Claude Code.
+**Nicht tun:** Körperdarstellungen, Bildmodell-Rasterbilder für die Produktion.
 
 ### AG-18: Vier Anatomie- und Ablauf-Schemata für die neuen Lektionen Squirting und Gebärmutterhals (SVG)
 
@@ -130,43 +122,6 @@ steht klein: „schematisch, Lage und Größe sind individuell“ (englisch: „
 **Prüfen:** SVGs im Browser öffnen (Text lesbar), je Lektion zwei Dateien, Liste vollständig; `flutter test` nicht nötig. Im Pull
 Request: Hinweis, dass die Bilder noch nicht eingebunden sind. **Filter:** Bricht dein Inhaltsfilter ab, nicht umgehen, in der
 Liste vermerken und weitermachen. **Nicht tun:** Körperdarstellungen, Spicy-Inhalte, Texte der Lektionen ändern.
-
-### AG-11: Probe Kursbilder, Pilotkurs „Toys“ (Normalfassung)
-
-**Branch:** `ag/11-kursbilder-probe`
-**Vorher lesen:** `docs/konzepte/kursbilder.md` (alles, besonders Abschnitte 4, 5 und 7), `tools/generate_diagrams.py`,
-`assets/images/diagram_yoni_clock.svg` und `assets/images/cover_27.svg` als Stilvorbild, Kurs 25 „Toys“ in
-`assets/data/velvet_content.json` (Lektionen `toys_2`, `toys_3`, `toys_4`).
-**Darf ändern:** nur neue Dateien in `docs/kursbilder-probe/` (kein Bild geht in die App, kein anderer Ordner).
-Nichts in `assets/`, `lib/`, `translations/`.
-
-Das ist ein **Probeauftrag**. Er soll klären, ob und wie gut Antigravity Grafiken für die Kurse erzeugen kann.
-
-1. **Zuerst melden:** Kannst du Bilder mit einem Bildmodell erzeugen, oder nur SVG als Code schreiben? Schreibe es
-   in die erste Zeile von `docs/kursbilder-probe/README.md`. Verweigert dein Inhaltsfilter ein Motiv: **abbrechen,
-   nicht umgehen, nicht entschärfen**, das Ergebnis in der README festhalten und die übrigen Motive weiterführen.
-2. **Vier Motive** (neutral, ohne Körper, ohne Marken; ruhiger Stil wie die vorhandenen Diagramme, dunkle Töne
-   `#140D1C`/`#0F172A`, Akzent `#FB7185`):
-   a. `toys_uebersicht`: stilisierte, neutrale Silhouetten der Toy-Arten (Vibratoren, Massagestab, Ringe, Kugeln,
-      Gleitmittel) als Überblick, ohne Körper. **Wichtig (Wunsch des Nutzers, 29.10.2026):** Zeige verschiedene Arten
-      von Toys **für Männer und für Frauen**, in zwei deutlich getrennten Gruppen, jeweils als Silhouette oder
-      Produktform ohne Körper (zum Beispiel für Frauen: Auflege-, Druckwellen-, Stab- und Kugel-Formen; für Männer:
-      Ringe, Masturbatoren-Formen, Prostata-Stimulatoren; für alle: Gleitmittel). Das Bild ist zugleich der Toy-Katalog
-      der Lektion `toys_2`.
-   b. `toys_material`: Vergleich der Materialien (Silikon, Glas, Metall, ABS) mit je einem Pflegehinweis.
-   c. `toys_sicherheit`: Ampel- oder Merkbild „Wo es heikel wird“ (Hygiene, passendes Gleitmittel, Stopp-Signal).
-   d. `toys_titel`: Titelbild für Kurs 25 in Stimmung der anderen Titelbilder (840 × 300).
-3. **Jedes Motiv als SVG** (a bis c im Format 800 × 600, d 840 × 300), **Deutsch und Englisch**
-   (`<name>.svg`, `<name>_en.svg`). Wenn du ein Bildmodell hast: zusätzlich je Motiv ein Rasterbild
-   (`<name>_modell.webp`, höchstens 150 KB) zum Vergleich.
-4. `docs/kursbilder-probe/README.md`: erste Zeile Fähigkeit (siehe 1), dann eine kurze Tabelle: Motiv, SVG ja/nein,
-   Modellbild ja/nein, Dateigröße, was nicht klappte (Filter, Stil, Lesbarkeit, Beschriftung).
-
-**Nicht tun:** Spicy- oder körperbezogene Motive, Bilder von Personen, Marken, Produktfotos. Nichts an Claude oder
-andere Sitzungen weitergeben, was nicht in der README steht.
-
-**Prüfen:** SVGs öffnen sich im Browser, Text ist lesbar und nicht abgeschnitten. `flutter test` nicht nötig, es
-ändert sich kein App-Code. In den Pull Request: Hinweis, dass alles nur zum Ansehen ist.
 
 ### AG-14, AG-15, AG-16: Erklär-Diagramme der Kurse als SVG (Deutsch und Englisch), in drei Stufen
 
@@ -246,3 +201,5 @@ keine Aussprache-Meldungen mehr ab und legt keine `aussprache/`-Branches mehr an
   Abholwerkzeug und Tests.
 - 28.10.2026, AG-12 (`ag/12-bildbedarf`, PR #55): Bildbedarf der Kurse sondiert, `docs/kursbilder-bedarf.md`.
 - 28.10.2026, AG-13 (kein Branch): Hörprüfung von vier Aufnahmen der Reihe, Bericht `C:\TOOLS\velvet-inhalte\reihe\pruefung_ag.md`.
+- 29.10.2026, AG-11 (`ag/11-kursbilder-probe`, PR #56): Probe Toys, vier Motive als SVG (Deutsch und Englisch) und Bildmodell-Rasterbild, `docs/kursbilder-probe/`. Textumbrüche mitten im Wort in `toys_material`, siehe AG-19.
+- 29.10.2026, AG-17 (kein Branch): Hörprüfung vier englische Aufnahmen, Bericht `C:\TOOLS\velvet-inhalte\reihe\pruefung_ag_en.md`; Lexikon-Vorschlag „vertebrae“ kommt auf die Mittwochsliste.
