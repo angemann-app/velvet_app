@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>The Perineum: Outer Zones &amp; Touch</title>
+  <desc>Orientation and three touch modes for external stimulation of pelvic and prostate nerves</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140D1C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDA4AF"/>
+      <stop offset="100%" stop-color="#E11D48"/>
+    </linearGradient>
+    <linearGradient id="bulbGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FB7185" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#9F1239" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <text x="400" y="38" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">The Perineum: Outer Zones &amp; Touch</text>
+  <text x="400" y="62" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">schematic, position and size vary</text>
+  <!-- Zonenkarte Damm -->
+  <g transform="translate(60, 95)">
+    <rect width="320" height="360" rx="14" fill="url(#card)" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="160" y="32" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#38BDF8">Perineal Zones</text>
+
+    <!-- Hodensack Ansatz oben -->
+    <path d="M100 55 C120 45 200 45 220 55" stroke="#64748B" stroke-width="3" fill="none"/>
+    <text x="160" y="72" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">↑ Scrotum</text>
+
+    <!-- Zone A: Vorderer Damm (Schwellkörperwurzel) -->
+    <rect x="65" y="88" width="190" height="58" rx="10" fill="#38BDF8" fill-opacity="0.25" stroke="#38BDF8" stroke-width="1.8"/>
+    <text x="160" y="112" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#F1F5F9">A: Anterior Zone</text>
+    <text x="160" y="134" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">Erectile roots</text>
+
+    <!-- Zone B: Zentrum (Centrum tendineum / Tiefenpunkt) -->
+    <rect x="65" y="158" width="190" height="65" rx="12" fill="#FB7185" fill-opacity="0.3" stroke="#FB7185" stroke-width="2"/>
+    <circle cx="160" cy="184" r="8" fill="#FBBF24"/>
+    <text x="160" y="210" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#F1F5F9">B: Central Hub</text>
+
+    <!-- Zone C: Hinterer Damm -->
+    <rect x="65" y="235" width="190" height="58" rx="10" fill="#38BDF8" fill-opacity="0.25" stroke="#38BDF8" stroke-width="1.8"/>
+    <text x="160" y="259" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#F1F5F9">C: Posterior Zone</text>
+    <text x="160" y="281" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">Near sphincter</text>
+
+    <!-- After unten -->
+    <ellipse cx="160" cy="320" rx="16" ry="10" fill="#0F172A" stroke="#64748B" stroke-width="2"/>
+    <text x="160" y="348" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">↓ Anus</text>
+  </g>
+  <g transform="translate(410, 95)">
+    <rect width="330" height="106" rx="12" fill="url(#card)" stroke="#FBBF24" stroke-width="1.6"/>
+    <text x="16" y="34" font-family="sans-serif" font-size="17" font-weight="700" fill="#FBBF24">1. Broad Palm (Warmth &amp; Grounding)</text>
+    <text x="16" y="62" font-family="sans-serif" font-size="16" fill="#F1F5F9">Rest palm gently on perineum;</text>
+    <text x="16" y="86" font-family="sans-serif" font-size="16" fill="#94A3B8">share breath and relax muscles.</text>
+  </g>
+  <g transform="translate(410, 219)">
+    <rect width="330" height="106" rx="12" fill="url(#card)" stroke="#FB7185" stroke-width="1.6"/>
+    <text x="16" y="34" font-family="sans-serif" font-size="17" font-weight="700" fill="#FB7185">2. Gentle Pressure (Point B Inward)</text>
+    <text x="16" y="62" font-family="sans-serif" font-size="16" fill="#F1F5F9">Pulse finger pad inward gently</text>
+    <text x="16" y="86" font-family="sans-serif" font-size="16" fill="#94A3B8">toward deep pelvic center.</text>
+  </g>
+  <g transform="translate(410, 343)">
+    <rect width="330" height="106" rx="12" fill="url(#card)" stroke="#38BDF8" stroke-width="1.6"/>
+    <text x="16" y="34" font-family="sans-serif" font-size="17" font-weight="700" fill="#38BDF8">3. Steady Stroking (Along Line A–C)</text>
+    <text x="16" y="62" font-family="sans-serif" font-size="16" fill="#F1F5F9">Stroke slowly back and forth</text>
+    <text x="16" y="86" font-family="sans-serif" font-size="16" fill="#94A3B8">with warm oil or lubricant.</text>
+  </g>
+  <rect x="60" y="480" width="680" height="76" rx="12" fill="#1E293B" fill-opacity="0.75" stroke="#FB7185" stroke-width="1.5"/>
+  <text x="80" y="510" font-family="sans-serif" font-size="16" fill="#F1F5F9">External touch stimulates deep nerves while keeping full self-control.</text>
+  <text x="80" y="536" font-family="sans-serif" font-size="16" fill="#F1F5F9">Use generous lubricant or warm oil to protect the delicate skin.</text>
+</svg>

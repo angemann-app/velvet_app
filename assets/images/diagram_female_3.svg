@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Die Klitoris: Netzwerk und Schwellkörper</title>
+  <desc>Dreidimensionale Architektur: Eichel, Schaft, Schenkel und Vorhofschwellkörper</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140D1C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDA4AF"/>
+      <stop offset="100%" stop-color="#E11D48"/>
+    </linearGradient>
+    <linearGradient id="bulbGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FB7185" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#9F1239" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <text x="400" y="38" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Die Klitoris: Netzwerk und Schwellkörper</text>
+  <text x="400" y="62" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">schematisch, Lage und Größe sind individuell</text>
+  <g transform="translate(230, 260)">
+    <!-- Scheideneingang in der Mitte -->
+    <ellipse cx="0" cy="50" rx="22" ry="42" fill="#0F172A" stroke="#FBBF24" stroke-width="2.5" stroke-dasharray="4 4"/>
+    <circle cx="0" cy="50" r="13" fill="#FBBF24"/><text x="0" y="56" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">5</text>
+
+    <!-- Vorhofschwellkörper (Bulbi vestibuli) umschließen die Scheide links und rechts -->
+    <path d="M-12 10 C-36 20 -44 55 -38 85 C-32 105 -18 100 -14 78 C-10 60 -6 30 -12 10 Z" fill="url(#bulbGrad)" stroke="#A78BFA" stroke-width="2"/>
+    <path d="M12 10 C36 20 44 55 38 85 C32 105 18 100 14 78 C10 60 6 30 12 10 Z" fill="url(#bulbGrad)" stroke="#A78BFA" stroke-width="2"/>
+    <circle cx="-32" cy="60" r="13" fill="#A78BFA"/><text x="-32" y="66" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text>
+    <circle cx="32" cy="60" r="13" fill="#A78BFA"/><text x="32" y="66" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text>
+
+    <!-- Schenkel (Crura clitoridis) spreizen sich weit nach außen-unten -->
+    <path d="M-8 -60 C-40 -50 -105 -10 -120 50 C-125 70 -105 75 -95 55 C-80 15 -35 -25 -6 -45 Z" fill="url(#roseGrad)" stroke="#FB7185" stroke-width="2"/>
+    <path d="M8 -60 C40 -50 105 -10 120 50 C125 70 105 75 95 55 C80 15 35 -25 6 -45 Z" fill="url(#roseGrad)" stroke="#FB7185" stroke-width="2"/>
+    <circle cx="-95" cy="20" r="13" fill="#FB7185"/><text x="-95" y="26" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text>
+    <circle cx="95" cy="20" r="13" fill="#FB7185"/><text x="95" y="26" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text>
+
+    <!-- Klitorisschaft (Corpus clitoridis) -->
+    <path d="M-14 -40 L-12 -90 C-12 -100 12 -100 12 -90 L14 -40 Z" fill="url(#roseGrad)" stroke="#FB7185" stroke-width="2"/>
+    <circle cx="0" cy="-70" r="13" fill="#FB7185"/><text x="0" y="-64" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">2</text>
+
+    <!-- Klitoriseichel (Glans clitoridis) an der Spitze -->
+    <circle cx="0" cy="-115" r="18" fill="#F4A6B4" stroke="#FB7185" stroke-width="3"/>
+    <circle cx="0" cy="-115" r="7" fill="#FFF" opacity="0.6"/>
+    <circle cx="0" cy="-115" r="13" fill="#FB7185"/><text x="0" y="-109" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">1</text>
+  </g>
+  <circle cx="470" cy="110" r="13" fill="#FB7185"/><text x="470" y="116" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">1</text>
+  <text x="496" y="116" font-family="sans-serif" font-size="16" fill="#F1F5F9">Klitoriseichel (außen sichtbar)</text>
+  <circle cx="470" cy="156" r="13" fill="#FB7185"/><text x="470" y="162" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">2</text>
+  <text x="496" y="162" font-family="sans-serif" font-size="16" fill="#F1F5F9">Klitorisschaft / Körper</text>
+  <circle cx="470" cy="202" r="13" fill="#FB7185"/><text x="470" y="208" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text>
+  <text x="496" y="208" font-family="sans-serif" font-size="16" fill="#F1F5F9">Klitorisschenkel (paarig, bis 10 cm)</text>
+  <circle cx="470" cy="248" r="13" fill="#A78BFA"/><text x="470" y="254" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text>
+  <text x="496" y="254" font-family="sans-serif" font-size="16" fill="#F1F5F9">Vorhofschwellkörper (Bulbi)</text>
+  <circle cx="470" cy="294" r="13" fill="#FBBF24"/><text x="470" y="300" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">5</text>
+  <text x="496" y="300" font-family="sans-serif" font-size="16" fill="#F1F5F9">Scheideneingang (schematisch)</text>
+  <rect x="40" y="470" width="720" height="76" rx="12" fill="#1E293B" fill-opacity="0.75" stroke="#FB7185" stroke-width="1.5"/>
+  <text x="60" y="500" font-family="sans-serif" font-size="16" fill="#F1F5F9">Nur die Eichel an der Spitze liegt außen. Das gesamte Schwellkörpersystem ist rund</text>
+  <text x="60" y="526" font-family="sans-serif" font-size="16" fill="#F1F5F9">zehn Zentimeter groß und füllt sich bei Erregung und Entspannung mit Blut.</text>
+</svg>
