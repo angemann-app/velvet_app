@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Der Beckenboden: Heben, Senken und Weiten</title>
+  <desc>Dreidimensionales Koordinatensystem des Beckenbodens mit den vier knöchernen Ankerpunkten</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#140D1C"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="bowlGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FB7185" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E11D48" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <text x="400" y="38" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Der Beckenboden: Heben, Senken und Weiten</text>
+  <text x="400" y="62" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">schematisch, Lage und Größe sind individuell</text>
+
+  <!-- Linke Spalte: Schalenmodell &amp; Ankerpunkte -->
+  <g transform="translate(40, 92)">
+    <rect width="340" height="365" rx="14" fill="url(#card)" stroke="#38BDF8" stroke-width="1.8"/>
+    <text x="170" y="32" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#38BDF8">DREIDIMENSIONALE SCHALE</text>
+    <text x="170" y="54" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">Vier knöcherne Ankerpunkte</text>
+
+    <!-- Diamant-Form Ankerpunkte -->
+    <text x="170" y="80" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">↑ Schambein (vorne)</text>
+    <text x="170" y="280" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">↓ Steißbein (hinten)</text>
+    
+    <!-- Sitzbein links und rechts mit sicherem Abstand zur Ellipse -->
+    <text x="70" y="180" text-anchor="end" font-family="sans-serif" font-size="16" fill="#94A3B8">Sitzbein</text>
+    <text x="270" y="180" text-anchor="start" font-family="sans-serif" font-size="16" fill="#94A3B8">Sitzbein</text>
+
+    <!-- Elastische Beckenbodenschale (Ellipsen von 80 bis 260) -->
+    <ellipse cx="170" cy="175" rx="90" ry="55" fill="url(#bowlGrad)" stroke="#FB7185" stroke-width="2.5"/>
+    <ellipse cx="170" cy="180" rx="45" ry="25" fill="#0F172A" stroke="#FBBF24" stroke-width="2"/>
+    <circle cx="170" cy="180" r="5" fill="#FB7185"/>
+    <text x="170" y="210" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#F1F5F9">Damm / Zentrum</text>
+
+    <!-- Expansionspfeile -->
+    <path d="M170 145 L170 120" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+    <path d="M170 215 L170 240" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+    <path d="M115 175 L95 175" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+    <path d="M225 175 L245 175" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+
+    <text x="170" y="335" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#34D399">Elastisch aufgespannt wie ein Segeltuch</text>
+  </g>
+
+  <!-- Rechte Spalte: 3 Bewegungsrichtungen -->
+  <g transform="translate(420, 92)">
+    <rect width="340" height="365" rx="14" fill="url(#card)" stroke="#FB7185" stroke-width="1.8"/>
+    <text x="170" y="32" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#FB7185">DIE DREI BEWEGUNGSRICHTUNGEN</text>
+
+    <!-- Box 1: Heben -->
+    <g transform="translate(18, 55)">
+      <rect width="304" height="88" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#38BDF8">1. Heben (Anspannen)</text>
+      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Zieht nach innen oben. Schließt di</text>
+      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8"> Öffnungen.</text>
+    </g>
+
+    <!-- Box 2: Senken -->
+    <g transform="translate(18, 155)">
+      <rect width="304" height="88" rx="10" fill="#0F172A" stroke="#94A3B8" stroke-width="1.5"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#94A3B8">2. Senken (Neutral)</text>
+      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Kehrt in Ruhelage zurück. Atmung f</text>
+      <text x="16" y="74" font-family="sans-serif" font-size="16" fill="#94A3B8">ießt frei.</text>
+    </g>
+
+    <!-- Box 3: Weiten -->
+    <g transform="translate(18, 255)">
+      <rect width="304" height="96" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.8"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="16" font-weight="700" fill="#34D399">3. Weiten (Loslassen / Öffnen)</text>
+      <text x="16" y="52" font-family="sans-serif" font-size="16" fill="#F1F5F9">Gibt nach unten außen nach wie ein</text>
+      <text x="16" y="76" font-family="sans-serif" font-size="16" fill="#34D399">Voraussetzung für schmerzfreies Ankommen</text>
+    </g>
+  </g>
+
+  <!-- Unterer Merksatz -->
+  <rect x="40" y="480" width="720" height="76" rx="12" fill="#1E293B" fill-opacity="0.75" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="60" y="510" font-family="sans-serif" font-size="16" fill="#F1F5F9">Viele Menschen kennen nur das Heben (Fitness/Kegel). Für entspannte Lust</text>
+  <text x="60" y="536" font-family="sans-serif" font-size="16" fill="#F1F5F9">und das Lösen von Schmerzen ist das Weiten und Nachgeben entscheidend.</text>
+
+</svg>
