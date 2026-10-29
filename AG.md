@@ -96,6 +96,41 @@ Liste von Wörtern, die in das Lexikon sollten (nur Vorschlag, nicht eintragen; 
 ab: nicht umgehen, im Bericht vermerken.
 **Prüfen:** nur der Bericht; Meldung an den Nutzer, sobald er liegt.
 
+### AG-18: Vier Anatomie- und Ablauf-Schemata für die neuen Lektionen Squirting und Gebärmutterhals (SVG)
+
+**Branch:** `ag/18-schemata-squirting-zervix`
+**Vorher lesen:** `docs/recherche/squirting.md` und `docs/recherche/gebaermutterhals.md` (nur für Beschriftung und Fachlichkeit),
+`assets/images/diagram_selbst_vulva.svg` und `_en.svg` (so zurückhaltend und schematisch soll Anatomie aussehen), die Regeln der
+Aufträge AG-14 bis AG-16 (Form, Palette, Größe). Aus `assets/data/velvet_content.json` darfst du **nur** die Lektionen `female_5` und
+`female_6` lesen. **Die Lektionen `touch_w_s2` und `touch_w_s3` (Spicy) nicht lesen und nicht bearbeiten;** ihre Motive stehen unten.
+**Darf ändern:** nur diese acht neuen Dateien in `assets/images/`: `diagram_female_5.svg`, `diagram_female_6.svg`,
+`diagram_touch_w_s2.svg`, `diagram_touch_w_s3.svg` und jeweils `_en.svg`. Nichts anderes.
+
+Form wie bei AG-14 bis AG-16: `viewBox="0 0 800 600"`, Hintergrund `#140D1C`, Akzent `#FB7185`, Text `#F1F5F9`, `sans-serif`, Schrift
+mindestens 16, nichts abgeschnitten, höchstens 20 KB, `<title>` und `<desc>` (Deutsch bzw. Englisch), keine Skripte oder Bilder. Rein
+schematisch, **keine Körper, keine Personen**; Anatomie als stilisierter Seitenschnitt mit Linien und Beschriftung. Auf jedem Bild
+steht klein: „schematisch, Lage und Größe sind individuell“ (englisch: „schematic, position and size vary“).
+
+1. `female_5` (Kurs 9, Squirting, Wissen): Seitenansicht (Schnitt) mit Harnblase, Harnröhre, Vorderwand der Vagina, paraurethralen
+   (Skene-)Drüsen neben dem unteren Ende der Harnröhre und der inneren Struktur der Klitoris (Eichel außen, Schenkel und
+   Schwellkörper innen). Dazu ein kleiner Kasten: „Vorderwand und Klitoris hängen zusammen; ob es einen eigenen ‚G-Punkt‘ gibt, ist
+   umstritten.“ Keine Pfeile, die einen „Punkt“ versprechen.
+2. `female_6` (Kurs 9, Gebärmutterhals, Wissen): Seitenansicht mit Gebärmutter, Gebärmutterhals, Muttermund, Scheide (Tiefe etwa 7 bis
+   10 cm als Maß) und Harnblase. Zwei kleine Nebenbilder oder Pfeile: „bei Erregung hebt sich die Gebärmutter, die Scheide verlängert
+   sich“ und „Lage und Neigung sind verschieden (zum Beispiel nach hinten gekippt)“. Hinweis: „Beim Sex dringt nichts in die
+   Gebärmutter ein, man drückt gegen den Gebärmutterhals.“
+3. `touch_w_s2` (Ablaufbild „Entspannen statt Pressen“, Beschriftung ohne Anatomie): Fünf Stationen von links nach rechts: Zeit
+   nehmen, außen erregen, Druck an der Vorderwand, Harndrang erkennen, entscheiden (laufen lassen mit Unterlage oder pausieren).
+   Darunter ein roter Balken: „Schmerz, Brennen oder Unbehagen heißen Stopp.“ Kein Erfolgsversprechen, kein „Ziel“.
+4. `touch_w_s3` (Ablaufbild „Tiefe und Stopp“, Beschriftung ohne Anatomie): Eine Treppe oder Ampel in vier Stufen: Erregung zuerst,
+   flach beginnen, Tiefe nur auf ein deutliches „mehr“, Schmerz oder Druck mit Unwohlsein heißt sofort Stopp. Die Person mit
+   Gebärmutterhals bestimmt Tiefe und Tempo (als Satz am unteren Rand).
+
+**Liste:** `docs/kursbilder-liste-ag18.md` mit einer Zeile je Lektion (ID, Dateien, Beschriftung deutsch und englisch, Anmerkung).
+**Prüfen:** SVGs im Browser öffnen (Text lesbar), je Lektion zwei Dateien, Liste vollständig; `flutter test` nicht nötig. Im Pull
+Request: Hinweis, dass die Bilder noch nicht eingebunden sind. **Filter:** Bricht dein Inhaltsfilter ab, nicht umgehen, in der
+Liste vermerken und weitermachen. **Nicht tun:** Körperdarstellungen, Spicy-Inhalte, Texte der Lektionen ändern.
+
 ### AG-11: Probe Kursbilder, Pilotkurs „Toys“ (Normalfassung)
 
 **Branch:** `ag/11-kursbilder-probe`
