@@ -88,6 +88,34 @@ Die Form wie bei AG-14 bis AG-16 (`viewBox 0 0 800 600`, Palette, Schrift mindes
 **Prüfen:** SVGs im Browser öffnen, jedes Wort am Rand lesen. Im Pull Request: nur zur Einbindung durch Claude Code.
 **Nicht tun:** Körperdarstellungen, Bildmodell-Rasterbilder für die Produktion.
 
+### AG-20: Korrekturen an den Diagrammen aus AG-14, AG-15, AG-16 und AG-18 (auf den vorhandenen Branches)
+
+Claude Code hat alle Diagramme gerendert. **Arbeite auf den vorhandenen Branches** (`ag/14-diagramme-stufe1`, `ag/15-diagramme-stufe2`,
+`ag/16-diagramme-stufe3`, `ag/18-schemata-squirting-zervix`), ändere nur die unten genannten Dateien (jeweils Deutsch und Englisch,
+dieselbe Zeichnung), committe und pushe auf den jeweiligen Branch. Gute Dateien nicht anfassen.
+
+**Die Regel, die dabei verletzt wurde:** Jede Textzeile muss **vollständig innerhalb ihres Kastens** stehen, mit mindestens 16 px
+Abstand zum rechten Kastenrand, und darf nicht über Linien, Pfeile oder andere Texte laufen. Schätze die Breite einer Zeile als
+Zeichenzahl × Schriftgröße × 0,55 und halte sie unter Kastenbreite minus 32. Ist sie länger: Zeile kürzen, mehrzeilig setzen (nur
+zwischen Wörtern) oder den Kasten breiter machen. Überschriften in Kästen ebenso. Englisch ist oft länger als Deutsch: auch dort prüfen.
+
+- **AG-14:** `female_4` (und `_en`): In den vier Phasen-Kästen ragen mehrere Zeilen rechts über den Kasten hinaus (Phase 1 „Oft Bedürfnis nach
+  Ruhe,“, Phase 3 „Lustphase und stärkere körpereigene Befeuchtung.“, Phase 4 „Wunsch nach Geborgenheit;“).
+- **AG-15:** `pain_2` (und `_en`): „Gefäße weiten sich (Zufluss)“, „Schwellkörper füllt sich“ und „Blut strömt nicht ein / fließt ab“ überlappen
+  Linien und Kastenränder; Beschriftungen frei platzieren. `pelvic_3_en.svg`: eine Zeile ist **deutsch** („Oberschenkel nach außen,
+  Schienbeine nach unten …“), englisch beschriften und alle Texte der Datei auf deutsche Wörter und Umlaute prüfen. `pelvic_1`: die
+  Beschriftungen „Sitzbein“ links und rechts berühren die Ellipse, etwas nach außen setzen.
+- **AG-16:** `anat_1`: die Texte der vier Spalten überlappen einander (Spalten breiter oder Text kürzer). `anat_4`: Überschrift
+  „Brustwarzen & Rückenmark“ rechts abgeschnitten, Text im Kasten 1 läuft über den Rand und wird von Linien überlagert. `female_1`: im
+  rechten Block „Mittlere Schicht“ und „Tiefe Schicht“ rechts abgeschnitten. `phase_2`: die Zeile „… zu belaste(n)“ ist abgeschnitten.
+  `pos_2`, `pos_3`: in allen drei Kästen laufen die Texte rechts aus dem Kasten und werden abgeschnitten. `vocal_1`: in den Kästen
+  „Die somatische Kette“ laufen die Zeilen aus dem Kasten, rechts überlagern sich Text und Kästen.
+- **AG-18:** `female_6` (und `_en`): Der untere Kasten („Beim Sex dringt nichts in die Gebärmutter ein …“) ragt über die untere Bildkante, nach oben
+  setzen. Die anderen drei sind in Ordnung.
+
+**Prüfen:** Öffne jede Datei im Browser (oder rendere sie mit `msedge --headless --screenshot=<png> --window-size=800,600 file:///<Pfad>.svg`) und
+lies jedes Wort am rechten Rand. **Nicht tun:** Inhalte ändern, neue Diagramme anlegen.
+
 ### AG-18: Vier Anatomie- und Ablauf-Schemata für die neuen Lektionen Squirting und Gebärmutterhals (SVG)
 
 **Branch:** `ag/18-schemata-squirting-zervix`
