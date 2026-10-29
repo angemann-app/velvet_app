@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Sensate Focus in drei Stufen</title>
+  <desc>Treppenmodell mit drei Stufen: erst Berührung ohne Genitalien, dann der ganze Körper ohne Eindringen, zuletzt Verschmelzen ohne Pflicht und mit jederzeit offenem Rückweg.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.6" r="0.55">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="380" cy="380" rx="340" ry="230" fill="url(#glow)"/>
+
+  <text x="400" y="54" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Sensate Focus</text>
+  <text x="400" y="88" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">In drei Stufen zurück zur Leichtigkeit</text>
+
+  <!-- Treppe -->
+  <rect x="60" y="390" width="200" height="110" fill="#1C1327" stroke="#3B2A4A" stroke-width="2"/>
+  <rect x="260" y="300" width="200" height="200" fill="#1C1327" stroke="#3B2A4A" stroke-width="2"/>
+  <rect x="460" y="210" width="200" height="290" fill="#1C1327" stroke="#3B2A4A" stroke-width="2"/>
+  <line x1="60" y1="390" x2="260" y2="390" stroke="#34D399" stroke-width="5"/>
+  <line x1="260" y1="300" x2="460" y2="300" stroke="#FBBF24" stroke-width="5"/>
+  <line x1="460" y1="210" x2="660" y2="210" stroke="#FB7185" stroke-width="5"/>
+  <line x1="40" y1="500" x2="760" y2="500" stroke="#334155" stroke-width="2"/>
+
+  <!-- Stufen-Nummern -->
+  <g fill="#FB7185" font-family="sans-serif" font-size="64" font-weight="800" text-anchor="middle" opacity="0.18">
+    <text x="160" y="480">1</text>
+    <text x="360" y="480">2</text>
+    <text x="560" y="480">3</text>
+  </g>
+
+  <!-- Stufe 1 -->
+  <text x="80" y="298" fill="#34D399" font-family="sans-serif" font-size="21" font-weight="700">Stufe 1</text>
+  <text x="80" y="324" fill="#F1F5F9" font-family="sans-serif" font-size="17">Berührung ohne</text>
+  <text x="80" y="348" fill="#F1F5F9" font-family="sans-serif" font-size="17">Genitalien</text>
+  <text x="80" y="372" fill="#94A3B8" font-family="sans-serif" font-size="17">Rücken, Arme, Füße</text>
+
+  <!-- Stufe 2 -->
+  <text x="280" y="208" fill="#FBBF24" font-family="sans-serif" font-size="21" font-weight="700">Stufe 2</text>
+  <text x="280" y="234" fill="#F1F5F9" font-family="sans-serif" font-size="17">Der ganze Körper</text>
+  <text x="280" y="258" fill="#F1F5F9" font-family="sans-serif" font-size="17">sanft einbeziehen</text>
+  <text x="280" y="282" fill="#94A3B8" font-family="sans-serif" font-size="17">ohne Eindringen</text>
+
+  <!-- Stufe 3 -->
+  <text x="480" y="122" fill="#FB7185" font-family="sans-serif" font-size="21" font-weight="700">Stufe 3</text>
+  <text x="480" y="148" fill="#F1F5F9" font-family="sans-serif" font-size="17">Verschmelzen</text>
+  <text x="480" y="172" fill="#F1F5F9" font-family="sans-serif" font-size="17">ohne Pflicht</text>
+  <text x="480" y="196" fill="#94A3B8" font-family="sans-serif" font-size="17">Rückweg jederzeit</text>
+
+  <!-- Erläuterung -->
+  <text x="400" y="534" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="19">Jede Stufe darf so lange dauern, wie ihr braucht.</text>
+  <text x="400" y="560" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="17">Erregung und Höhepunkt sind ausdrücklich nicht das Ziel.</text>
+  <text x="400" y="586" text-anchor="middle" fill="#64748B" font-family="sans-serif" font-size="16">Nach Masters und Johnson</text>
+</svg>
