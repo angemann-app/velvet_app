@@ -511,6 +511,11 @@
           "icon": "record_voice_over",
           "titel": "Inner views in English",
           "text": "The four new audio stories are now available in English as well."
+        },
+        {
+          "icon": "palette",
+          "titel": "Small refinements",
+          "text": "Labelled body drawings in eight lessons, discreet new title pictures in Spicy mode, and the photo idea in the couple channel can be collapsed and takes up less space."
         }
       ]
     }
@@ -543,6 +548,6 @@
     "news:50": "a3b0641866eea6b1",
     "news:51": "3e09b78b7e89959b",
     "news:52": "ca9ee432b7e4c53d",
-    "news:53": "2510e3c536fcbb29"
+    "news:53": "741ef731d9dc392d"
   }
 }

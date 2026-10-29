@@ -838,3 +838,15 @@ msgstr ""
 msgctxt "news:53#3.text"
 msgid "Die vier neuen Hörgeschichten gibt es jetzt auch auf Englisch."
 msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: Small refinements
+msgctxt "news:53#4.titel"
+msgid "Kleine Verschönerungen"
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.1
+#. EN: Labelled body drawings in eight lessons, discreet new title pictures in Spicy mode, and the photo idea in the couple channel can be collapsed and takes up less space.
+msgctxt "news:53#4.text"
+msgid "Beschriftete Körperzeichnungen in acht Lektionen, dezente neue Titelbilder im Spicy-Modus, und die Foto-Idee im Paar-Kanal lässt sich zuklappen und nimmt weniger Platz weg."
+msgstr ""
