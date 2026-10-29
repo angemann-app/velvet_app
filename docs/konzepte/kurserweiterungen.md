@@ -30,6 +30,13 @@ meisten Ideen sind schon teilweise gedeckt. Es bleiben **sechs neue Lektionen** 
 | Squirting: gibt es das wirklich oder nur Urin und Irrglaube; kann man es allein; wie; Gefühle danach | nichts dazu | **Lektion 7**, Kurs 9 (Weibliche Lust und Körperwissen): Was passiert (Skene-Drüsen, Flüssigkeit, Mischungen), was ist belegt, was nicht; Entspannung statt Leistung; allein ausprobieren ohne Ziel; Gefühle danach (Scham, Überraschung, Erleichterung); kein Muss. Spicy-Anteil in Kurs 18 (Spicy-Lektion) prüfen. |
 | Orgasmus durch Stimulation des Gebärmutterhalses durch den Partner | nichts dazu | **Lektion 8**, Kurs 9 oder Kurs 18: Anatomie, Zyklusabhängigkeit der Empfindlichkeit, sanfte Einladung statt Druck, Schmerz = Stopp, Absprache; ärztlicher Hinweis bei Schmerzen oder Blutungen. |
 
+**Squirting bekommt zusätzlich einen Spicy-Teil** (Wunsch des Nutzers, 29.10.2026): **Lektion 7a (Wissen, normal)** in Kurs 9
+und **Lektion 7b (Praxis, nur Spicy)** als neue Lektion in Kurs 18 („Berührung, die trägt“, hat schon eine Spicy-Lektion
+„Die Klitoris richtig verwöhnen“): Druck an der Vorderwand der Vagina („G-Zone“) allein und zu zweit, Entspannen statt
+Pressen, Atem und Beckenboden, Unterlage und Hygiene, Absprache und Rückmeldung, ruhig bleiben, wenn nichts passiert.
+Alternative für 7b: Kurs 26 (Spicy Solo) für den Weg allein und Kurs 27 (Spicy zu zweit) für den Weg zu zweit. Mein Vorschlag
+bleibt Kurs 18, weil dort Berührung und Rückmeldung zusammen stehen.
+
 Beide gehören inhaltlich zu den weiblichen Lektionen und brauchen keine Audio-Praxis. Der Wunsch wird wie die anderen sechs
 Lektionen behandelt: Text erst nach Freigabe, Englisch gleichzeitig.
 
