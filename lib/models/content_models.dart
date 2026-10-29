@@ -178,7 +178,8 @@ class Lesson {
   final String? image;
 
   /// Spicy-Stimmungsbilder aus dem Nur-R2-Paket `kurse-bilder-spicy` (Pfade im Paket, zum Beispiel
-  /// `kurse/touch_w_s2_allein_a.webp`). Nur bei Spicy-Lektionen, nur im Spicy-Modus; fehlt das Paket, bleibt die Lektion ohne Bild.
+  /// `kurse/touch_w_s2_allein_a.webp`). Bei Spicy-Lektionen und bei normalen Lektionen mit zweiter Spicy-Bildfassung, nur im
+  /// Spicy-Modus; fehlt das Paket, bleibt die Lektion ohne Bild.
   final List<String> bilder;
 
   /// "giver": Text spricht die gebende Person an; Rollen wie „sie“ meinen dann immer das Gegenüber

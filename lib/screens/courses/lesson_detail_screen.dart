@@ -52,7 +52,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
   /// funktioniert ohne Bild).
   Future<void> _spicyBilderLaden() async {
     final l = widget.lesson;
-    if (!l.spicy || l.bilder.isEmpty || !StorageService.spicyMode()) return;
+    if (l.bilder.isEmpty || !StorageService.spicyMode()) return;
     if (Pakete.version(Pakete.kurseBilderSpicy) > 0) return;
     try {
       await Pakete.laden(Pakete.kurseBilderSpicy);
@@ -64,7 +64,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
 
   /// Stimmungsbilder der Spicy-Praxis-Lektionen: nur im Spicy-Modus und nur, wenn das Paket da ist.
   Widget _spicyBilder(Lesson l) {
-    if (!l.spicy || l.bilder.isEmpty || !StorageService.spicyMode()) return const SizedBox.shrink();
+    if (l.bilder.isEmpty || !StorageService.spicyMode()) return const SizedBox.shrink();
     final dateien = [
       for (final b in l.bilder)
         if (Pakete.datei(b) case final pfad?) (pfad: pfad, beschriftung: b.contains('_allein') ? t.kursBildAllein : t.kursBildZuZweit),
