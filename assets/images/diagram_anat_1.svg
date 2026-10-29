@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Erregung als Ganzkörper-Ereignis</title>
+  <desc>Sensorische Zonen, Nervenvernetzung und die Rolle des Parasympathikus</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Erregung als Ganzkörper-Ereignis</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Sensorische Vernetzung &amp; Reihenfolge der Berührung</text>
+
+  <!-- 2x2 Grid of Sensory Zones -->
+  <!-- Node 1 -->
+  <rect x="40" y="105" width="345" height="120" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+  <circle cx="70" cy="138" r="15" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2"/>
+  <text x="70" y="144" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">A</text>
+  <text x="96" y="144" fill="#F1F5F9" font-family="sans-serif" font-size="17px" font-weight="bold">1. Kopf &amp; Sinne</text>
+  <text x="96" y="175" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Mund, Lippen, Nacken &amp; Ohren.</text>
+    <text x="96" y="197" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Parasympathikus schaltet frei.</text>
+
+  <!-- Node 2 -->
+  <rect x="415" y="105" width="345" height="120" rx="12" fill="#1E293B" stroke="#C084FC" stroke-width="1.5"/>
+  <circle cx="445" cy="138" r="15" fill="#C084FC" fill-opacity="0.2" stroke="#C084FC" stroke-width="2"/>
+  <text x="445" y="144" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">B</text>
+  <text x="471" y="144" fill="#F1F5F9" font-family="sans-serif" font-size="17px" font-weight="bold">2. Obere Körperachse</text>
+  <text x="471" y="175" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Brust, Warzen &amp; tiefer Atem.</text>
+    <text x="471" y="197" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Durchblutung und Erwärmung.</text>
+
+  <!-- Node 3 -->
+  <rect x="40" y="240" width="345" height="120" rx="12" fill="#1E293B" stroke="#34D399" stroke-width="1.5"/>
+  <circle cx="70" cy="273" r="15" fill="#34D399" fill-opacity="0.2" stroke="#34D399" stroke-width="2"/>
+  <text x="70" y="279" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">C</text>
+  <text x="96" y="279" fill="#F1F5F9" font-family="sans-serif" font-size="17px" font-weight="bold">3. Äußere Berührung</text>
+  <text x="96" y="310" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Hände, Oberschenkel &amp; Po.</text>
+    <text x="96" y="332" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Rezeptoren bereiten Mitte vor.</text>
+
+  <!-- Node 4 -->
+  <rect x="415" y="240" width="345" height="120" rx="12" fill="#1E293B" stroke="#FB7185" stroke-width="1.5"/>
+  <circle cx="445" cy="273" r="15" fill="#FB7185" fill-opacity="0.2" stroke="#FB7185" stroke-width="2"/>
+  <text x="445" y="279" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">D</text>
+  <text x="471" y="279" fill="#FB7185" font-family="sans-serif" font-size="17px" font-weight="bold">4. Zentrum &amp; Becken</text>
+  <text x="471" y="310" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Genitalien &amp; Schwellkörper.</text>
+    <text x="471" y="332" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Hohe Reizschwelle sinkt sanft.</text>
+
+  <!-- Bottom Details 2 Cards -->
+  <rect x="40" y="375" width="345" height="165" rx="12" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="408" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">Von außen nach innen</text>
+  <text x="60" y="442" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Berührung an äußeren Zonen nimmt</text>
+    <text x="60" y="466" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">den Druck. Was anfangs zu viel ist,</text>
+    <text x="60" y="490" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">wird mit Erregung genussvoll.</text>
+
+  <rect x="415" y="375" width="345" height="165" rx="12" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
+  <text x="435" y="408" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Das ganze Nervensystem</text>
+  <text x="435" y="442" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Schwellkörper füllen sich im ganzen Körper.</text>
+    <text x="435" y="466" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Ruhe und Sicherheit öffnen die Gefäße;</text>
+    <text x="435" y="490" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Hektik oder Zielstrebigkeit blockieren.</text>
+
+  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematisch, Lage und Größe sind individuell</text>
+
+</svg>

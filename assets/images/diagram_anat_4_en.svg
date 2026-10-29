@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Pudendal Nerve &amp; Shared Zones</title>
+  <desc>Schematic course of the pudendal nerve and sensory zones in all bodies</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Pudendal Nerve &amp; Erogenous Zones</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Shared Anatomical Innervation Across All Bodies</text>
+
+  <!-- Left: Tree schematic of Pudendal Nerve -->
+  <rect x="40" y="105" width="350" height="430" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="138" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">Path of Pudendal Nerve</text>
+
+  <!-- Branch 1 Box -->
+  <rect x="60" y="160" width="310" height="90" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="75" y="186" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold">1. Rectal Branches</text>
+  <text x="75" y="210" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Anus &amp; sphincter: Responds to</text>
+    <text x="75" y="232" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">warmth &amp; gentle resting touch.</text>
+
+  <!-- Branch 2 Box -->
+  <rect x="60" y="265" width="310" height="90" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="75" y="291" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold">2. Perineal Branches</text>
+  <text x="75" y="315" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Perineum: Bridge to erectile</text>
+    <text x="75" y="337" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">tissue roots &amp; pelvic muscles.</text>
+
+  <!-- Branch 3 Box -->
+  <rect x="60" y="370" width="310" height="90" rx="10" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
+  <text x="75" y="396" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold">3. Dorsal Branches</text>
+  <text x="75" y="420" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Clitoris / Penis: Sensory pathway</text>
+    <text x="75" y="442" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">for shaft and glans.</text>
+
+  <text x="60" y="495" fill="#94A3B8" font-family="sans-serif" font-size="16px">Verzweigt sich identisch in jedem Becken</text>
+
+  <!-- Right: Side Box on Nipples / Intercostal nerves -->
+  <rect x="410" y="105" width="350" height="430" rx="14" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
+  <text x="430" y="140" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Nipples &amp; Spinal Cord</text>
+  <text x="430" y="180" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Touch on chest and nipples sends</text>
+    <text x="430" y="206" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">signals via intercostal nerves.</text>
+    <text x="430" y="232" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">In the brain, they stimulate</text>
+    <text x="430" y="258" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">the same pleasure centers as</text>
+    <text x="430" y="284" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">signals from the pelvic region.</text>
+
+  <rect x="430" y="340" width="310" height="160" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+  <text x="445" y="370" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold">Key Insight</text>
+  <text x="445" y="400" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Pleasure is not confined to genitals.</text>
+    <text x="445" y="424" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Perineum, buttocks and nipples</text>
+    <text x="445" y="448" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">have direct neural pathways</text>
+    <text x="445" y="472" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">connecting straight to the brain.</text>
+
+  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematic, position and size vary</text>
+
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <title>Nervus pudendus &amp; erogene Zonen</title>
+  <desc>Schematischer Verlauf des Pudendusnervs und sensorische Zonen bei allen Körpern</desc>
+  <rect width="800" height="600" fill="#140D1C"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  
+  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Nervus pudendus &amp; erogene Zonen</text>
+  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Gemeinsame anatomische Versorgung bei allen Körpern</text>
+
+  <!-- Left: Tree schematic of Pudendal Nerve -->
+  <rect x="40" y="105" width="350" height="430" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+  <text x="60" y="138" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">Verlauf des Nervus pudendus</text>
+
+  <!-- Branch 1 Box -->
+  <rect x="60" y="160" width="310" height="90" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="75" y="186" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold">1. Rektale Äste</text>
+  <text x="75" y="210" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">After &amp; Schließmuskel: Reagiert</text>
+    <text x="75" y="232" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">auf Wärme &amp; flächige Auflage.</text>
+
+  <!-- Branch 2 Box -->
+  <rect x="60" y="265" width="310" height="90" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="75" y="291" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold">2. Perineale Äste</text>
+  <text x="75" y="315" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Damm (Perineum): Brücke zur</text>
+    <text x="75" y="337" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Schwellkörperwurzel &amp; Muskulatur.</text>
+
+  <!-- Branch 3 Box -->
+  <rect x="60" y="370" width="310" height="90" rx="10" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
+  <text x="75" y="396" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold">3. Dorsale Äste</text>
+  <text x="75" y="420" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Klitoris / Penis: Versorgung</text>
+    <text x="75" y="442" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">von Schaft und Eichel.</text>
+
+  <text x="60" y="495" fill="#94A3B8" font-family="sans-serif" font-size="16px">Verzweigt sich identisch in jedem Becken</text>
+
+  <!-- Right: Side Box on Nipples / Intercostal nerves -->
+  <rect x="410" y="105" width="350" height="430" rx="14" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
+  <text x="430" y="140" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Brustwarzen &amp; Rückenmark</text>
+  <text x="430" y="180" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Berührung an Brust und Warzen</text>
+    <text x="430" y="206" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">sendet Signale über die</text>
+    <text x="430" y="232" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Zwischenrippennerven ins Mark.</text>
+    <text x="430" y="258" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Im Gehirn aktivieren sie die</text>
+    <text x="430" y="284" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">gleichen Lust-Zentren wie das Becken.</text>
+
+  <rect x="430" y="340" width="310" height="160" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+  <text x="445" y="370" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold">Wichtige Erkenntnis</text>
+  <text x="445" y="400" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Lust entsteht überall:</text>
+    <text x="445" y="424" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Damm, Po und Brustwarzen</text>
+    <text x="445" y="448" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">besitzen kraftvolle eigene</text>
+    <text x="445" y="472" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Nervenbahnen direkt zum Gehirn.</text>
+
+  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematisch, Lage und Größe sind individuell</text>
+
+</svg>
