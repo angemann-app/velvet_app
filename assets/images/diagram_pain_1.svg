@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Die Schmerz-Verspannungs-Spirale</title>
+  <desc>Drei Stationen im Kreis: Schmerz, Anspannung und mehr Schmerz. Vier Ausstiegswege – Atem, Pause, Gleitmittel und Ruhe – unterbrechen die Rückkopplung.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.45" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrowP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FB7185"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34D399"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="360" cy="330" rx="340" ry="245" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Die Schmerz-Verspannungs-Spirale</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Schmerz, Anspannung, mehr Schmerz</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Der Kreis lässt sich an mehreren Stellen unterbrechen.</text>
+
+  <!-- Dezente Spirale -->
+  <path d="M 305.0 305.0 L 311.8 303.2 L 319.2 303.0 L 327.0 304.7 L 334.7 308.2 L 341.8 313.8 L 347.8 321.1 L 352.2 330.0 L 354.7 340.2 L 354.9 351.2 L 352.6 362.5 L 347.7 373.5 L 340.3 383.5 L 330.4 392.1 L 318.5 398.6 L 305.0 402.5 L 290.4 403.5 L 275.5 401.2 L 260.9 395.7 L 247.4 386.9 L 235.7 375.0 L 226.5 360.5 L 220.5 343.9 L 218.0 325.9 L 219.4 307.2 L 224.9 288.8 L 234.4 271.4 L 247.7 256.1 L 264.3 243.6 L 283.7 234.7 L 305.0 230.0 L 327.4 229.8 L 349.7 234.5 L 371.1 244.0 L 390.5 258.0 L 406.8 276.2 L 419.1 297.9 L 426.8 322.2 L 429.3 348.1 L 426.3 374.4 L 417.6 400.0 L 403.5 423.7 L 384.4 444.2 L 360.9 460.6 L 334.1 471.9 L 305.0 477.5 L 274.9 476.8 L 245.0 469.7 L 216.8 456.4 L 191.7 437.0 L 170.8 412.5 L 155.2 383.7 L 145.9 351.7 L 143.4 318.0 L 148.1 284.0 L 159.9 251.2 L 178.7 221.2 L 203.6 195.4 L 233.8 175.1 L 268.1 161.4 L 305.0 155.0" fill="none" stroke="#FB7185" stroke-width="2" opacity="0.12"/>
+
+  <!-- Drei Stationen -->
+  <circle cx="237" cy="227" r="64" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+  <text x="237" y="219" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Schmerz</text>
+  <text x="237" y="245" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Erwartung</text>
+
+  <circle cx="425" cy="335" r="64" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+  <text x="425" y="327" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Anspannung</text>
+  <text x="425" y="353" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Beckenboden</text>
+
+  <circle cx="237" cy="443" r="64" fill="#1C1327" stroke="#FB7185" stroke-width="2.5"/>
+  <text x="237" y="435" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="17" font-weight="700">mehr Schmerz</text>
+  <text x="237" y="461" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Bestätigung</text>
+
+  <!-- Rückkopplungen -->
+  <g stroke="#FB7185" stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M293 259 L370 303" marker-end="url(#arrowP)"/>
+    <path d="M370 367 L293 411" marker-end="url(#arrowP)"/>
+    <path d="M237 379 L237 291" marker-end="url(#arrowP)"/>
+  </g>
+
+  <!-- Ausstiegswege -->
+  <rect x="545" y="160" width="225" height="330" rx="18" fill="#14251F" stroke="#2F4A3F" stroke-width="2"/>
+  <text x="657" y="190" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="20" font-weight="700">Ausstiegswege</text>
+  <text x="657" y="213" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">unterbrechen, nicht aushalten</text>
+
+  <circle cx="570" cy="238" r="10" fill="#34D399" opacity="0.2" stroke="#34D399" stroke-width="2"/>
+  <text x="592" y="244" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">Atem</text>
+  <text x="592" y="266" fill="#CBD5E1" font-family="sans-serif" font-size="16">tief in den Bauch</text>
+
+  <circle cx="570" cy="296" r="10" fill="#34D399" opacity="0.2" stroke="#34D399" stroke-width="2"/>
+  <text x="592" y="302" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">Pause</text>
+  <text x="592" y="324" fill="#CBD5E1" font-family="sans-serif" font-size="16">Eindringen aussetzen</text>
+
+  <circle cx="570" cy="354" r="10" fill="#34D399" opacity="0.2" stroke="#34D399" stroke-width="2"/>
+  <text x="592" y="360" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">Gleitmittel</text>
+  <text x="592" y="382" fill="#CBD5E1" font-family="sans-serif" font-size="16">Feuchtigkeit geben</text>
+
+  <circle cx="570" cy="412" r="10" fill="#34D399" opacity="0.2" stroke="#34D399" stroke-width="2"/>
+  <text x="592" y="418" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">Ruhe</text>
+  <text x="592" y="440" fill="#CBD5E1" font-family="sans-serif" font-size="16">Tempo und Druck raus</text>
+
+  <text x="518" y="314" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="16">Stopp</text>
+  <path d="M545 330 L493 330" stroke="#34D399" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#arrowG)"/>
+
+  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Schmerz ist ein Signal, kein Teil von Sex, den man aushalten muss.</text>
+  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Atem, Pause, Gleitmittel und Ruhe unterbrechen die Rückkopplung.</text>
+  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Die Person mit Schmerz bestimmt, ob, wann und wie es weitergeht.</text>
+</svg>

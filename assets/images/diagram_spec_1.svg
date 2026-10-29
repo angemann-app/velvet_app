@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Die Beobachter-Falle</title>
+  <desc>Zwei Spalten im Vergleich: Die Außenperspektive prüft den Körper wie eine Kamera und stört die Erregung. Die Innenperspektive folgt dem Sinnesfluss und bleibt bei Wärme, Oberfläche und Druck.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="400" cy="330" rx="350" ry="240" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Die Beobachter-Falle</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Außenperspektive und Innenperspektive</text>
+  <text x="400" y="118" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Prüfen von außen oder spüren von innen</text>
+
+  <line x1="400" y1="165" x2="400" y2="482" stroke="#334155" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- Linke Spalte: Außenperspektive -->
+  <rect x="40" y="150" width="340" height="340" rx="18" fill="#1C1327" stroke="#3B2A4A" stroke-width="2"/>
+  <text x="210" y="182" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Außenperspektive</text>
+  <text x="210" y="206" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Die Prüfer-Kamera</text>
+
+  <!-- Kamera -->
+  <rect x="95" y="230" width="150" height="90" rx="12" fill="#241A31" stroke="#FB7185" stroke-width="2.5"/>
+  <rect x="110" y="217" width="34" height="13" rx="3" fill="#FB7185" opacity="0.5"/>
+  <circle cx="170" cy="275" r="28" fill="#140D1C" stroke="#FB7185" stroke-width="3"/>
+  <circle cx="170" cy="275" r="11" fill="#FB7185" opacity="0.35"/>
+  <line x1="245" y1="260" x2="303" y2="269" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="245" y1="290" x2="303" y2="281" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="315" cy="275" r="12" fill="none" stroke="#94A3B8" stroke-width="2"/>
+  <text x="315" y="314" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Prüfziel</text>
+
+  <text x="210" y="345" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Der Blick von außen prüft und stört.</text>
+  <text x="210" y="378" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="17">Ist mein Körper gerade</text>
+  <text x="210" y="402" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="17">erregt genug?</text>
+
+  <text x="70" y="430" fill="#CBD5E1" font-family="sans-serif" font-size="16">• Wie sehe ich aus?</text>
+  <text x="70" y="454" fill="#CBD5E1" font-family="sans-serif" font-size="16">• Dauert es zu lange?</text>
+  <text x="70" y="478" fill="#CBD5E1" font-family="sans-serif" font-size="16">• Was denkt der andere?</text>
+
+  <!-- Rechte Spalte: Innenperspektive -->
+  <rect x="420" y="150" width="340" height="340" rx="18" fill="#14251F" stroke="#2F4A3F" stroke-width="2"/>
+  <text x="590" y="182" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="20" font-weight="700">Innenperspektive</text>
+  <text x="590" y="206" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Der Sinnesfluss</text>
+
+  <!-- Sinneswellen -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M450 250 C480 232 510 268 540 250 C570 232 600 268 630 250 C660 232 690 268 720 250" stroke="#34D399" stroke-width="3" opacity="0.9"/>
+    <path d="M450 280 C480 262 510 298 540 280 C570 262 600 298 630 280 C660 262 690 298 720 280" stroke="#34D399" stroke-width="3" opacity="0.65"/>
+    <path d="M450 310 C480 292 510 328 540 310 C570 292 600 328 630 310 C660 292 690 328 720 310" stroke="#34D399" stroke-width="3" opacity="0.4"/>
+  </g>
+  <circle cx="540" cy="250" r="5" fill="#34D399"/>
+  <circle cx="630" cy="280" r="5" fill="#34D399"/>
+  <circle cx="540" cy="310" r="5" fill="#34D399" opacity="0.6"/>
+
+  <text x="590" y="345" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Die Aufmerksamkeit ist im Spüren.</text>
+  <text x="590" y="378" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="17">Was spüre ich gerade?</text>
+  <text x="590" y="402" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">ohne es zu bewerten</text>
+
+  <text x="450" y="430" fill="#CBD5E1" font-family="sans-serif" font-size="16">• Temperatur</text>
+  <text x="450" y="454" fill="#CBD5E1" font-family="sans-serif" font-size="16">• Oberfläche</text>
+  <text x="450" y="478" fill="#CBD5E1" font-family="sans-serif" font-size="16">• Druck und Atem</text>
+
+  <text x="400" y="526" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Prüfen schaltet den Verstand ein, Spüren schaltet ihn leiser.</text>
+  <text x="400" y="552" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Aufmerksamkeit entscheidet, ob Nähe Prüfung oder Erlebnis ist.</text>
+  <text x="400" y="578" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="18">Übung: Temperatur, Oberfläche und Druck benennen.</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <title>Fast Rewards and the Reward System</title>
+  <desc>Two curves compared: a fast stimulus creates a steep kick and a deep crash. Sustained closeness rises slowly and remains available as a plateau.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="#140D1C"/>
+  <ellipse cx="410" cy="320" rx="350" ry="235" fill="url(#glow)"/>
+
+  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Fast Rewards and the Reward System</text>
+  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Quick kick, deep crash – or a sustained plateau</text>
+  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Two curves in the same reward system</text>
+
+  <!-- Axes -->
+  <line x1="95" y1="195" x2="95" y2="455" stroke="#64748B" stroke-width="2"/>
+  <line x1="95" y1="390" x2="730" y2="390" stroke="#64748B" stroke-width="2"/>
+
+  <text x="82" y="205" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">high</text>
+  <text x="82" y="398" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">0</text>
+  <text x="82" y="445" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">low</text>
+  <text x="55" y="300" transform="rotate(-90 55 300)" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="18">Dopamine</text>
+  <text x="720" y="435" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="18">Time →</text>
+
+  <!-- Fast stimulus -->
+  <path d="M 110 385 C 150 382 175 250 215 215 C 232 200 246 202 260 245 C 278 300 290 395 306 432 C 323 462 345 446 375 418 C 400 397 430 390 460 386" fill="none" stroke="#FB7185" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="215" cy="215" r="6" fill="#FB7185"/>
+  <circle cx="306" cy="432" r="6" fill="#FB7185"/>
+  <text x="215" y="192" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Kick</text>
+  <text x="310" y="468" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18" font-weight="700">Crash</text>
+  <text x="480" y="420" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="17">fast stimulus</text>
+
+  <!-- Sustained closeness -->
+  <path d="M 110 383 C 180 377 230 335 300 315 C 370 295 430 290 500 287 C 580 284 650 282 720 281" fill="none" stroke="#34D399" stroke-width="5" stroke-linecap="round"/>
+  <text x="520" y="262" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="18" font-weight="700">sustained closeness</text>
+  <text x="105" y="414" fill="#94A3B8" font-family="sans-serif" font-size="16">baseline</text>
+
+  <text x="400" y="520" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">The quick stimulus rises briefly and falls deep.</text>
+  <text x="400" y="546" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Sustained closeness rises slowly and stays available.</text>
+  <text x="400" y="572" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">The brain adapts to speed – closeness needs another pace.</text>
+</svg>
