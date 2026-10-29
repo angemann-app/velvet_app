@@ -72,6 +72,36 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
+### AG-22: Probe „sanfte Spicy-Version“ der Bleistift-Studien (acht Bilder, nur Bildsammlung)
+
+**Kein Branch, kein Pull Request, kein Commit.** Ausnahme von der Regel „Spicy-Motive nicht an Cloud-Modelle“ und von der Sperre oben, mit
+**ausdrücklichem Einverständnis des Nutzers (29.10.2026)**, als **Probe**: Du darfst die Bilder dieses Auftrags erzeugen und in den Ordner
+`C:\TOOLS\velvet-inhalte\kurse\bilder\ag_spicy\` schreiben (neuer Ordner, **außerhalb des Repositorys**, nie ins Repository kopieren). Sonst nichts
+in `velvet-inhalte` anfassen, keine Lektionstexte lesen (nur die Motivzeilen unten).
+
+**Ziel:** Dieselbe Bildart wie AG-21 (Bleistift, technische Studie, blasses Raster mit Maßlinien, dünne Pfeile, off-white Papier, Graphit mit Rosé-Akzenten,
+**kein Text im Bild**), aber **sanft spicy**: intim, sinnlich, zärtlich, nackt, ruhig und künstlerisch, **keine Nahaufnahme von Genitalien**, keine
+Darstellung eines Aktes der Vereinigung. Erwachsene, keine Ähnlichkeit mit einer echten Person, natürliche Körper. Querformat, etwa 1024 × 576,
+WebP, höchstens 150 KB. Dateiname `<Lektions-ID>_spicy.webp`. **Bricht dein Filter bei einem Motiv ab: nicht umgehen, nicht entschärfen**, in
+`ag_spicy\_liste.txt` mit „Filter, übersprungen“ vermerken und weitermachen.
+
+**Stil-Prompt (Grundlage):** „detailed pencil drawing, technical illustration style, natural adult bodies with soft shading on skin and muscle, faint
+blueprint grid in the background with scale markers and thin dimension lines, thin non-obstructive arrows, off-white paper, graphite with soft rose accents,
+no text, no labels, sensual and tender, <Motiv>“.
+
+**Die acht Motive** (alle in beiden Fassungen zeigen alle, die in der Szene vorkommen):
+1. `touch_w_s1`: eine nackte Frau liegt auf dem Rücken, die Hand ihres Partners ruht sanft auf ihrer Hüfte, er liegt nackt neben ihr, beide ganz sichtbar.
+2. `touch_m_s1`: ein nackter Mann liegt auf dem Rücken, die Hand seiner nackten Partnerin gleitet über seine Brust und seinen Bauch, beide ganz sichtbar.
+3. `mass_s1`: ein nacktes Paar liegt eng umschlungen auf einem Massagetuch, Stirn an Stirn, beide ganz sichtbar.
+4. `pos_s1`: ein nacktes Paar liegt im Löffelchen, sein Arm um sie, seine Hand auf ihrem Bauch, seitliche Ansicht.
+5. `scen_1`: eine nackte Frau mit Augenbinde liegt auf dem Rücken, die Fingerspitzen ihres nackten Partners ruhen auf ihrem Schlüsselbein, beide ganz sichtbar.
+6. `self_2`: eine nackte erwachsene Frau liegt entspannt auf dem Bett und berührt sich sanft an Brust und Bauch, Augen geschlossen, ganze Gestalt.
+7. `self_3`: ein nackter erwachsener Mann liegt entspannt auf dem Bett, eine Hand auf der Brust, eine auf dem Bauch, Augen geschlossen, ganze Gestalt.
+8. `couples_1`: ein nacktes Paar steht eng umarmt, Stirn an Stirn, Rückenansicht oder seitliche Ansicht, beide ganz sichtbar.
+
+**Liste** `ag_spicy\_liste.txt`: je Motiv eine Zeile (Datei, Filter-Status, eine kurze Bemerkung). **Meldung an den Nutzer**, sobald die Bilder liegen.
+**Nicht tun:** Bilder ins Repository oder in `assets/` legen, Texte der Lektionen lesen, die Bilder weitergeben.
+
 ### AG-3: Texte für „Lust im Traum“ (an Claude Code abgegeben)
 
 Der Inhaltsfilter von Antigravity bricht diese Texte ab. Claude Code schreibt sie (lokal unter
