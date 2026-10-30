@@ -279,7 +279,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                     child: Icon(
                       isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded,
                       size: 34,
-                      color: const Color(0xFF0F172A),
+                      color: const Color(0xFF1D1F22),
                     ),
                   ),
                 ),

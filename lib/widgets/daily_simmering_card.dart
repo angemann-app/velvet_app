@@ -189,8 +189,8 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            const Color(0xFF1E293B),
-            const Color(0xFF0F172A),
+            const Color(0xFF26282C),
+            const Color(0xFF1D1F22),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,

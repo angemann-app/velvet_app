@@ -379,8 +379,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                const Color(0xFF1E293B),
-                const Color(0xFF0F172A).withValues(alpha: 0.8),
+                const Color(0xFF26282C),
+                const Color(0xFF1D1F22).withValues(alpha: 0.8),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -763,7 +763,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     label: Text(t.yesNoMaybePairViaQrCodeNow),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppTheme.amber,
-                      foregroundColor: const Color(0xFF0F172A),
+                      foregroundColor: const Color(0xFF1D1F22),
                       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                     ),
                   ),
@@ -798,7 +798,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [Color(0xFF064E3B), Color(0xFF0F172A)],
+                  colors: [Color(0xFF064E3B), Color(0xFF1D1F22)],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
