@@ -72,10 +72,13 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           (pfad: pfad, beschriftung: b.contains('_allein') ? t.kursBildAllein : (b.contains('_zweit') ? t.kursBildZuZweit : null)),
     ];
     if (dateien.isEmpty) return const SizedBox.shrink();
+    // Bleistift-Studien (`…_spicy.webp`) sind Querformat 16:9, die Praxis-Bilder Hochformat.
+    bool quer(String pfad) => pfad.endsWith('_spicy.webp');
+    final hoehe = dateien.every((d) => quer(d.pfad)) ? 200.0 : 240.0;
     return Padding(
       padding: const EdgeInsets.only(bottom: 14),
       child: SizedBox(
-        height: 240,
+        height: hoehe,
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: dateien.length,
@@ -85,9 +88,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: SizedBox(
-                width: 160,
+                width: quer(dateien[i].pfad) ? hoehe * 16 / 9 : 160,
                 child: Stack(fit: StackFit.expand, children: [
-                  Image.file(File(dateien[i].pfad), fit: BoxFit.cover, cacheWidth: 480),
+                  Image.file(File(dateien[i].pfad), fit: BoxFit.cover, cacheWidth: quer(dateien[i].pfad) ? 640 : 480),
                   if (dateien[i].beschriftung != null)
                     Positioned(
                       left: 0,

@@ -1,5 +1,5 @@
-{
-    "_hinweis":  "Version je Audio-Paket (tools/pakete_bauen.py). Nach neu eingesprochenen Aufnahmen hochzählen, dann bauen, signieren und hochladen (tools/pakete_hochladen.ps1).",
+﻿{
+    "_hinweis":  "Version je Audio-Paket (tools/pakete_bauen.py). Nach neu eingesprochenen Aufnahmen hochzÃ¤hlen, dann bauen, signieren und hochladen (tools/pakete_hochladen.ps1).",
     "de-lektionen":  3,
     "de-gefuehrt":  4,
     "en-lektionen":  3,
@@ -9,5 +9,6 @@
     "de-reihe":  3,
     "en-reihe":  3,
     "reihe-bilder":  2,
-    "kurse-bilder-spicy":  1
+    "kurse-bilder-spicy":  2
 }
+
