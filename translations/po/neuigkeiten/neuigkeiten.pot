@@ -850,3 +850,51 @@ msgstr ""
 msgctxt "news:53#4.text"
 msgid "Beschriftete Körperzeichnungen in acht Lektionen, dezente neue Titelbilder im Spicy-Modus, und die Foto-Idee im Paar-Kanal lässt sich zuklappen und nimmt weniger Platz weg."
 msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.2
+#. EN: New look: sketchbook
+msgctxt "news:54#0.titel"
+msgid "Neue Bildsprache: Skizzenbuch"
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.2
+#. EN: The app now looks like a sketchbook: graphite, a soft rose, fine lines and serif headings. The course title pictures are redrawn, warmer and closer in Spicy mode.
+msgctxt "news:54#0.text"
+msgid "Die App sieht jetzt aus wie ein Skizzenbuch: Graphit, dezentes Rosé, feine Linien und Überschriften in Serif. Die Titelbilder der Kurse sind neu gezeichnet, im Spicy-Modus wärmer und näher."
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.2
+#. EN: Pencil pictures in the practice lessons
+msgctxt "news:54#1.titel"
+msgid "Bleistift-Bilder in den Praxis-Lektionen"
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.2
+#. EN: The coloured pictures are gone. Instead there are fine pencil studies for 27 lessons, in Spicy mode only. More will follow.
+msgctxt "news:54#1.text"
+msgid "Die farbigen Bilder sind verschwunden. Stattdessen gibt es feine Bleistift-Studien zu 27 Lektionen, nur im Spicy-Modus. Weitere folgen."
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.2
+#. EN: Your course filter is remembered
+msgctxt "news:54#2.titel"
+msgid "Kursauswahl wird gemerkt"
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.2
+#. EN: Your filter (All courses, For her, For him, For couples) now stays saved and no longer jumps back. Thanks for the hint.
+msgctxt "news:54#2.text"
+msgid "Dein Filter (Alle Kurse, Für Sie, Für Ihn, Für Paare) bleibt jetzt gespeichert und springt nicht mehr zurück. Danke für den Hinweis."
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.2
+#. EN: Audio stories without pictures, for now
+msgctxt "news:54#3.titel"
+msgid "Hörgeschichten ohne Bilder, vorerst"
+msgstr ""
+
+#. Was ist neu in Version 4.16.0-beta.2
+#. EN: We have withdrawn the previous pictures of the Inner views series. New ones in pencil style will follow later.
+msgctxt "news:54#3.text"
+msgid "Die bisherigen Bilder der Reihe Innenansichten haben wir zurückgezogen. Neue im Bleistift-Stil kommen später."
+msgstr ""

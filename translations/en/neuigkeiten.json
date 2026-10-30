@@ -518,6 +518,32 @@
           "text": "Labelled body drawings in eight lessons, discreet new title pictures in Spicy mode, and the photo idea in the couple channel can be collapsed and takes up less space."
         }
       ]
+    },
+    {
+      "build": 54,
+      "version": "4.16.0-beta.2",
+      "punkte": [
+        {
+          "icon": "palette",
+          "titel": "New look: sketchbook",
+          "text": "The app now looks like a sketchbook: graphite, a soft rose, fine lines and serif headings. The course title pictures are redrawn, warmer and closer in Spicy mode."
+        },
+        {
+          "icon": "photo_library",
+          "titel": "Pencil pictures in the practice lessons",
+          "text": "The coloured pictures are gone. Instead there are fine pencil studies for 27 lessons, in Spicy mode only. More will follow."
+        },
+        {
+          "icon": "filter_list",
+          "titel": "Your course filter is remembered",
+          "text": "Your filter (All courses, For her, For him, For couples) now stays saved and no longer jumps back. Thanks for the hint."
+        },
+        {
+          "icon": "image_not_supported",
+          "titel": "Audio stories without pictures, for now",
+          "text": "We have withdrawn the previous pictures of the Inner views series. New ones in pencil style will follow later."
+        }
+      ]
     }
   ],
   "_source": {
@@ -548,6 +574,7 @@
     "news:50": "a3b0641866eea6b1",
     "news:51": "3e09b78b7e89959b",
     "news:52": "ca9ee432b7e4c53d",
-    "news:53": "741ef731d9dc392d"
+    "news:53": "741ef731d9dc392d",
+    "news:54": "bc011f006a7fcfd9"
   }
 }

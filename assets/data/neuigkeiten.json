@@ -518,6 +518,32 @@
           "text": "Beschriftete Körperzeichnungen in acht Lektionen, dezente neue Titelbilder im Spicy-Modus, und die Foto-Idee im Paar-Kanal lässt sich zuklappen und nimmt weniger Platz weg."
         }
       ]
+    },
+    {
+      "build": 54,
+      "version": "4.16.0-beta.2",
+      "punkte": [
+        {
+          "icon": "palette",
+          "titel": "Neue Bildsprache: Skizzenbuch",
+          "text": "Die App sieht jetzt aus wie ein Skizzenbuch: Graphit, dezentes Rosé, feine Linien und Überschriften in Serif. Die Titelbilder der Kurse sind neu gezeichnet, im Spicy-Modus wärmer und näher."
+        },
+        {
+          "icon": "photo_library",
+          "titel": "Bleistift-Bilder in den Praxis-Lektionen",
+          "text": "Die farbigen Bilder sind verschwunden. Stattdessen gibt es feine Bleistift-Studien zu 27 Lektionen, nur im Spicy-Modus. Weitere folgen."
+        },
+        {
+          "icon": "filter_list",
+          "titel": "Kursauswahl wird gemerkt",
+          "text": "Dein Filter (Alle Kurse, Für Sie, Für Ihn, Für Paare) bleibt jetzt gespeichert und springt nicht mehr zurück. Danke für den Hinweis."
+        },
+        {
+          "icon": "image_not_supported",
+          "titel": "Hörgeschichten ohne Bilder, vorerst",
+          "text": "Die bisherigen Bilder der Reihe Innenansichten haben wir zurückgezogen. Neue im Bleistift-Stil kommen später."
+        }
+      ]
     }
   ]
 }
