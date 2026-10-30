@@ -35,7 +35,7 @@ class GefuehrteAudios extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (mitSelbst && (mitPaar || kompakt))
+        if (mitSelbst && mitPaar && !kompakt)
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: Text(t.gefuehrtTitel,
@@ -43,10 +43,13 @@ class GefuehrteAudios extends StatelessWidget {
           ),
         if (mitSelbst) const _TagebuchKarte(),
         if (kompakt)
-          _Kompakt(
-            child: SizedBox(
-              height: 150,
-              child: ListView(scrollDirection: Axis.horizontal, children: karten),
+          _Einklappbar(
+            titel: t.gefuehrtTitel,
+            child: _Kompakt(
+              child: SizedBox(
+                height: 150,
+                child: ListView(scrollDirection: Axis.horizontal, children: karten),
+              ),
             ),
           )
         else
@@ -80,6 +83,68 @@ class GefuehrteAudios extends StatelessWidget {
             onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PaarAbendScreen())),
           ),
     ];
+  }
+}
+
+/// Dünner Balken, der die Kachelreihe der geführten Audios beim Antippen ausklappt.
+/// Der Zustand bleibt, solange die App läuft; beim Start ist der Balken zu.
+class _Einklappbar extends StatefulWidget {
+  final String titel;
+  final Widget child;
+
+  const _Einklappbar({required this.titel, required this.child});
+
+  @override
+  State<_Einklappbar> createState() => _EinklappbarState();
+}
+
+class _EinklappbarState extends State<_Einklappbar> {
+  static bool _offen = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Semantics(
+        button: true,
+        expanded: _offen,
+        label: widget.titel,
+        child: Material(
+          color: AppTheme.surface,
+          borderRadius: BorderRadius.circular(12),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(12),
+            onTap: () {
+              HapticFeedback.selectionClick();
+              setState(() => _offen = !_offen);
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+              child: Row(children: [
+                Icon(Icons.headphones_rounded, size: 18, color: AppTheme.rose),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(widget.titel,
+                      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                ),
+                AnimatedRotation(
+                  turns: _offen ? 0.5 : 0,
+                  duration: const Duration(milliseconds: 200),
+                  child: const Icon(Icons.expand_more_rounded, size: 22, color: AppTheme.textSecondary),
+                ),
+              ]),
+            ),
+          ),
+        ),
+      ),
+      AnimatedSize(
+        duration: const Duration(milliseconds: 220),
+        curve: Curves.easeOut,
+        alignment: Alignment.topCenter,
+        child: _offen
+            ? Padding(padding: const EdgeInsets.only(top: 10), child: widget.child)
+            : const SizedBox(width: double.infinity),
+      ),
+    ]);
   }
 }
 
