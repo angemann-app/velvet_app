@@ -2,23 +2,31 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   // Brand Colors
-  static const Color background = Color(0xFF0F172A); // Deep Slate Navy
-  static const Color surface = Color(0xFF1E293B);    // Slate Card Surface
-  static const Color surfaceLight = Color(0xFF334155); // Elevated Element
-  static const Color border = Color(0xFF334155);       // Border Outline
-  static const Color sageGreen = Color(0xFF10B981);   // Warm Sage Green / Emerald
-  static const Color sageLight = Color(0xFF34D399);   // Light Sage Accent
-  static const Color sageGlow = Color(0x3310B981);    // Soft Glow
-  static const Color amber = Color(0xFFF59E0B);       // Muted Amber Accent
-  static const Color amberLight = Color(0xFFFBBF24);
-  static const Color amberGlow = Color(0x33F59E0B);
+  static const Color background = Color(0xFF1D1F22); // Nachtpapier (Graphit)
+  static const Color surface = Color(0xFF26282C);    // Karte auf Nachtpapier
+  static const Color surfaceLight = Color(0xFF34373C); // Erhöhtes Element
+  static const Color border = Color(0xFF4A4C50);       // Skizzenlinie
+  static const Color sageGreen = Color(0xFFD9A3AB);   // Gedämpftes Rosé (Hauptakzent, früher Salbeigrün)
+  static const Color sageLight = Color(0xFFE8C2C8);   // Helles Rosé
+  static const Color sageGlow = Color(0x33D9A3AB);    // Sanfter Schimmer
+  static const Color amber = Color(0xFFCFA163);       // Gedämpftes Sand
+  static const Color amberLight = Color(0xFFE6C48B);
+  static const Color amberGlow = Color(0x33CFA163);
   static const Color rose = Color(0xFFF43F5E);        // SOS / Accent
   static const Color roseGlow = Color(0x33F43F5E);
 
   // Typography Colors
-  static const Color textPrimary = Color(0xFFF8FAFC);
-  static const Color textSecondary = Color(0xFF94A3B8);
-  static const Color textMuted = Color(0xFF64748B);
+  static const Color textPrimary = Color(0xFFE9E4D8);
+  static const Color textSecondary = Color(0xFFB9B3A6);
+  static const Color textMuted = Color(0xFF8A857A);
+
+  /// Überschriften in Serif (Android: Noto Serif, ohne mitgelieferte Schriftdatei), alles andere bleibt Systemschrift.
+  static const TextTheme _ueberschriften = TextTheme(
+    headlineLarge: TextStyle(fontFamily: 'serif'),
+    headlineMedium: TextStyle(fontFamily: 'serif'),
+    headlineSmall: TextStyle(fontFamily: 'serif'),
+    titleLarge: TextStyle(fontFamily: 'serif'),
+  );
 
   static ThemeData get darkTheme {
     return ThemeData(
@@ -31,11 +39,12 @@ class AppTheme {
         surface: surface,
         surfaceContainerHighest: surfaceLight,
         error: rose,
-        onPrimary: Color(0xFF022C22),
+        onPrimary: Color(0xFF2A1518),
         onSecondary: Color(0xFF451A03),
         onSurface: textPrimary,
       ),
-      fontFamily: null, // Default system font with clean scaling
+      fontFamily: null, // Fließtext: Systemschrift; Überschriften serif (Skizzenbuch, siehe docs/konzepte/redesign-bleistift.md)
+      textTheme: _ueberschriften,
       appBarTheme: const AppBarTheme(
         backgroundColor: background,
         elevation: 0,
@@ -61,7 +70,7 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: sageGreen,
-          foregroundColor: const Color(0xFF022C22),
+          foregroundColor: const Color(0xFF2A1518),
           elevation: 0,
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
           shape: RoundedRectangleBorder(

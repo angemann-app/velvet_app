@@ -331,7 +331,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFF1E293B), Color(0xFF0F172A)],
+          colors: [Color(0xFF26282C), Color(0xFF1D1F22)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
