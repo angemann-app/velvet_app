@@ -90,6 +90,10 @@ Darstellung der Vereinigung.** Erwachsene, keine Ähnlichkeit mit einer echten P
 höchstens 150 KB, Dateiname `<Lektions-ID>_spicy.webp`. **Bricht dein Inhaltsfilter ab: nicht umgehen, nicht entschärfen**, vermerken und weitermachen.
 
 **Teil A, Spicy-Lektionen (zuerst):**
+**Vorrang (Rückmeldung vom 30.10.: die bisherigen farbigen Praxis-Bilder wirken billig, der Bleistift-Stil gefällt besser). Vier Bilder, Dateinamen genau so:**
+`touch_w_s2_allein_spicy` a woman sitting relaxed on the edge of a bed on a silk sheet, one hand resting on her lower belly, eyes closed, calm and curious | `touch_w_s2_zweit_spicy` a couple on a bed, she leans back against him, his hand rests on her belly, both relaxed and smiling softly | `touch_w_s3_allein_spicy` a woman lying on her back with bent knees, one hand on her lower belly, breathing deeply, faint concentric lines over her pelvis like an anatomical study | `touch_w_s3_zweit_spicy` a man and a woman lying face to face under a sheet, his hand resting on her hip, foreheads close, still and tender.
+
+
 `touch_w_s1` a woman lying on her side, her partner's hand resting on her shoulder, tender (Ersatz für das abgelehnte Motiv) | `pos_s1` a nude couple in a deep embrace on a bed, side view, no close-up |
 `fant_s1` a man gently holding a woman's chin, she looks up devotedly | `scen_s1` a woman with silk scarves lightly draped around her wrists, a man leaning over her |
 `prost_s1` a man lying relaxed on his stomach, a woman beside him with her hand on his lower back | `vocal_s1` a couple embracing in backlight, her head thrown back |
