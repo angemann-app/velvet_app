@@ -104,6 +104,9 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     if (verzeichnis == null || !mounted) return;
     final neu = verzeichnis.paket(_paket);
     final bilder = verzeichnis.paket(Pakete.reiheBilder);
+    // Führt das Verzeichnis keine Szenenbilder mehr (die alten Ölbilder wurden zurückgezogen), räumt die App sie auf.
+    if (bilder == null && Pakete.version(Pakete.reiheBilder) > 0) await Pakete.loeschen(Pakete.reiheBilder);
+    if (!mounted) return;
     setState(() => _neueVersion = neu != null && neu.version > Pakete.version(_paket));
     if (bilder != null && bilder.version > Pakete.version(Pakete.reiheBilder)) {
       try {
