@@ -46,6 +46,7 @@ class StorageService {
   static const String _keyWeckenHeuteNacht = 'traum_wecken_heute_nacht';
   static const String _keyFrageVorLautsprecher = 'frage_vor_lautsprecher';
   static const String _keyPausiereBeiKopfhoererGetrennt = 'pausiere_bei_kopfhoerer_getrennt';
+  static const String _keyKursFilter = 'kurs_filter';
   static const String _keyHalloGesendetAm = 'hallo_gesendet_am';
 
   static SharedPreferences? _prefs;
@@ -198,6 +199,18 @@ class StorageService {
   static Future<void> setPausiereBeiKopfhoererGetrennt(bool value) async {
     final prefs = await _ensurePrefs();
     await prefs.setBool(_keyPausiereBeiKopfhoererGetrennt, value);
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  /// Gewählter Kursfilter (all, women, men, couples). Null, solange noch nie gewählt wurde: dann gilt der Vorschlag aus dem Profil.
+  static String? getKursFilter() => _prefs?.getString(_keyKursFilter);
+
+  static const kursFilterWerte = {'all', 'women', 'men', 'couples'};
+
+  static Future<void> setKursFilter(String value) async {
+    if (!kursFilterWerte.contains(value)) return;
+    final prefs = await _ensurePrefs();
+    await prefs.setString(_keyKursFilter, value);
     await AutoBackupService.saveAutoBackup();
   }
 
@@ -540,6 +553,7 @@ class StorageService {
       'naechtlichesWecken': getNaechtlichesWecken().map((z) => z.toIso8601String()).toList(),
       'frageVorLautsprecher': getFrageVorLautsprecher(),
       'pausiereBeiKopfhoererGetrennt': getPausiereBeiKopfhoererGetrennt(),
+      'kursFilter': getKursFilter(),
       'halloGesendetAm': getHalloGesendetAm(),
       'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
       'dailyCheckIns': _prefs?.getStringList(_keyDailyCheckIns),
@@ -659,6 +673,10 @@ class StorageService {
     }
     if (d['pausiereBeiKopfhoererGetrennt'] is bool) {
       writes[_keyPausiereBeiKopfhoererGetrennt] = d['pausiereBeiKopfhoererGetrennt'] as bool;
+    }
+    // Die eigene Wahl auf diesem Gerät gewinnt; fehlt sie, gilt die aus der Sicherung.
+    if (d['kursFilter'] is String && kursFilterWerte.contains(d['kursFilter']) && _prefs?.getString(_keyKursFilter) == null) {
+      writes[_keyKursFilter] = d['kursFilter'] as String;
     }
     if (d.containsKey('halloGesendetAm') && d['halloGesendetAm'] is String) {
       final lokal = _prefs?.getString(_keyHalloGesendetAm);

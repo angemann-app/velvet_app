@@ -76,6 +76,22 @@ void main() {
     expect(StorageService.getPausiereBeiKopfhoererGetrennt(), isFalse);
   });
 
+  test('Kursfilter wird gemerkt (auch „Alle Kurse“), steht in der Sicherung und die eigene Wahl gewinnt', () async {
+    expect(StorageService.getKursFilter(), isNull, reason: 'noch nie gewählt: Profil darf vorschlagen');
+
+    await StorageService.setKursFilter('all');
+    expect(StorageService.getKursFilter(), 'all', reason: '„Alle Kurse“ ist eine Wahl und bleibt');
+    await StorageService.setKursFilter('unsinn');
+    expect(StorageService.getKursFilter(), 'all');
+
+    final export = StorageService.exportAllUserData();
+    expect(export['kursFilter'], 'all');
+
+    await StorageService.setKursFilter('men');
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getKursFilter(), 'men', reason: 'die Wahl auf diesem Gerät gewinnt');
+  });
+
   test('Hallo-Merker ist in der Sicherung und wird wiederhergestellt', () async {
     expect(StorageService.getHalloGesendetAm(), isNull);
 

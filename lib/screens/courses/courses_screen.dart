@@ -32,7 +32,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
   Set<String> _completedLessonIds = {};
   int _streak = 1;
   bool _isLoading = true;
-  String _selectedCategory = 'all';
+  String _selectedCategory = StorageService.getKursFilter() ?? 'all';
   UserProfile? _profile;
 
   @override
@@ -63,8 +63,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
         _profile = profile;
         _isLoading = false;
 
-        // Auto-set category based on user profile on initial load
-        if (_selectedCategory == 'all' && profile != null) {
+        // Nur solange nie gewählt wurde, schlägt das Profil einen Filter vor; wer „Alle Kurse“ gewählt hat, behält das.
+        if (StorageService.getKursFilter() == null && _selectedCategory == 'all' && profile != null) {
           if (profile.isFemale) {
             _selectedCategory = 'women';
           } else if (profile.isMale) {
@@ -290,6 +290,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
         setState(() {
           _selectedCategory = cat;
         });
+        StorageService.setKursFilter(cat);
       },
       borderRadius: BorderRadius.circular(20),
       child: AnimatedContainer(
