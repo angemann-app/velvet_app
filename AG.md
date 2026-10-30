@@ -72,6 +72,30 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
+### AG-24: Szenenbilder der Audioreihe „Innenansichten“ im Bleistift-Stil (58 Hochformat-Bilder, mit Warten bei Kapazitätslimit)
+
+**Kein Branch, kein Pull Request, kein Commit.** Rückmeldung vom 30.10.2026: Die bisherigen Ölbilder wirken billig, der Bleistift-Stil gefällt besser; die Bildsprache soll komplett umgestellt
+werden. **Ausnahme mit ausdrücklicher Freigabe des Nutzers (30.10.2026), wie AG-22 und AG-23:** Diese Motive dürfen an dein Bildmodell. Bilder nur nach
+`C:\TOOLS\velvet-inhalte\reihe\bilder\ag\` schreiben, **nie ins Repository** und nie in `assets/`.
+
+**Reihenfolge:** Erst die vier Bilder mit Vorrang und die Reste aus Teil A von AG-23, dann AG-24 in dieser Folge-Reihenfolge: `frau_mann` (12), `im_eigenen_koerper` (10), `zwei_frauen` (12),
+`zwei_maenner` (12), `der_andere_koerper` (12), danach Teil B von AG-23. **Überspringe vorhandene Dateien.**
+
+**Die Motive stehen bereits fertig vorgegeben:** `C:\TOOLS\velvet-inhalte\reihe\bilder\motive_frau_mann.md` (Folge Frau und Mann) und `nacht_bilder.py` im selben Ordner (Wörterbuch `FOLGEN`,
+je Szene zwei Sätze: erster = **soft**, zweiter = **spicy**). Nimm die Motivsätze von dort, **nicht** den alten Stilblock („oil painting …“) und nicht die Negativlisten. Dateiname
+`<folge>_<variante>_<szene>.webp` wie in `webp\` (z. B. `frau_mann_spicy_attraction.webp`), 58 Stück.
+
+**Stil (wie AG-21 bis AG-23):** detailed pencil drawing, technical illustration style, natural adult bodies with soft shading, faint blueprint grid with thin dimension lines and thin arrows, off-white paper,
+graphite with soft rose accents, **no text, no labels**, sensual and tender. **Hochformat 768 × 1024, WebP, 80 bis 150 KB.** Soft = Raum, Licht, Stoff, Hände, angedeutet; Spicy = intimer, nackt oder
+angedeutet, aber **keine Nahaufnahme von Genitalien und keine Darstellung der Vereinigung.** Alle Erwachsenen, keine Ähnlichkeit mit einer echten Person, natürliche Körper, **wer in der Szene vorkommt, ist ganz
+sichtbar** (zwei Frauen, zwei Männer, Mann und Frau genau so, sonst entstehen falsche Paare). Solo-Folgen: eine Person ohne erkennbares Gesicht, ruhig.
+
+**Das Warten:** Ist die Bildgenerierung nicht verfügbar (Kapazitätslimit, 429, „Resource Exhausted“), **brich nicht ab und melde nicht „fertig“.** Notiere es in `ag\_liste.txt`, **warte** (Wartezeit aus der Meldung, sonst 30 Minuten)
+und versuche dasselbe Motiv erneut, bis alle 58 erzeugt oder von deinem Inhaltsfilter bewusst übersprungen sind. Nach **jedem** Bild eine Zeile in `ag\_liste.txt` (Datei, „erzeugt“, „Filter, übersprungen“
+oder „wartet auf Kapazität“, Uhrzeit). **Bricht dein Filter ab: nicht umgehen, nicht entschärfen**, vermerken und weitermachen. Meldung an den Nutzer erst am Ende oder bei dauerhaftem Stillstand.
+
+**Nicht tun:** Bilder ins Repository oder nach `assets/` legen, Lektionstexte oder Audio lesen, Bilder weitergeben, einen Filter umgehen.
+
 ### AG-23: Alle restlichen sanft-spicy Stimmungsbilder im Bleistift-Stil (45 Motive, in Etappen, mit Warten bei Kapazitätslimit)
 
 **Kein Branch, kein Pull Request, kein Commit.** Fortsetzung und Erweiterung von AG-22 (gleiche Ausnahme mit Einverständnis des Nutzers, 29.10.2026): Bilder nur in
