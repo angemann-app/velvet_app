@@ -212,7 +212,8 @@ prüft `dart run tools/relays_pruefen.dart`.
 | `tools/generate_audio_en.py` | englisches Audiopaket einsprechen und packen (Download in der App) |
 | `tools/translations.py` | Hilfe beim Übersetzen ins Englische: Gerüst, Textauszug, Einspielen |
 | `translations/po/`, `translations/STATUS.md` | PO-Dateien für Übersetzer und der Fortschritt je Sprache; abgleichen mit `flutter test test/uebersetzung_test.dart --dart-define=PO=sync` ([Anleitung](translations/README.md)) |
-| `tools/generate_covers.py` | Kursbilder `assets/images/cover_NN.svg` neu erzeugen |
+| `tools/generate_covers_skizze.py` | Titelbilder der Kurse, geführten Audios und Ja/Nein/Vielleicht-Bereiche (`cover_NN.svg`, `guided_*.svg`, `ynm_*.svg` samt `*_spicy.svg`) im Stil eines Skizzenbuchs neu erzeugen, reines SVG |
+| `tools/generate_covers.py` | die früheren Farb-Silhouetten (abgelöst, dessen Formen nutzt der Skizzen-Generator weiter) |
 | `assets/images/diagram_*.svg` | Anleitungsgrafiken (800×600) |
 
 ### Audio neu einsprechen

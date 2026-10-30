@@ -212,7 +212,8 @@ relays pass on direct messages.
 | `tools/generate_audio_en.py` | record and pack the English audio pack (downloaded in the app) |
 | `tools/translations.py` | translation helper for English: skeleton, text export, import |
 | `translations/po/`, `translations/STATUS.md` | PO files for translators and the progress per language; refresh with `flutter test test/uebersetzung_test.dart --dart-define=PO=sync` ([guide](translations/README.md)) |
-| `tools/generate_covers.py` | regenerate the course images `assets/images/cover_NN.svg` |
+| `tools/generate_covers_skizze.py` | regenerate the course, guided-audio and yes/no/maybe title pictures (`cover_NN.svg`, `guided_*.svg`, `ynm_*.svg` and their `*_spicy.svg` variants) in the pencil-sketchbook style, plain SVG |
+| `tools/generate_covers.py` | the previous colour silhouettes (superseded, its shapes are reused by the sketch generator) |
 | `assets/images/diagram_*.svg` | illustrations (800×600) |
 
 ### Re-recording audio
