@@ -131,7 +131,7 @@ abstract class AppLocalizations {
   /// No description provided for @mainNavigationProgrammeCourses.
   ///
   /// In de, this message translates to:
-  /// **'Programm & Kurse'**
+  /// **'Heute'**
   String get mainNavigationProgrammeCourses;
 
   /// No description provided for @mainNavigationSomaticsTraining.
@@ -161,7 +161,7 @@ abstract class AppLocalizations {
   /// No description provided for @mainNavigationCourses.
   ///
   /// In de, this message translates to:
-  /// **'Kurse'**
+  /// **'Heute'**
   String get mainNavigationCourses;
 
   /// No description provided for @mainNavigationTraining.
@@ -391,6 +391,60 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Willkommen'**
   String get coursesWelcome;
+
+  /// No description provided for @heuteNaechsterSchritt.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein nächster Schritt'**
+  String get heuteNaechsterSchritt;
+
+  /// No description provided for @heuteStarten.
+  ///
+  /// In de, this message translates to:
+  /// **'Starten'**
+  String get heuteStarten;
+
+  /// No description provided for @heuteWeitermachen.
+  ///
+  /// In de, this message translates to:
+  /// **'Weitermachen'**
+  String get heuteWeitermachen;
+
+  /// No description provided for @heuteKursUndDauer.
+  ///
+  /// In de, this message translates to:
+  /// **'{kurs} · {min} Min.'**
+  String heuteKursUndDauer(String kurs, int min);
+
+  /// No description provided for @heuteAllesErledigt.
+  ///
+  /// In de, this message translates to:
+  /// **'Du hast alle Lektionen durch. Stöbere in den Kursen oder hör ein Audio.'**
+  String get heuteAllesErledigt;
+
+  /// No description provided for @heuteBleibtLokal.
+  ///
+  /// In de, this message translates to:
+  /// **'Bleibt auf deinem Handy'**
+  String get heuteBleibtLokal;
+
+  /// No description provided for @heuteReiterCheckin.
+  ///
+  /// In de, this message translates to:
+  /// **'Check-in'**
+  String get heuteReiterCheckin;
+
+  /// No description provided for @heuteReiterFunke.
+  ///
+  /// In de, this message translates to:
+  /// **'Funke'**
+  String get heuteReiterFunke;
+
+  /// No description provided for @heuteKurse.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurse'**
+  String get heuteKurse;
 
   /// No description provided for @coursesYourFocusGoallabel.
   ///

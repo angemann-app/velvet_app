@@ -155,42 +155,39 @@ class _AufnahmenHinweisState extends State<AufnahmenHinweis> {
       valueListenable: Pakete.stand,
       builder: (context, _, __) {
         if (_spaeter || !Pakete.unvollstaendig) return const SizedBox.shrink();
+        // Dünne Zeile statt großer Karte: Der Hinweis soll den Start nicht dominieren.
         return Container(
-          margin: const EdgeInsets.only(bottom: 14),
-          padding: const EdgeInsets.fromLTRB(14, 12, 6, 6),
+          margin: const EdgeInsets.only(bottom: 12),
+          padding: const EdgeInsets.fromLTRB(14, 2, 2, 2),
           decoration: BoxDecoration(
-            color: AppTheme.sageGreen.withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.5)),
+            color: AppTheme.surface,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: AppTheme.border),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(t.aufnahmenHinweisTitel,
-                  style: TextStyle(fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
-              const SizedBox(height: 4),
-              Text(t.aufnahmenHinweisText,
-                  style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4)),
-              Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                TextButton(
-                  onPressed: () => setState(() => _spaeter = true),
-                  child: Text(t.aufnahmenSpaeter, style: TextStyle(color: AppTheme.textSecondary)),
+          child: Row(children: [
+            Icon(Icons.record_voice_over_rounded, color: AppTheme.sageGreen, size: 18),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(t.aufnahmenHinweisTitel,
+                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13.5, color: AppTheme.textPrimary)),
+            ),
+            TextButton(
+              onPressed: () => showModalBottomSheet(
+                context: context,
+                backgroundColor: AppTheme.surface,
+                builder: (_) => const SafeArea(
+                  child: Padding(padding: EdgeInsets.fromLTRB(16, 16, 16, 8), child: AufnahmenKarte()),
                 ),
-                TextButton(
-                  onPressed: () => showModalBottomSheet(
-                    context: context,
-                    backgroundColor: AppTheme.surface,
-                    builder: (_) => const SafeArea(
-                      child: Padding(padding: EdgeInsets.fromLTRB(16, 16, 16, 8), child: AufnahmenKarte()),
-                    ),
-                  ),
-                  child: Text(t.aufnahmenAnsehen, style: TextStyle(color: AppTheme.sageGreen)),
-                ),
-              ]),
-            ],
-          ),
-        );
-      },
+              ),
+              child: Text(t.aufnahmenAnsehen, style: TextStyle(color: AppTheme.sageGreen)),
+            ),
+            IconButton(
+              tooltip: t.aufnahmenSpaeter,
+              onPressed: () => setState(() => _spaeter = true),
+              icon: Icon(Icons.close_rounded, size: 18, color: AppTheme.textMuted),
+            ),
+          ]),
+        );      },
     );
   }
 }

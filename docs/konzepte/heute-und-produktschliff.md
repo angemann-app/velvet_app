@@ -58,3 +58,18 @@ Jede Stufe einzeln, mit Tests, Screens-Test und „Was ist neu“. Englisch wird
 - Tab „Lernen“ nur Kurse oder auch Lektions-Suche und Lesezeichen?
 - Wohin mit dem KI-Coach für Menschen ohne Schlüssel: unter „Üben“ sichtbar, oder erst nach Einrichtung?
 - Erste Stufe als Beta mit alter Tab-Leiste (Umbau erst in Stufe 4), damit Rückmeldungen nicht an zwei Dingen hängen?
+## Stand der Umsetzung
+
+**Stufe 1 gebaut am 31.10.2026** (noch nicht veröffentlicht): Tab und Titel heißen „Heute“; Kopf mit Begrüßung, Fokus und
+Hinweis „Bleibt auf deinem Handy“; „Dein nächster Schritt“ (nächste offene Lektion, zuerst im Schwerpunkt zum Fokus);
+Check-in und Funke als zwei Reiter; Aufnahmen-Hinweis als dünne Zeile; geführte Audios einklappbar, Zustand dauerhaft
+gespeichert und in der Sicherung (`audioBereichOffen`). Prozentbalken und Serienflamme entfallen.
+
+Noch offen aus Stufe 1: **„Weiter hören“** (zuletzt gehörtes Audio mit Fortsetzen-Knopf) braucht erst eine Speicherung des
+zuletzt gehörten Audios und kommt als Stufe 1b; „Zuletzt vor X Tagen“ im nächsten Schritt braucht denselben Zeitstempel
+je Lektion.
+
+## Entscheidungen (Vorschläge, vom Nutzer mit „Erst Heute bauen“ übernommen)
+
+Name „Heute“; Streak entfällt; Tab „Lernen“ mit Kursen, Suche und Lesezeichen; KI-Coach unter „Üben“ sichtbar mit
+freundlicher Einrichtung; Stufe 1 zuerst mit alter Tab-Leiste.

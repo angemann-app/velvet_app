@@ -87,7 +87,7 @@ class GefuehrteAudios extends StatelessWidget {
 }
 
 /// Dünner Balken, der die Kachelreihe der geführten Audios beim Antippen ausklappt.
-/// Der Zustand bleibt, solange die App läuft; beim Start ist der Balken zu.
+/// Der Zustand bleibt dauerhaft gespeichert (auch in der Sicherung); beim ersten Start ist der Bereich offen.
 class _Einklappbar extends StatefulWidget {
   final String titel;
   final Widget child;
@@ -99,7 +99,7 @@ class _Einklappbar extends StatefulWidget {
 }
 
 class _EinklappbarState extends State<_Einklappbar> {
-  static bool _offen = false;
+  bool _offen = StorageService.getAudioBereichOffen();
 
   @override
   Widget build(BuildContext context) {
@@ -116,6 +116,7 @@ class _EinklappbarState extends State<_Einklappbar> {
             onTap: () {
               HapticFeedback.selectionClick();
               setState(() => _offen = !_offen);
+              StorageService.setAudioBereichOffen(_offen);
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),

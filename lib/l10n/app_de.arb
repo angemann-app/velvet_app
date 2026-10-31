@@ -5,12 +5,12 @@
   "spracheAutomatisch": "Automatisch (wie das Gerät)",
   "spracheDeutsch": "Deutsch",
   "spracheEnglisch": "English",
-  "mainNavigationProgrammeCourses": "Programm & Kurse",
+  "mainNavigationProgrammeCourses": "Heute",
   "mainNavigationSomaticsTraining": "Somatik & Training",
   "mainNavigationCbtReframing": "KVT-Reframing",
   "mainNavigationCoupleChannel": "Paar-Kanal",
   "mainNavigationAiCoach": "KI-Coach",
-  "mainNavigationCourses": "Kurse",
+  "mainNavigationCourses": "Heute",
   "mainNavigationTraining": "Training",
   "mainNavigationReframing": "Reframing",
   "whatsNewWelcomeBack": "Willkommen zurück",
@@ -91,6 +91,21 @@
     }
   },
   "coursesWelcome": "Willkommen",
+  "heuteNaechsterSchritt": "Dein nächster Schritt",
+  "heuteStarten": "Starten",
+  "heuteWeitermachen": "Weitermachen",
+  "heuteKursUndDauer": "{kurs} · {min} Min.",
+  "heuteAllesErledigt": "Du hast alle Lektionen durch. Stöbere in den Kursen oder hör ein Audio.",
+  "heuteBleibtLokal": "Bleibt auf deinem Handy",
+  "heuteReiterCheckin": "Check-in",
+  "heuteReiterFunke": "Funke",
+  "heuteKurse": "Kurse",
+  "@heuteKursUndDauer": {
+    "placeholders": {
+      "kurs": {"type": "String"},
+      "min": {"type": "int"}
+    }
+  },
   "coursesYourFocusGoallabel": "Dein Fokus: {goalLabel}",
   "@coursesYourFocusGoallabel": {
     "placeholders": {

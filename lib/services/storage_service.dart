@@ -47,6 +47,7 @@ class StorageService {
   static const String _keyFrageVorLautsprecher = 'frage_vor_lautsprecher';
   static const String _keyPausiereBeiKopfhoererGetrennt = 'pausiere_bei_kopfhoerer_getrennt';
   static const String _keyKursFilter = 'kurs_filter';
+  static const String _keyAudioBereichOffen = 'audio_bereich_offen';
   static const String _keyHalloGesendetAm = 'hallo_gesendet_am';
 
   static SharedPreferences? _prefs;
@@ -206,6 +207,18 @@ class StorageService {
   static String? getKursFilter() => _prefs?.getString(_keyKursFilter);
 
   static const kursFilterWerte = {'all', 'women', 'men', 'couples'};
+
+  /// Ob der Bereich „Geführte Audios“ auf der Startseite aufgeklappt ist. Beim ersten Start offen
+  /// (Konzept `heute-und-produktschliff.md`).
+  static bool getAudioBereichOffen() => _prefs?.getBool(_keyAudioBereichOffen) ?? true;
+
+  static Future<void> setAudioBereichOffen(bool offen) async {
+    final prefs = await _ensurePrefs();
+    await prefs.setBool(_keyAudioBereichOffen, offen);
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  /// Ob der Bereich 
 
   static Future<void> setKursFilter(String value) async {
     if (!kursFilterWerte.contains(value)) return;
@@ -554,6 +567,7 @@ class StorageService {
       'frageVorLautsprecher': getFrageVorLautsprecher(),
       'pausiereBeiKopfhoererGetrennt': getPausiereBeiKopfhoererGetrennt(),
       'kursFilter': getKursFilter(),
+      'audioBereichOffen': _prefs?.getBool(_keyAudioBereichOffen),
       'halloGesendetAm': getHalloGesendetAm(),
       'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
       'dailyCheckIns': _prefs?.getStringList(_keyDailyCheckIns),
@@ -677,6 +691,9 @@ class StorageService {
     // Die eigene Wahl auf diesem Gerät gewinnt; fehlt sie, gilt die aus der Sicherung.
     if (d['kursFilter'] is String && kursFilterWerte.contains(d['kursFilter']) && _prefs?.getString(_keyKursFilter) == null) {
       writes[_keyKursFilter] = d['kursFilter'] as String;
+    }
+    if (d['audioBereichOffen'] is bool && _prefs?.getBool(_keyAudioBereichOffen) == null) {
+      writes[_keyAudioBereichOffen] = d['audioBereichOffen'] as bool;
     }
     if (d.containsKey('halloGesendetAm') && d['halloGesendetAm'] is String) {
       final lokal = _prefs?.getString(_keyHalloGesendetAm);

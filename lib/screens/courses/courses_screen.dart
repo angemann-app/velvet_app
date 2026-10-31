@@ -30,7 +30,6 @@ class CoursesScreen extends StatefulWidget {
 class _CoursesScreenState extends State<CoursesScreen> {
   List<Course> _courses = [];
   Set<String> _completedLessonIds = {};
-  int _streak = 1;
   bool _isLoading = true;
   String _selectedCategory = StorageService.getKursFilter() ?? 'all';
   UserProfile? _profile;
@@ -52,14 +51,12 @@ class _CoursesScreenState extends State<CoursesScreen> {
   Future<void> _loadData() async {
     final db = await DataService.loadDatabase();
     final completed = StorageService.getCompletedLessons();
-    final streak = StorageService.getStreakCount();
     final profile = StorageService.getUserProfile();
 
     if (mounted) {
       setState(() {
         _courses = db.courses;
         _completedLessonIds = completed;
-        _streak = streak;
         _profile = profile;
         _isLoading = false;
 
@@ -98,7 +95,6 @@ class _CoursesScreenState extends State<CoursesScreen> {
     // Refresh completed state on return
     setState(() {
       _completedLessonIds = StorageService.getCompletedLessons();
-      _streak = StorageService.getStreakCount();
     });
   }
 
@@ -144,17 +140,14 @@ class _CoursesScreenState extends State<CoursesScreen> {
     }
 
     // Calculate total stats
-    int totalLessons = 0;
     int completedCount = 0;
     for (final c in _courses) {
-      totalLessons += c.lessons.length;
       for (final l in c.lessons) {
         if (_completedLessonIds.contains(l.id)) {
           completedCount++;
         }
       }
     }
-    final double overallProgress = totalLessons > 0 ? (completedCount / totalLessons) : 0.0;
 
     // Filter courses based on selected category.
     // "Für Sie"/"Für Ihn" zeigen auch Paar-Kurse, außer bei Singles.
@@ -197,32 +190,26 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 : const SizedBox.shrink(),
           ),
 
-          // Welcome & Daily Streak Banner
-          _buildHeroHeader(completedCount, totalLessons, overallProgress),
+          // Kopf: Begrüßung ohne Prozentbalken und Serie (docs/konzepte/heute-und-produktschliff.md)
+          _buildKopf(),
 
-          const SizedBox(height: 18),
+          const SizedBox(height: 16),
 
-          const AufnahmenHinweis(),
-
-          // Daily 30-Second Micro-Journaling Check-in
-          DailyCheckInCard(
-            onCheckInSaved: () {
-              setState(() {
-                _streak = StorageService.getStreakCount();
-              });
-            },
-          ),
+          _buildNaechsterSchritt(completedCount),
 
           const SizedBox(height: 12),
 
-          // Daily Simmering / Erotik-Funke Card
-          const DailySimmeringCard(),
+          // Für heute: Check-in und Erotik-Funke als zwei Reiter einer Karte.
+          const _HeuteReiter(),
 
-          // Geführte Audios als Reihe kleiner Kacheln.
+          const SizedBox(height: 12),
+
+          const AufnahmenHinweis(),
+
+          // Geführte Audios: einklappbarer Balken mit Kachelreihe.
           GefuehrteAudios(mitPaar: showCouples, kompakt: true),
 
           const SizedBox(height: 18),
-
           // Filter nach Zielgruppe
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -327,126 +314,115 @@ class _CoursesScreenState extends State<CoursesScreen> {
     );
   }
 
-  Widget _buildHeroHeader(int completedCount, int totalLessons, double overallProgress) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF26282C), Color(0xFF1D1F22)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+  Widget _buildKopf() {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                _profile != null ? t.coursesHelloProfilename(_profile!.name) : t.coursesWelcome,
+                style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                      fontSize: 26,
+                      fontWeight: FontWeight.w800,
+                      color: AppTheme.textPrimary,
+                      letterSpacing: -0.4,
+                    ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                _profile != null
+                    ? t.coursesYourFocusGoallabel(_profile!.goalLabel)
+                    : t.coursesUnderstandTheBiologyQuietThe,
+                style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.35),
+              ),
+              const SizedBox(height: 8),
+              Row(mainAxisSize: MainAxisSize.min, children: [
+                Icon(Icons.lock_outline_rounded, size: 14, color: AppTheme.textMuted),
+                const SizedBox(width: 5),
+                Text(t.heuteBleibtLokal, style: TextStyle(fontSize: 12, color: AppTheme.textMuted)),
+              ]),
+            ],
+          ),
         ),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppTheme.border),
+        IconButton(
+          onPressed: _openProfileEditor,
+          tooltip: t.coursesProfileSettings,
+          visualDensity: VisualDensity.compact,
+          icon: Icon(
+            Icons.account_circle_rounded,
+            color: _profile?.isFemale == true ? const Color(0xFFFB7185) : AppTheme.sageGreen,
+            size: 30,
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// Die nächste offene Lektion: erst im Schwerpunkt zum Fokus im Profil, sonst die erste offene überhaupt.
+  (Course, Lesson)? _naechsteLektion() {
+    final fokus = _schwerpunktZumFokus[_profile?.primaryGoal];
+    final reihenfolge = [
+      if (fokus != null) ..._courses.where((c) => c.schwerpunkt == fokus),
+      ..._courses,
+    ];
+    for (final c in reihenfolge) {
+      for (final l in c.lessons) {
+        if (!_completedLessonIds.contains(l.id)) return (c, l);
+      }
+    }
+    return null;
+  }
+
+  Widget _buildNaechsterSchritt(int erledigt) {
+    final n = _naechsteLektion();
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppTheme.amber.withValues(alpha: 0.55)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      _profile != null ? t.coursesHelloProfilename(_profile!.name) : t.coursesWelcome,
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.w800,
-                        color: AppTheme.textPrimary,
-                        letterSpacing: -0.4,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      _profile != null
-                          ? t.coursesYourFocusGoallabel(_profile!.goalLabel)
-                          : t.coursesUnderstandTheBiologyQuietThe,
-                      style: TextStyle(
-                        fontSize: 13.5,
-                        color: AppTheme.textSecondary,
-                        height: 1.35,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(width: 10),
-              // Tagesserie
-              Tooltip(
-                message: t.coursesStreakDays(_streak),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: AppTheme.amber.withValues(alpha: 0.15),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: AppTheme.amber.withValues(alpha: 0.4)),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.local_fire_department_rounded, color: AppTheme.amber, size: 16),
-                      const SizedBox(width: 4),
-                      Text(
-                        '$_streak',
-                        style: TextStyle(color: AppTheme.amberLight, fontSize: 13, fontWeight: FontWeight.w700),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(width: 6),
-              IconButton(
-                onPressed: _openProfileEditor,
-                tooltip: t.coursesProfileSettings,
-                visualDensity: VisualDensity.compact,
-                icon: Icon(
-                  Icons.account_circle_rounded,
-                  color: _profile?.isFemale == true ? const Color(0xFFFB7185) : AppTheme.sageGreen,
-                  size: 28,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16),
-          // Progress bar
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                t.coursesOverallProgressCompletedcountOfTotallessons(completedCount, totalLessons),
-                style: TextStyle(
-                  color: AppTheme.textSecondary,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              Text(
-                '${(overallProgress * 100).toInt()}%',
-                style: TextStyle(
-                  color: AppTheme.sageGreen,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ],
+          Text(
+            t.heuteNaechsterSchritt.toUpperCase(),
+            style: TextStyle(color: AppTheme.textMuted, fontSize: 11.5, fontWeight: FontWeight.w700, letterSpacing: 0.8),
           ),
           const SizedBox(height: 8),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: LinearProgressIndicator(
-              value: overallProgress,
-              backgroundColor: AppTheme.surfaceLight,
-              valueColor: AlwaysStoppedAnimation<Color>(AppTheme.sageGreen),
-              minHeight: 8,
+          if (n == null)
+            Text(t.heuteAllesErledigt, style: TextStyle(color: AppTheme.textSecondary, fontSize: 14, height: 1.4))
+          else ...[
+            Text(
+              n.$2.title,
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
+                    color: AppTheme.textPrimary,
+                    height: 1.25,
+                  ),
             ),
-          ),
+            const SizedBox(height: 4),
+            Text(
+              t.heuteKursUndDauer(n.$1.title, n.$2.durationMin),
+              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+            ),
+            const SizedBox(height: 12),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () => _onLessonTap(n.$1, n.$2),
+                child: Text(erledigt > 0 ? t.heuteWeitermachen : t.heuteStarten),
+              ),
+            ),
+          ],
         ],
       ),
     );
   }
-
   /// Welche Schwerpunkte aufgeklappt sind; anfangs der zum Fokus im Profil passende, oder der erste mit
   /// offenen Lektionen, wenn der schon fertig ist.
   Set<String>? _offen;
@@ -811,5 +787,55 @@ class _CoursesScreenState extends State<CoursesScreen> {
         ],
       ),
     );
+  }
+}
+
+/// Check-in und Erotik-Funke als zwei Reiter, damit „für heute“ nur einen Block belegt. Die Wahl bleibt bis zum Neustart.
+class _HeuteReiter extends StatefulWidget {
+  const _HeuteReiter();
+
+  @override
+  State<_HeuteReiter> createState() => _HeuteReiterState();
+}
+
+class _HeuteReiterState extends State<_HeuteReiter> {
+  static int _gewaehlt = 0;
+
+  Widget _reiter(int i, String text, IconData icon) {
+    final an = _gewaehlt == i;
+    return InkWell(
+      onTap: () => setState(() => _gewaehlt = i),
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
+        decoration: BoxDecoration(
+          color: an ? AppTheme.amber.withValues(alpha: 0.18) : Colors.transparent,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: an ? AppTheme.amber : AppTheme.border, width: an ? 1.5 : 1),
+        ),
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          Icon(icon, size: 15, color: an ? AppTheme.amber : AppTheme.textSecondary),
+          const SizedBox(width: 6),
+          Text(text,
+              style: TextStyle(
+                  fontSize: 12.5,
+                  fontWeight: an ? FontWeight.w700 : FontWeight.w500,
+                  color: an ? AppTheme.textPrimary : AppTheme.textSecondary)),
+        ]),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Row(children: [
+        _reiter(0, t.heuteReiterCheckin, Icons.speed_rounded),
+        const SizedBox(width: 8),
+        _reiter(1, t.heuteReiterFunke, Icons.local_fire_department_rounded),
+      ]),
+      const SizedBox(height: 10),
+      if (_gewaehlt == 0) const DailyCheckInCard() else const DailySimmeringCard(),
+    ]);
   }
 }

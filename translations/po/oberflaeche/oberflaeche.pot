@@ -42,9 +42,9 @@ msgid "English"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Programme & courses
+#. EN: Today
 msgctxt "ui:mainNavigationProgrammeCourses#text"
-msgid "Programm & Kurse"
+msgid "Heute"
 msgstr ""
 
 #. Text der Oberfläche
@@ -72,9 +72,9 @@ msgid "KI-Coach"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Courses
+#. EN: Today
 msgctxt "ui:mainNavigationCourses#text"
-msgid "Kurse"
+msgid "Heute"
 msgstr ""
 
 #. Text der Oberfläche
@@ -308,6 +308,60 @@ msgstr ""
 #. EN: Welcome
 msgctxt "ui:coursesWelcome#text"
 msgid "Willkommen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your next step
+msgctxt "ui:heuteNaechsterSchritt#text"
+msgid "Dein nächster Schritt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start
+msgctxt "ui:heuteStarten#text"
+msgid "Starten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Continue
+msgctxt "ui:heuteWeitermachen#text"
+msgid "Weitermachen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {kurs}, {min}
+#. EN: {kurs} · {min} min
+msgctxt "ui:heuteKursUndDauer#text"
+msgid "{kurs} · {min} Min."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You've finished every lesson. Browse the courses or listen to an audio.
+msgctxt "ui:heuteAllesErledigt#text"
+msgid "Du hast alle Lektionen durch. Stöbere in den Kursen oder hör ein Audio."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Stays on your phone
+msgctxt "ui:heuteBleibtLokal#text"
+msgid "Bleibt auf deinem Handy"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Check-in
+msgctxt "ui:heuteReiterCheckin#text"
+msgid "Check-in"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Spark
+msgctxt "ui:heuteReiterFunke#text"
+msgid "Funke"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Courses
+msgctxt "ui:heuteKurse#text"
+msgid "Kurse"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {goalLabel}

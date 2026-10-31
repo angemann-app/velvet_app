@@ -91,6 +91,18 @@ void main() {
     await StorageService.importBackup(BackupCodec.validate(export));
     expect(StorageService.getKursFilter(), 'men', reason: 'die Wahl auf diesem Gerät gewinnt');
   });
+  test('Audio-Bereich auf der Startseite: standardmäßig offen, Wahl wird gemerkt, steht in der Sicherung, eigene Wahl gewinnt', () async {
+    expect(StorageService.getAudioBereichOffen(), isTrue, reason: 'beim ersten Start offen');
+    await StorageService.setAudioBereichOffen(false);
+    expect(StorageService.getAudioBereichOffen(), isFalse);
+
+    final export = StorageService.exportAllUserData();
+    expect(export['audioBereichOffen'], false);
+
+    await StorageService.setAudioBereichOffen(true);
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getAudioBereichOffen(), isTrue, reason: 'die Wahl auf diesem Gerät gewinnt');
+  });
 
   test('Hallo-Merker ist in der Sicherung und wird wiederhergestellt', () async {
     expect(StorageService.getHalloGesendetAm(), isNull);

@@ -24,7 +24,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get spracheEnglisch => 'English';
 
   @override
-  String get mainNavigationProgrammeCourses => 'Programme & courses';
+  String get mainNavigationProgrammeCourses => 'Today';
 
   @override
   String get mainNavigationSomaticsTraining => 'Somatics & training';
@@ -39,7 +39,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mainNavigationAiCoach => 'AI coach';
 
   @override
-  String get mainNavigationCourses => 'Courses';
+  String get mainNavigationCourses => 'Today';
 
   @override
   String get mainNavigationTraining => 'Training';
@@ -175,6 +175,36 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get coursesWelcome => 'Welcome';
+
+  @override
+  String get heuteNaechsterSchritt => 'Your next step';
+
+  @override
+  String get heuteStarten => 'Start';
+
+  @override
+  String get heuteWeitermachen => 'Continue';
+
+  @override
+  String heuteKursUndDauer(String kurs, int min) {
+    return '$kurs · $min min';
+  }
+
+  @override
+  String get heuteAllesErledigt =>
+      'You\'ve finished every lesson. Browse the courses or listen to an audio.';
+
+  @override
+  String get heuteBleibtLokal => 'Stays on your phone';
+
+  @override
+  String get heuteReiterCheckin => 'Check-in';
+
+  @override
+  String get heuteReiterFunke => 'Spark';
+
+  @override
+  String get heuteKurse => 'Courses';
 
   @override
   String coursesYourFocusGoallabel(Object goalLabel) {
