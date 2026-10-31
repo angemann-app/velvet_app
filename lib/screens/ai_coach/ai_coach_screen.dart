@@ -735,7 +735,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
               child: SelectableText(
                 msg.text,
                 style: TextStyle(
-                  color: isUser ? AppTheme.textPrimary : const Color(0xFFF1F5F9),
+                  color: AppTheme.textPrimary,
                   fontSize: 14,
                   height: 1.5,
                 ),

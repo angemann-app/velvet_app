@@ -1094,8 +1094,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFFBE123C), Color(0xFF881337)],
+        gradient: LinearGradient(
+          colors: [AppTheme.rose, AppTheme.rose.withValues(alpha: 0.75)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -1142,7 +1142,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           icon: Icon(icon, size: 16, color: selected ? Colors.white : color),
           label: Text(label, style: TextStyle(color: selected ? Colors.white : color, fontSize: 13)),
           style: OutlinedButton.styleFrom(
-            backgroundColor: selected ? (value == 'yes' ? const Color(0xFFE11D48) : AppTheme.surfaceLight) : null,
+            backgroundColor: selected ? (value == 'yes' ? AppTheme.rose : AppTheme.surfaceLight) : null,
             side: BorderSide(color: selected ? Colors.transparent : AppTheme.border),
             padding: const EdgeInsets.symmetric(vertical: 10),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),

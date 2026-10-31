@@ -189,8 +189,8 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            const Color(0xFF26282C),
-            const Color(0xFF1D1F22),
+            AppTheme.surface,
+            AppTheme.background,
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -198,14 +198,14 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: _isRevealed
-              ? const Color(0xFFE11D48).withValues(alpha: 0.6)
+              ? AppTheme.rose.withValues(alpha: 0.6)
               : AppTheme.amber.withValues(alpha: 0.35),
           width: 1.2,
         ),
         boxShadow: [
           if (_isRevealed)
             BoxShadow(
-              color: const Color(0xFFE11D48).withValues(alpha: 0.12),
+              color: AppTheme.rose.withValues(alpha: 0.12),
               blurRadius: 16,
               offset: const Offset(0, 4),
             ),
@@ -230,12 +230,12 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                         Container(
                           padding: const EdgeInsets.all(6),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFE11D48).withValues(alpha: 0.18),
+                            color: AppTheme.rose.withValues(alpha: 0.18),
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          child: const Icon(
+                          child: Icon(
                             Icons.local_fire_department_rounded,
-                            color: Color(0xFFFB7185),
+                            color: AppTheme.sageLight,
                             size: 18,
                           ),
                         ),
@@ -249,7 +249,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                                 fontSize: 11,
                                 fontWeight: FontWeight.w800,
                                 letterSpacing: 0.8,
-                                color: Color(0xFFFB7185),
+                                color: AppTheme.sageLight,
                               ),
                             ),
                             Text(

@@ -175,10 +175,10 @@ class BeliefLibraryView extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     t.beliefLibraryViewIrrationalthought(belief.irrationalThought),
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 14,
                       fontStyle: FontStyle.italic,
-                      color: Color(0xFFFECDD3),
+                      color: AppTheme.sageLight,
                       height: 1.35,
                     ),
                   ),

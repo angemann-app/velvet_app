@@ -488,10 +488,10 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               ),
               child: SelectableText(
                 personalize(lesson.content, _personalizeContext.forPerspective(lesson.perspective)),
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 16,
                   height: 1.65,
-                  color: Color(0xFFE2E8F0),
+                  color: AppTheme.textPrimary,
                   letterSpacing: 0.1,
                 ),
               ),

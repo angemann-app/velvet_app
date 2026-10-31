@@ -261,7 +261,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               label: Text(t.onboardingRestoreAutomaticBackupNow, style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color(0xFF10B981),
-                                foregroundColor: const Color(0xFF1D1F22),
+                                foregroundColor: AppTheme.background,
                               ),
                             ),
                           ),
@@ -315,7 +315,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               label: Text(t.onboardingRestoreFromClipboard, style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: AppTheme.amber,
-                                foregroundColor: const Color(0xFF1D1F22),
+                                foregroundColor: AppTheme.background,
                               ),
                             ),
                           ),
