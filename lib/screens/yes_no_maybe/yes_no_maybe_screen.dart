@@ -13,6 +13,7 @@ import '../../services/nostr_service.dart';
 import '../../services/storage_service.dart';
 import '../../services/spicy_bild.dart';
 import '../../theme/app_theme.dart';
+import '../../theme/vp_tokens.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../couples_channel/pairing_modal.dart';
 import '../../l10n/t.dart';
@@ -340,7 +341,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                       icon: Badge(
                         isLabelVisible: matchCount > 0,
                         label: Text('$matchCount'),
-                        backgroundColor: const Color(0xFF10B981),
+                        backgroundColor: AppTheme.statusJa,
                         child: const Icon(Icons.favorite_rounded, size: 18),
                       ),
                       text: t.yesNoMaybeMatchesMatchcount(matchCount),
@@ -377,14 +378,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
         Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                AppTheme.surface,
-                AppTheme.background.withValues(alpha: 0.8),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
+            color: AppTheme.surface,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(color: AppTheme.border),
           ),
@@ -418,7 +412,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               const SizedBox(height: 14),
               Row(
                 children: [
-                  _buildStatPill(t.yesNoMaybeYes, '$yesCount', const Color(0xFF10B981)),
+                  _buildStatPill(t.yesNoMaybeYes, '$yesCount', AppTheme.statusJa),
                   const SizedBox(width: 8),
                   _buildStatPill(t.yesNoMaybeMaybe, '$maybeCount', AppTheme.amber),
                   const SizedBox(width: 8),
@@ -797,32 +791,21 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
             Container(
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [const Color(0xFF064E3B), AppTheme.background],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.5)),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0xFF10B981).withValues(alpha: 0.2),
-                    blurRadius: 16,
-                    spreadRadius: 2,
-                  ),
-                ],
+                color: AppTheme.statusJa.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
+                border: Border.all(color: AppTheme.statusJa.withValues(alpha: 0.5)),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
-                      const Icon(Icons.auto_awesome_rounded, color: Color(0xFF34D399), size: 22),
+                      Icon(Icons.auto_awesome_rounded, color: AppTheme.statusJa, size: 22),
                       const SizedBox(width: 8),
                       Text(
                         t.yesNoMaybePerfectMatchWithPartnername(partnerName).toUpperCase(),
-                        style: const TextStyle(
-                          color: Color(0xFF34D399),
+                        style: TextStyle(
+                          color: AppTheme.statusJa,
                           fontWeight: FontWeight.w900,
                           fontSize: 13,
                           letterSpacing: 0.8,
@@ -833,16 +816,16 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   const SizedBox(height: 8),
                   Text(
                     t.yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(yesMatches.length, curiosityMatches.length),
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
-                      color: Colors.white,
+                      color: AppTheme.tinte,
                     ),
                   ),
                   const SizedBox(height: 6),
                   Text(
                     t.yesNoMaybeNoRejectionAllLimitsWere,
-                    style: TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.4),
+                    style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5, height: 1.4),
                   ),
                 ],
               ),
@@ -854,7 +837,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
             if (yesMatches.isNotEmpty) ...[
               Row(
                 children: [
-                  Icon(Icons.check_circle_rounded, color: Color(0xFF10B981), size: 18),
+                  Icon(Icons.check_circle_rounded, color: AppTheme.statusJa, size: 18),
                   SizedBox(width: 8),
                   Text(
                     t.yesNoMaybePerfectMatchBothSaidYes,
@@ -925,7 +908,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
   }
 
   Widget _buildMatchCard(YesNoMaybeItem item, {required bool isDirectYes}) {
-    final color = isDirectYes ? const Color(0xFF10B981) : AppTheme.amber;
+    final color = isDirectYes ? AppTheme.statusJa : AppTheme.amber;
 
     return Container(
       margin: const EdgeInsets.only(bottom: 10),

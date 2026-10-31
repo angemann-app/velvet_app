@@ -320,8 +320,8 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
               icon: const Icon(Icons.play_arrow_rounded),
               label: Text(t.reiheStart, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppTheme.rose,
-                foregroundColor: Colors.white,
+                backgroundColor: AppTheme.akzent,
+                foregroundColor: AppTheme.aufAkzent,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
               ),
             ),

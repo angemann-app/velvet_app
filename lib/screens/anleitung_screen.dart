@@ -34,7 +34,7 @@ const _icons = {
   'fitness': Icons.fitness_center_rounded,
   'psychology': Icons.psychology_rounded,
   'favorite': Icons.favorite_rounded,
-  'flame': Icons.local_fire_department_rounded,
+  'flame': Icons.bolt_outlined,
   'chat': Icons.chat_bubble_rounded,
   'lock': Icons.lock_rounded,
   'update': Icons.system_update_rounded,
@@ -120,7 +120,7 @@ class AnleitungScreen extends StatelessWidget {
           side: BorderSide(color: AppTheme.border),
         ),
         child: ListTile(
-          leading: Icon(Icons.local_fire_department_rounded, color: AppTheme.textMuted),
+          leading: Icon(Icons.bolt_outlined, color: AppTheme.textMuted),
           title: Text(t.spicyModus,
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
           subtitle: Text(t.spicyModusText, style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary)),

@@ -123,12 +123,12 @@ class BeliefLibraryView extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
                       color: belief.target == 'women'
-                          ? const Color(0xFFFB7185).withValues(alpha: 0.18)
+                          ? AppTheme.akzentTief.withValues(alpha: 0.18)
                           : AppTheme.sageGreen.withValues(alpha: 0.18),
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
                         color: belief.target == 'women'
-                            ? const Color(0xFFFB7185).withValues(alpha: 0.5)
+                            ? AppTheme.akzentTief.withValues(alpha: 0.5)
                             : AppTheme.sageGreen.withValues(alpha: 0.5),
                       ),
                     ),
@@ -136,7 +136,7 @@ class BeliefLibraryView extends StatelessWidget {
                       belief.target == 'women' ? t.beliefLibraryViewForHer : t.beliefLibraryViewForHim,
                       style: TextStyle(
                         color: belief.target == 'women'
-                            ? const Color(0xFFFB7185)
+                            ? AppTheme.akzentTief
                             : AppTheme.sageGreen,
                         fontSize: 10,
                         fontWeight: FontWeight.w800,

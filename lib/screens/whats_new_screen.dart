@@ -73,8 +73,8 @@ class WhatsNewScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () => Navigator.of(context).pop(),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppTheme.rose,
-                    foregroundColor: Colors.white,
+                    backgroundColor: AppTheme.akzent,
+                    foregroundColor: AppTheme.aufAkzent,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                   ),
                   child: Text(t.whatsNewLetSGo, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),

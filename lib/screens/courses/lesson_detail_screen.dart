@@ -528,7 +528,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: _isCompleted ? AppTheme.surfaceLight : AppTheme.sageGreen,
-                  foregroundColor: _isCompleted ? AppTheme.textPrimary : const Color(0xFF022C22),
+                  foregroundColor: _isCompleted ? AppTheme.textPrimary : AppTheme.aufAkzent,
                   side: _isCompleted ? BorderSide(color: AppTheme.border) : null,
                 ),
               ),
@@ -640,7 +640,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               label: Text(t.lessonDetailStartThePracticeNow),
               style: ElevatedButton.styleFrom(
                 backgroundColor: accentColor,
-                foregroundColor: Colors.black,
+                foregroundColor: AppTheme.aufAkzent,
               ),
             ),
           ),

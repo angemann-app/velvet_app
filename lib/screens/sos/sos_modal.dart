@@ -215,14 +215,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
             width: double.infinity,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  AppTheme.amber.withValues(alpha: 0.18),
-                  AppTheme.surface,
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
+              color: AppTheme.amber.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: AppTheme.amber.withValues(alpha: 0.5), width: 1.5),
             ),

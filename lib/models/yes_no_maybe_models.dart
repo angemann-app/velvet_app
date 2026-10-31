@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../l10n/t.dart';
+import '../theme/app_theme.dart';
 
 enum YesNoMaybeVote {
   yes,
@@ -40,11 +41,11 @@ enum YesNoMaybeVote {
   Color get color {
     switch (this) {
       case YesNoMaybeVote.yes:
-        return const Color(0xFF10B981);
+        return AppTheme.statusJa;
       case YesNoMaybeVote.maybe:
-        return const Color(0xFFF59E0B);
+        return AppTheme.statusVielleicht;
       case YesNoMaybeVote.no:
-        return const Color(0xFFF43F5E);
+        return AppTheme.statusNein;
     }
   }
 
@@ -792,7 +793,7 @@ const List<YesNoMaybeCategory> velvetYesNoMaybeCategories = [
     id: 'spicy',
     title: 'Spicy',
     description: 'Nur im Spicy-Modus: heißer, direkter, mutiger.',
-    icon: Icons.local_fire_department_rounded,
+    icon: Icons.spa_outlined,
     image: 'assets/images/ynm_spicy.svg',
     spicy: true,
     items: [

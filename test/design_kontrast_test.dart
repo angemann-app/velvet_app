@@ -40,6 +40,8 @@ void main() {
       text('akzentTief auf papier', p.akzentTief, p.papier);
       text('akzentTief auf papierErhoben', p.akzentTief, p.papierErhoben);
       text('aufAkzent auf akzent (Button)', p.aufAkzent, p.akzent);
+      text('aufAkzentTief auf akzentTief', p.aufAkzentTief, p.akzentTief);
+      text('aufSignal auf signal', p.aufSignal, p.signal);
       text('signal auf papier', p.signal, p.papier, 3);
       text('akzent auf papier (Linie, großes Element)', p.akzent, p.papier, 3);
       text('linieStark auf papier (Rahmen)', p.linieStark, p.papier, 1.8);

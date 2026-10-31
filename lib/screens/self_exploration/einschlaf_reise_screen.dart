@@ -485,8 +485,8 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
             icon: const Icon(Icons.bedtime_rounded),
             label: Text(t.einschlafStart, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.rose,
-              foregroundColor: Colors.white,
+              backgroundColor: AppTheme.akzent,
+              foregroundColor: AppTheme.aufAkzent,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
           ),
@@ -657,10 +657,8 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
           height: 160,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            gradient: RadialGradient(colors: [
-              AppTheme.rose.withValues(alpha: _pausiert ? 0.08 : 0.28),
-              AppTheme.background,
-            ]),
+            color: AppTheme.akzentLeise,
+            border: Border.all(color: AppTheme.linieStark, width: 1),
           ),
           child: Center(
             child: Icon(Icons.bedtime_rounded, color: AppTheme.textPrimary.withValues(alpha: 0.6), size: 44),
@@ -690,8 +688,8 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         else
           PlayerSteuerung(
             pausiert: _pausiert,
-            farbe: AppTheme.rose,
-            symbolFarbe: Colors.white,
+            farbe: AppTheme.akzent,
+            symbolFarbe: AppTheme.aufAkzent,
             onBeenden: _fragBeenden,
             onPause: _pauseUmschalten,
             onUeberspringen: _weiter,

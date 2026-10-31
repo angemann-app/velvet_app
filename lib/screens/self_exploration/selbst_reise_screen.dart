@@ -309,8 +309,8 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
             icon: const Icon(Icons.play_arrow_rounded),
             label: Text(t.selbstReiseBeginTheJourney, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.rose,
-              foregroundColor: Colors.white,
+              backgroundColor: AppTheme.akzent,
+              foregroundColor: AppTheme.aufAkzent,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
           ),
@@ -409,10 +409,8 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           height: spricht ? 190 : 160,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            gradient: RadialGradient(colors: [
-              AppTheme.rose.withValues(alpha: _pausiert ? 0.15 : 0.42),
-              AppTheme.background,
-            ]),
+            color: AppTheme.akzentLeise,
+            border: Border.all(color: AppTheme.linieStark, width: 1),
           ),
           child: Center(
             child: Icon(_fertig ? Icons.favorite_rounded : (spricht ? Icons.graphic_eq_rounded : Icons.spa_rounded),
@@ -448,8 +446,8 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         else
           PlayerSteuerung(
             pausiert: _pausiert,
-            farbe: AppTheme.rose,
-            symbolFarbe: Colors.white,
+            farbe: AppTheme.akzent,
+            symbolFarbe: AppTheme.aufAkzent,
             onBeenden: _fragBeenden,
             onPause: _pauseUmschalten,
             onUeberspringen: _weiter,

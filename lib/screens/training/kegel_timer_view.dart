@@ -455,11 +455,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                     height: 210,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      gradient: RadialGradient(colors: [
-                        currentPhase.color.withValues(alpha: 0.28),
-                        currentPhase.color.withValues(alpha: 0.08),
-                        Colors.transparent,
-                      ]),
+                      color: currentPhase.color.withValues(alpha: 0.10),
                       border: Border.all(color: currentPhase.color, width: 3.5),
                     ),
                     child: Center(
@@ -530,7 +526,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                       style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: _isRunning ? AppTheme.amber : AppTheme.sageGreen,
-                    foregroundColor: Colors.black,
+                    foregroundColor: _isRunning ? AppTheme.aufAkzentTief : AppTheme.aufAkzent,
                   ),
                 ),
               ),

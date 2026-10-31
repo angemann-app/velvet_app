@@ -317,9 +317,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
   Widget _buildCategoryChip(String cat, String label, IconData icon) {
     final isSelected = _selectedCategory == cat;
-    Color activeColor = AppTheme.sageGreen;
-    if (cat == 'women') activeColor = const Color(0xFFFB7185);
-    if (cat == 'couples') activeColor = AppTheme.amber;
+    Color activeColor = AppTheme.akzentTief;
+    if (cat == 'couples') activeColor = AppTheme.tinteLeise;
 
     return InkWell(
       onTap: () {
@@ -402,7 +401,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
           visualDensity: VisualDensity.compact,
           icon: Icon(
             Icons.account_circle_rounded,
-            color: _profile?.isFemale == true ? const Color(0xFFFB7185) : AppTheme.sageGreen,
+            color: AppTheme.akzentTief,
             size: 30,
           ),
         ),
@@ -630,15 +629,11 @@ class _CoursesScreenState extends State<CoursesScreen> {
     final progress = totalInCourse > 0 ? (completedInCourse / totalInCourse) : 0.0;
     final isAllDone = totalInCourse > 0 && completedInCourse == totalInCourse;
 
-    Color badgeColor = AppTheme.sageGreen;
-    if (course.isForWomen) {
-      badgeColor = const Color(0xFFFB7185);
-    } else if (course.isForCouples) {
-      badgeColor = AppTheme.amber;
-    } else if (course.isForMen) {
-      badgeColor = AppTheme.sageGreen;
-    } else {
-      badgeColor = const Color(0xFF38BDF8);
+    Color badgeColor = AppTheme.akzentTief;
+    if (course.isForCouples) {
+      badgeColor = AppTheme.tinteLeise;
+    } else if (!course.isForWomen && !course.isForMen) {
+      badgeColor = AppTheme.tinteStumm;
     }
 
     return Container(
@@ -916,7 +911,7 @@ class _HeuteReiterState extends State<_HeuteReiter> {
       Row(children: [
         _reiter(0, t.heuteReiterCheckin, Icons.speed_rounded),
         const SizedBox(width: 8),
-        _reiter(1, t.heuteReiterFunke, Icons.local_fire_department_rounded),
+        _reiter(1, t.heuteReiterFunke, Icons.bolt_outlined),
       ]),
       const SizedBox(height: 10),
       if (_gewaehlt == 0) const DailyCheckInCard() else const DailySimmeringCard(),

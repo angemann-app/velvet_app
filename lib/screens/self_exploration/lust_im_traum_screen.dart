@@ -174,8 +174,8 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
                       icon: const Icon(Icons.bedtime_rounded),
                       label: Text(t.lustWeiter, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: AppTheme.rose,
-                        foregroundColor: Colors.white,
+                        backgroundColor: AppTheme.akzent,
+                        foregroundColor: AppTheme.aufAkzent,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                       ),
                     ),

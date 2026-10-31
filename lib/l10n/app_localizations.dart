@@ -341,19 +341,19 @@ abstract class AppLocalizations {
   /// No description provided for @coursesForHer.
   ///
   /// In de, this message translates to:
-  /// **'Für Sie 🌸'**
+  /// **'Für Sie'**
   String get coursesForHer;
 
   /// No description provided for @coursesForHim.
   ///
   /// In de, this message translates to:
-  /// **'Für Ihn 🌿'**
+  /// **'Für Ihn'**
   String get coursesForHim;
 
   /// No description provided for @coursesForCouples.
   ///
   /// In de, this message translates to:
-  /// **'Für Paare 💫'**
+  /// **'Für Paare'**
   String get coursesForCouples;
 
   /// No description provided for @coursesCoupleChannel.
@@ -660,7 +660,7 @@ abstract class AppLocalizations {
   /// No description provided for @lessonDetailLessonMarkedAsCompleted.
   ///
   /// In de, this message translates to:
-  /// **'Lektion als abgeschlossen markiert! 🎉'**
+  /// **'Lektion als abgeschlossen markiert!'**
   String get lessonDetailLessonMarkedAsCompleted;
 
   /// No description provided for @lessonDetailLessonMarkedAsOpenAgain.
@@ -1809,7 +1809,7 @@ abstract class AppLocalizations {
   /// No description provided for @invitePartnerConnectedWithName.
   ///
   /// In de, this message translates to:
-  /// **'Verbunden mit {name} 💛'**
+  /// **'Verbunden mit {name}'**
   String invitePartnerConnectedWithName(Object name);
 
   /// No description provided for @invitePartnerAccept.
@@ -1858,7 +1858,7 @@ abstract class AppLocalizations {
   /// No description provided for @pairingModalConnectedWithName.
   ///
   /// In de, this message translates to:
-  /// **'Verbunden mit {name} 💛'**
+  /// **'Verbunden mit {name}'**
   String pairingModalConnectedWithName(Object name);
 
   /// No description provided for @pairingModalThisCodeDoesnTFit.
@@ -2272,7 +2272,7 @@ abstract class AppLocalizations {
   /// No description provided for @lustProfileYourDesireProfileIsOn.
   ///
   /// In de, this message translates to:
-  /// **'Dein Lust-Profil ist verschlüsselt unterwegs 💛'**
+  /// **'Dein Lust-Profil ist verschlüsselt unterwegs'**
   String get lustProfileYourDesireProfileIsOn;
 
   /// No description provided for @lustProfileSendingDidnTWorkPlease.
@@ -2356,7 +2356,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeCountAnswersMatched.
   ///
   /// In de, this message translates to:
-  /// **'{count} Antworten erfolgreich abgeglichen! ✨'**
+  /// **'{count} Antworten erfolgreich abgeglichen!'**
   String yesNoMaybeCountAnswersMatched(Object count);
 
   /// No description provided for @yesNoMaybeReadMore.
@@ -2767,13 +2767,13 @@ abstract class AppLocalizations {
   /// No description provided for @beliefLibraryViewForHer.
   ///
   /// In de, this message translates to:
-  /// **'FÜR SIE 🌸'**
+  /// **'FÜR SIE'**
   String get beliefLibraryViewForHer;
 
   /// No description provided for @beliefLibraryViewForHim.
   ///
   /// In de, this message translates to:
-  /// **'FÜR IHN 🌿'**
+  /// **'FÜR IHN'**
   String get beliefLibraryViewForHim;
 
   /// No description provided for @beliefLibraryViewTypicalMisbeliefMentalMovie.
@@ -3766,13 +3766,13 @@ abstract class AppLocalizations {
   /// No description provided for @dailyCheckinCardCoachingInsightYourEverydayStress.
   ///
   /// In de, this message translates to:
-  /// **'💡 Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.'**
+  /// **'Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.'**
   String get dailyCheckinCardCoachingInsightYourEverydayStress;
 
   /// No description provided for @dailyCheckinCardCoachingInsightWhenEverydayStress.
   ///
   /// In de, this message translates to:
-  /// **'💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.'**
+  /// **'Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.'**
   String get dailyCheckinCardCoachingInsightWhenEverydayStress;
 
   /// No description provided for @onboardingGuest.
@@ -3874,7 +3874,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingBackupForNameRestored.
   ///
   /// In de, this message translates to:
-  /// **'Sicherung für \"{name}\" erfolgreich eingespielt! ✨'**
+  /// **'Sicherung für \"{name}\" erfolgreich eingespielt!'**
   String onboardingBackupForNameRestored(Object name);
 
   /// No description provided for @onboardingProfilePersonalisation.
@@ -3970,25 +3970,25 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingInARelationshipMarried.
   ///
   /// In de, this message translates to:
-  /// **'In fester Beziehung / Verheiratet 💍'**
+  /// **'In fester Beziehung / Verheiratet'**
   String get onboardingInARelationshipMarried;
 
   /// No description provided for @onboardingDatingGettingToKnowSomeone.
   ///
   /// In de, this message translates to:
-  /// **'Dating / Kennenlernphase 💫'**
+  /// **'Dating / Kennenlernphase'**
   String get onboardingDatingGettingToKnowSomeone;
 
   /// No description provided for @onboardingSingle.
   ///
   /// In de, this message translates to:
-  /// **'Single 🌱'**
+  /// **'Single'**
   String get onboardingSingle;
 
   /// No description provided for @onboardingItSComplicated.
   ///
   /// In de, this message translates to:
-  /// **'Es ist kompliziert 🌀'**
+  /// **'Es ist kompliziert'**
   String get onboardingItSComplicated;
 
   /// No description provided for @onboardingWhatSYourBiggestPriority.
@@ -4060,7 +4060,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingSkipGoStraightToThe.
   ///
   /// In de, this message translates to:
-  /// **'Überspringen & Direkt zur App ➔'**
+  /// **'Überspringen & Direkt zur App'**
   String get onboardingSkipGoStraightToThe;
 
   /// No description provided for @onboardingVersionData.
@@ -5442,7 +5442,7 @@ abstract class AppLocalizations {
   /// No description provided for @spicyEinladungText.
   ///
   /// In de, this message translates to:
-  /// **'🔥 Ich habe den Spicy-Modus eingeschaltet. Magst du ihn auch ausprobieren? (Profil › Spicy-Modus)'**
+  /// **'Ich habe den Spicy-Modus eingeschaltet. Magst du ihn auch ausprobieren? (Profil › Spicy-Modus)'**
   String get spicyEinladungText;
 
   /// No description provided for @spicyEinladungAnnehmen.

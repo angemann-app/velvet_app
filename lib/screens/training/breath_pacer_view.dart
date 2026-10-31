@@ -196,7 +196,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
     if (current.isHold) {
       phaseColor = AppTheme.amber;
     } else if (current.isExhale) {
-      phaseColor = const Color(0xFF38BDF8); // Calming Sky Blue
+      phaseColor = AppTheme.tinteLeise;
     }
 
     return SingleChildScrollView(
@@ -272,24 +272,12 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                     height: 220,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      gradient: RadialGradient(
-                        colors: [
-                          phaseColor.withValues(alpha: 0.28),
-                          phaseColor.withValues(alpha: 0.08),
-                          Colors.transparent,
-                        ],
-                      ),
+                      color: phaseColor.withValues(alpha: 0.10),
                       border: Border.all(
                         color: phaseColor,
                         width: 3.5,
                       ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: phaseColor.withValues(alpha: 0.35),
-                          blurRadius: 30,
-                          spreadRadius: 4,
-                        ),
-                      ],
+                      
                     ),
                     child: Center(
                       child: Column(
@@ -392,7 +380,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: _isRunning ? AppTheme.amber : AppTheme.sageGreen,
-                    foregroundColor: Colors.black,
+                    foregroundColor: _isRunning ? AppTheme.aufAkzentTief : AppTheme.aufAkzent,
                   ),
                 ),
               ),

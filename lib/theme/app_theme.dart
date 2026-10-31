@@ -31,6 +31,13 @@ class AppTheme {
   static Color get akzentLeise => palette.akzentLeise;
   static Color get akzentTief => palette.akzentTief;
   static Color get aufAkzent => palette.aufAkzent;
+  static Color get aufAkzentTief => palette.aufAkzentTief;
+  static Color get aufSignal => palette.aufSignal;
+
+  /// Text und Symbole auf gefüllten Statusflächen (Ja, Vielleicht): hell auf Papier, dunkel auf den dunklen Atmosphären.
+  static Color get aufStatus => palette.istDunkel ? palette.aufAkzent : palette.papierErhoben;
+  static Color get akzentTiefHell => palette.akzentTiefHell;
+  static Color get tiefe => palette.tiefe;
   static Color get signal => palette.signal;
   static Color get statusJa => palette.statusJa;
   static Color get statusVielleicht => palette.statusVielleicht;

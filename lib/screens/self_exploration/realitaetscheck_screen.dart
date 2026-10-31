@@ -119,8 +119,8 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                   child: ElevatedButton(
                     onPressed: _antwortWach,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AppTheme.rose,
-                      foregroundColor: Colors.white,
+                      backgroundColor: AppTheme.akzent,
+                      foregroundColor: AppTheme.aufAkzent,
                       padding: const EdgeInsets.symmetric(vertical: 13),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                     ),

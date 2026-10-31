@@ -149,7 +149,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
             duration: const Duration(seconds: 5),
             action: SnackBarAction(
               label: t.aiCoachCheckKey,
-              textColor: Colors.white,
+              textColor: AppTheme.aufSignal,
               onPressed: () => _showApiKeyDialog(),
             ),
           ),
@@ -398,8 +398,8 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
               });
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.rose,
-              foregroundColor: Colors.white,
+              backgroundColor: AppTheme.akzent,
+              foregroundColor: AppTheme.aufAkzent,
             ),
             child: Text(t.aiCoachClear),
           ),
@@ -682,7 +682,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                   icon: const Icon(Icons.arrow_upward_rounded, size: 20),
                   style: IconButton.styleFrom(
                     backgroundColor: AppTheme.sageGreen,
-                    foregroundColor: Colors.black,
+                    foregroundColor: AppTheme.aufAkzent,
                   ),
                 ),
               ],

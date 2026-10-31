@@ -221,7 +221,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                     color: isSelected ? AppTheme.amber : AppTheme.border,
                   ),
                   labelStyle: TextStyle(
-                    color: isSelected ? Colors.white : AppTheme.textSecondary,
+                    color: isSelected ? AppTheme.tinte : AppTheme.textSecondary,
                     fontSize: 12,
                     fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                   ),
@@ -267,7 +267,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppTheme.sageGreen,
-                  foregroundColor: Colors.black,
+                  foregroundColor: AppTheme.aufAkzent,
                 ),
               ),
             ),
@@ -301,8 +301,8 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                 child: Center(
                   child: Text(
                     '$stepNumber',
-                    style: const TextStyle(
-                      color: Colors.black,
+                    style: TextStyle(
+                      color: AppTheme.aufAkzent,
                       fontWeight: FontWeight.bold,
                       fontSize: 12,
                     ),

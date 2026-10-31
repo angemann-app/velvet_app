@@ -96,16 +96,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
               : (isPaused ? accentColor.withValues(alpha: 0.3) : AppTheme.border),
           width: isPlaying ? 1.5 : 1.0,
         ),
-        boxShadow: isPlaying
-            ? [
-                BoxShadow(
-                  color: accentColor.withValues(alpha: 0.18),
-                  blurRadius: 18,
-                  spreadRadius: 2,
-                  offset: const Offset(0, 4),
-                ),
-              ]
-            : null,
+        
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -258,22 +249,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                   height: 58,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    gradient: LinearGradient(
-                      colors: [
-                        accentColor,
-                        accentColor.withValues(alpha: 0.85),
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: accentColor.withValues(alpha: 0.35),
-                        blurRadius: 14,
-                        spreadRadius: 1,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
+                    color: accentColor,
                   ),
                   child: Center(
                     child: Icon(

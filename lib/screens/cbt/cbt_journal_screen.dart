@@ -76,8 +76,8 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               _loadEntries();
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.rose,
-              foregroundColor: Colors.white,
+              backgroundColor: AppTheme.akzent,
+              foregroundColor: AppTheme.aufAkzent,
             ),
             child: Text(t.cbtJournalDelete),
           ),
@@ -111,7 +111,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
           ? FloatingActionButton.extended(
               onPressed: () => _openNewEntry(),
               backgroundColor: AppTheme.sageGreen,
-              foregroundColor: Colors.black,
+              foregroundColor: AppTheme.aufAkzent,
               icon: const Icon(Icons.add_rounded),
               label: Text(
                 t.cbtJournalNewEntry,
@@ -237,7 +237,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                 label: Text(t.cbtJournalNewRecord),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppTheme.sageGreen,
-                  foregroundColor: Colors.black,
+                  foregroundColor: AppTheme.aufAkzent,
                 ),
               ),
             ),

@@ -178,8 +178,8 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
                 icon: const Icon(Icons.edit_note_rounded),
                 label: Text(t.tagebuchWoranErinnerst, style: TextStyle(fontWeight: FontWeight.w700)),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppTheme.rose,
-                  foregroundColor: Colors.white,
+                  backgroundColor: AppTheme.akzent,
+                  foregroundColor: AppTheme.aufAkzent,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                 ),
               ),
@@ -336,7 +336,7 @@ class _EditorState extends State<_Editor> {
             const Spacer(),
             ElevatedButton(
               onPressed: _speichern,
-              style: ElevatedButton.styleFrom(backgroundColor: AppTheme.rose, foregroundColor: Colors.white),
+              style: ElevatedButton.styleFrom(backgroundColor: AppTheme.akzent, foregroundColor: AppTheme.aufAkzent),
               child: Text(t.tagebuchSpeichern),
             ),
           ]),

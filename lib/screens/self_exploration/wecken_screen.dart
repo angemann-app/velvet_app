@@ -281,8 +281,8 @@ class _WeckenScreenState extends State<WeckenScreen> {
             icon: const Icon(Icons.nights_stay_rounded),
             label: Text(t.weckenBegleitungStarten, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.rose,
-              foregroundColor: Colors.white,
+              backgroundColor: AppTheme.akzent,
+              foregroundColor: AppTheme.aufAkzent,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
           ),
@@ -338,12 +338,8 @@ class _WeckenScreenState extends State<WeckenScreen> {
             height: 140,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              gradient: RadialGradient(
-                colors: [
-                  AppTheme.rose.withValues(alpha: _pausiert ? 0.06 : 0.22),
-                  AppTheme.background,
-                ],
-              ),
+              color: AppTheme.akzentLeise,
+              border: Border.all(color: AppTheme.linieStark, width: 1),
             ),
             child: Center(
               child: Icon(Icons.nights_stay_rounded, color: AppTheme.textPrimary.withValues(alpha: 0.5), size: 40),
@@ -378,8 +374,8 @@ class _WeckenScreenState extends State<WeckenScreen> {
           else
             PlayerSteuerung(
               pausiert: _pausiert,
-              farbe: AppTheme.rose,
-              symbolFarbe: Colors.white,
+              farbe: AppTheme.akzent,
+              symbolFarbe: AppTheme.aufAkzent,
               onBeenden: _beenden,
               onPause: _pauseUmschalten,
               onUeberspringen: _weiter,

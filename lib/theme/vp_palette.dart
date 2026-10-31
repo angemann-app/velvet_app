@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 /// Welche Atmosphäre gerade gilt. Spicy hat Vorrang, sonst gilt die gewählte Darstellung des Normalmodus.
 enum VpPaletteId {
@@ -60,6 +60,12 @@ class VpPalette {
   /// Text und Symbole auf Akzentflächen.
   final Color aufAkzent;
 
+  /// Text und Symbole auf Flächen in kzentTief.
+  final Color aufAkzentTief;
+
+  /// Text und Symbole auf Flächen in signal.
+  final Color aufSignal;
+
   /// SOS und Fehler. Sonst nirgends.
   final Color signal;
   final Color signalLeise;
@@ -90,6 +96,8 @@ class VpPalette {
     required this.akzentTiefHell,
     required this.akzentTiefLeise,
     required this.aufAkzent,
+    required this.aufAkzentTief,
+    required this.aufSignal,
     required this.signal,
     required this.signalLeise,
     required this.statusJa,
@@ -119,6 +127,8 @@ class VpPalette {
     akzentTiefHell: Color(0xFFA85E6B),
     akzentTiefLeise: Color(0x338E4A57),
     aufAkzent: Color(0xFF2A1518),
+    aufAkzentTief: Color(0xFFFBF7F0),
+    aufSignal: Color(0xFFFFFFFF),
     signal: Color(0xFFB8283F),
     signalLeise: Color(0x33B8283F),
     statusJa: Color(0xFF5F8A6B),
@@ -146,6 +156,8 @@ class VpPalette {
     akzentTiefHell: Color(0xFFF0D4D8),
     akzentTiefLeise: Color(0x33E8C2C8),
     aufAkzent: Color(0xFF2A1518),
+    aufAkzentTief: Color(0xFF2A1518),
+    aufSignal: Color(0xFF2A1518),
     signal: Color(0xFFE5576B),
     signalLeise: Color(0x33E5576B),
     statusJa: Color(0xFF8DB59A),
@@ -173,6 +185,8 @@ class VpPalette {
     akzentTiefHell: Color(0xFFE6C48B),
     akzentTiefLeise: Color(0x33CFA163),
     aufAkzent: Color(0xFF2A1518),
+    aufAkzentTief: Color(0xFF2A1518),
+    aufSignal: Color(0xFFFFFFFF),
     signal: Color(0xFFF43F5E),
     signalLeise: Color(0x33F43F5E),
     statusJa: Color(0xFF10B981),
@@ -200,6 +214,8 @@ class VpPalette {
     akzentTiefHell: Color(0xFFF5CBD5),
     akzentTiefLeise: Color(0x33EDB3C0),
     aufAkzent: Color(0xFF2A1018),
+    aufAkzentTief: Color(0xFF2A1018),
+    aufSignal: Color(0xFF2A1018),
     signal: Color(0xFFE05A70),
     signalLeise: Color(0x33E05A70),
     statusJa: Color(0xFF9CBFA6),

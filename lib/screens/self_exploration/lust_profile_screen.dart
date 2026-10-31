@@ -168,8 +168,8 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
               icon: const Icon(Icons.favorite_rounded),
               label: Text(_nostr.isPaired ? t.lustProfileSendToMyPartner : t.lustProfileConnectCoupleChannelAndSend),
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppTheme.rose,
-                foregroundColor: Colors.white,
+                backgroundColor: AppTheme.akzent,
+                foregroundColor: AppTheme.aufAkzent,
               ),
             ),
           ),

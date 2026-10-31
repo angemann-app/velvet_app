@@ -118,8 +118,8 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
             if (context.mounted) Navigator.of(context).pop(true);
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppTheme.rose,
-            foregroundColor: Colors.white,
+            backgroundColor: AppTheme.akzent,
+            foregroundColor: AppTheme.aufAkzent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),

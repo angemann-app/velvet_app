@@ -75,9 +75,9 @@
   "updateDialogUpdateNow": "Jetzt aktualisieren",
   "coursesAllCourses": "Alle Kurse",
   "coursesTouch": "Berührung",
-  "coursesForHer": "Für Sie 🌸",
-  "coursesForHim": "Für Ihn 🌿",
-  "coursesForCouples": "Für Paare 💫",
+  "coursesForHer": "Für Sie",
+  "coursesForHim": "Für Ihn",
+  "coursesForCouples": "Für Paare",
   "coursesCoupleChannel": "PAAR-KANAL",
   "coursesYourPrivateSpace": "Euer privater Raum",
   "coursesSendSparksSecretlyMatchWishes": "Funken senden & Wünsche heimlich abgleichen",
@@ -166,7 +166,7 @@
   "coursesPracticePelvicFloor": "Praxis: Beckenboden",
   "coursesPracticeBreath": "Praxis: Atem",
   "coursesPracticeCbt": "Praxis: KVT",
-  "lessonDetailLessonMarkedAsCompleted": "Lektion als abgeschlossen markiert! 🎉",
+  "lessonDetailLessonMarkedAsCompleted": "Lektion als abgeschlossen markiert!",
   "lessonDetailLessonMarkedAsOpenAgain": "Lektion wieder als offen markiert.",
   "lessonDetailLessonSentToPartnername": "Lektion an {partnerName} geschickt.",
   "@lessonDetailLessonSentToPartnername": {
@@ -561,7 +561,7 @@
     }
   },
   "invitePartnerDecline": "Ablehnen",
-  "invitePartnerConnectedWithName": "Verbunden mit {name} 💛",
+  "invitePartnerConnectedWithName": "Verbunden mit {name}",
   "@invitePartnerConnectedWithName": {
     "placeholders": {
       "name": {
@@ -589,7 +589,7 @@
   },
   "pairingModalReplace": "Ersetzen",
   "pairingModalHiIMConnectedNow": "👋 Hallo, ich bin jetzt verbunden.",
-  "pairingModalConnectedWithName": "Verbunden mit {name} 💛",
+  "pairingModalConnectedWithName": "Verbunden mit {name}",
   "@pairingModalConnectedWithName": {
     "placeholders": {
       "name": {
@@ -696,7 +696,7 @@
   "lustProfileLotsOfTimeNoGoal": "Viel Zeit, ohne Ziel",
   "lustProfileMyDesireProfileThisIs": "💛 Mein Lust-Profil – das habe ich über mich entdeckt:\n",
   "lustProfileWouldYouLikeToTry": "\nMagst du es mit mir ausprobieren?",
-  "lustProfileYourDesireProfileIsOn": "Dein Lust-Profil ist verschlüsselt unterwegs 💛",
+  "lustProfileYourDesireProfileIsOn": "Dein Lust-Profil ist verschlüsselt unterwegs",
   "lustProfileSendingDidnTWorkPlease": "Senden hat nicht geklappt. Bitte gleich noch einmal.",
   "lustProfileTextCopied": "Text kopiert.",
   "lustProfileWithVulva": "Mit Vulva",
@@ -710,7 +710,7 @@
   "lustProfileJustCopyAsText": "Nur als Text kopieren",
   "lustProfileTipEvenNicerThanAny": "Tipp: Noch schöner als jede Nachricht ist es, die Hand deines Gegenübers zu führen oder es dir zeigen zu lassen. Die Nachricht kann der Anstoß dafür sein.",
   "yesNoMaybeMatchingAnswersEncrypted": "Antworten werden verschlüsselt abgeglichen …",
-  "yesNoMaybeCountAnswersMatched": "{count} Antworten erfolgreich abgeglichen! ✨",
+  "yesNoMaybeCountAnswersMatched": "{count} Antworten erfolgreich abgeglichen!",
   "@yesNoMaybeCountAnswersMatched": {
     "placeholders": {
       "count": {
@@ -871,8 +871,8 @@
   },
   "beliefLibraryViewBeliefToolkit": "Glaubenssätze-Baukasten",
   "beliefLibraryViewTheMostCommonMentalTraps": "Die häufigsten mentalen Fallen bei Leistungsangst – und die biologische Wahrheit dahinter. Tippe auf eine Karte, um sie direkt in dein eigenes Journal zu übernehmen.",
-  "beliefLibraryViewForHer": "FÜR SIE 🌸",
-  "beliefLibraryViewForHim": "FÜR IHN 🌿",
+  "beliefLibraryViewForHer": "FÜR SIE",
+  "beliefLibraryViewForHim": "FÜR IHN",
   "beliefLibraryViewTypicalMisbeliefMentalMovie": "TYPISCHER IRRGLAUBE (KOPFKINO)",
   "beliefLibraryViewIrrationalthought": "„{irrationalThought}“",
   "@beliefLibraryViewIrrationalthought": {
@@ -1095,8 +1095,8 @@
   "dailyCheckinCardWhatDidYouGoodToday": "3. Was hat deinem Nervensystem heute gut getan?",
   "dailyCheckinCardSaveDailyCheckIn": "Tages-Check-in speichern",
   "dailyCheckinCardUpdateValues": "Werte aktualisieren",
-  "dailyCheckinCardCoachingInsightYourEverydayStress": "💡 Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.",
-  "dailyCheckinCardCoachingInsightWhenEverydayStress": "💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.",
+  "dailyCheckinCardCoachingInsightYourEverydayStress": "Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.",
+  "dailyCheckinCardCoachingInsightWhenEverydayStress": "Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.",
   "onboardingGuest": "Gast",
   "onboardingProfileUpdated": "Profil erfolgreich aktualisiert.",
   "onboardingRestoreBackup": "Sicherung wiederherstellen",
@@ -1127,7 +1127,7 @@
   "onboardingApplyBackupNow": "Sicherung jetzt anwenden",
   "onboardingTheBackupCouldNotBe": "Die Sicherung konnte nicht eingespielt werden.",
   "onboardingUser": "Nutzer",
-  "onboardingBackupForNameRestored": "Sicherung für \"{name}\" erfolgreich eingespielt! ✨",
+  "onboardingBackupForNameRestored": "Sicherung für \"{name}\" erfolgreich eingespielt!",
   "@onboardingBackupForNameRestored": {
     "placeholders": {
       "name": {
@@ -1157,10 +1157,10 @@
     }
   },
   "onboardingYourRelationshipStatus": "4. Dein Beziehungsstatus",
-  "onboardingInARelationshipMarried": "In fester Beziehung / Verheiratet 💍",
-  "onboardingDatingGettingToKnowSomeone": "Dating / Kennenlernphase 💫",
-  "onboardingSingle": "Single 🌱",
-  "onboardingItSComplicated": "Es ist kompliziert 🌀",
+  "onboardingInARelationshipMarried": "In fester Beziehung / Verheiratet",
+  "onboardingDatingGettingToKnowSomeone": "Dating / Kennenlernphase",
+  "onboardingSingle": "Single",
+  "onboardingItSComplicated": "Es ist kompliziert",
   "onboardingWhatSYourBiggestPriority": "5. Was ist aktuell deine größte Priorität?",
   "onboardingStopPerformancePressureRacingThoughts": "Leistungsdruck & Kopfkino stoppen",
   "onboardingBreakThoughtLoopsStopSpectatoring": "Gedankenkreise durchbrechen, Spectatoring beenden.",
@@ -1172,7 +1172,7 @@
   "onboardingUnderstandResponsiveDesireEaseOrgasm": "Responsive Lust verstehen, Orgasmusdruck abbauen.",
   "onboardingSaveChanges": "Änderungen speichern",
   "onboardingPersonaliseProgrammeNow": "Programm jetzt personalisieren",
-  "onboardingSkipGoStraightToThe": "Überspringen & Direkt zur App ➔",
+  "onboardingSkipGoStraightToThe": "Überspringen & Direkt zur App",
   "onboardingVersionData": "Version {data}",
   "@onboardingVersionData": {
     "placeholders": {
@@ -1513,7 +1513,7 @@
   "gefuehrtSelbstText": "10 bis 30 Minuten nur für dich: eine Stimme führt dich über deinen Körper, so nah, wie du möchtest.",
   "lessonDetailTryGuidedEvening": "Jetzt geführt ausprobieren: Gemeinsamer Abend",
   "spicyEinladen": "Zum Spicy-Modus einladen",
-  "spicyEinladungText": "🔥 Ich habe den Spicy-Modus eingeschaltet. Magst du ihn auch ausprobieren? (Profil › Spicy-Modus)",
+  "spicyEinladungText": "Ich habe den Spicy-Modus eingeschaltet. Magst du ihn auch ausprobieren? (Profil › Spicy-Modus)",
   "spicyEinladungAnnehmen": "Spicy-Modus ansehen",
   "spicyEinladungSchonAn": "Bei dir ist der Spicy-Modus schon an.",
   "spicyEinladungGesendet": "Einladung gesendet.",

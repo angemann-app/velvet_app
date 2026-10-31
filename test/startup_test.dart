@@ -9,7 +9,7 @@ import 'package:velvetpulse/services/storage_service.dart';
 import 'package:velvetpulse/theme/app_theme.dart';
 
 void main() {
-  for (final label in ['Überspringen & Direkt zur App ➔', 'Programm jetzt personalisieren']) {
+  for (final label in ['Überspringen & Direkt zur App', 'Programm jetzt personalisieren']) {
     testWidgets('Onboarding "$label" -> alle Tabs', (tester) async {
       SharedPreferences.setMockInitialValues({});
       await tester.runAsync(() async {

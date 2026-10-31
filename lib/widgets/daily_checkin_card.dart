@@ -342,7 +342,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                           color: isSelected ? AppTheme.sageGreen : AppTheme.border,
                         ),
                         labelStyle: TextStyle(
-                          color: isSelected ? Colors.white : AppTheme.textSecondary,
+                          color: isSelected ? AppTheme.tinte : AppTheme.textSecondary,
                           fontSize: 11,
                           fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                         ),
@@ -359,7 +359,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       onPressed: _isSaving ? null : _saveCheckIn,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppTheme.sageGreen,
-                        foregroundColor: Colors.black,
+                        foregroundColor: AppTheme.aufAkzent,
                         padding: const EdgeInsets.symmetric(vertical: 11),
                       ),
                       child: Text(

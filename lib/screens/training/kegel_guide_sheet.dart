@@ -25,13 +25,7 @@ class KegelGuideSheet extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppTheme.surface,
             borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black54,
-                blurRadius: 20,
-                offset: Offset(0, -4),
-              ),
-            ],
+            
           ),
           child: Column(
             children: [
@@ -237,7 +231,7 @@ class KegelGuideSheet extends StatelessWidget {
                         onPressed: () => Navigator.of(context).pop(),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppTheme.sageGreen,
-                          foregroundColor: Colors.black,
+                          foregroundColor: AppTheme.aufAkzent,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                         ),
                         child: Text(t.kegelGuideSheetBackToTraining, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),

@@ -234,13 +234,7 @@ class _PairingModalState extends State<PairingModal>
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: AppTheme.amber.withValues(alpha: 0.2),
-                                  blurRadius: 20,
-                                  spreadRadius: 2,
-                                ),
-                              ],
+                              
                             ),
                             child: currentNpub.isNotEmpty
                                 ? QrImageView(
@@ -480,16 +474,16 @@ class _PairingModalState extends State<PairingModal>
                               : () => _handleKeySubmission(_keyInputController.text),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppTheme.amber,
-                            foregroundColor: const Color(0xFF0F172A),
+                            foregroundColor: AppTheme.aufAkzentTief,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(14),
                             ),
                           ),
                           child: _isProcessingScan
-                              ? const SizedBox(
+                              ? SizedBox(
                                   width: 20,
                                   height: 20,
-                                  child: CircularProgressIndicator(strokeWidth: 2, color: Colors.black),
+                                  child: CircularProgressIndicator(strokeWidth: 2, color: AppTheme.aufAkzentTief),
                                 )
                               : Text(
                                   t.pairingModalConnectPair,

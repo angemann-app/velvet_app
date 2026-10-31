@@ -222,21 +222,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       margin: const EdgeInsets.only(bottom: 14),
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF064E3B).withValues(alpha: 0.3),
+                        color: AppTheme.statusJa.withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(14),
-                        border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.6)),
+                        border: Border.all(color: AppTheme.statusJa.withValues(alpha: 0.6)),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: [
-                              const Icon(Icons.check_circle_rounded, color: Color(0xFF10B981), size: 18),
+                              Icon(Icons.check_circle_rounded, color: AppTheme.statusJa, size: 18),
                               const SizedBox(width: 8),
                               Text(
                                 t.onboardingBackupFoundOnThisDevice.toUpperCase(),
-                                style: const TextStyle(
-                                  color: Color(0xFF34D399),
+                                style: TextStyle(
+                                  color: AppTheme.statusJa,
                                   fontWeight: FontWeight.w800,
                                   fontSize: 11,
                                   letterSpacing: 0.6,
@@ -247,7 +247,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           const SizedBox(height: 6),
                           Text(
                             t.onboardingProfileProfilename(fileData.profileName),
-                            style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600),
+                            style: TextStyle(color: AppTheme.tinte, fontSize: 13, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 10),
                           SizedBox(
@@ -260,7 +260,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               icon: const Icon(Icons.flash_on_rounded, size: 16),
                               label: Text(t.onboardingRestoreAutomaticBackupNow, style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF10B981),
+                                backgroundColor: AppTheme.statusJa,
                                 foregroundColor: AppTheme.background,
                               ),
                             ),
@@ -385,7 +385,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       label: Text(t.onboardingApplyBackupNow, style: TextStyle(fontWeight: FontWeight.bold)),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppTheme.sageGreen,
-                        foregroundColor: Colors.black,
+                        foregroundColor: AppTheme.aufAkzent,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       ),
                     ),
@@ -472,12 +472,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       color: AppTheme.surface,
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(color: AppTheme.border),
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppTheme.amber.withValues(alpha: 0.15),
-                          blurRadius: 20,
-                        ),
-                      ],
+                      
                     ),
                     child: Icon(
                       Icons.spa_rounded,
@@ -565,7 +560,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     onPressed: () => setState(() => _schritt = 1),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppTheme.sageGreen,
-                      foregroundColor: Colors.black,
+                      foregroundColor: AppTheme.aufAkzent,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                     ),
                     child: Text(t.onboardingLosGehts, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
@@ -647,7 +642,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       current: _selectedGender,
                       label: t.onboardingFemale,
                       icon: Icons.female_rounded,
-                      activeColor: const Color(0xFFFB7185),
+                      activeColor: AppTheme.akzentTief,
                       onTap: () => setState(() => _selectedGender = 'female'),
                     ),
                   ),
@@ -774,16 +769,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       : (!widget.isEditing && _schritt < _fragen ? () => setState(() => _schritt++) : _submit),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppTheme.sageGreen,
-                    foregroundColor: Colors.black,
+                    foregroundColor: AppTheme.aufAkzent,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                   ),
                   child: _isSubmitting
-                      ? const SizedBox(
+                      ? SizedBox(
                           width: 22,
                           height: 22,
                           child: CircularProgressIndicator(
                             strokeWidth: 2.2,
-                            color: Colors.black,
+                            color: AppTheme.aufAkzent,
                           ),
                         )
                       : Text(
@@ -1378,8 +1373,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       child: SwitchListTile(
         contentPadding: const EdgeInsets.only(right: 8),
         value: _spicyMode,
-        activeThumbColor: AppTheme.rose,
-        secondary: Icon(Icons.local_fire_department_rounded, color: _spicyMode ? AppTheme.rose : AppTheme.textMuted),
+        activeThumbColor: AppTheme.akzentTief,
+        secondary: Icon(Icons.spa_outlined, color: _spicyMode ? AppTheme.akzentTief : AppTheme.textMuted),
         title: Text(t.spicyModus, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700)),
         subtitle: Text(
           t.spicyModusText,

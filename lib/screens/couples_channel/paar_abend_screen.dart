@@ -493,10 +493,8 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
             height: spricht ? 190 : 160,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              gradient: RadialGradient(colors: [
-                (runde == 0 ? AppTheme.amber : AppTheme.rose).withValues(alpha: _pausiert ? 0.15 : 0.45),
-                AppTheme.background,
-              ]),
+              color: AppTheme.akzentLeise,
+            border: Border.all(color: AppTheme.linieStark, width: 1),
             ),
             child: Center(
               child: Icon(

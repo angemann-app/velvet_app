@@ -10,6 +10,7 @@ import '../../services/message_notifier.dart';
 import '../../services/nostr_service.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../../theme/app_theme.dart';
+import '../../theme/vp_tokens.dart';
 import '../yes_no_maybe/yes_no_maybe_screen.dart';
 import 'invite_partner.dart';
 import 'paar_abend_screen.dart';
@@ -26,7 +27,7 @@ import '../../l10n/t.dart';
 
 /// Schnelle Funken: ein Tippen sagt, worauf man heute Lust hat – oder eben nicht.
 List<(String, String)> get _sparks => [
-  ('🔥', t.couplesChannelIWantYou),
+  ('💗', t.couplesChannelIWantYou),
   ('🌿', t.couplesChannelJustCuddlesToday),
   ('🥂', t.couplesChannelLookingForwardToLater),
   ('🐢', t.couplesChannelVerySlowlyToday),
@@ -38,7 +39,7 @@ List<(String, String)> get _sparks => [
 List<(String, String)> get _spicySparks => [
   ('💋', t.spicyFunkeLippen),
   ('😏', t.spicyFunkeHeuteAbend),
-  ('🔥', t.spicyFunkeScharf),
+  ('🌶️', t.spicyFunkeScharf),
   ('👅', t.spicyFunkeSchmecken),
   ('😈', t.spicyFunkeNichtsDrunter),
   ('🍑', t.spicyFunkeNackt),
@@ -316,7 +317,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         backgroundColor: AppTheme.rose,
         action: SnackBarAction(
           label: t.couplesChannelReconnect,
-          textColor: Colors.white,
+          textColor: AppTheme.aufSignal,
           onPressed: _nostr.reconnectNextRelay,
         ),
       ),
@@ -500,7 +501,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
-                    Icon(Icons.local_fire_department_rounded, size: 15, color: AppTheme.rose),
+                    Icon(Icons.spa_outlined, size: 15, color: AppTheme.akzentTief),
                     const SizedBox(width: 6),
                     Text(t.spicyEinladungAnnehmen,
                         style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: AppTheme.rose)),
@@ -918,7 +919,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   Widget _buildBubble(CoupleMessage msg, {bool istLetzteEigene = false}) {
     final isMe = msg.isMe;
     final isSpark = msg.type == CoupleMessageType.ping;
-    final textColor = isMe ? AppTheme.background : AppTheme.textPrimary;
+    final textColor = isMe ? AppTheme.aufAkzent : AppTheme.textPrimary;
 
     return Align(
       alignment: isMe ? Alignment.centerRight : Alignment.centerLeft,
@@ -927,14 +928,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.78),
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          gradient: isMe
-              ? LinearGradient(
-                  colors: [AppTheme.sageLight, AppTheme.sageGreen],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                )
-              : null,
-          color: isMe ? null : (isSpark ? AppTheme.rose.withValues(alpha: 0.16) : AppTheme.surface),
+          color: isMe ? AppTheme.akzentHell : (isSpark ? AppTheme.rose.withValues(alpha: 0.16) : AppTheme.surface),
           borderRadius: BorderRadius.only(
             topLeft: const Radius.circular(16),
             topRight: const Radius.circular(16),
@@ -947,7 +941,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           crossAxisAlignment: isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
           children: [
             Text(
-              isSpark ? '${msg.emoji ?? '🔥'}  ${msg.text ?? ''}' : (msg.text ?? ''),
+              isSpark ? '${msg.emoji ?? '💗'}  ${msg.text ?? ''}' : (msg.text ?? ''),
               style: TextStyle(
                 color: textColor,
                 fontSize: isSpark ? 15 : 14,
@@ -966,7 +960,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
-                      color: (isMe ? Colors.black : AppTheme.amber).withValues(alpha: 0.12),
+                      color: (isMe ? AppTheme.aufAkzent : AppTheme.akzentTief).withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Row(
@@ -1122,30 +1116,26 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [AppTheme.rose, AppTheme.rose.withValues(alpha: 0.75)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(16),
+        color: AppTheme.akzentTief,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             matches.length == 1 ? t.couplesChannelYouHaveAMatch : t.couplesChannelYouHaveMatcheslengthMatches(matches.length),
-            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 16),
+            style: TextStyle(color: AppTheme.aufAkzentTief, fontWeight: FontWeight.w800, fontSize: 16),
           ),
           const SizedBox(height: 8),
           ...matches.map((id) => Padding(
                 padding: const EdgeInsets.only(top: 4),
-                child: Text('✨ ${ListenUebersetzung.titelFuer(id) ?? ''}',
-                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 13.5)),
+                child: Text('${ListenUebersetzung.titelFuer(id) ?? ''}',
+                    style: TextStyle(color: AppTheme.aufAkzentTief, fontWeight: FontWeight.w600, fontSize: 13.5)),
               )),
           const SizedBox(height: 10),
           Text(
             t.couplesChannelAMatchIsAnInvitation,
-            style: TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.4),
+            style: TextStyle(color: AppTheme.aufAkzentTief.withValues(alpha: 0.85), fontSize: 12.5, height: 1.4),
           ),
         ],
       ),
@@ -1185,8 +1175,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
 
     Widget voteButton(String value, String label, IconData icon) {
       final selected = myVote == value;
-      final color = value == 'yes' ? AppTheme.rose : AppTheme.textSecondary;
-      final fuellung = value == 'yes' ? AppTheme.rose : (value == 'maybe' ? AppTheme.amber : AppTheme.surfaceLight);
+      final color = value == 'yes' ? AppTheme.statusJa : AppTheme.textSecondary;
+      final fuellung = value == 'yes' ? AppTheme.statusJa : (value == 'maybe' ? AppTheme.statusVielleicht : AppTheme.surfaceLight);
       return Expanded(
         child: OutlinedButton(
           onPressed: () {
@@ -1200,12 +1190,12 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           ),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(icon, size: 16, color: selected ? (value == 'maybe' ? AppTheme.background : Colors.white) : color),
+            Icon(icon, size: 16, color: selected ? (value == 'no' ? AppTheme.tinte : AppTheme.aufStatus) : color),
             const SizedBox(height: 3),
             Text(label,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: selected ? (value == 'maybe' ? AppTheme.background : Colors.white) : color,
+                    color: selected ? (value == 'no' ? AppTheme.tinte : AppTheme.aufStatus) : color,
                     fontSize: 12.5)),
           ]),
         ),
@@ -1249,7 +1239,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           const SizedBox(height: 14),
           Row(
             children: [
-              voteButton('yes', t.couplesChannelYesPlease, Icons.local_fire_department_rounded),
+              voteButton('yes', t.couplesChannelYesPlease, Icons.favorite_rounded),
               const SizedBox(width: 8),
               voteButton('maybe', t.yesNoMaybeMaybe, Icons.help_outline_rounded),
               const SizedBox(width: 8),

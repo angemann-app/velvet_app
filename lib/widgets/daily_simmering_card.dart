@@ -187,14 +187,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            AppTheme.surface,
-            AppTheme.background,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
+        color: AppTheme.surface,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: _isRevealed
@@ -202,14 +195,6 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
               : AppTheme.amber.withValues(alpha: 0.35),
           width: 1.2,
         ),
-        boxShadow: [
-          if (_isRevealed)
-            BoxShadow(
-              color: AppTheme.rose.withValues(alpha: 0.12),
-              blurRadius: 16,
-              offset: const Offset(0, 4),
-            ),
-        ],
       ),
       child: Material(
         color: Colors.transparent,
@@ -234,7 +219,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Icon(
-                            Icons.local_fire_department_rounded,
+                            Icons.bolt_outlined,
                             color: AppTheme.sageLight,
                             size: 18,
                           ),
