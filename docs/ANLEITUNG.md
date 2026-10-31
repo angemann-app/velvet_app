@@ -90,7 +90,7 @@ Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.
 
 Nachrichten: mit Lesebestätigung, die ihr im Menü abschalten könnt.
 
-Wünsche: In der Ja/Vielleicht/Nein-Liste stimmt jeder für sich ab. Sichtbar wird nur, was ihr beide wollt.
+Gemeinsam entdecken: In der Fantasie-Landkarte antwortet jeder für sich mit „Ja, gern“, „Vielleicht“ oder „Lieber nicht“. Sichtbar wird nur, was ihr beide wollt (Treffer); ein „Vielleicht“ erscheint zum Besprechen, ein „Lieber nicht“ nie. Im Spicy-Modus kommen Szenen zum Ausprobieren dazu, ganze Abende, die ihr genauso beantwortet.
 
 Gemeinsam lernen: Lektionen teilen und Antworten auf die Reflexionsfragen austauschen.
 

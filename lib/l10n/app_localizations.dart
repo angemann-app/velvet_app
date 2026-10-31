@@ -446,6 +446,30 @@ abstract class AppLocalizations {
   /// **'Kurse'**
   String get heuteKurse;
 
+  /// No description provided for @wuenscheSzenenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Szenen zum Ausprobieren'**
+  String get wuenscheSzenenTitel;
+
+  /// No description provided for @wuenscheSzenenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Ganze Abende statt einzelner Fragen. Beantwortet sie getrennt, wie in der Landkarte. Nur im Spicy-Modus.'**
+  String get wuenscheSzenenText;
+
+  /// No description provided for @wuenscheBesprechenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Zum Besprechen'**
+  String get wuenscheBesprechenTitel;
+
+  /// No description provided for @wuenscheBesprechenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Hier ist mindestens ein „Vielleicht“ dabei. Sprecht kurz darüber, was ihr euch vorstellen könnt.'**
+  String get wuenscheBesprechenText;
+
   /// No description provided for @aiCoachEinrichtungTitel.
   ///
   /// In de, this message translates to:
@@ -1267,7 +1291,7 @@ abstract class AppLocalizations {
   /// No description provided for @couplesChannelWishes.
   ///
   /// In de, this message translates to:
-  /// **'Wünsche'**
+  /// **'Gemeinsam entdecken'**
   String get couplesChannelWishes;
 
   /// No description provided for @couplesChannelConnectedEncrypted.
@@ -1369,7 +1393,7 @@ abstract class AppLocalizations {
   /// No description provided for @couplesChannelVoteSeparatelyAWishOnly.
   ///
   /// In de, this message translates to:
-  /// **'Stimmt getrennt ab. Ein Wunsch erscheint erst als Match, wenn ihr beide „Ja, gern“ sagt – ein „Lieber nicht“ wird nie angezeigt.'**
+  /// **'Stimmt getrennt ab. Ein Wunsch erscheint erst als Treffer, wenn ihr beide „Ja, gern“ sagt. Ein „Vielleicht“ landet zum Besprechen, ein „Lieber nicht“ wird nie angezeigt.'**
   String get couplesChannelVoteSeparatelyAWishOnly;
 
   /// No description provided for @couplesChannelQuestionsInSeveralAreasWith.
@@ -2344,7 +2368,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeYesMaybeNo.
   ///
   /// In de, this message translates to:
-  /// **'Ja / Vielleicht / Nein'**
+  /// **'Ja, gern / Vielleicht / Lieber nicht'**
   String get yesNoMaybeYesMaybeNo;
 
   /// No description provided for @yesNoMaybeSyncWithPartner.
@@ -2387,7 +2411,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeYes.
   ///
   /// In de, this message translates to:
-  /// **'Ja'**
+  /// **'Ja, gern'**
   String get yesNoMaybeYes;
 
   /// No description provided for @yesNoMaybeMaybe.
@@ -2399,7 +2423,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeNo.
   ///
   /// In de, this message translates to:
-  /// **'Nein'**
+  /// **'Lieber nicht'**
   String get yesNoMaybeNo;
 
   /// No description provided for @yesNoMaybeAllEintraegelength.
@@ -2417,7 +2441,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeYesYescount.
   ///
   /// In de, this message translates to:
-  /// **'Ja ({yesCount})'**
+  /// **'Ja, gern ({yesCount})'**
   String yesNoMaybeYesYescount(Object yesCount);
 
   /// No description provided for @yesNoMaybeMaybeMaybecount.
@@ -2429,7 +2453,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeNoNocount.
   ///
   /// In de, this message translates to:
-  /// **'Nein ({noCount})'**
+  /// **'Lieber nicht ({noCount})'**
   String yesNoMaybeNoNocount(Object noCount);
 
   /// No description provided for @yesNoMaybePairingRequired2.

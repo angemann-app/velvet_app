@@ -54,6 +54,15 @@ Für Nutzer wirkt das wie zwei Orte für dasselbe, mit verschiedenen Wörtern. D
    immer sichtbar? Nach den festen Regeln gehören sie hinter den Spicy-Modus; vor der Umsetzung klären, was jetzt gilt.
 4. Heißt der Tab „Wünsche“ weiter so, oder „Gemeinsam entdecken“ (passt besser zur Landkarte)?
 
-## Entscheidungen
+## Entscheidungen (abgestimmt am 31.10.2026, umgesetzt)
 
-Noch keine.
+1. **Wörter:** weicher, überall gleich: „Ja, gern“, „Vielleicht“, „Lieber nicht“ (Landkarte und Szenen).
+2. **Vielleicht = Besprechen:** Ja und Ja ist ein Treffer. Ja und Vielleicht oder zweimal Vielleicht erscheint als „Zum
+   Besprechen“ (leiser Block, kein Treffer). Ein „Lieber nicht“ bleibt für das Gegenüber immer unsichtbar.
+3. **Getrennt nach Spicy:** Die zwölf Szenen („Szenen zum Ausprobieren“) gibt es nur im Spicy-Modus; die Landkarte zeigt ihre
+   Spicy-Bereiche schon wie bisher nur dort. Treffer und Besprech-Punkte, die ohne Spicy nicht sichtbar wären, zählen auch
+   nicht im Zähler am Tab. (Alle zwölf Szenen gelten vorerst als Spicy; eine mildere Auswahl wäre eine eigene Entscheidung.)
+4. **Tabname:** „Gemeinsam entdecken“ (EN „Explore together“) statt „Wünsche“.
+
+Technik: Kein neues Protokoll. Die Stimme „maybe“ ist ein normaler Textwert; ältere Geräte werten sie nicht als Ja. Der
+Treffer-Banner löst Titel jetzt aus Szenen und Landkarte auf (vorher fiel er bei Landkarten-Treffern auf die erste Szene zurück).

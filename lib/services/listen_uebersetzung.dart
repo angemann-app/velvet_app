@@ -71,14 +71,33 @@ class ListenUebersetzung {
     ];
   }
 
+  /// Titel zu einer Stimm-Id: erst die Szenen, dann die Landkarte; null, wenn die Id hier nicht sichtbar ist.
+  static String? titelFuer(String id) {
+    for (final o in fantasien) {
+      if (o.id == id) return o.title;
+    }
+    for (final i in eintraege) {
+      if (i.id == id) return i.text;
+    }
+    return null;
+  }
+
   static List<YesNoMaybeItem> get eintraege => [for (final c in kategorien) ...c.items];
 
+  /// Die sichtbaren Szenen: nur bei eingeschaltetem Spicy-Modus.
   static List<FantasyOption> get fantasien {
+    if (!StorageService.spicyMode()) return const [];
+    return alleFantasien;
+  }
+
+  /// Alle Szenen, auch bei ausgeschaltetem Spicy-Modus (zum Auflösen von Titeln).
+  static List<FantasyOption> get alleFantasien {
     if (_fantasien.isEmpty) return defaultFantasyOptions;
     return [
       for (final o in defaultFantasyOptions)
         FantasyOption(
           id: o.id,
+          spicy: o.spicy,
           icon: o.icon,
           title: _text(_fantasien, o.id, 'title', o.title),
           subtitle: _text(_fantasien, o.id, 'subtitle', o.subtitle),

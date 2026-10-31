@@ -90,7 +90,7 @@ Sparks: with one tap you show what you're in the mood for today, or not.
 
 Messages: with read receipts, which you can switch off in the menu.
 
-Wishes: in the yes/maybe/no list, each of you votes separately. Only what you both want becomes visible.
+Explore together: in the fantasy map each of you answers separately with “Yes, please”, “Maybe” or “Rather not”. Only what you both want becomes visible (a match); a “Maybe” shows up under “To talk about”, a “Rather not” never does. In spicy mode there are also scenes to try, whole evenings that you answer the same way.
 
 Learning together: share lessons and exchange answers to the reflection questions.
 

@@ -100,6 +100,10 @@
   "heuteReiterCheckin": "Check-in",
   "heuteReiterFunke": "Funke",
   "heuteKurse": "Kurse",
+  "wuenscheSzenenTitel": "Szenen zum Ausprobieren",
+  "wuenscheSzenenText": "Ganze Abende statt einzelner Fragen. Beantwortet sie getrennt, wie in der Landkarte. Nur im Spicy-Modus.",
+  "wuenscheBesprechenTitel": "Zum Besprechen",
+  "wuenscheBesprechenText": "Hier ist mindestens ein „Vielleicht“ dabei. Sprecht kurz darüber, was ihr euch vorstellen könnt.",
   "aiCoachEinrichtungTitel": "Dein KI-Coach",
   "aiCoachEinrichtungText": "Stell Fragen zu Körper, Lust und Beziehung, vertraulich und ohne Urteil. Er ersetzt keine ärztliche oder therapeutische Hilfe.",
   "aiCoachEinrichtungSchritt1": "Einen kostenlosen Schlüssel bei Google erstellen",
@@ -368,7 +372,7 @@
   "couplesChannelGuidedTouchForTheTwo": "Geführte Berührung für euch beide, 20 bis 45 Minuten. Jedes Mal anders.",
   "couplesChannelFantasyMap": "Fantasie-Landkarte",
   "couplesChannelMessages": "Nachrichten",
-  "couplesChannelWishes": "Wünsche",
+  "couplesChannelWishes": "Gemeinsam entdecken",
   "couplesChannelConnectedEncrypted": "verbunden & verschlüsselt",
   "couplesChannelConnecting": "verbindet …",
   "couplesChannelOfflineTapToConnect": "offline – tippe zum Verbinden",
@@ -392,7 +396,7 @@
   "couplesChannelOpenLesson": "Lektion öffnen",
   "couplesChannelWriteAMessage": "Nachricht schreiben …",
   "couplesChannelSend": "Senden",
-  "couplesChannelVoteSeparatelyAWishOnly": "Stimmt getrennt ab. Ein Wunsch erscheint erst als Match, wenn ihr beide „Ja, gern“ sagt – ein „Lieber nicht“ wird nie angezeigt.",
+  "couplesChannelVoteSeparatelyAWishOnly": "Stimmt getrennt ab. Ein Wunsch erscheint erst als Treffer, wenn ihr beide „Ja, gern“ sagt. Ein „Vielleicht“ landet zum Besprechen, ein „Lieber nicht“ wird nie angezeigt.",
   "couplesChannelQuestionsInSeveralAreasWith": "{fragen} Fragen in {bereiche} Bereichen – mit passenden Kurs-Empfehlungen.",
   "couplesChannelYouHaveAMatch": "Ihr habt ein Match",
   "couplesChannelYouHaveMatcheslengthMatches": "Ihr habt {matchesLength} Matches",
@@ -715,7 +719,7 @@
     }
   },
   "yesNoMaybeReadMore": "WEITERLESEN",
-  "yesNoMaybeYesMaybeNo": "Ja / Vielleicht / Nein",
+  "yesNoMaybeYesMaybeNo": "Ja, gern / Vielleicht / Lieber nicht",
   "yesNoMaybeSyncWithPartner": "Mit Partner synchronisieren",
   "yesNoMaybePairingRequired": "Koppeln erforderlich",
   "yesNoMaybeQuestionsAnsweredcountTotalitems": "Fragenkatalog ({answeredCount}/{totalItems})",
@@ -739,9 +743,9 @@
   },
   "yesNoMaybeDigitalSafeSpace": "DIGITALER SAFE SPACE",
   "yesNoMaybeFindOutWhatExcitesYou": "Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar.",
-  "yesNoMaybeYes": "Ja",
+  "yesNoMaybeYes": "Ja, gern",
   "yesNoMaybeMaybe": "Vielleicht",
-  "yesNoMaybeNo": "Nein",
+  "yesNoMaybeNo": "Lieber nicht",
   "yesNoMaybeAllEintraegelength": "Alle ({eintraegeLength})",
   "@yesNoMaybeAllEintraegelength": {
     "placeholders": {
@@ -751,7 +755,7 @@
     }
   },
   "yesNoMaybeOpen": "Offen",
-  "yesNoMaybeYesYescount": "Ja ({yesCount})",
+  "yesNoMaybeYesYescount": "Ja, gern ({yesCount})",
   "@yesNoMaybeYesYescount": {
     "placeholders": {
       "yesCount": {
@@ -767,7 +771,7 @@
       }
     }
   },
-  "yesNoMaybeNoNocount": "Nein ({noCount})",
+  "yesNoMaybeNoNocount": "Lieber nicht ({noCount})",
   "@yesNoMaybeNoNocount": {
     "placeholders": {
       "noCount": {

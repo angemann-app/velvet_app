@@ -207,6 +207,20 @@ class AppLocalizationsDe extends AppLocalizations {
   String get heuteKurse => 'Kurse';
 
   @override
+  String get wuenscheSzenenTitel => 'Szenen zum Ausprobieren';
+
+  @override
+  String get wuenscheSzenenText =>
+      'Ganze Abende statt einzelner Fragen. Beantwortet sie getrennt, wie in der Landkarte. Nur im Spicy-Modus.';
+
+  @override
+  String get wuenscheBesprechenTitel => 'Zum Besprechen';
+
+  @override
+  String get wuenscheBesprechenText =>
+      'Hier ist mindestens ein „Vielleicht“ dabei. Sprecht kurz darüber, was ihr euch vorstellen könnt.';
+
+  @override
   String get aiCoachEinrichtungTitel => 'Dein KI-Coach';
 
   @override
@@ -704,7 +718,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get couplesChannelMessages => 'Nachrichten';
 
   @override
-  String get couplesChannelWishes => 'Wünsche';
+  String get couplesChannelWishes => 'Gemeinsam entdecken';
 
   @override
   String get couplesChannelConnectedEncrypted => 'verbunden & verschlüsselt';
@@ -761,7 +775,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get couplesChannelVoteSeparatelyAWishOnly =>
-      'Stimmt getrennt ab. Ein Wunsch erscheint erst als Match, wenn ihr beide „Ja, gern“ sagt – ein „Lieber nicht“ wird nie angezeigt.';
+      'Stimmt getrennt ab. Ein Wunsch erscheint erst als Treffer, wenn ihr beide „Ja, gern“ sagt. Ein „Vielleicht“ landet zum Besprechen, ein „Lieber nicht“ wird nie angezeigt.';
 
   @override
   String couplesChannelQuestionsInSeveralAreasWith(int fragen, int bereiche) {
@@ -1344,7 +1358,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get yesNoMaybeReadMore => 'WEITERLESEN';
 
   @override
-  String get yesNoMaybeYesMaybeNo => 'Ja / Vielleicht / Nein';
+  String get yesNoMaybeYesMaybeNo => 'Ja, gern / Vielleicht / Lieber nicht';
 
   @override
   String get yesNoMaybeSyncWithPartner => 'Mit Partner synchronisieren';
@@ -1371,13 +1385,13 @@ class AppLocalizationsDe extends AppLocalizations {
       'Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar.';
 
   @override
-  String get yesNoMaybeYes => 'Ja';
+  String get yesNoMaybeYes => 'Ja, gern';
 
   @override
   String get yesNoMaybeMaybe => 'Vielleicht';
 
   @override
-  String get yesNoMaybeNo => 'Nein';
+  String get yesNoMaybeNo => 'Lieber nicht';
 
   @override
   String yesNoMaybeAllEintraegelength(Object eintraegeLength) {
@@ -1389,7 +1403,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String yesNoMaybeYesYescount(Object yesCount) {
-    return 'Ja ($yesCount)';
+    return 'Ja, gern ($yesCount)';
   }
 
   @override
@@ -1399,7 +1413,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String yesNoMaybeNoNocount(Object noCount) {
-    return 'Nein ($noCount)';
+    return 'Lieber nicht ($noCount)';
   }
 
   @override

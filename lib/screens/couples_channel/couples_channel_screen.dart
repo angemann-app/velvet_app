@@ -578,18 +578,25 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             labelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
             tabs: [
               Tab(height: 42, text: t.couplesChannelMessages),
-              ValueListenableBuilder<List<String>>(
-                valueListenable: _nostr.matchesNotifier,
-                builder: (context, matches, _) => Tab(
-                  height: 42,
-                  child: Badge(
-                    isLabelVisible: matches.isNotEmpty,
-                    label: Text('${matches.length}'),
-                    backgroundColor: AppTheme.rose,
-                    offset: const Offset(14, -6),
-                    child: Text(t.couplesChannelWishes),
-                  ),
-                ),
+              ListenableBuilder(
+                listenable: Listenable.merge([_nostr.matchesNotifier, StorageService.spicyAenderung]),
+                builder: (context, _) {
+                  // Nur Treffer zählen, die hier auch sichtbar sind (Spicy-Szenen nur im Spicy-Modus).
+                  final sichtbar = [
+                    for (final id in _nostr.matchesNotifier.value)
+                      if (ListenUebersetzung.titelFuer(id) != null) id
+                  ];
+                  return Tab(
+                    height: 42,
+                    child: Badge(
+                      isLabelVisible: sichtbar.isNotEmpty,
+                      label: Text('${sichtbar.length}'),
+                      backgroundColor: AppTheme.rose,
+                      offset: const Offset(14, -6),
+                      child: Text(t.couplesChannelWishes),
+                    ),
+                  );
+                },
               ),
             ],
           ),
@@ -1061,10 +1068,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
 
   Widget _buildWishesTab() {
     return AnimatedBuilder(
-      animation: Listenable.merge([_nostr.myFantasyVotesNotifier, _nostr.matchesNotifier]),
+      animation: Listenable.merge(
+          [_nostr.myFantasyVotesNotifier, _nostr.matchesNotifier, _nostr.besprechenNotifier, StorageService.spicyAenderung]),
       builder: (context, _) {
-        final matches = _nostr.matchesNotifier.value;
+        // Nur Treffer und Besprech-Punkte, die hier auch sichtbar sind (Spicy-Szenen nur im Spicy-Modus).
+        final matches = [for (final id in _nostr.matchesNotifier.value) if (ListenUebersetzung.titelFuer(id) != null) id];
+        final besprechen = [for (final id in _nostr.besprechenNotifier.value) if (ListenUebersetzung.titelFuer(id) != null) id];
         final myVotes = _nostr.myFantasyVotesNotifier.value;
+        final szenen = ListenUebersetzung.fantasien;
 
         return ListView(
           padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
@@ -1076,14 +1087,31 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
               ),
             ),
-            const GefuehrteAudios(mitSelbst: false),
-            _buildFantasyMapCard(subtitle: t.couplesChannelQuestionsInSeveralAreasWith(ListenUebersetzung.eintraege.length, ListenUebersetzung.kategorien.length)),
-            const SizedBox(height: 16),
             if (matches.isNotEmpty) ...[
               _buildMatchBanner(matches),
-              const SizedBox(height: 16),
+              const SizedBox(height: 12),
             ],
-            ...ListenUebersetzung.fantasien.map((opt) => _buildWishCard(opt, myVotes[opt.id], matches.contains(opt.id))),
+            if (besprechen.isNotEmpty) ...[
+              _buildBesprechenKarte(besprechen),
+              const SizedBox(height: 12),
+            ],
+            _buildFantasyMapCard(subtitle: t.couplesChannelQuestionsInSeveralAreasWith(ListenUebersetzung.eintraege.length, ListenUebersetzung.kategorien.length)),
+            const SizedBox(height: 12),
+            const GefuehrteAudios(mitSelbst: false),
+            if (szenen.isNotEmpty) ...[
+              const SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(2, 6, 2, 10),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Text(t.wuenscheSzenenTitel,
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+                  const SizedBox(height: 3),
+                  Text(t.wuenscheSzenenText,
+                      style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.4)),
+                ]),
+              ),
+              ...szenen.map((opt) => _buildWishCard(opt, myVotes[opt.id], matches.contains(opt.id), besprechen.contains(opt.id))),
+            ],
           ],
         );
       },
@@ -1109,14 +1137,11 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 16),
           ),
           const SizedBox(height: 8),
-          ...matches.map((id) {
-            final opt = ListenUebersetzung.fantasien.firstWhere((o) => o.id == id, orElse: () => ListenUebersetzung.fantasien.first);
-            return Padding(
-              padding: const EdgeInsets.only(top: 4),
-              child: Text('✨ ${opt.title}',
-                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 13.5)),
-            );
-          }),
+          ...matches.map((id) => Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text('✨ ${ListenUebersetzung.titelFuer(id) ?? ''}',
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 13.5)),
+              )),
           const SizedBox(height: 10),
           Text(
             t.couplesChannelAMatchIsAnInvitation,
@@ -1127,26 +1152,62 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     );
   }
 
-  Widget _buildWishCard(FantasyOption opt, String? myVote, bool isMatch) {
+  /// Zum Besprechen: Ja und Vielleicht oder zweimal Vielleicht. Leiser als ein Treffer.
+  Widget _buildBesprechenKarte(List<String> ids) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppTheme.amber.withValues(alpha: 0.6)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(t.wuenscheBesprechenTitel,
+              style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w800, fontSize: 15.5)),
+          const SizedBox(height: 4),
+          Text(t.wuenscheBesprechenText,
+              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4)),
+          const SizedBox(height: 8),
+          ...ids.map((id) => Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text('• ${ListenUebersetzung.titelFuer(id) ?? ''}',
+                    style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w600, fontSize: 13.5)),
+              )),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildWishCard(FantasyOption opt, String? myVote, bool isMatch, bool besprechen) {
     final accent = isMatch ? AppTheme.rose : AppTheme.amber;
 
     Widget voteButton(String value, String label, IconData icon) {
       final selected = myVote == value;
       final color = value == 'yes' ? AppTheme.rose : AppTheme.textSecondary;
+      final fuellung = value == 'yes' ? AppTheme.rose : (value == 'maybe' ? AppTheme.amber : AppTheme.surfaceLight);
       return Expanded(
-        child: OutlinedButton.icon(
+        child: OutlinedButton(
           onPressed: () {
             HapticFeedback.lightImpact();
             _nostr.sendFantasyVote(opt.id, value);
           },
-          icon: Icon(icon, size: 16, color: selected ? Colors.white : color),
-          label: Text(label, style: TextStyle(color: selected ? Colors.white : color, fontSize: 13)),
           style: OutlinedButton.styleFrom(
-            backgroundColor: selected ? (value == 'yes' ? AppTheme.rose : AppTheme.surfaceLight) : null,
+            backgroundColor: selected ? fuellung : null,
             side: BorderSide(color: selected ? Colors.transparent : AppTheme.border),
-            padding: const EdgeInsets.symmetric(vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 10),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           ),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Icon(icon, size: 16, color: selected ? (value == 'maybe' ? AppTheme.background : Colors.white) : color),
+            const SizedBox(height: 3),
+            Text(label,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: selected ? (value == 'maybe' ? AppTheme.background : Colors.white) : color,
+                    fontSize: 12.5)),
+          ]),
         ),
       );
     }
@@ -1180,6 +1241,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 ),
               ),
               if (isMatch) Icon(Icons.favorite_rounded, color: AppTheme.rose, size: 20),
+              if (besprechen && !isMatch) Icon(Icons.chat_bubble_outline_rounded, color: AppTheme.amber, size: 20),
             ],
           ),
           const SizedBox(height: 8),
@@ -1188,7 +1250,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           Row(
             children: [
               voteButton('yes', t.couplesChannelYesPlease, Icons.local_fire_department_rounded),
-              const SizedBox(width: 10),
+              const SizedBox(width: 8),
+              voteButton('maybe', t.yesNoMaybeMaybe, Icons.help_outline_rounded),
+              const SizedBox(width: 8),
               voteButton('no', t.couplesChannelRatherNot, Icons.do_not_disturb_on_outlined),
             ],
           ),
@@ -1196,7 +1260,6 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       ),
     );
   }
-
   // ---------------------------------------------------------------------------
 
   Future<void> _confirmUnpair() async {

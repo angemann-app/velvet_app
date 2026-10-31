@@ -74,7 +74,7 @@ void main() {
     var db = await DataService.neuLaden();
     expect(db.courses.first.title, '1. Understanding Mind and Body');
     expect(ListenUebersetzung.kategorien.first.title, isNot(contains('ä')));
-    expect(ListenUebersetzung.fantasien.length, greaterThan(0));
+    expect(ListenUebersetzung.alleFantasien.length, greaterThan(0));
     final paar = await PaarAbendDaten.laden();
     expect(paar.dauerMs, isEmpty, reason: 'Längen der deutschen Aufnahmen gelten nicht für Englisch');
 

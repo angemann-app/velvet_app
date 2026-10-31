@@ -365,6 +365,30 @@ msgid "Kurse"
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: Scenes to try
+msgctxt "ui:wuenscheSzenenTitel#text"
+msgid "Szenen zum Ausprobieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Whole evenings instead of single questions. Answer separately, as on the map. Spicy mode only.
+msgctxt "ui:wuenscheSzenenText#text"
+msgid "Ganze Abende statt einzelner Fragen. Beantwortet sie getrennt, wie in der Landkarte. Nur im Spicy-Modus."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: To talk about
+msgctxt "ui:wuenscheBesprechenTitel#text"
+msgid "Zum Besprechen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: At least one of you said “Maybe”. Talk briefly about what you can imagine.
+msgctxt "ui:wuenscheBesprechenText#text"
+msgid "Hier ist mindestens ein „Vielleicht“ dabei. Sprecht kurz darüber, was ihr euch vorstellen könnt."
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Your AI coach
 msgctxt "ui:aiCoachEinrichtungTitel#text"
 msgid "Dein KI-Coach"
@@ -1181,9 +1205,9 @@ msgid "Nachrichten"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Wishes
+#. EN: Explore together
 msgctxt "ui:couplesChannelWishes#text"
-msgid "Wünsche"
+msgid "Gemeinsam entdecken"
 msgstr ""
 
 #. Text der Oberfläche
@@ -1283,9 +1307,9 @@ msgid "Senden"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Vote separately. A wish only shows up as a match when you both say “Yes, please” – a “Rather not” is never shown.
+#. EN: Vote separately. A wish only shows up as a match when you both say “Yes, please”. A “Maybe” goes into “To talk about”, a “Rather not” is never shown.
 msgctxt "ui:couplesChannelVoteSeparatelyAWishOnly#text"
-msgid "Stimmt getrennt ab. Ein Wunsch erscheint erst als Match, wenn ihr beide „Ja, gern“ sagt – ein „Lieber nicht“ wird nie angezeigt."
+msgid "Stimmt getrennt ab. Ein Wunsch erscheint erst als Treffer, wenn ihr beide „Ja, gern“ sagt. Ein „Vielleicht“ landet zum Besprechen, ein „Lieber nicht“ wird nie angezeigt."
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {fragen}, {bereiche}
@@ -2288,9 +2312,9 @@ msgid "WEITERLESEN"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Yes / Maybe / No
+#. EN: Yes, please / Maybe / Rather not
 msgctxt "ui:yesNoMaybeYesMaybeNo#text"
-msgid "Ja / Vielleicht / Nein"
+msgid "Ja, gern / Vielleicht / Lieber nicht"
 msgstr ""
 
 #. Text der Oberfläche
@@ -2330,9 +2354,9 @@ msgid "Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gem
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Yes
+#. EN: Yes, please
 msgctxt "ui:yesNoMaybeYes#text"
-msgid "Ja"
+msgid "Ja, gern"
 msgstr ""
 
 #. Text der Oberfläche
@@ -2342,9 +2366,9 @@ msgid "Vielleicht"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: No
+#. EN: Rather not
 msgctxt "ui:yesNoMaybeNo#text"
-msgid "Nein"
+msgid "Lieber nicht"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {eintraegeLength}
@@ -2360,9 +2384,9 @@ msgid "Offen"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {yesCount}
-#. EN: Yes ({yesCount})
+#. EN: Yes, please ({yesCount})
 msgctxt "ui:yesNoMaybeYesYescount#text"
-msgid "Ja ({yesCount})"
+msgid "Ja, gern ({yesCount})"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {maybeCount}
@@ -2372,9 +2396,9 @@ msgid "Vielleicht ({maybeCount})"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {noCount}
-#. EN: No ({noCount})
+#. EN: Rather not ({noCount})
 msgctxt "ui:yesNoMaybeNoNocount#text"
-msgid "Nein ({noCount})"
+msgid "Lieber nicht ({noCount})"
 msgstr ""
 
 #. Text der Oberfläche

@@ -173,6 +173,25 @@ void main() {
     expect(nostr.myFantasyVotesNotifier.value['a'], 'yes');
   });
 
+  test('Treffer und Besprechen: Ja+Ja ist ein Treffer, Vielleicht mit Ja oder Vielleicht zum Besprechen, Lieber nicht nie', () async {
+    final anna = keyApi.generatePrivateKey();
+    await nostr.setPartner(keyApi.getPublicKey(anna), name: 'Anna');
+    await nostr.handleIncomingKind4Map(dm(anna, {
+      'type': 'chat',
+      'text': 'Hi',
+      'votes': {'a': 'yes', 'b': 'yes', 'c': 'maybe', 'd': 'maybe', 'e': 'no', 'f': 'yes'}
+    }));
+    await nostr.sendFantasyVote('a', 'yes'); // Ja + Ja
+    await nostr.sendFantasyVote('b', 'maybe'); // Vielleicht + Ja
+    await nostr.sendFantasyVote('c', 'maybe'); // Vielleicht + Vielleicht
+    await nostr.sendFantasyVote('d', 'no'); // Lieber nicht + Vielleicht
+    await nostr.sendFantasyVote('e', 'yes'); // Ja + Lieber nicht
+    await nostr.sendFantasyVote('f', 'no'); // Lieber nicht + Ja
+
+    expect(nostr.matchesNotifier.value, ['a']);
+    expect(nostr.besprechenNotifier.value..sort(), ['b', 'c']);
+  });
+
   test('Trennen löscht alles vom Gegenüber, auch nach einem Neustart', () async {
     final anna = keyApi.generatePrivateKey();
     await nostr.setPartner(keyApi.getPublicKey(anna), name: 'Anna');

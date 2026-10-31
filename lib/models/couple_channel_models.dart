@@ -125,12 +125,16 @@ class FantasyOption {
   final String tag;
   final IconData icon;
 
+  /// Die Szenen sind deutlich und stehen nur im Spicy-Modus (Entscheidung vom 31.10.2026).
+  final bool spicy;
+
   const FantasyOption({
     required this.id,
     required this.title,
     required this.subtitle,
     required this.tag,
     required this.icon,
+    this.spicy = true,
   });
 
   String get category => tag;

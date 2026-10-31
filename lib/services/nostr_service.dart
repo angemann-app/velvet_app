@@ -126,6 +126,11 @@ class NostrService {
   final ValueNotifier<List<String>> matchesNotifier =
       ValueNotifier<List<String>>([]);
 
+  /// Zum Besprechen: mindestens ein „Vielleicht“, kein „Lieber nicht“ (Ja und Vielleicht oder zweimal Vielleicht).
+  /// Ein „Lieber nicht“ bleibt für das Gegenüber immer unsichtbar.
+  final ValueNotifier<List<String>> besprechenNotifier =
+      ValueNotifier<List<String>>([]);
+
   /// Name der eingeladenen Person, solange eine Einladung offen ist.
   final ValueNotifier<String?> inviteNameNotifier = ValueNotifier<String?>(null);
 
@@ -828,16 +833,20 @@ class NostrService {
     final myVotes = myFantasyVotesNotifier.value;
     final partnerVotes = partnerFantasyVotesNotifier.value;
     final List<String> matches = [];
+    final List<String> besprechen = [];
 
     for (var entry in myVotes.entries) {
-      if (entry.value == 'yes') {
-        if (partnerVotes[entry.key] == 'yes') {
-          matches.add(entry.key);
-        }
+      final meine = entry.value;
+      final seine = partnerVotes[entry.key];
+      if (meine == 'yes' && seine == 'yes') {
+        matches.add(entry.key);
+      } else if ((meine == 'maybe' && (seine == 'yes' || seine == 'maybe')) || (meine == 'yes' && seine == 'maybe')) {
+        besprechen.add(entry.key);
       }
     }
 
     matchesNotifier.value = matches;
+    besprechenNotifier.value = besprechen;
   }
 
   /// true, wenn [inputKey] eine andere Person ist als das jetzige Gegenüber –

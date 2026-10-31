@@ -54,7 +54,7 @@ void main() {
     for (final i in ListenUebersetzung.eintraege.where((i) => i.lessonId != null)) {
       expect(DataService.getLessonById(i.lessonId!), isNotNull, reason: '${i.id} → ${i.lessonId}');
     }
-    expect(YesNoMaybeVote.yes.label, 'Yes');
+    expect(YesNoMaybeVote.yes.label, 'Yes, please');
     expect(t.yesNoMaybeNoMatchesYet, 'No matches yet');
   });
 
@@ -64,7 +64,7 @@ void main() {
     await DataService.neuLaden();
     final porno = ListenUebersetzung.eintraege.firstWhere((i) => i.id == 'item_64');
     expect(porno.text, 'Gemeinsam einen Porno schauen');
-    expect(YesNoMaybeVote.yes.label, 'Ja');
+    expect(YesNoMaybeVote.yes.label, 'Ja, gern');
     expect(ListenUebersetzung.eintraege.length, 65);
   });
 }

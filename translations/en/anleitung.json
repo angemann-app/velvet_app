@@ -41,7 +41,7 @@
       "icon": "favorite",
       "titel": "Couple channel",
       "bild": "04_paarkanal_verbunden.png",
-      "text": "In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.\nSparks: with one tap you show what you're in the mood for today, or not.\nMessages: with read receipts, which you can switch off in the menu.\nWishes: in the yes/maybe/no list, each of you votes separately. Only what you both want becomes visible.\nLearning together: share lessons and exchange answers to the reflection questions."
+      "text": "In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.\nSparks: with one tap you show what you're in the mood for today, or not.\nMessages: with read receipts, which you can switch off in the menu.\nExplore together: in the fantasy map each of you answers separately with “Yes, please”, “Maybe” or “Rather not”. Only what you both want becomes visible (a match); a “Maybe” shows up under “To talk about”, a “Rather not” never does. In spicy mode there are also scenes to try, whole evenings that you answer the same way.\nLearning together: share lessons and exchange answers to the reflection questions."
     },
     {
       "id": "spicy",
@@ -92,7 +92,7 @@
     "guide:gefuehrt": "efa2b656287c7899",
     "guide:hilfe": "0f67b34ec65bbd7e",
     "guide:kurse": "045961b7f5f350ad",
-    "guide:paar": "cc5bcd0b0081f040",
+    "guide:paar": "b55d28b867fc979a",
     "guide:reframing": "a0ea4f55c9482b5e",
     "guide:spicy": "d8bdd6ab7baa084b",
     "guide:sprache": "e06647757a6f7c49",

@@ -207,6 +207,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get heuteKurse => 'Courses';
 
   @override
+  String get wuenscheSzenenTitel => 'Scenes to try';
+
+  @override
+  String get wuenscheSzenenText =>
+      'Whole evenings instead of single questions. Answer separately, as on the map. Spicy mode only.';
+
+  @override
+  String get wuenscheBesprechenTitel => 'To talk about';
+
+  @override
+  String get wuenscheBesprechenText =>
+      'At least one of you said “Maybe”. Talk briefly about what you can imagine.';
+
+  @override
   String get aiCoachEinrichtungTitel => 'Your AI coach';
 
   @override
@@ -698,7 +712,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get couplesChannelMessages => 'Messages';
 
   @override
-  String get couplesChannelWishes => 'Wishes';
+  String get couplesChannelWishes => 'Explore together';
 
   @override
   String get couplesChannelConnectedEncrypted => 'connected & encrypted';
@@ -753,7 +767,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get couplesChannelVoteSeparatelyAWishOnly =>
-      'Vote separately. A wish only shows up as a match when you both say “Yes, please” – a “Rather not” is never shown.';
+      'Vote separately. A wish only shows up as a match when you both say “Yes, please”. A “Maybe” goes into “To talk about”, a “Rather not” is never shown.';
 
   @override
   String couplesChannelQuestionsInSeveralAreasWith(int fragen, int bereiche) {
@@ -1334,7 +1348,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get yesNoMaybeReadMore => 'READ MORE';
 
   @override
-  String get yesNoMaybeYesMaybeNo => 'Yes / Maybe / No';
+  String get yesNoMaybeYesMaybeNo => 'Yes, please / Maybe / Rather not';
 
   @override
   String get yesNoMaybeSyncWithPartner => 'Sync with partner';
@@ -1361,13 +1375,13 @@ class AppLocalizationsEn extends AppLocalizations {
       'Find out what excites you and where your limits are. Not sure what is meant? Tap “Learn more”. If you\'re connected in the couple channel, you only see what you both want – a no stays invisible.';
 
   @override
-  String get yesNoMaybeYes => 'Yes';
+  String get yesNoMaybeYes => 'Yes, please';
 
   @override
   String get yesNoMaybeMaybe => 'Maybe';
 
   @override
-  String get yesNoMaybeNo => 'No';
+  String get yesNoMaybeNo => 'Rather not';
 
   @override
   String yesNoMaybeAllEintraegelength(Object eintraegeLength) {
@@ -1379,7 +1393,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String yesNoMaybeYesYescount(Object yesCount) {
-    return 'Yes ($yesCount)';
+    return 'Yes, please ($yesCount)';
   }
 
   @override
@@ -1389,7 +1403,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String yesNoMaybeNoNocount(Object noCount) {
-    return 'No ($noCount)';
+    return 'Rather not ($noCount)';
   }
 
   @override
