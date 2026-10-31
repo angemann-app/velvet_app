@@ -12,6 +12,10 @@ Serie, Traumtagebuch und Paket sind gebaut (siehe Konzept, „Umsetzung“). Off
 - Freiwilliges anonymes „Hallo“ (`docs/konzepte/hallo.md`) → AG-9
   (`docs/konzepte/lautsprecher.md`)
 
+## 1b. Heute und Produktschliff (Konzept: docs/konzepte/heute-und-produktschliff.md)
+
+Richtung abgestimmt, Muster gezeigt, offene Fragen am Ende des Konzepts. Stufen: 1 Heute-Seite (Audio-Bereich dauerhaft einklappbar), 2 Kurs-Zeilen mit Titelbildern, 3 SOS-Symbol, 4 Tab-Umbau, 5 KI-Coach-Einstieg und Onboarding.
+
 ## 2. Pflege: technische Schulden (nach AG-8 und AG-9)
 
 - **Abspieler entflechten:** `einschlaf_reise_screen.dart` trägt Einschlafen, Traum-Abend, Lust im Traum und
