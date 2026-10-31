@@ -15,12 +15,26 @@ import '../onboarding/onboarding_screen.dart';
 import 'lesson_detail_screen.dart';
 import '../../l10n/t.dart';
 
+/// Zwei Gesichter derselben Daten: **Heute** (Kopf, nächster Schritt, Check-in/Funke, geführte Audios) und **Lernen**
+/// (Filter und Kurse nach Schwerpunkten). Siehe docs/konzepte/heute-und-produktschliff.md.
 class CoursesScreen extends StatefulWidget {
   final void Function(int tabIndex, {String? subTab}) onNavigateToTool;
+
+  /// true: Tab „Lernen“ mit Filter und Kursliste; false: Tab „Heute“.
+  final bool lernen;
+
+  /// Heute: führt zum Tab „Lernen“.
+  final VoidCallback? onZuLernen;
+
+  /// Meldet, wenn der Tab gewechselt wurde, damit erledigte Lektionen aus dem anderen Tab nachgeladen werden.
+  final Listenable? aktualisieren;
 
   const CoursesScreen({
     super.key,
     required this.onNavigateToTool,
+    this.lernen = false,
+    this.onZuLernen,
+    this.aktualisieren,
   });
 
   @override
@@ -40,11 +54,13 @@ class _CoursesScreenState extends State<CoursesScreen> {
     _loadData();
     // Spicy-Kurse erscheinen und verschwinden sofort, wenn der Modus umgeschaltet wird.
     StorageService.spicyAenderung.addListener(_loadData);
+    widget.aktualisieren?.addListener(_loadData);
   }
 
   @override
   void dispose() {
     StorageService.spicyAenderung.removeListener(_loadData);
+    widget.aktualisieren?.removeListener(_loadData);
     super.dispose();
   }
 
@@ -190,78 +206,111 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 : const SizedBox.shrink(),
           ),
 
-          // Kopf: Begrüßung ohne Prozentbalken und Serie (docs/konzepte/heute-und-produktschliff.md)
-          _buildKopf(),
+          if (!widget.lernen) ...[
+            // Kopf: Begrüßung ohne Prozentbalken und Serie (docs/konzepte/heute-und-produktschliff.md)
+            _buildKopf(),
 
-          const SizedBox(height: 16),
+            const SizedBox(height: 16),
 
-          _buildNaechsterSchritt(completedCount),
+            _buildNaechsterSchritt(completedCount),
 
-          const SizedBox(height: 12),
+            const SizedBox(height: 12),
 
-          // Für heute: Check-in und Erotik-Funke als zwei Reiter einer Karte.
-          const _HeuteReiter(),
+            // Für heute: Check-in und Erotik-Funke als zwei Reiter einer Karte.
+            const _HeuteReiter(),
 
-          const SizedBox(height: 12),
+            const SizedBox(height: 12),
 
-          const AufnahmenHinweis(),
+            const AufnahmenHinweis(),
 
-          // Geführte Audios: einklappbarer Balken mit Kachelreihe.
-          GefuehrteAudios(mitPaar: showCouples, kompakt: true),
+            // Geführte Audios: einklappbarer Balken mit Kachelreihe.
+            GefuehrteAudios(mitPaar: showCouples, kompakt: true),
 
-          const SizedBox(height: 18),
-          // Filter nach Zielgruppe
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                _buildCategoryChip('all', t.coursesAllCourses, Icons.apps_rounded),
-                const SizedBox(width: 8),
-                _buildCategoryChip('women', t.coursesForHer, Icons.spa_rounded),
-                const SizedBox(width: 8),
-                _buildCategoryChip('men', t.coursesForHim, Icons.male_rounded),
-                const SizedBox(width: 8),
-                _buildCategoryChip('couples', t.coursesForCouples, Icons.favorite_rounded),
-              ],
+            const SizedBox(height: 12),
+
+            _buildKurseKarte(filteredCourses.length),
+          ] else ...[
+            // Filter nach Zielgruppe
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  _buildCategoryChip('all', t.coursesAllCourses, Icons.apps_rounded),
+                  const SizedBox(width: 8),
+                  _buildCategoryChip('women', t.coursesForHer, Icons.spa_rounded),
+                  const SizedBox(width: 8),
+                  _buildCategoryChip('men', t.coursesForHim, Icons.male_rounded),
+                  const SizedBox(width: 8),
+                  _buildCategoryChip('couples', t.coursesForCouples, Icons.favorite_rounded),
+                ],
+              ),
             ),
-          ),
 
-          const SizedBox(height: 8),
+            const SizedBox(height: 8),
 
-          // Kurse nach Schwerpunkten (docs/konzepte/startseite.md)
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  t.startSchwerpunkte,
-                  style: TextStyle(
-                    color: AppTheme.textMuted,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 0.8,
+            // Kurse nach Schwerpunkten (docs/konzepte/startseite.md)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    t.startSchwerpunkte,
+                    style: TextStyle(
+                      color: AppTheme.textMuted,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 0.8,
+                    ),
                   ),
-                ),
-                Text(
-                  t.coursesCourseCount(filteredCourses.length),
-                  style: TextStyle(
-                    color: AppTheme.textMuted,
-                    fontSize: 11,
+                  Text(
+                    t.coursesCourseCount(filteredCourses.length),
+                    style: TextStyle(color: AppTheme.textMuted, fontSize: 12),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
 
-          const SizedBox(height: 8),
+            const SizedBox(height: 8),
 
-          for (final s in Course.schwerpunkte)
-            if (filteredCourses.any((c) => c.schwerpunkt == s))
-              _buildSchwerpunkt(s, [for (final c in filteredCourses) if (c.schwerpunkt == s) c]),
-
+            for (final s in Course.schwerpunkte)
+              if (filteredCourses.any((c) => c.schwerpunkt == s))
+                _buildSchwerpunkt(s, [for (final c in filteredCourses) if (c.schwerpunkt == s) c]),
+          ],
           const SizedBox(height: 24),
         ],
+      ),
+    );
+  }
+
+  /// Heute: Einstieg in den Tab „Lernen“.
+  Widget _buildKurseKarte(int anzahl) {
+    return Material(
+      color: AppTheme.surface,
+      borderRadius: BorderRadius.circular(16),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: widget.onZuLernen,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: AppTheme.border),
+          ),
+          child: Row(children: [
+            Icon(Icons.menu_book_rounded, color: AppTheme.amber, size: 22),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(t.heuteAlleKurse,
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                const SizedBox(height: 2),
+                Text(t.coursesCourseCount(anzahl), style: TextStyle(fontSize: 13, color: AppTheme.textSecondary)),
+              ]),
+            ),
+            Icon(Icons.arrow_forward_ios_rounded, size: 15, color: AppTheme.textMuted),
+          ]),
+        ),
       ),
     );
   }

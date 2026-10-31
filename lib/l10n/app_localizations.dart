@@ -446,6 +446,48 @@ abstract class AppLocalizations {
   /// **'Kurse'**
   String get heuteKurse;
 
+  /// No description provided for @heuteAlleKurse.
+  ///
+  /// In de, this message translates to:
+  /// **'Alle Kurse ansehen'**
+  String get heuteAlleKurse;
+
+  /// No description provided for @navLernen.
+  ///
+  /// In de, this message translates to:
+  /// **'Lernen'**
+  String get navLernen;
+
+  /// No description provided for @navUeben.
+  ///
+  /// In de, this message translates to:
+  /// **'Üben'**
+  String get navUeben;
+
+  /// No description provided for @navWir.
+  ///
+  /// In de, this message translates to:
+  /// **'Wir'**
+  String get navWir;
+
+  /// No description provided for @uebenKoerper.
+  ///
+  /// In de, this message translates to:
+  /// **'Körper'**
+  String get uebenKoerper;
+
+  /// No description provided for @uebenGedanken.
+  ///
+  /// In de, this message translates to:
+  /// **'Gedanken'**
+  String get uebenGedanken;
+
+  /// No description provided for @uebenCoach.
+  ///
+  /// In de, this message translates to:
+  /// **'KI-Coach'**
+  String get uebenCoach;
+
   /// No description provided for @coursesYourFocusGoallabel.
   ///
   /// In de, this message translates to:

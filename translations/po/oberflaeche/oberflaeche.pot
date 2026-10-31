@@ -364,6 +364,48 @@ msgctxt "ui:heuteKurse#text"
 msgid "Kurse"
 msgstr ""
 
+#. Text der Oberfläche
+#. EN: Browse all courses
+msgctxt "ui:heuteAlleKurse#text"
+msgid "Alle Kurse ansehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Learn
+msgctxt "ui:navLernen#text"
+msgid "Lernen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Practice
+msgctxt "ui:navUeben#text"
+msgid "Üben"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Us
+msgctxt "ui:navWir#text"
+msgid "Wir"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Body
+msgctxt "ui:uebenKoerper#text"
+msgid "Körper"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thoughts
+msgctxt "ui:uebenGedanken#text"
+msgid "Gedanken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: AI coach
+msgctxt "ui:uebenCoach#text"
+msgid "KI-Coach"
+msgstr ""
+
 #. Platzhalter unverändert übernehmen: {goalLabel}
 #. EN: Your focus: {goalLabel}
 msgctxt "ui:coursesYourFocusGoallabel#text"

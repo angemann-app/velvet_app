@@ -7,9 +7,8 @@ import '../widgets/sos_button.dart';
 import '../widgets/update_dialog.dart';
 import 'courses/courses_screen.dart';
 import 'training/training_screen.dart';
-import 'cbt/cbt_journal_screen.dart';
 import 'couples_channel/couples_channel_screen.dart';
-import 'ai_coach/ai_coach_screen.dart';
+import 'ueben/ueben_screen.dart';
 import 'whats_new_screen.dart';
 import 'anleitung_screen.dart';
 import '../l10n/t.dart';
@@ -22,8 +21,14 @@ class MainNavigationScreen extends StatefulWidget {
 }
 
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
+  // Tabs: 0 Heute, 1 Lernen, 2 Üben, 3 Wir (Paar-Kanal).
+  static const _heute = 0, _lernen = 1, _ueben = 2, _wir = 3;
+
   int _currentIndex = 0;
   final GlobalKey<TrainingScreenState> _trainingKey = GlobalKey<TrainingScreenState>();
+  final GlobalKey<UebenScreenState> _uebenKey = GlobalKey<UebenScreenState>();
+  // Zählt bei jedem Tabwechsel hoch, damit Heute und Lernen erledigte Lektionen des anderen Tabs nachladen.
+  final ValueNotifier<int> _tabWechsel = ValueNotifier(0);
 
   @override
   void initState() {
@@ -41,35 +46,45 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       _currentIndex = index;
     });
     // Für Lesebestätigungen: Nur wer den Paar-Kanal wirklich sieht, hat gelesen.
-    NostrService().paarKanalSichtbar.value = index == 3;
+    NostrService().paarKanalSichtbar.value = index == _wir;
+    _tabWechsel.value++;
   }
 
+  /// Sprung aus Lektionen und Karten. Die Nummern sind die der alten fünf Tabs und bleiben dem Aufrufer so erhalten:
+  /// 0 Kurse, 1 Training (mit `subTab` kegel/breath), 2 Reframing, 3 Paar-Kanal, 4 KI-Coach.
   void _navigateToTab(int index, {String? subTab}) {
-    _showTab(index);
-    if (index == 1 && subTab != null) {
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        _trainingKey.currentState?.selectSubTab(subTab);
-      });
-    }
-  }
-
-  String _getAppBarTitle(int index) {
     switch (index) {
       case 0:
-        return t.mainNavigationProgrammeCourses;
-      case 1:
-        return t.mainNavigationSomaticsTraining;
-      case 2:
-        return t.mainNavigationCbtReframing;
+        _showTab(_heute);
       case 3:
+        _showTab(_wir);
+      default:
+        _showTab(_ueben);
+        final bereich = switch (index) {
+          1 => UebenScreenState.koerper,
+          2 => UebenScreenState.gedanken,
+          _ => UebenScreenState.coach,
+        };
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          _uebenKey.currentState?.waehle(bereich);
+          if (index == 1 && subTab != null) _trainingKey.currentState?.selectSubTab(subTab);
+        });
+    }
+  }
+  String _getAppBarTitle(int index) {
+    switch (index) {
+      case _heute:
+        return t.mainNavigationProgrammeCourses;
+      case _lernen:
+        return t.navLernen;
+      case _ueben:
+        return t.navUeben;
+      case _wir:
         return t.mainNavigationCoupleChannel;
-      case 4:
-        return t.mainNavigationAiCoach;
       default:
         return 'VelvetPulse';
     }
   }
-
   @override
   Widget build(BuildContext context) {
     // Im Spicy-Modus wird die ganze Oberfläche wärmer und röter (lib/widgets/spicy_atmosphaere.dart).
@@ -128,13 +143,17 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         children: [
           CoursesScreen(
             onNavigateToTool: _navigateToTab,
+            onZuLernen: () => _showTab(_lernen),
+            aktualisieren: _tabWechsel,
           ),
-          TrainingScreen(
-            key: _trainingKey,
+          CoursesScreen(
+            key: const ValueKey('lernen'),
+            lernen: true,
+            onNavigateToTool: _navigateToTab,
+            aktualisieren: _tabWechsel,
           ),
-          const CbtJournalScreen(),
+          UebenScreen(key: _uebenKey, trainingKey: _trainingKey),
           const CouplesChannelScreen(),
-          const AiCoachScreen(),
         ],
         ),
       ),
@@ -156,31 +175,25 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           onTap: _showTab,
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.menu_book_rounded),
-              activeIcon: Icon(Icons.menu_book_rounded),
+              icon: Icon(Icons.wb_sunny_outlined),
+              activeIcon: Icon(Icons.wb_sunny_rounded),
               label: t.mainNavigationCourses,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.fitness_center_rounded),
-              activeIcon: Icon(Icons.fitness_center_rounded),
-              label: t.mainNavigationTraining,
+              icon: Icon(Icons.menu_book_outlined),
+              activeIcon: Icon(Icons.menu_book_rounded),
+              label: t.navLernen,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.psychology_rounded),
-              activeIcon: Icon(Icons.psychology_rounded),
-              label: t.mainNavigationReframing,
+              icon: Icon(Icons.self_improvement_outlined),
+              activeIcon: Icon(Icons.self_improvement_rounded),
+              label: t.navUeben,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.favorite_outline_rounded),
               activeIcon: Icon(Icons.favorite_rounded),
-              label: t.navPaarKanalKurz,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.chat_bubble_outline_rounded),
-              activeIcon: Icon(Icons.chat_bubble_rounded),
-              label: t.mainNavigationAiCoach,
-            ),
-          ],
+              label: t.navWir,
+            ),          ],
         ),
       ),
     );

@@ -207,6 +207,27 @@ class AppLocalizationsEn extends AppLocalizations {
   String get heuteKurse => 'Courses';
 
   @override
+  String get heuteAlleKurse => 'Browse all courses';
+
+  @override
+  String get navLernen => 'Learn';
+
+  @override
+  String get navUeben => 'Practice';
+
+  @override
+  String get navWir => 'Us';
+
+  @override
+  String get uebenKoerper => 'Body';
+
+  @override
+  String get uebenGedanken => 'Thoughts';
+
+  @override
+  String get uebenCoach => 'AI coach';
+
+  @override
   String coursesYourFocusGoallabel(Object goalLabel) {
     return 'Your focus: $goalLabel';
   }

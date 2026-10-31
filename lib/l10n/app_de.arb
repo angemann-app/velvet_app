@@ -100,6 +100,13 @@
   "heuteReiterCheckin": "Check-in",
   "heuteReiterFunke": "Funke",
   "heuteKurse": "Kurse",
+  "heuteAlleKurse": "Alle Kurse ansehen",
+  "navLernen": "Lernen",
+  "navUeben": "Üben",
+  "navWir": "Wir",
+  "uebenKoerper": "Körper",
+  "uebenGedanken": "Gedanken",
+  "uebenCoach": "KI-Coach",
   "@heuteKursUndDauer": {
     "placeholders": {
       "kurs": {"type": "String"},

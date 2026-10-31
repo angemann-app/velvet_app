@@ -73,3 +73,8 @@ je Lektion.
 
 Name „Heute“; Streak entfällt; Tab „Lernen“ mit Kursen, Suche und Lesezeichen; KI-Coach unter „Üben“ sichtbar mit
 freundlicher Einrichtung; Stufe 1 zuerst mit alter Tab-Leiste.
+**Stufe 3 und 4 gebaut am 31.10.2026** (noch nicht veröffentlicht): SOS ist ein kleines Schild ohne Beschriftung. Die Tab-Leiste hat
+vier Tabs: **Heute** (Kopf, nächster Schritt, Check-in/Funke, geführte Audios, Einstieg „Alle Kurse ansehen“), **Lernen**
+(Filter und Kurse nach Schwerpunkten), **Üben** (Bereiche Körper, Gedanken, KI-Coach in `lib/screens/ueben/ueben_screen.dart`)
+und **Wir** (Paar-Kanal). Aufrufer wie Lektionen springen weiter mit den alten Tab-Nummern; `MainNavigationScreen` ordnet sie zu.
+Noch offen: Suche und Lesezeichen in „Lernen“, Willkommensschritt im KI-Coach und Onboarding (Stufe 5), „Weiter hören“ (Stufe 1b).

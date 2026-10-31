@@ -30,7 +30,7 @@ Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Starts
 
 <img src="anleitung/01_kurse.png" width="260" alt="Kurse und Lektionen">
 
-Der Tab Heute ist deine Startseite. Oben steht „Dein nächster Schritt“: die nächste offene Lektion, am Anfang aus dem Schwerpunkt deines Fokus. Darunter wählst du zwischen Check-in und Funke. Weiter unten findest du alle Kurse, geordnet nach sechs Schwerpunkten: Grundlagen, Annehmen und Lösen, Sich selbst entdecken, Lust als Paar, Berührung sowie Fantasie und Spiel. Ein Tipp auf einen Schwerpunkt klappt seine Kurse auf; anfangs ist der offen, der zu deinem Fokus passt. Mit den Filtern darüber wählst du zum Beispiel „Für Sie“, „Für Ihn“ oder „Für Paare“.
+Der Tab Heute ist deine Startseite. Oben steht „Dein nächster Schritt“: die nächste offene Lektion, am Anfang aus dem Schwerpunkt deines Fokus. Darunter wählst du zwischen Check-in und Funke. Alle Kurse findest du im Tab Lernen, geordnet nach sechs Schwerpunkten: Grundlagen, Annehmen und Lösen, Sich selbst entdecken, Lust als Paar, Berührung sowie Fantasie und Spiel. Ein Tipp auf einen Schwerpunkt klappt seine Kurse auf; anfangs ist der offen, der zu deinem Fokus passt. Mit den Filtern darüber wählst du zum Beispiel „Für Sie“, „Für Ihn“ oder „Für Paare“.
 
 Jede Lektion hat einen Text, eine Aufnahme zum Anhören und am Ende eine Frage zum Nachdenken. Manche Lektionen haben unten einen Knopf, der dich direkt zur passenden Übung bringt, etwa zum Beckenboden-Timer oder zu einem geführten Audio.
 
@@ -66,7 +66,7 @@ Innenansichten (nur im Spicy-Modus, ab 18): zusammenhängende Hörgeschichten vo
 
 <img src="anleitung/02_training.png" width="260" alt="Training und Akuthilfe">
 
-Im Tab Training findest du den Beckenboden-Timer mit vier Übungsarten und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.
+Im Tab Üben, Bereich Körper, findest du den Beckenboden-Timer mit vier Übungsarten und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.
 
 Der SOS-Knopf oben rechts hilft in Momenten mit Druck oder Angst: mit kurzen Schritten für vorher, im Moment und danach.
 
@@ -75,7 +75,7 @@ Der SOS-Knopf oben rechts hilft in Momenten mit Druck oder Angst: mit kurzen Sch
 
 <img src="anleitung/03_reframing.png" width="260" alt="Reframing-Tagebuch und Check-in">
 
-Im Tab Reframing schreibst du belastende Gedanken auf und prüfst sie nach der Methode der kognitiven Verhaltenstherapie: Was ist passiert, was hast du gedacht, was spricht dafür, was dagegen, und wie lässt es sich anders sehen?
+Im Tab Üben, Bereich Gedanken, schreibst du belastende Gedanken auf und prüfst sie nach der Methode der kognitiven Verhaltenstherapie: Was ist passiert, was hast du gedacht, was spricht dafür, was dagegen, und wie lässt es sich anders sehen?
 
 Auf der Startseite wartet außerdem der 30-Sekunden-Check-in: Wie stehen Stress und Lust heute zueinander?
 

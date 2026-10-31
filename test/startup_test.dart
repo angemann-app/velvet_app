@@ -37,7 +37,7 @@ void main() {
       expect(tester.takeException(), isNull);
       expect(find.byType(MainNavigationScreen), findsOneWidget);
 
-      for (final tab in ['Training', 'Reframing', 'Paar-Kanal', 'KI-Coach', 'Heute']) {
+      for (final tab in ['Lernen', 'Üben', 'Wir', 'Heute']) {
         await tester.tap(find.text(tab).last);
         for (var i = 0; i < 5; i++) {
           await tester.pump(const Duration(milliseconds: 100));

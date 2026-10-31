@@ -143,17 +143,21 @@ void main() {
     await tester.drag(find.byType(Scrollable).first, const Offset(0, -900));
     await _shot(tester, '01_kurse_unten', errors);
 
-    final tabs = {t.mainNavigationTraining: '02_training', t.mainNavigationReframing: '03_reframing', t.mainNavigationCoupleChannel: '04_paarkanal', t.mainNavigationAiCoach: '05_kicoach'};
-    for (final entry in tabs.entries) {
-      await tester.tap(find.text(entry.key).last);
-      await _shot(tester, entry.value, errors);
-    }
-
+    await tester.tap(find.text(t.navLernen).last);
+    await _shot(tester, '01_lernen', errors);
+    await tester.tap(find.text(t.navUeben).last);
+    await _shot(tester, '02_training', errors);
+    await tester.tap(find.text(t.uebenGedanken));
+    await _shot(tester, '03_reframing', errors);
+    await tester.tap(find.text(t.uebenCoach));
+    await _shot(tester, '05_kicoach', errors);
+    await tester.tap(find.text(t.navWir).last);
+    await _shot(tester, '04_paarkanal', errors);
     // Offene Einladung, auf die sich jemand gemeldet hat.
     await tester.runAsync(() => NostrService().startInvite('Anna'));
     NostrService().joinRequestNotifier.value = 'b' * 64;
     await tester.pumpWidget(_app(const MainNavigationScreen()));
-    await tester.tap(find.text(t.mainNavigationCoupleChannel).last);
+    await tester.tap(find.text(t.navWir).last);
     await _shot(tester, '04_paarkanal_anfrage', errors);
     await tester.runAsync(() => NostrService().cancelInvite());
 
@@ -175,7 +179,7 @@ void main() {
     });
     NostrService().partnerReadUntil.value = DateTime(2026, 10, 23, 21).millisecondsSinceEpoch ~/ 1000;
     await tester.pumpWidget(_app(const MainNavigationScreen()));
-    await tester.tap(find.text(t.mainNavigationCoupleChannel).last);
+    await tester.tap(find.text(t.navWir).last);
     await _shot(tester, '04_paarkanal_verbunden', errors);
     await tester.tap(find.text(t.couplesChannelWishes));
     await _shot(tester, '04_paarkanal_wuensche', errors);

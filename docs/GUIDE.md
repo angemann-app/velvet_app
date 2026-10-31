@@ -30,7 +30,7 @@ You can reach your profile at any time via the person icon at the top of the sta
 
 <img src="anleitung/01_kurse.png" width="260" alt="Courses and lessons">
 
-The Today tab is your start page. At the top is “Your next step”: the next open lesson, at first from the focus area matching your focus. Below it you choose between check-in and spark. Further down are all courses, grouped into six focus areas: Foundations, Accepting and letting go, Discovering yourself, Desire as a couple, Touch, and Fantasy and play. Tapping a focus area opens its courses; at first the one matching your focus is open. Use the filters above to choose, for example, “For her”, “For him” or “For couples”.
+The Today tab is your start page. At the top is “Your next step”: the next open lesson, at first from the focus area matching your focus. Below it you choose between check-in and spark. All courses are in the Learn tab, grouped into six focus areas: Foundations, Accepting and letting go, Discovering yourself, Desire as a couple, Touch, and Fantasy and play. Tapping a focus area opens its courses; at first the one matching your focus is open. Use the filters above to choose, for example, “For her”, “For him” or “For couples”.
 
 Every lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.
 
@@ -66,7 +66,7 @@ Inner views (spicy mode only, 18+): continuous audio stories of about 15 to 25 m
 
 <img src="anleitung/02_training.png" width="260" alt="Training and quick help">
 
-The Training tab contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
+The Practice tab, under Body, contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
 
 The SOS button at the top right helps in moments of pressure or anxiety, with short steps for before, in the moment and afterwards.
 
@@ -75,7 +75,7 @@ The SOS button at the top right helps in moments of pressure or anxiety, with sh
 
 <img src="anleitung/03_reframing.png" width="260" alt="Reframing journal and check-in">
 
-In the Reframing tab you write down distressing thoughts and examine them using the method of cognitive behavioural therapy: what happened, what did you think, what speaks for it, what against it, and how else could you see it?
+In the Practice tab, under Thoughts, you write down distressing thoughts and examine them using the method of cognitive behavioural therapy: what happened, what did you think, what speaks for it, what against it, and how else could you see it?
 
 The start page also has the 30-second check-in: how do stress and desire relate to each other today?
 

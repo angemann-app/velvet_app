@@ -58,6 +58,13 @@
   "heuteReiterCheckin": "Check-in",
   "heuteReiterFunke": "Spark",
   "heuteKurse": "Courses",
+  "heuteAlleKurse": "Browse all courses",
+  "navLernen": "Learn",
+  "navUeben": "Practice",
+  "navWir": "Us",
+  "uebenKoerper": "Body",
+  "uebenGedanken": "Thoughts",
+  "uebenCoach": "AI coach",
   "@heuteKursUndDauer": {
     "placeholders": {
       "kurs": {"type": "String"},
