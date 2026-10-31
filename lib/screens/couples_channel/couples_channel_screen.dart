@@ -921,8 +921,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
           gradient: isMe
-              ? const LinearGradient(
-                  colors: [Color(0xFFF59E0B), Color(0xFFD97706)],
+              ? LinearGradient(
+                  colors: [AppTheme.sageLight, AppTheme.sageGreen],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 )
