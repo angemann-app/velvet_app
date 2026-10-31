@@ -47,7 +47,7 @@ Future<void> showExportBackupDialog(BuildContext context) async {
       title: Text(t.backupDialogsBackupCopied),
       content: Text(
         t.backupDialogsBackupCopiedText + (withSecrets ? t.backupDialogsPasswordCannotBeReset : ''),
-        style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+        style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
       ),
       actions: [TextButton(onPressed: () => Navigator.pop(ctx), child: Text(t.backupDialogsOk))],
     ),

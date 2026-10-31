@@ -246,7 +246,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                 ),
                 child: Text(
                   t.breathPacerViewCompletedcyclesCyclesCompleted(_completedCycles),
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.textPrimary,
                     fontWeight: FontWeight.w600,
                     fontSize: 12,
@@ -297,7 +297,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                         children: [
                           Text(
                             '$_secondsLeft',
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 54,
                               fontWeight: FontWeight.w900,
                               color: AppTheme.textPrimary,
@@ -340,7 +340,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                 Text(
                   current.action,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.textPrimary,
                     fontSize: 14,
                     height: 1.4,
@@ -353,7 +353,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                       ? t.breathPacerViewALongerExhaleMeasurablySlows
                       : t.breathPacerViewTheDoubleInhaleIsMeant,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.textMuted,
                     fontSize: 11,
                   ),
@@ -374,7 +374,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                   shape: const CircleBorder(),
                   padding: const EdgeInsets.all(16),
                 ),
-                child: const Icon(Icons.refresh_rounded, color: AppTheme.textSecondary),
+                child: Icon(Icons.refresh_rounded, color: AppTheme.textSecondary),
               ),
               const SizedBox(width: 18),
               SizedBox(
@@ -403,7 +403,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                   shape: const CircleBorder(),
                   padding: const EdgeInsets.all(16),
                 ),
-                child: const Icon(Icons.skip_next_rounded, color: AppTheme.textSecondary),
+                child: Icon(Icons.skip_next_rounded, color: AppTheme.textSecondary),
               ),
             ],
           ),

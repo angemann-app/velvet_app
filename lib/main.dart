@@ -24,7 +24,7 @@ void main() async {
 
   try {
     SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
+      SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.light,
         statusBarBrightness: Brightness.dark,
@@ -57,7 +57,15 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
   void initState() {
     super.initState();
     Sprache.wahl.addListener(_spracheGewechselt);
+    StorageService.spicyAenderung.addListener(_spicyGewechselt);
     _initApp();
+  }
+
+  /// Spicy an oder aus: Die Farben hängen am Modus (AppTheme), also alles neu aufbauen. Der Zustand der Seiten bleibt.
+  void _spicyGewechselt() {
+    if (!mounted) return;
+    setState(() {});
+    WidgetsBinding.instance.reassembleApplication();
   }
 
   Future<void> _initApp() async {

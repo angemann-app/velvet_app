@@ -1,24 +1,32 @@
 import 'package:flutter/material.dart';
 
+import '../services/storage_service.dart';
+
 class AppTheme {
+  // Zwei Paletten: Skizzenbuch (normal) und Spicy (tiefes Weinrot, wärmer). Die Farben sind bewusst keine
+  // Konstanten, sondern hängen am Spicy-Modus (docs/konzepte/redesign-bleistift.md); nach dem Umschalten baut
+  // SpicyModus.neuAufbauen die Oberfläche neu auf.
+  static bool get _sp => StorageService.spicyMode();
+  static Color _w(Color normal, Color spicy) => _sp ? spicy : normal;
+
   // Brand Colors
-  static const Color background = Color(0xFF1D1F22); // Nachtpapier (Graphit)
-  static const Color surface = Color(0xFF26282C);    // Karte auf Nachtpapier
-  static const Color surfaceLight = Color(0xFF34373C); // Erhöhtes Element
-  static const Color border = Color(0xFF4A4C50);       // Skizzenlinie
-  static const Color sageGreen = Color(0xFFD9A3AB);   // Gedämpftes Rosé (Hauptakzent, früher Salbeigrün)
-  static const Color sageLight = Color(0xFFE8C2C8);   // Helles Rosé
-  static const Color sageGlow = Color(0x33D9A3AB);    // Sanfter Schimmer
-  static const Color amber = Color(0xFFCFA163);       // Gedämpftes Sand
-  static const Color amberLight = Color(0xFFE6C48B);
-  static const Color amberGlow = Color(0x33CFA163);
-  static const Color rose = Color(0xFFF43F5E);        // SOS / Accent
-  static const Color roseGlow = Color(0x33F43F5E);
+  static Color get background => _w(const Color(0xFF1D1F22), const Color(0xFF1A0F14)); // Nachtpapier (Graphit)
+  static Color get surface => _w(const Color(0xFF26282C), const Color(0xFF2A1820));    // Karte auf Nachtpapier
+  static Color get surfaceLight => _w(const Color(0xFF34373C), const Color(0xFF3B2330)); // Erhöhtes Element
+  static Color get border => _w(const Color(0xFF4A4C50), const Color(0xFF5E3744));       // Skizzenlinie
+  static Color get sageGreen => _w(const Color(0xFFD9A3AB), const Color(0xFFEE8497));   // Gedämpftes Rosé (Hauptakzent, früher Salbeigrün)
+  static Color get sageLight => _w(const Color(0xFFE8C2C8), const Color(0xFFF7B8C4));   // Helles Rosé
+  static Color get sageGlow => _w(const Color(0x33D9A3AB), const Color(0x44EE8497));    // Sanfter Schimmer
+  static Color get amber => _w(const Color(0xFFCFA163), const Color(0xFFE0956A));       // Gedämpftes Sand
+  static Color get amberLight => _w(const Color(0xFFE6C48B), const Color(0xFFF0B48C));
+  static Color get amberGlow => _w(const Color(0x33CFA163), const Color(0x44E0956A));
+  static Color get rose => _w(const Color(0xFFF43F5E), const Color(0xFFFF4D6D));        // SOS / Accent
+  static Color get roseGlow => _w(const Color(0x33F43F5E), const Color(0x44FF4D6D));
 
   // Typography Colors
-  static const Color textPrimary = Color(0xFFE9E4D8);
-  static const Color textSecondary = Color(0xFFB9B3A6);
-  static const Color textMuted = Color(0xFF8A857A);
+  static Color get textPrimary => _w(const Color(0xFFE9E4D8), const Color(0xFFF4E8E4));
+  static Color get textSecondary => _w(const Color(0xFFB9B3A6), const Color(0xFFCDB5B3));
+  static Color get textMuted => _w(const Color(0xFF8A857A), const Color(0xFF9A8180));
 
   /// Überschriften in Serif (Android: Noto Serif, ohne mitgelieferte Schriftdatei), alles andere bleibt Systemschrift.
   static const TextTheme _ueberschriften = TextTheme(
@@ -33,7 +41,7 @@ class AppTheme {
       useMaterial3: true,
       brightness: Brightness.dark,
       scaffoldBackgroundColor: background,
-      colorScheme: const ColorScheme.dark(
+      colorScheme: ColorScheme.dark(
         primary: sageGreen,
         secondary: amber,
         surface: surface,
@@ -45,7 +53,7 @@ class AppTheme {
       ),
       fontFamily: null, // Fließtext: Systemschrift; Überschriften serif (Skizzenbuch, siehe docs/konzepte/redesign-bleistift.md)
       textTheme: _ueberschriften,
-      appBarTheme: const AppBarTheme(
+      appBarTheme: AppBarTheme(
         backgroundColor: background,
         elevation: 0,
         scrolledUnderElevation: 0,
@@ -64,7 +72,7 @@ class AppTheme {
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
-          side: const BorderSide(color: border, width: 1),
+          side: BorderSide(color: border, width: 1),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -85,7 +93,7 @@ class AppTheme {
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: textPrimary,
-          side: const BorderSide(color: border, width: 1.2),
+          side: BorderSide(color: border, width: 1.2),
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -101,21 +109,21 @@ class AppTheme {
         fillColor: surfaceLight.withValues(alpha: 0.4),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: border),
+          borderSide: BorderSide(color: border),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: border),
+          borderSide: BorderSide(color: border),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: sageGreen, width: 1.5),
+          borderSide: BorderSide(color: sageGreen, width: 1.5),
         ),
-        labelStyle: const TextStyle(color: textSecondary),
-        hintStyle: const TextStyle(color: textMuted),
+        labelStyle: TextStyle(color: textSecondary),
+        hintStyle: TextStyle(color: textMuted),
         contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: background,
         selectedItemColor: sageGreen,
         unselectedItemColor: textMuted,

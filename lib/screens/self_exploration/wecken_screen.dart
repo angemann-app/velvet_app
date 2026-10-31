@@ -211,7 +211,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
       ),
       body: SafeArea(
         child: _traumDaten == null
-            ? const Center(child: CircularProgressIndicator(color: AppTheme.rose))
+            ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
             : (laeuft ? _buildPlayer() : _buildEinrichtung()),
       ),
     );
@@ -223,7 +223,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
       children: [
         Text(
           t.weckenBegleitungEinleitung,
-          style: const TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5),
+          style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5),
         ),
         const SizedBox(height: 18),
         SizedBox(
@@ -236,7 +236,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
             label: Text(t.weckenTraumNotieren, style: const TextStyle(fontWeight: FontWeight.w600)),
             style: OutlinedButton.styleFrom(
               foregroundColor: AppTheme.textPrimary,
-              side: const BorderSide(color: AppTheme.border),
+              side: BorderSide(color: AppTheme.border),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             ),
           ),
@@ -244,7 +244,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
         const SizedBox(height: 24),
         Text(
           t.paarAbendVoice,
-          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
         ),
         const SizedBox(height: 10),
         Wrap(
@@ -260,17 +260,17 @@ class _WeckenScreenState extends State<WeckenScreen> {
           value: _teppich,
           activeThumbColor: AppTheme.rose,
           onChanged: (v) => setState(() => _teppich = v),
-          title: Text(t.paarAbendSoftSoundBed, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
           subtitle: Text(
             t.paarAbendCalmBackgroundDuringTheSilences,
-            style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12.5),
+            style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5),
           ),
         ),
         if (_traumDaten?.hinweis('hinweis_schlafparalyse') != null) ...[
           const SizedBox(height: 14),
           Text(
             _traumDaten!.hinweis('hinweis_schlafparalyse')!,
-            style: const TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5),
+            style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5),
           ),
         ],
         const SizedBox(height: 24),
@@ -327,8 +327,8 @@ class _WeckenScreenState extends State<WeckenScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(_fmt(_vergangen), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
-              Text(_fmt(gesamt), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+              Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+              Text(_fmt(gesamt), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
             ],
           ),
           const Spacer(),
@@ -352,13 +352,13 @@ class _WeckenScreenState extends State<WeckenScreen> {
           const SizedBox(height: 24),
           Text(
             t.weckenLaeuft,
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: AppTheme.textSecondary),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: AppTheme.textSecondary),
           ),
           const SizedBox(height: 10),
           Text(
             _pausiert ? t.paarAbendPaused : t.weckenLaeuftText,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 13, color: AppTheme.textMuted, height: 1.4),
+            style: TextStyle(fontSize: 13, color: AppTheme.textMuted, height: 1.4),
           ),
           const Spacer(),
           if (_fertig)
@@ -369,7 +369,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
                 onPressed: () => Navigator.of(context).pop(),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: AppTheme.rose,
-                  side: const BorderSide(color: AppTheme.rose),
+                  side: BorderSide(color: AppTheme.rose),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                 ),
                 child: Text(t.couplesChannelClose, style: const TextStyle(fontWeight: FontWeight.w700)),

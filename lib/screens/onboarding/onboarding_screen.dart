@@ -165,7 +165,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         builder: (context, setModalState) {
           return Container(
             padding: EdgeInsets.fromLTRB(20, 16, 20, MediaQuery.of(ctx).viewInsets.bottom + 20),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: AppTheme.surface,
               borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
               border: Border(top: BorderSide(color: AppTheme.border, width: 1.5)),
@@ -298,7 +298,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           const SizedBox(height: 6),
                           Text(
                             t.onboardingBackupForProfilename(clipData.profileName),
-                            style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13, fontWeight: FontWeight.w600),
+                            style: TextStyle(color: AppTheme.textPrimary, fontSize: 13, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 10),
                           SizedBox(
@@ -334,15 +334,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   TextField(
                     controller: inputController,
                     maxLines: 4,
-                    style: const TextStyle(fontSize: 12, fontFamily: 'monospace', color: AppTheme.textPrimary),
+                    style: TextStyle(fontSize: 12, fontFamily: 'monospace', color: AppTheme.textPrimary),
                     decoration: InputDecoration(
                       hintText: t.onboardingPasteJsonTextHereE,
-                      hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 11),
+                      hintStyle: TextStyle(color: AppTheme.textMuted, fontSize: 11),
                       filled: true,
                       fillColor: AppTheme.background,
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: AppTheme.border)),
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: AppTheme.border)),
                       suffixIcon: IconButton(
-                        icon: const Icon(Icons.paste_rounded, color: AppTheme.amber, size: 20),
+                        icon: Icon(Icons.paste_rounded, color: AppTheme.amber, size: 20),
                         tooltip: t.pairingModalPasteFromClipboard,
                         onPressed: () async {
                           final c = await Clipboard.getData('text/plain');
@@ -476,7 +476,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ],
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.spa_rounded,
                       color: AppTheme.amber,
                       size: 34,
@@ -544,7 +544,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                   child: Row(
                     children: [
-                      const Icon(Icons.cloud_download_rounded, color: AppTheme.sageGreen, size: 24),
+                      Icon(Icons.cloud_download_rounded, color: AppTheme.sageGreen, size: 24),
                       const SizedBox(width: 12),
                       Expanded(
                         child: Column(
@@ -568,7 +568,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       OutlinedButton(
                         onPressed: _promptRestoreBackup,
                         style: OutlinedButton.styleFrom(
-                          side: const BorderSide(color: AppTheme.sageGreen),
+                          side: BorderSide(color: AppTheme.sageGreen),
                           foregroundColor: AppTheme.sageGreen,
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                         ),
@@ -585,23 +585,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(height: 8),
               TextField(
                 controller: _nameController,
-                style: const TextStyle(color: AppTheme.textPrimary, fontSize: 15),
+                style: TextStyle(color: AppTheme.textPrimary, fontSize: 15),
                 decoration: InputDecoration(
                   hintText: t.onboardingYourFirstNameOrA,
-                  prefixIcon: const Icon(Icons.badge_outlined, color: AppTheme.textMuted, size: 20),
+                  prefixIcon: Icon(Icons.badge_outlined, color: AppTheme.textMuted, size: 20),
                   filled: true,
                   fillColor: AppTheme.surface,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
-                    borderSide: const BorderSide(color: AppTheme.border),
+                    borderSide: BorderSide(color: AppTheme.border),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
-                    borderSide: const BorderSide(color: AppTheme.border),
+                    borderSide: BorderSide(color: AppTheme.border),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
-                    borderSide: const BorderSide(color: AppTheme.sageGreen),
+                    borderSide: BorderSide(color: AppTheme.sageGreen),
                   ),
                 ),
               ),
@@ -796,7 +796,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               );
                             }
                           },
-                    icon: const Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.textMuted),
+                    icon: Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.textMuted),
                     label: Text(
                       t.onboardingSkipGoStraightToThe,
                       style: TextStyle(color: AppTheme.textMuted, fontSize: 13),
@@ -807,7 +807,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
               if (widget.isEditing) ...[
                 const SizedBox(height: 24),
-                const Divider(color: AppTheme.border),
+                Divider(color: AppTheme.border),
                 const SizedBox(height: 16),
                 OutlinedButton.icon(
                   onPressed: () =>
@@ -829,7 +829,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   style: OutlinedButton.styleFrom(
                     foregroundColor: AppTheme.textSecondary,
                     minimumSize: const Size.fromHeight(48),
-                    side: const BorderSide(color: AppTheme.border),
+                    side: BorderSide(color: AppTheme.border),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -861,7 +861,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         const SizedBox(width: 8),
         Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w700,
             color: AppTheme.textPrimary,
@@ -985,7 +985,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   const SizedBox(height: 2),
                   Text(
                     subtitle,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: AppTheme.textSecondary,
                       fontSize: 11.5,
                     ),
@@ -1031,7 +1031,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           Row(
             children: [
-              const Icon(Icons.system_update_rounded, color: AppTheme.sageGreen, size: 20),
+              Icon(Icons.system_update_rounded, color: AppTheme.sageGreen, size: 20),
               const SizedBox(width: 10),
               Expanded(
                 child: GestureDetector(
@@ -1046,7 +1046,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     future: UpdateService.installedVersion(),
                     builder: (context, snap) => Text(
                       t.onboardingVersionData(snap.data ?? '…'),
-                      style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+                      style: TextStyle(color: AppTheme.textSecondary, fontSize: 13),
                     ),
                   ),
                 ),
@@ -1067,7 +1067,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               _updateChannel == UpdateChannel.beta
                   ? t.onboardingYouGetNewFeaturesEarlier
                   : t.onboardingOnlyTestedVersionsWhenSwitching,
-              style: const TextStyle(color: AppTheme.textMuted, fontSize: 12, height: 1.35),
+              style: TextStyle(color: AppTheme.textMuted, fontSize: 12, height: 1.35),
             ),
             onChanged: (beta) async {
               final channel = beta ? UpdateChannel.beta : UpdateChannel.stable;
@@ -1094,14 +1094,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           Row(
             children: [
-              const Icon(Icons.translate_rounded, color: AppTheme.sageGreen, size: 20),
+              Icon(Icons.translate_rounded, color: AppTheme.sageGreen, size: 20),
               const SizedBox(width: 8),
               Text(t.spracheTitel,
-                  style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14.5, fontWeight: FontWeight.w700)),
+                  style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5, fontWeight: FontWeight.w700)),
             ],
           ),
           const SizedBox(height: 4),
-          Text(t.spracheHinweis, style: const TextStyle(color: AppTheme.textMuted, fontSize: 12.5, height: 1.4)),
+          Text(t.spracheHinweis, style: TextStyle(color: AppTheme.textMuted, fontSize: 12.5, height: 1.4)),
           const SizedBox(height: 6),
           RadioGroup<String>(
             groupValue: Sprache.wahl.value,
@@ -1119,7 +1119,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   dense: true,
                   contentPadding: EdgeInsets.zero,
                   activeColor: AppTheme.sageGreen,
-                  title: Text(text, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14)),
+                  title: Text(text, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14)),
                 ),
             ]),
           ),
@@ -1165,7 +1165,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               _lockSupported
                   ? t.onboardingOnOpeningAndAfterOne
                   : t.onboardingNoScreenLockIsSet,
-              style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),
           SwitchListTile(
@@ -1236,7 +1236,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             title: Text(t.lautsprecherEinstellungFrageTitel, style: const TextStyle(fontSize: 14)),
             subtitle: Text(
               t.lautsprecherEinstellungFrageText,
-              style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),
           SwitchListTile(
@@ -1250,7 +1250,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             title: Text(t.lautsprecherEinstellungPauseTitel, style: const TextStyle(fontSize: 14)),
             subtitle: Text(
               t.lautsprecherEinstellungPauseText,
-              style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
             ),
           ),
         ],
@@ -1275,7 +1275,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         title: Text(t.spicyModus, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700)),
         subtitle: Text(
           t.spicyModusText,
-          style: const TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+          style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
         ),
         onChanged: (value) async {
           if (value) {
@@ -1395,11 +1395,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           Row(
             children: [
-              const Icon(Icons.waving_hand_rounded, color: AppTheme.amber, size: 20),
+              Icon(Icons.waving_hand_rounded, color: AppTheme.amber, size: 20),
               const SizedBox(width: 8),
               Text(
                 t.halloTitel,
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppTheme.textPrimary,
                   fontSize: 14.5,
                   fontWeight: FontWeight.w700,
@@ -1410,13 +1410,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           const SizedBox(height: 6),
           Text(
             t.halloErklaerung,
-            style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
+            style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
           ),
           const SizedBox(height: 12),
           if (gesendet != null)
             Text(
               t.halloDankeGesendet(gesendet),
-              style: const TextStyle(color: AppTheme.sageGreen, fontSize: 13, fontWeight: FontWeight.w600),
+              style: TextStyle(color: AppTheme.sageGreen, fontSize: 13, fontWeight: FontWeight.w600),
             )
           else
             OutlinedButton.icon(

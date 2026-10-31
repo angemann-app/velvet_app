@@ -197,7 +197,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                             _todayCheckIn != null
                                 ? t.dailyCheckinCardStressStresslevelPressurePressurelevel(_getStressLabel(_stressLevel), _getPressureLabel(_pressureLevel))
                                 : t.dailyCheckinCardHowDoStressPerformancePressure,
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: AppTheme.textSecondary,
                               fontSize: 12,
                             ),
@@ -217,7 +217,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
 
           // Expanded Content
           if (_isExpanded) ...[
-            const Divider(color: AppTheme.border, height: 1),
+            Divider(color: AppTheme.border, height: 1),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
               child: Column(
@@ -237,7 +237,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       ),
                       Text(
                         _getStressLabel(_stressLevel),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: AppTheme.amber,
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
@@ -281,7 +281,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       ),
                       Text(
                         _getPressureLabel(_pressureLevel),
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: AppTheme.sageGreen,
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
@@ -389,14 +389,14 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Icon(Icons.insights_rounded, color: AppTheme.amberLight, size: 18),
+                    Icon(Icons.insights_rounded, color: AppTheme.amberLight, size: 18),
                     const SizedBox(width: 10),
                     Expanded(
                       child: Text(
                         _stressLevel >= 4
                             ? t.dailyCheckinCardCoachingInsightYourEverydayStress
                             : t.dailyCheckinCardCoachingInsightWhenEverydayStress,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 12,
                           color: AppTheme.textSecondary,
                           height: 1.35,

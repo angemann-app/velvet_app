@@ -22,7 +22,7 @@ class KegelGuideSheet extends StatelessWidget {
       maxChildSize: 0.95,
       builder: (context, scrollController) {
         return Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: AppTheme.surface,
             borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
             boxShadow: [
@@ -81,14 +81,14 @@ class KegelGuideSheet extends StatelessWidget {
                       ],
                     ),
                     IconButton(
-                      icon: const Icon(Icons.close_rounded, color: AppTheme.textMuted),
+                      icon: Icon(Icons.close_rounded, color: AppTheme.textMuted),
                       onPressed: () => Navigator.of(context).pop(),
                     ),
                   ],
                 ),
               ),
 
-              const Divider(color: AppTheme.border, height: 1),
+              Divider(color: AppTheme.border, height: 1),
 
               // Content Body
               Expanded(
@@ -265,10 +265,10 @@ class KegelGuideSheet extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Icon(Icons.lightbulb_outline_rounded, color: AppTheme.amber, size: 18),
+          Icon(Icons.lightbulb_outline_rounded, color: AppTheme.amber, size: 18),
           const SizedBox(width: 8),
           Expanded(
-            child: Text(text, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 12, fontWeight: FontWeight.w600)),
+            child: Text(text, style: TextStyle(color: AppTheme.textPrimary, fontSize: 12, fontWeight: FontWeight.w600)),
           ),
         ],
       ),
@@ -283,10 +283,10 @@ class KegelGuideSheet extends StatelessWidget {
         children: [
           SizedBox(
             width: 82,
-            child: Text(when, style: const TextStyle(color: AppTheme.sageGreen, fontSize: 12.5, fontWeight: FontWeight.w700)),
+            child: Text(when, style: TextStyle(color: AppTheme.sageGreen, fontSize: 12.5, fontWeight: FontWeight.w700)),
           ),
           Expanded(
-            child: Text(what, style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4)),
+            child: Text(what, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4)),
           ),
         ],
       ),
@@ -314,7 +314,7 @@ class KegelGuideSheet extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
                   color: AppTheme.textPrimary,
@@ -386,7 +386,7 @@ class KegelGuideSheet extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   text,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.textSecondary,
                     fontSize: 12,
                     height: 1.4,
@@ -429,7 +429,7 @@ class KegelGuideSheet extends StatelessWidget {
               const SizedBox(width: 8),
               Text(
                 title,
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppTheme.textPrimary,
                   fontSize: 13,
                   fontWeight: FontWeight.w700,
@@ -452,7 +452,7 @@ class KegelGuideSheet extends StatelessWidget {
           const SizedBox(height: 6),
           Text(
             description,
-            style: const TextStyle(
+            style: TextStyle(
               color: AppTheme.textSecondary,
               fontSize: 12,
               height: 1.4,
@@ -494,7 +494,7 @@ class KegelGuideSheet extends StatelessWidget {
                 ),
                 Text(
                   description,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.textSecondary,
                     fontSize: 12,
                     height: 1.35,

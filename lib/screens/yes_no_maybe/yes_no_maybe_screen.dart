@@ -167,7 +167,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
         maxChildSize: 0.95,
         expand: false,
         builder: (ctx, scrollController) => Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: AppTheme.surface,
             borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
             border: Border(top: BorderSide(color: AppTheme.border, width: 1.5)),
@@ -186,7 +186,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               const SizedBox(height: 18),
               Text(
                 item.text,
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.textPrimary, height: 1.3),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.textPrimary, height: 1.3),
               ),
               if (item.image != null) ...[
                 const SizedBox(height: 16),
@@ -201,7 +201,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               const SizedBox(height: 16),
               Text(
                 item.explanation,
-                style: const TextStyle(fontSize: 14.5, color: AppTheme.textSecondary, height: 1.55),
+                style: TextStyle(fontSize: 14.5, color: AppTheme.textSecondary, height: 1.55),
               ),
               if (linked != null) ...[
                 const SizedBox(height: 22),
@@ -224,7 +224,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     ),
                     child: Row(
                       children: [
-                        const Icon(Icons.menu_book_rounded, color: AppTheme.amber),
+                        Icon(Icons.menu_book_rounded, color: AppTheme.amber),
                         const SizedBox(width: 12),
                         Expanded(
                           child: Column(
@@ -235,14 +235,14 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                                       fontSize: 11, fontWeight: FontWeight.w800, color: AppTheme.amber, letterSpacing: 0.6)),
                               const SizedBox(height: 2),
                               Text(linked.$1.title,
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
                               Text(linked.$2.title,
-                                  style: const TextStyle(fontSize: 12, color: AppTheme.textMuted)),
+                                  style: TextStyle(fontSize: 12, color: AppTheme.textMuted)),
                             ],
                           ),
                         ),
-                        const Icon(Icons.chevron_right_rounded, color: AppTheme.textMuted),
+                        Icon(Icons.chevron_right_rounded, color: AppTheme.textMuted),
                       ],
                     ),
                   ),
@@ -491,7 +491,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                         children: [
                           Text(
                             category.title,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w800,
                               color: AppTheme.textPrimary,
@@ -499,7 +499,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                           ),
                           Text(
                             category.description,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 11,
                               color: AppTheme.textMuted,
                             ),
@@ -543,7 +543,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           const SizedBox(width: 4),
           Text(
             value,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w800,
               color: AppTheme.textPrimary,
@@ -608,7 +608,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               Expanded(
                 child: Text(
                   item.text,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: AppTheme.textPrimary,
@@ -628,7 +628,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(color: AppTheme.border),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.info_outline_rounded,
                     size: 16,
                     color: AppTheme.amber,
@@ -741,7 +741,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                       shape: BoxShape.circle,
                       border: Border.all(color: AppTheme.amber.withValues(alpha: 0.4)),
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Icon(Icons.favorite_border_rounded, size: 36, color: AppTheme.amber),
                     ),
                   ),
@@ -956,7 +956,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               children: [
                 Text(
                   item.text,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 13.5,
                     fontWeight: FontWeight.w700,
                     color: AppTheme.textPrimary,

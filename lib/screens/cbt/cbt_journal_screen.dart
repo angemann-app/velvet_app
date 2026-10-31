@@ -99,7 +99,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
-      return const Center(
+      return Center(
         child: CircularProgressIndicator(color: AppTheme.sageGreen),
       );
     }
@@ -202,7 +202,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                 shape: BoxShape.circle,
                 border: Border.all(color: AppTheme.border),
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.psychology_rounded,
                 color: AppTheme.amber,
                 size: 48,
@@ -287,7 +287,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               color: AppTheme.sageGreen.withValues(alpha: 0.15),
               shape: BoxShape.circle,
             ),
-            child: const Icon(Icons.edit_note_rounded, color: AppTheme.sageGreen, size: 22),
+            child: Icon(Icons.edit_note_rounded, color: AppTheme.sageGreen, size: 22),
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -305,7 +305,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                 const SizedBox(height: 2),
                 Text(
                   t.cbtJournalProtocolsSaved(_entries.length),
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 12,
                     color: AppTheme.textSecondary,
                   ),
@@ -337,11 +337,11 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               children: [
                 Row(
                   children: [
-                    const Icon(Icons.calendar_today_rounded, size: 13, color: AppTheme.textMuted),
+                    Icon(Icons.calendar_today_rounded, size: 13, color: AppTheme.textMuted),
                     const SizedBox(width: 6),
                     Text(
                       _formatDate(entry.timestamp),
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 12,
                         color: AppTheme.textMuted,
                         fontWeight: FontWeight.w600,
@@ -350,7 +350,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                   ],
                 ),
                 PopupMenuButton<String>(
-                  icon: const Icon(Icons.more_vert_rounded, color: AppTheme.textMuted, size: 20),
+                  icon: Icon(Icons.more_vert_rounded, color: AppTheme.textMuted, size: 20),
                   color: AppTheme.surfaceLight,
                   onSelected: (val) {
                     if (val == 'edit') {
@@ -390,7 +390,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
             // Situation
             Text(
               entry.triggerSituation,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: AppTheme.textPrimary,
@@ -424,7 +424,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                   const SizedBox(height: 4),
                   Text(
                     t.cbtJournalAutomaticthought(entry.automaticThought),
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 13,
                       fontStyle: FontStyle.italic,
                       color: AppTheme.textSecondary,
@@ -451,7 +451,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                   ),
                   child: Text(
                     CbtJournalEntry.anzeige(d),
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 11,
                       color: AppTheme.amberLight,
                       fontWeight: FontWeight.w600,
@@ -470,7 +470,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                 color: AppTheme.sageGreen.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(10),
                 border: Border(
-                  left: const BorderSide(color: AppTheme.sageGreen, width: 3),
+                  left: BorderSide(color: AppTheme.sageGreen, width: 3),
                 ),
               ),
               child: Column(
@@ -488,7 +488,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                   const SizedBox(height: 4),
                   Text(
                     entry.realityCheckReframe,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 13,
                       color: AppTheme.textPrimary,
                       height: 1.4,

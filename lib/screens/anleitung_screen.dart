@@ -55,12 +55,12 @@ class AnleitungScreen extends StatelessWidget {
         future: AnleitungAbschnitt.laden(),
         builder: (context, snap) {
           final abschnitte = snap.data;
-          if (abschnitte == null) return const Center(child: CircularProgressIndicator(color: AppTheme.sageGreen));
+          if (abschnitte == null) return Center(child: CircularProgressIndicator(color: AppTheme.sageGreen));
           return ListView(
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 28),
             children: [
               Text(t.anleitungEinleitung,
-                  style: const TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.45)),
+                  style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.45)),
               const SizedBox(height: 14),
               for (final a in abschnitte)
                 // Den Spicy-Abschnitt sieht nur, wer den Modus an hat; alle anderen sehen nur, dass es ihn gibt.
@@ -89,14 +89,14 @@ class AnleitungScreen extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 10),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
-          side: const BorderSide(color: AppTheme.border),
+          side: BorderSide(color: AppTheme.border),
         ),
         clipBehavior: Clip.antiAlias,
         child: ExpansionTile(
           leading: Icon(_icons[a.icon] ?? Icons.info_rounded,
               color: a.id == 'spicy' ? AppTheme.rose : AppTheme.sageGreen),
           title: Text(a.titel,
-              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
           iconColor: AppTheme.textSecondary,
           collapsedIconColor: AppTheme.textMuted,
           childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
@@ -106,7 +106,7 @@ class AnleitungScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(absatz,
-                    style: const TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.5)),
+                    style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.5)),
               ),
           ],
         ),
@@ -117,13 +117,13 @@ class AnleitungScreen extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 10),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(14),
-          side: const BorderSide(color: AppTheme.border),
+          side: BorderSide(color: AppTheme.border),
         ),
         child: ListTile(
-          leading: const Icon(Icons.local_fire_department_rounded, color: AppTheme.textMuted),
+          leading: Icon(Icons.local_fire_department_rounded, color: AppTheme.textMuted),
           title: Text(t.spicyModus,
-              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
-          subtitle: Text(t.spicyModusText, style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary)),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+          subtitle: Text(t.spicyModusText, style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary)),
         ),
       );
 }

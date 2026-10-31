@@ -107,7 +107,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
         actions: [
           TextButton.icon(
             onPressed: _isSaving ? null : _save,
-            icon: const Icon(Icons.check, color: AppTheme.sageGreen),
+            icon: Icon(Icons.check, color: AppTheme.sageGreen),
             label: Text(
               t.partnerProfileDialogSave,
               style: TextStyle(
@@ -161,7 +161,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             TextFormField(
               controller: _situationController,
               maxLines: 2,
-              style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+              style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
               decoration: InputDecoration(
                 hintText: t.cbtNewEntryDescribeTheSpecificSituation,
               ),
@@ -184,7 +184,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             TextFormField(
               controller: _thoughtController,
               maxLines: 2,
-              style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+              style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
               decoration: InputDecoration(
                 hintText: t.cbtNewEntryNoteTheUnfilteredThought,
               ),
@@ -240,7 +240,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             TextFormField(
               controller: _reframeController,
               maxLines: 4,
-              style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+              style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
               decoration: InputDecoration(
                 hintText: t.cbtNewEntryEGMyBodyIs,
               ),
@@ -294,7 +294,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
               Container(
                 width: 22,
                 height: 22,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: AppTheme.sageGreen,
                   shape: BoxShape.circle,
                 ),
@@ -313,7 +313,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
               Expanded(
                 child: Text(
                   title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
                     color: AppTheme.textPrimary,
@@ -325,7 +325,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
           const SizedBox(height: 4),
           Text(
             hint,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 12,
               color: AppTheme.textMuted,
               height: 1.3,

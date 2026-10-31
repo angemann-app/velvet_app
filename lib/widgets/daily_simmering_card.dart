@@ -254,7 +254,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                             ),
                             Text(
                               _isRevealed ? impulse['tag']! : t.dailySimmeringCardSimmeringEverydayTeasing,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 11,
                                 color: AppTheme.textMuted,
                               ),
@@ -309,7 +309,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                 ] else ...[
                   Text(
                     impulse['title']!,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: AppTheme.textPrimary,
                       fontSize: 15,
                       fontWeight: FontWeight.w700,
@@ -318,7 +318,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                   const SizedBox(height: 6),
                   Text(
                     impulse['action']!,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: AppTheme.textSecondary,
                       fontSize: 13,
                       height: 1.45,

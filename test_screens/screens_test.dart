@@ -36,7 +36,9 @@ import 'package:velvetpulse/theme/app_theme.dart';
 const _fontDir = 'C:/TOOLS/flutter/bin/cache/artifacts/material_fonts';
 /// Sprache der Screenshots: flutter test test_screens/screens_test.dart --dart-define=LANG=en
 const _sprache = String.fromEnvironment('LANG', defaultValue: 'de');
-final _outDir = Directory(_sprache == 'de' ? 'build/screens' : 'build/screens_$_sprache');
+/// Spicy-Palette rendern: flutter test test_screens/screens_test.dart --dart-define=SPICY=true
+const _spicy = bool.fromEnvironment('SPICY');
+final _outDir = Directory(_spicy ? 'build/screens_spicy' : (_sprache == 'de' ? 'build/screens' : 'build/screens_$_sprache'));
 final _boundary = GlobalKey();
 
 Future<void> _loadFonts() async {
@@ -121,7 +123,7 @@ void main() {
     final oldHandler = FlutterError.onError;
     FlutterError.onError = (d) => errors.add(d.exceptionAsString().split('\n').first);
 
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({if (_spicy) 'spicy_mode': true});
     await tester.runAsync(() async {
       await _loadFonts();
       await StorageService.init();

@@ -56,21 +56,21 @@ class _AufnahmenKarteState extends State<AufnahmenKarte> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(children: [
-                    const Icon(Icons.record_voice_over_rounded, color: AppTheme.sageGreen, size: 18),
+                    Icon(Icons.record_voice_over_rounded, color: AppTheme.sageGreen, size: 18),
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(t.aufnahmenTitel,
-                          style: const TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w700)),
+                          style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w700)),
                     ),
                   ]),
                   const SizedBox(height: 6),
                   Text(t.aufnahmenText,
-                      style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4)),
+                      style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4)),
                   if (snap.connectionState == ConnectionState.done && v == null)
                     Padding(
                       padding: const EdgeInsets.only(top: 6),
                       child: Text(t.aufnahmenNichtErreichbar,
-                          style: const TextStyle(color: AppTheme.rose, fontSize: 12.5)),
+                          style: TextStyle(color: AppTheme.rose, fontSize: 12.5)),
                     ),
                   const SizedBox(height: 8),
                   for (final art in Pakete.arten) _zeile(art, v, fortschritt),
@@ -111,7 +111,7 @@ class _AufnahmenKarteState extends State<AufnahmenKarte> {
           Row(children: [
             Expanded(
               child: Text('$titel · $info',
-                  style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13.5)),
+                  style: TextStyle(color: AppTheme.textPrimary, fontSize: 13.5)),
             ),
             if (laeuft == null && eintrag != null && (installiert == 0 && !altesPaket || aktualisierbar))
               TextButton(
@@ -122,7 +122,7 @@ class _AufnahmenKarteState extends State<AufnahmenKarte> {
               IconButton(
                 tooltip: t.audioPaketLoeschen,
                 onPressed: () => Pakete.loeschen(name),
-                icon: const Icon(Icons.delete_outline_rounded, size: 20, color: AppTheme.textSecondary),
+                icon: Icon(Icons.delete_outline_rounded, size: 20, color: AppTheme.textSecondary),
               ),
           ]),
           if (laeuft != null)
@@ -167,14 +167,14 @@ class _AufnahmenHinweisState extends State<AufnahmenHinweis> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(t.aufnahmenHinweisTitel,
-                  style: const TextStyle(fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                  style: TextStyle(fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
               const SizedBox(height: 4),
               Text(t.aufnahmenHinweisText,
-                  style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4)),
+                  style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4)),
               Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                 TextButton(
                   onPressed: () => setState(() => _spaeter = true),
-                  child: Text(t.aufnahmenSpaeter, style: const TextStyle(color: AppTheme.textSecondary)),
+                  child: Text(t.aufnahmenSpaeter, style: TextStyle(color: AppTheme.textSecondary)),
                 ),
                 TextButton(
                   onPressed: () => showModalBottomSheet(
@@ -184,7 +184,7 @@ class _AufnahmenHinweisState extends State<AufnahmenHinweis> {
                       child: Padding(padding: EdgeInsets.fromLTRB(16, 16, 16, 8), child: AufnahmenKarte()),
                     ),
                   ),
-                  child: Text(t.aufnahmenAnsehen, style: const TextStyle(color: AppTheme.sageGreen)),
+                  child: Text(t.aufnahmenAnsehen, style: TextStyle(color: AppTheme.sageGreen)),
                 ),
               ]),
             ],

@@ -256,7 +256,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
         appBar: AppBar(backgroundColor: AppTheme.background, title: Text(t.reiheTitel)),
         body: SafeArea(
           child: !_geladen
-              ? const Center(child: CircularProgressIndicator(color: AppTheme.rose))
+              ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
               : (laeuft ? _spieler() : _einrichtung()),
         ),
       ),
@@ -373,7 +373,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
         const SizedBox(height: 12),
         Text(folge.titel,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
         const SizedBox(height: 6),
         Text('${fassung.spicy ? t.reiheSpicy : t.reiheSoft} · ${_perspektiveName(fassung)}',
             style: TextStyle(color: AppTheme.textMuted)),
@@ -440,7 +440,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
               else
                 OutlinedButton(
                   onPressed: _paketLaden,
-                  style: OutlinedButton.styleFrom(foregroundColor: AppTheme.rose, side: const BorderSide(color: AppTheme.rose)),
+                  style: OutlinedButton.styleFrom(foregroundColor: AppTheme.rose, side: BorderSide(color: AppTheme.rose)),
                   child: Text(_paketDa ? t.audioPaketAktualisieren : t.reihePaketLaden),
                 ),
             ]),
@@ -465,10 +465,10 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
               border: Border.all(color: aktiv ? AppTheme.rose : AppTheme.border),
             ),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(f.titel, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+              Text(f.titel, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
               if (f.beschreibung.isNotEmpty) ...[
                 const SizedBox(height: 2),
-                Text(f.beschreibung, style: const TextStyle(fontSize: 12, color: AppTheme.textMuted)),
+                Text(f.beschreibung, style: TextStyle(fontSize: 12, color: AppTheme.textMuted)),
               ],
             ]),
           ),
@@ -477,7 +477,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
 
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(

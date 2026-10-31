@@ -128,7 +128,7 @@ class InviteStatusCard extends StatelessWidget {
                   Expanded(
                     child: Text(
                       request ? t.invitePartnerNameWantsToConnect(name) : t.invitePartnerInvitationSentToName(name),
-                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
                     ),
                   ),
                 ],
@@ -140,7 +140,7 @@ class InviteStatusCard extends StatelessWidget {
                   request
                       ? t.invitePartnerAMessageJustArrivedAt(name)
                       : t.invitePartnerAsSoonAsNameInstalls(name),
-                  style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
+                  style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
                 ),
               ),
               Row(

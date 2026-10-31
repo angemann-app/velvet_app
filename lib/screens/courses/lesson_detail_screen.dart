@@ -237,7 +237,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                       color: AppTheme.rose, size: 16),
                   const SizedBox(width: 6),
                   Text(mine.isEmpty ? t.lessonDetailNameHasAlreadyAnswered(name) : t.lessonDetailNameSThoughts(name),
-                      style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13.5, fontWeight: FontWeight.w700)),
+                      style: TextStyle(color: AppTheme.textPrimary, fontSize: 13.5, fontWeight: FontWeight.w700)),
                 ],
               ),
               const SizedBox(height: 6),
@@ -308,13 +308,13 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       appBar: AppBar(
         title: Text(
           widget.courseTitle,
-          style: const TextStyle(fontSize: 16, color: AppTheme.textSecondary),
+          style: TextStyle(fontSize: 16, color: AppTheme.textSecondary),
         ),
         actions: [
           if (_nostr.isPaired)
             IconButton(
               onPressed: _shareLesson,
-              icon: const Icon(Icons.favorite_border_rounded, color: AppTheme.rose),
+              icon: Icon(Icons.favorite_border_rounded, color: AppTheme.rose),
               tooltip: t.lessonDetailShareWithPartnername(_nostr.partnerName),
             ),
           IconButton(
@@ -433,7 +433,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                 const SizedBox(width: 10),
                 Text(
                   t.lessonDetailDurationminMinRead(lesson.durationMin),
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.textMuted,
                     fontSize: 12,
                   ),
@@ -446,7 +446,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             // Title
             Text(
               lesson.title,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w800,
                 color: AppTheme.textPrimary,
@@ -460,7 +460,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             // Summary
             Text(
               lesson.summary,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 15,
                 color: AppTheme.textSecondary,
                 height: 1.4,
@@ -529,7 +529,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: _isCompleted ? AppTheme.surfaceLight : AppTheme.sageGreen,
                   foregroundColor: _isCompleted ? AppTheme.textPrimary : const Color(0xFF022C22),
-                  side: _isCompleted ? const BorderSide(color: AppTheme.border) : null,
+                  side: _isCompleted ? BorderSide(color: AppTheme.border) : null,
                 ),
               ),
             ),
@@ -615,7 +615,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                     ),
                     Text(
                       toolTitle,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: AppTheme.textPrimary,
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
@@ -629,7 +629,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           const SizedBox(height: 8),
           Text(
             toolSubtitle,
-            style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+            style: TextStyle(color: AppTheme.textSecondary, fontSize: 13),
           ),
           const SizedBox(height: 14),
           SizedBox(
@@ -677,7 +677,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           const SizedBox(height: 10),
           Text(
             question,
-            style: const TextStyle(
+            style: TextStyle(
               color: AppTheme.amberLight,
               fontSize: 14,
               fontWeight: FontWeight.w600,
@@ -688,7 +688,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           TextField(
             controller: _reflectionController,
             maxLines: 4,
-            style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+            style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
             decoration: InputDecoration(
               hintText: t.lessonDetailWriteDownYourHonestThoughts,
             ),
@@ -716,7 +716,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                   backgroundColor: AppTheme.surfaceLight,
                   foregroundColor: AppTheme.textPrimary,
                   padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-                  side: const BorderSide(color: AppTheme.border),
+                  side: BorderSide(color: AppTheme.border),
                 ),
                 child: _isSavingReflection
                     ? const SizedBox(
@@ -734,9 +734,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               alignment: Alignment.centerRight,
               child: TextButton.icon(
                 onPressed: _shareReflection,
-                icon: const Icon(Icons.favorite_border_rounded, size: 16, color: AppTheme.rose),
+                icon: Icon(Icons.favorite_border_rounded, size: 16, color: AppTheme.rose),
                 label: Text(t.lessonDetailShareWithPartnername2(_nostr.partnerName),
-                    style: const TextStyle(color: AppTheme.rose, fontSize: 13, fontWeight: FontWeight.w600)),
+                    style: TextStyle(color: AppTheme.rose, fontSize: 13, fontWeight: FontWeight.w600)),
               ),
             ),
           ],

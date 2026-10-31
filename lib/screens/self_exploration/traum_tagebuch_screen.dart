@@ -124,7 +124,7 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
                   ),
                   child: Row(
                     children: [
-                      const Icon(Icons.nights_stay_rounded, color: AppTheme.rose, size: 22),
+                      Icon(Icons.nights_stay_rounded, color: AppTheme.rose, size: 22),
                       const SizedBox(width: 12),
                       Expanded(
                         child: Column(
@@ -132,7 +132,7 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
                           children: [
                             Text(
                               t.weckenTagebuchKarteTitel,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
                                 color: AppTheme.textPrimary,
@@ -141,12 +141,12 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
                             const SizedBox(height: 2),
                             Text(
                               t.weckenTagebuchKarteText,
-                              style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
+                              style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
                             ),
                           ],
                         ),
                       ),
-                      const Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
+                      Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
                     ],
                   ),
                 ),
@@ -214,7 +214,7 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                       Text(
                         [_datum(e.zeit), if (traumAbendName(e.abend).isNotEmpty) traumAbendName(e.abend)].join(' · '),
-                        style: const TextStyle(fontSize: 12, color: AppTheme.textMuted),
+                        style: TextStyle(fontSize: 12, color: AppTheme.textMuted),
                       ),
                       if (e.text.isNotEmpty) ...[
                         const SizedBox(height: 6),
@@ -298,7 +298,7 @@ class _EditorState extends State<_Editor> {
       child: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, mainAxisSize: MainAxisSize.min, children: [
           Text(t.tagebuchWoranErinnerst,
-              style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+              style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
           const SizedBox(height: 12),
           TextField(
             controller: _text,
@@ -306,10 +306,10 @@ class _EditorState extends State<_Editor> {
             minLines: 3,
             maxLines: 8,
             textCapitalization: TextCapitalization.sentences,
-            style: const TextStyle(color: AppTheme.textPrimary),
+            style: TextStyle(color: AppTheme.textPrimary),
             decoration: InputDecoration(
               hintText: t.tagebuchHinweisText,
-              hintStyle: const TextStyle(color: AppTheme.textMuted),
+              hintStyle: TextStyle(color: AppTheme.textMuted),
               filled: true,
               fillColor: AppTheme.background,
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
@@ -332,7 +332,7 @@ class _EditorState extends State<_Editor> {
           const SizedBox(height: 18),
           Row(children: [
             if (widget.eintrag != null)
-              TextButton(onPressed: _loeschen, child: Text(t.tagebuchLoeschen, style: const TextStyle(color: AppTheme.textMuted))),
+              TextButton(onPressed: _loeschen, child: Text(t.tagebuchLoeschen, style: TextStyle(color: AppTheme.textMuted))),
             const Spacer(),
             ElevatedButton(
               onPressed: _speichern,
@@ -411,18 +411,18 @@ class _WochenrueckblickKarte extends StatelessWidget {
           collapsedIconColor: AppTheme.textMuted,
           title: Text(
             t.rueckblickTitel,
-            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
           ),
           subtitle: Text(
             _kurztext(r),
-            style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3),
+            style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3),
           ),
           children: [
             if (r.eintraegeGesamt == 0)
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(t.rueckblickKeineEintraege,
-                    style: const TextStyle(fontSize: 13, color: AppTheme.textMuted)),
+                    style: TextStyle(fontSize: 13, color: AppTheme.textMuted)),
               )
             else ...[
               Align(
@@ -433,7 +433,7 @@ class _WochenrueckblickKarte extends StatelessWidget {
                     if (r.erinnert > 0) t.rueckblickErinnertMorgen(r.erinnert),
                     if (r.nichtsErinnert > 0) t.rueckblickNichtsErinnertMorgen(r.nichtsErinnert),
                   ].join('. ') + '.',
-                  style: const TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.4),
+                  style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.4),
                 ),
               ),
               if (r.markenZaehlung.isNotEmpty) ...[
@@ -454,7 +454,7 @@ class _WochenrueckblickKarte extends StatelessWidget {
                             ),
                             child: Text(
                               '${r.markenZaehlung[m]}× ${traumMarkeName(m)}',
-                              style: const TextStyle(fontSize: 11.5, color: AppTheme.textSecondary),
+                              style: TextStyle(fontSize: 11.5, color: AppTheme.textSecondary),
                             ),
                           ),
                     ],
@@ -467,7 +467,7 @@ class _WochenrueckblickKarte extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     t.rueckblickNachAbenden,
-                    style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppTheme.textMuted),
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppTheme.textMuted),
                   ),
                 ),
                 const SizedBox(height: 6),
@@ -478,7 +478,7 @@ class _WochenrueckblickKarte extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Text(
                         '• ${traumAbendName(entry.key)}: ${_formatMarken(entry.value)}',
-                        style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35),
+                        style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35),
                       ),
                     ),
                   ),
@@ -516,7 +516,7 @@ class _RealitaetscheckZeile extends StatelessWidget {
         ),
         child: Row(
           children: [
-            const Icon(Icons.touch_app_outlined, color: AppTheme.sageGreen, size: 22),
+            Icon(Icons.touch_app_outlined, color: AppTheme.sageGreen, size: 22),
             const SizedBox(width: 12),
             Expanded(
               child: Column(
@@ -524,7 +524,7 @@ class _RealitaetscheckZeile extends StatelessWidget {
                 children: [
                   Text(
                     t.realitaetTitel,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
                       color: AppTheme.textPrimary,
@@ -533,12 +533,12 @@ class _RealitaetscheckZeile extends StatelessWidget {
                   const SizedBox(height: 2),
                   Text(
                     aktiv ? t.realitaetStatusEin : t.realitaetStatusAus,
-                    style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
+                    style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
                   ),
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
+            Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
           ],
         ),
       ),

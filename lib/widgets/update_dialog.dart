@@ -96,18 +96,18 @@ class _UpdateDialogState extends State<UpdateDialog> {
           children: [
             Text(
               update.notes.isNotEmpty ? update.notes : t.updateDialogImprovementsAndBugFixes,
-              style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
             ),
             if (downloading) ...[
               const SizedBox(height: 16),
               LinearProgressIndicator(value: _progress == 0 ? null : _progress, color: AppTheme.sageGreen),
               const SizedBox(height: 6),
               Text(t.updateDialogDownloadingProgress(((_progress ?? 0) * 100).round()),
-                  style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+                  style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
             ],
             if (_error != null) ...[
               const SizedBox(height: 12),
-              Text(_error!, style: const TextStyle(color: AppTheme.rose, fontSize: 13)),
+              Text(_error!, style: TextStyle(color: AppTheme.rose, fontSize: 13)),
             ],
             const SizedBox(height: 12),
             Text(

@@ -138,7 +138,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
-      return const Center(
+      return Center(
         child: CircularProgressIndicator(color: AppTheme.sageGreen),
       );
     }
@@ -191,7 +191,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                         border: Border.all(color: AppTheme.amber.withValues(alpha: 0.6)),
                       ),
                       child: Text(t.testmodusSchild,
-                          style: const TextStyle(color: AppTheme.amber, fontSize: 12, fontWeight: FontWeight.w700)),
+                          style: TextStyle(color: AppTheme.amber, fontSize: 12, fontWeight: FontWeight.w700)),
                     ),
                   )
                 : const SizedBox.shrink(),
@@ -258,7 +258,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 ),
                 Text(
                   t.coursesCourseCount(filteredCourses.length),
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.textMuted,
                     fontSize: 11,
                   ),
@@ -351,7 +351,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   children: [
                     Text(
                       _profile != null ? t.coursesHelloProfilename(_profile!.name) : t.coursesWelcome,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w800,
                         color: AppTheme.textPrimary,
@@ -363,7 +363,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       _profile != null
                           ? t.coursesYourFocusGoallabel(_profile!.goalLabel)
                           : t.coursesUnderstandTheBiologyQuietThe,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 13.5,
                         color: AppTheme.textSecondary,
                         height: 1.35,
@@ -386,11 +386,11 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(Icons.local_fire_department_rounded, color: AppTheme.amber, size: 16),
+                      Icon(Icons.local_fire_department_rounded, color: AppTheme.amber, size: 16),
                       const SizedBox(width: 4),
                       Text(
                         '$_streak',
-                        style: const TextStyle(color: AppTheme.amberLight, fontSize: 13, fontWeight: FontWeight.w700),
+                        style: TextStyle(color: AppTheme.amberLight, fontSize: 13, fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -416,7 +416,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
             children: [
               Text(
                 t.coursesOverallProgressCompletedcountOfTotallessons(completedCount, totalLessons),
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppTheme.textSecondary,
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
@@ -424,7 +424,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
               ),
               Text(
                 '${(overallProgress * 100).toInt()}%',
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppTheme.sageGreen,
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
@@ -438,7 +438,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
             child: LinearProgressIndicator(
               value: overallProgress,
               backgroundColor: AppTheme.surfaceLight,
-              valueColor: const AlwaysStoppedAnimation<Color>(AppTheme.sageGreen),
+              valueColor: AlwaysStoppedAnimation<Color>(AppTheme.sageGreen),
               minHeight: 8,
             ),
           ),
@@ -511,10 +511,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text(_schwerpunktName(s),
-                        style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+                        style: TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
                     const SizedBox(height: 3),
                     Text(_schwerpunktText(s),
-                        style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3)),
+                        style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3)),
                     const SizedBox(height: 8),
                     Row(children: [
                       Expanded(
@@ -524,13 +524,13 @@ class _CoursesScreenState extends State<CoursesScreen> {
                             value: fortschritt,
                             minHeight: 4,
                             backgroundColor: AppTheme.surfaceLight,
-                            valueColor: const AlwaysStoppedAnimation(AppTheme.sageGreen),
+                            valueColor: AlwaysStoppedAnimation(AppTheme.sageGreen),
                           ),
                         ),
                       ),
                       const SizedBox(width: 10),
                       Text(t.startLektionenVon(erledigt, lektionen.length),
-                          style: const TextStyle(fontSize: 11, color: AppTheme.textMuted)),
+                          style: TextStyle(fontSize: 11, color: AppTheme.textMuted)),
                     ]),
                   ]),
                 ),
@@ -596,7 +596,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                           fit: BoxFit.cover,
                           errorBuilder: (context, error, stackTrace) => Container(
                             color: AppTheme.surfaceLight,
-                            child: const Center(
+                            child: Center(
                               child: Icon(Icons.spa_rounded, color: AppTheme.textMuted, size: 32),
                             ),
                           ),
@@ -681,7 +681,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     const SizedBox(height: 4),
                     Text(
                       course.subtitle,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 12,
                         color: AppTheme.textSecondary,
                         height: 1.3,
@@ -717,7 +717,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                   ],
                 ),
                 children: [
-                  const Divider(color: AppTheme.border, height: 1),
+                  Divider(color: AppTheme.border, height: 1),
                   ...course.lessons.map((lesson) {
                     final isDone = _completedLessonIds.contains(lesson.id);
 
@@ -766,13 +766,13 @@ class _CoursesScreenState extends State<CoursesScreen> {
                                       children: [
                                         Text(
                                           t.coursesDurationminMin(lesson.durationMin),
-                                          style: const TextStyle(
+                                          style: TextStyle(
                                             fontSize: 11,
                                             color: AppTheme.textMuted,
                                           ),
                                         ),
                                         if (lesson.linkedTool != 'none') ...[
-                                          const Text(' • ', style: TextStyle(color: AppTheme.textMuted, fontSize: 11)),
+                                          Text(' • ', style: TextStyle(color: AppTheme.textMuted, fontSize: 11)),
                                           Text(
                                             switch (lesson.linkedTool) {
                                               'kegel_timer' => t.coursesPracticePelvicFloor,
@@ -781,7 +781,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                                               'lust_profil' => t.coursesPracticeDesireProfile,
                                               _ => t.coursesPracticeCbt,
                                             },
-                                            style: const TextStyle(
+                                            style: TextStyle(
                                               color: AppTheme.sageGreen,
                                               fontSize: 11,
                                               fontWeight: FontWeight.w600,
@@ -793,7 +793,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                                   ],
                                 ),
                               ),
-                              const Icon(
+                              Icon(
                                 Icons.arrow_forward_ios_rounded,
                                 color: AppTheme.textMuted,
                                 size: 14,

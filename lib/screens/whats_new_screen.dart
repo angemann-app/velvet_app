@@ -48,7 +48,7 @@ class WhatsNewScreen extends StatelessWidget {
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(24, 36, 24, 16),
                 children: [
-                  const Icon(Icons.auto_awesome_rounded, color: AppTheme.rose, size: 40),
+                  Icon(Icons.auto_awesome_rounded, color: AppTheme.rose, size: 40),
                   const SizedBox(height: 16),
                   Text(
                     t.whatsNewWelcomeBack,
@@ -57,7 +57,7 @@ class WhatsNewScreen extends StatelessWidget {
                   const SizedBox(height: 6),
                   Text(
                     t.whatsNewThisIsNewInVersion(version),
-                    style: const TextStyle(fontSize: 15, color: AppTheme.textSecondary),
+                    style: TextStyle(fontSize: 15, color: AppTheme.textSecondary),
                   ),
                   const SizedBox(height: 26),
                   for (final entry in entries)
@@ -103,9 +103,9 @@ class WhatsNewScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(item.title,
-                      style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                      style: TextStyle(fontSize: 15.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
                   const SizedBox(height: 3),
-                  Text(item.text, style: const TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.45)),
+                  Text(item.text, style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.45)),
                 ],
               ),
             ),

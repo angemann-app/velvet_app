@@ -218,7 +218,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         appBar: AppBar(backgroundColor: AppTheme.background, title: Text(t.lessonDetailGuidedSelfExploration)),
         body: SafeArea(
           child: _daten == null
-              ? const Center(child: CircularProgressIndicator(color: AppTheme.rose))
+              ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
               : (laeuft ? _buildPlayer() : _buildEinrichtung()),
         ),
       ),
@@ -321,7 +321,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
 
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -361,9 +361,9 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
             const SizedBox(width: 12),
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(titel, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                Text(titel, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
                 const SizedBox(height: 2),
-                Text(text, style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
+                Text(text, style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
               ]),
             ),
           ]),
@@ -399,8 +399,8 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         ),
         const SizedBox(height: 8),
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Text(_fmt(_vergangen), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
-          Text(_fmt(gesamt), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+          Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+          Text(_fmt(gesamt), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
         ]),
         const Spacer(),
         AnimatedContainer(
@@ -420,12 +420,12 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           ),
         ),
         const SizedBox(height: 28),
-        Text(phase, style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+        Text(phase, style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
         const SizedBox(height: 10),
         if (!_fertig && schritt != null)
           Text(
             _pausiert ? t.paarAbendPaused : (spricht ? t.paarAbendTheVoiceIsSpeaking : t.selbstReiseSilenceStillerestLeft(_fmt(stilleRest))),
-            style: const TextStyle(fontSize: 13, color: AppTheme.textMuted),
+            style: TextStyle(fontSize: 13, color: AppTheme.textMuted),
           )
         else
           Text(t.selbstReiseStayLyingDownAsLong,
@@ -439,7 +439,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
               onPressed: () => Navigator.of(context).pop(),
               style: OutlinedButton.styleFrom(
                 foregroundColor: AppTheme.rose,
-                side: const BorderSide(color: AppTheme.rose),
+                side: BorderSide(color: AppTheme.rose),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
               ),
               child: Text(t.couplesChannelClose, style: TextStyle(fontWeight: FontWeight.w700)),

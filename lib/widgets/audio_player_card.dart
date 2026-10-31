@@ -153,7 +153,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
               // Time Display (01:24 / 04:15)
               Text(
                 '${_formatDuration(currentPos)} / ${_formatDuration(totalDur)}',
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppTheme.textSecondary,
                   fontSize: 12,
                   fontWeight: FontWeight.w600,

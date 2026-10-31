@@ -109,7 +109,7 @@ class BeliefLibraryView extends StatelessWidget {
                   ),
                   child: Text(
                     belief.category.toUpperCase(),
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: AppTheme.amberLight,
                       fontSize: 11,
                       fontWeight: FontWeight.w800,
@@ -195,7 +195,7 @@ class BeliefLibraryView extends StatelessWidget {
                 color: AppTheme.sageGreen.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(12),
                 border: Border(
-                  left: const BorderSide(color: AppTheme.sageGreen, width: 3),
+                  left: BorderSide(color: AppTheme.sageGreen, width: 3),
                 ),
               ),
               child: Column(
@@ -213,7 +213,7 @@ class BeliefLibraryView extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     belief.realityCheck,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 13,
                       color: AppTheme.textPrimary,
                       height: 1.45,
@@ -229,12 +229,12 @@ class BeliefLibraryView extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(Icons.swap_horiz_rounded, color: AppTheme.sageLight, size: 18),
+                Icon(Icons.swap_horiz_rounded, color: AppTheme.sageLight, size: 18),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
                     belief.practicalShift,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 12,
                       color: AppTheme.textSecondary,
                       height: 1.35,
@@ -251,13 +251,13 @@ class BeliefLibraryView extends StatelessWidget {
               width: double.infinity,
               child: OutlinedButton.icon(
                 onPressed: () => _transferToJournal(context, belief),
-                icon: const Icon(Icons.edit_note_rounded, size: 18, color: AppTheme.amberLight),
+                icon: Icon(Icons.edit_note_rounded, size: 18, color: AppTheme.amberLight),
                 label: Text(
                   t.beliefLibraryViewTakeIntoMyJournal,
                   style: TextStyle(fontSize: 13, color: AppTheme.textPrimary),
                 ),
                 style: OutlinedButton.styleFrom(
-                  side: const BorderSide(color: AppTheme.border),
+                  side: BorderSide(color: AppTheme.border),
                   padding: const EdgeInsets.symmetric(vertical: 10),
                 ),
               ),

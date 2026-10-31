@@ -39,7 +39,7 @@ class GefuehrteAudios extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: Text(t.gefuehrtTitel,
-                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
           ),
         if (mitSelbst) const _TagebuchKarte(),
         if (kompakt)
@@ -124,12 +124,12 @@ class _EinklappbarState extends State<_Einklappbar> {
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(widget.titel,
-                      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
                 ),
                 AnimatedRotation(
                   turns: _offen ? 0.5 : 0,
                   duration: const Duration(milliseconds: 200),
-                  child: const Icon(Icons.expand_more_rounded, size: 22, color: AppTheme.textSecondary),
+                  child: Icon(Icons.expand_more_rounded, size: 22, color: AppTheme.textSecondary),
                 ),
               ]),
             ),
@@ -321,7 +321,7 @@ class GefuehrtKarte extends StatelessWidget {
                           Text(text,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3)),
+                            style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3)),
                       ]),
                     ),
                     const SizedBox(width: 10),

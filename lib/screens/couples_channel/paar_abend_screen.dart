@@ -257,7 +257,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         ),
         body: SafeArea(
           child: _daten == null
-              ? const Center(child: CircularProgressIndicator(color: AppTheme.amber))
+              ? Center(child: CircularProgressIndicator(color: AppTheme.amber))
               : (laeuft ? _buildPlayer() : _buildEinrichtung()),
         ),
       ),
@@ -379,7 +379,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
         child: Text(text,
-            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -427,9 +427,9 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(titel,
-                        style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                        style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
                     const SizedBox(height: 2),
-                    Text(text, style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
+                    Text(text, style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
                   ],
                 ),
               ),
@@ -482,8 +482,8 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(_fmt(_vergangen), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
-              Text(_fmt(gesamt), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+              Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+              Text(_fmt(gesamt), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
             ],
           ),
           const Spacer(),
@@ -508,16 +508,16 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
           ),
           const SizedBox(height: 28),
           Text(phase,
-              style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
           const SizedBox(height: 8),
           Text(zeile,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 15, color: AppTheme.textSecondary, height: 1.4)),
+              style: TextStyle(fontSize: 15, color: AppTheme.textSecondary, height: 1.4)),
           const SizedBox(height: 10),
           if (!_fertig && schritt != null)
             Text(
               _pausiert ? t.paarAbendPaused : (spricht ? t.paarAbendTheVoiceIsSpeaking : t.paarAbendSilenceStillerestLeft(_fmt(stilleRest))),
-              style: const TextStyle(fontSize: 13, color: AppTheme.textMuted),
+              style: TextStyle(fontSize: 13, color: AppTheme.textMuted),
             ),
           const Spacer(),
           if (_fertig)
@@ -528,7 +528,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
                 onPressed: () => Navigator.of(context).pop(),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: AppTheme.amberLight,
-                  side: const BorderSide(color: AppTheme.amber),
+                  side: BorderSide(color: AppTheme.amber),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                 ),
                 child: Text(t.couplesChannelClose, style: TextStyle(fontWeight: FontWeight.w700)),

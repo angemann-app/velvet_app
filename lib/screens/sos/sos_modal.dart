@@ -58,7 +58,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
 
     return Container(
       height: height,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: AppTheme.background,
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
         border: Border(
@@ -91,7 +91,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                     color: AppTheme.rose.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.shield_rounded,
                     color: AppTheme.rose,
                     size: 22,
@@ -122,7 +122,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                 ),
                 IconButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  icon: const Icon(Icons.close_rounded, color: AppTheme.textSecondary),
+                  icon: Icon(Icons.close_rounded, color: AppTheme.textSecondary),
                 ),
               ],
             ),
@@ -144,7 +144,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
             ],
           ),
 
-          const Divider(height: 1, color: AppTheme.border),
+          Divider(height: 1, color: AppTheme.border),
 
           // Tab content
           Expanded(
@@ -171,7 +171,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
           // Title & Situation
           Text(
             card.title,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
               color: AppTheme.textPrimary,
@@ -188,7 +188,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(
+                Icon(
                   Icons.info_outline_rounded,
                   color: AppTheme.amber,
                   size: 18,
@@ -197,7 +197,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                 Expanded(
                   child: Text(
                     card.situation,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: AppTheme.textSecondary,
                       fontSize: 13,
                       height: 1.4,
@@ -330,7 +330,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                               : Center(
                                   child: Text(
                                     '${index + 1}',
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       color: AppTheme.textMuted,
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,

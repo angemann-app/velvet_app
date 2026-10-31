@@ -121,7 +121,7 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
       ),
       body: SafeArea(
         child: !_geladen
-            ? const Center(child: CircularProgressIndicator(color: AppTheme.rose))
+            ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
             : ListView(
                 padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
                 children: [
@@ -221,7 +221,7 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
                   onPressed: _paketLaden,
                   style: OutlinedButton.styleFrom(
                     foregroundColor: AppTheme.rose,
-                    side: const BorderSide(color: AppTheme.rose),
+                    side: BorderSide(color: AppTheme.rose),
                   ),
                   child: Text(t.lustPaketLaden),
                 ),
@@ -255,8 +255,8 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
             SizedBox(
               width: 30,
               child: frei
-                  ? Text('$f', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: AppTheme.textPrimary))
-                  : const Icon(Icons.lock_outline_rounded, size: 18, color: AppTheme.textMuted),
+                  ? Text('$f', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: AppTheme.textPrimary))
+                  : Icon(Icons.lock_outline_rounded, size: 18, color: AppTheme.textMuted),
             ),
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -268,7 +268,7 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
                 const SizedBox(height: 2),
                 Text(
                   frei ? t.lustAbendeGehoert(abende) : t.lustGesperrt(f - 1),
-                  style: const TextStyle(fontSize: 12, color: AppTheme.textMuted),
+                  style: TextStyle(fontSize: 12, color: AppTheme.textMuted),
                 ),
               ]),
             ),
@@ -280,7 +280,7 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
 
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(

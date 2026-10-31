@@ -47,7 +47,7 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       title: Text(
         t.lautsprecherFrageTitel,
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w700,
           color: AppTheme.textPrimary,
@@ -59,7 +59,7 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
         children: [
           Text(
             t.lautsprecherFrageNachricht,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 14,
               color: AppTheme.textSecondary,
               height: 1.45,
@@ -90,7 +90,7 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
                   Expanded(
                     child: Text(
                       t.lautsprecherNichtMehrFragen,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 13.5,
                         color: AppTheme.textPrimary,
                       ),
@@ -107,7 +107,7 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
           onPressed: () => Navigator.of(context).pop(false),
           child: Text(
             t.lautsprecherAbbrechen,
-            style: const TextStyle(color: AppTheme.textSecondary),
+            style: TextStyle(color: AppTheme.textSecondary),
           ),
         ),
         ElevatedButton(

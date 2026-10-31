@@ -325,7 +325,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
         title: Text(t.kegelTimerViewDone),
         content: Text(
           t.kegelTimerViewYouPractisedTotalroundsRoundsA(_totalRounds),
-          style: const TextStyle(color: AppTheme.textSecondary, height: 1.4),
+          style: TextStyle(color: AppTheme.textSecondary, height: 1.4),
         ),
         actions: [
           ElevatedButton(onPressed: () => Navigator.of(context).pop(), child: Text(t.kegelTimerViewFinish)),
@@ -390,7 +390,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                     SizedBox(width: 64, child: Text(t.kegelTimerViewRounds, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
                     ..._roundOptions.map((r) => _buildOptionChip('$r', _totalRounds == r, () => _changeSettings(() => _totalRounds = r))),
                     const Spacer(),
-                    Text(t.kegelTimerViewMinutesMin(minutes), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+                    Text(t.kegelTimerViewMinutesMin(minutes), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
                   ],
                 ),
                 if (_selectedPreset != KegelPreset.impulse) ...[
@@ -411,7 +411,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                     Expanded(
                       child: Text(
                         _voiceCues ? t.kegelTimerViewAVoiceGuidesYou : t.kegelTimerViewVibrationOnly,
-                        style: const TextStyle(color: AppTheme.textMuted, fontSize: 12),
+                        style: TextStyle(color: AppTheme.textMuted, fontSize: 12),
                       ),
                     ),
                     Switch(
@@ -468,7 +468,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                         children: [
                           Text(
                             '$_secondsLeftInPhase',
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontSize: 54, fontWeight: FontWeight.w900, color: AppTheme.textPrimary, height: 1.0),
                           ),
                           const SizedBox(height: 6),
@@ -504,7 +504,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             child: Text(
               currentPhase.instruction,
               textAlign: TextAlign.center,
-              style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14, height: 1.45, fontWeight: FontWeight.w500),
+              style: TextStyle(color: AppTheme.textPrimary, fontSize: 14, height: 1.45, fontWeight: FontWeight.w500),
             ),
           ),
 
@@ -517,7 +517,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               OutlinedButton(
                 onPressed: _stopTraining,
                 style: OutlinedButton.styleFrom(shape: const CircleBorder(), padding: const EdgeInsets.all(16)),
-                child: const Icon(Icons.refresh_rounded, color: AppTheme.textSecondary),
+                child: Icon(Icons.refresh_rounded, color: AppTheme.textSecondary),
               ),
               const SizedBox(width: 18),
               SizedBox(
@@ -538,7 +538,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               OutlinedButton(
                 onPressed: _isRunning ? () => setState(_nextPhase) : null,
                 style: OutlinedButton.styleFrom(shape: const CircleBorder(), padding: const EdgeInsets.all(16)),
-                child: const Icon(Icons.skip_next_rounded, color: AppTheme.textSecondary),
+                child: Icon(Icons.skip_next_rounded, color: AppTheme.textSecondary),
               ),
             ],
           ),

@@ -370,7 +370,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
             ]),
         body: SafeArea(
           child: _daten == null
-              ? const Center(child: CircularProgressIndicator(color: AppTheme.rose))
+              ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
               : (laeuft ? _buildPlayer() : _buildEinrichtung()),
         ),
       ),
@@ -514,7 +514,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         ),
         child: Row(
           children: [
-            const Icon(Icons.touch_app_outlined, color: AppTheme.sageGreen, size: 22),
+            Icon(Icons.touch_app_outlined, color: AppTheme.sageGreen, size: 22),
             const SizedBox(width: 12),
             Expanded(
               child: Column(
@@ -522,7 +522,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
                 children: [
                   Text(
                     t.realitaetTitel,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 14.5,
                       fontWeight: FontWeight.w700,
                       color: AppTheme.textPrimary,
@@ -531,12 +531,12 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
                   const SizedBox(height: 2),
                   Text(
                     aktiv ? t.realitaetStatusEin : t.realitaetStatusAus,
-                    style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
+                    style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
                   ),
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
+            Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
           ],
         ),
       ),
@@ -566,10 +566,10 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
                       if (v) _weckenZeit = NaechtlichesWecken.schlageWeckzeitVor();
                     })
                 : null,
-            title: Text(t.weckenTitel, style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+            title: Text(t.weckenTitel, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
             subtitle: Text(
               darfWecken ? t.weckenUntertitel : t.weckenGesperrt,
-              style: const TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
+              style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
             ),
           ),
           if (aktiv) ...[
@@ -579,18 +579,18 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
               children: [
                 Text(
                   t.weckenUhrzeit(NaechtlichesWecken.formatUhrzeit(_weckenZeit)),
-                  style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600, color: AppTheme.textPrimary),
+                  style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600, color: AppTheme.textPrimary),
                 ),
                 TextButton(
                   onPressed: _weckzeitWaehlen,
-                  child: Text(t.weckenAendern, style: const TextStyle(color: AppTheme.rose)),
+                  child: Text(t.weckenAendern, style: TextStyle(color: AppTheme.rose)),
                 ),
               ],
             ),
             const SizedBox(height: 4),
             Text(
               t.weckenSicherheit,
-              style: const TextStyle(fontSize: 12, color: AppTheme.textMuted, height: 1.45),
+              style: TextStyle(fontSize: 12, color: AppTheme.textMuted, height: 1.45),
             ),
           ],
         ],
@@ -610,7 +610,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
 
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -647,8 +647,8 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         ),
         const SizedBox(height: 8),
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Text(_fmt(_vergangen), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
-          Text(_fmt(gesamt), style: const TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+          Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+          Text(_fmt(gesamt), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
         ]),
         const Spacer(),
         AnimatedContainer(
@@ -668,10 +668,10 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         ),
         const SizedBox(height: 28),
         Text(_fertig ? t.einschlafLaeuft : t.einschlafLaeuft,
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: AppTheme.textSecondary)),
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: AppTheme.textSecondary)),
         const SizedBox(height: 10),
         Text(_pausiert ? t.paarAbendPaused : t.einschlafLaeuftText,
-            textAlign: TextAlign.center, style: const TextStyle(fontSize: 13, color: AppTheme.textMuted, height: 1.4)),
+            textAlign: TextAlign.center, style: TextStyle(fontSize: 13, color: AppTheme.textMuted, height: 1.4)),
         const Spacer(),
         if (_fertig)
           SizedBox(
@@ -681,7 +681,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
               onPressed: () => Navigator.of(context).pop(),
               style: OutlinedButton.styleFrom(
                 foregroundColor: AppTheme.rose,
-                side: const BorderSide(color: AppTheme.rose),
+                side: BorderSide(color: AppTheme.rose),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
               ),
               child: Text(t.couplesChannelClose, style: TextStyle(fontWeight: FontWeight.w700)),

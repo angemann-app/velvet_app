@@ -48,12 +48,12 @@ class _PairingModalState extends State<PairingModal>
       builder: (ctx) => AlertDialog(
         backgroundColor: AppTheme.surface,
         title: Text(t.pairingAnfrageTitel, style: const TextStyle(fontSize: 18)),
-        content: Text(t.pairingAnfrageText, style: const TextStyle(color: AppTheme.textSecondary, height: 1.45)),
+        content: Text(t.pairingAnfrageText, style: TextStyle(color: AppTheme.textSecondary, height: 1.45)),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.invitePartnerDecline)),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text(t.pairingAnfrageVerbinden, style: const TextStyle(color: AppTheme.rose)),
+            child: Text(t.pairingAnfrageVerbinden, style: TextStyle(color: AppTheme.rose)),
           ),
         ],
       ),
@@ -101,7 +101,7 @@ class _PairingModalState extends State<PairingModal>
           title: Text(t.pairingModalConnectWithSomeoneElse, style: TextStyle(fontSize: 18)),
           content: Text(
             t.pairingModalYouReCurrentlyConnectedWith(old, old, old),
-            style: const TextStyle(color: AppTheme.textSecondary, height: 1.45),
+            style: TextStyle(color: AppTheme.textSecondary, height: 1.45),
           ),
           actions: [
             TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
@@ -154,7 +154,7 @@ class _PairingModalState extends State<PairingModal>
 
     return Container(
       height: MediaQuery.of(context).size.height * 0.88,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: AppTheme.background,
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
@@ -250,7 +250,7 @@ class _PairingModalState extends State<PairingModal>
                                     backgroundColor: Colors.white,
                                     padding: EdgeInsets.zero,
                                   )
-                                : const SizedBox(
+                                : SizedBox(
                                     width: 210,
                                     height: 210,
                                     child: Center(
@@ -276,7 +276,7 @@ class _PairingModalState extends State<PairingModal>
                                     currentNpub,
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       color: AppTheme.textMuted,
                                       fontFamily: 'monospace',
                                       fontSize: 12,
@@ -402,7 +402,7 @@ class _PairingModalState extends State<PairingModal>
                           ),
                           child: Text(
                             _errorMessage!,
-                            style: const TextStyle(color: AppTheme.rose, fontSize: 12),
+                            style: TextStyle(color: AppTheme.rose, fontSize: 12),
                           ),
                         ),
                       ],
@@ -410,16 +410,16 @@ class _PairingModalState extends State<PairingModal>
                       // Partner Name Input
                       TextField(
                         controller: _nameInputController,
-                        style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+                        style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
                         decoration: InputDecoration(
                           hintText: t.pairingModalPartnerSNameEG,
-                          hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 13),
-                          prefixIcon: const Icon(Icons.favorite_outline_rounded, color: AppTheme.rose, size: 20),
+                          hintStyle: TextStyle(color: AppTheme.textMuted, fontSize: 13),
+                          prefixIcon: Icon(Icons.favorite_outline_rounded, color: AppTheme.rose, size: 20),
                           filled: true,
                           fillColor: AppTheme.surface,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: AppTheme.border),
+                            borderSide: BorderSide(color: AppTheme.border),
                           ),
                         ),
                       ),
@@ -445,13 +445,13 @@ class _PairingModalState extends State<PairingModal>
                       // Manual Key Input
                       TextField(
                         controller: _keyInputController,
-                        style: const TextStyle(color: AppTheme.textPrimary, fontSize: 13, fontFamily: 'monospace'),
+                        style: TextStyle(color: AppTheme.textPrimary, fontSize: 13, fontFamily: 'monospace'),
                         decoration: InputDecoration(
                           hintText: t.pairingModalOrPasteNpubHexKey,
-                          hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 12),
-                          prefixIcon: const Icon(Icons.key_rounded, color: AppTheme.amber, size: 20),
+                          hintStyle: TextStyle(color: AppTheme.textMuted, fontSize: 12),
+                          prefixIcon: Icon(Icons.key_rounded, color: AppTheme.amber, size: 20),
                           suffixIcon: IconButton(
-                            icon: const Icon(Icons.paste_rounded, color: AppTheme.amberLight, size: 20),
+                            icon: Icon(Icons.paste_rounded, color: AppTheme.amberLight, size: 20),
                             tooltip: t.pairingModalPasteFromClipboard,
                             onPressed: () async {
                               final data = await Clipboard.getData('text/plain');
@@ -464,7 +464,7 @@ class _PairingModalState extends State<PairingModal>
                           fillColor: AppTheme.surface,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(color: AppTheme.border),
+                            borderSide: BorderSide(color: AppTheme.border),
                           ),
                         ),
                       ),

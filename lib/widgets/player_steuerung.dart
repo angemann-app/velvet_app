@@ -72,5 +72,5 @@ class PlayerSteuerung extends StatelessWidget {
       );
 
   Widget _beschriftung(String text) =>
-      Text(text, style: const TextStyle(fontSize: 11.5, color: AppTheme.textMuted));
+      Text(text, style: TextStyle(fontSize: 11.5, color: AppTheme.textMuted));
 }

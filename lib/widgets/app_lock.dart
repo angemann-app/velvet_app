@@ -90,7 +90,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(Icons.lock_rounded, color: AppTheme.textSecondary, size: 48),
+                      Icon(Icons.lock_rounded, color: AppTheme.textSecondary, size: 48),
                       const SizedBox(height: 16),
                       Text(
                         t.appLockLocked,

@@ -62,12 +62,12 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
           children: [
             Text(
               t.realitaetFrage,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
             ),
             const SizedBox(height: 8),
             Text(
               t.realitaetEinleitung,
-              style: const TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.45),
+              style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.45),
             ),
             const SizedBox(height: 18),
 
@@ -105,7 +105,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                 ),
                 child: Text(
                   _rueckmeldung!,
-                  style: const TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.4),
+                  style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.4),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -147,7 +147,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
             // Motive aus dem Tagebuch
             Text(
               t.realitaetMotiveTitel,
-              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
             ),
             const SizedBox(height: 8),
             if (_motive.isEmpty)
@@ -160,7 +160,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                 ),
                 child: Text(
                   t.realitaetMotiveKeine,
-                  style: const TextStyle(fontSize: 13, color: AppTheme.textMuted, height: 1.4),
+                  style: TextStyle(fontSize: 13, color: AppTheme.textMuted, height: 1.4),
                 ),
               )
             else
@@ -179,7 +179,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                         padding: const EdgeInsets.only(bottom: 6),
                         child: Text(
                           '• ${t.realitaetMotivSatz(m)}',
-                          style: const TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.35),
+                          style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.35),
                         ),
                       ),
                   ],
@@ -190,7 +190,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
             // Einstellungen
             Text(
               t.realitaetErinnerungenAktiv,
-              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
             ),
             const SizedBox(height: 8),
             Container(
@@ -203,10 +203,10 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                 children: [
                   SwitchListTile(
                     title: Text(t.realitaetErinnerungenAktiv,
-                        style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w600, color: AppTheme.textPrimary)),
+                        style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w600, color: AppTheme.textPrimary)),
                     subtitle: Text(
                       t.realitaetMitteilungTitel,
-                      style: const TextStyle(fontSize: 12.5, color: AppTheme.textMuted),
+                      style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted),
                     ),
                     value: _einstellungen.aktiv,
                     activeThumbColor: AppTheme.rose,
@@ -221,7 +221,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                         children: [
                           Text(
                             t.realitaetZeitfenster(_einstellungen.vonStunde, _einstellungen.bisStunde),
-                            style: const TextStyle(fontSize: 13, color: AppTheme.textSecondary),
+                            style: TextStyle(fontSize: 13, color: AppTheme.textSecondary),
                           ),
                         ],
                       ),
@@ -233,7 +233,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                         children: [
                           Text(
                             t.realitaetAnzahlTag(_einstellungen.anzahlProTag),
-                            style: const TextStyle(fontSize: 13, color: AppTheme.textSecondary),
+                            style: TextStyle(fontSize: 13, color: AppTheme.textSecondary),
                           ),
                           Row(
                             children: [
@@ -279,7 +279,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
               ),
               child: Text(
                 t.realitaetHinweisXiaomi,
-                style: const TextStyle(fontSize: 11.5, color: AppTheme.textMuted, height: 1.4),
+                style: TextStyle(fontSize: 11.5, color: AppTheme.textMuted, height: 1.4),
               ),
             ),
           ],
@@ -316,12 +316,12 @@ class _UebungsKarte extends StatelessWidget {
               children: [
                 Text(
                   titel,
-                  style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   text,
-                  style: const TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
+                  style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
                 ),
               ],
             ),

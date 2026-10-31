@@ -193,7 +193,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                   if (reasonMessage != null) ...[
                     Text(
                       reasonMessage,
-                      style: const TextStyle(color: AppTheme.amberLight, fontSize: 13),
+                      style: TextStyle(color: AppTheme.amberLight, fontSize: 13),
                     ),
                     const SizedBox(height: 12),
                   ],
@@ -204,7 +204,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                   const SizedBox(height: 16),
                   TextField(
                     controller: controller,
-                    style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+                    style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
                     decoration: const InputDecoration(
                       hintText: 'AIzaSy...',
                       labelText: 'Google AI Studio API Key',
@@ -315,7 +315,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                               });
                             },
                       icon: isTesting
-                          ? const SizedBox(
+                          ? SizedBox(
                               width: 14,
                               height: 14,
                               child: CircularProgressIndicator(strokeWidth: 2, color: AppTheme.amber),
@@ -324,7 +324,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                       label: Text(isTesting ? t.aiCoachCheckingConnection : t.aiCoachTestConnection),
                       style: OutlinedButton.styleFrom(
                         foregroundColor: AppTheme.amber,
-                        side: const BorderSide(color: AppTheme.amber),
+                        side: BorderSide(color: AppTheme.amber),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
@@ -452,17 +452,17 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
               Row(
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.help_outline_rounded, size: 20, color: AppTheme.amberLight),
+                    icon: Icon(Icons.help_outline_rounded, size: 20, color: AppTheme.amberLight),
                     tooltip: t.aiCoachGuideCreateAKey,
                     onPressed: _showApiKeyGuide,
                   ),
                   IconButton(
-                    icon: const Icon(Icons.delete_sweep_rounded, size: 20, color: AppTheme.textMuted),
+                    icon: Icon(Icons.delete_sweep_rounded, size: 20, color: AppTheme.textMuted),
                     tooltip: t.aiCoachClearChat,
                     onPressed: _clearChat,
                   ),
                   IconButton(
-                    icon: const Icon(Icons.settings_rounded, size: 20, color: AppTheme.textSecondary),
+                    icon: Icon(Icons.settings_rounded, size: 20, color: AppTheme.textSecondary),
                     tooltip: t.aiCoachApiKeySettings,
                     onPressed: () => _showApiKeyDialog(),
                   ),
@@ -484,7 +484,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
             ),
             child: Row(
               children: [
-                const Icon(Icons.lightbulb_outline_rounded, color: AppTheme.amber, size: 20),
+                Icon(Icons.lightbulb_outline_rounded, color: AppTheme.amber, size: 20),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
@@ -525,7 +525,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
             child: Row(
               children: [
-                const SizedBox(
+                SizedBox(
                   width: 14,
                   height: 14,
                   child: CircularProgressIndicator(
@@ -563,8 +563,8 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                   label: Text(prompt),
                   onPressed: () => _sendMessage(prompt),
                   backgroundColor: AppTheme.surfaceLight.withValues(alpha: 0.4),
-                  side: const BorderSide(color: AppTheme.border),
-                  labelStyle: const TextStyle(
+                  side: BorderSide(color: AppTheme.border),
+                  labelStyle: TextStyle(
                     fontSize: 11,
                     color: AppTheme.textPrimary,
                   ),
@@ -577,7 +577,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
         // Input Field Bar
         Container(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 14),
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: AppTheme.surface,
             border: Border(top: BorderSide(color: AppTheme.border)),
           ),
@@ -591,23 +591,23 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                     minLines: 1,
                     maxLines: 4,
                     textCapitalization: TextCapitalization.sentences,
-                    style: const TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+                    style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
                     decoration: InputDecoration(
                       hintText: t.aiCoachAskAConfidentialQuestion,
-                      hintStyle: const TextStyle(color: AppTheme.textMuted, fontSize: 14),
+                      hintStyle: TextStyle(color: AppTheme.textMuted, fontSize: 14),
                       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                       fillColor: AppTheme.background,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(24),
-                        borderSide: const BorderSide(color: AppTheme.border),
+                        borderSide: BorderSide(color: AppTheme.border),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(24),
-                        borderSide: const BorderSide(color: AppTheme.border),
+                        borderSide: BorderSide(color: AppTheme.border),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(24),
-                        borderSide: const BorderSide(color: AppTheme.sageGreen),
+                        borderSide: BorderSide(color: AppTheme.sageGreen),
                       ),
                     ),
                     onSubmitted: (_) => _sendMessage(),
@@ -648,7 +648,7 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
                 shape: BoxShape.circle,
                 border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.4)),
               ),
-              child: const Icon(Icons.psychology_rounded, size: 16, color: AppTheme.sageGreen),
+              child: Icon(Icons.psychology_rounded, size: 16, color: AppTheme.sageGreen),
             ),
           ],
           Flexible(

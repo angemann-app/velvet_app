@@ -20,7 +20,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: AppTheme.surface,
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
@@ -51,7 +51,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                     color: AppTheme.amber.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(Icons.key_rounded, color: AppTheme.amber, size: 24),
+                  child: Icon(Icons.key_rounded, color: AppTheme.amber, size: 24),
                 ),
                 const SizedBox(width: 14),
                 Expanded(
@@ -78,14 +78,14 @@ class ApiKeyGuideSheet extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.close_rounded, color: AppTheme.textMuted),
+                  icon: Icon(Icons.close_rounded, color: AppTheme.textMuted),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ],
             ),
           ),
 
-          const Divider(color: AppTheme.border, height: 1),
+          Divider(color: AppTheme.border, height: 1),
 
           // Steps list
           Expanded(
@@ -103,7 +103,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(Icons.shield_outlined, color: AppTheme.sageGreen, size: 20),
+                      Icon(Icons.shield_outlined, color: AppTheme.sageGreen, size: 20),
                       const SizedBox(width: 10),
                       Expanded(
                         child: RichText(
@@ -144,9 +144,9 @@ class ApiKeyGuideSheet extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        const Icon(Icons.link_rounded, color: AppTheme.amber, size: 18),
+                        Icon(Icons.link_rounded, color: AppTheme.amber, size: 18),
                         const SizedBox(width: 8),
-                        const Expanded(
+                        Expanded(
                           child: Text(
                             'https://aistudio.google.com',
                             style: TextStyle(
@@ -277,7 +277,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
           // Bottom CTA Button
           Container(
             padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: AppTheme.surface,
               border: Border(top: BorderSide(color: AppTheme.border)),
             ),
@@ -339,7 +339,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
             ),
             child: Text(
               stepNumber,
-              style: const TextStyle(
+              style: TextStyle(
                 color: AppTheme.amberLight,
                 fontWeight: FontWeight.w800,
                 fontSize: 13,
@@ -353,7 +353,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.textPrimary,
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
@@ -362,7 +362,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   description,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.textSecondary,
                     fontSize: 12,
                     height: 1.4,
@@ -386,7 +386,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
       children: [
         Text(
           '• $question',
-          style: const TextStyle(
+          style: TextStyle(
             color: AppTheme.amberLight,
             fontSize: 12,
             fontWeight: FontWeight.w600,
@@ -397,7 +397,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
           padding: const EdgeInsets.only(left: 10),
           child: Text(
             answer,
-            style: const TextStyle(
+            style: TextStyle(
               color: AppTheme.textMuted,
               fontSize: 11,
               height: 1.35,
