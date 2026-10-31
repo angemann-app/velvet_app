@@ -365,6 +365,102 @@ msgid "Kurse"
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: Your AI coach
+msgctxt "ui:aiCoachEinrichtungTitel#text"
+msgid "Dein KI-Coach"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Ask about body, desire and relationships, in confidence and without judgement. It does not replace medical or therapeutic help.
+msgctxt "ui:aiCoachEinrichtungText#text"
+msgid "Stell Fragen zu Körper, Lust und Beziehung, vertraulich und ohne Urteil. Er ersetzt keine ärztliche oder therapeutische Hilfe."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Create a free key at Google
+msgctxt "ui:aiCoachEinrichtungSchritt1#text"
+msgid "Einen kostenlosen Schlüssel bei Google erstellen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guide
+msgctxt "ui:aiCoachEinrichtungKnopf1#text"
+msgid "Anleitung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paste the key here
+msgctxt "ui:aiCoachEinrichtungSchritt2#text"
+msgid "Den Schlüssel hier einfügen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paste
+msgctxt "ui:aiCoachEinrichtungKnopf2#text"
+msgid "Einfügen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Only your questions go to Google Gemini. Everything else stays on your phone.
+msgctxt "ui:aiCoachEinrichtungDatenschutz#text"
+msgid "Nur deine Fragen gehen an Googles Gemini. Alles andere bleibt auf deinem Handy."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Get started
+msgctxt "ui:onboardingLosGehts#text"
+msgid "Loslegen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Next
+msgctxt "ui:onboardingWeiter#text"
+msgid "Weiter"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Back
+msgctxt "ui:onboardingZurueck#text"
+msgid "Zurück"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: OK
+msgctxt "ui:onboardingOk#text"
+msgid "OK"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: More about privacy
+msgctxt "ui:onboardingMehrDatenschutz#text"
+msgid "Mehr zum Datenschutz"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Everything stays on your phone: profile, journal and progress.
+msgctxt "ui:onboardingVersprechenLokal#text"
+msgid "Alles bleibt auf deinem Handy: Profil, Tagebuch und Fortschritt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No account, no ads, no tracking.
+msgctxt "ui:onboardingVersprechenKeinKonto#text"
+msgid "Kein Konto, keine Werbung, keine Auswertung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Only what you switch on yourself goes online: the AI coach, the couple channel and the check for updates.
+msgctxt "ui:onboardingVersprechenNetz#text"
+msgid "Ins Netz geht nur, was du selbst einschaltest: KI-Coach, Paar-Kanal und die Suche nach Updates."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}, {gesamt}
+#. EN: Question {n} of {gesamt}
+msgctxt "ui:onboardingSchritt#text"
+msgid "Frage {n} von {gesamt}"
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Browse all courses
 msgctxt "ui:heuteAlleKurse#text"
 msgid "Alle Kurse ansehen"

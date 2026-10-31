@@ -78,3 +78,7 @@ vier Tabs: **Heute** (Kopf, nächster Schritt, Check-in/Funke, geführte Audios,
 (Filter und Kurse nach Schwerpunkten), **Üben** (Bereiche Körper, Gedanken, KI-Coach in `lib/screens/ueben/ueben_screen.dart`)
 und **Wir** (Paar-Kanal). Aufrufer wie Lektionen springen weiter mit den alten Tab-Nummern; `MainNavigationScreen` ordnet sie zu.
 Noch offen: Suche und Lesezeichen in „Lernen“, Willkommensschritt im KI-Coach und Onboarding (Stufe 5), „Weiter hören“ (Stufe 1b).
+**Stufe 5 gebaut am 31.10.2026** (noch nicht veröffentlicht): Die Ersteinrichtung beginnt mit einer Willkommensseite (drei
+Versprechen, Datenschutz-Einzelheiten hinter „Mehr zum Datenschutz“, „Loslegen“, Wiederherstellen), danach eine Frage pro
+Bild mit Fortschrittsstrich, „Weiter“ und „Zurück“; „Überspringen“ steht immer da. Das Bearbeiten des Profils bleibt eine
+Seite. Der KI-Coach zeigt ohne Schlüssel einen Einstieg in zwei Schritten (Anleitung, Einfügen) statt einer Fehlermeldung.

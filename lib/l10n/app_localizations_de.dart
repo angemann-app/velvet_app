@@ -207,6 +207,62 @@ class AppLocalizationsDe extends AppLocalizations {
   String get heuteKurse => 'Kurse';
 
   @override
+  String get aiCoachEinrichtungTitel => 'Dein KI-Coach';
+
+  @override
+  String get aiCoachEinrichtungText =>
+      'Stell Fragen zu Körper, Lust und Beziehung, vertraulich und ohne Urteil. Er ersetzt keine ärztliche oder therapeutische Hilfe.';
+
+  @override
+  String get aiCoachEinrichtungSchritt1 =>
+      'Einen kostenlosen Schlüssel bei Google erstellen';
+
+  @override
+  String get aiCoachEinrichtungKnopf1 => 'Anleitung';
+
+  @override
+  String get aiCoachEinrichtungSchritt2 => 'Den Schlüssel hier einfügen';
+
+  @override
+  String get aiCoachEinrichtungKnopf2 => 'Einfügen';
+
+  @override
+  String get aiCoachEinrichtungDatenschutz =>
+      'Nur deine Fragen gehen an Googles Gemini. Alles andere bleibt auf deinem Handy.';
+
+  @override
+  String get onboardingLosGehts => 'Loslegen';
+
+  @override
+  String get onboardingWeiter => 'Weiter';
+
+  @override
+  String get onboardingZurueck => 'Zurück';
+
+  @override
+  String get onboardingOk => 'OK';
+
+  @override
+  String get onboardingMehrDatenschutz => 'Mehr zum Datenschutz';
+
+  @override
+  String get onboardingVersprechenLokal =>
+      'Alles bleibt auf deinem Handy: Profil, Tagebuch und Fortschritt.';
+
+  @override
+  String get onboardingVersprechenKeinKonto =>
+      'Kein Konto, keine Werbung, keine Auswertung.';
+
+  @override
+  String get onboardingVersprechenNetz =>
+      'Ins Netz geht nur, was du selbst einschaltest: KI-Coach, Paar-Kanal und die Suche nach Updates.';
+
+  @override
+  String onboardingSchritt(int n, int gesamt) {
+    return 'Frage $n von $gesamt';
+  }
+
+  @override
   String get heuteAlleKurse => 'Alle Kurse ansehen';
 
   @override

@@ -408,8 +408,71 @@ class _AiCoachScreenState extends State<AiCoachScreen> {
     );
   }
 
+  /// Ohne Schlüssel: ein freundlicher Einstieg in zwei Schritten statt einer Fehlermeldung
+  /// (docs/konzepte/heute-und-produktschliff.md, Punkt 6).
+  Widget _buildEinrichtung() {
+    Widget schritt(int n, String text, String knopf, VoidCallback onTap) => Container(
+          margin: const EdgeInsets.only(top: 12),
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: AppTheme.surface,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: AppTheme.border),
+          ),
+          child: Row(children: [
+            Container(
+              width: 28,
+              height: 28,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(shape: BoxShape.circle, color: AppTheme.amber.withValues(alpha: 0.18)),
+              child: Text('$n', style: TextStyle(fontWeight: FontWeight.w800, color: AppTheme.amber)),
+            ),
+            const SizedBox(width: 12),
+            Expanded(child: Text(text, style: TextStyle(fontSize: 14, color: AppTheme.textPrimary, height: 1.35))),
+            const SizedBox(width: 8),
+            OutlinedButton(
+              onPressed: onTap,
+              style: OutlinedButton.styleFrom(
+                foregroundColor: AppTheme.sageGreen,
+                side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.7)),
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              ),
+              child: Text(knopf, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700)),
+            ),
+          ]),
+        );
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
+      children: [
+        Center(child: Icon(Icons.chat_bubble_outline_rounded, size: 38, color: AppTheme.amber)),
+        const SizedBox(height: 14),
+        Text(t.aiCoachEinrichtungTitel,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                fontSize: 24, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+        const SizedBox(height: 10),
+        Text(t.aiCoachEinrichtungText,
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 14.5, color: AppTheme.textSecondary, height: 1.45)),
+        const SizedBox(height: 8),
+        schritt(1, t.aiCoachEinrichtungSchritt1, t.aiCoachEinrichtungKnopf1, _showApiKeyGuide),
+        schritt(2, t.aiCoachEinrichtungSchritt2, t.aiCoachEinrichtungKnopf2, () => _showApiKeyDialog()),
+        const SizedBox(height: 16),
+        Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Icon(Icons.lock_outline_rounded, size: 15, color: AppTheme.textMuted),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(t.aiCoachEinrichtungDatenschutz,
+                style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.4)),
+          ),
+        ]),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (_apiKey == null || _apiKey!.isEmpty) return _buildEinrichtung();
     return Column(
       children: [
         // Sub-Header bar for Key Setup & Reset

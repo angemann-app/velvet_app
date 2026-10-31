@@ -28,6 +28,16 @@ void main() {
       ));
       await tester.pump();
 
+      // Ersteinrichtung in Schritten: Willkommen, dann fünf Fragen. „Überspringen“ steht immer da, „personalisieren“ erst am Ende.
+      if (label == 'Programm jetzt personalisieren') {
+        for (final knopf in ['Loslegen', 'Weiter', 'Weiter', 'Weiter', 'Weiter']) {
+          final b = find.text(knopf);
+          await tester.ensureVisible(b);
+          await tester.tap(b);
+          await tester.pump(const Duration(milliseconds: 100));
+        }
+      }
+
       final button = find.text(label);
       await tester.ensureVisible(button);
       await tester.tap(button);

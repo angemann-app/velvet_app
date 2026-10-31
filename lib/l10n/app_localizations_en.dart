@@ -207,6 +207,61 @@ class AppLocalizationsEn extends AppLocalizations {
   String get heuteKurse => 'Courses';
 
   @override
+  String get aiCoachEinrichtungTitel => 'Your AI coach';
+
+  @override
+  String get aiCoachEinrichtungText =>
+      'Ask about body, desire and relationships, in confidence and without judgement. It does not replace medical or therapeutic help.';
+
+  @override
+  String get aiCoachEinrichtungSchritt1 => 'Create a free key at Google';
+
+  @override
+  String get aiCoachEinrichtungKnopf1 => 'Guide';
+
+  @override
+  String get aiCoachEinrichtungSchritt2 => 'Paste the key here';
+
+  @override
+  String get aiCoachEinrichtungKnopf2 => 'Paste';
+
+  @override
+  String get aiCoachEinrichtungDatenschutz =>
+      'Only your questions go to Google Gemini. Everything else stays on your phone.';
+
+  @override
+  String get onboardingLosGehts => 'Get started';
+
+  @override
+  String get onboardingWeiter => 'Next';
+
+  @override
+  String get onboardingZurueck => 'Back';
+
+  @override
+  String get onboardingOk => 'OK';
+
+  @override
+  String get onboardingMehrDatenschutz => 'More about privacy';
+
+  @override
+  String get onboardingVersprechenLokal =>
+      'Everything stays on your phone: profile, journal and progress.';
+
+  @override
+  String get onboardingVersprechenKeinKonto =>
+      'No account, no ads, no tracking.';
+
+  @override
+  String get onboardingVersprechenNetz =>
+      'Only what you switch on yourself goes online: the AI coach, the couple channel and the check for updates.';
+
+  @override
+  String onboardingSchritt(int n, int gesamt) {
+    return 'Question $n of $gesamt';
+  }
+
+  @override
   String get heuteAlleKurse => 'Browse all courses';
 
   @override

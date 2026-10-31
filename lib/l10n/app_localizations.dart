@@ -446,6 +446,102 @@ abstract class AppLocalizations {
   /// **'Kurse'**
   String get heuteKurse;
 
+  /// No description provided for @aiCoachEinrichtungTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein KI-Coach'**
+  String get aiCoachEinrichtungTitel;
+
+  /// No description provided for @aiCoachEinrichtungText.
+  ///
+  /// In de, this message translates to:
+  /// **'Stell Fragen zu Körper, Lust und Beziehung, vertraulich und ohne Urteil. Er ersetzt keine ärztliche oder therapeutische Hilfe.'**
+  String get aiCoachEinrichtungText;
+
+  /// No description provided for @aiCoachEinrichtungSchritt1.
+  ///
+  /// In de, this message translates to:
+  /// **'Einen kostenlosen Schlüssel bei Google erstellen'**
+  String get aiCoachEinrichtungSchritt1;
+
+  /// No description provided for @aiCoachEinrichtungKnopf1.
+  ///
+  /// In de, this message translates to:
+  /// **'Anleitung'**
+  String get aiCoachEinrichtungKnopf1;
+
+  /// No description provided for @aiCoachEinrichtungSchritt2.
+  ///
+  /// In de, this message translates to:
+  /// **'Den Schlüssel hier einfügen'**
+  String get aiCoachEinrichtungSchritt2;
+
+  /// No description provided for @aiCoachEinrichtungKnopf2.
+  ///
+  /// In de, this message translates to:
+  /// **'Einfügen'**
+  String get aiCoachEinrichtungKnopf2;
+
+  /// No description provided for @aiCoachEinrichtungDatenschutz.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur deine Fragen gehen an Googles Gemini. Alles andere bleibt auf deinem Handy.'**
+  String get aiCoachEinrichtungDatenschutz;
+
+  /// No description provided for @onboardingLosGehts.
+  ///
+  /// In de, this message translates to:
+  /// **'Loslegen'**
+  String get onboardingLosGehts;
+
+  /// No description provided for @onboardingWeiter.
+  ///
+  /// In de, this message translates to:
+  /// **'Weiter'**
+  String get onboardingWeiter;
+
+  /// No description provided for @onboardingZurueck.
+  ///
+  /// In de, this message translates to:
+  /// **'Zurück'**
+  String get onboardingZurueck;
+
+  /// No description provided for @onboardingOk.
+  ///
+  /// In de, this message translates to:
+  /// **'OK'**
+  String get onboardingOk;
+
+  /// No description provided for @onboardingMehrDatenschutz.
+  ///
+  /// In de, this message translates to:
+  /// **'Mehr zum Datenschutz'**
+  String get onboardingMehrDatenschutz;
+
+  /// No description provided for @onboardingVersprechenLokal.
+  ///
+  /// In de, this message translates to:
+  /// **'Alles bleibt auf deinem Handy: Profil, Tagebuch und Fortschritt.'**
+  String get onboardingVersprechenLokal;
+
+  /// No description provided for @onboardingVersprechenKeinKonto.
+  ///
+  /// In de, this message translates to:
+  /// **'Kein Konto, keine Werbung, keine Auswertung.'**
+  String get onboardingVersprechenKeinKonto;
+
+  /// No description provided for @onboardingVersprechenNetz.
+  ///
+  /// In de, this message translates to:
+  /// **'Ins Netz geht nur, was du selbst einschaltest: KI-Coach, Paar-Kanal und die Suche nach Updates.'**
+  String get onboardingVersprechenNetz;
+
+  /// No description provided for @onboardingSchritt.
+  ///
+  /// In de, this message translates to:
+  /// **'Frage {n} von {gesamt}'**
+  String onboardingSchritt(int n, int gesamt);
+
   /// No description provided for @heuteAlleKurse.
   ///
   /// In de, this message translates to:

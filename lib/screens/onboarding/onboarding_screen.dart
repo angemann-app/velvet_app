@@ -42,6 +42,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   String _selectedRelationship = 'relationship';
   String _selectedGoal = 'performance_anxiety';
   bool _isSubmitting = false;
+  // Ersteinrichtung in Schritten: 0 Willkommen (Versprechen), 1 bis 5 je eine Frage. Beim Bearbeiten des Profils gilt alles auf einer Seite.
+  int _schritt = 0;
+  static const _fragen = 5;
   bool _lockEnabled = false;
   bool _discreetIcon = false;
   UpdateChannel _updateChannel = UpdateChannel.stable;
@@ -459,7 +462,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              if (!widget.isEditing) ...[
+              if (!widget.isEditing && _schritt == 0) ...[
                 // Welcome Logo & Header
                 Center(
                   child: Container(
@@ -507,31 +510,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 12),
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: AppTheme.surfaceLight.withValues(alpha: 0.4),
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: AppTheme.border),
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.lock_outline_rounded, color: AppTheme.sageGreen, size: 18),
-                      SizedBox(width: 10),
-                      Expanded(
-                        child: Text(
-                          t.onboardingPrivateProfileJournalProgressStay,
-                          style: TextStyle(
-                            fontSize: 11.5,
-                            color: AppTheme.textSecondary,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                const SizedBox(height: 18),
+                _buildVersprechen(),
                 const SizedBox(height: 16),
 
                 // Fast Restore Option
@@ -577,10 +557,41 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ],
                   ),
                 ),
+                const SizedBox(height: 20),
+                SizedBox(
+                  width: double.infinity,
+                  height: 54,
+                  child: ElevatedButton(
+                    onPressed: () => setState(() => _schritt = 1),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppTheme.sageGreen,
+                      foregroundColor: Colors.black,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                    ),
+                    child: Text(t.onboardingLosGehts, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  ),
+                ),
+                const SizedBox(height: 12),
+              ],
+
+              if (!widget.isEditing && _schritt >= 1) ...[
+                Text(t.onboardingSchritt(_schritt, _fragen),
+                    style: TextStyle(fontSize: 12, color: AppTheme.textMuted, fontWeight: FontWeight.w600)),
+                const SizedBox(height: 6),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(4),
+                  child: LinearProgressIndicator(
+                    value: _schritt / _fragen,
+                    minHeight: 4,
+                    backgroundColor: AppTheme.surfaceLight,
+                    valueColor: AlwaysStoppedAnimation(AppTheme.sageGreen),
+                  ),
+                ),
                 const SizedBox(height: 24),
               ],
 
               // 1. Name
+              if (widget.isEditing || _schritt == 1) ...[
               _buildSectionTitle(t.onboardingWhatShouldWeCallYou, Icons.person_rounded),
               const SizedBox(height: 8),
               TextField(
@@ -606,9 +617,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
 
-              const SizedBox(height: 24),
+              ],
 
               // 2. Gender
+              if (widget.isEditing || _schritt == 2) ...[
+              const SizedBox(height: 24),
               _buildSectionTitle(t.onboardingYourGender, Icons.wc_rounded),
               Text(
                 t.onboardingAdjustsCourseRecommendationsPelvicFloor,
@@ -652,9 +665,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ],
               ),
 
-              const SizedBox(height: 24),
+              ],
 
               // 3. Age
+              if (widget.isEditing || _schritt == 3) ...[
+              const SizedBox(height: 24),
               _buildSectionTitle(t.onboardingYourAgeSelectedageYears(_selectedAge), Icons.cake_rounded),
               const SizedBox(height: 4),
               SliderTheme(
@@ -675,9 +690,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
 
-              const SizedBox(height: 20),
+              ],
 
               // 4. Relationship Status
+              if (widget.isEditing || _schritt == 4) ...[
+              const SizedBox(height: 20),
               _buildSectionTitle(t.onboardingYourRelationshipStatus, Icons.favorite_rounded),
               const SizedBox(height: 8),
               Wrap(
@@ -711,9 +728,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ],
               ),
 
-              const SizedBox(height: 24),
+              ],
 
               // 5. Primary Goal
+              if (widget.isEditing || _schritt == 5) ...[
+              const SizedBox(height: 24),
               _buildSectionTitle(t.onboardingWhatSYourBiggestPriority, Icons.track_changes_rounded),
               const SizedBox(height: 8),
               _buildGoalTile(
@@ -740,14 +759,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 subtitle: t.onboardingUnderstandResponsiveDesireEaseOrgasm,
               ),
 
+              ],
+
               const SizedBox(height: 32),
 
-              // Submit Button
+              // Submit Button (bei der Ersteinrichtung: Weiter, am Ende Personalisieren)
+              if (widget.isEditing || _schritt >= 1)
               SizedBox(
                 width: double.infinity,
                 height: 54,
                 child: ElevatedButton(
-                  onPressed: _isSubmitting ? null : _submit,
+                  onPressed: _isSubmitting
+                      ? null
+                      : (!widget.isEditing && _schritt < _fragen ? () => setState(() => _schritt++) : _submit),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppTheme.sageGreen,
                     foregroundColor: Colors.black,
@@ -763,11 +787,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         )
                       : Text(
-                          widget.isEditing ? t.onboardingSaveChanges : t.onboardingPersonaliseProgrammeNow,
+                          widget.isEditing
+                              ? t.onboardingSaveChanges
+                              : (_schritt < _fragen ? t.onboardingWeiter : t.onboardingPersonaliseProgrammeNow),
                           style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                 ),
               ),
+
+              if (!widget.isEditing && _schritt > 1)
+                Center(
+                  child: TextButton(
+                    onPressed: () => setState(() => _schritt--),
+                    child: Text(t.onboardingZurueck, style: TextStyle(color: AppTheme.textSecondary)),
+                  ),
+                ),
 
               if (!widget.isEditing) ...[
                 const SizedBox(height: 12),
@@ -851,6 +885,48 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  /// Willkommensseite: drei Versprechen statt eines langen Datenschutztextes; die Einzelheiten stehen dahinter.
+  Widget _buildVersprechen() {
+    Widget zeile(IconData icon, String text) => Padding(
+          padding: const EdgeInsets.symmetric(vertical: 6),
+          child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Icon(icon, color: AppTheme.sageGreen, size: 20),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(text, style: TextStyle(fontSize: 14, color: AppTheme.textPrimary, height: 1.4)),
+            ),
+          ]),
+        );
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 10, 16, 4),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        zeile(Icons.lock_outline_rounded, t.onboardingVersprechenLokal),
+        zeile(Icons.person_off_outlined, t.onboardingVersprechenKeinKonto),
+        zeile(Icons.wifi_off_rounded, t.onboardingVersprechenNetz),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton(
+            onPressed: () => showDialog<void>(
+              context: context,
+              builder: (ctx) => AlertDialog(
+                backgroundColor: AppTheme.surface,
+                title: Text(t.onboardingMehrDatenschutz),
+                content: Text(t.onboardingPrivateProfileJournalProgressStay),
+                actions: [TextButton(onPressed: () => Navigator.of(ctx).pop(), child: Text(t.onboardingOk))],
+              ),
+            ),
+            child: Text(t.onboardingMehrDatenschutz, style: TextStyle(color: AppTheme.sageGreen)),
+          ),
+        ),
+      ]),
     );
   }
 
