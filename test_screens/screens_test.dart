@@ -161,11 +161,7 @@ void main() {
       final now = DateTime(2026, 10, 23, 20, 15);
       await prefs.setString('velvet_partner_pubkey', 'a' * 64);
       await prefs.setString('velvet_partner_name', 'Anna');
-      await prefs.setString('velvet_couple_messages_cache', jsonEncode([
-        {'id': '1', 'isMe': false, 'type': 'ping', 'emoji': '🥂', 'text': 'Freu mich auf später', 'createdAt': '$now'},
-        {'id': '2', 'isMe': true, 'type': 'chat', 'text': 'Ich mich auch. Lass uns heute ganz langsam machen.', 'createdAt': '$now'},
-        {'id': '3', 'isMe': false, 'type': 'chat', 'text': 'Klingt perfekt 💛', 'createdAt': '$now'},
-      ]));
+      // Bewusst ohne Nachrichten: Die Bilder landen in der README, Chats werden nicht veröffentlicht.
       await prefs.setString('velvet_my_fantasy_votes', jsonEncode({'match_blindfold': 'yes'}));
       await prefs.setString('velvet_partner_fantasy_votes', jsonEncode({'match_blindfold': 'yes'}));
       await NostrService().reloadKeysFromPrefs();
