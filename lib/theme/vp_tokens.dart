@@ -37,7 +37,10 @@ enum VpBildFormat {
   marke(1 / 1),
   kopf(3 / 2),
   studie(16 / 9),
-  hoch(3 / 4);
+  hoch(3 / 4),
+
+  /// Erklärdiagramme (800 × 600): werden ganz gezeigt, nie beschnitten.
+  diagramm(4 / 3);
 
   final double verhaeltnis;
   const VpBildFormat(this.verhaeltnis);

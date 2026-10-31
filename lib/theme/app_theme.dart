@@ -34,6 +34,9 @@ class AppTheme {
   static Color get aufAkzentTief => palette.aufAkzentTief;
   static Color get aufSignal => palette.aufSignal;
 
+  /// Text auf Bildern mit dunkler Abdunklung (Titelbild-Kacheln): in allen Atmosphären hell, weil die Abdunklung es ist.
+  static const Color aufBild = Color(0xFFF6F0E6);
+
   /// Text und Symbole auf gefüllten Statusflächen (Ja, Vielleicht): hell auf Papier, dunkel auf den dunklen Atmosphären.
   static Color get aufStatus => palette.istDunkel ? palette.aufAkzent : palette.papierErhoben;
   static Color get akzentTiefHell => palette.akzentTiefHell;

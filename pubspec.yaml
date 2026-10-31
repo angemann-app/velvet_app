@@ -61,6 +61,7 @@ flutter:
 
   assets:
     - assets/data/velvet_content.json
+    - assets/data/bilder.json
     - assets/data/paar_abend.json
     - assets/data/selbst_reise.json
     - assets/data/einschlaf_reise.json

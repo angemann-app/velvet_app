@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import '../../widgets/design/vp_bild_feld.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/couple_channel_models.dart';
 import '../../services/data_service.dart';
 import '../../services/listen_uebersetzung.dart';
@@ -358,12 +358,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(20),
-          child: SvgPicture.asset(
-            'assets/images/cover_11.svg',
-            height: 150,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ),
+          child: SizedBox(height: 150, width: double.infinity, child: VpBildFeld('kurs.11.titel')),
         ),
         const SizedBox(height: 20),
         Text(

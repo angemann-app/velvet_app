@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import '../../theme/vp_tokens.dart';
+import '../../widgets/design/vp_bild_feld.dart';
 import '../../models/content_models.dart';
 import '../../models/user_profile.dart';
 import '../../services/data_service.dart';
 import '../../services/storage_service.dart';
-import '../../services/spicy_bild.dart';
 import '../../services/testmodus.dart';
 import '../../widgets/aufnahmen_karte.dart';
 import '../../widgets/gefuehrte_audios.dart';
@@ -600,7 +600,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
       child: Stack(children: [
         ClipRRect(
           borderRadius: rahmen,
-          child: SizedBox(width: 60, height: 60, child: SvgPicture.asset(spicyBild(bild), fit: BoxFit.cover)),
+          child: SizedBox(width: 60, height: 60, child: VpBildFeld.pfad(bild, format: VpBildFormat.marke)),
         ),
         Positioned.fill(
           child: DecoratedBox(
@@ -656,21 +656,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 SizedBox(
                   height: 125,
                   width: double.infinity,
-                  child: course.image!.endsWith('.svg')
-                      ? SvgPicture.asset(
-                          spicyBild(course.image!),
-                          fit: BoxFit.cover,
-                        )
-                      : Image.asset(
-                          course.image!,
-                          fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) => Container(
-                            color: AppTheme.surfaceLight,
-                            child: Center(
-                              child: Icon(Icons.spa_rounded, color: AppTheme.textMuted, size: 32),
-                            ),
-                          ),
-                        ),
+                  child: VpBildFeld.pfad(course.image!, format: VpBildFormat.kopf),
                 ),
                 // Gradient Overlay for smooth transition into card content
                 Positioned.fill(

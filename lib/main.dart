@@ -2,6 +2,7 @@ import 'dart:ui' show PointerDeviceKind;
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show LicenseEntryWithLineBreaks, LicenseRegistry;
 import 'package:flutter/services.dart';
+import 'services/bild_register.dart';
 import 'services/data_service.dart';
 import 'services/storage_service.dart';
 import 'services/auto_backup_service.dart';
@@ -91,6 +92,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
 
     try {
       await Sprache.laden();
+      await BildRegister.laden();
       await AudioPaket.init();
       await Pakete.init();
     } catch (e) {

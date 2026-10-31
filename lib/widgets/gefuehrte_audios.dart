@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
+import 'design/vp_bild_feld.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../l10n/t.dart';
 import '../screens/couples_channel/paar_abend_screen.dart';
@@ -11,7 +12,6 @@ import '../screens/self_exploration/selbst_reise_screen.dart';
 import '../screens/self_exploration/traum_tagebuch_screen.dart';
 import '../services/privacy_service.dart';
 import '../services/storage_service.dart';
-import '../services/spicy_bild.dart';
 import '../services/testmodus.dart';
 import '../theme/app_theme.dart';
 
@@ -293,7 +293,7 @@ class GefuehrtKarte extends StatelessWidget {
               height: kompakt ? 150 : 128,
               width: kompakt ? 168 : null,
               child: Stack(fit: StackFit.expand, children: [
-                SvgPicture.asset(spicyBild(bild), fit: BoxFit.cover),
+                VpBildFeld.pfad(bild, format: VpBildFormat.kopf),
                 // Verlauf nach unten, damit der Text auf dem Bild lesbar bleibt.
                 DecoratedBox(
                   decoration: BoxDecoration(
@@ -316,13 +316,13 @@ class GefuehrtKarte extends StatelessWidget {
                             maxLines: kompakt ? 2 : null,
                             overflow: kompakt ? TextOverflow.ellipsis : null,
                             style: TextStyle(
-                                fontSize: kompakt ? 15 : 17, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+                                fontSize: kompakt ? 15 : 17, fontWeight: FontWeight.w800, color: AppTheme.aufBild)),
                         if (!kompakt) const SizedBox(height: 2),
                         if (!kompakt)
                           Text(text,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3)),
+                            style: TextStyle(fontSize: 12.5, color: AppTheme.aufBild.withValues(alpha: 0.85), height: 1.3)),
                       ]),
                     ),
                     const SizedBox(width: 10),

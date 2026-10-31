@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/content_models.dart';
 import '../../services/nostr_service.dart';
 import '../../services/pakete.dart';
@@ -10,12 +9,13 @@ import '../../services/storage_service.dart';
 import '../../services/audio_service.dart';
 import '../../services/tts_service.dart';
 import '../../theme/app_theme.dart';
+import '../../theme/vp_tokens.dart';
+import '../../widgets/design/vp_bild_feld.dart';
 import '../../widgets/audio_player_card.dart';
 import '../self_exploration/lust_profile_screen.dart';
 import '../self_exploration/selbst_reise_screen.dart';
 import '../couples_channel/paar_abend_screen.dart';
 import '../../l10n/t.dart';
-import '../../services/sprache.dart';
 
 class LessonDetailScreen extends StatefulWidget {
   final Lesson lesson;
@@ -90,7 +90,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               child: SizedBox(
                 width: quer(dateien[i].pfad) ? hoehe * 16 / 9 : 160,
                 child: Stack(fit: StackFit.expand, children: [
-                  Image.file(File(dateien[i].pfad), fit: BoxFit.cover, cacheWidth: quer(dateien[i].pfad) ? 640 : 480),
+                  VpBildFeld.datei(dateien[i].pfad, format: quer(dateien[i].pfad) ? VpBildFormat.studie : VpBildFormat.hoch, cacheBreite: quer(dateien[i].pfad) ? 640 : 480),
                   if (dateien[i].beschriftung != null)
                     Positioned(
                       left: 0,
@@ -292,7 +292,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           appBar: AppBar(backgroundColor: Colors.black),
           body: InteractiveViewer(
             maxScale: 5,
-            child: Center(child: SvgPicture.asset(Sprache.bild(asset), fit: BoxFit.contain)),
+            child: Center(child: VpBildFeld.pfad(asset, format: VpBildFormat.diagramm, fit: BoxFit.contain)),
           ),
         ),
       ),
@@ -348,7 +348,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                               // Alle Diagramme sind 800x600.
                               AspectRatio(
                                 aspectRatio: 4 / 3,
-                                child: SvgPicture.asset(Sprache.bild(lesson.image!), fit: BoxFit.contain),
+                                child: VpBildFeld.pfad(lesson.image!, format: VpBildFormat.diagramm),
                               ),
                               const Positioned(
                                 right: 8,
@@ -358,12 +358,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                             ],
                           ),
                         )
-                      : Image.asset(
-                          lesson.image!,
-                          height: 160,
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                        ),
+                      : SizedBox(height: 160, width: double.infinity, child: VpBildFeld.pfad(lesson.image!, format: VpBildFormat.kopf)),
                 ),
               ),
               const SizedBox(height: 16),
@@ -378,7 +373,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                     children: [
                       AspectRatio(
                         aspectRatio: 16 / 9,
-                        child: SvgPicture.asset(Sprache.bild(lesson.zeichnung!), fit: BoxFit.cover),
+                        child: VpBildFeld.pfad(lesson.zeichnung!, format: VpBildFormat.studie),
                       ),
                       const Positioned(
                         right: 8,

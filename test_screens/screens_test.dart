@@ -31,6 +31,7 @@ import 'package:velvetpulse/services/nostr_service.dart';
 import 'package:velvetpulse/l10n/t.dart';
 import 'package:velvetpulse/services/sprache.dart';
 import 'package:velvetpulse/services/storage_service.dart';
+import 'package:velvetpulse/services/bild_register.dart';
 import 'package:velvetpulse/theme/app_theme.dart';
 
 const _fontDir = 'C:/TOOLS/flutter/bin/cache/artifacts/material_fonts';
@@ -166,6 +167,7 @@ void main() {
             primaryGoal: 'performance_anxiety'),
         triggerBackup: false,
       );
+      await BildRegister.laden();
       await DataService.loadDatabase();
     });
 

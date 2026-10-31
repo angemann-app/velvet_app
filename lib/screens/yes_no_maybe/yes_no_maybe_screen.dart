@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import '../../widgets/design/vp_bild_feld.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../models/content_models.dart';
 import '../../models/yes_no_maybe_models.dart';
@@ -11,13 +11,11 @@ import '../../services/data_service.dart';
 import '../../services/listen_uebersetzung.dart';
 import '../../services/nostr_service.dart';
 import '../../services/storage_service.dart';
-import '../../services/spicy_bild.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/vp_tokens.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../couples_channel/pairing_modal.dart';
 import '../../l10n/t.dart';
-import '../../services/sprache.dart';
 
 class YesNoMaybeScreen extends StatefulWidget {
   const YesNoMaybeScreen({super.key});
@@ -195,7 +193,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   borderRadius: BorderRadius.circular(14),
                   child: AspectRatio(
                     aspectRatio: 4 / 3,
-                    child: SvgPicture.asset(Sprache.bild(item.image!), fit: BoxFit.contain),
+                    child: VpBildFeld.pfad(item.image!, format: VpBildFormat.diagramm),
                   ),
                 ),
               ],
@@ -469,7 +467,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   child: SizedBox(
                     height: 96,
                     width: double.infinity,
-                    child: SvgPicture.asset(spicyBild(category.image), fit: BoxFit.cover),
+                    child: VpBildFeld.pfad(category.image, format: VpBildFormat.kopf),
                   ),
                 ),
               ),
