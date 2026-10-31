@@ -58,3 +58,7 @@ Der Wechsel bleibt der bekannte Spicy-Schalter. Diskretions-Modus: neutrale Tite
 2. Serif-Überschriften ja/nein? Empfehlung: ja.
 3. Umschalter „Klassisches Design“ in der Beta? Empfehlung: ja, bis zum stabilen Release.
 4. Pilot: Startseite und Kurs 1? Empfehlung: ja.
+
+## Spicy-Palette (umgesetzt 31.10.2026)
+
+Die Farben in `AppTheme` sind keine Konstanten mehr, sondern hängen am Spicy-Modus: tiefes Weinrot als Hintergrund, Karten und Linien in warmem Rot, kräftigeres Rosé als Akzent, Kupfer statt Sand. Beim Umschalten baut `main.dart` die Oberfläche per `reassembleApplication` neu auf, der Zustand der Seiten bleibt. Das Glühen und die Funken bleiben als Schicht darüber. Rendern: `flutter test test_screens/screens_test.dart --dart-define=SPICY=true` (nach `build/screens_spicy`). Offen: einzelne fest verdrahtete Farben (eigene Chat-Blase, Funke-Karte) und die Option „Klassisches Design“ für Spicy.
