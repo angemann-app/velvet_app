@@ -46,6 +46,17 @@ dev_dependencies:
   flutter_lints: ^3.0.0
 flutter:
   uses-material-design: true
+
+  # Redaktionelle Überschriften, Anzeigen und Zahlen (docs/konzepte/designsystem-magazin.md). Aus der variablen
+  # Source Serif 4 (OFL) auf Latein beschnitten; Fließtext bleibt Systemschrift.
+  fonts:
+    - family: SourceSerif4
+      fonts:
+        - asset: assets/fonts/SourceSerif4-Regular.ttf
+        - asset: assets/fonts/SourceSerif4-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/SourceSerif4-Italic.ttf
+          style: italic
   generate: true
 
   assets:
@@ -69,6 +80,7 @@ flutter:
     - translations/en/anleitung.json
     - translations/en/foto_ideen.json
     - assets/images/
+    - assets/fonts/SourceSerif4-OFL.txt
     # Aufnahmen kommen als Pakete nach (lib/services/pakete.dart, tools/pakete_bauen.py). In der App bleiben nur
     # die Ansagen des Beckenboden-Trainings (Deutsch und Englisch), Klangschale, Klangteppich und die Längen der
     # geführten Bausteine (für die Planung auch ohne Paket).

@@ -38,7 +38,13 @@ const _fontDir = 'C:/TOOLS/flutter/bin/cache/artifacts/material_fonts';
 const _sprache = String.fromEnvironment('LANG', defaultValue: 'de');
 /// Spicy-Palette rendern: flutter test test_screens/screens_test.dart --dart-define=SPICY=true
 const _spicy = bool.fromEnvironment('SPICY');
-final _outDir = Directory(_spicy ? 'build/screens_spicy' : (_sprache == 'de' ? 'build/screens' : 'build/screens_$_sprache'));
+/// Darstellung des Normalmodus: --dart-define=PALETTE=papier|nacht|klassisch (Standard: papier). Spicy geht vor.
+const _palette = String.fromEnvironment('PALETTE', defaultValue: 'papier');
+final _outDir = Directory(_spicy
+    ? 'build/screens_spicy'
+    : (_palette != 'papier'
+        ? 'build/screens_$_palette'
+        : (_sprache == 'de' ? 'build/screens' : 'build/screens_$_sprache')));
 final _boundary = GlobalKey();
 
 Future<void> _loadFonts() async {
@@ -59,7 +65,19 @@ Future<void> _loadFonts() async {
         .load();
   }
   await (FontLoader('MaterialIcons')..addFont(load('materialicons-regular.otf'))).load();
+  // Redaktionelle Serif der App (assets/fonts), damit die Screenshots die echte Typografie zeigen.
+  Future<ByteData> serif(String f) async =>
+      ByteData.view(Uint8List.fromList(await File('assets/fonts/$f').readAsBytes()).buffer);
+  await (FontLoader('SourceSerif4')
+        ..addFont(serif('SourceSerif4-Regular.ttf'))
+        ..addFont(serif('SourceSerif4-SemiBold.ttf'))
+        ..addFont(serif('SourceSerif4-Italic.ttf')))
+      .load();
 }
+
+/// Serif-Stile der App behalten, alle anderen auf Roboto setzen.
+TextStyle? _mitRoboto(TextStyle? s) =>
+    s == null ? null : (s.fontFamily == 'SourceSerif4' ? s : s.copyWith(fontFamily: 'Roboto', fontFamilyFallback: ['Emoji']));
 
 /// Im Test gibt es keine Systemschrift: Stile ohne Schriftfamilie (AppBar, Knöpfe)
 /// würden als Kästchen gezeichnet. Darum überall Roboto eintragen.
@@ -70,9 +88,25 @@ ThemeData _testTheme() {
             (style?.textStyle?.resolve({}) ?? const TextStyle()).copyWith(fontFamily: 'Roboto')),
       );
   return base.copyWith(
-    textTheme: base.textTheme.apply(fontFamily: 'Roboto', fontFamilyFallback: ['Emoji']),
+    textTheme: TextTheme(
+      displayLarge: _mitRoboto(base.textTheme.displayLarge),
+      displayMedium: _mitRoboto(base.textTheme.displayMedium),
+      displaySmall: _mitRoboto(base.textTheme.displaySmall),
+      headlineLarge: _mitRoboto(base.textTheme.headlineLarge),
+      headlineMedium: _mitRoboto(base.textTheme.headlineMedium),
+      headlineSmall: _mitRoboto(base.textTheme.headlineSmall),
+      titleLarge: _mitRoboto(base.textTheme.titleLarge),
+      titleMedium: _mitRoboto(base.textTheme.titleMedium),
+      titleSmall: _mitRoboto(base.textTheme.titleSmall),
+      bodyLarge: _mitRoboto(base.textTheme.bodyLarge),
+      bodyMedium: _mitRoboto(base.textTheme.bodyMedium),
+      bodySmall: _mitRoboto(base.textTheme.bodySmall),
+      labelLarge: _mitRoboto(base.textTheme.labelLarge),
+      labelMedium: _mitRoboto(base.textTheme.labelMedium),
+      labelSmall: _mitRoboto(base.textTheme.labelSmall),
+    ),
     appBarTheme: base.appBarTheme.copyWith(
-      titleTextStyle: (base.appBarTheme.titleTextStyle ?? const TextStyle()).copyWith(fontFamily: 'Roboto'),
+      titleTextStyle: _mitRoboto(base.appBarTheme.titleTextStyle ?? const TextStyle()),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(style: withRoboto(base.elevatedButtonTheme.style)),
     outlinedButtonTheme: OutlinedButtonThemeData(style: withRoboto(base.outlinedButtonTheme.style)),
@@ -123,7 +157,7 @@ void main() {
     final oldHandler = FlutterError.onError;
     FlutterError.onError = (d) => errors.add(d.exceptionAsString().split('\n').first);
 
-    SharedPreferences.setMockInitialValues({if (_spicy) 'spicy_mode': true});
+    SharedPreferences.setMockInitialValues({if (_spicy) 'spicy_mode': true, 'design_palette': _palette});
     await tester.runAsync(() async {
       await _loadFonts();
       await StorageService.init();

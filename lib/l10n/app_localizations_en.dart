@@ -3064,6 +3064,22 @@ class AppLocalizationsEn extends AppLocalizations {
       '18+. Unlocks the levels “Spicy” and “Extra spicy” in the body journey and the shared evening.';
 
   @override
+  String get designTitel => 'Appearance';
+
+  @override
+  String get designText =>
+      'Paper is light, Night paper is dark. Spicy mode uses its own colours.';
+
+  @override
+  String get designPapier => 'Paper';
+
+  @override
+  String get designNacht => 'Night paper';
+
+  @override
+  String get designKlassisch => 'Classic';
+
+  @override
   String get spicyEinschaltenTitel => 'Turn on spicy mode?';
 
   @override

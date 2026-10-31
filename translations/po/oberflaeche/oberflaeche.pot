@@ -5225,6 +5225,36 @@ msgid "Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: Appearance
+msgctxt "ui:designTitel#text"
+msgid "Darstellung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paper is light, Night paper is dark. Spicy mode uses its own colours.
+msgctxt "ui:designText#text"
+msgid "Papier ist hell, Nachtpapier dunkel. Im Spicy-Modus gelten eigene Farben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paper
+msgctxt "ui:designPapier#text"
+msgid "Papier"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Night paper
+msgctxt "ui:designNacht#text"
+msgid "Nachtpapier"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Classic
+msgctxt "ui:designKlassisch#text"
+msgid "Klassisch"
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Turn on spicy mode?
 msgctxt "ui:spicyEinschaltenTitel#text"
 msgid "Spicy-Modus einschalten?"

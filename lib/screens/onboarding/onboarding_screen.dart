@@ -871,6 +871,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 const SizedBox(height: 16),
                 _buildPrivacySection(),
                 const SizedBox(height: 16),
+                _buildDesignSection(),
+                const SizedBox(height: 16),
                 _buildSpicySection(),
                 const SizedBox(height: 16),
                 _buildBackupSection(),
@@ -1331,6 +1333,36 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  /// Darstellung des Normalmodus: Papier (hell), Nachtpapier (dunkel) oder Klassisch (Farben bis Build 55, Übergang).
+  Widget _buildDesignSection() {
+    final namen = {'papier': t.designPapier, 'nacht': t.designNacht, 'klassisch': t.designKlassisch};
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(t.designTitel, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700)),
+        const SizedBox(height: 4),
+        Text(t.designText, style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35)),
+        const SizedBox(height: 12),
+        ValueListenableBuilder<String>(
+          valueListenable: StorageService.designAenderung,
+          builder: (context, gewaehlt, _) => Wrap(spacing: 8, runSpacing: 8, children: [
+            for (final e in namen.entries)
+              ChoiceChip(
+                label: Text(e.value),
+                selected: gewaehlt == e.key,
+                onSelected: (_) => StorageService.setDesignPalette(e.key),
+              ),
+          ]),
+        ),
+      ]),
     );
   }
 

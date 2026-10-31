@@ -57,6 +57,7 @@ class StorageService {
     try {
       _prefs ??= await SharedPreferences.getInstance();
       spicyAenderung.value = spicyMode();
+      designAenderung.value = designPalette();
       Testmodus.init(_prefs!);
       await SecretStore.init(_prefs!);
       final profStr = _prefs?.getString(_keyUserProfile);
@@ -392,6 +393,27 @@ class StorageService {
     spicyAenderung.value = value;
   }
 
+  // Darstellung im Normalmodus: Papier (hell, Standard), Nachtpapier oder Klassisch (Übergang).
+  // Spicy hat eigene Farben und geht vor. Anders als der Spicy-Schalter gehört die Wahl zur Sicherung.
+  static const String _keyDesignPalette = 'design_palette';
+  static const designWerte = {'papier', 'nacht', 'klassisch'};
+
+  static String designPalette() {
+    final v = _prefs?.getString(_keyDesignPalette);
+    return v != null && designWerte.contains(v) ? v : 'papier';
+  }
+
+  /// Ändert sich bei jeder neuen Wahl, damit die App sich neu aufbaut (wie [spicyAenderung]).
+  static final ValueNotifier<String> designAenderung = ValueNotifier<String>('papier');
+
+  static Future<void> setDesignPalette(String value) async {
+    if (!designWerte.contains(value)) return;
+    final prefs = await _ensurePrefs();
+    await prefs.setString(_keyDesignPalette, value);
+    designAenderung.value = value;
+    unawaited(AutoBackupService.saveAutoBackup());
+  }
+
   // AI Chat Messages
   static List<ChatMessage> getChatHistory() {
     final list = _prefs?.getStringList(_keyChatHistory) ?? [];
@@ -567,6 +589,7 @@ class StorageService {
       'frageVorLautsprecher': getFrageVorLautsprecher(),
       'pausiereBeiKopfhoererGetrennt': getPausiereBeiKopfhoererGetrennt(),
       'kursFilter': getKursFilter(),
+      'designPalette': designPalette(),
       'audioBereichOffen': _prefs?.getBool(_keyAudioBereichOffen),
       'halloGesendetAm': getHalloGesendetAm(),
       'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
@@ -691,6 +714,9 @@ class StorageService {
     // Die eigene Wahl auf diesem Gerät gewinnt; fehlt sie, gilt die aus der Sicherung.
     if (d['kursFilter'] is String && kursFilterWerte.contains(d['kursFilter']) && _prefs?.getString(_keyKursFilter) == null) {
       writes[_keyKursFilter] = d['kursFilter'] as String;
+    }
+    if (d['designPalette'] is String && designWerte.contains(d['designPalette']) && _prefs?.getString(_keyDesignPalette) == null) {
+      writes[_keyDesignPalette] = d['designPalette'] as String;
     }
     if (d['audioBereichOffen'] is bool && _prefs?.getBool(_keyAudioBereichOffen) == null) {
       writes[_keyAudioBereichOffen] = d['audioBereichOffen'] as bool;

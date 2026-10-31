@@ -3075,6 +3075,22 @@ class AppLocalizationsDe extends AppLocalizations {
       'Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy“ und „Sehr spicy“ frei.';
 
   @override
+  String get designTitel => 'Darstellung';
+
+  @override
+  String get designText =>
+      'Papier ist hell, Nachtpapier dunkel. Im Spicy-Modus gelten eigene Farben.';
+
+  @override
+  String get designPapier => 'Papier';
+
+  @override
+  String get designNacht => 'Nachtpapier';
+
+  @override
+  String get designKlassisch => 'Klassisch';
+
+  @override
   String get spicyEinschaltenTitel => 'Spicy-Modus einschalten?';
 
   @override

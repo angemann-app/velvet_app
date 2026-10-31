@@ -1,5 +1,6 @@
 import 'dart:ui' show PointerDeviceKind;
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show LicenseEntryWithLineBreaks, LicenseRegistry;
 import 'package:flutter/services.dart';
 import 'services/data_service.dart';
 import 'services/storage_service.dart';
@@ -22,21 +23,31 @@ import 'l10n/t.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  systemLeistenAnpassen();
+  // Lizenz der mitgelieferten Schrift (SIL OFL), sie verlangt, dass der Text mitgeliefert wird.
+  LicenseRegistry.addLicense(() async* {
+    yield LicenseEntryWithLineBreaks(['Source Serif 4'], await rootBundle.loadString('assets/fonts/SourceSerif4-OFL.txt'));
+  });
+
+  runApp(const VelvetPulseApp());
+}
+
+/// Status- und Navigationsleiste zur aktuellen Atmosphäre: helle Symbole auf dunklem Grund, dunkle auf Papier.
+void systemLeistenAnpassen() {
   try {
+    final dunkel = AppTheme.palette.istDunkel;
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.light,
-        statusBarBrightness: Brightness.dark,
+        statusBarIconBrightness: dunkel ? Brightness.light : Brightness.dark,
+        statusBarBrightness: dunkel ? Brightness.dark : Brightness.light,
         systemNavigationBarColor: AppTheme.background,
-        systemNavigationBarIconBrightness: Brightness.light,
+        systemNavigationBarIconBrightness: dunkel ? Brightness.light : Brightness.dark,
       ),
     );
   } catch (e) {
     debugPrint('System UI overlay error: $e');
   }
-
-  runApp(const VelvetPulseApp());
 }
 
 class VelvetPulseApp extends StatefulWidget {
@@ -58,12 +69,15 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
     super.initState();
     Sprache.wahl.addListener(_spracheGewechselt);
     StorageService.spicyAenderung.addListener(_spicyGewechselt);
+    StorageService.designAenderung.addListener(_spicyGewechselt);
     _initApp();
   }
 
-  /// Spicy an oder aus: Die Farben hängen am Modus (AppTheme), also alles neu aufbauen. Der Zustand der Seiten bleibt.
+  /// Spicy an oder aus, oder neue Darstellung: Die Farben hängen daran (AppTheme), also alles neu aufbauen.
+  /// Der Zustand der Seiten bleibt.
   void _spicyGewechselt() {
     if (!mounted) return;
+    systemLeistenAnpassen();
     setState(() {});
     WidgetsBinding.instance.reassembleApplication();
   }
@@ -85,6 +99,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
 
     try {
       await StorageService.init();
+      systemLeistenAnpassen();
       await AutoBackupService.checkAndAutoRestore();
       await NostrService().init();
     } catch (e) {

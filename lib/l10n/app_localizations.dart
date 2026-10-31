@@ -5217,6 +5217,36 @@ abstract class AppLocalizations {
   /// **'Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy“ und „Sehr spicy“ frei.'**
   String get spicyModusText;
 
+  /// No description provided for @designTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Darstellung'**
+  String get designTitel;
+
+  /// No description provided for @designText.
+  ///
+  /// In de, this message translates to:
+  /// **'Papier ist hell, Nachtpapier dunkel. Im Spicy-Modus gelten eigene Farben.'**
+  String get designText;
+
+  /// No description provided for @designPapier.
+  ///
+  /// In de, this message translates to:
+  /// **'Papier'**
+  String get designPapier;
+
+  /// No description provided for @designNacht.
+  ///
+  /// In de, this message translates to:
+  /// **'Nachtpapier'**
+  String get designNacht;
+
+  /// No description provided for @designKlassisch.
+  ///
+  /// In de, this message translates to:
+  /// **'Klassisch'**
+  String get designKlassisch;
+
   /// No description provided for @spicyEinschaltenTitel.
   ///
   /// In de, this message translates to:
