@@ -26,7 +26,7 @@ class AppTheme {
   // Typography Colors
   static Color get textPrimary => _w(const Color(0xFFE9E4D8), const Color(0xFFF4E8E4));
   static Color get textSecondary => _w(const Color(0xFFB9B3A6), const Color(0xFFCDB5B3));
-  static Color get textMuted => _w(const Color(0xFF8A857A), const Color(0xFF9A8180));
+  static Color get textMuted => _w(const Color(0xFF9B968B), const Color(0xFFAA8F8E));
 
   /// Überschriften in Serif (Android: Noto Serif, ohne mitgelieferte Schriftdatei), alles andere bleibt Systemschrift.
   static const TextTheme _ueberschriften = TextTheme(

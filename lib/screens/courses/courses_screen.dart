@@ -490,7 +490,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                         style: TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
                     const SizedBox(height: 3),
                     Text(_schwerpunktText(s),
-                        style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3)),
+                        style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.3)),
                     const SizedBox(height: 8),
                     Row(children: [
                       Expanded(
@@ -506,7 +506,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                       ),
                       const SizedBox(width: 10),
                       Text(t.startLektionenVon(erledigt, lektionen.length),
-                          style: TextStyle(fontSize: 11, color: AppTheme.textMuted)),
+                          style: TextStyle(fontSize: 12, color: AppTheme.textMuted)),
                     ]),
                   ]),
                 ),
@@ -520,6 +520,56 @@ class _CoursesScreenState extends State<CoursesScreen> {
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 0, 10, 2),
             child: Column(children: [for (final c in kurse) _buildCourseCard(c, mitBild: false)]),
+          ),
+      ]),
+    );
+  }
+
+  /// Kleines Titelbild vor dem Kurs (Bleistift-Skizze, im Spicy-Modus die Spicy-Fassung); ohne Bild das Symbol.
+  /// Ein Haken in der Ecke zeigt einen abgeschlossenen Kurs.
+  Widget _kursBild(Course course, bool fertig) {
+    final bild = course.image;
+    final rahmen = BorderRadius.circular(12);
+    if (bild == null || !bild.endsWith('.svg')) {
+      return Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          color: fertig ? AppTheme.sageGreen.withValues(alpha: 0.18) : AppTheme.surfaceLight,
+          borderRadius: rahmen,
+          border: Border.all(color: fertig ? AppTheme.sageGreen.withValues(alpha: 0.4) : AppTheme.border),
+        ),
+        child: Icon(
+          fertig ? Icons.check_circle_rounded : _getIconForCourse(course.icon),
+          color: fertig ? AppTheme.sageGreen : AppTheme.textPrimary,
+          size: 24,
+        ),
+      );
+    }
+    return SizedBox(
+      width: 60,
+      height: 60,
+      child: Stack(children: [
+        ClipRRect(
+          borderRadius: rahmen,
+          child: SizedBox(width: 60, height: 60, child: SvgPicture.asset(spicyBild(bild), fit: BoxFit.cover)),
+        ),
+        Positioned.fill(
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              borderRadius: rahmen,
+              border: Border.all(color: fertig ? AppTheme.sageGreen.withValues(alpha: 0.7) : AppTheme.border),
+            ),
+          ),
+        ),
+        if (fertig)
+          Positioned(
+            right: 3,
+            bottom: 3,
+            child: Container(
+              decoration: BoxDecoration(color: AppTheme.surface, shape: BoxShape.circle),
+              child: Icon(Icons.check_circle_rounded, color: AppTheme.sageGreen, size: 18),
+            ),
           ),
       ]),
     );
@@ -627,22 +677,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
               child: ExpansionTile(
                 initiallyExpanded: false,
                 tilePadding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-                leading: Container(
-                  width: 44,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    color: isAllDone ? AppTheme.sageGreen.withValues(alpha: 0.18) : AppTheme.surfaceLight,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                      color: isAllDone ? AppTheme.sageGreen.withValues(alpha: 0.4) : AppTheme.border,
-                    ),
-                  ),
-                  child: Icon(
-                    isAllDone ? Icons.check_circle_rounded : _getIconForCourse(course.icon),
-                    color: isAllDone ? AppTheme.sageGreen : AppTheme.textPrimary,
-                    size: 22,
-                  ),
-                ),
+                leading: _kursBild(course, isAllDone),
                 title: Text(
                   course.title,
                   style: TextStyle(
@@ -658,7 +693,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     Text(
                       course.subtitle,
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 13,
                         color: AppTheme.textSecondary,
                         height: 1.3,
                       ),
@@ -683,7 +718,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                         Text(
                           '$completedInCourse/$totalInCourse',
                           style: TextStyle(
-                            fontSize: 11,
+                            fontSize: 12,
                             fontWeight: FontWeight.w600,
                             color: isAllDone ? AppTheme.sageGreen : AppTheme.textMuted,
                           ),
@@ -743,7 +778,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
                                         Text(
                                           t.coursesDurationminMin(lesson.durationMin),
                                           style: TextStyle(
-                                            fontSize: 11,
+                                            fontSize: 12,
                                             color: AppTheme.textMuted,
                                           ),
                                         ),
