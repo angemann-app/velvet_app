@@ -25,11 +25,12 @@ erst verstehen, warum der Körper bremst, dann mit Übungen, Atmung und Berühru
 Bremse nehmen – allein oder zu zweit.
 
 <p align="center">
-  <img src="docs/screenshots/kurse.png" width="19%" alt="Kursübersicht">
-  <img src="docs/screenshots/gemeinsamer-abend.png" width="19%" alt="Gemeinsamer Abend: geführtes Paar-Audio">
-  <img src="docs/screenshots/paar-kanal.png" width="19%" alt="Verschlüsselter Paar-Kanal">
-  <img src="docs/screenshots/gemeinsam-lernen.png" width="19%" alt="Gemeinsam reflektieren">
-  <img src="docs/screenshots/beckenboden.png" width="19%" alt="Beckenboden-Training">
+  <img src="docs/screenshots/kurse.png" width="16%" alt="Kursübersicht">
+  <img src="docs/screenshots/gemeinsamer-abend.png" width="16%" alt="Gemeinsamer Abend: geführtes Paar-Audio">
+  <img src="docs/screenshots/paar-kanal.png" width="16%" alt="Verschlüsselter Paar-Kanal">
+  <img src="docs/screenshots/gemeinsam-lernen.png" width="16%" alt="Gemeinsam reflektieren">
+  <img src="docs/screenshots/beckenboden.png" width="16%" alt="Beckenboden-Training">
+  <img src="docs/screenshots/lektion-bild.png" width="16%" alt="Lektion mit Bleistift-Illustration">
 </p>
 
 **[⬇ Neueste Version herunterladen](https://github.com/angemann-app/velvet_app/releases/latest)** ·

@@ -28,11 +28,12 @@ therapy (CBT)**, **somatic body work** and **sex education**: first understand w
 brakes, then take your foot off the brake with exercises, breathing and touch, on your own or together.
 
 <p align="center">
-  <img src="docs/screenshots/kurse.png" width="19%" alt="Course overview">
-  <img src="docs/screenshots/gemeinsamer-abend.png" width="19%" alt="An evening together: guided couple audio">
-  <img src="docs/screenshots/paar-kanal.png" width="19%" alt="Encrypted couple channel">
-  <img src="docs/screenshots/gemeinsam-lernen.png" width="19%" alt="Reflecting together">
-  <img src="docs/screenshots/beckenboden.png" width="19%" alt="Pelvic floor training">
+  <img src="docs/screenshots/kurse.png" width="16%" alt="Course overview">
+  <img src="docs/screenshots/gemeinsamer-abend.png" width="16%" alt="An evening together: guided couple audio">
+  <img src="docs/screenshots/paar-kanal.png" width="16%" alt="Encrypted couple channel">
+  <img src="docs/screenshots/gemeinsam-lernen.png" width="16%" alt="Reflecting together">
+  <img src="docs/screenshots/beckenboden.png" width="16%" alt="Pelvic floor training">
+  <img src="docs/screenshots/lektion-bild.png" width="16%" alt="Illustrated lesson in pencil style">
 </p>
 
 **[⬇ Download the latest version](https://github.com/angemann-app/velvet_app/releases/latest)** ·
