@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart' show DateFormat;
+import '../../services/sprache.dart';
+import '../../theme/vp_palette.dart';
+import '../../widgets/design/vp_komponenten.dart';
 import '../../theme/vp_tokens.dart';
 import '../../widgets/design/vp_bild_feld.dart';
 import '../../models/content_models.dart';
@@ -114,12 +118,6 @@ class _CoursesScreenState extends State<CoursesScreen> {
     });
   }
 
-  /// "#RRGGBB" aus velvet_content.json (Feld title_color) in eine Farbe umwandeln.
-  Color? _parseColor(String? hex) {
-    if (hex == null || !RegExp(r'^#[0-9a-fA-F]{6}$').hasMatch(hex)) return null;
-    return Color(int.parse('FF${hex.substring(1)}', radix: 16));
-  }
-
   IconData _getIconForCourse(String iconName) {
     switch (iconName) {
       case 'psychology':
@@ -210,23 +208,26 @@ class _CoursesScreenState extends State<CoursesScreen> {
             // Kopf: Begrüßung ohne Prozentbalken und Serie (docs/konzepte/heute-und-produktschliff.md)
             _buildKopf(),
 
-            const SizedBox(height: 16),
+            const SizedBox(height: VpAbstand.xl),
 
+            // Die Einladung: ein großes Bildfeld und ein klarer nächster Schritt. Alles Weitere ist leiser.
             _buildNaechsterSchritt(completedCount),
 
-            const SizedBox(height: 12),
+            const SizedBox(height: VpAbstand.xxl),
 
-            // Für heute: Check-in und Erotik-Funke als zwei Reiter einer Karte.
+            // Für heute: Check-in und Funke als zwei leise Reiter.
+            VpAbschnitt(titel: t.heuteFuerHeute),
+            const SizedBox(height: VpAbstand.m),
             const _HeuteReiter(),
 
-            const SizedBox(height: 12),
+            const SizedBox(height: VpAbstand.xl),
 
             const AufnahmenHinweis(),
 
             // Geführte Audios: einklappbarer Balken mit Kachelreihe.
             GefuehrteAudios(mitPaar: showCouples, kompakt: true),
 
-            const SizedBox(height: 12),
+            const SizedBox(height: VpAbstand.l),
 
             _buildKurseKarte(filteredCourses.length),
           ] else ...[
@@ -236,42 +237,24 @@ class _CoursesScreenState extends State<CoursesScreen> {
               child: Row(
                 children: [
                   _buildCategoryChip('all', t.coursesAllCourses, Icons.apps_rounded),
-                  const SizedBox(width: 8),
-                  _buildCategoryChip('women', t.coursesForHer, Icons.spa_rounded),
-                  const SizedBox(width: 8),
+                  const SizedBox(width: VpAbstand.s),
+                  _buildCategoryChip('women', t.coursesForHer, Icons.spa_outlined),
+                  const SizedBox(width: VpAbstand.s),
                   _buildCategoryChip('men', t.coursesForHim, Icons.male_rounded),
-                  const SizedBox(width: 8),
-                  _buildCategoryChip('couples', t.coursesForCouples, Icons.favorite_rounded),
+                  const SizedBox(width: VpAbstand.s),
+                  _buildCategoryChip('couples', t.coursesForCouples, Icons.favorite_border_rounded),
                 ],
               ),
             ),
 
-            const SizedBox(height: 8),
+            const SizedBox(height: VpAbstand.xl),
 
-            // Kurse nach Schwerpunkten (docs/konzepte/startseite.md)
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    t.startSchwerpunkte,
-                    style: TextStyle(
-                      color: AppTheme.textMuted,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 0.8,
-                    ),
-                  ),
-                  Text(
-                    t.coursesCourseCount(filteredCourses.length),
-                    style: TextStyle(color: AppTheme.textMuted, fontSize: 12),
-                  ),
-                ],
-              ),
+            // Kurse nach Schwerpunkten (docs/konzepte/startseite.md): Magazin-Inhaltsverzeichnis
+            VpAbschnitt(
+              eyebrow: t.startSchwerpunkte,
+              titel: t.coursesCourseCount(filteredCourses.length),
+              massLinie: true,
             ),
-
-            const SizedBox(height: 8),
 
             for (final s in Course.schwerpunkte)
               if (filteredCourses.any((c) => c.schwerpunkt == s))
@@ -283,86 +266,43 @@ class _CoursesScreenState extends State<CoursesScreen> {
     );
   }
 
-  /// Heute: Einstieg in den Tab „Lernen“.
+  /// Heute: leiser Verweis in den Tab „Lernen“ (eine Zeile, kein Rahmen).
   Widget _buildKurseKarte(int anzahl) {
-    return Material(
-      color: AppTheme.surface,
-      borderRadius: BorderRadius.circular(16),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(16),
-        onTap: widget.onZuLernen,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: AppTheme.border),
-          ),
-          child: Row(children: [
-            Icon(Icons.menu_book_rounded, color: AppTheme.amber, size: 22),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(t.heuteAlleKurse,
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
-                const SizedBox(height: 2),
-                Text(t.coursesCourseCount(anzahl), style: TextStyle(fontSize: 13, color: AppTheme.textSecondary)),
-              ]),
-            ),
-            Icon(Icons.arrow_forward_ios_rounded, size: 15, color: AppTheme.textMuted),
-          ]),
-        ),
-      ),
+    return VpListenzeile(
+      titel: t.heuteAlleKurse,
+      meta: t.coursesCourseCount(anzahl),
+      onTap: widget.onZuLernen,
+      trailing: Icon(Icons.arrow_forward_rounded, color: AppTheme.akzentTief, size: 20),
     );
   }
 
   Widget _buildCategoryChip(String cat, String label, IconData icon) {
-    final isSelected = _selectedCategory == cat;
-    Color activeColor = AppTheme.akzentTief;
-    if (cat == 'couples') activeColor = AppTheme.tinteLeise;
-
-    return InkWell(
+    return VpChip(
+      label: label,
+      icon: icon,
+      gewaehlt: _selectedCategory == cat,
       onTap: () {
-        setState(() {
-          _selectedCategory = cat;
-        });
+        setState(() => _selectedCategory = cat);
         StorageService.setKursFilter(cat);
       },
-      borderRadius: BorderRadius.circular(20),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-        decoration: BoxDecoration(
-          color: isSelected ? activeColor.withValues(alpha: 0.18) : AppTheme.surface,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(
-            color: isSelected ? activeColor : AppTheme.border,
-            width: isSelected ? 1.5 : 1.0,
-          ),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              icon,
-              size: 15,
-              color: isSelected ? activeColor : AppTheme.textSecondary,
-            ),
-            const SizedBox(width: 6),
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-                color: isSelected ? AppTheme.textPrimary : AppTheme.textSecondary,
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 
+  /// Datum für die Kopfzeile („Sonntag, 1. November“), in der Sprache der App. Ohne Datumsdaten leer.
+  String _datum() {
+    try {
+      return DateFormat.MMMMEEEEd(Sprache.code).format(DateTime.now());
+    } catch (_) {
+      return '';
+    }
+  }
+
   Widget _buildKopf() {
+    final typo = context.vp.typo;
+    final spicy = AppTheme.paletteId == VpPaletteId.spicy;
+    final datum = _datum();
+    // Spicy: die Begrüßung in kursiver Serif, sonst ruhige Regular.
+    final anzeige = spicy ? typo.anzeige.copyWith(fontStyle: FontStyle.italic) : typo.anzeige;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -370,27 +310,18 @@ class _CoursesScreenState extends State<CoursesScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              if (datum.isNotEmpty) ...[VpEyebrow(datum), const SizedBox(height: VpAbstand.s)],
+              Text(_profile != null ? t.coursesHelloProfilename(_profile!.name) : t.coursesWelcome, style: anzeige),
+              const SizedBox(height: VpAbstand.s),
               Text(
-                _profile != null ? t.coursesHelloProfilename(_profile!.name) : t.coursesWelcome,
-                style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                      fontSize: 26,
-                      fontWeight: FontWeight.w800,
-                      color: AppTheme.textPrimary,
-                      letterSpacing: -0.4,
-                    ),
+                _profile != null ? t.coursesYourFocusGoallabel(_profile!.goalLabel) : t.coursesUnderstandTheBiologyQuietThe,
+                style: typo.fliesstextKlein,
               ),
-              const SizedBox(height: 4),
-              Text(
-                _profile != null
-                    ? t.coursesYourFocusGoallabel(_profile!.goalLabel)
-                    : t.coursesUnderstandTheBiologyQuietThe,
-                style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.35),
-              ),
-              const SizedBox(height: 8),
+              const SizedBox(height: VpAbstand.s),
               Row(mainAxisSize: MainAxisSize.min, children: [
-                Icon(Icons.lock_outline_rounded, size: 14, color: AppTheme.textMuted),
+                Icon(Icons.lock_outline_rounded, size: 13, color: AppTheme.tinteStumm),
                 const SizedBox(width: 5),
-                Text(t.heuteBleibtLokal, style: TextStyle(fontSize: 12, color: AppTheme.textMuted)),
+                Text(t.heuteBleibtLokal, style: typo.beschriftung.copyWith(color: AppTheme.tinteStumm)),
               ]),
             ],
           ),
@@ -399,11 +330,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
           onPressed: _openProfileEditor,
           tooltip: t.coursesProfileSettings,
           visualDensity: VisualDensity.compact,
-          icon: Icon(
-            Icons.account_circle_rounded,
-            color: AppTheme.akzentTief,
-            size: 30,
-          ),
+          icon: Icon(Icons.account_circle_outlined, color: AppTheme.akzentTief, size: 30),
         ),
       ],
     );
@@ -426,39 +353,63 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
   Widget _buildNaechsterSchritt(int erledigt) {
     final n = _naechsteLektion();
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: AppTheme.amber.withValues(alpha: 0.55)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            t.heuteNaechsterSchritt.toUpperCase(),
-            style: TextStyle(color: AppTheme.textMuted, fontSize: 11.5, fontWeight: FontWeight.w700, letterSpacing: 0.8),
-          ),
-          const SizedBox(height: 8),
-          if (n == null)
-            Text(t.heuteAllesErledigt, style: TextStyle(color: AppTheme.textSecondary, fontSize: 14, height: 1.4))
-          else ...[
-            Text(
-              n.$2.title,
-              style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w800,
-                    color: AppTheme.textPrimary,
-                    height: 1.25,
+    final typo = context.vp.typo;
+    final spicy = AppTheme.paletteId == VpPaletteId.spicy;
+    if (n == null) {
+      return VpKarte(
+        rahmen: VpRahmen.gerahmt,
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          VpEyebrow(t.heuteNaechsterSchritt),
+          const SizedBox(height: VpAbstand.s),
+          Text(t.heuteAllesErledigt, style: typo.fliesstext),
+        ]),
+      );
+    }
+    final eyebrow = VpEyebrow(t.heuteNaechsterSchritt, farbe: spicy ? AppTheme.aufBild.withValues(alpha: 0.8) : null);
+    final titel = Text(
+      n.$2.title,
+      style: spicy ? typo.ueberschrift.copyWith(fontSize: 26, fontStyle: FontStyle.italic, color: AppTheme.aufBild) : typo.ueberschrift,
+    );
+    final bildHoehe = spicy ? 300.0 : 190.0;
+    return VpKarte(
+      rahmen: VpRahmen.gerahmt,
+      padding: EdgeInsets.zero,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        // Das Bildfeld bestimmt die Seite: in Spicy höher, mit dem Titel über einer ruhigen Abdunklung am Bildrand
+        // (die Abdunklung ist funktional, sie trägt die Lesbarkeit des Titels).
+        ClipRRect(
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(VpRadius.karte)),
+          child: SizedBox(
+            height: bildHoehe,
+            child: Stack(fit: StackFit.expand, children: [
+              const VpBildFeld('bereich.heute.einladung'),
+              if (spicy) ...[
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Colors.transparent, AppTheme.tiefe.withValues(alpha: 0.92)],
+                      stops: const [0.35, 1],
+                    ),
                   ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              t.heuteKursUndDauer(n.$1.title, n.$2.durationMin),
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13),
-            ),
-            const SizedBox(height: 12),
+                ),
+                Positioned(
+                  left: VpAbstand.l,
+                  right: VpAbstand.l,
+                  bottom: VpAbstand.l,
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [eyebrow, const SizedBox(height: VpAbstand.xs), titel]),
+                ),
+              ],
+            ]),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(VpAbstand.l),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            if (!spicy) ...[eyebrow, const SizedBox(height: VpAbstand.xs), titel, const SizedBox(height: VpAbstand.xs)],
+            Text(t.heuteKursUndDauer(n.$1.title, n.$2.durationMin), style: typo.fliesstextKlein),
+            const SizedBox(height: VpAbstand.l),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -466,9 +417,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 child: Text(erledigt > 0 ? t.heuteWeitermachen : t.heuteStarten),
               ),
             ),
-          ],
-        ],
-      ),
+          ]),
+        ),
+      ]),
     );
   }
   /// Welche Schwerpunkte aufgeklappt sind; anfangs der zum Fokus im Profil passende, oder der erste mit
@@ -516,346 +467,143 @@ class _CoursesScreenState extends State<CoursesScreen> {
     final lektionen = [for (final c in kurse) ...c.lessons];
     final erledigt = lektionen.where((l) => _completedLessonIds.contains(l.id)).length;
     final fortschritt = lektionen.isEmpty ? 0.0 : erledigt / lektionen.length;
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: offen ? AppTheme.sageGreen.withValues(alpha: 0.45) : AppTheme.border),
-      ),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-        Material(
-          type: MaterialType.transparency,
-          child: InkWell(
-            borderRadius: BorderRadius.circular(18),
-            onTap: () => setState(() => _offen = offen ? ({..._offen!}..remove(s)) : {..._offen!, s}),
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(16, 14, 12, 14),
-              child: Row(children: [
-                Expanded(
-                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(_schwerpunktName(s),
-                        style: TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
-                    const SizedBox(height: 3),
-                    Text(_schwerpunktText(s),
-                        style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.3)),
-                    const SizedBox(height: 8),
-                    Row(children: [
-                      Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(4),
-                          child: LinearProgressIndicator(
-                            value: fortschritt,
-                            minHeight: 4,
-                            backgroundColor: AppTheme.surfaceLight,
-                            valueColor: AlwaysStoppedAnimation(AppTheme.sageGreen),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Text(t.startLektionenVon(erledigt, lektionen.length),
-                          style: TextStyle(fontSize: 12, color: AppTheme.textMuted)),
-                    ]),
-                  ]),
-                ),
-                const SizedBox(width: 6),
-                Icon(offen ? Icons.expand_less_rounded : Icons.expand_more_rounded, color: AppTheme.textMuted),
-              ]),
-            ),
-          ),
-        ),
-        if (offen)
-          Padding(
-            padding: const EdgeInsets.fromLTRB(10, 0, 10, 2),
-            child: Column(children: [for (final c in kurse) _buildCourseCard(c, mitBild: false)]),
-          ),
-      ]),
-    );
-  }
-
-  /// Kleines Titelbild vor dem Kurs (Bleistift-Skizze, im Spicy-Modus die Spicy-Fassung); ohne Bild das Symbol.
-  /// Ein Haken in der Ecke zeigt einen abgeschlossenen Kurs.
-  Widget _kursBild(Course course, bool fertig) {
-    final bild = course.image;
-    final rahmen = BorderRadius.circular(12);
-    if (bild == null || !bild.endsWith('.svg')) {
-      return Container(
-        width: 60,
-        height: 60,
-        decoration: BoxDecoration(
-          color: fertig ? AppTheme.sageGreen.withValues(alpha: 0.18) : AppTheme.surfaceLight,
-          borderRadius: rahmen,
-          border: Border.all(color: fertig ? AppTheme.sageGreen.withValues(alpha: 0.4) : AppTheme.border),
-        ),
-        child: Icon(
-          fertig ? Icons.check_circle_rounded : _getIconForCourse(course.icon),
-          color: fertig ? AppTheme.sageGreen : AppTheme.textPrimary,
-          size: 24,
-        ),
-      );
-    }
-    return SizedBox(
-      width: 60,
-      height: 60,
-      child: Stack(children: [
-        ClipRRect(
-          borderRadius: rahmen,
-          child: SizedBox(width: 60, height: 60, child: VpBildFeld.pfad(bild, format: VpBildFormat.marke)),
-        ),
-        Positioned.fill(
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              borderRadius: rahmen,
-              border: Border.all(color: fertig ? AppTheme.sageGreen.withValues(alpha: 0.7) : AppTheme.border),
-            ),
-          ),
-        ),
-        if (fertig)
-          Positioned(
-            right: 3,
-            bottom: 3,
-            child: Container(
-              decoration: BoxDecoration(color: AppTheme.surface, shape: BoxShape.circle),
-              child: Icon(Icons.check_circle_rounded, color: AppTheme.sageGreen, size: 18),
-            ),
-          ),
-      ]),
-    );
-  }
-
-  Widget _buildCourseCard(Course course, {bool mitBild = true}) {
-    final completedInCourse = course.lessons.where((l) => _completedLessonIds.contains(l.id)).length;
-    final totalInCourse = course.lessons.length;
-    final progress = totalInCourse > 0 ? (completedInCourse / totalInCourse) : 0.0;
-    final isAllDone = totalInCourse > 0 && completedInCourse == totalInCourse;
-
-    Color badgeColor = AppTheme.akzentTief;
-    if (course.isForCouples) {
-      badgeColor = AppTheme.tinteLeise;
-    } else if (!course.isForWomen && !course.isForMen) {
-      badgeColor = AppTheme.tinteStumm;
-    }
-
-    return Container(
-      margin: EdgeInsets.only(bottom: mitBild ? 16 : 10),
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(
-          color: isAllDone ? AppTheme.sageGreen.withValues(alpha: 0.5) : AppTheme.border,
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Thematic Image Banner
-          if (course.image != null && mitBild)
-            Stack(
-              children: [
-                SizedBox(
-                  height: 125,
-                  width: double.infinity,
-                  child: VpBildFeld.pfad(course.image!, format: VpBildFormat.kopf),
-                ),
-                // Gradient Overlay for smooth transition into card content
-                Positioned.fill(
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Colors.transparent,
-                          AppTheme.surface.withValues(alpha: 0.7),
-                          AppTheme.surface,
-                        ],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      ),
-                    ),
-                  ),
-                ),
-                // Target Category Tag Pill
-                Positioned(
-                  top: 10,
-                  right: 12,
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
-                    decoration: BoxDecoration(
-                      color: Colors.black.withValues(alpha: 0.65),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: badgeColor.withValues(alpha: 0.7)),
-                    ),
-                    child: Text(
-                      course.targetBadgeLabel,
-                      style: TextStyle(
-                        color: badgeColor,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.6,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-          Theme(
-            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-            // Eigene Material-Ebene, damit der Tipp-Effekt über dem farbigen Container sichtbar ist.
-            child: Material(
-              type: MaterialType.transparency,
-              child: ExpansionTile(
-                initiallyExpanded: false,
-                tilePadding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-                leading: _kursBild(course, isAllDone),
-                title: Text(
-                  course.title,
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: _parseColor(course.titleColor) ?? AppTheme.textPrimary,
-                  ),
-                ),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 4),
-                    Text(
-                      course.subtitle,
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: AppTheme.textSecondary,
-                        height: 1.3,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(4),
-                            child: LinearProgressIndicator(
-                              value: progress,
-                              backgroundColor: AppTheme.surfaceLight,
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                isAllDone ? AppTheme.sageGreen : AppTheme.amber,
-                              ),
-                              minHeight: 5,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        Text(
-                          '$completedInCourse/$totalInCourse',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                            color: isAllDone ? AppTheme.sageGreen : AppTheme.textMuted,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                children: [
-                  Divider(color: AppTheme.border, height: 1),
-                  ...course.lessons.map((lesson) {
-                    final isDone = _completedLessonIds.contains(lesson.id);
-
-                    return Material(
-                      color: Colors.transparent,
-                      child: InkWell(
-                        onTap: () => _onLessonTap(course, lesson),
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                          decoration: BoxDecoration(
-                            border: Border(
-                              bottom: BorderSide(
-                                color: AppTheme.border.withValues(alpha: 0.5),
-                                width: 0.5,
-                              ),
-                            ),
-                          ),
-                          child: Row(
-                            children: [
-                              // Done or Icon indicator
-                              Icon(
-                                isDone
-                                    ? Icons.check_circle_rounded
-                                    : (lesson.isAudioExercise ? Icons.headphones_rounded : Icons.circle_outlined),
-                                color: isDone
-                                    ? AppTheme.sageGreen
-                                    : (lesson.isAudioExercise ? AppTheme.amber : AppTheme.textMuted),
-                                size: 18,
-                              ),
-                              const SizedBox(width: 12),
-                              // Titles
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      lesson.title,
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
-                                        color: isDone ? AppTheme.textSecondary : AppTheme.textPrimary,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 2),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          t.coursesDurationminMin(lesson.durationMin),
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            color: AppTheme.textMuted,
-                                          ),
-                                        ),
-                                        if (lesson.linkedTool != 'none') ...[
-                                          Text(' • ', style: TextStyle(color: AppTheme.textMuted, fontSize: 11)),
-                                          Text(
-                                            switch (lesson.linkedTool) {
-                                              'kegel_timer' => t.coursesPracticePelvicFloor,
-                                              'breath_pacer' => t.coursesPracticeBreath,
-                                              'selbst_reise' => t.coursesPracticeSelfExploration,
-                                              'lust_profil' => t.coursesPracticeDesireProfile,
-                                              _ => t.coursesPracticeCbt,
-                                            },
-                                            style: TextStyle(
-                                              color: AppTheme.sageGreen,
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        ],
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Icon(
-                                Icons.arrow_forward_ios_rounded,
-                                color: AppTheme.textMuted,
-                                size: 14,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
-                  }),
-                ],
+    final nr = (Course.schwerpunkte.indexOf(s) + 1).toString().padLeft(2, '0');
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      Semantics(
+        button: true,
+        expanded: offen,
+        child: InkWell(
+          onTap: () => setState(() => _offen = offen ? ({..._offen!}..remove(s)) : {..._offen!, s}),
+          child: Padding(
+            padding: const EdgeInsets.only(top: VpAbstand.l),
+            child: VpAbschnitt(
+              eyebrow: '$nr · ${t.startLektionenVon(erledigt, lektionen.length)}',
+              titel: _schwerpunktName(s),
+              text: _schwerpunktText(s),
+              linie: false,
+              trailing: Padding(
+                padding: const EdgeInsets.only(left: VpAbstand.m),
+                child: Icon(offen ? Icons.remove_rounded : Icons.add_rounded, color: AppTheme.tinteStumm, size: 22),
               ),
             ),
           ),
-        ],
+        ),
+      ),
+      const SizedBox(height: VpAbstand.m),
+      VpFortschritt(wert: fortschritt, schritte: lektionen.length),
+      if (offen) Column(children: [for (final c in kurse) _buildCourseCard(c)]),
+      const SizedBox(height: VpAbstand.xl),
+    ]);
+  }
+
+  /// Welche Kurse aufgeklappt sind; anfangs der mit der nächsten offenen Lektion.
+  Set<String>? _kurseOffen;
+
+  /// Kleines Titelbild in der Kurszeile (Bleistift-Skizze, im Spicy-Modus die Spicy-Fassung, sonst der Platzhalter).
+  /// Ein Haken in der Ecke zeigt einen abgeschlossenen Kurs.
+  Widget _kursBild(Course course, bool fertig) {
+    final bild = course.image;
+    return Stack(fit: StackFit.expand, children: [
+      if (bild != null && bild.endsWith('.svg'))
+        VpBildFeld.pfad(bild, format: VpBildFormat.marke)
+      else
+        ColoredBox(
+          color: AppTheme.papierVertieft,
+          child: Icon(_getIconForCourse(course.icon), color: AppTheme.tinteLeise, size: 24),
+        ),
+      if (fertig)
+        Positioned(
+          right: 3,
+          bottom: 3,
+          child: Container(
+            decoration: BoxDecoration(color: AppTheme.papierErhoben, shape: BoxShape.circle),
+            child: Icon(Icons.check_circle_rounded, color: AppTheme.akzentTief, size: 18),
+          ),
+        ),
+    ]);
+  }
+
+  /// Eine Kurszeile: Nummer, Titel, Teaser, Fortschrittslinie, Bild. Antippen klappt die Lektionen auf (Kursdetail).
+  Widget _buildCourseCard(Course course) {
+    final fertigAnzahl = course.lessons.where((l) => _completedLessonIds.contains(l.id)).length;
+    final gesamt = course.lessons.length;
+    final isAllDone = gesamt > 0 && fertigAnzahl == gesamt;
+    final naechste = _naechsteLektion();
+    final offen = (_kurseOffen ??= {if (naechste != null) naechste.$1.id}).contains(course.id);
+    // Titel tragen ihre Nummer („1. Kopf und Körper …“): sie wird zur Serif-Zahl links, der Titel bleibt sauber.
+    final m = RegExp(r'^(\d+)\.\s*(.*)$').firstMatch(course.title);
+    final nummer = m?.group(1);
+    final titel = m?.group(2) ?? course.title;
+    final typo = context.vp.typo;
+
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      VpListenzeile(
+        nummer: nummer,
+        titel: titel,
+        teaser: course.subtitle,
+        bild: _kursBild(course, isAllDone),
+        fortschritt: gesamt > 0 ? fertigAnzahl / gesamt : 0,
+        fortschrittSchritte: gesamt,
+        fortschrittText: '$fertigAnzahl/$gesamt',
+        erledigt: isAllDone,
+        offen: offen,
+        trennlinie: !offen,
+        onTap: () => setState(() => _kurseOffen = offen ? ({..._kurseOffen!}..remove(course.id)) : {..._kurseOffen!, course.id}),
+      ),
+      if (offen)
+        Container(
+          margin: const EdgeInsets.only(bottom: VpAbstand.s),
+          decoration: BoxDecoration(border: Border(bottom: BorderSide(color: AppTheme.linie, width: VpLinie.haar))),
+          child: Column(children: [
+            for (final lesson in course.lessons) _buildLektionsZeile(course, lesson, typo),
+          ]),
+        ),
+    ]);
+  }
+
+  Widget _buildLektionsZeile(Course course, Lesson lesson, VpTypo typo) {
+    final isDone = _completedLessonIds.contains(lesson.id);
+    final praxis = switch (lesson.linkedTool) {
+      'none' => null,
+      'kegel_timer' => t.coursesPracticePelvicFloor,
+      'breath_pacer' => t.coursesPracticeBreath,
+      'selbst_reise' => t.coursesPracticeSelfExploration,
+      'lust_profil' => t.coursesPracticeDesireProfile,
+      _ => t.coursesPracticeCbt,
+    };
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: () => _onLessonTap(course, lesson),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(34, VpAbstand.m, 0, VpAbstand.m),
+          child: Row(children: [
+            Icon(
+              isDone ? Icons.check_circle_outline_rounded : (lesson.isAudioExercise ? Icons.headphones_outlined : Icons.circle_outlined),
+              color: isDone ? AppTheme.akzentTief : AppTheme.tinteStumm,
+              size: 18,
+            ),
+            const SizedBox(width: VpAbstand.m),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(lesson.title,
+                    style: typo.fliesstext.copyWith(fontWeight: FontWeight.w600, color: isDone ? AppTheme.tinteLeise : AppTheme.tinte)),
+                const SizedBox(height: 2),
+                Text(
+                  [t.coursesDurationminMin(lesson.durationMin), if (praxis != null) praxis].join(' · '),
+                  style: typo.beschriftung.copyWith(color: AppTheme.tinteStumm),
+                ),
+              ]),
+            ),
+            Icon(Icons.chevron_right_rounded, color: AppTheme.tinteStumm, size: 20),
+          ]),
+        ),
       ),
     );
   }
 }
 
-/// Check-in und Erotik-Funke als zwei Reiter, damit „für heute“ nur einen Block belegt. Die Wahl bleibt bis zum Neustart.
+/// Check-in und Funke als zwei leise Reiter, damit „für heute“ nur einen Block belegt. Die Wahl bleibt bis zum Neustart.
 class _HeuteReiter extends StatefulWidget {
   const _HeuteReiter();
 
@@ -866,40 +614,15 @@ class _HeuteReiter extends StatefulWidget {
 class _HeuteReiterState extends State<_HeuteReiter> {
   static int _gewaehlt = 0;
 
-  Widget _reiter(int i, String text, IconData icon) {
-    final an = _gewaehlt == i;
-    return InkWell(
-      onTap: () => setState(() => _gewaehlt = i),
-      borderRadius: BorderRadius.circular(20),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
-        decoration: BoxDecoration(
-          color: an ? AppTheme.amber.withValues(alpha: 0.18) : Colors.transparent,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: an ? AppTheme.amber : AppTheme.border, width: an ? 1.5 : 1),
-        ),
-        child: Row(mainAxisSize: MainAxisSize.min, children: [
-          Icon(icon, size: 15, color: an ? AppTheme.amber : AppTheme.textSecondary),
-          const SizedBox(width: 6),
-          Text(text,
-              style: TextStyle(
-                  fontSize: 12.5,
-                  fontWeight: an ? FontWeight.w700 : FontWeight.w500,
-                  color: an ? AppTheme.textPrimary : AppTheme.textSecondary)),
-        ]),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Row(children: [
-        _reiter(0, t.heuteReiterCheckin, Icons.speed_rounded),
-        const SizedBox(width: 8),
-        _reiter(1, t.heuteReiterFunke, Icons.bolt_outlined),
+        VpChip(label: t.heuteReiterCheckin, icon: Icons.speed_rounded, gewaehlt: _gewaehlt == 0, onTap: () => setState(() => _gewaehlt = 0)),
+        const SizedBox(width: VpAbstand.s),
+        VpChip(label: t.heuteReiterFunke, icon: Icons.bolt_outlined, gewaehlt: _gewaehlt == 1, onTap: () => setState(() => _gewaehlt = 1)),
       ]),
-      const SizedBox(height: 10),
+      const SizedBox(height: VpAbstand.m),
       if (_gewaehlt == 0) const DailyCheckInCard() else const DailySimmeringCard(),
     ]);
   }

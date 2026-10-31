@@ -3063,6 +3063,9 @@ class AppLocalizationsEn extends AppLocalizations {
       '18+. Unlocks the levels “Spicy” and “Extra spicy” in the body journey and the shared evening.';
 
   @override
+  String get heuteFuerHeute => 'For today';
+
+  @override
   String get designTitel => 'Appearance';
 
   @override

@@ -3074,6 +3074,9 @@ class AppLocalizationsDe extends AppLocalizations {
       'Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy“ und „Sehr spicy“ frei.';
 
   @override
+  String get heuteFuerHeute => 'Für heute';
+
+  @override
   String get designTitel => 'Darstellung';
 
   @override

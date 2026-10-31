@@ -25,7 +25,7 @@ class VpGrafik extends StatelessWidget {
     assert(BildRegister.grafikIds.isEmpty || BildRegister.grafikIds.contains(id), 'Unbekannte Grafik: $id');
     final c = farbe ?? AppTheme.linieStark;
     final maler = malerFuer(id, c);
-    return SizedBox(width: breite, height: hoehe, child: CustomPaint(painter: maler, size: Size(breite ?? 0, hoehe ?? 0)));
+    return SizedBox(width: breite ?? double.infinity, height: hoehe, child: CustomPaint(painter: maler));
   }
 
   static CustomPainter malerFuer(String id, Color farbe) => switch (id) {

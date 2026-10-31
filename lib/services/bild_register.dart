@@ -14,8 +14,8 @@ class BildEintrag {
   final String id;
   final VpBildFormat format;
 
-  /// Reguläres Bild in der APK (`assets/…`) oder, bei [paket], eine Datei aus einem Paket.
-  final String normal;
+  /// Reguläres Bild in der APK (fehlt, solange die Illustration aussteht: dann zeigt VpBildFeld den Platzhalter) (`assets/…`) oder, bei [paket], eine Datei aus einem Paket.
+  final String? normal;
 
   /// Fassung für den Spicy-Modus, falls vorhanden.
   final String? spicy;
@@ -32,7 +32,7 @@ class BildEintrag {
   const BildEintrag({
     required this.id,
     required this.format,
-    required this.normal,
+    this.normal,
     this.spicy,
     this.englisch,
     this.paket,
@@ -45,7 +45,7 @@ class BildEintrag {
     return BildEintrag(
       id: id,
       format: VpBildFormat.ausName(j['format'] as String?) ?? VpBildFormat.kopf,
-      normal: j['normal'] as String,
+      normal: j['normal'] as String?,
       spicy: j['spicy'] as String?,
       englisch: j['englisch'] as String?,
       paket: j['paket'] as String?,
@@ -94,7 +94,7 @@ class BildRegister {
     for (final e in ((j['bilder'] as Map?) ?? const {}).entries) {
       final eintrag = BildEintrag.aus(e.key as String, Map<String, dynamic>.from(e.value as Map));
       _nachId[eintrag.id] = eintrag;
-      _nachPfad[eintrag.normal] = eintrag;
+      if (eintrag.normal != null) _nachPfad[eintrag.normal!] = eintrag;
     }
     _geladen = true;
   }
@@ -114,7 +114,8 @@ class BildRegister {
     final en = englisch ?? Sprache.englisch;
     if (sp && e.spicy != null) return _quelle(e.spicy!, e.paket);
     if (en && e.englisch != null) return _quelle(e.englisch!, e.paket);
-    return _quelle(e.normal, e.paket);
+    final normal = e.normal;
+    return normal == null ? null : _quelle(normal, e.paket);
   }
 
   static BildQuelle? _quelle(String pfad, String? paket) {

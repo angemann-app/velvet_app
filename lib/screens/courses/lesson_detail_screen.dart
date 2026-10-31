@@ -11,6 +11,8 @@ import '../../services/tts_service.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/vp_tokens.dart';
 import '../../widgets/design/vp_bild_feld.dart';
+import '../../widgets/design/vp_komponenten.dart';
+import '../../widgets/design/vp_grafik.dart';
 import '../../widgets/audio_player_card.dart';
 import '../self_exploration/lust_profile_screen.dart';
 import '../self_exploration/selbst_reise_screen.dart';
@@ -336,7 +338,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           children: [
             if (lesson.image != null) ...[
               ClipRRect(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
                 child: Container(
                   color: AppTheme.surfaceLight,
                   child: lesson.image!.endsWith('.svg')
@@ -366,7 +368,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             if (lesson.zeichnung != null) ...[
               // Körperzeichnung (16:9) mit Beschriftung; Antippen öffnet sie zum Zoomen.
               ClipRRect(
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
                 child: GestureDetector(
                   onTap: () => _openDiagram(lesson.zeichnung!),
                   child: Stack(
@@ -388,82 +390,15 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             ],
             _spicyBilder(lesson),
 
-            // Lesson Type & Duration
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: lesson.isAudioExercise
-                        ? AppTheme.amber.withValues(alpha: 0.18)
-                        : AppTheme.sageGreen.withValues(alpha: 0.15),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: lesson.isAudioExercise
-                          ? AppTheme.amber.withValues(alpha: 0.4)
-                          : AppTheme.sageGreen.withValues(alpha: 0.3),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        lesson.isAudioExercise ? Icons.headphones_rounded : Icons.menu_book_rounded,
-                        size: 14,
-                        color: lesson.isAudioExercise ? AppTheme.amber : AppTheme.sageGreen,
-                      ),
-                      const SizedBox(width: 6),
-                      Text(
-                        lesson.isAudioExercise ? t.lessonDetailAudioExercise : t.lessonDetailLesson,
-                        style: TextStyle(
-                          color: lesson.isAudioExercise ? AppTheme.amber : AppTheme.sageGreen,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 0.5,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 10),
-                Text(
-                  t.lessonDetailDurationminMinRead(lesson.durationMin),
-                  style: TextStyle(
-                    color: AppTheme.textMuted,
-                    fontSize: 12,
-                  ),
-                ),
-              ],
-            ),
-
-            const SizedBox(height: 12),
-
-            // Title
-            Text(
-              lesson.title,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w800,
-                color: AppTheme.textPrimary,
-                height: 1.25,
-                letterSpacing: -0.3,
-              ),
-            ),
-
-            const SizedBox(height: 8),
-
-            // Summary
-            Text(
-              lesson.summary,
-              style: TextStyle(
-                fontSize: 15,
-                color: AppTheme.textSecondary,
-                height: 1.4,
-              ),
-            ),
-
-            const SizedBox(height: 20),
-
+            // Kopf im Magazinstil: Eyebrow (Kurs, Art, Dauer), Serif-Titel, Einleitung, Haarlinie.
+            VpEyebrow('${widget.courseTitle} · ${lesson.isAudioExercise ? t.lessonDetailAudioExercise : t.lessonDetailLesson} · ${t.lessonDetailDurationminMinRead(lesson.durationMin)}'),
+            const SizedBox(height: VpAbstand.s),
+            Text(lesson.title, style: context.vp.typo.anzeige.copyWith(fontSize: 30)),
+            const SizedBox(height: VpAbstand.m),
+            Text(lesson.summary, style: context.vp.typo.fliesstext.copyWith(color: AppTheme.tinteLeise, fontSize: 16.5, height: 1.55)),
+            const SizedBox(height: VpAbstand.l),
+            VpGrafik.trenner(id: 'linie.mass'),
+            const SizedBox(height: VpAbstand.l),
             // Audio Player Card
             AudioPlayerCard(
               textToRead: stripPersonalization(lesson.content),
@@ -473,25 +408,11 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               meldeOrt: '${widget.courseTitle}, „${lesson.title}“ (${lesson.id})',
             ),
 
-            // Main Text Content
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: AppTheme.surface,
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: AppTheme.border),
-              ),
-              child: SelectableText(
-                personalize(lesson.content, _personalizeContext.forPerspective(lesson.perspective)),
-                style: TextStyle(
-                  fontSize: 16,
-                  height: 1.65,
-                  color: AppTheme.textPrimary,
-                  letterSpacing: 0.1,
-                ),
-              ),
+            // Haupttext: kein Kasten, nur Typografie und Raum.
+            SelectableText(
+              personalize(lesson.content, _personalizeContext.forPerspective(lesson.perspective)),
+              style: context.vp.typo.fliesstext.copyWith(fontSize: 16.5, height: 1.7, letterSpacing: 0.1),
             ),
-
             const SizedBox(height: 28),
 
             // Smart-Action-Button (linked_tool)
@@ -574,13 +495,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       accentColor = AppTheme.sageLight;
     }
 
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: accentColor.withValues(alpha: 0.08),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: accentColor.withValues(alpha: 0.3), width: 1.5),
-      ),
+    accentColor = AppTheme.akzentTief;
+    return VpKarte(
+      rahmen: VpRahmen.akzent,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -645,19 +562,13 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
   }
 
   Widget _buildReflectionCard(String question) {
-    return Container(
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
-      ),
+    return VpKarte(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.edit_note_rounded, color: AppTheme.amber, size: 22),
+              Icon(Icons.edit_note_rounded, color: AppTheme.akzentTief, size: 22),
               SizedBox(width: 8),
               Text(
                 t.lessonDetailYourPersonalReflection,
@@ -673,7 +584,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           Text(
             question,
             style: TextStyle(
-              color: AppTheme.amberLight,
+              color: AppTheme.tinteLeise,
               fontSize: 14,
               fontWeight: FontWeight.w600,
               height: 1.4,

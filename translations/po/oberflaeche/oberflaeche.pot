@@ -5225,6 +5225,12 @@ msgid "Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: For today
+msgctxt "ui:heuteFuerHeute#text"
+msgid "Für heute"
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Appearance
 msgctxt "ui:designTitel#text"
 msgid "Darstellung"

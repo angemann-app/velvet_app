@@ -62,6 +62,14 @@
       },
       "spicy": "assets/images/ynm_fantasy_watching_spicy.svg"
     },
+    "bereich.heute.einladung": {
+      "format": "hoch",
+      "ausstehend": true,
+      "alt": {
+        "de": "Einladung zum nächsten Schritt",
+        "en": "Invitation to the next step"
+      }
+    },
     "bereich.mouth_kissing": {
       "format": "kopf",
       "normal": "assets/images/ynm_mouth_kissing.svg",

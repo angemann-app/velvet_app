@@ -9,6 +9,7 @@ import 'dart:io';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -168,6 +169,7 @@ void main() {
         triggerBackup: false,
       );
       await BildRegister.laden();
+      await initializeDateFormatting(_sprache);
       await DataService.loadDatabase();
     });
 
@@ -279,6 +281,12 @@ void main() {
     final course = DataService.getCourses().firstWhere((c) => c.id == 'course_sacred_massage');
     await tester.pumpWidget(_app(LessonDetailScreen(lesson: course.lessons[1], courseTitle: course.title)));
     await _shot(tester, '06_lektion', errors);
+    await tester.pumpWidget(const SizedBox());
+
+    // Pilot: Kurs 1, erste Lektion (Kopf, Einleitung, Text).
+    final kurs1 = DataService.getCourses().first;
+    await tester.pumpWidget(_app(LessonDetailScreen(lesson: kurs1.lessons.first, courseTitle: kurs1.title)));
+    await _shot(tester, '06_lektion_kurs1', errors);
     await tester.pumpWidget(const SizedBox());
 
     final news = await tester.runAsync(WhatsNew.load);

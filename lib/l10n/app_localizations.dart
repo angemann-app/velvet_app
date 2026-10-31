@@ -5217,6 +5217,12 @@ abstract class AppLocalizations {
   /// **'Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy“ und „Sehr spicy“ frei.'**
   String get spicyModusText;
 
+  /// No description provided for @heuteFuerHeute.
+  ///
+  /// In de, this message translates to:
+  /// **'Für heute'**
+  String get heuteFuerHeute;
+
   /// No description provided for @designTitel.
   ///
   /// In de, this message translates to:

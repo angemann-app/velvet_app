@@ -45,6 +45,11 @@ JA_NEIN = {
     "spicy": ("Spicy", "Spicy"),
 }
 
+# Bestellte, noch nicht gelieferte Bilder (ID -> Format, Alt-Text DE, Alt-Text EN).
+AUSSTEHEND = {
+    "bereich.heute.einladung": ("hoch", "Einladung zum nächsten Schritt", "Invitation to the next step"),
+}
+
 # Grafische Gestaltungselemente: in Dart gezeichnet (lib/widgets/design/vp_grafik.dart), keine Dateien.
 GRAFIK = {
     "marke.kreuz": "Kreuzmarke",
@@ -151,6 +156,10 @@ def bauen():
         if existiert(pfad.replace(".svg", "_en.svg")):
             e["englisch"] = pfad.replace(".svg", "_en.svg")
         bilder[bid] = e
+
+    # Noch nicht gelieferte Illustrationen: im Register, damit Bildschirme die ID schon nennen; bis zum Bild steht der Platzhalter da.
+    for bid, (fmt, alt_de, alt_en) in AUSSTEHEND.items():
+        bilder[bid] = {"format": fmt, "ausstehend": True, "alt": {"de": alt_de, "en": alt_en}}
 
     return {
         "version": 1,
