@@ -163,9 +163,9 @@ void main() {
       await prefs.setString('velvet_partner_name', 'Anna');
       // Erfundene Beispielnachrichten eines Beispielpaars (Alex und Anna); keine echten Chats.
       await prefs.setString('velvet_couple_messages_cache', jsonEncode([
-        {'id': '1', 'isMe': false, 'type': 'ping', 'emoji': '🥂', 'text': 'Freu mich auf später', 'createdAt': '$now'},
-        {'id': '2', 'isMe': true, 'type': 'chat', 'text': 'Ich mich auch. Lass uns heute ganz langsam machen.', 'createdAt': '$now'},
-        {'id': '3', 'isMe': false, 'type': 'chat', 'text': 'Klingt perfekt 💛', 'createdAt': '$now'},
+        {'id': '1', 'isMe': false, 'type': 'ping', 'emoji': '🔥', 'text': 'Lust auf dich', 'createdAt': '$now'},
+        {'id': '2', 'isMe': true, 'type': 'chat', 'text': 'Du machst mich verrückt. Ich weiß schon, wo ich dich später anfassen werde 😈', 'createdAt': '$now'},
+        {'id': '3', 'isMe': false, 'type': 'chat', 'text': 'Dann zieh dir vorher besser nichts Unnötiges an 😘', 'createdAt': '$now'},
       ]));
       await prefs.setString('velvet_my_fantasy_votes', jsonEncode({'match_blindfold': 'yes'}));
       await prefs.setString('velvet_partner_fantasy_votes', jsonEncode({'match_blindfold': 'yes'}));
