@@ -544,6 +544,42 @@
           "text": "We have withdrawn the previous pictures of the Inner views series. New ones in pencil style will follow later."
         }
       ]
+    },
+    {
+      "build": 55,
+      "version": "4.17.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "New start page “Today”",
+          "text": "Your next step is at the top, with the check-in and the spark. No more progress bar or streak: the app does not push you. The guided audios can be folded in and out, and the app remembers it."
+        },
+        {
+          "icon": "school",
+          "titel": "Four tabs: Today, Learn, Practice, Us",
+          "text": "The courses are under Learn; pelvic floor, breath, thoughts and the AI coach are under Practice; the couple channel is called Us. The course lists have small title pictures and are easier to read, and SOS is a small shield."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Explore together",
+          "text": "That is the new name of the wishes tab in the couple channel. The same answers everywhere: Yes please, Maybe, Rather not. A Maybe appears under To talk about, a Rather not never does. The scenes to try are in Spicy mode only."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Spicy with its own look",
+          "text": "In Spicy mode the whole app switches to wine red, rose and copper, instantly when you toggle it. Your own chat bubble now matches the rest."
+        },
+        {
+          "icon": "person",
+          "titel": "A gentler start",
+          "text": "The welcome shows three promises first, then one question per screen. The AI coach explains the setup in two steps."
+        },
+        {
+          "icon": "edit",
+          "titel": "New icon and pictures",
+          "text": "The app icon is now a lotus in sketchbook style. Two new pencil pictures in the lesson on squirting (Spicy mode only)."
+        }
+      ]
     }
   ],
   "_source": {
@@ -575,6 +611,7 @@
     "news:51": "3e09b78b7e89959b",
     "news:52": "ca9ee432b7e4c53d",
     "news:53": "741ef731d9dc392d",
-    "news:54": "bc011f006a7fcfd9"
+    "news:54": "bc011f006a7fcfd9",
+    "news:55": "8e5b8ca49d01efaa"
   }
 }

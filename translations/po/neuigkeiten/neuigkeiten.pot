@@ -898,3 +898,75 @@ msgstr ""
 msgctxt "news:54#3.text"
 msgid "Die bisherigen Bilder der Reihe Innenansichten haben wir zurückgezogen. Neue im Bleistift-Stil kommen später."
 msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: New start page “Today”
+msgctxt "news:55#0.titel"
+msgid "Neue Startseite „Heute“"
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: Your next step is at the top, with the check-in and the spark. No more progress bar or streak: the app does not push you. The guided audios can be folded in and out, and the app remembers it.
+msgctxt "news:55#0.text"
+msgid "Oben steht dein nächster Schritt, dazu Check-in und Funke. Kein Prozentbalken und keine Serie mehr: Die App drängt dich nicht. Die geführten Audios lassen sich ein- und ausklappen, die App merkt es sich."
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: Four tabs: Today, Learn, Practice, Us
+msgctxt "news:55#1.titel"
+msgid "Vier Tabs: Heute, Lernen, Üben, Wir"
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: The courses are under Learn; pelvic floor, breath, thoughts and the AI coach are under Practice; the couple channel is called Us. The course lists have small title pictures and are easier to read, and SOS is a small shield.
+msgctxt "news:55#1.text"
+msgid "Die Kurse liegen unter Lernen, Beckenboden, Atem, Gedanken und KI-Coach unter Üben, der Paar-Kanal heißt Wir. Die Kurslisten haben kleine Titelbilder und sind besser lesbar, SOS ist ein kleines Schild."
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: Explore together
+msgctxt "news:55#2.titel"
+msgid "Gemeinsam entdecken"
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: That is the new name of the wishes tab in the couple channel. The same answers everywhere: Yes please, Maybe, Rather not. A Maybe appears under To talk about, a Rather not never does. The scenes to try are in Spicy mode only.
+msgctxt "news:55#2.text"
+msgid "So heißt jetzt der Wünsche-Tab im Paar-Kanal. Überall dieselben Antworten: Ja, gern, Vielleicht, Lieber nicht. Ein Vielleicht erscheint zum Besprechen, ein Lieber nicht nie. Die Szenen zum Ausprobieren gibt es nur im Spicy-Modus."
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: Spicy with its own look
+msgctxt "news:55#3.titel"
+msgid "Spicy mit eigenem Look"
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: In Spicy mode the whole app switches to wine red, rose and copper, instantly when you toggle it. Your own chat bubble now matches the rest.
+msgctxt "news:55#3.text"
+msgid "Im Spicy-Modus wechselt die ganze App auf Weinrot, Rosé und Kupfer, sofort beim Umschalten. Die eigene Chat-Blase passt jetzt zum Rest."
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: A gentler start
+msgctxt "news:55#4.titel"
+msgid "Sanfterer Einstieg"
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: The welcome shows three promises first, then one question per screen. The AI coach explains the setup in two steps.
+msgctxt "news:55#4.text"
+msgid "Das Willkommen zeigt zuerst drei Versprechen, danach kommt eine Frage pro Bild. Der KI-Coach erklärt die Einrichtung in zwei Schritten."
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: New icon and pictures
+msgctxt "news:55#5.titel"
+msgid "Neues Symbol und Bilder"
+msgstr ""
+
+#. Was ist neu in Version 4.17.0-beta.1
+#. EN: The app icon is now a lotus in sketchbook style. Two new pencil pictures in the lesson on squirting (Spicy mode only).
+msgctxt "news:55#5.text"
+msgid "Das App-Symbol ist jetzt ein Lotus im Skizzenbuch-Stil. Zwei neue Bleistift-Bilder in der Lektion zum Squirting (nur im Spicy-Modus)."
+msgstr ""

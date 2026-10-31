@@ -544,6 +544,42 @@
           "text": "Die bisherigen Bilder der Reihe Innenansichten haben wir zurückgezogen. Neue im Bleistift-Stil kommen später."
         }
       ]
+    },
+    {
+      "build": 55,
+      "version": "4.17.0-beta.1",
+      "punkte": [
+        {
+          "icon": "spa",
+          "titel": "Neue Startseite „Heute“",
+          "text": "Oben steht dein nächster Schritt, dazu Check-in und Funke. Kein Prozentbalken und keine Serie mehr: Die App drängt dich nicht. Die geführten Audios lassen sich ein- und ausklappen, die App merkt es sich."
+        },
+        {
+          "icon": "school",
+          "titel": "Vier Tabs: Heute, Lernen, Üben, Wir",
+          "text": "Die Kurse liegen unter Lernen, Beckenboden, Atem, Gedanken und KI-Coach unter Üben, der Paar-Kanal heißt Wir. Die Kurslisten haben kleine Titelbilder und sind besser lesbar, SOS ist ein kleines Schild."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Gemeinsam entdecken",
+          "text": "So heißt jetzt der Wünsche-Tab im Paar-Kanal. Überall dieselben Antworten: Ja, gern, Vielleicht, Lieber nicht. Ein Vielleicht erscheint zum Besprechen, ein Lieber nicht nie. Die Szenen zum Ausprobieren gibt es nur im Spicy-Modus."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Spicy mit eigenem Look",
+          "text": "Im Spicy-Modus wechselt die ganze App auf Weinrot, Rosé und Kupfer, sofort beim Umschalten. Die eigene Chat-Blase passt jetzt zum Rest."
+        },
+        {
+          "icon": "person",
+          "titel": "Sanfterer Einstieg",
+          "text": "Das Willkommen zeigt zuerst drei Versprechen, danach kommt eine Frage pro Bild. Der KI-Coach erklärt die Einrichtung in zwei Schritten."
+        },
+        {
+          "icon": "edit",
+          "titel": "Neues Symbol und Bilder",
+          "text": "Das App-Symbol ist jetzt ein Lotus im Skizzenbuch-Stil. Zwei neue Bleistift-Bilder in der Lektion zum Squirting (nur im Spicy-Modus)."
+        }
+      ]
     }
   ]
 }

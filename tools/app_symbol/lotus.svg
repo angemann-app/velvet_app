@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+  <!-- Lotus im Skizzenbuch-Stil: doppelte Bleistiftkontur in Sand, zarte Rosé-Schraffur. Sichere Zone: 66 dp um die Mitte. -->
+  <defs>
+    <clipPath id="mitte"><path d="M54,70 C44,60 44,44 54,30 C64,44 64,60 54,70 Z"/></clipPath>
+    <clipPath id="links"><path d="M54,70 C40,66 33,52 36,40 C46,46 52,56 54,70 Z"/></clipPath>
+    <clipPath id="rechts"><path d="M54,70 C68,66 75,52 72,40 C62,46 56,56 54,70 Z"/></clipPath>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#D9A3AB" stroke-width="0.9" opacity="0.75">
+      <g clip-path="url(#mitte)"><path d="M40,70 L68,34 M40,64 L68,28 M40,76 L68,40 M44,78 L68,46"/></g>
+      <g clip-path="url(#links)"><path d="M30,66 L56,40 M30,72 L60,42 M30,60 L52,38"/></g>
+      <g clip-path="url(#rechts)"><path d="M78,66 L52,40 M78,72 L48,42 M78,60 L56,38"/></g>
+    </g>
+    <g stroke="#CFA163" stroke-width="2.1">
+      <path d="M54,70 C44,60 44,44 54,30 C64,44 64,60 54,70 Z"/>
+      <path d="M54,70 C40,66 33,52 36,40 C46,46 52,56 54,70 Z"/>
+      <path d="M54,70 C68,66 75,52 72,40 C62,46 56,56 54,70 Z"/>
+      <path d="M54,70 C38,72 26,64 22,52 C34,52 46,58 54,70 Z"/>
+      <path d="M54,70 C70,72 82,64 86,52 C74,52 62,58 54,70 Z"/>
+    </g>
+    <g stroke="#CFA163" stroke-width="0.9" opacity="0.55" transform="translate(0.9,-0.7)">
+      <path d="M54,70 C44,60 44,44 54,30 C64,44 64,60 54,70 Z"/>
+      <path d="M54,70 C38,72 26,64 22,52 C34,52 46,58 54,70 Z"/>
+      <path d="M54,70 C70,72 82,64 86,52 C74,52 62,58 54,70 Z"/>
+    </g>
+    <g stroke="#CFA163" stroke-width="1.6" opacity="0.9">
+      <path d="M30,77 C42,81 66,81 78,77"/>
+      <path d="M41,82 C48,85 60,85 67,82"/>
+    </g>
+  </g>
+</svg>
