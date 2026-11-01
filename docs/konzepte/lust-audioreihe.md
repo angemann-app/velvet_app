@@ -519,3 +519,12 @@ Texte nicht nötig: Texte in `reihe.json`, Aufnahmen und `dauer.json` ins Paket,
   und `sehr_spicy_mann.txt` (Thema Körper des Mannes, Hörerin → Fassung `sehrspicy_frau`, Victoria). **Ich-Form bleibt.** Überarbeitung: Höhepunkt als Erleben
   statt Erklärung ausbauen, Lehrbuchstellen vor dem Höhepunkt zu Empfindung machen, Rückkehr-Teil der Frau-Fassung ergänzen, Abbildung auf die sechs Szenen
   (Hauptteil in `other_body`), Englisch dazu.
+
+**Redaktionelle Leitplanken (Nutzer, 01.11.2026, freigegeben):**
+1. **Die Höhepunkte wirklich erzählen**, nicht Abläufe aufzählen: Der Hörer erlebt Spannungsaufbau, Empfindungen, Wellen und Nachlassen unmittelbar mit.
+2. **Wissenschaft in die Erzählung integrieren:** Anatomie und Physiologie stimmen, unterbrechen aber den Fluss nicht; Fachbegriffe nur, wo sie echten Erkenntnisgewinn bringen.
+3. **Beide Geschichten bekommen eine vollständige Rückverwandlung** und sind dramaturgisch gleichwertig abgeschlossen (die Frau-wird-Mann-Geschichte hat sie, die Mann-wird-Frau-Geschichte bekommt sie).
+4. **Zuordnung:** „Wenn ich eine Frau werde“ → `sehrspicy_mann` (Hörer Mann, Martin); „Wenn ich ein Mann werde“ → `sehrspicy_frau` (Hörerin, Victoria).
+5. **Sechs Szenen bleiben**, `other_body` darf deutlich länger sein.
+6. **Englisch literarisch übertragen**, nicht Wort für Wort übersetzen.
+7. **Keine künstliche Kürzung** auf 17 Minuten oder eine Zeichenzahl: Die Qualität des Erlebens geht vor einheitlicher Laufzeit (auch 20 Minuten sind in Ordnung).
