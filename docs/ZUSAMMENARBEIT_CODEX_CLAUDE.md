@@ -88,4 +88,5 @@ Stand: 01.11.2026. Auftrag des Nutzers: Texte überarbeiten, besonders die Spicy
   5. *Rückkehr:* Beide Fassungen besitzen eine vollwertige, gleichwertige Rückverwandlung und beruhigenden Nachklang.
   6. *Englisch:* Literarisch anspruchsvoll übertragen, nicht wörtlich übersetzt.
 - **Status:** Schritt 1 (Recherche) und Schritt 2 (Textentwürfe) abgeschlossen. Bereit für **Schritt 3: Textabnahme durch den Nutzer**. Produktionsdateien, Audios und Pakete bleiben unberührt.
+- **Freigabe & Bildkonzept:** Nutzer hat Texte freigegeben („Texte passen“) und Variante B (perspektivenspezifische Prompts) für die Szenenbilder gewählt. Konzept in `docs/konzepte/sehr-spicy-bilder-prompts.md` und Erzeugungsskript `C:\TOOLS\velvet-inhalte\reihe\bilder\sehrspicy_bilder.py` hinterlegt. Aussprachekorrekturen in `tools/aussprache.json` eingetragen. Vorbereitung für die Vertonung abgeschlossen.
 
