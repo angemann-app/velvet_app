@@ -66,6 +66,8 @@ seinem OK führt Claude zusammen, trägt den Auftrag unter „Erledigt“ ein un
 
 ## Gesperrt (hier arbeitet gerade Claude Code)
 
+Zusammenarbeit mit Codex: `docs/ZUSAMMENARBEIT_CODEX_CLAUDE.md` vor paralleler Text- oder Diagrammarbeit lesen. Codex hat getrennte DE/EN-Lektoratsentwürfe unter `build/redaktion/spicy/` erstellt; Prüfbericht und Erzeugung stehen in `docs/konzepte/spicy-lektorat.md`. Lektionstexte und Aufnahmen sind unverändert. Die 100 Diagramm-SVGs sind neu gezeichnet; Quelle, Prüfungen und Übergabe stehen im selben Protokoll.
+
 Jede Zeile mit Datum. Einträge, die älter als drei Tage sind, fragt Antigravity beim Nutzer nach, statt sie
 stillschweigend zu übergehen.
 
