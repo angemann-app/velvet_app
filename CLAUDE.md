@@ -43,6 +43,7 @@ Modell `opencode/deepseek-v4.1-flash-free`. Soll AG langfristig als Arbeitstier 
   `C:\TOOLS\velvet-inhalte`, Rückmeldungen und Postfach, Schlüssel und Geheimnisse, Sicherheitscode
   (`SecretStore`, `BackupCodec`, `NostrEventCheck`, Krypto), neue Inhaltstexte und Entscheidungen aus
   „Offene Fragen“.
+- **Ausnahme ChatGPT (Nutzer, 01.11.2026):** Der Nutzer gibt die **Texte und Audios** der Spicy-Folgen ausdrücklich an ChatGPT als zweiten Programmier- und Redaktionskollegen. Das ist seine Entscheidung, nicht meine. **Bilder und Motive** bleiben davon ausgenommen (Regel unter „Bilder“), ebenso Schlüssel und Zugangsdaten. OpenCode bleibt für diese Inhalte gesperrt. Ändert ChatGPT Dateien in `C:\TOOLS\velvet-inhalte` oder in `C:\TOOLS\workspace\mojo_innenansichten`, wartet Claude auf das Signal des Nutzers, bevor er sie liest, prüft oder verändert.
 - **Danach immer selbst prüfen:** `git diff` lesen, Tests laufen lassen, erst dann committen. OpenCode
   committet, pusht und veröffentlicht nie.
 - **Rechte** stehen in `~/.config/opencode/opencode.jsonc` (Vorlage `tools/opencode/opencode.jsonc`): kein
