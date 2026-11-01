@@ -1,47 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <title>The Ninety-Percent Principle</title>
-  <desc>Two arousal curves compared: stopping at about ninety percent preserves anticipation. Without a pause the curve drops sharply after the peak.</desc>
-  <defs>
-    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
-      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
-      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <rect width="800" height="600" fill="#140D1C"/>
-  <ellipse cx="410" cy="320" rx="350" ry="235" fill="url(#glow)"/>
-
-  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">The Ninety-Percent Principle</text>
-  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Stopping before it is over</text>
-  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Anticipation stays when the moment ends openly</text>
-
-  <!-- Axes -->
-  <line x1="100" y1="180" x2="100" y2="460" stroke="#64748B" stroke-width="2"/>
-  <line x1="100" y1="460" x2="730" y2="460" stroke="#64748B" stroke-width="2"/>
-  <text x="86" y="196" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">100</text>
-  <text x="86" y="222" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">90</text>
-  <text x="86" y="466" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="16">0</text>
-  <text x="54" y="320" transform="rotate(-90 54 320)" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="18">Arousal</text>
-  <text x="722" y="492" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="18">Time →</text>
-
-  <!-- Ninety-percent mark -->
-  <line x1="100" y1="216" x2="320" y2="216" stroke="#34D399" stroke-width="2" stroke-dasharray="6 5" opacity="0.75"/>
-  <text x="112" y="202" fill="#34D399" font-family="sans-serif" font-size="17" font-weight="700">stop at 90 %</text>
-
-  <!-- Curve with a pause -->
-  <path d="M110 450 C160 444 210 392 258 326 C288 286 312 242 330 216 C352 250 374 276 402 283 C480 300 596 288 708 278" fill="none" stroke="#34D399" stroke-width="5" stroke-linecap="round"/>
-  <circle cx="330" cy="216" r="7" fill="#34D399" stroke="#140D1C" stroke-width="2"/>
-
-  <!-- Curve without a pause -->
-  <path d="M110 450 C172 440 232 378 290 300 C330 246 368 198 404 188 C424 183 440 204 456 246 C478 308 496 390 516 432 C542 450 604 448 708 446" fill="none" stroke="#FB7185" stroke-width="5" stroke-linecap="round"/>
-
-  <!-- Legend -->
-  <line x1="512" y1="158" x2="552" y2="158" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
-  <text x="560" y="164" fill="#F1F5F9" font-family="sans-serif" font-size="16">with a pause</text>
-  <line x1="512" y1="184" x2="552" y2="184" stroke="#FB7185" stroke-width="4" stroke-linecap="round"/>
-  <text x="560" y="190" fill="#F1F5F9" font-family="sans-serif" font-size="16">without a pause</text>
-
-  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Stopping at about 90 percent keeps the anticipation alive.</text>
-  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Without a pause the curve drops sharply after the peak.</text>
-  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">An ending without a promise removes the pressure.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Pauses and anticipation</title>
+<desc id="beschreibung">One possible pattern, not a percentage measurement. A pause can also be the end of the moment.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  BODY KNOWLEDGE</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">36</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Pauses and anticipation</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">One possible pattern, not a percentage measurement</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<line x1="86" y1="436" x2="724" y2="436" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="86" y1="436" x2="86" y2="196" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<path d="M 94 411 C 142 411 160 305 213 301 S 264 391 311 391 S 367 257 425 260 S 492 375 538 375 S 614 278 708 304" fill="none" stroke="#925B68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text x="180" y="480" font-family="sans-serif" font-size="23" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Approach</text>
+<text x="400" y="480" font-family="sans-serif" font-size="23" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Pause</text>
+<text x="636" y="480" font-family="sans-serif" font-size="23" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Choose again</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">A pause can also be the end of the moment.</text>
 </svg>

@@ -1,75 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <title>The Perineum: Outer Zones &amp; Touch</title>
-  <desc>Orientation and three touch modes for external stimulation of pelvic and prostate nerves</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#140D1C"/>
-      <stop offset="100%" stop-color="#0F172A"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
-    </linearGradient>
-    <linearGradient id="roseGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FDA4AF"/>
-      <stop offset="100%" stop-color="#E11D48"/>
-    </linearGradient>
-    <linearGradient id="bulbGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FB7185" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#9F1239" stop-opacity="0.55"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <text x="400" y="38" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">The Perineum: Outer Zones &amp; Touch</text>
-  <text x="400" y="62" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">schematic, position and size vary</text>
-  <!-- Zonenkarte Damm -->
-  <g transform="translate(60, 95)">
-    <rect width="320" height="360" rx="14" fill="url(#card)" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.5"/>
-    <text x="160" y="32" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#38BDF8">Perineal Zones</text>
-
-    <!-- Hodensack Ansatz oben -->
-    <path d="M100 55 C120 45 200 45 220 55" stroke="#64748B" stroke-width="3" fill="none"/>
-    <text x="160" y="72" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">↑ Scrotum</text>
-
-    <!-- Zone A: Vorderer Damm (Schwellkörperwurzel) -->
-    <rect x="65" y="88" width="190" height="58" rx="10" fill="#38BDF8" fill-opacity="0.25" stroke="#38BDF8" stroke-width="1.8"/>
-    <text x="160" y="112" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#F1F5F9">A: Anterior Zone</text>
-    <text x="160" y="134" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">Erectile roots</text>
-
-    <!-- Zone B: Zentrum (Centrum tendineum / Tiefenpunkt) -->
-    <rect x="65" y="158" width="190" height="65" rx="12" fill="#FB7185" fill-opacity="0.3" stroke="#FB7185" stroke-width="2"/>
-    <circle cx="160" cy="184" r="8" fill="#FBBF24"/>
-    <text x="160" y="210" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#F1F5F9">B: Central Hub</text>
-
-    <!-- Zone C: Hinterer Damm -->
-    <rect x="65" y="235" width="190" height="58" rx="10" fill="#38BDF8" fill-opacity="0.25" stroke="#38BDF8" stroke-width="1.8"/>
-    <text x="160" y="259" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#F1F5F9">C: Posterior Zone</text>
-    <text x="160" y="281" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">Near sphincter</text>
-
-    <!-- After unten -->
-    <ellipse cx="160" cy="320" rx="16" ry="10" fill="#0F172A" stroke="#64748B" stroke-width="2"/>
-    <text x="160" y="348" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">↓ Anus</text>
-  </g>
-  <g transform="translate(410, 95)">
-    <rect width="330" height="106" rx="12" fill="url(#card)" stroke="#FBBF24" stroke-width="1.6"/>
-    <text x="16" y="34" font-family="sans-serif" font-size="17" font-weight="700" fill="#FBBF24">1. Broad Palm (Warmth &amp; Grounding)</text>
-    <text x="16" y="62" font-family="sans-serif" font-size="16" fill="#F1F5F9">Rest palm gently on perineum;</text>
-    <text x="16" y="86" font-family="sans-serif" font-size="16" fill="#94A3B8">share breath and relax muscles.</text>
-  </g>
-  <g transform="translate(410, 219)">
-    <rect width="330" height="106" rx="12" fill="url(#card)" stroke="#FB7185" stroke-width="1.6"/>
-    <text x="16" y="34" font-family="sans-serif" font-size="17" font-weight="700" fill="#FB7185">2. Gentle Pressure (Point B Inward)</text>
-    <text x="16" y="62" font-family="sans-serif" font-size="16" fill="#F1F5F9">Pulse finger pad inward gently</text>
-    <text x="16" y="86" font-family="sans-serif" font-size="16" fill="#94A3B8">toward deep pelvic center.</text>
-  </g>
-  <g transform="translate(410, 343)">
-    <rect width="330" height="106" rx="12" fill="url(#card)" stroke="#38BDF8" stroke-width="1.6"/>
-    <text x="16" y="34" font-family="sans-serif" font-size="17" font-weight="700" fill="#38BDF8">3. Steady Stroking (Along Line A–C)</text>
-    <text x="16" y="62" font-family="sans-serif" font-size="16" fill="#F1F5F9">Stroke slowly back and forth</text>
-    <text x="16" y="86" font-family="sans-serif" font-size="16" fill="#94A3B8">with warm oil or lubricant.</text>
-  </g>
-  <rect x="60" y="480" width="680" height="76" rx="12" fill="#1E293B" fill-opacity="0.75" stroke="#FB7185" stroke-width="1.5"/>
-  <text x="80" y="510" font-family="sans-serif" font-size="16" fill="#F1F5F9">External touch stimulates deep nerves while keeping full self-control.</text>
-  <text x="80" y="536" font-family="sans-serif" font-size="16" fill="#F1F5F9">Use generous lubricant or warm oil to protect the delicate skin.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">The perineal region</title>
+<desc id="beschreibung">Surface anatomy, not pressure points. The prostate cannot be felt directly from outside.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  BODY KNOWLEDGE</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">31</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">The perineal region</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Surface anatomy, not pressure points</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<ellipse cx="226" cy="236" rx="65" ry="38" fill="none" stroke="#2A2A2C" stroke-width="1.8"/>
+<path d="M 164 282 Q 225 320 288 282 L 269 397 Q 225 425 181 397 Z" fill="#EBD9D8" stroke="#925B68" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="225" cy="452" r="15" fill="none" stroke="#2A2A2C" stroke-width="1.8"/>
+<circle cx="460" cy="197.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="202.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<text x="490" y="205.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Scrotum</text>
+<circle cx="312" cy="239" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="312" y="244" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<circle cx="460" cy="327.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="332.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="490" y="335.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Perineum</text>
+<circle cx="305" cy="350" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="305" y="355" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<circle cx="460" cy="457.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="462.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<text x="490" y="465.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Anus</text>
+<circle cx="274" cy="451" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="274" y="456" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">The prostate cannot be felt directly from outside.</text>
 </svg>

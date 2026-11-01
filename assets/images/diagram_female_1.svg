@@ -1,79 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
-  <title>Weiblicher Beckenboden: Loslassen</title>
-  <desc>Schichten des Beckenbodens, Weitung bei Bauchatmung und Entspannung der Muskelschlingen</desc>
-  <rect width="800" height="600" fill="#140D1C"/>
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
-    </linearGradient>
-    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FB7185"/>
-      <stop offset="100%" stop-color="#F43F5E"/>
-    </linearGradient>
-    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#0284C7"/>
-    </linearGradient>
-    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#34D399"/>
-      <stop offset="100%" stop-color="#059669"/>
-    </linearGradient>
-    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#C084FC"/>
-      <stop offset="100%" stop-color="#9333EA"/>
-    </linearGradient>
-  </defs>
-
-  
-  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Der weibliche Beckenboden: Öffnen statt Halten</text>
-  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Drei Schichten &amp; das Prinzip des sanften Nachgebens</text>
-
-  <!-- Left: 3 Layers -->
-  <rect x="40" y="105" width="350" height="430" rx="14" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
-  <text x="60" y="138" fill="#38BDF8" font-family="sans-serif" font-size="18px" font-weight="bold">Die drei Muskelschichten</text>
-
-  <!-- Layer 1 -->
-  <rect x="60" y="155" width="310" height="90" rx="10" fill="#0F172A" stroke="#FB7185" stroke-width="1.5"/>
-  <text x="75" y="180" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold">1. Äußere Schließschicht</text>
-  <text x="75" y="204" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Umgibt Scheideneingang &amp; Klitoris.</text>
-    <text x="75" y="226" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Neigt bei Anspannung zu Vaginismus.</text>
-
-  <!-- Layer 2 -->
-  <rect x="60" y="255" width="310" height="105" rx="10" fill="#0F172A" stroke="#C084FC" stroke-width="1.5"/>
-  <text x="75" y="280" fill="#C084FC" font-family="sans-serif" font-size="16px" font-weight="bold">2. Mittlere Schicht</text>
-  <text x="75" y="302" fill="#94A3B8" font-family="sans-serif" font-size="16px">(Diaphragma urogenitale)</text>
-  <text x="75" y="326" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Dreieckige elastische Muskelplatte.</text>
-    <text x="75" y="348" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Stabilisiert und federt Druck ab.</text>
-
-  <!-- Layer 3 -->
-  <rect x="60" y="370" width="310" height="105" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
-  <text x="75" y="395" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold">3. Tiefe Schicht</text>
-  <text x="75" y="417" fill="#94A3B8" font-family="sans-serif" font-size="16px">(Levator ani Schlinge)</text>
-  <text x="75" y="441" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Große Schlinge im Beckeninneren.</text>
-    <text x="75" y="463" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Hebt &amp; senkt sich synchron mit Atem.</text>
-
-  <text x="60" y="505" fill="#34D399" font-family="sans-serif" font-size="16px">Drei elastisch verschränkte Schichten</text>
-
-  <!-- Right: Blossom Exercise -->
-  <rect x="410" y="105" width="350" height="430" rx="14" fill="#1E1B4B" stroke="#334155" stroke-width="1.5"/>
-  <text x="430" y="138" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Die Knospen-Übung</text>
-
-  <rect x="430" y="155" width="310" height="160" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
-  <text x="445" y="185" fill="#38BDF8" font-family="sans-serif" font-size="17px" font-weight="bold">Einatmen: Nachgeben</text>
-  <text x="445" y="215" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Tief in den Bauch atmen.</text>
-    <text x="445" y="239" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Vorstellung: Scheideneingang</text>
-    <text x="445" y="263" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">und Damm werden weich und geben</text>
-    <text x="445" y="287" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">sanft nach außen nach (Knospe).</text>
-
-  <rect x="430" y="330" width="310" height="145" rx="10" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
-  <text x="445" y="360" fill="#34D399" font-family="sans-serif" font-size="17px" font-weight="bold">Ausatmen: Weich bleiben</text>
-  <text x="445" y="390" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Kein Gegendruck, kein Hochziehen.</text>
-    <text x="445" y="414" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Der Beckenboden bleibt entspannt.</text>
-    <text x="445" y="438" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Bessere Durchblutung &amp; Spielraum.</text>
-
-  <text x="430" y="505" fill="#FB7185" font-family="sans-serif" font-size="16px">Druck verschließt – Sicherheit öffnet</text>
-
-  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematisch, Lage und Größe sind individuell</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Der Beckenboden kann nachgeben</title>
+<desc id="beschreibung">Vereinfachtes Funktionsmodell. Loslassen bedeutet nicht, aktiv nach unten zu pressen.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  KÖRPERWISSEN</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">13</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Der Beckenboden kann nachgeben</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Vereinfachtes Funktionsmodell</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<path d="M 225 189 C 118 173 73 245 87 340 C 98 403 147 438 226 447 C 302 438 355 403 366 340 C 380 245 334 173 225 189 Z" fill="none" stroke="#2A2A2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 226 223 C 148 211 121 262 136 330 C 147 373 178 401 226 412 C 275 400 306 372 316 330 C 332 261 303 210 226 223 Z" fill="none" stroke="#B6AB9E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 127 312 Q 225 410 325 312 Q 225 355 127 312 Z" fill="#EBD9D8" stroke="#925B68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="150" y1="331" x2="163" y2="349" stroke="#925B68" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+<line x1="168" y1="331" x2="181" y2="349" stroke="#925B68" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+<line x1="186" y1="331" x2="199" y2="349" stroke="#925B68" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+<line x1="204" y1="331" x2="217" y2="349" stroke="#925B68" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+<line x1="222" y1="331" x2="235" y2="349" stroke="#925B68" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+<line x1="240" y1="331" x2="253" y2="349" stroke="#925B68" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+<line x1="258" y1="331" x2="271" y2="349" stroke="#925B68" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+<line x1="276" y1="331" x2="289" y2="349" stroke="#925B68" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+<line x1="294" y1="331" x2="307" y2="349" stroke="#925B68" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+<line x1="390" y1="275" x2="390" y2="247" stroke="#925B68" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 394.3 254.9 L 390 247 L 385.7 254.9" fill="none" stroke="#925B68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="390" y1="350" x2="390" y2="351" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 385.7 343.1 L 390 351 L 394.3 343.1" fill="none" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="390" y1="412" x2="390" y2="437" stroke="#925B68" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 385.7 429.1 L 390 437 L 394.3 429.1" fill="none" stroke="#925B68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="460" cy="197.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="202.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<text x="490" y="205.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Wahrnehmen</text>
+<circle cx="460" cy="327.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="332.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="490" y="335.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Anspannen</text>
+<circle cx="460" cy="457.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="462.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<text x="490" y="465.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Loslassen</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Loslassen bedeutet nicht, aktiv nach unten zu pressen.</text>
 </svg>

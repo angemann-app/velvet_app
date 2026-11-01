@@ -1,36 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#140D1C"/><stop offset="1" stop-color="#0F172A"/>
-    </linearGradient>
-    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#E2AA92"/><stop offset="1" stop-color="#C98A74"/>
-    </linearGradient>
-    <linearGradient id="inner" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#C9687A"/><stop offset="1" stop-color="#A84C60"/>
-    </linearGradient>
-    <linearGradient id="glans" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#E39AA2"/><stop offset="1" stop-color="#C46E7C"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <rect x="10" y="25" width="250" height="270" rx="18" fill="#1E293B" opacity="0.55"/>
-  <circle cx="37" cy="52" r="17" fill="#FBBF24"/><text x="37" y="59" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="800" fill="#1A1224">1</text>
-  <text x="135" y="282" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Open hand</text>
-<g transform="translate(40 120)"><path d="M0 30 C10 75 55 85 70 55 C78 40 60 25 40 26 Z" fill="#C98A74" stroke="#7A4A3B" stroke-width="2"/><path d="M0 -6 C60 -14 120 -20 160 -22 C166 -6 166 14 160 30 C120 32 60 36 4 44 C0 30 -2 10 0 -6 Z" fill="url(#skin)" stroke="#7A4A3B" stroke-width="2"/><path d="M156 -26 C182 -36 214 -26 220 -2 C226 22 204 38 176 38 C168 38 162 36 158 34 C168 18 168 -10 156 -26 Z" fill="url(#glans)" stroke="#7A3E4A" stroke-width="2"/></g><rect x="70.0" y="81.0" width="120" height="34" rx="17.0" fill="#F5D0C0" opacity="0.6" stroke="#FBBF24" stroke-width="3" transform="rotate(0 130 98)"/><path d="M65 70 L185 66" stroke="#FBBF24" stroke-width="5"/><polygon points="0,-9 18,0 0,9" fill="#FBBF24" transform="translate(190 66) rotate(0)"/>  <rect x="275" y="25" width="250" height="270" rx="18" fill="#1E293B" opacity="0.55"/>
-  <circle cx="302" cy="52" r="17" fill="#FBBF24"/><text x="302" y="59" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="800" fill="#1A1224">2</text>
-  <text x="400" y="282" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Two-handed gliding</text>
-<g transform="translate(305 120)"><path d="M0 30 C10 75 55 85 70 55 C78 40 60 25 40 26 Z" fill="#C98A74" stroke="#7A4A3B" stroke-width="2"/><path d="M0 -6 C60 -14 120 -20 160 -22 C166 -6 166 14 160 30 C120 32 60 36 4 44 C0 30 -2 10 0 -6 Z" fill="url(#skin)" stroke="#7A4A3B" stroke-width="2"/><path d="M156 -26 C182 -36 214 -26 220 -2 C226 22 204 38 176 38 C168 38 162 36 158 34 C168 18 168 -10 156 -26 Z" fill="url(#glans)" stroke="#7A3E4A" stroke-width="2"/></g><rect x="337.0" y="96.0" width="36" height="80" rx="40.0" fill="#F5D0C0" opacity="0.6" stroke="#FBBF24" stroke-width="3" transform="rotate(0 355 136)"/><rect x="407.0" y="90.0" width="36" height="80" rx="40.0" fill="#F5D0C0" opacity="0.6" stroke="#FBBF24" stroke-width="3" transform="rotate(0 425 130)"/><path d="M325 75 L455 71" stroke="#FBBF24" stroke-width="5"/><polygon points="0,-9 18,0 0,9" fill="#FBBF24" transform="translate(460 71) rotate(0)"/>  <rect x="540" y="25" width="250" height="270" rx="18" fill="#1E293B" opacity="0.55"/>
-  <circle cx="567" cy="52" r="17" fill="#FBBF24"/><text x="567" y="59" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="800" fill="#1A1224">3</text>
-  <text x="665" y="282" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Twisting</text>
-<g transform="translate(570 120)"><path d="M0 30 C10 75 55 85 70 55 C78 40 60 25 40 26 Z" fill="#C98A74" stroke="#7A4A3B" stroke-width="2"/><path d="M0 -6 C60 -14 120 -20 160 -22 C166 -6 166 14 160 30 C120 32 60 36 4 44 C0 30 -2 10 0 -6 Z" fill="url(#skin)" stroke="#7A4A3B" stroke-width="2"/><path d="M156 -26 C182 -36 214 -26 220 -2 C226 22 204 38 176 38 C168 38 162 36 158 34 C168 18 168 -10 156 -26 Z" fill="url(#glans)" stroke="#7A3E4A" stroke-width="2"/></g><rect x="635.0" y="90.0" width="40" height="84" rx="42.0" fill="#F5D0C0" opacity="0.6" stroke="#FBBF24" stroke-width="3" transform="rotate(0 655 132)"/><path d="M623 78 C645 62 675 62 693 78" fill="none" stroke="#FBBF24" stroke-width="5"/><polygon points="0,-9 18,0 0,9" fill="#FBBF24" transform="translate(695 80) rotate(50)"/><polygon points="0,-9 18,0 0,9" fill="#FBBF24" transform="translate(621 80) rotate(130)"/>  <rect x="10" y="300" width="250" height="270" rx="18" fill="#1E293B" opacity="0.55"/>
-  <circle cx="37" cy="327" r="17" fill="#FBBF24"/><text x="37" y="334" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="800" fill="#1A1224">4</text>
-  <text x="135" y="557" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Ring at the base</text>
-<g transform="translate(40 395)"><path d="M0 30 C10 75 55 85 70 55 C78 40 60 25 40 26 Z" fill="#C98A74" stroke="#7A4A3B" stroke-width="2"/><path d="M0 -6 C60 -14 120 -20 160 -22 C166 -6 166 14 160 30 C120 32 60 36 4 44 C0 30 -2 10 0 -6 Z" fill="url(#skin)" stroke="#7A4A3B" stroke-width="2"/><path d="M156 -26 C182 -36 214 -26 220 -2 C226 22 204 38 176 38 C168 38 162 36 158 34 C168 18 168 -10 156 -26 Z" fill="url(#glans)" stroke="#7A3E4A" stroke-width="2"/></g><ellipse cx="47" cy="415" rx="14" ry="36" fill="none" stroke="#FBBF24" stroke-width="6" stroke-dasharray="10 5"/>  <rect x="275" y="300" width="250" height="270" rx="18" fill="#1E293B" opacity="0.55"/>
-  <circle cx="302" cy="327" r="17" fill="#FBBF24"/><text x="302" y="334" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="800" fill="#1A1224">5</text>
-  <text x="400" y="557" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Frenulum</text>
-<g transform="translate(305 395)"><path d="M0 30 C10 75 55 85 70 55 C78 40 60 25 40 26 Z" fill="#C98A74" stroke="#7A4A3B" stroke-width="2"/><path d="M0 -6 C60 -14 120 -20 160 -22 C166 -6 166 14 160 30 C120 32 60 36 4 44 C0 30 -2 10 0 -6 Z" fill="url(#skin)" stroke="#7A4A3B" stroke-width="2"/><path d="M156 -26 C182 -36 214 -26 220 -2 C226 22 204 38 176 38 C168 38 162 36 158 34 C168 18 168 -10 156 -26 Z" fill="url(#glans)" stroke="#7A3E4A" stroke-width="2"/></g><circle cx="468" cy="431" r="9" fill="#FB7185" stroke="#FFFFFF" stroke-width="2"/><circle cx="468" cy="431" r="26" fill="none" stroke="#FBBF24" stroke-width="4" stroke-dasharray="9 6"/>  <rect x="540" y="300" width="250" height="270" rx="18" fill="#1E293B" opacity="0.55"/>
-  <circle cx="567" cy="327" r="17" fill="#FBBF24"/><text x="567" y="334" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="800" fill="#1A1224">6</text>
-  <text x="665" y="557" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Testicles &amp; perineum</text>
-<g transform="translate(570 395)"><path d="M0 30 C10 75 55 85 70 55 C78 40 60 25 40 26 Z" fill="#C98A74" stroke="#7A4A3B" stroke-width="2"/><path d="M0 -6 C60 -14 120 -20 160 -22 C166 -6 166 14 160 30 C120 32 60 36 4 44 C0 30 -2 10 0 -6 Z" fill="url(#skin)" stroke="#7A4A3B" stroke-width="2"/><path d="M156 -26 C182 -36 214 -26 220 -2 C226 22 204 38 176 38 C168 38 162 36 158 34 C168 18 168 -10 156 -26 Z" fill="url(#glans)" stroke="#7A3E4A" stroke-width="2"/></g><ellipse cx="603" cy="477" rx="40" ry="18" fill="#F5D0C0" opacity="0.55" stroke="#FBBF24" stroke-width="3"/><circle cx="555" cy="485" r="20" fill="none" stroke="#34D399" stroke-width="4" stroke-dasharray="8 5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Comparing types of touch</title>
+<desc id="beschreibung">Abstract movement symbols. The symbols suggest options, not a fixed sequence.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  BODY KNOWLEDGE</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">33</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Comparing types of touch</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Abstract movement symbols</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<circle cx="144" cy="290" r="58" fill="none" stroke="#B6AB9E" stroke-width="0.9"/>
+<ellipse cx="144" cy="290" rx="30" ry="15" fill="#EBD9D8" stroke="#925B68" stroke-width="1.8"/>
+<line x1="107" y1="315" x2="181" y2="315" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<circle cx="144" cy="187" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="144" y="192" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<text x="144" y="407" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Rest</text>
+<circle cx="316" cy="290" r="58" fill="none" stroke="#B6AB9E" stroke-width="0.9"/>
+<line x1="288" y1="290" x2="344" y2="290" stroke="#925B68" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 336.1 294.3 L 344 290 L 336.1 285.7" fill="none" stroke="#925B68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="284" y1="308" x2="344" y2="308" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<circle cx="316" cy="187" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="316" y="192" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="316" y="407" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Glide</text>
+<circle cx="488" cy="290" r="58" fill="none" stroke="#B6AB9E" stroke-width="0.9"/>
+<path d="M 463 310 A 33 33 0 1 1 518 296" fill="none" stroke="#925B68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="519" y1="295" x2="509" y2="307" stroke="#925B68" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 510.7 298.2 L 509 307 L 517.4 303.7" fill="none" stroke="#925B68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="488" cy="187" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="488" y="192" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<text x="488" y="407" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Circle</text>
+<circle cx="660" cy="290" r="58" fill="none" stroke="#B6AB9E" stroke-width="0.9"/>
+<line x1="651" y1="268" x2="651" y2="312" stroke="#925B68" stroke-width="4" stroke-linecap="round" opacity="1"/>
+<line x1="669" y1="268" x2="669" y2="312" stroke="#925B68" stroke-width="4" stroke-linecap="round" opacity="1"/>
+<circle cx="660" cy="187" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="660" y="192" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">4</text>
+<text x="660" y="407" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Pause</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">The symbols suggest options, not a fixed sequence.</text>
 </svg>

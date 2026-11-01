@@ -1,41 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <title>Peak and Ejaculation: Two Processes</title>
-  <desc>Two tracks on one shared timeline: orgasmic waves in the pelvic floor above, the motor reflex of ejaculation with a threshold below.</desc>
-  <defs>
-    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
-      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
-      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
-    </radialGradient>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
-    </marker>
-  </defs>
-  <rect width="800" height="600" fill="#140D1C"/>
-  <ellipse cx="400" cy="320" rx="350" ry="235" fill="url(#glow)"/>
-
-  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="30" font-weight="700">Peak and Ejaculation</text>
-  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Two processes on one timeline</text>
-  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Orgasm is experience, ejaculation is a reflex</text>
-
-  <line x1="480" y1="170" x2="480" y2="460" stroke="#64748B" stroke-width="2" stroke-dasharray="6 6"/>
-  <text x="480" y="160" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">threshold</text>
-
-  <text x="110" y="206" fill="#FB7185" font-family="sans-serif" font-size="19" font-weight="700">Orgasm</text>
-  <text x="110" y="230" fill="#94A3B8" font-family="sans-serif" font-size="16">waves in the pelvic floor</text>
-  <path d="M180 300 Q202 280 224 300 Q246 320 268 300 Q290 272 312 300 Q334 328 356 300 Q378 255 400 300 Q422 345 444 300 Q466 235 488 300 Q510 365 532 300 Q554 240 576 300 Q598 340 620 300 Q642 270 664 300 Q686 285 700 300" fill="none" stroke="#FB7185" stroke-width="4" stroke-linecap="round"/>
-
-  <text x="110" y="382" fill="#34D399" font-family="sans-serif" font-size="19" font-weight="700">Ejaculation</text>
-  <text x="110" y="406" fill="#94A3B8" font-family="sans-serif" font-size="16">motor reflex</text>
-  <path d="M180 424 L430 424 C450 424 458 372 480 372 C502 372 510 424 530 424 L700 424" fill="none" stroke="#34D399" stroke-width="4" stroke-linejoin="round"/>
-  <circle cx="480" cy="372" r="6" fill="#34D399"/>
-
-  <line x1="110" y1="470" x2="725" y2="470" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="180" y="500" fill="#94A3B8" font-family="sans-serif" font-size="17">arousal</text>
-  <text x="480" y="500" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="17">threshold</text>
-  <text x="620" y="500" fill="#94A3B8" font-family="sans-serif" font-size="17">afterwards</text>
-  <text x="725" y="500" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="17">time</text>
-
-  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Orgasm and ejaculation are two processes that usually occur together.</text>
-  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">The peak is experience; ejaculation is a reflex in the spinal cord.</text>
-  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Separating them can buy time – without adding performance pressure.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Orgasm and ejaculation</title>
+<desc id="beschreibung">Related, but not the same process. Timing and experience vary between people.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  BODY KNOWLEDGE</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">38</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Orgasm and ejaculation</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Related, but not the same process</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<text x="67" y="204" font-family="SourceSerif4" font-size="29" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Orgasm</text>
+<line x1="68" y1="258" x2="731" y2="258" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<path d="M 210 258 C 280 258 297 223 365 223 S 443 276 500 276 S 575 258 711 258" fill="none" stroke="#925B68" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text x="67" y="304" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Subjective experience</text>
+<text x="67" y="343" font-family="SourceSerif4" font-size="29" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Ejaculation</text>
+<line x1="68" y1="397" x2="731" y2="397" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<path d="M 210 397 C 280 397 297 362 365 362 S 443 415 500 415 S 575 397 711 397" fill="none" stroke="#2A2A2C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text x="67" y="443" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">A physical process</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Timing and experience vary between people.</text>
 </svg>

@@ -1,41 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <title>Entspannen statt Pressen</title>
-  <desc>Ablauf in fünf Stationen: Zeit nehmen, außen erregen, Druck an der Vorderwand, Harndrang erkennen, entscheiden</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140D1C"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <text x="400" y="34" font-family="sans-serif" font-size="24" font-weight="700" fill="#F1F5F9" text-anchor="middle">Entspannen statt Pressen</text>
-  <text x="400" y="60" font-family="sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">schematisch, Lage und Größe sind individuell</text>
-  <rect x="26" y="110" width="136" height="270" rx="14" fill="#1E293B" fill-opacity="0.7" stroke="#FB7185" stroke-opacity="0.6" stroke-width="1.5"/>
-  <circle cx="48" cy="134" r="13" fill="#FBBF24"/><text x="48" y="140" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">1</text>
-  <g transform="translate(94 206)"><circle cx="0" cy="0" r="26" fill="none" stroke="#FBBF24" stroke-width="4"/><path d="M0 -14 L0 0 L12 8" fill="none" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/></g>
-  <text x="94" y="276" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">Zeit nehmen</text>
-  <polygon points="0,-9 14,0 0,9" fill="#FBBF24" transform="translate(164 245)"/>
-  <rect x="179" y="110" width="136" height="270" rx="14" fill="#1E293B" fill-opacity="0.7" stroke="#FB7185" stroke-opacity="0.6" stroke-width="1.5"/>
-  <circle cx="201" cy="134" r="13" fill="#FBBF24"/><text x="201" y="140" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">2</text>
-  <g transform="translate(247 206)"><circle cx="0" cy="0" r="8" fill="#FB7185"/><circle cx="0" cy="0" r="18" fill="none" stroke="#FB7185" stroke-width="3" opacity="0.8"/><circle cx="0" cy="0" r="28" fill="none" stroke="#FB7185" stroke-width="2.5" opacity="0.5"/></g>
-  <text x="247" y="276" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">außen erregen</text>
-  <polygon points="0,-9 14,0 0,9" fill="#FBBF24" transform="translate(317 245)"/>
-  <rect x="332" y="110" width="136" height="270" rx="14" fill="#1E293B" fill-opacity="0.7" stroke="#FB7185" stroke-opacity="0.6" stroke-width="1.5"/>
-  <circle cx="354" cy="134" r="13" fill="#FBBF24"/><text x="354" y="140" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text>
-  <g transform="translate(400 206)"><path d="M-24 18 C-24 -10 -4 -26 24 -26" fill="none" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"/><path d="M-30 4 L-14 4" stroke="#FBBF24" stroke-width="5" stroke-linecap="round"/><polygon points="0,-8 16,0 0,8" fill="#FBBF24" transform="translate(-10 4)"/></g>
-  <text x="400" y="276" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">Druck an der</text>
-  <text x="400" y="300" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">Vorderwand</text>
-  <polygon points="0,-9 14,0 0,9" fill="#FBBF24" transform="translate(470 245)"/>
-  <rect x="485" y="110" width="136" height="270" rx="14" fill="#1E293B" fill-opacity="0.7" stroke="#FB7185" stroke-opacity="0.6" stroke-width="1.5"/>
-  <circle cx="507" cy="134" r="13" fill="#FBBF24"/><text x="507" y="140" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text>
-  <g transform="translate(553 206)"><path d="M0 -26 C0 -26 -18 -2 -18 10 C-18 21 -10 28 0 28 C10 28 18 21 18 10 C18 -2 0 -26 0 -26 Z" fill="#38BDF8"/></g>
-  <text x="553" y="276" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">Harndrang</text>
-  <text x="553" y="300" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">erkennen</text>
-  <polygon points="0,-9 14,0 0,9" fill="#FBBF24" transform="translate(623 245)"/>
-  <rect x="638" y="110" width="136" height="270" rx="14" fill="#1E293B" fill-opacity="0.7" stroke="#FB7185" stroke-opacity="0.6" stroke-width="1.5"/>
-  <circle cx="660" cy="134" r="13" fill="#FBBF24"/><text x="660" y="140" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">5</text>
-  <g transform="translate(706 206)"><path d="M0 26 L0 0 M0 0 L-20 -22 M0 0 L20 -22" fill="none" stroke="#F1F5F9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <text x="706" y="276" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">entscheiden:</text>
-  <text x="706" y="300" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">laufen lassen</text>
-  <text x="706" y="324" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">mit Unterlage</text>
-  <text x="706" y="348" font-family="sans-serif" font-size="17" font-weight="700" fill="#F1F5F9" text-anchor="middle">oder pausieren</text>
-  <rect x="26" y="420" width="748" height="70" rx="14" fill="#B91C1C" fill-opacity="0.85" stroke="#FCA5A5" stroke-width="1.5"/>
-  <text x="400" y="463" font-family="sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">Schmerz, Brennen oder Unbehagen heißen Stopp.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Wahrnehmen statt erzwingen</title>
+<desc id="beschreibung">Kein vorhersagbares Ergebnis. Schmerz oder Brennen: stoppen. Harndrang darf Pause heißen.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  KÖRPERWISSEN</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">40</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Wahrnehmen statt erzwingen</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Kein vorhersagbares Ergebnis</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<line x1="165.0" y1="263" x2="288.33333333333337" y2="263" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 280.4 267.3 L 288.33333333333337 263 L 280.4 258.7" fill="none" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="338.33333333333337" y1="263" x2="461.6666666666667" y2="263" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 453.8 267.3 L 461.6666666666667 263 L 453.8 258.7" fill="none" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="511.6666666666667" y1="263" x2="635.0" y2="263" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 627.1 267.3 L 635.0 263 L 627.1 258.7" fill="none" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="140.0" cy="263" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="140.0" y="268" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<text x="140.0" y="325" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Zeit</text>
+<text x="140.0" y="400" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Ohne</text>
+<text x="140.0" y="427" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Erwartungsdruck</text>
+<circle cx="313.33333333333337" cy="263" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="313.33333333333337" y="268" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="313.33333333333337" y="325" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Komfort</text>
+<text x="313.33333333333337" y="400" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Angenehme</text>
+<text x="313.33333333333337" y="427" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Berührung</text>
+<circle cx="486.6666666666667" cy="263" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="486.6666666666667" y="268" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<text x="486.6666666666667" y="325" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Wahrnehmen</text>
+<text x="486.6666666666667" y="400" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Signale ernst</text>
+<text x="486.6666666666667" y="427" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">nehmen</text>
+<circle cx="660.0" cy="263" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="660.0" y="268" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">4</text>
+<text x="660.0" y="325" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Entscheiden</text>
+<text x="660.0" y="400" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Pause oder</text>
+<text x="660.0" y="427" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">aufhören</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Schmerz oder Brennen: stoppen. Harndrang darf Pause heißen.</text>
 </svg>

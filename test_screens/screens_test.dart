@@ -68,6 +68,8 @@ Future<void> _loadFonts() async {
     ..addFont(load('roboto-black.ttf'))
     ..addFont(load('roboto-italic.ttf'));
   await roboto.load();
+  // SVG-Beschriftungen verwenden den Android-Systemnamen sans-serif.
+  await (FontLoader('sans-serif')..addFont(load('roboto-regular.ttf'))).load();
   // Emojis (Funken im Paar-Kanal): unter Windows liegt eine Farb-Emoji-Schrift bei.
   const emojiFont = 'C:/Windows/Fonts/seguiemj.ttf';
   if (File(emojiFont).existsSync()) {

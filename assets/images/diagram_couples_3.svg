@@ -1,60 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <title>Die Ampel: Wünsche und Grenzen</title>
-  <desc>Drei Zonen als Ampel: Grün, Gelb und Rot, jeweils mit einer kurzen Empfehlung für Wünsche und Grenzen.</desc>
-  <defs>
-    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.6">
-      <stop offset="0" stop-color="#FB7185" stop-opacity="0.13"/>
-      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <rect width="800" height="600" fill="#140D1C"/>
-  <ellipse cx="400" cy="320" rx="350" ry="235" fill="url(#glow)"/>
-
-  <text x="400" y="50" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="34" font-weight="700">Die Ampel: Wünsche und Grenzen</text>
-  <text x="400" y="84" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="20" font-weight="700">Drei Wörter für den Moment</text>
-  <text x="400" y="116" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="18">Grün, Gelb und Rot vorher gemeinsam vereinbaren</text>
-
-  <!-- Grün -->
-  <g>
-    <rect x="60" y="158" width="220" height="322" rx="18" fill="#1C1327" stroke="#34D399" stroke-width="2" stroke-opacity="0.5"/>
-    <circle cx="170" cy="222" r="44" fill="#34D399" opacity="0.16"/>
-    <circle cx="170" cy="222" r="34" fill="#34D399" opacity="0.9"/>
-    <text x="170" y="296" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="22" font-weight="700">Grün</text>
-    <line x1="84" y1="316" x2="256" y2="316" stroke="#34D399" stroke-width="2" stroke-opacity="0.35"/>
-    <text x="170" y="346" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="16" font-weight="700">Wunsch</text>
-    <text x="170" y="370" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">mehr davon zulassen</text>
-    <text x="170" y="408" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="16" font-weight="700">Grenze</text>
-    <text x="170" y="432" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Grün darf wachsen.</text>
-  </g>
-
-  <!-- Gelb -->
-  <g>
-    <rect x="290" y="158" width="220" height="322" rx="18" fill="#1C1327" stroke="#FBBF24" stroke-width="2" stroke-opacity="0.5"/>
-    <circle cx="400" cy="222" r="44" fill="#FBBF24" opacity="0.16"/>
-    <circle cx="400" cy="222" r="34" fill="#FBBF24" opacity="0.9"/>
-    <text x="400" y="296" text-anchor="middle" fill="#FBBF24" font-family="sans-serif" font-size="22" font-weight="700">Gelb</text>
-    <line x1="314" y1="316" x2="486" y2="316" stroke="#FBBF24" stroke-width="2" stroke-opacity="0.35"/>
-    <text x="400" y="346" text-anchor="middle" fill="#FBBF24" font-family="sans-serif" font-size="16" font-weight="700">Wunsch</text>
-    <text x="400" y="370" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">sanfter oder anders</text>
-    <text x="400" y="408" text-anchor="middle" fill="#FBBF24" font-family="sans-serif" font-size="16" font-weight="700">Grenze</text>
-    <text x="400" y="432" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Gelb ist kein Nein.</text>
-  </g>
-
-  <!-- Rot -->
-  <g>
-    <rect x="520" y="158" width="220" height="322" rx="18" fill="#1C1327" stroke="#FB7185" stroke-width="2" stroke-opacity="0.5"/>
-    <circle cx="630" cy="222" r="44" fill="#FB7185" opacity="0.16"/>
-    <circle cx="630" cy="222" r="34" fill="#FB7185" opacity="0.9"/>
-    <text x="630" y="296" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="22" font-weight="700">Rot</text>
-    <line x1="544" y1="316" x2="716" y2="316" stroke="#FB7185" stroke-width="2" stroke-opacity="0.35"/>
-    <text x="630" y="346" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">Wunsch</text>
-    <text x="630" y="370" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">später neu fragen</text>
-    <text x="630" y="408" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="700">Grenze</text>
-    <text x="630" y="432" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="16">Stopp gilt sofort.</text>
-  </g>
-
-  <text x="400" y="540" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="20">Eine gemeinsame, spielerische Sprache macht Rückmeldung leicht.</text>
-  <text x="400" y="566" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="18">Grün heißt weiter, Gelb heißt anpassen, Rot heißt stoppen.</text>
-  <text x="400" y="590" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="18">Rot braucht keine Begründung und wird sofort respektiert.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Wünsche und Grenzen</title>
+<desc id="beschreibung">Signale gemeinsam vereinbaren. Ein Stopp gilt sofort und braucht keine Begründung.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  KÖRPERWISSEN</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">07</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Wünsche und Grenzen</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Signale gemeinsam vereinbaren</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<circle cx="103" cy="216" r="24" fill="none" stroke="#526D60" stroke-width="2"/>
+<text x="103" y="223" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#526D60">1</text>
+<text x="161" y="215" font-family="SourceSerif4" font-size="30" font-weight="400" letter-spacing="0" text-anchor="start" fill="#526D60">Grün</text>
+<text x="161" y="251" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">So ist es angenehm</text>
+<line x1="161" y1="273" x2="734" y2="273" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<circle cx="103" cy="320" r="24" fill="none" stroke="#925B68" stroke-width="2"/>
+<text x="103" y="327" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="161" y="319" font-family="SourceSerif4" font-size="30" font-weight="400" letter-spacing="0" text-anchor="start" fill="#925B68">Gelb</text>
+<text x="161" y="355" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Pause und nachfragen</text>
+<line x1="161" y1="377" x2="734" y2="377" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<circle cx="103" cy="424" r="24" fill="none" stroke="#983F4F" stroke-width="2"/>
+<text x="103" y="431" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#983F4F">3</text>
+<text x="161" y="423" font-family="SourceSerif4" font-size="30" font-weight="400" letter-spacing="0" text-anchor="start" fill="#983F4F">Rot</text>
+<text x="161" y="459" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Sofort aufhören</text>
+<line x1="161" y1="481" x2="734" y2="481" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Ein Stopp gilt sofort und braucht keine Begründung.</text>
 </svg>

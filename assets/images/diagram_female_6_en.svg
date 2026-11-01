@@ -1,38 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <title>Cervix: Position and Depth (Section)</title>
-  <desc>Schematic side section with uterus, cervix, cervical opening, vagina and bladder</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#140D1C"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <text x="400" y="34" font-family="sans-serif" font-size="24" font-weight="700" fill="#F1F5F9" text-anchor="middle">Cervix: Position and Depth (Section)</text>
-  <text x="400" y="60" font-family="sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">schematic, position and size vary</text>
-  <g>
-    <ellipse cx="186" cy="240" rx="44" ry="34" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2.5"/>
-    <path d="M170 352 L272 248 C285 236 312 236 324 250 L326 262 L214 382 Z" fill="#FB7185" fill-opacity="0.16" stroke="#FB7185" stroke-opacity="0.8" stroke-width="2" stroke-linejoin="round"/>
-    <path d="M296 232 C258 222 230 170 242 122 C252 86 304 82 326 114 C346 148 338 202 312 232 Z" fill="#FBBF24" fill-opacity="0.22" stroke="#FBBF24" stroke-width="2.5"/>
-    <rect x="283" y="214" width="30" height="52" rx="12" fill="#FB7185" fill-opacity="0.45" stroke="#FB7185" stroke-width="2.5"/>
-    <ellipse cx="298" cy="266" rx="6" ry="3" fill="#140D1C" stroke="#FB7185" stroke-width="1.5"/>
-    <!-- Maß -->
-    <path d="M222 396 L338 280" fill="none" stroke="#F1F5F9" stroke-width="2" stroke-dasharray="5 4"/>
-    <polygon points="0,-6 12,0 0,6" fill="#F1F5F9" transform="translate(341 277) rotate(-45)"/>
-    <polygon points="0,-6 12,0 0,6" fill="#F1F5F9" transform="translate(219 399) rotate(135)"/>
-    <circle cx="186" cy="240" r="13" fill="#38BDF8"/><text x="186" y="246" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">1</text><circle cx="282" cy="150" r="13" fill="#FBBF24"/><text x="282" y="156" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">2</text><circle cx="298" cy="200" r="13" fill="#FB7185"/><text x="298" y="206" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text><circle cx="342" cy="258" r="13" fill="#FB7185"/><text x="342" y="264" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text><circle cx="226" cy="322" r="13" fill="#FB7185"/><text x="226" y="328" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">5</text>
-  </g>
-  <circle cx="430" cy="110" r="13" fill="#38BDF8"/><text x="430" y="116" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">1</text>
-  <text x="454" y="116" font-family="sans-serif" font-size="16" fill="#F1F5F9">Bladder</text>
-  <circle cx="430" cy="140" r="13" fill="#FBBF24"/><text x="430" y="146" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">2</text>
-  <text x="454" y="146" font-family="sans-serif" font-size="16" fill="#F1F5F9">Uterus</text>
-  <circle cx="430" cy="170" r="13" fill="#FB7185"/><text x="430" y="176" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text>
-  <text x="454" y="176" font-family="sans-serif" font-size="16" fill="#F1F5F9">Cervix</text>
-  <circle cx="430" cy="200" r="13" fill="#FB7185"/><text x="430" y="206" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text>
-  <text x="454" y="206" font-family="sans-serif" font-size="16" fill="#F1F5F9">Cervical opening</text>
-  <circle cx="430" cy="230" r="13" fill="#FB7185"/><text x="430" y="236" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">5</text>
-  <text x="454" y="236" font-family="sans-serif" font-size="16" fill="#F1F5F9">Vagina</text>
-  <text x="300" y="372" font-family="sans-serif" font-size="16" fill="#F1F5F9">Depth about 7 to 10 cm</text>
-  <rect x="30" y="394" width="360" height="106" rx="12" fill="#1E293B" fill-opacity="0.7" stroke="#FBBF24" stroke-width="1.5"/><ellipse cx="82" cy="466" rx="20" ry="24" fill="#FBBF24" fill-opacity="0.25" stroke="#FBBF24" stroke-width="2"/><path d="M82 444 L82 414" stroke="#FBBF24" stroke-width="4" stroke-linecap="round"/><polygon points="0,-8 16,0 0,8" fill="#FBBF24" transform="translate(82 410) rotate(-90)"/><text x="126" y="430" font-family="sans-serif" font-size="16" fill="#F1F5F9">With arousal the uterus rises</text><text x="126" y="454" font-family="sans-serif" font-size="16" fill="#F1F5F9">and the vagina gets</text><text x="126" y="478" font-family="sans-serif" font-size="16" fill="#F1F5F9">longer.</text>
-  <rect x="410" y="394" width="360" height="106" rx="12" fill="#1E293B" fill-opacity="0.7" stroke="#FB7185" stroke-width="1.5"/><g transform="translate(0, -12)"><path d="M450 500 C430 484 434 444 450 434 C466 444 470 484 450 500 Z" fill="#FBBF24" fill-opacity="0.25" stroke="#FBBF24" stroke-width="2"/><g transform="rotate(35 498 500)"><path d="M498 500 C478 484 482 444 498 434 C514 444 518 484 498 500 Z" fill="#FB7185" fill-opacity="0.25" stroke="#FB7185" stroke-width="2"/></g></g><text x="550" y="430" font-family="sans-serif" font-size="16" fill="#F1F5F9">Position and tilt vary</text><text x="550" y="454" font-family="sans-serif" font-size="16" fill="#F1F5F9">(for example tilted</text><text x="550" y="478" font-family="sans-serif" font-size="16" fill="#F1F5F9">backwards).</text>
-  <rect x="40" y="512" width="720" height="62" rx="12" fill="#1E293B" fill-opacity="0.7" stroke="#FB7185" stroke-width="1.5"/>
-  <text x="58" y="538" font-family="sans-serif" font-size="16" fill="#F1F5F9">During sex nothing enters the uterus;</text>
-  <text x="58" y="560" font-family="sans-serif" font-size="16" fill="#F1F5F9">pressure is against the cervix.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Uterus and cervix</title>
+<desc id="beschreibung">Schematic anatomy, not a depth measurement. Position and sensitivity vary; take pain seriously.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  BODY KNOWLEDGE</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">17</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Uterus and cervix</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Schematic anatomy, not a depth measurement</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<path d="M 179 210 C 194 180 270 180 285 210 C 301 246 264 277 250 315 L 212 315 C 202 274 164 248 179 210 Z" fill="#EBD9D8" stroke="#2A2A2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 193 218 C 210 203 255 203 271 218 L 236 292 Z" fill="none" stroke="#925B68" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 211 315 L 214 348 Q 232 365 250 348 L 252 315" fill="none" stroke="#925B68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 218 358 Q 206 408 216 458 M 249 358 Q 260 408 249 458" fill="none" stroke="#2A2A2C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 178 211 Q 145 192 111 220 M 285 211 Q 316 192 350 220" fill="none" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="460" cy="197.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="202.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<text x="490" y="205.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Uterus</text>
+<circle cx="287" cy="250" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="287" y="255" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<circle cx="460" cy="327.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="332.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="490" y="335.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Cervix</text>
+<circle cx="281" cy="333" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="281" y="338" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<circle cx="460" cy="457.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="462.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<text x="490" y="465.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Vagina</text>
+<circle cx="281" cy="415" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="281" y="420" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Position and sensitivity vary; take pain seriously.</text>
 </svg>

@@ -1,65 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <title>Die Klitoris: Netzwerk und Schwellkörper</title>
-  <desc>Dreidimensionale Architektur: Eichel, Schaft, Schenkel und Vorhofschwellkörper</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#140D1C"/>
-      <stop offset="100%" stop-color="#0F172A"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
-    </linearGradient>
-    <linearGradient id="roseGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FDA4AF"/>
-      <stop offset="100%" stop-color="#E11D48"/>
-    </linearGradient>
-    <linearGradient id="bulbGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FB7185" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#9F1239" stop-opacity="0.55"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <text x="400" y="38" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#F1F5F9">Die Klitoris: Netzwerk und Schwellkörper</text>
-  <text x="400" y="62" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#94A3B8">schematisch, Lage und Größe sind individuell</text>
-  <g transform="translate(230, 260)">
-    <!-- Scheideneingang in der Mitte -->
-    <ellipse cx="0" cy="50" rx="22" ry="42" fill="#0F172A" stroke="#FBBF24" stroke-width="2.5" stroke-dasharray="4 4"/>
-    <circle cx="0" cy="50" r="13" fill="#FBBF24"/><text x="0" y="56" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">5</text>
-
-    <!-- Vorhofschwellkörper (Bulbi vestibuli) umschließen die Scheide links und rechts -->
-    <path d="M-12 10 C-36 20 -44 55 -38 85 C-32 105 -18 100 -14 78 C-10 60 -6 30 -12 10 Z" fill="url(#bulbGrad)" stroke="#A78BFA" stroke-width="2"/>
-    <path d="M12 10 C36 20 44 55 38 85 C32 105 18 100 14 78 C10 60 6 30 12 10 Z" fill="url(#bulbGrad)" stroke="#A78BFA" stroke-width="2"/>
-    <circle cx="-32" cy="60" r="13" fill="#A78BFA"/><text x="-32" y="66" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text>
-    <circle cx="32" cy="60" r="13" fill="#A78BFA"/><text x="32" y="66" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text>
-
-    <!-- Schenkel (Crura clitoridis) spreizen sich weit nach außen-unten -->
-    <path d="M-8 -60 C-40 -50 -105 -10 -120 50 C-125 70 -105 75 -95 55 C-80 15 -35 -25 -6 -45 Z" fill="url(#roseGrad)" stroke="#FB7185" stroke-width="2"/>
-    <path d="M8 -60 C40 -50 105 -10 120 50 C125 70 105 75 95 55 C80 15 35 -25 6 -45 Z" fill="url(#roseGrad)" stroke="#FB7185" stroke-width="2"/>
-    <circle cx="-95" cy="20" r="13" fill="#FB7185"/><text x="-95" y="26" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text>
-    <circle cx="95" cy="20" r="13" fill="#FB7185"/><text x="95" y="26" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text>
-
-    <!-- Klitorisschaft (Corpus clitoridis) -->
-    <path d="M-14 -40 L-12 -90 C-12 -100 12 -100 12 -90 L14 -40 Z" fill="url(#roseGrad)" stroke="#FB7185" stroke-width="2"/>
-    <circle cx="0" cy="-70" r="13" fill="#FB7185"/><text x="0" y="-64" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">2</text>
-
-    <!-- Klitoriseichel (Glans clitoridis) an der Spitze -->
-    <circle cx="0" cy="-115" r="18" fill="#F4A6B4" stroke="#FB7185" stroke-width="3"/>
-    <circle cx="0" cy="-115" r="7" fill="#FFF" opacity="0.6"/>
-    <circle cx="0" cy="-115" r="13" fill="#FB7185"/><text x="0" y="-109" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">1</text>
-  </g>
-  <circle cx="470" cy="110" r="13" fill="#FB7185"/><text x="470" y="116" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">1</text>
-  <text x="496" y="116" font-family="sans-serif" font-size="16" fill="#F1F5F9">Klitoriseichel (außen sichtbar)</text>
-  <circle cx="470" cy="156" r="13" fill="#FB7185"/><text x="470" y="162" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">2</text>
-  <text x="496" y="162" font-family="sans-serif" font-size="16" fill="#F1F5F9">Klitorisschaft / Körper</text>
-  <circle cx="470" cy="202" r="13" fill="#FB7185"/><text x="470" y="208" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">3</text>
-  <text x="496" y="208" font-family="sans-serif" font-size="16" fill="#F1F5F9">Klitorisschenkel (paarig, bis 10 cm)</text>
-  <circle cx="470" cy="248" r="13" fill="#A78BFA"/><text x="470" y="254" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">4</text>
-  <text x="496" y="254" font-family="sans-serif" font-size="16" fill="#F1F5F9">Vorhofschwellkörper (Bulbi)</text>
-  <circle cx="470" cy="294" r="13" fill="#FBBF24"/><text x="470" y="300" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="800" fill="#1A1224">5</text>
-  <text x="496" y="300" font-family="sans-serif" font-size="16" fill="#F1F5F9">Scheideneingang (schematisch)</text>
-  <rect x="40" y="470" width="720" height="76" rx="12" fill="#1E293B" fill-opacity="0.75" stroke="#FB7185" stroke-width="1.5"/>
-  <text x="60" y="500" font-family="sans-serif" font-size="16" fill="#F1F5F9">Nur die Eichel an der Spitze liegt außen. Das gesamte Schwellkörpersystem ist rund</text>
-  <text x="60" y="526" font-family="sans-serif" font-size="16" fill="#F1F5F9">zehn Zentimeter groß und füllt sich bei Erregung und Entspannung mit Blut.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Die Klitoris: außen und innen</title>
+<desc id="beschreibung">Schematische Ansicht, nicht maßstabsgetreu. Form und Größe unterscheiden sich von Körper zu Körper.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  KÖRPERWISSEN</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">14</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Die Klitoris: außen und innen</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Schematische Ansicht, nicht maßstabsgetreu</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<path d="M 231 246 C 227 278 221 309 205 336 C 186 364 161 401 139 432 M 243 246 C 247 278 253 309 269 336 C 288 364 313 401 335 432" fill="none" stroke="#925B68" stroke-width="19" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 226 249 C 232 228 242 228 248 249" fill="none" stroke="#2A2A2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="237" cy="230" rx="16" ry="21" fill="#EBD9D8" stroke="#925B68" stroke-width="2"/>
+<line x1="237" y1="180" x2="237" y2="463" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1" stroke-dasharray="3 7"/>
+<path d="M 230 252 C 225 296 211 323 198 344 M 244 252 C 249 296 263 323 276 344" fill="none" stroke="#2A2A2C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="460" cy="197.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="202.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<text x="490" y="205.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Eichel</text>
+<circle cx="279" cy="228" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="279" y="233" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<circle cx="460" cy="327.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="332.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="490" y="335.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Körper</text>
+<circle cx="281" cy="286" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="281" y="291" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<circle cx="460" cy="457.0" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="460" y="462.0" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<text x="490" y="465.0" font-family="sans-serif" font-size="24" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Schenkel</text>
+<circle cx="326" cy="404" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="326" y="409" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Form und Größe unterscheiden sich von Körper zu Körper.</text>
 </svg>

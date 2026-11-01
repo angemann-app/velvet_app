@@ -1,98 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <title>Toy-Materialien im Vergleich</title>
-  <desc>Eigenschaften, Haptik und Pflege der vier Grundmaterialien</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#140D1C"/>
-      <stop offset="100%" stop-color="#0F172A"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.9"/>
-    </linearGradient>
-    <linearGradient id="siliconeG" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FB7185"/>
-      <stop offset="100%" stop-color="#BE185D"/>
-    </linearGradient>
-    <linearGradient id="glassG" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#A5F3FC"/>
-      <stop offset="100%" stop-color="#0284C7"/>
-    </linearGradient>
-    <linearGradient id="steelG" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F1F5F9"/>
-      <stop offset="50%" stop-color="#94A3B8"/>
-      <stop offset="100%" stop-color="#475569"/>
-    </linearGradient>
-    <linearGradient id="absG" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FDE68A"/>
-      <stop offset="100%" stop-color="#D97706"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="800" height="600" fill="url(#bg)"/>
-
-  <!-- Titelzeile -->
-  <text x="400" y="40" text-anchor="middle" fill="#F1F5F9" font-family="sans-serif" font-size="22" font-weight="700">Toy-Materialien im Vergleich</text>
-  <text x="400" y="64" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="16">Eigenschaften, Haptik und Pflege der vier Grundmaterialien</text>
-
-  <!-- Kachel 1: Silikon -->
-  <g transform="translate(25, 84)">
-    <rect width="365" height="240" rx="14" fill="url(#card)" stroke="#FB7185" stroke-width="1.5" stroke-opacity="0.5"/>
-    <circle cx="44" cy="44" r="24" fill="url(#siliconeG)"/>
-    <path d="M36 38 C42 34 50 38 52 46 C52 52 44 54 38 50 C34 46 32 40 36 38 Z" fill="#FFF" opacity="0.6"/>
-    <text x="82" y="38" fill="#F1F5F9" font-family="sans-serif" font-size="19" font-weight="700">Medizinisches Silikon</text>
-    <text x="82" y="60" fill="#FB7185" font-family="sans-serif" font-size="16" font-weight="600">Weich, samtig &amp; körperwarm</text>
-    <text x="24" y="104" fill="#E2E8F0" font-family="sans-serif" font-size="16">✓ Flexibel, schmiegt sich an</text>
-    <!-- Pflegehinweis Kasten -->
-    <rect x="18" y="124" width="329" height="96" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#334155" stroke-width="1"/>
-    <text x="30" y="150" fill="#FDE68A" font-family="sans-serif" font-size="16" font-weight="700">⚠ Pflegehinweis:</text>
-    <text x="30" y="176" fill="#CBD5E1" font-family="sans-serif" font-size="16">Nur wasserbasiertes Gleitmittel.</text>
-    <text x="30" y="200" fill="#CBD5E1" font-family="sans-serif" font-size="16">Silikongel zerstört die Oberfläche.</text>
-  </g>
-
-  <!-- Kachel 2: Glas -->
-  <g transform="translate(410, 84)">
-    <rect width="365" height="240" rx="14" fill="url(#card)" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.5"/>
-    <circle cx="44" cy="44" r="24" fill="url(#glassG)"/>
-    <path d="M34 52 L54 32 C56 30 56 38 52 44 L36 56 Z" fill="#FFF" opacity="0.75"/>
-    <text x="82" y="38" fill="#F1F5F9" font-family="sans-serif" font-size="19" font-weight="700">Borosilikatglas</text>
-    <text x="82" y="60" fill="#38BDF8" font-family="sans-serif" font-size="16" font-weight="600">Glatt, fest &amp; porenfrei</text>
-    <text x="24" y="104" fill="#E2E8F0" font-family="sans-serif" font-size="16">✓ Hält Wärme &amp; Kälte exzellent</text>
-    <!-- Pflegehinweis Kasten -->
-    <rect x="18" y="124" width="329" height="96" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#334155" stroke-width="1"/>
-    <text x="30" y="150" fill="#38BDF8" font-family="sans-serif" font-size="16" font-weight="700">★ Pflegehinweis:</text>
-    <text x="30" y="176" fill="#CBD5E1" font-family="sans-serif" font-size="16">Verträgt jedes Gleitmittel.</text>
-    <text x="30" y="200" fill="#CBD5E1" font-family="sans-serif" font-size="16">Auskochen &amp; desinfizieren möglich.</text>
-  </g>
-
-  <!-- Kachel 3: Edelstahl -->
-  <g transform="translate(25, 340)">
-    <rect width="365" height="240" rx="14" fill="url(#card)" stroke="#94A3B8" stroke-width="1.5" stroke-opacity="0.5"/>
-    <circle cx="44" cy="44" r="24" fill="url(#steelG)"/>
-    <line x1="28" y1="28" x2="60" y2="60" stroke="#FFF" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-    <text x="82" y="38" fill="#F1F5F9" font-family="sans-serif" font-size="19" font-weight="700">Edelstahl</text>
-    <text x="82" y="60" fill="#CBD5E1" font-family="sans-serif" font-size="16" font-weight="600">Kühl, schwer &amp; nahtlos</text>
-    <text x="24" y="104" fill="#E2E8F0" font-family="sans-serif" font-size="16">✓ Intensive Druckübertragung</text>
-    <!-- Pflegehinweis Kasten -->
-    <rect x="18" y="124" width="329" height="96" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#334155" stroke-width="1"/>
-    <text x="30" y="150" fill="#CBD5E1" font-family="sans-serif" font-size="16" font-weight="700">★ Pflegehinweis:</text>
-    <text x="30" y="176" fill="#CBD5E1" font-family="sans-serif" font-size="16">Extrem langlebig &amp; porenfrei.</text>
-    <text x="30" y="200" fill="#CBD5E1" font-family="sans-serif" font-size="16">Vorab in warmes Wasser legen.</text>
-  </g>
-
-  <!-- Kachel 4: ABS-Kunststoff -->
-  <g transform="translate(410, 340)">
-    <rect width="365" height="240" rx="14" fill="url(#card)" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.5"/>
-    <circle cx="44" cy="44" r="24" fill="url(#absG)"/>
-    <circle cx="44" cy="44" r="10" fill="#1E293B"/>
-    <line x1="44" y1="36" x2="44" y2="44" stroke="#FDE68A" stroke-width="2" stroke-linecap="round"/>
-    <text x="82" y="38" fill="#F1F5F9" font-family="sans-serif" font-size="19" font-weight="700">ABS-Kunststoff</text>
-    <text x="82" y="60" fill="#FBBF24" font-family="sans-serif" font-size="16" font-weight="600">Fest, glatt &amp; formstabil</text>
-    <text x="24" y="104" fill="#E2E8F0" font-family="sans-serif" font-size="16">✓ Überträgt Vibrationen direkt</text>
-    <!-- Pflegehinweis Kasten -->
-    <rect x="18" y="124" width="329" height="96" rx="8" fill="#0F172A" fill-opacity="0.75" stroke="#334155" stroke-width="1"/>
-    <text x="30" y="150" fill="#FDE68A" font-family="sans-serif" font-size="16" font-weight="700">⚠ Pflegehinweis:</text>
-    <text x="30" y="176" fill="#CBD5E1" font-family="sans-serif" font-size="16">Formstabil &amp; leicht zu reinigen.</text>
-    <text x="30" y="200" fill="#CBD5E1" font-family="sans-serif" font-size="16">Elektronik vor Wasser schützen.</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Materialien und Pflege</title>
+<desc id="beschreibung">Form und Verarbeitung zählen ebenfalls. Reinigung und Gleitmittel immer nach Herstellerangaben.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  KÖRPERWISSEN</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">43</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Materialien und Pflege</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Form und Verarbeitung zählen ebenfalls</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<path d="M 92 316 C 105 224 179 344 192 252 L 192 279 C 168 356 113 249 92 341 Z" fill="#EBD9D8" stroke="#925B68" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="142" cy="184" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="142" y="189" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<text x="142" y="401" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Silikon</text>
+<text x="142" y="457" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Flexibilität</text>
+<text x="142" y="484" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">variiert</text>
+<path d="M 275 259 L 341 240 L 363 310 L 296 331 Z" fill="none" stroke="#2A2A2C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="291" y1="265" x2="333" y2="254" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="296" y1="281" x2="339" y2="270" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<circle cx="315" cy="184" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="315" y="189" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="315" y="401" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Borosilikatglas</text>
+<text x="315" y="457" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Fest und glatt</text>
+<ellipse cx="488" cy="257" rx="44" ry="16" fill="none" stroke="#2A2A2C" stroke-width="1.5"/>
+<line x1="444" y1="257" x2="444" y2="318" stroke="#2A2A2C" stroke-width="1.5" stroke-linecap="round" opacity="1"/>
+<line x1="532" y1="257" x2="532" y2="318" stroke="#2A2A2C" stroke-width="1.5" stroke-linecap="round" opacity="1"/>
+<path d="M 444 318 Q 488 347 532 318" fill="none" stroke="#2A2A2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="462" y1="278" x2="462" y2="318" stroke="#B6AB9E" stroke-width="0.8" stroke-linecap="round" opacity="1"/>
+<line x1="476" y1="278" x2="476" y2="318" stroke="#B6AB9E" stroke-width="0.8" stroke-linecap="round" opacity="1"/>
+<line x1="490" y1="278" x2="490" y2="318" stroke="#B6AB9E" stroke-width="0.8" stroke-linecap="round" opacity="1"/>
+<line x1="504" y1="278" x2="504" y2="318" stroke="#B6AB9E" stroke-width="0.8" stroke-linecap="round" opacity="1"/>
+<circle cx="488" cy="184" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="488" y="189" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<text x="488" y="401" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Edelstahl</text>
+<text x="488" y="457" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Fest und schwer</text>
+<path d="M 616 265 Q 616 249 632 249 L 690 249 Q 706 249 706 265 L 706 320 L 616 320 Z" fill="#EBD9D8" stroke="#2A2A2C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="661" cy="281" r="12" fill="none" stroke="#925B68" stroke-width="1.2"/>
+<circle cx="661" cy="184" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="661" y="189" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">4</text>
+<text x="661" y="401" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">ABS-Kunststoff</text>
+<text x="661" y="457" font-family="sans-serif" font-size="21" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Fest und leicht</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Reinigung und Gleitmittel immer nach Herstellerangaben.</text>
 </svg>

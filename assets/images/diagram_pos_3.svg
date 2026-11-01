@@ -1,64 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
-  <title>Positionen für sanftes Öffnen</title>
-  <desc>Schutz vor Stoßschmerz, Keilkissen-Winkeldiagramm und Kontrolle über Tiefe und Tempo</desc>
-  <rect width="800" height="600" fill="#140D1C"/>
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8"/>
-    </linearGradient>
-    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FB7185"/>
-      <stop offset="100%" stop-color="#F43F5E"/>
-    </linearGradient>
-    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#0284C7"/>
-    </linearGradient>
-    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#34D399"/>
-      <stop offset="100%" stop-color="#059669"/>
-    </linearGradient>
-    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#C084FC"/>
-      <stop offset="100%" stop-color="#9333EA"/>
-    </linearGradient>
-  </defs>
-
-  
-  <text x="40" y="48" fill="#F1F5F9" font-family="sans-serif" font-size="24px" font-weight="bold">Enges Becken: Sanftes Öffnen &amp; Sicherheit</text>
-  <text x="40" y="78" fill="#94A3B8" font-family="sans-serif" font-size="16px">Kontrolle über Tiefe &amp; Tempo verhindert Schmerzreflexe</text>
-
-  <!-- Row 1: Melting -->
-  <rect x="40" y="105" width="720" height="95" rx="12" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
-  <circle cx="68" cy="133" r="14" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2"/>
-  <text x="68" y="139" fill="#38BDF8" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">1</text>
-  <text x="94" y="139" fill="#F1F5F9" font-family="sans-serif" font-size="18px" font-weight="bold">1. Sanftes Einschmelzen (oben)</text>
-  <text x="94" y="165" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Sie kniet über ihm und bestimmt Millimeter und Tempo; er bewegt sich nicht.</text>
-    <text x="94" y="187" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Vorher außen an Schamlippen reiben, bis Gewebe weich und feucht nachgibt.</text>
-
-  <!-- Row 2: Butterfly -->
-  <rect x="40" y="215" width="720" height="95" rx="12" fill="#1E293B" stroke="#34D399" stroke-width="1.5"/>
-  <circle cx="68" cy="243" r="14" fill="#34D399" fill-opacity="0.2" stroke="#34D399" stroke-width="2"/>
-  <text x="68" y="249" fill="#34D399" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">2</text>
-  <text x="94" y="249" fill="#F1F5F9" font-family="sans-serif" font-size="18px" font-weight="bold">2. Schmetterling mit Kissen</text>
-  <text x="94" y="275" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">In Rückenlage Beine nicht eng halten; Kissen stützen Knie nach außen ab.</text>
-    <text x="94" y="297" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Entspannt die Adduktoren und öffnet das Becken ohne Muskelanstrengung.</text>
-
-  <!-- Row 3: Side T -->
-  <rect x="40" y="325" width="720" height="95" rx="12" fill="#1E293B" stroke="#FB7185" stroke-width="1.5"/>
-  <circle cx="68" cy="353" r="14" fill="#FB7185" fill-opacity="0.2" stroke="#FB7185" stroke-width="2"/>
-  <text x="68" y="359" fill="#FB7185" font-family="sans-serif" font-size="16px" font-weight="bold" text-anchor="middle">3</text>
-  <text x="94" y="359" fill="#F1F5F9" font-family="sans-serif" font-size="18px" font-weight="bold">3. Seitliche T-Position</text>
-  <text x="94" y="385" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Flacher Winkel vermeidet direktes Anstoßen am empfindlichen Muttermund.</text>
-    <text x="94" y="407" fill="#94A3B8" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Erlaubt ruhiges, sanftes Gleiten mit minimalem Druck auf den Beckenboden.</text>
-
-  <!-- Bottom Golden Rule -->
-  <rect x="40" y="435" width="720" height="105" rx="12" fill="#1E1B4B" stroke="#FB7185" stroke-width="1.5"/>
-  <text x="65" y="465" fill="#FB7185" font-family="sans-serif" font-size="18px" font-weight="bold">Die goldene Regel bei Beckenenge</text>
-  <text x="65" y="495" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Kontrolle schafft Sicherheit – Sicherheit löst die Schmerzbremse.</text>
-    <text x="65" y="519" fill="#F1F5F9" font-family="sans-serif" font-size="16px" font-weight="normal" text-anchor="start">Die Person mit empfindlichem Becken bestimmt stets Tiefe, Winkel und Rhythmus.</text>
-
-  <text x="400" y="570" fill="#94A3B8" font-family="sans-serif" font-size="16px" text-anchor="middle">schematisch, Lage und Größe sind individuell</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Mehr Unterstützung, weniger Druck</title>
+<desc id="beschreibung">Haltung und Bewegungsraum anpassen. Eine Position garantiert keine Schmerzfreiheit.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  KÖRPERWISSEN</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">29</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Mehr Unterstützung, weniger Druck</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Haltung und Bewegungsraum anpassen</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<line x1="92" y1="383" x2="342" y2="383" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<circle cx="212" cy="226" r="20" fill="none" stroke="#2A2A2C" stroke-width="2"/>
+<path d="M 212 251 L 212 310 M 185 273 L 239 273 M 212 310 L 143 334 L 197 365 L 227 365 L 281 334 L 212 310" fill="none" stroke="#2A2A2C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="136" cy="350" rx="28" ry="17" fill="#EBD9D8" stroke="#B6AB9E" stroke-width="1.2"/>
+<ellipse cx="288" cy="350" rx="28" ry="17" fill="#EBD9D8" stroke="#B6AB9E" stroke-width="1.2"/>
+<circle cx="212" cy="183" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="212" y="188" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<text x="212" y="424" font-family="sans-serif" font-size="28" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Kissen nutzen</text>
+<text x="212" y="463" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Bequem unterstützen</text>
+<line x1="457" y1="383" x2="707" y2="383" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<circle cx="544" cy="231" r="20" fill="none" stroke="#2A2A2C" stroke-width="2"/>
+<path d="M 546 256 L 550 313 L 621 327 L 621 371 L 661 371 M 546 275 L 498 322 L 498 363" fill="none" stroke="#2A2A2C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M 514 323 L 588 323 L 588 379 M 514 323 L 514 379" fill="none" stroke="#B6AB9E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="577" cy="183" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="577" y="188" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="577" y="424" font-family="sans-serif" font-size="28" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Grenzen beachten</text>
+<text x="577" y="463" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#5A5750">Bei Schmerzen stoppen</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Eine Position garantiert keine Schmerzfreiheit.</text>
 </svg>

@@ -1,59 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#140D1C"/>
-      <stop offset="1" stop-color="#0F172A"/>
-    </linearGradient>
-    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#E2AA92"/>
-      <stop offset="1" stop-color="#C98A74"/>
-    </linearGradient>
-    <linearGradient id="inner" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#C9687A"/>
-      <stop offset="1" stop-color="#A84C60"/>
-    </linearGradient>
-    <radialGradient id="mons" cx="0.5" cy="0.6" r="0.5">
-      <stop offset="0" stop-color="#E2AA92" stop-opacity="0.75"/>
-      <stop offset="1" stop-color="#E2AA92" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="800" height="600" fill="url(#bg)"/>
-
-  <!-- Linke Hälfte: Vulva mit Umlaufbahnen -->
-  <g transform="translate(-60 30) scale(0.86)">
-    <ellipse cx="400" cy="150" rx="170" ry="95" fill="url(#mons)"/>
-    <path d="M400 105 C318 110 282 190 288 295 C294 395 344 462 400 474 C456 462 506 395 512 295 C518 190 482 110 400 105 Z"
-          fill="url(#skin)" stroke="#8C5546" stroke-width="2.5"/>
-    <path d="M400 150 C376 166 362 200 366 232 C370 258 352 288 362 322 C370 356 384 396 400 414
-             C416 396 430 356 438 322 C448 288 430 258 434 232 C438 200 424 166 400 150 Z"
-          fill="url(#inner)" stroke="#7E3346" stroke-width="2.5"/>
-    <path d="M400 214 C386 232 380 280 382 330 C384 368 392 392 400 398 C408 392 416 368 418 330 C420 280 414 232 400 214 Z" fill="#8A3449"/>
-    <path d="M374 196 C374 160 426 160 426 196 C414 184 386 184 374 196 Z" fill="#B85A6D" stroke="#7E3346" stroke-width="2"/>
-    <circle cx="400" cy="200" r="8" fill="#F4A6B4" stroke="#7E3346" stroke-width="1.5"/>
-    <ellipse cx="400" cy="345" rx="13" ry="28" fill="#4A1A27"/>
-
-    <!-- Umlaufbahnen -->
-    <circle cx="400" cy="210" r="70" fill="none" stroke="#FBBF24" stroke-width="5" stroke-dasharray="14 9"/>
-    <ellipse cx="400" cy="250" rx="150" ry="190" fill="none" stroke="#FBBF24" stroke-width="4" stroke-dasharray="14 9" opacity="0.7"/>
-    <polygon points="470,196 458,222 484,220" fill="#FBBF24"/>
-    <polygon points="250,262 238,236 264,238" fill="#FBBF24"/>
-  </g>
-  <text x="284" y="566" text-anchor="middle" fill="#FBBF24" font-family="sans-serif" font-size="24" font-weight="800">1  Weite Kreise zuerst</text>
-
-  <!-- Rechte Hälfte: Finger im Vergleich -->
-  <line x1="560" y1="80" x2="560" y2="540" stroke="#334155" stroke-width="2"/>
-
-  <!-- Spitz -->
-  <text x="680" y="90" text-anchor="middle" fill="#FB7185" font-family="sans-serif" font-size="24" font-weight="800">spitz</text>
-  <path d="M600 250 C640 238 720 238 760 250" fill="none" stroke="#C98A74" stroke-width="6" stroke-linecap="round"/>
-  <path d="M680 120 L680 236" stroke="#E2AA92" stroke-width="26" stroke-linecap="round"/>
-  <circle cx="680" cy="244" r="9" fill="#FB7185"/>
-  <text x="680" y="290" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="21">punktuell, grell</text>
-
-  <!-- Flach -->
-  <text x="680" y="350" text-anchor="middle" fill="#34D399" font-family="sans-serif" font-size="24" font-weight="800">2  flach</text>
-  <path d="M600 470 C640 458 720 458 760 470" fill="none" stroke="#C98A74" stroke-width="6" stroke-linecap="round"/>
-  <path d="M600 400 C640 420 690 446 740 456" stroke="#E2AA92" stroke-width="26" stroke-linecap="round" fill="none"/>
-  <ellipse cx="690" cy="462" rx="56" ry="9" fill="#34D399" opacity="0.6"/>
-  <text x="680" y="510" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="21">breit, satt, sicher</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="titel beschreibung">
+<title id="titel">Bewegung und Kontaktfläche</title>
+<desc id="beschreibung">Abstrakte Orientierung für Berührung. Rückmeldung entscheidet über Ort, Druck und Dauer.</desc>
+<rect width="800" height="600" fill="#F6F0E6"/>
+<line x1="24" y1="24" x2="34" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="24" x2="24" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="766" y2="24" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="24" x2="776" y2="34" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="34" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="24" y1="576" x2="24" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="766" y2="576" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="776" y1="576" x2="776" y2="566" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="1.6" text-anchor="start" fill="#5A5750">VELVETPULSE  /  KÖRPERWISSEN</text>
+<text x="752" y="39" font-family="sans-serif" font-size="14" font-weight="400" letter-spacing="0" text-anchor="end" fill="#5A5750">47</text>
+<text x="48" y="83" font-family="SourceSerif4" font-size="32" font-weight="400" letter-spacing="0" text-anchor="start" fill="#2A2A2C">Bewegung und Kontaktfläche</text>
+<text x="48" y="117" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Abstrakte Orientierung für Berührung</text>
+<line x1="48" y1="137" x2="752" y2="137" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<line x1="400" y1="157" x2="400" y2="493" stroke="#B6AB9E" stroke-width="0.7" stroke-linecap="round" opacity="0.45" stroke-dasharray="2 9"/>
+<circle cx="144" cy="290" r="58" fill="none" stroke="#B6AB9E" stroke-width="0.9"/>
+<path d="M 119 310 A 33 33 0 1 1 174 296" fill="none" stroke="#925B68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="175" y1="295" x2="165" y2="307" stroke="#925B68" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 166.7 298.2 L 165 307 L 173.4 303.7" fill="none" stroke="#925B68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<circle cx="144" cy="187" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="144" y="192" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">1</text>
+<text x="144" y="407" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Kreisen</text>
+<circle cx="316" cy="290" r="58" fill="none" stroke="#B6AB9E" stroke-width="0.9"/>
+<line x1="288" y1="290" x2="344" y2="290" stroke="#925B68" stroke-width="2" stroke-linecap="round" opacity="1"/>
+<path d="M 336.1 294.3 L 344 290 L 336.1 285.7" fill="none" stroke="#925B68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<line x1="284" y1="308" x2="344" y2="308" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<circle cx="316" cy="187" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="316" y="192" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">2</text>
+<text x="316" y="407" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Gleiten</text>
+<circle cx="488" cy="290" r="58" fill="none" stroke="#B6AB9E" stroke-width="0.9"/>
+<ellipse cx="488" cy="290" rx="30" ry="15" fill="#EBD9D8" stroke="#925B68" stroke-width="1.8"/>
+<line x1="451" y1="315" x2="525" y2="315" stroke="#B6AB9E" stroke-width="1" stroke-linecap="round" opacity="1"/>
+<circle cx="488" cy="187" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="488" y="192" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">3</text>
+<text x="488" y="407" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Auflegen</text>
+<circle cx="660" cy="290" r="58" fill="none" stroke="#B6AB9E" stroke-width="0.9"/>
+<line x1="651" y1="268" x2="651" y2="312" stroke="#925B68" stroke-width="4" stroke-linecap="round" opacity="1"/>
+<line x1="669" y1="268" x2="669" y2="312" stroke="#925B68" stroke-width="4" stroke-linecap="round" opacity="1"/>
+<circle cx="660" cy="187" r="15" fill="#F6F0E6" stroke="#925B68" stroke-width="1.4"/>
+<text x="660" y="192" font-family="sans-serif" font-size="17" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#925B68">4</text>
+<text x="660" y="407" font-family="sans-serif" font-size="25" font-weight="400" letter-spacing="0" text-anchor="middle" fill="#2A2A2C">Pause</text>
+<line x1="48" y1="518" x2="752" y2="518" stroke="#B6AB9E" stroke-width="1.2" stroke-linecap="round" opacity="1"/>
+<text x="48" y="550" font-family="sans-serif" font-size="22" font-weight="400" letter-spacing="0" text-anchor="start" fill="#5A5750">Rückmeldung entscheidet über Ort, Druck und Dauer.</text>
 </svg>
