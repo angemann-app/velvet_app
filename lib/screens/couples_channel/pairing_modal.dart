@@ -180,14 +180,13 @@ class _PairingModalState extends State<PairingModal>
               children: [
                 Icon(Icons.link_rounded, color: AppTheme.akzentTief, size: 24),
                 SizedBox(width: 10),
-                Text(
-                  t.couplesChannelConnectWithPartner,
+                Expanded(child: Text(t.couplesChannelConnectWithPartner,
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w800,
                     color: AppTheme.tinte,
                   ),
-                ),
+                )),
               ],
             ),
           ),
@@ -304,14 +303,13 @@ class _PairingModalState extends State<PairingModal>
                             children: [
                               Icon(Icons.lock_rounded, size: 14, color: AppTheme.akzentTief),
                               SizedBox(width: 6),
-                              Text(
-                                t.pairingModalEndToEndEncryptedNo,
+                              Flexible(child: Text(t.pairingModalEndToEndEncryptedNo, textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: AppTheme.akzentTief,
                                   fontSize: 11.5,
                                   fontWeight: FontWeight.w600,
                                 ),
-                              ),
+                              )),
                             ],
                           ),
                         ],

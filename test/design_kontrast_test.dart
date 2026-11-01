@@ -40,6 +40,13 @@ void main() {
       text('akzentTief auf papier', p.akzentTief, p.papier);
       text('akzentTief auf papierErhoben', p.akzentTief, p.papierErhoben);
       text('aufAkzent auf akzent (Button)', p.aufAkzent, p.akzent);
+      // Eingelassene Flächen (Felder, gewählte Elemente) tragen denselben Text wie die Karte.
+      text('tinte auf papierVertieft', p.tinte, p.papierVertieft);
+      text('tinteLeise auf papierVertieft', p.tinteLeise, p.papierVertieft);
+      text('tinteStumm auf papierVertieft', p.tinteStumm, p.papierVertieft);
+      text('akzentTief auf papierVertieft', p.akzentTief, p.papierVertieft);
+      text('tinte auf akzentLeise über papierErhoben (gewählte Chips)', p.tinte, Color.alphaBlend(p.akzentLeise, p.papierErhoben));
+      text('aufStatus auf statusJa (Ja-Knopf)', p.istDunkel ? p.aufAkzent : p.papierErhoben, p.statusJa, 3);
       text('aufAkzentTief auf akzentTief', p.aufAkzentTief, p.akzentTief);
       text('aufSignal auf signal', p.aufSignal, p.signal);
       text('signal auf papier', p.signal, p.papier, 3);

@@ -329,3 +329,27 @@ und eigener Durchsicht des Diffs. Komposition, Spicy-Dramaturgie und alles Visue
   `test_screens/platzhalter_test.dart`.
 - **Offen:** Debug-Build auf dem Handy; Umfärbung der dunklen SVG-Diagramme für Papier; echte Illustrationen
   (`bereich.heute.einladung`, `kurs.01.titel`); Beta erst nach den Pilotbildern.
+
+## 18. Qualitätssicherung (Stufe 7)
+
+- **Layout-Matrix:** `test_screens/screens_test.dart` prüft Papier, Nachtpapier und Spicy × Schriftskala 1,0 / 1,3 / 1,6 ×
+  Displays 360 × 640, 390 × 844 und 430 × 932. Das sind 27 Läufe.
+- **Befehle:** `flutter test test_screens/screens_test.dart --dart-define=PALETTE=papier|nacht|klassisch`
+  (oder `--dart-define=SPICY=true`) `--dart-define=TEXTSCALE=1.6 --dart-define=SIZE=360x640`.
+  Mit `--dart-define=STRICT=true` schlägt der Lauf bei jedem Überlauf fehl.
+- **Ausgabe:** je Lauf in `build/screens_<palette>_s<skala>_<größe>/`. Das Layout-Protokoll nennt bei Überläufen die
+  Fundstelle als `Datei:Zeile`.
+- **Ergebnis vor den Korrekturen:** bei Skala 1,0 auf allen Displays und in allen Atmosphären 0 Überläufe. Bei Skala 1,3 und 1,6
+  Überläufe an zehn Stellen: Ja/Nein/Vielleicht-Knöpfe und Zähler, Reflexionskarte und Antwortzeile in der Lektion,
+  Audio-Player-Kopf, Check-in-Karte, Kopplungsdialog sowie Stufenzeile im Beckenboden-Timer.
+- **Ergebnis nach den Korrekturen:** 0 Überläufe in allen 27 Läufen. Einzige Ausnahme ist ein Rest von 2 Pixeln im
+  Nachrichten-Reiter des Wir-Bereichs bei Skala 1,6 auf 360 × 640 (`couples_channel_screen.dart`, Spalte aus Funkenleiste und
+  Eingabe).
+- **Kontrast:** `test/design_kontrast_test.dart` prüft für Papier, Nachtpapier und Spicy alle Text-Hintergrund-Paare
+  (Text 4,5 : 1, große Elemente 3 : 1), jetzt auch auf `papierVertieft` und auf gewählten Chips. Dafür wurde `tinteStumm`
+  in Papier auf `66625A` und in Nachtpapier auf `A8A398` nachgestellt.
+- **Regression:** `flutter test` ist vollständig grün, inklusive Start- und Navigationstest, Sicherungs-Merge-Test und
+  Sicherheitstest.
+- **Noch nicht geprüft:** Debug-Build auf dem Handy, Tablet-Größen, TalkBack.
+- **Abnahme:** `git diff --stat` zeigt nur diese Datei; bereits vorhandene uncommittete Änderungen anderer Dateien bleiben
+  unberührt. Kein `git commit`, kein Push.

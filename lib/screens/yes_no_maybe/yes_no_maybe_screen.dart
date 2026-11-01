@@ -408,12 +408,12 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 ),
               ),
               const SizedBox(height: 14),
-              Row(
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
                 children: [
                   _buildStatPill(t.yesNoMaybeYes, '$yesCount', AppTheme.statusJa),
-                  const SizedBox(width: 8),
                   _buildStatPill(t.yesNoMaybeMaybe, '$maybeCount', AppTheme.akzentTief),
-                  const SizedBox(width: 8),
                   _buildStatPill(t.yesNoMaybeNo, '$noCount', AppTheme.akzentTief),
                 ],
               ),
@@ -689,14 +689,13 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 color: isActive ? color : AppTheme.tinteStumm,
               ),
               const SizedBox(width: 6),
-              Text(
-                vote.label,
+              Flexible(child: Text(vote.label, textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 12.5,
                   fontWeight: isActive ? FontWeight.w800 : FontWeight.w600,
                   color: isActive ? color : AppTheme.tinteLeise,
                 ),
-              ),
+              )),
             ],
           ),
         ),

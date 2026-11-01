@@ -238,8 +238,8 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                   Icon(mine.isEmpty ? Icons.lock_outline_rounded : Icons.favorite_rounded,
                       color: AppTheme.akzentTief, size: 16),
                   const SizedBox(width: 6),
-                  Text(mine.isEmpty ? t.lessonDetailNameHasAlreadyAnswered(name) : t.lessonDetailNameSThoughts(name),
-                      style: TextStyle(color: AppTheme.tinte, fontSize: 13.5, fontWeight: FontWeight.w700)),
+                  Expanded(child: Text(mine.isEmpty ? t.lessonDetailNameHasAlreadyAnswered(name) : t.lessonDetailNameSThoughts(name),
+                      style: TextStyle(color: AppTheme.tinte, fontSize: 13.5, fontWeight: FontWeight.w700))),
                 ],
               ),
               const SizedBox(height: 6),
@@ -570,14 +570,13 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             children: [
               Icon(Icons.edit_note_rounded, color: AppTheme.akzentTief, size: 22),
               SizedBox(width: 8),
-              Text(
-                t.lessonDetailYourPersonalReflection,
+              Expanded(child: Text(t.lessonDetailYourPersonalReflection,
                 style: TextStyle(
                   color: AppTheme.tinte,
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                 ),
-              ),
+              )),
             ],
           ),
           const SizedBox(height: 10),

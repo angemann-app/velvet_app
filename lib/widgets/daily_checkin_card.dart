@@ -165,14 +165,13 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                         children: [
                           Row(
                             children: [
-                              Text(
-                                t.dailyCheckinCardSecondDailyCheckIn,
+                              Flexible(child: Text(t.dailyCheckinCardSecondDailyCheckIn,
                                 style: TextStyle(
                                   color: AppTheme.tinte,
                                   fontWeight: FontWeight.w700,
                                   fontSize: 14,
                                 ),
-                              ),
+                              )),
                               if (_todayCheckIn != null) ...[
                                 const SizedBox(width: 8),
                                 Container(

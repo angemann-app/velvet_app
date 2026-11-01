@@ -106,7 +106,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              Flexible(child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
                   color: isPlaying
@@ -128,8 +128,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                       size: 14,
                     ),
                     const SizedBox(width: 6),
-                    Text(
-                      isUsingFallback
+                    Flexible(child: Text(isUsingFallback
                           ? t.audioPlayerCardDeviceVoice
                           : (widget.isAudioExercise ? t.audioPlayerCardGuidedExercise : t.audioPlayerCardListen),
                       style: TextStyle(
@@ -138,10 +137,13 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                         fontWeight: FontWeight.w700,
                         letterSpacing: 0.6,
                       ),
-                    ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    )),
                   ],
                 ),
-              ),
+              )),
+              const SizedBox(width: 8),
               // Time Display (01:24 / 04:15)
               Text(
                 '${_formatDuration(currentPos)} / ${_formatDuration(totalDur)}',

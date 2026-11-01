@@ -396,9 +396,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                 ),
                 if (_selectedPreset != KegelPreset.impulse) ...[
                   const SizedBox(height: 8),
-                  Row(
-                    children: [
-                      SizedBox(width: 64, child: Text(t.kegelTimerViewLevel, style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5))),
+                  Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [SizedBox(width: 64, child: Text(t.kegelTimerViewLevel, style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5))),
                       _buildOptionChip('leicht', _level == KegelLevel.leicht, () => _changeSettings(() => _level = KegelLevel.leicht)),
                       _buildOptionChip('mittel', _level == KegelLevel.mittel, () => _changeSettings(() => _level = KegelLevel.mittel)),
                       _buildOptionChip('stark', _level == KegelLevel.fortgeschritten,
