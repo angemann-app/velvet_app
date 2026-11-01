@@ -6945,6 +6945,12 @@ abstract class AppLocalizations {
   /// **'Spicy'**
   String get reiheSpicy;
 
+  /// No description provided for @reiheSehrSpicy.
+  ///
+  /// In de, this message translates to:
+  /// **'Sehr spicy'**
+  String get reiheSehrSpicy;
+
   /// No description provided for @reihePerspektive.
   ///
   /// In de, this message translates to:

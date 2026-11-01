@@ -136,6 +136,38 @@ void main() {
     expect(folge.varianten(spicyErlaubt: true), ['soft', 'spicy']);
   });
 
+  group('Sehr spicy (Der andere Körper)', () {
+    Map<String, dynamic> mitSehrSpicy() {
+      final json = _folge();
+      json['fassungen'] = <dynamic>[
+        ...(json['fassungen'] as List),
+        _fassung('sehrspicy_frau', 'sehrspicy', 'frau', 'victoria'),
+        _fassung('sehrspicy_mann', 'sehrspicy', 'mann', 'martin'),
+      ];
+      return json;
+    }
+
+    test('erscheint, sobald das Paket Fassungen dafür enthält, und nur im Spicy-Modus', () {
+      final folge = _parseFolge(mitSehrSpicy());
+      expect(folge.varianten(spicyErlaubt: true), ['soft', 'spicy', 'sehrspicy']);
+      expect(folge.varianten(spicyErlaubt: false), ['soft']);
+      // Ohne Fassungen im Paket bleibt es bei den bisherigen Varianten.
+      expect(_parseFolge().varianten(spicyErlaubt: true), ['soft', 'spicy']);
+    });
+
+    test('gilt als Spicy, teilt die Szenenbilder mit Spicy und besteht die Synchronitätsprüfung', () {
+      final folge = _parseFolge(mitSehrSpicy());
+      final sehr = folge.fassungenVon('sehrspicy');
+      expect(sehr, hasLength(2));
+      expect(sehr.every((f) => f.spicy && f.sehrSpicy), isTrue);
+      expect(folge.fassungenVon('spicy').any((f) => f.sehrSpicy), isFalse);
+      final szene = sehr.first.segmente.first;
+      expect(ReiheDaten.bildPfad(folge, sehr.first, szene), 'bilder/f1_spicy_opening.webp');
+      expect(ReiheDaten.audioPfad(folge, sehr.first, szene), 'audio/reihe/victoria_f1_sehrspicy_frau_opening.opus');
+      expect(folge.pruefeSynchronitaet(), isEmpty);
+      expect(folge.partnerVon(sehr.first).map((f) => f.id), ['sehrspicy_mann']);
+    });
+  });
   test('partnerVon liefert die Fassung derselben Variante', () {
     final folge = _parseFolge();
     final softFrau = folge.fassungen.firstWhere((f) => f.id == 'soft_frau');

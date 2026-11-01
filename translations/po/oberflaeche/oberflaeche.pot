@@ -6966,6 +6966,12 @@ msgid "Spicy"
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: Very spicy
+msgctxt "ui:reiheSehrSpicy#text"
+msgid "Sehr spicy"
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Perspective
 msgctxt "ui:reihePerspektive#text"
 msgid "Perspektive"

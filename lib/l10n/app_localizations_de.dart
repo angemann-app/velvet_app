@@ -4130,6 +4130,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get reiheSpicy => 'Spicy';
 
   @override
+  String get reiheSehrSpicy => 'Sehr spicy';
+
+  @override
   String get reihePerspektive => 'Perspektive';
 
   @override

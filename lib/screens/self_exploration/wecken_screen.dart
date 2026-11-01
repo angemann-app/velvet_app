@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../services/wach_halten.dart';
 import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -27,7 +28,7 @@ class WeckenScreen extends StatefulWidget {
   State<WeckenScreen> createState() => _WeckenScreenState();
 }
 
-class _WeckenScreenState extends State<WeckenScreen> {
+class _WeckenScreenState extends State<WeckenScreen> with WachHalter {
   static const _teppichLaut = 0.22;
   static const _ausblenden = Duration(minutes: 10);
 
@@ -113,6 +114,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
   }
 
   Future<void> _abspielen(int lauf) async {
+    wachAn(); // lange Wiedergabe: bei ausgeschaltetem Bildschirm wach bleiben
     final ablauf = _ablauf!;
     while (_index < ablauf.length) {
       final schritt = ablauf[_index];
@@ -152,6 +154,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
     await _teppichPlayer.stop().catchError((_) {});
     await _stimmePlayer.stop().catchError((_) {});
     if (_abgebrochen(lauf)) return;
+    wachAus();
     setState(() => _fertig = true);
   }
 
@@ -159,9 +162,11 @@ class _WeckenScreenState extends State<WeckenScreen> {
     HapticFeedback.lightImpact();
     setState(() => _pausiert = !_pausiert);
     if (_pausiert) {
+      wachAus(); // Pause: Sperre frei (Akku)
       Sprachausgabe.pause(_stimmePlayer);
       _teppichPlayer.pause().catchError((_) {});
     } else {
+      wachAn();
       _stimmePlayer.resume().catchError((_) {});
       if (_teppich) _teppichPlayer.resume().catchError((_) {});
     }
@@ -177,6 +182,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
 
   void _beenden() {
     _lauf++;
+    wachAus();
     Sprachausgabe.stopp(_stimmePlayer);
     _teppichPlayer.stop().catchError((_) {});
     setState(() {

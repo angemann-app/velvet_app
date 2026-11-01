@@ -486,3 +486,45 @@ Ihr besonderes Merkmal ist die Kombination aus:
    Vorab zu klären: Soft/Spicy-Bilder getrennt (Dual-Bild-Prinzip und R2 aus `docs/kursbilder-bedarf.md`), Erzeugung
    (lokal mit stable-diffusion.cpp), Ablage im Paket `<sprache>-reihe`, Umfang (eine Bildserie je Folge oder je
    Fassung, 5 bis 6 Szenen).
+
+## Nachtrag 01.11.2026: Sehr spicy in „Der andere Körper“
+
+**Auftrag des Nutzers (01.11.2026, Texte am Dienstag, 03.11.2026):** Für die Übung „Der andere Körper“ (Innenansichten) gibt es eine dritte,
+**sehr spicy** Variante. Frau und Mann wissen nicht voneinander, wie sich der Moment anfühlt. Die beiden Texte beschreiben ihn **genau**:
+- **Fassung `sehrspicy_frau`** (Hörerin ist eine Frau, sie stellt sich den Körper eines Mannes vor): wie sich beim Mann der Samenerguss anfühlt
+  (Aufbau, Punkt ohne Wiederkehr, die Kontraktionen, die Entladung, danach).
+- **Fassung `sehrspicy_mann`** (Hörer ist ein Mann, er stellt sich den Körper einer Frau vor): wie sich bei der Frau der Orgasmus anfühlt,
+  gern auch mehrfach hintereinander (Aufbau, Kontraktionen, Wellen, weitere Orgasmen, danach).
+
+**Umsetzung in der App (fertig, Beta 57):** Die Variante heißt `sehrspicy` (Anzeige „Sehr spicy“ / „Very spicy“). Sie erscheint in der Intensitätswahl
+**automatisch**, sobald das Paket `de-reihe` (bzw. `en-reihe`) Fassungen mit `"variante": "sehrspicy"` enthält, und nur im Spicy-Modus. Ohne diese
+Fassungen im Paket ändert sich nichts. Die Szenenbilder teilen sie mit Spicy (`bilder/<folge>_spicy_<szene>.webp`). Ein App-Update ist für die
+Texte nicht nötig: Texte in `reihe.json`, Aufnahmen und `dauer.json` ins Paket, `reihe` in `tools/pakete/versionen.json` hochzählen, bauen, hochladen.
+
+**Für Dienstag (Reihenfolge):**
+1. Recherche (physiologisch genau, mit Spannbreite des Erlebens, keine Leistungsnorm): Phasen des Orgasmus bei Frau und Mann,
+   Kontraktionsfolge und Takt, Rolle von Klitoris, Vagina, Beckenboden, Uterus; mehrfache Orgasmen (Sensibilität, Pausen, Unterschiede);
+   Mann: Emission und Expulsion, Refraktärzeit. Quellen im Konzept festhalten.
+2. Zwei Texte in der Szenenfolge von „Der andere Körper“ (`opening`, `own_body`, `other_door`, `other_body`, `return`, `afterglow`), Schwerpunkt
+   `other_body`, Länge etwa wie die Spicy-Fassungen (rund 10.000 Zeichen), Deutsch und Englisch.
+3. Vertonung lokal (Kokoro, Victoria für `frau`, Martin für `mann`, Ausdrucksprofil nach `tools/reihe_ausdruck.py`), Hörprobe durch den Nutzer.
+4. Pakete bauen (`de-reihe`, `en-reihe`), nach Abnahme hochladen.
+
+**Entscheidungen des Nutzers (01.11.2026):**
+- **Wortwahl: sinnlich und exakt.** Genaue körperliche Beschreibung in einer sinnlichen, ruhigen Sprache, **kein Dirty Talk**.
+- **Spannbreite des Erlebens:** Der knappe Zusatz „so erleben es viele, nicht alle“ passt und bleibt (keine Leistungsnorm).
+- **Kein Hinweistext** vor der Folge (Einwilligung und Abbruch wie bisher durch die Spicy-Freischaltung und den Beenden-Dialog).
+
+- **Beispieltexte als Basis (01.11.2026):** `C:\TOOLS\workspace\mojo_innenansichten\sehr_spicy_frau.txt` (Thema Körper der Frau, Hörer ein Mann → Fassung `sehrspicy_mann`, Martin)
+  und `sehr_spicy_mann.txt` (Thema Körper des Mannes, Hörerin → Fassung `sehrspicy_frau`, Victoria). **Ich-Form bleibt.** Überarbeitung: Höhepunkt als Erleben
+  statt Erklärung ausbauen, Lehrbuchstellen vor dem Höhepunkt zu Empfindung machen, Rückkehr-Teil der Frau-Fassung ergänzen, Abbildung auf die sechs Szenen
+  (Hauptteil in `other_body`), Englisch dazu.
+
+**Redaktionelle Leitplanken (Nutzer, 01.11.2026, freigegeben):**
+1. **Die Höhepunkte wirklich erzählen**, nicht Abläufe aufzählen: Der Hörer erlebt Spannungsaufbau, Empfindungen, Wellen und Nachlassen unmittelbar mit.
+2. **Wissenschaft in die Erzählung integrieren:** Anatomie und Physiologie stimmen, unterbrechen aber den Fluss nicht; Fachbegriffe nur, wo sie echten Erkenntnisgewinn bringen.
+3. **Beide Geschichten bekommen eine vollständige Rückverwandlung** und sind dramaturgisch gleichwertig abgeschlossen (die Frau-wird-Mann-Geschichte hat sie, die Mann-wird-Frau-Geschichte bekommt sie).
+4. **Zuordnung:** „Wenn ich eine Frau werde“ → `sehrspicy_mann` (Hörer Mann, Martin); „Wenn ich ein Mann werde“ → `sehrspicy_frau` (Hörerin, Victoria).
+5. **Sechs Szenen bleiben**, `other_body` darf deutlich länger sein.
+6. **Englisch literarisch übertragen**, nicht Wort für Wort übersetzen.
+7. **Keine künstliche Kürzung** auf 17 Minuten oder eine Zeichenzahl: Die Qualität des Erlebens geht vor einheitlicher Laufzeit (auch 20 Minuten sind in Ordnung).
