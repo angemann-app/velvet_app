@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -107,9 +108,9 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: AppBar(
-        backgroundColor: AppTheme.background,
+        backgroundColor: AppTheme.papier,
         title: Text(t.lustTitel),
         actions: [
           IconButton(
@@ -121,11 +122,11 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
       ),
       body: SafeArea(
         child: !_geladen
-            ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
+            ? Center(child: CircularProgressIndicator(color: AppTheme.akzentTief))
             : ListView(
                 padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
                 children: [
-                  Text(t.lustSerieEinleitung, style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5)),
+                  Text(t.lustSerieEinleitung, style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5)),
                   const SizedBox(height: 14),
                   if (!_paketDa || _daten == null) ...[_paketKarte(), const SizedBox(height: 18)],
                   _titel(t.selbstReiseYourBody),
@@ -159,11 +160,11 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
                     Container(
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
-                        color: AppTheme.surface,
-                        borderRadius: BorderRadius.circular(14),
-                        border: Border.all(color: AppTheme.border),
+                        color: AppTheme.papierErhoben,
+                        borderRadius: BorderRadius.circular(VpRadius.karte),
+                        border: Border.all(color: AppTheme.linie),
                       ),
-                      child: Text(tag, style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.5)),
+                      child: Text(tag, style: TextStyle(fontSize: 13, color: AppTheme.tinteLeise, height: 1.5)),
                     ),
                   ],
                   const SizedBox(height: 22),
@@ -176,13 +177,13 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppTheme.akzent,
                         foregroundColor: AppTheme.aufAkzent,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                       ),
                     ),
                   ),
                   const SizedBox(height: 16),
                   Text(_bett == 'penis' ? '${t.lustHinweise}\n${t.lustHinweisHandtuch}' : t.lustHinweise,
-                      style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
+                      style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
                 ],
               ),
       ),
@@ -207,21 +208,21 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
           return Container(
             padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.rose.withValues(alpha: 0.5)),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5)),
             ),
             child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-              Text(t.lustPaketFehlt, style: TextStyle(fontSize: 13.5, color: AppTheme.textPrimary, height: 1.5)),
+              Text(t.lustPaketFehlt, style: TextStyle(fontSize: 13.5, color: AppTheme.tinte, height: 1.5)),
               const SizedBox(height: 10),
               if (laeuft != null)
-                LinearProgressIndicator(value: laeuft, color: AppTheme.rose, backgroundColor: AppTheme.surfaceLight)
+                LinearProgressIndicator(value: laeuft, color: AppTheme.akzentTief, backgroundColor: AppTheme.papierVertieft)
               else
                 OutlinedButton(
                   onPressed: _paketLaden,
                   style: OutlinedButton.styleFrom(
-                    foregroundColor: AppTheme.rose,
-                    side: BorderSide(color: AppTheme.rose),
+                    foregroundColor: AppTheme.akzentTief,
+                    side: BorderSide(color: AppTheme.akzentTief),
                   ),
                   child: Text(t.lustPaketLaden),
                 ),
@@ -237,7 +238,7 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: InkWell(
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         onTap: frei
             ? () {
                 HapticFeedback.selectionClick();
@@ -247,16 +248,16 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
           decoration: BoxDecoration(
-            color: aktiv ? AppTheme.rose.withValues(alpha: 0.14) : AppTheme.surface,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: aktiv ? AppTheme.rose : AppTheme.border),
+            color: aktiv ? AppTheme.akzentTief.withValues(alpha: 0.14) : AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
           ),
           child: Row(children: [
             SizedBox(
               width: 30,
               child: frei
-                  ? Text('$f', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: AppTheme.textPrimary))
-                  : Icon(Icons.lock_outline_rounded, size: 18, color: AppTheme.textMuted),
+                  ? Text('$f', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: AppTheme.tinte))
+                  : Icon(Icons.lock_outline_rounded, size: 18, color: AppTheme.tinteStumm),
             ),
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -264,11 +265,11 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
                     style: TextStyle(
                         fontSize: 14.5,
                         fontWeight: FontWeight.w700,
-                        color: frei ? AppTheme.textPrimary : AppTheme.textMuted)),
+                        color: frei ? AppTheme.tinte : AppTheme.tinteStumm)),
                 const SizedBox(height: 2),
                 Text(
                   frei ? t.lustAbendeGehoert(abende) : t.lustGesperrt(f - 1),
-                  style: TextStyle(fontSize: 12, color: AppTheme.textMuted),
+                  style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm),
                 ),
               ]),
             ),
@@ -280,7 +281,7 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
 
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -290,10 +291,10 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
           HapticFeedback.selectionClick();
           onTap();
         },
-        selectedColor: AppTheme.rose.withValues(alpha: 0.22),
-        backgroundColor: AppTheme.surface,
-        side: BorderSide(color: aktiv ? AppTheme.rose : AppTheme.border),
-        labelStyle: TextStyle(color: aktiv ? AppTheme.textPrimary : AppTheme.textSecondary, fontWeight: FontWeight.w600),
+        selectedColor: AppTheme.akzentTief.withValues(alpha: 0.22),
+        backgroundColor: AppTheme.papierErhoben,
+        side: BorderSide(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
+        labelStyle: TextStyle(color: aktiv ? AppTheme.tinte : AppTheme.tinteLeise, fontWeight: FontWeight.w600),
         showCheckmark: false,
       );
 }

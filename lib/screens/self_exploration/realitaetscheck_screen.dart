@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 
 import '../../l10n/t.dart';
@@ -51,9 +52,9 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: AppBar(
-        backgroundColor: AppTheme.background,
+        backgroundColor: AppTheme.papier,
         title: Text(t.realitaetTitel),
       ),
       body: SafeArea(
@@ -62,12 +63,12 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
           children: [
             Text(
               t.realitaetFrage,
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+              style: TextStyle(fontFamily: VpTypo.serif, fontSize: 22, fontWeight: FontWeight.w600, color: AppTheme.tinte),
             ),
             const SizedBox(height: 8),
             Text(
               t.realitaetEinleitung,
-              style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.45),
+              style: TextStyle(fontSize: 13.5, color: AppTheme.tinteLeise, height: 1.45),
             ),
             const SizedBox(height: 18),
 
@@ -99,13 +100,13 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: AppTheme.rose.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: AppTheme.rose.withValues(alpha: 0.4)),
+                  color: AppTheme.akzentTief.withValues(alpha: 0.15),
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
+                  border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.4)),
                 ),
                 child: Text(
                   _rueckmeldung!,
-                  style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.4),
+                  style: TextStyle(fontSize: 13, color: AppTheme.tinte, height: 1.4),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -122,7 +123,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                       backgroundColor: AppTheme.akzent,
                       foregroundColor: AppTheme.aufAkzent,
                       padding: const EdgeInsets.symmetric(vertical: 13),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                     ),
                     child: Text(t.realitaetBestaetigenWach, style: const TextStyle(fontWeight: FontWeight.w700)),
                   ),
@@ -132,10 +133,10 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                   child: OutlinedButton(
                     onPressed: _antwortTraum,
                     style: OutlinedButton.styleFrom(
-                      foregroundColor: AppTheme.textPrimary,
-                      side: BorderSide(color: AppTheme.border),
+                      foregroundColor: AppTheme.tinte,
+                      side: BorderSide(color: AppTheme.linie),
                       padding: const EdgeInsets.symmetric(vertical: 13),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                     ),
                     child: Text(t.realitaetBestaetigenTraum, style: const TextStyle(fontWeight: FontWeight.w700)),
                   ),
@@ -147,29 +148,29 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
             // Motive aus dem Tagebuch
             Text(
               t.realitaetMotiveTitel,
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte),
             ),
             const SizedBox(height: 8),
             if (_motive.isEmpty)
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: AppTheme.surface,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: AppTheme.border),
+                  color: AppTheme.papierErhoben,
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
+                  border: Border.all(color: AppTheme.linie),
                 ),
                 child: Text(
                   t.realitaetMotiveKeine,
-                  style: TextStyle(fontSize: 13, color: AppTheme.textMuted, height: 1.4),
+                  style: TextStyle(fontSize: 13, color: AppTheme.tinteStumm, height: 1.4),
                 ),
               )
             else
               Container(
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: AppTheme.surface,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: AppTheme.border),
+                  color: AppTheme.papierErhoben,
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
+                  border: Border.all(color: AppTheme.linie),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -179,7 +180,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                         padding: const EdgeInsets.only(bottom: 6),
                         child: Text(
                           '• ${t.realitaetMotivSatz(m)}',
-                          style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.35),
+                          style: TextStyle(fontSize: 13, color: AppTheme.tinte, height: 1.35),
                         ),
                       ),
                   ],
@@ -190,26 +191,26 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
             // Einstellungen
             Text(
               t.realitaetErinnerungenAktiv,
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte),
             ),
             const SizedBox(height: 8),
             Container(
               decoration: BoxDecoration(
-                color: AppTheme.surface,
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(color: AppTheme.border),
+                color: AppTheme.papierErhoben,
+                borderRadius: BorderRadius.circular(VpRadius.karte),
+                border: Border.all(color: AppTheme.linie),
               ),
               child: Column(
                 children: [
                   SwitchListTile(
                     title: Text(t.realitaetErinnerungenAktiv,
-                        style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w600, color: AppTheme.textPrimary)),
+                        style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w600, color: AppTheme.tinte)),
                     subtitle: Text(
                       t.realitaetMitteilungTitel,
-                      style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted),
+                      style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm),
                     ),
                     value: _einstellungen.aktiv,
-                    activeThumbColor: AppTheme.rose,
+                    activeThumbColor: AppTheme.akzentTief,
                     onChanged: (an) => _einstellungenSpeichern(_einstellungen.mit(aktiv: an)),
                   ),
                   if (_einstellungen.aktiv) ...[
@@ -221,7 +222,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                         children: [
                           Text(
                             t.realitaetZeitfenster(_einstellungen.vonStunde, _einstellungen.bisStunde),
-                            style: TextStyle(fontSize: 13, color: AppTheme.textSecondary),
+                            style: TextStyle(fontSize: 13, color: AppTheme.tinteLeise),
                           ),
                         ],
                       ),
@@ -233,7 +234,7 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                         children: [
                           Text(
                             t.realitaetAnzahlTag(_einstellungen.anzahlProTag),
-                            style: TextStyle(fontSize: 13, color: AppTheme.textSecondary),
+                            style: TextStyle(fontSize: 13, color: AppTheme.tinteLeise),
                           ),
                           Row(
                             children: [
@@ -246,13 +247,13 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
                                     onSelected: (sel) {
                                       if (sel) _einstellungenSpeichern(_einstellungen.mit(anzahlProTag: n));
                                     },
-                                    selectedColor: AppTheme.rose.withValues(alpha: 0.22),
-                                    backgroundColor: AppTheme.background,
+                                    selectedColor: AppTheme.akzentTief.withValues(alpha: 0.22),
+                                    backgroundColor: AppTheme.papier,
                                     side: BorderSide(
-                                      color: _einstellungen.anzahlProTag == n ? AppTheme.rose : AppTheme.border,
+                                      color: _einstellungen.anzahlProTag == n ? AppTheme.akzentTief : AppTheme.linie,
                                     ),
                                     labelStyle: TextStyle(
-                                      color: _einstellungen.anzahlProTag == n ? AppTheme.textPrimary : AppTheme.textSecondary,
+                                      color: _einstellungen.anzahlProTag == n ? AppTheme.tinte : AppTheme.tinteLeise,
                                       fontWeight: FontWeight.w600,
                                       fontSize: 12,
                                     ),
@@ -274,12 +275,12 @@ class _RealitaetscheckScreenState extends State<RealitaetscheckScreen> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.surfaceLight,
-                borderRadius: BorderRadius.circular(10),
+                color: AppTheme.papierVertieft,
+                borderRadius: BorderRadius.circular(VpRadius.karte),
               ),
               child: Text(
                 t.realitaetHinweisXiaomi,
-                style: TextStyle(fontSize: 11.5, color: AppTheme.textMuted, height: 1.4),
+                style: TextStyle(fontSize: 11.5, color: AppTheme.tinteStumm, height: 1.4),
               ),
             ),
           ],
@@ -301,14 +302,14 @@ class _UebungsKarte extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(13),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icon, color: AppTheme.rose, size: 22),
+          Icon(icon, color: AppTheme.akzentTief, size: 22),
           const SizedBox(width: 12),
           Expanded(
             child: Column(
@@ -316,12 +317,12 @@ class _UebungsKarte extends StatelessWidget {
               children: [
                 Text(
                   titel,
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.tinte),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   text,
-                  style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
+                  style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.4),
                 ),
               ],
             ),

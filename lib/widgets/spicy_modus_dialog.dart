@@ -11,14 +11,14 @@ Future<bool> spicyModusEinschalten(BuildContext context) async {
   final ja = await showDialog<bool>(
     context: context,
     builder: (context) => AlertDialog(
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.papierErhoben,
       title: Text(t.spicyEinschaltenTitel),
       content: SingleChildScrollView(child: Text(t.spicyEinschaltenText, style: const TextStyle(height: 1.45))),
       actions: [
         TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.ausspracheMeldenCancel)),
         TextButton(
           onPressed: () => Navigator.pop(context, true),
-          child: Text(t.spicyEinschalten, style: TextStyle(color: AppTheme.rose)),
+          child: Text(t.spicyEinschalten, style: TextStyle(color: AppTheme.akzentTief)),
         ),
       ],
     ),

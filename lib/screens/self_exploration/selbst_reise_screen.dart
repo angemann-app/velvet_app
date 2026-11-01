@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -214,11 +215,11 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         if (!didPop) _fragBeenden();
       },
       child: Scaffold(
-        backgroundColor: AppTheme.background,
-        appBar: AppBar(backgroundColor: AppTheme.background, title: Text(t.lessonDetailGuidedSelfExploration)),
+        backgroundColor: AppTheme.papier,
+        appBar: AppBar(backgroundColor: AppTheme.papier, title: Text(t.lessonDetailGuidedSelfExploration)),
         body: SafeArea(
           child: _daten == null
-              ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
+              ? Center(child: CircularProgressIndicator(color: AppTheme.akzentTief))
               : (laeuft ? _buildPlayer() : _buildEinrichtung()),
         ),
       ),
@@ -229,7 +230,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
     final ja = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.selbstReiseEndTheJourney),
         content: Text(t.selbstReiseTheGuidanceStopsThenYou),
         actions: [
@@ -247,19 +248,19 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
       children: [
         Text(
           t.selbstReiseAVoiceGuidesYouThrough,
-          style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5),
+          style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5),
         ),
         const SizedBox(height: 14),
         Container(
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            color: AppTheme.surface,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: AppTheme.border),
+            color: AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: AppTheme.linie),
           ),
           child: Text(
             t.selbstReiseYouDecideYouCanPause,
-            style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.5),
+            style: TextStyle(fontSize: 13, color: AppTheme.tinteLeise, height: 1.5),
           ),
         ),
         const SizedBox(height: 22),
@@ -295,11 +296,11 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
           value: _teppich,
-          activeThumbColor: AppTheme.rose,
+          activeThumbColor: AppTheme.akzentTief,
           onChanged: (v) => setState(() => _teppich = v),
-          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.tinte, fontSize: 14.5)),
           subtitle: Text(t.paarAbendCalmBackgroundDuringTheSilences,
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5)),
+              style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5)),
         ),
         const SizedBox(height: 22),
         SizedBox(
@@ -311,7 +312,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
             style: ElevatedButton.styleFrom(
               backgroundColor: AppTheme.akzent,
               foregroundColor: AppTheme.aufAkzent,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
             ),
           ),
         ),
@@ -321,7 +322,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
 
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -331,10 +332,10 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           HapticFeedback.selectionClick();
           onTap();
         },
-        selectedColor: AppTheme.rose.withValues(alpha: 0.22),
-        backgroundColor: AppTheme.surface,
-        side: BorderSide(color: aktiv ? AppTheme.rose : AppTheme.border),
-        labelStyle: TextStyle(color: aktiv ? AppTheme.textPrimary : AppTheme.textSecondary, fontWeight: FontWeight.w600),
+        selectedColor: AppTheme.akzentTief.withValues(alpha: 0.22),
+        backgroundColor: AppTheme.papierErhoben,
+        side: BorderSide(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
+        labelStyle: TextStyle(color: aktiv ? AppTheme.tinte : AppTheme.tinteLeise, fontWeight: FontWeight.w600),
         showCheckmark: false,
       );
 
@@ -343,7 +344,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: InkWell(
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         onTap: () {
           HapticFeedback.selectionClick();
           setState(() => _tiefe = tiefe);
@@ -351,19 +352,19 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
           decoration: BoxDecoration(
-            color: aktiv ? AppTheme.rose.withValues(alpha: 0.10) : AppTheme.surface,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: aktiv ? AppTheme.rose : AppTheme.border),
+            color: aktiv ? AppTheme.akzentTief.withValues(alpha: 0.10) : AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
           ),
           child: Row(children: [
             Icon(aktiv ? Icons.radio_button_checked_rounded : Icons.radio_button_off_rounded,
-                color: aktiv ? AppTheme.rose : AppTheme.textMuted, size: 20),
+                color: aktiv ? AppTheme.akzentTief : AppTheme.tinteStumm, size: 20),
             const SizedBox(width: 12),
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(titel, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                Text(titel, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
                 const SizedBox(height: 2),
-                Text(text, style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
+                Text(text, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.35)),
               ]),
             ),
           ]),
@@ -393,14 +394,14 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           child: LinearProgressIndicator(
             value: fortschritt.clamp(0.0, 1.0),
             minHeight: 4,
-            backgroundColor: AppTheme.surfaceLight,
-            color: AppTheme.rose,
+            backgroundColor: AppTheme.papierVertieft,
+            color: AppTheme.akzentTief,
           ),
         ),
         const SizedBox(height: 8),
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
-          Text(_fmt(gesamt), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+          Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
+          Text(_fmt(gesamt), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
         ]),
         const Spacer(),
         AnimatedContainer(
@@ -414,20 +415,20 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
           ),
           child: Center(
             child: Icon(_fertig ? Icons.favorite_rounded : (spricht ? Icons.graphic_eq_rounded : Icons.spa_rounded),
-                color: AppTheme.textPrimary.withValues(alpha: 0.85), size: 44),
+                color: AppTheme.tinte.withValues(alpha: 0.85), size: 44),
           ),
         ),
         const SizedBox(height: 28),
-        Text(phase, style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+        Text(phase, style: TextStyle(fontFamily: VpTypo.serif, fontSize: 26, fontWeight: FontWeight.w600, color: AppTheme.tinte)),
         const SizedBox(height: 10),
         if (!_fertig && schritt != null)
           Text(
             _pausiert ? t.paarAbendPaused : (spricht ? t.paarAbendTheVoiceIsSpeaking : t.selbstReiseSilenceStillerestLeft(_fmt(stilleRest))),
-            style: TextStyle(fontSize: 13, color: AppTheme.textMuted),
+            style: TextStyle(fontSize: 13, color: AppTheme.tinteStumm),
           )
         else
           Text(t.selbstReiseStayLyingDownAsLong,
-              style: TextStyle(fontSize: 15, color: AppTheme.textSecondary)),
+              style: TextStyle(fontSize: 15, color: AppTheme.tinteLeise)),
         const Spacer(),
         if (_fertig)
           SizedBox(
@@ -436,9 +437,9 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
             child: OutlinedButton(
               onPressed: () => Navigator.of(context).pop(),
               style: OutlinedButton.styleFrom(
-                foregroundColor: AppTheme.rose,
-                side: BorderSide(color: AppTheme.rose),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                foregroundColor: AppTheme.akzentTief,
+                side: BorderSide(color: AppTheme.akzentTief),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
               ),
               child: Text(t.couplesChannelClose, style: TextStyle(fontWeight: FontWeight.w700)),
             ),

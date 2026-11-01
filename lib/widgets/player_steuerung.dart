@@ -64,7 +64,7 @@ class PlayerSteuerung extends StatelessWidget {
             onPressed: onPressed,
             icon: Icon(icon),
             iconSize: 30,
-            color: AppTheme.textSecondary,
+            color: AppTheme.tinteLeise,
             tooltip: text,
           ),
           ExcludeSemantics(child: _beschriftung(text)),
@@ -72,5 +72,5 @@ class PlayerSteuerung extends StatelessWidget {
       );
 
   Widget _beschriftung(String text) =>
-      Text(text, style: TextStyle(fontSize: 11.5, color: AppTheme.textMuted));
+      Text(text, style: TextStyle(fontSize: 11.5, color: AppTheme.tinteStumm));
 }

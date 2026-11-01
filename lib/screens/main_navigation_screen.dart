@@ -97,7 +97,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 
   Widget _buildScaffold(bool spicy) {
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: AppBar(
         // Titel in der redaktionellen Serif des Themes; Spicy zeigt sich an den Farben, nicht an einem Symbol.
         title: Text(

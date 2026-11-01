@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import '../../models/journal_entry.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
@@ -69,7 +70,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(t.cbtNewEntryPleaseChooseAtLeastOne),
-          backgroundColor: AppTheme.amber,
+          backgroundColor: AppTheme.akzentTief,
         ),
       );
       return;
@@ -98,7 +99,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: AppBar(
         title: Text(
           widget.existingEntry == null ? t.cbtNewEntryNewThoughtRecord : t.cbtNewEntryEditEntry,
@@ -107,11 +108,11 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
         actions: [
           TextButton.icon(
             onPressed: _isSaving ? null : _save,
-            icon: Icon(Icons.check, color: AppTheme.sageGreen),
+            icon: Icon(Icons.check, color: AppTheme.akzentTief),
             label: Text(
               t.partnerProfileDialogSave,
               style: TextStyle(
-                color: AppTheme.sageGreen,
+                color: AppTheme.akzentTief,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -128,19 +129,19 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             Container(
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
-                color: AppTheme.surface,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppTheme.border),
+                color: AppTheme.papierErhoben,
+                borderRadius: BorderRadius.circular(VpRadius.karte),
+                border: Border.all(color: AppTheme.linie),
               ),
               child: Row(
                 children: [
-                  Icon(Icons.psychology_outlined, color: AppTheme.amber, size: 22),
+                  Icon(Icons.psychology_outlined, color: AppTheme.akzentTief, size: 22),
                   SizedBox(width: 12),
                   Expanded(
                     child: Text(
                       t.cbtNewEntryCognitiveRestructuringUnmaskIrrationalAlarm,
                       style: TextStyle(
-                        color: AppTheme.textSecondary,
+                        color: AppTheme.tinteLeise,
                         fontSize: 12,
                         height: 1.35,
                       ),
@@ -161,7 +162,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             TextFormField(
               controller: _situationController,
               maxLines: 2,
-              style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+              style: TextStyle(color: AppTheme.tinte, fontSize: 14),
               decoration: InputDecoration(
                 hintText: t.cbtNewEntryDescribeTheSpecificSituation,
               ),
@@ -184,7 +185,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             TextFormField(
               controller: _thoughtController,
               maxLines: 2,
-              style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+              style: TextStyle(color: AppTheme.tinte, fontSize: 14),
               decoration: InputDecoration(
                 hintText: t.cbtNewEntryNoteTheUnfilteredThought,
               ),
@@ -214,14 +215,14 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                   label: Text(CbtJournalEntry.anzeige(distortion)),
                   selected: isSelected,
                   onSelected: (_) => _toggleDistortion(distortion),
-                  selectedColor: AppTheme.amber.withValues(alpha: 0.25),
-                  checkmarkColor: AppTheme.amber,
-                  backgroundColor: AppTheme.surface,
+                  selectedColor: AppTheme.akzentTief.withValues(alpha: 0.25),
+                  checkmarkColor: AppTheme.akzentTief,
+                  backgroundColor: AppTheme.papierErhoben,
                   side: BorderSide(
-                    color: isSelected ? AppTheme.amber : AppTheme.border,
+                    color: isSelected ? AppTheme.akzentTief : AppTheme.linie,
                   ),
                   labelStyle: TextStyle(
-                    color: isSelected ? AppTheme.tinte : AppTheme.textSecondary,
+                    color: isSelected ? AppTheme.tinte : AppTheme.tinteLeise,
                     fontSize: 12,
                     fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                   ),
@@ -240,7 +241,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             TextFormField(
               controller: _reframeController,
               maxLines: 4,
-              style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+              style: TextStyle(color: AppTheme.tinte, fontSize: 14),
               decoration: InputDecoration(
                 hintText: t.cbtNewEntryEGMyBodyIs,
               ),
@@ -266,7 +267,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                   style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppTheme.sageGreen,
+                  backgroundColor: AppTheme.akzent,
                   foregroundColor: AppTheme.aufAkzent,
                 ),
               ),
@@ -295,7 +296,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                 width: 22,
                 height: 22,
                 decoration: BoxDecoration(
-                  color: AppTheme.sageGreen,
+                  color: AppTheme.akzentTief,
                   shape: BoxShape.circle,
                 ),
                 child: Center(
@@ -316,7 +317,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
-                    color: AppTheme.textPrimary,
+                    color: AppTheme.tinte,
                   ),
                 ),
               ),
@@ -327,7 +328,7 @@ class _CbtNewEntryScreenState extends State<CbtNewEntryScreen> {
             hint,
             style: TextStyle(
               fontSize: 12,
-              color: AppTheme.textMuted,
+              color: AppTheme.tinteStumm,
               height: 1.3,
             ),
           ),

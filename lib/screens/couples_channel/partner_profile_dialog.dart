@@ -22,7 +22,7 @@ Future<bool> editPartnerProfile(BuildContext context) async {
     context: context,
     builder: (ctx) => StatefulBuilder(
       builder: (ctx, setState) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.partnerProfileDialogYourPartner),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -30,7 +30,7 @@ Future<bool> editPartnerProfile(BuildContext context) async {
           children: [
             Text(
               t.partnerProfileDialogThisLetsLessonsCallYour,
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.45),
+              style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13, height: 1.45),
             ),
             const SizedBox(height: 14),
             TextField(
@@ -48,7 +48,7 @@ Future<bool> editPartnerProfile(BuildContext context) async {
                     label: Text(entry.value),
                     selected: gender == entry.key,
                     onSelected: (_) => setState(() => gender = entry.key),
-                    selectedColor: AppTheme.rose.withValues(alpha: 0.25),
+                    selectedColor: AppTheme.akzentTief.withValues(alpha: 0.25),
                     showCheckmark: false,
                   ),
               ],
@@ -104,14 +104,14 @@ class PartnerProfilePrompt extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   t.partnerProfileDialogWithNameAndGenderThe,
-                  style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
+                  style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.4),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     TextButton(
                       onPressed: nostr.dismissPartnerProfilePrompt,
-                      child: Text(t.updateDialogLater, style: TextStyle(color: AppTheme.textSecondary)),
+                      child: Text(t.updateDialogLater, style: TextStyle(color: AppTheme.tinteLeise)),
                     ),
                     TextButton(
                       onPressed: () => editPartnerProfile(context),

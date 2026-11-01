@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:intl/intl.dart';
 import '../../models/journal_entry.dart';
 import '../../services/storage_service.dart';
@@ -8,6 +9,7 @@ import '../../services/sprache.dart';
 import 'cbt_new_entry_screen.dart';
 import 'belief_library_view.dart';
 import '../../widgets/design/vp_tabs.dart';
+import '../../widgets/design/vp_komponenten.dart';
 
 class CbtJournalScreen extends StatefulWidget {
   const CbtJournalScreen({super.key});
@@ -59,16 +61,16 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.cbtJournalDeleteEntry),
         content: Text(
           t.cbtJournalDoYouReallyWantTo,
-          style: TextStyle(color: AppTheme.textSecondary),
+          style: TextStyle(color: AppTheme.tinteLeise),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: Text(t.ausspracheMeldenCancel, style: TextStyle(color: AppTheme.textMuted)),
+            child: Text(t.ausspracheMeldenCancel, style: TextStyle(color: AppTheme.tinteStumm)),
           ),
           ElevatedButton(
             onPressed: () async {
@@ -101,17 +103,17 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
   Widget build(BuildContext context) {
     if (_isLoading) {
       return Center(
-        child: CircularProgressIndicator(color: AppTheme.sageGreen),
+        child: CircularProgressIndicator(color: AppTheme.akzentTief),
       );
     }
 
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       // Leerer Zustand hat eigene Buttons; die FAB erst zeigen, wenn es Einträge gibt.
       floatingActionButton: _tabController.index == 0 && _entries.isNotEmpty
           ? FloatingActionButton.extended(
               onPressed: () => _openNewEntry(),
-              backgroundColor: AppTheme.sageGreen,
+              backgroundColor: AppTheme.akzent,
               foregroundColor: AppTheme.aufAkzent,
               icon: const Icon(Icons.add_rounded),
               label: Text(
@@ -133,7 +135,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                   children: [
                     const Icon(Icons.edit_note_rounded, size: 16),
                     const SizedBox(width: 8),
-                    Text(t.cbtJournalMyRecordsEntrieslength(_entries.length)),
+                    Flexible(child: Text(t.cbtJournalMyRecordsEntrieslength(_entries.length), maxLines: 1, overflow: TextOverflow.ellipsis)),
                   ],
                 ),
               ),
@@ -143,7 +145,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                   children: [
                     Icon(Icons.library_books_rounded, size: 16),
                     SizedBox(width: 8),
-                    Text(t.cbtJournalBeliefs),
+                    Flexible(child: Text(t.cbtJournalBeliefs, maxLines: 1, overflow: TextOverflow.ellipsis)),
                   ],
                 ),
               ),
@@ -177,38 +179,10 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: AppTheme.surface,
-                shape: BoxShape.circle,
-                border: Border.all(color: AppTheme.border),
-              ),
-              child: Icon(
-                Icons.psychology_rounded,
-                color: AppTheme.amber,
-                size: 48,
-              ),
-            ),
-            const SizedBox(height: 20),
-            Text(
-              t.cbtJournalNoThoughtRecordsYet,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 19,
-                fontWeight: FontWeight.w700,
-                color: AppTheme.textPrimary,
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              t.cbtJournalWhenYourHeadBlocksBefore,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 14,
-                color: AppTheme.textSecondary,
-                height: 1.45,
-              ),
+            VpLeerzustand(
+              icon: Icons.psychology_outlined,
+              titel: t.cbtJournalNoThoughtRecordsYet,
+              text: t.cbtJournalWhenYourHeadBlocksBefore,
             ),
             const SizedBox(height: 24),
             SizedBox(
@@ -218,7 +192,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                 icon: const Icon(Icons.add_rounded, size: 20),
                 label: Text(t.cbtJournalNewRecord),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppTheme.sageGreen,
+                  backgroundColor: AppTheme.akzent,
                   foregroundColor: AppTheme.aufAkzent,
                 ),
               ),
@@ -257,19 +231,19 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
       margin: const EdgeInsets.only(bottom: 16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Row(
         children: [
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: AppTheme.sageGreen.withValues(alpha: 0.15),
+              color: AppTheme.akzentTief.withValues(alpha: 0.15),
               shape: BoxShape.circle,
             ),
-            child: Icon(Icons.edit_note_rounded, color: AppTheme.sageGreen, size: 22),
+            child: Icon(Icons.edit_note_rounded, color: AppTheme.akzentTief, size: 22),
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -281,7 +255,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
-                    color: AppTheme.textPrimary,
+                    color: AppTheme.tinte,
                   ),
                 ),
                 const SizedBox(height: 2),
@@ -289,7 +263,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                   t.cbtJournalProtocolsSaved(_entries.length),
                   style: TextStyle(
                     fontSize: 12,
-                    color: AppTheme.textSecondary,
+                    color: AppTheme.tinteLeise,
                   ),
                 ),
               ],
@@ -304,9 +278,9 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
     return Container(
       margin: const EdgeInsets.only(bottom: 14),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -319,21 +293,21 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               children: [
                 Row(
                   children: [
-                    Icon(Icons.calendar_today_rounded, size: 13, color: AppTheme.textMuted),
+                    Icon(Icons.calendar_today_rounded, size: 13, color: AppTheme.tinteStumm),
                     const SizedBox(width: 6),
                     Text(
                       _formatDate(entry.timestamp),
                       style: TextStyle(
                         fontSize: 12,
-                        color: AppTheme.textMuted,
+                        color: AppTheme.tinteStumm,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
                 ),
                 PopupMenuButton<String>(
-                  icon: Icon(Icons.more_vert_rounded, color: AppTheme.textMuted, size: 20),
-                  color: AppTheme.surfaceLight,
+                  icon: Icon(Icons.more_vert_rounded, color: AppTheme.tinteStumm, size: 20),
+                  color: AppTheme.papierVertieft,
                   onSelected: (val) {
                     if (val == 'edit') {
                       _openNewEntry(existing: entry);
@@ -346,7 +320,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                       value: 'edit',
                       child: Row(
                         children: [
-                          Icon(Icons.edit_rounded, size: 16, color: AppTheme.textSecondary),
+                          Icon(Icons.edit_rounded, size: 16, color: AppTheme.tinteLeise),
                           SizedBox(width: 8),
                           Text(t.cbtJournalEdit),
                         ],
@@ -356,9 +330,9 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                       value: 'delete',
                       child: Row(
                         children: [
-                          Icon(Icons.delete_outline_rounded, size: 16, color: AppTheme.rose),
+                          Icon(Icons.delete_outline_rounded, size: 16, color: AppTheme.akzentTief),
                           SizedBox(width: 8),
-                          Text(t.cbtJournalDelete, style: TextStyle(color: AppTheme.rose)),
+                          Text(t.cbtJournalDelete, style: TextStyle(color: AppTheme.akzentTief)),
                         ],
                       ),
                     ),
@@ -375,7 +349,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
-                color: AppTheme.textPrimary,
+                color: AppTheme.tinte,
               ),
             ),
 
@@ -385,10 +359,10 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.surfaceLight.withValues(alpha: 0.35),
-                borderRadius: BorderRadius.circular(10),
+                color: AppTheme.papierVertieft.withValues(alpha: 0.35),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
                 border: Border(
-                  left: BorderSide(color: AppTheme.rose.withValues(alpha: 0.8), width: 3),
+                  left: BorderSide(color: AppTheme.akzentTief.withValues(alpha: 0.8), width: 3),
                 ),
               ),
               child: Column(
@@ -399,7 +373,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w800,
-                      color: AppTheme.rose,
+                      color: AppTheme.akzentTief,
                       letterSpacing: 0.8,
                     ),
                   ),
@@ -409,7 +383,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                     style: TextStyle(
                       fontSize: 13,
                       fontStyle: FontStyle.italic,
-                      color: AppTheme.textSecondary,
+                      color: AppTheme.tinteLeise,
                       height: 1.35,
                     ),
                   ),
@@ -427,15 +401,15 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                 return Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(
-                    color: AppTheme.amber.withValues(alpha: 0.15),
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: AppTheme.amber.withValues(alpha: 0.3)),
+                    color: AppTheme.akzentTief.withValues(alpha: 0.15),
+                    borderRadius: BorderRadius.circular(VpRadius.chip),
+                    border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.3)),
                   ),
                   child: Text(
                     CbtJournalEntry.anzeige(d),
                     style: TextStyle(
                       fontSize: 11,
-                      color: AppTheme.amberLight,
+                      color: AppTheme.akzentTief,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -449,10 +423,10 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.sageGreen.withValues(alpha: 0.08),
-                borderRadius: BorderRadius.circular(10),
+                color: AppTheme.akzentTief.withValues(alpha: 0.08),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
                 border: Border(
-                  left: BorderSide(color: AppTheme.sageGreen, width: 3),
+                  left: BorderSide(color: AppTheme.akzentTief, width: 3),
                 ),
               ),
               child: Column(
@@ -463,7 +437,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w800,
-                      color: AppTheme.sageGreen,
+                      color: AppTheme.akzentTief,
                       letterSpacing: 0.8,
                     ),
                   ),
@@ -472,7 +446,7 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
                     entry.realityCheckReframe,
                     style: TextStyle(
                       fontSize: 13,
-                      color: AppTheme.textPrimary,
+                      color: AppTheme.tinte,
                       height: 1.4,
                     ),
                   ),

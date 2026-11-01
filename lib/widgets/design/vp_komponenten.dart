@@ -313,3 +313,36 @@ class VpListenzeile extends StatelessWidget {
     );
   }
 }
+
+/// Ruhiger Leer- oder Fehlerzustand: ein gezeichnetes Motiv (Konstruktionsbögen mit Symbol), Serif-Titel und ein Satz.
+/// Die Handlungsknöpfe setzt der Aufrufer darunter. Ersetzt die einzelnen Kreise mit großem Symbol.
+class VpLeerzustand extends StatelessWidget {
+  final IconData icon;
+  final String titel;
+  final String? text;
+
+  const VpLeerzustand({super.key, required this.icon, required this.titel, this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    final typo = context.vp.typo;
+    return Column(mainAxisSize: MainAxisSize.min, children: [
+      SizedBox(
+        width: 150,
+        height: 104,
+        child: Stack(alignment: Alignment.center, children: [
+          Positioned.fill(
+            child: CustomPaint(painter: KonstruktionsBogen(AppTheme.linieStark, mitte: const Offset(0.5, 0.62), ringe: 3)),
+          ),
+          Icon(icon, color: AppTheme.akzentTief, size: 40),
+        ]),
+      ),
+      const SizedBox(height: VpAbstand.l),
+      Text(titel, textAlign: TextAlign.center, style: typo.ueberschrift.copyWith(fontSize: 21)),
+      if (text != null) ...[
+        const SizedBox(height: VpAbstand.s),
+        Text(text!, textAlign: TextAlign.center, style: typo.fliesstextKlein.copyWith(height: 1.5)),
+      ],
+    ]);
+  }
+}

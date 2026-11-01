@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -231,7 +232,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     final ja = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.reiheBeendenFrage),
         content: Text(t.reiheBeendenText),
         actions: [
@@ -252,11 +253,11 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
         if (!didPop) _fragBeenden();
       },
       child: Scaffold(
-        backgroundColor: AppTheme.background,
-        appBar: AppBar(backgroundColor: AppTheme.background, title: Text(t.reiheTitel)),
+        backgroundColor: AppTheme.papier,
+        appBar: AppBar(backgroundColor: AppTheme.papier, title: Text(t.reiheTitel)),
         body: SafeArea(
           child: !_geladen
-              ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
+              ? Center(child: CircularProgressIndicator(color: AppTheme.akzentTief))
               : (laeuft ? _spieler() : _einrichtung()),
         ),
       ),
@@ -279,10 +280,10 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
       children: [
-        Text(t.reiheEinleitung, style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5)),
+        Text(t.reiheEinleitung, style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5)),
         const SizedBox(height: 14),
         if (!_paketDa || _daten == null || _neueVersion) ...[_paketKarte(), const SizedBox(height: 18)],
-        if (_daten != null && folge == null) Text(t.reiheLeer, style: TextStyle(color: AppTheme.textMuted)),
+        if (_daten != null && folge == null) Text(t.reiheLeer, style: TextStyle(color: AppTheme.tinteStumm)),
         if (folge != null && fassung != null) ...[
           _titel(t.reiheFolgen),
           for (final f in _daten!.folgen) _folgeKachel(f, f.id == folge.id),
@@ -306,11 +307,11 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
           ],
           if (partner.isNotEmpty)
             Text(t.reihePartnerHinweis(partner.map(_perspektiveName).join(', ')),
-                style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
+                style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
           const SizedBox(height: 8),
           Text(
             '${t.reiheDauer(_daten!.gesamt(folge, fassung).inMinutes.clamp(1, 999))} · ${t.reiheOffline}',
-            style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted),
+            style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm),
           ),
           const SizedBox(height: 18),
           SizedBox(
@@ -322,17 +323,17 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppTheme.akzent,
                 foregroundColor: AppTheme.aufAkzent,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
               ),
             ),
           ),
           if (Pakete.datei(ReiheDaten.audioPfad(folge, fassung, fassung.segmente.first)) == null) ...[
             const SizedBox(height: 10),
-            Text(t.reiheKeineAufnahme, style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
+            Text(t.reiheKeineAufnahme, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
           ],
         ],
         const SizedBox(height: 16),
-        Text(t.reiheHinweise, style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
+        Text(t.reiheHinweise, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
       ],
     );
   }
@@ -356,7 +357,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [AppTheme.background.withValues(alpha: 0.55), AppTheme.background.withValues(alpha: 0.85)],
+                      colors: [AppTheme.papier.withValues(alpha: 0.55), AppTheme.papier.withValues(alpha: 0.85)],
                     ),
                   ),
                 ),
@@ -373,22 +374,22 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
         const SizedBox(height: 12),
         Text(folge.titel,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.tinte)),
         const SizedBox(height: 6),
         Text('${fassung.spicy ? t.reiheSpicy : t.reiheSoft} · ${_perspektiveName(fassung)}',
-            style: TextStyle(color: AppTheme.textMuted)),
+            style: TextStyle(color: AppTheme.tinteStumm)),
         const Spacer(),
         Text(_fertig ? t.reiheFertig : t.reiheSzene(i + 1, szenen),
-            textAlign: TextAlign.center, style: TextStyle(fontSize: 15, color: AppTheme.textSecondary)),
+            textAlign: TextAlign.center, style: TextStyle(fontSize: 15, color: AppTheme.tinteLeise)),
         if (szene != null && !_fertig) ...[
           const SizedBox(height: 8),
-          Text(szene.beschreibung, textAlign: TextAlign.center, style: TextStyle(fontSize: 13, color: AppTheme.textMuted)),
+          Text(szene.beschreibung, textAlign: TextAlign.center, style: TextStyle(fontSize: 13, color: AppTheme.tinteStumm)),
         ],
         const SizedBox(height: 18),
         LinearProgressIndicator(
           value: _fertig ? 1 : (i + 0.0) / szenen,
-          color: AppTheme.rose,
-          backgroundColor: AppTheme.surfaceLight,
+          color: AppTheme.akzentTief,
+          backgroundColor: AppTheme.papierVertieft,
         ),
         const Spacer(),
         if (_fertig)
@@ -404,7 +405,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             const SizedBox(width: 12),
             IconButton.filled(
               iconSize: 40,
-              style: IconButton.styleFrom(backgroundColor: AppTheme.rose),
+              style: IconButton.styleFrom(backgroundColor: AppTheme.akzentTief),
               onPressed: _pauseUmschalten,
               icon: Icon(_pausiert ? Icons.play_arrow_rounded : Icons.pause_rounded),
             ),
@@ -428,19 +429,19 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
           return Container(
             padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.rose.withValues(alpha: 0.5)),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5)),
             ),
             child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-              Text(_paketDa ? t.reihePaketNeu : t.reihePaketFehlt, style: TextStyle(fontSize: 13.5, color: AppTheme.textPrimary, height: 1.5)),
+              Text(_paketDa ? t.reihePaketNeu : t.reihePaketFehlt, style: TextStyle(fontSize: 13.5, color: AppTheme.tinte, height: 1.5)),
               const SizedBox(height: 10),
               if (laeuft != null)
-                LinearProgressIndicator(value: laeuft, color: AppTheme.rose, backgroundColor: AppTheme.surfaceLight)
+                LinearProgressIndicator(value: laeuft, color: AppTheme.akzentTief, backgroundColor: AppTheme.papierVertieft)
               else
                 OutlinedButton(
                   onPressed: _paketLaden,
-                  style: OutlinedButton.styleFrom(foregroundColor: AppTheme.rose, side: BorderSide(color: AppTheme.rose)),
+                  style: OutlinedButton.styleFrom(foregroundColor: AppTheme.akzentTief, side: BorderSide(color: AppTheme.akzentTief)),
                   child: Text(_paketDa ? t.audioPaketAktualisieren : t.reihePaketLaden),
                 ),
             ]),
@@ -451,7 +452,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   Widget _folgeKachel(ReiheFolge f, bool aktiv) => Padding(
         padding: const EdgeInsets.only(bottom: 8),
         child: InkWell(
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.circular(VpRadius.karte),
           onTap: () {
             HapticFeedback.selectionClick();
             setState(() => _folgeId = f.id);
@@ -460,15 +461,15 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
             decoration: BoxDecoration(
-              color: aktiv ? AppTheme.rose.withValues(alpha: 0.14) : AppTheme.surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: aktiv ? AppTheme.rose : AppTheme.border),
+              color: aktiv ? AppTheme.akzentTief.withValues(alpha: 0.14) : AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
             ),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(f.titel, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+              Text(f.titel, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
               if (f.beschreibung.isNotEmpty) ...[
                 const SizedBox(height: 2),
-                Text(f.beschreibung, style: TextStyle(fontSize: 12, color: AppTheme.textMuted)),
+                Text(f.beschreibung, style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm)),
               ],
             ]),
           ),
@@ -477,7 +478,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
 
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -487,10 +488,10 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
           HapticFeedback.selectionClick();
           onTap();
         },
-        selectedColor: AppTheme.rose.withValues(alpha: 0.22),
-        backgroundColor: AppTheme.surface,
-        side: BorderSide(color: aktiv ? AppTheme.rose : AppTheme.border),
-        labelStyle: TextStyle(color: aktiv ? AppTheme.textPrimary : AppTheme.textSecondary, fontWeight: FontWeight.w600),
+        selectedColor: AppTheme.akzentTief.withValues(alpha: 0.22),
+        backgroundColor: AppTheme.papierErhoben,
+        side: BorderSide(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
+        labelStyle: TextStyle(color: aktiv ? AppTheme.tinte : AppTheme.tinteLeise, fontWeight: FontWeight.w600),
         showCheckmark: false,
       );
 }

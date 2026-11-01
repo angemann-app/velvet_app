@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import '../../services/rueckmeldung.dart';
@@ -99,7 +100,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(t.onboardingProfileUpdated),
-              backgroundColor: AppTheme.sageGreen,
+              backgroundColor: AppTheme.akzent,
             ),
           );
         }
@@ -169,9 +170,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           return Container(
             padding: EdgeInsets.fromLTRB(20, 16, 20, MediaQuery.of(ctx).viewInsets.bottom + 20),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
+              color: AppTheme.papierErhoben,
               borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-              border: Border(top: BorderSide(color: AppTheme.border, width: 1.5)),
+              border: Border(top: BorderSide(color: AppTheme.linie, width: 1.5)),
             ),
             child: SingleChildScrollView(
               child: Column(
@@ -183,7 +184,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       width: 40,
                       height: 4,
                       decoration: BoxDecoration(
-                        color: AppTheme.border,
+                        color: AppTheme.linie,
                         borderRadius: BorderRadius.circular(2),
                       ),
                     ),
@@ -191,7 +192,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   const SizedBox(height: 16),
                   Row(
                     children: [
-                      Icon(Icons.restore_page_rounded, color: AppTheme.sageGreen, size: 24),
+                      Icon(Icons.restore_page_rounded, color: AppTheme.akzentTief, size: 24),
                       SizedBox(width: 10),
                       Expanded(
                         child: Column(
@@ -202,12 +203,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               style: TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
-                                color: AppTheme.textPrimary,
+                                color: AppTheme.tinte,
                               ),
                             ),
                             Text(
                               t.onboardingRestoreYourProfileLessonsCouple,
-                              style: TextStyle(fontSize: 12, color: AppTheme.textMuted),
+                              style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm),
                             ),
                           ],
                         ),
@@ -223,7 +224,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
                         color: AppTheme.statusJa.withValues(alpha: 0.12),
-                        borderRadius: BorderRadius.circular(14),
+                        borderRadius: BorderRadius.circular(VpRadius.karte),
                         border: Border.all(color: AppTheme.statusJa.withValues(alpha: 0.6)),
                       ),
                       child: Column(
@@ -261,7 +262,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               label: Text(t.onboardingRestoreAutomaticBackupNow, style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: AppTheme.statusJa,
-                                foregroundColor: AppTheme.background,
+                                foregroundColor: AppTheme.papier,
                               ),
                             ),
                           ),
@@ -276,21 +277,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       margin: const EdgeInsets.only(bottom: 14),
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
-                        color: AppTheme.amber.withValues(alpha: 0.12),
-                        borderRadius: BorderRadius.circular(14),
-                        border: Border.all(color: AppTheme.amber.withValues(alpha: 0.5)),
+                        color: AppTheme.akzentTief.withValues(alpha: 0.12),
+                        borderRadius: BorderRadius.circular(VpRadius.karte),
+                        border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5)),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             children: [
-                              Icon(Icons.content_paste_rounded, color: AppTheme.amber, size: 18),
+                              Icon(Icons.content_paste_rounded, color: AppTheme.akzentTief, size: 18),
                               SizedBox(width: 8),
                               Text(
                                 t.onboardingReadyInClipboard,
                                 style: TextStyle(
-                                  color: AppTheme.amber,
+                                  color: AppTheme.akzentTief,
                                   fontWeight: FontWeight.w800,
                                   fontSize: 11,
                                   letterSpacing: 0.6,
@@ -301,7 +302,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           const SizedBox(height: 6),
                           Text(
                             t.onboardingBackupForProfilename(clipData.profileName),
-                            style: TextStyle(color: AppTheme.textPrimary, fontSize: 13, fontWeight: FontWeight.w600),
+                            style: TextStyle(color: AppTheme.tinte, fontSize: 13, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 10),
                           SizedBox(
@@ -314,8 +315,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               icon: const Icon(Icons.done_all_rounded, size: 16),
                               label: Text(t.onboardingRestoreFromClipboard, style: TextStyle(fontWeight: FontWeight.bold)),
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: AppTheme.amber,
-                                foregroundColor: AppTheme.background,
+                                backgroundColor: AppTheme.akzentTief,
+                                foregroundColor: AppTheme.papier,
                               ),
                             ),
                           ),
@@ -330,22 +331,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w700,
-                      color: AppTheme.textSecondary,
+                      color: AppTheme.tinteLeise,
                     ),
                   ),
                   const SizedBox(height: 8),
                   TextField(
                     controller: inputController,
                     maxLines: 4,
-                    style: TextStyle(fontSize: 12, fontFamily: 'monospace', color: AppTheme.textPrimary),
+                    style: TextStyle(fontSize: 12, fontFamily: 'monospace', color: AppTheme.tinte),
                     decoration: InputDecoration(
                       hintText: t.onboardingPasteJsonTextHereE,
-                      hintStyle: TextStyle(color: AppTheme.textMuted, fontSize: 11),
+                      hintStyle: TextStyle(color: AppTheme.tinteStumm, fontSize: 11),
                       filled: true,
-                      fillColor: AppTheme.background,
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: AppTheme.border)),
+                      fillColor: AppTheme.papier,
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(VpRadius.karte), borderSide: BorderSide(color: AppTheme.linie)),
                       suffixIcon: IconButton(
-                        icon: Icon(Icons.paste_rounded, color: AppTheme.amber, size: 20),
+                        icon: Icon(Icons.paste_rounded, color: AppTheme.akzentTief, size: 20),
                         tooltip: t.pairingModalPasteFromClipboard,
                         onPressed: () async {
                           final c = await Clipboard.getData('text/plain');
@@ -367,7 +368,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         final raw = inputController.text.trim();
                         if (raw.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text(t.onboardingPleasePasteTheBackupJson), backgroundColor: AppTheme.amber),
+                            SnackBar(content: Text(t.onboardingPleasePasteTheBackupJson), backgroundColor: AppTheme.akzentTief),
                           );
                           return;
                         }
@@ -377,16 +378,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           await _applyRestore(backup);
                         } on BackupException catch (e) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text(e.message), backgroundColor: AppTheme.rose),
+                            SnackBar(content: Text(e.message), backgroundColor: AppTheme.signal),
                           );
                         }
                       },
                       icon: const Icon(Icons.check_rounded, size: 18),
                       label: Text(t.onboardingApplyBackupNow, style: TextStyle(fontWeight: FontWeight.bold)),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: AppTheme.sageGreen,
+                        backgroundColor: AppTheme.akzent,
                         foregroundColor: AppTheme.aufAkzent,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                       ),
                     ),
                   ),
@@ -420,7 +421,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(t.onboardingBackupForNameRestored(name)),
-          backgroundColor: AppTheme.sageGreen,
+          backgroundColor: AppTheme.akzent,
         ),
       );
 
@@ -441,7 +442,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       }
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(error), backgroundColor: AppTheme.rose),
+        SnackBar(content: Text(error), backgroundColor: AppTheme.signal),
       );
     }
   }
@@ -449,11 +450,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: widget.isEditing
           ? AppBar(
               title: Text(t.onboardingProfilePersonalisation),
-              backgroundColor: AppTheme.background,
+              backgroundColor: AppTheme.papier,
             )
           : null,
       body: SafeArea(
@@ -469,14 +470,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     width: 64,
                     height: 64,
                     decoration: BoxDecoration(
-                      color: AppTheme.surface,
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: AppTheme.border),
+                      color: AppTheme.papierErhoben,
+                      borderRadius: BorderRadius.circular(VpRadius.karte),
+                      border: Border.all(color: AppTheme.linie),
                       
                     ),
                     child: Icon(
                       Icons.spa_rounded,
-                      color: AppTheme.amber,
+                      color: AppTheme.akzentTief,
                       size: 34,
                     ),
                   ),
@@ -486,9 +487,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: Text(
                     t.onboardingWelcomeToVelvetpulse,
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w900,
-                      color: AppTheme.textPrimary,
+                      fontFamily: VpTypo.serif, fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                      color: AppTheme.tinte,
                       letterSpacing: -0.5,
                     ),
                   ),
@@ -500,7 +501,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 13,
-                      color: AppTheme.textSecondary,
+                      color: AppTheme.tinteLeise,
                       height: 1.4,
                     ),
                   ),
@@ -513,13 +514,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
-                    color: AppTheme.surface,
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.4)),
+                    color: AppTheme.papierErhoben,
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
+                    border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.4)),
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.cloud_download_rounded, color: AppTheme.sageGreen, size: 24),
+                      Icon(Icons.cloud_download_rounded, color: AppTheme.akzentTief, size: 24),
                       const SizedBox(width: 12),
                       Expanded(
                         child: Column(
@@ -530,12 +531,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               style: TextStyle(
                                 fontSize: 13.5,
                                 fontWeight: FontWeight.w700,
-                                color: AppTheme.textPrimary,
+                                color: AppTheme.tinte,
                               ),
                             ),
                             Text(
                               t.onboardingLoadABackupFromFile,
-                              style: TextStyle(fontSize: 11, color: AppTheme.textMuted),
+                              style: TextStyle(fontSize: 11, color: AppTheme.tinteStumm),
                             ),
                           ],
                         ),
@@ -543,8 +544,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       OutlinedButton(
                         onPressed: _promptRestoreBackup,
                         style: OutlinedButton.styleFrom(
-                          side: BorderSide(color: AppTheme.sageGreen),
-                          foregroundColor: AppTheme.sageGreen,
+                          side: BorderSide(color: AppTheme.akzentTief),
+                          foregroundColor: AppTheme.akzentTief,
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                         ),
                         child: Text(t.onboardingRestore, style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
@@ -559,9 +560,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: ElevatedButton(
                     onPressed: () => setState(() => _schritt = 1),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AppTheme.sageGreen,
+                      backgroundColor: AppTheme.akzent,
                       foregroundColor: AppTheme.aufAkzent,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                     ),
                     child: Text(t.onboardingLosGehts, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                   ),
@@ -571,15 +572,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
               if (!widget.isEditing && _schritt >= 1) ...[
                 Text(t.onboardingSchritt(_schritt, _fragen),
-                    style: TextStyle(fontSize: 12, color: AppTheme.textMuted, fontWeight: FontWeight.w600)),
+                    style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm, fontWeight: FontWeight.w600)),
                 const SizedBox(height: 6),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(4),
                   child: LinearProgressIndicator(
                     value: _schritt / _fragen,
                     minHeight: 4,
-                    backgroundColor: AppTheme.surfaceLight,
-                    valueColor: AlwaysStoppedAnimation(AppTheme.sageGreen),
+                    backgroundColor: AppTheme.papierVertieft,
+                    valueColor: AlwaysStoppedAnimation(AppTheme.akzentTief),
                   ),
                 ),
                 const SizedBox(height: 24),
@@ -591,23 +592,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(height: 8),
               TextField(
                 controller: _nameController,
-                style: TextStyle(color: AppTheme.textPrimary, fontSize: 15),
+                style: TextStyle(color: AppTheme.tinte, fontSize: 15),
                 decoration: InputDecoration(
                   hintText: t.onboardingYourFirstNameOrA,
-                  prefixIcon: Icon(Icons.badge_outlined, color: AppTheme.textMuted, size: 20),
+                  prefixIcon: Icon(Icons.badge_outlined, color: AppTheme.tinteStumm, size: 20),
                   filled: true,
-                  fillColor: AppTheme.surface,
+                  fillColor: AppTheme.papierErhoben,
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(14),
-                    borderSide: BorderSide(color: AppTheme.border),
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
+                    borderSide: BorderSide(color: AppTheme.linie),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(14),
-                    borderSide: BorderSide(color: AppTheme.border),
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
+                    borderSide: BorderSide(color: AppTheme.linie),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(14),
-                    borderSide: BorderSide(color: AppTheme.sageGreen),
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
+                    borderSide: BorderSide(color: AppTheme.akzentTief),
                   ),
                 ),
               ),
@@ -620,7 +621,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               _buildSectionTitle(t.onboardingYourGender, Icons.wc_rounded),
               Text(
                 t.onboardingAdjustsCourseRecommendationsPelvicFloor,
-                style: TextStyle(fontSize: 12, color: AppTheme.textMuted),
+                style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm),
               ),
               const SizedBox(height: 10),
               Row(
@@ -631,7 +632,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       current: _selectedGender,
                       label: t.onboardingMale,
                       icon: Icons.male_rounded,
-                      activeColor: AppTheme.sageGreen,
+                      activeColor: AppTheme.akzent,
                       onTap: () => setState(() => _selectedGender = 'male'),
                     ),
                   ),
@@ -653,7 +654,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       current: _selectedGender,
                       label: t.partnerProfileDialogNonBinary,
                       icon: Icons.all_inclusive_rounded,
-                      activeColor: AppTheme.amber,
+                      activeColor: AppTheme.akzentTief,
                       onTap: () => setState(() => _selectedGender = 'other'),
                     ),
                   ),
@@ -669,10 +670,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(height: 4),
               SliderTheme(
                 data: SliderTheme.of(context).copyWith(
-                  activeTrackColor: AppTheme.sageGreen,
-                  inactiveTrackColor: AppTheme.surfaceLight,
-                  thumbColor: AppTheme.sageGreen,
-                  overlayColor: AppTheme.sageGreen.withValues(alpha: 0.2),
+                  activeTrackColor: AppTheme.akzentTief,
+                  inactiveTrackColor: AppTheme.papierVertieft,
+                  thumbColor: AppTheme.akzent,
+                  overlayColor: AppTheme.akzentTief.withValues(alpha: 0.2),
                   trackHeight: 6,
                 ),
                 child: Slider(
@@ -768,9 +769,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ? null
                       : (!widget.isEditing && _schritt < _fragen ? () => setState(() => _schritt++) : _submit),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppTheme.sageGreen,
+                    backgroundColor: AppTheme.akzent,
                     foregroundColor: AppTheme.aufAkzent,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                   ),
                   child: _isSubmitting
                       ? SizedBox(
@@ -794,7 +795,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Center(
                   child: TextButton(
                     onPressed: () => setState(() => _schritt--),
-                    child: Text(t.onboardingZurueck, style: TextStyle(color: AppTheme.textSecondary)),
+                    child: Text(t.onboardingZurueck, style: TextStyle(color: AppTheme.tinteLeise)),
                   ),
                 ),
 
@@ -825,10 +826,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               );
                             }
                           },
-                    icon: Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.textMuted),
+                    icon: Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.tinteStumm),
                     label: Text(
                       t.onboardingSkipGoStraightToThe,
-                      style: TextStyle(color: AppTheme.textMuted, fontSize: 13),
+                      style: TextStyle(color: AppTheme.tinteStumm, fontSize: 13),
                     ),
                   ),
                 ),
@@ -836,7 +837,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
               if (widget.isEditing) ...[
                 const SizedBox(height: 24),
-                Divider(color: AppTheme.border),
+                Divider(color: AppTheme.linie),
                 const SizedBox(height: 16),
                 OutlinedButton.icon(
                   onPressed: () =>
@@ -844,9 +845,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   icon: const Icon(Icons.menu_book_rounded),
                   label: Text(t.anleitungTitel),
                   style: OutlinedButton.styleFrom(
-                    foregroundColor: AppTheme.sageGreen,
+                    foregroundColor: AppTheme.akzentTief,
                     minimumSize: const Size.fromHeight(48),
-                    side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.6)),
+                    side: BorderSide(color: AppTheme.akzentTief.withValues(alpha: 0.6)),
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -856,9 +857,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   icon: const Icon(Icons.campaign_outlined),
                   label: Text(t.rueckmeldungTitel),
                   style: OutlinedButton.styleFrom(
-                    foregroundColor: AppTheme.textSecondary,
+                    foregroundColor: AppTheme.tinteLeise,
                     minimumSize: const Size.fromHeight(48),
-                    side: BorderSide(color: AppTheme.border),
+                    side: BorderSide(color: AppTheme.linie),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -890,19 +891,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     Widget zeile(IconData icon, String text) => Padding(
           padding: const EdgeInsets.symmetric(vertical: 6),
           child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Icon(icon, color: AppTheme.sageGreen, size: 20),
+            Icon(icon, color: AppTheme.akzentTief, size: 20),
             const SizedBox(width: 12),
             Expanded(
-              child: Text(text, style: TextStyle(fontSize: 14, color: AppTheme.textPrimary, height: 1.4)),
+              child: Text(text, style: TextStyle(fontSize: 14, color: AppTheme.tinte, height: 1.4)),
             ),
           ]),
         );
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 10, 16, 4),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         zeile(Icons.lock_outline_rounded, t.onboardingVersprechenLokal),
@@ -914,13 +915,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             onPressed: () => showDialog<void>(
               context: context,
               builder: (ctx) => AlertDialog(
-                backgroundColor: AppTheme.surface,
+                backgroundColor: AppTheme.papierErhoben,
                 title: Text(t.onboardingMehrDatenschutz),
                 content: Text(t.onboardingPrivateProfileJournalProgressStay),
                 actions: [TextButton(onPressed: () => Navigator.of(ctx).pop(), child: Text(t.onboardingOk))],
               ),
             ),
-            child: Text(t.onboardingMehrDatenschutz, style: TextStyle(color: AppTheme.sageGreen)),
+            child: Text(t.onboardingMehrDatenschutz, style: TextStyle(color: AppTheme.akzentTief)),
           ),
         ),
       ]),
@@ -930,14 +931,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget _buildSectionTitle(String title, IconData icon) {
     return Row(
       children: [
-        Icon(icon, color: AppTheme.amber, size: 18),
+        Icon(icon, color: AppTheme.akzentTief, size: 18),
         const SizedBox(width: 8),
         Text(
           title,
           style: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w700,
-            color: AppTheme.textPrimary,
+            color: AppTheme.tinte,
           ),
         ),
       ],
@@ -955,27 +956,27 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final isSelected = current == id;
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(VpRadius.karte),
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 14),
         decoration: BoxDecoration(
-          color: isSelected ? activeColor.withValues(alpha: 0.18) : AppTheme.surface,
-          borderRadius: BorderRadius.circular(14),
+          color: isSelected ? activeColor.withValues(alpha: 0.18) : AppTheme.papierErhoben,
+          borderRadius: BorderRadius.circular(VpRadius.karte),
           border: Border.all(
-            color: isSelected ? activeColor : AppTheme.border,
+            color: isSelected ? activeColor : AppTheme.linie,
             width: isSelected ? 1.8 : 1.0,
           ),
         ),
         child: Column(
           children: [
-            Icon(icon, color: isSelected ? activeColor : AppTheme.textSecondary, size: 24),
+            Icon(icon, color: isSelected ? activeColor : AppTheme.tinteLeise, size: 24),
             const SizedBox(height: 6),
             Text(
               label,
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-                color: isSelected ? AppTheme.textPrimary : AppTheme.textSecondary,
+                color: isSelected ? AppTheme.tinte : AppTheme.tinteLeise,
               ),
             ),
           ],
@@ -993,14 +994,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final isSelected = current == id;
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(VpRadius.karte),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          color: isSelected ? AppTheme.sageGreen.withValues(alpha: 0.18) : AppTheme.surface,
-          borderRadius: BorderRadius.circular(12),
+          color: isSelected ? AppTheme.akzentTief.withValues(alpha: 0.18) : AppTheme.papierErhoben,
+          borderRadius: BorderRadius.circular(VpRadius.karte),
           border: Border.all(
-            color: isSelected ? AppTheme.sageGreen : AppTheme.border,
+            color: isSelected ? AppTheme.akzentTief : AppTheme.linie,
             width: isSelected ? 1.5 : 1.0,
           ),
         ),
@@ -1009,7 +1010,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           style: TextStyle(
             fontSize: 13,
             fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-            color: isSelected ? AppTheme.textPrimary : AppTheme.textSecondary,
+            color: isSelected ? AppTheme.tinte : AppTheme.tinteLeise,
           ),
         ),
       ),
@@ -1024,14 +1025,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     final isSelected = _selectedGoal == id;
     return InkWell(
       onTap: () => setState(() => _selectedGoal = id),
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(VpRadius.karte),
       child: Container(
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
-          color: isSelected ? AppTheme.surfaceLight.withValues(alpha: 0.5) : AppTheme.surface,
-          borderRadius: BorderRadius.circular(14),
+          color: isSelected ? AppTheme.papierVertieft.withValues(alpha: 0.5) : AppTheme.papierErhoben,
+          borderRadius: BorderRadius.circular(VpRadius.karte),
           border: Border.all(
-            color: isSelected ? AppTheme.sageGreen : AppTheme.border,
+            color: isSelected ? AppTheme.akzentTief : AppTheme.linie,
             width: isSelected ? 1.6 : 1.0,
           ),
         ),
@@ -1039,7 +1040,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           children: [
             Icon(
               isSelected ? Icons.check_circle_rounded : Icons.circle_outlined,
-              color: isSelected ? AppTheme.sageGreen : AppTheme.textMuted,
+              color: isSelected ? AppTheme.akzentTief : AppTheme.tinteStumm,
               size: 20,
             ),
             const SizedBox(width: 12),
@@ -1050,7 +1051,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   Text(
                     title,
                     style: TextStyle(
-                      color: AppTheme.textPrimary,
+                      color: AppTheme.tinte,
                       fontWeight: isSelected ? FontWeight.w700 : FontWeight.w600,
                       fontSize: 13.5,
                     ),
@@ -1059,7 +1060,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   Text(
                     subtitle,
                     style: TextStyle(
-                      color: AppTheme.textSecondary,
+                      color: AppTheme.tinteLeise,
                       fontSize: 11.5,
                     ),
                   ),
@@ -1096,15 +1097,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 10, 8, 10),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Column(
         children: [
           Row(
             children: [
-              Icon(Icons.system_update_rounded, color: AppTheme.sageGreen, size: 20),
+              Icon(Icons.system_update_rounded, color: AppTheme.akzentTief, size: 20),
               const SizedBox(width: 10),
               Expanded(
                 child: GestureDetector(
@@ -1119,28 +1120,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     future: UpdateService.installedVersion(),
                     builder: (context, snap) => Text(
                       t.onboardingVersionData(snap.data ?? '…'),
-                      style: TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+                      style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13),
                     ),
                   ),
                 ),
               ),
               TextButton(
                 onPressed: () => checkForUpdateAndPrompt(context, force: true),
-                child: Text(t.onboardingCheckForUpdates, style: TextStyle(color: AppTheme.sageGreen)),
+                child: Text(t.onboardingCheckForUpdates, style: TextStyle(color: AppTheme.akzentTief)),
               ),
             ],
           ),
           SwitchListTile(
             contentPadding: const EdgeInsets.only(left: 30, right: 4),
             value: _updateChannel == UpdateChannel.beta,
-            activeThumbColor: AppTheme.amber,
+            activeThumbColor: AppTheme.akzentTief,
             title: Text(t.onboardingReceiveBetaVersions,
-                style: TextStyle(color: AppTheme.textPrimary, fontSize: 14)),
+                style: TextStyle(color: AppTheme.tinte, fontSize: 14)),
             subtitle: Text(
               _updateChannel == UpdateChannel.beta
                   ? t.onboardingYouGetNewFeaturesEarlier
                   : t.onboardingOnlyTestedVersionsWhenSwitching,
-              style: TextStyle(color: AppTheme.textMuted, fontSize: 12, height: 1.35),
+              style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12, height: 1.35),
             ),
             onChanged: (beta) async {
               final channel = beta ? UpdateChannel.beta : UpdateChannel.stable;
@@ -1158,23 +1159,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 16, 8, 8),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.translate_rounded, color: AppTheme.sageGreen, size: 20),
+              Icon(Icons.translate_rounded, color: AppTheme.akzentTief, size: 20),
               const SizedBox(width: 8),
               Text(t.spracheTitel,
-                  style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5, fontWeight: FontWeight.w700)),
+                  style: TextStyle(color: AppTheme.tinte, fontSize: 14.5, fontWeight: FontWeight.w700)),
             ],
           ),
           const SizedBox(height: 4),
-          Text(t.spracheHinweis, style: TextStyle(color: AppTheme.textMuted, fontSize: 12.5, height: 1.4)),
+          Text(t.spracheHinweis, style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12.5, height: 1.4)),
           const SizedBox(height: 6),
           RadioGroup<String>(
             groupValue: Sprache.wahl.value,
@@ -1191,8 +1192,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   value: wert,
                   dense: true,
                   contentPadding: EdgeInsets.zero,
-                  activeColor: AppTheme.sageGreen,
-                  title: Text(text, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14)),
+                  activeColor: AppTheme.akzent,
+                  title: Text(text, style: TextStyle(color: AppTheme.tinte, fontSize: 14)),
                 ),
             ]),
           ),
@@ -1206,27 +1207,27 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 16, 8, 8),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.visibility_off_rounded, color: AppTheme.sageGreen, size: 20),
+              Icon(Icons.visibility_off_rounded, color: AppTheme.akzentTief, size: 20),
               SizedBox(width: 8),
               Text(
                 t.onboardingDiscretion,
-                style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5, fontWeight: FontWeight.w700),
+                style: TextStyle(color: AppTheme.tinte, fontSize: 14.5, fontWeight: FontWeight.w700),
               ),
             ],
           ),
           SwitchListTile(
             contentPadding: const EdgeInsets.only(right: 8),
             value: _lockEnabled,
-            activeThumbColor: AppTheme.sageGreen,
+            activeThumbColor: AppTheme.akzent,
             onChanged: _lockSupported
                 ? (value) async {
                     final ok = await PrivacyService.setLockEnabled(value);
@@ -1238,13 +1239,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               _lockSupported
                   ? t.onboardingOnOpeningAndAfterOne
                   : t.onboardingNoScreenLockIsSet,
-              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+              style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
             ),
           ),
           SwitchListTile(
             contentPadding: const EdgeInsets.only(right: 8),
             value: _discreetIcon,
-            activeThumbColor: AppTheme.sageGreen,
+            activeThumbColor: AppTheme.akzent,
             onChanged: (value) async {
               await PrivacyService.setDiscreetIcon(value);
               if (!mounted) return;
@@ -1260,13 +1261,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             title: Text(t.onboardingDiscreetAppIcon, style: TextStyle(fontSize: 14)),
             subtitle: Text(
               t.onboardingShowsPulseWithANeutral,
-              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+              style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
             ),
           ),
           SwitchListTile(
             contentPadding: const EdgeInsets.only(right: 8),
             value: _personalizeNames,
-            activeThumbColor: AppTheme.sageGreen,
+            activeThumbColor: AppTheme.akzent,
             onChanged: (value) async {
               await StorageService.setPersonalizeNames(value);
               if (mounted) setState(() => _personalizeNames = value);
@@ -1274,13 +1275,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             title: Text(t.onboardingCallYourPartnerByName, style: TextStyle(fontSize: 14)),
             subtitle: Text(
               t.onboardingForExampleAnnaLiesOn,
-              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+              style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
             ),
           ),
           SwitchListTile(
             contentPadding: const EdgeInsets.only(right: 8),
             value: _notifyMessages,
-            activeThumbColor: AppTheme.sageGreen,
+            activeThumbColor: AppTheme.akzent,
             onChanged: (value) async {
               final ok = await MessageNotifier.setEnabled(value);
               if (!mounted) return;
@@ -1295,13 +1296,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             title: Text(t.onboardingNotifyAboutNewMessages, style: TextStyle(fontSize: 14)),
             subtitle: Text(
               t.onboardingEvenWhenTheAppIs,
-              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+              style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
             ),
           ),
           SwitchListTile(
             contentPadding: const EdgeInsets.only(right: 8),
             value: _frageVorLautsprecher,
-            activeThumbColor: AppTheme.sageGreen,
+            activeThumbColor: AppTheme.akzent,
             onChanged: (value) async {
               await StorageService.setFrageVorLautsprecher(value);
               if (mounted) setState(() => _frageVorLautsprecher = value);
@@ -1309,13 +1310,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             title: Text(t.lautsprecherEinstellungFrageTitel, style: const TextStyle(fontSize: 14)),
             subtitle: Text(
               t.lautsprecherEinstellungFrageText,
-              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+              style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
             ),
           ),
           SwitchListTile(
             contentPadding: const EdgeInsets.only(right: 8),
             value: _pausiereBeiKopfhoererGetrennt,
-            activeThumbColor: AppTheme.sageGreen,
+            activeThumbColor: AppTheme.akzent,
             onChanged: (value) async {
               await StorageService.setPausiereBeiKopfhoererGetrennt(value);
               if (mounted) setState(() => _pausiereBeiKopfhoererGetrennt = value);
@@ -1323,7 +1324,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             title: Text(t.lautsprecherEinstellungPauseTitel, style: const TextStyle(fontSize: 14)),
             subtitle: Text(
               t.lautsprecherEinstellungPauseText,
-              style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+              style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
             ),
           ),
         ],
@@ -1337,14 +1338,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(t.designTitel, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700)),
         const SizedBox(height: 4),
-        Text(t.designText, style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35)),
+        Text(t.designText, style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35)),
         const SizedBox(height: 12),
         ValueListenableBuilder<String>(
           valueListenable: StorageService.designAenderung,
@@ -1366,19 +1367,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 8, 8, 8),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: SwitchListTile(
         contentPadding: const EdgeInsets.only(right: 8),
         value: _spicyMode,
         activeThumbColor: AppTheme.akzentTief,
-        secondary: Icon(Icons.spa_outlined, color: _spicyMode ? AppTheme.akzentTief : AppTheme.textMuted),
+        secondary: Icon(Icons.spa_outlined, color: _spicyMode ? AppTheme.akzentTief : AppTheme.tinteStumm),
         title: Text(t.spicyModus, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700)),
         subtitle: Text(
           t.spicyModusText,
-          style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.35),
+          style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
         ),
         onChanged: (value) async {
           if (value) {
@@ -1396,21 +1397,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.shield_rounded, color: AppTheme.sageGreen, size: 20),
+              Icon(Icons.shield_rounded, color: AppTheme.akzentTief, size: 20),
               SizedBox(width: 8),
               Text(
                 t.onboardingPrivacyUpdateSafety,
                 style: TextStyle(
-                  color: AppTheme.textPrimary,
+                  color: AppTheme.tinte,
                   fontSize: 14.5,
                   fontWeight: FontWeight.w700,
                 ),
@@ -1420,7 +1421,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           const SizedBox(height: 8),
           Text(
             t.onboardingEverythingStaysLocalOnYour,
-            style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
+            style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5, height: 1.4),
           ),
           const SizedBox(height: 14),
           Row(
@@ -1431,8 +1432,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   icon: const Icon(Icons.copy_rounded, size: 16),
                   label: Text(t.onboardingExportBackup, style: TextStyle(fontSize: 12)),
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.5)),
-                    foregroundColor: AppTheme.sageGreen,
+                    side: BorderSide(color: AppTheme.akzentTief.withValues(alpha: 0.5)),
+                    foregroundColor: AppTheme.akzentTief,
                     padding: const EdgeInsets.symmetric(vertical: 10),
                   ),
                 ),
@@ -1444,8 +1445,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   icon: const Icon(Icons.restore_page_rounded, size: 16),
                   label: Text(t.onboardingRestore, style: TextStyle(fontSize: 12)),
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: AppTheme.amber.withValues(alpha: 0.5)),
-                    foregroundColor: AppTheme.amber,
+                    side: BorderSide(color: AppTheme.akzentTief.withValues(alpha: 0.5)),
+                    foregroundColor: AppTheme.akzentTief,
                     padding: const EdgeInsets.symmetric(vertical: 10),
                   ),
                 ),
@@ -1474,12 +1475,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       if (mounted) {
         setState(() => _halloGesendetAm = datumStr);
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(t.halloGesendet), backgroundColor: AppTheme.sageGreen),
+          SnackBar(content: Text(t.halloGesendet), backgroundColor: AppTheme.akzent),
         );
       }
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(t.rueckmeldungFehler), backgroundColor: AppTheme.rose),
+        SnackBar(content: Text(t.rueckmeldungFehler), backgroundColor: AppTheme.signal),
       );
     }
   }
@@ -1489,21 +1490,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.waving_hand_rounded, color: AppTheme.amber, size: 20),
+              Icon(Icons.waving_hand_rounded, color: AppTheme.akzentTief, size: 20),
               const SizedBox(width: 8),
               Text(
                 t.halloTitel,
                 style: TextStyle(
-                  color: AppTheme.textPrimary,
+                  color: AppTheme.tinte,
                   fontSize: 14.5,
                   fontWeight: FontWeight.w700,
                 ),
@@ -1513,13 +1514,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           const SizedBox(height: 6),
           Text(
             t.halloErklaerung,
-            style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
+            style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5, height: 1.4),
           ),
           const SizedBox(height: 12),
           if (gesendet != null)
             Text(
               t.halloDankeGesendet(gesendet),
-              style: TextStyle(color: AppTheme.sageGreen, fontSize: 13, fontWeight: FontWeight.w600),
+              style: TextStyle(color: AppTheme.akzentTief, fontSize: 13, fontWeight: FontWeight.w600),
             )
           else
             OutlinedButton.icon(
@@ -1529,8 +1530,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   : const Icon(Icons.send_rounded, size: 16),
               label: Text(t.halloKnopf, style: const TextStyle(fontSize: 12.5)),
               style: OutlinedButton.styleFrom(
-                side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.5)),
-                foregroundColor: AppTheme.sageGreen,
+                side: BorderSide(color: AppTheme.akzentTief.withValues(alpha: 0.5)),
+                foregroundColor: AppTheme.akzentTief,
                 padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
               ),
             ),

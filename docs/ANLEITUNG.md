@@ -15,6 +15,7 @@ Diese Anleitung steht auch in der App (Fragezeichen oben rechts oder im Profil).
 - [Datenschutz, Diskretion und Sicherung](#datenschutz-diskretion-und-sicherung)
 - [Updates und Beta](#updates-und-beta)
 - [Sprache und englische Aufnahmen](#sprache-und-englische-aufnahmen)
+- [Darstellung](#darstellung)
 - [Hilfe und Rückmeldung](#hilfe-und-rückmeldung)
 
 ## Erste Schritte
@@ -140,6 +141,11 @@ Nach einem Update zeigt „Was ist neu“ einmal, was sich geändert hat.
 Die App gibt es auf Deutsch und Englisch. Sie richtet sich nach der Sprache deines Handys, im Profil kannst du sie umstellen.
 
 Die Aufnahmen von Victoria und Martin lädst du im Profil unter „Aufnahmen“ nach, getrennt nach Lektionen und geführten Audios, auf Deutsch wie auf Englisch. Sie sind nicht mehr in der App selbst, damit sie klein bleibt und korrigierte Aufnahmen ohne Update kommen. Fehlt eine Aufnahme, liest die Stimme deines Handys vor.
+
+
+## Darstellung
+
+Unter Profil und Einstellungen findest du „Darstellung“: Papier ist hell und der Standard, Nachtpapier ist dunkel, Klassisch sind die bisherigen Farben. Die Wahl gilt sofort für die ganze App. Im Spicy-Modus gelten eigene Farben.
 
 
 ## Hilfe und Rückmeldung

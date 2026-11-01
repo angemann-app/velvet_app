@@ -14,11 +14,11 @@ Future<void> showExportBackupDialog(BuildContext context) async {
   final withSecrets = await showDialog<bool>(
     context: context,
     builder: (ctx) => AlertDialog(
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.papierErhoben,
       title: Text(t.backupDialogsWhatShouldGoIntoThe),
       content: Text(
         t.backupDialogsOnlyYourDataProfileProgress,
-        style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+        style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
       ),
       actions: [
         TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.backupDialogsDataOnly)),
@@ -43,11 +43,11 @@ Future<void> showExportBackupDialog(BuildContext context) async {
   await showDialog<void>(
     context: context,
     builder: (ctx) => AlertDialog(
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.papierErhoben,
       title: Text(t.backupDialogsBackupCopied),
       content: Text(
         t.backupDialogsBackupCopiedText + (withSecrets ? t.backupDialogsPasswordCannotBeReset : ''),
-        style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+        style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
       ),
       actions: [TextButton(onPressed: () => Navigator.pop(ctx), child: Text(t.backupDialogsOk))],
     ),
@@ -61,11 +61,11 @@ Future<Map<String, String>?> resolveBackupSecrets(BuildContext context, Validate
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.backupDialogsOlderBackup),
         content: Text(
           t.backupDialogsThisBackupComesFromAn,
-          style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+          style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
         ),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
@@ -83,7 +83,7 @@ Future<Map<String, String>?> resolveBackupSecrets(BuildContext context, Validate
     final result = await showDialog<String>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.backupDialogsBackupPassword),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -91,7 +91,7 @@ Future<Map<String, String>?> resolveBackupSecrets(BuildContext context, Validate
           children: [
             Text(
               t.backupDialogsThisAlsoBringsBackThe,
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+              style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
             ),
             const SizedBox(height: 12),
             TextField(
@@ -129,7 +129,7 @@ Future<String?> _askNewPassword(BuildContext context) async {
     context: context,
     builder: (ctx) => StatefulBuilder(
       builder: (ctx, setState) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.backupDialogsPasswordForTheBackup),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -170,7 +170,7 @@ Future<T> _withProgress<T>(BuildContext context, Future<T> work) async {
     context: context,
     barrierDismissible: false,
     builder: (_) => AlertDialog(
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.papierErhoben,
       content: Row(
         children: [
           SizedBox(width: 22, height: 22, child: CircularProgressIndicator(strokeWidth: 2.5)),

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -353,9 +354,9 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         if (!didPop) _fragBeenden();
       },
       child: Scaffold(
-        backgroundColor: AppTheme.background,
+        backgroundColor: AppTheme.papier,
         appBar: AppBar(
-            backgroundColor: AppTheme.background,
+            backgroundColor: AppTheme.papier,
             title: Text(widget.lust != null
                 ? '${t.lustFolgeN(widget.lust!.folge)} · ${lustFolgeTitel(widget.lust!.folge)}'
                 : (widget.traum ? t.traumTitel : t.einschlafTitel)),
@@ -370,7 +371,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
             ]),
         body: SafeArea(
           child: _daten == null
-              ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
+              ? Center(child: CircularProgressIndicator(color: AppTheme.akzentTief))
               : (laeuft ? _buildPlayer() : _buildEinrichtung()),
         ),
       ),
@@ -381,7 +382,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
     final ja = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.einschlafBeenden),
         content: Text(t.einschlafBeendenText),
         actions: [
@@ -399,23 +400,23 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
       padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
       children: [
         if (widget.lust != null && _lustDaten == null) ...[
-          Text(t.lustPaketFehlt, style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5)),
+          Text(t.lustPaketFehlt, style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5)),
           const SizedBox(height: 14),
         ],
-        Text(widget.lust != null ? t.lustEinleitung : (widget.traum ? t.traumEinleitung : t.einschlafEinleitung), style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5)),
+        Text(widget.lust != null ? t.lustEinleitung : (widget.traum ? t.traumEinleitung : t.einschlafEinleitung), style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5)),
         const SizedBox(height: 14),
         Container(
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            color: AppTheme.surface,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: AppTheme.border),
+            color: AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: AppTheme.linie),
           ),
           child: Text(
               widget.lust != null
                   ? t.lustEhrlich
                   : (widget.traum ? (_traumDaten?.hinweis('hinweis_einstieg') ?? '') : t.einschlafWirkung),
-              style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.5)),
+              style: TextStyle(fontSize: 13, color: AppTheme.tinteLeise, height: 1.5)),
         ),
         const SizedBox(height: 22),
         _titel(t.einschlafLaenge),
@@ -442,10 +443,10 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
             SwitchListTile(
               contentPadding: EdgeInsets.zero,
               value: _spicy,
-              activeThumbColor: AppTheme.rose,
+              activeThumbColor: AppTheme.akzentTief,
               onChanged: (v) => setState(() => _spicy = v),
-              title: Text(t.einschlafSpicyTitel, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
-              subtitle: Text(t.einschlafSpicyText, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5)),
+              title: Text(t.einschlafSpicyTitel, style: TextStyle(color: AppTheme.tinte, fontSize: 14.5)),
+              subtitle: Text(t.einschlafSpicyText, style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5)),
             ),
         ],
         const SizedBox(height: 20),
@@ -458,11 +459,11 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
           value: _teppich,
-          activeThumbColor: AppTheme.rose,
+          activeThumbColor: AppTheme.akzentTief,
           onChanged: (v) => setState(() => _teppich = v),
-          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.tinte, fontSize: 14.5)),
           subtitle: Text(t.paarAbendCalmBackgroundDuringTheSilences,
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5)),
+              style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5)),
         ),
         const SizedBox(height: 14),
         if (widget.traum) ...[
@@ -471,11 +472,11 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
           _buildWeckenSchalter(),
           const SizedBox(height: 14),
         ],
-        Text(t.einschlafHinweise, style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
+        Text(t.einschlafHinweise, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
         if ((widget.traum || widget.lust != null) && _traumDaten?.hinweis('hinweis_schlafparalyse') != null) ...[
           const SizedBox(height: 10),
           Text(_traumDaten!.hinweis('hinweis_schlafparalyse')!,
-              style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
+              style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
         ],
         const SizedBox(height: 22),
         SizedBox(
@@ -487,7 +488,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
             style: ElevatedButton.styleFrom(
               backgroundColor: AppTheme.akzent,
               foregroundColor: AppTheme.aufAkzent,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
             ),
           ),
         ),
@@ -504,17 +505,17 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
         );
         if (mounted) setState(() {});
       },
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(VpRadius.karte),
       child: Container(
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
-          color: AppTheme.surface,
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: AppTheme.border),
+          color: AppTheme.papierErhoben,
+          borderRadius: BorderRadius.circular(VpRadius.karte),
+          border: Border.all(color: AppTheme.linie),
         ),
         child: Row(
           children: [
-            Icon(Icons.touch_app_outlined, color: AppTheme.sageGreen, size: 22),
+            Icon(Icons.touch_app_outlined, color: AppTheme.akzentTief, size: 22),
             const SizedBox(width: 12),
             Expanded(
               child: Column(
@@ -525,18 +526,18 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
                     style: TextStyle(
                       fontSize: 14.5,
                       fontWeight: FontWeight.w700,
-                      color: AppTheme.textPrimary,
+                      color: AppTheme.tinte,
                     ),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     aktiv ? t.realitaetStatusEin : t.realitaetStatusAus,
-                    style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
+                    style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise),
                   ),
                 ],
               ),
             ),
-            Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
+            Icon(Icons.chevron_right_rounded, color: AppTheme.tinteLeise),
           ],
         ),
       ),
@@ -549,9 +550,9 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: aktiv ? AppTheme.rose.withValues(alpha: 0.5) : AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: aktiv ? AppTheme.akzentTief.withValues(alpha: 0.5) : AppTheme.linie),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -559,17 +560,17 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
           SwitchListTile(
             contentPadding: EdgeInsets.zero,
             value: aktiv,
-            activeThumbColor: AppTheme.rose,
+            activeThumbColor: AppTheme.akzentTief,
             onChanged: darfWecken
                 ? (v) => setState(() {
                       _heuteWecken = v;
                       if (v) _weckenZeit = NaechtlichesWecken.schlageWeckzeitVor();
                     })
                 : null,
-            title: Text(t.weckenTitel, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+            title: Text(t.weckenTitel, style: TextStyle(color: AppTheme.tinte, fontSize: 14.5)),
             subtitle: Text(
               darfWecken ? t.weckenUntertitel : t.weckenGesperrt,
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4),
+              style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5, height: 1.4),
             ),
           ),
           if (aktiv) ...[
@@ -579,18 +580,18 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
               children: [
                 Text(
                   t.weckenUhrzeit(NaechtlichesWecken.formatUhrzeit(_weckenZeit)),
-                  style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600, color: AppTheme.textPrimary),
+                  style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600, color: AppTheme.tinte),
                 ),
                 TextButton(
                   onPressed: _weckzeitWaehlen,
-                  child: Text(t.weckenAendern, style: TextStyle(color: AppTheme.rose)),
+                  child: Text(t.weckenAendern, style: TextStyle(color: AppTheme.akzentTief)),
                 ),
               ],
             ),
             const SizedBox(height: 4),
             Text(
               t.weckenSicherheit,
-              style: TextStyle(fontSize: 12, color: AppTheme.textMuted, height: 1.45),
+              style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm, height: 1.45),
             ),
           ],
         ],
@@ -610,7 +611,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
 
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -620,10 +621,10 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
           HapticFeedback.selectionClick();
           onTap();
         },
-        selectedColor: AppTheme.rose.withValues(alpha: 0.22),
-        backgroundColor: AppTheme.surface,
-        side: BorderSide(color: aktiv ? AppTheme.rose : AppTheme.border),
-        labelStyle: TextStyle(color: aktiv ? AppTheme.textPrimary : AppTheme.textSecondary, fontWeight: FontWeight.w600),
+        selectedColor: AppTheme.akzentTief.withValues(alpha: 0.22),
+        backgroundColor: AppTheme.papierErhoben,
+        side: BorderSide(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
+        labelStyle: TextStyle(color: aktiv ? AppTheme.tinte : AppTheme.tinteLeise, fontWeight: FontWeight.w600),
         showCheckmark: false,
       );
 
@@ -641,14 +642,14 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
           child: LinearProgressIndicator(
             value: fortschritt.clamp(0.0, 1.0),
             minHeight: 3,
-            backgroundColor: AppTheme.surfaceLight,
-            color: AppTheme.rose.withValues(alpha: 0.6),
+            backgroundColor: AppTheme.papierVertieft,
+            color: AppTheme.akzentTief.withValues(alpha: 0.6),
           ),
         ),
         const SizedBox(height: 8),
         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
-          Text(_fmt(gesamt), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+          Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
+          Text(_fmt(gesamt), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
         ]),
         const Spacer(),
         AnimatedContainer(
@@ -661,15 +662,15 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
             border: Border.all(color: AppTheme.linieStark, width: 1),
           ),
           child: Center(
-            child: Icon(Icons.bedtime_rounded, color: AppTheme.textPrimary.withValues(alpha: 0.6), size: 44),
+            child: Icon(Icons.bedtime_rounded, color: AppTheme.tinte.withValues(alpha: 0.6), size: 44),
           ),
         ),
         const SizedBox(height: 28),
         Text(_fertig ? t.einschlafLaeuft : t.einschlafLaeuft,
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700, color: AppTheme.textSecondary)),
+            style: TextStyle(fontFamily: VpTypo.serif, fontSize: 22, fontWeight: FontWeight.w600, color: AppTheme.tinteLeise)),
         const SizedBox(height: 10),
         Text(_pausiert ? t.paarAbendPaused : t.einschlafLaeuftText,
-            textAlign: TextAlign.center, style: TextStyle(fontSize: 13, color: AppTheme.textMuted, height: 1.4)),
+            textAlign: TextAlign.center, style: TextStyle(fontSize: 13, color: AppTheme.tinteStumm, height: 1.4)),
         const Spacer(),
         if (_fertig)
           SizedBox(
@@ -678,9 +679,9 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
             child: OutlinedButton(
               onPressed: () => Navigator.of(context).pop(),
               style: OutlinedButton.styleFrom(
-                foregroundColor: AppTheme.rose,
-                side: BorderSide(color: AppTheme.rose),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                foregroundColor: AppTheme.akzentTief,
+                side: BorderSide(color: AppTheme.akzentTief),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
               ),
               child: Text(t.couplesChannelClose, style: TextStyle(fontWeight: FontWeight.w700)),
             ),

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -250,14 +251,14 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         if (!didPop) _fragBeenden();
       },
       child: Scaffold(
-        backgroundColor: AppTheme.background,
+        backgroundColor: AppTheme.papier,
         appBar: AppBar(
-          backgroundColor: AppTheme.background,
+          backgroundColor: AppTheme.papier,
           title: Text(t.couplesChannelSharedEvening),
         ),
         body: SafeArea(
           child: _daten == null
-              ? Center(child: CircularProgressIndicator(color: AppTheme.amber))
+              ? Center(child: CircularProgressIndicator(color: AppTheme.akzentTief))
               : (laeuft ? _buildPlayer() : _buildEinrichtung()),
         ),
       ),
@@ -268,7 +269,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     final ja = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.paarAbendEndTheEvening),
         content: Text(t.paarAbendTheGuidanceStopsThenYou),
         actions: [
@@ -286,7 +287,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
       children: [
         Text(
           t.paarAbendPutThePhoneNextTo,
-          style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5),
+          style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5),
         ),
         const SizedBox(height: 22),
         _titel(t.paarAbendDuration),
@@ -330,29 +331,29 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
           value: _teppich,
-          activeThumbColor: AppTheme.amber,
+          activeThumbColor: AppTheme.akzentTief,
           onChanged: (v) => setState(() => _teppich = v),
-          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.tinte, fontSize: 14.5)),
           subtitle: Text(t.paarAbendCalmBackgroundDuringTheSilences,
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5)),
+              style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5)),
         ),
         const SizedBox(height: 12),
         Container(
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            color: AppTheme.sageGreen.withValues(alpha: 0.08),
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.35)),
+            color: AppTheme.akzentTief.withValues(alpha: 0.08),
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.35)),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.handshake_outlined, color: AppTheme.sageGreen, size: 20),
+              Icon(Icons.handshake_outlined, color: AppTheme.akzentTief, size: 20),
               SizedBox(width: 10),
               Expanded(
                 child: Text(
                   _tiefe.istSpicy ? t.paarAbendSpicyHinweis : t.paarAbendAgreeOnAStopWord,
-                  style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.45),
+                  style: TextStyle(fontSize: 13, color: AppTheme.tinte, height: 1.45),
                 ),
               ),
             ],
@@ -366,9 +367,9 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
             icon: const Icon(Icons.play_arrow_rounded),
             label: Text(t.paarAbendBeginTheEvening, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.amber,
-              foregroundColor: AppTheme.background,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+              backgroundColor: AppTheme.akzentTief,
+              foregroundColor: AppTheme.papier,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
             ),
           ),
         ),
@@ -379,7 +380,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
         child: Text(text,
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -389,11 +390,11 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
           HapticFeedback.selectionClick();
           onTap();
         },
-        selectedColor: AppTheme.amber.withValues(alpha: 0.25),
-        backgroundColor: AppTheme.surface,
-        side: BorderSide(color: aktiv ? AppTheme.amber : AppTheme.border),
+        selectedColor: AppTheme.akzentTief.withValues(alpha: 0.25),
+        backgroundColor: AppTheme.papierErhoben,
+        side: BorderSide(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
         labelStyle: TextStyle(
-          color: aktiv ? AppTheme.amberLight : AppTheme.textSecondary,
+          color: aktiv ? AppTheme.akzentTief : AppTheme.tinteLeise,
           fontWeight: FontWeight.w600,
         ),
         showCheckmark: false,
@@ -401,11 +402,11 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
 
   Widget _tiefeOption(PaarTiefe tiefe, String titel, String text) {
     final aktiv = _tiefe == tiefe;
-    final farbe = tiefe.index >= PaarTiefe.intim.index ? AppTheme.rose : AppTheme.amber;
+    final farbe = tiefe.index >= PaarTiefe.intim.index ? AppTheme.akzentTief : AppTheme.akzentTief;
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: InkWell(
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         onTap: () {
           HapticFeedback.selectionClick();
           setState(() => _tiefe = tiefe);
@@ -413,23 +414,23 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
           decoration: BoxDecoration(
-            color: aktiv ? farbe.withValues(alpha: 0.12) : AppTheme.surface,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: aktiv ? farbe : AppTheme.border),
+            color: aktiv ? farbe.withValues(alpha: 0.12) : AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: aktiv ? farbe : AppTheme.linie),
           ),
           child: Row(
             children: [
               Icon(aktiv ? Icons.radio_button_checked_rounded : Icons.radio_button_off_rounded,
-                  color: aktiv ? farbe : AppTheme.textMuted, size: 20),
+                  color: aktiv ? farbe : AppTheme.tinteStumm, size: 20),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(titel,
-                        style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                        style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
                     const SizedBox(height: 2),
-                    Text(text, style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
+                    Text(text, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.35)),
                   ],
                 ),
               ),
@@ -474,16 +475,16 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
             child: LinearProgressIndicator(
               value: fortschritt.clamp(0.0, 1.0),
               minHeight: 4,
-              backgroundColor: AppTheme.surfaceLight,
-              color: AppTheme.amber,
+              backgroundColor: AppTheme.papierVertieft,
+              color: AppTheme.akzentTief,
             ),
           ),
           const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
-              Text(_fmt(gesamt), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+              Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
+              Text(_fmt(gesamt), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
             ],
           ),
           const Spacer(),
@@ -499,23 +500,23 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
             child: Center(
               child: Icon(
                 _fertig ? Icons.favorite_rounded : (spricht ? Icons.graphic_eq_rounded : Icons.spa_rounded),
-                color: AppTheme.textPrimary.withValues(alpha: 0.85),
+                color: AppTheme.tinte.withValues(alpha: 0.85),
                 size: 44,
               ),
             ),
           ),
           const SizedBox(height: 28),
           Text(phase,
-              style: TextStyle(fontSize: 26, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+              style: TextStyle(fontFamily: VpTypo.serif, fontSize: 26, fontWeight: FontWeight.w600, color: AppTheme.tinte)),
           const SizedBox(height: 8),
           Text(zeile,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 15, color: AppTheme.textSecondary, height: 1.4)),
+              style: TextStyle(fontSize: 15, color: AppTheme.tinteLeise, height: 1.4)),
           const SizedBox(height: 10),
           if (!_fertig && schritt != null)
             Text(
               _pausiert ? t.paarAbendPaused : (spricht ? t.paarAbendTheVoiceIsSpeaking : t.paarAbendSilenceStillerestLeft(_fmt(stilleRest))),
-              style: TextStyle(fontSize: 13, color: AppTheme.textMuted),
+              style: TextStyle(fontSize: 13, color: AppTheme.tinteStumm),
             ),
           const Spacer(),
           if (_fertig)
@@ -525,9 +526,9 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
               child: OutlinedButton(
                 onPressed: () => Navigator.of(context).pop(),
                 style: OutlinedButton.styleFrom(
-                  foregroundColor: AppTheme.amberLight,
-                  side: BorderSide(color: AppTheme.amber),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                  foregroundColor: AppTheme.akzentTief,
+                  side: BorderSide(color: AppTheme.akzentTief),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                 ),
                 child: Text(t.couplesChannelClose, style: TextStyle(fontWeight: FontWeight.w700)),
               ),
@@ -535,8 +536,8 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
           else
             PlayerSteuerung(
               pausiert: _pausiert,
-              farbe: AppTheme.amber,
-              symbolFarbe: AppTheme.background,
+              farbe: AppTheme.akzentTief,
+              symbolFarbe: AppTheme.papier,
               onBeenden: _fragBeenden,
               onPause: _pauseUmschalten,
               onUeberspringen: _weiter,

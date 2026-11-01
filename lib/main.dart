@@ -1,5 +1,6 @@
 import 'dart:ui' show PointerDeviceKind;
 import 'package:flutter/material.dart';
+import 'theme/vp_tokens.dart';
 import 'package:flutter/foundation.dart' show LicenseEntryWithLineBreaks, LicenseRegistry;
 import 'package:flutter/services.dart';
 import 'services/bild_register.dart';
@@ -42,7 +43,7 @@ void systemLeistenAnpassen() {
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: dunkel ? Brightness.light : Brightness.dark,
         statusBarBrightness: dunkel ? Brightness.dark : Brightness.light,
-        systemNavigationBarColor: AppTheme.background,
+        systemNavigationBarColor: AppTheme.papier,
         systemNavigationBarIconBrightness: dunkel ? Brightness.light : Brightness.dark,
       ),
     );
@@ -178,7 +179,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
           : child!,
       home: !_isInitialized
           ? Scaffold(
-              backgroundColor: AppTheme.background,
+              backgroundColor: AppTheme.papier,
               body: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -186,9 +187,9 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
                     Text(
                       'VelvetPulse',
                       style: TextStyle(
-                        fontSize: 34,
-                        fontWeight: FontWeight.w900,
-                        color: AppTheme.textPrimary,
+                        fontFamily: VpTypo.serif, fontSize: 34,
+                        fontWeight: FontWeight.w600,
+                        color: AppTheme.tinte,
                         letterSpacing: -0.5,
                       ),
                     ),
@@ -198,7 +199,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
                       style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
-                        color: AppTheme.sageGreen,
+                        color: AppTheme.akzentTief,
                         letterSpacing: 1.2,
                       ),
                     ),
@@ -208,7 +209,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
                       height: 22,
                       child: CircularProgressIndicator(
                         strokeWidth: 2.2,
-                        color: AppTheme.sageGreen,
+                        color: AppTheme.akzentTief,
                       ),
                     ),
                   ],

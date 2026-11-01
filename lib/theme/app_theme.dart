@@ -30,6 +30,8 @@ class AppTheme {
   static Color get akzentHell => palette.akzentHell;
   static Color get akzentLeise => palette.akzentLeise;
   static Color get akzentTief => palette.akzentTief;
+  static Color get akzentTiefLeise => palette.akzentTiefLeise;
+  static Color get signalLeise => palette.signalLeise;
   static Color get aufAkzent => palette.aufAkzent;
   static Color get aufAkzentTief => palette.aufAkzentTief;
   static Color get aufSignal => palette.aufSignal;
@@ -45,24 +47,6 @@ class AppTheme {
   static Color get statusJa => palette.statusJa;
   static Color get statusVielleicht => palette.statusVielleicht;
   static Color get statusNein => palette.statusNein;
-
-  // Übergangsnamen aus der Zeit vor dem Designsystem: Sie bleiben, bis Stufe 2 bis 6 alle Stellen auf Rollen umgestellt haben.
-  // Achtung, die Namen stimmen nicht mehr mit den Farben überein (sageGreen ist der Akzent, amber die Tiefstufe).
-  static Color get background => papier;
-  static Color get surface => papierErhoben;
-  static Color get surfaceLight => papierVertieft;
-  static Color get border => linie;
-  static Color get sageGreen => akzent;
-  static Color get sageLight => akzentHell;
-  static Color get sageGlow => akzentLeise;
-  static Color get amber => akzentTief;
-  static Color get amberLight => palette.akzentTiefHell;
-  static Color get amberGlow => palette.akzentTiefLeise;
-  static Color get rose => signal;
-  static Color get roseGlow => palette.signalLeise;
-  static Color get textPrimary => tinte;
-  static Color get textSecondary => tinteLeise;
-  static Color get textMuted => tinteStumm;
 
   /// Das Theme der aktuellen Atmosphäre.
   static ThemeData get darkTheme => themeData(palette);

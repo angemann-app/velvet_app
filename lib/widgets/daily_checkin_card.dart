@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
 import '../models/daily_checkin.dart';
 import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
@@ -115,12 +116,12 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
     return Container(
       margin: const EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         border: Border.all(
           color: _todayCheckIn != null
-              ? AppTheme.sageGreen.withValues(alpha: 0.4)
-              : AppTheme.amber.withValues(alpha: 0.5),
+              ? AppTheme.akzentTief.withValues(alpha: 0.4)
+              : AppTheme.akzentTief.withValues(alpha: 0.5),
         ),
       ),
       child: Column(
@@ -134,7 +135,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                   _isExpanded = !_isExpanded;
                 });
               },
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(VpRadius.karte),
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Row(
@@ -143,8 +144,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: _todayCheckIn != null
-                            ? AppTheme.sageGreen.withValues(alpha: 0.18)
-                            : AppTheme.amber.withValues(alpha: 0.18),
+                            ? AppTheme.akzentTief.withValues(alpha: 0.18)
+                            : AppTheme.akzentTief.withValues(alpha: 0.18),
                         shape: BoxShape.circle,
                       ),
                       child: Icon(
@@ -152,8 +153,8 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                             ? Icons.check_circle_rounded
                             : Icons.speed_rounded,
                         color: _todayCheckIn != null
-                            ? AppTheme.sageGreen
-                            : AppTheme.amber,
+                            ? AppTheme.akzentTief
+                            : AppTheme.akzentTief,
                         size: 20,
                       ),
                     ),
@@ -167,7 +168,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                               Text(
                                 t.dailyCheckinCardSecondDailyCheckIn,
                                 style: TextStyle(
-                                  color: AppTheme.textPrimary,
+                                  color: AppTheme.tinte,
                                   fontWeight: FontWeight.w700,
                                   fontSize: 14,
                                 ),
@@ -177,13 +178,13 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                   decoration: BoxDecoration(
-                                    color: AppTheme.sageGreen.withValues(alpha: 0.2),
-                                    borderRadius: BorderRadius.circular(6),
+                                    color: AppTheme.akzentTief.withValues(alpha: 0.2),
+                                    borderRadius: BorderRadius.circular(VpRadius.chip),
                                   ),
                                   child: Text(
                                     t.dailyCheckinCardDone,
                                     style: TextStyle(
-                                      color: AppTheme.sageGreen,
+                                      color: AppTheme.akzentTief,
                                       fontSize: 10,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -198,7 +199,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                                 ? t.dailyCheckinCardStressStresslevelPressurePressurelevel(_getStressLabel(_stressLevel), _getPressureLabel(_pressureLevel))
                                 : t.dailyCheckinCardHowDoStressPerformancePressure,
                             style: TextStyle(
-                              color: AppTheme.textSecondary,
+                              color: AppTheme.tinteLeise,
                               fontSize: 12,
                             ),
                           ),
@@ -207,7 +208,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                     ),
                     Icon(
                       _isExpanded ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down,
-                      color: AppTheme.textMuted,
+                      color: AppTheme.tinteStumm,
                     ),
                   ],
                 ),
@@ -217,7 +218,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
 
           // Expanded Content
           if (_isExpanded) ...[
-            Divider(color: AppTheme.border, height: 1),
+            Divider(color: AppTheme.linie, height: 1),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
               child: Column(
@@ -230,7 +231,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       Text(
                         t.dailyCheckinCardEverydayStressTodayJobAppointments,
                         style: TextStyle(
-                          color: AppTheme.textPrimary,
+                          color: AppTheme.tinte,
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
                         ),
@@ -238,7 +239,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       Text(
                         _getStressLabel(_stressLevel),
                         style: TextStyle(
-                          color: AppTheme.amber,
+                          color: AppTheme.akzentTief,
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
                         ),
@@ -247,10 +248,10 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
-                      activeTrackColor: AppTheme.amber,
-                      inactiveTrackColor: AppTheme.surfaceLight,
-                      thumbColor: AppTheme.amber,
-                      overlayColor: AppTheme.amber.withValues(alpha: 0.2),
+                      activeTrackColor: AppTheme.akzentTief,
+                      inactiveTrackColor: AppTheme.papierVertieft,
+                      thumbColor: AppTheme.akzentTief,
+                      overlayColor: AppTheme.akzentTief.withValues(alpha: 0.2),
                     ),
                     child: Slider(
                       value: _stressLevel,
@@ -274,7 +275,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       Text(
                         t.dailyCheckinCardInnerPerformancePressureRacingThoughts,
                         style: TextStyle(
-                          color: AppTheme.textPrimary,
+                          color: AppTheme.tinte,
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
                         ),
@@ -282,7 +283,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                       Text(
                         _getPressureLabel(_pressureLevel),
                         style: TextStyle(
-                          color: AppTheme.sageGreen,
+                          color: AppTheme.akzentTief,
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
                         ),
@@ -291,10 +292,10 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                   ),
                   SliderTheme(
                     data: SliderTheme.of(context).copyWith(
-                      activeTrackColor: AppTheme.sageGreen,
-                      inactiveTrackColor: AppTheme.surfaceLight,
-                      thumbColor: AppTheme.sageGreen,
-                      overlayColor: AppTheme.sageGreen.withValues(alpha: 0.2),
+                      activeTrackColor: AppTheme.akzentTief,
+                      inactiveTrackColor: AppTheme.papierVertieft,
+                      thumbColor: AppTheme.akzent,
+                      overlayColor: AppTheme.akzentTief.withValues(alpha: 0.2),
                     ),
                     child: Slider(
                       value: _pressureLevel,
@@ -315,7 +316,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                   Text(
                     t.dailyCheckinCardWhatDidYouGoodToday,
                     style: TextStyle(
-                      color: AppTheme.textPrimary,
+                      color: AppTheme.tinte,
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
                     ),
@@ -335,14 +336,14 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         labelPadding: const EdgeInsets.symmetric(horizontal: 2),
                         padding: const EdgeInsets.symmetric(horizontal: 6),
-                        selectedColor: AppTheme.sageGreen.withValues(alpha: 0.25),
-                        checkmarkColor: AppTheme.sageGreen,
-                        backgroundColor: AppTheme.surfaceLight.withValues(alpha: 0.3),
+                        selectedColor: AppTheme.akzent.withValues(alpha: 0.25),
+                        checkmarkColor: AppTheme.akzentTief,
+                        backgroundColor: AppTheme.papierVertieft.withValues(alpha: 0.3),
                         side: BorderSide(
-                          color: isSelected ? AppTheme.sageGreen : AppTheme.border,
+                          color: isSelected ? AppTheme.akzentTief : AppTheme.linie,
                         ),
                         labelStyle: TextStyle(
-                          color: isSelected ? AppTheme.tinte : AppTheme.textSecondary,
+                          color: isSelected ? AppTheme.tinte : AppTheme.tinteLeise,
                           fontSize: 11,
                           fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                         ),
@@ -358,7 +359,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                     child: ElevatedButton(
                       onPressed: _isSaving ? null : _saveCheckIn,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: AppTheme.sageGreen,
+                        backgroundColor: AppTheme.akzent,
                         foregroundColor: AppTheme.aufAkzent,
                         padding: const EdgeInsets.symmetric(vertical: 11),
                       ),
@@ -382,14 +383,14 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
               child: Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: AppTheme.surfaceLight.withValues(alpha: 0.3),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: AppTheme.border.withValues(alpha: 0.5)),
+                  color: AppTheme.papierVertieft.withValues(alpha: 0.3),
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
+                  border: Border.all(color: AppTheme.linie.withValues(alpha: 0.5)),
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.insights_rounded, color: AppTheme.amberLight, size: 18),
+                    Icon(Icons.insights_rounded, color: AppTheme.akzentTief, size: 18),
                     const SizedBox(width: 10),
                     Expanded(
                       child: Text(
@@ -398,7 +399,7 @@ class _DailyCheckInCardState extends State<DailyCheckInCard> {
                             : t.dailyCheckinCardCoachingInsightWhenEverydayStress,
                         style: TextStyle(
                           fontSize: 12,
-                          color: AppTheme.textSecondary,
+                          color: AppTheme.tinteLeise,
                           height: 1.35,
                         ),
                       ),

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../services/audio_ausgabe.dart';
@@ -74,7 +75,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewBreatheInWiden,
             instruction: t.kegelTimerViewBreatheDeepIntoTheBelly,
             durationSeconds: 4,
-            color: AppTheme.sageGreen,
+            color: AppTheme.akzentTief,
             circleScaleTarget: 1.25,
             cue: 'einatmen_weit',
           ),
@@ -82,7 +83,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewStaySoft,
             instruction: t.kegelTimerViewBreatheOutSlowlyAndStay,
             durationSeconds: _hold(6),
-            color: AppTheme.amber,
+            color: AppTheme.akzentTief,
             circleScaleTarget: 1.35,
             cue: 'weich_bleiben',
           ),
@@ -90,7 +91,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewNotice,
             instruction: t.kegelTimerViewKeepBreathingNormallyAndFeel,
             durationSeconds: 5,
-            color: AppTheme.surfaceLight,
+            color: AppTheme.papierVertieft,
             circleScaleTarget: 1.0,
             cue: 'nachspueren',
           ),
@@ -101,7 +102,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewTighten,
             instruction: t.kegelTimerViewGentlyDrawTheAreaBetween,
             durationSeconds: 2,
-            color: AppTheme.sageGreen,
+            color: AppTheme.akzentTief,
             circleScaleTarget: 0.8,
             cue: 'anspannen',
           ),
@@ -109,7 +110,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.breathPacerViewHold,
             instruction: t.kegelTimerViewHoldTheTensionAtAbout,
             durationSeconds: _hold(3),
-            color: AppTheme.amber,
+            color: AppTheme.akzentTief,
             circleScaleTarget: 0.75,
             cue: 'halten',
           ),
@@ -117,7 +118,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewLetGoCompletely,
             instruction: t.kegelTimerViewRelaxCompletelyLettingGoLasts,
             durationSeconds: _hold(3) + 3,
-            color: AppTheme.surfaceLight,
+            color: AppTheme.papierVertieft,
             circleScaleTarget: 1.1,
             cue: 'loslassen',
           ),
@@ -128,7 +129,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewQuickSqueeze,
             instruction: t.kegelTimerViewAQuickShortSqueezeLike,
             durationSeconds: 1,
-            color: AppTheme.sageGreen,
+            color: AppTheme.akzentTief,
             circleScaleTarget: 0.8,
             cue: 'an',
           ),
@@ -136,7 +137,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewRelease,
             instruction: t.kegelTimerViewLetGoCompletelyRightAway,
             durationSeconds: 2,
-            color: AppTheme.surfaceLight,
+            color: AppTheme.papierVertieft,
             circleScaleTarget: 1.05,
             cue: 'los',
           ),
@@ -147,7 +148,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewBreatheInSoften,
             instruction: t.kegelTimerViewBreatheDeepIntoTheBelly2,
             durationSeconds: 5,
-            color: AppTheme.rose,
+            color: AppTheme.akzentTief,
             circleScaleTarget: 1.35,
             cue: 'welle',
           ),
@@ -155,7 +156,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewLongExhale,
             instruction: t.kegelTimerViewBreatheOutLongAndAudibly,
             durationSeconds: _hold(7),
-            color: AppTheme.amber,
+            color: AppTheme.akzentTief,
             circleScaleTarget: 1.45,
             cue: 'seufzen',
           ),
@@ -163,7 +164,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             label: t.kegelTimerViewNotice,
             instruction: t.kegelTimerViewKeepBreathingCalmlyAndFeel,
             durationSeconds: 4,
-            color: AppTheme.surfaceLight,
+            color: AppTheme.papierVertieft,
             circleScaleTarget: 1.0,
             cue: 'nachspueren',
           ),
@@ -321,11 +322,11 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.kegelTimerViewDone),
         content: Text(
           t.kegelTimerViewYouPractisedTotalroundsRoundsA(_totalRounds),
-          style: TextStyle(color: AppTheme.textSecondary, height: 1.4),
+          style: TextStyle(color: AppTheme.tinteLeise, height: 1.4),
         ),
         actions: [
           ElevatedButton(onPressed: () => Navigator.of(context).pop(), child: Text(t.kegelTimerViewFinish)),
@@ -350,9 +351,9 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
           Container(
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.border),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.linie),
             ),
             child: Column(
               children: [
@@ -379,25 +380,25 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
           Container(
             padding: const EdgeInsets.fromLTRB(14, 10, 8, 10),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.border),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.linie),
             ),
             child: Column(
               children: [
                 Row(
                   children: [
-                    SizedBox(width: 64, child: Text(t.kegelTimerViewRounds, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
+                    SizedBox(width: 64, child: Text(t.kegelTimerViewRounds, style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5))),
                     ..._roundOptions.map((r) => _buildOptionChip('$r', _totalRounds == r, () => _changeSettings(() => _totalRounds = r))),
                     const Spacer(),
-                    Text(t.kegelTimerViewMinutesMin(minutes), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+                    Text(t.kegelTimerViewMinutesMin(minutes), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
                   ],
                 ),
                 if (_selectedPreset != KegelPreset.impulse) ...[
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      SizedBox(width: 64, child: Text(t.kegelTimerViewLevel, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
+                      SizedBox(width: 64, child: Text(t.kegelTimerViewLevel, style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5))),
                       _buildOptionChip('leicht', _level == KegelLevel.leicht, () => _changeSettings(() => _level = KegelLevel.leicht)),
                       _buildOptionChip('mittel', _level == KegelLevel.mittel, () => _changeSettings(() => _level = KegelLevel.mittel)),
                       _buildOptionChip('stark', _level == KegelLevel.fortgeschritten,
@@ -407,16 +408,16 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                 ],
                 Row(
                   children: [
-                    SizedBox(width: 64, child: Text(t.kegelTimerViewVoiceCues, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5))),
+                    SizedBox(width: 64, child: Text(t.kegelTimerViewVoiceCues, style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5))),
                     Expanded(
                       child: Text(
                         _voiceCues ? t.kegelTimerViewAVoiceGuidesYou : t.kegelTimerViewVibrationOnly,
-                        style: TextStyle(color: AppTheme.textMuted, fontSize: 12),
+                        style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12),
                       ),
                     ),
                     Switch(
                       value: _voiceCues,
-                      activeThumbColor: AppTheme.sageGreen,
+                      activeThumbColor: AppTheme.akzent,
                       onChanged: (v) {
                         setState(() => _voiceCues = v);
                         _saveSettings();
@@ -434,7 +435,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _buildBadge(t.kegelTimerViewRoundCurrentroundOfTotalrounds(_currentRound, _totalRounds), AppTheme.textPrimary, AppTheme.border),
+              _buildBadge(t.kegelTimerViewRoundCurrentroundOfTotalrounds(_currentRound, _totalRounds), AppTheme.tinte, AppTheme.linie),
               _buildBadge(t.kegelTimerViewPhaseCurrentphaseindexPhaseslength(_currentPhaseIndex + 1, phases.length), currentPhase.color,
                   currentPhase.color.withValues(alpha: 0.4)),
             ],
@@ -465,7 +466,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                           Text(
                             '$_secondsLeftInPhase',
                             style: TextStyle(
-                                fontSize: 54, fontWeight: FontWeight.w900, color: AppTheme.textPrimary, height: 1.0),
+                                fontSize: 54, fontWeight: FontWeight.w900, color: AppTheme.tinte, height: 1.0),
                           ),
                           const SizedBox(height: 6),
                           Padding(
@@ -493,14 +494,14 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.border),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.linie),
             ),
             child: Text(
               currentPhase.instruction,
               textAlign: TextAlign.center,
-              style: TextStyle(color: AppTheme.textPrimary, fontSize: 14, height: 1.45, fontWeight: FontWeight.w500),
+              style: TextStyle(color: AppTheme.tinte, fontSize: 14, height: 1.45, fontWeight: FontWeight.w500),
             ),
           ),
 
@@ -513,7 +514,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               OutlinedButton(
                 onPressed: _stopTraining,
                 style: OutlinedButton.styleFrom(shape: const CircleBorder(), padding: const EdgeInsets.all(16)),
-                child: Icon(Icons.refresh_rounded, color: AppTheme.textSecondary),
+                child: Icon(Icons.refresh_rounded, color: AppTheme.tinteLeise),
               ),
               const SizedBox(width: 18),
               SizedBox(
@@ -525,7 +526,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                   label: Text(_isRunning ? t.playerSteuerungPause2 : t.breathPacerViewStart,
                       style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: _isRunning ? AppTheme.amber : AppTheme.sageGreen,
+                    backgroundColor: _isRunning ? AppTheme.akzentTief : AppTheme.akzentTief,
                     foregroundColor: _isRunning ? AppTheme.aufAkzentTief : AppTheme.aufAkzent,
                   ),
                 ),
@@ -534,7 +535,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               OutlinedButton(
                 onPressed: _isRunning ? () => setState(_nextPhase) : null,
                 style: OutlinedButton.styleFrom(shape: const CircleBorder(), padding: const EdgeInsets.all(16)),
-                child: Icon(Icons.skip_next_rounded, color: AppTheme.textSecondary),
+                child: Icon(Icons.skip_next_rounded, color: AppTheme.tinteLeise),
               ),
             ],
           ),
@@ -544,31 +545,31 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
           // Anleitung
           InkWell(
             onTap: () => KegelGuideSheet.show(context),
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(VpRadius.karte),
             child: Container(
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
-                color: AppTheme.surface,
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.35)),
+                color: AppTheme.papierErhoben,
+                borderRadius: BorderRadius.circular(VpRadius.karte),
+                border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.35)),
               ),
               child: Row(
                 children: [
-                  Icon(Icons.menu_book_rounded, color: AppTheme.sageGreen, size: 22),
+                  Icon(Icons.menu_book_rounded, color: AppTheme.akzentTief, size: 22),
                   SizedBox(width: 12),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(t.kegelTimerViewGuidePracticePlan,
-                            style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w700, fontSize: 13.5)),
+                            style: TextStyle(color: AppTheme.tinte, fontWeight: FontWeight.w700, fontSize: 13.5)),
                         SizedBox(height: 2),
                         Text(t.kegelTimerViewFindingTheMuscleWhichExercise,
-                            style: TextStyle(color: AppTheme.textMuted, fontSize: 11.5, height: 1.3)),
+                            style: TextStyle(color: AppTheme.tinteStumm, fontSize: 11.5, height: 1.3)),
                       ],
                     ),
                   ),
-                  Icon(Icons.chevron_right_rounded, color: AppTheme.textMuted),
+                  Icon(Icons.chevron_right_rounded, color: AppTheme.tinteStumm),
                 ],
               ),
             ),
@@ -585,7 +586,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         border: Border.all(color: border),
       ),
       child: Text(text, style: TextStyle(color: color, fontWeight: FontWeight.w700, fontSize: 13)),
@@ -597,18 +598,18 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
       padding: const EdgeInsets.only(right: 6),
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(VpRadius.feld),
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           decoration: BoxDecoration(
-            color: selected ? AppTheme.sageGreen.withValues(alpha: 0.2) : Colors.transparent,
-            borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: selected ? AppTheme.sageGreen : AppTheme.border),
+            color: selected ? AppTheme.akzentTief.withValues(alpha: 0.2) : Colors.transparent,
+            borderRadius: BorderRadius.circular(VpRadius.feld),
+            border: Border.all(color: selected ? AppTheme.akzentTief : AppTheme.linie),
           ),
           child: Text(
             label,
             style: TextStyle(
-              color: selected ? AppTheme.textPrimary : AppTheme.textSecondary,
+              color: selected ? AppTheme.tinte : AppTheme.tinteLeise,
               fontSize: 12.5,
               fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
             ),
@@ -624,13 +625,13 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
       color: Colors.transparent,
       child: InkWell(
         onTap: () => _changeSettings(() => _selectedPreset = preset),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
           decoration: BoxDecoration(
-            color: isSelected ? AppTheme.surfaceLight : Colors.transparent,
-            borderRadius: BorderRadius.circular(10),
-            border: isSelected ? Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.5)) : null,
+            color: isSelected ? AppTheme.papierVertieft : Colors.transparent,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: isSelected ? Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5)) : null,
           ),
           child: Column(
             children: [
@@ -638,7 +639,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                 label,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: isSelected ? AppTheme.textPrimary : AppTheme.textMuted,
+                  color: isSelected ? AppTheme.tinte : AppTheme.tinteStumm,
                   fontSize: 12.5,
                   fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                 ),
@@ -647,7 +648,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               Text(
                 subtitle,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: isSelected ? AppTheme.sageGreen : AppTheme.textMuted, fontSize: 10.5),
+                style: TextStyle(color: isSelected ? AppTheme.akzentTief : AppTheme.tinteStumm, fontSize: 10.5),
               ),
             ],
           ),

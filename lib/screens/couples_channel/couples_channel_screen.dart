@@ -145,7 +145,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   Future<void> _fotoSenden() async {
     final quelle = await showModalBottomSheet<ImageSource>(
       context: context,
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.papierErhoben,
       builder: (context) => SafeArea(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           // Direkte Verbindung ohne Relais-Server: klappt noch nicht in jedem Netz.
@@ -155,16 +155,16 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  color: AppTheme.rose.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(8),
+                  color: AppTheme.akzentTief.withValues(alpha: 0.15),
+                  borderRadius: BorderRadius.circular(VpRadius.feld),
                 ),
                 child: Text(t.fotoExperimentell,
-                    style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: AppTheme.rose)),
+                    style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: AppTheme.akzentTief)),
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: Text(t.fotoExperimentellHinweis,
-                    style: TextStyle(fontSize: 12, color: AppTheme.textMuted, height: 1.4)),
+                    style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm, height: 1.4)),
               ),
             ]),
           ),
@@ -181,7 +181,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
             child: Text(t.fotoSicherheitHinweis,
-                style: TextStyle(fontSize: 12, color: AppTheme.textMuted, height: 1.4)),
+                style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm, height: 1.4)),
           ),
         ]),
       ),
@@ -193,7 +193,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     final ergebnis = await FotoKanal.instanz.senden(await gewaehlt.readAsBytes(), verschwindet: _verschwindenAktiv);
     switch (ergebnis) {
       case FotoErgebnis.fehler:
-        messenger.showSnackBar(SnackBar(content: Text(t.fotoFehler), backgroundColor: AppTheme.rose));
+        messenger.showSnackBar(SnackBar(content: Text(t.fotoFehler), backgroundColor: AppTheme.signal));
       case FotoErgebnis.wartet:
         messenger.showSnackBar(SnackBar(content: Text(t.fotoNichtDa), duration: const Duration(seconds: 6)));
         _scrollToBottom();
@@ -220,14 +220,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                   final jetzt = await showDialog<bool>(
                     context: context,
                     builder: (context) => AlertDialog(
-                      backgroundColor: AppTheme.surface,
+                      backgroundColor: AppTheme.papierErhoben,
                       title: Text(t.fotoAlleinTitel),
                       content: Text(t.fotoAlleinText, style: const TextStyle(height: 1.45)),
                       actions: [
                         TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.fotoSpaeter)),
                         TextButton(
                           onPressed: () => Navigator.pop(context, true),
-                          child: Text(t.fotoJetztAnsehen, style: TextStyle(color: AppTheme.rose)),
+                          child: Text(t.fotoJetztAnsehen, style: TextStyle(color: AppTheme.akzentTief)),
                         ),
                       ],
                     ),
@@ -241,7 +241,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                   }
                   await Navigator.of(context).push(MaterialPageRoute(builder: (_) => FotoAnsicht(bild: bild)));
                 },
-                style: FilledButton.styleFrom(backgroundColor: AppTheme.rose),
+                style: FilledButton.styleFrom(backgroundColor: AppTheme.akzentTief),
                 icon: const Icon(Icons.visibility_outlined, size: 18),
                 label: Text(t.fotoAnsehen),
               ),
@@ -315,7 +315,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(t.lessonDetailSendingDidnTWorkPlease),
-        backgroundColor: AppTheme.rose,
+        backgroundColor: AppTheme.akzentTief,
         action: SnackBarAction(
           label: t.couplesChannelReconnect,
           textColor: AppTheme.aufSignal,
@@ -340,7 +340,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       body: SafeArea(
         child: ValueListenableBuilder<String?>(
           valueListenable: _nostr.partnerPubKeyNotifier,
@@ -358,18 +358,18 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(VpRadius.karte),
           child: SizedBox(height: 150, width: double.infinity, child: VpBildFeld('kurs.11.titel')),
         ),
         const SizedBox(height: 20),
         Text(
           t.coursesYourPrivateSpace,
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: AppTheme.textPrimary),
+          style: TextStyle(fontFamily: VpTypo.serif, fontSize: 24, fontWeight: FontWeight.w600, color: AppTheme.tinte),
         ),
         const SizedBox(height: 8),
         Text(
           t.couplesChannelConnectWithYourPartnerAnd,
-          style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.45),
+          style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.45),
         ),
         const SizedBox(height: 16),
         // Geht auch ohne Verbindung: ein Handy neben euch reicht.
@@ -377,19 +377,19 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         const SizedBox(height: 8),
         _buildFeature(
           Icons.bolt_rounded,
-          AppTheme.amber,
+          AppTheme.akzentTief,
           t.couplesChannelSendSparks,
           t.couplesChannelShowWithOneTapWhat,
         ),
         _buildFeature(
           Icons.favorite_rounded,
-          AppTheme.rose,
+          AppTheme.akzentTief,
           t.couplesChannelSecretlyMatchWishes,
           t.couplesChannelYouVoteSeparatelyOnlyWhat,
         ),
         _buildFeature(
           Icons.lock_rounded,
-          AppTheme.sageGreen,
+          AppTheme.akzentTief,
           t.couplesChannelJustForTheTwoOf,
           t.couplesChannelEndToEndEncryptedNo,
         ),
@@ -403,9 +403,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             label: Text(t.couplesChannelConnectWithPartner,
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.amber,
-              foregroundColor: AppTheme.background,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+              backgroundColor: AppTheme.akzentTief,
+              foregroundColor: AppTheme.papier,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
             ),
           ),
         ),
@@ -417,9 +417,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             icon: const Icon(Icons.send_rounded, size: 18),
             label: Text(t.couplesChannelInvitePartner, style: TextStyle(fontWeight: FontWeight.w700)),
             style: OutlinedButton.styleFrom(
-              foregroundColor: AppTheme.amberLight,
-              side: BorderSide(color: AppTheme.amber.withValues(alpha: 0.6)),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+              foregroundColor: AppTheme.akzentTief,
+              side: BorderSide(color: AppTheme.akzentTief.withValues(alpha: 0.6)),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
             ),
           ),
         ),
@@ -427,7 +427,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         Center(
           child: TextButton(
             onPressed: _showInfoDialog,
-            child: Text(t.couplesChannelHowDoesItWork, style: TextStyle(color: AppTheme.textSecondary)),
+            child: Text(t.couplesChannelHowDoesItWork, style: TextStyle(color: AppTheme.tinteLeise)),
           ),
         ),
         const SizedBox(height: 12),
@@ -454,9 +454,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(title,
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
                 const SizedBox(height: 2),
-                Text(text, style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.4)),
+                Text(text, style: TextStyle(fontSize: 13, color: AppTheme.tinteLeise, height: 1.4)),
               ],
             ),
           ),
@@ -486,21 +486,21 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       builder: (context, an, _) => Padding(
         padding: const EdgeInsets.only(top: 6),
         child: an
-            ? Text(t.spicyEinladungSchonAn, style: TextStyle(fontSize: 12, color: AppTheme.textMuted))
+            ? Text(t.spicyEinladungSchonAn, style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm))
             : InkWell(
                 onTap: () => spicyModusEinschalten(context),
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                   decoration: BoxDecoration(
-                    color: AppTheme.rose.withValues(alpha: 0.16),
-                    borderRadius: BorderRadius.circular(10),
+                    color: AppTheme.akzentTief.withValues(alpha: 0.16),
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
                   ),
                   child: Row(mainAxisSize: MainAxisSize.min, children: [
                     Icon(Icons.spa_outlined, size: 15, color: AppTheme.akzentTief),
                     const SizedBox(width: 6),
                     Text(t.spicyEinladungAnnehmen,
-                        style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: AppTheme.rose)),
+                        style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: AppTheme.akzentTief)),
                   ]),
                 ),
               ),
@@ -516,30 +516,30 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   Widget _buildFantasyMapCard({required String subtitle}) {
     return InkWell(
       onTap: _openFantasyMap,
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(VpRadius.karte),
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: AppTheme.surface,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.4)),
+          color: AppTheme.papierErhoben,
+          borderRadius: BorderRadius.circular(VpRadius.karte),
+          border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.4)),
         ),
         child: Row(
           children: [
-            Icon(Icons.explore_rounded, color: AppTheme.sageGreen, size: 26),
+            Icon(Icons.explore_rounded, color: AppTheme.akzentTief, size: 26),
             const SizedBox(width: 14),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(t.couplesChannelFantasyMap,
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
                   const SizedBox(height: 2),
-                  Text(subtitle, style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35)),
+                  Text(subtitle, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.35)),
                 ],
               ),
             ),
-            Icon(Icons.chevron_right_rounded, color: AppTheme.textMuted),
+            Icon(Icons.chevron_right_rounded, color: AppTheme.tinteStumm),
           ],
         ),
       ),
@@ -668,8 +668,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 tooltip: t.couplesChannelFantasyMap,
               ),
               PopupMenuButton<String>(
-                icon: Icon(Icons.more_vert_rounded, color: AppTheme.textSecondary),
-                color: AppTheme.surface,
+                icon: Icon(Icons.more_vert_rounded, color: AppTheme.tinteLeise),
+                color: AppTheme.papierErhoben,
                 onSelected: (value) {
                   switch (value) {
                     case 'info':
@@ -729,47 +729,47 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             margin: const EdgeInsets.fromLTRB(16, 6, 16, 0),
             padding: _ideeOffen ? const EdgeInsets.fromLTRB(14, 8, 6, 4) : const EdgeInsets.fromLTRB(12, 0, 4, 0),
             decoration: BoxDecoration(
-              color: AppTheme.rose.withValues(alpha: 0.10),
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.rose.withValues(alpha: 0.4)),
+              color: AppTheme.akzentTief.withValues(alpha: 0.10),
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.4)),
             ),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               // Eingeklappt nur eine Zeile mit der Idee, Antippen klappt auf.
               InkWell(
                 onTap: () => setState(() => _ideeOffen = !_ideeOffen),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
                 child: SizedBox(
                   height: _ideeOffen ? 28 : 40,
                   child: Row(children: [
-                    Icon(Icons.photo_camera_outlined, size: 16, color: AppTheme.rose),
+                    Icon(Icons.photo_camera_outlined, size: 16, color: AppTheme.akzentTief),
                     const SizedBox(width: 8),
                     Expanded(
                       child: _ideeOffen
                           ? Text(t.fotoIdeeTitel,
-                              style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, color: AppTheme.rose))
+                              style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, color: AppTheme.akzentTief))
                           : Text(idee.text,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: TextStyle(fontSize: 13.5, color: AppTheme.textPrimary, fontWeight: FontWeight.w600)),
+                              style: TextStyle(fontSize: 13.5, color: AppTheme.tinte, fontWeight: FontWeight.w600)),
                     ),
-                    Icon(_ideeOffen ? Icons.expand_less_rounded : Icons.expand_more_rounded, size: 20, color: AppTheme.rose),
+                    Icon(_ideeOffen ? Icons.expand_less_rounded : Icons.expand_more_rounded, size: 20, color: AppTheme.akzentTief),
                   ]),
                 ),
               ),
               if (_ideeOffen) ...[
                 Text(idee.text,
-                    style: TextStyle(fontSize: 14, color: AppTheme.textPrimary, fontWeight: FontWeight.w600)),
+                    style: TextStyle(fontSize: 14, color: AppTheme.tinte, fontWeight: FontWeight.w600)),
                 Text(idee.heiss ? t.fotoIdeeHinweisHeiss : t.fotoIdeeHinweis,
                     style: TextStyle(
                         fontSize: 11,
-                        color: idee.heiss ? AppTheme.rose : AppTheme.textMuted,
+                        color: idee.heiss ? AppTheme.akzentTief : AppTheme.tinteStumm,
                         fontWeight: idee.heiss ? FontWeight.w600 : FontWeight.w400)),
                 Wrap(spacing: 0, children: [
                   TextButton(onPressed: _fotoSenden, child: Text(t.fotoSenden)),
                   TextButton(onPressed: () => FotoIdeen.andereIdee(), child: Text(t.fotoIdeeAndere)),
                   TextButton(
                     onPressed: () => FotoIdeen.heuteNicht(),
-                    style: TextButton.styleFrom(foregroundColor: AppTheme.textMuted),
+                    style: TextButton.styleFrom(foregroundColor: AppTheme.tinteStumm),
                     child: Text(t.fotoIdeeHeuteNicht),
                   ),
                 ]),
@@ -820,7 +820,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               ),
               child: Text(
                 '$emoji  $text',
-                style: TextStyle(fontSize: 12.5, color: AppTheme.textPrimary, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 12.5, color: AppTheme.tinte, fontWeight: FontWeight.w600),
               ),
             ),
           );
@@ -845,17 +845,17 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.forum_outlined, size: 44, color: AppTheme.textMuted),
+                  Icon(Icons.forum_outlined, size: 44, color: AppTheme.tinteStumm),
                   SizedBox(height: 12),
                   Text(
                     t.couplesChannelItSStillQuietHere,
-                    style: TextStyle(color: AppTheme.textSecondary, fontSize: 15, fontWeight: FontWeight.w600),
+                    style: TextStyle(color: AppTheme.tinteLeise, fontSize: 15, fontWeight: FontWeight.w600),
                   ),
                   SizedBox(height: 6),
                   Text(
                     t.couplesChannelSendASparkFromThe,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: AppTheme.textMuted, fontSize: 13, height: 1.4),
+                    style: TextStyle(color: AppTheme.tinteStumm, fontSize: 13, height: 1.4),
                   ),
                 ],
               ),
@@ -897,7 +897,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   Widget _buildBubble(CoupleMessage msg, {bool istLetzteEigene = false}) {
     final isMe = msg.isMe;
     final isSpark = msg.type == CoupleMessageType.ping;
-    final textColor = isMe ? AppTheme.aufAkzent : AppTheme.textPrimary;
+    final textColor = isMe ? AppTheme.aufAkzent : AppTheme.tinte;
 
     return Align(
       alignment: isMe ? Alignment.centerRight : Alignment.centerLeft,
@@ -906,7 +906,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.78),
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          color: isMe ? AppTheme.akzentHell : (isSpark ? AppTheme.akzentLeise : AppTheme.surface),
+          color: isMe ? AppTheme.akzentHell : (isSpark ? AppTheme.akzentLeise : AppTheme.papierErhoben),
           borderRadius: BorderRadius.only(
             topLeft: const Radius.circular(VpRadius.karte),
             topRight: const Radius.circular(VpRadius.karte),
@@ -928,18 +928,18 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               ),
             ),
             if (msg.spicyEinladung && !isMe) _spicyAnnehmen(),
-            if (msg.fotoId != null) _fotoZeile(msg, isMe ? textColor.withValues(alpha: 0.8) : AppTheme.textSecondary),
+            if (msg.fotoId != null) _fotoZeile(msg, isMe ? textColor.withValues(alpha: 0.8) : AppTheme.tinteLeise),
             if (msg.lessonId != null && DataService.getLessonById(msg.lessonId!) != null)
               Padding(
                 padding: const EdgeInsets.only(top: 6),
                 child: InkWell(
                   onTap: () => _openLesson(msg.lessonId!),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                     decoration: BoxDecoration(
                       color: (isMe ? AppTheme.aufAkzent : AppTheme.akzentTief).withValues(alpha: 0.12),
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(VpRadius.karte),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -969,7 +969,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 ],
                 Text(
                   _formatTime(msg.createdAt),
-                  style: TextStyle(fontSize: 10, color: isMe ? textColor.withValues(alpha: 0.65) : AppTheme.textMuted),
+                  style: TextStyle(fontSize: 10, color: isMe ? textColor.withValues(alpha: 0.65) : AppTheme.tinteStumm),
                 ),
                 if (istLetzteEigene) _lesestatus(msg, textColor.withValues(alpha: 0.75)),
               ],
@@ -993,13 +993,13 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 setState(() => _verschwinden = !_verschwinden);
               },
               isSelected: _verschwinden,
-              icon: Icon(Icons.timer_outlined, color: AppTheme.textMuted),
+              icon: Icon(Icons.timer_outlined, color: AppTheme.tinteStumm),
               selectedIcon: Icon(Icons.timer_rounded, color: AppTheme.akzentTief),
               tooltip: t.verschwindenSchalter,
             ),
             IconButton(
               onPressed: _fotoSenden,
-              icon: Icon(Icons.add_a_photo_outlined, color: AppTheme.textMuted),
+              icon: Icon(Icons.add_a_photo_outlined, color: AppTheme.tinteStumm),
               tooltip: t.fotoSenden,
             ),
           ],
@@ -1009,14 +1009,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               minLines: 1,
               maxLines: 4,
               textCapitalization: TextCapitalization.sentences,
-              style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+              style: TextStyle(color: AppTheme.tinte, fontSize: 14),
               decoration: InputDecoration(
                 hintText: _verschwindenAktiv ? t.verschwindenHinweis : t.couplesChannelWriteAMessage,
-                hintStyle: TextStyle(color: _verschwindenAktiv ? AppTheme.akzentTief : AppTheme.textMuted, fontSize: 13.5),
+                hintStyle: TextStyle(color: _verschwindenAktiv ? AppTheme.akzentTief : AppTheme.tinteStumm, fontSize: 13.5),
                 filled: true,
                 fillColor: _verschwindenAktiv
                     ? AppTheme.akzentLeise
-                    : AppTheme.surface,
+                    : AppTheme.papierErhoben,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(VpRadius.feld),
@@ -1056,7 +1056,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               padding: EdgeInsets.fromLTRB(2, 4, 2, 14),
               child: Text(
                 t.couplesChannelVoteSeparatelyAWishOnly,
-                style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+                style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
               ),
             ),
             if (matches.isNotEmpty) ...[
@@ -1076,10 +1076,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 padding: const EdgeInsets.fromLTRB(2, 6, 2, 10),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Text(t.wuenscheSzenenTitel,
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.tinte)),
                   const SizedBox(height: 3),
                   Text(t.wuenscheSzenenText,
-                      style: TextStyle(fontSize: 13, color: AppTheme.textSecondary, height: 1.4)),
+                      style: TextStyle(fontSize: 13, color: AppTheme.tinteLeise, height: 1.4)),
                 ]),
               ),
               ...szenen.map((opt) => _buildWishCard(opt, myVotes[opt.id], matches.contains(opt.id), besprechen.contains(opt.id))),
@@ -1125,23 +1125,23 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.amber.withValues(alpha: 0.6)),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.6)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(t.wuenscheBesprechenTitel,
-              style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w800, fontSize: 15.5)),
+              style: TextStyle(color: AppTheme.tinte, fontWeight: FontWeight.w800, fontSize: 15.5)),
           const SizedBox(height: 4),
           Text(t.wuenscheBesprechenText,
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4)),
+              style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13, height: 1.4)),
           const SizedBox(height: 8),
           ...ids.map((id) => Padding(
                 padding: const EdgeInsets.only(top: 4),
                 child: Text('• ${ListenUebersetzung.titelFuer(id) ?? ''}',
-                    style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w600, fontSize: 13.5)),
+                    style: TextStyle(color: AppTheme.tinte, fontWeight: FontWeight.w600, fontSize: 13.5)),
               )),
         ],
       ),
@@ -1149,12 +1149,12 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   }
 
   Widget _buildWishCard(FantasyOption opt, String? myVote, bool isMatch, bool besprechen) {
-    final accent = isMatch ? AppTheme.rose : AppTheme.amber;
+    final accent = isMatch ? AppTheme.akzentTief : AppTheme.akzentTief;
 
     Widget voteButton(String value, String label, IconData icon) {
       final selected = myVote == value;
-      final color = value == 'yes' ? AppTheme.statusJa : AppTheme.textSecondary;
-      final fuellung = value == 'yes' ? AppTheme.statusJa : (value == 'maybe' ? AppTheme.statusVielleicht : AppTheme.surfaceLight);
+      final color = value == 'yes' ? AppTheme.statusJa : AppTheme.tinteLeise;
+      final fuellung = value == 'yes' ? AppTheme.statusJa : (value == 'maybe' ? AppTheme.statusVielleicht : AppTheme.papierVertieft);
       return Expanded(
         child: OutlinedButton(
           onPressed: () {
@@ -1163,9 +1163,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           },
           style: OutlinedButton.styleFrom(
             backgroundColor: selected ? fuellung : null,
-            side: BorderSide(color: selected ? Colors.transparent : AppTheme.border),
+            side: BorderSide(color: selected ? Colors.transparent : AppTheme.linie),
             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 10),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
           ),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
             Icon(icon, size: 16, color: selected ? (value == 'no' ? AppTheme.tinte : AppTheme.aufStatus) : color),
@@ -1184,9 +1184,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: isMatch ? AppTheme.rose.withValues(alpha: 0.1) : AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: isMatch ? AppTheme.rose.withValues(alpha: 0.7) : AppTheme.border),
+        color: isMatch ? AppTheme.akzentTief.withValues(alpha: 0.1) : AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: isMatch ? AppTheme.akzentTief.withValues(alpha: 0.7) : AppTheme.linie),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1204,16 +1204,16 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                         style: TextStyle(color: accent, fontSize: 10.5, fontWeight: FontWeight.w800, letterSpacing: 0.6)),
                     const SizedBox(height: 2),
                     Text(opt.title,
-                        style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w700, fontSize: 15)),
+                        style: TextStyle(color: AppTheme.tinte, fontWeight: FontWeight.w700, fontSize: 15)),
                   ],
                 ),
               ),
-              if (isMatch) Icon(Icons.favorite_rounded, color: AppTheme.rose, size: 20),
-              if (besprechen && !isMatch) Icon(Icons.chat_bubble_outline_rounded, color: AppTheme.amber, size: 20),
+              if (isMatch) Icon(Icons.favorite_rounded, color: AppTheme.akzentTief, size: 20),
+              if (besprechen && !isMatch) Icon(Icons.chat_bubble_outline_rounded, color: AppTheme.akzentTief, size: 20),
             ],
           ),
           const SizedBox(height: 8),
-          Text(opt.subtitle, style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4)),
+          Text(opt.subtitle, style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13, height: 1.4)),
           const SizedBox(height: 14),
           Row(
             children: [
@@ -1235,17 +1235,17 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     final ja = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.couplesChannelDisconnect2, style: TextStyle(fontSize: 18)),
         content: Text(
           t.couplesChannelTheHistoryWithNameName(name, name, name),
-          style: TextStyle(color: AppTheme.textSecondary, height: 1.45),
+          style: TextStyle(color: AppTheme.tinteLeise, height: 1.45),
         ),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text(t.couplesChannelDisconnect3, style: TextStyle(color: AppTheme.rose)),
+            child: Text(t.couplesChannelDisconnect3, style: TextStyle(color: AppTheme.akzentTief)),
           ),
         ],
       ),
@@ -1260,7 +1260,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.couplesChannelHowItStaysPrivate, style: TextStyle(fontSize: 18)),
         content: SingleChildScrollView(
           child: Column(
@@ -1269,7 +1269,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             children: [
               Text(
                 t.couplesChannelMessagesAreEncryptedOnYour,
-                style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+                style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
               ),
               const SizedBox(height: 16),
               _buildInfoRow(t.couplesChannelEncryption,
@@ -1278,17 +1278,17 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 const SizedBox(height: 8),
                 Text(
                   t.couplesChannelSealedNote,
-                  style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.4),
+                  style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13, height: 1.4),
                 ),
               ],
               _buildInfoRow(t.couplesChannelServers, _nostr.connectedRelaysLabel),
               for (final relay in _nostr.connectedRelays) _buildInfoRow('', relay),
               const SizedBox(height: 10),
-              Text(t.couplesChannelYourConnectionCode, style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+              Text(t.couplesChannelYourConnectionCode, style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
               const SizedBox(height: 4),
               SelectableText(
                 _nostr.myNpub,
-                style: TextStyle(fontFamily: 'monospace', fontSize: 11, color: AppTheme.amberLight),
+                style: TextStyle(fontFamily: 'monospace', fontSize: 11, color: AppTheme.akzentTief),
               ),
             ],
           ),
@@ -1296,7 +1296,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(),
-            child: Text(t.couplesChannelClose, style: TextStyle(color: AppTheme.textSecondary)),
+            child: Text(t.couplesChannelClose, style: TextStyle(color: AppTheme.tinteLeise)),
           ),
         ],
       ),
@@ -1311,11 +1311,11 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         children: [
           SizedBox(
             width: 120,
-            child: Text(label, style: TextStyle(color: AppTheme.textMuted, fontSize: 12.5)),
+            child: Text(label, style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12.5)),
           ),
           Expanded(
             child: Text(value,
-                style: TextStyle(color: AppTheme.textPrimary, fontSize: 12.5, fontWeight: FontWeight.w600)),
+                style: TextStyle(color: AppTheme.tinte, fontSize: 12.5, fontWeight: FontWeight.w600)),
           ),
         ],
       ),

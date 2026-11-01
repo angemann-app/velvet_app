@@ -149,7 +149,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
   Widget build(BuildContext context) {
     if (_isLoading) {
       return Center(
-        child: CircularProgressIndicator(color: AppTheme.sageGreen),
+        child: CircularProgressIndicator(color: AppTheme.akzentTief),
       );
     }
 
@@ -180,8 +180,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
     return RefreshIndicator(
       onRefresh: _loadData,
-      color: AppTheme.sageGreen,
-      backgroundColor: AppTheme.surface,
+      color: AppTheme.akzentTief,
+      backgroundColor: AppTheme.papierErhoben,
       child: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         children: [
@@ -193,12 +193,12 @@ class _CoursesScreenState extends State<CoursesScreen> {
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
-                        color: AppTheme.amber.withValues(alpha: 0.15),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: AppTheme.amber.withValues(alpha: 0.6)),
+                        color: AppTheme.akzentTief.withValues(alpha: 0.15),
+                        borderRadius: BorderRadius.circular(VpRadius.karte),
+                        border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.6)),
                       ),
                       child: Text(t.testmodusSchild,
-                          style: TextStyle(color: AppTheme.amber, fontSize: 12, fontWeight: FontWeight.w700)),
+                          style: TextStyle(color: AppTheme.akzentTief, fontSize: 12, fontWeight: FontWeight.w700)),
                     ),
                   )
                 : const SizedBox.shrink(),

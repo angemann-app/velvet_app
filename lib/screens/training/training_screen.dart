@@ -54,7 +54,7 @@ class TrainingScreenState extends State<TrainingScreen> with SingleTickerProvide
                 children: [
                   Icon(Icons.fitness_center_rounded, size: 16),
                   SizedBox(width: 8),
-                  Text(t.trainingPelvicFloor),
+                  Flexible(child: Text(t.trainingPelvicFloor, maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
               ),
             ),
@@ -64,7 +64,7 @@ class TrainingScreenState extends State<TrainingScreen> with SingleTickerProvide
                 children: [
                   Icon(Icons.air_rounded, size: 16),
                   SizedBox(width: 8),
-                  Text(t.trainingBreathPacer),
+                  Flexible(child: Text(t.trainingBreathPacer, maxLines: 1, overflow: TextOverflow.ellipsis)),
                 ],
               ),
             ),

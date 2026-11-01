@@ -304,3 +304,28 @@ und eigener Durchsicht des Diffs. Komposition, Spicy-Dramaturgie und alles Visue
 2. Annahme zur Voreinstellung: **Papier** für alle; „Systemeinstellung folgen“ als Option, nicht Standard. Einverstanden?
 3. Soll Antigravity vor Stufe 4 die drei Pilot-Illustrationen (`bereich.heute.einladung` normal und Spicy, `kurs.01.titel`) liefern,
    oder wird der Pilot rein mit Platzhaltern bewertet? Empfehlung: Pilot zuerst mit Platzhaltern.
+
+## 17. Umsetzungsstand (Stufe 1 bis 6)
+
+- **Arbeitsstand:** Branch `worktree-design-magazin`, je Stufe ein Tag `magazin-stufe-1` bis `magazin-stufe-5`; Stufe 6 folgt nach
+  Freigabe.
+- **Stufe 1 (Tokens und Paletten):** `lib/theme/vp_palette.dart` mit den Paletten Papier, Nacht, Klassisch und Spicy;
+  `lib/theme/vp_tokens.dart` mit `VpTokens`, `VpAbstand`, `VpRadius`, `VpLinie`, `VpTypo` und `VpBildFormat`; Theme in
+  `lib/theme/app_theme.dart`; Schrift Source Serif 4 unter `assets/fonts`; Einstellung `design_palette` (Standard Papier,
+  in Sicherung und Merge enthalten); Kontrasttest `test/design_kontrast_test.dart`.
+- **Stufe 2 (Bereinigung):** Festfarben auf Rollen umgestellt; Spicy ohne Glühen und Flammen (`VpSeite` mit Vignette);
+  Emojis aus den Oberflächentexten entfernt; dekorative Verläufe und Schatten entfernt.
+- **Stufe 3 (Bildsystem):** Bildregister `assets/data/bilder.json` (gebaut mit `tools/bilder_register.py`),
+  `lib/services/bild_register.dart`, `VpBildFeld` mit Platzhalter sowie `VpGrafik` in `lib/widgets/design/`.
+- **Stufe 4 (Komponenten):** `lib/widgets/design/vp_komponenten.dart` mit `VpEyebrow`, `VpAbschnitt`, `VpKarte`,
+  `VpFortschritt`, `VpChip`, `VpListenzeile` und `VpLeerzustand`; Pilot in Heute, Lernen (Kurse) und Lektion.
+- **Stufe 5 (Kapitel und Tabs):** `lib/widgets/design/vp_tabs.dart` mit `VpKapitelLeiste` und `VpTabs.leiste`;
+  Pilot in Üben und Wir.
+- **Stufe 6 (in Arbeit):** alte Farbnamen (`sageGreen`, `amber`, `rose`, `background`, `surface`, `border`, `textPrimary` …)
+  sind entfernt, alle Stellen nutzen Rollennamen (`akzent`, `akzentTief`, `signal`, `papier`, `papierErhoben`, `linie`, `tinte` …);
+  Radien über `VpRadius`; Überschriften in Serif; Leerzustände über `VpLeerzustand`.
+- **Werkzeuge:** `tools/pilot_kontaktbogen.py` legt Papier, Nachtpapier, Spicy und Klassisch nebeneinander; Screenshots über
+  `flutter test test_screens/screens_test.dart --dart-define=PALETTE=papier|nacht|klassisch` bzw. `--dart-define=SPICY=true`;
+  `test_screens/platzhalter_test.dart`.
+- **Offen:** Debug-Build auf dem Handy; Umfärbung der dunklen SVG-Diagramme für Papier; echte Illustrationen
+  (`bereich.heute.einladung`, `kurs.01.titel`); Beta erst nach den Pilotbildern.

@@ -84,17 +84,17 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
         if (_locked)
           Positioned.fill(
             child: Material(
-              color: AppTheme.background,
+              color: AppTheme.papier,
               child: SafeArea(
                 child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.lock_rounded, color: AppTheme.textSecondary, size: 48),
+                      Icon(Icons.lock_rounded, color: AppTheme.tinteLeise, size: 48),
                       const SizedBox(height: 16),
                       Text(
                         t.appLockLocked,
-                        style: TextStyle(color: AppTheme.textPrimary, fontSize: 20, fontWeight: FontWeight.w700),
+                        style: TextStyle(color: AppTheme.tinte, fontSize: 20, fontWeight: FontWeight.w700),
                       ),
                       const SizedBox(height: 24),
                       ElevatedButton.icon(

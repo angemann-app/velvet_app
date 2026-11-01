@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -58,9 +59,9 @@ class _RueckmeldungScreenState extends State<RueckmeldungScreen> {
     final messenger = ScaffoldMessenger.of(context);
     if (ok) {
       Navigator.of(context).pop();
-      messenger.showSnackBar(SnackBar(content: Text(t.rueckmeldungDanke), backgroundColor: AppTheme.sageGreen));
+      messenger.showSnackBar(SnackBar(content: Text(t.rueckmeldungDanke), backgroundColor: AppTheme.akzent));
     } else {
-      messenger.showSnackBar(SnackBar(content: Text(t.rueckmeldungFehler), backgroundColor: AppTheme.rose));
+      messenger.showSnackBar(SnackBar(content: Text(t.rueckmeldungFehler), backgroundColor: AppTheme.signal));
     }
   }
 
@@ -70,12 +71,12 @@ class _RueckmeldungScreenState extends State<RueckmeldungScreen> {
   Widget build(BuildContext context) {
     final aussprache = _art == RueckmeldungArt.aussprache;
     return Scaffold(
-      backgroundColor: AppTheme.background,
-      appBar: AppBar(backgroundColor: AppTheme.background, title: Text(t.rueckmeldungTitel)),
+      backgroundColor: AppTheme.papier,
+      appBar: AppBar(backgroundColor: AppTheme.papier, title: Text(t.rueckmeldungTitel)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
         children: [
-          Text(t.rueckmeldungEinleitung, style: TextStyle(color: AppTheme.textSecondary, height: 1.45)),
+          Text(t.rueckmeldungEinleitung, style: TextStyle(color: AppTheme.tinteLeise, height: 1.45)),
           const SizedBox(height: 16),
           SegmentedButton<RueckmeldungArt>(
             segments: [
@@ -94,7 +95,7 @@ class _RueckmeldungScreenState extends State<RueckmeldungScreen> {
                 padding: const EdgeInsets.only(bottom: 12),
                 child: Text(
                   widget.angaben.entries.map((e) => '${e.key}: ${e.value}').join('\n'),
-                  style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.4),
+                  style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.4),
                 ),
               ),
             TextField(
@@ -126,16 +127,16 @@ class _RueckmeldungScreenState extends State<RueckmeldungScreen> {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppTheme.border),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.linie),
             ),
             child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Icon(Icons.lock_outline_rounded, size: 18, color: AppTheme.sageGreen),
+              Icon(Icons.lock_outline_rounded, size: 18, color: AppTheme.akzentTief),
               const SizedBox(width: 10),
               Expanded(
                 child: Text(t.rueckmeldungDatenschutz,
-                    style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.45)),
+                    style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.45)),
               ),
             ]),
           ),
@@ -152,7 +153,7 @@ class _RueckmeldungScreenState extends State<RueckmeldungScreen> {
           TextButton(
             onPressed: () => launchUrl(Uri.parse('https://github.com/angemann-app/velvet_app/issues'),
                 mode: LaunchMode.externalApplication).catchError((_) => false),
-            child: Text(t.rueckmeldungGithub, style: TextStyle(color: AppTheme.textMuted, fontSize: 12.5)),
+            child: Text(t.rueckmeldungGithub, style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12.5)),
           ),
         ],
       ),
