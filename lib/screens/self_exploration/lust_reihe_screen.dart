@@ -169,6 +169,13 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     _abspielen(++_lauf);
   }
 
+  /// Anzeigename der Intensität; Sehr spicy erscheint, sobald das Paket Fassungen dafür enthält.
+  String _varianteName(String v) => switch (v) {
+        'spicy' => t.reiheSpicy,
+        'sehrspicy' => t.reiheSehrSpicy,
+        _ => t.reiheSoft,
+      };
+
   bool _abgebrochen(int lauf) => lauf != _lauf || !mounted;
 
   /// Hält das Handy bei ausgeschaltetem Bildschirm wach, solange die Folge läuft (sonst bleibt sie zwischen den Szenen stehen).
@@ -325,7 +332,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             _titel(t.reiheVariante),
             Wrap(spacing: 8, children: [
               for (final v in folge.varianten(spicyErlaubt: _spicy))
-                _chip(v == 'spicy' ? t.reiheSpicy : t.reiheSoft, fassung.variante == v, () => setState(() => _variante = v)),
+                _chip(_varianteName(v), fassung.variante == v, () => setState(() => _variante = v)),
             ]),
             const SizedBox(height: 16),
           ],
@@ -409,7 +416,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.tinte)),
         const SizedBox(height: 6),
-        Text('${fassung.spicy ? t.reiheSpicy : t.reiheSoft} · ${_perspektiveName(fassung)}',
+        Text('${_varianteName(fassung.variante)} · ${_perspektiveName(fassung)}',
             style: TextStyle(color: AppTheme.tinteStumm)),
         const Spacer(),
         Text(_fertig ? t.reiheFertig : t.reiheSzene(i + 1, szenen),

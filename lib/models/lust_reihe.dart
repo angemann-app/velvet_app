@@ -34,7 +34,7 @@ class ReiheSegment {
       ReiheSegment(szene: j['szene'] as String, text: j['text'] as String);
 }
 
-/// Eine Fassung: Variante (soft | spicy) und Perspektive (z. B. frau | mann) einer Folge.
+/// Eine Fassung: Variante (soft | spicy | sehrspicy) und Perspektive (z. B. frau | mann) einer Folge.
 class ReiheFassung {
   final String id;
   final String variante;
@@ -54,7 +54,10 @@ class ReiheFassung {
     this.name,
   });
 
-  bool get spicy => variante == 'spicy';
+  /// Spicy und Sehr spicy gibt es nur im Spicy-Modus.
+  bool get spicy => variante == 'spicy' || variante == 'sehrspicy';
+
+  bool get sehrSpicy => variante == 'sehrspicy';
 
   factory ReiheFassung.fromJson(Map<String, dynamic> j) => ReiheFassung(
         id: j['id'] as String,
@@ -96,12 +99,13 @@ class ReiheFolge {
   /// Solo-Folgen („Im eigenen Körper“): die Fassungen gehören nicht zu einer gemeinsamen Begegnung.
   bool get solo => typ == 'solo';
 
-  /// Varianten dieser Folge; Spicy nur, wenn [spicyErlaubt].
+  /// Varianten dieser Folge in aufsteigender Deutlichkeit; Spicy und Sehr spicy nur, wenn [spicyErlaubt]. Eine Variante erscheint,
+  /// sobald das Paket Fassungen dafür enthält (Sehr spicy: Der andere Körper), die App braucht dafür kein Update.
   List<String> varianten({required bool spicyErlaubt}) {
     final alle = <String>{for (final f in fassungen) f.variante};
     return [
-      for (final v in const ['soft', 'spicy'])
-        if (alle.contains(v) && (v != 'spicy' || spicyErlaubt)) v
+      for (final v in const ['soft', 'spicy', 'sehrspicy'])
+        if (alle.contains(v) && (v == 'soft' || spicyErlaubt)) v
     ];
   }
 
@@ -176,8 +180,9 @@ class ReiheDaten {
 
   /// Pfad des Szenenbilds im Paket. Ein Bild gehört zu Folge, Variante und Szene und wird von beiden Perspektiven
   /// geteilt (docs/konzepte/lust-reihe-szenenbilder.md); fehlt es, zeigt der Player kein Bild.
+  /// Sehr spicy teilt sich die Bilder mit Spicy.
   static String bildPfad(ReiheFolge folge, ReiheFassung fassung, ReiheSegment s) =>
-      'bilder/${folge.id}_${fassung.variante}_${s.szene}.webp';
+      'bilder/${folge.id}_${fassung.sehrSpicy ? 'spicy' : fassung.variante}_${s.szene}.webp';
 
   /// Dauer eines Segments: gemessen, sonst aus der Textlänge geschätzt (rund zehn Zeichen je Sekunde).
   Duration dauerVon(ReiheFolge folge, ReiheFassung fassung, ReiheSegment s) {
