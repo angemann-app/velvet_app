@@ -79,6 +79,13 @@
       "text": "The app is available in German and English. It follows your phone's language, and you can change it in your profile.\nYou download the recordings by Victoria and Martin in your profile under “Recordings”, split into lessons and guided audio, in German and in English. They're no longer inside the app itself, so it stays small and corrected recordings arrive without an update. If a recording is missing, your phone's voice reads aloud."
     },
     {
+      "id": "darstellung",
+      "icon": "spa",
+      "titel": "Appearance",
+      "bild": "",
+      "text": "Under Profile and settings you choose “Appearance”: Paper (light, default), Night paper (dark) or Classic (the previous colours). The choice applies to the whole app straight away and is part of your backup.\nSpicy mode has its own colours: deep burgundy and plum with warm paper white. Where an illustration is still missing, a drawn placeholder appears."
+    },
+    {
       "id": "hilfe",
       "icon": "help",
       "titel": "Help and feedback",
@@ -88,6 +95,7 @@
   ],
   "_source": {
     "guide:coach": "6528d2614ac06be6",
+    "guide:darstellung": "6db4e99add0397b5",
     "guide:diskretion": "9b4b4191fd610cb0",
     "guide:gefuehrt": "efa2b656287c7899",
     "guide:hilfe": "0f67b34ec65bbd7e",

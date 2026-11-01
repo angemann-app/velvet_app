@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import '../../theme/app_theme.dart';
 import '../../l10n/t.dart';
@@ -21,7 +22,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppTheme.surface,
+        color: AppTheme.papierErhoben,
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       constraints: BoxConstraints(
@@ -35,7 +36,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
             width: 44,
             height: 4,
             decoration: BoxDecoration(
-              color: AppTheme.border,
+              color: AppTheme.linie,
               borderRadius: BorderRadius.circular(2),
             ),
           ),
@@ -48,10 +49,10 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: AppTheme.amber.withValues(alpha: 0.15),
-                    borderRadius: BorderRadius.circular(12),
+                    color: AppTheme.akzentTief.withValues(alpha: 0.15),
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
                   ),
-                  child: Icon(Icons.key_rounded, color: AppTheme.amber, size: 24),
+                  child: Icon(Icons.key_rounded, color: AppTheme.akzentTief, size: 24),
                 ),
                 const SizedBox(width: 14),
                 Expanded(
@@ -63,7 +64,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w700,
-                          color: AppTheme.textPrimary,
+                          color: AppTheme.tinte,
                         ),
                       ),
                       SizedBox(height: 2),
@@ -71,21 +72,21 @@ class ApiKeyGuideSheet extends StatelessWidget {
                         t.apiKeyGuideSheetCreatedStepByStepIn,
                         style: TextStyle(
                           fontSize: 13,
-                          color: AppTheme.textSecondary,
+                          color: AppTheme.tinteLeise,
                         ),
                       ),
                     ],
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.close_rounded, color: AppTheme.textMuted),
+                  icon: Icon(Icons.close_rounded, color: AppTheme.tinteStumm),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               ],
             ),
           ),
 
-          Divider(color: AppTheme.border, height: 1),
+          Divider(color: AppTheme.linie, height: 1),
 
           // Steps list
           Expanded(
@@ -96,23 +97,23 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
-                    color: AppTheme.surfaceLight,
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: AppTheme.border),
+                    color: AppTheme.papierVertieft,
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
+                    border: Border.all(color: AppTheme.linie),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(Icons.shield_outlined, color: AppTheme.sageGreen, size: 20),
+                      Icon(Icons.shield_outlined, color: AppTheme.akzentTief, size: 20),
                       const SizedBox(width: 10),
                       Expanded(
                         child: RichText(
                           text: TextSpan(
-                            style: TextStyle(fontSize: 12, color: AppTheme.textSecondary, height: 1.4),
+                            style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.4),
                             children: [
                               TextSpan(
                                 text: t.apiKeyGuideSheetFreeAndWhatHappensTo,
-                                style: TextStyle(fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+                                style: TextStyle(fontWeight: FontWeight.w700, color: AppTheme.tinte),
                               ),
                               TextSpan(
                                 text:
@@ -138,19 +139,19 @@ class ApiKeyGuideSheet extends StatelessWidget {
                   actionWidget: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     decoration: BoxDecoration(
-                      color: AppTheme.background,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: AppTheme.border),
+                      color: AppTheme.papier,
+                      borderRadius: BorderRadius.circular(VpRadius.karte),
+                      border: Border.all(color: AppTheme.linie),
                     ),
                     child: Row(
                       children: [
-                        Icon(Icons.link_rounded, color: AppTheme.amber, size: 18),
+                        Icon(Icons.link_rounded, color: AppTheme.akzentTief, size: 18),
                         const SizedBox(width: 8),
                         Expanded(
                           child: Text(
                             'https://aistudio.google.com',
                             style: TextStyle(
-                              color: AppTheme.amberLight,
+                              color: AppTheme.akzentTief,
                               fontSize: 13,
                               fontWeight: FontWeight.w600,
                             ),
@@ -165,22 +166,22 @@ class ApiKeyGuideSheet extends StatelessWidget {
                               SnackBar(
                                 content: Text(t.apiKeyGuideSheetLinkCopiedToClipboard),
                                 duration: Duration(seconds: 2),
-                                backgroundColor: AppTheme.sageGreen,
+                                backgroundColor: AppTheme.akzent,
                               ),
                             );
                           },
-                          borderRadius: BorderRadius.circular(6),
+                          borderRadius: BorderRadius.circular(VpRadius.chip),
                           child: Container(
                             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                             decoration: BoxDecoration(
-                              color: AppTheme.surfaceLight,
-                              borderRadius: BorderRadius.circular(6),
+                              color: AppTheme.papierVertieft,
+                              borderRadius: BorderRadius.circular(VpRadius.chip),
                             ),
                             child: Row(
                               children: [
-                                Icon(Icons.copy_rounded, color: AppTheme.textPrimary, size: 14),
+                                Icon(Icons.copy_rounded, color: AppTheme.tinte, size: 14),
                                 SizedBox(width: 4),
-                                Text(t.apiKeyGuideSheetCopy, style: TextStyle(color: AppTheme.textPrimary, fontSize: 11)),
+                                Text(t.apiKeyGuideSheetCopy, style: TextStyle(color: AppTheme.tinte, fontSize: 11)),
                               ],
                             ),
                           ),
@@ -240,9 +241,9 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: AppTheme.surfaceLight.withValues(alpha: 0.5),
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: AppTheme.border.withValues(alpha: 0.6)),
+                    color: AppTheme.papierVertieft.withValues(alpha: 0.5),
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
+                    border: Border.all(color: AppTheme.linie.withValues(alpha: 0.6)),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -250,7 +251,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                       Text(
                         t.apiKeyGuideSheetFrequentlyAskedQuestions,
                         style: TextStyle(
-                          color: AppTheme.textPrimary,
+                          color: AppTheme.tinte,
                           fontWeight: FontWeight.w700,
                           fontSize: 13,
                         ),
@@ -278,8 +279,8 @@ class ApiKeyGuideSheet extends StatelessWidget {
           Container(
             padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              border: Border(top: BorderSide(color: AppTheme.border)),
+              color: AppTheme.papierErhoben,
+              border: Border(top: BorderSide(color: AppTheme.linie)),
             ),
             child: SizedBox(
               width: double.infinity,
@@ -297,10 +298,10 @@ class ApiKeyGuideSheet extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.w700),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppTheme.amber,
-                  foregroundColor: AppTheme.background,
+                  backgroundColor: AppTheme.akzentTief,
+                  foregroundColor: AppTheme.papier,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
                   ),
                 ),
               ),
@@ -321,9 +322,9 @@ class ApiKeyGuideSheet extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: AppTheme.surfaceLight,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppTheme.border.withValues(alpha: 0.8)),
+        color: AppTheme.papierVertieft,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie.withValues(alpha: 0.8)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -333,14 +334,14 @@ class ApiKeyGuideSheet extends StatelessWidget {
             height: 28,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: AppTheme.amber.withValues(alpha: 0.2),
+              color: AppTheme.akzentTief.withValues(alpha: 0.2),
               shape: BoxShape.circle,
-              border: Border.all(color: AppTheme.amber, width: 1.5),
+              border: Border.all(color: AppTheme.akzentTief, width: 1.5),
             ),
             child: Text(
               stepNumber,
               style: TextStyle(
-                color: AppTheme.amberLight,
+                color: AppTheme.akzentTief,
                 fontWeight: FontWeight.w800,
                 fontSize: 13,
               ),
@@ -354,7 +355,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    color: AppTheme.textPrimary,
+                    color: AppTheme.tinte,
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
                   ),
@@ -363,7 +364,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
                 Text(
                   description,
                   style: TextStyle(
-                    color: AppTheme.textSecondary,
+                    color: AppTheme.tinteLeise,
                     fontSize: 12,
                     height: 1.4,
                   ),
@@ -387,7 +388,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
         Text(
           '• $question',
           style: TextStyle(
-            color: AppTheme.amberLight,
+            color: AppTheme.akzentTief,
             fontSize: 12,
             fontWeight: FontWeight.w600,
           ),
@@ -398,7 +399,7 @@ class ApiKeyGuideSheet extends StatelessWidget {
           child: Text(
             answer,
             style: TextStyle(
-              color: AppTheme.textMuted,
+              color: AppTheme.tinteStumm,
               fontSize: 11,
               height: 1.35,
             ),

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 
 import '../l10n/t.dart';
@@ -34,7 +35,7 @@ const _icons = {
   'fitness': Icons.fitness_center_rounded,
   'psychology': Icons.psychology_rounded,
   'favorite': Icons.favorite_rounded,
-  'flame': Icons.local_fire_department_rounded,
+  'flame': Icons.bolt_outlined,
   'chat': Icons.chat_bubble_rounded,
   'lock': Icons.lock_rounded,
   'update': Icons.system_update_rounded,
@@ -49,18 +50,18 @@ class AnleitungScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.background,
-      appBar: AppBar(backgroundColor: AppTheme.background, title: Text(t.anleitungTitel)),
+      backgroundColor: AppTheme.papier,
+      appBar: AppBar(backgroundColor: AppTheme.papier, title: Text(t.anleitungTitel)),
       body: FutureBuilder<List<AnleitungAbschnitt>>(
         future: AnleitungAbschnitt.laden(),
         builder: (context, snap) {
           final abschnitte = snap.data;
-          if (abschnitte == null) return Center(child: CircularProgressIndicator(color: AppTheme.sageGreen));
+          if (abschnitte == null) return Center(child: CircularProgressIndicator(color: AppTheme.akzentTief));
           return ListView(
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 28),
             children: [
               Text(t.anleitungEinleitung,
-                  style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.45)),
+                  style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.45)),
               const SizedBox(height: 14),
               for (final a in abschnitte)
                 // Den Spicy-Abschnitt sieht nur, wer den Modus an hat; alle anderen sehen nur, dass es ihn gibt.
@@ -72,9 +73,9 @@ class AnleitungScreen extends StatelessWidget {
                 icon: const Icon(Icons.campaign_outlined),
                 label: Text(t.rueckmeldungTitel),
                 style: OutlinedButton.styleFrom(
-                  foregroundColor: AppTheme.sageGreen,
+                  foregroundColor: AppTheme.akzentTief,
                   minimumSize: const Size.fromHeight(48),
-                  side: BorderSide(color: AppTheme.sageGreen.withValues(alpha: 0.6)),
+                  side: BorderSide(color: AppTheme.akzentTief.withValues(alpha: 0.6)),
                 ),
               ),
             ],
@@ -85,20 +86,20 @@ class AnleitungScreen extends StatelessWidget {
   }
 
   Widget _karte(AnleitungAbschnitt a) => Card(
-        color: AppTheme.surface,
+        color: AppTheme.papierErhoben,
         margin: const EdgeInsets.only(bottom: 10),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(14),
-          side: BorderSide(color: AppTheme.border),
+          borderRadius: BorderRadius.circular(VpRadius.karte),
+          side: BorderSide(color: AppTheme.linie),
         ),
         clipBehavior: Clip.antiAlias,
         child: ExpansionTile(
           leading: Icon(_icons[a.icon] ?? Icons.info_rounded,
-              color: a.id == 'spicy' ? AppTheme.rose : AppTheme.sageGreen),
+              color: a.id == 'spicy' ? AppTheme.akzentTief : AppTheme.akzentTief),
           title: Text(a.titel,
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
-          iconColor: AppTheme.textSecondary,
-          collapsedIconColor: AppTheme.textMuted,
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
+          iconColor: AppTheme.tinteLeise,
+          collapsedIconColor: AppTheme.tinteStumm,
           childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
           expandedCrossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -106,24 +107,24 @@ class AnleitungScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(absatz,
-                    style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.5)),
+                    style: TextStyle(fontSize: 13.5, color: AppTheme.tinteLeise, height: 1.5)),
               ),
           ],
         ),
       );
 
   Widget _spicyHinweis() => Card(
-        color: AppTheme.surface,
+        color: AppTheme.papierErhoben,
         margin: const EdgeInsets.only(bottom: 10),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(14),
-          side: BorderSide(color: AppTheme.border),
+          borderRadius: BorderRadius.circular(VpRadius.karte),
+          side: BorderSide(color: AppTheme.linie),
         ),
         child: ListTile(
-          leading: Icon(Icons.local_fire_department_rounded, color: AppTheme.textMuted),
+          leading: Icon(Icons.bolt_outlined, color: AppTheme.tinteStumm),
           title: Text(t.spicyModus,
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
-          subtitle: Text(t.spicyModusText, style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary)),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
+          subtitle: Text(t.spicyModusText, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise)),
         ),
       );
 }

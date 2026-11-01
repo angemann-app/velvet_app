@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
 
 import '../l10n/t.dart';
 import '../services/audio_ausgabe.dart';
@@ -43,14 +44,14 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: AppTheme.surface,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      backgroundColor: AppTheme.papierErhoben,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
       title: Text(
         t.lautsprecherFrageTitel,
         style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w700,
-          color: AppTheme.textPrimary,
+          color: AppTheme.tinte,
         ),
       ),
       content: Column(
@@ -61,14 +62,14 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
             t.lautsprecherFrageNachricht,
             style: TextStyle(
               fontSize: 14,
-              color: AppTheme.textSecondary,
+              color: AppTheme.tinteLeise,
               height: 1.45,
             ),
           ),
           const SizedBox(height: 16),
           InkWell(
             onTap: () => setState(() => _nichtMehrFragen = !_nichtMehrFragen),
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(VpRadius.feld),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 4),
               child: Row(
@@ -78,7 +79,7 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
                     height: 24,
                     child: Checkbox(
                       value: _nichtMehrFragen,
-                      activeColor: AppTheme.rose,
+                      activeColor: AppTheme.akzentTief,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
                       ),
@@ -92,7 +93,7 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
                       t.lautsprecherNichtMehrFragen,
                       style: TextStyle(
                         fontSize: 13.5,
-                        color: AppTheme.textPrimary,
+                        color: AppTheme.tinte,
                       ),
                     ),
                   ),
@@ -107,7 +108,7 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
           onPressed: () => Navigator.of(context).pop(false),
           child: Text(
             t.lautsprecherAbbrechen,
-            style: TextStyle(color: AppTheme.textSecondary),
+            style: TextStyle(color: AppTheme.tinteLeise),
           ),
         ),
         ElevatedButton(
@@ -118,10 +119,10 @@ class _LautsprecherDialogState extends State<_LautsprecherDialog> {
             if (context.mounted) Navigator.of(context).pop(true);
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppTheme.rose,
-            foregroundColor: Colors.white,
+            backgroundColor: AppTheme.akzent,
+            foregroundColor: AppTheme.aufAkzent,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(VpRadius.karte),
             ),
           ),
           child: Text(

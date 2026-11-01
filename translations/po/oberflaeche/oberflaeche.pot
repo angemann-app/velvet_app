@@ -257,21 +257,21 @@ msgid "Berührung"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: For her 🌸
+#. EN: For her
 msgctxt "ui:coursesForHer#text"
-msgid "Für Sie 🌸"
+msgid "Für Sie"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: For him 🌿
+#. EN: For him
 msgctxt "ui:coursesForHim#text"
-msgid "Für Ihn 🌿"
+msgid "Für Ihn"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: For couples 💫
+#. EN: For couples
 msgctxt "ui:coursesForCouples#text"
-msgid "Für Paare 💫"
+msgid "Für Paare"
 msgstr ""
 
 #. Text der Oberfläche
@@ -575,9 +575,9 @@ msgid "Praxis: KVT"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Lesson marked as completed! 🎉
+#. EN: Lesson marked as completed!
 msgctxt "ui:lessonDetailLessonMarkedAsCompleted#text"
-msgid "Lektion als abgeschlossen markiert! 🎉"
+msgid "Lektion als abgeschlossen markiert!"
 msgstr ""
 
 #. Text der Oberfläche
@@ -1749,9 +1749,9 @@ msgid "Ablehnen"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {name}
-#. EN: Connected with {name} 💛
+#. EN: Connected with {name}
 msgctxt "ui:invitePartnerConnectedWithName#text"
-msgid "Verbunden mit {name} 💛"
+msgid "Verbunden mit {name}"
 msgstr ""
 
 #. Text der Oberfläche
@@ -1797,9 +1797,9 @@ msgid "👋 Hallo, ich bin jetzt verbunden."
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {name}
-#. EN: Connected with {name} 💛
+#. EN: Connected with {name}
 msgctxt "ui:pairingModalConnectedWithName#text"
-msgid "Verbunden mit {name} 💛"
+msgid "Verbunden mit {name}"
 msgstr ""
 
 #. Text der Oberfläche
@@ -2216,9 +2216,9 @@ msgid ""
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Your desire profile is on its way, encrypted 💛
+#. EN: Your desire profile is on its way, encrypted
 msgctxt "ui:lustProfileYourDesireProfileIsOn#text"
-msgid "Dein Lust-Profil ist verschlüsselt unterwegs 💛"
+msgid "Dein Lust-Profil ist verschlüsselt unterwegs"
 msgstr ""
 
 #. Text der Oberfläche
@@ -2300,9 +2300,9 @@ msgid "Antworten werden verschlüsselt abgeglichen …"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {count}
-#. EN: {count} answers matched! ✨
+#. EN: {count} answers matched!
 msgctxt "ui:yesNoMaybeCountAnswersMatched#text"
-msgid "{count} Antworten erfolgreich abgeglichen! ✨"
+msgid "{count} Antworten erfolgreich abgeglichen!"
 msgstr ""
 
 #. Text der Oberfläche
@@ -2713,15 +2713,15 @@ msgid "Die häufigsten mentalen Fallen bei Leistungsangst – und die biologisch
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: FOR HER 🌸
+#. EN: FOR HER
 msgctxt "ui:beliefLibraryViewForHer#text"
-msgid "FÜR SIE 🌸"
+msgid "FÜR SIE"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: FOR HIM 🌿
+#. EN: FOR HIM
 msgctxt "ui:beliefLibraryViewForHim#text"
-msgid "FÜR IHN 🌿"
+msgid "FÜR IHN"
 msgstr ""
 
 #. Text der Oberfläche
@@ -3730,15 +3730,15 @@ msgid "Werte aktualisieren"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: 💡 Coaching insight: your everyday stress is high today. Remember: stress and exhaustion often slow desire down by themselves. That's a normal reaction, not a defect.
+#. EN: Coaching insight: your everyday stress is high today. Remember: stress and exhaustion often slow desire down by themselves. That's a normal reaction, not a defect.
 msgctxt "ui:dailyCheckinCardCoachingInsightYourEverydayStress#text"
-msgid "💡 Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt."
+msgid "Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: 💡 Coaching insight: when everyday stress drops, it's often easier to relax. Use today's calm to feel into your body without pressure to perform.
+#. EN: Coaching insight: when everyday stress drops, it's often easier to relax. Use today's calm to feel into your body without pressure to perform.
 msgctxt "ui:dailyCheckinCardCoachingInsightWhenEverydayStress#text"
-msgid "💡 Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren."
+msgid "Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren."
 msgstr ""
 
 #. Text der Oberfläche
@@ -3838,9 +3838,9 @@ msgid "Nutzer"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {name}
-#. EN: Backup for "{name}" restored! ✨
+#. EN: Backup for "{name}" restored!
 msgctxt "ui:onboardingBackupForNameRestored#text"
-msgid "Sicherung für \"{name}\" erfolgreich eingespielt! ✨"
+msgid "Sicherung für \"{name}\" erfolgreich eingespielt!"
 msgstr ""
 
 #. Text der Oberfläche
@@ -3934,27 +3934,27 @@ msgid "4. Dein Beziehungsstatus"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: In a relationship / married 💍
+#. EN: In a relationship / married
 msgctxt "ui:onboardingInARelationshipMarried#text"
-msgid "In fester Beziehung / Verheiratet 💍"
+msgid "In fester Beziehung / Verheiratet"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Dating / getting to know someone 💫
+#. EN: Dating / getting to know someone
 msgctxt "ui:onboardingDatingGettingToKnowSomeone#text"
-msgid "Dating / Kennenlernphase 💫"
+msgid "Dating / Kennenlernphase"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Single 🌱
+#. EN: Single
 msgctxt "ui:onboardingSingle#text"
-msgid "Single 🌱"
+msgid "Single"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: It's complicated 🌀
+#. EN: It's complicated
 msgctxt "ui:onboardingItSComplicated#text"
-msgid "Es ist kompliziert 🌀"
+msgid "Es ist kompliziert"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4024,9 +4024,9 @@ msgid "Programm jetzt personalisieren"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Skip & go straight to the app ➔
+#. EN: Skip & go straight to the app
 msgctxt "ui:onboardingSkipGoStraightToThe#text"
-msgid "Überspringen & Direkt zur App ➔"
+msgid "Überspringen & Direkt zur App"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {data}
@@ -5225,6 +5225,42 @@ msgid "Ab 18. Schaltet in Körperreise und Gemeinsamem Abend die Stufen „Spicy
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: For today
+msgctxt "ui:heuteFuerHeute#text"
+msgid "Für heute"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Appearance
+msgctxt "ui:designTitel#text"
+msgid "Darstellung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paper is light, Night paper is dark. Spicy mode uses its own colours.
+msgctxt "ui:designText#text"
+msgid "Papier ist hell, Nachtpapier dunkel. Im Spicy-Modus gelten eigene Farben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paper
+msgctxt "ui:designPapier#text"
+msgid "Papier"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Night paper
+msgctxt "ui:designNacht#text"
+msgid "Nachtpapier"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Classic
+msgctxt "ui:designKlassisch#text"
+msgid "Klassisch"
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Turn on spicy mode?
 msgctxt "ui:spicyEinschaltenTitel#text"
 msgid "Spicy-Modus einschalten?"
@@ -5430,9 +5466,9 @@ msgid "Zum Spicy-Modus einladen"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: 🔥 I've turned on spicy mode. Would you like to try it too? (Profile › Spicy mode)
+#. EN: I've turned on spicy mode. Would you like to try it too? (Profile › Spicy mode)
 msgctxt "ui:spicyEinladungText#text"
-msgid "🔥 Ich habe den Spicy-Modus eingeschaltet. Magst du ihn auch ausprobieren? (Profil › Spicy-Modus)"
+msgid "Ich habe den Spicy-Modus eingeschaltet. Magst du ihn auch ausprobieren? (Profil › Spicy-Modus)"
 msgstr ""
 
 #. Text der Oberfläche

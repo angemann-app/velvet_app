@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../services/nostr_service.dart';
 import '../services/storage_service.dart';
-import '../widgets/spicy_atmosphaere.dart';
+import '../widgets/design/vp_seite.dart';
 import '../theme/app_theme.dart';
+import '../theme/vp_tokens.dart';
 import '../widgets/sos_button.dart';
 import '../widgets/update_dialog.dart';
 import 'courses/courses_screen.dart';
@@ -96,36 +97,13 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 
   Widget _buildScaffold(bool spicy) {
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: AppBar(
-        flexibleSpace: spicy
-            ? DecoratedBox(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [SpicyAtmosphaere.glut.withValues(alpha: 0.28), AppTheme.background],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                ),
-              )
-            : null,
-        title: Row(mainAxisSize: MainAxisSize.min, children: [
-          if (spicy) ...[
-            Icon(Icons.local_fire_department_rounded, color: AppTheme.rose, size: 20, semanticLabel: t.spicyModus),
-            const SizedBox(width: 6),
-          ],
-          Flexible(
-            child: Text(
-              _getAppBarTitle(_currentIndex),
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w800,
-                letterSpacing: -0.3,
-              ),
-            ),
-          ),
-        ]),
+        // Titel in der redaktionellen Serif des Themes; Spicy zeigt sich an den Farben, nicht an einem Symbol.
+        title: Text(
+          _getAppBarTitle(_currentIndex),
+          overflow: TextOverflow.ellipsis,
+        ),
         actions: [
           IconButton(
             onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AnleitungScreen())),
@@ -136,8 +114,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           const SosButton(),
         ],
       ),
-      body: SpicyAtmosphaere(
-        an: spicy,
+      body: VpSeite(
         child: IndexedStack(
         index: _currentIndex,
         children: [
@@ -159,17 +136,14 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          border: Border(
-            top: BorderSide(
-                color: spicy ? SpicyAtmosphaere.glut.withValues(alpha: 0.6) : AppTheme.border, width: 0.8),
-          ),
+          border: Border(top: BorderSide(color: AppTheme.linie, width: VpLinie.haar)),
         ),
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
           type: BottomNavigationBarType.fixed,
-          backgroundColor: spicy ? Color.alphaBlend(SpicyAtmosphaere.glut.withValues(alpha: 0.08), AppTheme.surface) : AppTheme.surface,
-          selectedItemColor: spicy ? AppTheme.rose : AppTheme.amber,
-          unselectedItemColor: AppTheme.textMuted,
+          backgroundColor: AppTheme.papier,
+          selectedItemColor: AppTheme.akzentTief,
+          unselectedItemColor: AppTheme.tinteStumm,
           selectedFontSize: 11,
           unselectedFontSize: 11,
           onTap: _showTab,

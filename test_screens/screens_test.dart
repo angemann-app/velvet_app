@@ -9,6 +9,7 @@ import 'dart:io';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -31,6 +32,7 @@ import 'package:velvetpulse/services/nostr_service.dart';
 import 'package:velvetpulse/l10n/t.dart';
 import 'package:velvetpulse/services/sprache.dart';
 import 'package:velvetpulse/services/storage_service.dart';
+import 'package:velvetpulse/services/bild_register.dart';
 import 'package:velvetpulse/theme/app_theme.dart';
 
 const _fontDir = 'C:/TOOLS/flutter/bin/cache/artifacts/material_fonts';
@@ -38,7 +40,22 @@ const _fontDir = 'C:/TOOLS/flutter/bin/cache/artifacts/material_fonts';
 const _sprache = String.fromEnvironment('LANG', defaultValue: 'de');
 /// Spicy-Palette rendern: flutter test test_screens/screens_test.dart --dart-define=SPICY=true
 const _spicy = bool.fromEnvironment('SPICY');
-final _outDir = Directory(_spicy ? 'build/screens_spicy' : (_sprache == 'de' ? 'build/screens' : 'build/screens_$_sprache'));
+/// Darstellung des Normalmodus: --dart-define=PALETTE=papier|nacht|klassisch (Standard: papier). Spicy geht vor.
+const _palette = String.fromEnvironment('PALETTE', defaultValue: 'papier');
+/// Qualitätssicherung: Schriftskala und Displaygröße, z. B. --dart-define=TEXTSCALE=1.6 --dart-define=SIZE=360x640.
+final _textscale = double.parse(const String.fromEnvironment('TEXTSCALE', defaultValue: '1.0'));
+const _size = String.fromEnvironment('SIZE', defaultValue: '390x844');
+
+/// Mit --dart-define=STRICT=true schlägt der Test bei jedem Layout-Überlauf fehl.
+const _strict = bool.fromEnvironment('STRICT');
+
+String get _suffix => (_textscale != 1.0 ? '_s$_textscale' : '') + (_size != '390x844' ? '_$_size' : '');
+
+final _outDir = Directory(_spicy
+    ? 'build/screens_spicy$_suffix'
+    : (_palette != 'papier'
+        ? 'build/screens_$_palette$_suffix'
+        : (_sprache == 'de' ? 'build/screens$_suffix' : 'build/screens_$_sprache$_suffix')));
 final _boundary = GlobalKey();
 
 Future<void> _loadFonts() async {
@@ -59,7 +76,19 @@ Future<void> _loadFonts() async {
         .load();
   }
   await (FontLoader('MaterialIcons')..addFont(load('materialicons-regular.otf'))).load();
+  // Redaktionelle Serif der App (assets/fonts), damit die Screenshots die echte Typografie zeigen.
+  Future<ByteData> serif(String f) async =>
+      ByteData.view(Uint8List.fromList(await File('assets/fonts/$f').readAsBytes()).buffer);
+  await (FontLoader('SourceSerif4')
+        ..addFont(serif('SourceSerif4-Regular.ttf'))
+        ..addFont(serif('SourceSerif4-SemiBold.ttf'))
+        ..addFont(serif('SourceSerif4-Italic.ttf')))
+      .load();
 }
+
+/// Serif-Stile der App behalten, alle anderen auf Roboto setzen.
+TextStyle? _mitRoboto(TextStyle? s) =>
+    s == null ? null : (s.fontFamily == 'SourceSerif4' ? s : s.copyWith(fontFamily: 'Roboto', fontFamilyFallback: ['Emoji']));
 
 /// Im Test gibt es keine Systemschrift: Stile ohne Schriftfamilie (AppBar, Knöpfe)
 /// würden als Kästchen gezeichnet. Darum überall Roboto eintragen.
@@ -70,9 +99,25 @@ ThemeData _testTheme() {
             (style?.textStyle?.resolve({}) ?? const TextStyle()).copyWith(fontFamily: 'Roboto')),
       );
   return base.copyWith(
-    textTheme: base.textTheme.apply(fontFamily: 'Roboto', fontFamilyFallback: ['Emoji']),
+    textTheme: TextTheme(
+      displayLarge: _mitRoboto(base.textTheme.displayLarge),
+      displayMedium: _mitRoboto(base.textTheme.displayMedium),
+      displaySmall: _mitRoboto(base.textTheme.displaySmall),
+      headlineLarge: _mitRoboto(base.textTheme.headlineLarge),
+      headlineMedium: _mitRoboto(base.textTheme.headlineMedium),
+      headlineSmall: _mitRoboto(base.textTheme.headlineSmall),
+      titleLarge: _mitRoboto(base.textTheme.titleLarge),
+      titleMedium: _mitRoboto(base.textTheme.titleMedium),
+      titleSmall: _mitRoboto(base.textTheme.titleSmall),
+      bodyLarge: _mitRoboto(base.textTheme.bodyLarge),
+      bodyMedium: _mitRoboto(base.textTheme.bodyMedium),
+      bodySmall: _mitRoboto(base.textTheme.bodySmall),
+      labelLarge: _mitRoboto(base.textTheme.labelLarge),
+      labelMedium: _mitRoboto(base.textTheme.labelMedium),
+      labelSmall: _mitRoboto(base.textTheme.labelSmall),
+    ),
     appBarTheme: base.appBarTheme.copyWith(
-      titleTextStyle: (base.appBarTheme.titleTextStyle ?? const TextStyle()).copyWith(fontFamily: 'Roboto'),
+      titleTextStyle: _mitRoboto(base.appBarTheme.titleTextStyle ?? const TextStyle()),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(style: withRoboto(base.elevatedButtonTheme.style)),
     outlinedButtonTheme: OutlinedButtonThemeData(style: withRoboto(base.outlinedButtonTheme.style)),
@@ -88,6 +133,16 @@ Widget _app(Widget home) => RepaintBoundary(
         home: home,
       ),
     );
+
+/// Tippt robust: scrollt das Ziel ins Bild (kleine Displays, große Schrift) und ignoriert Fehltreffer, statt zu hängen.
+Future<void> _tippe(WidgetTester tester, Finder f) async {
+  if (f.evaluate().isEmpty) return;
+  try {
+    await tester.ensureVisible(f.first);
+    await tester.pump();
+  } catch (_) {}
+  await tester.tap(f.first, warnIfMissed: false);
+}
 
 Future<void> _shot(WidgetTester tester, String name, List<String> errors) async {
   for (var i = 0; i < 5; i++) {
@@ -109,7 +164,10 @@ Future<void> _shot(WidgetTester tester, String name, List<String> errors) async 
 void main() {
   Sprache.geraetFuerTest = _sprache;
   testWidgets('Screens rendern', (tester) async {
-    tester.view.physicalSize = const Size(390, 844);
+    final wh = _size.split('x').map(double.parse).toList();
+    tester.view.physicalSize = Size(wh[0], wh[1]);
+    tester.platformDispatcher.textScaleFactorTestValue = _textscale;
+    addTearDown(tester.platformDispatcher.clearAllTestValues);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
 
@@ -121,9 +179,14 @@ void main() {
 
     final errors = <String>[];
     final oldHandler = FlutterError.onError;
-    FlutterError.onError = (d) => errors.add(d.exceptionAsString().split('\n').first);
+    FlutterError.onError = (d) {
+      final text = d.exceptionAsString();
+      // Bei Überläufen die Fundstelle (Datei:Zeile) des betroffenen Widgets mit aufnehmen.
+      final ort = RegExp(r'/lib/(\S+?\.dart:\d+)').firstMatch(d.toString())?.group(1);
+      errors.add(text.split('\n').first + (ort != null ? '  @ $ort' : ''));
+    };
 
-    SharedPreferences.setMockInitialValues({if (_spicy) 'spicy_mode': true});
+    SharedPreferences.setMockInitialValues({if (_spicy) 'spicy_mode': true, 'design_palette': _palette});
     await tester.runAsync(() async {
       await _loadFonts();
       await StorageService.init();
@@ -132,6 +195,8 @@ void main() {
             primaryGoal: 'performance_anxiety'),
         triggerBackup: false,
       );
+      await BildRegister.laden();
+      await initializeDateFormatting(_sprache);
       await DataService.loadDatabase();
     });
 
@@ -143,21 +208,21 @@ void main() {
     await tester.drag(find.byType(Scrollable).first, const Offset(0, -900));
     await _shot(tester, '01_kurse_unten', errors);
 
-    await tester.tap(find.text(t.navLernen).last);
+    await _tippe(tester, find.text(t.navLernen).last);
     await _shot(tester, '01_lernen', errors);
-    await tester.tap(find.text(t.navUeben).last);
+    await _tippe(tester, find.text(t.navUeben).last);
     await _shot(tester, '02_training', errors);
-    await tester.tap(find.text(t.uebenGedanken));
+    await _tippe(tester, find.text(t.uebenGedanken));
     await _shot(tester, '03_reframing', errors);
-    await tester.tap(find.text(t.uebenCoach));
+    await _tippe(tester, find.text(t.uebenCoach));
     await _shot(tester, '05_kicoach', errors);
-    await tester.tap(find.text(t.navWir).last);
+    await _tippe(tester, find.text(t.navWir).last);
     await _shot(tester, '04_paarkanal', errors);
     // Offene Einladung, auf die sich jemand gemeldet hat.
     await tester.runAsync(() => NostrService().startInvite('Anna'));
     NostrService().joinRequestNotifier.value = 'b' * 64;
     await tester.pumpWidget(_app(const MainNavigationScreen()));
-    await tester.tap(find.text(t.navWir).last);
+    await _tippe(tester, find.text(t.navWir).last);
     await _shot(tester, '04_paarkanal_anfrage', errors);
     await tester.runAsync(() => NostrService().cancelInvite());
 
@@ -179,9 +244,9 @@ void main() {
     });
     NostrService().partnerReadUntil.value = DateTime(2026, 10, 23, 21).millisecondsSinceEpoch ~/ 1000;
     await tester.pumpWidget(_app(const MainNavigationScreen()));
-    await tester.tap(find.text(t.navWir).last);
+    await _tippe(tester, find.text(t.navWir).last);
     await _shot(tester, '04_paarkanal_verbunden', errors);
-    await tester.tap(find.text(t.couplesChannelWishes));
+    await _tippe(tester, find.text(t.couplesChannelWishes));
     await _shot(tester, '04_paarkanal_wuensche', errors);
 
     await tester.pumpWidget(const SizedBox());
@@ -190,12 +255,12 @@ void main() {
     await _shot(tester, '09_paar_abend', errors);
     await tester.drag(find.byType(Scrollable).first, const Offset(0, -700));
     await _shot(tester, '09_paar_abend_unten', errors);
-    await tester.tap(find.text(t.paarAbendBeginTheEvening));
+    await _tippe(tester, find.text(t.paarAbendBeginTheEvening));
     await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 500)));
     await _shot(tester, '09_paar_abend_laeuft', errors);
-    await tester.tap(find.byIcon(Icons.skip_next_rounded));
-    await tester.tap(find.byIcon(Icons.skip_next_rounded));
-    await tester.tap(find.byIcon(Icons.skip_next_rounded));
+    await _tippe(tester, find.byIcon(Icons.skip_next_rounded));
+    await _tippe(tester, find.byIcon(Icons.skip_next_rounded));
+    await _tippe(tester, find.byIcon(Icons.skip_next_rounded));
     await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 1500)));
     await _shot(tester, '09_paar_abend_runde', errors);
     await tester.pumpWidget(const SizedBox());
@@ -205,13 +270,13 @@ void main() {
 
     await tester.pumpWidget(_app(const YesNoMaybeScreen()));
     await _shot(tester, '07_ja_nein_vielleicht', errors);
-    await tester.tap(find.byIcon(Icons.info_outline_rounded).first);
+    await _tippe(tester, find.byIcon(Icons.info_outline_rounded).first);
     await _shot(tester, '07_mehr_erfahren', errors);
     await tester.pumpWidget(const SizedBox());
     await tester.pumpWidget(_app(const YesNoMaybeScreen()));
     await tester.drag(find.byType(Scrollable).first, const Offset(0, -2600));
     await _shot(tester, '07_ja_nein_vielleicht_unten', errors);
-    await tester.tap(find.byIcon(Icons.info_outline_rounded).hitTestable().first);
+    await _tippe(tester, find.byIcon(Icons.info_outline_rounded).hitTestable().first);
     await _shot(tester, '07_mehr_erfahren_grafik', errors);
 
     await tester.pumpWidget(const SizedBox());
@@ -245,6 +310,12 @@ void main() {
     await _shot(tester, '06_lektion', errors);
     await tester.pumpWidget(const SizedBox());
 
+    // Pilot: Kurs 1, erste Lektion (Kopf, Einleitung, Text).
+    final kurs1 = DataService.getCourses().first;
+    await tester.pumpWidget(_app(LessonDetailScreen(lesson: kurs1.lessons.first, courseTitle: kurs1.title)));
+    await _shot(tester, '06_lektion_kurs1', errors);
+    await tester.pumpWidget(const SizedBox());
+
     final news = await tester.runAsync(WhatsNew.load);
     await tester.pumpWidget(_app(WhatsNewScreen(entries: news!.reversed.take(1).toList())));
     await _shot(tester, '12_was_ist_neu', errors);
@@ -255,7 +326,7 @@ void main() {
       await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 300)));
       await tester.pump();
     }
-    await tester.tap(find.text(t.paarAbendIntimate));
+    await _tippe(tester, find.text(t.paarAbendIntimate));
     await _shot(tester, '13_selbst_reise', errors);
     await tester.drag(find.byType(Scrollable).first, const Offset(0, -700));
     await _shot(tester, '13_selbst_reise_unten', errors);
@@ -276,7 +347,11 @@ void main() {
     await tester.pump(const Duration(seconds: 6));
     FlutterError.onError = oldHandler;
 
+    final protokoll = errors.where((e) => !e.startsWith('RenderBox was not laid out')).toList();
     // ignore: avoid_print
-    print('LAYOUT-PROTOKOLL:\n${errors.where((e) => !e.startsWith('RenderBox was not laid out')).join('\n')}');
+    print('LAYOUT-PROTOKOLL:\n${protokoll.join('\n')}');
+    if (_strict) {
+      expect(protokoll.where((e) => e.contains('overflowed')), isEmpty, reason: 'Layout-Überläufe, siehe LAYOUT-PROTOKOLL');
+    }
   });
 }

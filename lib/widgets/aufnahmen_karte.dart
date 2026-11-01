@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
 
 import '../l10n/t.dart';
 import '../services/paket_verzeichnis.dart';
@@ -26,7 +27,7 @@ class _AufnahmenKarteState extends State<AufnahmenKarte> {
       }
       messenger.showSnackBar(SnackBar(content: Text(t.aufnahmenFertig)));
     } catch (_) {
-      messenger.showSnackBar(SnackBar(content: Text(t.aufnahmenFehler), backgroundColor: AppTheme.rose));
+      messenger.showSnackBar(SnackBar(content: Text(t.aufnahmenFehler), backgroundColor: AppTheme.signal));
     }
   }
 
@@ -48,29 +49,29 @@ class _AufnahmenKarteState extends State<AufnahmenKarte> {
               margin: const EdgeInsets.only(top: 6, bottom: 8),
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.background,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppTheme.border),
+                color: AppTheme.papier,
+                borderRadius: BorderRadius.circular(VpRadius.karte),
+                border: Border.all(color: AppTheme.linie),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(children: [
-                    Icon(Icons.record_voice_over_rounded, color: AppTheme.sageGreen, size: 18),
+                    Icon(Icons.record_voice_over_rounded, color: AppTheme.akzentTief, size: 18),
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(t.aufnahmenTitel,
-                          style: TextStyle(color: AppTheme.textPrimary, fontWeight: FontWeight.w700)),
+                          style: TextStyle(color: AppTheme.tinte, fontWeight: FontWeight.w700)),
                     ),
                   ]),
                   const SizedBox(height: 6),
                   Text(t.aufnahmenText,
-                      style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4)),
+                      style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5, height: 1.4)),
                   if (snap.connectionState == ConnectionState.done && v == null)
                     Padding(
                       padding: const EdgeInsets.only(top: 6),
                       child: Text(t.aufnahmenNichtErreichbar,
-                          style: TextStyle(color: AppTheme.rose, fontSize: 12.5)),
+                          style: TextStyle(color: AppTheme.akzentTief, fontSize: 12.5)),
                     ),
                   const SizedBox(height: 8),
                   for (final art in Pakete.arten) _zeile(art, v, fortschritt),
@@ -111,7 +112,7 @@ class _AufnahmenKarteState extends State<AufnahmenKarte> {
           Row(children: [
             Expanded(
               child: Text('$titel · $info',
-                  style: TextStyle(color: AppTheme.textPrimary, fontSize: 13.5)),
+                  style: TextStyle(color: AppTheme.tinte, fontSize: 13.5)),
             ),
             if (laeuft == null && eintrag != null && (installiert == 0 && !altesPaket || aktualisierbar))
               TextButton(
@@ -122,14 +123,14 @@ class _AufnahmenKarteState extends State<AufnahmenKarte> {
               IconButton(
                 tooltip: t.audioPaketLoeschen,
                 onPressed: () => Pakete.loeschen(name),
-                icon: Icon(Icons.delete_outline_rounded, size: 20, color: AppTheme.textSecondary),
+                icon: Icon(Icons.delete_outline_rounded, size: 20, color: AppTheme.tinteLeise),
               ),
           ]),
           if (laeuft != null)
             LinearProgressIndicator(
               value: laeuft == 0 ? null : laeuft,
-              color: AppTheme.sageGreen,
-              backgroundColor: AppTheme.surfaceLight,
+              color: AppTheme.akzentTief,
+              backgroundColor: AppTheme.papierVertieft,
             ),
         ],
       ),
@@ -160,31 +161,31 @@ class _AufnahmenHinweisState extends State<AufnahmenHinweis> {
           margin: const EdgeInsets.only(bottom: 12),
           padding: const EdgeInsets.fromLTRB(14, 2, 2, 2),
           decoration: BoxDecoration(
-            color: AppTheme.surface,
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppTheme.border),
+            color: AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: AppTheme.linie),
           ),
           child: Row(children: [
-            Icon(Icons.record_voice_over_rounded, color: AppTheme.sageGreen, size: 18),
+            Icon(Icons.record_voice_over_rounded, color: AppTheme.akzentTief, size: 18),
             const SizedBox(width: 10),
             Expanded(
               child: Text(t.aufnahmenHinweisTitel,
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13.5, color: AppTheme.textPrimary)),
+                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13.5, color: AppTheme.tinte)),
             ),
             TextButton(
               onPressed: () => showModalBottomSheet(
                 context: context,
-                backgroundColor: AppTheme.surface,
+                backgroundColor: AppTheme.papierErhoben,
                 builder: (_) => const SafeArea(
                   child: Padding(padding: EdgeInsets.fromLTRB(16, 16, 16, 8), child: AufnahmenKarte()),
                 ),
               ),
-              child: Text(t.aufnahmenAnsehen, style: TextStyle(color: AppTheme.sageGreen)),
+              child: Text(t.aufnahmenAnsehen, style: TextStyle(color: AppTheme.akzentTief)),
             ),
             IconButton(
               tooltip: t.aufnahmenSpaeter,
               onPressed: () => setState(() => _spaeter = true),
-              icon: Icon(Icons.close_rounded, size: 18, color: AppTheme.textMuted),
+              icon: Icon(Icons.close_rounded, size: 18, color: AppTheme.tinteStumm),
             ),
           ]),
         );      },

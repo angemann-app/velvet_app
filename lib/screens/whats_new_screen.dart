@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
 
 import '../services/whats_new.dart';
 import '../theme/app_theme.dart';
@@ -40,7 +41,7 @@ class WhatsNewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final version = entries.first.version.split('-').first;
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       body: SafeArea(
         child: Column(
           children: [
@@ -48,16 +49,16 @@ class WhatsNewScreen extends StatelessWidget {
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(24, 36, 24, 16),
                 children: [
-                  Icon(Icons.auto_awesome_rounded, color: AppTheme.rose, size: 40),
+                  Icon(Icons.auto_awesome_rounded, color: AppTheme.akzentTief, size: 40),
                   const SizedBox(height: 16),
                   Text(
                     t.whatsNewWelcomeBack,
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800, color: AppTheme.textPrimary),
+                    style: TextStyle(fontFamily: VpTypo.serif, fontSize: 28, fontWeight: FontWeight.w600, color: AppTheme.tinte),
                   ),
                   const SizedBox(height: 6),
                   Text(
                     t.whatsNewThisIsNewInVersion(version),
-                    style: TextStyle(fontSize: 15, color: AppTheme.textSecondary),
+                    style: TextStyle(fontSize: 15, color: AppTheme.tinteLeise),
                   ),
                   const SizedBox(height: 26),
                   for (final entry in entries)
@@ -73,9 +74,9 @@ class WhatsNewScreen extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () => Navigator.of(context).pop(),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppTheme.rose,
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                    backgroundColor: AppTheme.akzent,
+                    foregroundColor: AppTheme.aufAkzent,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                   ),
                   child: Text(t.whatsNewLetSGo, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
                 ),
@@ -94,8 +95,8 @@ class WhatsNewScreen extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(color: AppTheme.rose.withValues(alpha: 0.14), shape: BoxShape.circle),
-              child: Icon(_icons[item.icon] ?? Icons.star_rounded, color: AppTheme.rose, size: 22),
+              decoration: BoxDecoration(color: AppTheme.akzentTief.withValues(alpha: 0.14), shape: BoxShape.circle),
+              child: Icon(_icons[item.icon] ?? Icons.star_rounded, color: AppTheme.akzentTief, size: 22),
             ),
             const SizedBox(width: 14),
             Expanded(
@@ -103,9 +104,9 @@ class WhatsNewScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(item.title,
-                      style: TextStyle(fontSize: 15.5, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                      style: TextStyle(fontSize: 15.5, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
                   const SizedBox(height: 3),
-                  Text(item.text, style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.45)),
+                  Text(item.text, style: TextStyle(fontSize: 13.5, color: AppTheme.tinteLeise, height: 1.45)),
                 ],
               ),
             ),

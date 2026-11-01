@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
+import '../../theme/vp_tokens.dart';
 import '../../l10n/t.dart';
 
 Map<String?, String> get partnerGenderLabels => {
@@ -21,7 +22,7 @@ Future<bool> editPartnerProfile(BuildContext context) async {
     context: context,
     builder: (ctx) => StatefulBuilder(
       builder: (ctx, setState) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.partnerProfileDialogYourPartner),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -29,7 +30,7 @@ Future<bool> editPartnerProfile(BuildContext context) async {
           children: [
             Text(
               t.partnerProfileDialogThisLetsLessonsCallYour,
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.45),
+              style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13, height: 1.45),
             ),
             const SizedBox(height: 14),
             TextField(
@@ -47,7 +48,7 @@ Future<bool> editPartnerProfile(BuildContext context) async {
                     label: Text(entry.value),
                     selected: gender == entry.key,
                     onSelected: (_) => setState(() => gender = entry.key),
-                    selectedColor: AppTheme.rose.withValues(alpha: 0.25),
+                    selectedColor: AppTheme.akzentTief.withValues(alpha: 0.25),
                     showCheckmark: false,
                   ),
               ],
@@ -86,31 +87,36 @@ class PartnerProfilePrompt extends StatelessWidget {
             margin: const EdgeInsets.fromLTRB(16, 10, 16, 0),
             padding: const EdgeInsets.fromLTRB(14, 12, 6, 6),
             decoration: BoxDecoration(
-              color: AppTheme.rose.withValues(alpha: 0.08),
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.rose.withValues(alpha: 0.4)),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border(
+                left: BorderSide(color: AppTheme.akzentTief, width: VpLinie.akzent),
+                top: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
+                right: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
+                bottom: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(t.partnerProfileDialogHowMayLessonsReferTo,
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                    style: context.vp.typo.titel.copyWith(fontSize: 16)),
                 const SizedBox(height: 4),
                 Text(
                   t.partnerProfileDialogWithNameAndGenderThe,
-                  style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
+                  style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.4),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     TextButton(
                       onPressed: nostr.dismissPartnerProfilePrompt,
-                      child: Text(t.updateDialogLater, style: TextStyle(color: AppTheme.textSecondary)),
+                      child: Text(t.updateDialogLater, style: TextStyle(color: AppTheme.tinteLeise)),
                     ),
                     TextButton(
                       onPressed: () => editPartnerProfile(context),
                       child: Text(t.partnerProfileDialogAdd,
-                          style: TextStyle(color: AppTheme.rose, fontWeight: FontWeight.w700)),
+                          style: TextStyle(color: AppTheme.akzentTief, fontWeight: FontWeight.w700)),
                     ),
                   ],
                 ),

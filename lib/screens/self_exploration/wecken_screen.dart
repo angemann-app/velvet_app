@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -204,14 +205,14 @@ class _WeckenScreenState extends State<WeckenScreen> {
   Widget build(BuildContext context) {
     final laeuft = _ablauf != null;
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: AppBar(
-        backgroundColor: AppTheme.background,
+        backgroundColor: AppTheme.papier,
         title: Text(t.weckenBegleitungTitel),
       ),
       body: SafeArea(
         child: _traumDaten == null
-            ? Center(child: CircularProgressIndicator(color: AppTheme.rose))
+            ? Center(child: CircularProgressIndicator(color: AppTheme.akzentTief))
             : (laeuft ? _buildPlayer() : _buildEinrichtung()),
       ),
     );
@@ -223,7 +224,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
       children: [
         Text(
           t.weckenBegleitungEinleitung,
-          style: TextStyle(fontSize: 14, color: AppTheme.textSecondary, height: 1.5),
+          style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5),
         ),
         const SizedBox(height: 18),
         SizedBox(
@@ -235,16 +236,16 @@ class _WeckenScreenState extends State<WeckenScreen> {
             icon: const Icon(Icons.edit_note_rounded),
             label: Text(t.weckenTraumNotieren, style: const TextStyle(fontWeight: FontWeight.w600)),
             style: OutlinedButton.styleFrom(
-              foregroundColor: AppTheme.textPrimary,
-              side: BorderSide(color: AppTheme.border),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+              foregroundColor: AppTheme.tinte,
+              side: BorderSide(color: AppTheme.linie),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
             ),
           ),
         ),
         const SizedBox(height: 24),
         Text(
           t.paarAbendVoice,
-          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte),
         ),
         const SizedBox(height: 10),
         Wrap(
@@ -258,19 +259,19 @@ class _WeckenScreenState extends State<WeckenScreen> {
         SwitchListTile(
           contentPadding: EdgeInsets.zero,
           value: _teppich,
-          activeThumbColor: AppTheme.rose,
+          activeThumbColor: AppTheme.akzentTief,
           onChanged: (v) => setState(() => _teppich = v),
-          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.textPrimary, fontSize: 14.5)),
+          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.tinte, fontSize: 14.5)),
           subtitle: Text(
             t.paarAbendCalmBackgroundDuringTheSilences,
-            style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5),
+            style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5),
           ),
         ),
         if (_traumDaten?.hinweis('hinweis_schlafparalyse') != null) ...[
           const SizedBox(height: 14),
           Text(
             _traumDaten!.hinweis('hinweis_schlafparalyse')!,
-            style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5),
+            style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5),
           ),
         ],
         const SizedBox(height: 24),
@@ -281,9 +282,9 @@ class _WeckenScreenState extends State<WeckenScreen> {
             icon: const Icon(Icons.nights_stay_rounded),
             label: Text(t.weckenBegleitungStarten, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppTheme.rose,
-              foregroundColor: Colors.white,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+              backgroundColor: AppTheme.akzent,
+              foregroundColor: AppTheme.aufAkzent,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
             ),
           ),
         ),
@@ -298,10 +299,10 @@ class _WeckenScreenState extends State<WeckenScreen> {
           HapticFeedback.selectionClick();
           onTap();
         },
-        selectedColor: AppTheme.rose.withValues(alpha: 0.22),
-        backgroundColor: AppTheme.surface,
-        side: BorderSide(color: aktiv ? AppTheme.rose : AppTheme.border),
-        labelStyle: TextStyle(color: aktiv ? AppTheme.textPrimary : AppTheme.textSecondary, fontWeight: FontWeight.w600),
+        selectedColor: AppTheme.akzentTief.withValues(alpha: 0.22),
+        backgroundColor: AppTheme.papierErhoben,
+        side: BorderSide(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
+        labelStyle: TextStyle(color: aktiv ? AppTheme.tinte : AppTheme.tinteLeise, fontWeight: FontWeight.w600),
         showCheckmark: false,
       );
 
@@ -319,16 +320,16 @@ class _WeckenScreenState extends State<WeckenScreen> {
             child: LinearProgressIndicator(
               value: fortschritt.clamp(0.0, 1.0),
               minHeight: 3,
-              backgroundColor: AppTheme.surfaceLight,
-              color: AppTheme.rose.withValues(alpha: 0.6),
+              backgroundColor: AppTheme.papierVertieft,
+              color: AppTheme.akzentTief.withValues(alpha: 0.6),
             ),
           ),
           const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
-              Text(_fmt(gesamt), style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+              Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
+              Text(_fmt(gesamt), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
             ],
           ),
           const Spacer(),
@@ -338,27 +339,23 @@ class _WeckenScreenState extends State<WeckenScreen> {
             height: 140,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              gradient: RadialGradient(
-                colors: [
-                  AppTheme.rose.withValues(alpha: _pausiert ? 0.06 : 0.22),
-                  AppTheme.background,
-                ],
-              ),
+              color: AppTheme.akzentLeise,
+              border: Border.all(color: AppTheme.linieStark, width: 1),
             ),
             child: Center(
-              child: Icon(Icons.nights_stay_rounded, color: AppTheme.textPrimary.withValues(alpha: 0.5), size: 40),
+              child: Icon(Icons.nights_stay_rounded, color: AppTheme.tinte.withValues(alpha: 0.5), size: 40),
             ),
           ),
           const SizedBox(height: 24),
           Text(
             t.weckenLaeuft,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: AppTheme.textSecondary),
+            style: TextStyle(fontFamily: VpTypo.serif, fontSize: 20, fontWeight: FontWeight.w600, color: AppTheme.tinteLeise),
           ),
           const SizedBox(height: 10),
           Text(
             _pausiert ? t.paarAbendPaused : t.weckenLaeuftText,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 13, color: AppTheme.textMuted, height: 1.4),
+            style: TextStyle(fontSize: 13, color: AppTheme.tinteStumm, height: 1.4),
           ),
           const Spacer(),
           if (_fertig)
@@ -368,9 +365,9 @@ class _WeckenScreenState extends State<WeckenScreen> {
               child: OutlinedButton(
                 onPressed: () => Navigator.of(context).pop(),
                 style: OutlinedButton.styleFrom(
-                  foregroundColor: AppTheme.rose,
-                  side: BorderSide(color: AppTheme.rose),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                  foregroundColor: AppTheme.akzentTief,
+                  side: BorderSide(color: AppTheme.akzentTief),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                 ),
                 child: Text(t.couplesChannelClose, style: const TextStyle(fontWeight: FontWeight.w700)),
               ),
@@ -378,8 +375,8 @@ class _WeckenScreenState extends State<WeckenScreen> {
           else
             PlayerSteuerung(
               pausiert: _pausiert,
-              farbe: AppTheme.rose,
-              symbolFarbe: Colors.white,
+              farbe: AppTheme.akzent,
+              symbolFarbe: AppTheme.aufAkzent,
               onBeenden: _beenden,
               onPause: _pauseUmschalten,
               onUeberspringen: _weiter,

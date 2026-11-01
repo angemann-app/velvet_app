@@ -76,7 +76,7 @@ class _AusspracheMeldenButtonState extends State<AusspracheMeldenButton> {
             icon: const Icon(Icons.record_voice_over_outlined, size: 16),
             label: Text(t.ausspracheMeldenWordMispronounced),
             style: TextButton.styleFrom(
-              foregroundColor: AppTheme.textMuted,
+              foregroundColor: AppTheme.tinteStumm,
               textStyle: const TextStyle(fontSize: 12.5),
               visualDensity: VisualDensity.compact,
             ),

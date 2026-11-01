@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
+import 'design/vp_bild_feld.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../l10n/t.dart';
 import '../screens/couples_channel/paar_abend_screen.dart';
@@ -11,7 +12,6 @@ import '../screens/self_exploration/selbst_reise_screen.dart';
 import '../screens/self_exploration/traum_tagebuch_screen.dart';
 import '../services/privacy_service.dart';
 import '../services/storage_service.dart';
-import '../services/spicy_bild.dart';
 import '../services/testmodus.dart';
 import '../theme/app_theme.dart';
 
@@ -39,7 +39,7 @@ class GefuehrteAudios extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
             child: Text(t.gefuehrtTitel,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppTheme.tinte)),
           ),
         if (mitSelbst) const _TagebuchKarte(),
         if (kompakt)
@@ -109,10 +109,10 @@ class _EinklappbarState extends State<_Einklappbar> {
         expanded: _offen,
         label: widget.titel,
         child: Material(
-          color: AppTheme.surface,
-          borderRadius: BorderRadius.circular(12),
+          color: AppTheme.papierErhoben,
+          borderRadius: BorderRadius.circular(VpRadius.karte),
           child: InkWell(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(VpRadius.karte),
             onTap: () {
               HapticFeedback.selectionClick();
               setState(() => _offen = !_offen);
@@ -121,16 +121,16 @@ class _EinklappbarState extends State<_Einklappbar> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
               child: Row(children: [
-                Icon(Icons.headphones_rounded, size: 18, color: AppTheme.rose),
+                Icon(Icons.headphones_rounded, size: 18, color: AppTheme.akzentTief),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(widget.titel,
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
                 ),
                 AnimatedRotation(
                   turns: _offen ? 0.5 : 0,
                   duration: const Duration(milliseconds: 200),
-                  child: Icon(Icons.expand_more_rounded, size: 22, color: AppTheme.textSecondary),
+                  child: Icon(Icons.expand_more_rounded, size: 22, color: AppTheme.tinteLeise),
                 ),
               ]),
             ),
@@ -281,8 +281,8 @@ class GefuehrtKarte extends StatelessWidget {
         button: true,
         label: titel,
         child: Material(
-          color: AppTheme.surface,
-          borderRadius: BorderRadius.circular(16),
+          color: AppTheme.papierErhoben,
+          borderRadius: BorderRadius.circular(VpRadius.karte),
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () {
@@ -293,7 +293,7 @@ class GefuehrtKarte extends StatelessWidget {
               height: kompakt ? 150 : 128,
               width: kompakt ? 168 : null,
               child: Stack(fit: StackFit.expand, children: [
-                SvgPicture.asset(spicyBild(bild), fit: BoxFit.cover),
+                VpBildFeld.pfad(bild, format: VpBildFormat.kopf),
                 // Verlauf nach unten, damit der Text auf dem Bild lesbar bleibt.
                 DecoratedBox(
                   decoration: BoxDecoration(
@@ -316,19 +316,19 @@ class GefuehrtKarte extends StatelessWidget {
                             maxLines: kompakt ? 2 : null,
                             overflow: kompakt ? TextOverflow.ellipsis : null,
                             style: TextStyle(
-                                fontSize: kompakt ? 15 : 17, fontWeight: FontWeight.w800, color: AppTheme.textPrimary)),
+                                fontSize: kompakt ? 15 : 17, fontWeight: FontWeight.w800, color: AppTheme.aufBild)),
                         if (!kompakt) const SizedBox(height: 2),
                         if (!kompakt)
                           Text(text,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3)),
+                            style: TextStyle(fontSize: 12.5, color: AppTheme.aufBild.withValues(alpha: 0.85), height: 1.3)),
                       ]),
                     ),
                     const SizedBox(width: 10),
                     Container(
                       padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(color: AppTheme.rose, shape: BoxShape.circle),
+                      decoration: BoxDecoration(color: AppTheme.akzentTief, shape: BoxShape.circle),
                       child: const Icon(Icons.play_arrow_rounded, color: Colors.white, size: 22),
                     ),
                   ]),

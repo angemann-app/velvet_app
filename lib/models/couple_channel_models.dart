@@ -196,7 +196,7 @@ const List<FantasyOption> defaultFantasyOptions = [
     title: 'Das 90-Prozent-Spiel im Alltag',
     subtitle: 'Mitten am Tag eine Minute innig küssen, die Hände wandern lassen – und dann lächelnd weitergehen. Ohne Versprechen für später.',
     tag: 'Knisterndes Hinhalten',
-    icon: Icons.local_fire_department_rounded,
+    icon: Icons.spa_outlined,
   ),
   FantasyOption(
     id: 'match_mirror_watch',

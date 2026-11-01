@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -46,14 +47,14 @@ class _PairingModalState extends State<PairingModal>
     final verbinden = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppTheme.surface,
+        backgroundColor: AppTheme.papierErhoben,
         title: Text(t.pairingAnfrageTitel, style: const TextStyle(fontSize: 18)),
-        content: Text(t.pairingAnfrageText, style: TextStyle(color: AppTheme.textSecondary, height: 1.45)),
+        content: Text(t.pairingAnfrageText, style: TextStyle(color: AppTheme.tinteLeise, height: 1.45)),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.invitePartnerDecline)),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text(t.pairingAnfrageVerbinden, style: TextStyle(color: AppTheme.rose)),
+            child: Text(t.pairingAnfrageVerbinden, style: TextStyle(color: AppTheme.akzentTief)),
           ),
         ],
       ),
@@ -97,17 +98,17 @@ class _PairingModalState extends State<PairingModal>
       final weiter = await showDialog<bool>(
         context: context,
         builder: (ctx) => AlertDialog(
-          backgroundColor: AppTheme.surface,
+          backgroundColor: AppTheme.papierErhoben,
           title: Text(t.pairingModalConnectWithSomeoneElse, style: TextStyle(fontSize: 18)),
           content: Text(
             t.pairingModalYouReCurrentlyConnectedWith(old, old, old),
-            style: TextStyle(color: AppTheme.textSecondary, height: 1.45),
+            style: TextStyle(color: AppTheme.tinteLeise, height: 1.45),
           ),
           actions: [
             TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
             TextButton(
               onPressed: () => Navigator.pop(ctx, true),
-              child: Text(t.pairingModalReplace, style: TextStyle(color: AppTheme.rose)),
+              child: Text(t.pairingModalReplace, style: TextStyle(color: AppTheme.akzentTief)),
             ),
           ],
         ),
@@ -135,7 +136,7 @@ class _PairingModalState extends State<PairingModal>
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(t.pairingModalConnectedWithName(name)),
-            backgroundColor: AppTheme.sageGreen,
+            backgroundColor: AppTheme.akzent,
           ),
         );
       } else {
@@ -155,7 +156,7 @@ class _PairingModalState extends State<PairingModal>
     return Container(
       height: MediaQuery.of(context).size.height * 0.88,
       decoration: BoxDecoration(
-        color: AppTheme.background,
+        color: AppTheme.papier,
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       child: Column(
@@ -166,7 +167,7 @@ class _PairingModalState extends State<PairingModal>
             width: 40,
             height: 4,
             decoration: BoxDecoration(
-              color: AppTheme.border,
+              color: AppTheme.linie,
               borderRadius: BorderRadius.circular(2),
             ),
           ),
@@ -177,16 +178,15 @@ class _PairingModalState extends State<PairingModal>
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
-                Icon(Icons.link_rounded, color: AppTheme.amber, size: 24),
+                Icon(Icons.link_rounded, color: AppTheme.akzentTief, size: 24),
                 SizedBox(width: 10),
-                Text(
-                  t.couplesChannelConnectWithPartner,
+                Expanded(child: Text(t.couplesChannelConnectWithPartner,
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w800,
-                    color: AppTheme.textPrimary,
+                    color: AppTheme.tinte,
                   ),
-                ),
+                )),
               ],
             ),
           ),
@@ -196,9 +196,9 @@ class _PairingModalState extends State<PairingModal>
           // Tab Bar
           TabBar(
             controller: _tabController,
-            indicatorColor: AppTheme.amber,
-            labelColor: AppTheme.amberLight,
-            unselectedLabelColor: AppTheme.textSecondary,
+            indicatorColor: AppTheme.akzentTief,
+            labelColor: AppTheme.akzentTief,
+            unselectedLabelColor: AppTheme.tinteLeise,
             tabs: [
               Tab(icon: Icon(Icons.qr_code_rounded), text: t.pairingModalMyCode),
               Tab(icon: Icon(Icons.qr_code_scanner_rounded), text: t.pairingModalScanPartner),
@@ -222,7 +222,7 @@ class _PairingModalState extends State<PairingModal>
                             t.pairingModalLetYourPartnerScanThis,
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: AppTheme.textSecondary,
+                              color: AppTheme.tinteLeise,
                               fontSize: 13.5,
                             ),
                           ),
@@ -233,14 +233,8 @@ class _PairingModalState extends State<PairingModal>
                             padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: AppTheme.amber.withValues(alpha: 0.2),
-                                  blurRadius: 20,
-                                  spreadRadius: 2,
-                                ),
-                              ],
+                              borderRadius: BorderRadius.circular(VpRadius.karte),
+                              
                             ),
                             child: currentNpub.isNotEmpty
                                 ? QrImageView(
@@ -254,7 +248,7 @@ class _PairingModalState extends State<PairingModal>
                                     width: 210,
                                     height: 210,
                                     child: Center(
-                                      child: CircularProgressIndicator(color: AppTheme.amber),
+                                      child: CircularProgressIndicator(color: AppTheme.akzentTief),
                                     ),
                                   ),
                           ),
@@ -265,9 +259,9 @@ class _PairingModalState extends State<PairingModal>
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                             decoration: BoxDecoration(
-                              color: AppTheme.surface,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: AppTheme.border),
+                              color: AppTheme.papierErhoben,
+                              borderRadius: BorderRadius.circular(VpRadius.karte),
+                              border: Border.all(color: AppTheme.linie),
                             ),
                             child: Row(
                               children: [
@@ -277,7 +271,7 @@ class _PairingModalState extends State<PairingModal>
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
-                                      color: AppTheme.textMuted,
+                                      color: AppTheme.tinteStumm,
                                       fontFamily: 'monospace',
                                       fontSize: 12,
                                     ),
@@ -285,7 +279,7 @@ class _PairingModalState extends State<PairingModal>
                                 ),
                                 IconButton(
                                   icon: const Icon(Icons.copy_rounded, size: 18),
-                                  color: AppTheme.amberLight,
+                                  color: AppTheme.akzentTief,
                                   tooltip: t.pairingModalCopyCode,
                                   onPressed: () {
                                     Clipboard.setData(ClipboardData(text: currentNpub));
@@ -307,16 +301,15 @@ class _PairingModalState extends State<PairingModal>
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.lock_rounded, size: 14, color: AppTheme.sageGreen),
+                              Icon(Icons.lock_rounded, size: 14, color: AppTheme.akzentTief),
                               SizedBox(width: 6),
-                              Text(
-                                t.pairingModalEndToEndEncryptedNo,
+                              Flexible(child: Text(t.pairingModalEndToEndEncryptedNo, textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  color: AppTheme.sageGreen,
+                                  color: AppTheme.akzentTief,
                                   fontSize: 11.5,
                                   fontWeight: FontWeight.w600,
                                 ),
-                              ),
+                              )),
                             ],
                           ),
                         ],
@@ -332,14 +325,14 @@ class _PairingModalState extends State<PairingModal>
                     children: [
                       // Scanner Viewport
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(VpRadius.karte),
                         child: Container(
                           height: 220,
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.black,
-                            border: Border.all(color: AppTheme.amber.withValues(alpha: 0.5), width: 1.5),
-                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5), width: 1.5),
+                            borderRadius: BorderRadius.circular(VpRadius.karte),
                           ),
                           child: Stack(
                             children: [
@@ -361,8 +354,8 @@ class _PairingModalState extends State<PairingModal>
                                   width: 160,
                                   height: 160,
                                   decoration: BoxDecoration(
-                                    border: Border.all(color: AppTheme.amber, width: 2),
-                                    borderRadius: BorderRadius.circular(16),
+                                    border: Border.all(color: AppTheme.akzentTief, width: 2),
+                                    borderRadius: BorderRadius.circular(VpRadius.karte),
                                   ),
                                 ),
                               ),
@@ -375,7 +368,7 @@ class _PairingModalState extends State<PairingModal>
                                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                                     decoration: BoxDecoration(
                                       color: Colors.black.withValues(alpha: 0.6),
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(VpRadius.karte),
                                     ),
                                     child: Text(
                                       t.pairingModalHoldYourPartnerSQr,
@@ -396,13 +389,13 @@ class _PairingModalState extends State<PairingModal>
                           padding: const EdgeInsets.all(10),
                           margin: const EdgeInsets.only(bottom: 12),
                           decoration: BoxDecoration(
-                            color: AppTheme.rose.withValues(alpha: 0.15),
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: AppTheme.rose.withValues(alpha: 0.4)),
+                            color: AppTheme.akzentTief.withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(VpRadius.karte),
+                            border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.4)),
                           ),
                           child: Text(
                             _errorMessage!,
-                            style: TextStyle(color: AppTheme.rose, fontSize: 12),
+                            style: TextStyle(color: AppTheme.akzentTief, fontSize: 12),
                           ),
                         ),
                       ],
@@ -410,16 +403,16 @@ class _PairingModalState extends State<PairingModal>
                       // Partner Name Input
                       TextField(
                         controller: _nameInputController,
-                        style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+                        style: TextStyle(color: AppTheme.tinte, fontSize: 14),
                         decoration: InputDecoration(
                           hintText: t.pairingModalPartnerSNameEG,
-                          hintStyle: TextStyle(color: AppTheme.textMuted, fontSize: 13),
-                          prefixIcon: Icon(Icons.favorite_outline_rounded, color: AppTheme.rose, size: 20),
+                          hintStyle: TextStyle(color: AppTheme.tinteStumm, fontSize: 13),
+                          prefixIcon: Icon(Icons.favorite_outline_rounded, color: AppTheme.akzentTief, size: 20),
                           filled: true,
-                          fillColor: AppTheme.surface,
+                          fillColor: AppTheme.papierErhoben,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: AppTheme.border),
+                            borderRadius: BorderRadius.circular(VpRadius.karte),
+                            borderSide: BorderSide(color: AppTheme.linie),
                           ),
                         ),
                       ),
@@ -434,7 +427,7 @@ class _PairingModalState extends State<PairingModal>
                               label: Text(entry.value, style: const TextStyle(fontSize: 12.5)),
                               selected: _gender == entry.key,
                               onSelected: (_) => setState(() => _gender = entry.key),
-                              selectedColor: AppTheme.rose.withValues(alpha: 0.25),
+                              selectedColor: AppTheme.akzentTief.withValues(alpha: 0.25),
                               showCheckmark: false,
                             ),
                         ],
@@ -445,13 +438,13 @@ class _PairingModalState extends State<PairingModal>
                       // Manual Key Input
                       TextField(
                         controller: _keyInputController,
-                        style: TextStyle(color: AppTheme.textPrimary, fontSize: 13, fontFamily: 'monospace'),
+                        style: TextStyle(color: AppTheme.tinte, fontSize: 13, fontFamily: 'monospace'),
                         decoration: InputDecoration(
                           hintText: t.pairingModalOrPasteNpubHexKey,
-                          hintStyle: TextStyle(color: AppTheme.textMuted, fontSize: 12),
-                          prefixIcon: Icon(Icons.key_rounded, color: AppTheme.amber, size: 20),
+                          hintStyle: TextStyle(color: AppTheme.tinteStumm, fontSize: 12),
+                          prefixIcon: Icon(Icons.key_rounded, color: AppTheme.akzentTief, size: 20),
                           suffixIcon: IconButton(
-                            icon: Icon(Icons.paste_rounded, color: AppTheme.amberLight, size: 20),
+                            icon: Icon(Icons.paste_rounded, color: AppTheme.akzentTief, size: 20),
                             tooltip: t.pairingModalPasteFromClipboard,
                             onPressed: () async {
                               final data = await Clipboard.getData('text/plain');
@@ -461,10 +454,10 @@ class _PairingModalState extends State<PairingModal>
                             },
                           ),
                           filled: true,
-                          fillColor: AppTheme.surface,
+                          fillColor: AppTheme.papierErhoben,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: BorderSide(color: AppTheme.border),
+                            borderRadius: BorderRadius.circular(VpRadius.karte),
+                            borderSide: BorderSide(color: AppTheme.linie),
                           ),
                         ),
                       ),
@@ -479,17 +472,17 @@ class _PairingModalState extends State<PairingModal>
                               ? null
                               : () => _handleKeySubmission(_keyInputController.text),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: AppTheme.amber,
-                            foregroundColor: const Color(0xFF0F172A),
+                            backgroundColor: AppTheme.akzentTief,
+                            foregroundColor: AppTheme.aufAkzentTief,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(14),
+                              borderRadius: BorderRadius.circular(VpRadius.karte),
                             ),
                           ),
                           child: _isProcessingScan
-                              ? const SizedBox(
+                              ? SizedBox(
                                   width: 20,
                                   height: 20,
-                                  child: CircularProgressIndicator(strokeWidth: 2, color: Colors.black),
+                                  child: CircularProgressIndicator(strokeWidth: 2, color: AppTheme.aufAkzentTief),
                                 )
                               : Text(
                                   t.pairingModalConnectPair,

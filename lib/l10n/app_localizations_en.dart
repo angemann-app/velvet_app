@@ -147,13 +147,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get coursesTouch => 'Touch';
 
   @override
-  String get coursesForHer => 'For her 🌸';
+  String get coursesForHer => 'For her';
 
   @override
-  String get coursesForHim => 'For him 🌿';
+  String get coursesForHim => 'For him';
 
   @override
-  String get coursesForCouples => 'For couples 💫';
+  String get coursesForCouples => 'For couples';
 
   @override
   String get coursesCoupleChannel => 'COUPLE CHANNEL';
@@ -330,7 +330,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get lessonDetailLessonMarkedAsCompleted =>
-      'Lesson marked as completed! 🎉';
+      'Lesson marked as completed!';
 
   @override
   String get lessonDetailLessonMarkedAsOpenAgain =>
@@ -1018,7 +1018,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String invitePartnerConnectedWithName(Object name) {
-    return 'Connected with $name 💛';
+    return 'Connected with $name';
   }
 
   @override
@@ -1047,7 +1047,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String pairingModalConnectedWithName(Object name) {
-    return 'Connected with $name 💛';
+    return 'Connected with $name';
   }
 
   @override
@@ -1292,7 +1292,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get lustProfileYourDesireProfileIsOn =>
-      'Your desire profile is on its way, encrypted 💛';
+      'Your desire profile is on its way, encrypted';
 
   @override
   String get lustProfileSendingDidnTWorkPlease =>
@@ -1341,7 +1341,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String yesNoMaybeCountAnswersMatched(Object count) {
-    return '$count answers matched! ✨';
+    return '$count answers matched!';
   }
 
   @override
@@ -1594,10 +1594,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'The most common mental traps in performance anxiety – and the reality behind them. Tap a card to take it straight into your own journal.';
 
   @override
-  String get beliefLibraryViewForHer => 'FOR HER 🌸';
+  String get beliefLibraryViewForHer => 'FOR HER';
 
   @override
-  String get beliefLibraryViewForHim => 'FOR HIM 🌿';
+  String get beliefLibraryViewForHim => 'FOR HIM';
 
   @override
   String get beliefLibraryViewTypicalMisbeliefMentalMovie =>
@@ -2183,11 +2183,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailyCheckinCardCoachingInsightYourEverydayStress =>
-      '💡 Coaching insight: your everyday stress is high today. Remember: stress and exhaustion often slow desire down by themselves. That\'s a normal reaction, not a defect.';
+      'Coaching insight: your everyday stress is high today. Remember: stress and exhaustion often slow desire down by themselves. That\'s a normal reaction, not a defect.';
 
   @override
   String get dailyCheckinCardCoachingInsightWhenEverydayStress =>
-      '💡 Coaching insight: when everyday stress drops, it\'s often easier to relax. Use today\'s calm to feel into your body without pressure to perform.';
+      'Coaching insight: when everyday stress drops, it\'s often easier to relax. Use today\'s calm to feel into your body without pressure to perform.';
 
   @override
   String get onboardingGuest => 'Guest';
@@ -2250,7 +2250,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String onboardingBackupForNameRestored(Object name) {
-    return 'Backup for \"$name\" restored! ✨';
+    return 'Backup for \"$name\" restored!';
   }
 
   @override
@@ -2305,18 +2305,17 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboardingYourRelationshipStatus => '4. Your relationship status';
 
   @override
-  String get onboardingInARelationshipMarried =>
-      'In a relationship / married 💍';
+  String get onboardingInARelationshipMarried => 'In a relationship / married';
 
   @override
   String get onboardingDatingGettingToKnowSomeone =>
-      'Dating / getting to know someone 💫';
+      'Dating / getting to know someone';
 
   @override
-  String get onboardingSingle => 'Single 🌱';
+  String get onboardingSingle => 'Single';
 
   @override
-  String get onboardingItSComplicated => 'It\'s complicated 🌀';
+  String get onboardingItSComplicated => 'It\'s complicated';
 
   @override
   String get onboardingWhatSYourBiggestPriority =>
@@ -2361,7 +2360,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboardingPersonaliseProgrammeNow => 'Personalise programme now';
 
   @override
-  String get onboardingSkipGoStraightToThe => 'Skip & go straight to the app ➔';
+  String get onboardingSkipGoStraightToThe => 'Skip & go straight to the app';
 
   @override
   String onboardingVersionData(Object data) {
@@ -3064,6 +3063,25 @@ class AppLocalizationsEn extends AppLocalizations {
       '18+. Unlocks the levels “Spicy” and “Extra spicy” in the body journey and the shared evening.';
 
   @override
+  String get heuteFuerHeute => 'For today';
+
+  @override
+  String get designTitel => 'Appearance';
+
+  @override
+  String get designText =>
+      'Paper is light, Night paper is dark. Spicy mode uses its own colours.';
+
+  @override
+  String get designPapier => 'Paper';
+
+  @override
+  String get designNacht => 'Night paper';
+
+  @override
+  String get designKlassisch => 'Classic';
+
+  @override
   String get spicyEinschaltenTitel => 'Turn on spicy mode?';
 
   @override
@@ -3180,7 +3198,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get spicyEinladungText =>
-      '🔥 I\'ve turned on spicy mode. Would you like to try it too? (Profile › Spicy mode)';
+      'I\'ve turned on spicy mode. Would you like to try it too? (Profile › Spicy mode)';
 
   @override
   String get spicyEinladungAnnehmen => 'Look at spicy mode';

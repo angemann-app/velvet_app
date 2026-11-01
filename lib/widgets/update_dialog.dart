@@ -84,7 +84,7 @@ class _UpdateDialogState extends State<UpdateDialog> {
     final downloading = _progress != null;
 
     return AlertDialog(
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.papierErhoben,
       title: Text(
         update.prerelease ? t.updateDialogNewBetaVersion(update.version) : t.updateDialogNewVersionVersion(update.version),
         style: const TextStyle(fontSize: 18),
@@ -96,23 +96,23 @@ class _UpdateDialogState extends State<UpdateDialog> {
           children: [
             Text(
               update.notes.isNotEmpty ? update.notes : t.updateDialogImprovementsAndBugFixes,
-              style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+              style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
             ),
             if (downloading) ...[
               const SizedBox(height: 16),
-              LinearProgressIndicator(value: _progress == 0 ? null : _progress, color: AppTheme.sageGreen),
+              LinearProgressIndicator(value: _progress == 0 ? null : _progress, color: AppTheme.akzentTief),
               const SizedBox(height: 6),
               Text(t.updateDialogDownloadingProgress(((_progress ?? 0) * 100).round()),
-                  style: TextStyle(color: AppTheme.textMuted, fontSize: 12)),
+                  style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
             ],
             if (_error != null) ...[
               const SizedBox(height: 12),
-              Text(_error!, style: TextStyle(color: AppTheme.rose, fontSize: 13)),
+              Text(_error!, style: TextStyle(color: AppTheme.signal, fontSize: 13)),
             ],
             const SizedBox(height: 12),
             Text(
               t.updateDialogYourDataIsKeptDuring,
-              style: TextStyle(color: AppTheme.textMuted, fontSize: 12),
+              style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12),
             ),
           ],
         ),
@@ -122,7 +122,7 @@ class _UpdateDialogState extends State<UpdateDialog> {
           TextButton(
             // Erinnert nach UpdateService.checkInterval erneut.
             onPressed: () => Navigator.of(context).pop(),
-            child: Text(t.updateDialogLater, style: TextStyle(color: AppTheme.textSecondary)),
+            child: Text(t.updateDialogLater, style: TextStyle(color: AppTheme.tinteLeise)),
           ),
         ElevatedButton(
           onPressed: downloading ? null : _install,

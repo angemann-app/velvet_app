@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import '../../models/content_models.dart';
 import '../../services/data_service.dart';
 import '../../theme/app_theme.dart';
@@ -59,10 +60,10 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
     return Container(
       height: height,
       decoration: BoxDecoration(
-        color: AppTheme.background,
+        color: AppTheme.papier,
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
         border: Border(
-          top: BorderSide(color: AppTheme.rose, width: 2),
+          top: BorderSide(color: AppTheme.signal, width: 2),
         ),
       ),
       child: Column(
@@ -88,12 +89,12 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: AppTheme.rose.withValues(alpha: 0.15),
-                    borderRadius: BorderRadius.circular(10),
+                    color: AppTheme.signal.withValues(alpha: 0.15),
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
                   ),
                   child: Icon(
                     Icons.shield_rounded,
-                    color: AppTheme.rose,
+                    color: AppTheme.signal,
                     size: 22,
                   ),
                 ),
@@ -105,7 +106,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                       Text(
                         t.sosModalSosQuickHelp,
                         style: TextStyle(
-                          color: AppTheme.textPrimary,
+                          color: AppTheme.tinte,
                           fontSize: 19,
                           fontWeight: FontWeight.w700,
                         ),
@@ -113,7 +114,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                       Text(
                         t.sosModalCalmDownRightNowEmergency,
                         style: TextStyle(
-                          color: AppTheme.textSecondary,
+                          color: AppTheme.tinteLeise,
                           fontSize: 12,
                         ),
                       ),
@@ -122,7 +123,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                 ),
                 IconButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  icon: Icon(Icons.close_rounded, color: AppTheme.textSecondary),
+                  icon: Icon(Icons.close_rounded, color: AppTheme.tinteLeise),
                 ),
               ],
             ),
@@ -131,10 +132,10 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
           // Tabs
           TabBar(
             controller: _tabController,
-            indicatorColor: AppTheme.rose,
+            indicatorColor: AppTheme.signal,
             indicatorWeight: 3,
-            labelColor: AppTheme.textPrimary,
-            unselectedLabelColor: AppTheme.textMuted,
+            labelColor: AppTheme.tinte,
+            unselectedLabelColor: AppTheme.tinteStumm,
             labelStyle: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
             unselectedLabelStyle: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
             tabs: [
@@ -144,7 +145,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
             ],
           ),
 
-          Divider(height: 1, color: AppTheme.border),
+          Divider(height: 1, color: AppTheme.linie),
 
           // Tab content
           Expanded(
@@ -174,23 +175,23 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
-              color: AppTheme.textPrimary,
+              color: AppTheme.tinte,
             ),
           ),
           const SizedBox(height: 6),
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppTheme.border),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.linie),
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(
                   Icons.info_outline_rounded,
-                  color: AppTheme.amber,
+                  color: AppTheme.akzentTief,
                   size: 18,
                 ),
                 const SizedBox(width: 10),
@@ -198,7 +199,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                   child: Text(
                     card.situation,
                     style: TextStyle(
-                      color: AppTheme.textSecondary,
+                      color: AppTheme.tinteLeise,
                       fontSize: 13,
                       height: 1.4,
                     ),
@@ -215,28 +216,21 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
             width: double.infinity,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  AppTheme.amber.withValues(alpha: 0.18),
-                  AppTheme.surface,
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: AppTheme.amber.withValues(alpha: 0.5), width: 1.5),
+              color: AppTheme.akzentTief.withValues(alpha: 0.12),
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5), width: 1.5),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
-                    Icon(Icons.format_quote_rounded, color: AppTheme.amber, size: 20),
+                    Icon(Icons.format_quote_rounded, color: AppTheme.akzentTief, size: 20),
                     const SizedBox(width: 6),
                     Text(
                       t.sosModalYourMantraForThisMoment,
                       style: TextStyle(
-                        color: AppTheme.amber,
+                        color: AppTheme.akzentTief,
                         fontSize: 11,
                         fontWeight: FontWeight.w800,
                         letterSpacing: 0.8,
@@ -268,7 +262,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
               Text(
                 t.sosModalImmediateStepsTickOff,
                 style: TextStyle(
-                  color: AppTheme.textMuted,
+                  color: AppTheme.tinteStumm,
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
                   letterSpacing: 0.8,
@@ -278,8 +272,8 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                 t.sosModalCheckedlengthImmediatestepslengthDone(checked.length, card.immediateSteps.length),
                 style: TextStyle(
                   color: checked.length == card.immediateSteps.length
-                      ? AppTheme.sageGreen
-                      : AppTheme.textSecondary,
+                      ? AppTheme.akzentTief
+                      : AppTheme.tinteLeise,
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
                 ),
@@ -300,14 +294,14 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                 color: Colors.transparent,
                 child: InkWell(
                   onTap: () => _toggleStep(card.id, index),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
                   child: Container(
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: isDone ? AppTheme.surfaceLight.withValues(alpha: 0.2) : AppTheme.surface,
-                      borderRadius: BorderRadius.circular(12),
+                      color: isDone ? AppTheme.papierVertieft.withValues(alpha: 0.2) : AppTheme.papierErhoben,
+                      borderRadius: BorderRadius.circular(VpRadius.karte),
                       border: Border.all(
-                        color: isDone ? AppTheme.sageGreen.withValues(alpha: 0.5) : AppTheme.border,
+                        color: isDone ? AppTheme.akzentTief.withValues(alpha: 0.5) : AppTheme.linie,
                       ),
                     ),
                     child: Row(
@@ -319,9 +313,9 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                           height: 24,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: isDone ? AppTheme.sageGreen : Colors.transparent,
+                            color: isDone ? AppTheme.akzentTief : Colors.transparent,
                             border: Border.all(
-                              color: isDone ? AppTheme.sageGreen : AppTheme.textMuted,
+                              color: isDone ? AppTheme.akzentTief : AppTheme.tinteStumm,
                               width: 1.8,
                             ),
                           ),
@@ -331,7 +325,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                                   child: Text(
                                     '${index + 1}',
                                     style: TextStyle(
-                                      color: AppTheme.textMuted,
+                                      color: AppTheme.tinteStumm,
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -343,7 +337,7 @@ class _SosModalState extends State<SosModal> with SingleTickerProviderStateMixin
                           child: Text(
                             stepText,
                             style: TextStyle(
-                              color: isDone ? AppTheme.textMuted : AppTheme.textPrimary,
+                              color: isDone ? AppTheme.tinteStumm : AppTheme.tinte,
                               fontSize: 14,
                               height: 1.45,
                               decoration: isDone ? TextDecoration.lineThrough : null,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import '../../models/content_models.dart';
 import '../../models/journal_entry.dart';
 import '../../services/data_service.dart';
@@ -40,14 +41,14 @@ class BeliefLibraryView extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: AppTheme.surface,
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: AppTheme.border),
+            color: AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: AppTheme.linie),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.library_books_rounded, color: AppTheme.amber, size: 24),
+              Icon(Icons.library_books_rounded, color: AppTheme.akzentTief, size: 24),
               SizedBox(width: 12),
               Expanded(
                 child: Column(
@@ -58,7 +59,7 @@ class BeliefLibraryView extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
-                        color: AppTheme.textPrimary,
+                        color: AppTheme.tinte,
                       ),
                     ),
                     SizedBox(height: 4),
@@ -66,7 +67,7 @@ class BeliefLibraryView extends StatelessWidget {
                       t.beliefLibraryViewTheMostCommonMentalTraps,
                       style: TextStyle(
                         fontSize: 12,
-                        color: AppTheme.textSecondary,
+                        color: AppTheme.tinteLeise,
                         height: 1.4,
                       ),
                     ),
@@ -88,9 +89,9 @@ class BeliefLibraryView extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -103,14 +104,14 @@ class BeliefLibraryView extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: AppTheme.amber.withValues(alpha: 0.18),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: AppTheme.amber.withValues(alpha: 0.4)),
+                    color: AppTheme.akzentTief.withValues(alpha: 0.18),
+                    borderRadius: BorderRadius.circular(VpRadius.feld),
+                    border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.4)),
                   ),
                   child: Text(
                     belief.category.toUpperCase(),
                     style: TextStyle(
-                      color: AppTheme.amberLight,
+                      color: AppTheme.akzentTief,
                       fontSize: 11,
                       fontWeight: FontWeight.w800,
                       letterSpacing: 0.5,
@@ -123,21 +124,21 @@ class BeliefLibraryView extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
                       color: belief.target == 'women'
-                          ? const Color(0xFFFB7185).withValues(alpha: 0.18)
-                          : AppTheme.sageGreen.withValues(alpha: 0.18),
-                      borderRadius: BorderRadius.circular(8),
+                          ? AppTheme.akzentTief.withValues(alpha: 0.18)
+                          : AppTheme.akzentTief.withValues(alpha: 0.18),
+                      borderRadius: BorderRadius.circular(VpRadius.feld),
                       border: Border.all(
                         color: belief.target == 'women'
-                            ? const Color(0xFFFB7185).withValues(alpha: 0.5)
-                            : AppTheme.sageGreen.withValues(alpha: 0.5),
+                            ? AppTheme.akzentTief.withValues(alpha: 0.5)
+                            : AppTheme.akzentTief.withValues(alpha: 0.5),
                       ),
                     ),
                     child: Text(
                       belief.target == 'women' ? t.beliefLibraryViewForHer : t.beliefLibraryViewForHim,
                       style: TextStyle(
                         color: belief.target == 'women'
-                            ? const Color(0xFFFB7185)
-                            : AppTheme.sageGreen,
+                            ? AppTheme.akzentTief
+                            : AppTheme.akzentTief,
                         fontSize: 10,
                         fontWeight: FontWeight.w800,
                         letterSpacing: 0.5,
@@ -154,10 +155,10 @@ class BeliefLibraryView extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.rose.withValues(alpha: 0.08),
-                borderRadius: BorderRadius.circular(12),
+                color: AppTheme.akzentTief.withValues(alpha: 0.08),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
                 border: Border(
-                  left: BorderSide(color: AppTheme.rose.withValues(alpha: 0.8), width: 3),
+                  left: BorderSide(color: AppTheme.akzentTief.withValues(alpha: 0.8), width: 3),
                 ),
               ),
               child: Column(
@@ -168,7 +169,7 @@ class BeliefLibraryView extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w800,
-                      color: AppTheme.rose,
+                      color: AppTheme.akzentTief,
                       letterSpacing: 0.8,
                     ),
                   ),
@@ -178,7 +179,7 @@ class BeliefLibraryView extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontStyle: FontStyle.italic,
-                      color: AppTheme.sageLight,
+                      color: AppTheme.akzentTief,
                       height: 1.35,
                     ),
                   ),
@@ -192,10 +193,10 @@ class BeliefLibraryView extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: AppTheme.sageGreen.withValues(alpha: 0.08),
-                borderRadius: BorderRadius.circular(12),
+                color: AppTheme.akzentTief.withValues(alpha: 0.08),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
                 border: Border(
-                  left: BorderSide(color: AppTheme.sageGreen, width: 3),
+                  left: BorderSide(color: AppTheme.akzentTief, width: 3),
                 ),
               ),
               child: Column(
@@ -206,7 +207,7 @@ class BeliefLibraryView extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w800,
-                      color: AppTheme.sageGreen,
+                      color: AppTheme.akzentTief,
                       letterSpacing: 0.8,
                     ),
                   ),
@@ -215,7 +216,7 @@ class BeliefLibraryView extends StatelessWidget {
                     belief.realityCheck,
                     style: TextStyle(
                       fontSize: 13,
-                      color: AppTheme.textPrimary,
+                      color: AppTheme.tinte,
                       height: 1.45,
                     ),
                   ),
@@ -229,14 +230,14 @@ class BeliefLibraryView extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(Icons.swap_horiz_rounded, color: AppTheme.sageLight, size: 18),
+                Icon(Icons.swap_horiz_rounded, color: AppTheme.akzentTief, size: 18),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
                     belief.practicalShift,
                     style: TextStyle(
                       fontSize: 12,
-                      color: AppTheme.textSecondary,
+                      color: AppTheme.tinteLeise,
                       height: 1.35,
                     ),
                   ),
@@ -251,13 +252,13 @@ class BeliefLibraryView extends StatelessWidget {
               width: double.infinity,
               child: OutlinedButton.icon(
                 onPressed: () => _transferToJournal(context, belief),
-                icon: Icon(Icons.edit_note_rounded, size: 18, color: AppTheme.amberLight),
+                icon: Icon(Icons.edit_note_rounded, size: 18, color: AppTheme.akzentTief),
                 label: Text(
                   t.beliefLibraryViewTakeIntoMyJournal,
-                  style: TextStyle(fontSize: 13, color: AppTheme.textPrimary),
+                  style: TextStyle(fontSize: 13, color: AppTheme.tinte),
                 ),
                 style: OutlinedButton.styleFrom(
-                  side: BorderSide(color: AppTheme.border),
+                  side: BorderSide(color: AppTheme.linie),
                   padding: const EdgeInsets.symmetric(vertical: 10),
                 ),
               ),

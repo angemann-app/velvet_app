@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../services/nostr_service.dart';
@@ -115,7 +116,7 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(ok ? t.lustProfileYourDesireProfileIsOn : t.lustProfileSendingDidnTWorkPlease),
-        backgroundColor: ok ? AppTheme.sageGreen : AppTheme.rose,
+        backgroundColor: ok ? AppTheme.akzentTief : AppTheme.akzentTief,
       ),
     );
   }
@@ -134,14 +135,14 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
     final second = isFemale ? (t.lustProfileWithPenis, _penisTechniques) : (t.lustProfileWithVulva, _vulvaTechniques);
 
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: AppBar(title: Text(t.lessonDetailMyDesireProfile)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
         children: [
           Text(
             t.lustProfileTickWhatYouEnjoyedWhile,
-            style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+            style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
           ),
           const SizedBox(height: 16),
           _buildSection(t.lustProfileGeneral, _general),
@@ -168,8 +169,8 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
               icon: const Icon(Icons.favorite_rounded),
               label: Text(_nostr.isPaired ? t.lustProfileSendToMyPartner : t.lustProfileConnectCoupleChannelAndSend),
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppTheme.rose,
-                foregroundColor: Colors.white,
+                backgroundColor: AppTheme.akzent,
+                foregroundColor: AppTheme.aufAkzent,
               ),
             ),
           ),
@@ -184,7 +185,7 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
           const SizedBox(height: 8),
           Text(
             t.lustProfileTipEvenNicerThanAny,
-            style: TextStyle(color: AppTheme.textMuted, fontSize: 12, height: 1.4),
+            style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12, height: 1.4),
           ),
         ],
       ),
@@ -195,9 +196,9 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Theme(
         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
@@ -207,7 +208,7 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
           children: items
               .map((t) => CheckboxListTile(
                     value: _selected.contains(t.$1),
-                    activeColor: AppTheme.rose,
+                    activeColor: AppTheme.akzentTief,
                     dense: true,
                     title: Text(t.$2, style: const TextStyle(fontSize: 14)),
                     onChanged: (v) {

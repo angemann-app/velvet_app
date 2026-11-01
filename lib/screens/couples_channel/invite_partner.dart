@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 
 import '../../services/nostr_service.dart';
@@ -22,7 +23,7 @@ Future<void> invitePartner(BuildContext context) async {
   final name = await showDialog<String>(
     context: context,
     builder: (context) => AlertDialog(
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.papierErhoben,
       title: Text(t.couplesChannelInvitePartner),
       content: Column(
         mainAxisSize: MainAxisSize.min,
@@ -30,7 +31,7 @@ Future<void> invitePartner(BuildContext context) async {
         children: [
           Text(
             t.invitePartnerYouSendALinkTo,
-            style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+            style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
           ),
           const SizedBox(height: 14),
           TextField(
@@ -64,11 +65,11 @@ Future<void> invitePartner(BuildContext context) async {
     context: context,
     barrierDismissible: false,
     builder: (context) => AlertDialog(
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.papierErhoben,
       title: Text(t.invitePartnerNowYourCode),
       content: Text(
         t.invitePartnerSendYourConnectionCodeAfterwards,
-        style: TextStyle(color: AppTheme.textSecondary, fontSize: 13.5, height: 1.45),
+        style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13.5, height: 1.45),
       ),
       actions: [
         TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.updateDialogLater)),
@@ -108,14 +109,14 @@ class InviteStatusCard extends StatelessWidget {
         final name = nostr.inviteNameNotifier.value;
         if (name == null) return const SizedBox.shrink();
         final request = nostr.joinRequestNotifier.value != null;
-        final color = request ? AppTheme.rose : AppTheme.amber;
+        final color = request ? AppTheme.akzentTief : AppTheme.akzentTief;
 
         return Container(
           margin: const EdgeInsets.only(bottom: 14),
           padding: const EdgeInsets.fromLTRB(16, 14, 8, 8),
           decoration: BoxDecoration(
             color: color.withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(VpRadius.karte),
             border: Border.all(color: color.withValues(alpha: 0.5)),
           ),
           child: Column(
@@ -128,7 +129,7 @@ class InviteStatusCard extends StatelessWidget {
                   Expanded(
                     child: Text(
                       request ? t.invitePartnerNameWantsToConnect(name) : t.invitePartnerInvitationSentToName(name),
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte),
                     ),
                   ),
                 ],
@@ -140,7 +141,7 @@ class InviteStatusCard extends StatelessWidget {
                   request
                       ? t.invitePartnerAMessageJustArrivedAt(name)
                       : t.invitePartnerAsSoonAsNameInstalls(name),
-                  style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.4),
+                  style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.4),
                 ),
               ),
               Row(
@@ -149,7 +150,7 @@ class InviteStatusCard extends StatelessWidget {
                     ? [
                         TextButton(
                           onPressed: nostr.declineJoinRequest,
-                          child: Text(t.invitePartnerDecline, style: TextStyle(color: AppTheme.textSecondary)),
+                          child: Text(t.invitePartnerDecline, style: TextStyle(color: AppTheme.tinteLeise)),
                         ),
                         TextButton(
                           onPressed: () async {
@@ -157,18 +158,18 @@ class InviteStatusCard extends StatelessWidget {
                             final ok = await nostr.acceptJoinRequest();
                             if (context.mounted && ok) {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text(t.invitePartnerConnectedWithName(name)), backgroundColor: AppTheme.sageGreen),
+                                SnackBar(content: Text(t.invitePartnerConnectedWithName(name)), backgroundColor: AppTheme.akzent),
                               );
                             }
                           },
                           child: Text(t.invitePartnerAccept,
-                              style: TextStyle(color: AppTheme.rose, fontWeight: FontWeight.w700)),
+                              style: TextStyle(color: AppTheme.akzentTief, fontWeight: FontWeight.w700)),
                         ),
                       ]
                     : [
                         TextButton(
                           onPressed: nostr.cancelInvite,
-                          child: Text(t.invitePartnerWithdraw, style: TextStyle(color: AppTheme.textSecondary)),
+                          child: Text(t.invitePartnerWithdraw, style: TextStyle(color: AppTheme.tinteLeise)),
                         ),
                         TextButton(
                           onPressed: () => invitePartner(context),

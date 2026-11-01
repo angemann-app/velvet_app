@@ -1,0 +1,945 @@
+{
+  "version": 1,
+  "formate": {
+    "marke": "1:1, kleine Marke in Listen",
+    "kopf": "3:2, Kartenkopf und Titelbild",
+    "studie": "16:9, Lektion und Körperzeichnung",
+    "hoch": "3:4, Einladung und Hochformat",
+    "diagramm": "4:3, Erklärdiagramm (wird ganz gezeigt, nie beschnitten)"
+  },
+  "bilder": {
+    "audio.einschlaf.cover": {
+      "format": "kopf",
+      "normal": "assets/images/guided_einschlaf.svg",
+      "alt": {
+        "de": "Einschlafen",
+        "en": "Falling asleep"
+      },
+      "spicy": "assets/images/guided_einschlaf_spicy.svg"
+    },
+    "audio.paar.cover": {
+      "format": "kopf",
+      "normal": "assets/images/guided_paar.svg",
+      "alt": {
+        "de": "Gemeinsamer Abend",
+        "en": "Shared evening"
+      },
+      "spicy": "assets/images/guided_paar_spicy.svg"
+    },
+    "audio.selbst.cover": {
+      "format": "kopf",
+      "normal": "assets/images/guided_selbst.svg",
+      "alt": {
+        "de": "Körperreise",
+        "en": "Body journey"
+      },
+      "spicy": "assets/images/guided_selbst_spicy.svg"
+    },
+    "bereich.communication_mind": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_communication_mind.svg",
+      "alt": {
+        "de": "Kommunikation und Kopf",
+        "en": "Communication and mind"
+      },
+      "spicy": "assets/images/ynm_communication_mind_spicy.svg"
+    },
+    "bereich.deep_somatics": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_deep_somatics.svg",
+      "alt": {
+        "de": "Tiefe Körperarbeit",
+        "en": "Deep body work"
+      },
+      "spicy": "assets/images/ynm_deep_somatics_spicy.svg"
+    },
+    "bereich.fantasy_watching": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_fantasy_watching.svg",
+      "alt": {
+        "de": "Fantasie und Zuschauen",
+        "en": "Fantasy and watching"
+      },
+      "spicy": "assets/images/ynm_fantasy_watching_spicy.svg"
+    },
+    "bereich.heute.einladung": {
+      "format": "hoch",
+      "ausstehend": true,
+      "alt": {
+        "de": "Einladung zum nächsten Schritt",
+        "en": "Invitation to the next step"
+      }
+    },
+    "bereich.mouth_kissing": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_mouth_kissing.svg",
+      "alt": {
+        "de": "Mund und Küsse",
+        "en": "Mouth and kissing"
+      },
+      "spicy": "assets/images/ynm_mouth_kissing_spicy.svg"
+    },
+    "bereich.positions_movement": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_positions_movement.svg",
+      "alt": {
+        "de": "Stellungen und Bewegung",
+        "en": "Positions and movement"
+      },
+      "spicy": "assets/images/ynm_positions_movement_spicy.svg"
+    },
+    "bereich.power_dynamics": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_power_dynamics.svg",
+      "alt": {
+        "de": "Macht und Hingabe",
+        "en": "Power and surrender"
+      },
+      "spicy": "assets/images/ynm_power_dynamics_spicy.svg"
+    },
+    "bereich.roles_settings": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_roles_settings.svg",
+      "alt": {
+        "de": "Rollen und Szenarien",
+        "en": "Roles and settings"
+      },
+      "spicy": "assets/images/ynm_roles_settings_spicy.svg"
+    },
+    "bereich.sensory_basics": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_sensory_basics.svg",
+      "alt": {
+        "de": "Sinne und Grundlagen",
+        "en": "Senses and basics"
+      },
+      "spicy": "assets/images/ynm_sensory_basics_spicy.svg"
+    },
+    "bereich.spicy": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_spicy.svg",
+      "alt": {
+        "de": "Spicy",
+        "en": "Spicy"
+      },
+      "spicy": "assets/images/ynm_spicy_spicy.svg"
+    },
+    "bereich.touch_techniques": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_touch_techniques.svg",
+      "alt": {
+        "de": "Berührung und Techniken",
+        "en": "Touch and techniques"
+      },
+      "spicy": "assets/images/ynm_touch_techniques_spicy.svg"
+    },
+    "bereich.toys_aids": {
+      "format": "kopf",
+      "normal": "assets/images/ynm_toys_aids.svg",
+      "alt": {
+        "de": "Spielzeug und Hilfsmittel",
+        "en": "Toys and aids"
+      },
+      "spicy": "assets/images/ynm_toys_aids_spicy.svg"
+    },
+    "diagramm.anat_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_anat_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Erregung ist ein Ganzkörper-Ereignis“",
+        "en": "Diagram for the lesson “Arousal Is a Whole-Body Event”"
+      },
+      "englisch": "assets/images/diagram_anat_1_en.svg"
+    },
+    "diagramm.anat_4": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_anat_4.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Brust, Damm und Po – bei allen Körpern“",
+        "en": "Diagram for the lesson “Chest, Perineum and Buttocks – in Every Body”"
+      },
+      "englisch": "assets/images/diagram_anat_4_en.svg"
+    },
+    "diagramm.anat_5": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_anat_5.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Deine eigene Landkarte“",
+        "en": "Diagram for the lesson “Your Own Map”"
+      },
+      "englisch": "assets/images/diagram_anat_5_en.svg"
+    },
+    "diagramm.cat_position": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_cat_position.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Wiegen statt Stoßen: Die hohe Verschmelzung“",
+        "en": "Diagram for the lesson “Rocking Instead of Thrusting: The High Merge”"
+      },
+      "englisch": "assets/images/diagram_cat_position_en.svg"
+    },
+    "diagramm.couples_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_couples_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Sensate Focus: In drei Stufen zurück zur Leichtigkeit“",
+        "en": "Diagram for the lesson “Sensate Focus: Three Stages Back to Ease”"
+      },
+      "englisch": "assets/images/diagram_couples_1_en.svg"
+    },
+    "diagramm.couples_2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_couples_2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Bauch an Bauch: gemeinsam atmen“",
+        "en": "Diagram for the lesson “Belly to Belly: Breathing Together”"
+      },
+      "englisch": "assets/images/diagram_couples_2_en.svg"
+    },
+    "diagramm.couples_3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_couples_3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Die Ampel: Wünsche und Grenzen ohne Kränkung“",
+        "en": "Diagram for the lesson “The Traffic Light: Wishes and Boundaries Without Hurt”"
+      },
+      "englisch": "assets/images/diagram_couples_3_en.svg"
+    },
+    "diagramm.desire_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_desire_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Kein Defekt: Warum Lust selten gleich verteilt ist“",
+        "en": "Diagram for the lesson “Not a Defect: Why Desire Is Rarely Evenly Distributed”"
+      },
+      "englisch": "assets/images/diagram_desire_1_en.svg"
+    },
+    "diagramm.desire_2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_desire_2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Der Teufelskreis aus Drängen und Ausweichen“",
+        "en": "Diagram for the lesson “The Vicious Circle of Pushing and Avoiding”"
+      },
+      "englisch": "assets/images/diagram_desire_2_en.svg"
+    },
+    "diagramm.desire_3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_desire_3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Das Lust-Menü: Mehr als Ja oder Nein“",
+        "en": "Diagram for the lesson “The Pleasure Menu: More Than Yes or No”"
+      },
+      "englisch": "assets/images/diagram_desire_3_en.svg"
+    },
+    "diagramm.dopa_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_dopa_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Schnelle Reize und das Belohnungssystem“",
+        "en": "Diagram for the lesson “Fast Stimuli and the Reward System”"
+      },
+      "englisch": "assets/images/diagram_dopa_1_en.svg"
+    },
+    "diagramm.fant_3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_fant_3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Spiele sicher gestalten: Absprache, Signale, Nachsorge“",
+        "en": "Diagram for the lesson “Making Play Safe: Agreement, Signals, Aftercare”"
+      },
+      "englisch": "assets/images/diagram_fant_3_en.svg"
+    },
+    "diagramm.female_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_female_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Der weibliche Beckenboden: Loslassen statt Festhalten“",
+        "en": "Diagram for the lesson “The Female Pelvic Floor: Letting Go Instead of Holding On”"
+      },
+      "englisch": "assets/images/diagram_female_1_en.svg"
+    },
+    "diagramm.female_3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_female_3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Die Klitoris: größer, als man denkt“",
+        "en": "Diagram for the lesson “The Clitoris: Bigger Than You Think”"
+      },
+      "englisch": "assets/images/diagram_female_3_en.svg"
+    },
+    "diagramm.female_4": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_female_4.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Der Zyklus und die Lust“",
+        "en": "Diagram for the lesson “The Cycle and Desire”"
+      },
+      "englisch": "assets/images/diagram_female_4_en.svg"
+    },
+    "diagramm.female_5": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_female_5.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Squirting: Was man weiß und was nicht“",
+        "en": "Diagram for the lesson “Squirting: what we know and what we don’t”"
+      },
+      "englisch": "assets/images/diagram_female_5_en.svg"
+    },
+    "diagramm.female_6": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_female_6.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Der Gebärmutterhals: Anatomie, Empfindungen, Vorsicht“",
+        "en": "Diagram for the lesson “The cervix: anatomy, sensations, caution”"
+      },
+      "englisch": "assets/images/diagram_female_6_en.svg"
+    },
+    "diagramm.lingam_zones": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_lingam_zones.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Das ganze Becken einbeziehen: Wurzel, Leisten und Damm“",
+        "en": "Diagram for the lesson “Including the Whole Pelvis: Root, Groin and Perineum”"
+      },
+      "englisch": "assets/images/diagram_lingam_zones_en.svg"
+    },
+    "diagramm.neuro_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_neuro_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Gaspedal und Bremse“",
+        "en": "Diagram for the lesson “Accelerator and Brake”"
+      },
+      "englisch": "assets/images/diagram_neuro_1_en.svg"
+    },
+    "diagramm.neuro_2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_neuro_2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Der Teufelskreis der Erwartungsangst“",
+        "en": "Diagram for the lesson “The Vicious Circle of Anticipatory Anxiety”"
+      },
+      "englisch": "assets/images/diagram_neuro_2_en.svg"
+    },
+    "diagramm.pain_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_pain_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Wenn Sex wehtut“",
+        "en": "Diagram for the lesson “When Sex Hurts”"
+      },
+      "englisch": "assets/images/diagram_pain_1_en.svg"
+    },
+    "diagramm.pain_2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_pain_2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Wenn die Erektion nicht mitspielt“",
+        "en": "Diagram for the lesson “When the Erection Doesn't Play Along”"
+      },
+      "englisch": "assets/images/diagram_pain_2_en.svg"
+    },
+    "diagramm.pain_3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_pain_3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Zu früh kommen: Kontrolle durch Entspannung“",
+        "en": "Diagram for the lesson “Coming Too Soon: Control Through Relaxation”"
+      },
+      "englisch": "assets/images/diagram_pain_3_en.svg"
+    },
+    "diagramm.pelvic_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_pelvic_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Zu fest statt zu schwach“",
+        "en": "Diagram for the lesson “Too Tight Rather Than Too Weak”"
+      },
+      "englisch": "assets/images/diagram_pelvic_1_en.svg"
+    },
+    "diagramm.pelvic_2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_pelvic_2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Anspannen und Öffnen: zwei Bewegungen“",
+        "en": "Diagram for the lesson “Contracting and Opening: Two Movements”"
+      },
+      "englisch": "assets/images/diagram_pelvic_2_en.svg"
+    },
+    "diagramm.pelvic_3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_pelvic_3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Hüfte und Becken weit werden lassen“",
+        "en": "Diagram for the lesson “Letting Hips and Pelvis Open Up”"
+      },
+      "englisch": "assets/images/diagram_pelvic_3_en.svg"
+    },
+    "diagramm.phase_2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_phase_2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Wechseljahre: Wenn sich die Lust verändert“",
+        "en": "Diagram for the lesson “Menopause: When Desire Changes”"
+      },
+      "englisch": "assets/images/diagram_phase_2_en.svg"
+    },
+    "diagramm.pos_2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_pos_2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Positionen für Ausdauer und eine entspannte Erektion“",
+        "en": "Diagram for the lesson “Positions for Stamina and a Relaxed Erection”"
+      },
+      "englisch": "assets/images/diagram_pos_2_en.svg"
+    },
+    "diagramm.pos_3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_pos_3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Positionen für ein enges Becken und sanftes Öffnen“",
+        "en": "Diagram for the lesson “Positions for a Tight Pelvis and Gentle Opening”"
+      },
+      "englisch": "assets/images/diagram_pos_3_en.svg"
+    },
+    "diagramm.prost_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_prost_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Anatomie ohne Scham“",
+        "en": "Diagram for the lesson “Anatomy Without Shame”"
+      },
+      "englisch": "assets/images/diagram_prost_1_en.svg"
+    },
+    "diagramm.prost_2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_prost_2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Der Damm: Die Brücke von außen“",
+        "en": "Diagram for the lesson “The Perineum: The Bridge From the Outside”"
+      },
+      "englisch": "assets/images/diagram_prost_2_en.svg"
+    },
+    "diagramm.prost_3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_prost_3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Der Weg nach innen: Langsam, sicher, ohne Ziel“",
+        "en": "Diagram for the lesson “The Way Inside: Slowly, Safely, Without a Goal”"
+      },
+      "englisch": "assets/images/diagram_prost_3_en.svg"
+    },
+    "diagramm.selbst_penis": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_selbst_penis.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Mit Penis: sieben Arten, dich zu berühren“",
+        "en": "Diagram for the lesson “With a Penis: Seven Ways to Touch Yourself”"
+      },
+      "englisch": "assets/images/diagram_selbst_penis_en.svg"
+    },
+    "diagramm.selbst_vulva": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_selbst_vulva.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Mit Vulva: sieben Arten, dich zu berühren“",
+        "en": "Diagram for the lesson “With a Vulva: Seven Ways to Touch Yourself”"
+      },
+      "englisch": "assets/images/diagram_selbst_vulva_en.svg"
+    },
+    "diagramm.spec_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_spec_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Die Beobachter-Falle“",
+        "en": "Diagram for the lesson “The Spectator Trap”"
+      },
+      "englisch": "assets/images/diagram_spec_1_en.svg"
+    },
+    "diagramm.tease_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_tease_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Das Neunzig-Prozent-Prinzip: Vorfreude statt Pflichtprogramm“",
+        "en": "Diagram for the lesson “The Ninety-Percent Principle: Anticipation Instead of Obligation”"
+      },
+      "englisch": "assets/images/diagram_tease_1_en.svg"
+    },
+    "diagramm.touch_m_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_touch_m_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Offene Hand statt Klammergriff“",
+        "en": "Diagram for the lesson “Open Hand Instead of Death Grip”"
+      },
+      "englisch": "assets/images/diagram_touch_m_1_en.svg"
+    },
+    "diagramm.touch_m_5": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_touch_m_5.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Höhepunkt und Samenerguss: Zwei Vorgänge, die sich trennen lassen“",
+        "en": "Diagram for the lesson “Orgasm and Ejaculation: Two Processes That Can Be Separated”"
+      },
+      "englisch": "assets/images/diagram_touch_m_5_en.svg"
+    },
+    "diagramm.touch_w_4": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_touch_w_4.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Reiz-Schichtung: Wenn der Kopf Pause machen darf“",
+        "en": "Diagram for the lesson “Layering Sensations: When the Mind May Take a Break”"
+      },
+      "englisch": "assets/images/diagram_touch_w_4_en.svg"
+    },
+    "diagramm.touch_w_s2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_touch_w_s2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Spicy: Squirting ausprobieren, allein und zu zweit“",
+        "en": "Diagram for the lesson “Spicy: trying squirting, alone and together”"
+      },
+      "englisch": "assets/images/diagram_touch_w_s2_en.svg"
+    },
+    "diagramm.touch_w_s3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_touch_w_s3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Spicy: Tiefe Berührung, allein und zu zweit“",
+        "en": "Diagram for the lesson “Spicy: deep touch, alone and together”"
+      },
+      "englisch": "assets/images/diagram_touch_w_s3_en.svg"
+    },
+    "diagramm.toys_2": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_toys_2.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Der Überblick: Was es gibt“",
+        "en": "Diagram for the lesson “The Overview: What Is Out There”"
+      },
+      "englisch": "assets/images/diagram_toys_2_en.svg"
+    },
+    "diagramm.toys_3": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_toys_3.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Material, Pflege und Gleitmittel“",
+        "en": "Diagram for the lesson “Material, Care and Lubricant”"
+      },
+      "englisch": "assets/images/diagram_toys_3_en.svg"
+    },
+    "diagramm.toys_4": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_toys_4.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Sicherheit: Wo es heikel wird“",
+        "en": "Diagram for the lesson “Safety: Where It Gets Tricky”"
+      },
+      "englisch": "assets/images/diagram_toys_4_en.svg"
+    },
+    "diagramm.toys_5": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_toys_5.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Kaufen, aufbewahren, diskret bleiben“",
+        "en": "Diagram for the lesson “Buying, Storing, Staying Discreet”"
+      },
+      "englisch": "assets/images/diagram_toys_5_en.svg"
+    },
+    "diagramm.toys_7": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_toys_7.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Allein mit Toy: ein Stufenplan“",
+        "en": "Diagram for the lesson “Alone with a Toy: A Step-by-Step Plan”"
+      },
+      "englisch": "assets/images/diagram_toys_7_en.svg"
+    },
+    "diagramm.umkreisen": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_umkreisen.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Umkreisen und der flache Finger“",
+        "en": "Diagram for the lesson “Circling and the Flat Finger”"
+      },
+      "englisch": "assets/images/diagram_umkreisen_en.svg"
+    },
+    "diagramm.vocal_1": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_vocal_1.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Das Stummfilm-Muster im Bett“",
+        "en": "Diagram for the lesson “The Silent-Movie Pattern in Bed”"
+      },
+      "englisch": "assets/images/diagram_vocal_1_en.svg"
+    },
+    "diagramm.wellen": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_wellen.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Wellen statt Sprint: Das Plateau genießen“",
+        "en": "Diagram for the lesson “Waves Instead of a Sprint: Enjoying the Plateau”"
+      },
+      "englisch": "assets/images/diagram_wellen_en.svg"
+    },
+    "diagramm.yoni_clock": {
+      "format": "diagramm",
+      "normal": "assets/images/diagram_yoni_clock.svg",
+      "alt": {
+        "de": "Diagramm zur Lektion „Die Yoni-Massage: Behutsam und Schritt für Schritt“",
+        "en": "Diagram for the lesson “The Yoni Massage: Gently and Step by Step”"
+      },
+      "englisch": "assets/images/diagram_yoni_clock_en.svg"
+    },
+    "kurs.01.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_01.svg",
+      "alt": {
+        "de": "1. Kopf und Körper verstehen",
+        "en": "1. Understanding Mind and Body"
+      },
+      "spicy": "assets/images/cover_01_spicy.svg"
+    },
+    "kurs.02.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_02.svg",
+      "alt": {
+        "de": "4. Raus aus der Beobachter-Falle",
+        "en": "4. Escaping the Spectator Trap"
+      },
+      "spicy": "assets/images/cover_02_spicy.svg"
+    },
+    "kurs.03.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_03.svg",
+      "alt": {
+        "de": "7. Beckenboden: Loslassen und Kraft",
+        "en": "7. Pelvic Floor: Letting Go and Strength"
+      },
+      "spicy": "assets/images/cover_03_spicy.svg"
+    },
+    "kurs.04.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_04.svg",
+      "alt": {
+        "de": "10. Reize neu einstellen",
+        "en": "10. Resetting Your Stimulation"
+      },
+      "spicy": "assets/images/cover_04_spicy.svg"
+    },
+    "kurs.05.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_05.svg",
+      "alt": {
+        "de": "12. Das Schweigen brechen",
+        "en": "12. Breaking the Silence"
+      },
+      "spicy": "assets/images/cover_05_spicy.svg"
+    },
+    "kurs.06.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_06.svg",
+      "alt": {
+        "de": "9. Weibliche Lust und Körperwissen",
+        "en": "9. Female Desire and Body Knowledge"
+      },
+      "spicy": "assets/images/cover_06_spicy.svg"
+    },
+    "kurs.07.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_07.svg",
+      "alt": {
+        "de": "17. Das Paar-Labor: Nähe ohne Ziel",
+        "en": "17. The Couples Lab: Closeness Without a Goal"
+      },
+      "spicy": "assets/images/cover_07_spicy.svg"
+    },
+    "kurs.08.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_08.svg",
+      "alt": {
+        "de": "18. Berührung, die trägt (Für Sie)",
+        "en": "18. Touch That Carries (For Her)"
+      },
+      "spicy": "assets/images/cover_08_spicy.svg"
+    },
+    "kurs.09.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_09.svg",
+      "alt": {
+        "de": "19. Berührung neu lernen (Für Ihn)",
+        "en": "19. Relearning Touch (For Him)"
+      },
+      "spicy": "assets/images/cover_09_spicy.svg"
+    },
+    "kurs.10.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_10.svg",
+      "alt": {
+        "de": "21. Hörbare Lust: Stimme, Kiefer und Becken",
+        "en": "21. Audible Pleasure: Voice, Jaw and Pelvis"
+      },
+      "spicy": "assets/images/cover_10_spicy.svg"
+    },
+    "kurs.11.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_11.svg",
+      "alt": {
+        "de": "15. Vorfreude und Langsamkeit",
+        "en": "15. Anticipation and Slowness"
+      },
+      "spicy": "assets/images/cover_11_spicy.svg"
+    },
+    "kurs.12.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_12.svg",
+      "alt": {
+        "de": "23. Fantasien, Führung und Hingabe",
+        "en": "23. Fantasies, Leading and Surrender"
+      },
+      "spicy": "assets/images/cover_12_spicy.svg"
+    },
+    "kurs.13.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_13.svg",
+      "alt": {
+        "de": "6. Präsenz und erotisches Selbstmitgefühl",
+        "en": "6. Presence and Erotic Self-Compassion"
+      },
+      "spicy": "assets/images/cover_13_spicy.svg"
+    },
+    "kurs.14.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_14.svg",
+      "alt": {
+        "de": "20. Die Kunst der Intim-Massage",
+        "en": "20. The Art of Intimate Massage"
+      },
+      "spicy": "assets/images/cover_14_spicy.svg"
+    },
+    "kurs.15.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_15.svg",
+      "alt": {
+        "de": "11. Prostata und Damm: Anatomie und Annäherung",
+        "en": "11. Prostate and Perineum: Anatomy and Approach"
+      },
+      "spicy": "assets/images/cover_15_spicy.svg"
+    },
+    "kurs.16.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_16.svg",
+      "alt": {
+        "de": "22. Stellungen, die entspannen: Winkel, Nähe und Ausdauer",
+        "en": "22. Positions That Relax: Angle, Closeness and Stamina"
+      },
+      "spicy": "assets/images/cover_16_spicy.svg"
+    },
+    "kurs.17.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_17.svg",
+      "alt": {
+        "de": "24. Kopfkino: Szenarien für zwei",
+        "en": "24. Mental Movies: Scenarios for Two"
+      },
+      "spicy": "assets/images/cover_17_spicy.svg"
+    },
+    "kurs.18.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_18.svg",
+      "alt": {
+        "de": "8. Sich selbst erkunden",
+        "en": "8. Exploring Yourself"
+      },
+      "spicy": "assets/images/cover_18_spicy.svg"
+    },
+    "kurs.19.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_19.svg",
+      "alt": {
+        "de": "13. Unterschiedliche Lust: Wenn einer öfter will",
+        "en": "13. Mismatched Desire: When One Wants It More Often"
+      },
+      "spicy": "assets/images/cover_19_spicy.svg"
+    },
+    "kurs.20.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_20.svg",
+      "alt": {
+        "de": "14. Lebensphasen: Lust im Wandel",
+        "en": "14. Life Phases: Desire in Transition"
+      },
+      "spicy": "assets/images/cover_20_spicy.svg"
+    },
+    "kurs.21.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_21.svg",
+      "alt": {
+        "de": "5. Schmerz, Scham und Leistungsdruck",
+        "en": "5. Pain, Shame and Performance Pressure"
+      },
+      "spicy": "assets/images/cover_21_spicy.svg"
+    },
+    "kurs.22.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_22.svg",
+      "alt": {
+        "de": "2. Anatomie der Erregung",
+        "en": "2. The Anatomy of Arousal"
+      },
+      "spicy": "assets/images/cover_22_spicy.svg"
+    },
+    "kurs.23.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_23.svg",
+      "alt": {
+        "de": "26. Spicy Solo: Lust ohne Bremse",
+        "en": "26. Spicy Solo: Pleasure Without Brakes"
+      },
+      "spicy": "assets/images/cover_23_spicy.svg"
+    },
+    "kurs.24.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_24.svg",
+      "alt": {
+        "de": "27. Spicy zu zweit: Mehr wagen",
+        "en": "27. Spicy Together: Dare More"
+      },
+      "spicy": "assets/images/cover_24_spicy.svg"
+    },
+    "kurs.25.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_25.svg",
+      "alt": {
+        "de": "3. Jeder Körper ist schön und sexy",
+        "en": "3. Every Body Is Beautiful and Sexy"
+      },
+      "spicy": "assets/images/cover_25_spicy.svg"
+    },
+    "kurs.26.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_26.svg",
+      "alt": {
+        "de": "16. Alltagserotik: Lust zwischen Kaffee und Kalender",
+        "en": "16. Everyday Eroticism: Desire Between Coffee and Calendar"
+      },
+      "spicy": "assets/images/cover_26_spicy.svg"
+    },
+    "kurs.27.titel": {
+      "format": "kopf",
+      "normal": "assets/images/cover_27.svg",
+      "alt": {
+        "de": "25. Toys: Spielzeug mit Köpfchen",
+        "en": "25. Toys: Playthings with Know-How"
+      },
+      "spicy": "assets/images/cover_27_spicy.svg"
+    },
+    "zeichnung.anat_1": {
+      "format": "studie",
+      "normal": "assets/images/zeichnung_anat_1.svg",
+      "alt": {
+        "de": "Körperzeichnung zur Lektion „Erregung ist ein Ganzkörper-Ereignis“",
+        "en": "Body drawing for the lesson “Arousal Is a Whole-Body Event”"
+      },
+      "englisch": "assets/images/zeichnung_anat_1_en.svg"
+    },
+    "zeichnung.anat_3": {
+      "format": "studie",
+      "normal": "assets/images/zeichnung_anat_3.svg",
+      "alt": {
+        "de": "Körperzeichnung zur Lektion „Rücken, Bauch, Kniekehlen und Füße“",
+        "en": "Body drawing for the lesson “Back, Belly, Backs of the Knees and Feet”"
+      },
+      "englisch": "assets/images/zeichnung_anat_3_en.svg"
+    },
+    "zeichnung.beauty_1": {
+      "format": "studie",
+      "normal": "assets/images/zeichnung_beauty_1.svg",
+      "alt": {
+        "de": "Körperzeichnung zur Lektion „Der Mythos vom perfekten Körper“",
+        "en": "Body drawing for the lesson “The Myth of the Perfect Body”"
+      },
+      "englisch": "assets/images/zeichnung_beauty_1_en.svg"
+    },
+    "zeichnung.mass_1": {
+      "format": "studie",
+      "normal": "assets/images/zeichnung_mass_1.svg",
+      "alt": {
+        "de": "Körperzeichnung zur Lektion „Einer gibt, einer empfängt“",
+        "en": "Body drawing for the lesson “One Gives, One Receives”"
+      },
+      "englisch": "assets/images/zeichnung_mass_1_en.svg"
+    },
+    "zeichnung.pos_2": {
+      "format": "studie",
+      "normal": "assets/images/zeichnung_pos_2.svg",
+      "alt": {
+        "de": "Körperzeichnung zur Lektion „Positionen für Ausdauer und eine entspannte Erektion“",
+        "en": "Body drawing for the lesson “Positions for Stamina and a Relaxed Erection”"
+      },
+      "englisch": "assets/images/zeichnung_pos_2_en.svg"
+    },
+    "zeichnung.self_1": {
+      "format": "studie",
+      "normal": "assets/images/zeichnung_self_1.svg",
+      "alt": {
+        "de": "Körperzeichnung zur Lektion „Warum sich selbst erkunden?“",
+        "en": "Body drawing for the lesson “Why Explore Yourself?”"
+      },
+      "englisch": "assets/images/zeichnung_self_1_en.svg"
+    },
+    "zeichnung.touch_m_1": {
+      "format": "studie",
+      "normal": "assets/images/zeichnung_touch_m_1.svg",
+      "alt": {
+        "de": "Körperzeichnung zur Lektion „Offene Hand statt Klammergriff“",
+        "en": "Body drawing for the lesson “Open Hand Instead of Death Grip”"
+      },
+      "englisch": "assets/images/zeichnung_touch_m_1_en.svg"
+    },
+    "zeichnung.touch_w_1": {
+      "format": "studie",
+      "normal": "assets/images/zeichnung_touch_w_1.svg",
+      "alt": {
+        "de": "Körperzeichnung zur Lektion „Gleichmäßigkeit: Wenn genau so genau so bleiben darf“",
+        "en": "Body drawing for the lesson “Consistency: When “Just Like That” Is Allowed to Stay Just Like That”"
+      },
+      "englisch": "assets/images/zeichnung_touch_w_1_en.svg"
+    }
+  },
+  "grafik": {
+    "marke.kreuz": {
+      "art": "painter",
+      "beschreibung": "Kreuzmarke"
+    },
+    "marke.eck": {
+      "art": "painter",
+      "beschreibung": "Eckmarken eines Bildfelds"
+    },
+    "linie.mass": {
+      "art": "painter",
+      "beschreibung": "Maßlinie mit Endstrichen"
+    },
+    "linie.haar": {
+      "art": "painter",
+      "beschreibung": "Haarlinie"
+    },
+    "linie.doppel": {
+      "art": "painter",
+      "beschreibung": "Doppellinie"
+    },
+    "raster.fein": {
+      "art": "painter",
+      "beschreibung": "Feines Raster"
+    },
+    "bogen.konstruktion": {
+      "art": "painter",
+      "beschreibung": "Konstruktionsbögen"
+    },
+    "rahmen.passepartout": {
+      "art": "painter",
+      "beschreibung": "Passepartout um ein Bild"
+    }
+  }
+}

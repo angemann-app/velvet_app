@@ -41,7 +41,7 @@ class _FotoAnsichtState extends State<FotoAnsicht> {
         Padding(
           padding: const EdgeInsets.all(16),
           child: Text(t.fotoAnsichtHinweis,
-              textAlign: TextAlign.center, style: TextStyle(color: AppTheme.textMuted, fontSize: 12.5)),
+              textAlign: TextAlign.center, style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12.5)),
         ),
       ]),
     );

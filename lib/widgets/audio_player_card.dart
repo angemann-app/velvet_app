@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
 import '../services/audio_service.dart';
 import '../theme/app_theme.dart';
 import 'aussprache_melden.dart';
@@ -82,30 +83,21 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
     final double totalMs = totalDur.inMilliseconds > 0 ? totalDur.inMilliseconds.toDouble() : 1.0;
     final double posMs = (_dragValue ?? currentPos.inMilliseconds.toDouble()).clamp(0.0, totalMs);
 
-    final accentColor = widget.isAudioExercise ? AppTheme.amber : AppTheme.sageGreen;
+    final accentColor = widget.isAudioExercise ? AppTheme.akzentTief : AppTheme.akzentTief;
 
     return Container(
       margin: const EdgeInsets.only(bottom: 20),
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(20),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         border: Border.all(
           color: isPlaying
               ? accentColor.withValues(alpha: 0.7)
-              : (isPaused ? accentColor.withValues(alpha: 0.3) : AppTheme.border),
+              : (isPaused ? accentColor.withValues(alpha: 0.3) : AppTheme.linie),
           width: isPlaying ? 1.5 : 1.0,
         ),
-        boxShadow: isPlaying
-            ? [
-                BoxShadow(
-                  color: accentColor.withValues(alpha: 0.18),
-                  blurRadius: 18,
-                  spreadRadius: 2,
-                  offset: const Offset(0, 4),
-                ),
-              ]
-            : null,
+        
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -114,51 +106,32 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                decoration: BoxDecoration(
-                  color: isPlaying
-                      ? accentColor.withValues(alpha: 0.2)
-                      : AppTheme.surfaceLight,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: isPlaying
-                        ? accentColor.withValues(alpha: 0.5)
-                        : Colors.transparent,
+              // Art der Aufnahme als Eyebrow (ohne Kapsel): Symbol und Versalien, aktiv im Akzent.
+              Flexible(
+                child: Row(mainAxisSize: MainAxisSize.min, children: [
+                  Icon(
+                    isPlaying ? Icons.graphic_eq_rounded : Icons.headphones_outlined,
+                    color: isPlaying ? accentColor : AppTheme.tinteStumm,
+                    size: 15,
                   ),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(
-                      isPlaying ? Icons.graphic_eq_rounded : Icons.headphones_rounded,
-                      color: isPlaying ? accentColor : AppTheme.textSecondary,
-                      size: 14,
+                  const SizedBox(width: 6),
+                  Flexible(
+                    child: Text(
+                      (isUsingFallback
+                              ? t.audioPlayerCardDeviceVoice
+                              : (widget.isAudioExercise ? t.audioPlayerCardGuidedExercise : t.audioPlayerCardListen))
+                          .toUpperCase(),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: context.vp.typo.eyebrow.copyWith(color: isPlaying ? accentColor : AppTheme.tinteStumm),
                     ),
-                    const SizedBox(width: 6),
-                    Text(
-                      isUsingFallback
-                          ? t.audioPlayerCardDeviceVoice
-                          : (widget.isAudioExercise ? t.audioPlayerCardGuidedExercise : t.audioPlayerCardListen),
-                      style: TextStyle(
-                        color: isPlaying ? accentColor : AppTheme.textSecondary,
-                        fontSize: 10.5,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 0.6,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                  ),
+                ]),
+              ),              const SizedBox(width: 8),
               // Time Display (01:24 / 04:15)
               Text(
                 '${_formatDuration(currentPos)} / ${_formatDuration(totalDur)}',
-                style: TextStyle(
-                  color: AppTheme.textSecondary,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w600,
-                  fontFeatures: [FontFeature.tabularFigures()],
-                ),
+                style: context.vp.typo.zahl.copyWith(color: AppTheme.tinteLeise, fontSize: 14, fontWeight: FontWeight.w400),
               ),
             ],
           ),
@@ -177,7 +150,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                         ? t.audioPlayerCardCloseYourEyesAndListen
                         : t.audioPlayerCardListenToTheLessonApprox(widget.durationMin))),
             style: TextStyle(
-              color: isPlaying ? AppTheme.textPrimary : AppTheme.textMuted,
+              color: isPlaying ? AppTheme.tinte : AppTheme.tinteStumm,
               fontSize: 13,
               fontWeight: isPlaying ? FontWeight.w500 : FontWeight.w400,
             ),
@@ -188,11 +161,14 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
           // Slider / Progress bar
           SliderTheme(
             data: SliderTheme.of(context).copyWith(
-              trackHeight: 4,
+              trackHeight: 2,
               activeTrackColor: accentColor,
-              inactiveTrackColor: AppTheme.surfaceLight,
+              inactiveTrackColor: AppTheme.linieStark,
+              disabledActiveTrackColor: AppTheme.linieStark,
+              disabledInactiveTrackColor: AppTheme.linie,
               thumbColor: accentColor,
-              thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6.5),
+              disabledThumbColor: AppTheme.linieStark,
+              thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 5, disabledThumbRadius: 4),
               overlayColor: accentColor.withValues(alpha: 0.2),
               overlayShape: const RoundSliderOverlayShape(overlayRadius: 14),
             ),
@@ -229,7 +205,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                     : null,
                 icon: const Icon(Icons.replay_10_rounded),
                 iconSize: 30,
-                color: isCurrent ? AppTheme.textPrimary : AppTheme.textMuted.withValues(alpha: 0.4),
+                color: isCurrent ? AppTheme.tinte : AppTheme.tinteStumm.withValues(alpha: 0.4),
                 tooltip: t.audioPlayerCardBackS,
               ),
 
@@ -258,28 +234,13 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                   height: 58,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    gradient: LinearGradient(
-                      colors: [
-                        accentColor,
-                        accentColor.withValues(alpha: 0.85),
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: accentColor.withValues(alpha: 0.35),
-                        blurRadius: 14,
-                        spreadRadius: 1,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
+                    color: accentColor,
                   ),
                   child: Center(
                     child: Icon(
                       isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded,
                       size: 34,
-                      color: AppTheme.background,
+                      color: AppTheme.aufAkzentTief,
                     ),
                   ),
                 ),
@@ -294,7 +255,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                     : null,
                 icon: const Icon(Icons.forward_10_rounded),
                 iconSize: 30,
-                color: isCurrent ? AppTheme.textPrimary : AppTheme.textMuted.withValues(alpha: 0.4),
+                color: isCurrent ? AppTheme.tinte : AppTheme.tinteStumm.withValues(alpha: 0.4),
                 tooltip: t.audioPlayerCardForwardS,
               ),
 
@@ -305,7 +266,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                   onPressed: () => _audioService.stop(),
                   icon: const Icon(Icons.stop_rounded),
                   iconSize: 22,
-                  color: AppTheme.textSecondary,
+                  color: AppTheme.tinteLeise,
                   tooltip: t.audioPlayerCardStopReset,
                 ),
               ],

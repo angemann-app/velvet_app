@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../models/content_models.dart';
 import '../../services/nostr_service.dart';
 import '../../services/pakete.dart';
@@ -10,12 +9,15 @@ import '../../services/storage_service.dart';
 import '../../services/audio_service.dart';
 import '../../services/tts_service.dart';
 import '../../theme/app_theme.dart';
+import '../../theme/vp_tokens.dart';
+import '../../widgets/design/vp_bild_feld.dart';
+import '../../widgets/design/vp_komponenten.dart';
+import '../../widgets/design/vp_grafik.dart';
 import '../../widgets/audio_player_card.dart';
 import '../self_exploration/lust_profile_screen.dart';
 import '../self_exploration/selbst_reise_screen.dart';
 import '../couples_channel/paar_abend_screen.dart';
 import '../../l10n/t.dart';
-import '../../services/sprache.dart';
 
 class LessonDetailScreen extends StatefulWidget {
   final Lesson lesson;
@@ -86,11 +88,11 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           itemBuilder: (_, i) => GestureDetector(
             onTap: () => _spicyBildGross(dateien[i].pfad),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(VpRadius.karte),
               child: SizedBox(
                 width: quer(dateien[i].pfad) ? hoehe * 16 / 9 : 160,
                 child: Stack(fit: StackFit.expand, children: [
-                  Image.file(File(dateien[i].pfad), fit: BoxFit.cover, cacheWidth: quer(dateien[i].pfad) ? 640 : 480),
+                  VpBildFeld.datei(dateien[i].pfad, format: quer(dateien[i].pfad) ? VpBildFormat.studie : VpBildFormat.hoch, cacheBreite: quer(dateien[i].pfad) ? 640 : 480),
                   if (dateien[i].beschriftung != null)
                     Positioned(
                       left: 0,
@@ -144,7 +146,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                 ? t.lessonDetailLessonMarkedAsCompleted
                 : t.lessonDetailLessonMarkedAsOpenAgain,
           ),
-          backgroundColor: newState ? AppTheme.sageGreen : AppTheme.surfaceLight,
+          backgroundColor: newState ? AppTheme.akzentTief : AppTheme.papierVertieft,
           duration: const Duration(seconds: 2),
         ),
       );
@@ -191,7 +193,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       content: Text(ok
           ? t.lessonDetailLessonSentToPartnername(_nostr.partnerName)
           : t.lessonDetailSendingDidnTWorkPlease),
-      backgroundColor: ok ? AppTheme.sageGreen : AppTheme.rose,
+      backgroundColor: ok ? AppTheme.akzentTief : AppTheme.akzentTief,
     ));
   }
 
@@ -208,7 +210,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       content: Text(ok
           ? t.lessonDetailYourThoughtsAreWithPartnername(_nostr.partnerName)
           : t.lessonDetailSendingDidnTWorkPlease),
-      backgroundColor: ok ? AppTheme.sageGreen : AppTheme.rose,
+      backgroundColor: ok ? AppTheme.akzentTief : AppTheme.akzentTief,
     ));
   }
 
@@ -224,9 +226,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           margin: const EdgeInsets.only(top: 14),
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
-            color: AppTheme.rose.withValues(alpha: 0.08),
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppTheme.rose.withValues(alpha: 0.35)),
+            color: AppTheme.akzentTief.withValues(alpha: 0.08),
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.35)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -234,17 +236,17 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               Row(
                 children: [
                   Icon(mine.isEmpty ? Icons.lock_outline_rounded : Icons.favorite_rounded,
-                      color: AppTheme.rose, size: 16),
+                      color: AppTheme.akzentTief, size: 16),
                   const SizedBox(width: 6),
-                  Text(mine.isEmpty ? t.lessonDetailNameHasAlreadyAnswered(name) : t.lessonDetailNameSThoughts(name),
-                      style: TextStyle(color: AppTheme.textPrimary, fontSize: 13.5, fontWeight: FontWeight.w700)),
+                  Expanded(child: Text(mine.isEmpty ? t.lessonDetailNameHasAlreadyAnswered(name) : t.lessonDetailNameSThoughts(name),
+                      style: TextStyle(color: AppTheme.tinte, fontSize: 13.5, fontWeight: FontWeight.w700))),
                 ],
               ),
               const SizedBox(height: 6),
               Text(
                 mine.isEmpty ? t.lessonDetailWriteAndSaveYourOwn(name) : theirs,
                 style: TextStyle(
-                  color: mine.isEmpty ? AppTheme.textMuted : AppTheme.textPrimary,
+                  color: mine.isEmpty ? AppTheme.tinteStumm : AppTheme.tinte,
                   fontSize: 13.5,
                   height: 1.45,
                 ),
@@ -292,7 +294,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           appBar: AppBar(backgroundColor: Colors.black),
           body: InteractiveViewer(
             maxScale: 5,
-            child: Center(child: SvgPicture.asset(Sprache.bild(asset), fit: BoxFit.contain)),
+            child: Center(child: VpBildFeld.pfad(asset, format: VpBildFormat.diagramm, fit: BoxFit.contain)),
           ),
         ),
       ),
@@ -304,24 +306,24 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     final lesson = widget.lesson;
 
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: AppBar(
         title: Text(
           widget.courseTitle,
-          style: TextStyle(fontSize: 16, color: AppTheme.textSecondary),
+          style: TextStyle(fontSize: 16, color: AppTheme.tinteLeise),
         ),
         actions: [
           if (_nostr.isPaired)
             IconButton(
               onPressed: _shareLesson,
-              icon: Icon(Icons.favorite_border_rounded, color: AppTheme.rose),
+              icon: Icon(Icons.favorite_border_rounded, color: AppTheme.akzentTief),
               tooltip: t.lessonDetailShareWithPartnername(_nostr.partnerName),
             ),
           IconButton(
             onPressed: _toggleCompleted,
             icon: Icon(
               _isCompleted ? Icons.check_circle_rounded : Icons.check_circle_outline_rounded,
-              color: _isCompleted ? AppTheme.sageGreen : AppTheme.textMuted,
+              color: _isCompleted ? AppTheme.akzentTief : AppTheme.tinteStumm,
               size: 26,
             ),
             tooltip: _isCompleted ? t.lessonDetailCompleted : t.lessonDetailMarkAsCompleted,
@@ -335,10 +337,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (lesson.image != null) ...[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
+              VpTafel(
                 child: Container(
-                  color: AppTheme.surfaceLight,
+                  color: AppTheme.papierVertieft,
                   child: lesson.image!.endsWith('.svg')
                       // Diagramme in voller Breite; Antippen öffnet sie zum Zoomen.
                       ? GestureDetector(
@@ -348,7 +349,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                               // Alle Diagramme sind 800x600.
                               AspectRatio(
                                 aspectRatio: 4 / 3,
-                                child: SvgPicture.asset(Sprache.bild(lesson.image!), fit: BoxFit.contain),
+                                child: VpBildFeld.pfad(lesson.image!, format: VpBildFormat.diagramm),
                               ),
                               const Positioned(
                                 right: 8,
@@ -358,27 +359,21 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                             ],
                           ),
                         )
-                      : Image.asset(
-                          lesson.image!,
-                          height: 160,
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                        ),
+                      : SizedBox(height: 160, width: double.infinity, child: VpBildFeld.pfad(lesson.image!, format: VpBildFormat.kopf)),
                 ),
               ),
               const SizedBox(height: 16),
             ],
             if (lesson.zeichnung != null) ...[
               // Körperzeichnung (16:9) mit Beschriftung; Antippen öffnet sie zum Zoomen.
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
+              VpTafel(
                 child: GestureDetector(
                   onTap: () => _openDiagram(lesson.zeichnung!),
                   child: Stack(
                     children: [
                       AspectRatio(
                         aspectRatio: 16 / 9,
-                        child: SvgPicture.asset(Sprache.bild(lesson.zeichnung!), fit: BoxFit.cover),
+                        child: VpBildFeld.pfad(lesson.zeichnung!, format: VpBildFormat.studie),
                       ),
                       const Positioned(
                         right: 8,
@@ -393,82 +388,15 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             ],
             _spicyBilder(lesson),
 
-            // Lesson Type & Duration
-            Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: lesson.isAudioExercise
-                        ? AppTheme.amber.withValues(alpha: 0.18)
-                        : AppTheme.sageGreen.withValues(alpha: 0.15),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: lesson.isAudioExercise
-                          ? AppTheme.amber.withValues(alpha: 0.4)
-                          : AppTheme.sageGreen.withValues(alpha: 0.3),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        lesson.isAudioExercise ? Icons.headphones_rounded : Icons.menu_book_rounded,
-                        size: 14,
-                        color: lesson.isAudioExercise ? AppTheme.amber : AppTheme.sageGreen,
-                      ),
-                      const SizedBox(width: 6),
-                      Text(
-                        lesson.isAudioExercise ? t.lessonDetailAudioExercise : t.lessonDetailLesson,
-                        style: TextStyle(
-                          color: lesson.isAudioExercise ? AppTheme.amber : AppTheme.sageGreen,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 0.5,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 10),
-                Text(
-                  t.lessonDetailDurationminMinRead(lesson.durationMin),
-                  style: TextStyle(
-                    color: AppTheme.textMuted,
-                    fontSize: 12,
-                  ),
-                ),
-              ],
-            ),
-
-            const SizedBox(height: 12),
-
-            // Title
-            Text(
-              lesson.title,
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w800,
-                color: AppTheme.textPrimary,
-                height: 1.25,
-                letterSpacing: -0.3,
-              ),
-            ),
-
-            const SizedBox(height: 8),
-
-            // Summary
-            Text(
-              lesson.summary,
-              style: TextStyle(
-                fontSize: 15,
-                color: AppTheme.textSecondary,
-                height: 1.4,
-              ),
-            ),
-
-            const SizedBox(height: 20),
-
+            // Kopf im Magazinstil: Eyebrow (Kurs, Art, Dauer), Serif-Titel, Einleitung, Haarlinie.
+            VpEyebrow('${widget.courseTitle} · ${lesson.isAudioExercise ? t.lessonDetailAudioExercise : t.lessonDetailLesson} · ${t.lessonDetailDurationminMinRead(lesson.durationMin)}'),
+            const SizedBox(height: VpAbstand.s),
+            Text(lesson.title, style: context.vp.typo.anzeige.copyWith(fontSize: 30)),
+            const SizedBox(height: VpAbstand.m),
+            Text(lesson.summary, style: context.vp.typo.fliesstext.copyWith(color: AppTheme.tinteLeise, fontSize: 16.5, height: 1.55)),
+            const SizedBox(height: VpAbstand.l),
+            VpGrafik.trenner(id: 'linie.mass'),
+            const SizedBox(height: VpAbstand.l),
             // Audio Player Card
             AudioPlayerCard(
               textToRead: stripPersonalization(lesson.content),
@@ -478,25 +406,11 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               meldeOrt: '${widget.courseTitle}, „${lesson.title}“ (${lesson.id})',
             ),
 
-            // Main Text Content
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: AppTheme.surface,
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: AppTheme.border),
-              ),
-              child: SelectableText(
-                personalize(lesson.content, _personalizeContext.forPerspective(lesson.perspective)),
-                style: TextStyle(
-                  fontSize: 16,
-                  height: 1.65,
-                  color: AppTheme.textPrimary,
-                  letterSpacing: 0.1,
-                ),
-              ),
+            // Haupttext: kein Kasten, nur Typografie und Raum.
+            SelectableText(
+              personalize(lesson.content, _personalizeContext.forPerspective(lesson.perspective)),
+              style: context.vp.typo.fliesstext.copyWith(fontSize: 16.5, height: 1.7, letterSpacing: 0.1),
             ),
-
             const SizedBox(height: 28),
 
             // Smart-Action-Button (linked_tool)
@@ -527,9 +441,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                       : t.lessonDetailMarkLessonAsCompleted,
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: _isCompleted ? AppTheme.surfaceLight : AppTheme.sageGreen,
-                  foregroundColor: _isCompleted ? AppTheme.textPrimary : const Color(0xFF022C22),
-                  side: _isCompleted ? BorderSide(color: AppTheme.border) : null,
+                  backgroundColor: _isCompleted ? AppTheme.papierVertieft : AppTheme.akzentTief,
+                  foregroundColor: _isCompleted ? AppTheme.tinte : AppTheme.aufAkzent,
+                  side: _isCompleted ? BorderSide(color: AppTheme.linie) : null,
                 ),
               ),
             ),
@@ -545,47 +459,43 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
     String toolTitle = '';
     String toolSubtitle = '';
     IconData toolIcon = Icons.fitness_center_rounded;
-    Color accentColor = AppTheme.sageGreen;
+    Color accentColor = AppTheme.akzentTief;
 
     if (tool == 'kegel_timer') {
       toolTitle = t.lessonDetailOpenPelvicFloorTimer;
       toolSubtitle = t.lessonDetailGoStraightIntoRelaxationStrengthening;
       toolIcon = Icons.fitness_center_rounded;
-      accentColor = AppTheme.amber;
+      accentColor = AppTheme.akzentTief;
     } else if (tool == 'breath_pacer') {
       toolTitle = t.lessonDetailStartBreathPacerDownRegulation;
       toolSubtitle = t.lessonDetailCalmDownWithBreathingOr;
       toolIcon = Icons.air_rounded;
-      accentColor = AppTheme.sageGreen;
+      accentColor = AppTheme.akzentTief;
     } else if (tool == 'lust_profil') {
       toolTitle = t.lessonDetailMyDesireProfile;
       toolSubtitle = t.lessonDetailTickWhatYouLikeAnd;
       toolIcon = Icons.favorite_rounded;
-      accentColor = AppTheme.rose;
+      accentColor = AppTheme.akzentTief;
     } else if (tool == 'selbst_reise') {
       toolTitle = t.lessonDetailGuidedSelfExploration;
       toolSubtitle = t.lessonDetailToMinutesAVoiceGuides;
       toolIcon = Icons.spa_rounded;
-      accentColor = AppTheme.rose;
+      accentColor = AppTheme.akzentTief;
     } else if (tool == 'paar_abend') {
       toolTitle = t.lessonDetailTryGuidedEvening;
       toolSubtitle = t.couplesChannelGuidedTouchForTheTwo;
       toolIcon = Icons.favorite_rounded;
-      accentColor = AppTheme.rose;
+      accentColor = AppTheme.akzentTief;
     } else if (tool == 'cbt_journal') {
       toolTitle = t.lessonDetailStartCbtThoughtRecord;
       toolSubtitle = t.lessonDetailReframeAnticipatoryAnxietyAndCatastrophic;
       toolIcon = Icons.psychology_rounded;
-      accentColor = AppTheme.sageLight;
+      accentColor = AppTheme.akzentTief;
     }
 
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: accentColor.withValues(alpha: 0.08),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: accentColor.withValues(alpha: 0.3), width: 1.5),
-      ),
+    accentColor = AppTheme.akzentTief;
+    return VpKarte(
+      rahmen: VpRahmen.akzent,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -616,7 +526,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
                     Text(
                       toolTitle,
                       style: TextStyle(
-                        color: AppTheme.textPrimary,
+                        color: AppTheme.tinte,
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
                       ),
@@ -629,7 +539,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           const SizedBox(height: 8),
           Text(
             toolSubtitle,
-            style: TextStyle(color: AppTheme.textSecondary, fontSize: 13),
+            style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13),
           ),
           const SizedBox(height: 14),
           SizedBox(
@@ -640,7 +550,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               label: Text(t.lessonDetailStartThePracticeNow),
               style: ElevatedButton.styleFrom(
                 backgroundColor: accentColor,
-                foregroundColor: Colors.black,
+                foregroundColor: AppTheme.aufAkzent,
               ),
             ),
           ),
@@ -650,35 +560,28 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
   }
 
   Widget _buildReflectionCard(String question) {
-    return Container(
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
-      ),
+    return VpKarte(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.edit_note_rounded, color: AppTheme.amber, size: 22),
+              Icon(Icons.edit_note_rounded, color: AppTheme.akzentTief, size: 22),
               SizedBox(width: 8),
-              Text(
-                t.lessonDetailYourPersonalReflection,
+              Expanded(child: Text(t.lessonDetailYourPersonalReflection,
                 style: TextStyle(
-                  color: AppTheme.textPrimary,
+                  color: AppTheme.tinte,
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                 ),
-              ),
+              )),
             ],
           ),
           const SizedBox(height: 10),
           Text(
             question,
             style: TextStyle(
-              color: AppTheme.amberLight,
+              color: AppTheme.tinteLeise,
               fontSize: 14,
               fontWeight: FontWeight.w600,
               height: 1.4,
@@ -688,7 +591,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           TextField(
             controller: _reflectionController,
             maxLines: 4,
-            style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
+            style: TextStyle(color: AppTheme.tinte, fontSize: 14),
             decoration: InputDecoration(
               hintText: t.lessonDetailWriteDownYourHonestThoughts,
             ),
@@ -700,11 +603,11 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               if (_reflectionSavedMessage)
                 Row(
                   children: [
-                    Icon(Icons.check, color: AppTheme.sageGreen, size: 16),
+                    Icon(Icons.check, color: AppTheme.akzentTief, size: 16),
                     SizedBox(width: 4),
                     Text(
                       t.lessonDetailSavedLocally,
-                      style: TextStyle(color: AppTheme.sageGreen, fontSize: 12, fontWeight: FontWeight.w600),
+                      style: TextStyle(color: AppTheme.akzentTief, fontSize: 12, fontWeight: FontWeight.w600),
                     ),
                   ],
                 )
@@ -713,10 +616,10 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               ElevatedButton(
                 onPressed: _isSavingReflection ? null : _saveReflection,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppTheme.surfaceLight,
-                  foregroundColor: AppTheme.textPrimary,
+                  backgroundColor: AppTheme.papierVertieft,
+                  foregroundColor: AppTheme.tinte,
                   padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-                  side: BorderSide(color: AppTheme.border),
+                  side: BorderSide(color: AppTheme.linie),
                 ),
                 child: _isSavingReflection
                     ? const SizedBox(
@@ -734,9 +637,9 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
               alignment: Alignment.centerRight,
               child: TextButton.icon(
                 onPressed: _shareReflection,
-                icon: Icon(Icons.favorite_border_rounded, size: 16, color: AppTheme.rose),
+                icon: Icon(Icons.favorite_border_rounded, size: 16, color: AppTheme.akzentTief),
                 label: Text(t.lessonDetailShareWithPartnername2(_nostr.partnerName),
-                    style: TextStyle(color: AppTheme.rose, fontSize: 13, fontWeight: FontWeight.w600)),
+                    style: TextStyle(color: AppTheme.akzentTief, fontSize: 13, fontWeight: FontWeight.w600)),
               ),
             ),
           ],

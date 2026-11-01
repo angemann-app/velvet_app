@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velvetpulse/l10n/app_localizations.dart';
 import 'package:velvetpulse/services/storage_service.dart';
 import 'package:velvetpulse/widgets/gefuehrte_audios.dart';
-import 'package:velvetpulse/widgets/spicy_atmosphaere.dart';
+import 'package:velvetpulse/widgets/design/vp_seite.dart';
 
 void main() {
   setUp(() async {
@@ -29,18 +29,19 @@ void main() {
     expect(StorageService.spicyAenderung.value, isFalse);
   });
 
-  testWidgets('Das Glühen liegt nur bei eingeschaltetem Modus über dem Inhalt und fängt keine Berührungen ab',
-      (tester) async {
+  testWidgets('Die Vignette liegt nur im Spicy-Modus über dem Inhalt und fängt keine Berührungen ab', (tester) async {
     var getippt = 0;
-    Widget mit(bool an) => app(SpicyAtmosphaere(
-          an: an,
-          child: Center(child: ElevatedButton(onPressed: () => getippt++, child: const Text('Knopf'))),
-        ));
-    final glut = find.descendant(of: find.byType(SpicyAtmosphaere), matching: find.byType(IgnorePointer));
-    await tester.pumpWidget(mit(false));
-    expect(glut, findsNothing);
-    await tester.pumpWidget(mit(true));
-    expect(glut, findsOneWidget);
+    final seite = app(VpSeite(
+      child: Center(child: ElevatedButton(onPressed: () => getippt++, child: const Text('Knopf'))),
+    ));
+    final vignette = find.descendant(of: find.byType(VpSeite), matching: find.byType(IgnorePointer));
+    await tester.pumpWidget(seite);
+    expect(vignette, findsNothing);
+    await tester.runAsync(() => StorageService.setSpicyMode(true));
+    await tester.pumpWidget(app(VpSeite(
+      child: Center(child: ElevatedButton(onPressed: () => getippt++, child: const Text('Knopf'))),
+    )));
+    expect(vignette, findsOneWidget);
     await tester.tap(find.text('Knopf'));
     expect(getippt, 1);
   });

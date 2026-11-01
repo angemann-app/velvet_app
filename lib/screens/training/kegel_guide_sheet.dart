@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import '../../theme/app_theme.dart';
 import '../../l10n/t.dart';
 
@@ -23,15 +24,9 @@ class KegelGuideSheet extends StatelessWidget {
       builder: (context, scrollController) {
         return Container(
           decoration: BoxDecoration(
-            color: AppTheme.surface,
+            color: AppTheme.papierErhoben,
             borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black54,
-                blurRadius: 20,
-                offset: Offset(0, -4),
-              ),
-            ],
+            
           ),
           child: Column(
             children: [
@@ -42,7 +37,7 @@ class KegelGuideSheet extends StatelessWidget {
                   width: 44,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: AppTheme.border,
+                    color: AppTheme.linie,
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
@@ -56,7 +51,7 @@ class KegelGuideSheet extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.menu_book_rounded, color: AppTheme.sageGreen, size: 24),
+                        Icon(Icons.menu_book_rounded, color: AppTheme.akzentTief, size: 24),
                         SizedBox(width: 10),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,14 +61,14 @@ class KegelGuideSheet extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w800,
-                                color: AppTheme.textPrimary,
+                                color: AppTheme.tinte,
                               ),
                             ),
                             Text(
                               t.kegelGuideSheetFindingTheMuscleExercisesPlan,
                               style: TextStyle(
                                 fontSize: 12,
-                                color: AppTheme.textSecondary,
+                                color: AppTheme.tinteLeise,
                               ),
                             ),
                           ],
@@ -81,14 +76,14 @@ class KegelGuideSheet extends StatelessWidget {
                       ],
                     ),
                     IconButton(
-                      icon: Icon(Icons.close_rounded, color: AppTheme.textMuted),
+                      icon: Icon(Icons.close_rounded, color: AppTheme.tinteStumm),
                       onPressed: () => Navigator.of(context).pop(),
                     ),
                   ],
                 ),
               ),
 
-              Divider(color: AppTheme.border, height: 1),
+              Divider(color: AppTheme.linie, height: 1),
 
               // Content Body
               Expanded(
@@ -99,25 +94,25 @@ class KegelGuideSheet extends StatelessWidget {
                     _buildSectionCard(
                       title: t.kegelGuideSheetFindingTheMuscle,
                       badge: t.kegelGuideSheetBasics,
-                      badgeColor: AppTheme.sageGreen,
+                      badgeColor: AppTheme.akzentTief,
                       children: [
                         Text(
                           t.kegelGuideSheetThePelvicFloorStretchesLike,
-                          style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.5),
+                          style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13, height: 1.5),
                         ),
                         const SizedBox(height: 12),
                         _buildMethodBox(
                           icon: Icons.vertical_align_top_rounded,
                           title: t.kegelGuideSheetTightenAndLift,
                           text: t.kegelGuideSheetImagineHoldingBackWindAnd,
-                          accentColor: AppTheme.sageGreen,
+                          accentColor: AppTheme.akzentTief,
                         ),
                         const SizedBox(height: 8),
                         _buildMethodBox(
                           icon: Icons.vertical_align_bottom_rounded,
                           title: t.kegelGuideSheetLetGoAndWiden,
                           text: t.kegelGuideSheetBreatheDeepIntoTheBelly,
-                          accentColor: AppTheme.amber,
+                          accentColor: AppTheme.akzentTief,
                         ),
                         const SizedBox(height: 10),
                         _buildTip(t.kegelGuideSheetButtocksThighsAndBellyStay),
@@ -129,34 +124,34 @@ class KegelGuideSheet extends StatelessWidget {
                     _buildSectionCard(
                       title: t.kegelGuideSheetWhichExerciseForWhat,
                       badge: t.kegelGuideSheetExercises,
-                      badgeColor: AppTheme.amber,
+                      badgeColor: AppTheme.akzentTief,
                       children: [
                         _buildModeComparison(
                           title: t.kegelTimerViewLetGo,
                           subtitle: t.kegelGuideSheetForTensionPainOnPenetration,
                           description: t.kegelGuideSheetForEveryoneWhosePelvicFloor,
-                          color: AppTheme.amber,
+                          color: AppTheme.akzentTief,
                         ),
                         const SizedBox(height: 10),
                         _buildModeComparison(
                           title: t.kegelTimerViewStrengthen,
                           subtitle: t.kegelGuideSheetForSupportControlAndStability,
                           description: t.kegelGuideSheetStrengthensTheMusclesForExample,
-                          color: AppTheme.sageGreen,
+                          color: AppTheme.akzentTief,
                         ),
                         const SizedBox(height: 10),
                         _buildModeComparison(
                           title: t.kegelTimerViewQuickPulses,
                           subtitle: t.kegelGuideSheetForResponsiveness,
                           description: t.kegelGuideSheetAShortSqueezeAndImmediate,
-                          color: AppTheme.sageGreen,
+                          color: AppTheme.akzentTief,
                         ),
                         const SizedBox(height: 10),
                         _buildModeComparison(
                           title: t.kegelTimerViewWaves,
                           subtitle: t.kegelGuideSheetStayingLooseWhenItGets,
                           description: t.kegelGuideSheetALongAudibleExhaleWith,
-                          color: AppTheme.rose,
+                          color: AppTheme.akzentTief,
                         ),
                       ],
                     ),
@@ -166,7 +161,7 @@ class KegelGuideSheet extends StatelessWidget {
                     _buildSectionCard(
                       title: t.kegelGuideSheetCommonMistakes,
                       badge: t.kegelGuideSheetCareful,
-                      badgeColor: AppTheme.rose,
+                      badgeColor: AppTheme.akzentTief,
                       children: [
                         _buildRuleItem(
                           isWarning: true,
@@ -201,7 +196,7 @@ class KegelGuideSheet extends StatelessWidget {
                     _buildSectionCard(
                       title: t.kegelGuideSheetAPlanForSixWeeks,
                       badge: t.kegelGuideSheetPlan,
-                      badgeColor: AppTheme.sageGreen,
+                      badgeColor: AppTheme.akzentTief,
                       children: [
                         _buildPlanRow(t.kegelGuideSheetWeek, t.kegelGuideSheetLetGoDailyRoundsEasy),
                         _buildPlanRow(t.kegelGuideSheetWeek2, t.kegelGuideSheetLetGoRoundsThenStrengthen),
@@ -209,7 +204,7 @@ class KegelGuideSheet extends StatelessWidget {
                         const SizedBox(height: 6),
                         Text(
                           t.kegelGuideSheetAfterThatKeepTwoOr,
-                          style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.45),
+                          style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5, height: 1.45),
                         ),
                       ],
                     ),
@@ -219,11 +214,11 @@ class KegelGuideSheet extends StatelessWidget {
                     _buildSectionCard(
                       title: t.kegelGuideSheetWhenToSeeAPhysiotherapist,
                       badge: t.kegelGuideSheetHealth,
-                      badgeColor: AppTheme.amber,
+                      badgeColor: AppTheme.akzentTief,
                       children: [
                         Text(
                           t.kegelGuideSheetSpecialisedPelvicFloorPhysiotherapyCan,
-                          style: TextStyle(color: AppTheme.textSecondary, fontSize: 13, height: 1.5),
+                          style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13, height: 1.5),
                         ),
                       ],
                     ),
@@ -236,9 +231,9 @@ class KegelGuideSheet extends StatelessWidget {
                       child: ElevatedButton(
                         onPressed: () => Navigator.of(context).pop(),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: AppTheme.sageGreen,
-                          foregroundColor: Colors.black,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                          backgroundColor: AppTheme.akzent,
+                          foregroundColor: AppTheme.aufAkzent,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                         ),
                         child: Text(t.kegelGuideSheetBackToTraining, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                       ),
@@ -259,16 +254,16 @@ class KegelGuideSheet extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: AppTheme.surfaceLight.withValues(alpha: 0.5),
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierVertieft.withValues(alpha: 0.5),
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Row(
         children: [
-          Icon(Icons.lightbulb_outline_rounded, color: AppTheme.amber, size: 18),
+          Icon(Icons.lightbulb_outline_rounded, color: AppTheme.akzentTief, size: 18),
           const SizedBox(width: 8),
           Expanded(
-            child: Text(text, style: TextStyle(color: AppTheme.textPrimary, fontSize: 12, fontWeight: FontWeight.w600)),
+            child: Text(text, style: TextStyle(color: AppTheme.tinte, fontSize: 12, fontWeight: FontWeight.w600)),
           ),
         ],
       ),
@@ -283,10 +278,10 @@ class KegelGuideSheet extends StatelessWidget {
         children: [
           SizedBox(
             width: 82,
-            child: Text(when, style: TextStyle(color: AppTheme.sageGreen, fontSize: 12.5, fontWeight: FontWeight.w700)),
+            child: Text(when, style: TextStyle(color: AppTheme.akzentTief, fontSize: 12.5, fontWeight: FontWeight.w700)),
           ),
           Expanded(
-            child: Text(what, style: TextStyle(color: AppTheme.textSecondary, fontSize: 12.5, height: 1.4)),
+            child: Text(what, style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5, height: 1.4)),
           ),
         ],
       ),
@@ -302,9 +297,9 @@ class KegelGuideSheet extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.background,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papier,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -317,14 +312,14 @@ class KegelGuideSheet extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
-                  color: AppTheme.textPrimary,
+                  color: AppTheme.tinte,
                 ),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
                   color: badgeColor.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(6),
+                  borderRadius: BorderRadius.circular(VpRadius.chip),
                   border: Border.all(color: badgeColor.withValues(alpha: 0.4)),
                 ),
                 child: Text(
@@ -355,9 +350,9 @@ class KegelGuideSheet extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: AppTheme.surfaceLight.withValues(alpha: 0.3),
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: AppTheme.border.withValues(alpha: 0.6)),
+        color: AppTheme.papierVertieft.withValues(alpha: 0.3),
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie.withValues(alpha: 0.6)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -387,7 +382,7 @@ class KegelGuideSheet extends StatelessWidget {
                 Text(
                   text,
                   style: TextStyle(
-                    color: AppTheme.textSecondary,
+                    color: AppTheme.tinteLeise,
                     fontSize: 12,
                     height: 1.4,
                   ),
@@ -410,7 +405,7 @@ class KegelGuideSheet extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.06),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Column(
@@ -430,7 +425,7 @@ class KegelGuideSheet extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
-                  color: AppTheme.textPrimary,
+                  color: AppTheme.tinte,
                   fontSize: 13,
                   fontWeight: FontWeight.w700,
                 ),
@@ -453,7 +448,7 @@ class KegelGuideSheet extends StatelessWidget {
           Text(
             description,
             style: TextStyle(
-              color: AppTheme.textSecondary,
+              color: AppTheme.tinteLeise,
               fontSize: 12,
               height: 1.4,
             ),
@@ -468,7 +463,7 @@ class KegelGuideSheet extends StatelessWidget {
     required String title,
     required String description,
   }) {
-    final color = isWarning ? AppTheme.rose : AppTheme.sageGreen;
+    final color = isWarning ? AppTheme.akzentTief : AppTheme.akzentTief;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6),
       child: Row(
@@ -495,7 +490,7 @@ class KegelGuideSheet extends StatelessWidget {
                 Text(
                   description,
                   style: TextStyle(
-                    color: AppTheme.textSecondary,
+                    color: AppTheme.tinteLeise,
                     fontSize: 12,
                     height: 1.35,
                   ),

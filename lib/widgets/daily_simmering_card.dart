@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import '../models/user_profile.dart';
 import '../services/storage_service.dart';
@@ -187,35 +188,20 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            AppTheme.surface,
-            AppTheme.background,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(16),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         border: Border.all(
           color: _isRevealed
-              ? AppTheme.rose.withValues(alpha: 0.6)
-              : AppTheme.amber.withValues(alpha: 0.35),
+              ? AppTheme.akzentTief.withValues(alpha: 0.6)
+              : AppTheme.akzentTief.withValues(alpha: 0.35),
           width: 1.2,
         ),
-        boxShadow: [
-          if (_isRevealed)
-            BoxShadow(
-              color: AppTheme.rose.withValues(alpha: 0.12),
-              blurRadius: 16,
-              offset: const Offset(0, 4),
-            ),
-        ],
       ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
           onTap: _toggleReveal,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(VpRadius.karte),
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -230,12 +216,12 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                         Container(
                           padding: const EdgeInsets.all(6),
                           decoration: BoxDecoration(
-                            color: AppTheme.rose.withValues(alpha: 0.18),
-                            borderRadius: BorderRadius.circular(8),
+                            color: AppTheme.akzentTief.withValues(alpha: 0.18),
+                            borderRadius: BorderRadius.circular(VpRadius.feld),
                           ),
                           child: Icon(
-                            Icons.local_fire_department_rounded,
-                            color: AppTheme.sageLight,
+                            Icons.bolt_outlined,
+                            color: AppTheme.akzentTief,
                             size: 18,
                           ),
                         ),
@@ -249,14 +235,14 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                                 fontSize: 11,
                                 fontWeight: FontWeight.w800,
                                 letterSpacing: 0.8,
-                                color: AppTheme.sageLight,
+                                color: AppTheme.akzentTief,
                               ),
                             ),
                             Text(
                               _isRevealed ? impulse['tag']! : t.dailySimmeringCardSimmeringEverydayTeasing,
                               style: TextStyle(
                                 fontSize: 11,
-                                color: AppTheme.textMuted,
+                                color: AppTheme.tinteStumm,
                               ),
                             ),
                           ],
@@ -267,7 +253,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                       _isRevealed
                           ? Icons.keyboard_arrow_up_rounded
                           : Icons.lock_open_rounded,
-                      color: AppTheme.textSecondary,
+                      color: AppTheme.tinteLeise,
                       size: 20,
                     ),
                   ],
@@ -283,7 +269,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                         child: Text(
                           t.dailySimmeringCardTapHereToRevealToday,
                           style: TextStyle(
-                            color: AppTheme.textSecondary.withValues(alpha: 0.9),
+                            color: AppTheme.tinteLeise.withValues(alpha: 0.9),
                             fontSize: 13,
                             fontStyle: FontStyle.italic,
                           ),
@@ -292,13 +278,13 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                         decoration: BoxDecoration(
-                          color: AppTheme.amber.withValues(alpha: 0.15),
-                          borderRadius: BorderRadius.circular(8),
+                          color: AppTheme.akzentTief.withValues(alpha: 0.15),
+                          borderRadius: BorderRadius.circular(VpRadius.feld),
                         ),
                         child: Text(
                           t.dailySimmeringCardOpen,
                           style: TextStyle(
-                            color: AppTheme.amberLight,
+                            color: AppTheme.akzentTief,
                             fontSize: 11,
                             fontWeight: FontWeight.w700,
                           ),
@@ -310,7 +296,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                   Text(
                     impulse['title']!,
                     style: TextStyle(
-                      color: AppTheme.textPrimary,
+                      color: AppTheme.tinte,
                       fontSize: 15,
                       fontWeight: FontWeight.w700,
                     ),
@@ -319,7 +305,7 @@ class _DailySimmeringCardState extends State<DailySimmeringCard>
                   Text(
                     impulse['action']!,
                     style: TextStyle(
-                      color: AppTheme.textSecondary,
+                      color: AppTheme.tinteLeise,
                       fontSize: 13,
                       height: 1.45,
                     ),

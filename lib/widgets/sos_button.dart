@@ -18,7 +18,7 @@ class SosButton extends StatelessWidget {
       child: IconButton(
         onPressed: () => SosModal.show(context),
         tooltip: t.sosModalSosQuickHelp,
-        icon: Icon(Icons.shield_outlined, color: AppTheme.rose.withValues(alpha: 0.85), size: size * 0.6),
+        icon: Icon(Icons.shield_outlined, color: AppTheme.signal.withValues(alpha: 0.85), size: size * 0.6),
       ),
     );
   }

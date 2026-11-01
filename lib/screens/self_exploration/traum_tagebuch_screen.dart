@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 
 import '../../l10n/t.dart';
@@ -77,7 +78,7 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
     final geaendert = await showModalBottomSheet<bool>(
       context: context,
       isScrollControlled: true,
-      backgroundColor: AppTheme.surface,
+      backgroundColor: AppTheme.papierErhoben,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (_) => _Editor(eintrag: eintrag),
     );
@@ -100,31 +101,31 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.background,
+      backgroundColor: AppTheme.papier,
       appBar: AppBar(
-        backgroundColor: AppTheme.background,
+        backgroundColor: AppTheme.papier,
         title: Text(t.tagebuchTitel),
       ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
           children: [
-            Text(t.tagebuchTipp, style: TextStyle(fontSize: 13.5, color: AppTheme.textSecondary, height: 1.5)),
+            Text(t.tagebuchTipp, style: TextStyle(fontSize: 13.5, color: AppTheme.tinteLeise, height: 1.5)),
             if (NaechtlichesWecken.istWeckenAktiv()) ...[
               const SizedBox(height: 16),
               InkWell(
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(VpRadius.karte),
                 onTap: _pruefeWeckenBegleitung,
                 child: Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
-                    color: AppTheme.surface,
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: AppTheme.rose.withValues(alpha: 0.6)),
+                    color: AppTheme.papierErhoben,
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
+                    border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.6)),
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.nights_stay_rounded, color: AppTheme.rose, size: 22),
+                      Icon(Icons.nights_stay_rounded, color: AppTheme.akzentTief, size: 22),
                       const SizedBox(width: 12),
                       Expanded(
                         child: Column(
@@ -135,18 +136,18 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
-                                color: AppTheme.textPrimary,
+                                color: AppTheme.tinte,
                               ),
                             ),
                             const SizedBox(height: 2),
                             Text(
                               t.weckenTagebuchKarteText,
-                              style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
+                              style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise),
                             ),
                           ],
                         ),
                       ),
-                      Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
+                      Icon(Icons.chevron_right_rounded, color: AppTheme.tinteLeise),
                     ],
                   ),
                 ),
@@ -163,11 +164,11 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
               Container(
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: AppTheme.surface,
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: AppTheme.rose.withValues(alpha: 0.5)),
+                  color: AppTheme.papierErhoben,
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
+                  border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5)),
                 ),
-                child: Text(t.tagebuchPause, style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.5)),
+                child: Text(t.tagebuchPause, style: TextStyle(fontSize: 13, color: AppTheme.tinte, height: 1.5)),
               ),
               const SizedBox(height: 16),
             ],
@@ -178,9 +179,9 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
                 icon: const Icon(Icons.edit_note_rounded),
                 label: Text(t.tagebuchWoranErinnerst, style: TextStyle(fontWeight: FontWeight.w700)),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppTheme.rose,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                  backgroundColor: AppTheme.akzent,
+                  foregroundColor: AppTheme.aufAkzent,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                 ),
               ),
             ),
@@ -190,9 +191,9 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
               child: OutlinedButton(
                 onPressed: _nichtsErinnert,
                 style: OutlinedButton.styleFrom(
-                  foregroundColor: AppTheme.textSecondary,
-                  side: BorderSide(color: AppTheme.border),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                  foregroundColor: AppTheme.tinteLeise,
+                  side: BorderSide(color: AppTheme.linie),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
                 ),
                 child: Text(t.tagebuchNichtsErinnert),
               ),
@@ -202,26 +203,26 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 10),
                 child: InkWell(
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
                   onTap: () => _bearbeiten(e),
                   child: Container(
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: AppTheme.surface,
-                      borderRadius: BorderRadius.circular(14),
-                      border: Border.all(color: AppTheme.border),
+                      color: AppTheme.papierErhoben,
+                      borderRadius: BorderRadius.circular(VpRadius.karte),
+                      border: Border.all(color: AppTheme.linie),
                     ),
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                       Text(
                         [_datum(e.zeit), if (traumAbendName(e.abend).isNotEmpty) traumAbendName(e.abend)].join(' · '),
-                        style: TextStyle(fontSize: 12, color: AppTheme.textMuted),
+                        style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm),
                       ),
                       if (e.text.isNotEmpty) ...[
                         const SizedBox(height: 6),
                         Text(e.text,
                             maxLines: 4,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(fontSize: 14, color: AppTheme.textPrimary, height: 1.4)),
+                            style: TextStyle(fontSize: 14, color: AppTheme.tinte, height: 1.4)),
                       ],
                       if (e.marken.isNotEmpty) ...[
                         const SizedBox(height: 8),
@@ -230,11 +231,11 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                               decoration: BoxDecoration(
-                                color: AppTheme.surfaceLight,
-                                borderRadius: BorderRadius.circular(8),
+                                color: AppTheme.papierVertieft,
+                                borderRadius: BorderRadius.circular(VpRadius.feld),
                               ),
                               child: Text(traumMarkeName(m),
-                                  style: TextStyle(fontSize: 11.5, color: AppTheme.textSecondary)),
+                                  style: TextStyle(fontSize: 11.5, color: AppTheme.tinteLeise)),
                             ),
                         ]),
                       ],
@@ -243,7 +244,7 @@ class _TraumTagebuchScreenState extends State<TraumTagebuchScreen> {
                 ),
               ),
             const SizedBox(height: 12),
-            Text(t.tagebuchPrivat, style: TextStyle(fontSize: 12.5, color: AppTheme.textMuted, height: 1.5)),
+            Text(t.tagebuchPrivat, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
           ],
         ),
       ),
@@ -298,7 +299,7 @@ class _EditorState extends State<_Editor> {
       child: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, mainAxisSize: MainAxisSize.min, children: [
           Text(t.tagebuchWoranErinnerst,
-              style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+              style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
           const SizedBox(height: 12),
           TextField(
             controller: _text,
@@ -306,13 +307,13 @@ class _EditorState extends State<_Editor> {
             minLines: 3,
             maxLines: 8,
             textCapitalization: TextCapitalization.sentences,
-            style: TextStyle(color: AppTheme.textPrimary),
+            style: TextStyle(color: AppTheme.tinte),
             decoration: InputDecoration(
               hintText: t.tagebuchHinweisText,
-              hintStyle: TextStyle(color: AppTheme.textMuted),
+              hintStyle: TextStyle(color: AppTheme.tinteStumm),
               filled: true,
-              fillColor: AppTheme.background,
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
+              fillColor: AppTheme.papier,
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(VpRadius.karte), borderSide: BorderSide.none),
             ),
           ),
           const SizedBox(height: 14),
@@ -322,21 +323,21 @@ class _EditorState extends State<_Editor> {
                 label: Text(traumMarkeName(m)),
                 selected: _marken.contains(m),
                 onSelected: (an) => setState(() => _marken = an ? {..._marken, m} : ({..._marken}..remove(m))),
-                selectedColor: AppTheme.rose.withValues(alpha: 0.22),
-                backgroundColor: AppTheme.background,
-                side: BorderSide(color: _marken.contains(m) ? AppTheme.rose : AppTheme.border),
-                labelStyle: TextStyle(color: _marken.contains(m) ? AppTheme.textPrimary : AppTheme.textSecondary),
+                selectedColor: AppTheme.akzentTief.withValues(alpha: 0.22),
+                backgroundColor: AppTheme.papier,
+                side: BorderSide(color: _marken.contains(m) ? AppTheme.akzentTief : AppTheme.linie),
+                labelStyle: TextStyle(color: _marken.contains(m) ? AppTheme.tinte : AppTheme.tinteLeise),
                 showCheckmark: false,
               ),
           ]),
           const SizedBox(height: 18),
           Row(children: [
             if (widget.eintrag != null)
-              TextButton(onPressed: _loeschen, child: Text(t.tagebuchLoeschen, style: TextStyle(color: AppTheme.textMuted))),
+              TextButton(onPressed: _loeschen, child: Text(t.tagebuchLoeschen, style: TextStyle(color: AppTheme.tinteStumm))),
             const Spacer(),
             ElevatedButton(
               onPressed: _speichern,
-              style: ElevatedButton.styleFrom(backgroundColor: AppTheme.rose, foregroundColor: Colors.white),
+              style: ElevatedButton.styleFrom(backgroundColor: AppTheme.akzent, foregroundColor: AppTheme.aufAkzent),
               child: Text(t.tagebuchSpeichern),
             ),
           ]),
@@ -398,31 +399,31 @@ class _WochenrueckblickKarte extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppTheme.border),
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
       ),
       child: Theme(
         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
           tilePadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 2),
           childrenPadding: const EdgeInsets.fromLTRB(14, 0, 14, 14),
-          iconColor: AppTheme.rose,
-          collapsedIconColor: AppTheme.textMuted,
+          iconColor: AppTheme.akzentTief,
+          collapsedIconColor: AppTheme.tinteStumm,
           title: Text(
             t.rueckblickTitel,
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte),
           ),
           subtitle: Text(
             _kurztext(r),
-            style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.3),
+            style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.3),
           ),
           children: [
             if (r.eintraegeGesamt == 0)
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(t.rueckblickKeineEintraege,
-                    style: TextStyle(fontSize: 13, color: AppTheme.textMuted)),
+                    style: TextStyle(fontSize: 13, color: AppTheme.tinteStumm)),
               )
             else ...[
               Align(
@@ -433,7 +434,7 @@ class _WochenrueckblickKarte extends StatelessWidget {
                     if (r.erinnert > 0) t.rueckblickErinnertMorgen(r.erinnert),
                     if (r.nichtsErinnert > 0) t.rueckblickNichtsErinnertMorgen(r.nichtsErinnert),
                   ].join('. ') + '.',
-                  style: TextStyle(fontSize: 13, color: AppTheme.textPrimary, height: 1.4),
+                  style: TextStyle(fontSize: 13, color: AppTheme.tinte, height: 1.4),
                 ),
               ),
               if (r.markenZaehlung.isNotEmpty) ...[
@@ -449,12 +450,12 @@ class _WochenrueckblickKarte extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                             decoration: BoxDecoration(
-                              color: AppTheme.surfaceLight,
-                              borderRadius: BorderRadius.circular(8),
+                              color: AppTheme.papierVertieft,
+                              borderRadius: BorderRadius.circular(VpRadius.feld),
                             ),
                             child: Text(
                               '${r.markenZaehlung[m]}× ${traumMarkeName(m)}',
-                              style: TextStyle(fontSize: 11.5, color: AppTheme.textSecondary),
+                              style: TextStyle(fontSize: 11.5, color: AppTheme.tinteLeise),
                             ),
                           ),
                     ],
@@ -467,7 +468,7 @@ class _WochenrueckblickKarte extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     t.rueckblickNachAbenden,
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppTheme.textMuted),
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppTheme.tinteStumm),
                   ),
                 ),
                 const SizedBox(height: 6),
@@ -478,7 +479,7 @@ class _WochenrueckblickKarte extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Text(
                         '• ${traumAbendName(entry.key)}: ${_formatMarken(entry.value)}',
-                        style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary, height: 1.35),
+                        style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.35),
                       ),
                     ),
                   ),
@@ -506,17 +507,17 @@ class _RealitaetscheckZeile extends StatelessWidget {
         );
         onZurueck();
       },
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(VpRadius.karte),
       child: Container(
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
-          color: AppTheme.surface,
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: AppTheme.border),
+          color: AppTheme.papierErhoben,
+          borderRadius: BorderRadius.circular(VpRadius.karte),
+          border: Border.all(color: AppTheme.linie),
         ),
         child: Row(
           children: [
-            Icon(Icons.touch_app_outlined, color: AppTheme.sageGreen, size: 22),
+            Icon(Icons.touch_app_outlined, color: AppTheme.akzentTief, size: 22),
             const SizedBox(width: 12),
             Expanded(
               child: Column(
@@ -527,18 +528,18 @@ class _RealitaetscheckZeile extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
-                      color: AppTheme.textPrimary,
+                      color: AppTheme.tinte,
                     ),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     aktiv ? t.realitaetStatusEin : t.realitaetStatusAus,
-                    style: TextStyle(fontSize: 12.5, color: AppTheme.textSecondary),
+                    style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise),
                   ),
                 ],
               ),
             ),
-            Icon(Icons.chevron_right_rounded, color: AppTheme.textSecondary),
+            Icon(Icons.chevron_right_rounded, color: AppTheme.tinteLeise),
           ],
         ),
       ),

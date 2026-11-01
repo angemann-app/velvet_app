@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
@@ -192,11 +193,11 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
     final phases = _phases;
     final current = phases[_currentPhaseIndex];
 
-    Color phaseColor = AppTheme.sageGreen;
+    Color phaseColor = AppTheme.akzentTief;
     if (current.isHold) {
-      phaseColor = AppTheme.amber;
+      phaseColor = AppTheme.akzentTief;
     } else if (current.isExhale) {
-      phaseColor = const Color(0xFF38BDF8); // Calming Sky Blue
+      phaseColor = AppTheme.tinteLeise;
     }
 
     return SingleChildScrollView(
@@ -207,9 +208,9 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
           Container(
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.border),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.linie),
             ),
             child: Row(
               children: [
@@ -240,14 +241,14 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: AppTheme.surfaceLight.withValues(alpha: 0.4),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: AppTheme.border),
+                  color: AppTheme.papierVertieft.withValues(alpha: 0.4),
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
+                  border: Border.all(color: AppTheme.linie),
                 ),
                 child: Text(
                   t.breathPacerViewCompletedcyclesCyclesCompleted(_completedCycles),
                   style: TextStyle(
-                    color: AppTheme.textPrimary,
+                    color: AppTheme.tinte,
                     fontWeight: FontWeight.w600,
                     fontSize: 12,
                   ),
@@ -272,24 +273,12 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                     height: 220,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      gradient: RadialGradient(
-                        colors: [
-                          phaseColor.withValues(alpha: 0.28),
-                          phaseColor.withValues(alpha: 0.08),
-                          Colors.transparent,
-                        ],
-                      ),
+                      color: phaseColor.withValues(alpha: 0.10),
                       border: Border.all(
                         color: phaseColor,
                         width: 3.5,
                       ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: phaseColor.withValues(alpha: 0.35),
-                          blurRadius: 30,
-                          spreadRadius: 4,
-                        ),
-                      ],
+                      
                     ),
                     child: Center(
                       child: Column(
@@ -300,7 +289,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                             style: TextStyle(
                               fontSize: 54,
                               fontWeight: FontWeight.w900,
-                              color: AppTheme.textPrimary,
+                              color: AppTheme.tinte,
                               height: 1.0,
                             ),
                           ),
@@ -331,9 +320,9 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
             decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.border),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.linie),
             ),
             child: Column(
               children: [
@@ -341,7 +330,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                   current.action,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: AppTheme.textPrimary,
+                    color: AppTheme.tinte,
                     fontSize: 14,
                     height: 1.4,
                     fontWeight: FontWeight.w500,
@@ -354,7 +343,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                       : t.breathPacerViewTheDoubleInhaleIsMeant,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: AppTheme.textMuted,
+                    color: AppTheme.tinteStumm,
                     fontSize: 11,
                   ),
                 ),
@@ -374,7 +363,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                   shape: const CircleBorder(),
                   padding: const EdgeInsets.all(16),
                 ),
-                child: Icon(Icons.refresh_rounded, color: AppTheme.textSecondary),
+                child: Icon(Icons.refresh_rounded, color: AppTheme.tinteLeise),
               ),
               const SizedBox(width: 18),
               SizedBox(
@@ -391,8 +380,8 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                     style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: _isRunning ? AppTheme.amber : AppTheme.sageGreen,
-                    foregroundColor: Colors.black,
+                    backgroundColor: _isRunning ? AppTheme.akzentTief : AppTheme.akzentTief,
+                    foregroundColor: _isRunning ? AppTheme.aufAkzentTief : AppTheme.aufAkzent,
                   ),
                 ),
               ),
@@ -403,7 +392,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                   shape: const CircleBorder(),
                   padding: const EdgeInsets.all(16),
                 ),
-                child: Icon(Icons.skip_next_rounded, color: AppTheme.textSecondary),
+                child: Icon(Icons.skip_next_rounded, color: AppTheme.tinteLeise),
               ),
             ],
           ),
@@ -414,20 +403,20 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
           Container(
             padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-              color: AppTheme.surfaceLight.withValues(alpha: 0.3),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppTheme.border),
+              color: AppTheme.papierVertieft.withValues(alpha: 0.3),
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border.all(color: AppTheme.linie),
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(Icons.science_outlined, color: AppTheme.sageGreen, size: 20),
+                Icon(Icons.science_outlined, color: AppTheme.akzentTief, size: 20),
                 SizedBox(width: 10),
                 Expanded(
                   child: Text(
                     t.breathPacerViewBackgroundWhenTheExhaleLasts,
                     style: TextStyle(
-                      color: AppTheme.textSecondary,
+                      color: AppTheme.tinteLeise,
                       fontSize: 12,
                       height: 1.4,
                     ),
@@ -454,14 +443,14 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
       color: Colors.transparent,
       child: InkWell(
         onTap: () => _switchMode(mode),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(VpRadius.karte),
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
           decoration: BoxDecoration(
-            color: isSelected ? AppTheme.surfaceLight : Colors.transparent,
-            borderRadius: BorderRadius.circular(10),
+            color: isSelected ? AppTheme.papierVertieft : Colors.transparent,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
             border: isSelected
-                ? Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.5))
+                ? Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5))
                 : null,
           ),
           child: Column(
@@ -470,7 +459,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                 title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: isSelected ? AppTheme.textPrimary : AppTheme.textMuted,
+                  color: isSelected ? AppTheme.tinte : AppTheme.tinteStumm,
                   fontSize: 13,
                   fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                 ),
@@ -480,7 +469,7 @@ class _BreathPacerViewState extends State<BreathPacerView> with TickerProviderSt
                 subtitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: isSelected ? AppTheme.sageGreen : AppTheme.textMuted,
+                  color: isSelected ? AppTheme.akzentTief : AppTheme.tinteStumm,
                   fontSize: 10,
                 ),
               ),

@@ -580,6 +580,32 @@
           "text": "Das App-Symbol ist jetzt ein Lotus im Skizzenbuch-Stil. Zwei neue Bleistift-Bilder in der Lektion zum Squirting (nur im Spicy-Modus)."
         }
       ]
+    },
+    {
+      "build": 56,
+      "version": "4.18.0-beta.1",
+      "punkte": [
+        {
+          "icon": "new_releases",
+          "titel": "Neue Gestaltung",
+          "text": "Helles Papier, feine Linien und Überschriften in Serif: VelvetPulse wirkt jetzt wie ein Magazin. Heute, Lernen, Üben und Wir sind neu komponiert, mit Kapiteln, Nummern und feinen Fortschrittslinien."
+        },
+        {
+          "icon": "spa",
+          "titel": "Darstellung wählbar",
+          "text": "Unter Profil und Einstellungen: Papier (hell, Standard), Nachtpapier (dunkel) oder Klassisch (die bisherigen Farben). Spicy hat weiter eigene Farben, jetzt ohne Glühen und Flammen."
+        },
+        {
+          "icon": "edit",
+          "titel": "Platzhalter statt leerer Flächen",
+          "text": "Wo eine Illustration noch fehlt, steht ein gezeichneter Platzhalter mit Raster und Konstruktionsbögen. Die Bleistift-Bilder kommen nach, ohne dass sich etwas ändern muss."
+        },
+        {
+          "icon": "person",
+          "titel": "Lesbarer",
+          "text": "Kontraste sind geprüft, größere Schrift bricht nichts mehr um, und die Diagramme hängen auf Papier wie gerahmte Drucke."
+        }
+      ]
     }
   ]
 }
