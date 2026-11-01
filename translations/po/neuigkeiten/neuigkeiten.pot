@@ -970,3 +970,51 @@ msgstr ""
 msgctxt "news:55#5.text"
 msgid "Das App-Symbol ist jetzt ein Lotus im Skizzenbuch-Stil. Zwei neue Bleistift-Bilder in der Lektion zum Squirting (nur im Spicy-Modus)."
 msgstr ""
+
+#. Was ist neu in Version 4.18.0-beta.1
+#. EN: New look
+msgctxt "news:56#0.titel"
+msgid "Neue Gestaltung"
+msgstr ""
+
+#. Was ist neu in Version 4.18.0-beta.1
+#. EN: Light paper, fine lines and serif headings: VelvetPulse now feels like a magazine. Today, Learn, Practise and Us are newly composed, with chapters, numbers and fine progress lines.
+msgctxt "news:56#0.text"
+msgid "Helles Papier, feine Linien und Überschriften in Serif: VelvetPulse wirkt jetzt wie ein Magazin. Heute, Lernen, Üben und Wir sind neu komponiert, mit Kapiteln, Nummern und feinen Fortschrittslinien."
+msgstr ""
+
+#. Was ist neu in Version 4.18.0-beta.1
+#. EN: Choose your look
+msgctxt "news:56#1.titel"
+msgid "Darstellung wählbar"
+msgstr ""
+
+#. Was ist neu in Version 4.18.0-beta.1
+#. EN: Under Profile and settings: Paper (light, default), Night paper (dark) or Classic (the previous colours). Spicy keeps its own colours, now without glow and flames.
+msgctxt "news:56#1.text"
+msgid "Unter Profil und Einstellungen: Papier (hell, Standard), Nachtpapier (dunkel) oder Klassisch (die bisherigen Farben). Spicy hat weiter eigene Farben, jetzt ohne Glühen und Flammen."
+msgstr ""
+
+#. Was ist neu in Version 4.18.0-beta.1
+#. EN: Placeholders instead of empty areas
+msgctxt "news:56#2.titel"
+msgid "Platzhalter statt leerer Flächen"
+msgstr ""
+
+#. Was ist neu in Version 4.18.0-beta.1
+#. EN: Where an illustration is still missing, a drawn placeholder with grid and construction arcs appears. The pencil drawings will follow without anything needing to change.
+msgctxt "news:56#2.text"
+msgid "Wo eine Illustration noch fehlt, steht ein gezeichneter Platzhalter mit Raster und Konstruktionsbögen. Die Bleistift-Bilder kommen nach, ohne dass sich etwas ändern muss."
+msgstr ""
+
+#. Was ist neu in Version 4.18.0-beta.1
+#. EN: Easier to read
+msgctxt "news:56#3.titel"
+msgid "Lesbarer"
+msgstr ""
+
+#. Was ist neu in Version 4.18.0-beta.1
+#. EN: Contrasts are checked, larger text no longer breaks layouts, and diagrams hang on paper like framed prints.
+msgctxt "news:56#3.text"
+msgid "Kontraste sind geprüft, größere Schrift bricht nichts mehr um, und die Diagramme hängen auf Papier wie gerahmte Drucke."
+msgstr ""

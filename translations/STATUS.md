@@ -19,6 +19,6 @@ Generated automatically, do not edit. Percentages by words of the German source;
 | Einschlaf-Reise (Audio-Bausteine) | 119 | 0 | 0 | (direkt gepflegt) |
 | Traum-Reise (Audio-Bausteine) | 43 | 0 | 0 | (direkt gepflegt) |
 | Gemeinsamer Abend (Audio-Bausteine) | 110 | 0 | 0 | (direkt gepflegt) |
-| Anleitung in der App | 24 | 0 | 0 | (direkt gepflegt) |
-| Was ist neu (nach Updates) | 160 | 0 | 0 | (direkt gepflegt) |
+| Anleitung in der App | 26 | 0 | 0 | (direkt gepflegt) |
+| Was ist neu (nach Updates) | 168 | 0 | 0 | (direkt gepflegt) |
 | Foto-Ideen im Paar-Chat (nur im Spicy-Modus) | 40 | 0 | 0 | (direkt gepflegt) |

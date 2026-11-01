@@ -209,6 +209,21 @@ msgid ""
 msgstr ""
 
 #. Abschnitt der Anleitung
+#. EN: Appearance
+msgctxt "guide:darstellung#titel"
+msgid "Darstellung"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Under Profile and settings you choose “Appearance”: Paper (light, default), Night paper (dark) or Classic (the previous colours). The choice applies to the whole app straight away and is part of your backup.
+#. EN: Spicy mode has its own colours: deep burgundy and plum with warm paper white. Where an illustration is still missing, a drawn placeholder appears.
+msgctxt "guide:darstellung#text"
+msgid ""
+"Unter Profil und Einstellungen wählst du „Darstellung“: Papier (hell, Standard), Nachtpapier (dunkel) oder Klassisch (die bisherigen Farben). Die Wahl gilt sofort für die ganze App und ist Teil deiner Sicherung.\n"
+"Im Spicy-Modus gelten eigene Farben: tiefes Bordeaux und Pflaume mit warmem Papierweiß. Wo noch keine Illustration liegt, steht ein gezeichneter Platzhalter."
+msgstr ""
+
+#. Abschnitt der Anleitung
 #. EN: Help and feedback
 msgctxt "guide:hilfe#titel"
 msgid "Hilfe und Rückmeldung"

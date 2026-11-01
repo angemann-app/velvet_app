@@ -79,6 +79,13 @@
       "text": "Die App gibt es auf Deutsch und Englisch. Sie richtet sich nach der Sprache deines Handys, im Profil kannst du sie umstellen.\nDie Aufnahmen von Victoria und Martin lädst du im Profil unter „Aufnahmen“ nach, getrennt nach Lektionen und geführten Audios, auf Deutsch wie auf Englisch. Sie sind nicht mehr in der App selbst, damit sie klein bleibt und korrigierte Aufnahmen ohne Update kommen. Fehlt eine Aufnahme, liest die Stimme deines Handys vor."
     },
     {
+      "id": "darstellung",
+      "icon": "spa",
+      "titel": "Darstellung",
+      "bild": "",
+      "text": "Unter Profil und Einstellungen wählst du „Darstellung“: Papier (hell, Standard), Nachtpapier (dunkel) oder Klassisch (die bisherigen Farben). Die Wahl gilt sofort für die ganze App und ist Teil deiner Sicherung.\nIm Spicy-Modus gelten eigene Farben: tiefes Bordeaux und Pflaume mit warmem Papierweiß. Wo noch keine Illustration liegt, steht ein gezeichneter Platzhalter."
+    },
+    {
       "id": "hilfe",
       "icon": "help",
       "titel": "Hilfe und Rückmeldung",

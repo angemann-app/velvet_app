@@ -580,6 +580,32 @@
           "text": "The app icon is now a lotus in sketchbook style. Two new pencil pictures in the lesson on squirting (Spicy mode only)."
         }
       ]
+    },
+    {
+      "build": 56,
+      "version": "4.18.0-beta.1",
+      "punkte": [
+        {
+          "icon": "new_releases",
+          "titel": "New look",
+          "text": "Light paper, fine lines and serif headings: VelvetPulse now feels like a magazine. Today, Learn, Practise and Us are newly composed, with chapters, numbers and fine progress lines."
+        },
+        {
+          "icon": "spa",
+          "titel": "Choose your look",
+          "text": "Under Profile and settings: Paper (light, default), Night paper (dark) or Classic (the previous colours). Spicy keeps its own colours, now without glow and flames."
+        },
+        {
+          "icon": "edit",
+          "titel": "Placeholders instead of empty areas",
+          "text": "Where an illustration is still missing, a drawn placeholder with grid and construction arcs appears. The pencil drawings will follow without anything needing to change."
+        },
+        {
+          "icon": "person",
+          "titel": "Easier to read",
+          "text": "Contrasts are checked, larger text no longer breaks layouts, and diagrams hang on paper like framed prints."
+        }
+      ]
     }
   ],
   "_source": {
@@ -612,6 +638,7 @@
     "news:52": "ca9ee432b7e4c53d",
     "news:53": "741ef731d9dc392d",
     "news:54": "bc011f006a7fcfd9",
-    "news:55": "8e5b8ca49d01efaa"
+    "news:55": "8e5b8ca49d01efaa",
+    "news:56": "e5bb7c1308efaf7c"
   }
 }
