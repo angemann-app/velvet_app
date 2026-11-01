@@ -606,6 +606,22 @@
           "text": "Contrasts are checked, larger text no longer breaks layouts, and diagrams hang on paper like framed prints."
         }
       ]
+    },
+    {
+      "build": 57,
+      "version": "4.18.0-beta.2",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "New diagrams",
+          "text": "All 50 diagrams have been redrawn, in German and English: clearer, more precise and in the magazine style."
+        },
+        {
+          "icon": "edit",
+          "titel": "New pictures",
+          "text": "In Spicy mode there are new pencil drawings for more lessons, and a few pictures have been reworked."
+        }
+      ]
     }
   ],
   "_source": {

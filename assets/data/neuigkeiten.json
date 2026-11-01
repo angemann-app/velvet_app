@@ -606,6 +606,22 @@
           "text": "Kontraste sind geprüft, größere Schrift bricht nichts mehr um, und die Diagramme hängen auf Papier wie gerahmte Drucke."
         }
       ]
+    },
+    {
+      "build": 57,
+      "version": "4.18.0-beta.2",
+      "punkte": [
+        {
+          "icon": "school",
+          "titel": "Neue Diagramme",
+          "text": "Alle 50 Diagramme sind neu gezeichnet und stehen auf Deutsch und Englisch bereit: klarer, genauer und im Stil des Magazins."
+        },
+        {
+          "icon": "edit",
+          "titel": "Neue Bilder",
+          "text": "Im Spicy-Modus gibt es neue Bleistift-Bilder zu weiteren Lektionen, und einige Bilder wurden überarbeitet."
+        }
+      ]
     }
   ]
 }
