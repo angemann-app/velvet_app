@@ -12,8 +12,10 @@ import '../../models/lust_reihe.dart';
 import '../../services/audio_ausgabe.dart';
 import '../../services/paket_verzeichnis.dart';
 import '../../services/pakete.dart';
+import '../../services/segment_takt.dart';
 import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
+import '../../services/wach_halten.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/lautsprecher_frage.dart';
 
@@ -75,6 +77,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   @override
   void dispose() {
     _lauf++;
+    _wachAus();
     _kopfhoererSub?.cancel();
     Sprachausgabe.vorlesenBeenden();
     _player.dispose();
@@ -168,24 +171,51 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
 
   bool _abgebrochen(int lauf) => lauf != _lauf || !mounted;
 
+  /// Hält das Handy bei ausgeschaltetem Bildschirm wach, solange die Folge läuft (sonst bleibt sie zwischen den Szenen stehen).
+  bool _wach = false;
+
+  void _wachAn() {
+    if (_wach) return;
+    _wach = true;
+    WachHalten.halten();
+  }
+
+  void _wachAus() {
+    if (!_wach) return;
+    _wach = false;
+    WachHalten.freigeben();
+  }
+
   /// Segment für Segment, ohne Stille dazwischen; die Szenen bleiben so für beide Perspektiven gleich.
+  /// Die nächste Szene beginnt, wenn die Aufnahme zu Ende ist (nicht, wenn ein Zähler abgelaufen ist): Bei ausgeschaltetem
+  /// Bildschirm bremst Android die App, ein Zähler bliebe stehen. Den Fortschritt zählt die tatsächlich vergangene Zeit.
   Future<void> _abspielen(int lauf) async {
     final folge = _spiel!, fassung = _fassung!, daten = _daten!;
+    _wachAn();
     while (_index < fassung.segmente.length) {
       final s = fassung.segmente[_index];
       final dauer = daten.dauerVon(folge, fassung, s);
-      Sprachausgabe.sprich(_player, ReiheDaten.audioPfad(folge, fassung, s), s.text);
-      while (_imSegment < dauer) {
-        await Future.delayed(const Duration(milliseconds: 250));
-        if (_abgebrochen(lauf)) return;
-        if (!_pausiert) setState(() => _imSegment += const Duration(milliseconds: 250));
-      }
-      if (_abgebrochen(lauf)) return;
+      final pfad = ReiheDaten.audioPfad(folge, fassung, s);
+      // Nur mit Aufnahme meldet der Player das Ende; die Geräte-Stimme (ohne Aufnahme) läuft nach der geschätzten Dauer.
+      final ende = Sprachausgabe.quelle(pfad) != null ? _player.onPlayerComplete.map((_) {}).asBroadcastStream() : null;
+      // Erst lauschen (segmentAbwarten abonniert sofort), dann abspielen, damit kein Ende verloren geht.
+      final warten = segmentAbwarten(
+        dauer: dauer,
+        ende: ende,
+        pausiert: () => _pausiert,
+        abgebrochen: () => _abgebrochen(lauf),
+        fortschritt: (schritt) {
+          if (mounted) setState(() => _imSegment += schritt);
+        },
+      );
+      Sprachausgabe.sprich(_player, pfad, s.text);
+      if (!await warten || _abgebrochen(lauf)) return;
       setState(() {
         _index++;
         _imSegment = Duration.zero;
       });
     }
+    _wachAus();
     setState(() => _fertig = true);
   }
 
@@ -194,8 +224,10 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     setState(() => _pausiert = !_pausiert);
     if (_pausiert) {
       Sprachausgabe.pause(_player);
+      _wachAus(); // Pause: keine Sperre halten (Akku)
     } else {
       _player.resume().catchError((_) {});
+      _wachAn();
     }
   }
 
@@ -219,6 +251,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
 
   void _beenden() {
     _lauf++;
+    _wachAus();
     Sprachausgabe.stopp(_player);
     setState(() {
       _spiel = null;
