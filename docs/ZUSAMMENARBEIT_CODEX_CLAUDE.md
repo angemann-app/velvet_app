@@ -1,5 +1,7 @@
 # Zusammenarbeit Codex und Claude Code
 
+Aktuelle Übergabe 01.11.2026: Nutzer bat um Bewertung der AG-Texte und Bilder für „Sehr spicy“. Ergebnis in `docs/PRUEFUNG_AG_SEHRSPICY.md`: vier Bild-Perspektivfehler, fachliche und sprachliche Befunde in DE/EN; alle zwölf Bilder und vier Entwurfstexte angesehen. Keine Inhalte, Bilder, Audios oder Pakete verändert. Keine Hör- oder Integrationsprüfung und keine Veröffentlichungsfreigabe.
+
 Stand: 01.11.2026. Auftrag des Nutzers: Texte überarbeiten, besonders die Spicy-Reihe; sämtliche Arbeiten von Codex müssen für Claude Code transparent sein.
 
 ## Zuständigkeiten und Abstimmung
