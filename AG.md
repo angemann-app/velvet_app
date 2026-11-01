@@ -45,6 +45,7 @@ Auftrag: AG-n
 
 ### Erledigt
 
+- 01.11.2026, AG-22 bis AG-24 (kein Branch, Bilder lokal unter C:\TOOLS\velvet-inhalte\): 52 Kurs-Stimmungsbilder (1024 × 576) und 58 Szenenbilder der Audioreihe (768 × 1024) im Bleistift-Stil, eingebaut in die Pakete kurse-bilder-spicy v4 und eihe-bilder v3. Der Nutzer ist sehr zufrieden; vier Bilder gehen als AG-25 in die Korrektur.
 - (ein Punkt je Ergebnis)
 
 ### Für den Nutzer
@@ -72,106 +73,35 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
-### AG-24: Szenenbilder der Audioreihe „Innenansichten“ im Bleistift-Stil (58 Hochformat-Bilder, mit Warten bei Kapazitätslimit)
+### AG-25: Korrektur von vier Bildern (drei Kursbilder und eine Szene der Audioreihe)
 
-**Kein Branch, kein Pull Request, kein Commit.** Rückmeldung vom 30.10.2026: Die bisherigen Ölbilder wirken billig, der Bleistift-Stil gefällt besser; die Bildsprache soll komplett umgestellt
-werden. **Ausnahme mit ausdrücklicher Freigabe des Nutzers (30.10.2026), wie AG-22 und AG-23:** Diese Motive dürfen an dein Bildmodell. Bilder nur nach
-`C:\TOOLS\velvet-inhalte\reihe\bilder\ag\` schreiben, **nie ins Repository** und nie in `assets/`.
+**Kein Branch, kein Pull Request, kein Commit.** Rückmeldung vom 01.11.2026 nach der Durchsicht von AG-22 bis AG-24: Der Nutzer ist mit den Bildern sehr zufrieden. Nur diese vier
+passen nicht und werden neu erzeugt, **sonst nichts**. **Gleiche Ausnahme mit ausdrücklicher Freigabe des Nutzers (01.11.2026) wie AG-22 bis AG-24:** Die Motive dürfen an dein
+Bildmodell. Bilder nur nach `C:\TOOLS\velvet-inhalte\kurse\bilder\ag_korrektur\` (Kursbilder, 1024 × 576) und `C:\TOOLS\velvet-inhalte\reihe\bilder\ag_korrektur\` (Szene,
+768 × 1024) schreiben, **gleiche Dateinamen wie die Vorlage**, WebP, unter 130 KB. **Nie ins Repository, nie in `assets/`, die Originale nicht überschreiben.**
 
-**Reihenfolge:** Erst die vier Bilder mit Vorrang und die Reste aus Teil A von AG-23, dann AG-24 in dieser Folge-Reihenfolge: `frau_mann` (12), `im_eigenen_koerper` (10), `zwei_frauen` (12),
-`zwei_maenner` (12), `der_andere_koerper` (12), danach Teil B von AG-23. **Überspringe vorhandene Dateien.**
+**Stil unverändert (wie AG-24):** detailed pencil drawing, technical illustration style, natural adult bodies with soft shading, faint blueprint grid with thin dimension
+lines and thin arrows, off-white paper, dezente Rosé-Akzente, keine Schrift. Alle Figuren erwachsen, alles einvernehmlich. Das Bild füllt die ganze Fläche mit hellem Papierton
+(wie `couples_2` oder `pos_1`).
 
-**Die Motive stehen bereits fertig vorgegeben:** `C:\TOOLS\velvet-inhalte\reihe\bilder\motive_frau_mann.md` (Folge Frau und Mann) und `nacht_bilder.py` im selben Ordner (Wörterbuch `FOLGEN`,
-je Szene zwei Sätze: erster = **soft**, zweiter = **spicy**). Nimm die Motivsätze von dort, **nicht** den alten Stilblock („oil painting …“) und nicht die Negativlisten. Dateiname
-`<folge>_<variante>_<szene>.webp` wie in `webp\` (z. B. `frau_mann_spicy_attraction.webp`), 58 Stück.
+| Datei | Problem | Soll |
+|---|---|---|
+| `kurse\spduo_3_spicy.webp` | Das Blatt steht auf grauem Grund (Foto-Effekt) | Dasselbe Motiv (Paar, einander zugewandt, ihre Hand auf seiner Brust) randlos auf hellem Papier, **kein** grauer Rand, **keine** Blattkante |
+| `kurse\self_2_spicy.webp` | grauer Rand mit Schneidematte, Bleistift in der Ecke | Dasselbe Motiv (liegende Frau, ruhig) randlos auf hellem Papier, **ohne** Stift, Matte und Rand |
+| `kurse\scen_1_spicy.webp` | am Rand angedeutete Textzeilen (die Vorgabe ist „textfrei“) | Dasselbe Motiv (Augenbinde, Hand auf der Schulter), am Rand nur Raster, Maßlinien und Pfeile, **keine** Zeilen, **keine** Schriftzeichen |
+| `reihe\frau_mann_soft_climax.webp` | Frau allein im Bett, das Paar nur als Silhouette im Fenster | **Beide Figuren sind im Bild:** Mann und Frau eng umschlungen im Bett unter dem Laken, Kerze, Regen am Fenster; vom Laken bedeckt (soft), ohne deutliche Nacktheit, in der Bildsprache von `frau_mann_soft_building_desire` |
 
-**Stil (wie AG-21 bis AG-23):** detailed pencil drawing, technical illustration style, natural adult bodies with soft shading, faint blueprint grid with thin dimension lines and thin arrows, off-white paper,
-graphite with soft rose accents, **no text, no labels**, sensual and tender. **Hochformat 768 × 1024, WebP, 80 bis 150 KB.** Soft = Raum, Licht, Stoff, Hände, angedeutet; Spicy = intimer, nackt oder
-angedeutet, aber **keine Nahaufnahme von Genitalien und keine Darstellung der Vereinigung.** Alle Erwachsenen, keine Ähnlichkeit mit einer echten Person, natürliche Körper, **wer in der Szene vorkommt, ist ganz
-sichtbar** (zwei Frauen, zwei Männer, Mann und Frau genau so, sonst entstehen falsche Paare). Solo-Folgen: eine Person ohne erkennbares Gesicht, ruhig.
+Die Vorlagen liegen in `kurse\bilder\ag_spicy\` und `reihe\bilder\ag\`; sie sind die Referenz für Motiv, Figuren und Stil. Gesichter und Frisuren der Figuren bleiben wie in der Vorlage.
 
-**Das Warten:** Ist die Bildgenerierung nicht verfügbar (Kapazitätslimit, 429, „Resource Exhausted“), **brich nicht ab und melde nicht „fertig“.** Notiere es in `ag\_liste.txt`, **warte** (Wartezeit aus der Meldung, sonst 30 Minuten)
-und versuche dasselbe Motiv erneut, bis alle 58 erzeugt oder von deinem Inhaltsfilter bewusst übersprungen sind. Nach **jedem** Bild eine Zeile in `ag\_liste.txt` (Datei, „erzeugt“, „Filter, übersprungen“
-oder „wartet auf Kapazität“, Uhrzeit). **Bricht dein Filter ab: nicht umgehen, nicht entschärfen**, vermerken und weitermachen. Meldung an den Nutzer erst am Ende oder bei dauerhaftem Stillstand.
+**Das Warten:** Wie bei AG-24: Ist die Bildgenerierung nicht verfügbar (Kapazitätslimit, 429, „Resource Exhausted“), **brich nicht ab und melde nicht „fertig“.** Notiere es in
+`ag_korrektur\_liste.txt`, **warte** (Wartezeit aus der Meldung, sonst 30 Minuten) und versuche dasselbe Motiv erneut. Nach **jedem** Bild eine Zeile in `_liste.txt` (Datei,
+„erzeugt“ oder „Filter, übersprungen“, Größe, Maße, Datum).
 
-**Nicht tun:** Bilder ins Repository oder nach `assets/` legen, Lektionstexte oder Audio lesen, Bilder weitergeben, einen Filter umgehen.
+**Fertig, wenn:** alle vier Bilder in den beiden Ordnern `ag_korrektur` liegen **und** `bericht_fuer_claude.md` im Ordner `kurse\bilder\ag_korrektur\` steht (nur Dateien, die
+ersetzt werden können, Auffälligkeiten, was der Filter übersprungen hat).
 
-### AG-23: Alle restlichen sanft-spicy Stimmungsbilder im Bleistift-Stil (45 Motive, in Etappen, mit Warten bei Kapazitätslimit)
-
-**Kein Branch, kein Pull Request, kein Commit.** Fortsetzung und Erweiterung von AG-22 (gleiche Ausnahme mit Einverständnis des Nutzers, 29.10.2026): Bilder nur in
-`C:\TOOLS\velvet-inhalte\kurse\bilder\ag_spicy\` schreiben, **nie ins Repository** und nie in `assets/`. Erledigt sind dort schon `touch_m_s1`, `mass_s1`, `scen_1`;
-**überspringe vorhandene Dateien**. Zuerst die offenen Motive aus AG-22 (`pos_s1`, `self_2`, `self_3`, `couples_1`), dann die Liste unten in dieser Reihenfolge.
-
-**Wichtig, das Warten:** Ist die **Bildgenerierung gerade nicht verfügbar** (Kapazitätslimit, Fehler 429, „Resource Exhausted“ oder Ähnliches), **brich nicht ab und melde
-nicht „fertig“.** Notiere es in `_liste.txt`, **warte** (die Wartezeit steht meist in der Fehlermeldung, sonst 30 Minuten) und **versuche dasselbe Motiv danach erneut**. Mach das so lange,
-bis **alle** Motive entweder erzeugt oder wegen deines Inhaltsfilters bewusst übersprungen sind. Schreibe nach **jedem** Bild eine Zeile in `ag_spicy\_liste.txt` (Datei, Status
-„erzeugt“, „Filter, übersprungen“ oder „wartet auf Kapazität“, Uhrzeit), damit bei einer Unterbrechung nichts verloren geht und du genau dort weitermachst. Meldung an den Nutzer erst
-am Ende oder wenn du dauerhaft nicht weiterkommst.
-
-**Stil (wie AG-21 und AG-22):** detailed pencil drawing, technical illustration style, natural adult bodies with soft shading, faint blueprint grid with thin dimension lines and thin arrows,
-off-white paper, graphite with soft rose accents, **no text, no labels**, sensual and tender. **Sanft spicy:** intim, nackt oder angedeutet, **keine Nahaufnahme von Genitalien, keine
-Darstellung der Vereinigung.** Erwachsene, keine Ähnlichkeit mit einer echten Person, natürliche Körper, **alle, die in der Szene vorkommen, ganz sichtbar**. Querformat 1024 × 576, WebP,
-höchstens 150 KB, Dateiname `<Lektions-ID>_spicy.webp`. **Bricht dein Inhaltsfilter ab: nicht umgehen, nicht entschärfen**, vermerken und weitermachen.
-
-**Teil A, Spicy-Lektionen (zuerst):**
-**Vorrang (Rückmeldung vom 30.10.: die bisherigen farbigen Praxis-Bilder wirken billig, der Bleistift-Stil gefällt besser). Vier Bilder, Dateinamen genau so:**
-`touch_w_s2_allein_spicy` a woman sitting relaxed on the edge of a bed on a silk sheet, one hand resting on her lower belly, eyes closed, calm and curious | `touch_w_s2_zweit_spicy` a couple on a bed, she leans back against him, his hand rests on her belly, both relaxed and smiling softly | `touch_w_s3_allein_spicy` a woman lying on her back with bent knees, one hand on her lower belly, breathing deeply, faint concentric lines over her pelvis like an anatomical study | `touch_w_s3_zweit_spicy` a man and a woman lying face to face under a sheet, his hand resting on her hip, foreheads close, still and tender.
-
-
-`touch_w_s1` a woman lying on her side, her partner's hand resting on her shoulder, tender (Ersatz für das abgelehnte Motiv) | `pos_s1` a nude couple in a deep embrace on a bed, side view, no close-up |
-`fant_s1` a man gently holding a woman's chin, she looks up devotedly | `scen_s1` a woman with silk scarves lightly draped around her wrists, a man leaning over her |
-`prost_s1` a man lying relaxed on his stomach, a woman beside him with her hand on his lower back | `vocal_s1` a couple embracing in backlight, her head thrown back |
-`alltag_6` a smartphone on a silk sheet showing a glowing message, a woman's bare hand beside it | `alltag_7` a man and a woman pressed against a wall in half shadow, passionate, clothed or nude |
-`alltag_8` a restaurant table, a woman's hand and a man's hand touching under the table | `alltag_10` a woman in elegant lace lingerie, torso crop |
-`toys_7` a woman lying in bed, a softly glowing smooth toy beside her hand | `toys_8` a man and a woman in bed together holding a smooth toy, laughing |
-`spsolo_1` a man sitting on the edge of a bed, tension in his body | `spsolo_2` a woman sitting on a bed holding a smooth toy, curious |
-`spsolo_3` a woman lying with closed eyes, her imagination as soft mist above her head | `spsolo_4` a man lying back with his mouth open in pleasure, a sheet at his hips |
-`spsolo_5` a woman on a bed in unusual light with silk and candles | `spduo_1` a man whispering into a woman's ear, she smiles |
-`spduo_2` a man kissing the inside of a woman's thigh, she lies back with a blissful face, sheet covering | `spduo_3` a woman with her hand flat on a man's chest holding him back playfully |
-`spduo_4` a woman with a blindfold and a soft silk tie lightly around her wrists, a man kissing her neck | `spduo_5` a man and a woman in bed laughing with a smooth toy between them |
-`spduo_6` a man and a woman, she guides his hand to her hip, leading and following.
-
-**Teil B, normale Lektionen mit zweiter Bildfassung (danach):**
-`anat_1` a nude woman standing in profile | `anat_4` a man and a woman, his hand resting on her lower back from behind | `beauty_6` lace and silk lingerie on a woman's collarbone, face out of frame |
-`pelvic_3` a woman lying on her back, knees relaxed and open, a pillow under her hips | `female_3` an opening orchid in warm light, still life without a person |
-`prost_2` a man lying on his side, a woman behind him with her hand on his hip | `tease_1` a man and a woman face to face, lips almost touching | `couples_1` a couple embracing, foreheads touching |
-`couples_2` a couple belly to belly, foreheads touching, at rest | `touch_w_2` a woman's bare back with a man's fingertips gently circling her skin |
-`touch_m_1` a man lying on his front, a woman's flat hands on his back | `touch_m_2` a man lying on his back, a woman's hand sliding across his chest |
-`mass_1` a nude woman lying on silk, a man kneeling beside her | `mass_2` a man's hand pouring warm oil on a woman's bare back | `mass_3` a woman lying on her stomach, a man stroking her lower back |
-`vocal_1` a woman's slightly open lips and bare throat as she breathes out | `pos_1` a man and a woman in a deep embrace, she wrapped around him |
-`pos_2` a couple in spoon position on white sheets | `pos_3` a woman with her hips raised on a wedge pillow, a man kneeling in front of her | `toys_2` an elegant ensemble of modern toys on a silk cloth, still life.
-
-**Nicht tun:** Bilder ins Repository oder in `assets/` legen, Lektionstexte lesen, die Bilder weitergeben, einen Filter umgehen.
-
-### AG-22: Probe „sanfte Spicy-Version“ der Bleistift-Studien (acht Bilder, nur Bildsammlung)
-
-**Kein Branch, kein Pull Request, kein Commit.** Ausnahme von der Regel „Spicy-Motive nicht an Cloud-Modelle“ und von der Sperre oben, mit
-**ausdrücklichem Einverständnis des Nutzers (29.10.2026)**, als **Probe**: Du darfst die Bilder dieses Auftrags erzeugen und in den Ordner
-`C:\TOOLS\velvet-inhalte\kurse\bilder\ag_spicy\` schreiben (neuer Ordner, **außerhalb des Repositorys**, nie ins Repository kopieren). Sonst nichts
-in `velvet-inhalte` anfassen, keine Lektionstexte lesen (nur die Motivzeilen unten).
-
-**Ziel:** Dieselbe Bildart wie AG-21 (Bleistift, technische Studie, blasses Raster mit Maßlinien, dünne Pfeile, off-white Papier, Graphit mit Rosé-Akzenten,
-**kein Text im Bild**), aber **sanft spicy**: intim, sinnlich, zärtlich, nackt, ruhig und künstlerisch, **keine Nahaufnahme von Genitalien**, keine
-Darstellung eines Aktes der Vereinigung. Erwachsene, keine Ähnlichkeit mit einer echten Person, natürliche Körper. Querformat, etwa 1024 × 576,
-WebP, höchstens 150 KB. Dateiname `<Lektions-ID>_spicy.webp`. **Bricht dein Filter bei einem Motiv ab: nicht umgehen, nicht entschärfen**, in
-`ag_spicy\_liste.txt` mit „Filter, übersprungen“ vermerken und weitermachen.
-
-**Stil-Prompt (Grundlage):** „detailed pencil drawing, technical illustration style, natural adult bodies with soft shading on skin and muscle, faint
-blueprint grid in the background with scale markers and thin dimension lines, thin non-obstructive arrows, off-white paper, graphite with soft rose accents,
-no text, no labels, sensual and tender, <Motiv>“.
-
-**Die acht Motive** (alle in beiden Fassungen zeigen alle, die in der Szene vorkommen):
-1. `touch_w_s1`: eine nackte Frau liegt auf dem Rücken, die Hand ihres Partners ruht sanft auf ihrer Hüfte, er liegt nackt neben ihr, beide ganz sichtbar.
-2. `touch_m_s1`: ein nackter Mann liegt auf dem Rücken, die Hand seiner nackten Partnerin gleitet über seine Brust und seinen Bauch, beide ganz sichtbar.
-3. `mass_s1`: ein nacktes Paar liegt eng umschlungen auf einem Massagetuch, Stirn an Stirn, beide ganz sichtbar.
-4. `pos_s1`: ein nacktes Paar liegt im Löffelchen, sein Arm um sie, seine Hand auf ihrem Bauch, seitliche Ansicht.
-5. `scen_1`: eine nackte Frau mit Augenbinde liegt auf dem Rücken, die Fingerspitzen ihres nackten Partners ruhen auf ihrem Schlüsselbein, beide ganz sichtbar.
-6. `self_2`: eine nackte erwachsene Frau liegt entspannt auf dem Bett und berührt sich sanft an Brust und Bauch, Augen geschlossen, ganze Gestalt.
-7. `self_3`: ein nackter erwachsener Mann liegt entspannt auf dem Bett, eine Hand auf der Brust, eine auf dem Bauch, Augen geschlossen, ganze Gestalt.
-8. `couples_1`: ein nacktes Paar steht eng umarmt, Stirn an Stirn, Rückenansicht oder seitliche Ansicht, beide ganz sichtbar.
-
-**Liste** `ag_spicy\_liste.txt`: je Motiv eine Zeile (Datei, Filter-Status, eine kurze Bemerkung). **Meldung an den Nutzer**, sobald die Bilder liegen.
-**Nicht tun:** Bilder ins Repository oder in `assets/` legen, Texte der Lektionen lesen, die Bilder weitergeben.
+**Nicht tun:** Bilder ins Repository oder nach `assets/` legen, Originale überschreiben, Lektionstexte oder Audio lesen, Bilder weitergeben, einen Filter umgehen, andere Bilder
+„nebenbei verbessern“.
 
 ### AG-3: Texte für „Lust im Traum“ (an Claude Code abgegeben)
 
@@ -185,6 +115,7 @@ keine Aussprache-Meldungen mehr ab und legt keine `aussprache/`-Branches mehr an
 
 ## Erledigt
 
+- 01.11.2026, AG-22 bis AG-24 (kein Branch, Bilder lokal unter C:\TOOLS\velvet-inhalte\): 52 Kurs-Stimmungsbilder (1024 × 576) und 58 Szenenbilder der Audioreihe (768 × 1024) im Bleistift-Stil, eingebaut in die Pakete kurse-bilder-spicy v4 und eihe-bilder v3. Der Nutzer ist sehr zufrieden; vier Bilder gehen als AG-25 in die Korrektur.
 - 26.10.2026, AG-1 Schritt A (`aussprache/2026-10-26`, PR #12): 16 Lexikon-Einträge, 8 Aufnahmen neu.
 - 26.10.2026, AG-2 (`ag/2-traum-sanft`, PR #11): sanfte Texte der Traum-Reise, 39 Bausteine je Sprache;
   Fantasie-Räume (31 Bausteine) lokal unter `C:\TOOLS\velvet-inhalte\traum\fantasie.json` zum Gegenlesen.
