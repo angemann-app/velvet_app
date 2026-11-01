@@ -514,3 +514,8 @@ Texte nicht nötig: Texte in `reihe.json`, Aufnahmen und `dauer.json` ins Paket,
 - **Wortwahl: sinnlich und exakt.** Genaue körperliche Beschreibung in einer sinnlichen, ruhigen Sprache, **kein Dirty Talk**.
 - **Spannbreite des Erlebens:** Der knappe Zusatz „so erleben es viele, nicht alle“ passt und bleibt (keine Leistungsnorm).
 - **Kein Hinweistext** vor der Folge (Einwilligung und Abbruch wie bisher durch die Spicy-Freischaltung und den Beenden-Dialog).
+
+- **Beispieltexte als Basis (01.11.2026):** `C:\TOOLS\workspace\mojo_innenansichten\sehr_spicy_frau.txt` (Thema Körper der Frau, Hörer ein Mann → Fassung `sehrspicy_mann`, Martin)
+  und `sehr_spicy_mann.txt` (Thema Körper des Mannes, Hörerin → Fassung `sehrspicy_frau`, Victoria). **Ich-Form bleibt.** Überarbeitung: Höhepunkt als Erleben
+  statt Erklärung ausbauen, Lehrbuchstellen vor dem Höhepunkt zu Empfindung machen, Rückkehr-Teil der Frau-Fassung ergänzen, Abbildung auf die sechs Szenen
+  (Hauptteil in `other_body`), Englisch dazu.
