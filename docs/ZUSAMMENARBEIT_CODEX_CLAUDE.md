@@ -67,3 +67,25 @@ Stand: 01.11.2026. Auftrag des Nutzers: Texte überarbeiten, besonders die Spicy
 - Der Kernauftrag verlangt neue explizite erotische Ich-Erzählungen mit ausführlich erlebten Höhepunkten. Diesen Teil kann Codex nicht erstellen oder als Audio produzieren. Keine Zusage zur vollständigen Ausführung.
 - Möglich bleiben sachliche Recherche zu Anatomie und Physiologie, nicht explizite körperbezogene Erzählungen in DE/EN sowie technische Struktur- und Paketprüfungen.
 - Private Beispieltexte nicht geöffnet; keine Produktionsquellen, Audio-, Paket- oder App-Dateien verändert. Kein neuer Branch, kein Upload, keine Termin-Automation angelegt. Nutzer über die Grenze und den möglichen alternativen Umfang informiert.
+
+### 01.11.2026 – Übernahme Auftrag Sehr spicy zur Textabnahme (Antigravity)
+
+- **Übernahme:** Nach der Weigerung von Codex hat der Nutzer den Auftrag `docs/AUFTRAG_CODEX_SEHRSPICY.md` an Antigravity übergeben.
+- **Branch:** Eigener Branch `codex/sehrspicy` im Haupt-Checkout. Claude-Worktree und Produktionsquellen (`C:\TOOLS\velvet-inhalte\reihe\`, `reihe.json`) bleiben bis zur Abnahme unverändert.
+- **Konzept & Recherche:** `docs/konzepte/sehr-spicy-andere-koerper.md` erstellt. Vollständige physiologische Recherche mit 11 Fachquellen (u. a. O'Connell, Masters & Johnson, Komisaruk & Whipple, Jannini, Giuliano). Genaue Ausarbeitung von Kontraktionstakt (0,8s), innerem Klitorisnetzwerk (Crura, Bulbi), zweiphasiger Ejakulation (Emission / Punkt ohne Wiederkehr vs. Expulsion), Orgasmus vs. Ejakulation, Hypersensibilität, Mehrfachorgasmen und Refraktärzeit (Prolaktin).
+- **Entwürfe:** Vollständig generiert über `tools/redaktion_sehrspicy_bauen.py` unter `build/redaktion/sehrspicy/`:
+  - `sehrspicy_mann.de.json` / `sehrspicy_mann.de.md` (9.762 Zeichen, ca. 11,6 Min, Martin)
+  - `sehrspicy_mann.en.json` / `sehrspicy_mann.en.md` (8.602 Zeichen, ca. 11,6 Min, Martin)
+  - `sehrspicy_frau.de.json` / `sehrspicy_frau.de.md` (8.882 Zeichen, ca. 10,4 Min, Victoria)
+  - `sehrspicy_frau.en.json` / `sehrspicy_frau.en.md` (8.004 Zeichen, ca. 10,2 Min, Victoria)
+  - `INDEX.md` (Übersicht, Metadaten und Kennzahlen)
+  - `VERGLEICH.html` (Interaktive, autarke Browser-Ansicht zur Textabnahme mit Reiter-Umschaltung und Spaltenvergleich DE/EN)
+- **Leitplanken-Prüfung:**
+  1. *Ich-Form:* Durchgehend eingehalten („Ich liege...“, „Ich spüre...“).
+  2. *Szenenfolge:* Alle 6 Szenen (`opening`, `own_body`, `other_door`, `other_body`, `return`, `afterglow`) vorhanden.
+  3. *Schwerpunkt:* `other_body` bildet den detaillierten emotionalen und physiologischen Kern.
+  4. *Tonalität:* Sinnlich, intim und anatomisch präzise; kein Dirty Talk.
+  5. *Rückkehr:* Beide Fassungen besitzen eine vollwertige, gleichwertige Rückverwandlung und beruhigenden Nachklang.
+  6. *Englisch:* Literarisch anspruchsvoll übertragen, nicht wörtlich übersetzt.
+- **Status:** Schritt 1 (Recherche) und Schritt 2 (Textentwürfe) abgeschlossen. Bereit für **Schritt 3: Textabnahme durch den Nutzer**. Produktionsdateien, Audios und Pakete bleiben unberührt.
+
