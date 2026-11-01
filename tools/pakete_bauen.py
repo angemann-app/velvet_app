@@ -144,7 +144,8 @@ def bilder_bauen(version):
         print("reihe-bilder: übersprungen, keine Bilder")
         return None
     texte = json.loads((REIHE_ORDNER / "reihe.json").read_text(encoding="utf-8"))["de"]
-    gueltig = {f"{folge['id']}_{f['variante']}_{s['szene']}.webp"
+    # Sehr spicy hat eigene Bilder je Perspektive (Fassungs-ID), alle anderen Varianten teilen sie je Variante
+    gueltig = {f"{folge['id']}_{f['id'] if f['variante'] == 'sehrspicy' else f['variante']}_{s['szene']}.webp"
                for folge in texte["folgen"] for f in folge["fassungen"] for s in f["segmente"]}
     unbekannt = [b.name for b in bilder if b.name not in gueltig]
     if unbekannt:

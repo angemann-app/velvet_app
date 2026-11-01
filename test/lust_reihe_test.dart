@@ -162,7 +162,7 @@ void main() {
       expect(sehr.every((f) => f.spicy && f.sehrSpicy), isTrue);
       expect(folge.fassungenVon('spicy').any((f) => f.sehrSpicy), isFalse);
       final szene = sehr.first.segmente.first;
-      expect(ReiheDaten.bildPfad(folge, sehr.first, szene), 'bilder/f1_spicy_opening.webp');
+      expect(ReiheDaten.bildPfad(folge, sehr.first, szene), 'bilder/f1_sehrspicy_frau_opening.webp');
       expect(ReiheDaten.audioPfad(folge, sehr.first, szene), 'audio/reihe/victoria_f1_sehrspicy_frau_opening.opus');
       expect(folge.pruefeSynchronitaet(), isEmpty);
       expect(folge.partnerVon(sehr.first).map((f) => f.id), ['sehrspicy_mann']);

@@ -180,9 +180,10 @@ class ReiheDaten {
 
   /// Pfad des Szenenbilds im Paket. Ein Bild gehört zu Folge, Variante und Szene und wird von beiden Perspektiven
   /// geteilt (docs/konzepte/lust-reihe-szenenbilder.md); fehlt es, zeigt der Player kein Bild.
-  /// Sehr spicy teilt sich die Bilder mit Spicy.
+  /// Sehr spicy hat eigene Bilder je Perspektive (`<folge>_sehrspicy_<perspektive>_<szene>`), weil sich die beiden
+  /// Geschichten in Körper und Moment unterscheiden.
   static String bildPfad(ReiheFolge folge, ReiheFassung fassung, ReiheSegment s) =>
-      'bilder/${folge.id}_${fassung.sehrSpicy ? 'spicy' : fassung.variante}_${s.szene}.webp';
+      'bilder/${folge.id}_${fassung.sehrSpicy ? fassung.id : fassung.variante}_${s.szene}.webp';
 
   /// Dauer eines Segments: gemessen, sonst aus der Textlänge geschätzt (rund zehn Zeichen je Sekunde).
   Duration dauerVon(ReiheFolge folge, ReiheFassung fassung, ReiheSegment s) {
