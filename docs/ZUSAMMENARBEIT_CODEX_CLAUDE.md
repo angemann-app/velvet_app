@@ -90,7 +90,9 @@ Stand: 01.11.2026. Auftrag des Nutzers: Texte überarbeiten, besonders die Spicy
 - **Status:** Schritt 1 (Recherche) und Schritt 2 (Textentwürfe) abgeschlossen. Bereit für **Schritt 3: Textabnahme durch den Nutzer**. Produktionsdateien, Audios und Pakete bleiben unberührt.
 - **Freigabe & Bildkonzept:** Nutzer hat Texte freigegeben („Texte passen“) und Variante B (perspektivenspezifische Prompts) für die Szenenbilder gewählt. Konzept in `docs/konzepte/sehr-spicy-bilder-prompts.md` und Erzeugungsskript `C:\TOOLS\velvet-inhalte\reihe\bilder\sehrspicy_bilder.py` hinterlegt. Aussprachekorrekturen in `tools/aussprache.json` eingetragen.
 - **Vertonung & Bildstatus (01.11.2026):**
-  - Deutsche Aufnahmen (`audio/`): Alle 12 Szenen vollständig und fehlerfrei mit Kokoro vertont (Victoria 11:17 Min, Martin 12:40 Min).
-  - Englische Aufnahmen (`audio_en/`): Vertonungslauf mit Kokoro läuft aktuell im Hintergrund.
-  - Szenenbilder: Nutzer hat entschieden, die Bilder im Skizzenbuch-/Bleistift-Stil über Gemini generieren zu lassen, sobald das Modell-Tageskontingent zurückgesetzt ist (Prompts und Konfiguration liegen bereit). Übergabe an Claude Code zum Einbau der fertigen Audios und Texte.
+  - Deutsche Aufnahmen (`audio/`): Alle 12 Szenen vollständig und fehlerfrei mit Kokoro vertont (Victoria 11:17 Min, Martin 12:40 Min), `dauer.json` aktualisiert.
+  - Englische Aufnahmen (`audio_en/`): Alle 12 Szenen vollständig und fehlerfrei mit Kokoro vertont (Victoria 10:48 Min, Martin 12:15 Min), `dauer.json` aktualisiert.
+  - Texte: In `C:\TOOLS\velvet-inhalte\reihe\reihe.json` eingepflegt (Backup `reihe.vor-sehrspicy.bak.json`).
+  - Szenenbilder: Prompts im Skizzenbuch-/Bleistift-Stil (Variante B) stehen in `docs/konzepte/sehr-spicy-bilder-prompts.md` bereit. Erzeugung erfolgt über Gemini, sobald das Tageskontingent zurückgesetzt ist.
+  - **Übergabe an Claude Code:** Texte und Audios sind vollständig produktionsbereit zur Integration und Paketierung.
 
