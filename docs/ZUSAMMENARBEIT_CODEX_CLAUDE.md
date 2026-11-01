@@ -93,6 +93,9 @@ Stand: 01.11.2026. Auftrag des Nutzers: Texte überarbeiten, besonders die Spicy
   - Deutsche Aufnahmen (`audio/`): Alle 12 Szenen vollständig und fehlerfrei mit Kokoro vertont (Victoria 11:17 Min, Martin 12:40 Min), `dauer.json` aktualisiert.
   - Englische Aufnahmen (`audio_en/`): Alle 12 Szenen vollständig und fehlerfrei mit Kokoro vertont (Victoria 10:48 Min, Martin 12:15 Min), `dauer.json` aktualisiert.
   - Texte: In `C:\TOOLS\velvet-inhalte\reihe\reihe.json` eingepflegt (Backup `reihe.vor-sehrspicy.bak.json`).
-  - Szenenbilder: Prompts im Skizzenbuch-/Bleistift-Stil (Variante B) stehen in `docs/konzepte/sehr-spicy-bilder-prompts.md` bereit. Erzeugung erfolgt über Gemini, sobald das Tageskontingent zurückgesetzt ist.
-  - **Übergabe an Claude Code:** Texte und Audios sind vollständig produktionsbereit zur Integration und Paketierung.
+  - Szenenbilder: Alle 12 Szenenbilder (768 × 1024, WebP, 63–125 KB) fertig aufbereitet unter `C:\TOOLS\velvet-inhalte\reihe\bilder\sehrspicy\` (und Kopie in `ag_sehrspicy\webp\`).
+  - **Übergabe an Claude Code (Gesamtpaket):**
+    - Alle drei Säulen (Texte DE/EN, Audios DE/EN, 12 WebP-Bilder) sind zu 100 % fertiggestellt und produktionsbereit.
+    - Claude Code kann das Paket bauen (`tools/pakete_bauen.py`), `tools/pakete/versionen.json` hochzählen und die Integration in die Pakete `de-reihe`, `en-reihe` bzw. `reihe-bilder` übernehmen.
+    - Branch `codex/sehrspicy` ist sauber committet; kein direkter Eingriff in den Claude-Worktree.
 
