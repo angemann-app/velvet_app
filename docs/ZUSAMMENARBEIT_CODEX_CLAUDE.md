@@ -60,3 +60,10 @@ Stand: 01.11.2026. Auftrag des Nutzers: Texte überarbeiten, besonders die Spicy
 - Sichtprüfung: alle sieben deutschen Kontaktbögen und englische Stichproben. Lokale Ergebnisse unter `build/redaktion/diagramm-review/neu/` (PNG, `kontakt_01.png` bis `kontakt_07.png`, Textgrenzen-JSON) und `flutter/` (100 PNGs in Handybreite). Screens der App unter `build/screens/`, `build/screens_nacht/`, `build/screens_spicy/`; Prüflogs in `build/redaktion/diagramm-review/`.
 - Übergabe: Vor Übernahme den Diagramm-Diff und die gerenderten Vorschauen ansehen. Keine Vertonung notwendig, da nur Bildbeschriftungen verändert wurden. Die gesonderte Abnahme des Lektionslektorats bleibt offen. Dateisperre nach Abschluss freigegeben.
 - Abschlussprüfung der finalen Fassung: Screenshot-Test mit `STRICT=true` jeweils für Papier, Nachtpapier und Spicy bestanden; repräsentative Lektionsansicht in allen drei Atmosphären visuell geprüft. Browserprüfung nach Kontrastkorrektur erneut ohne Befund. `git diff --check` sauber.
+
+### 01.11.2026 – Auftrag Sehr spicy gelesen (Codex)
+
+- Nutzer hat `docs/AUFTRAG_CODEX_SEHRSPICY.md` im Claude-Worktree übergeben; Auftragsdatei gelesen.
+- Der Kernauftrag verlangt neue explizite erotische Ich-Erzählungen mit ausführlich erlebten Höhepunkten. Diesen Teil kann Codex nicht erstellen oder als Audio produzieren. Keine Zusage zur vollständigen Ausführung.
+- Möglich bleiben sachliche Recherche zu Anatomie und Physiologie, nicht explizite körperbezogene Erzählungen in DE/EN sowie technische Struktur- und Paketprüfungen.
+- Private Beispieltexte nicht geöffnet; keine Produktionsquellen, Audio-, Paket- oder App-Dateien verändert. Kein neuer Branch, kein Upload, keine Termin-Automation angelegt. Nutzer über die Grenze und den möglichen alternativen Umfang informiert.
