@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
+import '../../theme/vp_tokens.dart';
 import '../../l10n/t.dart';
 
 Map<String?, String> get partnerGenderLabels => {
@@ -86,15 +87,20 @@ class PartnerProfilePrompt extends StatelessWidget {
             margin: const EdgeInsets.fromLTRB(16, 10, 16, 0),
             padding: const EdgeInsets.fromLTRB(14, 12, 6, 6),
             decoration: BoxDecoration(
-              color: AppTheme.rose.withValues(alpha: 0.08),
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.rose.withValues(alpha: 0.4)),
+              color: AppTheme.papierErhoben,
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              border: Border(
+                left: BorderSide(color: AppTheme.akzentTief, width: VpLinie.akzent),
+                top: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
+                right: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
+                bottom: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(t.partnerProfileDialogHowMayLessonsReferTo,
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.textPrimary)),
+                    style: context.vp.typo.titel.copyWith(fontSize: 16)),
                 const SizedBox(height: 4),
                 Text(
                   t.partnerProfileDialogWithNameAndGenderThe,
@@ -110,7 +116,7 @@ class PartnerProfilePrompt extends StatelessWidget {
                     TextButton(
                       onPressed: () => editPartnerProfile(context),
                       child: Text(t.partnerProfileDialogAdd,
-                          style: TextStyle(color: AppTheme.rose, fontWeight: FontWeight.w700)),
+                          style: TextStyle(color: AppTheme.akzentTief, fontWeight: FontWeight.w700)),
                     ),
                   ],
                 ),

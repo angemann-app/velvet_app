@@ -11,6 +11,7 @@ import '../../services/nostr_service.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/vp_tokens.dart';
+import '../../widgets/design/vp_tabs.dart';
 import '../yes_no_maybe/yes_no_maybe_screen.dart';
 import 'invite_partner.dart';
 import 'paar_abend_screen.dart';
@@ -553,51 +554,33 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       children: [
         _buildHeader(),
         const PartnerProfilePrompt(),
-        Container(
-          margin: const EdgeInsets.fromLTRB(16, 10, 16, 6),
-          decoration: BoxDecoration(
-            color: AppTheme.surface,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: AppTheme.border),
-          ),
-          child: TabBar(
-            controller: _subTabController,
-            indicator: BoxDecoration(
-              color: AppTheme.amber.withValues(alpha: 0.2),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppTheme.amber.withValues(alpha: 0.5)),
+        VpTabs.leiste(
+          controller: _subTabController,
+          tabs: [
+            Tab(height: 42, text: t.couplesChannelMessages),
+            ListenableBuilder(
+              listenable: Listenable.merge([_nostr.matchesNotifier, StorageService.spicyAenderung]),
+              builder: (context, _) {
+                // Nur Treffer zählen, die hier auch sichtbar sind (Spicy-Szenen nur im Spicy-Modus).
+                final sichtbar = [
+                  for (final id in _nostr.matchesNotifier.value)
+                    if (ListenUebersetzung.titelFuer(id) != null) id
+                ];
+                return Tab(
+                  height: 42,
+                  child: Badge(
+                    isLabelVisible: sichtbar.isNotEmpty,
+                    label: Text('${sichtbar.length}'),
+                    backgroundColor: AppTheme.akzentTief,
+                    textColor: AppTheme.aufAkzentTief,
+                    offset: const Offset(14, -6),
+                    child: Text(t.couplesChannelWishes),
+                  ),
+                );
+              },
             ),
-            indicatorSize: TabBarIndicatorSize.tab,
-            dividerColor: Colors.transparent,
-            labelColor: AppTheme.amberLight,
-            unselectedLabelColor: AppTheme.textSecondary,
-            labelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
-            tabs: [
-              Tab(height: 42, text: t.couplesChannelMessages),
-              ListenableBuilder(
-                listenable: Listenable.merge([_nostr.matchesNotifier, StorageService.spicyAenderung]),
-                builder: (context, _) {
-                  // Nur Treffer zählen, die hier auch sichtbar sind (Spicy-Szenen nur im Spicy-Modus).
-                  final sichtbar = [
-                    for (final id in _nostr.matchesNotifier.value)
-                      if (ListenUebersetzung.titelFuer(id) != null) id
-                  ];
-                  return Tab(
-                    height: 42,
-                    child: Badge(
-                      isLabelVisible: sichtbar.isNotEmpty,
-                      label: Text('${sichtbar.length}'),
-                      backgroundColor: AppTheme.rose,
-                      offset: const Offset(14, -6),
-                      child: Text(t.couplesChannelWishes),
-                    ),
-                  );
-                },
-              ),
-            ],
-          ),
-        ),
-        Expanded(
+          ],
+        ),        Expanded(
           child: TabBarView(
             controller: _subTabController,
             children: [
@@ -617,25 +600,25 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         final name = _nostr.partnerName;
         final status = _nostr.statusNotifier.value;
         final (Color dot, String label) = switch (status) {
-          NostrConnectionStatus.connected => (AppTheme.sageGreen, t.couplesChannelConnectedEncrypted),
-          NostrConnectionStatus.connecting => (AppTheme.amber, t.couplesChannelConnecting),
-          _ => (AppTheme.rose, t.couplesChannelOfflineTapToConnect),
+          NostrConnectionStatus.connected => (AppTheme.statusJa, t.couplesChannelConnectedEncrypted),
+          NostrConnectionStatus.connecting => (AppTheme.statusVielleicht, t.couplesChannelConnecting),
+          _ => (AppTheme.statusNein, t.couplesChannelOfflineTapToConnect),
         };
 
         return Container(
           padding: const EdgeInsets.fromLTRB(16, 10, 4, 10),
           decoration: BoxDecoration(
-            color: AppTheme.surface,
-            border: Border(bottom: BorderSide(color: AppTheme.border, width: 0.8)),
+            color: AppTheme.papier,
+            border: Border(bottom: BorderSide(color: AppTheme.linie, width: VpLinie.haar)),
           ),
           child: Row(
             children: [
               CircleAvatar(
                 radius: 20,
-                backgroundColor: AppTheme.rose.withValues(alpha: 0.2),
+                backgroundColor: AppTheme.akzentLeise,
                 child: Text(
                   name.isNotEmpty ? name.characters.first.toUpperCase() : '♥',
-                  style: TextStyle(color: AppTheme.rose, fontWeight: FontWeight.w800, fontSize: 16),
+                  style: context.vp.typo.titel.copyWith(color: AppTheme.akzentTief),
                 ),
               ),
               const SizedBox(width: 12),
@@ -649,7 +632,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                         t.couplesChannelYouName(name),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.textPrimary),
+                        style: context.vp.typo.titel,
                       ),
                       const SizedBox(height: 3),
                       Row(
@@ -665,7 +648,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                               label,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: TextStyle(fontSize: 11.5, color: dot),
+                              style: TextStyle(fontSize: 11.5, color: AppTheme.tinteLeise),
                             ),
                           ),
                         ],
@@ -676,12 +659,12 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               ),
               IconButton(
                 onPressed: _openAbend,
-                icon: Icon(Icons.spa_outlined, color: AppTheme.rose, size: 22),
+                icon: Icon(Icons.spa_outlined, color: AppTheme.akzentTief, size: 22),
                 tooltip: t.couplesChannelSharedEvening,
               ),
               IconButton(
                 onPressed: _openFantasyMap,
-                icon: Icon(Icons.explore_outlined, color: AppTheme.amber, size: 22),
+                icon: Icon(Icons.explore_outlined, color: AppTheme.akzentTief, size: 22),
                 tooltip: t.couplesChannelFantasyMap,
               ),
               PopupMenuButton<String>(
@@ -813,8 +796,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     return Container(
       height: 48,
       decoration: BoxDecoration(
-        color: AppTheme.surface,
-        border: Border(top: BorderSide(color: AppTheme.border, width: 0.8)),
+        color: AppTheme.papier,
+        border: Border(top: BorderSide(color: AppTheme.linie, width: VpLinie.haar)),
       ),
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
@@ -826,14 +809,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           final heiss = i >= _sparks.length;
           return InkWell(
             onTap: () => _sendSpark(emoji, text),
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(VpRadius.chip),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 12),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: heiss ? AppTheme.rose.withValues(alpha: 0.14) : AppTheme.surfaceLight.withValues(alpha: 0.6),
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: heiss ? AppTheme.rose.withValues(alpha: 0.6) : AppTheme.border),
+                color: heiss ? AppTheme.akzentLeise : Colors.transparent,
+                borderRadius: BorderRadius.circular(VpRadius.chip),
+                border: Border.all(color: heiss ? AppTheme.akzent : AppTheme.linieStark),
               ),
               child: Text(
                 '$emoji  $text',
@@ -923,14 +906,14 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.78),
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
-          color: isMe ? AppTheme.akzentHell : (isSpark ? AppTheme.rose.withValues(alpha: 0.16) : AppTheme.surface),
+          color: isMe ? AppTheme.akzentHell : (isSpark ? AppTheme.akzentLeise : AppTheme.surface),
           borderRadius: BorderRadius.only(
-            topLeft: const Radius.circular(16),
-            topRight: const Radius.circular(16),
-            bottomLeft: Radius.circular(isMe ? 16 : 4),
-            bottomRight: Radius.circular(isMe ? 4 : 16),
+            topLeft: const Radius.circular(VpRadius.karte),
+            topRight: const Radius.circular(VpRadius.karte),
+            bottomLeft: Radius.circular(isMe ? VpRadius.karte : 2),
+            bottomRight: Radius.circular(isMe ? 2 : VpRadius.karte),
           ),
-          border: isMe ? null : Border.all(color: isSpark ? AppTheme.rose.withValues(alpha: 0.45) : AppTheme.border),
+          border: isMe ? null : Border.all(color: isSpark ? AppTheme.akzent : AppTheme.linie),
         ),
         child: Column(
           crossAxisAlignment: isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
@@ -941,7 +924,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 color: textColor,
                 fontSize: isSpark ? 15 : 14,
                 fontWeight: isSpark ? FontWeight.w700 : FontWeight.w500,
-                height: 1.35,
+                height: 1.4,
               ),
             ),
             if (msg.spicyEinladung && !isMe) _spicyAnnehmen(),
@@ -961,13 +944,13 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.menu_book_rounded, size: 15, color: isMe ? textColor : AppTheme.amberLight),
+                        Icon(Icons.menu_book_rounded, size: 15, color: isMe ? textColor : AppTheme.akzentTief),
                         const SizedBox(width: 6),
                         Text(t.couplesChannelOpenLesson,
                             style: TextStyle(
                                 fontSize: 12.5,
                                 fontWeight: FontWeight.w700,
-                                color: isMe ? textColor : AppTheme.amberLight)),
+                                color: isMe ? textColor : AppTheme.akzentTief)),
                       ],
                     ),
                   ),
@@ -980,7 +963,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 if (msg.verschwindet) ...[
                   Icon(Icons.timer_outlined,
                       size: 11,
-                      color: isMe ? textColor.withValues(alpha: 0.75) : AppTheme.rose,
+                      color: isMe ? textColor.withValues(alpha: 0.75) : AppTheme.akzentTief,
                       semanticLabel: t.verschwindetLabel),
                   const SizedBox(width: 4),
                 ],
@@ -1000,7 +983,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   Widget _buildChatInputBar() {
     return Container(
       padding: const EdgeInsets.fromLTRB(14, 8, 14, 10),
-      color: AppTheme.surface,
+      decoration: BoxDecoration(color: AppTheme.papier, border: Border(top: BorderSide(color: AppTheme.linie, width: VpLinie.haar))),
       child: Row(
         children: [
           if (StorageService.spicyMode()) ...[
@@ -1011,7 +994,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               },
               isSelected: _verschwinden,
               icon: Icon(Icons.timer_outlined, color: AppTheme.textMuted),
-              selectedIcon: Icon(Icons.timer_rounded, color: AppTheme.rose),
+              selectedIcon: Icon(Icons.timer_rounded, color: AppTheme.akzentTief),
               tooltip: t.verschwindenSchalter,
             ),
             IconButton(
@@ -1029,15 +1012,15 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               style: TextStyle(color: AppTheme.textPrimary, fontSize: 14),
               decoration: InputDecoration(
                 hintText: _verschwindenAktiv ? t.verschwindenHinweis : t.couplesChannelWriteAMessage,
-                hintStyle: TextStyle(color: _verschwindenAktiv ? AppTheme.rose : AppTheme.textMuted, fontSize: 13.5),
+                hintStyle: TextStyle(color: _verschwindenAktiv ? AppTheme.akzentTief : AppTheme.textMuted, fontSize: 13.5),
                 filled: true,
                 fillColor: _verschwindenAktiv
-                    ? AppTheme.rose.withValues(alpha: 0.10)
-                    : AppTheme.surfaceLight.withValues(alpha: 0.5),
+                    ? AppTheme.akzentLeise
+                    : AppTheme.surface,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(24),
-                  borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.circular(VpRadius.feld),
+                  borderSide: BorderSide(color: AppTheme.linieStark, width: VpLinie.haar),
                 ),
               ),
               onSubmitted: (_) => _sendMessage(),
@@ -1046,8 +1029,8 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           const SizedBox(width: 10),
           IconButton.filled(
             onPressed: _sendMessage,
-            style: IconButton.styleFrom(backgroundColor: AppTheme.amber, fixedSize: const Size(46, 46)),
-            icon: Icon(Icons.send_rounded, color: AppTheme.background, size: 20),
+            style: IconButton.styleFrom(backgroundColor: AppTheme.akzentTief, fixedSize: const Size(46, 46), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.feld))),
+            icon: Icon(Icons.send_rounded, color: AppTheme.aufAkzentTief, size: 20),
             tooltip: t.couplesChannelSend,
           ),
         ],

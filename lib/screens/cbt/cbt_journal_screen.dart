@@ -7,6 +7,7 @@ import '../../l10n/t.dart';
 import '../../services/sprache.dart';
 import 'cbt_new_entry_screen.dart';
 import 'belief_library_view.dart';
+import '../../widgets/design/vp_tabs.dart';
 
 class CbtJournalScreen extends StatefulWidget {
   const CbtJournalScreen({super.key});
@@ -122,50 +123,31 @@ class _CbtJournalScreenState extends State<CbtJournalScreen> with SingleTickerPr
       body: Column(
         children: [
           // Segmented Bar
-          Container(
-            margin: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-            decoration: BoxDecoration(
-              color: AppTheme.surface,
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: AppTheme.border),
-            ),
-            child: TabBar(
-              controller: _tabController,
-              onTap: (_) => setState(() {}),
-              indicator: BoxDecoration(
-                color: AppTheme.surfaceLight,
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: AppTheme.sageGreen.withValues(alpha: 0.4)),
+          VpTabs.leiste(
+            controller: _tabController,
+            onTap: (_) => setState(() {}),
+            tabs: [
+              Tab(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.edit_note_rounded, size: 16),
+                    const SizedBox(width: 8),
+                    Text(t.cbtJournalMyRecordsEntrieslength(_entries.length)),
+                  ],
+                ),
               ),
-              indicatorSize: TabBarIndicatorSize.tab,
-              dividerColor: Colors.transparent,
-              labelColor: AppTheme.textPrimary,
-              unselectedLabelColor: AppTheme.textMuted,
-              labelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
-              unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
-              tabs: [
-                Tab(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(Icons.edit_note_rounded, size: 16),
-                      const SizedBox(width: 8),
-                      Text(t.cbtJournalMyRecordsEntrieslength(_entries.length)),
-                    ],
-                  ),
+              Tab(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.library_books_rounded, size: 16),
+                    SizedBox(width: 8),
+                    Text(t.cbtJournalBeliefs),
+                  ],
                 ),
-                Tab(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.library_books_rounded, size: 16),
-                      SizedBox(width: 8),
-                      Text(t.cbtJournalBeliefs),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
 
           // Tab views
