@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../services/wach_halten.dart';
 import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -51,7 +52,7 @@ class LustWahl {
       : traumKoerper = traumKoerper ?? bettKoerper;
 }
 
-class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
+class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> with WachHalter {
   String get _modus => widget.lust != null ? 'lust' : (widget.traum ? 'traum' : 'einschlaf');
   String get _keyMinuten => '${_modus}_minuten';
   String get _keyThema => '${_modus}_thema';
@@ -228,6 +229,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
   }
 
   Future<void> _abspielen(int lauf) async {
+    wachAn(); // lange Wiedergabe: bei ausgeschaltetem Bildschirm wach bleiben
     final ablauf = _ablauf!;
     while (_index < ablauf.length) {
       final schritt = ablauf[_index];
@@ -278,6 +280,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
     await _teppichPlayer.stop().catchError((_) {});
     await _stimmePlayer.stop().catchError((_) {});
     if (_abgebrochen(lauf)) return;
+    wachAus();
     setState(() => _fertig = true);
   }
 
@@ -285,9 +288,11 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
     HapticFeedback.lightImpact();
     setState(() => _pausiert = !_pausiert);
     if (_pausiert) {
+      wachAus(); // Pause: Sperre frei (Akku)
       Sprachausgabe.pause(_stimmePlayer);
       _teppichPlayer.pause().catchError((_) {});
     } else {
+      wachAn();
       _stimmePlayer.resume().catchError((_) {});
       if (_teppich) _teppichPlayer.resume().catchError((_) {});
     }
@@ -303,6 +308,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
 
   void _beenden() {
     _lauf++;
+    wachAus();
     Sprachausgabe.stopp(_stimmePlayer);
     _teppichPlayer.stop().catchError((_) {});
     setState(() {

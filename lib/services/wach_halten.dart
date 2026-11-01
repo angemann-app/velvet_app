@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart';
 
 /// Hält das Handy bei ausgeschaltetem Bildschirm wach genug, damit lange Wiedergaben (Audioreihe, Reisen) ohne Stocken
@@ -32,4 +32,28 @@ class WachHalten {
 
   @visibleForTesting
   static void zuruecksetzenFuerTest() => _zaehler = 0;
+}
+
+/// Für Bildschirme mit langer Wiedergabe: [wachAn] beim Start und beim Weiterspielen, [wachAus] bei Pause, Ende und
+/// Verlassen. Der Bildschirm gibt die Sperre beim Entsorgen selbst frei.
+mixin WachHalter<T extends StatefulWidget> on State<T> {
+  bool _wachGehalten = false;
+
+  void wachAn() {
+    if (_wachGehalten) return;
+    _wachGehalten = true;
+    WachHalten.halten();
+  }
+
+  void wachAus() {
+    if (!_wachGehalten) return;
+    _wachGehalten = false;
+    WachHalten.freigeben();
+  }
+
+  @override
+  void dispose() {
+    wachAus();
+    super.dispose();
+  }
 }

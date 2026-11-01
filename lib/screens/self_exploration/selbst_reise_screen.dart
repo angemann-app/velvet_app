@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../services/wach_halten.dart';
 import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -28,7 +29,7 @@ class SelbstReiseScreen extends StatefulWidget {
   State<SelbstReiseScreen> createState() => _SelbstReiseScreenState();
 }
 
-class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
+class _SelbstReiseScreenState extends State<SelbstReiseScreen> with WachHalter {
   static const _keyMinuten = 'selbst_reise_minuten';
   static const _keyTiefe = 'selbst_reise_tiefe';
   static const _keyKoerper = 'selbst_reise_koerper';
@@ -131,6 +132,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
   bool _abgebrochen(int lauf) => lauf != _lauf || !mounted;
 
   Future<void> _abspielen(int lauf) async {
+    wachAn(); // lange Wiedergabe: bei ausgeschaltetem Bildschirm wach bleiben
     final ablauf = _ablauf!;
     while (_index < ablauf.length) {
       final schritt = ablauf[_index];
@@ -157,15 +159,18 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
       await Future.delayed(const Duration(milliseconds: 400));
     }
     await _teppichPlayer.stop().catchError((_) {});
+    wachAus(); // erst nach dem Ausblenden, sonst bleibt der Klangteppich bei ausgeschaltetem Bildschirm stehen
   }
 
   void _pauseUmschalten() {
     HapticFeedback.lightImpact();
     setState(() => _pausiert = !_pausiert);
     if (_pausiert) {
+      wachAus(); // Pause: Sperre frei (Akku)
       Sprachausgabe.pause(_stimmePlayer);
       _teppichPlayer.pause().catchError((_) {});
     } else {
+      wachAn();
       _stimmePlayer.resume().catchError((_) {});
       if (_teppich) _teppichPlayer.resume().catchError((_) {});
     }
@@ -181,6 +186,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
 
   void _beenden() {
     _lauf++;
+    wachAus();
     Sprachausgabe.stopp(_stimmePlayer);
     _klangPlayer.stop().catchError((_) {});
     _teppichPlayer.stop().catchError((_) {});

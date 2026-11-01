@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../services/wach_halten.dart';
 import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -28,7 +29,7 @@ class PaarAbendScreen extends StatefulWidget {
   State<PaarAbendScreen> createState() => _PaarAbendScreenState();
 }
 
-class _PaarAbendScreenState extends State<PaarAbendScreen> {
+class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
   static const _keyMinuten = 'paar_abend_minuten';
   static const _keyTiefe = 'paar_abend_tiefe';
   static const _keyStimme = 'paar_abend_stimme';
@@ -157,6 +158,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
   bool _abgebrochen(int lauf) => lauf != _lauf || !mounted;
 
   Future<void> _abspielen(int lauf) async {
+    wachAn(); // lange Wiedergabe: bei ausgeschaltetem Bildschirm wach bleiben
     final ablauf = _ablauf!;
     while (_index < ablauf.length) {
       final schritt = ablauf[_index];
@@ -181,6 +183,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     }
     setState(() => _fertig = true);
     await _teppichLeiser();
+    wachAus(); // erst nach dem Ausblenden des Klangteppichs
   }
 
   Future<void> _teppichLeiser() async {
@@ -195,9 +198,11 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
     HapticFeedback.lightImpact();
     setState(() => _pausiert = !_pausiert);
     if (_pausiert) {
+      wachAus(); // Pause: Sperre frei (Akku)
       Sprachausgabe.pause(_stimmePlayer);
       _teppichPlayer.pause().catchError((_) {});
     } else {
+      wachAn();
       _stimmePlayer.resume().catchError((_) {});
       if (_teppich) _teppichPlayer.resume().catchError((_) {});
     }
@@ -214,6 +219,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
 
   void _beenden() {
     _lauf++;
+    wachAus();
     Sprachausgabe.stopp(_stimmePlayer);
     _klangPlayer.stop().catchError((_) {});
     _teppichPlayer.stop().catchError((_) {});
