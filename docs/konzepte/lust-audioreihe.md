@@ -510,6 +510,7 @@ Texte nicht nötig: Texte in `reihe.json`, Aufnahmen und `dauer.json` ins Paket,
 3. Vertonung lokal (Kokoro, Victoria für `frau`, Martin für `mann`, Ausdrucksprofil nach `tools/reihe_ausdruck.py`), Hörprobe durch den Nutzer.
 4. Pakete bauen (`de-reihe`, `en-reihe`), nach Abnahme hochladen.
 
-**Offene Fragen für Dienstag:** Wortwahl und Deutlichkeit (Stufe „Sehr spicy“ ohne oder mit Dirty Talk, wie bei Körperreise?); wie ausdrücklich der
-Hinweis „so erleben es viele, nicht alle“ sein soll, wenn die Beschreibung „exakt“ sein soll; ob am Anfang ein kurzer Hinweistext zur Einwilligung und
-zum Abbruch steht (wie bei den anderen Folgen).
+**Entscheidungen des Nutzers (01.11.2026):**
+- **Wortwahl: sinnlich und exakt.** Genaue körperliche Beschreibung in einer sinnlichen, ruhigen Sprache, **kein Dirty Talk**.
+- **Spannbreite des Erlebens:** Der knappe Zusatz „so erleben es viele, nicht alle“ passt und bleibt (keine Leistungsnorm).
+- **Kein Hinweistext** vor der Folge (Einwilligung und Abbruch wie bisher durch die Spicy-Freischaltung und den Beenden-Dialog).
