@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import '../../widgets/design/vp_bild_feld.dart';
+import '../../widgets/design/vp_komponenten.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../models/content_models.dart';
@@ -189,8 +190,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               ),
               if (item.image != null) ...[
                 const SizedBox(height: 16),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(VpRadius.karte),
+                VpTafel(
                   child: AspectRatio(
                     aspectRatio: 4 / 3,
                     child: VpBildFeld.pfad(item.image!, format: VpBildFormat.diagramm),

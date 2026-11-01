@@ -346,3 +346,38 @@ class VpLeerzustand extends StatelessWidget {
     ]);
   }
 }
+
+/// Bildtafel für Diagramme und Zeichnungen, die für dunklen Grund gezeichnet sind: Auf hellem Papier hängen sie wie ein
+/// gerahmter Druck mit Passepartout (Papierrand, Haarlinie, feine Innenlinie), auf dunklen Atmosphären liegen sie
+/// einfach mit Haarlinie auf der Seite. So wirken sie gewollt und nicht wie ein Fremdkörper.
+class VpTafel extends StatelessWidget {
+  final Widget child;
+  const VpTafel({super.key, required this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    final hell = !AppTheme.palette.istDunkel;
+    if (!hell) {
+      return Container(
+        foregroundDecoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(VpRadius.karte),
+          border: Border.all(color: AppTheme.linie, width: VpLinie.haar),
+        ),
+        child: ClipRRect(borderRadius: BorderRadius.circular(VpRadius.karte), child: child),
+      );
+    }
+    return Container(
+      padding: const EdgeInsets.all(VpAbstand.m),
+      decoration: BoxDecoration(
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie, width: VpLinie.haar),
+      ),
+      foregroundDecoration: null,
+      child: CustomPaint(
+        foregroundPainter: Passepartout(AppTheme.linieStark, rand: 5),
+        child: ClipRRect(borderRadius: BorderRadius.circular(VpRadius.chip), child: child),
+      ),
+    );
+  }
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'design/vp_komponenten.dart';
 import '../services/privacy_service.dart';
 import '../theme/app_theme.dart';
 import '../l10n/t.dart';
@@ -90,12 +91,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.lock_rounded, color: AppTheme.tinteLeise, size: 48),
-                      const SizedBox(height: 16),
-                      Text(
-                        t.appLockLocked,
-                        style: TextStyle(color: AppTheme.tinte, fontSize: 20, fontWeight: FontWeight.w700),
-                      ),
+                      VpLeerzustand(icon: Icons.lock_rounded, titel: t.appLockLocked),
                       const SizedBox(height: 24),
                       ElevatedButton.icon(
                         onPressed: _unlock,

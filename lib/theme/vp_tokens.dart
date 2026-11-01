@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'app_theme.dart';
 import 'vp_palette.dart';
 
 /// Abstände (Vielfache von 4). Keine eigenen Zahlen in Bildschirmen, wenn eine Stufe passt.
@@ -143,5 +144,6 @@ class VpTokens extends ThemeExtension<VpTokens> {
 }
 
 extension VpKontext on BuildContext {
-  VpTokens get vp => Theme.of(this).extension<VpTokens>()!;
+  /// Die Entwurfswerte der aktuellen Atmosphäre. Ohne VpTokens im Theme (Tests, fremde Themes) gelten die der App.
+  VpTokens get vp => Theme.of(this).extension<VpTokens>() ?? AppTheme.tokens;
 }

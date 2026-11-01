@@ -12,6 +12,7 @@ import '../courses/lesson_detail_screen.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/vp_tokens.dart';
 import '../../widgets/design/vp_tabs.dart';
+import '../../widgets/design/vp_komponenten.dart';
 import '../yes_no_maybe/yes_no_maybe_screen.dart';
 import 'invite_partner.dart';
 import 'paar_abend_screen.dart';
@@ -842,22 +843,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           return Center(
             child: Padding(
               padding: EdgeInsets.all(32),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.forum_outlined, size: 44, color: AppTheme.tinteStumm),
-                  SizedBox(height: 12),
-                  Text(
-                    t.couplesChannelItSStillQuietHere,
-                    style: TextStyle(color: AppTheme.tinteLeise, fontSize: 15, fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(height: 6),
-                  Text(
-                    t.couplesChannelSendASparkFromThe,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: AppTheme.tinteStumm, fontSize: 13, height: 1.4),
-                  ),
-                ],
+              child: VpLeerzustand(
+                icon: Icons.forum_outlined,
+                titel: t.couplesChannelItSStillQuietHere,
+                text: t.couplesChannelSendASparkFromThe,
               ),
             ),
           );

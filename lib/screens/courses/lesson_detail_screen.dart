@@ -337,8 +337,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (lesson.image != null) ...[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(VpRadius.karte),
+              VpTafel(
                 child: Container(
                   color: AppTheme.papierVertieft,
                   child: lesson.image!.endsWith('.svg')
@@ -367,8 +366,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             ],
             if (lesson.zeichnung != null) ...[
               // Körperzeichnung (16:9) mit Beschriftung; Antippen öffnet sie zum Zoomen.
-              ClipRRect(
-                borderRadius: BorderRadius.circular(VpRadius.karte),
+              VpTafel(
                 child: GestureDetector(
                   onTap: () => _openDiagram(lesson.zeichnung!),
                   child: Stack(
