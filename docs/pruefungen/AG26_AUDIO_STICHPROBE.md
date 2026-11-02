@@ -42,3 +42,27 @@
 | de/martin_praxis_klarheit | unauffällig | - | Klar, achtsam und zentriert; angenehme Pausen und natürlicher Satzbau. |
 | en/victoria_praxis_morgen | unauffällig | - | Flüssige, lebendige und dennoch sanfte Morgen-Stimmung. |
 | en/martin_praxis_abend | unauffällig | - | Warme Abendstimmung, fließender Rhythmus, perfekte Ausklang-Atmosphäre. |
+
+---
+
+## Nachtrag 02.11.2026: Gezieltes Gegenhören der Korrekturfassung `de/prost_3`
+
+- **Prüfendes Modell:** Gemini 3.8 Flash (über Antigravity-Agentenumgebung)
+- **Prüfmethode:** Direkte multimodale Audioverarbeitung (`read_file`) der Vorher-/Nachherproben und der Gesamtkorrekturfassung unter `build/redaktion/gesamt/korrektur-ag26/` (`vorher_prostata.wav`, `vorher_herstellerangaben.wav`, `nachher_aussprache.wav`, `prost_3_korrektur.opus`).
+- **Referenzdaten:**
+  - `korrektur_sha256`: `ccdf3c56531d7f8a08ac2078486a9d488047a5c01d0043b1d3852b48b6355df2`
+  - `dauer_sekunden`: `196.85`
+  - `original_sha256`: `52df23373f27aa01bd34ec88e3faa06432c63579f7fad010652d7b08cc3be8ce`
+
+### Akustischer Befund der Korrekturfassung:
+1. **„Prostata“ (Lautschrift nachher: `pɾˈoːstata`):**
+   - **Ergebnis: Unverändert auffällig.**
+   - Sowohl im kurzen Vergleichssatz als auch in der Gesamtfassung (bei 0:11 und 1:44) artikuliert Martin das *s* vor *t* weiterhin deutlich palatalisiert / mit zischendem Sch-Beiklang wie **„Proschtata“**. Die vorgenommene Dehnung des *o* behebt den Ausspracheeindruck nicht.
+2. **„Herstellerangaben“ (Lautschrift nachher: `hˈeːɐʃtɛlɐʔˌanɡaːbən`):**
+   - **Ergebnis: Neue Unnatürlichkeit (Verschlusslaut t).**
+   - Der Versuch, mit dem Glottisschlag `ʔ` die Silbentrennung zu schärfen, führt in der Synthese zu einem hörbaren dentalen Verschlusslaut *t*, sodass das Wort deutlich als **„Herstellert-angaben“** bzw. **„Hersteller-tangaben“** (bei 2:38) gesprochen wird. Das klingt unnatürlich und fehlerhaft.
+
+### Empfehlung für Claude / Codex:
+- **Korrekturfassung so nicht übernehmen.** Die Neusynthese verbessert die beanstandeten Stellen nicht: „Prostata“ klingt weiterhin nach „Proschtata“, und bei „Herstellerangaben“ ist ein störendes „t“ hineingeraten.
+- Für eine echte Bereinigung sollte die Lautschrift von *Prostata* ohne Palatalisierung geführt werden (z. B. reines stimmloses *s* explizit) und *Herstellerangaben* ohne harten Knacklaut-Einschub, der als *t* interpretiert wird.
+- Alternativ ist die Originalfassung von `de/prost_3` im Satzfluss insgesamt runder, da die ursprüngliche Silbentrennung bei „Herstellerangaben“ im Fluss weit weniger auffiel als das jetzige „Herstellertangaben“.
