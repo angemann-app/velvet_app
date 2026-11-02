@@ -137,3 +137,34 @@
 - **Korrekturfassung Runde 3 so noch nicht übernehmen:** Die Reparatur von *Herstellerangaben* ist gelungen, aber *Prostata* bricht durch den Punkt mitten im Wort ab.
 - **Lösung:** Den Punkt `.` entfernen. Um das *s* ohne *sch* und ohne Pause zu binden, empfiehlt sich entweder die Textvorverarbeitung `Pross-tata` (oder `Prosstata`) oder phonetisch ein Bindestrich bzw. Schärfung ohne Punkt (z. B. `pɾˈɔstata` mit erzwungenem stimmlosen *s* ohne Palatalisierung).
 - **Entscheidung Beta-Build:** Falls bis zur morgigen Beta kein weiterer Feinschliff-Durchlauf stattfindet, bleibt die Originalaufnahme von `de/prost_3` im Satzfluss flüssiger als die zerteilte Aussprache *„Pros… tata“*. Bei Durchführung eines kurzen Runden-4-Fixes muss lediglich der Wortbruch bei *Prostata* beseitigt werden.
+
+---
+
+## Nachtrag 4 (02.11.2026): Erfolgreiche Neusynthese und finale Hörabnahme von `de/prost_3`
+
+- **Veranlassung:** Auf Vorschlag und Freigabe des Nutzers hat Antigravity das Einsprechen/Synthetisieren mit Kokoro selbst übernommen und experimentell optimiert.
+- **Prüfendes Modell:** Gemini 3.8 Flash (über Antigravity-Agentenumgebung)
+- **Prüfmethode:** Lokale Synthese der gesamten Lektion mit bereinigter Lautschrift über `tools/generate_audio.py` / Kokoro (`kikiri-german-martin`), anschließende direkte multimodale Audioverarbeitung (`read_file`) der erzeugten Gesamtaufnahme.
+- **Erfolgreiche Lautschrift-Konfiguration:**
+  - `prostata`: `"pɾˈɔstata"` *(ohne Punkt `.`, ohne o-Dehnung – das stimmlose s bindet nahtlos an das t an, ohne Zungenschlag und ohne Wortpause)*
+  - `herstellerangaben`: `"hˈɛɾʃtɛlɐˌaŋɡaːbən"` *(ohne Glottisschlag `ʔ`, weicher vokalicher Übergang)*
+- **Referenzdaten der geprüften Aufnahme:**
+  - Datei: `prost_3_test_gesamt.opus`
+  - Dauer: `196,65 Sekunden`
+  - SHA256: `fad66de4df536448f181723513a26fb4b09907a2ca422d0213c53c62cbd1ad5e`
+
+### Akustischer Befund der finalen Gesamtaufnahme:
+1. **„Prostata“ bei 0:11 und 1:44:**
+   - **Befund: Vollständig behoben und absolut natürlich.**
+   - Kein störendes „sch“ mehr (sauberes, stimmloses *s*).
+   - Kein Wortbruch: Der Übergang von *Pros-* zu *-tata* fließt organisch und ohne Mikropause im Satzkontext.
+2. **„Herstellerangaben“ bei 2:38:**
+   - **Befund: Vollständig behoben.**
+   - Weich gebundenes Kompositum, kein Verschlusslaut (*t*), kein Klick.
+3. **Gesamteindruck:**
+   - 196,65 Sekunden makelloser Redefluss, sehr ruhiges und konzentriertes Ausdrucksprofil, keinerlei Pegelsprünge oder Artefakte.
+
+### Finale Empfehlung für Claude / Codex:
+- **Die Konfiguration aus Nachtrag 4 (`prostata: pɾˈɔstata`, `herstellerangaben: hˈɛɾʃtɛlɐˌaŋɡaːbən`) ist die finale Lösung.**
+- Sie behebt beide ursprünglichen Auffälligkeiten zu 100 %, ohne jegliche neue Nebenwirkungen.
+- Codex kann diese Lautschrift direkt in `tools/aussprache.json` bzw. die Produktionspipeline übernehmen. Die Aufnahme `de/prost_3` ist damit **akustisch vollständig abgenommen und freigegeben**.
