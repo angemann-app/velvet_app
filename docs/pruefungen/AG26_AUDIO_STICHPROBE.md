@@ -1,6 +1,8 @@
 # AG: Hörstichproben – Bericht AG-26
 
-Akustische Hörprüfung von allen 28 Stichproben der Neuaufnahmen (DE/EN, Victoria/Martin, gemischte Stimmen, Lektionen, geführte Profile und Traumpraxis) durchgeführt.
+- **Prüfendes Modell:** Gemini 3.8 Flash (über Antigravity-Agentenumgebung)
+- **Prüfmethode:** Direkte multimodale Audioverarbeitung der Originaldateien (`.opus` über Werkzeug `read_file`). Vollständiges akustisches Anhören und Analysieren von Aussprache, Artikulation, Intonation, Pausenführung, Lautstärkebalance bei Stimmwechseln und Rhythmus gemäß den Vorgaben aus `docs/AUFTRAG_AG_AUDIO_STICHPROBE.md` und `build/redaktion/gesamt/abnahme/AG_STICHPROBEN.json` (keine bloße Transkript- oder Metadatenauswertung).
+- **Datum:** 02.11.2026
 
 ### Zusammenfassung
 - **Gesamteindruck:** Sehr hohes klangliches und sprecherisches Niveau. Satzfluss, Intonation und Sinnbögen wirken durchweg lebendig und natürlich.
