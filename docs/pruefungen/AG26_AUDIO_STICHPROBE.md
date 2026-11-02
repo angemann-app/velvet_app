@@ -79,3 +79,34 @@
 
 3. **Pragmatische Option für den morgigen Beta-Build:**
    - Falls vor dem Build kein neuer Durchlauf mit angepasster Lautschrift gewünscht ist: Die **Originalfassung von `de/prost_3`** beibehalten. Die dortige leichte Silbentrennung bei „Hersteller-rangaben“ ist im Redefluss deutlich unauffälliger als das jetzige „Herstellert-angaben“.
+
+---
+
+## Nachtrag 2 (02.11.2026): Akustischer Vergleich der beiden Aussprachevarianten (Runde 2)
+
+- **Prüfendes Modell:** Gemini 3.8 Flash (über Antigravity-Agentenumgebung)
+- **Prüfmethode:** Direkte multimodale Audioverarbeitung (`read_file`) der beiden neuen Ausspracheproben unter `build/redaktion/gesamt/korrektur-ag26/varianten-2/`.
+- **Geprüfte Dateien und Prüfsummen:**
+  - **Variante a:** `variante_a.wav` (9,16 s, SHA256: `7d308c7790190bfe133b975119725a63cd5b1f9b013e845674a1f7060eee617e`)  
+    Phoneme: `pɾˈɔs tata` / `hˈɛɾʃtɛlɐˌaŋɡaːbən`
+  - **Variante b:** `variante_b.wav` (9,36 s, SHA256: `7a688a4f866fb2607863b4e26fdc84de26cf20d42e529b08adf5a4ab2684e0ea`)  
+    Phoneme: `pɾˈɔs.tata` / `hˈɛɾʃtɛlɐ ˈanɡaːbən`
+
+### Akustischer Direktvergleich je Wort:
+
+1. **„Prostata“: Sieger ist Variante B (`pɾˈɔs.tata`)**
+   - **Variante A (`pɾˈɔs tata`):** Das störende „sch“ ist vollständig verschwunden; sauberes, scharfes *s*. Durch das Leerzeichen in der Lautschrift entsteht jedoch eine minimale interne Zäsur zwischen *Pros* und *tata*.
+   - **Variante B (`pɾˈɔs.tata`):** Exzellent! Das *s* ist absolut sauber und stimmlos (kein Zungenschlag, kein „sch“). Der Punkt als Silbengrenze erzeugt **keine störende Pause**, sondern bindet die Silben völlig natürlich zu einem fließenden, organischen Gesamtwort zusammen.
+   - **Urteil:** Variante B ist die natürlichere und klanglich überzeugendere Variante.
+
+2. **„Herstellerangaben“: Sieger ist Variante A (`hˈɛɾʃtɛlɐˌaŋɡaːbən`)**
+   - **Variante A (`hˈɛɾʃtɛlɐˌaŋɡaːbən`):** Hervorragend! Kein Verschlusslaut „t“, kein harter Klick. Der Übergang vom vokalisierten *-er* `[ɐ]` zum *a* fließt weich und natürlich wie ein echtes deutsches Kompositum.
+   - **Variante B (`hˈɛɾʃtɛlɐ ˈanɡaːbən`):** Zwar ebenfalls ohne „t“-Fehler, aber durch das Leerzeichen und den doppelten Hauptakzent entsteht eine deutliche Sprechpause. Es klingt wie zwei separate Wörter (*„Hersteller … Angaben“*) statt wie ein Begriff.
+   - **Urteil:** Variante A ist klar natürlicher und im Satzfluss vorzuziehen.
+
+### Empfehlung für die Neusynthese von `de/prost_3`:
+- Für die finale Erzeugung der Lektion `de/prost_3` die Kombination aus den beiden besten Teilvarianten nutzen:
+  - **`prostata`:** `pɾˈɔs.tata` (aus Variante B)
+  - **`herstellerangaben`:** `hˈɛɾʃtɛlɐˌaŋɡaːbən` (aus Variante A)
+- Mit dieser Kombination sind beide ursprünglichen Mängel vollständig behoben, ohne neue Nebenwirkungen oder Pausenartefakte zu erzeugen.
+- *(Hinweis: Noch keine Gesamtabnahme der Lektion, da die vollständige Aufnahme mit diesen Phonemen noch erzeugt werden muss).*
