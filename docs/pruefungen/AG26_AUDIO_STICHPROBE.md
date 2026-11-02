@@ -64,5 +64,18 @@
 
 ### Empfehlung für Claude / Codex:
 - **Korrekturfassung so nicht übernehmen.** Die Neusynthese verbessert die beanstandeten Stellen nicht: „Prostata“ klingt weiterhin nach „Proschtata“, und bei „Herstellerangaben“ ist ein störendes „t“ hineingeraten.
-- Für eine echte Bereinigung sollte die Lautschrift von *Prostata* ohne Palatalisierung geführt werden (z. B. reines stimmloses *s* explizit) und *Herstellerangaben* ohne harten Knacklaut-Einschub, der als *t* interpretiert wird.
-- Alternativ ist die Originalfassung von `de/prost_3` im Satzfluss insgesamt runder, da die ursprüngliche Silbentrennung bei „Herstellerangaben“ im Fluss weit weniger auffiel als das jetzige „Herstellertangaben“.
+
+#### Konkrete Regie- und Phonetik-Hinweise für eine saubere Neusynthese:
+
+1. **„Prostata“: Warum Kokoro scheitert und wie es gelingt:**
+   - **Ursache:** Im deutschen G2P-Regelwerk wird `st` am Wortanfang (*Stein, Start*) automatisch zu `[ʃt]` (scht). Kokoros deutscher Parser zerlegt *Prostata* fälschlich morphematisch in *Pro-stata*, stuft `st` als Anlaut ein und palatalisiert zu *Pro-schtata*. Die Verlängerung des *o* ändert daran nichts.
+   - **Soll-Klang:** Kurzes, offenes *o* (wie in *Post* oder *Kosten*, nicht lang wie bei *Prost!*), Betonung klar auf der ersten Silbe, Zungenspitze flach hinter den Schneidezähnen für ein sauberes, scharfes *s* vor dem Zahndamm-Schlag des *t*: `[ˈpʁɔstata]` (*Próss-ta-ta*).
+   - **Kokoro-Lösung:** Dem Modell die Silbengrenze nach dem *s* aufzwingen (z. B. `pɾˈɔs.tata` bzw. Vorverarbeitung als `Pross-tata` oder lateinische Silbentrennung), damit das `s` zur ersten Silbe gehört und nicht als `st`-Anlaut interpretiert wird.
+
+2. **„Herstellerangaben“: Warum das „t“ entstand und wie es gelingt:**
+   - **Ursache:** Der eingefügte Glottisschlag `ʔ` vor dem Vokal (`hˈeːɐʃtɛlɐʔˌanɡaːbən`) wird vom neuronalen Vocoder als harter Plosiv (dentaler Verschlusslaut *t*) missinterpretiert -> *„Herstellert-angaben“*.
+   - **Soll-Klang:** Hauptbetonung auf *Hérsteller*, Nebenbetonung auf *Ángaben*. Am Übergang vom vokalisierten *-er* `[ɐ]` zum *a* braucht es keinen harten Glottisschlag, sondern ein weiches Hinübergleiten der Stimme: `[ˈhɛʁʃtɛlɐˌaŋɡaːbən]`.
+   - **Kokoro-Lösung:** Den Glottisschlag `ʔ` entfernen und das Wort entweder als fließende Lautschrift `hˈɛɾʃtɛlɐˌaŋɡaːbən` oder im Text schlicht mit Bindestrich als `Hersteller-Angaben` übergeben (Bindestriche verarbeitet Kokoro meist als natürliche, weiche Silbenfuge ohne Plosiv-Artefakt).
+
+3. **Pragmatische Option für den morgigen Beta-Build:**
+   - Falls vor dem Build kein neuer Durchlauf mit angepasster Lautschrift gewünscht ist: Die **Originalfassung von `de/prost_3`** beibehalten. Die dortige leichte Silbentrennung bei „Hersteller-rangaben“ ist im Redefluss deutlich unauffälliger als das jetzige „Herstellert-angaben“.
