@@ -110,3 +110,30 @@
   - **`herstellerangaben`:** `hˈɛɾʃtɛlɐˌaŋɡaːbən` (aus Variante A)
 - Mit dieser Kombination sind beide ursprünglichen Mängel vollständig behoben, ohne neue Nebenwirkungen oder Pausenartefakte zu erzeugen.
 - *(Hinweis: Noch keine Gesamtabnahme der Lektion, da die vollständige Aufnahme mit diesen Phonemen noch erzeugt werden muss).*
+
+---
+
+## Nachtrag 3 (02.11.2026): Akustische Prüfung der Gesamtkorrektur Runde 3 (`final-runde3`)
+
+- **Prüfendes Modell:** Gemini 3.8 Flash (über Antigravity-Agentenumgebung)
+- **Prüfmethode:** Direkte multimodale Audioverarbeitung (`read_file`) der vollständigen Neusynthese `prost_3_korrektur.opus` sowie der kurzen Schnittprobe `nachher_aussprache.wav` unter `build/redaktion/gesamt/korrektur-ag26/final-runde3/`.
+- **Referenzdaten:**
+  - `korrektur_sha256`: `fe308ac77dc24c315cfd3cd592426be6c5f3f5d5448594583683758110718549`
+  - `dauer_sekunden`: `197.05`
+  - Phonem-Vorgaben: `prostata: pɾˈɔs.tata`, `herstellerangaben: hˈɛɾʃtɛlɐˌaŋɡaːbən`
+
+### Akustischer Befund im Satzfluss der Gesamtaufnahme:
+
+1. **„Herstellerangaben“ (bei 2:38): Vollkommen behoben (unauffällig)**
+   - Satz: *„…für anale Nutzung vorgesehenes Toy mit sicherem Stopper und nach Herstellerangaben.“*
+   - Die Aussprache fließt weich, fehlerfrei und ohne harten Verschlusslaut (*t*) oder Klick. Klingt vollkommen natürlich wie ein deutsches Kompositum.
+
+2. **„Prostata“ (bei 0:11 und 1:44): Neuer Befund – Wortbruch im Redefluss**
+   - **0:11:** *„Wenn du – allein oder zu zweit – neugierig bist, die Pros… tata direkt zu erkunden…“*
+   - **1:44:** *„Drittens, Ankommen und Bewegen: Die Pros… tata kann durch die vordere Enddarmwand…“*
+   - **Beobachtung:** Während die isolierte 9-Sekunden-Wortprobe noch flüssig wirkte, interpretiert der neuronale Synthese-Parser den Punkt `.` im echten Satzkontext als Satzzeichen bzw. Stillepause. Martin stoppt mitten im Wort ab (*„Pros… tata“*). Das zischende *sch* ist zwar vollständig beseitigt, doch der abrupte Wortbruch stört den ruhigen Redefluss empfindlich.
+
+### Empfehlung für Claude / Codex:
+- **Korrekturfassung Runde 3 so noch nicht übernehmen:** Die Reparatur von *Herstellerangaben* ist gelungen, aber *Prostata* bricht durch den Punkt mitten im Wort ab.
+- **Lösung:** Den Punkt `.` entfernen. Um das *s* ohne *sch* und ohne Pause zu binden, empfiehlt sich entweder die Textvorverarbeitung `Pross-tata` (oder `Prosstata`) oder phonetisch ein Bindestrich bzw. Schärfung ohne Punkt (z. B. `pɾˈɔstata` mit erzwungenem stimmlosen *s* ohne Palatalisierung).
+- **Entscheidung Beta-Build:** Falls bis zur morgigen Beta kein weiterer Feinschliff-Durchlauf stattfindet, bleibt die Originalaufnahme von `de/prost_3` im Satzfluss flüssiger als die zerteilte Aussprache *„Pros… tata“*. Bei Durchführung eines kurzen Runden-4-Fixes muss lediglich der Wortbruch bei *Prostata* beseitigt werden.
