@@ -72,6 +72,7 @@ Jede Zeile mit Datum. Einträge, die älter als drei Tage sind, fragt Antigravit
 stillschweigend zu übergehen.
 
 - 27.10.2026: `C:\TOOLS\velvet-inhalte\` (private Inhalte, nie anfassen)
+- 04.11.2026 (Mittwoch): **GitHub-Konto wird umbenannt, Verlauf wird umgeschrieben.** Vorher alles committen und pushen, dann nicht weiterarbeiten; danach den Klon mojo-ag **verwerfen und neu klonen**. Einzelheiten: docs/UMBENENNUNG.md.
 
 ## Offene Aufträge
 
