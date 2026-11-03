@@ -1,4 +1,6 @@
 {
   "_hinweis": "Veröffentlichte Pakete, die tools/pakete_bauen.py gerade nicht neu bauen kann (z. B. fehlen noch Aufnahmen). Sie bleiben mit ihrer veröffentlichten Version, Größe und Prüfsumme im Verzeichnis, sonst verschwänden sie für die Nutzer. Eintrag entfernen, sobald das Paket wieder gebaut wird.",
-  "pakete": []
+  "pakete": [
+    {"name": "en-reihe", "sprache": "en", "version": 5, "groesse": 66892622, "sha256": "f319cf402d6de27732da1ee728ead0adcd0684d9f89cc832834e85240f3b1a5a", "datei": "en-reihe-v5.zip", "nur_r2": true, "spicy": true}
+  ]
 }
