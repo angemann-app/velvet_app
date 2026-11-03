@@ -1206,9 +1206,9 @@ msgid "Innenansichten: Sehr spicy und zu dritt"
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.3
-#. EN: All audio stories are now also available as extra spicy. Two new episodes for three are added, with three perspectives to choose from. They appear in spicy mode, and the app downloads the recordings.
+#. EN: All audio stories are now also available as extra spicy. Two new episodes for three are added, in all three levels and with three perspectives to choose from. They appear in spicy mode, and the app downloads the recordings.
 msgctxt "news:61#2.text"
-msgid "Alle Hörgeschichten gibt es jetzt auch als Sehr spicy. Neu sind zwei Folgen zu dritt, mit drei Perspektiven zum Wählen. Sie erscheinen im Spicy-Modus, die Aufnahmen lädt die App nach."
+msgid "Alle Hörgeschichten gibt es jetzt auch als Sehr spicy. Neu sind zwei Folgen zu dritt, in allen drei Stufen und mit drei Perspektiven zum Wählen. Sie erscheinen im Spicy-Modus, die Aufnahmen lädt die App nach."
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.3
@@ -1224,13 +1224,13 @@ msgid "Zum Einschalten gibst du Monat und Jahr deiner Geburt an und bestätigst 
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.4
-#. EN: Pictures for the audio stories
+#. EN: Pictures for the audio stories, threesome episodes play
 msgctxt "news:62#0.titel"
-msgid "Bilder zu den Hörgeschichten"
+msgid "Bilder zu den Hörgeschichten, Dreier-Folgen spielen"
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.4
-#. EN: Tap the scene picture in the player or choose “View pictures” on the episode: the pictures open full screen, you swipe between scenes and zoom with two fingers. Only in spicy mode and never with the discreet app icon.
+#. EN: Tap the scene picture in the player or choose “View pictures” on the episode: the pictures open full screen, you swipe between scenes and zoom with two fingers. Only in spicy mode and never with the discreet app icon. The threesome episodes now play reliably.
 msgctxt "news:62#0.text"
-msgid "Tippe im Player auf das Szenenbild oder wähle „Bilder ansehen“ bei der Folge: Die Bilder erscheinen im Vollbild, du wischst zwischen den Szenen und zoomst mit zwei Fingern. Nur im Spicy-Modus und nie mit dem diskreten App-Symbol."
+msgid "Tippe im Player auf das Szenenbild oder wähle „Bilder ansehen“ bei der Folge: Die Bilder erscheinen im Vollbild, du wischst zwischen den Szenen und zoomst mit zwei Fingern. Nur im Spicy-Modus und nie mit dem diskreten App-Symbol. Die Folgen zu dritt spielen jetzt zuverlässig."
 msgstr ""

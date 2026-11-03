@@ -145,14 +145,15 @@ class WiedergabePlan {
       'blendeMs',
       'stimmeVon',
       'stimmeBis',
-      'sprachfamilie'
+      'sprachfamilie',
+      'trio'
     };
     final params = <String, Object>{};
     for (final e in p.entries) {
       if (!keys.contains(e.key))
         throw const FormatException('Unbekannte Einstellung');
       final v = e.value;
-      const schalter = {'teppich', 'ichZuerst', 'lustZaehlen'};
+      const schalter = {'teppich', 'ichZuerst', 'lustZaehlen', 'trio'};
       const lautstaerken = {'teppichLaut', 'stimmeVon', 'stimmeBis'};
       const zahlen = {'minuten', 'lustFolge', 'blendeMs'};
       if (schalter.contains(e.key)

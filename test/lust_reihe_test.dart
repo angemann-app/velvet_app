@@ -1,8 +1,11 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:velvetpulse/models/lust_reihe.dart';
+import 'package:velvetpulse/models/wiedergabe_plan.dart';
 import 'package:velvetpulse/services/pakete.dart';
+import 'package:velvetpulse/services/wiedergabe_plaene.dart';
 
 /// Szenen-IDs des gemeinsamen Szenenbuchs, in dieser Reihenfolge.
 const szenenIds = ['opening', 'attraction', 'afterglow'];
@@ -84,6 +87,20 @@ void main() {
       expect(folge.gewaehlt('soft', 'frau_b', spicyErlaubt: true)!.id, 'sehrspicy_frau_b');
       expect(folge.gewaehlt('soft', 'gibtsnicht', spicyErlaubt: true)!.id, 'sehrspicy_frau_a');
       expect(folge.partnerVon(folge.fassungen.first).map((f) => f.id), ['sehrspicy_frau_b', 'sehrspicy_mann']);
+    });
+
+    test('Der Hörplan einer Dreier-Folge übersteht Speichern und Laden (Parameter „trio“)', () {
+      final folge = _parseFolge(trio());
+      final plan = WiedergabePlaene.reihe(ReiheDaten([folge], const {}), folge, folge.fassungen.first);
+      expect(plan.parameter['trio'], isTrue);
+      final zurueck = WiedergabePlan.fromJson(jsonDecode(jsonEncode(plan.toJson())) as Map<String, dynamic>);
+      expect(zurueck.parameter['trio'], isTrue);
+      expect(zurueck.abschnitte, hasLength(plan.abschnitte.length));
+
+      final normal = _parseFolge();
+      final p2 = WiedergabePlaene.reihe(ReiheDaten([normal], const {}), normal, normal.fassungen.first);
+      expect(p2.parameter.containsKey('trio'), isFalse);
+      WiedergabePlan.fromJson(jsonDecode(jsonEncode(p2.toJson())) as Map<String, dynamic>);
     });
 
     test('Folgen mit allen Stufen wählen wie bisher', () {
