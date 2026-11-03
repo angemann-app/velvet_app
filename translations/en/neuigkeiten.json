@@ -688,6 +688,11 @@
           "icon": "bedtime",
           "titel": "Compare sleep data",
           "text": "Optionally view previously synced sleep records alongside your own observations. Everything remains usable without a wearable."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Notifications no longer interrupt",
+          "text": "If a notification arrives during a recording, it gets briefly quieter instead of stopping. A phone call still pauses it, and it never restarts on its own."
         }
       ]
     }
@@ -727,6 +732,6 @@
     "news:57": "41de9b83fda3c38f",
     "news:58": "e0e4be67dbd7672b",
     "news:59": "56252afd43bd3f86",
-    "news:60": "1f31f88c3d05f676"
+    "news:60": "24de6b882a4a33d6"
   }
 }

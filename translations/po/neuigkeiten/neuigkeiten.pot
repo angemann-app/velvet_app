@@ -1162,3 +1162,15 @@ msgstr ""
 msgctxt "news:60#1.text"
 msgid "Auf Wunsch kannst du bereits synchronisierte Schlafdaten neben deinen eigenen Beobachtungen ansehen. Ohne Wearable bleibt alles nutzbar."
 msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.2
+#. EN: Notifications no longer interrupt
+msgctxt "news:60#2.titel"
+msgid "Benachrichtigungen unterbrechen nicht mehr"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.2
+#. EN: If a notification arrives during a recording, it gets briefly quieter instead of stopping. A phone call still pauses it, and it never restarts on its own.
+msgctxt "news:60#2.text"
+msgid "Kommt während einer Aufnahme eine Benachrichtigung, wird sie kurz leiser statt zu stoppen. Bei einem Anruf pausiert sie weiter und startet nie von selbst."
+msgstr ""

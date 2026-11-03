@@ -688,6 +688,11 @@
           "icon": "bedtime",
           "titel": "Schlafdaten vergleichen",
           "text": "Auf Wunsch kannst du bereits synchronisierte Schlafdaten neben deinen eigenen Beobachtungen ansehen. Ohne Wearable bleibt alles nutzbar."
+        },
+        {
+          "icon": "notifications",
+          "titel": "Benachrichtigungen unterbrechen nicht mehr",
+          "text": "Kommt während einer Aufnahme eine Benachrichtigung, wird sie kurz leiser statt zu stoppen. Bei einem Anruf pausiert sie weiter und startet nie von selbst."
         }
       ]
     }
