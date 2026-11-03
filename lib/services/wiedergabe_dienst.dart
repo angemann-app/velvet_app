@@ -14,8 +14,25 @@ import 'wiedergabe_ausgabe.dart';
 import 'wiedergabe_lauf.dart';
 import 'wiedergabe_plaene.dart';
 
+/// Wie die Wiedergabe auf eine Unterbrechung des Audiofokus antwortet.
+enum UnterbrechungsReaktion { leiser, normal, pausieren, keine }
+
 class WiedergabeDienst with WidgetsBindingObserver {
   static final instanz = WiedergabeDienst._();
+
+  /// Lautstärke-Anteil, solange eine kurze Benachrichtigung spielt.
+  static const duckFaktor = 0.35;
+
+  /// Android meldet kurze Töne (Benachrichtigungen) als „duck“: leiser weiterspielen statt pausieren.
+  /// Alles andere, was den Fokus ganz übernimmt (Anruf, andere Wiedergabe), pausiert wie bisher
+  /// und startet nie von selbst wieder.
+  @visibleForTesting
+  static UnterbrechungsReaktion reaktionAuf(AudioInterruptionEvent e) =>
+      e.type == AudioInterruptionType.duck
+          ? (e.begin ? UnterbrechungsReaktion.leiser : UnterbrechungsReaktion.normal)
+          : (e.begin ? UnterbrechungsReaktion.pausieren : UnterbrechungsReaktion.keine);
+
+  double _duck = 1.0;
   WiedergabeDienst._() {
     lauf = WiedergabeLauf(
         ausgabe: nativeAbschnittAusgabe,
@@ -56,8 +73,18 @@ class WiedergabeDienst with WidgetsBindingObserver {
       _session = await AudioSession.instance;
       await _session!.configure(const AudioSessionConfiguration.speech());
       _session!.interruptionEventStream.listen((e) {
-        // Telefonat, andere Wiedergabe: niemals ungefragt wieder anlaufen.
-        if (e.begin && lauf.spielt) unawaited(pause());
+        switch (reaktionAuf(e)) {
+          case UnterbrechungsReaktion.leiser:
+          case UnterbrechungsReaktion.normal:
+            // Benachrichtigung: kurz leiser statt Abbruch, danach wieder normal.
+            _duck = reaktionAuf(e) == UnterbrechungsReaktion.leiser ? duckFaktor : 1.0;
+            unawaited(_begleiten(lauf));
+          case UnterbrechungsReaktion.pausieren:
+            // Telefonat, andere Wiedergabe: niemals ungefragt wieder anlaufen.
+            if (lauf.spielt) unawaited(pause());
+          case UnterbrechungsReaktion.keine:
+            break;
+        }
       });
     } catch (_) {}
     _kanal.setMethodCallHandler((call) async {
@@ -208,7 +235,7 @@ class WiedergabeDienst with WidgetsBindingObserver {
           ? (l.vergangen.inMilliseconds / l.dauer.inMilliseconds)
               .clamp(0.0, 1.0)
           : 0.0;
-      await l.laut((von + (bis - von) * anteil).clamp(0.0, 1.0));
+      await l.laut(((von + (bis - von) * anteil) * _duck).clamp(0.0, 1.0));
     }
     final soll = p?.parameter['teppich'] == true;
     if (!soll || !l.vorhanden || l.zustand == WiedergabeZustand.fehler) {
@@ -240,7 +267,7 @@ class WiedergabeDienst with WidgetsBindingObserver {
       final rest = (d - l.position.inMilliseconds) / blende;
       laut *= rest.clamp(0.0, 1.0);
     }
-    await _teppich!.setVolume(laut.clamp(0.0, 1.0));
+    await _teppich!.setVolume((laut * _duck).clamp(0.0, 1.0));
     if (!_teppichAn) {
       await _teppich!.play(AssetSource('audio/paar/klangteppich.opus'));
       _teppichAn = true;
