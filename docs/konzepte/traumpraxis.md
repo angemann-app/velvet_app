@@ -71,3 +71,8 @@ Nutzer hat nach der Textarbeit ausdrücklich auch die Produktion durch Codex bea
 ## Präzisierung des Audio-Anschlusses durch Nutzer-Nachfrage
 
 Die drei vorbereiteten Begleitungen gehören in die kommende Beta. Konkrete Titel/IDs und Spicy-18+-Zuordnung aus der vorhandenen kanonischen Quelle bestätigt. `de-gefuehrt` / `en-gefuehrt`, Aufnahmen unter `audio/traum/<stimme>_<id>.opus`, sprachbezogener Inhaltskatalog `audio/traum/traumpraxis.json`. Bestehenden globalen Player und drei direkte Einstiege im Traumpraxis-Modul nutzen, nicht in die zufällige Einschlafplanung mischen. Kataloge und zwölf Hash-/Dauer-Zuordnungen sind lokal vorbereitet. Vollständiger technischer Anschlussauftrag an Claude: `docs/pruefungen/TRAUMPRAXIS_AUDIO_INTEGRATION_CLAUDE.md`. App-/Paketanschluss noch von Claude auszuführen; keine Veröffentlichung oder Versionsfreigabe durch diese Dokumentation.
+
+
+## Wearable-Umfang präzisiert
+
+Nutzerentscheidung: Live-Funktionen vorerst streichen; nur bereits synchronisierte Schlafdaten freiwillig mit eigenen Traumpraxis-Beobachtungen abgleichen. Konzept und offene Schnittstellenfragen: `schlafdaten-abgleich.md`. Vollständige Nutzung ohne Gerät erhalten. Keine neue Live-REM-Erkennung oder schlafphasengesteuerte Signale in diesem Umfang.

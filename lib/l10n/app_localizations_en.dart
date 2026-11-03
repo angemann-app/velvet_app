@@ -4158,6 +4158,63 @@ class AppLocalizationsEn extends AppLocalizations {
       'The content of these pieces comes with the recordings. Download them in package management and the titles will appear here.';
 
   @override
+  String get audioFuerHeute => 'For today';
+
+  @override
+  String get audioAlleAnzeigen => 'Show all';
+
+  @override
+  String get audioGruppeFuerMich => 'For me';
+
+  @override
+  String get audioGruppeFuerMichText =>
+      'Time just for you: feel your body, explore yourself, experience dreams more consciously. You choose the length and how close you go.';
+
+  @override
+  String get audioGruppeFuerUns => 'For us';
+
+  @override
+  String get audioGruppeFuerUnsText =>
+      'Listen together or take turns giving and receiving. A voice guides you, you set the pace.';
+
+  @override
+  String get audioGruppeNacht => 'Night';
+
+  @override
+  String get audioGruppeNachtNeutral => 'Calm';
+
+  @override
+  String get audioGruppeNachtText =>
+      'For falling asleep, the dream evening and getting back to sleep. The voice grows quieter, you may drift off.';
+
+  @override
+  String get audioGruppeGeschichten => 'Stories';
+
+  @override
+  String get audioGruppeGeschichtenNeutral => 'Audio stories';
+
+  @override
+  String get audioGruppeGeschichtenText =>
+      'Connected audio stories for adults, not for falling asleep. You choose the perspective and intensity.';
+
+  @override
+  String get audioGemeinsamTitel => 'Listen together';
+
+  @override
+  String get audioGemeinsamText =>
+      'Start a recording and tap \"Listen together\" in the player. You both need the same recording on your device; you listen in time and either of you can pause.';
+
+  @override
+  String get traumpraxisKarteTitel => 'Dream practice';
+
+  @override
+  String get traumpraxisKarteTitelNeutral => 'Practice';
+
+  @override
+  String get traumpraxisKarteText =>
+      'Recall, recognise, notice: your practice around the night.';
+
+  @override
   String get traumpraxisErkundung =>
       'More pleasure in dreams and daily life is the aim of this exploration. Whether these exercises increase your waking desire remains an open question for you to observe. MILD is studied as a way to encourage lucid dreams; this brief evening adaptation and the daytime practice are not proven treatments. Restful sleep matters more than any particular dream experience.';
 

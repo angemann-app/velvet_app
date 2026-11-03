@@ -4174,6 +4174,63 @@ class AppLocalizationsDe extends AppLocalizations {
       'Der Inhalt dieser Begleitungen kommt mit den Aufnahmen. Lade sie in der Paketverwaltung nach, dann erscheinen die Titel hier.';
 
   @override
+  String get audioFuerHeute => 'Für heute';
+
+  @override
+  String get audioAlleAnzeigen => 'Alle anzeigen';
+
+  @override
+  String get audioGruppeFuerMich => 'Für mich';
+
+  @override
+  String get audioGruppeFuerMichText =>
+      'Zeit nur für dich: deinen Körper spüren, dich erkunden, Träume bewusster erleben. Du bestimmst Länge und Nähe.';
+
+  @override
+  String get audioGruppeFuerUns => 'Für uns';
+
+  @override
+  String get audioGruppeFuerUnsText =>
+      'Zu zweit hören oder abwechselnd geben und empfangen. Eine Stimme führt, ihr bestimmt das Tempo.';
+
+  @override
+  String get audioGruppeNacht => 'Nacht';
+
+  @override
+  String get audioGruppeNachtNeutral => 'Ruhe';
+
+  @override
+  String get audioGruppeNachtText =>
+      'Zum Einschlafen, für den Traum-Abend und zum Wiedereinschlafen. Die Stimme wird leiser, du darfst einschlafen.';
+
+  @override
+  String get audioGruppeGeschichten => 'Geschichten';
+
+  @override
+  String get audioGruppeGeschichtenNeutral => 'Hörgeschichten';
+
+  @override
+  String get audioGruppeGeschichtenText =>
+      'Zusammenhängende Hörgeschichten für Erwachsene, nicht zum Einschlafen. Du wählst Perspektive und Intensität.';
+
+  @override
+  String get audioGemeinsamTitel => 'Gemeinsam hören';
+
+  @override
+  String get audioGemeinsamText =>
+      'Startet eine Aufnahme und tippt im Player auf „Gemeinsam hören“. Beide brauchen dieselbe Aufnahme auf dem Gerät; ihr hört im selben Takt und beide können pausieren.';
+
+  @override
+  String get traumpraxisKarteTitel => 'Traumpraxis';
+
+  @override
+  String get traumpraxisKarteTitelNeutral => 'Praxis';
+
+  @override
+  String get traumpraxisKarteText =>
+      'Erinnern, erkennen, nachspüren: deine Praxis rund um die Nacht.';
+
+  @override
   String get traumpraxisErkundung =>
       'Mehr Lust im Traum und im Alltag ist das Ziel dieser Erkundung. Ob diese Übungen deine Tageslust erhöhen, ist offen und individuell zu beobachten. MILD wird zur Klartraumförderung untersucht; diese kurze Abendfassung und der Transfer in den Tag sind keine nachgewiesene Behandlung. Erholsamer Schlaf bleibt wichtiger als ein bestimmtes Traumerlebnis.';
 

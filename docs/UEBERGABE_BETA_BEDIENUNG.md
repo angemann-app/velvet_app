@@ -1,5 +1,21 @@
 # Übergabe an Claude Code: Beta über In-App-Download
 
+## Geräteprüfung: Nutzerrückmeldung zur veröffentlichten Beta 4.19.0-beta.1 / Build 59
+
+Aktueller Prüfstand nach Veröffentlichung, vom Nutzer selbst auf seinem Handy gemeldet:
+
+| Schritt | Status |
+|---|---|
+| Update über Beta-Kanal / In-App-Download | Erledigt laut Nutzer |
+| Innenansichten über Szenengrenzen mit ausgeschaltetem Bildschirm | Funktioniert laut Nutzer sehr gut |
+| Traumpraxis-Wiedergabe | Passt laut Nutzer |
+| Kopfhörer-/Anrufunterbrechung und Wiederaufnahme | Funktioniert laut Nutzer weiterhin |
+| Gemeinsames Hören auf zwei Geräten und Backup-Import | Noch offen; Nutzer testet heute Abend |
+
+Dies ist eine tatsächliche Nutzer-Geräterückmeldung, keine neue automatische Codex-Prüfung. Kein Gerätetyp/Androidstand oder detailliertes Einzelprotokoll genannt; keine zusätzliche vollständige Stimmen-/Dateiabnahme daraus ableiten. Insbesondere den ursprünglich gemeldeten Bildschirm-aus-Szenenwechsel nun als auf dem Nutzergerät positiv geprüft festhalten. Keine vollständige Geräteabnahme behaupten, solange Punkt 5 offen ist. Bekannt gewordener Paar-Kanal-Überlauf bei 1,6-facher Schrift bleibt separat offen.
+
+Die früheren Aussagen „noch nicht veröffentlicht“, „Pakete noch nicht übernommen“ bzw. „kein Gerätetest“ weiter unten sind historische Übergabestände. Laut vorheriger Veröffentlichungsmeldung wurde Beta 4.19.0-beta.1 / Build 59 samt aktualisierten Paketen bereits veröffentlicht; hier wurde kein weiterer Build oder Upload ausgelöst.
+
 ## Vollständige App- und Audioübernahme für Claude
 
 Ergänzung auf Nutzerwunsch: `docs/pruefungen/CODEX_APP_GESAMTUEBERGABE.md` bündelt Bedienung/Player, Traumpraxis, Speicherung/DE/EN, Grafiken und App-Icon einschließlich Prüfbelegen und offenen Geräte-/Buildschritten. Vollständige Quelldateiliste mit Hash/Status `build/redaktion/abgleich-claude/APP_DATEIEN.csv`; **37 neue unversionierte Code-/Android-/Testdateien nicht übersehen**. Audio-Abgleich gesondert `docs/pruefungen/CODEX_GESAMTABGLEICH_AUDIO.md`: 1.593 passende frühere Neuaufnahmen fehlen in den aktuell gebauten ZIPs, zusätzlich zum korrekt übernommenen 174er-Stapel. Keine weitere Synthese nötig. Die gemeinsame Antwort steht direkt unter Claudes Rückfrage in `docs/ZUSAMMENARBEIT_CODEX_CLAUDE.md`.

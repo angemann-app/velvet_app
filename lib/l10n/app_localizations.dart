@@ -7185,6 +7185,108 @@ abstract class AppLocalizations {
   /// **'Der Inhalt dieser Begleitungen kommt mit den Aufnahmen. Lade sie in der Paketverwaltung nach, dann erscheinen die Titel hier.'**
   String get traumpraxisHoerenPaket;
 
+  /// No description provided for @audioFuerHeute.
+  ///
+  /// In de, this message translates to:
+  /// **'Für heute'**
+  String get audioFuerHeute;
+
+  /// No description provided for @audioAlleAnzeigen.
+  ///
+  /// In de, this message translates to:
+  /// **'Alle anzeigen'**
+  String get audioAlleAnzeigen;
+
+  /// No description provided for @audioGruppeFuerMich.
+  ///
+  /// In de, this message translates to:
+  /// **'Für mich'**
+  String get audioGruppeFuerMich;
+
+  /// No description provided for @audioGruppeFuerMichText.
+  ///
+  /// In de, this message translates to:
+  /// **'Zeit nur für dich: deinen Körper spüren, dich erkunden, Träume bewusster erleben. Du bestimmst Länge und Nähe.'**
+  String get audioGruppeFuerMichText;
+
+  /// No description provided for @audioGruppeFuerUns.
+  ///
+  /// In de, this message translates to:
+  /// **'Für uns'**
+  String get audioGruppeFuerUns;
+
+  /// No description provided for @audioGruppeFuerUnsText.
+  ///
+  /// In de, this message translates to:
+  /// **'Zu zweit hören oder abwechselnd geben und empfangen. Eine Stimme führt, ihr bestimmt das Tempo.'**
+  String get audioGruppeFuerUnsText;
+
+  /// No description provided for @audioGruppeNacht.
+  ///
+  /// In de, this message translates to:
+  /// **'Nacht'**
+  String get audioGruppeNacht;
+
+  /// No description provided for @audioGruppeNachtNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Ruhe'**
+  String get audioGruppeNachtNeutral;
+
+  /// No description provided for @audioGruppeNachtText.
+  ///
+  /// In de, this message translates to:
+  /// **'Zum Einschlafen, für den Traum-Abend und zum Wiedereinschlafen. Die Stimme wird leiser, du darfst einschlafen.'**
+  String get audioGruppeNachtText;
+
+  /// No description provided for @audioGruppeGeschichten.
+  ///
+  /// In de, this message translates to:
+  /// **'Geschichten'**
+  String get audioGruppeGeschichten;
+
+  /// No description provided for @audioGruppeGeschichtenNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Hörgeschichten'**
+  String get audioGruppeGeschichtenNeutral;
+
+  /// No description provided for @audioGruppeGeschichtenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Zusammenhängende Hörgeschichten für Erwachsene, nicht zum Einschlafen. Du wählst Perspektive und Intensität.'**
+  String get audioGruppeGeschichtenText;
+
+  /// No description provided for @audioGemeinsamTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsam hören'**
+  String get audioGemeinsamTitel;
+
+  /// No description provided for @audioGemeinsamText.
+  ///
+  /// In de, this message translates to:
+  /// **'Startet eine Aufnahme und tippt im Player auf „Gemeinsam hören“. Beide brauchen dieselbe Aufnahme auf dem Gerät; ihr hört im selben Takt und beide können pausieren.'**
+  String get audioGemeinsamText;
+
+  /// No description provided for @traumpraxisKarteTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Traumpraxis'**
+  String get traumpraxisKarteTitel;
+
+  /// No description provided for @traumpraxisKarteTitelNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Praxis'**
+  String get traumpraxisKarteTitelNeutral;
+
+  /// No description provided for @traumpraxisKarteText.
+  ///
+  /// In de, this message translates to:
+  /// **'Erinnern, erkennen, nachspüren: deine Praxis rund um die Nacht.'**
+  String get traumpraxisKarteText;
+
   /// No description provided for @traumpraxisErkundung.
   ///
   /// In de, this message translates to:

@@ -58,7 +58,7 @@ Mit „Als abgeschlossen markieren“ zählt dein Fortschritt.
 
 <img src="anleitung/13_selbst_reise.png" width="260" alt="Geführte Audios">
 
-Auf dem Tab Heute liegen die geführten Audios als Reihe zum Wischen. Der Balken „Geführte Audios“ klappt sie ein und aus; die App merkt sich das.
+Auf dem Tab Heute stehen die geführten Audios nach Anlass geordnet: oben „Für heute“ als Empfehlung nach Tageszeit und danach die übrigen Gruppen. „Für mich“ enthält Körperreise und Traumpraxis, „Für uns“ den Gemeinsamen Abend und das gemeinsame Hören, „Nacht“ Einschlafen, Traum-Abend, Wiedereinschlafen und Lust im Traum, „Geschichten“ die Innenansichten. „Alle anzeigen“ öffnet die vollständige Liste. Der Balken „Geführte Audios“ klappt den Bereich ein und aus; die App merkt sich das.
 
 Körperreise: 10 bis 30 Minuten nur für dich. Du wählst, wie nah du dir kommen möchtest, und eine Stimme führt dich über deinen Körper. Die meiste Zeit ist Stille, damit du spüren kannst.
 

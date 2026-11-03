@@ -7211,6 +7211,108 @@ msgid "Der Inhalt dieser Begleitungen kommt mit den Aufnahmen. Lade sie in der P
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: For today
+msgctxt "ui:audioFuerHeute#text"
+msgid "Für heute"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Show all
+msgctxt "ui:audioAlleAnzeigen#text"
+msgid "Alle anzeigen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For me
+msgctxt "ui:audioGruppeFuerMich#text"
+msgid "Für mich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Time just for you: feel your body, explore yourself, experience dreams more consciously. You choose the length and how close you go.
+msgctxt "ui:audioGruppeFuerMichText#text"
+msgid "Zeit nur für dich: deinen Körper spüren, dich erkunden, Träume bewusster erleben. Du bestimmst Länge und Nähe."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For us
+msgctxt "ui:audioGruppeFuerUns#text"
+msgid "Für uns"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Listen together or take turns giving and receiving. A voice guides you, you set the pace.
+msgctxt "ui:audioGruppeFuerUnsText#text"
+msgid "Zu zweit hören oder abwechselnd geben und empfangen. Eine Stimme führt, ihr bestimmt das Tempo."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Night
+msgctxt "ui:audioGruppeNacht#text"
+msgid "Nacht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Calm
+msgctxt "ui:audioGruppeNachtNeutral#text"
+msgid "Ruhe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For falling asleep, the dream evening and getting back to sleep. The voice grows quieter, you may drift off.
+msgctxt "ui:audioGruppeNachtText#text"
+msgid "Zum Einschlafen, für den Traum-Abend und zum Wiedereinschlafen. Die Stimme wird leiser, du darfst einschlafen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Stories
+msgctxt "ui:audioGruppeGeschichten#text"
+msgid "Geschichten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Audio stories
+msgctxt "ui:audioGruppeGeschichtenNeutral#text"
+msgid "Hörgeschichten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connected audio stories for adults, not for falling asleep. You choose the perspective and intensity.
+msgctxt "ui:audioGruppeGeschichtenText#text"
+msgid "Zusammenhängende Hörgeschichten für Erwachsene, nicht zum Einschlafen. Du wählst Perspektive und Intensität."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Listen together
+msgctxt "ui:audioGemeinsamTitel#text"
+msgid "Gemeinsam hören"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start a recording and tap "Listen together" in the player. You both need the same recording on your device; you listen in time and either of you can pause.
+msgctxt "ui:audioGemeinsamText#text"
+msgid "Startet eine Aufnahme und tippt im Player auf „Gemeinsam hören“. Beide brauchen dieselbe Aufnahme auf dem Gerät; ihr hört im selben Takt und beide können pausieren."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Dream practice
+msgctxt "ui:traumpraxisKarteTitel#text"
+msgid "Traumpraxis"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Practice
+msgctxt "ui:traumpraxisKarteTitelNeutral#text"
+msgid "Praxis"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Recall, recognise, notice: your practice around the night.
+msgctxt "ui:traumpraxisKarteText#text"
+msgid "Erinnern, erkennen, nachspüren: deine Praxis rund um die Nacht."
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: More pleasure in dreams and daily life is the aim of this exploration. Whether these exercises increase your waking desire remains an open question for you to observe. MILD is studied as a way to encourage lucid dreams; this brief evening adaptation and the daytime practice are not proven treatments. Restful sleep matters more than any particular dream experience.
 msgctxt "ui:traumpraxisErkundung#text"
 msgid "Mehr Lust im Traum und im Alltag ist das Ziel dieser Erkundung. Ob diese Übungen deine Tageslust erhöhen, ist offen und individuell zu beobachten. MILD wird zur Klartraumförderung untersucht; diese kurze Abendfassung und der Transfer in den Tag sind keine nachgewiesene Behandlung. Erholsamer Schlaf bleibt wichtiger als ein bestimmtes Traumerlebnis."

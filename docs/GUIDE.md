@@ -58,7 +58,7 @@ Tapping “Mark as completed” counts towards your progress.
 
 <img src="anleitung/13_selbst_reise.png" width="260" alt="Guided audio">
 
-The guided audios sit on the Today tab as a row to swipe through. The “Guided audio” bar folds them in and out; the app remembers your choice.
+On the Today tab the guided audios are sorted by occasion: “For today” at the top is a suggestion based on the time of day, followed by the other groups. “For me” holds the body journey and dream practice, “For us” the shared evening and listening together, “Night” falling asleep, the dream evening, getting back to sleep and Pleasure in dreams, “Stories” the inner views. “Show all” opens the full list. The “Guided audio” bar folds the area in and out; the app remembers your choice.
 
 Body journey: 10 to 30 minutes just for you. You choose how close you want to come to yourself, and a voice guides you across your body. Most of the time is silence, so you can feel.
 

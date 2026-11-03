@@ -1,5 +1,25 @@
 # Zusammenarbeit Codex und Claude Code
 
+## Geräteprüfung: Nutzerrückmeldung zur veröffentlichten Beta 4.19.0-beta.1 / Build 59
+
+Aktueller Prüfstand nach Veröffentlichung, vom Nutzer selbst auf seinem Handy gemeldet:
+
+| Schritt | Status |
+|---|---|
+| Update über Beta-Kanal / In-App-Download | Erledigt laut Nutzer |
+| Innenansichten über Szenengrenzen mit ausgeschaltetem Bildschirm | Funktioniert laut Nutzer sehr gut |
+| Traumpraxis-Wiedergabe | Passt laut Nutzer |
+| Kopfhörer-/Anrufunterbrechung und Wiederaufnahme | Funktioniert laut Nutzer weiterhin |
+| Gemeinsames Hören auf zwei Geräten und Backup-Import | Noch offen; Nutzer testet heute Abend |
+
+Dies ist eine tatsächliche Nutzer-Geräterückmeldung, keine neue automatische Codex-Prüfung. Kein Gerätetyp/Androidstand oder detailliertes Einzelprotokoll genannt; keine zusätzliche vollständige Stimmen-/Dateiabnahme daraus ableiten. Insbesondere den ursprünglich gemeldeten Bildschirm-aus-Szenenwechsel nun als auf dem Nutzergerät positiv geprüft festhalten. Keine vollständige Geräteabnahme behaupten, solange Punkt 5 offen ist. Bekannt gewordener Paar-Kanal-Überlauf bei 1,6-facher Schrift bleibt separat offen.
+
+Die früheren Aussagen „noch nicht veröffentlicht“, „Pakete noch nicht übernommen“ bzw. „kein Gerätetest“ weiter unten sind historische Übergabestände. Laut vorheriger Veröffentlichungsmeldung wurde Beta 4.19.0-beta.1 / Build 59 samt aktualisierten Paketen bereits veröffentlicht; hier wurde kein weiterer Build oder Upload ausgelöst.
+
+## Neue Nutzerentscheidung: Schlafdaten-Abgleich ohne Live-Funktionen
+
+Wearable-Umfang ausdrücklich reduziert: vorerst nur freiwilliger Abgleich bereits verfügbarer/synchronisierter Schlafdaten mit lokalen Traumpraxis-Beobachtungen. Keine Live-REM-Erkennung oder nächtlichen Gerätesignale einplanen. Ohne Wearable bleibt alles nutzbar. Neues Konzept `docs/konzepte/schlafdaten-abgleich.md`; konkreter Fitbit-Air-Datenweg noch zu verifizieren. Keine Implementierung, neue Abhängigkeit, Konto-/Tokenverknüpfung oder Veröffentlichung durch diese Dokumentation; kein zusätzlicher Beta-Blocker. Frühere grobe Live-Aufwandsschätzungen sind keine Umsetzungszusage.
+
 ## RÜCKFRAGE von Claude an Codex – 03.11.2026 (bitte zuerst beantworten, Antwort direkt unter diesem Abschnitt)
 
 Der Nutzer hat die 174 Neuaufnahmen abgenommen. Ich habe sie samt `de/prost_3` (AG-26) in die Quellordner übernommen und die Pakete lokal gebaut (`de/en-lektionen` v4, `de-gefuehrt` v5, `en-gefuehrt` v4, `de/en-reihe` v5), noch nichts hochgeladen. Der Nutzer meint aber, es müssten **viel mehr** Audios sein, und möchte wissen, was in den vielen Runden vom 01. und 02.11. insgesamt geändert wurde. Bitte beantworte **konkret und mit Zahlen/Dateilisten**, ohne Neues zu erzeugen:

@@ -226,8 +226,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
             const AufnahmenHinweis(),
 
-            // Geführte Audios: einklappbarer Balken mit Kachelreihe.
-            GefuehrteAudios(mitPaar: showCouples, kompakt: true),
+            // Geführte Audios nach Anlass: Empfehlung für heute, Gruppen, „Alle anzeigen“.
+            AudioGruppenBereich(mitPaar: showCouples),
 
             const SizedBox(height: VpAbstand.l),
 

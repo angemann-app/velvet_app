@@ -44,6 +44,8 @@ Schwerpunkten kompakter, Check-in und Funke nebeneinander.
 
 ## Später
 
+- Optionaler Schlafdaten-Abgleich für Traumpraxis, Konzept `docs/konzepte/schlafdaten-abgleich.md`: freiwilliger Import bereits synchronisierter Daten, auch ohne Wearable voll nutzbar. Live-Funktionen vom Nutzer vorerst ausdrücklich ausgeschlossen. Schnittstellenweg noch prüfen; noch nicht implementiert.
+
 - Eigene Domain für R2 statt `r2.dev` (bewusst aufgeschoben).
 - Stabile Version nach den Handytests (Nutzer testet, Testmodus hilft).
 - Fantasie-Räume, Statistik Selbstliebe, NIP-17 Stufe 2 (nach fünf stabilen Versionen).
