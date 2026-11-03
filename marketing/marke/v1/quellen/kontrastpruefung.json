@@ -1,0 +1,47 @@
+[
+  {
+    "palette": "papier",
+    "rolle": "tinte",
+    "kontrast": 12.64
+  },
+  {
+    "palette": "papier",
+    "rolle": "sekundaer",
+    "kontrast": 6.36
+  },
+  {
+    "palette": "papier",
+    "rolle": "akzent_text",
+    "kontrast": 5.67
+  },
+  {
+    "palette": "nachtpapier",
+    "rolle": "tinte",
+    "kontrast": 13.02
+  },
+  {
+    "palette": "nachtpapier",
+    "rolle": "sekundaer",
+    "kontrast": 7.91
+  },
+  {
+    "palette": "nachtpapier",
+    "rolle": "akzent_text",
+    "kontrast": 10.21
+  },
+  {
+    "palette": "spicy",
+    "rolle": "tinte",
+    "kontrast": 15.25
+  },
+  {
+    "palette": "spicy",
+    "rolle": "sekundaer",
+    "kontrast": 10.19
+  },
+  {
+    "palette": "spicy",
+    "rolle": "akzent_text",
+    "kontrast": 10.32
+  }
+]

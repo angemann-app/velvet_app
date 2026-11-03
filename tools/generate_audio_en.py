@@ -51,10 +51,12 @@ class Englisch:
             import reihe_ausdruck
             szene = pause.rsplit(":", 1)[1]
             stuecke = []
-            for satz, tempo, luecke in reihe_ausdruck.plan(szene, text, de.SPEED):
-                for r in self.pipe(satz, voice=STIMMEN[name], speed=tempo):
-                    stuecke.append(r.audio.numpy())
-                stuecke.append(np.zeros(int(luecke * SR), dtype=np.float32))
+            teile = de.alternate_voices(text) if name == de.BOTH else [(name, text)]
+            for stimme, abschnitt in teile:
+                for satz, tempo, luecke in reihe_ausdruck.plan(szene, abschnitt, de.SPEED):
+                    for r in self.pipe(satz, voice=STIMMEN[stimme], speed=tempo):
+                        stuecke.append(r.audio.numpy())
+                    stuecke.append(np.zeros(int(luecke * SR), dtype=np.float32))
             audio = np.concatenate(stuecke)
             sf.write(pfad, audio, SR)
             return int(len(audio) / SR * 1000)

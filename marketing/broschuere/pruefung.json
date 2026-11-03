@@ -1,0 +1,5098 @@
+{
+  "pdfs": [
+    {
+      "sprache": "de",
+      "seiten": 24,
+      "textabdeckung": "vollständig",
+      "ueberlagerungen": 0,
+      "schriften": [
+        "/AAAAAA+SegoeUI",
+        "/AAAAAA+SourceSerif4Italic-Italic",
+        "/AAAAAA+SourceSerif4Roman-Regular"
+      ],
+      "link": "https://github.com/angemann-app/velvet_app/releases/latest",
+      "bytes": 6939199,
+      "sha256": "3aee69f4ae7c9dc3aee312da9738e07aec095fca142a604119c99b10c2e61ac7"
+    },
+    {
+      "sprache": "en",
+      "seiten": 24,
+      "textabdeckung": "vollständig",
+      "ueberlagerungen": 0,
+      "schriften": [
+        "/AAAAAA+SegoeUI",
+        "/AAAAAA+SourceSerif4Italic-Italic",
+        "/AAAAAA+SourceSerif4Roman-Regular"
+      ],
+      "link": "https://github.com/angemann-app/velvet_app/releases/latest",
+      "bytes": 6923942,
+      "sha256": "947f06904e94297bf3d772561d7d6f5854160c31e5c675260b31dd7bcad6136d"
+    }
+  ],
+  "textfelder": [
+    {
+      "sprache": "de",
+      "seite": 1,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "KÖRPERWISSEN. SINNLICHKEIT. NÄHE."
+    },
+    {
+      "sprache": "de",
+      "seite": 1,
+      "x": 42,
+      "y": 174,
+      "breite": 511.27599999999995,
+      "hoehe": 97.52000000000001,
+      "text": "Dein Körper. Dein Erleben."
+    },
+    {
+      "sprache": "de",
+      "seite": 1,
+      "x": 42,
+      "y": 291,
+      "breite": 465,
+      "hoehe": 40.04,
+      "text": "Entdecke VelvetPulse. Ein persönlicher Raum für Wissen, Berührung und neue Erfahrungen. Allein und zu zweit."
+    },
+    {
+      "sprache": "de",
+      "seite": 1,
+      "x": 42,
+      "y": 775,
+      "breite": 511.27599999999995,
+      "hoehe": 10.799999999999999,
+      "text": "Für Erwachsene · Android · Deutsch und Englisch"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "WILLKOMMEN"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Mehr verstehen. Mehr bei dir sein."
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Manchmal beginnt Nähe mit einer Frage. Manchmal mit einer Berührung. Und manchmal damit, sich selbst wieder zuzuhören."
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 277,
+      "breite": 511.27599999999995,
+      "hoehe": 24.36,
+      "text": "Ein Angebot, das mit dir mitgeht"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 310.36,
+      "breite": 511.27599999999995,
+      "hoehe": 51.480000000000004,
+      "text": "VelvetPulse verbindet Sexualaufklärung mit Körperwahrnehmung, praktischen Übungen und Raum für eure Beziehung. Du wählst einen Einstieg, der gerade zu dir passt. Ohne vorgeschriebenes Tempo und ohne ein bestimmtes Erlebnis erreichen zu müssen."
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 383.84000000000003,
+      "breite": 511.27599999999995,
+      "hoehe": 24.36,
+      "text": "Vier Bereiche, eine gemeinsame Welt"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 417.20000000000005,
+      "breite": 511.27599999999995,
+      "hoehe": 51.480000000000004,
+      "text": "Heute lädt dich ein. Lernen erklärt Zusammenhänge. Üben macht sie erfahrbar. Wir gibt eurer Verbindung einen eigenen Raum. Auch wenn du die App allein nutzt, stehen dir Wissen, Übungen und Hörbegleitungen offen."
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 498.68000000000006,
+      "breite": 511.27599999999995,
+      "hoehe": 31.049999999999997,
+      "text": "Neugier darf der Anfang sein."
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 580,
+      "breite": 100,
+      "hoehe": 27.169999999999998,
+      "text": "Heute"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 160,
+      "y": 584,
+      "breite": 325,
+      "hoehe": 16.159,
+      "text": "Dein persönlicher Einstieg"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 500,
+      "y": 584,
+      "breite": 53,
+      "hoehe": 14.299999999999999,
+      "text": "03"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 627,
+      "breite": 100,
+      "hoehe": 27.169999999999998,
+      "text": "Lernen"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 160,
+      "y": 631,
+      "breite": 325,
+      "hoehe": 16.159,
+      "text": "Wissen für Körper und Lust"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 500,
+      "y": 631,
+      "breite": 53,
+      "hoehe": 14.299999999999999,
+      "text": "04-07"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 674,
+      "breite": 100,
+      "hoehe": 27.169999999999998,
+      "text": "Üben"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 160,
+      "y": 678,
+      "breite": 325,
+      "hoehe": 16.159,
+      "text": "Körper, Gedanken und Begleitung"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 500,
+      "y": 678,
+      "breite": 53,
+      "hoehe": 14.299999999999999,
+      "text": "08-09"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 42,
+      "y": 721,
+      "breite": 100,
+      "hoehe": 27.169999999999998,
+      "text": "Wir"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 160,
+      "y": 725,
+      "breite": 325,
+      "hoehe": 16.159,
+      "text": "Nähe und Wünsche zu zweit"
+    },
+    {
+      "sprache": "de",
+      "seite": 2,
+      "x": 500,
+      "y": 725,
+      "breite": 53,
+      "hoehe": 14.299999999999999,
+      "text": "10-11"
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "01 / HEUTE"
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Ein nächster Schritt. Ganz deiner."
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Öffne die App und finde einen ruhigen Einstieg in deinen Tag."
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Orientierung statt Überforderung"
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Dein nächster Schritt führt dich zur nächsten offenen Lektion. Zu Beginn berücksichtigt die Auswahl deinen gewählten Fokus. Wenn du lieber stöbern möchtest, sind die anderen Bereiche jederzeit erreichbar."
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Kurz innehalten"
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Mit dem 30-Sekunden-Check-in hältst du fest, wie Stress und Lust heute zueinander stehen. Ein kleiner Moment Aufmerksamkeit, aus dem keine Pflicht wird."
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 486.87299999999993,
+      "breite": 279,
+      "hoehe": 41.76,
+      "text": "Hören oder Verbindung aufnehmen"
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 537.6329999999999,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Geführte Audios laden zum Spüren ein. Ein Funke kann deinem Gegenüber zeigen, wonach dir ist. Du entscheidest, ob heute Wissen, Ruhe oder Nähe im Vordergrund steht."
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "Die Abbildung zeigt eine gerenderte App-Ansicht mit Beispieldaten."
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "02 / LERNEN"
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Wissen, das sich mit Leben verbindet."
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "27 Kurse und 128 Lektionen verbinden verständliche Erklärungen mit konkreter Praxis. Die Gesamtzahl schließt Spicy-Inhalte ein."
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Lesen, hören, ausprobieren"
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Jede Lektion bietet einen Text, eine Aufnahme und eine Frage zum Nachdenken. Aufgaben laden dazu ein, das Gelesene im eigenen Tempo auszuprobieren. Wo es passt, führt die Lektion direkt zur passenden Übung."
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Deinen Weg finden"
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Sechs Schwerpunkte ordnen die Kurswelt. Filter helfen dir, Angebote für dich oder für euch zu finden. Feine Fortschrittsanzeigen machen sichtbar, wo du weitergehen kannst."
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 503.0319999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Anschaulich statt abstrakt"
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 532.9119999999999,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Bleistiftzeichnungen und erklärende Diagramme machen Zusammenhänge sichtbar. Illustrationen lassen sich in der App vergrößern und genauer betrachten."
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "25 Kurse sind ohne Spicy zugänglich. Zwei weitere Kurse und einzelne Vertiefungen werden im Spicy-Modus sichtbar."
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "DIE KURSWELT"
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Von Körperwissen bis Kopfkino."
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Du musst nicht vorne anfangen und alles der Reihe nach durcharbeiten. Folge der Frage, die dich gerade beschäftigt."
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 42.0,
+      "y": 268,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "01 / Grundlagen"
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 42.0,
+      "y": 299.04,
+      "breite": 240.63799999999998,
+      "hoehe": 64.636,
+      "text": "Wie Kopf und Körper zusammenwirken. Anatomie der Erregung, Körperbilder und die Beobachter-Falle: verstehen, bevor du etwas verändern möchtest."
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 312.638,
+      "y": 268,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "02 / Annehmen und Lösen"
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 312.638,
+      "y": 299.04,
+      "breite": 240.63799999999998,
+      "hoehe": 64.636,
+      "text": "Scham, Leistungsdruck und belastende Erwartungen erkennen. Präsenz und Selbstmitgefühl als Einladung zu einem freundlicheren Umgang mit dir."
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 42.0,
+      "y": 434,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "03 / Sich selbst entdecken"
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 42.0,
+      "y": 465.04,
+      "breite": 240.63799999999998,
+      "hoehe": 64.636,
+      "text": "Beckenboden, eigene Vorlieben und Körperwahrnehmung. Lust in unterschiedlichen Lebensphasen und ein bewusster Umgang mit Reizen."
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 312.638,
+      "y": 434,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "04 / Lust als Paar"
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 312.638,
+      "y": 465.04,
+      "breite": 240.63799999999998,
+      "hoehe": 64.636,
+      "text": "Über Wünsche sprechen, mit unterschiedlicher Lust umgehen und Alltag neu gestalten. Nähe darf entstehen, ohne dass daraus ein bestimmtes Ziel werden muss."
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 42.0,
+      "y": 600,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "05 / Berührung"
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 42.0,
+      "y": 631.04,
+      "breite": 240.63799999999998,
+      "hoehe": 64.636,
+      "text": "Weibliche und männliche Berührung, Massage, Stimme, Atem und entspannte Positionen. Konkrete Anregungen mit Raum für Rückmeldung."
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 312.638,
+      "y": 600,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "06 / Fantasie und Spiel"
+    },
+    {
+      "sprache": "de",
+      "seite": 5,
+      "x": 312.638,
+      "y": 631.04,
+      "breite": 240.63799999999998,
+      "hoehe": 48.477,
+      "text": "Fantasien, Führung und Hingabe, Szenarien für zwei und Toys. Im optionalen Spicy-Modus kommen direktere Vertiefungen hinzu."
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "KÖRPERWISSEN UND SELBSTWAHRNEHMUNG"
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Nicht jeder Körper antwortet gleich."
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Lerne deinen eigenen genauer kennen."
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Zusammenhänge verstehen"
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 42.0,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 135.135,
+      "text": "Lust entsteht im Zusammenspiel von Körper, Aufmerksamkeit, Lebensumständen und Beziehung. VelvetPulse erklärt unter anderem das Modell von Gaspedal und Bremse und lädt dich ein, eigene fördernde und hemmende Einflüsse zu erkennen."
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Empfindungen unterscheiden"
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 219.42533333333333,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 105.10499999999999,
+      "text": "Erkunde Atem, Spannung, Berührung und angenehme Reize. Die Übungen verbinden Wissen über weibliche und männliche Anatomie mit einer offenen Frage: Was fühlt sich für dich stimmig an?"
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Deine Vorlieben in Worte fassen"
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Im persönlichen Lustprofil kannst du sammeln, was dir gefällt. Wenn du möchtest, teilst du es mit deinem Gegenüber. Was du allein entdecken möchtest, bleibt deine Entscheidung."
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "x": 42,
+      "y": 762.415,
+      "breite": 511.27599999999995,
+      "hoehe": 23.0,
+      "text": "Dein Körper ist kein Prüfungsfach."
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "BERÜHRUNG UND MASSAGE"
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Aufmerksamkeit, die ankommt."
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Eine gute Berührung ist kein festes Rezept. Sie entsteht im Kontakt."
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Genauer wahrnehmen"
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 42.0,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Kurse zu Berührung und Intim-Massage erklären, wie Druck, Tempo, Ort und Pausen das Erleben verändern können. Ihr probiert aus und gebt einander Rückmeldung."
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Geben und empfangen"
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 219.42533333333333,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Im geführten gemeinsamen Abend wechseln sich die Rollen ab. Klangschalen markieren Übergänge; ruhige Abschnitte lassen euch Zeit für eigene Empfindungen."
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Einvernehmen bleibt konkret"
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Besprecht vorher Wünsche und Grenzen. Ein Stoppwort und die Möglichkeit, jederzeit zu ändern oder aufzuhören, gehören dazu. Jede Einladung darf unbeantwortet bleiben."
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "20, 30 oder 45 Minuten für einen gemeinsamen Abend. Alle Figuren in den Illustrationen sind erwachsen."
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "03 / ÜBEN · KÖRPER"
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Vom Nachdenken ins Spüren."
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Kurze Werkzeuge helfen dir, eine bewusste Praxis in deinen Alltag einzubauen."
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Beckenboden mit zwei Richtungen"
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Loslassen gehört ebenso dazu wie Anspannen. Der Timer begleitet vier Übungsarten: Lösen, Kräftigen, Pulse und Wellen. Sprachansagen unterstützen den Ablauf."
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Atem mit einem ruhigen Takt"
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Der Atem-Taktgeber macht einen Rhythmus sichtbar, etwa für die 4-7-8-Atmung. Du orientierst dich am Angebot und an deinem Wohlbefinden, statt dich durch eine Übung zu zwingen."
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "x": 42,
+      "y": 503.0319999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Übung statt Leistungstest"
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "x": 42,
+      "y": 532.9119999999999,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Wähle eine überschaubare Einheit, spüre danach kurz nach und höre auf, wenn etwas schmerzt oder unangenehm wird. Es geht um Wahrnehmung, nicht um möglichst große Zahlen."
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "03 / ÜBEN · GEDANKEN"
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Wenn der Kopf zu laut wird."
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Nicht jeder Gedanke braucht das letzte Wort."
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Das Reframing-Tagebuch"
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Halte eine belastende Situation und den dazugehörigen Gedanken fest. Was spricht dafür, was dagegen? Welche andere Sicht ist möglich? Die Struktur orientiert sich an Methoden der kognitiven Verhaltenstherapie."
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Ein Blick auf den Alltag"
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Der kurze Check-in hilft dir, Stress und Lust wahrzunehmen. Du musst dich weder erklären noch einen guten Wert erreichen. Ein ehrlicher Eintrag genügt."
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 503.0319999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Hilfe im unmittelbaren Moment"
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 532.9119999999999,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Der SOS-Bereich bietet kurze Orientierung für vorher, im Moment und danach, wenn Druck oder Angst auftauchen. Er ist schnell erreichbar und ergänzt die längere Arbeit mit Kursen und Übungen."
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "x": 42,
+      "y": 704,
+      "breite": 511.27599999999995,
+      "hoehe": 26.45,
+      "text": "Du darfst langsamer werden."
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "04 / WIR"
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Ein eigener Raum für eure Nähe."
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Verbunden bleiben, ohne für jedes Bedürfnis sofort die richtigen Worte finden zu müssen."
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Einladen und verbinden"
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "x": 42.0,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Ihr verbindet euch per Einladung oder QR-Code. Dafür braucht ihr weder ein Benutzerkonto noch eine Telefonnummer. Der Paar-Kanal ist Ende-zu-Ende-verschlüsselt."
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Kleine Signale, klare Worte"
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "x": 219.42533333333333,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Ein Funke zeigt, worauf dir heute zumute ist, auch wenn du gerade keine Lust hast. Im Chat könnt ihr Gedanken austauschen. Lesebestätigungen lassen sich abschalten."
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Gemeinsam lernen"
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "x": 396.85066666666665,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 105.10499999999999,
+      "text": "Teilt eine Lektion oder antwortet auf dieselbe Reflexionsfrage. Die Antwort des Gegenübers wird erst sichtbar, wenn du selbst geantwortet hast. So bekommt jede Perspektive zunächst ihren eigenen Raum."
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "WÜNSCHE UND GRENZEN"
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Was ihr teilt, entscheidet ihr."
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Die Fantasie-Landkarte hilft, Wünsche zu erkunden, ohne sich gegenseitig zu drängen."
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Erst für dich antworten"
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 42.0,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Jeder wählt unabhängig: Ja, gern. Vielleicht. Lieber nicht. Sichtbar werden gemeinsame Wünsche und Anregungen zum Besprechen. Ein Nein bleibt verborgen."
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Dann ins Gespräch kommen"
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 219.42533333333333,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 105.10499999999999,
+      "text": "Ein Treffer ist eine Gesprächseinladung, keine Verabredung und keine Zustimmung zu einer konkreten Handlung. Ihr entscheidet gemeinsam, ob und wie ihr etwas ausprobieren möchtet."
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Raum für Veränderung"
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Vorlieben sind kein Vertrag. Heute darf etwas anders sein als gestern. Im Spicy-Modus erweitern zusätzliche Ideen und Szenarien die Auswahl."
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "x": 42,
+      "y": 732.385,
+      "breite": 511.27599999999995,
+      "hoehe": 46.0,
+      "text": "Ein Vielleicht ist Raum für ein Gespräch. Ein Ja bleibt freiwillig."
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "SPICY · FREIWILLIG AB 18"
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Mehr Intensität. Deine Entscheidung."
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Wenn du tiefer eintauchen möchtest, öffnet Spicy eine direktere, sinnlichere Ebene derselben Welt."
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Eigene Inhalte"
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 42.0,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 105.10499999999999,
+      "text": "Spicy Solo und Spicy zu zweit, zusätzliche Kurslektionen und intensivere Stufen der Körperreise und des gemeinsamen Abends. Alles wird erst nach deiner bewussten Aktivierung im Profil sichtbar."
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Neue Möglichkeiten zu zweit"
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 219.42533333333333,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 105.10499999999999,
+      "text": "Weitere Fantasien, Szenarien und heiße Funken ergänzen den Paarraum. Es gibt Nachrichten, die nach dem Lesen verschwinden, und experimentelle, verschlüsselte Einmal-Fotos."
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Du behältst die Wahl"
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 396.85066666666665,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Spicy lässt sich jederzeit wieder ausschalten. Grenzen, Einvernehmen und die Freiheit zum Aufhören gelten in jeder Intensität. Die Atmosphäre wird tiefer, nicht der Erwartungsdruck."
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Einmal-Fotos nutzen eine direkte Verbindung und funktionieren nicht in jedem Netz. Verschwindende Inhalte sind keine Garantie gegen das Abfotografieren mit einem anderen Gerät."
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "HÖRBEGLEITUNGEN"
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Eine Stimme. Zeit für dich."
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Augen schließen, zuhören und die Aufmerksamkeit im Körper ankommen lassen."
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Körperreise"
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 42.0,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "10, 20 oder 30 Minuten Selbstwahrnehmung. Du wählst die Intensität; die Stimme begleitet Atem und Körper, mit Zeit zum eigenen Spüren."
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Gemeinsamer Abend"
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 219.42533333333333,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "20, 30 oder 45 Minuten zu zweit. Ankommen, Berührung mit Rollenwechsel und ein ruhiger Ausklang. Klangschale und dezenter Klangteppich tragen die Pausen."
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Einschlaf-Reise und Traum-Abend"
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "60, 90 oder 120 Minuten Einschlafbegleitung oder 30, 45 oder 60 Minuten Traum-Abend. Stimme und Wiederholungen werden ruhiger und lassen Raum für den Schlaf."
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 36.96,
+      "text": "Victoria und Martin · Deutsch und Englisch. Gewünschte Aufnahmen als Paket laden und danach offline hören. Die neue Audioedition wurde mit abgestimmtem Tempo, bewussten Satzpausen und gepflegter Aussprache vorbereitet; die Bereitstellung im Paket steht noch aus."
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "WEITERHÖREN / BETA-AUSBLICK"
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Dein Moment bleibt. Auch beim Weitergehen."
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Ein gemeinsamer Player begleitet dich durch die App, ohne deine Hörzeit an einen einzigen Bildschirm zu binden."
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Mehr Bewegungsfreiheit"
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Wechsle zwischen den Bereichen, während deine Aufnahme läuft. Der kleine Player hält Pause und Rückkehr zur Wiedergabe erreichbar. Du musst dafür nicht auf der Audioseite bleiben."
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Wiederfinden statt neu anfangen"
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Der gemerkte Ablauf und die Aufnahmeposition helfen dir beim Fortsetzen. Ein bereits zusammengestellter Abend wird wiedergefunden. Nach dem Öffnen entscheidest du selbst, wann es weitergeht."
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 503.0319999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Klarheit vor dem Start"
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 532.9119999999999,
+      "breite": 279,
+      "hoehe": 80.79499999999999,
+      "text": "Direkt am Angebot erkennst du, ob die Aufnahme vorhanden ist oder ein Paket fehlt. Einmal geladen, lässt sie sich offline hören. Die Geräte-Stimme kann bei einzelnen Angeboten einspringen; sie beginnt den Abschnitt neu."
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Neu für die kommende Beta vorbereitet. Geräte-Stimme und Originalaufnahme haben unterschiedliche Laufzeiten; gemeinsames Hören benötigt die passende Aufnahme auf beiden Geräten."
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "GEMEINSAM HÖREN / BETA-AUSBLICK"
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Zwei Geräte. Ein geteilter Moment."
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Dieselbe Hörbegleitung erleben, ohne ein Handy zwischen euch legen zu müssen."
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Einladen. Ankommen. Bereit sein."
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Ihr verbindet euch im Paarraum und nehmt die Einladung bewusst an. Wenn beide bereit sind, gibt ein gemeinsamer Countdown den Start vor. Jede Person hört auf dem eigenen Gerät."
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Eine Pause gilt für euch beide"
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Bei bestehender Verbindung kann jede Person die gemeinsame Wiedergabe pausieren. Weiter geht es erst, wenn beide erneut bereit sind. Nähe braucht kein Durchhalten und keine Erklärung für eine Pause."
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 503.0319999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Danach gehört dir dein Eindruck"
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 532.9119999999999,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Ein freiwilliger Rückblick lässt Raum für Worte und ein Gefühl. Die Antwort des Gegenübers wird erst sichtbar, wenn ihr beide euren Rückblick erfolgreich geteilt habt."
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Beta-Vorschau: gleiche Aufnahme auf beiden Geräten, App zum Einladen geöffnet, Netz für die Abstimmung. Keine perfekte Gleichzeitigkeit; Gegenperspektiven werden nicht synchronisiert."
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "LOKALE SUCHE / BETA-AUSBLICK"
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Eine Frage. Ein guter Einstieg."
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Manchmal weißt du schon, was dich beschäftigt. Du musst nur noch den passenden Inhalt finden."
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 41.76,
+      "text": "Weniger suchen, leichter entdecken"
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 318.76,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Finde Kurse, Lektionen, Hörangebote und Übungen an einer Stelle. Ein Begriff kann dich von einer ersten Frage zu Wissen oder einer passenden Praxis führen."
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 390.23699999999997,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Dein gewählter Rahmen bleibt"
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 420.11699999999996,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Die Suche zeigt Inhalte, die im aktuellen Modus zugänglich sind. Spicy-Angebote bleiben hinter dem bewusst eingeschalteten Spicy-Modus."
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 491.59399999999994,
+      "breite": 279,
+      "hoehe": 41.76,
+      "text": "Privates bleibt außerhalb der Suche"
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 542.3539999999999,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Deine Anfrage wird lokal verarbeitet, ohne Cloud-Suche und ohne Suchhistorie. Tagebuch, persönliche Nachrichten und Coach-Gespräche werden nicht durchsucht."
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "Neue Suche für die kommende Beta vorbereitet. Die Abbildung zeigt eine gerenderte Ansicht mit fiktiven Beispieldaten."
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "DEIN PERSÖNLICHER WEG / BETA-AUSBLICK"
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Wissen. Spüren. Nachklingen lassen."
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Aus einzelnen Inhalten wird ein kleiner Zusammenhang, der in deinen Alltag passt."
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Verstehen"
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 42.0,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Eine vorhandene Lektion gibt dir einen Gedanken mit. Der freiwillige Weg verbindet Wissen mit einer passenden Übung und einem Moment zum Nachspüren."
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Spüren"
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 219.42533333333333,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Probiere aus, was heute zu dir passt. Du darfst anhalten, etwas auslassen oder frei in der App weiterstöbern. Kein Streak, keine Rangliste, kein Leistungsdruck."
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Nachklingen lassen"
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 396.85066666666665,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Halte bei Bedarf einen Gedanken fest. Ein kurzer Moment Aufmerksamkeit genügt, ohne ein bestimmtes Ergebnis erreichen zu müssen. Dein Tempo bleibt der Maßstab."
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Für die kommende Beta vorbereitet. Der persönliche Weg verwendet bestehende Inhalte; er ist kein Therapieplan und kein Leistungsprogramm."
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "INNENANSICHTEN · IM SPICY-MODUS"
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Dieselbe Begegnung. Ein anderer Blick."
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Hörgeschichten, die eine Begegnung von innen erzählen: über Empfindungen, Nähe und das, was von außen oft unsichtbar bleibt."
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Perspektiven entdecken"
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 42.0,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 105.10499999999999,
+      "text": "Du wählst eine Perspektive und die Variante Soft oder Spicy. Gegenperspektiven derselben Begegnung folgen derselben Szenenfolge. So könnt ihr euch über unterschiedliches Erleben austauschen."
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Bewusst zuhören"
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 219.42533333333333,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Die Geschichten dauern ungefähr 15 bis 25 Minuten und sind zum wachen Hören gedacht. Im Player kannst du pausieren und zwischen Szenen wechseln."
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Gemeinsam dieselbe Fassung hören"
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 120.11999999999999,
+      "text": "Der neue gemeinsame Player ist für dieselbe Aufnahme auf zwei Geräten vorbereitet. Unterschiedliche Gegenperspektiven werden nicht synchronisiert. Geladene Hörfassungen bleiben offline verfügbar."
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Erwachsene Figuren, einvernehmliche Begegnungen. Die Erzählungen zeigen Möglichkeiten des Erlebens; sie sind kein Maßstab dafür, wie sich ein Körper anfühlen muss."
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "TRAUMPRAXIS · IM SPICY-MODUS"
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Nimm deine Lust mit in die Nacht."
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Und etwas von der Nacht mit in den Tag."
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Ein Weg mit acht Abenden"
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 80.79499999999999,
+      "text": "Die Reihe Lust im Traum verbindet sinnliche Körperwahrnehmung vor dem Schlafen mit der Neugier auf bewusstes Traumerleben. Die Folgen bauen aufeinander auf; die nächste wird nach zwei gehörten Abenden frei."
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 401.67499999999995,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Deine eigene Spur"
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 431.55499999999995,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "In der Traumpraxis sammelst du persönliche Traumzeichen, wählst eine angenehme Erinnerung und bereitest dich bewusst auf den Abend vor. Morgens hältst du fest, was geblieben ist."
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 519.1909999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Offen für dein Erleben"
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 549.0709999999999,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Sinnliche Träume und erlebte Höhepunkte dürfen vorkommen. Sie müssen es nicht. Mehr Lust am Tag ist ein Erkundungsziel und kein versprochener Effekt."
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Keine Uhr und kein Armband nötig. Bei Neigung zu Schlafparalyse luzide Übungen lieber auslassen. Dein erholsamer Schlaf hat Vorrang."
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "TRAUMPRAXIS IM ALLTAG"
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Erinnern. Erkennen. Mitnehmen."
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Eine persönliche Praxis, die auch zwischen zwei Nächten Platz findet."
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 42,
+      "y": 264,
+      "breite": 63,
+      "hoehe": 39,
+      "text": "01"
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 123,
+      "y": 274,
+      "breite": 430,
+      "hoehe": 25.52,
+      "text": "Erinnern"
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 123,
+      "y": 308.52,
+      "breite": 430,
+      "hoehe": 49.763999999999996,
+      "text": "Notiere morgens Stichworte oder markiere den Traum als sinnlich oder klar. Auch eine Nacht ohne Erinnerung darf festgehalten werden. Das private Traumtagebuch und der Wochenrückblick helfen, eigene Spuren wiederzufinden."
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 42,
+      "y": 411,
+      "breite": 63,
+      "hoehe": 39,
+      "text": "02"
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 123,
+      "y": 421,
+      "breite": 430,
+      "hoehe": 25.52,
+      "text": "Erkennen"
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 123,
+      "y": 455.52,
+      "breite": 430,
+      "hoehe": 49.763999999999996,
+      "text": "Lege persönliche Traumzeichen an. Eine kurze Vorstellungsübung verbindet eine angenehme Erinnerung mit der Absicht, einen Traum als Traum zu erkennen. Freiwillige, neutral formulierte Realitätscheck-Erinnerungen begleiten den Tag."
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 42,
+      "y": 558,
+      "breite": 63,
+      "hoehe": 39,
+      "text": "03"
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 123,
+      "y": 568,
+      "breite": 430,
+      "hoehe": 25.52,
+      "text": "Mitnehmen"
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 123,
+      "y": 602.52,
+      "breite": 430,
+      "hoehe": 49.763999999999996,
+      "text": "Spüre nach, ob eine angenehme Erinnerung im wachen Körper noch etwas anklingen lässt. Erholung, Tageslust, mögliche Höhepunkte und eine Notiz kannst du freiwillig dokumentieren, später bearbeiten oder löschen."
+    },
+    {
+      "sprache": "de",
+      "seite": 20,
+      "x": 42,
+      "y": 745,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Deine Traumzeichen und Tagesbeobachtungen bleiben lokal und gehen weder an den Paar-Kanal noch an den KI-Coach. Keine Erfolgsquote, keine automatische Traumdeutung. Optionales nächtliches Wecken bleibt eine bewusste einzelne Entscheidung."
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "03 / ÜBEN · COACH"
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Platz für Fragen, die dich beschäftigen."
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Manchmal hilft es, eine Frage erst einmal auszusprechen."
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Ein optionaler KI-Coach"
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Fragen zu Körper, Lust und Beziehung lassen sich im Coach vertiefen. Passende Beispielfragen erleichtern den Einstieg. Du entscheidest selbst, was du eingeben möchtest."
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Dein eigener Zugang"
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Der Coach nutzt Google Gemini mit deinem eigenen API-Schlüssel. Die App erklärt die Einrichtung. Deine eingegebenen Fragen werden dabei an Google übermittelt; der Coach arbeitet nicht rein lokal."
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 503.0319999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Ein Werkzeug mit Grenzen"
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 532.9119999999999,
+      "breite": 279,
+      "hoehe": 80.79499999999999,
+      "text": "KI-Antworten können ungenau sein. Sie ersetzen weder Diagnosen noch ärztliche oder psychotherapeutische Behandlung. Für Schmerzen, Beschwerden oder eine persönliche Krisensituation ist geeignete menschliche Unterstützung wichtig."
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Alle anderen Kernbereiche kannst du ohne eingerichteten KI-Coach nutzen. Private Traumpraxis-Daten werden nicht automatisch an ihn weitergegeben."
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "DATENSCHUTZ UND DISKRETION"
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 72.60000000000001,
+      "text": "Dein persönlicher Raum braucht klare Grenzen."
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 42,
+      "y": 177.60000000000002,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Du sollst verstehen können, was auf deinem Gerät bleibt und wann ein externer Dienst beteiligt ist."
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 112,
+      "y": 277,
+      "breite": 441,
+      "hoehe": 24.36,
+      "text": "Lokal auf deinem Handy"
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 112,
+      "y": 310.36,
+      "breite": 441,
+      "hoehe": 50.193,
+      "text": "Profil, Fortschritt, Tagebuch, Check-ins und Traumpraxis-Einträge werden auf dem Gerät gespeichert. Eine passwortgeschützte, verschlüsselte Sicherung hilft beim Gerätewechsel. Es gibt kein zentrales Benutzerkonto."
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 112,
+      "y": 388.553,
+      "breite": 441,
+      "hoehe": 24.36,
+      "text": "Geschützt im Alltag"
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 112,
+      "y": 421.913,
+      "breite": 441,
+      "hoehe": 66.92399999999999,
+      "text": "Fingerabdruck-Sperre, ausgeblendete Inhalte in der App-Übersicht und ein neutrales App-Symbol unterstützen Diskretion. Mitteilungen bleiben unauffällig. Vor Lautsprecher-Wiedergabe fragt die App nach; beim Trennen der Kopfhörer pausiert sie."
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 112,
+      "y": 516.837,
+      "breite": 441,
+      "hoehe": 24.36,
+      "text": "Verbindungen bewusst nutzen"
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 112,
+      "y": 550.197,
+      "breite": 441,
+      "hoehe": 66.92399999999999,
+      "text": "Der Paarraum sendet Ende-zu-Ende-verschlüsselte Nachrichten über externe Nostr-Relays. Für Fotos hilft ein STUN-Dienst beim direkten Verbindungsaufbau. Fragen an den optionalen KI-Coach gehen an Google. Downloads und Updates benötigen ebenfalls eine Netzverbindung."
+    },
+    {
+      "sprache": "de",
+      "seite": 22,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Keine Werbeprofile. Kein verpflichtendes Konto. Verschlüsselung schützt Inhalte, macht die Nutzung externer Dienste aber nicht pauschal anonym."
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "SO BEGINNST DU"
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Dein Tempo. Deine Atmosphäre."
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Ein paar Minuten genügen für den ersten Schritt."
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 54,
+      "y": 269,
+      "breite": 135,
+      "hoehe": 16.5,
+      "text": "Papier"
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 230,
+      "y": 269,
+      "breite": 135,
+      "hoehe": 16.5,
+      "text": "Nachtpapier"
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 406,
+      "y": 269,
+      "breite": 135,
+      "hoehe": 16.5,
+      "text": "Spicy"
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 349,
+      "breite": 511.27599999999995,
+      "hoehe": 23.2,
+      "text": "01 / Installieren"
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 381.2,
+      "breite": 511.27599999999995,
+      "hoehe": 66.92399999999999,
+      "text": "VelvetPulse ist für Android ab Version 7 erhältlich. Öffne die Release-Seite und installiere die passende APK. Die Anleitung erklärt die nötige Android-Freigabe. Neue Funktionen können zunächst im Beta-Kanal erscheinen. Weitere Updates kannst du über den In-App-Download beziehen."
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 471.12399999999997,
+      "breite": 511.27599999999995,
+      "hoehe": 23.2,
+      "text": "02 / Ankommen"
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 503.32399999999996,
+      "breite": 511.27599999999995,
+      "hoehe": 33.461999999999996,
+      "text": "Wähle deinen Fokus und stöbere in Heute oder Lernen. Lade gewünschte Audio-Pakete einmal herunter. Du brauchst weder ein Wearable noch eine Paar-Verbindung, um anzufangen."
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 559.786,
+      "breite": 511.27599999999995,
+      "hoehe": 23.2,
+      "text": "03 / Einrichten"
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 591.986,
+      "breite": 511.27599999999995,
+      "hoehe": 50.193,
+      "text": "Papier bietet einen hellen, warmen Einstieg. Nachtpapier interpretiert dieselbe Welt dunkel. Spicy bringt Bordeaux und Pflaume hinzu. Das klassische Design bleibt wählbar. Sprache, Diskretion und Sicherung findest du im Profil."
+    },
+    {
+      "sprache": "de",
+      "seite": 23,
+      "x": 42,
+      "y": 728,
+      "breite": 511.27599999999995,
+      "hoehe": 36.96,
+      "text": "Stand 02.11.2026: Neue Bedienfunktionen sind implementiert und automatisch geprüft, aber noch nicht veröffentlicht; Handytests stehen aus. Neuaufnahmen sind technisch geprüft und stichprobenartig akustisch geprüft. Paketübernahme steht aus; die drei zusätzlichen Traumpraxis-Begleitungen sind noch nicht als App-Einträge integriert."
+    },
+    {
+      "sprache": "de",
+      "seite": 24,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "VELVETPULSE"
+    },
+    {
+      "sprache": "de",
+      "seite": 24,
+      "x": 42,
+      "y": 223,
+      "breite": 511.27599999999995,
+      "hoehe": 92.88000000000001,
+      "text": "Entdecke deinen nächsten Schritt."
+    },
+    {
+      "sprache": "de",
+      "seite": 24,
+      "x": 42,
+      "y": 342,
+      "breite": 450,
+      "hoehe": 21.45,
+      "text": "Körperwissen, Sinnlichkeit und Nähe. In deinem Tempo."
+    },
+    {
+      "sprache": "de",
+      "seite": 24,
+      "x": 177,
+      "y": 602,
+      "breite": 376,
+      "hoehe": 30.029999999999998,
+      "text": "App und Installationshinweise"
+    },
+    {
+      "sprache": "de",
+      "seite": 24,
+      "x": 177,
+      "y": 648,
+      "breite": 376,
+      "hoehe": 31.459999999999997,
+      "text": "github.com/angemann-app/velvet_app /releases/latest"
+    },
+    {
+      "sprache": "de",
+      "seite": 24,
+      "x": 42,
+      "y": 731,
+      "breite": 511.27599999999995,
+      "hoehe": 25.74,
+      "text": "Für Erwachsene. VelvetPulse ersetzt keine ärztliche oder psychotherapeutische Behandlung. Individuelles Erleben darf unterschiedlich bleiben."
+    },
+    {
+      "sprache": "de",
+      "seite": 24,
+      "x": 42,
+      "y": 777,
+      "breite": 511.27599999999995,
+      "hoehe": 12.100000000000001,
+      "text": "Verstehen. Spüren. Verbinden."
+    },
+    {
+      "sprache": "en",
+      "seite": 1,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "BODY KNOWLEDGE. SENSUALITY. CLOSENESS."
+    },
+    {
+      "sprache": "en",
+      "seite": 1,
+      "x": 42,
+      "y": 174,
+      "breite": 511.27599999999995,
+      "hoehe": 97.52000000000001,
+      "text": "Your body. Your experience."
+    },
+    {
+      "sprache": "en",
+      "seite": 1,
+      "x": 42,
+      "y": 291,
+      "breite": 465,
+      "hoehe": 40.04,
+      "text": "Discover VelvetPulse. A personal space for understanding, touch and new experiences. On your own and together."
+    },
+    {
+      "sprache": "en",
+      "seite": 1,
+      "x": 42,
+      "y": 775,
+      "breite": 511.27599999999995,
+      "hoehe": 10.799999999999999,
+      "text": "For adults · Android · German and English"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "WELCOME"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Understand more. Feel more at home."
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Sometimes closeness begins with a question. Sometimes with touch. And sometimes with learning to listen to yourself again."
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 277,
+      "breite": 511.27599999999995,
+      "hoehe": 24.36,
+      "text": "An experience that moves with you"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 310.36,
+      "breite": 511.27599999999995,
+      "hoehe": 51.480000000000004,
+      "text": "VelvetPulse brings sex education together with body awareness, practical exercises and space for your relationship. Choose an entry point that feels right today. There is no prescribed pace and no particular experience you have to achieve."
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 383.84000000000003,
+      "breite": 511.27599999999995,
+      "hoehe": 24.36,
+      "text": "Four areas, one shared world"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 417.20000000000005,
+      "breite": 511.27599999999995,
+      "hoehe": 51.480000000000004,
+      "text": "Today invites you in. Learn explains the connections. Practice makes room for experience. Us gives your relationship a space of its own. Knowledge, exercises and audio guidance are also there for you when you use the app on your own."
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 498.68000000000006,
+      "breite": 511.27599999999995,
+      "hoehe": 31.049999999999997,
+      "text": "Curiosity can be the beginning."
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 580,
+      "breite": 100,
+      "hoehe": 27.169999999999998,
+      "text": "Today"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 160,
+      "y": 584,
+      "breite": 325,
+      "hoehe": 16.159,
+      "text": "Your personal starting point"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 500,
+      "y": 584,
+      "breite": 53,
+      "hoehe": 14.299999999999999,
+      "text": "03"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 627,
+      "breite": 100,
+      "hoehe": 27.169999999999998,
+      "text": "Learn"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 160,
+      "y": 631,
+      "breite": 325,
+      "hoehe": 16.159,
+      "text": "Understanding your body and desire"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 500,
+      "y": 631,
+      "breite": 53,
+      "hoehe": 14.299999999999999,
+      "text": "04-07"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 674,
+      "breite": 100,
+      "hoehe": 27.169999999999998,
+      "text": "Practice"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 160,
+      "y": 678,
+      "breite": 325,
+      "hoehe": 16.159,
+      "text": "Body, thoughts and guidance"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 500,
+      "y": 678,
+      "breite": 53,
+      "hoehe": 14.299999999999999,
+      "text": "08-09"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 42,
+      "y": 721,
+      "breite": 100,
+      "hoehe": 27.169999999999998,
+      "text": "Us"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 160,
+      "y": 725,
+      "breite": 325,
+      "hoehe": 16.159,
+      "text": "Closeness and wishes for two"
+    },
+    {
+      "sprache": "en",
+      "seite": 2,
+      "x": 500,
+      "y": 725,
+      "breite": 53,
+      "hoehe": 14.299999999999999,
+      "text": "10-11"
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "01 / TODAY"
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "A next step. Your own."
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Open the app and find a calm way into your day."
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "A little direction"
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Your next step takes you to the next unfinished lesson. At the beginning, the suggestion reflects your chosen focus. If you would rather explore, the other areas remain close at hand."
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Pause for a moment"
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "The 30-second check-in lets you notice how stress and desire relate today. A small moment of attention, without another obligation."
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 486.87299999999993,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Listen or reach out"
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 516.7529999999999,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Guided audios invite you to feel. A spark can let your partner know what you are in the mood for. You decide whether today calls for knowledge, quiet or connection."
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "The illustration shows a rendered app screen with sample data."
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "02 / LEARN"
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Knowledge that connects with life."
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "27 courses and 128 lessons bring clear explanations together with practical experience. These totals include Spicy content."
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Read, listen, explore"
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Each lesson offers a text, a recording and a question for reflection. Exercises invite you to try things at your own pace. Where it fits, a lesson takes you straight to a related practice."
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Find your way"
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Six themes organise the course collection. Filters help you find material for yourself or for the two of you. Subtle progress indicators show where you can continue."
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 503.0319999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Make things visible"
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 532.9119999999999,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Pencil drawings and explanatory diagrams give ideas a visual form. You can enlarge illustrations in the app and look more closely."
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "25 courses are accessible without Spicy. Two more courses and individual deeper explorations appear in Spicy mode."
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "THE COURSE COLLECTION"
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "From body knowledge to imagination."
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "You do not have to begin at the beginning or work through everything in order. Follow the question that matters to you now."
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 42.0,
+      "y": 268,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "01 / Foundations"
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 42.0,
+      "y": 299.04,
+      "breite": 240.63799999999998,
+      "hoehe": 64.636,
+      "text": "How mind and body work together. The anatomy of arousal, body image and the spectator trap: understand before trying to change."
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 312.638,
+      "y": 268,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "02 / Acceptance and release"
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 312.638,
+      "y": 299.04,
+      "breite": 240.63799999999998,
+      "hoehe": 64.636,
+      "text": "Recognise shame, pressure to perform and difficult expectations. Presence and self-compassion invite a kinder relationship with yourself."
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 42.0,
+      "y": 434,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "03 / Exploring yourself"
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 42.0,
+      "y": 465.04,
+      "breite": 240.63799999999998,
+      "hoehe": 64.636,
+      "text": "Pelvic floor, personal preferences and body awareness. Desire through different life stages, and a more conscious relationship with stimulation."
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 312.638,
+      "y": 434,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "04 / Desire as a couple"
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 312.638,
+      "y": 465.04,
+      "breite": 240.63799999999998,
+      "hoehe": 48.477,
+      "text": "Talk about wishes, navigate differences in desire and make space in daily life. Closeness can grow without having to lead to a particular goal."
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 42.0,
+      "y": 600,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "05 / Touch"
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 42.0,
+      "y": 631.04,
+      "breite": 240.63799999999998,
+      "hoehe": 48.477,
+      "text": "Female and male touch, massage, voice, breath and comfortable positions. Practical ideas with room for feedback."
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 312.638,
+      "y": 600,
+      "breite": 240.63799999999998,
+      "hoehe": 22.04,
+      "text": "06 / Fantasy and play"
+    },
+    {
+      "sprache": "en",
+      "seite": 5,
+      "x": 312.638,
+      "y": 631.04,
+      "breite": 240.63799999999998,
+      "hoehe": 48.477,
+      "text": "Fantasy, leading and surrender, scenarios for two and toys. Optional Spicy mode adds more direct explorations."
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "BODY KNOWLEDGE AND SELF-AWARENESS"
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Every body answers differently."
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Get to know your own a little better."
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Understand the connections"
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 42.0,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 120.11999999999999,
+      "text": "Desire involves the body, attention, life circumstances and relationships. VelvetPulse explains ideas such as the accelerator-and-brake model and invites you to recognise what encourages or inhibits your own desire."
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Notice the differences"
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 219.42533333333333,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Explore breathing, tension, touch and pleasant stimulation. The exercises connect female and male anatomy with an open question: what feels right for you?"
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Find words for your preferences"
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Your personal desire profile lets you collect what you enjoy. Share it with your partner if you choose. What you would rather discover privately remains your decision."
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "x": 42,
+      "y": 747.4,
+      "breite": 511.27599999999995,
+      "hoehe": 23.0,
+      "text": "Your body is not an exam."
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "TOUCH AND MASSAGE"
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Attention you can feel."
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Good touch is not a fixed recipe. It grows through contact."
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Notice more"
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 42.0,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Courses on touch and intimate massage explore how pressure, pace, location and pauses can change an experience. Try things and give each other feedback."
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Give and receive"
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 219.42533333333333,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "The guided evening together includes a change of roles. Singing bowls mark transitions; quiet passages leave time to notice your own sensations."
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Keep consent specific"
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Talk about wishes and limits beforehand. Agree on a stop word, and keep the freedom to change or stop at any time. Every invitation may be declined."
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "20, 30 or 45 minutes for an evening together. All figures in the illustrations are adults."
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "03 / PRACTICE · BODY"
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "From thinking to feeling."
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Simple tools help you make conscious practice part of everyday life."
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Two sides of pelvic floor practice"
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Releasing matters just as much as contracting. The timer guides four kinds of practice: release, strengthening, pulses and waves. Voice prompts support the sequence."
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "x": 42,
+      "y": 369.35699999999997,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "A steady rhythm for breathing"
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "x": 42,
+      "y": 399.23699999999997,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "The breathing pacer makes a rhythm visible, including 4-7-8 breathing. Let the guidance and your own comfort work together, rather than forcing yourself through an exercise."
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "x": 42,
+      "y": 486.87299999999993,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Practice, not a performance test"
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "x": 42,
+      "y": 516.7529999999999,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Choose a manageable session, notice how you feel afterwards, and stop if something hurts or becomes uncomfortable. The point is awareness, not the biggest possible numbers."
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "03 / PRACTICE · THOUGHTS"
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "When your mind gets too loud."
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Not every thought needs to have the final word."
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "The reframing journal"
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Write down a difficult situation and the thought that came with it. What supports it, and what challenges it? What other view might be possible? The structure draws on methods from cognitive behavioural therapy."
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "A glance at everyday life"
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "The brief check-in helps you notice stress and desire. You do not have to explain yourself or achieve a good score. An honest entry is enough."
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 486.87299999999993,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Support in the moment"
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 516.7529999999999,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "The SOS area offers short prompts for before, during and afterwards when pressure or anxiety arise. It is easy to reach and complements the longer work with courses and exercises."
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "x": 42,
+      "y": 704,
+      "breite": 511.27599999999995,
+      "hoehe": 26.45,
+      "text": "You are allowed to slow down."
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "04 / US"
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "A space of your own for being close."
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Stay connected without always having to find the perfect words for every need."
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Invite and connect"
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "x": 42.0,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 60.059999999999995,
+      "text": "Connect by invitation or QR code. You need neither an account nor a phone number. The couple channel is end-to-end encrypted."
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Small signals, clear words"
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "x": 219.42533333333333,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "A spark shows what you feel like today, including when you are not in the mood. Use the chat to exchange thoughts. Read receipts can be switched off."
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Learn together"
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "x": 396.85066666666665,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Share a lesson or answer the same reflection question. Your partner's answer only appears once you have answered yourself. Each perspective gets its own space first."
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "WISHES AND BOUNDARIES"
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "You decide what you share."
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "The fantasy map helps you explore wishes without putting pressure on each other."
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Answer for yourself first"
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 42.0,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Each person chooses independently: Yes, please. Maybe. Rather not. Shared wishes and ideas to discuss become visible. A no remains private."
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Then begin a conversation"
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 219.42533333333333,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "A match is an invitation to talk, not an arrangement or consent to a specific act. Decide together whether and how you would like to try something."
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Leave room for change"
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Preferences are not a contract. Today may feel different from yesterday. Spicy mode adds further ideas and scenarios to explore."
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "x": 42,
+      "y": 707,
+      "breite": 511.27599999999995,
+      "hoehe": 46.0,
+      "text": "A maybe makes room for conversation. A yes remains freely given."
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "SPICY · OPTIONAL, ADULTS ONLY"
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "More intensity. Your choice."
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "When you want to explore further, Spicy opens a more direct, sensual layer of the same world."
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Content of its own"
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 42.0,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Spicy Solo and Spicy for Two, additional lessons and more intense levels of the body journey and the evening together. They only appear after you deliberately enable Spicy in your profile."
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "More possibilities together"
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 219.42533333333333,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "Further fantasies, scenarios and hot sparks extend the couple space. There are messages that disappear after reading and experimental, encrypted photos for a single viewing."
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "You keep the choice"
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 396.85066666666665,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "You can switch Spicy off again at any time. Boundaries, consent and the freedom to stop apply at every level. The atmosphere deepens; expectations do not have to."
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Single-view photos use a direct connection and do not work on every network. Disappearing content cannot prevent someone photographing the screen with another device."
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "AUDIO GUIDANCE"
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "A voice. Time for yourself."
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Close your eyes, listen and let your attention settle in your body."
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Body journey"
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 42.0,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "10, 20 or 30 minutes of self-awareness. Choose the intensity; the voice guides breath and body, leaving time for your own sensations."
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "An evening together"
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 219.42533333333333,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "20, 30 or 45 minutes for two. Arrive, exchange touch with a change of roles, and wind down. A singing bowl and a subtle sound bed support the pauses."
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Drift-off journey and dream evening"
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "60, 90 or 120 minutes of drift-off guidance, or a 30-, 45- or 60-minute dream evening. The voice and repetitions grow quieter and make space for sleep."
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 36.96,
+      "text": "Victoria and Martin · German and English. Download the recordings you want as packages, then listen offline. A new audio edition has been prepared with balanced pacing, considered sentence pauses and pronunciation care; release in the packages is still pending."
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "KEEP LISTENING / BETA PREVIEW"
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Your moment stays. Even as you move on."
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "One player follows you through the app, so listening no longer depends on staying on a single screen."
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Room to move"
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Explore other sections while your recording plays. The mini player keeps pause and a route back to playback within reach. You can leave the audio page without ending your session."
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Pick up where you left off"
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "The saved sequence and recording position help you continue. An evening you have already put together can be found again. When you return, you decide when playback resumes."
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 503.0319999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Know what is ready"
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 532.9119999999999,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "See whether a recording is available or a package needs downloading before you begin. Downloaded recordings play offline. For some individual sessions, the device voice can step in; it restarts the current section."
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Prepared for the upcoming beta. Device speech and recorded audio have different timings; shared listening requires the matching recording on both devices."
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "LISTEN TOGETHER / BETA PREVIEW"
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Two devices. One shared moment."
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Experience the same audio session without having to place a single phone between you."
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Invite. Settle in. Get ready."
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Connect in your couple space and choose to accept the invitation. Once both of you are ready, a shared countdown sets the start. Each person listens on their own device."
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "A pause belongs to both of you"
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "While connected, either person can pause shared playback. Continue only when both are ready again. Closeness needs neither endurance nor an explanation for taking a break."
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 503.0319999999999,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Your impression comes first"
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 532.9119999999999,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "An optional reflection leaves room for words and a feeling. Your partner’s response becomes visible only after you have both successfully shared your own reflection."
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Beta preview: matching recording on both devices, app open for invitations, connection for coordination. No guarantee of perfect timing; opposite perspectives are not synchronised."
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "LOCAL SEARCH / BETA PREVIEW"
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "One question. A place to begin."
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Sometimes you already know what is on your mind. All you need is a way into the right content."
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Find your way more easily"
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Look for courses, lessons, audio sessions and exercises in one place. A single term can lead from an initial question to useful knowledge or a relevant practice."
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 369.35699999999997,
+      "breite": 279,
+      "hoehe": 41.76,
+      "text": "Your chosen boundaries stay in place"
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 420.11699999999996,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Search shows content available in your current mode. Spicy content stays behind the Spicy mode you deliberately choose to enable."
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 491.59399999999994,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Private means outside the index"
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 521.4739999999999,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Your query is processed locally, without cloud search or a search history. Your journal, private messages and coach conversations are not searched."
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "New search prepared for the upcoming beta. The illustration is a rendered app view using fictional example data."
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "YOUR PERSONAL PATH / BETA PREVIEW"
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Understand. Feel. Let it resonate."
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Individual pieces of content become a small, connected experience that fits into your day."
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Understand"
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 42.0,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "An existing lesson offers an idea to take with you. An optional path connects knowledge with a relevant exercise and a moment to reflect."
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Feel"
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 219.42533333333333,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 60.059999999999995,
+      "text": "Try what feels right today. Pause, skip a step or explore the app freely. No streaks, no leaderboard and no pressure to perform."
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Let it resonate"
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 396.85066666666665,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "Capture a thought if you wish. A brief moment of attention can be enough, without reaching a particular outcome. Your pace remains the measure."
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Prepared for the upcoming beta. Personal paths use existing content; they are neither a therapy plan nor a performance programme."
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "INSIDE VIEWS · IN SPICY MODE"
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "The same encounter. Another perspective."
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "Audio stories that describe an encounter from within: sensations, closeness and what often remains invisible from outside."
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 42.0,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Explore perspectives"
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 42.0,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 105.10499999999999,
+      "text": "Choose a perspective and a Soft or Spicy version. Opposite perspectives on the same encounter follow the same sequence of scenes, creating a starting point for talking about different experiences."
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 219.42533333333333,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 19.139999999999997,
+      "text": "Listen with attention"
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 219.42533333333333,
+      "y": 588.14,
+      "breite": 156.42533333333333,
+      "hoehe": 75.07499999999999,
+      "text": "The stories run for around 15 to 25 minutes and are intended for listening while awake. In the player you can pause and move between scenes."
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 396.85066666666665,
+      "y": 560,
+      "breite": 156.42533333333333,
+      "hoehe": 38.279999999999994,
+      "text": "Share the same recording"
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 396.85066666666665,
+      "y": 607.28,
+      "breite": 156.42533333333333,
+      "hoehe": 90.08999999999999,
+      "text": "The new shared player is prepared for the same recording on two devices. Different perspectives are not synchronised with one another. Downloaded versions remain available offline."
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "Adult characters, consensual encounters. The stories portray possible experiences, not a standard for how a body should feel."
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "DREAM PRACTICE · IN SPICY MODE"
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Take your desire into the night."
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "And bring something of the night into your day."
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "A path through eight evenings"
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "Desire in Dreams connects sensual body awareness before sleep with curiosity about lucid dreaming. The episodes build on each other; the next unlocks after two evenings of listening."
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 385.51599999999996,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Follow your own thread"
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 415.39599999999996,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "In dream practice, collect personal dream signs, choose a pleasant memory and prepare consciously for the evening. In the morning, record what stayed with you."
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 486.87299999999993,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Open to your experience"
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 516.7529999999999,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Sensual dreams and experienced orgasms may be part of it. They do not have to be. Greater daytime desire is something to explore, not a promised effect."
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "No watch or wristband needed. If you are prone to sleep paralysis, leave lucid exercises aside. Restful sleep comes first."
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "DREAM PRACTICE IN DAILY LIFE"
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Remember. Recognise. Carry it with you."
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "A personal practice with room to grow between one night and the next."
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 42,
+      "y": 264,
+      "breite": 63,
+      "hoehe": 39,
+      "text": "01"
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 123,
+      "y": 274,
+      "breite": 430,
+      "hoehe": 25.52,
+      "text": "Remember"
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 123,
+      "y": 308.52,
+      "breite": 430,
+      "hoehe": 49.763999999999996,
+      "text": "Write a few words in the morning or mark a dream as sensual or lucid. You can also record a night without recall. The private dream journal and weekly review help you find your own threads again."
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 42,
+      "y": 411,
+      "breite": 63,
+      "hoehe": 39,
+      "text": "02"
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 123,
+      "y": 421,
+      "breite": 430,
+      "hoehe": 25.52,
+      "text": "Recognise"
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 123,
+      "y": 455.52,
+      "breite": 430,
+      "hoehe": 49.763999999999996,
+      "text": "Create personal dream signs. A short visualisation links a pleasant memory with the intention to recognise a dream as a dream. Optional reality-check reminders use neutral wording during the day."
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 42,
+      "y": 558,
+      "breite": 63,
+      "hoehe": 39,
+      "text": "03"
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 123,
+      "y": 568,
+      "breite": 430,
+      "hoehe": 25.52,
+      "text": "Carry it with you"
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 123,
+      "y": 602.52,
+      "breite": 430,
+      "hoehe": 49.763999999999996,
+      "text": "Notice whether a pleasant memory still resonates in your waking body. If you choose, record restfulness, daytime desire, possible orgasms and a note. Edit or delete your observations later."
+    },
+    {
+      "sprache": "en",
+      "seite": 20,
+      "x": 42,
+      "y": 745,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "Dream signs and daily observations stay local and go neither to your couple channel nor to the AI coach. No success score, no automatic dream interpretation. Optional night waking remains a deliberate choice for a single night."
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "03 / PRACTICE · COACH"
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Space for questions on your mind."
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "Sometimes it helps to put a question into words."
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 268,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "An optional AI coach"
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 297.88,
+      "breite": 279,
+      "hoehe": 48.477,
+      "text": "Explore questions about the body, desire and relationships. Relevant example questions offer an easy starting point. You choose what to type."
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 369.35699999999997,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "Your own access"
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 399.23699999999997,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "The coach uses Google Gemini with your own API key. The app explains how to set it up. Questions you enter are sent to Google; the coach does not run entirely on your device."
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 486.87299999999993,
+      "breite": 279,
+      "hoehe": 20.88,
+      "text": "A tool with limits"
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 516.7529999999999,
+      "breite": 279,
+      "hoehe": 64.636,
+      "text": "AI answers can be inaccurate. They replace neither diagnosis nor medical or psychotherapeutic care. Pain, symptoms or a personal crisis call for appropriate human support."
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "x": 42,
+      "y": 746,
+      "breite": 511.27599999999995,
+      "hoehe": 12.32,
+      "text": "You can use all other core areas without setting up the AI coach. Private dream-practice data is not automatically sent to it."
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "PRIVACY AND DISCRETION"
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 72.60000000000001,
+      "text": "A personal space needs clear boundaries."
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 42,
+      "y": 177.60000000000002,
+      "breite": 511.27599999999995,
+      "hoehe": 37.699999999999996,
+      "text": "You should be able to understand what stays on your device and when an external service is involved."
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 112,
+      "y": 277,
+      "breite": 441,
+      "hoehe": 24.36,
+      "text": "Local on your phone"
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 112,
+      "y": 310.36,
+      "breite": 441,
+      "hoehe": 50.193,
+      "text": "Profile, progress, journal, check-ins and dream-practice entries are stored on the device. A password-protected, encrypted backup helps when moving to another phone. There is no central user account."
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 112,
+      "y": 388.553,
+      "breite": 441,
+      "hoehe": 24.36,
+      "text": "Discreet in everyday life"
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 112,
+      "y": 421.913,
+      "breite": 441,
+      "hoehe": 50.193,
+      "text": "Fingerprint lock, hidden content in the app switcher and a neutral app icon support discretion. Notifications stay unobtrusive. The app asks before playing over the speaker and pauses when headphones disconnect."
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 112,
+      "y": 500.106,
+      "breite": 441,
+      "hoehe": 24.36,
+      "text": "Use connections consciously"
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 112,
+      "y": 533.466,
+      "breite": 441,
+      "hoehe": 66.92399999999999,
+      "text": "The couple space sends end-to-end encrypted messages through external Nostr relays. A STUN service helps photos establish a direct connection. Questions to the optional AI coach go to Google. Downloads and updates also require a network connection."
+    },
+    {
+      "sprache": "en",
+      "seite": 22,
+      "x": 42,
+      "y": 751,
+      "breite": 511.27599999999995,
+      "hoehe": 24.64,
+      "text": "No advertising profiles. No mandatory account. Encryption protects content; it does not make the use of external services universally anonymous."
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "GETTING STARTED"
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 85,
+      "breite": 511.27599999999995,
+      "hoehe": 77.0,
+      "text": "Your pace. Your atmosphere."
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 182.0,
+      "breite": 511.27599999999995,
+      "hoehe": 18.849999999999998,
+      "text": "A few minutes are enough for a first step."
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 54,
+      "y": 269,
+      "breite": 135,
+      "hoehe": 16.5,
+      "text": "Paper"
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 230,
+      "y": 269,
+      "breite": 135,
+      "hoehe": 16.5,
+      "text": "Night Paper"
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 406,
+      "y": 269,
+      "breite": 135,
+      "hoehe": 16.5,
+      "text": "Spicy"
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 349,
+      "breite": 511.27599999999995,
+      "hoehe": 23.2,
+      "text": "01 / Install"
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 381.2,
+      "breite": 511.27599999999995,
+      "hoehe": 50.193,
+      "text": "VelvetPulse is available for Android 7 and later. Open the release page and install the appropriate APK. The guide explains the Android permission involved. New features may appear in the beta channel first. Further updates can be downloaded from within the app."
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 454.393,
+      "breite": 511.27599999999995,
+      "hoehe": 23.2,
+      "text": "02 / Settle in"
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 486.59299999999996,
+      "breite": 511.27599999999995,
+      "hoehe": 33.461999999999996,
+      "text": "Choose your focus and explore Today or Learn. Download the audio packs you want once. You need neither a wearable nor a couple connection to begin."
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 543.055,
+      "breite": 511.27599999999995,
+      "hoehe": 23.2,
+      "text": "03 / Make it yours"
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 575.255,
+      "breite": 511.27599999999995,
+      "hoehe": 50.193,
+      "text": "Paper offers a warm, light beginning. Night Paper interprets the same world in darker tones. Spicy brings burgundy and plum. The classic design remains available. Language, discretion and backup settings are in your profile."
+    },
+    {
+      "sprache": "en",
+      "seite": 23,
+      "x": 42,
+      "y": 728,
+      "breite": 511.27599999999995,
+      "hoehe": 36.96,
+      "text": "As of 2 November 2026: new usability features are implemented and automatically tested, but not yet released; phone testing is pending. New recordings have passed technical checks and acoustic spot checks. Package integration is pending; the three extra Dream Practice audios are not yet integrated as app entries."
+    },
+    {
+      "sprache": "en",
+      "seite": 24,
+      "x": 42,
+      "y": 39,
+      "breite": 471.27599999999995,
+      "hoehe": 10.080000000000002,
+      "text": "VELVETPULSE"
+    },
+    {
+      "sprache": "en",
+      "seite": 24,
+      "x": 42,
+      "y": 223,
+      "breite": 511.27599999999995,
+      "hoehe": 92.88000000000001,
+      "text": "Discover your next step."
+    },
+    {
+      "sprache": "en",
+      "seite": 24,
+      "x": 42,
+      "y": 342,
+      "breite": 450,
+      "hoehe": 21.45,
+      "text": "Body knowledge, sensuality and closeness. At your own pace."
+    },
+    {
+      "sprache": "en",
+      "seite": 24,
+      "x": 177,
+      "y": 602,
+      "breite": 376,
+      "hoehe": 30.029999999999998,
+      "text": "App and installation guide"
+    },
+    {
+      "sprache": "en",
+      "seite": 24,
+      "x": 177,
+      "y": 648,
+      "breite": 376,
+      "hoehe": 31.459999999999997,
+      "text": "github.com/angemann-app/velvet_app /releases/latest"
+    },
+    {
+      "sprache": "en",
+      "seite": 24,
+      "x": 42,
+      "y": 731,
+      "breite": 511.27599999999995,
+      "hoehe": 12.87,
+      "text": "For adults. VelvetPulse does not replace medical or psychotherapeutic care. Individual experiences are allowed to differ."
+    },
+    {
+      "sprache": "en",
+      "seite": 24,
+      "x": 42,
+      "y": 777,
+      "breite": 511.27599999999995,
+      "hoehe": 12.100000000000001,
+      "text": "Understand. Feel. Connect."
+    }
+  ],
+  "bilder": [
+    {
+      "sprache": "de",
+      "seite": 1,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\.codex-remote-attachments\\01a19710-1855-7460-bfcc-29bf0fbfb6d0\\02ad3119-7be5-4032-a746-df9d91b01ae7\\1-57591.jpg",
+      "beschnitt": [
+        188,
+        26,
+        1105,
+        689
+      ],
+      "x": 41.99999999999997,
+      "y": 372.1712170119956,
+      "pixel": [
+        917,
+        663
+      ],
+      "breite_pt": 511.28,
+      "hoehe_pt": 369.66,
+      "ppi": 129.1
+    },
+    {
+      "sprache": "de",
+      "seite": 3,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens\\01_kurse.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "de",
+      "seite": 4,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens\\01_lernen.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "de",
+      "seite": 6,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\tools\\zeichnungen\\self_1.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "de",
+      "seite": 7,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\.codex-remote-attachments\\01a19710-1855-7460-bfcc-29bf0fbfb6d0\\02ad3119-7be5-4032-a746-df9d91b01ae7\\2-57592.jpg",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1280,
+        720
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 186.5
+    },
+    {
+      "sprache": "de",
+      "seite": 8,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens\\02_training.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "de",
+      "seite": 9,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens\\03_reframing.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "de",
+      "seite": 10,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\couples_2_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "de",
+      "seite": 11,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\alltag_8_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "de",
+      "seite": 12,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\.codex-remote-attachments\\01a19710-1855-7460-bfcc-29bf0fbfb6d0\\02ad3119-7be5-4032-a746-df9d91b01ae7\\3-57590.jpg",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1280,
+        720
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 186.5
+    },
+    {
+      "sprache": "de",
+      "seite": 13,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\self_2_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "de",
+      "seite": 14,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens\\20_wiedergabe.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "de",
+      "seite": 15,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens\\22_gemeinsam_countdown.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "de",
+      "seite": 16,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens\\00_suche.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "de",
+      "seite": 17,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\alltag_8_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "de",
+      "seite": 18,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\tease_1_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "de",
+      "seite": 19,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_spicy\\15_traumpraxis.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "de",
+      "seite": 21,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens\\05_kicoach.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "de",
+      "seite": 24,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\alltag_8_spicy.webp",
+      "beschnitt": null,
+      "x": 153.63799999999998,
+      "y": 405.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 288.0,
+      "hoehe_pt": 162.0,
+      "ppi": 256.0
+    },
+    {
+      "sprache": "en",
+      "seite": 1,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\.codex-remote-attachments\\01a19710-1855-7460-bfcc-29bf0fbfb6d0\\02ad3119-7be5-4032-a746-df9d91b01ae7\\1-57591.jpg",
+      "beschnitt": [
+        188,
+        26,
+        1105,
+        689
+      ],
+      "x": 41.99999999999997,
+      "y": 372.1712170119956,
+      "pixel": [
+        917,
+        663
+      ],
+      "breite_pt": 511.28,
+      "hoehe_pt": 369.66,
+      "ppi": 129.1
+    },
+    {
+      "sprache": "en",
+      "seite": 3,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_en\\01_kurse.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "en",
+      "seite": 4,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_en\\01_lernen.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "en",
+      "seite": 6,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\tools\\zeichnungen\\self_1.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "en",
+      "seite": 7,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\.codex-remote-attachments\\01a19710-1855-7460-bfcc-29bf0fbfb6d0\\02ad3119-7be5-4032-a746-df9d91b01ae7\\2-57592.jpg",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1280,
+        720
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 186.5
+    },
+    {
+      "sprache": "en",
+      "seite": 8,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_en\\02_training.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "en",
+      "seite": 9,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_en\\03_reframing.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "en",
+      "seite": 10,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\couples_2_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "en",
+      "seite": 11,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\alltag_8_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "en",
+      "seite": 12,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\.codex-remote-attachments\\01a19710-1855-7460-bfcc-29bf0fbfb6d0\\02ad3119-7be5-4032-a746-df9d91b01ae7\\3-57590.jpg",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1280,
+        720
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 186.5
+    },
+    {
+      "sprache": "en",
+      "seite": 13,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\self_2_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "en",
+      "seite": 14,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_en\\20_wiedergabe.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "en",
+      "seite": 15,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_en\\22_gemeinsam_countdown.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "en",
+      "seite": 16,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_en\\00_suche.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "en",
+      "seite": 17,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\alltag_8_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "en",
+      "seite": 18,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\tease_1_spicy.webp",
+      "beschnitt": null,
+      "x": 50.52688888888886,
+      "y": 244.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 494.22,
+      "hoehe_pt": 278.0,
+      "ppi": 149.2
+    },
+    {
+      "sprache": "en",
+      "seite": 19,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_spicy_en\\15_traumpraxis.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "en",
+      "seite": 21,
+      "quelle": "C:\\TOOLS\\workspace\\mojo\\build\\screens_en\\05_kicoach.png",
+      "x": 354,
+      "y": 266,
+      "pixel": [
+        390,
+        844
+      ],
+      "breite_pt": 184,
+      "hoehe_pt": 398.1948717948718,
+      "ppi": 152.6
+    },
+    {
+      "sprache": "en",
+      "seite": 24,
+      "quelle": "C:\\TOOLS\\velvet-inhalte\\kurse\\bilder\\final\\alltag_8_spicy.webp",
+      "beschnitt": null,
+      "x": 153.63799999999998,
+      "y": 405.0,
+      "pixel": [
+        1024,
+        576
+      ],
+      "breite_pt": 288.0,
+      "hoehe_pt": 162.0,
+      "ppi": 256.0
+    }
+  ]
+}

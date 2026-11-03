@@ -1,6 +1,6 @@
 # Konzept: Gemeinsam erleben (synchrones Hören und Üben im Paar-Kanal)
 
-Stand: Entwurf vom 30.10.2026, noch nicht abgestimmt. Vor der Umsetzung Entscheidungen unten klären.
+Stand: Entwurf vom 30.10.2026; Richtung am 02.11.2026 vom Nutzer zur Umsetzung freigegeben. Entscheidungen unten aktualisiert; Gesamtauftrag `bedienung-audio-wege.md`.
 
 ## Idee
 
@@ -49,9 +49,9 @@ Mit jederzeit möglichem Stopp, ohne Begründung, und mit einem Rückblick, den 
 Wie `test/foto_kanal_test.dart`: Signalfluss mit Doppelgänger-Server, Uhrabgleich, Pause von beiden Seiten, Wiederholung nach Abbruch,
 Verwerfen alter oder fremder Signale.
 
-## Entscheidungen (offen)
+## Entscheidungen (02.11.2026)
 
-1. Beginnen mit Stufe 1 und 2 als Beta? Empfehlung: ja.
-2. Wenn bei einer Person das Audio-Paket fehlt: Geräte-Stimme für diese Person (Empfehlung) oder Einladung sperren?
-3. Darf nur die einladende Person den Rückblick-Start auslösen, oder beide? Empfehlung: beide, jede Person für sich.
-4. Mindestens Kopfhörer-Hinweis vor dem Start verpflichtend? Empfehlung: Hinweis, kein Zwang.
+1. Nutzer hat gemeinsames Hören zusammen mit den weiteren Bedienungsverbesserungen zur Umsetzung freigegeben. Stufe 1 und 2, kein ungefragtes Veröffentlichen einer Beta.
+2. Ausdrücklich vom Nutzer beantwortet: **Passende Aufnahme auf beiden Geräten erforderlich.** Die frühere Geräte-Stimmen-Empfehlung entfällt; verschiedene Laufzeiten würden den gemeinsamen Ablauf verfälschen.
+3. Rückblick wie empfohlen beidseitig freiwillig beginnen; Antworten erst nach beiden Eingaben sichtbar. Kein weiterer gespeicherter privater Datenbestand außerhalb des bestehenden Reflexionswegs.
+4. Kopfhörer-Hinweis, kein Zwang. Vorhandene Lautsprecher-Nachfrage bleibt erhalten, Bereitschaft jeweils bewusst bestätigen.

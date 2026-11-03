@@ -45,7 +45,9 @@ Auftrag: AG-n
 
 ### Erledigt
 
-- 01.11.2026, AG-22 bis AG-24 (kein Branch, Bilder lokal unter C:\TOOLS\velvet-inhalte\): 52 Kurs-Stimmungsbilder (1024 × 576) und 58 Szenenbilder der Audioreihe (768 × 1024) im Bleistift-Stil, eingebaut in die Pakete kurse-bilder-spicy v4 und eihe-bilder v3. Der Nutzer ist sehr zufrieden; vier Bilder gehen als AG-25 in die Korrektur.
+
+- 01.11.2026, AG-22 bis AG-24 (kein Branch, Bilder lokal unter C:\TOOLS\velvet-inhalte\): 52 Kurs-Stimmungsbilder (1024 × 576) und 58 Szenenbilder der Audioreihe (768 × 1024) im Bleistift-Stil, eingebaut in die Pakete kurse-bilder-spicy v4 und
+eihe-bilder v3. Der Nutzer ist sehr zufrieden; vier Bilder gehen als AG-25 in die Korrektur.
 - (ein Punkt je Ergebnis)
 
 ### Für den Nutzer
@@ -66,7 +68,23 @@ seinem OK führt Claude zusammen, trägt den Auftrag unter „Erledigt“ ein un
 
 ## Gesperrt (hier arbeitet gerade Claude Code)
 
-Zusammenarbeit mit Codex: `docs/ZUSAMMENARBEIT_CODEX_CLAUDE.md` vor paralleler Text- oder Diagrammarbeit lesen. Codex hat getrennte DE/EN-Lektoratsentwürfe unter `build/redaktion/spicy/` erstellt; Prüfbericht und Erzeugung stehen in `docs/konzepte/spicy-lektorat.md`. Lektionstexte und Aufnahmen sind unverändert. Die 100 Diagramm-SVGs sind neu gezeichnet; Quelle, Prüfungen und Übergabe stehen im selben Protokoll.
+
+
+
+
+
+
+
+
+
+
+- 02.11.2026, Codex: drei neue Traumpraxis-Hörtexte DE/EN unter `docs/redaktion/traumpraxis/`, neue Produktions-/Prüfwerkzeuge und lokale Aufnahmen unter `build/redaktion/traumpraxis/`. Nutzer hat Textarbeit und alle zwölf Aufnahmen (Victoria/Martin, DE/EN) beauftragt. Keine parallele Kokoro-Instanz; keine Änderungen an Claudes acht privaten Folgen.
+
+
+
+- 01.11.2026, Codex: `assets/data/velvet_content.json`, `translations/en/velvet_content.json`, `tools/generate_audio.py`, `tools/generate_audio_en.py`, `tools/reihe_ausdruck.py`, Geführte Texte DE/EN (paar_abend.json, selbst_reise.json, einschlaf_reise.json und traum_reise.json unter assets/data/ und translations/en/), neue Gesamtlektorat-Werkzeuge und Tests. Auftrag Gesamtlektorat/Audio auf `codex/gesamtlektorat-audio`; Stand im gemeinsamen Übergabeprotokoll. Keine parallelen Änderungen dieser Dateien.
+
+Zusammenarbeit mit Codex: `docs/ZUSAMMENARBEIT_CODEX_CLAUDE.md` vor paralleler Text- oder Diagrammarbeit lesen. Codex hat getrennte DE/EN-Lektoratsentwürfe unter `build/redaktion/spicy/` erstellt; Prüfbericht und Erzeugung stehen in `docs/konzepte/spicy-lektorat.md`. Stand Gesamtlektorat: 128 Kurslektionen sowie 372 geführte Bausteine je Sprache gelesen; 82 geführte Sprachfassungen korrigiert. 345 Flutter-Tests und acht Python-Audiotests grün. Lokale Neuvertonung läuft getrennt; bestehende Paketaufnahmen unverändert. Details im Übergabeprotokoll. Die 100 Diagramm-SVGs sind neu gezeichnet; Quelle, Prüfungen und Übergabe stehen im selben Protokoll.
 
 Jede Zeile mit Datum. Einträge, die älter als drei Tage sind, fragt Antigravity beim Nutzer nach, statt sie
 stillschweigend zu übergehen.
@@ -74,6 +92,15 @@ stillschweigend zu übergehen.
 - 27.10.2026: `C:\TOOLS\velvet-inhalte\` (private Inhalte, nie anfassen)
 
 ## Offene Aufträge
+
+### AG-26: Gezielte Audio-Hörstichprobe (von Claude zu koordinieren)
+
+**Aktuell abgeschlossen:** Finale AG-Aufnahme vom Nutzer freigegeben und durch Codex anhand SHA256/Dekodierung geprüft. Exakte Datei lokal gesichert unter `build/redaktion/gesamt/korrektur-ag26/abgenommen-ag/`. Kein weiterer Hör-/Syntheseauftrag. Paketübernahme durch Claude offen; siehe `docs/pruefungen/AG26_FINALE_UEBERGABE.md`. Bericht-PR noch nicht zusammengeführt; nicht als bereits gemergt verbuchen.
+
+Nutzerentscheidung vom 02.11.2026: Stichproben reichen. Verbindlicher Auftrag: `docs/AUFTRAG_AG_AUDIO_STICHPROBE.md`. 28 Proben, Deutsch/Englisch, Victoria/Martin und Stimmenwechsel, Lektionen sowie geführte Profile einschließlich Traumpraxis; rund 25–30 Minuten mit Wechseln und Wiederholungen. Hörseite: `C:\TOOLS\workspace\mojo\build\redaktion\gesamt\abnahme\AG_STICHPROBEN.html`.
+
+Eigener Klon/Branch `ag/26-audio-stichprobe-20261102`; einzige erlaubte Änderung `docs/pruefungen/AG26_AUDIO_STICHPROBE.md`. Produktionsdateien nur lesen/abspielen, keine Neuvertonung oder Uploads. Private Innenansichten/Abendfolgen ausgeschlossen. Bei fehlender akustischer Prüfmöglichkeit ausdrücklich „nicht prüfbar“. Auftrag vorbereitet, Hörabnahme offen. Da dieser Stand noch lokal ist, stellt Claude AG den Auftrag und die lokalen Eingaben bereit; nicht durch bloßes Pull als verfügbar voraussetzen.
+
 
 ### AG-25: Korrektur von vier Bildern (drei Kursbilder und eine Szene der Audioreihe)
 
@@ -117,7 +144,10 @@ keine Aussprache-Meldungen mehr ab und legt keine `aussprache/`-Branches mehr an
 
 ## Erledigt
 
-- 01.11.2026, AG-22 bis AG-24 (kein Branch, Bilder lokal unter C:\TOOLS\velvet-inhalte\): 52 Kurs-Stimmungsbilder (1024 × 576) und 58 Szenenbilder der Audioreihe (768 × 1024) im Bleistift-Stil, eingebaut in die Pakete kurse-bilder-spicy v4 und eihe-bilder v3. Der Nutzer ist sehr zufrieden; vier Bilder gehen als AG-25 in die Korrektur.
+- 02.11.2026, Codex: Bedienung/Player/gemeinsames Hören implementiert und automatisch geprüft (419 Tests, Analyse, DE/EN-Renderansichten). Übergabe `docs/UEBERGABE_BETA_BEDIENUNG.md`; Nutzer hat den Build ausdrücklich Claude zugeordnet. Native App-/Handytests bleiben offen; kein Codex-Release.
+
+- 01.11.2026, AG-22 bis AG-24 (kein Branch, Bilder lokal unter C:\TOOLS\velvet-inhalte\): 52 Kurs-Stimmungsbilder (1024 × 576) und 58 Szenenbilder der Audioreihe (768 × 1024) im Bleistift-Stil, eingebaut in die Pakete kurse-bilder-spicy v4 und
+eihe-bilder v3. Der Nutzer ist sehr zufrieden; vier Bilder gehen als AG-25 in die Korrektur.
 - 26.10.2026, AG-1 Schritt A (`aussprache/2026-10-26`, PR #12): 16 Lexikon-Einträge, 8 Aufnahmen neu.
 - 26.10.2026, AG-2 (`ag/2-traum-sanft`, PR #11): sanfte Texte der Traum-Reise, 39 Bausteine je Sprache;
   Fantasie-Räume (31 Bausteine) lokal unter `C:\TOOLS\velvet-inhalte\traum\fantasie.json` zum Gegenlesen.

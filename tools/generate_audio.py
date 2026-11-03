@@ -205,7 +205,10 @@ class Kokoro:
         import numpy as np
         import soundfile as sf
 
-        sf.write(wav_path, np.concatenate(self._speak_ausdruck(szene, text, name)), SAMPLE_RATE)
+        teile = alternate_voices(text) if name == BOTH else [(name, text)]
+        audio = [p for stimme, abschnitt in teile
+                 for p in self._speak_ausdruck(szene, abschnitt, stimme)]
+        sf.write(wav_path, np.concatenate(audio), SAMPLE_RATE)
 
     def synthesize_wav(self, text, name, wav_path, pause=True):
         import numpy as np

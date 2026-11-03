@@ -2,6 +2,22 @@
 
 Diese Anleitung steht auch in der App (Fragezeichen oben rechts oder im Profil). [English version](GUIDE.md)
 
+## Weiterhören und gemeinsam erleben
+
+Lektionen und geführte Angebote verwenden einen gemeinsamen Player. Beim Schließen einer Seite läuft die Wiedergabe weiter; der kleine Player bleibt unten in der App erreichbar. Nach einem App-Neustart wird nichts automatisch abgespielt. Eine Aufnahme setzt am gemerkten Abschnitt und der gemerkten Position fort, ein zufälliger Ablauf bleibt erhalten. Bei der Geräte-Stimme beginnt ein fortgesetzter Abschnitt von vorn. Die Sicherung enthält den Wiedergabestand, keine Sprechtexte.
+
+Vor und während der Wiedergabe siehst du den Aufnahmestand und kannst passende Pakete nachladen. Ein gemerkter Ablauf behält seine ursprüngliche Sprache.
+
+Für „Gemeinsam hören“ öffnet ihr beide die App mit verbundenem Paar-Kanal. Nach Einladung und Annahme bestätigt jede Person „Bereit“. Beide benötigen identische Aufnahmen derselben Fassung; die Dateien werden verglichen. Ein gemeinsamer Countdown gleicht die Geräteuhren ab. Jede Person kann pausieren oder beenden. Fortsetzen erfordert beide Bereitschaften erneut. Unterschiedliche Gegenperspektiven werden noch nicht synchronisiert. Spicy benötigt bei beiden den eingeschalteten Modus.
+
+Bei Verbindungsunterbrechung läuft die eigene Aufnahme weiter. Eine Fernpause benötigt Verbindung; lokal kannst du immer pausieren. Wiederverbinden startet nichts automatisch. Der freiwillige Rückblick mit optionalem Gefühl wird erst aufgedeckt, wenn beide ihre Antwort geteilt haben. Ein fehlgeschlagener Versand deckt nichts auf. Die zugehörige Nachricht im Paar-Kanal öffnet den Rückblick erneut.
+
+## Finden und dein persönlicher Weg
+
+Die Lupe oben durchsucht Kurse, Lektionen und Praxisangebote rein lokal, ohne Suchhistorie und ohne private Notizen oder Nachrichten. Spicy-Inhalte erscheinen nur bei aktiviertem Modus. Der Lektionsplayer zeigt die tatsächliche Offline-Verfügbarkeit seiner Aufnahme. Fehlt sie, kann die Geräte-Stimme vorlesen; „Aufnahmen laden“ öffnet die Paketverwaltung.
+
+Lektionen mit verknüpfter Übung und Reflexionsfrage bieten den freiwilligen persönlichen Weg: Wissen entdecken, Übung ausprobieren, Nachspüren. Die Schritte werden bewusst bestätigt, ohne Zeitvorgabe oder Pflichtantwort. Ein begonnener Weg ist auf Heute erreichbar und Teil der Sicherung.
+
 ## Inhalt
 
 - [Erste Schritte](#erste-schritte)
@@ -60,7 +76,9 @@ Lust im Traum (nur im Spicy-Modus): acht Abende, die aufeinander aufbauen, vom l
 
 Alle werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden.
 
-Innenansichten (nur im Spicy-Modus, ab 18): zusammenhängende Hörgeschichten von rund 15 bis 25 Minuten, nicht zum Einschlafen. Sie erzählen eine Begegnung von innen. Du wählst Soft oder Spicy und eine Perspektive; die Gegenperspektive derselben Begegnung hat dieselbe Szenenfolge, so können zwei Menschen sie gemeinsam hören. Die App gleicht zwei Geräte allerdings nicht ab: Ihr startet selbst zusammen. Alle Figuren sind erwachsen, alles geschieht einvernehmlich, und nichts davon ist ein Maßstab: Jeder Körper erlebt Lust anders. Die Aufnahmen kommen als eigenes Paket und laufen danach ohne Netz. Im Player kannst du pausieren und Szenen überspringen. Auf der Karte steht im Diskretions-Modus nur Hörgeschichte.
+Innenansichten (nur im Spicy-Modus, ab 18): zusammenhängende Hörgeschichten von rund 15 bis 25 Minuten, nicht zum Einschlafen. Sie erzählen eine Begegnung von innen. Du wählst Soft oder Spicy und eine Perspektive; die Gegenperspektive derselben Begegnung hat dieselbe Szenenfolge, so können zwei Menschen sie gemeinsam hören. „Gemeinsam hören“ gleicht dieselbe Fassung auf zwei Geräten ab. Unterschiedliche Gegenperspektiven stimmt ihr weiterhin selbst aufeinander ab. Alle Figuren sind erwachsen, alles geschieht einvernehmlich, und nichts davon ist ein Maßstab: Jeder Körper erlebt Lust anders. Die Aufnahmen kommen als eigenes Paket und laufen danach ohne Netz. Im Player kannst du pausieren und Szenen überspringen. Auf der Karte steht im Diskretions-Modus nur Hörgeschichte.
+
+Deine Traumpraxis: In Lust im Traum verbindest du Erinnern, bewusstes Erkennen und Nachspüren am Tag. Unter „Deine Traumzeichen“ legst du persönliche Zeichen an, bearbeitest oder löschst sie. Für deine Abendvorbereitung wählst du ein Zeichen und eine angenehme Erinnerung aus dem Tagebuch. Unter „Heute nachspüren“ hältst du freiwillig Erholung, Tageslust, sinnliche oder klare Träume, mögliche Höhepunkte und eine Notiz fest. Fragen dürfen offenbleiben. Im privaten Rückblick kannst du deine Tagesbeobachtungen ansehen, bearbeiten und löschen. Traumzeichen und Beobachtungen bleiben lokal, sind Teil deiner Sicherung und gehen nicht an Partner oder KI-Coach. Mehr Tageslust ist ein Erkundungsziel, kein versprochener Effekt. Zum Hören gibt es dort drei kurze Begleitungen für Abend, Klarheit und Morgen, mit Victoria oder Martin. Sie gehören zu den geführten Aufnahmen, die du nachlädst, und sind nur für dich allein.
 
 
 ## Training und Akuthilfe
@@ -145,7 +163,11 @@ Die Aufnahmen von Victoria und Martin lädst du im Profil unter „Aufnahmen“ 
 
 ## Darstellung
 
-Unter Profil und Einstellungen findest du „Darstellung“: Papier ist hell und der Standard, Nachtpapier ist dunkel, Klassisch sind die bisherigen Farben. Die Wahl gilt sofort für die ganze App. Im Spicy-Modus gelten eigene Farben.
+Unter Profil und Einstellungen wählst du „Darstellung“: Papier (hell, Standard), Nachtpapier (dunkel) oder Klassisch (die bisherigen Farben). Die Wahl gilt sofort für die ganze App und ist Teil deiner Sicherung.
+
+Im Spicy-Modus gelten eigene Farben: tiefes Bordeaux und Pflaume mit warmem Papierweiß. Wo noch keine Illustration liegt, steht ein gezeichneter Platzhalter.
+
+Kurs-, Audio- und Themenbilder verwenden vorhandene Bleistiftzeichnungen oder ruhige grafische Motive. Die intensiveren Spicy-Illustrationen kommen aus dem Bildpaket der Kurse und erscheinen nur im Spicy-Modus. Ist das Paket noch nicht geladen, bleibt das reguläre Bild sichtbar. Nach dem Laden wechselt die Ansicht automatisch.
 
 
 ## Hilfe und Rückmeldung

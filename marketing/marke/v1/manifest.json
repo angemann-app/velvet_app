@@ -1,0 +1,427 @@
+{
+  "version": "1.0",
+  "datum": "2026-11-02",
+  "svg_master": 32,
+  "dateien": [
+    {
+      "pfad": "bildwelt/naehe-graphit.png",
+      "bytes": 2750595,
+      "sha256": "fb58c0775c0cc27dc04fae28b324f9d554895499aa0bc05fa31b414d0b012051"
+    },
+    {
+      "pfad": "elemente/eckmarkierungen.png",
+      "bytes": 1487,
+      "sha256": "962949ba146eee9e1b230453b9195a26d4518ec39b469e684a1b6e3b45724a32"
+    },
+    {
+      "pfad": "elemente/eckmarkierungen.svg",
+      "bytes": 286,
+      "sha256": "3ea8c1d7fe3617843d8b0cf4bc9fd4e3d88f528aca6209d83256dd417da635d5"
+    },
+    {
+      "pfad": "elemente/konstruktionsbogen.png",
+      "bytes": 16538,
+      "sha256": "e44a632396bca139a000848dacefec60c4f4c589a6469345075d6238d5a1992f"
+    },
+    {
+      "pfad": "elemente/konstruktionsbogen.svg",
+      "bytes": 328,
+      "sha256": "c81ea4419b441a13eed37a6015ba0dc6ed93fab1c809fbb491fa627de99fe7f0"
+    },
+    {
+      "pfad": "fonts/SourceSerif4-Italic.ttf",
+      "bytes": 60220,
+      "sha256": "0285f60b3a4a2b1126d8a736cff3ca63abc100298947e9ef4cd26a9437ebfa02"
+    },
+    {
+      "pfad": "fonts/SourceSerif4-OFL.txt",
+      "bytes": 4493,
+      "sha256": "363739f8bf0f4525297a99ca03905c84efe887a733579bb751c466bb80a302cf"
+    },
+    {
+      "pfad": "fonts/SourceSerif4-Regular.ttf",
+      "bytes": 57860,
+      "sha256": "00df31102a0feffbee5823f78bc82ac5a422e36bae9159b45751d6c202612f26"
+    },
+    {
+      "pfad": "fonts/SourceSerif4-SemiBold.ttf",
+      "bytes": 57884,
+      "sha256": "86c76edcee4e2621acbc64369031f821cffb4ad24c55692daa7a7ac4c83f61b0"
+    },
+    {
+      "pfad": "guide/VelvetPulse-Markenleitfaden-v1.pdf",
+      "bytes": 5172307,
+      "sha256": "fac0a8f24f55eb764085725169552db3d893c5e2108f6cf82df425d49e936b64"
+    },
+    {
+      "pfad": "icons/app-symbol-papier-1024.png",
+      "bytes": 32025,
+      "sha256": "69b0062ab2d778d2e8a940d0b7efebc81caca318d8410cffeead127e4645444f"
+    },
+    {
+      "pfad": "icons/app-symbol-papier-1024.svg",
+      "bytes": 757,
+      "sha256": "114620049aa190cad6d0f0aaca22bb0d799891dcd3f6e9d1a82ce57d50b2836f"
+    },
+    {
+      "pfad": "icons/app-symbol-spicy-1024.png",
+      "bytes": 33694,
+      "sha256": "8bedd0707044bafae53e37cc2b90e2820d04433e170783b3cd51f133612d82d5"
+    },
+    {
+      "pfad": "icons/app-symbol-spicy-1024.svg",
+      "bytes": 756,
+      "sha256": "066929dd2968216cb2702318c5817ef25e39386c42a2870859c8352b90176426"
+    },
+    {
+      "pfad": "icons/avatar-papier-512.png",
+      "bytes": 22306,
+      "sha256": "3bb0f117e9de9a89a876c7c303efb4950b6c7d48d15556f191ecfba17eca01ad"
+    },
+    {
+      "pfad": "icons/avatar-papier-512.svg",
+      "bytes": 754,
+      "sha256": "47e1b2b3082811be1cdf24fe7442903302ea191a23e6da598e2fba417e1d3eab"
+    },
+    {
+      "pfad": "icons/avatar-spicy-512.png",
+      "bytes": 23617,
+      "sha256": "9f85f50ddd581b0388a1d100a020e3beb79dd7301388e96c8f650ea80f971d31"
+    },
+    {
+      "pfad": "icons/avatar-spicy-512.svg",
+      "bytes": 753,
+      "sha256": "b7ef2455a84e8c923ef5b86410ef7bd5182f984a7dac022ccb779591ea3baae5"
+    },
+    {
+      "pfad": "icons/favicon-32.png",
+      "bytes": 766,
+      "sha256": "3ec3382f866f352f4023294fd4ae49c1a697ec3bcf6c3a1611578613e0409d12"
+    },
+    {
+      "pfad": "icons/favicon-32.svg",
+      "bytes": 662,
+      "sha256": "694435dcaa74c5d84ca43b3817c57bdf3062ef731b7e9bc6c2571c5585c11090"
+    },
+    {
+      "pfad": "logos/velvetpulse-gestapelt-einfarbig-dunkel.png",
+      "bytes": 14086,
+      "sha256": "d729f419125e0d8187d92eec85a718cff733580eb8890b6805c8654ed7664d1a"
+    },
+    {
+      "pfad": "logos/velvetpulse-gestapelt-einfarbig-dunkel.svg",
+      "bytes": 10533,
+      "sha256": "faee7e687fe186a6b740100b4406f63f2400cf1214390c41297eae98ab06a40d"
+    },
+    {
+      "pfad": "logos/velvetpulse-gestapelt-einfarbig-weiss.png",
+      "bytes": 11963,
+      "sha256": "45402c749ba0382f37ec3152b38f4ec1dccba573a12cd9f117816b1f5363d53c"
+    },
+    {
+      "pfad": "logos/velvetpulse-gestapelt-einfarbig-weiss.svg",
+      "bytes": 10532,
+      "sha256": "738281217d2c0c4ccdf4067035944c4aab55818c2691f669c8b90c1c7e862031"
+    },
+    {
+      "pfad": "logos/velvetpulse-gestapelt-hell.png",
+      "bytes": 14001,
+      "sha256": "70c9a2b3d6e14900397e9f61337a7b6097953b69597a00545a1811c058b86a86"
+    },
+    {
+      "pfad": "logos/velvetpulse-gestapelt-hell.svg",
+      "bytes": 10521,
+      "sha256": "c476c84e0a3b7c89fa962ce311b2213574ebf80d5555265f213aaf4f87d33f49"
+    },
+    {
+      "pfad": "logos/velvetpulse-gestapelt-papier.png",
+      "bytes": 14198,
+      "sha256": "8fce958db76985ae50b6e70f8014fd6a76791e23efcd6f0c24f8e1c3afc2c252"
+    },
+    {
+      "pfad": "logos/velvetpulse-gestapelt-papier.svg",
+      "bytes": 10523,
+      "sha256": "ba3472ba1d1296493c5b19e2e59c4c9902f3cc297bc70aa9acafc62ff1b3fb52"
+    },
+    {
+      "pfad": "logos/velvetpulse-horizontal-einfarbig-dunkel.png",
+      "bytes": 11542,
+      "sha256": "26507fd74acabcf54c8d046e84a937fe47f74cb758bcf28bad745e40b75d8086"
+    },
+    {
+      "pfad": "logos/velvetpulse-horizontal-einfarbig-dunkel.svg",
+      "bytes": 10539,
+      "sha256": "561d12e886b1eb4b9ef5178b6611d1b1d2bf0126ad710f20b99433a51f2af011"
+    },
+    {
+      "pfad": "logos/velvetpulse-horizontal-einfarbig-weiss.png",
+      "bytes": 9818,
+      "sha256": "6c963fb7b53fba6242d88b49d9110f96a4c04597012036126a9d26dba22c87df"
+    },
+    {
+      "pfad": "logos/velvetpulse-horizontal-einfarbig-weiss.svg",
+      "bytes": 10538,
+      "sha256": "8b1396cf11002c8ab75575d675159ed95ceff3820175a39b8616f2e31152de9f"
+    },
+    {
+      "pfad": "logos/velvetpulse-horizontal-hell.png",
+      "bytes": 11615,
+      "sha256": "781f5045c989cad61d5760bbc1111e98b7f5b7e61ab482d16306df73aff9d0a0"
+    },
+    {
+      "pfad": "logos/velvetpulse-horizontal-hell.svg",
+      "bytes": 10527,
+      "sha256": "058ef02e5a0bf036f57b3c6cd85f805f7fc36444713262ab0f3cdff2cf494cd9"
+    },
+    {
+      "pfad": "logos/velvetpulse-horizontal-papier.png",
+      "bytes": 11790,
+      "sha256": "f67281e1fa4eaf5b9f7cf7bcce72e596c0674aa1ddead8b2524f7cd231cfce2a"
+    },
+    {
+      "pfad": "logos/velvetpulse-horizontal-papier.svg",
+      "bytes": 10529,
+      "sha256": "336eaf366db024570370dd1b6ec63665104c6d58e223e20b5c03f49cca493be4"
+    },
+    {
+      "pfad": "logos/velvetpulse-kompakt-dunkel.png",
+      "bytes": 5522,
+      "sha256": "002f09dffb2253cd15998c11ef8f196232987de2674997ff1a5f464a61d9b514"
+    },
+    {
+      "pfad": "logos/velvetpulse-kompakt-dunkel.svg",
+      "bytes": 655,
+      "sha256": "6ab8976fa1f734614e23243b9a68ebbd81d8169f29e8692611e20aa2b0ddce5c"
+    },
+    {
+      "pfad": "logos/velvetpulse-kompakt-weiss.png",
+      "bytes": 4724,
+      "sha256": "76a891a53fb411bd965ca5465d4a2b91fc48edf981000b5ba4447865844839d9"
+    },
+    {
+      "pfad": "logos/velvetpulse-kompakt-weiss.svg",
+      "bytes": 655,
+      "sha256": "1bd6a949c1ddd16d55accdbb8f0726f6a975756f0f6b3a4fec68110b351c02ce"
+    },
+    {
+      "pfad": "logos/velvetpulse-signet-einfarbig-dunkel.png",
+      "bytes": 5583,
+      "sha256": "713dcaee7790ac259633166272d2f23cbd74746e135104cb98d970d6cb9b2272"
+    },
+    {
+      "pfad": "logos/velvetpulse-signet-einfarbig-dunkel.svg",
+      "bytes": 667,
+      "sha256": "14cf2fda56fd2094cb46e94b0d610b93a4d99c49ec4a5bb83ba40e15d9188d2e"
+    },
+    {
+      "pfad": "logos/velvetpulse-signet-einfarbig-weiss.png",
+      "bytes": 4697,
+      "sha256": "df1566540bf804e5a2c944a8eb1a02ba1ef81f58858548c050b0a05fe1e69baa"
+    },
+    {
+      "pfad": "logos/velvetpulse-signet-einfarbig-weiss.svg",
+      "bytes": 666,
+      "sha256": "5b79ab1fb4f6e57087a81b5fd6c7a01a5f562382f9bf191fcea8a58ccea758fd"
+    },
+    {
+      "pfad": "logos/velvetpulse-signet-hell.png",
+      "bytes": 5537,
+      "sha256": "501da654ab4a12ceedf7019ded7e0a6ea2f3598d63216da86952bb439c7efdb4"
+    },
+    {
+      "pfad": "logos/velvetpulse-signet-hell.svg",
+      "bytes": 655,
+      "sha256": "a9904c6081af0d2481983c434eb297d3103c5b90c2f787973931b606de8284b4"
+    },
+    {
+      "pfad": "logos/velvetpulse-signet-papier.png",
+      "bytes": 5688,
+      "sha256": "aafd2a1b1fa0b15721fd7730fa4eae2f82d1f0425a3686bd33e940fc422fe25c"
+    },
+    {
+      "pfad": "logos/velvetpulse-signet-papier.svg",
+      "bytes": 657,
+      "sha256": "79b5ffa800611d878b8ebf78ec0135aaef21f74656161db023ae39bc92a23b31"
+    },
+    {
+      "pfad": "quellen/bildwelt-prompt.txt",
+      "bytes": 1404,
+      "sha256": "a4c25a92a31093c9814269d973e79482930b3dcdcfaa09bf8b86ba9ab5c4331f"
+    },
+    {
+      "pfad": "quellen/kontrastpruefung.json",
+      "bytes": 789,
+      "sha256": "2f566039366d90c7422a57014997bd8fa60c313f74545505363536f96fa6ad24"
+    },
+    {
+      "pfad": "quellen/marke.json",
+      "bytes": 3885,
+      "sha256": "54fa607cfeed89170313e1d965cac1b29d548be44ab9af9c363215d38bc0fbdf"
+    },
+    {
+      "pfad": "quellen/pdf-textgrenzen.json",
+      "bytes": 23555,
+      "sha256": "f6365edb964754ecb90ae0b3631ce34aac417f53f30d11a211bea538acb4b16c"
+    },
+    {
+      "pfad": "quellen/renderpruefung.json",
+      "bytes": 42,
+      "sha256": "f52fb98597ece7244daa84c2b729681637b8e3d65a4430bda3e22432ac665abb"
+    },
+    {
+      "pfad": "quellen/werkzeuge/marke_schriftpfade.ps1",
+      "bytes": 1115,
+      "sha256": "b2fea146da3df768bd9175626510dd855743893ece1b3c1e3491160c99c138b2"
+    },
+    {
+      "pfad": "quellen/werkzeuge/markenleitfaden.py",
+      "bytes": 18056,
+      "sha256": "5809bd2f6ad120e2b8635f9cdda10b4aeb3e09501531b44796d253fa1761aba3"
+    },
+    {
+      "pfad": "quellen/werkzeuge/markenpaket.py",
+      "bytes": 15649,
+      "sha256": "a12d3b1224278bcbeb645638cb2364a0634871e897e9cf9a591f487b77aceaaf"
+    },
+    {
+      "pfad": "quellen/werkzeuge/markenpaket_pruefen.py",
+      "bytes": 6143,
+      "sha256": "5187f81c41515ded37fc552b95dde3f4dda878a95d4eb56ef6f40f6ee20ae9c8"
+    },
+    {
+      "pfad": "quellen/wortmarke-pfade.json",
+      "bytes": 13200,
+      "sha256": "e91e309b6a741a4643714b549b691633eefd6044fa720ed9f55fbdc51869fc75"
+    },
+    {
+      "pfad": "README.en.md",
+      "bytes": 1988,
+      "sha256": "8cb098020929f6a4bab372e903a4584ca16815ae3c0b4155390f96217b2fd3f5"
+    },
+    {
+      "pfad": "README.md",
+      "bytes": 3063,
+      "sha256": "ff6bf9fe867995a267155283bc8011003ea8dc70630346f0fc2459cef496e5dd"
+    },
+    {
+      "pfad": "START.html",
+      "bytes": 3980,
+      "sha256": "bcb564a467df0d624242eccccbd40112a417ca4739666fa050cb126de0ea99c1"
+    },
+    {
+      "pfad": "vorlagen/banner-1200x630-en.png",
+      "bytes": 298642,
+      "sha256": "d67e6278e2966933142327b682677ea9331a6a5bdc1b3e6f0f472910ed978945"
+    },
+    {
+      "pfad": "vorlagen/banner-1200x630-en.svg",
+      "bytes": 3755938,
+      "sha256": "bab72a19f5999d4e3db26c13406d900b5a58d47a2a41e88227cd2ecae3a808f6"
+    },
+    {
+      "pfad": "vorlagen/banner-1200x630.png",
+      "bytes": 301476,
+      "sha256": "b8ee8bec405d1a2dca00d12871c7f9932e5e4368487f631591612b5a5e4ac189"
+    },
+    {
+      "pfad": "vorlagen/banner-1200x630.svg",
+      "bytes": 3755925,
+      "sha256": "2ef1e78f6cc005f0f44cbb70e8f4b318e30d3f7785efe0d955a2600c4a59cf94"
+    },
+    {
+      "pfad": "vorlagen/briefpapier-a4.png",
+      "bytes": 13966,
+      "sha256": "eafd5741426cf4d455e577d9f7b2817ff52c6d45247c5e635fce8d94a001616a"
+    },
+    {
+      "pfad": "vorlagen/briefpapier-a4.svg",
+      "bytes": 88065,
+      "sha256": "d036528441ba95bd6b4f2438d3b6d27bc3249c6b6fa0c5c5477387e293880539"
+    },
+    {
+      "pfad": "vorlagen/feed-traumpraxis-1080x1350-en.png",
+      "bytes": 359357,
+      "sha256": "dd74c49385f94f7b676d727cae1b0427b0bfd52fe7d5fe51f1c812e0332667d0"
+    },
+    {
+      "pfad": "vorlagen/feed-traumpraxis-1080x1350-en.svg",
+      "bytes": 3756228,
+      "sha256": "f3066c645db3e23411b26ec18ff56b62d61721e639620df33b7b42c87ab71b1c"
+    },
+    {
+      "pfad": "vorlagen/feed-traumpraxis-1080x1350.png",
+      "bytes": 360432,
+      "sha256": "afeb7bca3cb7653cb0b0daedc3cb679ca5ddf1960ed8e1c7cb1bd95e10b7f89c"
+    },
+    {
+      "pfad": "vorlagen/feed-traumpraxis-1080x1350.svg",
+      "bytes": 3756219,
+      "sha256": "0c3211f0dda7f3ab40018936c0d935f49a22baa39e887bf2910033acb459f4d6"
+    },
+    {
+      "pfad": "vorlagen/praesentationscover-1920x1080.png",
+      "bytes": 69716,
+      "sha256": "68534cefdaf113d9763290ae84f9ccc82e4ddd11154eec258e40e5d86775531c"
+    },
+    {
+      "pfad": "vorlagen/praesentationscover-1920x1080.svg",
+      "bytes": 88772,
+      "sha256": "19088d261f84e5b8400ccece6e69ccfd1d6bb30da73ecf129b77539324735a7e"
+    },
+    {
+      "pfad": "vorlagen/story-marke-1080x1920-en.png",
+      "bytes": 103940,
+      "sha256": "db165a6266af8358704b41184777fe4bdf611b33bd07ea5d3242727623623ddc"
+    },
+    {
+      "pfad": "vorlagen/story-marke-1080x1920-en.svg",
+      "bytes": 89107,
+      "sha256": "c689dc190f9958beb87f09489ba0bf3dd06837ed5646905f44db0dda8e33a384"
+    },
+    {
+      "pfad": "vorlagen/story-marke-1080x1920.png",
+      "bytes": 94300,
+      "sha256": "fa436dcbb905c21a6c9a2b640ca5a0ced34cc4bf91844f46d4c412f4a2ba56ff"
+    },
+    {
+      "pfad": "vorlagen/story-marke-1080x1920.svg",
+      "bytes": 89092,
+      "sha256": "1d543931cb05e8246a3dfc5c7602d0f111136bae2b1a6df546496344d8030f46"
+    },
+    {
+      "pfad": "vorlagen/zitat-1080x1080-en.png",
+      "bytes": 58926,
+      "sha256": "4ccddcca581a42d9a2c25b78206527e1669f834cc7b5a77229840144db94908b"
+    },
+    {
+      "pfad": "vorlagen/zitat-1080x1080-en.svg",
+      "bytes": 88441,
+      "sha256": "d1d0ea98207c4858293f09152288430dc3d4e23db72d21462ce1f0eb012c0768"
+    },
+    {
+      "pfad": "vorlagen/zitat-1080x1080.png",
+      "bytes": 60900,
+      "sha256": "0c3710076b513a2e6256f980d809e80c996679064a8537b6e79d52244c427f08"
+    },
+    {
+      "pfad": "vorlagen/zitat-1080x1080.svg",
+      "bytes": 88523,
+      "sha256": "c53435415e375a9ead072817ac91549410fc27665bce254881624122c41725ff"
+    },
+    {
+      "pfad": "vorschau/leitfaden-kontaktbogen.jpg",
+      "bytes": 358065,
+      "sha256": "691163d76e8bbe16ccbec633546bbdd622aa77afb7ef13cc8dbd3affadbec50c"
+    },
+    {
+      "pfad": "vorschau/markenuebersicht.png",
+      "bytes": 422670,
+      "sha256": "c262caf8b953a82b014c8b6d2814044b0f06b912dd84de88346bab04b63b123b"
+    },
+    {
+      "pfad": "vorschau/markenuebersicht.svg",
+      "bytes": 3767515,
+      "sha256": "13968e847566fdfa9be326ddf4320370f97ca82c3cb6d89921d8b8b7c55fe56a"
+    }
+  ]
+}

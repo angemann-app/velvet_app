@@ -12,6 +12,7 @@ import json
 import os
 import re
 import sys
+from kursgrafiken_webp import eintrag as dekorativer_eintrag
 
 WURZEL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BILDER = os.path.join(WURZEL, "assets", "images")
@@ -95,27 +96,18 @@ def bauen():
         pfad = kurs.get("image")
         if not pfad:
             continue
-        nr = re.search(r"cover_(\d+)\.svg$", pfad).group(1)
-        eintrag = {"format": "kopf", "normal": pfad, "alt": {"de": kurs["title"], "en": en_kurse[kurs["id"]]["title"]}}
-        spicy = pfad.replace(".svg", "_spicy.svg")
-        if existiert(spicy):
-            eintrag["spicy"] = spicy
+        nr = re.search(r"cover_(\d+)\.(?:svg|webp)$", pfad).group(1)
+        eintrag = dekorativer_eintrag('cover_'+nr, {"de": kurs["title"], "en": en_kurse[kurs["id"]]["title"]})
         bilder["kurs.%s.titel" % nr] = eintrag
 
     # Geführte Audios
     for name, (alt_de, alt_en) in GEFUEHRT.items():
-        pfad = "assets/images/guided_%s.svg" % name
-        e = {"format": "kopf", "normal": pfad, "alt": {"de": alt_de, "en": alt_en}}
-        if existiert(pfad.replace(".svg", "_spicy.svg")):
-            e["spicy"] = pfad.replace(".svg", "_spicy.svg")
+        e = dekorativer_eintrag('guided_'+name, {"de": alt_de, "en": alt_en})
         bilder["audio.%s.cover" % name] = e
 
     # Ja/Nein/Vielleicht-Bereiche
     for name, (alt_de, alt_en) in JA_NEIN.items():
-        pfad = "assets/images/ynm_%s.svg" % name
-        e = {"format": "kopf", "normal": pfad, "alt": {"de": alt_de, "en": alt_en}}
-        if existiert(pfad.replace(".svg", "_spicy.svg")):
-            e["spicy"] = pfad.replace(".svg", "_spicy.svg")
+        e = dekorativer_eintrag('ynm_'+name, {"de": alt_de, "en": alt_en})
         bilder["bereich.%s" % name] = e
 
     # Diagramme und Körperzeichnungen der Lektionen (deutsche und englische Fassung)

@@ -12,8 +12,14 @@ import re
 # Ändert sich das Profil, ändert sich die Prüfsumme der Aufnahmen und sie werden neu gesprochen.
 PROFIL = "ausdruck-1"
 
+# Separates Profil für neue Kursaufnahmen; bestehende Reihen-Aufnahmen nicht
+# allein durch die Hörproben für das Gesamtlektorat ungültig machen.
+LEKTIONS_PROFIL = "lektionsausdruck-1"
+
 # Tempo relativ zum Grundtempo der Stimme.
 SZENE = {
+    "wissen": 1.02,
+    "praxis": 0.97,
     "opening": 1.05,
     "attraction": 1.02,
     "first_contact": 1.02,

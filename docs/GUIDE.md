@@ -2,6 +2,22 @@
 
 This guide is also inside the app (question mark at the top right, or in your profile). [Deutsche Fassung](ANLEITUNG.md)
 
+## Continue listening and share an experience
+
+Lessons and guided activities use one player. Closing a page keeps playback going; the mini player remains available at the bottom of the app. Reopening the app never starts playback automatically. Recordings resume at the saved section and position, and randomly assembled sequences stay intact. The device voice restarts a resumed section from its beginning. Backups contain your place, without spoken texts.
+
+Before and during playback, check recording availability and download matching packages. A saved sequence keeps its original language.
+
+For “Listen together”, both people open the app with a connected couple channel. After invitation and acceptance, each person confirms “Ready”. Both need identical recordings of the same version; actual files are compared. A shared countdown accounts for different device clocks. Either person can pause or end the activity. Continuing requires both people to be ready again. Different complementary perspectives are not synchronised yet. Spicy requires the mode on both devices.
+
+If the connection is interrupted, your own recording continues. Remote pause requires a connection; you can always pause locally. Reconnecting never starts playback automatically. Reflection and a feeling are optional; answers are revealed only after both have shared. Failed sends do not reveal answers. Reopen a reflection through its message in the couple channel.
+
+## Find content and follow your personal path
+
+The magnifying glass searches courses, lessons and practice activities locally. No search history is saved, and private notes and messages are excluded. Spicy content appears only when its mode is enabled. The lesson player shows the actual offline availability of its recording. If it is missing, the device voice can read the text; “Download recordings” opens the package manager.
+
+Lessons with a linked exercise and reflection question offer an optional personal path: discover the knowledge, try the exercise and reflect. You confirm each step yourself, with no time limit or required answer. Return to an unfinished path from Today. Your place is included in your backup.
+
 ## Contents
 
 - [Getting started](#getting-started)
@@ -15,6 +31,7 @@ This guide is also inside the app (question mark at the top right, or in your pr
 - [Privacy, discretion and backup](#privacy-discretion-and-backup)
 - [Updates and beta](#updates-and-beta)
 - [Language and English recordings](#language-and-english-recordings)
+- [Appearance](#appearance)
 - [Help and feedback](#help-and-feedback)
 
 ## Getting started
@@ -59,7 +76,9 @@ Pleasure in dreams (spicy mode only): eight evenings that build on each other, f
 
 All of them are put together anew every time. You can pause, skip and stop at any time.
 
-Inner views (spicy mode only, 18+): continuous audio stories of about 15 to 25 minutes, not for falling asleep. They tell an encounter from the inside. You choose Soft or Spicy and a perspective; the matching perspective of the same encounter follows the same sequence of scenes, so two people can listen together. The app does not sync two devices, though: you start together yourselves. All characters are adults, everything happens by mutual consent, and none of it is a benchmark: every body experiences pleasure differently. The recordings come as a separate package and then play without a network. In the player you can pause and skip scenes. On the card, discreet mode only shows Audio story.
+Inner views (spicy mode only, 18+): continuous audio stories of about 15 to 25 minutes, not for falling asleep. They tell an encounter from the inside. You choose Soft or Spicy and a perspective; the matching perspective of the same encounter follows the same sequence of scenes, so two people can listen together. “Listen together” synchronises the same version on two devices. Different complementary perspectives still need to be coordinated by you. All characters are adults, everything happens by mutual consent, and none of it is a benchmark: every body experiences pleasure differently. The recordings come as a separate package and then play without a network. In the player you can pause and skip scenes. On the card, discreet mode only shows Audio story.
+
+Your dream practice: In Pleasure in dreams, connect recall, recognising dreams and noticing what lingers during the day. Under “Your dream signs”, add, edit or delete personal signs. For your evening preparation, choose a sign and a pleasant memory from your journal. Under “Reflect on today”, optionally record rest, waking desire, sensual or lucid dreams, any experienced orgasms and a note. Questions can remain unanswered. Your private review lets you view, edit and delete daily observations. Signs and observations stay local, are included in your backup and are not sent to a partner or the AI coach. More waking desire is an aim to explore, not a promised effect.
 
 
 ## Training and quick help
@@ -140,6 +159,15 @@ After an update, “What's new” shows once what has changed.
 The app is available in German and English. It follows your phone's language, and you can change it in your profile.
 
 You download the recordings by Victoria and Martin in your profile under “Recordings”, split into lessons and guided audio, in German and in English. They're no longer inside the app itself, so it stays small and corrected recordings arrive without an update. If a recording is missing, your phone's voice reads aloud.
+
+
+## Appearance
+
+Under Profile and settings you choose “Appearance”: Paper (light, default), Night paper (dark) or Classic (the previous colours). The choice applies to the whole app straight away and is part of your backup.
+
+Spicy mode has its own colours: deep burgundy and plum with warm paper white. Where an illustration is still missing, a drawn placeholder appears.
+
+Course, audio and topic images use existing pencil drawings or restrained graphic compositions. More intense Spicy illustrations come from the course image pack and appear only in Spicy mode. Until the pack is downloaded, the regular image remains visible. The view updates automatically after installation.
 
 
 ## Help and feedback

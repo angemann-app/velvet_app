@@ -1,5 +1,15 @@
 # Lektorat bestehender Spicy-Lektionen
 
+## Neuer Nutzerauftrag: ausschließlich Spicy-Ton nachschärfen – 02.11.2026
+
+Nach der externen Kritik ausdrücklich beauftragt: „Überarbeite nur die Spicy Varianten. Spicy darf ruhig im direkten Sinne erotisch sein.“ Bestehende explizite Inhalte sprachlich bearbeiten, keine neuen Handlungen/Szenen ergänzen. Direktere Satzführung und weniger redundante Erlaubnis-/Möglichkeitsfloskeln, vorhandene erotische Begriffe und Dialoge erhalten. Medizinische Unsicherheit bleibt korrekt; Stoppsignale, Grenzen und sicherheitsrelevante Bedingungen nicht entfernen. Rollenspiel-Erlaubnis hat Bedeutung und wird nicht mechanisch gestrichen.
+
+Nur tatsächlich Spicy-geschützte Varianten ändern: Lektionen mit eigenem oder Kurs-Spicy-Flag, Paar-/Selbst-Bausteine mit `tiefe=spicy|sehrSpicy`, Einschlaf-Bausteine mit `teil=s1|s2`, Traum-Bausteine mit `stufe=spicy`. Allgemeine Traumabsichten und Kurzfassungen v3 gehören nicht dazu und bleiben unverändert. DE/EN gemeinsam, keine privaten Innenansichten/Abendfolgen. Änderungen mit Vorherstand/Einzelvergleich und gezielter Liste veralteter Audios dokumentieren. Keine Neuvertonung, Paketübernahme oder Veröffentlichung in diesem Textschritt; die frühere akustische Abnahme gilt weiter nur für die jeweiligen bisherigen Dateien.
+
+## Freigabe und Übernahme 01.11.2026
+
+Der Nutzer hat die 27 vollständigen Lektoratsfassungen einschließlich Englisch freigegeben und die Neuvertonung beauftragt. Übernommen auf `codex/gesamtlektorat-audio` mit `tools/redaktion_spicy_uebernehmen.py`; 54 Fassungen gegen die freigegebenen Entwürfe und die aktuellen Ausgangsstellen geprüft. Aktuelle Metadaten erhalten, Originalquellen unter `build/redaktion/gesamt/` gesichert. Die nachfolgenden älteren Abschnitte beschreiben den Entwurfsstand; ihre Hinweise auf ausstehende Textabnahme sind damit erledigt. Hörabnahme des neuen Lektionsprofils und vollständige Neuvertonung stehen weiterhin aus. Den alten Entwurfsgenerator nach Übernahme nicht gegen die bereits korrigierten Quellen ausführen; Entwürfe und Quellensicherungen sind erhalten.
+
 Stand: 01.11.2026. Vom Nutzer beauftragt: bestehende Spicy-Lektionen überarbeiten, Deutsch und Englisch mitpflegen, anschließend lokale Neuvertonung nach den Regeln von Claude Code. Die neuen Innenansichten gehören nicht zu diesem Auftrag.
 
 ## Vereinbarter Umfang

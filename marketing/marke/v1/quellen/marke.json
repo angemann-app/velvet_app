@@ -1,0 +1,45 @@
+{
+  "marke": "VelvetPulse",
+  "version": "1.0",
+  "datum": "2026-11-02",
+  "positionierung": "Ein persönlicher Raum für Körperwissen, Wahrnehmung, Berührung und Nähe. Ein digitales Magazin, das zum eigenen Erleben einlädt.",
+  "claim_de": "Dein Körper. Dein Erleben.",
+  "claim_en": "Your body. Your experience.",
+  "leitgedanke_de": "Verstehen. Spüren. Verbinden.",
+  "leitgedanke_en": "Understand. Feel. Connect.",
+  "eigenschaften": ["warm", "erwachsen", "sinnlich", "klar", "diskret", "neugierig"],
+  "farben": {
+    "papier": {"grund": "#F6F0E6", "erhoben": "#FBF7F0", "tinte": "#2A2A2C", "sekundaer": "#5A5750", "linie": "#D8CFBF", "akzent": "#B47C84", "akzent_text": "#8E4A57"},
+    "nachtpapier": {"grund": "#1D1F22", "erhoben": "#26282C", "tinte": "#E9E4D8", "sekundaer": "#B9B3A6", "linie": "#4A4C50", "akzent": "#D9A3AB", "akzent_text": "#E8C2C8"},
+    "spicy": {"grund": "#1F1017", "erhoben": "#2C1722", "tinte": "#F3E8E2", "sekundaer": "#D2BCBC", "linie": "#55303F", "akzent": "#D07A8E", "akzent_text": "#EDB3C0"},
+    "rose_dekorativ": "#C98A93"
+  },
+  "typografie": {"redaktionell": "Source Serif 4", "funktional": "System UI", "schnitte": ["Regular", "SemiBold", "Italic"]},
+  "angebot": {
+    "Heute": "Persönliche Einladung und ein nächster Schritt.",
+    "Lernen": "Körperwissen verstehen, Zusammenhänge entdecken.",
+    "Üben": "Wahrnehmung und bewusste Erfahrung vertiefen.",
+    "Wir": "Nähe und Verständigung zu zweit gestalten.",
+    "Traumpraxis": "Träume erinnern, Erkennen üben und angenehme Erfahrungen nachspüren."
+  },
+  "copy_de": {
+    "kurz": "Körperwissen, Sinnlichkeit und Nähe. In deinem Tempo.",
+    "profil": "Ein digitales Magazin über Körper, Wahrnehmung und Nähe. Wissen zum Verstehen. Übungen zum Spüren. Raum für dein eigenes Erleben. Für Erwachsene.",
+    "lang": "VelvetPulse verbindet Körperwissen mit bewusster Erfahrung. Entdecke redaktionelle Kurse, praktische Übungen und ruhige Hörbegleitungen. Allein oder zu zweit, neugierig und ohne Leistungsdruck. Du entscheidest, was zu dir passt und wie nah du dir kommen möchtest.",
+    "cta": "Entdecke deinen nächsten Schritt.",
+    "traumpraxis": "Nimm deine Lust mit in den Traum. Und etwas davon mit in den Tag."
+  },
+  "copy_en": {
+    "kurz": "Body knowledge, sensuality and closeness. At your own pace.",
+    "profil": "A digital magazine about the body, awareness and closeness. Knowledge to understand. Practices to explore. Space for your own experience. For adults.",
+    "lang": "VelvetPulse brings body knowledge and conscious experience together. Explore editorial courses, practical exercises and calm audio guidance. On your own or together, with curiosity and without pressure to perform. You choose what feels right and how deeply you want to explore.",
+    "cta": "Discover your next step.",
+    "traumpraxis": "Take your desire into your dreams. And bring something of it into your day."
+  },
+  "ton": {
+    "tun": ["Du-Ansprache, einladend und konkret", "Anatomisch präzise, ohne unnötigen Fachjargon", "Spicy darf direkt sein, bleibt respektvoll", "Möglichkeiten benennen, keine Ergebnisse versprechen"],
+    "vermeiden": ["Garantierte Orgasmen oder Heilung", "Künstliche Verknappung und Leistungsdruck", "Kindliche Verniedlichung, Scham und Wertung", "Pauschale Datenschutzversprechen bei externen Diensten"]
+  },
+  "logo": {"schutzraum": "Mindestens ein Viertel der sichtbaren Signethöhe ringsum.", "horizontal_min_px": 160, "horizontal_min_mm": 35, "signet_min_px": 24, "kompakt_min_px": 16},
+  "bildsprache": ["Natürliche erwachsene Körper und realistische Proportionen", "Graphit, differenzierte Schraffuren, warme Papierflächen", "Rosé zurückhaltend, technische Linien sparsam", "Solo und Paare, unterschiedliche Körper, Geschlechter und Lebensphasen", "Keine Comicfiguren, Stockperfektion, Flammen oder Glüheffekte"]
+}

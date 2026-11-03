@@ -218,4 +218,7 @@ def alle():
 
 
 if __name__ == "__main__":
-    alle()
+    print('Abgelöst durch tools/kursgrafiken_webp.py; keine alten SVGs mehr erzeugen.')
+    from kursgrafiken_webp import make, check
+    make()
+    check()

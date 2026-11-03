@@ -1,9 +1,19 @@
 # Aufgaben
 
+## Aktuell vorrangig: gezielte Spicy-Neuvertonung vor Claudes Beta
+
+02.11.2026: Neuer Nutzerauftrag Spicy-Ton einschließlich separater Sehr-spicy-Innenansichten und Neuvertonung. Textdurchgang umgesetzt und geprüft; Produktion von 150 regulären Dateien plus 24 Szenendateien erfolgreich abgeschlossen, 174/174 technisch geprüft. Hörstichprobe und Paketübernahme offen. Morgen zuerst Fortschritt/Abschluss prüfen: `docs/redaktion/SPICY_TONDURCHGANG_2026-11-02.md` und `build/redaktion/spicy-ton/nachtlauf.json` / `abschluss.json`. Dann gezielte Paketübernahme, Hörstichprobe und Claudes Beta-Build nach bestehendem Freigabeworkflow. Kein neuer Gesamtlauf und kein Upload durch Codex.
+
 Stand: 27.10.2026. Reihenfolge = Priorität. Erledigtes nach unten unter „Erledigt“ verschieben.
 Für jede Aufgabe eine eigene Sitzung und ein eigener Branch.
 
+## Aktuell: Bedienung und gemeinsames Hören
+
+Freigegeben am 02.11.2026, Branch `codex/bedienung-audio-gemeinsam-20261102`, Konzept `docs/konzepte/bedienung-audio-wege.md`. Implementiert: lokale Suche, persönlicher Weg, globaler Player/Mini-Player, genaue Wiederaufnahme des gespeicherten Ablaufs, Offline-/Downloadwege, gemeinsames Hören derselben Fassung und freiwilliger gemeinsamer Rückblick. 419 Tests grün, Analyse ohne Befund; DE/EN und alle Atmosphären sowie kleine/große Displays geprüft. Gemeinsames Hören braucht passende tatsächliche Aufnahmen auf beiden Geräten; keine Geräte-Stimme. **Offen im Team:** Claude baut/veröffentlicht morgen eine Beta für den In-App-Download; erst danach echter Geräte-/Zweigeräte-/Hintergrundtest. Kein USB-/Alpha-Weg. Übergabe `docs/UEBERGABE_BETA_BEDIENUNG.md`, aktuelle Belege `docs/ZUSAMMENARBEIT_CODEX_CLAUDE.md`. Keine APK und keine Veröffentlichung durch Codex.
+
 ## 1. Lust im Traum: Rest
+
+Weiterentwicklung 01.11.2026 → `docs/konzepte/traumpraxis.md`: persönlicher Übungsweg, dauerhafte Traumzeichen, Abendvorbereitung und privater Tagesrückblick im Codex-Branch implementiert, DE/EN, mit Sicherung und Merge. Renderprüfung beider Sprachen und Formular-/Backup-Tests bestanden. Noch nicht veröffentlicht; echter Gerätetest und Release stehen aus. Keine Behauptung eines nachgewiesenen Lustzuwachses. Aktuelle Übergabe und Prüflogs in `docs/ZUSAMMENARBEIT_CODEX_CLAUDE.md`.
 
 Serie, Traumtagebuch und Paket sind gebaut (siehe Konzept, „Umsetzung“). Offen:
 - Auf dem Handy testen: Paket laden, Folge 1, Freischaltung, Traumkörper und Gegenüber ab Folge 3.
@@ -44,6 +54,10 @@ Meldungen werden täglich gesammelt, abgearbeitet wird einmal pro Woche am Mittw
 führt nach dem OK des Nutzers zusammen. Ablauf in `docs/AUSSPRACHE.md` (früher AG-1).
 
 ## Erledigt
+
+- 02.11.2026, Codex: App-Icon auf Magazin-Markenzeichen umgestellt, Android-7-Dichten/adaptive Ebenen/Themensymbol fertig, neutrales Pulse-Symbol erhalten. Native Icon-Ressourcen isoliert erfolgreich kompiliert/verlinkt; vollständiger Offline-Gradle-Build wegen fehlender Cache-Abhängigkeiten nicht bestätigt. Kein Release beauftragt. Anschließend technische Endprüfung der vorhandenen Neuvertonung aufgenommen.
+
+- 02.11.2026, Codex: dekorative Kurs-/Audio-/Themenbilder auf WebP umgestellt, vorhandene Pencil-Zeichnungen und eigene Spicy-Paketmotive eingebunden; zentrale Zuordnung und Alias-Kompatibilität, automatischer Bildwechsel bei Paketinstallation/-löschung. Konzept `docs/konzepte/kursgrafiken-redaktionell.md`, Prüfung und Übergabe im Codex-/Claude-Protokoll. Noch kein App-Release beauftragt.
 
 - 26.10.2026: Konzept Traum-Reise abgestimmt, `CLAUDE.md` angelegt, Cloudflare R2 eingerichtet und
   Verbindung geprüft.

@@ -1,0 +1,14 @@
+Use case: ads-marketing.
+Create a finished premium German social media sharepic for VelvetPulse, portrait 4:5 aspect ratio, ideally 1080 x 1350. It should look like the cover of a refined international editorial magazine about body awareness, intimacy and dreams. This is a polished final marketing image, not a mockup displayed on a device.
+Brand aesthetic: warm ivory paper #F6F0E6, graphite ink #2A2A2C, muted dusty rose #C98A93, subtle plum shading. Fine realistic graphite pencil illustration with delicate hatching, natural proportions, soft shadows and a few restrained architectural construction arcs and fine registration marks. No cartoon, no stock-photo style, no glow, no fire, no generic gradients. Plenty of intentional white space. Elegant high-contrast editorial serif headlines and restrained readable sans serif supporting text.
+Illustration: an adult woman peacefully resting, eyes closed, head on a soft pillow, one naturally drawn hand resting nearby, covered shoulders in a loose modest sleep shirt. A beautiful realistic pencil study, quiet and intimate without erotic posing or nudity. Her face, pillow and soft folds gradually dissolve into delicate graphite contours of an open doorway and a very subtle crescent-shaped construction arc suggesting the threshold of a dream. Grounded, artistic and tactile, no magical fantasy spectacle. The drawing should actively shape the page composition, occupy the central/lower section and blend into the warm paper.
+Exact German text, reproduce accurately with umlauts and punctuation. Strong hierarchy:
+Top small elegant brand name: "VelvetPulse"
+Small editorial eyebrow: "NEU · TRAUMPRAXIS"
+Large central headline, generously spaced: "Deine Nacht.
+Deine Lust.
+Dein Raum."
+Supporting copy below headline, readable: "Nimm deine Lust mit in den Traum.
+Und etwas davon mit in den Tag."
+Small footer, clearly readable: "Träume erinnern · Klarheit üben · Lust entdecken"
+No other text, no invented app screens, no store badges, no QR codes, no URLs, no claims of guaranteed lucid dreams or orgasms. Do not invent a logo icon: use the VelvetPulse wordmark only. Deliver a visually sophisticated, serene, warm and adult campaign image with all text well inside safe margins. Opaque paper background.

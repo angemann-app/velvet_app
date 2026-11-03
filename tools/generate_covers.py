@@ -268,30 +268,7 @@ GEFUEHRT = {
 }
 
 if __name__ == "__main__":
-    import sys
-
-    if "--spicy" in sys.argv:  # nur die Spicy-Fassungen (*_spicy.svg), die Normalfassungen bleiben unberührt
-        n = 0
-        for name, (kind, _) in GEFUEHRT.items():
-            (OUT / f"{name}_spicy.svg").write_text(spicy_scene(kind, n), encoding="utf-8", newline="\n")
-            n += 1
-        for nr, (kind, _) in COVERS.items():
-            (OUT / f"cover_{nr:02d}_spicy.svg").write_text(spicy_scene(kind, nr), encoding="utf-8", newline="\n")
-            n += 1
-        for category, (kind, _) in YES_NO_MAYBE.items():
-            (OUT / f"ynm_{category}_spicy.svg").write_text(spicy_scene(kind, n), encoding="utf-8", newline="\n")
-            n += 1
-        print(f"{n} Spicy-Fassungen geschrieben")
-        raise SystemExit
-    for name, (kind, pal) in GEFUEHRT.items():
-        path = OUT / f"{name}.svg"
-        path.write_text(scene(kind, pal), encoding="utf-8")
-        print(path.name, kind, pal)
-    for nr, (kind, pal) in COVERS.items():
-        path = OUT / f"cover_{nr:02d}.svg"
-        path.write_text(scene(kind, pal), encoding="utf-8")
-        print(path.name, kind, pal)
-    for category, (kind, pal) in YES_NO_MAYBE.items():
-        path = OUT / f"ynm_{category}.svg"
-        path.write_text(scene(kind, pal), encoding="utf-8")
-        print(path.name, kind, pal)
+    print('Abgelöst durch tools/kursgrafiken_webp.py; keine alten SVGs mehr erzeugen.')
+    from kursgrafiken_webp import make, check
+    make()
+    check()

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>VelvetPulse – Bogen und V-/Pulslinie</title>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M194.468,194.468C158.512,230.425 100.480,231.269 63.493,196.373C26.506,161.478 23.975,103.496 57.780,65.509C91.585,27.523 149.469,23.306 188.422,55.992" stroke="#2A2A2C" stroke-width="9.5"/>
+    <path d="M188.422,55.992C204.489,69.473 215.585,87.941 219.946,108.456" stroke="#B47C84" stroke-width="9.5"/>
+    <path d="M66,104 C84,96 97,129 111,151 C122,169 133,170 144,152 L165,117 C177,99 190,98 202,111" stroke="#2A2A2C" stroke-width="12"/>
+  </g>
+</svg>
