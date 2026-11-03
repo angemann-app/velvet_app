@@ -20,6 +20,91 @@ class SchlafTraumBlick extends StatelessWidget {
     neu();
   }
 
+  static String _dauer(Duration d) =>
+      t.schlafDauer(d.inHours, d.inMinutes.remainder(60));
+
+  /// Kalendertag in Worten: heute und gestern ausgeschrieben, sonst Wochentag und Datum.
+  static String _tagName(String datum, DateTime jetzt) {
+    final d = DateTime.parse(datum);
+    final heute = DateTime(jetzt.year, jetzt.month, jetzt.day);
+    final diff = DateTime(d.year, d.month, d.day).difference(heute).inDays;
+    return diff == 0
+        ? t.schlafBlickHeute
+        : diff == -1
+            ? t.schlafBlickGestern
+            : DateFormat.MMMEd(Sprache.code).format(d);
+  }
+
+  /// Ein Tag in einfachen Worten: wie lange du geschlafen hast und alles, was du selbst festgehalten hast
+  /// (Erholung, Lust, Träume, Notiz). Phasen und Zeitfenster stehen nur unter „Messwerte“.
+  Widget _tag(BuildContext context, SchlafTraumTag tag, VpTypo typo) {
+    final b = tag.beobachtung;
+    final String? schlaf = tag.messungen.length > 1
+        ? t.schlafBlickMehrere
+        : tag.messungen.length == 1
+            ? (tag.messungen.single.schlafzeit != null
+                ? t.schlafBlickGeschlafen(_dauer(tag.messungen.single.schlafzeit!))
+                : t.schlafBlickImBett(_dauer(tag.messungen.single.zeitfenster)))
+            : null;
+    final angaben = <String>[
+      if (b?.schlaf != null) praxisSchlafName(b!.schlaf!),
+      if (b?.lust != null) praxisLustName(b!.lust!),
+      if (tag.klar) t.schlafBlickKlar,
+      if (tag.sinnlich) t.schlafBlickSinnlich,
+      if (tag.hoehepunkt) t.schlafBlickHoehepunkt,
+      if (tag.erinnert)
+        t.schlafBlickErinnert
+      else if (tag.nichtsErinnert)
+        t.schlafBlickOhneErinnerung,
+    ];
+    final notiz = b?.text.trim() ?? '';
+    final nichts = !tag.hatAngaben;
+    return Padding(
+        padding: const EdgeInsets.symmetric(vertical: VpAbstand.m),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(_tagName(tag.datum, DateTime.now()), style: typo.titel),
+          if (schlaf != null)
+            Padding(
+                padding: const EdgeInsets.only(top: VpAbstand.s),
+                child: Text(schlaf)),
+          if (angaben.isNotEmpty)
+            Padding(
+                padding: const EdgeInsets.only(top: VpAbstand.s),
+                child: Wrap(spacing: VpAbstand.s, runSpacing: VpAbstand.s, children: [
+                  for (final a in angaben) Chip(label: Text(a))
+                ])),
+          if (notiz.isNotEmpty)
+            Padding(
+                padding: const EdgeInsets.only(top: VpAbstand.s),
+                child: Text(notiz,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                    style: typo.fliesstextKlein)),
+          if (tag.hatAngaben && angaben.isEmpty && notiz.isEmpty)
+            Padding(
+                padding: const EdgeInsets.only(top: VpAbstand.s),
+                child: Text(t.schlafBlickKeineBesonderheiten,
+                    style: typo.fliesstextKlein)),
+          if (nichts && schlaf == null)
+            Padding(
+                padding: const EdgeInsets.only(top: VpAbstand.s),
+                child: Text(t.schlafBlickNochNichts,
+                    style: typo.fliesstextKlein)),
+          const SizedBox(height: VpAbstand.s),
+          Builder(builder: (context) {
+            final oeffnen = () => _oeffnen(
+                context,
+                PraxisVerwaltung(
+                    ansicht: PraxisAnsicht.beobachtung, tag: tag.datum));
+            return nichts
+                ? FilledButton.tonal(
+                    onPressed: oeffnen, child: Text(t.schlafBlickNacht))
+                : TextButton(
+                    onPressed: oeffnen, child: Text(t.schlafBlickAendern));
+          }),
+        ]));
+  }
+
   @override
   Widget build(BuildContext context) {
     final typo = VpTypo.fuer(AppTheme.palette);
@@ -67,41 +152,7 @@ class SchlafTraumBlick extends StatelessWidget {
             child: Text(t.schlafBlickBilanz(klar, angaben))),
       for (final tag in tage) ...[
         const Divider(),
-        Padding(
-            padding: const EdgeInsets.symmetric(vertical: VpAbstand.m),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(
-                  DateFormat.MMMEd(Sprache.code)
-                      .format(DateTime.parse(tag.datum)),
-                  style: typo.titel),
-              Text(tag.messungen.isEmpty
-                  ? t.schlafBlickOhneMessung
-                  : tag.messungen.length > 1
-                      ? t.schlafBlickMehrere
-                      : '${t.schlafSchlafzeit}: ${tag.messungen.single.schlafzeit == null ? t.schlafUnbekannt : t.schlafDauer(tag.messungen.single.schlafzeit!.inHours, tag.messungen.single.schlafzeit!.inMinutes.remainder(60))}'),
-              if (tag.messungen.length == 1 &&
-                  tag.messungen.single.schlafzeit == null)
-                Text(
-                    '${t.schlafZeitfenster}: ${t.schlafDauer(tag.messungen.single.zeitfenster.inHours, tag.messungen.single.zeitfenster.inMinutes.remainder(60))}'),
-              if (tag.klar) Text(t.schlafBlickKlar),
-              if (tag.sinnlich) Text(t.schlafBlickSinnlich),
-              if (tag.hoehepunkt) Text(t.schlafBlickHoehepunkt),
-              if (tag.erinnert)
-                Text(t.schlafBlickErinnert)
-              else if (tag.nichtsErinnert)
-                Text(t.schlafBlickOhneErinnerung)
-              else if (!tag.klar && !tag.sinnlich && !tag.hoehepunkt)
-                Text(t.schlafBlickUnbekannt),
-              if (tag.beobachtung?.lust != null)
-                Text(praxisLustName(tag.beobachtung!.lust!)),
-              TextButton(
-                  onPressed: () => _oeffnen(
-                      context,
-                      PraxisVerwaltung(
-                          ansicht: PraxisAnsicht.beobachtung, tag: tag.datum)),
-                  child: Text(t.schlafBlickNacht)),
-            ])),
+        _tag(context, tag, typo),
       ],
       const SizedBox(height: VpAbstand.l),
       Text(t.schlafBlickGrenze, style: typo.fliesstextKlein),

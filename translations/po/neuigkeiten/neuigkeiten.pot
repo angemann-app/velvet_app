@@ -1174,3 +1174,27 @@ msgstr ""
 msgctxt "news:60#2.text"
 msgid "Kommt während einer Aufnahme eine Benachrichtigung, wird sie kurz leiser statt zu stoppen. Bei einem Anruf pausiert sie weiter und startet nie von selbst."
 msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.3
+#. EN: Notifications no longer stop playback
+msgctxt "news:61#0.titel"
+msgid "Benachrichtigungen stoppen nicht mehr"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.3
+#. EN: If a notification arrives during a recording, it now really only gets briefly quieter. A phone call still pauses it, and it never restarts on its own.
+msgctxt "news:61#0.text"
+msgid "Kommt während einer Aufnahme eine Benachrichtigung, wird sie jetzt wirklich nur kurz leiser. Bei einem Anruf pausiert sie weiter und startet nie von selbst."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.3
+#. EN: Your nights in review, in plain words
+msgctxt "news:61#1.titel"
+msgid "Deine Nächte im Rückblick, in einfachen Worten"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.3
+#. EN: For each day you see how long you slept and everything you noted yourself: rest, desire, dreams and your note.
+msgctxt "news:61#1.text"
+msgid "Zu jedem Tag siehst du, wie lange du geschlafen hast, und alles, was du selbst festgehalten hast: Erholung, Lust, Träume und deine Notiz."
+msgstr ""

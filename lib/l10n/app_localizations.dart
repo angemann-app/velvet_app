@@ -8553,6 +8553,48 @@ abstract class AppLocalizations {
   /// **'Traumpraxis entdecken'**
   String get schlafBlickPraxis;
 
+  /// No description provided for @schlafBlickHeute.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute'**
+  String get schlafBlickHeute;
+
+  /// No description provided for @schlafBlickGestern.
+  ///
+  /// In de, this message translates to:
+  /// **'Gestern'**
+  String get schlafBlickGestern;
+
+  /// No description provided for @schlafBlickGeschlafen.
+  ///
+  /// In de, this message translates to:
+  /// **'Geschlafen: {dauer}'**
+  String schlafBlickGeschlafen(String dauer);
+
+  /// No description provided for @schlafBlickImBett.
+  ///
+  /// In de, this message translates to:
+  /// **'Im Bett: {dauer}'**
+  String schlafBlickImBett(String dauer);
+
+  /// No description provided for @schlafBlickKeineBesonderheiten.
+  ///
+  /// In de, this message translates to:
+  /// **'Nichts Besonderes notiert'**
+  String get schlafBlickKeineBesonderheiten;
+
+  /// No description provided for @schlafBlickAendern.
+  ///
+  /// In de, this message translates to:
+  /// **'Angaben ansehen oder ändern'**
+  String get schlafBlickAendern;
+
+  /// No description provided for @schlafBlickNochNichts.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch nichts festgehalten'**
+  String get schlafBlickNochNichts;
+
   /// No description provided for @schlafMesswerte.
   ///
   /// In de, this message translates to:

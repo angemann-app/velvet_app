@@ -32,6 +32,13 @@ class WiedergabeDienst with WidgetsBindingObserver {
           ? (e.begin ? UnterbrechungsReaktion.leiser : UnterbrechungsReaktion.normal)
           : (e.begin ? UnterbrechungsReaktion.pausieren : UnterbrechungsReaktion.keine);
 
+  /// Die Vorlage „speech“ setzt androidWillPauseWhenDucked auf true: Android meldet dann jede Benachrichtigung
+  /// als Pause statt als „leiser“, und die Wiedergabe stoppt. Ausgeschaltet kommt sie als duck an.
+  @visibleForTesting
+  static AudioSessionConfiguration sitzungsKonfiguration() =>
+      const AudioSessionConfiguration.speech()
+          .copyWith(androidWillPauseWhenDucked: false);
+
   double _duck = 1.0;
   WiedergabeDienst._() {
     lauf = WiedergabeLauf(
@@ -71,7 +78,7 @@ class WiedergabeDienst with WidgetsBindingObserver {
     });
     try {
       _session = await AudioSession.instance;
-      await _session!.configure(const AudioSessionConfiguration.speech());
+      await _session!.configure(sitzungsKonfiguration());
       _session!.interruptionEventStream.listen((e) {
         switch (reaktionAuf(e)) {
           case UnterbrechungsReaktion.leiser:

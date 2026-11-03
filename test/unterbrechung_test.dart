@@ -18,6 +18,12 @@ void main() {
     }
   });
 
+  test('Sitzung pausiert nicht von selbst, wenn Android nur „leiser“ verlangt', () {
+    final k = WiedergabeDienst.sitzungsKonfiguration();
+    expect(k.androidWillPauseWhenDucked, isFalse);
+    expect(k.androidAudioAttributes?.contentType, AndroidAudioContentType.speech);
+  });
+
   test('Leiser ist hörbar leiser, aber nicht stumm', () {
     expect(WiedergabeDienst.duckFaktor, inInclusiveRange(0.2, 0.6));
   });

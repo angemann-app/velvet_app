@@ -8579,6 +8579,48 @@ msgid "Traumpraxis entdecken"
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: Today
+msgctxt "ui:schlafBlickHeute#text"
+msgid "Heute"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yesterday
+msgctxt "ui:schlafBlickGestern#text"
+msgid "Gestern"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {dauer}
+#. EN: Slept: {dauer}
+msgctxt "ui:schlafBlickGeschlafen#text"
+msgid "Geschlafen: {dauer}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {dauer}
+#. EN: In bed: {dauer}
+msgctxt "ui:schlafBlickImBett#text"
+msgid "Im Bett: {dauer}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Nothing special noted
+msgctxt "ui:schlafBlickKeineBesonderheiten#text"
+msgid "Nichts Besonderes notiert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: View or change entries
+msgctxt "ui:schlafBlickAendern#text"
+msgid "Angaben ansehen oder ändern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Nothing noted yet
+msgctxt "ui:schlafBlickNochNichts#text"
+msgid "Noch nichts festgehalten"
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Connect sleep data and view measurements
 msgctxt "ui:schlafMesswerte#text"
 msgid "Schlafdaten verbinden und Messwerte ansehen"

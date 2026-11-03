@@ -695,6 +695,22 @@
           "text": "Kommt während einer Aufnahme eine Benachrichtigung, wird sie kurz leiser statt zu stoppen. Bei einem Anruf pausiert sie weiter und startet nie von selbst."
         }
       ]
+    },
+    {
+      "build": 61,
+      "version": "4.19.0-beta.3",
+      "punkte": [
+        {
+          "icon": "notifications",
+          "titel": "Benachrichtigungen stoppen nicht mehr",
+          "text": "Kommt während einer Aufnahme eine Benachrichtigung, wird sie jetzt wirklich nur kurz leiser. Bei einem Anruf pausiert sie weiter und startet nie von selbst."
+        },
+        {
+          "icon": "bedtime",
+          "titel": "Deine Nächte im Rückblick, in einfachen Worten",
+          "text": "Zu jedem Tag siehst du, wie lange du geschlafen hast, und alles, was du selbst festgehalten hast: Erholung, Lust, Träume und deine Notiz."
+        }
+      ]
     }
   ]
 }

@@ -1495,7 +1495,27 @@
   "schlafBlickVertiefen": "You have recorded lucidity in a dream. What would you like to notice consciously next time? Dream Practice makes room for sensuality and noticing how it feels during the day.",
   "schlafBlickRuhe": "Your recent entries suggest taking a break. Rest can be enough today. You do not need another exercise or overnight interruption.",
   "schlafBlickPraxis": "Explore Dream Practice",
-  "schlafMesswerte": "Connect sleep data and view measurements",
+  "schlafBlickHeute": "Today",
+  "schlafBlickGestern": "Yesterday",
+  "schlafBlickGeschlafen": "Slept: {dauer}",
+  "@schlafBlickGeschlafen": {
+    "placeholders": {
+      "dauer": {
+        "type": "String"
+      }
+    }
+  },
+  "schlafBlickImBett": "In bed: {dauer}",
+  "@schlafBlickImBett": {
+    "placeholders": {
+      "dauer": {
+        "type": "String"
+      }
+    }
+  },
+  "schlafBlickKeineBesonderheiten": "Nothing special noted",
+  "schlafBlickAendern": "View or change entries",
+  "schlafBlickNochNichts": "Nothing noted yet",  "schlafMesswerte": "Connect sleep data and view measurements",
   "schlafBlickBilanz": "{klar} of {tage} days with personal entries include a reported lucid dream. This is a reflection, not a performance goal.",
   "@schlafBlickBilanz": {
     "placeholders": {

@@ -5012,6 +5012,31 @@ class AppLocalizationsEn extends AppLocalizations {
   String get schlafBlickPraxis => 'Explore Dream Practice';
 
   @override
+  String get schlafBlickHeute => 'Today';
+
+  @override
+  String get schlafBlickGestern => 'Yesterday';
+
+  @override
+  String schlafBlickGeschlafen(String dauer) {
+    return 'Slept: $dauer';
+  }
+
+  @override
+  String schlafBlickImBett(String dauer) {
+    return 'In bed: $dauer';
+  }
+
+  @override
+  String get schlafBlickKeineBesonderheiten => 'Nothing special noted';
+
+  @override
+  String get schlafBlickAendern => 'View or change entries';
+
+  @override
+  String get schlafBlickNochNichts => 'Nothing noted yet';
+
+  @override
   String get schlafMesswerte => 'Connect sleep data and view measurements';
 
   @override

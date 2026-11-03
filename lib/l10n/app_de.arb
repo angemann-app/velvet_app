@@ -2246,7 +2246,27 @@
   "schlafBlickVertiefen": "Du hast Klarheit im Traum notiert. Was möchtest du beim nächsten Mal bewusst wahrnehmen? Deine Traumpraxis lässt Raum für Sinnlichkeit und das Nachspüren am Tag.",
   "schlafBlickRuhe": "Deine letzten Einträge sprechen für eine Pause. Heute darf Erholung genügen. Du musst keine neue Übung oder nächtliche Unterbrechung hinzufügen.",
   "schlafBlickPraxis": "Traumpraxis entdecken",
-  "schlafMesswerte": "Schlafdaten verbinden und Messwerte ansehen",
+  "schlafBlickHeute": "Heute",
+  "schlafBlickGestern": "Gestern",
+  "schlafBlickGeschlafen": "Geschlafen: {dauer}",
+  "@schlafBlickGeschlafen": {
+    "placeholders": {
+      "dauer": {
+        "type": "String"
+      }
+    }
+  },
+  "schlafBlickImBett": "Im Bett: {dauer}",
+  "@schlafBlickImBett": {
+    "placeholders": {
+      "dauer": {
+        "type": "String"
+      }
+    }
+  },
+  "schlafBlickKeineBesonderheiten": "Nichts Besonderes notiert",
+  "schlafBlickAendern": "Angaben ansehen oder ändern",
+  "schlafBlickNochNichts": "Noch nichts festgehalten",  "schlafMesswerte": "Schlafdaten verbinden und Messwerte ansehen",
   "schlafBlickBilanz": "{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel.",
   "@schlafBlickBilanz": {
     "placeholders": {
