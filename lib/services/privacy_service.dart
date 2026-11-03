@@ -30,7 +30,12 @@ class PrivacyService {
     return prefs.getBool(_keyDiscreetIcon) ?? false;
   }
 
+  /// Ersatz für die Geräteprüfung in Tests.
+  @visibleForTesting
+  static bool? unterstuetztFuerTest;
+
   static Future<bool> isSupported() async {
+    if (unterstuetztFuerTest != null) return unterstuetztFuerTest!;
     if (kIsWeb) return false;
     try {
       return await _auth.isDeviceSupported();

@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart' show LicenseEntryWithLineBreaks, Licens
 import 'package:flutter/services.dart';
 import 'services/bild_register.dart';
 import 'services/data_service.dart';
+import 'services/alter_dienst.dart';
 import 'services/storage_service.dart';
 import 'services/auto_backup_service.dart';
 import 'services/message_notifier.dart';
@@ -103,6 +104,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
 
     try {
       await StorageService.init();
+      await AlterDienst.init();
       systemLeistenAnpassen();
       await AutoBackupService.checkAndAutoRestore();
       await NostrService().init();

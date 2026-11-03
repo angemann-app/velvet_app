@@ -709,6 +709,11 @@
           "icon": "bedtime",
           "titel": "Deine Nächte im Rückblick, in einfachen Worten",
           "text": "Zu jedem Tag siehst du, wie lange du geschlafen hast, und alles, was du selbst festgehalten hast: Erholung, Lust, Träume und deine Notiz."
+        },
+        {
+          "icon": "lock",
+          "titel": "Spicy-Modus besser geschützt",
+          "text": "Zum Einschalten gibst du Monat und Jahr deiner Geburt an und bestätigst deine Gerätesperre. Alles bleibt auf deinem Gerät. Wer Spicy schon an hatte, bestätigt es einmal neu."
         }
       ]
     }

@@ -709,6 +709,11 @@
           "icon": "bedtime",
           "titel": "Your nights in review, in plain words",
           "text": "For each day you see how long you slept and everything you noted yourself: rest, desire, dreams and your note."
+        },
+        {
+          "icon": "lock",
+          "titel": "Spicy mode better protected",
+          "text": "To switch it on, you enter the month and year you were born and confirm your device lock. Everything stays on your device. If spicy was already on for you, you confirm it once again."
         }
       ]
     }
@@ -749,6 +754,6 @@
     "news:58": "e0e4be67dbd7672b",
     "news:59": "56252afd43bd3f86",
     "news:60": "24de6b882a4a33d6",
-    "news:61": "80f829c1dc5e7f38"
+    "news:61": "de5f520999db82b1"
   }
 }

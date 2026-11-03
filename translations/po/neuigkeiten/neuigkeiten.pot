@@ -1198,3 +1198,15 @@ msgstr ""
 msgctxt "news:61#1.text"
 msgid "Zu jedem Tag siehst du, wie lange du geschlafen hast, und alles, was du selbst festgehalten hast: Erholung, Lust, Träume und deine Notiz."
 msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.3
+#. EN: Spicy mode better protected
+msgctxt "news:61#2.titel"
+msgid "Spicy-Modus besser geschützt"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.3
+#. EN: To switch it on, you enter the month and year you were born and confirm your device lock. Everything stays on your device. If spicy was already on for you, you confirm it once again.
+msgctxt "news:61#2.text"
+msgid "Zum Einschalten gibst du Monat und Jahr deiner Geburt an und bestätigst deine Gerätesperre. Alles bleibt auf deinem Gerät. Wer Spicy schon an hatte, bestätigt es einmal neu."
+msgstr ""

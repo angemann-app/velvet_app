@@ -5745,6 +5745,84 @@ abstract class AppLocalizations {
   /// **'Ich bin 18+, einschalten'**
   String get spicyEinschalten;
 
+  /// No description provided for @alterTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Bist du volljährig?'**
+  String get alterTitel;
+
+  /// No description provided for @alterText.
+  ///
+  /// In de, this message translates to:
+  /// **'Dieser Bereich ist nur für Erwachsene. Gib Monat und Jahr deiner Geburt an. Die App rechnet nur nach und speichert das Datum nicht. Alles bleibt auf diesem Gerät. Das ersetzt keinen Ausweis.'**
+  String get alterText;
+
+  /// No description provided for @alterMonat.
+  ///
+  /// In de, this message translates to:
+  /// **'Monat'**
+  String get alterMonat;
+
+  /// No description provided for @alterJahr.
+  ///
+  /// In de, this message translates to:
+  /// **'Jahr'**
+  String get alterJahr;
+
+  /// No description provided for @alterWeiter.
+  ///
+  /// In de, this message translates to:
+  /// **'Weiter'**
+  String get alterWeiter;
+
+  /// No description provided for @alterGesperrtTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Gerade nicht möglich'**
+  String get alterGesperrtTitel;
+
+  /// No description provided for @alterGesperrtText.
+  ///
+  /// In de, this message translates to:
+  /// **'Dieser Bereich ist erst ab 18 verfügbar. Du kannst es später noch einmal versuchen.'**
+  String get alterGesperrtText;
+
+  /// No description provided for @alterSperreFehltTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Gerätesperre nötig'**
+  String get alterSperreFehltTitel;
+
+  /// No description provided for @alterSperreFehltText.
+  ///
+  /// In de, this message translates to:
+  /// **'Richte zuerst eine Bildschirmsperre (PIN, Muster oder Fingerabdruck) auf deinem Gerät ein. Sie schützt diesen Bereich vor fremdem Zugriff.'**
+  String get alterSperreFehltText;
+
+  /// No description provided for @alterSperreGrund.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte bestätige, dass du diesen Bereich öffnen willst.'**
+  String get alterSperreGrund;
+
+  /// No description provided for @alterAbsichern.
+  ///
+  /// In de, this message translates to:
+  /// **'Immer erneut absichern'**
+  String get alterAbsichern;
+
+  /// No description provided for @alterAbsichernText.
+  ///
+  /// In de, this message translates to:
+  /// **'Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach deiner Gerätesperre.'**
+  String get alterAbsichernText;
+
+  /// No description provided for @alterGesperrtKurz.
+  ///
+  /// In de, this message translates to:
+  /// **'Gesperrt. Zum Entsperren einschalten.'**
+  String get alterGesperrtKurz;
+
   /// No description provided for @spicyStufe.
   ///
   /// In de, this message translates to:

@@ -5766,6 +5766,84 @@ msgid "Ich bin 18+, einschalten"
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: Are you 18 or older?
+msgctxt "ui:alterTitel#text"
+msgid "Bist du volljährig?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This area is for adults only. Enter the month and year you were born. The app only calculates and does not store the date. Everything stays on this device. This does not replace an ID check.
+msgctxt "ui:alterText#text"
+msgid "Dieser Bereich ist nur für Erwachsene. Gib Monat und Jahr deiner Geburt an. Die App rechnet nur nach und speichert das Datum nicht. Alles bleibt auf diesem Gerät. Das ersetzt keinen Ausweis."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Month
+msgctxt "ui:alterMonat#text"
+msgid "Monat"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Year
+msgctxt "ui:alterJahr#text"
+msgid "Jahr"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Continue
+msgctxt "ui:alterWeiter#text"
+msgid "Weiter"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not possible right now
+msgctxt "ui:alterGesperrtTitel#text"
+msgid "Gerade nicht möglich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This area is only available from age 18. You can try again later.
+msgctxt "ui:alterGesperrtText#text"
+msgid "Dieser Bereich ist erst ab 18 verfügbar. Du kannst es später noch einmal versuchen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Device lock needed
+msgctxt "ui:alterSperreFehltTitel#text"
+msgid "Gerätesperre nötig"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: First set up a screen lock (PIN, pattern or fingerprint) on your device. It protects this area from other people.
+msgctxt "ui:alterSperreFehltText#text"
+msgid "Richte zuerst eine Bildschirmsperre (PIN, Muster oder Fingerabdruck) auf deinem Gerät ein. Sie schützt diesen Bereich vor fremdem Zugriff."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Please confirm that you want to open this area.
+msgctxt "ui:alterSperreGrund#text"
+msgid "Bitte bestätige, dass du diesen Bereich öffnen willst."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Always ask again
+msgctxt "ui:alterAbsichern#text"
+msgid "Immer erneut absichern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: After an app restart or 30 minutes in the background, the app asks for your device lock again.
+msgctxt "ui:alterAbsichernText#text"
+msgid "Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach deiner Gerätesperre."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Locked. Turn on to unlock.
+msgctxt "ui:alterGesperrtKurz#text"
+msgid "Gesperrt. Zum Entsperren einschalten."
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Spicy
 msgctxt "ui:spicyStufe#text"
 msgid "Spicy"

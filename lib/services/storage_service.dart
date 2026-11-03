@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:nostr_tools/nostr_tools.dart' show KeyApi;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/journal_entry.dart';
+import 'alter_dienst.dart';
 import '../models/chat_message.dart';
 import '../models/daily_checkin.dart';
 import '../models/traum_eintrag.dart';
@@ -513,7 +514,12 @@ class StorageService {
   // Bewusst nur auf diesem Gerät und nicht Teil der Sicherung: Wer ihn will, schaltet ihn selbst ein.
   static const String _keySpicyMode = 'spicy_mode';
 
-  static bool spicyMode() => _prefs?.getBool(_keySpicyMode) ?? false;
+  /// Gewählt und, sobald der Altersnachweis scharf ist, auch bestätigt und entsperrt (docs/konzepte/altersnachweis.md).
+  static bool spicyMode() =>
+      (_prefs?.getBool(_keySpicyMode) ?? false) && AlterDienst.frei;
+
+  /// Die Wahl selbst, unabhängig von Nachweis und Entsperrung (für die Anzeige „gesperrt“).
+  static bool spicyGewaehlt() => _prefs?.getBool(_keySpicyMode) ?? false;
 
   /// Ändert sich beim Ein- und Ausschalten, damit Oberflächen sofort folgen (z. B. der Spicy-Look).
   static final ValueNotifier<bool> spicyAenderung = ValueNotifier<bool>(false);
@@ -521,7 +527,7 @@ class StorageService {
   static Future<void> setSpicyMode(bool value) async {
     final prefs = await _ensurePrefs();
     await prefs.setBool(_keySpicyMode, value);
-    spicyAenderung.value = value;
+    spicyAenderung.value = spicyMode();
   }
 
   // Darstellung im Normalmodus: Papier (hell, Standard), Nachtpapier oder Klassisch (Übergang).

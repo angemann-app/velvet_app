@@ -3351,6 +3351,50 @@ class AppLocalizationsEn extends AppLocalizations {
   String get spicyEinschalten => 'I\'m 18+, turn on';
 
   @override
+  String get alterTitel => 'Are you 18 or older?';
+
+  @override
+  String get alterText =>
+      'This area is for adults only. Enter the month and year you were born. The app only calculates and does not store the date. Everything stays on this device. This does not replace an ID check.';
+
+  @override
+  String get alterMonat => 'Month';
+
+  @override
+  String get alterJahr => 'Year';
+
+  @override
+  String get alterWeiter => 'Continue';
+
+  @override
+  String get alterGesperrtTitel => 'Not possible right now';
+
+  @override
+  String get alterGesperrtText =>
+      'This area is only available from age 18. You can try again later.';
+
+  @override
+  String get alterSperreFehltTitel => 'Device lock needed';
+
+  @override
+  String get alterSperreFehltText =>
+      'First set up a screen lock (PIN, pattern or fingerprint) on your device. It protects this area from other people.';
+
+  @override
+  String get alterSperreGrund =>
+      'Please confirm that you want to open this area.';
+
+  @override
+  String get alterAbsichern => 'Always ask again';
+
+  @override
+  String get alterAbsichernText =>
+      'After an app restart or 30 minutes in the background, the app asks for your device lock again.';
+
+  @override
+  String get alterGesperrtKurz => 'Locked. Turn on to unlock.';
+
+  @override
   String get spicyStufe => 'Spicy';
 
   @override

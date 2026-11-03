@@ -3364,6 +3364,50 @@ class AppLocalizationsDe extends AppLocalizations {
   String get spicyEinschalten => 'Ich bin 18+, einschalten';
 
   @override
+  String get alterTitel => 'Bist du volljährig?';
+
+  @override
+  String get alterText =>
+      'Dieser Bereich ist nur für Erwachsene. Gib Monat und Jahr deiner Geburt an. Die App rechnet nur nach und speichert das Datum nicht. Alles bleibt auf diesem Gerät. Das ersetzt keinen Ausweis.';
+
+  @override
+  String get alterMonat => 'Monat';
+
+  @override
+  String get alterJahr => 'Jahr';
+
+  @override
+  String get alterWeiter => 'Weiter';
+
+  @override
+  String get alterGesperrtTitel => 'Gerade nicht möglich';
+
+  @override
+  String get alterGesperrtText =>
+      'Dieser Bereich ist erst ab 18 verfügbar. Du kannst es später noch einmal versuchen.';
+
+  @override
+  String get alterSperreFehltTitel => 'Gerätesperre nötig';
+
+  @override
+  String get alterSperreFehltText =>
+      'Richte zuerst eine Bildschirmsperre (PIN, Muster oder Fingerabdruck) auf deinem Gerät ein. Sie schützt diesen Bereich vor fremdem Zugriff.';
+
+  @override
+  String get alterSperreGrund =>
+      'Bitte bestätige, dass du diesen Bereich öffnen willst.';
+
+  @override
+  String get alterAbsichern => 'Immer erneut absichern';
+
+  @override
+  String get alterAbsichernText =>
+      'Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach deiner Gerätesperre.';
+
+  @override
+  String get alterGesperrtKurz => 'Gesperrt. Zum Entsperren einschalten.';
+
+  @override
   String get spicyStufe => 'Spicy';
 
   @override

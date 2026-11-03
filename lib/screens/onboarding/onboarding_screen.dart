@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import '../../services/rueckmeldung.dart';
 import '../../models/user_profile.dart';
+import '../../services/alter_dienst.dart';
 import '../../services/storage_service.dart';
 import '../../services/testmodus.dart';
 import '../../services/auto_backup_service.dart';
@@ -51,7 +52,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   UpdateChannel _updateChannel = UpdateChannel.stable;
   bool _notifyMessages = false;
   bool _personalizeNames = StorageService.personalizeNames();
-  bool _spicyMode = StorageService.spicyMode();
   bool _lockSupported = false;
   bool _frageVorLautsprecher = StorageService.getFrageVorLautsprecher();
   bool _pausiereBeiKopfhoererGetrennt = StorageService.getPausiereBeiKopfhoererGetrennt();
@@ -1362,37 +1362,60 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  /// Spicy-Modus: aus, bis man ihn bewusst und mit Bestätigung einschaltet; Ausschalten geht sofort.
+  /// Spicy-Modus: aus, bis man ihn bewusst mit Altersangabe und Gerätesperre einschaltet; Ausschalten geht sofort.
   Widget _buildSpicySection() {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(16, 8, 8, 8),
-      decoration: BoxDecoration(
-        color: AppTheme.papierErhoben,
-        borderRadius: BorderRadius.circular(VpRadius.karte),
-        border: Border.all(color: AppTheme.linie),
-      ),
-      child: SwitchListTile(
-        contentPadding: const EdgeInsets.only(right: 8),
-        value: _spicyMode,
-        activeThumbColor: AppTheme.akzentTief,
-        secondary: Icon(Icons.spa_outlined, color: _spicyMode ? AppTheme.akzentTief : AppTheme.tinteStumm),
-        title: Text(t.spicyModus, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700)),
-        subtitle: Text(
-          t.spicyModusText,
-          style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
-        ),
-        onChanged: (value) async {
-          if (value) {
-            if (!await spicyModusEinschalten(context)) return;
-          } else {
-            await StorageService.setSpicyMode(false);
-          }
-          if (mounted) setState(() => _spicyMode = value);
-        },
-      ),
+    return ListenableBuilder(
+      listenable: Listenable.merge([AlterDienst.aenderung, StorageService.spicyAenderung]),
+      builder: (context, _) {
+        final an = StorageService.spicyMode();
+        final gesperrt = !an && StorageService.spicyGewaehlt() && AlterDienst.bestaetigt;
+        return Container(
+          padding: const EdgeInsets.fromLTRB(16, 8, 8, 8),
+          decoration: BoxDecoration(
+            color: AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: AppTheme.linie),
+          ),
+          child: Column(children: [
+            SwitchListTile(
+              contentPadding: const EdgeInsets.only(right: 8),
+              value: an,
+              activeThumbColor: AppTheme.akzentTief,
+              secondary: Icon(Icons.spa_outlined, color: an ? AppTheme.akzentTief : AppTheme.tinteStumm),
+              title: Text(t.spicyModus, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700)),
+              subtitle: Text(
+                gesperrt ? t.alterGesperrtKurz : t.spicyModusText,
+                style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
+              ),
+              onChanged: (value) async {
+                if (value) {
+                  await spicyModusEinschalten(context);
+                } else {
+                  await StorageService.setSpicyMode(false);
+                }
+                if (mounted) setState(() {});
+              },
+            ),
+            if (an)
+              SwitchListTile(
+                contentPadding: const EdgeInsets.only(right: 8),
+                value: AlterDienst.absichern,
+                activeThumbColor: AppTheme.akzentTief,
+                title: Text(t.alterAbsichern, style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600)),
+                subtitle: Text(
+                  t.alterAbsichernText,
+                  style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.35),
+                ),
+                onChanged: (value) async {
+                  await AlterDienst.setAbsichern(value);
+                  if (mounted) setState(() {});
+                },
+              ),
+          ]),
+        );
+      },
     );
   }
-
   Widget _buildBackupSection() {
     return Container(
       padding: const EdgeInsets.all(16),
