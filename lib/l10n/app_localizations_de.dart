@@ -4760,6 +4760,11 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
+  String reihePartnerHinweisDrei(String name) {
+    return 'Die beiden anderen Perspektiven derselben Begegnung: $name. Alle drei folgen derselben Szenenfolge. Dreier-Folgen hörst du allein, „Gemeinsam hören“ gibt es dafür nicht.';
+  }
+
+  @override
   String reiheDauer(int minuten) {
     return 'Etwa $minuten Minuten';
   }

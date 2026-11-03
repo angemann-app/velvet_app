@@ -1374,6 +1374,7 @@
   "reihePerspektiveFrau": "Her",
   "reihePerspektiveMann": "Him",
   "reihePartnerHinweis": "The matching perspective of the same encounter: {name}. Both follow the same sequence of scenes. “Listen together” synchronises the same version on two devices. Different complementary perspectives still need to be coordinated by you.",
+  "reihePartnerHinweisDrei": "The other two perspectives of the same encounter: {name}. All three follow the same sequence of scenes. You listen to threesome episodes on your own; “Listen together” is not offered for them.",
   "reiheDauer": "About {minuten} minutes",
   "reiheStart": "Start",
   "reiheSzene": "Scene {n} of {m}",
@@ -1411,6 +1412,13 @@
     }
   },
   "@reihePartnerHinweis": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "@reihePartnerHinweisDrei": {
     "placeholders": {
       "name": {
         "type": "String"

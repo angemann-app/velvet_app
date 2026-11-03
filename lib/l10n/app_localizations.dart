@@ -8073,6 +8073,12 @@ abstract class AppLocalizations {
   /// **'Die passende Gegenperspektive derselben Begegnung: {name}. Beide folgen derselben Szenenfolge. „Gemeinsam hören“ gleicht dieselbe Fassung auf zwei Geräten ab. Unterschiedliche Gegenperspektiven stimmt ihr weiterhin selbst aufeinander ab.'**
   String reihePartnerHinweis(String name);
 
+  /// No description provided for @reihePartnerHinweisDrei.
+  ///
+  /// In de, this message translates to:
+  /// **'Die beiden anderen Perspektiven derselben Begegnung: {name}. Alle drei folgen derselben Szenenfolge. Dreier-Folgen hörst du allein, „Gemeinsam hören“ gibt es dafür nicht.'**
+  String reihePartnerHinweisDrei(String name);
+
   /// No description provided for @reiheDauer.
   ///
   /// In de, this message translates to:

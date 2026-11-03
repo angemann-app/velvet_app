@@ -109,6 +109,16 @@ class ReiheFolge {
     ];
   }
 
+  /// Die Fassung zur Wahl: gewünschte Stufe, sonst die erste, die es gibt und erlaubt ist (Dreier-Folgen haben nur
+  /// Sehr spicy); darin die gewünschte Perspektive, sonst die erste. Null, wenn nichts erlaubt oder vorhanden ist.
+  ReiheFassung? gewaehlt(String variante, String? perspektive, {required bool spicyErlaubt}) {
+    final erlaubt = varianten(spicyErlaubt: spicyErlaubt);
+    if (erlaubt.isEmpty) return null;
+    final liste = fassungenVon(erlaubt.contains(variante) ? variante : erlaubt.first);
+    if (liste.isEmpty) return null;
+    return liste.where((f) => f.perspektive == perspektive).firstOrNull ?? liste.first;
+  }
+
   List<ReiheFassung> fassungenVon(String variante) => [for (final f in fassungen) if (f.variante == variante) f];
 
   /// Die zusammengehörende Fassung derselben Begegnung (gleiche Variante, andere Perspektive).

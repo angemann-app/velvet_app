@@ -45,11 +45,16 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   bool _neueVersion = false;
   bool get _spicy => StorageService.spicyMode();
 
+  /// Folgen, von denen es in der gewählten Betriebsart etwas zu hören gibt (Dreier-Folgen z. B. nur als Sehr spicy).
+  List<ReiheFolge> get _folgen => [
+        for (final f in _daten?.folgen ?? const <ReiheFolge>[])
+          if (f.varianten(spicyErlaubt: _spicy).isNotEmpty) f
+      ];
+
   ReiheFolge? get _folge {
-    final d = _daten;
-    if (d == null || d.folgen.isEmpty) return null;
-    return d.folgen.where((f) => f.id == _folgeId).firstOrNull ??
-        d.folgen.first;
+    final liste = _folgen;
+    if (liste.isEmpty) return null;
+    return liste.where((f) => f.id == _folgeId).firstOrNull ?? liste.first;
   }
 
   @override
@@ -119,16 +124,8 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   }
 
   /// Die gewählte Fassung; fällt auf die erste der Variante zurück, wenn die Perspektive dort fehlt.
-  ReiheFassung? _gewaehlt(ReiheFolge folge) {
-    final variante = folge.varianten(spicyErlaubt: _spicy).contains(_variante)
-        ? _variante
-        : 'soft';
-    final liste = folge.fassungenVon(variante);
-    if (liste.isEmpty) return null;
-    return liste.where((f) => f.perspektive == _perspektive).firstOrNull ??
-        liste.first;
-  }
-
+  ReiheFassung? _gewaehlt(ReiheFolge folge) =>
+      folge.gewaehlt(_variante, _perspektive, spicyErlaubt: _spicy);
   Future<void> _starten() async {
     final folge = _folge;
     final fassung = folge == null ? null : _gewaehlt(folge);
@@ -202,7 +199,7 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             _paket
           ]),
           _titel(t.reiheFolgen),
-          for (final f in _daten!.folgen) _folgeKachel(f, f.id == folge.id),
+          for (final f in _folgen) _folgeKachel(f, f.id == folge.id),
           const SizedBox(height: 16),
           if (folge.varianten(spicyErlaubt: _spicy).length > 1) ...[
             _titel(t.reiheVariante),
@@ -224,7 +221,11 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
           ],
           if (partner.isNotEmpty)
             Text(
-                t.reihePartnerHinweis(partner.map(_perspektiveName).join(', ')),
+                folge.typ == 'trio'
+                    ? t.reihePartnerHinweisDrei(
+                        partner.map(_perspektiveName).join(', '))
+                    : t.reihePartnerHinweis(
+                        partner.map(_perspektiveName).join(', ')),
                 style: TextStyle(
                     fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
           const SizedBox(height: 8),

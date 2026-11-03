@@ -159,6 +159,7 @@ class WiedergabeScreen extends StatelessWidget {
                                 child: Text(t.gemeinsamStatusOeffnen))
                           else if (NostrService().isPaired &&
                               p.art != WiedergabeArt.praxis &&
+                              p.parameter['trio'] != true &&
                               l.zustand != WiedergabeZustand.fertig)
                             OutlinedButton.icon(
                                 icon: const Icon(Icons.people_outline_rounded),

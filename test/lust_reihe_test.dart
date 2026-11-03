@@ -59,7 +59,40 @@ void _erwarteProblem(List<String> probleme, String teil) {
 
 void main() {
   nameUndSolo();
-  test('ReiheDaten.fromJson liest Folge, Szenen und alle Fassungen', () {
+
+  group('Dreier-Folge (nur Sehr spicy)', () {
+    Map<String, dynamic> trio() => {
+          ..._folge(),
+          'typ': 'trio',
+          'fassungen': [
+            _fassung('sehrspicy_frau_a', 'sehrspicy', 'frau_a', 'victoria'),
+            _fassung('sehrspicy_frau_b', 'sehrspicy', 'frau_b', 'victoria'),
+            _fassung('sehrspicy_mann', 'sehrspicy', 'mann', 'martin'),
+          ],
+        };
+
+    test('Ohne Spicy gibt es nichts zu hören, mit Spicy genau die eine Stufe', () {
+      final folge = _parseFolge(trio());
+      expect(folge.varianten(spicyErlaubt: false), isEmpty);
+      expect(folge.gewaehlt('soft', null, spicyErlaubt: false), isNull);
+      expect(folge.varianten(spicyErlaubt: true), ['sehrspicy']);
+      expect(folge.solo, isFalse);
+    });
+
+    test('Die gespeicherte Stufe „Soft“ fällt auf die vorhandene zurück, die Perspektive bleibt', () {
+      final folge = _parseFolge(trio());
+      expect(folge.gewaehlt('soft', 'frau_b', spicyErlaubt: true)!.id, 'sehrspicy_frau_b');
+      expect(folge.gewaehlt('soft', 'gibtsnicht', spicyErlaubt: true)!.id, 'sehrspicy_frau_a');
+      expect(folge.partnerVon(folge.fassungen.first).map((f) => f.id), ['sehrspicy_frau_b', 'sehrspicy_mann']);
+    });
+
+    test('Folgen mit allen Stufen wählen wie bisher', () {
+      final folge = _parseFolge();
+      expect(folge.gewaehlt('spicy', 'mann', spicyErlaubt: true)!.id, 'spicy_mann');
+      expect(folge.gewaehlt('spicy', 'mann', spicyErlaubt: false)!.id, 'soft_mann');
+      expect(folge.gewaehlt('sehrspicy', null, spicyErlaubt: true)!.id, 'soft_frau');
+    });
+  });  test('ReiheDaten.fromJson liest Folge, Szenen und alle Fassungen', () {
     final daten = ReiheDaten.fromJson({'folgen': [_folge()]});
     expect(daten.folgen, hasLength(1));
     expect(daten.dauerMs, isEmpty);

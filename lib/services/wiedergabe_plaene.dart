@@ -78,7 +78,9 @@ class WiedergabePlaene {
           parameter: {
             'folge': folge.id,
             'variante': f.id,
-            'stimme': f.stimme
+            'stimme': f.stimme,
+            // Drei Rollen, aber zwei Geräte: Dreier-Folgen werden nur allein gehört.
+            if (folge.typ == 'trio') 'trio': true
           },
           abschnitte: [
             for (final s in f.segmente)

@@ -1200,13 +1200,25 @@ msgid "Zu jedem Tag siehst du, wie lange du geschlafen hast, und alles, was du s
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.3
-#. EN: Spicy mode better protected
+#. EN: Inner views: extra spicy and for three
 msgctxt "news:61#2.titel"
+msgid "Innenansichten: Sehr spicy und zu dritt"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.3
+#. EN: All audio stories are now also available as extra spicy. Two new episodes for three are added, with three perspectives to choose from. They appear in spicy mode, and the app downloads the recordings.
+msgctxt "news:61#2.text"
+msgid "Alle Hörgeschichten gibt es jetzt auch als Sehr spicy. Neu sind zwei Folgen zu dritt, mit drei Perspektiven zum Wählen. Sie erscheinen im Spicy-Modus, die Aufnahmen lädt die App nach."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.3
+#. EN: Spicy mode better protected
+msgctxt "news:61#3.titel"
 msgid "Spicy-Modus besser geschützt"
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.3
 #. EN: To switch it on, you enter the month and year you were born and confirm your device lock. Everything stays on your device. If spicy was already on for you, you confirm it once again.
-msgctxt "news:61#2.text"
+msgctxt "news:61#3.text"
 msgid "Zum Einschalten gibst du Monat und Jahr deiner Geburt an und bestätigst deine Gerätesperre. Alles bleibt auf deinem Gerät. Wer Spicy schon an hatte, bestätigt es einmal neu."
 msgstr ""

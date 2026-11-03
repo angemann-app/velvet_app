@@ -417,7 +417,8 @@ class GemeinsamHoeren extends ChangeNotifier {
         if (jsonEncode(raw).length > 38000) return;
         final eingang = WiedergabePlan.fromJson(raw);
         // Traumpraxis-Begleitungen werden nur allein gehört, nie über eine Einladung.
-        if (eingang.art == WiedergabeArt.praxis) return;
+        if (eingang.art == WiedergabeArt.praxis ||
+            eingang.parameter['trio'] == true) return;
         final privat = eingang.art == WiedergabeArt.reihe ||
             eingang.art == WiedergabeArt.lust;
         if ((eingang.spicy || privat) && !spicy()) return;
