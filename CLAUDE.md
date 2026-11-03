@@ -129,6 +129,8 @@ der APK**, sondern später als `bilder/…` im Nur-R2-Paket der Reihe. Spicy-Mot
 
 ## Git
 
+- **Umbenennung am 04.11.2026:** Das GitHub-Konto wird in lotus-atelier umbenannt und der Verlauf umgeschrieben (docs/UMBENENNUNG.md). Bis dahin den Kontonamen nicht neu festschreiben; danach nur frische Klone benutzen.
+
 - Größere Änderungen auf einem eigenen Branch, nicht direkt auf `main`.
 - Releases baut und veröffentlicht Claude Code mit `tools/release.ps1`, aber nur nach ausdrücklicher
   Freigabe des Nutzers für genau dieses Release (Version und Build-Nummer). Die Build-Nummer steigt immer,
