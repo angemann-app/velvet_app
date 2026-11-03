@@ -19,6 +19,7 @@ import 'services/whats_new.dart';
 import 'widgets/app_lock.dart';
 import 'theme/app_theme.dart';
 import 'screens/main_navigation_screen.dart';
+import 'screens/self_exploration/schlafdaten_screen.dart';
 import 'screens/onboarding/onboarding_screen.dart';
 import 'l10n/t.dart';
 
@@ -161,6 +162,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {'/schlafdaten-info': (_) => const SchlafInfoScreen()},
       navigatorKey: VelvetPulseApp.navigatorKey,
       // Neuer Schlüssel je Sprache: Die ganze App wird neu aufgebaut, kein Text bleibt in der alten Sprache.
       key: ValueKey(Sprache.code),

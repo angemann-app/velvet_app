@@ -8229,3 +8229,363 @@ msgstr ""
 msgctxt "ui:halloGesendet#text"
 msgid "Danke für dein Hallo!"
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Compare sleep data
+msgctxt "ui:schlafTitel#text"
+msgid "Schlafdaten abgleichen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A look back at your night
+msgctxt "ui:schlafEinladung#text"
+msgid "Deine Nacht im Rückblick"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Optional: View sleep data already synced to Health Connect alongside your own observations. No live detection or signals during the night. Dream Practice works without a device.
+msgctxt "ui:schlafErklaerung#text"
+msgid "Optional: Bereits synchronisierte Schlafdaten aus Health Connect neben deinen eigenen Beobachtungen ansehen. Keine Live-Erkennung, keine Signale während der Nacht. Die Traumpraxis funktioniert auch ohne Gerät."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: VelvetPulse reads only sleep sessions from the last 30 days when you explicitly start a comparison. It writes nothing to Health Connect. Imported copies stay local and are included in your backup; nothing is shared with the coach or your partner.
+msgctxt "ui:schlafDatenschutz#text"
+msgid "VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an Coach oder Paarraum."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Enable sharing of sleep data from Fitbit or Google Health to Health Connect. Only data actually available there can be shown. Sleep stages are estimates, not a diagnosis.
+msgctxt "ui:schlafHinweis#text"
+msgid "Aktiviere die Freigabe deiner Schlafdaten in Fitbit bzw. Google Health für Health Connect. Es werden nur Daten angezeigt, die dort tatsächlich verfügbar sind. Schlafphasen sind Schätzungen, keine Diagnose."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect Health Connect
+msgctxt "ui:schlafVerbinden#text"
+msgid "Health Connect verbinden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Compare last 30 days
+msgctxt "ui:schlafImportieren#text"
+msgid "Letzte 30 Tage abgleichen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Import selected source
+msgctxt "ui:schlafUebernehmen#text"
+msgid "Ausgewählte Quelle übernehmen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Data source
+msgctxt "ui:schlafQuelle#text"
+msgid "Datenquelle"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Choose a source. Records from different devices are not added together.
+msgctxt "ui:schlafQuelleWaehlen#text"
+msgid "Bitte wähle eine Quelle. Aufzeichnungen verschiedener Geräte werden nicht addiert."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Turn off comparison
+msgctxt "ui:schlafTrennen#text"
+msgid "Abgleich ausschalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Comparison is off. Imported data is retained. You can revoke the Android permission in Health Connect.
+msgctxt "ui:schlafGetrennt#text"
+msgid "Abgleich ausgeschaltet. Importierte Daten bleiben erhalten. Die Android-Berechtigung kannst du in Health Connect widerrufen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Comparison is enabled. Data is read only when you request it.
+msgctxt "ui:schlafVerbunden#text"
+msgid "Abgleich aktiviert. Daten werden nur auf deinen Wunsch gelesen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Access to sleep data is missing. You can allow it in Health Connect; the rest of Dream Practice stays available.
+msgctxt "ui:schlafBerechtigungFehlt#text"
+msgid "Zugriff auf Schlafdaten fehlt. Du kannst ihn in Health Connect erlauben; die übrige Traumpraxis bleibt nutzbar."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This optional import needs Android 14 or later and available Health Connect. All other exercises remain available.
+msgctxt "ui:schlafNichtVerfuegbar#text"
+msgid "Dieser optionale Import benötigt Android 14 oder neuer und verfügbares Health Connect. Alle übrigen Übungen bleiben nutzbar."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No sleep records imported yet.
+msgctxt "ui:schlafLeer#text"
+msgid "Noch keine Schlafaufzeichnungen importiert."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No completed sleep sessions are available. Check syncing and sharing in your source app.
+msgctxt "ui:schlafKeineDaten#text"
+msgid "Keine abgeschlossenen Schlafsitzungen verfügbar. Prüfe die Synchronisierung und die Freigabe in deiner Quell-App."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The comparison could not be completed. Your existing data is retained.
+msgctxt "ui:schlafFehler#text"
+msgid "Der Abgleich konnte nicht abgeschlossen werden. Deine bisherigen Daten bleiben erhalten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The selected sleep data has been imported.
+msgctxt "ui:schlafGespeichert#text"
+msgid "Die ausgewählten Schlafdaten wurden übernommen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Android permissions
+msgctxt "ui:schlafEinstellungen#text"
+msgid "Android-Berechtigungen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Delete imported sleep data
+msgctxt "ui:schlafLoeschen#text"
+msgid "Importierte Schlafdaten löschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Delete all imported sleep data from VelvetPulse? Your own journal and Dream Practice entries are retained. Data in Health Connect is not deleted.
+msgctxt "ui:schlafLoeschenFrage#text"
+msgid "Alle importierten Schlafdaten aus VelvetPulse löschen? Deine eigenen Tagebuch- und Traumpraxis-Einträge bleiben erhalten. Daten in Health Connect werden nicht gelöscht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Cancel
+msgctxt "ui:schlafAbbrechen#text"
+msgid "Abbrechen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Recorded time window
+msgctxt "ui:schlafZeitfenster#text"
+msgid "Erfasstes Zeitfenster"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sleep time from stages
+msgctxt "ui:schlafSchlafzeit#text"
+msgid "Schlafzeit laut Phasen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Cannot be fully determined
+msgctxt "ui:schlafUnbekannt#text"
+msgid "Nicht vollständig bestimmbar"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Recorded stages
+msgctxt "ui:schlafPhasen#text"
+msgid "Erfasste Phasen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Awake
+msgctxt "ui:schlafWach#text"
+msgid "Wach"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Light sleep
+msgctxt "ui:schlafLeicht#text"
+msgid "Leichtschlaf"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Deep sleep
+msgctxt "ui:schlafTief#text"
+msgid "Tiefschlaf"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: REM
+msgctxt "ui:schlafRem#text"
+msgid "REM"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sleep without a stage label
+msgctxt "ui:schlafOhnePhase#text"
+msgid "Schlaf ohne Phasenangabe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Unknown
+msgctxt "ui:schlafUnbekanntePhase#text"
+msgid "Unbekannt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your observations for this wake-up date
+msgctxt "ui:schlafEigeneAngaben#text"
+msgid "Deine Angaben zu diesem Aufwachdatum"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No personal daily observation yet.
+msgctxt "ui:schlafKeineAngaben#text"
+msgid "Noch keine eigene Tagesbeobachtung vorhanden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open daily observation
+msgctxt "ui:schlafBeobachtung#text"
+msgid "Tagesbeobachtung öffnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Last comparison
+msgctxt "ui:schlafLetzterAbgleich#text"
+msgid "Letzter Abgleich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Saved copy. Changes or deletions in the source app do not automatically remove this copy. Observed patterns do not establish an effect on desire or dreams.
+msgctxt "ui:schlafImportierteKopie#text"
+msgid "Gespeicherte Kopie. Änderungen oder Löschungen in der Quell-App entfernen diese Kopie nicht automatisch. Hinweise auf einen Zusammenhang sind kein Nachweis einer Wirkung auf Lust oder Träume."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {stunden}, {minuten}
+#. EN: {stunden} hr {minuten} min
+msgctxt "ui:schlafDauer#text"
+msgid "{stunden} Std. {minuten} Min."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What your nights reveal
+msgctxt "ui:schlafBlickTitel#text"
+msgid "Was deine Nächte erzählen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Noticed a dream sign? Carried a feeling into your day? Explore your past seven days through your memories and, if you wish, your sleep records.
+msgctxt "ui:schlafBlickEinladung#text"
+msgid "Ein Traumzeichen bemerkt? Ein Gefühl mit in den Tag genommen? Entdecke deine letzten sieben Tage – mit deinen Erinnerungen und, wenn du möchtest, deinen Schlafdaten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your own entries describe your experience. A watch provides sleep estimates. These do not identify lucid dreams or orgasms. Journal entries are matched by their entry date.
+msgctxt "ui:schlafBlickGrenze#text"
+msgid "Deine Angaben erzählen vom Erleben. Die Uhr liefert Schlafschätzungen. Daraus wird kein Klartraum oder Orgasmus erkannt. Tagebucheinträge werden nach ihrem Eintragsdatum zugeordnet."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your past seven days
+msgctxt "ui:schlafBlickWoche#text"
+msgid "Deine letzten sieben Tage"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Lucidity recorded
+msgctxt "ui:schlafBlickKlar#text"
+msgid "Klarheit im Traum notiert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Dream memory recorded
+msgctxt "ui:schlafBlickErinnert#text"
+msgid "Traumerinnerung notiert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sensual dream recorded
+msgctxt "ui:schlafBlickSinnlich#text"
+msgid "Sinnlicher Traum notiert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Dream orgasm recorded
+msgctxt "ui:schlafBlickHoehepunkt#text"
+msgid "Höhepunkt im Traum notiert"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Nothing recalled – that belongs here too
+msgctxt "ui:schlafBlickOhneErinnerung#text"
+msgid "Nichts erinnert – auch das gehört dazu"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No dream observation yet
+msgctxt "ui:schlafBlickUnbekannt#text"
+msgid "Noch keine Traumangabe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No sleep measurement
+msgctxt "ui:schlafBlickOhneMessung#text"
+msgid "Ohne Schlafmessung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Multiple sleep records – view them individually under measurements
+msgctxt "ui:schlafBlickMehrere#text"
+msgid "Mehrere Schlafaufzeichnungen – einzeln unter Messwerten ansehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Record this night
+msgctxt "ui:schlafBlickNacht#text"
+msgid "Diese Nacht festhalten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your next discovery
+msgctxt "ui:schlafBlickNaechster#text"
+msgid "Deine nächste Entdeckung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Start with a small fragment of memory: an image, a mood, a place. It may become your personal dream sign.
+msgctxt "ui:schlafBlickStart#text"
+msgid "Beginne mit einem kleinen Rest Erinnerung: ein Bild, eine Stimmung, ein Ort. Daraus kann dein persönliches Traumzeichen entstehen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You have already recorded something. Look for an unusual detail and carry it as a gentle intention into your next evening practice.
+msgctxt "ui:schlafBlickUeben#text"
+msgid "Du hast bereits etwas festgehalten. Schau nach einem ungewöhnlichen Detail und nimm es als ruhige Absicht in deine nächste Abendpraxis mit."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You have recorded lucidity in a dream. What would you like to notice consciously next time? Dream Practice makes room for sensuality and noticing how it feels during the day.
+msgctxt "ui:schlafBlickVertiefen#text"
+msgid "Du hast Klarheit im Traum notiert. Was möchtest du beim nächsten Mal bewusst wahrnehmen? Deine Traumpraxis lässt Raum für Sinnlichkeit und das Nachspüren am Tag."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your recent entries suggest taking a break. Rest can be enough today. You do not need another exercise or overnight interruption.
+msgctxt "ui:schlafBlickRuhe#text"
+msgid "Deine letzten Einträge sprechen für eine Pause. Heute darf Erholung genügen. Du musst keine neue Übung oder nächtliche Unterbrechung hinzufügen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Explore Dream Practice
+msgctxt "ui:schlafBlickPraxis#text"
+msgid "Traumpraxis entdecken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect sleep data and view measurements
+msgctxt "ui:schlafMesswerte#text"
+msgid "Schlafdaten verbinden und Messwerte ansehen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {klar}, {tage}
+#. EN: {klar} of {tage} days with personal entries include a reported lucid dream. This is a reflection, not a performance goal.
+msgctxt "ui:schlafBlickBilanz#text"
+msgid "{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel."
+msgstr ""

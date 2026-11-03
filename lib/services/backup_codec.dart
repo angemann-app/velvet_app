@@ -45,6 +45,7 @@ class BackupCodec {
     // Traumtagebuch (Liste von TraumEintrag) und Fortschritt der Serie „Lust im Traum“ (JSON {Folge: Abende}).
     'traumTagebuch': List,
     'traumpraxis': Map,
+    'schlafdaten': Map,
       'bedienung': Map,
     'lustFortschritt': String,
     // Realitätschecks (Einstellungen als Map).

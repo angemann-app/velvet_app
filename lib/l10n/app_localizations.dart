@@ -8204,6 +8204,366 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Danke für dein Hallo!'**
   String get halloGesendet;
+
+  /// No description provided for @schlafTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Schlafdaten abgleichen'**
+  String get schlafTitel;
+
+  /// No description provided for @schlafEinladung.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine Nacht im Rückblick'**
+  String get schlafEinladung;
+
+  /// No description provided for @schlafErklaerung.
+  ///
+  /// In de, this message translates to:
+  /// **'Optional: Bereits synchronisierte Schlafdaten aus Health Connect neben deinen eigenen Beobachtungen ansehen. Keine Live-Erkennung, keine Signale während der Nacht. Die Traumpraxis funktioniert auch ohne Gerät.'**
+  String get schlafErklaerung;
+
+  /// No description provided for @schlafDatenschutz.
+  ///
+  /// In de, this message translates to:
+  /// **'VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an Coach oder Paarraum.'**
+  String get schlafDatenschutz;
+
+  /// No description provided for @schlafHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Aktiviere die Freigabe deiner Schlafdaten in Fitbit bzw. Google Health für Health Connect. Es werden nur Daten angezeigt, die dort tatsächlich verfügbar sind. Schlafphasen sind Schätzungen, keine Diagnose.'**
+  String get schlafHinweis;
+
+  /// No description provided for @schlafVerbinden.
+  ///
+  /// In de, this message translates to:
+  /// **'Health Connect verbinden'**
+  String get schlafVerbinden;
+
+  /// No description provided for @schlafImportieren.
+  ///
+  /// In de, this message translates to:
+  /// **'Letzte 30 Tage abgleichen'**
+  String get schlafImportieren;
+
+  /// No description provided for @schlafUebernehmen.
+  ///
+  /// In de, this message translates to:
+  /// **'Ausgewählte Quelle übernehmen'**
+  String get schlafUebernehmen;
+
+  /// No description provided for @schlafQuelle.
+  ///
+  /// In de, this message translates to:
+  /// **'Datenquelle'**
+  String get schlafQuelle;
+
+  /// No description provided for @schlafQuelleWaehlen.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte wähle eine Quelle. Aufzeichnungen verschiedener Geräte werden nicht addiert.'**
+  String get schlafQuelleWaehlen;
+
+  /// No description provided for @schlafTrennen.
+  ///
+  /// In de, this message translates to:
+  /// **'Abgleich ausschalten'**
+  String get schlafTrennen;
+
+  /// No description provided for @schlafGetrennt.
+  ///
+  /// In de, this message translates to:
+  /// **'Abgleich ausgeschaltet. Importierte Daten bleiben erhalten. Die Android-Berechtigung kannst du in Health Connect widerrufen.'**
+  String get schlafGetrennt;
+
+  /// No description provided for @schlafVerbunden.
+  ///
+  /// In de, this message translates to:
+  /// **'Abgleich aktiviert. Daten werden nur auf deinen Wunsch gelesen.'**
+  String get schlafVerbunden;
+
+  /// No description provided for @schlafBerechtigungFehlt.
+  ///
+  /// In de, this message translates to:
+  /// **'Zugriff auf Schlafdaten fehlt. Du kannst ihn in Health Connect erlauben; die übrige Traumpraxis bleibt nutzbar.'**
+  String get schlafBerechtigungFehlt;
+
+  /// No description provided for @schlafNichtVerfuegbar.
+  ///
+  /// In de, this message translates to:
+  /// **'Dieser optionale Import benötigt Android 14 oder neuer und verfügbares Health Connect. Alle übrigen Übungen bleiben nutzbar.'**
+  String get schlafNichtVerfuegbar;
+
+  /// No description provided for @schlafLeer.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch keine Schlafaufzeichnungen importiert.'**
+  String get schlafLeer;
+
+  /// No description provided for @schlafKeineDaten.
+  ///
+  /// In de, this message translates to:
+  /// **'Keine abgeschlossenen Schlafsitzungen verfügbar. Prüfe die Synchronisierung und die Freigabe in deiner Quell-App.'**
+  String get schlafKeineDaten;
+
+  /// No description provided for @schlafFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Der Abgleich konnte nicht abgeschlossen werden. Deine bisherigen Daten bleiben erhalten.'**
+  String get schlafFehler;
+
+  /// No description provided for @schlafGespeichert.
+  ///
+  /// In de, this message translates to:
+  /// **'Die ausgewählten Schlafdaten wurden übernommen.'**
+  String get schlafGespeichert;
+
+  /// No description provided for @schlafEinstellungen.
+  ///
+  /// In de, this message translates to:
+  /// **'Android-Berechtigungen'**
+  String get schlafEinstellungen;
+
+  /// No description provided for @schlafLoeschen.
+  ///
+  /// In de, this message translates to:
+  /// **'Importierte Schlafdaten löschen'**
+  String get schlafLoeschen;
+
+  /// No description provided for @schlafLoeschenFrage.
+  ///
+  /// In de, this message translates to:
+  /// **'Alle importierten Schlafdaten aus VelvetPulse löschen? Deine eigenen Tagebuch- und Traumpraxis-Einträge bleiben erhalten. Daten in Health Connect werden nicht gelöscht.'**
+  String get schlafLoeschenFrage;
+
+  /// No description provided for @schlafAbbrechen.
+  ///
+  /// In de, this message translates to:
+  /// **'Abbrechen'**
+  String get schlafAbbrechen;
+
+  /// No description provided for @schlafZeitfenster.
+  ///
+  /// In de, this message translates to:
+  /// **'Erfasstes Zeitfenster'**
+  String get schlafZeitfenster;
+
+  /// No description provided for @schlafSchlafzeit.
+  ///
+  /// In de, this message translates to:
+  /// **'Schlafzeit laut Phasen'**
+  String get schlafSchlafzeit;
+
+  /// No description provided for @schlafUnbekannt.
+  ///
+  /// In de, this message translates to:
+  /// **'Nicht vollständig bestimmbar'**
+  String get schlafUnbekannt;
+
+  /// No description provided for @schlafPhasen.
+  ///
+  /// In de, this message translates to:
+  /// **'Erfasste Phasen'**
+  String get schlafPhasen;
+
+  /// No description provided for @schlafWach.
+  ///
+  /// In de, this message translates to:
+  /// **'Wach'**
+  String get schlafWach;
+
+  /// No description provided for @schlafLeicht.
+  ///
+  /// In de, this message translates to:
+  /// **'Leichtschlaf'**
+  String get schlafLeicht;
+
+  /// No description provided for @schlafTief.
+  ///
+  /// In de, this message translates to:
+  /// **'Tiefschlaf'**
+  String get schlafTief;
+
+  /// No description provided for @schlafRem.
+  ///
+  /// In de, this message translates to:
+  /// **'REM'**
+  String get schlafRem;
+
+  /// No description provided for @schlafOhnePhase.
+  ///
+  /// In de, this message translates to:
+  /// **'Schlaf ohne Phasenangabe'**
+  String get schlafOhnePhase;
+
+  /// No description provided for @schlafUnbekanntePhase.
+  ///
+  /// In de, this message translates to:
+  /// **'Unbekannt'**
+  String get schlafUnbekanntePhase;
+
+  /// No description provided for @schlafEigeneAngaben.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine Angaben zu diesem Aufwachdatum'**
+  String get schlafEigeneAngaben;
+
+  /// No description provided for @schlafKeineAngaben.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch keine eigene Tagesbeobachtung vorhanden.'**
+  String get schlafKeineAngaben;
+
+  /// No description provided for @schlafBeobachtung.
+  ///
+  /// In de, this message translates to:
+  /// **'Tagesbeobachtung öffnen'**
+  String get schlafBeobachtung;
+
+  /// No description provided for @schlafLetzterAbgleich.
+  ///
+  /// In de, this message translates to:
+  /// **'Letzter Abgleich'**
+  String get schlafLetzterAbgleich;
+
+  /// No description provided for @schlafImportierteKopie.
+  ///
+  /// In de, this message translates to:
+  /// **'Gespeicherte Kopie. Änderungen oder Löschungen in der Quell-App entfernen diese Kopie nicht automatisch. Hinweise auf einen Zusammenhang sind kein Nachweis einer Wirkung auf Lust oder Träume.'**
+  String get schlafImportierteKopie;
+
+  /// No description provided for @schlafDauer.
+  ///
+  /// In de, this message translates to:
+  /// **'{stunden} Std. {minuten} Min.'**
+  String schlafDauer(int stunden, int minuten);
+
+  /// No description provided for @schlafBlickTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Was deine Nächte erzählen'**
+  String get schlafBlickTitel;
+
+  /// No description provided for @schlafBlickEinladung.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Traumzeichen bemerkt? Ein Gefühl mit in den Tag genommen? Entdecke deine letzten sieben Tage – mit deinen Erinnerungen und, wenn du möchtest, deinen Schlafdaten.'**
+  String get schlafBlickEinladung;
+
+  /// No description provided for @schlafBlickGrenze.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine Angaben erzählen vom Erleben. Die Uhr liefert Schlafschätzungen. Daraus wird kein Klartraum oder Orgasmus erkannt. Tagebucheinträge werden nach ihrem Eintragsdatum zugeordnet.'**
+  String get schlafBlickGrenze;
+
+  /// No description provided for @schlafBlickWoche.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine letzten sieben Tage'**
+  String get schlafBlickWoche;
+
+  /// No description provided for @schlafBlickKlar.
+  ///
+  /// In de, this message translates to:
+  /// **'Klarheit im Traum notiert'**
+  String get schlafBlickKlar;
+
+  /// No description provided for @schlafBlickErinnert.
+  ///
+  /// In de, this message translates to:
+  /// **'Traumerinnerung notiert'**
+  String get schlafBlickErinnert;
+
+  /// No description provided for @schlafBlickSinnlich.
+  ///
+  /// In de, this message translates to:
+  /// **'Sinnlicher Traum notiert'**
+  String get schlafBlickSinnlich;
+
+  /// No description provided for @schlafBlickHoehepunkt.
+  ///
+  /// In de, this message translates to:
+  /// **'Höhepunkt im Traum notiert'**
+  String get schlafBlickHoehepunkt;
+
+  /// No description provided for @schlafBlickOhneErinnerung.
+  ///
+  /// In de, this message translates to:
+  /// **'Nichts erinnert – auch das gehört dazu'**
+  String get schlafBlickOhneErinnerung;
+
+  /// No description provided for @schlafBlickUnbekannt.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch keine Traumangabe'**
+  String get schlafBlickUnbekannt;
+
+  /// No description provided for @schlafBlickOhneMessung.
+  ///
+  /// In de, this message translates to:
+  /// **'Ohne Schlafmessung'**
+  String get schlafBlickOhneMessung;
+
+  /// No description provided for @schlafBlickMehrere.
+  ///
+  /// In de, this message translates to:
+  /// **'Mehrere Schlafaufzeichnungen – einzeln unter Messwerten ansehen'**
+  String get schlafBlickMehrere;
+
+  /// No description provided for @schlafBlickNacht.
+  ///
+  /// In de, this message translates to:
+  /// **'Diese Nacht festhalten'**
+  String get schlafBlickNacht;
+
+  /// No description provided for @schlafBlickNaechster.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine nächste Entdeckung'**
+  String get schlafBlickNaechster;
+
+  /// No description provided for @schlafBlickStart.
+  ///
+  /// In de, this message translates to:
+  /// **'Beginne mit einem kleinen Rest Erinnerung: ein Bild, eine Stimmung, ein Ort. Daraus kann dein persönliches Traumzeichen entstehen.'**
+  String get schlafBlickStart;
+
+  /// No description provided for @schlafBlickUeben.
+  ///
+  /// In de, this message translates to:
+  /// **'Du hast bereits etwas festgehalten. Schau nach einem ungewöhnlichen Detail und nimm es als ruhige Absicht in deine nächste Abendpraxis mit.'**
+  String get schlafBlickUeben;
+
+  /// No description provided for @schlafBlickVertiefen.
+  ///
+  /// In de, this message translates to:
+  /// **'Du hast Klarheit im Traum notiert. Was möchtest du beim nächsten Mal bewusst wahrnehmen? Deine Traumpraxis lässt Raum für Sinnlichkeit und das Nachspüren am Tag.'**
+  String get schlafBlickVertiefen;
+
+  /// No description provided for @schlafBlickRuhe.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine letzten Einträge sprechen für eine Pause. Heute darf Erholung genügen. Du musst keine neue Übung oder nächtliche Unterbrechung hinzufügen.'**
+  String get schlafBlickRuhe;
+
+  /// No description provided for @schlafBlickPraxis.
+  ///
+  /// In de, this message translates to:
+  /// **'Traumpraxis entdecken'**
+  String get schlafBlickPraxis;
+
+  /// No description provided for @schlafMesswerte.
+  ///
+  /// In de, this message translates to:
+  /// **'Schlafdaten verbinden und Messwerte ansehen'**
+  String get schlafMesswerte;
+
+  /// No description provided for @schlafBlickBilanz.
+  ///
+  /// In de, this message translates to:
+  /// **'{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel.'**
+  String schlafBlickBilanz(int klar, int tage);
 }
 
 class _AppLocalizationsDelegate

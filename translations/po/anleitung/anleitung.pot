@@ -279,3 +279,22 @@ msgid ""
 "Klingt ein Wort in einer Aufnahme falsch, tippe unter dem Player auf „Wort falsch ausgesprochen?“. Wünsche und Fehler schickst du über „Rückmeldung senden“ hier unten oder im Profil: anonym und verschlüsselt über Nostr, ohne Konto. Wer mag, kann sie auch öffentlich auf GitHub melden.\n"
 "Die App ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es sinnvoll ist, sagen die Lektionen ausdrücklich, wann eine Abklärung ratsam ist."
 msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Compare sleep data
+msgctxt "guide:schlafdaten#titel"
+msgid "Schlafdaten vergleichen"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: In Practice, open Dream Practice to find the optional sleep-data comparison. On Android 14 or later, you can allow Health Connect to read sleep records. Your watch or its app must first sync its data to Health Connect. Dream Practice remains fully usable without a wearable.
+#. EN: Import runs only when you request it and reads the past 30 days. If several sources are available, select one. The app displays its recorded time window and available sleep stages alongside your own observations. A time window is not necessarily actual sleep duration; measurements are estimates and do not establish an effect of the exercises. There is no live detection or overnight signalling.
+#. EN: Disconnecting keeps previously imported records. Use “Delete imported sleep data” to remove them separately; your journal and personal observations remain. Revoke Android access in Health Connect settings. Imported copies are included in local backups; restoring a backup does not automatically connect the new device. Changes or deletions in the source app are not applied automatically.
+#. EN: The “What your nights reveal” reflection brings together the past seven days, your dream journal and your daily observations. It shows reported lucidity, sensuality and any available sleep measurements together. Entries are matched by date, not treated as precisely measured dream times. An optional invitation leads to your journal or evening practice. Missing observations remain unknown; when entries suggest distress, rest takes priority.
+msgctxt "guide:schlafdaten#text"
+msgid ""
+"In Üben unter Traumpraxis findest du den optionalen Schlafdaten-Abgleich. Ab Android 14 kannst du Health Connect den Lesezugriff auf Schlafdaten erlauben. Deine Uhr oder ihre App muss die Daten vorher selbst mit Health Connect synchronisieren. Ohne ein solches Gerät bleibt die Traumpraxis vollständig nutzbar.\n"
+"Der Import startet nur auf deinen Wunsch und fragt die letzten 30 Tage ab. Bei mehreren Quellen wählst du eine aus. Die App zeigt deren Zeitfenster und verfügbare Schlafphasen neben deinen eigenen Beobachtungen. Ein Zeitfenster ist nicht automatisch die tatsächliche Schlafdauer; Messungen sind Schätzungen und belegen keine Wirkung der Übungen. Es gibt keine Live-Erkennung oder nächtlichen Signale.\n"
+"Beim Trennen bleiben bereits importierte Daten erhalten. Mit „Importierte Schlafdaten löschen“ entfernst du sie separat; Tagebuch und eigene Beobachtungen bleiben erhalten. Die Android-Berechtigung widerrufst du in den Health-Connect-Einstellungen. Die importierten Kopien gehören zur lokalen Sicherung; eine Wiederherstellung verbindet das neue Gerät nicht automatisch. Änderungen oder Löschungen in der Quell-App werden nicht automatisch übernommen.\n"
+"Der Rückblick „Was deine Nächte erzählen“ verbindet die letzten sieben Tage mit deinem Traumtagebuch und deinen Tagesbeobachtungen. Du siehst berichtete Klarheit, Sinnlichkeit und vorhandene Schlafmessungen gemeinsam. Einträge werden nach ihrem Datum zugeordnet, nicht als exakt gemessene Traumzeit. Eine freiwillige Einladung führt dich zum Tagebuch oder zur Abendpraxis. Fehlende Angaben bleiben offen; bei belastenden Einträgen hat Ruhe Vorrang."
+msgstr ""

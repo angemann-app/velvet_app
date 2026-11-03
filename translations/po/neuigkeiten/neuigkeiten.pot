@@ -1138,3 +1138,27 @@ msgstr ""
 msgctxt "news:59#5.text"
 msgid "Kurs-, Audio- und Themenbilder im Stil des Magazins; Spicy zeigt eigene Motive. Dazu ein neues App-Symbol. Das diskrete Pulse-Symbol bleibt erhalten."
 msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.2
+#. EN: Audio by occasion
+msgctxt "news:60#0.titel"
+msgid "Audios nach Anlass"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.2
+#. EN: On Today the guided audios are now sorted into four groups: For me, For us, Night and Stories. A suggestion based on the time of day sits at the top, and "Show all" opens the full list.
+msgctxt "news:60#0.text"
+msgid "Auf Heute sind die geführten Audios jetzt in vier Gruppen geordnet: Für mich, Für uns, Nacht und Geschichten. Oben steht eine Empfehlung nach Tageszeit, „Alle anzeigen“ öffnet die vollständige Liste."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.2
+#. EN: Compare sleep data
+msgctxt "news:60#1.titel"
+msgid "Schlafdaten vergleichen"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.2
+#. EN: Optionally view previously synced sleep records alongside your own observations. Everything remains usable without a wearable.
+msgctxt "news:60#1.text"
+msgid "Auf Wunsch kannst du bereits synchronisierte Schlafdaten neben deinen eigenen Beobachtungen ansehen. Ohne Wearable bleibt alles nutzbar."
+msgstr ""

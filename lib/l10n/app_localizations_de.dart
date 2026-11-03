@@ -4837,4 +4837,210 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get halloGesendet => 'Danke für dein Hallo!';
+
+  @override
+  String get schlafTitel => 'Schlafdaten abgleichen';
+
+  @override
+  String get schlafEinladung => 'Deine Nacht im Rückblick';
+
+  @override
+  String get schlafErklaerung =>
+      'Optional: Bereits synchronisierte Schlafdaten aus Health Connect neben deinen eigenen Beobachtungen ansehen. Keine Live-Erkennung, keine Signale während der Nacht. Die Traumpraxis funktioniert auch ohne Gerät.';
+
+  @override
+  String get schlafDatenschutz =>
+      'VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an Coach oder Paarraum.';
+
+  @override
+  String get schlafHinweis =>
+      'Aktiviere die Freigabe deiner Schlafdaten in Fitbit bzw. Google Health für Health Connect. Es werden nur Daten angezeigt, die dort tatsächlich verfügbar sind. Schlafphasen sind Schätzungen, keine Diagnose.';
+
+  @override
+  String get schlafVerbinden => 'Health Connect verbinden';
+
+  @override
+  String get schlafImportieren => 'Letzte 30 Tage abgleichen';
+
+  @override
+  String get schlafUebernehmen => 'Ausgewählte Quelle übernehmen';
+
+  @override
+  String get schlafQuelle => 'Datenquelle';
+
+  @override
+  String get schlafQuelleWaehlen =>
+      'Bitte wähle eine Quelle. Aufzeichnungen verschiedener Geräte werden nicht addiert.';
+
+  @override
+  String get schlafTrennen => 'Abgleich ausschalten';
+
+  @override
+  String get schlafGetrennt =>
+      'Abgleich ausgeschaltet. Importierte Daten bleiben erhalten. Die Android-Berechtigung kannst du in Health Connect widerrufen.';
+
+  @override
+  String get schlafVerbunden =>
+      'Abgleich aktiviert. Daten werden nur auf deinen Wunsch gelesen.';
+
+  @override
+  String get schlafBerechtigungFehlt =>
+      'Zugriff auf Schlafdaten fehlt. Du kannst ihn in Health Connect erlauben; die übrige Traumpraxis bleibt nutzbar.';
+
+  @override
+  String get schlafNichtVerfuegbar =>
+      'Dieser optionale Import benötigt Android 14 oder neuer und verfügbares Health Connect. Alle übrigen Übungen bleiben nutzbar.';
+
+  @override
+  String get schlafLeer => 'Noch keine Schlafaufzeichnungen importiert.';
+
+  @override
+  String get schlafKeineDaten =>
+      'Keine abgeschlossenen Schlafsitzungen verfügbar. Prüfe die Synchronisierung und die Freigabe in deiner Quell-App.';
+
+  @override
+  String get schlafFehler =>
+      'Der Abgleich konnte nicht abgeschlossen werden. Deine bisherigen Daten bleiben erhalten.';
+
+  @override
+  String get schlafGespeichert =>
+      'Die ausgewählten Schlafdaten wurden übernommen.';
+
+  @override
+  String get schlafEinstellungen => 'Android-Berechtigungen';
+
+  @override
+  String get schlafLoeschen => 'Importierte Schlafdaten löschen';
+
+  @override
+  String get schlafLoeschenFrage =>
+      'Alle importierten Schlafdaten aus VelvetPulse löschen? Deine eigenen Tagebuch- und Traumpraxis-Einträge bleiben erhalten. Daten in Health Connect werden nicht gelöscht.';
+
+  @override
+  String get schlafAbbrechen => 'Abbrechen';
+
+  @override
+  String get schlafZeitfenster => 'Erfasstes Zeitfenster';
+
+  @override
+  String get schlafSchlafzeit => 'Schlafzeit laut Phasen';
+
+  @override
+  String get schlafUnbekannt => 'Nicht vollständig bestimmbar';
+
+  @override
+  String get schlafPhasen => 'Erfasste Phasen';
+
+  @override
+  String get schlafWach => 'Wach';
+
+  @override
+  String get schlafLeicht => 'Leichtschlaf';
+
+  @override
+  String get schlafTief => 'Tiefschlaf';
+
+  @override
+  String get schlafRem => 'REM';
+
+  @override
+  String get schlafOhnePhase => 'Schlaf ohne Phasenangabe';
+
+  @override
+  String get schlafUnbekanntePhase => 'Unbekannt';
+
+  @override
+  String get schlafEigeneAngaben => 'Deine Angaben zu diesem Aufwachdatum';
+
+  @override
+  String get schlafKeineAngaben =>
+      'Noch keine eigene Tagesbeobachtung vorhanden.';
+
+  @override
+  String get schlafBeobachtung => 'Tagesbeobachtung öffnen';
+
+  @override
+  String get schlafLetzterAbgleich => 'Letzter Abgleich';
+
+  @override
+  String get schlafImportierteKopie =>
+      'Gespeicherte Kopie. Änderungen oder Löschungen in der Quell-App entfernen diese Kopie nicht automatisch. Hinweise auf einen Zusammenhang sind kein Nachweis einer Wirkung auf Lust oder Träume.';
+
+  @override
+  String schlafDauer(int stunden, int minuten) {
+    return '$stunden Std. $minuten Min.';
+  }
+
+  @override
+  String get schlafBlickTitel => 'Was deine Nächte erzählen';
+
+  @override
+  String get schlafBlickEinladung =>
+      'Ein Traumzeichen bemerkt? Ein Gefühl mit in den Tag genommen? Entdecke deine letzten sieben Tage – mit deinen Erinnerungen und, wenn du möchtest, deinen Schlafdaten.';
+
+  @override
+  String get schlafBlickGrenze =>
+      'Deine Angaben erzählen vom Erleben. Die Uhr liefert Schlafschätzungen. Daraus wird kein Klartraum oder Orgasmus erkannt. Tagebucheinträge werden nach ihrem Eintragsdatum zugeordnet.';
+
+  @override
+  String get schlafBlickWoche => 'Deine letzten sieben Tage';
+
+  @override
+  String get schlafBlickKlar => 'Klarheit im Traum notiert';
+
+  @override
+  String get schlafBlickErinnert => 'Traumerinnerung notiert';
+
+  @override
+  String get schlafBlickSinnlich => 'Sinnlicher Traum notiert';
+
+  @override
+  String get schlafBlickHoehepunkt => 'Höhepunkt im Traum notiert';
+
+  @override
+  String get schlafBlickOhneErinnerung =>
+      'Nichts erinnert – auch das gehört dazu';
+
+  @override
+  String get schlafBlickUnbekannt => 'Noch keine Traumangabe';
+
+  @override
+  String get schlafBlickOhneMessung => 'Ohne Schlafmessung';
+
+  @override
+  String get schlafBlickMehrere =>
+      'Mehrere Schlafaufzeichnungen – einzeln unter Messwerten ansehen';
+
+  @override
+  String get schlafBlickNacht => 'Diese Nacht festhalten';
+
+  @override
+  String get schlafBlickNaechster => 'Deine nächste Entdeckung';
+
+  @override
+  String get schlafBlickStart =>
+      'Beginne mit einem kleinen Rest Erinnerung: ein Bild, eine Stimmung, ein Ort. Daraus kann dein persönliches Traumzeichen entstehen.';
+
+  @override
+  String get schlafBlickUeben =>
+      'Du hast bereits etwas festgehalten. Schau nach einem ungewöhnlichen Detail und nimm es als ruhige Absicht in deine nächste Abendpraxis mit.';
+
+  @override
+  String get schlafBlickVertiefen =>
+      'Du hast Klarheit im Traum notiert. Was möchtest du beim nächsten Mal bewusst wahrnehmen? Deine Traumpraxis lässt Raum für Sinnlichkeit und das Nachspüren am Tag.';
+
+  @override
+  String get schlafBlickRuhe =>
+      'Deine letzten Einträge sprechen für eine Pause. Heute darf Erholung genügen. Du musst keine neue Übung oder nächtliche Unterbrechung hinzufügen.';
+
+  @override
+  String get schlafBlickPraxis => 'Traumpraxis entdecken';
+
+  @override
+  String get schlafMesswerte => 'Schlafdaten verbinden und Messwerte ansehen';
+
+  @override
+  String schlafBlickBilanz(int klar, int tage) {
+    return '$klar von $tage Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel.';
+  }
 }

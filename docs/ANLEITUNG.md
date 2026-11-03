@@ -2,26 +2,12 @@
 
 Diese Anleitung steht auch in der App (Fragezeichen oben rechts oder im Profil). [English version](GUIDE.md)
 
-## Weiterhören und gemeinsam erleben
-
-Lektionen und geführte Angebote verwenden einen gemeinsamen Player. Beim Schließen einer Seite läuft die Wiedergabe weiter; der kleine Player bleibt unten in der App erreichbar. Nach einem App-Neustart wird nichts automatisch abgespielt. Eine Aufnahme setzt am gemerkten Abschnitt und der gemerkten Position fort, ein zufälliger Ablauf bleibt erhalten. Bei der Geräte-Stimme beginnt ein fortgesetzter Abschnitt von vorn. Die Sicherung enthält den Wiedergabestand, keine Sprechtexte.
-
-Vor und während der Wiedergabe siehst du den Aufnahmestand und kannst passende Pakete nachladen. Ein gemerkter Ablauf behält seine ursprüngliche Sprache.
-
-Für „Gemeinsam hören“ öffnet ihr beide die App mit verbundenem Paar-Kanal. Nach Einladung und Annahme bestätigt jede Person „Bereit“. Beide benötigen identische Aufnahmen derselben Fassung; die Dateien werden verglichen. Ein gemeinsamer Countdown gleicht die Geräteuhren ab. Jede Person kann pausieren oder beenden. Fortsetzen erfordert beide Bereitschaften erneut. Unterschiedliche Gegenperspektiven werden noch nicht synchronisiert. Spicy benötigt bei beiden den eingeschalteten Modus.
-
-Bei Verbindungsunterbrechung läuft die eigene Aufnahme weiter. Eine Fernpause benötigt Verbindung; lokal kannst du immer pausieren. Wiederverbinden startet nichts automatisch. Der freiwillige Rückblick mit optionalem Gefühl wird erst aufgedeckt, wenn beide ihre Antwort geteilt haben. Ein fehlgeschlagener Versand deckt nichts auf. Die zugehörige Nachricht im Paar-Kanal öffnet den Rückblick erneut.
-
-## Finden und dein persönlicher Weg
-
-Die Lupe oben durchsucht Kurse, Lektionen und Praxisangebote rein lokal, ohne Suchhistorie und ohne private Notizen oder Nachrichten. Spicy-Inhalte erscheinen nur bei aktiviertem Modus. Der Lektionsplayer zeigt die tatsächliche Offline-Verfügbarkeit seiner Aufnahme. Fehlt sie, kann die Geräte-Stimme vorlesen; „Aufnahmen laden“ öffnet die Paketverwaltung.
-
-Lektionen mit verknüpfter Übung und Reflexionsfrage bieten den freiwilligen persönlichen Weg: Wissen entdecken, Übung ausprobieren, Nachspüren. Die Schritte werden bewusst bestätigt, ohne Zeitvorgabe oder Pflichtantwort. Ein begonnener Weg ist auf Heute erreichbar und Teil der Sicherung.
-
 ## Inhalt
 
 - [Erste Schritte](#erste-schritte)
 - [Kurse und Lektionen](#kurse-und-lektionen)
+- [Finden und dein persönlicher Weg](#finden-und-dein-persönlicher-weg)
+- [Weiterhören und gemeinsam erleben](#weiterhören-und-gemeinsam-erleben)
 - [Geführte Audios](#geführte-audios)
 - [Training und Akuthilfe](#training-und-akuthilfe)
 - [Reframing-Tagebuch und Check-in](#reframing-tagebuch-und-check-in)
@@ -33,6 +19,7 @@ Lektionen mit verknüpfter Übung und Reflexionsfrage bieten den freiwilligen pe
 - [Sprache und englische Aufnahmen](#sprache-und-englische-aufnahmen)
 - [Darstellung](#darstellung)
 - [Hilfe und Rückmeldung](#hilfe-und-rückmeldung)
+- [Schlafdaten vergleichen](#schlafdaten-vergleichen)
 
 ## Erste Schritte
 
@@ -52,6 +39,28 @@ Der Tab Heute ist deine Startseite. Oben steht „Dein nächster Schritt“: die
 Jede Lektion hat einen Text, eine Aufnahme zum Anhören und am Ende eine Frage zum Nachdenken. Manche Lektionen haben unten einen Knopf, der dich direkt zur passenden Übung bringt, etwa zum Beckenboden-Timer oder zu einem geführten Audio.
 
 Mit „Als abgeschlossen markieren“ zählt dein Fortschritt.
+
+
+## Finden und dein persönlicher Weg
+
+Über die Lupe oben findest du Kurse, Lektionen und Praxisangebote. Die Suche läuft nur auf deinem Gerät, speichert keine Suchhistorie und durchsucht keine privaten Notizen oder Nachrichten. Spicy-Inhalte erscheinen nur im eingeschalteten Spicy-Modus.
+
+Am Lektionsplayer steht, ob die konkrete Aufnahme offline vorhanden ist. Fehlt sie, kann die Geräte-Stimme vorlesen. Über „Aufnahmen laden“ öffnest du die bestehende Paketverwaltung.
+
+Lektionen mit verknüpfter Übung und Reflexionsfrage bieten einen persönlichen Weg: Wissen entdecken, Übung ausprobieren und Nachspüren. Du öffnest und bestätigst die Schritte selbst, ohne Zeitvorgabe oder Pflichtantwort. Ein begonnener Weg ist auf Heute wieder erreichbar. Sein Stand ist Teil deiner Sicherung.
+
+
+## Weiterhören und gemeinsam erleben
+
+Wiedergabe und Weiterhören: Lektionen und geführte Angebote nutzen einen gemeinsamen Player. Du kannst die Seite schließen und in der App weitergehen. Unten bleibt ein neutral beschrifteter kleiner Player sichtbar. Nach dem erneuten Öffnen der App startet nichts von selbst: Du entscheidest, wann du weiterhörst. Aufnahmen setzen am gemerkten Abschnitt und der gemerkten Position fort; ein zufällig zusammengestellter Ablauf wird dabei nicht neu gewürfelt. Die Geräte-Stimme beginnt einen fortgesetzten Abschnitt von vorn. Der Wiedergabestand gehört zur Sicherung.
+
+Vor und während des Hörens siehst du, ob Aufnahmen offline vorliegen. Über „Aufnahmen laden“ öffnest du die passende Paketverwaltung, auch für die ursprüngliche Sprache eines gemerkten Ablaufs. Ein fehlendes Inhaltspaket kannst du nachladen.
+
+Gemeinsam hören: Öffnet beide die App mit verbundenem Paar-Kanal. Wähle im Player „Gemeinsam hören“. Eine neutrale Einladung erscheint beim Gegenüber; sie startet keine Aufnahme. Nach der Annahme bestätigen beide ausdrücklich „Bereit“. Beide brauchen dieselbe Aufnahme und denselben Ablauf; tatsächliche Dateien werden verglichen. Dann beginnt ein gemeinsamer Countdown. Beide können jederzeit pausieren oder beenden. Nach einer Pause müssen beide erneut bereit sein. Unterschiedliche Gegenperspektiven einer Hörgeschichte werden noch nicht synchronisiert.
+
+Bei unterbrochener Verbindung läuft die eigene Aufnahme lokal weiter. Eine Fernpause kann ohne Verbindung nicht zugestellt werden; lokal kannst du immer pausieren. Wiederverbinden startet nichts automatisch. Spicy-Angebote benötigen den eingeschalteten Modus bei beiden.
+
+Der gemeinsame Rückblick ist freiwillig. Du kannst ein Gefühl auswählen und deine Antwort ausdrücklich speichern und teilen. Antworten werden erst nach beiderseitigem Teilen aufgedeckt. Ein fehlgeschlagener Versand deckt nichts vorzeitig auf. Über die zugehörige Nachricht im Paar-Kanal öffnest du den Rückblick erneut. Spicy-Rückblicke bleiben hinter dem Modus.
 
 
 ## Geführte Audios
@@ -175,3 +184,14 @@ Kurs-, Audio- und Themenbilder verwenden vorhandene Bleistiftzeichnungen oder ru
 Klingt ein Wort in einer Aufnahme falsch, tippe unter dem Player auf „Wort falsch ausgesprochen?“. Wünsche und Fehler schickst du über „Rückmeldung senden“ hier unten oder im Profil: anonym und verschlüsselt über Nostr, ohne Konto. Wer mag, kann sie auch öffentlich auf GitHub melden.
 
 Die App ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es sinnvoll ist, sagen die Lektionen ausdrücklich, wann eine Abklärung ratsam ist.
+
+
+## Schlafdaten vergleichen
+
+In Üben unter Traumpraxis findest du den optionalen Schlafdaten-Abgleich. Ab Android 14 kannst du Health Connect den Lesezugriff auf Schlafdaten erlauben. Deine Uhr oder ihre App muss die Daten vorher selbst mit Health Connect synchronisieren. Ohne ein solches Gerät bleibt die Traumpraxis vollständig nutzbar.
+
+Der Import startet nur auf deinen Wunsch und fragt die letzten 30 Tage ab. Bei mehreren Quellen wählst du eine aus. Die App zeigt deren Zeitfenster und verfügbare Schlafphasen neben deinen eigenen Beobachtungen. Ein Zeitfenster ist nicht automatisch die tatsächliche Schlafdauer; Messungen sind Schätzungen und belegen keine Wirkung der Übungen. Es gibt keine Live-Erkennung oder nächtlichen Signale.
+
+Beim Trennen bleiben bereits importierte Daten erhalten. Mit „Importierte Schlafdaten löschen“ entfernst du sie separat; Tagebuch und eigene Beobachtungen bleiben erhalten. Die Android-Berechtigung widerrufst du in den Health-Connect-Einstellungen. Die importierten Kopien gehören zur lokalen Sicherung; eine Wiederherstellung verbindet das neue Gerät nicht automatisch. Änderungen oder Löschungen in der Quell-App werden nicht automatisch übernommen.
+
+Der Rückblick „Was deine Nächte erzählen“ verbindet die letzten sieben Tage mit deinem Traumtagebuch und deinen Tagesbeobachtungen. Du siehst berichtete Klarheit, Sinnlichkeit und vorhandene Schlafmessungen gemeinsam. Einträge werden nach ihrem Datum zugeordnet, nicht als exakt gemessene Traumzeit. Eine freiwillige Einladung führt dich zum Tagebuch oder zur Abendpraxis. Fehlende Angaben bleiben offen; bei belastenden Einträgen hat Ruhe Vorrang.

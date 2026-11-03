@@ -2,26 +2,12 @@
 
 This guide is also inside the app (question mark at the top right, or in your profile). [Deutsche Fassung](ANLEITUNG.md)
 
-## Continue listening and share an experience
-
-Lessons and guided activities use one player. Closing a page keeps playback going; the mini player remains available at the bottom of the app. Reopening the app never starts playback automatically. Recordings resume at the saved section and position, and randomly assembled sequences stay intact. The device voice restarts a resumed section from its beginning. Backups contain your place, without spoken texts.
-
-Before and during playback, check recording availability and download matching packages. A saved sequence keeps its original language.
-
-For “Listen together”, both people open the app with a connected couple channel. After invitation and acceptance, each person confirms “Ready”. Both need identical recordings of the same version; actual files are compared. A shared countdown accounts for different device clocks. Either person can pause or end the activity. Continuing requires both people to be ready again. Different complementary perspectives are not synchronised yet. Spicy requires the mode on both devices.
-
-If the connection is interrupted, your own recording continues. Remote pause requires a connection; you can always pause locally. Reconnecting never starts playback automatically. Reflection and a feeling are optional; answers are revealed only after both have shared. Failed sends do not reveal answers. Reopen a reflection through its message in the couple channel.
-
-## Find content and follow your personal path
-
-The magnifying glass searches courses, lessons and practice activities locally. No search history is saved, and private notes and messages are excluded. Spicy content appears only when its mode is enabled. The lesson player shows the actual offline availability of its recording. If it is missing, the device voice can read the text; “Download recordings” opens the package manager.
-
-Lessons with a linked exercise and reflection question offer an optional personal path: discover the knowledge, try the exercise and reflect. You confirm each step yourself, with no time limit or required answer. Return to an unfinished path from Today. Your place is included in your backup.
-
 ## Contents
 
 - [Getting started](#getting-started)
 - [Courses and lessons](#courses-and-lessons)
+- [Find content and follow your personal path](#find-content-and-follow-your-personal-path)
+- [Continue listening and share an experience](#continue-listening-and-share-an-experience)
 - [Guided audio](#guided-audio)
 - [Training and quick help](#training-and-quick-help)
 - [Reframing journal and check-in](#reframing-journal-and-check-in)
@@ -33,6 +19,7 @@ Lessons with a linked exercise and reflection question offer an optional persona
 - [Language and English recordings](#language-and-english-recordings)
 - [Appearance](#appearance)
 - [Help and feedback](#help-and-feedback)
+- [Compare sleep data](#compare-sleep-data)
 
 ## Getting started
 
@@ -52,6 +39,28 @@ The Today tab is your start page. At the top is “Your next step”: the next o
 Every lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.
 
 Tapping “Mark as completed” counts towards your progress.
+
+
+## Find content and follow your personal path
+
+Use the magnifying glass at the top to find courses, lessons and practice activities. Search runs only on your device, saves no search history and does not search private notes or messages. Spicy content appears only when spicy mode is enabled.
+
+The lesson player shows whether the specific recording is available offline. If it is missing, the device voice can read the text. “Download recordings” opens the existing package manager.
+
+Lessons with a linked exercise and reflection question offer a personal path: discover the knowledge, try the exercise and reflect. You open and confirm each step yourself, with no time limit or required answer. You can return to a path from Today. Your place on the path is included in your backup.
+
+
+## Continue listening and share an experience
+
+Playback and continue listening: lessons and guided activities use one shared player. You can close the page and explore the app while a neutrally labelled mini player remains visible below. Reopening the app never starts playback by itself: you choose when to continue. Recordings resume at the saved section and position; a randomly assembled sequence is not regenerated. The device voice restarts a resumed section from the beginning. Your place is included in your backup.
+
+Before and during playback you can see whether recordings are available offline. “Download recordings” opens the matching package manager, including the original language of a saved sequence. Missing content packages can be downloaded again.
+
+Listen together: both of you open the app with a connected couple channel. Choose “Listen together” in the player. Your partner receives a neutral invitation that does not start audio. After accepting, each person explicitly confirms “Ready”. Both devices need the same recordings and sequence; actual files are compared. A shared countdown then begins. Either person can pause or end the activity at any time. Resuming needs both people to be ready again. Different complementary perspectives of an audio story are not synchronised yet.
+
+If the connection is interrupted, your own recording continues locally. A remote pause cannot be delivered without a connection; you can always pause locally. Reconnecting never starts playback automatically. Spicy activities require the mode to be enabled on both devices.
+
+Shared reflection is optional. You can choose a feeling and explicitly save and share your answer. Answers are revealed only after both people have shared. A failed send does not reveal anything early. Reopen a reflection from its message in the couple channel. Spicy reflections remain behind the mode.
 
 
 ## Guided audio
@@ -78,7 +87,7 @@ All of them are put together anew every time. You can pause, skip and stop at an
 
 Inner views (spicy mode only, 18+): continuous audio stories of about 15 to 25 minutes, not for falling asleep. They tell an encounter from the inside. You choose Soft or Spicy and a perspective; the matching perspective of the same encounter follows the same sequence of scenes, so two people can listen together. “Listen together” synchronises the same version on two devices. Different complementary perspectives still need to be coordinated by you. All characters are adults, everything happens by mutual consent, and none of it is a benchmark: every body experiences pleasure differently. The recordings come as a separate package and then play without a network. In the player you can pause and skip scenes. On the card, discreet mode only shows Audio story.
 
-Your dream practice: In Pleasure in dreams, connect recall, recognising dreams and noticing what lingers during the day. Under “Your dream signs”, add, edit or delete personal signs. For your evening preparation, choose a sign and a pleasant memory from your journal. Under “Reflect on today”, optionally record rest, waking desire, sensual or lucid dreams, any experienced orgasms and a note. Questions can remain unanswered. Your private review lets you view, edit and delete daily observations. Signs and observations stay local, are included in your backup and are not sent to a partner or the AI coach. More waking desire is an aim to explore, not a promised effect.
+Your dream practice: In Pleasure in dreams, connect recall, recognising dreams and noticing what lingers during the day. Under “Your dream signs”, add, edit or delete personal signs. For your evening preparation, choose a sign and a pleasant memory from your journal. Under “Reflect on today”, optionally record rest, waking desire, sensual or lucid dreams, any experienced orgasms and a note. Questions can remain unanswered. Your private review lets you view, edit and delete daily observations. Signs and observations stay local, are included in your backup and are not sent to a partner or the AI coach. More waking desire is an aim to explore, not a promised effect. For listening there are three short guided pieces for evening, clarity and morning, with Victoria or Martin. They are part of the guided recordings you download, and are for you alone.
 
 
 ## Training and quick help
@@ -175,3 +184,14 @@ Course, audio and topic images use existing pencil drawings or restrained graphi
 If a word in a recording sounds wrong, tap “Word mispronounced?” below the player. Send wishes and bug reports with “Send feedback” at the bottom of this page or in your profile: anonymous and encrypted over Nostr, no account needed. You can also report them publicly on GitHub.
 
 The app is no substitute for medical or psychotherapeutic treatment. Where it makes sense, the lessons say explicitly when it's advisable to get checked.
+
+
+## Compare sleep data
+
+In Practice, open Dream Practice to find the optional sleep-data comparison. On Android 14 or later, you can allow Health Connect to read sleep records. Your watch or its app must first sync its data to Health Connect. Dream Practice remains fully usable without a wearable.
+
+Import runs only when you request it and reads the past 30 days. If several sources are available, select one. The app displays its recorded time window and available sleep stages alongside your own observations. A time window is not necessarily actual sleep duration; measurements are estimates and do not establish an effect of the exercises. There is no live detection or overnight signalling.
+
+Disconnecting keeps previously imported records. Use “Delete imported sleep data” to remove them separately; your journal and personal observations remain. Revoke Android access in Health Connect settings. Imported copies are included in local backups; restoring a backup does not automatically connect the new device. Changes or deletions in the source app are not applied automatically.
+
+The “What your nights reveal” reflection brings together the past seven days, your dream journal and your daily observations. It shows reported lucidity, sensuality and any available sleep measurements together. Entries are matched by date, not treated as precisely measured dream times. An optional invitation leads to your journal or evening practice. Missing observations remain unknown; when entries suggest distress, rest takes priority.

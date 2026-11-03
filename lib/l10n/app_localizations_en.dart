@@ -4814,4 +4814,208 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get halloGesendet => 'Thank you for saying hello!';
+
+  @override
+  String get schlafTitel => 'Compare sleep data';
+
+  @override
+  String get schlafEinladung => 'A look back at your night';
+
+  @override
+  String get schlafErklaerung =>
+      'Optional: View sleep data already synced to Health Connect alongside your own observations. No live detection or signals during the night. Dream Practice works without a device.';
+
+  @override
+  String get schlafDatenschutz =>
+      'VelvetPulse reads only sleep sessions from the last 30 days when you explicitly start a comparison. It writes nothing to Health Connect. Imported copies stay local and are included in your backup; nothing is shared with the coach or your partner.';
+
+  @override
+  String get schlafHinweis =>
+      'Enable sharing of sleep data from Fitbit or Google Health to Health Connect. Only data actually available there can be shown. Sleep stages are estimates, not a diagnosis.';
+
+  @override
+  String get schlafVerbinden => 'Connect Health Connect';
+
+  @override
+  String get schlafImportieren => 'Compare last 30 days';
+
+  @override
+  String get schlafUebernehmen => 'Import selected source';
+
+  @override
+  String get schlafQuelle => 'Data source';
+
+  @override
+  String get schlafQuelleWaehlen =>
+      'Choose a source. Records from different devices are not added together.';
+
+  @override
+  String get schlafTrennen => 'Turn off comparison';
+
+  @override
+  String get schlafGetrennt =>
+      'Comparison is off. Imported data is retained. You can revoke the Android permission in Health Connect.';
+
+  @override
+  String get schlafVerbunden =>
+      'Comparison is enabled. Data is read only when you request it.';
+
+  @override
+  String get schlafBerechtigungFehlt =>
+      'Access to sleep data is missing. You can allow it in Health Connect; the rest of Dream Practice stays available.';
+
+  @override
+  String get schlafNichtVerfuegbar =>
+      'This optional import needs Android 14 or later and available Health Connect. All other exercises remain available.';
+
+  @override
+  String get schlafLeer => 'No sleep records imported yet.';
+
+  @override
+  String get schlafKeineDaten =>
+      'No completed sleep sessions are available. Check syncing and sharing in your source app.';
+
+  @override
+  String get schlafFehler =>
+      'The comparison could not be completed. Your existing data is retained.';
+
+  @override
+  String get schlafGespeichert => 'The selected sleep data has been imported.';
+
+  @override
+  String get schlafEinstellungen => 'Android permissions';
+
+  @override
+  String get schlafLoeschen => 'Delete imported sleep data';
+
+  @override
+  String get schlafLoeschenFrage =>
+      'Delete all imported sleep data from VelvetPulse? Your own journal and Dream Practice entries are retained. Data in Health Connect is not deleted.';
+
+  @override
+  String get schlafAbbrechen => 'Cancel';
+
+  @override
+  String get schlafZeitfenster => 'Recorded time window';
+
+  @override
+  String get schlafSchlafzeit => 'Sleep time from stages';
+
+  @override
+  String get schlafUnbekannt => 'Cannot be fully determined';
+
+  @override
+  String get schlafPhasen => 'Recorded stages';
+
+  @override
+  String get schlafWach => 'Awake';
+
+  @override
+  String get schlafLeicht => 'Light sleep';
+
+  @override
+  String get schlafTief => 'Deep sleep';
+
+  @override
+  String get schlafRem => 'REM';
+
+  @override
+  String get schlafOhnePhase => 'Sleep without a stage label';
+
+  @override
+  String get schlafUnbekanntePhase => 'Unknown';
+
+  @override
+  String get schlafEigeneAngaben => 'Your observations for this wake-up date';
+
+  @override
+  String get schlafKeineAngaben => 'No personal daily observation yet.';
+
+  @override
+  String get schlafBeobachtung => 'Open daily observation';
+
+  @override
+  String get schlafLetzterAbgleich => 'Last comparison';
+
+  @override
+  String get schlafImportierteKopie =>
+      'Saved copy. Changes or deletions in the source app do not automatically remove this copy. Observed patterns do not establish an effect on desire or dreams.';
+
+  @override
+  String schlafDauer(int stunden, int minuten) {
+    return '$stunden hr $minuten min';
+  }
+
+  @override
+  String get schlafBlickTitel => 'What your nights reveal';
+
+  @override
+  String get schlafBlickEinladung =>
+      'Noticed a dream sign? Carried a feeling into your day? Explore your past seven days through your memories and, if you wish, your sleep records.';
+
+  @override
+  String get schlafBlickGrenze =>
+      'Your own entries describe your experience. A watch provides sleep estimates. These do not identify lucid dreams or orgasms. Journal entries are matched by their entry date.';
+
+  @override
+  String get schlafBlickWoche => 'Your past seven days';
+
+  @override
+  String get schlafBlickKlar => 'Lucidity recorded';
+
+  @override
+  String get schlafBlickErinnert => 'Dream memory recorded';
+
+  @override
+  String get schlafBlickSinnlich => 'Sensual dream recorded';
+
+  @override
+  String get schlafBlickHoehepunkt => 'Dream orgasm recorded';
+
+  @override
+  String get schlafBlickOhneErinnerung =>
+      'Nothing recalled – that belongs here too';
+
+  @override
+  String get schlafBlickUnbekannt => 'No dream observation yet';
+
+  @override
+  String get schlafBlickOhneMessung => 'No sleep measurement';
+
+  @override
+  String get schlafBlickMehrere =>
+      'Multiple sleep records – view them individually under measurements';
+
+  @override
+  String get schlafBlickNacht => 'Record this night';
+
+  @override
+  String get schlafBlickNaechster => 'Your next discovery';
+
+  @override
+  String get schlafBlickStart =>
+      'Start with a small fragment of memory: an image, a mood, a place. It may become your personal dream sign.';
+
+  @override
+  String get schlafBlickUeben =>
+      'You have already recorded something. Look for an unusual detail and carry it as a gentle intention into your next evening practice.';
+
+  @override
+  String get schlafBlickVertiefen =>
+      'You have recorded lucidity in a dream. What would you like to notice consciously next time? Dream Practice makes room for sensuality and noticing how it feels during the day.';
+
+  @override
+  String get schlafBlickRuhe =>
+      'Your recent entries suggest taking a break. Rest can be enough today. You do not need another exercise or overnight interruption.';
+
+  @override
+  String get schlafBlickPraxis => 'Explore Dream Practice';
+
+  @override
+  String get schlafMesswerte => 'Connect sleep data and view measurements';
+
+  @override
+  String schlafBlickBilanz(int klar, int tage) {
+    return '$klar of $tage days with personal entries include a reported lucid dream. This is a reflection, not a performance goal.';
+  }
 }

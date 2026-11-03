@@ -12,10 +12,46 @@ import io.flutter.plugin.common.MethodChannel
 
 // FlutterFragmentActivity wird von local_auth (Fingerabdruck) benötigt.
 class MainActivity : FlutterFragmentActivity() {
+    private var schlafBerechtigung: MethodChannel.Result? = null
+    private val schlafAnfrage = 20963
     // Hält die CPU bei ausgeschaltetem Bildschirm wach, solange eine lange Wiedergabe läuft (lib/services/wach_halten.dart).
     private var wachSperre: PowerManager.WakeLock? = null
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "velvetpulse/schlafdaten")
+            .setMethodCallHandler { call, result ->
+                when (call.method) {
+                    "status" -> result.success(mapOf("verfuegbar" to SchlafdatenLeser.verfuegbar(this),
+                        "berechtigt" to (Build.VERSION.SDK_INT >= 34 && checkSelfPermission(SchlafdatenLeser.BERECHTIGUNG) == PackageManager.PERMISSION_GRANTED)))
+                    "berechtigen" -> {
+                        if (!SchlafdatenLeser.verfuegbar(this)) result.success(false)
+                        else if (schlafBerechtigung != null) result.error("beschaeftigt", null, null)
+                        else if (checkSelfPermission(SchlafdatenLeser.BERECHTIGUNG) == PackageManager.PERMISSION_GRANTED) result.success(true)
+                        else {
+                            schlafBerechtigung = result
+                            try {
+                                requestPermissions(arrayOf(SchlafdatenLeser.BERECHTIGUNG), schlafAnfrage)
+                            } catch (e: Exception) {
+                                schlafBerechtigung = null
+                                result.error("berechtigung_fehlt", null, null)
+                            }
+                        }
+                    }
+                    "einstellungen" -> try {
+                        SchlafdatenLeser.einstellungen(this); result.success(null)
+                    } catch (e: Exception) { result.error("einstellungen", null, null) }
+                    "lesen" -> {
+                        val von = call.argument<Number>("startMs")?.toLong()
+                        val bis = call.argument<Number>("endeMs")?.toLong()
+                        if (von == null || bis == null) result.error("zeitraum", null, null)
+                        else SchlafdatenLeser.lesen(this, von, bis, object : SchlafdatenLeser.Antwort {
+                            override fun fertig(daten: MutableList<MutableMap<String, Any>>?) { result.success(daten) }
+                            override fun fehler(code: String?) { result.error(code ?: "lesefehler", null, null) }
+                        })
+                    }
+                    else -> result.notImplemented()
+                }
+            }
         val wiedergabe = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "velvetpulse/wiedergabe")
         WiedergabeService.steuerung = WiedergabeService.Steuerung { aktion ->
             runOnUiThread { wiedergabe.invokeMethod(aktion, null) }
@@ -99,11 +135,21 @@ class MainActivity : FlutterFragmentActivity() {
     }
 
     override fun onDestroy() {
+        schlafBerechtigung?.error("abgebrochen", null, null)
+        schlafBerechtigung = null
         WiedergabeService.steuerung = null
         stopService(Intent(this, WiedergabeService::class.java))
         wachSperre?.let { if (it.isHeld) it.release() }
         wachSperre = null
         super.onDestroy()
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == schlafAnfrage) {
+            schlafBerechtigung?.success(grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED })
+            schlafBerechtigung = null
+        }
     }
 
     private fun setLauncherEnabled(alias: String, enabled: Boolean) {

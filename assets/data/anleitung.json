@@ -103,6 +103,12 @@
       "titel": "Hilfe und Rückmeldung",
       "bild": "",
       "text": "Klingt ein Wort in einer Aufnahme falsch, tippe unter dem Player auf „Wort falsch ausgesprochen?“. Wünsche und Fehler schickst du über „Rückmeldung senden“ hier unten oder im Profil: anonym und verschlüsselt über Nostr, ohne Konto. Wer mag, kann sie auch öffentlich auf GitHub melden.\nDie App ersetzt keine ärztliche oder psychotherapeutische Behandlung. Wo es sinnvoll ist, sagen die Lektionen ausdrücklich, wann eine Abklärung ratsam ist."
+    },
+    {
+      "id": "schlafdaten",
+      "icon": "bedtime",
+      "titel": "Schlafdaten vergleichen",
+      "text": "In Üben unter Traumpraxis findest du den optionalen Schlafdaten-Abgleich. Ab Android 14 kannst du Health Connect den Lesezugriff auf Schlafdaten erlauben. Deine Uhr oder ihre App muss die Daten vorher selbst mit Health Connect synchronisieren. Ohne ein solches Gerät bleibt die Traumpraxis vollständig nutzbar.\nDer Import startet nur auf deinen Wunsch und fragt die letzten 30 Tage ab. Bei mehreren Quellen wählst du eine aus. Die App zeigt deren Zeitfenster und verfügbare Schlafphasen neben deinen eigenen Beobachtungen. Ein Zeitfenster ist nicht automatisch die tatsächliche Schlafdauer; Messungen sind Schätzungen und belegen keine Wirkung der Übungen. Es gibt keine Live-Erkennung oder nächtlichen Signale.\nBeim Trennen bleiben bereits importierte Daten erhalten. Mit „Importierte Schlafdaten löschen“ entfernst du sie separat; Tagebuch und eigene Beobachtungen bleiben erhalten. Die Android-Berechtigung widerrufst du in den Health-Connect-Einstellungen. Die importierten Kopien gehören zur lokalen Sicherung; eine Wiederherstellung verbindet das neue Gerät nicht automatisch. Änderungen oder Löschungen in der Quell-App werden nicht automatisch übernommen.\nDer Rückblick „Was deine Nächte erzählen“ verbindet die letzten sieben Tage mit deinem Traumtagebuch und deinen Tagesbeobachtungen. Du siehst berichtete Klarheit, Sinnlichkeit und vorhandene Schlafmessungen gemeinsam. Einträge werden nach ihrem Datum zugeordnet, nicht als exakt gemessene Traumzeit. Eine freiwillige Einladung führt dich zum Tagebuch oder zur Abendpraxis. Fehlende Angaben bleiben offen; bei belastenden Einträgen hat Ruhe Vorrang."
     }
   ]
 }

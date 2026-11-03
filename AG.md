@@ -78,6 +78,7 @@ seinem OK führt Claude zusammen, trägt den Auftrag unter „Erledigt“ ein un
 
 
 
+
 - 02.11.2026, Codex: drei neue Traumpraxis-Hörtexte DE/EN unter `docs/redaktion/traumpraxis/`, neue Produktions-/Prüfwerkzeuge und lokale Aufnahmen unter `build/redaktion/traumpraxis/`. Nutzer hat Textarbeit und alle zwölf Aufnahmen (Victoria/Martin, DE/EN) beauftragt. Keine parallele Kokoro-Instanz; keine Änderungen an Claudes acht privaten Folgen.
 
 

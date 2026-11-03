@@ -17,6 +17,7 @@ import '../../theme/app_theme.dart';
 import '../../theme/vp_tokens.dart';
 import 'traum_tagebuch_screen.dart';
 import 'traumpraxis_verwalten.dart';
+import 'schlafdaten_screen.dart';
 
 /// Ergänzende Anleitung, keine neue Audiofolge. Auswahl bleibt in dieser Sitzung.
 class TraumpraxisScreen extends StatefulWidget {
@@ -125,6 +126,9 @@ class _TraumpraxisScreenState extends State<TraumpraxisScreen> {
                   Text(t.traumpraxisEinladung, style: typo.ueberschrift),
                   const SizedBox(height: VpAbstand.l),
                   Text(t.traumpraxisZiel, style: typo.fliesstext),
+                  OutlinedButton.icon(
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SchlafdatenScreen())),
+                    icon: const Icon(Icons.bedtime_outlined), label: Text(t.schlafTitel)),
                   const SizedBox(height: VpAbstand.xl),
                   _abschnitt(
                       t.praxisPfad,

@@ -674,6 +674,22 @@
           "text": "Kurs-, Audio- und Themenbilder im Stil des Magazins; Spicy zeigt eigene Motive. Dazu ein neues App-Symbol. Das diskrete Pulse-Symbol bleibt erhalten."
         }
       ]
+    },
+    {
+      "build": 60,
+      "version": "4.19.0-beta.2",
+      "punkte": [
+        {
+          "icon": "headphones",
+          "titel": "Audios nach Anlass",
+          "text": "Auf Heute sind die geführten Audios jetzt in vier Gruppen geordnet: Für mich, Für uns, Nacht und Geschichten. Oben steht eine Empfehlung nach Tageszeit, „Alle anzeigen“ öffnet die vollständige Liste."
+        },
+        {
+          "icon": "bedtime",
+          "titel": "Schlafdaten vergleichen",
+          "text": "Auf Wunsch kannst du bereits synchronisierte Schlafdaten neben deinen eigenen Beobachtungen ansehen. Ohne Wearable bleibt alles nutzbar."
+        }
+      ]
     }
   ]
 }

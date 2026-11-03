@@ -44,7 +44,7 @@ Schwerpunkten kompakter, Check-in und Funke nebeneinander.
 
 ## Später
 
-- Optionaler Schlafdaten-Abgleich für Traumpraxis, Konzept `docs/konzepte/schlafdaten-abgleich.md`: freiwilliger Import bereits synchronisierter Daten, auch ohne Wearable voll nutzbar. Live-Funktionen vom Nutzer vorerst ausdrücklich ausgeschlossen. Schnittstellenweg noch prüfen; noch nicht implementiert.
+- Schlafdaten-Abgleich: echter Fitbit-Air-/Health-Connect-Import auf Android 15/16 und Berechtigungs-/Löschabläufe am Gerät prüfen. Implementierung im Arbeitsbaum abgeschlossen, Übergabe oben in `docs/ZUSAMMENARBEIT_CODEX_CLAUDE.md`. Keine Live-Funktionen.
 
 - Eigene Domain für R2 statt `r2.dev` (bewusst aufgeschoben).
 - Stabile Version nach den Handytests (Nutzer testet, Testmodus hilft).
@@ -56,6 +56,8 @@ Meldungen werden täglich gesammelt, abgearbeitet wird einmal pro Woche am Mittw
 führt nach dem OK des Nutzers zusammen. Ablauf in `docs/AUSSPRACHE.md` (früher AG-1).
 
 ## Erledigt
+
+- 03.11.2026, Codex: optionaler Schlafdaten-Abgleich DE/EN unter Traumpraxis mit Siebentage-Traumrückblick und freiwilligem nächsten Schritt, native Health-Connect-Brücke ab Android 14 ohne neue Abhängigkeit, manuelle Quellenwahl, Backup-Merge und getrenntes Löschen. 454 Tests und 4 Bildschirmtests grün; Analyse ohne Befund, Android-Kompilierung erfolgreich. Keine Geräteprüfung oder Veröffentlichung behauptet.
 
 - 02.11.2026, Codex: App-Icon auf Magazin-Markenzeichen umgestellt, Android-7-Dichten/adaptive Ebenen/Themensymbol fertig, neutrales Pulse-Symbol erhalten. Native Icon-Ressourcen isoliert erfolgreich kompiliert/verlinkt; vollständiger Offline-Gradle-Build wegen fehlender Cache-Abhängigkeiten nicht bestätigt. Kein Release beauftragt. Anschließend technische Endprüfung der vorhandenen Neuvertonung aufgenommen.
 

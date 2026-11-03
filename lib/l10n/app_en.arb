@@ -41,7 +41,13 @@
   "gemeinsamGeteilt": "Your reflection has been shared.",
   "gemeinsamNochVerdeckt": "The shared reflection is still hidden.",
   "gemeinsamCountdown": "Starting together in {sekunden}",
-  "@gemeinsamCountdown": {"placeholders": {"sekunden": {"type": "int"}}},
+  "@gemeinsamCountdown": {
+    "placeholders": {
+      "sekunden": {
+        "type": "int"
+      }
+    }
+  },
   "wiedergabeNeutral": "Playback",
   "wiedergabeLeer": "No accessible playback selected.",
   "wiedergabeBehalten": "You can close this page and keep exploring while you listen.",
@@ -55,7 +61,13 @@
   "wiedergabeLaeuft": "Playing",
   "wiedergabeFortsetzen": "Continue listening",
   "wiedergabeRunde": "Round {runde}",
-  "@wiedergabeRunde": {"placeholders": {"runde": {"type": "int"}}},
+  "@wiedergabeRunde": {
+    "placeholders": {
+      "runde": {
+        "type": "int"
+      }
+    }
+  },
   "sucheTitel": "Explore & find",
   "aufnahmeOffline": "Recording available offline",
   "wegTitel": "Your personal path",
@@ -159,7 +171,16 @@
   "onboardingVersprechenKeinKonto": "No account, no ads, no tracking.",
   "onboardingVersprechenNetz": "Only what you switch on yourself goes online: the AI coach, the couple channel and the check for updates.",
   "onboardingSchritt": "Question {n} of {gesamt}",
-  "@onboardingSchritt": {"placeholders": {"n": {"type": "int"}, "gesamt": {"type": "int"}}},
+  "@onboardingSchritt": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "gesamt": {
+        "type": "int"
+      }
+    }
+  },
   "heuteAlleKurse": "Browse all courses",
   "navLernen": "Learn",
   "navUeben": "Practice",
@@ -169,8 +190,12 @@
   "uebenCoach": "AI coach",
   "@heuteKursUndDauer": {
     "placeholders": {
-      "kurs": {"type": "String"},
-      "min": {"type": "int"}
+      "kurs": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      }
     }
   },
   "coursesYourFocusGoallabel": "Your focus: {goalLabel}",
@@ -1186,7 +1211,8 @@
   "traumpraxisHoerenKlarheit": "In the daytime or early evening, awake, sitting or lying down.",
   "traumpraxisHoerenMorgen": "After waking up or in a quiet moment during the day, then perhaps your daytime observation.",
   "traumpraxisHoerenStarten": "Listen",
-  "traumpraxisHoerenPaket": "The content of these pieces comes with the recordings. Download them in package management and the titles will appear here.",  "audioFuerHeute": "For today",
+  "traumpraxisHoerenPaket": "The content of these pieces comes with the recordings. Download them in package management and the titles will appear here.",
+  "audioFuerHeute": "For today",
   "audioAlleAnzeigen": "Show all",
   "audioGruppeFuerMich": "For me",
   "audioGruppeFuerMichText": "Time just for you: feel your body, explore yourself, experience dreams more consciously. You choose the length and how close you go.",
@@ -1202,7 +1228,8 @@
   "audioGemeinsamText": "Start a recording and tap \"Listen together\" in the player. You both need the same recording on your device; you listen in time and either of you can pause.",
   "traumpraxisKarteTitel": "Dream practice",
   "traumpraxisKarteTitelNeutral": "Practice",
-  "traumpraxisKarteText": "Recall, recognise, notice: your practice around the night.",  "traumpraxisErkundung": "More pleasure in dreams and daily life is the aim of this exploration. Whether these exercises increase your waking desire remains an open question for you to observe. MILD is studied as a way to encourage lucid dreams; this brief evening adaptation and the daytime practice are not proven treatments. Restful sleep matters more than any particular dream experience.",
+  "traumpraxisKarteText": "Recall, recognise, notice: your practice around the night.",
+  "traumpraxisErkundung": "More pleasure in dreams and daily life is the aim of this exploration. Whether these exercises increase your waking desire remains an open question for you to observe. MILD is studied as a way to encourage lucid dreams; this brief evening adaptation and the daytime practice are not proven treatments. Restful sleep matters more than any particular dream experience.",
   "lustTitel": "Pleasure in dreams",
   "lustFolgeN": "Episode {n}",
   "lustFolge1": "Pleasure in the body",
@@ -1353,9 +1380,30 @@
   "reiheLadenFehler": "Download failed. Please try again later.",
   "reiheOffline": "Available offline",
   "reiheKeineAufnahme": "There is no recording for this version yet; the device voice reads it aloud.",
-  "@reiheDauer": { "placeholders": { "minuten": { "type": "int" } } },
-  "@reiheSzene": { "placeholders": { "n": { "type": "int" }, "m": { "type": "int" } } },
-  "@reihePartnerHinweis": { "placeholders": { "name": { "type": "String" } } },
+  "@reiheDauer": {
+    "placeholders": {
+      "minuten": {
+        "type": "int"
+      }
+    }
+  },
+  "@reiheSzene": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "m": {
+        "type": "int"
+      }
+    }
+  },
+  "@reihePartnerHinweis": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "lautsprecherFrageTitel": "Speaker",
   "lautsprecherFrageNachricht": "Playback will play through the speaker. Play anyway?",
   "lautsprecherAbspielen": "Play",
@@ -1378,5 +1426,85 @@
       }
     }
   },
-  "halloGesendet": "Thank you for saying hello!"
+  "halloGesendet": "Thank you for saying hello!",
+  "schlafTitel": "Compare sleep data",
+  "schlafEinladung": "A look back at your night",
+  "schlafErklaerung": "Optional: View sleep data already synced to Health Connect alongside your own observations. No live detection or signals during the night. Dream Practice works without a device.",
+  "schlafDatenschutz": "VelvetPulse reads only sleep sessions from the last 30 days when you explicitly start a comparison. It writes nothing to Health Connect. Imported copies stay local and are included in your backup; nothing is shared with the coach or your partner.",
+  "schlafHinweis": "Enable sharing of sleep data from Fitbit or Google Health to Health Connect. Only data actually available there can be shown. Sleep stages are estimates, not a diagnosis.",
+  "schlafVerbinden": "Connect Health Connect",
+  "schlafImportieren": "Compare last 30 days",
+  "schlafUebernehmen": "Import selected source",
+  "schlafQuelle": "Data source",
+  "schlafQuelleWaehlen": "Choose a source. Records from different devices are not added together.",
+  "schlafTrennen": "Turn off comparison",
+  "schlafGetrennt": "Comparison is off. Imported data is retained. You can revoke the Android permission in Health Connect.",
+  "schlafVerbunden": "Comparison is enabled. Data is read only when you request it.",
+  "schlafBerechtigungFehlt": "Access to sleep data is missing. You can allow it in Health Connect; the rest of Dream Practice stays available.",
+  "schlafNichtVerfuegbar": "This optional import needs Android 14 or later and available Health Connect. All other exercises remain available.",
+  "schlafLeer": "No sleep records imported yet.",
+  "schlafKeineDaten": "No completed sleep sessions are available. Check syncing and sharing in your source app.",
+  "schlafFehler": "The comparison could not be completed. Your existing data is retained.",
+  "schlafGespeichert": "The selected sleep data has been imported.",
+  "schlafEinstellungen": "Android permissions",
+  "schlafLoeschen": "Delete imported sleep data",
+  "schlafLoeschenFrage": "Delete all imported sleep data from VelvetPulse? Your own journal and Dream Practice entries are retained. Data in Health Connect is not deleted.",
+  "schlafAbbrechen": "Cancel",
+  "schlafZeitfenster": "Recorded time window",
+  "schlafSchlafzeit": "Sleep time from stages",
+  "schlafUnbekannt": "Cannot be fully determined",
+  "schlafPhasen": "Recorded stages",
+  "schlafWach": "Awake",
+  "schlafLeicht": "Light sleep",
+  "schlafTief": "Deep sleep",
+  "schlafRem": "REM",
+  "schlafOhnePhase": "Sleep without a stage label",
+  "schlafUnbekanntePhase": "Unknown",
+  "schlafEigeneAngaben": "Your observations for this wake-up date",
+  "schlafKeineAngaben": "No personal daily observation yet.",
+  "schlafBeobachtung": "Open daily observation",
+  "schlafLetzterAbgleich": "Last comparison",
+  "schlafImportierteKopie": "Saved copy. Changes or deletions in the source app do not automatically remove this copy. Observed patterns do not establish an effect on desire or dreams.",
+  "schlafDauer": "{stunden} hr {minuten} min",
+  "@schlafDauer": {
+    "placeholders": {
+      "stunden": {
+        "type": "int"
+      },
+      "minuten": {
+        "type": "int"
+      }
+    }
+  },
+  "schlafBlickTitel": "What your nights reveal",
+  "schlafBlickEinladung": "Noticed a dream sign? Carried a feeling into your day? Explore your past seven days through your memories and, if you wish, your sleep records.",
+  "schlafBlickGrenze": "Your own entries describe your experience. A watch provides sleep estimates. These do not identify lucid dreams or orgasms. Journal entries are matched by their entry date.",
+  "schlafBlickWoche": "Your past seven days",
+  "schlafBlickKlar": "Lucidity recorded",
+  "schlafBlickErinnert": "Dream memory recorded",
+  "schlafBlickSinnlich": "Sensual dream recorded",
+  "schlafBlickHoehepunkt": "Dream orgasm recorded",
+  "schlafBlickOhneErinnerung": "Nothing recalled – that belongs here too",
+  "schlafBlickUnbekannt": "No dream observation yet",
+  "schlafBlickOhneMessung": "No sleep measurement",
+  "schlafBlickMehrere": "Multiple sleep records – view them individually under measurements",
+  "schlafBlickNacht": "Record this night",
+  "schlafBlickNaechster": "Your next discovery",
+  "schlafBlickStart": "Start with a small fragment of memory: an image, a mood, a place. It may become your personal dream sign.",
+  "schlafBlickUeben": "You have already recorded something. Look for an unusual detail and carry it as a gentle intention into your next evening practice.",
+  "schlafBlickVertiefen": "You have recorded lucidity in a dream. What would you like to notice consciously next time? Dream Practice makes room for sensuality and noticing how it feels during the day.",
+  "schlafBlickRuhe": "Your recent entries suggest taking a break. Rest can be enough today. You do not need another exercise or overnight interruption.",
+  "schlafBlickPraxis": "Explore Dream Practice",
+  "schlafMesswerte": "Connect sleep data and view measurements",
+  "schlafBlickBilanz": "{klar} of {tage} days with personal entries include a reported lucid dream. This is a reflection, not a performance goal.",
+  "@schlafBlickBilanz": {
+    "placeholders": {
+      "klar": {
+        "type": "int"
+      },
+      "tage": {
+        "type": "int"
+      }
+    }
+  }
 }

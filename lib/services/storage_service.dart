@@ -17,8 +17,36 @@ import 'testmodus.dart';
 import '../l10n/t.dart';
 import '../models/traumpraxis_daten.dart';
 import '../models/bedien_daten.dart';
+import '../models/schlafdaten.dart';
 
 class StorageService {
+  static const _keySchlafdaten = 'schlafdaten';
+  static Future<void> _schlafSchreiben = Future<void>.value();
+  static final ValueNotifier<int> schlafAenderung = ValueNotifier(0);
+
+  static Future<void> _schlafFolge(Future<void> Function() aktion) {
+    final result = _schlafSchreiben.then((_) => aktion());
+    _schlafSchreiben = result.then<void>((_) {}, onError: (Object _, StackTrace __) {});
+    return result;
+  }
+
+  static SchlafDaten getSchlafdaten() {
+    final raw = _prefs?.getString(_keySchlafdaten);
+    if (raw == null) return const SchlafDaten();
+    try { return SchlafDaten.fromJson(Map<String, dynamic>.from(jsonDecode(raw) as Map)); }
+    catch (_) { return const SchlafDaten(); }
+  }
+
+  static Future<void> saveSchlafdaten(SchlafDaten Function(SchlafDaten) aendern, {bool backup = true}) => _schlafFolge(() async {
+    final prefs = await _ensurePrefs();
+    final raw = prefs.getString(_keySchlafdaten);
+    // Beschädigte Daten nicht durch eine leere Anzeige überschreiben.
+    final alt = raw == null ? const SchlafDaten() : SchlafDaten.fromJson(Map<String, dynamic>.from(jsonDecode(raw) as Map));
+    final neu = SchlafDaten.fromJson(aendern(alt).toJson());
+    if (!await prefs.setString(_keySchlafdaten, jsonEncode(neu.toJson()))) throw StateError('Schlafdaten nicht gespeichert');
+    schlafAenderung.value++;
+    if (backup) await AutoBackupService.saveAutoBackup();
+  });
   static const _keyBedienung = 'bedienung';
   static Future<void> _bedienSchreiben = Future<void>.value();
   static final ValueNotifier<int> bedienAenderung = ValueNotifier(0);
@@ -689,6 +717,7 @@ class StorageService {
       'cbtEntries': getCbtEntries().map((e) => e.toJson()).toList(),
       'traumTagebuch': getTraumEintraege().map((e) => e.toJson()).toList(),
       'traumpraxis': getTraumpraxis().toJson(),
+      'schlafdaten': getSchlafdaten().toJson(),
       'bedienung': getBedienDaten().toJson(),
       'realitaetschecks': getRealitaetschecks().toJson(),
       'naechtlichesWecken':
@@ -745,7 +774,7 @@ class StorageService {
   /// wiederhergestellt. [secrets] sind die entschlüsselten bzw. Klartext-Geheimnisse.
   static Future<void> importBackup(ValidatedBackup backup,
       {Map<String, String> secrets = const {}}) =>
-      _bedienOperation(() => _importBackup(backup, secrets: secrets));
+      _schlafFolge(() => _bedienOperation(() => _importBackup(backup, secrets: secrets)));
 
   static Future<void> _importBackup(ValidatedBackup backup,
       {Map<String, String> secrets = const {}}) async {
@@ -833,6 +862,17 @@ class StorageService {
         writes[_keyBedienung] = jsonEncode(getBedienDaten().zusammen(imported).toJson());
       } catch (_) {
         throw BackupException(t.storageServiceTheBackupIsDamagedFeld('bedienung'));
+      }
+    }
+    if (d['schlafdaten'] is Map) {
+      try {
+        final imported = SchlafDaten.fromJson(Map<String, dynamic>.from(d['schlafdaten'] as Map));
+        final raw = prefs.getString(_keySchlafdaten);
+        final lokal = raw == null ? const SchlafDaten() : SchlafDaten.fromJson(Map<String, dynamic>.from(jsonDecode(raw) as Map));
+        // Keine Gerätefreigabe aus einem fremden Backup übernehmen.
+        writes[_keySchlafdaten] = jsonEncode(lokal.zusammen(imported).toJson());
+      } catch (_) {
+        throw BackupException(t.storageServiceTheBackupIsDamagedFeld('schlafdaten'));
       }
     }
     if (d['naechtlichesWecken'] is List) {
@@ -984,6 +1024,7 @@ class StorageService {
     if (profile != null) _inMemoryProfile = profile;
     await NostrService().reloadKeysFromPrefs();
     bedienAenderung.value++;
+    schlafAenderung.value++;
     await AutoBackupService.saveAutoBackup();
   }
 

@@ -41,7 +41,13 @@
   "gemeinsamGeteilt": "Dein Rückblick wurde geteilt.",
   "gemeinsamNochVerdeckt": "Der gemeinsame Rückblick ist noch verdeckt.",
   "gemeinsamCountdown": "Gemeinsamer Start in {sekunden}",
-  "@gemeinsamCountdown": {"placeholders": {"sekunden": {"type": "int"}}},
+  "@gemeinsamCountdown": {
+    "placeholders": {
+      "sekunden": {
+        "type": "int"
+      }
+    }
+  },
   "wiedergabeNeutral": "Wiedergabe",
   "wiedergabeLeer": "Keine zugängliche Wiedergabe ausgewählt.",
   "wiedergabeBehalten": "Du kannst diese Seite schließen und während des Hörens weiter entdecken.",
@@ -55,7 +61,13 @@
   "wiedergabeLaeuft": "Läuft weiter",
   "wiedergabeFortsetzen": "Weiterhören",
   "wiedergabeRunde": "Runde {runde}",
-  "@wiedergabeRunde": {"placeholders": {"runde": {"type": "int"}}},
+  "@wiedergabeRunde": {
+    "placeholders": {
+      "runde": {
+        "type": "int"
+      }
+    }
+  },
   "sucheTitel": "Entdecken & finden",
   "aufnahmeOffline": "Aufnahme offline verfügbar",
   "wegTitel": "Dein persönlicher Weg",
@@ -201,7 +213,16 @@
   "onboardingVersprechenKeinKonto": "Kein Konto, keine Werbung, keine Auswertung.",
   "onboardingVersprechenNetz": "Ins Netz geht nur, was du selbst einschaltest: KI-Coach, Paar-Kanal und die Suche nach Updates.",
   "onboardingSchritt": "Frage {n} von {gesamt}",
-  "@onboardingSchritt": {"placeholders": {"n": {"type": "int"}, "gesamt": {"type": "int"}}},
+  "@onboardingSchritt": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "gesamt": {
+        "type": "int"
+      }
+    }
+  },
   "heuteAlleKurse": "Alle Kurse ansehen",
   "navLernen": "Lernen",
   "navUeben": "Üben",
@@ -211,8 +232,12 @@
   "uebenCoach": "KI-Coach",
   "@heuteKursUndDauer": {
     "placeholders": {
-      "kurs": {"type": "String"},
-      "min": {"type": "int"}
+      "kurs": {
+        "type": "String"
+      },
+      "min": {
+        "type": "int"
+      }
     }
   },
   "coursesYourFocusGoallabel": "Dein Fokus: {goalLabel}",
@@ -1826,7 +1851,8 @@
   "traumpraxisHoerenKlarheit": "Tagsüber oder am frühen Abend, wach und im Sitzen oder Liegen.",
   "traumpraxisHoerenMorgen": "Nach dem Aufwachen oder in einem ruhigen Moment am Tag, danach gern die Tagesbeobachtung.",
   "traumpraxisHoerenStarten": "Anhören",
-  "traumpraxisHoerenPaket": "Der Inhalt dieser Begleitungen kommt mit den Aufnahmen. Lade sie in der Paketverwaltung nach, dann erscheinen die Titel hier.",  "audioFuerHeute": "Für heute",
+  "traumpraxisHoerenPaket": "Der Inhalt dieser Begleitungen kommt mit den Aufnahmen. Lade sie in der Paketverwaltung nach, dann erscheinen die Titel hier.",
+  "audioFuerHeute": "Für heute",
   "audioAlleAnzeigen": "Alle anzeigen",
   "audioGruppeFuerMich": "Für mich",
   "audioGruppeFuerMichText": "Zeit nur für dich: deinen Körper spüren, dich erkunden, Träume bewusster erleben. Du bestimmst Länge und Nähe.",
@@ -1842,7 +1868,8 @@
   "audioGemeinsamText": "Startet eine Aufnahme und tippt im Player auf „Gemeinsam hören“. Beide brauchen dieselbe Aufnahme auf dem Gerät; ihr hört im selben Takt und beide können pausieren.",
   "traumpraxisKarteTitel": "Traumpraxis",
   "traumpraxisKarteTitelNeutral": "Praxis",
-  "traumpraxisKarteText": "Erinnern, erkennen, nachspüren: deine Praxis rund um die Nacht.",  "traumpraxisErkundung": "Mehr Lust im Traum und im Alltag ist das Ziel dieser Erkundung. Ob diese Übungen deine Tageslust erhöhen, ist offen und individuell zu beobachten. MILD wird zur Klartraumförderung untersucht; diese kurze Abendfassung und der Transfer in den Tag sind keine nachgewiesene Behandlung. Erholsamer Schlaf bleibt wichtiger als ein bestimmtes Traumerlebnis.",
+  "traumpraxisKarteText": "Erinnern, erkennen, nachspüren: deine Praxis rund um die Nacht.",
+  "traumpraxisErkundung": "Mehr Lust im Traum und im Alltag ist das Ziel dieser Erkundung. Ob diese Übungen deine Tageslust erhöhen, ist offen und individuell zu beobachten. MILD wird zur Klartraumförderung untersucht; diese kurze Abendfassung und der Transfer in den Tag sind keine nachgewiesene Behandlung. Erholsamer Schlaf bleibt wichtiger als ein bestimmtes Traumerlebnis.",
   "lustTitel": "Lust im Traum",
   "lustFolgeN": "Folge {n}",
   "@lustFolgeN": {
@@ -2104,9 +2131,30 @@
   "reiheLadenFehler": "Laden hat nicht geklappt. Bitte später noch einmal versuchen.",
   "reiheOffline": "Offline verfügbar",
   "reiheKeineAufnahme": "Zu dieser Fassung gibt es noch keine Aufnahme; die Geräte-Stimme liest vor.",
-  "@reiheDauer": { "placeholders": { "minuten": { "type": "int" } } },
-  "@reiheSzene": { "placeholders": { "n": { "type": "int" }, "m": { "type": "int" } } },
-  "@reihePartnerHinweis": { "placeholders": { "name": { "type": "String" } } },
+  "@reiheDauer": {
+    "placeholders": {
+      "minuten": {
+        "type": "int"
+      }
+    }
+  },
+  "@reiheSzene": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "m": {
+        "type": "int"
+      }
+    }
+  },
+  "@reihePartnerHinweis": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
   "lautsprecherFrageTitel": "Lautsprecher",
   "lautsprecherFrageNachricht": "Die Wiedergabe läuft über den Lautsprecher. Trotzdem abspielen?",
   "lautsprecherAbspielen": "Abspielen",
@@ -2129,5 +2177,85 @@
       }
     }
   },
-  "halloGesendet": "Danke für dein Hallo!"
+  "halloGesendet": "Danke für dein Hallo!",
+  "schlafTitel": "Schlafdaten abgleichen",
+  "schlafEinladung": "Deine Nacht im Rückblick",
+  "schlafErklaerung": "Optional: Bereits synchronisierte Schlafdaten aus Health Connect neben deinen eigenen Beobachtungen ansehen. Keine Live-Erkennung, keine Signale während der Nacht. Die Traumpraxis funktioniert auch ohne Gerät.",
+  "schlafDatenschutz": "VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an Coach oder Paarraum.",
+  "schlafHinweis": "Aktiviere die Freigabe deiner Schlafdaten in Fitbit bzw. Google Health für Health Connect. Es werden nur Daten angezeigt, die dort tatsächlich verfügbar sind. Schlafphasen sind Schätzungen, keine Diagnose.",
+  "schlafVerbinden": "Health Connect verbinden",
+  "schlafImportieren": "Letzte 30 Tage abgleichen",
+  "schlafUebernehmen": "Ausgewählte Quelle übernehmen",
+  "schlafQuelle": "Datenquelle",
+  "schlafQuelleWaehlen": "Bitte wähle eine Quelle. Aufzeichnungen verschiedener Geräte werden nicht addiert.",
+  "schlafTrennen": "Abgleich ausschalten",
+  "schlafGetrennt": "Abgleich ausgeschaltet. Importierte Daten bleiben erhalten. Die Android-Berechtigung kannst du in Health Connect widerrufen.",
+  "schlafVerbunden": "Abgleich aktiviert. Daten werden nur auf deinen Wunsch gelesen.",
+  "schlafBerechtigungFehlt": "Zugriff auf Schlafdaten fehlt. Du kannst ihn in Health Connect erlauben; die übrige Traumpraxis bleibt nutzbar.",
+  "schlafNichtVerfuegbar": "Dieser optionale Import benötigt Android 14 oder neuer und verfügbares Health Connect. Alle übrigen Übungen bleiben nutzbar.",
+  "schlafLeer": "Noch keine Schlafaufzeichnungen importiert.",
+  "schlafKeineDaten": "Keine abgeschlossenen Schlafsitzungen verfügbar. Prüfe die Synchronisierung und die Freigabe in deiner Quell-App.",
+  "schlafFehler": "Der Abgleich konnte nicht abgeschlossen werden. Deine bisherigen Daten bleiben erhalten.",
+  "schlafGespeichert": "Die ausgewählten Schlafdaten wurden übernommen.",
+  "schlafEinstellungen": "Android-Berechtigungen",
+  "schlafLoeschen": "Importierte Schlafdaten löschen",
+  "schlafLoeschenFrage": "Alle importierten Schlafdaten aus VelvetPulse löschen? Deine eigenen Tagebuch- und Traumpraxis-Einträge bleiben erhalten. Daten in Health Connect werden nicht gelöscht.",
+  "schlafAbbrechen": "Abbrechen",
+  "schlafZeitfenster": "Erfasstes Zeitfenster",
+  "schlafSchlafzeit": "Schlafzeit laut Phasen",
+  "schlafUnbekannt": "Nicht vollständig bestimmbar",
+  "schlafPhasen": "Erfasste Phasen",
+  "schlafWach": "Wach",
+  "schlafLeicht": "Leichtschlaf",
+  "schlafTief": "Tiefschlaf",
+  "schlafRem": "REM",
+  "schlafOhnePhase": "Schlaf ohne Phasenangabe",
+  "schlafUnbekanntePhase": "Unbekannt",
+  "schlafEigeneAngaben": "Deine Angaben zu diesem Aufwachdatum",
+  "schlafKeineAngaben": "Noch keine eigene Tagesbeobachtung vorhanden.",
+  "schlafBeobachtung": "Tagesbeobachtung öffnen",
+  "schlafLetzterAbgleich": "Letzter Abgleich",
+  "schlafImportierteKopie": "Gespeicherte Kopie. Änderungen oder Löschungen in der Quell-App entfernen diese Kopie nicht automatisch. Hinweise auf einen Zusammenhang sind kein Nachweis einer Wirkung auf Lust oder Träume.",
+  "schlafDauer": "{stunden} Std. {minuten} Min.",
+  "@schlafDauer": {
+    "placeholders": {
+      "stunden": {
+        "type": "int"
+      },
+      "minuten": {
+        "type": "int"
+      }
+    }
+  },
+  "schlafBlickTitel": "Was deine Nächte erzählen",
+  "schlafBlickEinladung": "Ein Traumzeichen bemerkt? Ein Gefühl mit in den Tag genommen? Entdecke deine letzten sieben Tage – mit deinen Erinnerungen und, wenn du möchtest, deinen Schlafdaten.",
+  "schlafBlickGrenze": "Deine Angaben erzählen vom Erleben. Die Uhr liefert Schlafschätzungen. Daraus wird kein Klartraum oder Orgasmus erkannt. Tagebucheinträge werden nach ihrem Eintragsdatum zugeordnet.",
+  "schlafBlickWoche": "Deine letzten sieben Tage",
+  "schlafBlickKlar": "Klarheit im Traum notiert",
+  "schlafBlickErinnert": "Traumerinnerung notiert",
+  "schlafBlickSinnlich": "Sinnlicher Traum notiert",
+  "schlafBlickHoehepunkt": "Höhepunkt im Traum notiert",
+  "schlafBlickOhneErinnerung": "Nichts erinnert – auch das gehört dazu",
+  "schlafBlickUnbekannt": "Noch keine Traumangabe",
+  "schlafBlickOhneMessung": "Ohne Schlafmessung",
+  "schlafBlickMehrere": "Mehrere Schlafaufzeichnungen – einzeln unter Messwerten ansehen",
+  "schlafBlickNacht": "Diese Nacht festhalten",
+  "schlafBlickNaechster": "Deine nächste Entdeckung",
+  "schlafBlickStart": "Beginne mit einem kleinen Rest Erinnerung: ein Bild, eine Stimmung, ein Ort. Daraus kann dein persönliches Traumzeichen entstehen.",
+  "schlafBlickUeben": "Du hast bereits etwas festgehalten. Schau nach einem ungewöhnlichen Detail und nimm es als ruhige Absicht in deine nächste Abendpraxis mit.",
+  "schlafBlickVertiefen": "Du hast Klarheit im Traum notiert. Was möchtest du beim nächsten Mal bewusst wahrnehmen? Deine Traumpraxis lässt Raum für Sinnlichkeit und das Nachspüren am Tag.",
+  "schlafBlickRuhe": "Deine letzten Einträge sprechen für eine Pause. Heute darf Erholung genügen. Du musst keine neue Übung oder nächtliche Unterbrechung hinzufügen.",
+  "schlafBlickPraxis": "Traumpraxis entdecken",
+  "schlafMesswerte": "Schlafdaten verbinden und Messwerte ansehen",
+  "schlafBlickBilanz": "{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel.",
+  "@schlafBlickBilanz": {
+    "placeholders": {
+      "klar": {
+        "type": "int"
+      },
+      "tage": {
+        "type": "int"
+      }
+    }
+  }
 }

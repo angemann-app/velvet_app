@@ -1,5 +1,21 @@
 # Zusammenarbeit Codex und Claude Code
 
+## Neuer Arbeitsauftrag: optionaler Schlafdaten-Abgleich
+
+### Übergabe 03.11.2026 – Implementierung liegt im Arbeitsbaum
+
+Schlafdaten-Seite unter Üben → Traumpraxis angeschlossen, DE/EN. Native Health-Connect-Brücke ab Android 14, nur READ_SLEEP, manueller Import der letzten 30 Tage mit Quellenwahl. Keine neue Bibliothek, kein Cloudzugriff, keine Live-Funktion. App-Mindestversion bleibt unverändert. Beim Trennen bleiben Daten erhalten; separates bestätigtes Löschen betrifft ausschließlich importierte Schlafdaten. Löschmarkierung verhindert das Zurückholen aus älteren Backups; Geräteverbindung wird nicht aus fremdem Backup aktiviert. Keine Änderungen an privaten Geschichten oder Audios.
+
+**Ergänzung auf Nutzerwunsch:** redaktioneller Siebentage-Rückblick „Was deine Nächte erzählen“ als Einstieg. Verknüpft importierte Schlafaufzeichnungen, Traumtagebuch und eigene Tagesbeobachtungen nach Datum. Berichtete Klarheit, Sinnlichkeit und Höhepunkte bleiben Selbstauskünfte, keine aus Messwerten errechneten Ergebnisse. Fehlende Angaben bleiben unbekannt; mehrere Messungen werden nicht addiert. Freiwilliger nächster Schritt öffnet Tagebuch oder bestehende Traumpraxis; vorhandene Pausenregel hat Vorrang. Import-/Messwertdetails aufklappbar, ohne Wearable nutzbar. Berechnung lokal, keine neuen gespeicherten Auswertungsfelder. Konzept und Anleitung DE/EN ergänzt.
+
+Geprüft am finalen Stand: vollständiger Flutter-Testbestand **454/454**, zusätzlich Bildschirm-/Löschdialogtests **4/4** (DE/EN, 360×640, Schrift 1,0/1,6). Darin 17 neue Modell-/Diensttests zu Zeitfenstern, Phasen, DST, Duplikaten, Backup, Löschung, Importlimit, Abbruch, Berechtigungsentzug und Tagebuchzuordnung. Android `:app:compileDebugKotlin :app:compileDebugJavaWithJavac` erfolgreich. Analyse **ohne Befund**. Berichte unter `build/schlafdaten/` (`full-tests.log`, `screens.log`, `android-final.log`, `analyze-final.log`), synthetische Screenshots unter `build/screens/schlafdaten/`. Alle Änderungen liegen uncommittet im vorhandenen Branch `codex/bedienung-audio-gemeinsam-20261102`; vor Paket-/Releasearbeit gemeinsam übernehmen. Codex-Dateisperre aufgehoben.
+
+**Vor Release offen:** echter Import vom Fitbit-Air-Datenweg auf Android 15/16, Erlauben/Ablehnen/Widerrufen, Trennen mit erhaltenen Daten, separates Löschen und Backup-Wiederherstellung. Ohne exportierte Health-Connect-Daten darf keine Gerätekompatibilität behauptet werden. Keine APK gebaut, installiert oder veröffentlicht. Claude übernimmt den vereinbarten Release-Workflow, erst nach Freigabe von Version und Build. Nächsten „Was ist neu“-Eintrag mit festgelegter Build-Nummer DE/EN ergänzen; Vorschlag: DE „Schlafdaten vergleichen – Auf Wunsch bereits synchronisierte Schlafdaten neben deinen eigenen Beobachtungen ansehen. Ohne Wearable bleibt alles nutzbar.“ / EN „Compare sleep data – Optionally view previously synced sleep records alongside your own observations. Everything remains usable without a wearable.“
+
+**Innenansichten / Sehr spicy:** `ReiheFolge.varianten()` unterstützt die paketgesteuerte Variante bereits für jede Folge. Keine leeren Fassungen ergänzen. Für weitere Geschichten fehlen gelieferte DE/EN-Fassungen und danach abgenommene Aufnahmen; Codex hat in diesem Schritt keine neuen expliziten Geschichten erstellt oder deren Produktion zugesagt. Bestehende Texte und Audio-Pakete bleiben unverändert.
+
+Nutzer beauftragt Umsetzung, nennt Android 15/16 und wählt: importierte Daten beim Trennen behalten, getrenntes Löschen anbieten. Native Health-Connect-Leseanbindung ab Android 14 geplant, App-Mindestversion unverändert. Manueller Import, keine Live-/REM-Signale, kein Cloudzugriff. Konzept `docs/konzepte/schlafdaten-abgleich.md` konkretisiert; aktive Dateisperre in AG.md. Kein Build/Upload durch Codex. Zusätzlich gewünschte Sehr-spicy-Erweiterung: technische Struktur/Einbindung und Lektorat angelieferter Texte möglich; keine neuen grafisch-expliziten Geschichten von Codex zugesagt. Private Inhalte nicht an Cloud-Hilfsagenten abgeben.
+
 ## Geräteprüfung: Nutzerrückmeldung zur veröffentlichten Beta 4.19.0-beta.1 / Build 59
 
 Aktueller Prüfstand nach Veröffentlichung, vom Nutzer selbst auf seinem Handy gemeldet:

@@ -674,6 +674,22 @@
           "text": "Course, audio and topic pictures in the magazine style; Spicy shows its own motifs. Plus a new app icon. The discreet Pulse icon remains available."
         }
       ]
+    },
+    {
+      "build": 60,
+      "version": "4.19.0-beta.2",
+      "punkte": [
+        {
+          "icon": "headphones",
+          "titel": "Audio by occasion",
+          "text": "On Today the guided audios are now sorted into four groups: For me, For us, Night and Stories. A suggestion based on the time of day sits at the top, and \"Show all\" opens the full list."
+        },
+        {
+          "icon": "bedtime",
+          "titel": "Compare sleep data",
+          "text": "Optionally view previously synced sleep records alongside your own observations. Everything remains usable without a wearable."
+        }
+      ]
     }
   ],
   "_source": {
@@ -710,6 +726,7 @@
     "news:56": "e5bb7c1308efaf7c",
     "news:57": "41de9b83fda3c38f",
     "news:58": "e0e4be67dbd7672b",
-    "news:59": "56252afd43bd3f86"
+    "news:59": "56252afd43bd3f86",
+    "news:60": "1f31f88c3d05f676"
   }
 }
