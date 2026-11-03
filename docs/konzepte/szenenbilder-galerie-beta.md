@@ -153,3 +153,12 @@ Jede Szene in `reihe.json` enthält den Bildverweis je Variante:
   einheitlich werden?
 - [ ] Sehr spicy der Zweier-Folgen: ein Bildsatz je Folge (AG: 3 von 6 Szenen fertig) oder je Rolle?
 - [ ] Beim Schließen der Galerie `FLAG_SECURE` immer setzen, auch ohne App-Sperre? (Vorschlag: ja, nur in der Galerie)
+
+### 5.6 Umsetzung (03.11.2026)
+
+Gebaut: `lib/screens/self_exploration/reihe_galerie_screen.dart` (Vollbild, `PageView` und `InteractiveViewer`, Stufenwahl nur mit Bildern,
+`FLAG_SECURE` solange offen, Bild-Cache beim Schließen geleert, schließt sich beim diskreten App-Symbol). Einstiege: Tippen auf das Bild
+im Player und „Bilder ansehen“ in der Einrichtung (nur mit Bildern und ohne diskretes Symbol). Neues Folgenfeld `bildersatz`
+(`stufe` oder `fassung`, ohne Angabe `fassung`); in `reihe.json` steht `stufe` für alle Folgen außer „Der andere Körper“. Tests:
+`test/reihe_galerie_test.dart`. Entschieden: Bildstile bleiben getrennt (Nutzer, 03.11.2026). Offen: Welche Sehr-spicy-Bilder ins Paket
+`reihe-bilder` kommen (Namen `<folge>_sehrspicy_<szene>.webp`, bei den Dreier-Folgen `drei_ffm_sehrspicy_<szene>.webp`).

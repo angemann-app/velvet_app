@@ -8063,6 +8063,24 @@ msgid "Soft"
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: View pictures
+msgctxt "ui:reiheBilderAnsehen#text"
+msgid "Bilder ansehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pictures
+msgctxt "ui:reiheGalerieTitel#text"
+msgid "Bilder"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: There are no pictures for this episode yet.
+msgctxt "ui:reiheGalerieLeer#text"
+msgid "Zu dieser Folge gibt es noch keine Bilder."
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Spicy
 msgctxt "ui:reiheSpicy#text"
 msgid "Spicy"

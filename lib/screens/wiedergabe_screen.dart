@@ -13,7 +13,10 @@ import '../services/gemeinsam_dienst.dart';
 import '../services/nostr_service.dart';
 import '../models/wiedergabe_plan.dart';
 import '../widgets/aussprache_melden.dart';
+import '../models/lust_reihe.dart';
+import '../services/privacy_service.dart';
 import 'gemeinsam_screen.dart';
+import 'self_exploration/reihe_galerie_screen.dart';
 import '../widgets/aufnahme_status.dart';
 import '../services/wiedergabe_plaene.dart';
 
@@ -23,6 +26,27 @@ String hoerzeit(Duration d) =>
 class WiedergabeScreen extends StatelessWidget {
   final WiedergabeLauf? vorschau;
   const WiedergabeScreen({super.key, this.vorschau});
+
+  /// Tippen auf das Szenenbild einer Reihenfolge öffnet die Bilder der Folge im Vollbild; das diskrete App-Symbol
+  /// zeigt sie nie.
+  static Future<void> _galerieOeffnen(
+      BuildContext context, WiedergabePlan p) async {
+    if (await PrivacyService.isDiscreetIcon()) return;
+    final daten = await ReiheDaten.laden();
+    final folge = daten?.folgen.where((f) => f.id == p.id).firstOrNull;
+    final fassung = folge?.fassungen
+        .where((f) => f.id == p.parameter['variante'])
+        .firstOrNull;
+    if (folge == null || fassung == null || !context.mounted) return;
+    await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (_) => ReiheGalerieScreen(
+                folge: folge,
+                variante: fassung.variante,
+                perspektive: fassung.perspektive)));
+  }
+
   @override
   Widget build(BuildContext context) {
     final dienst = WiedergabeDienst.instanz;
@@ -50,12 +74,17 @@ class WiedergabeScreen extends StatelessWidget {
                             Padding(
                                 padding:
                                     const EdgeInsets.only(bottom: VpAbstand.xl),
-                                child: AspectRatio(
-                                    aspectRatio: VpBildFormat.kopf.verhaeltnis,
-                                    child: Image.file(File(datei),
-                                        fit: BoxFit.cover,
-                                        errorBuilder: (_, error, stack) =>
-                                            const SizedBox.shrink()))),
+                                child: GestureDetector(
+                                    onTap: p.art == WiedergabeArt.reihe
+                                        ? () => _galerieOeffnen(context, p)
+                                        : null,
+                                    child: AspectRatio(
+                                        aspectRatio:
+                                            VpBildFormat.kopf.verhaeltnis,
+                                        child: Image.file(File(datei),
+                                            fit: BoxFit.cover,
+                                            errorBuilder: (_, error, stack) =>
+                                                const SizedBox.shrink())))),
                           Text(p.titel.isEmpty ? t.wiedergabeNeutral : p.titel,
                               style: context.vp.typo.anzeige),
                           const SizedBox(height: VpAbstand.m),

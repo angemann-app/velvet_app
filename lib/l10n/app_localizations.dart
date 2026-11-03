@@ -8037,6 +8037,24 @@ abstract class AppLocalizations {
   /// **'Soft'**
   String get reiheSoft;
 
+  /// No description provided for @reiheBilderAnsehen.
+  ///
+  /// In de, this message translates to:
+  /// **'Bilder ansehen'**
+  String get reiheBilderAnsehen;
+
+  /// No description provided for @reiheGalerieTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Bilder'**
+  String get reiheGalerieTitel;
+
+  /// No description provided for @reiheGalerieLeer.
+  ///
+  /// In de, this message translates to:
+  /// **'Zu dieser Folge gibt es noch keine Bilder.'**
+  String get reiheGalerieLeer;
+
   /// No description provided for @reiheSpicy.
   ///
   /// In de, this message translates to:

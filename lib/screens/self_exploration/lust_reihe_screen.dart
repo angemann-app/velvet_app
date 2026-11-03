@@ -5,6 +5,7 @@ import '../../widgets/aufnahme_status.dart';
 import '../../services/wiedergabe_plaene.dart';
 import '../../services/wiedergabe_dienst.dart';
 import '../wiedergabe_screen.dart';
+import 'reihe_galerie_screen.dart';
 import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -13,6 +14,7 @@ import '../../l10n/t.dart';
 import '../../models/lust_reihe.dart';
 import '../../services/paket_verzeichnis.dart';
 import '../../services/pakete.dart';
+import '../../services/privacy_service.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/lautsprecher_frage.dart';
@@ -250,6 +252,24 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
               ),
             ),
           ),
+          FutureBuilder<bool>(
+              future: PrivacyService.isDiscreetIcon(),
+              builder: (context, diskret) => diskret.data == false &&
+                      ReiheGalerieScreen.hatBilder(folge, fassung.perspektive,
+                          spicyErlaubt: _spicy)
+                  ? Padding(
+                      padding: const EdgeInsets.only(top: 8),
+                      child: TextButton.icon(
+                          onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => ReiheGalerieScreen(
+                                      folge: folge,
+                                      variante: fassung.variante,
+                                      perspektive: fassung.perspektive))),
+                          icon: const Icon(Icons.photo_library_outlined),
+                          label: Text(t.reiheBilderAnsehen)))
+                  : const SizedBox.shrink()),
           if (Pakete.datei(ReiheDaten.audioPfad(
                   folge, fassung, fassung.segmente.first)) ==
               null) ...[

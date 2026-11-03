@@ -1222,3 +1222,15 @@ msgstr ""
 msgctxt "news:61#3.text"
 msgid "Zum Einschalten gibst du Monat und Jahr deiner Geburt an und bestätigst deine Gerätesperre. Alles bleibt auf deinem Gerät. Wer Spicy schon an hatte, bestätigt es einmal neu."
 msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.4
+#. EN: Pictures for the audio stories
+msgctxt "news:62#0.titel"
+msgid "Bilder zu den Hörgeschichten"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.4
+#. EN: Tap the scene picture in the player or choose “View pictures” on the episode: the pictures open full screen, you swipe between scenes and zoom with two fingers. Only in spicy mode and never with the discreet app icon.
+msgctxt "news:62#0.text"
+msgid "Tippe im Player auf das Szenenbild oder wähle „Bilder ansehen“ bei der Folge: Die Bilder erscheinen im Vollbild, du wischst zwischen den Szenen und zoomst mit zwei Fingern. Nur im Spicy-Modus und nie mit dem diskreten App-Symbol."
+msgstr ""

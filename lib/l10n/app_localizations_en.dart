@@ -4720,6 +4720,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get reiheSoft => 'Soft';
 
   @override
+  String get reiheBilderAnsehen => 'View pictures';
+
+  @override
+  String get reiheGalerieTitel => 'Pictures';
+
+  @override
+  String get reiheGalerieLeer => 'There are no pictures for this episode yet.';
+
+  @override
   String get reiheSpicy => 'Spicy';
 
   @override

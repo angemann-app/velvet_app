@@ -4740,6 +4740,15 @@ class AppLocalizationsDe extends AppLocalizations {
   String get reiheSoft => 'Soft';
 
   @override
+  String get reiheBilderAnsehen => 'Bilder ansehen';
+
+  @override
+  String get reiheGalerieTitel => 'Bilder';
+
+  @override
+  String get reiheGalerieLeer => 'Zu dieser Folge gibt es noch keine Bilder.';
+
+  @override
   String get reiheSpicy => 'Spicy';
 
   @override

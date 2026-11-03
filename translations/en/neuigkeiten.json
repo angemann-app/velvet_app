@@ -721,6 +721,17 @@
           "text": "To switch it on, you enter the month and year you were born and confirm your device lock. Everything stays on your device. If spicy was already on for you, you confirm it once again."
         }
       ]
+    },
+    {
+      "build": 62,
+      "version": "4.19.0-beta.4",
+      "punkte": [
+        {
+          "icon": "photo_library",
+          "titel": "Pictures for the audio stories",
+          "text": "Tap the scene picture in the player or choose “View pictures” on the episode: the pictures open full screen, you swipe between scenes and zoom with two fingers. Only in spicy mode and never with the discreet app icon."
+        }
+      ]
     }
   ],
   "_source": {
@@ -759,6 +770,7 @@
     "news:58": "e0e4be67dbd7672b",
     "news:59": "56252afd43bd3f86",
     "news:60": "24de6b882a4a33d6",
-    "news:61": "ca792faffc60c479"
+    "news:61": "ca792faffc60c479",
+    "news:62": "e2e3a23977eebfd2"
   }
 }

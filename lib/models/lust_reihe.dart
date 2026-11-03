@@ -78,6 +78,10 @@ class ReiheFolge {
   final List<ReiheSzene> szenen;
   final List<ReiheFassung> fassungen;
 
+  /// Wie die Szenenbilder von Sehr spicy zugeordnet sind: `fassung` (je Perspektive, so bei „Der andere Körper“; gilt, wenn
+  /// nichts angegeben ist) oder `stufe` (ein Satz je Folge und Stufe wie bei Soft und Spicy).
+  final String bildersatz;
+
   const ReiheFolge({
     required this.id,
     required this.typ,
@@ -85,6 +89,7 @@ class ReiheFolge {
     required this.beschreibung,
     required this.szenen,
     required this.fassungen,
+    this.bildersatz = 'fassung',
   });
 
   factory ReiheFolge.fromJson(Map<String, dynamic> j) => ReiheFolge(
@@ -94,6 +99,7 @@ class ReiheFolge {
         beschreibung: (j['beschreibung'] as String?) ?? '',
         szenen: [for (final s in j['szenen'] as List) ReiheSzene.fromJson(s as Map<String, dynamic>)],
         fassungen: [for (final f in j['fassungen'] as List) ReiheFassung.fromJson(f as Map<String, dynamic>)],
+        bildersatz: (j['bildersatz'] as String?) == 'stufe' ? 'stufe' : 'fassung',
       );
 
   /// Solo-Folgen („Im eigenen Körper“): die Fassungen gehören nicht zu einer gemeinsamen Begegnung.
@@ -191,9 +197,9 @@ class ReiheDaten {
   /// Pfad des Szenenbilds im Paket. Ein Bild gehört zu Folge, Variante und Szene und wird von beiden Perspektiven
   /// geteilt (docs/konzepte/lust-reihe-szenenbilder.md); fehlt es, zeigt der Player kein Bild.
   /// Sehr spicy hat eigene Bilder je Perspektive (`<folge>_sehrspicy_<perspektive>_<szene>`), weil sich die beiden
-  /// Geschichten in Körper und Moment unterscheiden.
+  /// Geschichten in Körper und Moment unterscheiden, außer die Folge setzt ildersatz: stufe (ein Satz je Stufe).
   static String bildPfad(ReiheFolge folge, ReiheFassung fassung, ReiheSegment s) =>
-      'bilder/${folge.id}_${fassung.sehrSpicy ? fassung.id : fassung.variante}_${s.szene}.webp';
+      'bilder/${folge.id}_${fassung.sehrSpicy && folge.bildersatz == 'fassung' ? fassung.id : fassung.variante}_${s.szene}.webp';
 
   /// Dauer eines Segments: gemessen, sonst aus der Textlänge geschätzt (rund zehn Zeichen je Sekunde).
   Duration dauerVon(ReiheFolge folge, ReiheFassung fassung, ReiheSegment s) {
