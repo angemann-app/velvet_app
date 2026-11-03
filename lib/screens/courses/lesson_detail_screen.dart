@@ -6,8 +6,6 @@ import '../../services/nostr_service.dart';
 import '../../services/pakete.dart';
 import '../../services/personalize.dart';
 import '../../services/storage_service.dart';
-import '../../services/audio_service.dart';
-import '../../services/tts_service.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/vp_tokens.dart';
 import '../../widgets/design/vp_bild_feld.dart';
@@ -18,6 +16,7 @@ import '../self_exploration/lust_profile_screen.dart';
 import '../self_exploration/selbst_reise_screen.dart';
 import '../couples_channel/paar_abend_screen.dart';
 import '../../l10n/t.dart';
+import '../../widgets/weg_begleiter.dart';
 
 class LessonDetailScreen extends StatefulWidget {
   final Lesson lesson;
@@ -36,6 +35,15 @@ class LessonDetailScreen extends StatefulWidget {
 }
 
 class _LessonDetailScreenState extends State<LessonDetailScreen> {
+  final _wissenAnker = GlobalKey();
+  final _uebungAnker = GlobalKey();
+  final _nachspuerenAnker = GlobalKey();
+
+  void _wegOeffnen(int schritt) {
+    final anker = [_wissenAnker, _uebungAnker, _nachspuerenAnker][schritt];
+    final ziel = anker.currentContext;
+    if (ziel != null) Scrollable.ensureVisible(ziel);
+  }
   late TextEditingController _reflectionController;
   bool _isCompleted = false;
   bool _isSavingReflection = false;
@@ -127,8 +135,6 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
   @override
   void dispose() {
     _reflectionController.dispose();
-    AudioService().stop();
-    TtsService().stop();
     super.dispose();
   }
 
@@ -407,7 +413,10 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             ),
 
             // Haupttext: kein Kasten, nur Typografie und Raum.
+            if (lesson.linkedTool != 'none' && lesson.reflectionQuestion.isNotEmpty)
+              WegBegleiter(lektion: lesson, oeffnen: _wegOeffnen),
             SelectableText(
+              key: _wissenAnker,
               personalize(lesson.content, _personalizeContext.forPerspective(lesson.perspective)),
               style: context.vp.typo.fliesstext.copyWith(fontSize: 16.5, height: 1.7, letterSpacing: 0.1),
             ),
@@ -415,13 +424,13 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
 
             // Smart-Action-Button (linked_tool)
             if (lesson.linkedTool != 'none') ...[
-              _buildSmartToolCard(lesson.linkedTool),
+              KeyedSubtree(key: _uebungAnker, child: _buildSmartToolCard(lesson.linkedTool)),
               const SizedBox(height: 28),
             ],
 
             // Interactive Reflection Question
             if (lesson.reflectionQuestion.isNotEmpty) ...[
-              _buildReflectionCard(lesson.reflectionQuestion),
+              KeyedSubtree(key: _nachspuerenAnker, child: _buildReflectionCard(lesson.reflectionQuestion)),
               const SizedBox(height: 24),
             ],
 

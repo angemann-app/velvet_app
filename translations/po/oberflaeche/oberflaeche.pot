@@ -12,6 +12,480 @@ msgstr ""
 "X-Source-Language: de\n"
 
 #. Text der Oberfläche
+#. EN: Playback could not start. Check the recordings and audio output, then try again.
+msgctxt "ui:gemeinsamWiedergabeFehler#text"
+msgid "Eine Wiedergabe konnte nicht starten. Prüft die Aufnahmen und die Audioausgabe und versucht es erneut."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Withdraw invitation
+msgctxt "ui:gemeinsamZurueckziehen#text"
+msgid "Einladung zurückziehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The matching content package needs to be downloaded.
+msgctxt "ui:aufnahmePaketFehlt#text"
+msgid "Das passende Inhaltspaket muss geladen werden."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Recordings for this voice
+msgctxt "ui:wiedergabeStimmenStand#text"
+msgid "Aufnahmen für diese Stimme"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your reflection is too long. Please shorten it a little and try again.
+msgctxt "ui:gemeinsamAntwortZuLang#text"
+msgid "Der Rückblick ist zu lang. Kürze ihn bitte etwas und versuche es erneut."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Calm
+msgctxt "ui:gemeinsamGefuehlRuhig#text"
+msgid "Ruhig"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connected
+msgctxt "ui:gemeinsamGefuehlNah#text"
+msgid "Verbunden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Still open
+msgctxt "ui:gemeinsamGefuehlOffen#text"
+msgid "Noch offen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Moved
+msgctxt "ui:gemeinsamGefuehlBewegt#text"
+msgid "Bewegt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Shared activity
+msgctxt "ui:gemeinsamTitel#text"
+msgid "Gemeinsame Übung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Listen to the same sequence on your own devices. You both need matching recordings and must confirm you are ready. Headphones may feel comfortable. Either person can pause; continuing needs both of you to be ready again. An invitation starts the sequence from the beginning.
+msgctxt "ui:gemeinsamHinweis#text"
+msgid "Ihr hört denselben Ablauf auf euren eigenen Geräten. Beide brauchen passende Aufnahmen und bestätigen ihre Bereitschaft. Kopfhörer können angenehm sein. Jede Person kann pausieren; weiter geht es erst, wenn beide bereit sind. Eine Einladung beginnt den Ablauf von vorn."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Accept
+msgctxt "ui:gemeinsamAnnehmen#text"
+msgid "Annehmen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Later
+msgctxt "ui:gemeinsamSpaeter#text"
+msgid "Später"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You are ready. Waiting for your partner.
+msgctxt "ui:gemeinsamWarten#text"
+msgid "Du bist bereit. Warte auf dein Gegenüber."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Get comfortable, then confirm that you are ready.
+msgctxt "ui:gemeinsamBereitHinweis#text"
+msgid "Richte dich in Ruhe ein und bestätige dann deine Bereitschaft."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Ready
+msgctxt "ui:gemeinsamBereit#text"
+msgid "Bereit"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open playback
+msgctxt "ui:gemeinsamPlayer#text"
+msgid "Wiedergabe öffnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Shared reflection
+msgctxt "ui:gemeinsamRueckblick#text"
+msgid "Gemeinsamer Rückblick"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: End for both
+msgctxt "ui:gemeinsamBeenden#text"
+msgid "Für beide beenden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Close
+msgctxt "ui:gemeinsamSchliessen#text"
+msgid "Schließen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: An invitation is waiting for you.
+msgctxt "ui:gemeinsamEinladung#text"
+msgid "Eine Einladung wartet auf dich."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Get ready at your own pace
+msgctxt "ui:gemeinsamVorbereiten#text"
+msgid "In Ruhe bereit werden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Waiting for your partner.
+msgctxt "ui:gemeinsamWartenAnnahme#text"
+msgid "Warte auf dein Gegenüber."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You are listening together.
+msgctxt "ui:gemeinsamLaeuft#text"
+msgid "Ihr hört gemeinsam."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Paused. Continue only when both of you are ready.
+msgctxt "ui:gemeinsamPause#text"
+msgid "Pause. Weiter erst, wenn beide bereit sind."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your shared moment has ended.
+msgctxt "ui:gemeinsamAbgeschlossen#text"
+msgid "Euer gemeinsamer Moment ist beendet."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Matching recordings are missing or differ. Both of you should download the current recordings, then send a new invitation. Shared listening never uses the device voice.
+msgctxt "ui:gemeinsamAufnahmenFehlen#text"
+msgid "Passende Aufnahmen fehlen oder unterscheiden sich. Ladet beide die aktuellen Aufnahmen und ladet euch erneut ein. Gemeinsames Hören verwendet keine Geräte-Stimme."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your partner is unavailable, already busy or needs a current app version. Both of you should open the couple channel and try again.
+msgctxt "ui:gemeinsamPartnerFehlt#text"
+msgid "Dein Gegenüber ist gerade nicht erreichbar, bereits beschäftigt oder braucht eine aktuelle App. Öffnet beide den Paar-Kanal und versucht es erneut."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The connection did not work. Please try again.
+msgctxt "ui:gemeinsamFehler#text"
+msgid "Die Verbindung hat nicht geklappt. Bitte versucht es erneut."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Choose “Listen together” during playback.
+msgctxt "ui:gemeinsamLeer#text"
+msgid "Wähle bei einer Wiedergabe „Gemeinsam hören“."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open shared activity
+msgctxt "ui:gemeinsamStatusOeffnen#text"
+msgid "Gemeinsamen Ablauf öffnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Listen together
+msgctxt "ui:gemeinsamStarten#text"
+msgid "Gemeinsam hören"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You receive, your partner gives.
+msgctxt "ui:gemeinsamDuEmpfaengst#text"
+msgid "Du empfängst, dein Gegenüber gibt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The connection to your partner has been interrupted. Your recording continues locally. You can pause at any time; reconnecting never starts playback automatically.
+msgctxt "ui:gemeinsamVerbindungFehlt#text"
+msgid "Die Verbindung zum Gegenüber ist unterbrochen. Deine Wiedergabe läuft lokal weiter. Du kannst jederzeit pausieren; ein Wiederverbinden startet nichts automatisch."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How did this moment feel for you?
+msgctxt "ui:gemeinsamRueckblickFrage#text"
+msgid "Wie war dieser Moment für dich?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reflection is optional. Your partner’s answer becomes visible only after both of you have shared your own answer.
+msgctxt "ui:gemeinsamRueckblickHinweis#text"
+msgid "Dein Rückblick ist freiwillig. Die Antwort deines Gegenübers wird erst sichtbar, wenn ihr beide eine eigene Antwort geteilt habt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your reflection
+msgctxt "ui:gemeinsamAntwort#text"
+msgid "Dein Rückblick"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Save and share answer
+msgctxt "ui:gemeinsamTeilen#text"
+msgid "Antwort speichern und teilen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your reflection has been shared.
+msgctxt "ui:gemeinsamGeteilt#text"
+msgid "Dein Rückblick wurde geteilt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The shared reflection is still hidden.
+msgctxt "ui:gemeinsamNochVerdeckt#text"
+msgid "Der gemeinsame Rückblick ist noch verdeckt."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {sekunden}
+#. EN: Starting together in {sekunden}
+msgctxt "ui:gemeinsamCountdown#text"
+msgid "Gemeinsamer Start in {sekunden}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Playback
+msgctxt "ui:wiedergabeNeutral#text"
+msgid "Wiedergabe"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No accessible playback selected.
+msgctxt "ui:wiedergabeLeer#text"
+msgid "Keine zugängliche Wiedergabe ausgewählt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You can close this page and keep exploring while you listen.
+msgctxt "ui:wiedergabeBehalten#text"
+msgid "Du kannst diese Seite schließen und während des Hörens weiter entdecken."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Device voice: resuming restarts this section from the beginning.
+msgctxt "ui:wiedergabeTts#text"
+msgid "Geräte-Stimme: Beim Wiederaufnehmen beginnt dieser Abschnitt von vorn."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Playback could not continue. Check the recordings and try again.
+msgctxt "ui:wiedergabeFehler#text"
+msgid "Die Wiedergabe konnte nicht fortgesetzt werden. Prüfe die Aufnahmen und versuche es erneut."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Complete for this moment.
+msgctxt "ui:wiedergabeFertig#text"
+msgid "Für diesen Moment abgeschlossen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Some recordings are not available offline. The device voice reads missing sections.
+msgctxt "ui:wiedergabeTeilweise#text"
+msgid "Nicht alle Aufnahmen sind offline vorhanden. Fehlende Texte liest die Geräte-Stimme."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sections
+msgctxt "ui:wiedergabeAbschnitte#text"
+msgid "Abschnitte"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Rest & reflect
+msgctxt "ui:wiedergabeRuhe#text"
+msgid "Ruhe & Nachspüren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Remove from continue listening
+msgctxt "ui:wiedergabeEntfernen#text"
+msgid "Aus Weiterhören entfernen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Playing
+msgctxt "ui:wiedergabeLaeuft#text"
+msgid "Läuft weiter"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Continue listening
+msgctxt "ui:wiedergabeFortsetzen#text"
+msgid "Weiterhören"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {runde}
+#. EN: Round {runde}
+msgctxt "ui:wiedergabeRunde#text"
+msgid "Runde {runde}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Explore & find
+msgctxt "ui:sucheTitel#text"
+msgid "Entdecken & finden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Recording available offline
+msgctxt "ui:aufnahmeOffline#text"
+msgid "Aufnahme offline verfügbar"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your personal path
+msgctxt "ui:wegTitel#text"
+msgid "Dein persönlicher Weg"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Learn, explore, reflect. Three optional steps at your own pace, with no time limit or required answer.
+msgctxt "ui:wegEinladung#text"
+msgid "Wissen, Ausprobieren, Nachspüren. Drei freiwillige Schritte in deinem Tempo – ohne Zeitvorgabe oder Pflichtantwort."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Discover the knowledge
+msgctxt "ui:wegWissen#text"
+msgid "Wissen entdecken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Try the exercise
+msgctxt "ui:wegUeben#text"
+msgid "Übung ausprobieren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reflect
+msgctxt "ui:wegNachspueren#text"
+msgid "Nachspüren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Begin this path
+msgctxt "ui:wegBeginnen#text"
+msgid "Diesen Weg beginnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Explore again
+msgctxt "ui:wegNochEinmal#text"
+msgid "Noch einmal entdecken"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open step
+msgctxt "ui:wegOeffnen#text"
+msgid "Schritt öffnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Go to the next step
+msgctxt "ui:wegWeiter#text"
+msgid "Zum nächsten Schritt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Finish for now
+msgctxt "ui:wegAbschliessen#text"
+msgid "Für mich abschließen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your progress could not be saved. Please try again.
+msgctxt "ui:wegFehler#text"
+msgid "Der Stand konnte nicht gespeichert werden. Bitte versuche es noch einmal."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Without recording: device voice
+msgctxt "ui:aufnahmeGeraetestimme#text"
+msgid "Ohne Aufnahme: Geräte-Stimme"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Download recordings
+msgctxt "ui:aufnahmeVerwalten#text"
+msgid "Aufnahmen laden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Search courses, lessons and exercises
+msgctxt "ui:sucheFeld#text"
+msgid "Kurse, Lektionen und Übungen suchen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Clear search
+msgctxt "ui:sucheLeeren#text"
+msgid "Suche leeren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What would you like to explore? Search for a topic or an activity. Your search stays on this device and is not saved.
+msgctxt "ui:sucheHinweis#text"
+msgid "Was möchtest du entdecken? Suche nach einem Thema oder einem Angebot. Deine Suche bleibt auf diesem Gerät und wird nicht gespeichert."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Nothing found. Try a different word.
+msgctxt "ui:sucheLeer#text"
+msgid "Dazu wurde nichts gefunden. Versuche ein anderes Wort."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The content could not be loaded. Please reopen the search.
+msgctxt "ui:sucheFehler#text"
+msgid "Die Inhalte konnten nicht geladen werden. Öffne die Suche bitte erneut."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Course
+msgctxt "ui:sucheKurs#text"
+msgid "Kurs"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Lesson
+msgctxt "ui:sucheLektion#text"
+msgid "Lektion"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Audio & practice
+msgctxt "ui:sucheAngebot#text"
+msgid "Audio & Praxis"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Guided evening together
+msgctxt "ui:suchePaarAbend#text"
+msgid "Geführter Paar-Abend"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Inner perspectives
+msgctxt "ui:sucheInnenansichten#text"
+msgid "Innenansichten"
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: VelvetPulse
 msgctxt "ui:appName#text"
 msgid "VelvetPulse"
@@ -6294,6 +6768,455 @@ msgid "Ein paar Worte für dich, gleich am Morgen."
 msgstr ""
 
 #. Text der Oberfläche
+#. EN: Your dream practice
+msgctxt "ui:traumpraxisTitel#text"
+msgid "Deine Traumpraxis"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your dream signs
+msgctxt "ui:praxisZeichenTitel#text"
+msgid "Deine Traumzeichen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What keeps appearing in your dreams? A place, an impossible transition, an unusual light? Name a sign you would like to recognise within a dream.
+msgctxt "ui:praxisZeichenText#text"
+msgid "Was taucht in deinen Träumen wieder auf? Ein Ort, ein unmöglicher Übergang, ein besonderes Licht? Benenne ein Zeichen, an dem du einen Traum erkennen möchtest."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No dream signs yet. You can begin with a detail from your journal.
+msgctxt "ui:praxisZeichenLeer#text"
+msgid "Noch keine Traumzeichen. Du kannst mit einem Detail aus deinem Tagebuch beginnen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: My dream sign
+msgctxt "ui:praxisZeichenFeld#text"
+msgid "Mein Traumzeichen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For example: a doorway in an impossible place
+msgctxt "ui:praxisZeichenBeispiel#text"
+msgid "Zum Beispiel: eine Tür an einem unmöglichen Ort"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Add
+msgctxt "ui:praxisHinzufuegen#text"
+msgid "Hinzufügen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Save
+msgctxt "ui:praxisSpeichern#text"
+msgid "Speichern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Cancel
+msgctxt "ui:praxisAbbrechen#text"
+msgid "Abbrechen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Edit
+msgctxt "ui:praxisBearbeiten#text"
+msgid "Bearbeiten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Delete
+msgctxt "ui:praxisLoeschen#text"
+msgid "Löschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Delete this entry?
+msgctxt "ui:praxisLoeschenFrage#text"
+msgid "Diesen Eintrag löschen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The entry will be removed. Restoring an older backup later will not automatically bring it back.
+msgctxt "ui:praxisLoeschenText#text"
+msgid "Der Eintrag wird entfernt. Eine spätere Wiederherstellung einer älteren Sicherung holt ihn nicht automatisch zurück."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Saving did not work. Your existing data is preserved. Please try again.
+msgctxt "ui:praxisFehler#text"
+msgid "Das Speichern hat nicht geklappt. Deine bisherigen Daten bleiben erhalten. Bitte versuche es erneut."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A sign for tonight
+msgctxt "ui:praxisZeichenWaehlen#text"
+msgid "Ein Zeichen für heute Abend"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Imagine this sign appearing in your dream. You notice it and realise: I am dreaming. Then let your personal intention rest.
+msgctxt "ui:praxisZeichenAbsicht#text"
+msgid "Stell dir vor, dieses Zeichen erscheint in deinem Traum. Du bemerkst es und erkennst: Ich träume. Danach darf deine persönliche Absicht ruhen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open your evening episode
+msgctxt "ui:praxisAbendStart#text"
+msgid "Zu deiner Abendfolge"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reflect on today
+msgctxt "ui:praxisBeobachten#text"
+msgid "Heute nachspüren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your daily observation
+msgctxt "ui:praxisBeobachtungTitel#text"
+msgid "Deine Tagesbeobachtung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What do you notice today? You can leave questions unanswered. An experienced orgasm is a possibility, not a nightly goal.
+msgctxt "ui:praxisBeobachtungText#text"
+msgid "Was beobachtest du heute? Du kannst einzelne Fragen offenlassen. Ein erlebter Höhepunkt ist eine Möglichkeit, kein Ziel für jeden Abend."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How rested do you feel?
+msgctxt "ui:praxisSchlaf#text"
+msgid "Wie erholt bist du?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: How does your desire feel today?
+msgctxt "ui:praxisLust#text"
+msgid "Wie fühlt sich deine Lust heute an?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Leave unanswered
+msgctxt "ui:praxisUnbeantwortet#text"
+msgid "Offenlassen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not rested at all
+msgctxt "ui:praxisSchlaf0#text"
+msgid "Gar nicht erholt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Slightly rested
+msgctxt "ui:praxisSchlaf1#text"
+msgid "Wenig erholt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Somewhat rested
+msgctxt "ui:praxisSchlaf2#text"
+msgid "Teils erholt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Well rested
+msgctxt "ui:praxisSchlaf3#text"
+msgid "Gut erholt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Very well rested
+msgctxt "ui:praxisSchlaf4#text"
+msgid "Sehr erholt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No desire noticeable
+msgctxt "ui:praxisLust0#text"
+msgid "Keine Lust spürbar"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A little desire
+msgctxt "ui:praxisLust1#text"
+msgid "Wenig Lust"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Moderate desire
+msgctxt "ui:praxisLust2#text"
+msgid "Mittlere Lust"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Clear desire
+msgctxt "ui:praxisLust3#text"
+msgid "Deutliche Lust"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Strong desire
+msgctxt "ui:praxisLust4#text"
+msgid "Viel Lust"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Was your dream sensual?
+msgctxt "ui:praxisSinnlich#text"
+msgid "War dein Traum sinnlich?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Did you know you were dreaming?
+msgctxt "ui:praxisKlar#text"
+msgid "Wusstest du im Traum, dass du träumst?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Did you experience an orgasm in your dream?
+msgctxt "ui:praxisOrgasmus#text"
+msgid "Hast du im Traum einen Orgasmus erlebt?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes
+msgctxt "ui:praxisJa#text"
+msgid "Ja"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No
+msgctxt "ui:praxisNein#text"
+msgid "Nein"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What would you like to remember?
+msgctxt "ui:praxisNotiz#text"
+msgid "Was möchtest du festhalten?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your private review
+msgctxt "ui:praxisRueckblick#text"
+msgid "Dein privater Rückblick"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: These are your own observations. Similar patterns may invite curiosity, but do not establish a cause. There are no points or target rates.
+msgctxt "ui:praxisRueckblickText#text"
+msgid "Hier stehen deine eigenen Beobachtungen. Ähnliche Verläufe können neugierig machen, belegen aber keine Ursache. Es gibt keine Punkte und keine Zielquote."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No daily observations yet. Even a single note can be a beginning.
+msgctxt "ui:praxisRueckblickLeer#text"
+msgid "Noch keine Tagesbeobachtung. Schon eine einzelne Notiz kann ein Anfang sein."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No questions answered yet
+msgctxt "ui:praxisNurOffeneFelder#text"
+msgid "Noch keine Fragen beantwortet"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your path for today
+msgctxt "ui:praxisPfad#text"
+msgid "Dein Weg für heute"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Begin with dream recall and bodily awareness. The first two episodes accompany you.
+msgctxt "ui:praxisPfadErinnern#text"
+msgid "Beginne mit Erinnern und Körperwahrnehmung. Die ersten beiden Folgen begleiten dich dabei."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect a personal dream sign with your evening preparation. Episodes three to five explore recognising dreams.
+msgctxt "ui:praxisPfadErkennen#text"
+msgid "Verbinde ein persönliches Traumzeichen mit deiner Abendvorbereitung. Die Folgen drei bis fünf vertiefen das Erkennen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Explore pleasure within lucid dreams and notice what you might carry into the day. Episodes six to eight offer space for this.
+msgctxt "ui:praxisPfadEntfalten#text"
+msgid "Du kannst Lust im Klartraum erkunden und nachspüren, was du in den Tag mitnehmen möchtest. Die Folgen sechs bis acht geben dir dafür Raum."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This dream practice is part of Spicy mode for adults.
+msgctxt "ui:traumpraxisNurSpicy#text"
+msgid "Diese Traumpraxis gehört zum Spicy-Modus für Erwachsene."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Pleasure may linger beyond the night.
+msgctxt "ui:traumpraxisEinladung#text"
+msgid "Lust darf über die Nacht hinausreichen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Explore sensual dreams, becoming aware within a dream, and what you might carry into your day. An orgasm may be part of that experience. You choose how far you want to go.
+msgctxt "ui:traumpraxisZiel#text"
+msgid "Erkunde sinnliche Träume, das bewusste Erkennen im Traum und das, was davon am Tag nachklingen darf. Ein Höhepunkt kann dazugehören. Du bestimmst, wie weit du gehen möchtest."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: In the morning · Remember
+msgctxt "ui:traumpraxisErinnern#text"
+msgid "Am Morgen · Erinnern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Write down what you remember: a place, a sensation, an encounter. You can mark sensuality, lucidity and an experienced orgasm in your journal. A dream without an orgasm, or a night with no recall, belongs here too.
+msgctxt "ui:traumpraxisErinnernText#text"
+msgid "Halte fest, woran du dich erinnerst: einen Ort, eine Empfindung, eine Begegnung. Sinnlichkeit, Klarheit und ein erlebter Höhepunkt dürfen im Tagebuch markiert werden. Auch ein Traum ohne Höhepunkt oder eine Nacht ohne Erinnerung gehört dazu."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: In the evening · Practise noticing
+msgctxt "ui:traumpraxisErkennen#text"
+msgid "Am Abend · Erkennen üben"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This imagery exercise draws on MILD: connecting a remembered dream with the intention to recognise the next one. Keep it brief, without keeping yourself awake. You do not need an extra alarm for this exercise.
+msgctxt "ui:traumpraxisMildEinleitung#text"
+msgid "Diese Vorstellungsübung orientiert sich an MILD: Du verbindest die Erinnerung an einen Traum mit der Absicht, den nächsten Traum zu erkennen. Übe kurz und ohne dich wachzuhalten. Einen zusätzlichen Wecker brauchst du dafür nicht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A pleasant dream memory
+msgctxt "ui:traumpraxisVorlage#text"
+msgid "Eine angenehme Traumerinnerung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: No suitable entry yet? Recall a pleasant dream. You can also begin by picturing a familiar place and rehearsing the moment of recognition.
+msgctxt "ui:traumpraxisOhneEintrag#text"
+msgid "Noch kein passender Eintrag? Erinnere dich an einen angenehmen Traum. Du kannst zunächst auch nur einen vertrauten Ort vor Augen haben und das bewusste Erkennen üben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Let your dream return to mind. Where was something unusual? Perhaps a place changed, or an impossible transition occurred.
+#. EN:
+#. EN: Picture that moment again. This time, you notice it and realise: I am dreaming. Let the image remain for a moment, without forcing anything to happen.
+msgctxt "ui:traumpraxisMildSchritte#text"
+msgid ""
+"Rufe deinen Traum ruhig in Erinnerung. Wo war etwas ungewöhnlich? Vielleicht ein Ort, der sich verändert hat, oder ein unmöglicher Übergang.\n"
+"\n"
+"Stell dir dieselbe Stelle noch einmal vor. Diesmal bemerkst du sie und erkennst: Ich träume. Lass die Vorstellung für einen Moment bestehen, ohne eine Handlung erzwingen zu müssen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Next time I dream, I want to remember that I am dreaming.
+msgctxt "ui:traumpraxisAbsicht#text"
+msgid "Wenn ich wieder träume, möchte ich mich daran erinnern, dass ich träume."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Then let the intention rest. You are free to fall asleep. If the exercise makes you more alert, leave it for tonight. The eight evening episodes remain available to you.
+msgctxt "ui:traumpraxisLoslassen#text"
+msgid "Danach darf die Absicht ruhen. Du darfst einschlafen. Wenn die Übung dich wacher macht, lässt du sie für heute los. Die acht Abendfolgen stehen dir weiterhin zur Verfügung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Rest can be enough today
+msgctxt "ui:traumpraxisRuhe#text"
+msgid "Heute darf Ruhe genügen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: During the day · Carry something pleasant with you
+msgctxt "ui:traumpraxisMitnehmen#text"
+msgid "Am Tag · Das Angenehme mitnehmen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: If your dream felt pleasant, recall a sensation: warmth, lightness or closeness. What, if anything, can you still feel in your waking body? There may be a lot, a little or nothing. Skip this exercise if the dream was distressing.
+msgctxt "ui:traumpraxisMitnehmenText#text"
+msgid "Wenn dein Traum angenehm war, erinnere dich an eine Empfindung: Wärme, Leichtigkeit oder Nähe. Was davon ist jetzt, im wachen Körper, noch spürbar? Es darf viel sein, wenig oder gar nichts. Bei einem belastenden Traum lässt du diese Übung aus."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Choose a small, freely chosen sensual experience for your day: warm water on your skin, a soft fabric, or a quiet moment of bodily awareness. Afterwards, notice: Has your desire changed? Your curiosity? Or mostly your sense of calm? Write down your own observation, without having to judge it.
+msgctxt "ui:traumpraxisNachspueren#text"
+msgid "Wähle eine kleine, freiwillige sinnliche Erfahrung für deinen Tag: warmes Wasser auf der Haut, einen weichen Stoff oder einen Moment ungestörter Körperwahrnehmung. Spüre danach nach: Hat sich deine Lust verändert? Deine Neugier? Oder vor allem deine Ruhe? Notiere deine eigene Beobachtung, ohne sie bewerten zu müssen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Reflect in your journal
+msgctxt "ui:traumpraxisNotieren#text"
+msgid "Im Tagebuch nachspüren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: If you experience an orgasm in a dream
+msgctxt "ui:traumpraxisHoehepunkt#text"
+msgid "Wenn du im Traum einen Orgasmus erlebst"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You may enjoy and record the experience, including if it happens again. The app does not measure bodily responses: a remembered dream orgasm is a reported experience, not a physiological measurement. You do not have to stay in the dream or reach another orgasm.
+msgctxt "ui:traumpraxisHoehepunktText#text"
+msgid "Du darfst das Erlebnis genießen und festhalten, auch wenn es sich wiederholt. Die App misst keine körperlichen Reaktionen: Ein erinnerter Orgasmus im Traum ist ein berichtetes Erlebnis, kein körperlicher Messbefund. Du musst weder im Traum bleiben noch einen weiteren Höhepunkt erreichen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: To listen
+msgctxt "ui:traumpraxisHoeren#text"
+msgid "Zum Hören"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Three short guided pieces with Victoria or Martin. They add to the practice, replace nothing, and end on their own. For you alone, not for listening together.
+msgctxt "ui:traumpraxisHoerenText#text"
+msgid "Drei kurze Begleitungen mit Victoria oder Martin. Sie ergänzen die Praxis, ersetzen nichts davon und enden von selbst. Nur für dich allein, nicht für das gemeinsame Hören."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Once before falling asleep or before an evening episode.
+msgctxt "ui:traumpraxisHoerenAbend#text"
+msgid "Einmal vor dem Einschlafen oder vor einer Abendfolge."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: In the daytime or early evening, awake, sitting or lying down.
+msgctxt "ui:traumpraxisHoerenKlarheit#text"
+msgid "Tagsüber oder am frühen Abend, wach und im Sitzen oder Liegen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: After waking up or in a quiet moment during the day, then perhaps your daytime observation.
+msgctxt "ui:traumpraxisHoerenMorgen#text"
+msgid "Nach dem Aufwachen oder in einem ruhigen Moment am Tag, danach gern die Tagesbeobachtung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Listen
+msgctxt "ui:traumpraxisHoerenStarten#text"
+msgid "Anhören"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The content of these pieces comes with the recordings. Download them in package management and the titles will appear here.
+msgctxt "ui:traumpraxisHoerenPaket#text"
+msgid "Der Inhalt dieser Begleitungen kommt mit den Aufnahmen. Lade sie in der Paketverwaltung nach, dann erscheinen die Titel hier."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: More pleasure in dreams and daily life is the aim of this exploration. Whether these exercises increase your waking desire remains an open question for you to observe. MILD is studied as a way to encourage lucid dreams; this brief evening adaptation and the daytime practice are not proven treatments. Restful sleep matters more than any particular dream experience.
+msgctxt "ui:traumpraxisErkundung#text"
+msgid "Mehr Lust im Traum und im Alltag ist das Ziel dieser Erkundung. Ob diese Übungen deine Tageslust erhöhen, ist offen und individuell zu beobachten. MILD wird zur Klartraumförderung untersucht; diese kurze Abendfassung und der Transfer in den Tag sind keine nachgewiesene Behandlung. Erholsamer Schlaf bleibt wichtiger als ein bestimmtes Traumerlebnis."
+msgstr ""
+
+#. Text der Oberfläche
 #. EN: Pleasure in dreams
 msgctxt "ui:lustTitel#text"
 msgid "Lust im Traum"
@@ -6990,9 +7913,9 @@ msgid "Er"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {name}
-#. EN: The matching perspective of the same encounter: {name}. Both follow the same sequence of scenes. You can start a shared playback this way, but the app does not sync the devices.
+#. EN: The matching perspective of the same encounter: {name}. Both follow the same sequence of scenes. “Listen together” synchronises the same version on two devices. Different complementary perspectives still need to be coordinated by you.
 msgctxt "ui:reihePartnerHinweis#text"
-msgid "Die passende Gegenperspektive derselben Begegnung: {name}. Beide folgen derselben Szenenfolge. Eine gemeinsame Wiedergabe lässt sich so starten, die App gleicht die Geräte aber nicht ab."
+msgid "Die passende Gegenperspektive derselben Begegnung: {name}. Beide folgen derselben Szenenfolge. „Gemeinsam hören“ gleicht dieselbe Fassung auf zwei Geräten ab. Unterschiedliche Gegenperspektiven stimmt ihr weiterhin selbst aufeinander ab."
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {minuten}

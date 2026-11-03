@@ -9,6 +9,265 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get gemeinsamWiedergabeFehler =>
+      'Playback could not start. Check the recordings and audio output, then try again.';
+
+  @override
+  String get gemeinsamZurueckziehen => 'Withdraw invitation';
+
+  @override
+  String get aufnahmePaketFehlt =>
+      'The matching content package needs to be downloaded.';
+
+  @override
+  String get wiedergabeStimmenStand => 'Recordings for this voice';
+
+  @override
+  String get gemeinsamAntwortZuLang =>
+      'Your reflection is too long. Please shorten it a little and try again.';
+
+  @override
+  String get gemeinsamGefuehlRuhig => 'Calm';
+
+  @override
+  String get gemeinsamGefuehlNah => 'Connected';
+
+  @override
+  String get gemeinsamGefuehlOffen => 'Still open';
+
+  @override
+  String get gemeinsamGefuehlBewegt => 'Moved';
+
+  @override
+  String get gemeinsamTitel => 'Shared activity';
+
+  @override
+  String get gemeinsamHinweis =>
+      'Listen to the same sequence on your own devices. You both need matching recordings and must confirm you are ready. Headphones may feel comfortable. Either person can pause; continuing needs both of you to be ready again. An invitation starts the sequence from the beginning.';
+
+  @override
+  String get gemeinsamAnnehmen => 'Accept';
+
+  @override
+  String get gemeinsamSpaeter => 'Later';
+
+  @override
+  String get gemeinsamWarten => 'You are ready. Waiting for your partner.';
+
+  @override
+  String get gemeinsamBereitHinweis =>
+      'Get comfortable, then confirm that you are ready.';
+
+  @override
+  String get gemeinsamBereit => 'Ready';
+
+  @override
+  String get gemeinsamPlayer => 'Open playback';
+
+  @override
+  String get gemeinsamRueckblick => 'Shared reflection';
+
+  @override
+  String get gemeinsamBeenden => 'End for both';
+
+  @override
+  String get gemeinsamSchliessen => 'Close';
+
+  @override
+  String get gemeinsamEinladung => 'An invitation is waiting for you.';
+
+  @override
+  String get gemeinsamVorbereiten => 'Get ready at your own pace';
+
+  @override
+  String get gemeinsamWartenAnnahme => 'Waiting for your partner.';
+
+  @override
+  String get gemeinsamLaeuft => 'You are listening together.';
+
+  @override
+  String get gemeinsamPause =>
+      'Paused. Continue only when both of you are ready.';
+
+  @override
+  String get gemeinsamAbgeschlossen => 'Your shared moment has ended.';
+
+  @override
+  String get gemeinsamAufnahmenFehlen =>
+      'Matching recordings are missing or differ. Both of you should download the current recordings, then send a new invitation. Shared listening never uses the device voice.';
+
+  @override
+  String get gemeinsamPartnerFehlt =>
+      'Your partner is unavailable, already busy or needs a current app version. Both of you should open the couple channel and try again.';
+
+  @override
+  String get gemeinsamFehler =>
+      'The connection did not work. Please try again.';
+
+  @override
+  String get gemeinsamLeer => 'Choose “Listen together” during playback.';
+
+  @override
+  String get gemeinsamStatusOeffnen => 'Open shared activity';
+
+  @override
+  String get gemeinsamStarten => 'Listen together';
+
+  @override
+  String get gemeinsamDuEmpfaengst => 'You receive, your partner gives.';
+
+  @override
+  String get gemeinsamVerbindungFehlt =>
+      'The connection to your partner has been interrupted. Your recording continues locally. You can pause at any time; reconnecting never starts playback automatically.';
+
+  @override
+  String get gemeinsamRueckblickFrage => 'How did this moment feel for you?';
+
+  @override
+  String get gemeinsamRueckblickHinweis =>
+      'Reflection is optional. Your partner’s answer becomes visible only after both of you have shared your own answer.';
+
+  @override
+  String get gemeinsamAntwort => 'Your reflection';
+
+  @override
+  String get gemeinsamTeilen => 'Save and share answer';
+
+  @override
+  String get gemeinsamGeteilt => 'Your reflection has been shared.';
+
+  @override
+  String get gemeinsamNochVerdeckt => 'The shared reflection is still hidden.';
+
+  @override
+  String gemeinsamCountdown(int sekunden) {
+    return 'Starting together in $sekunden';
+  }
+
+  @override
+  String get wiedergabeNeutral => 'Playback';
+
+  @override
+  String get wiedergabeLeer => 'No accessible playback selected.';
+
+  @override
+  String get wiedergabeBehalten =>
+      'You can close this page and keep exploring while you listen.';
+
+  @override
+  String get wiedergabeTts =>
+      'Device voice: resuming restarts this section from the beginning.';
+
+  @override
+  String get wiedergabeFehler =>
+      'Playback could not continue. Check the recordings and try again.';
+
+  @override
+  String get wiedergabeFertig => 'Complete for this moment.';
+
+  @override
+  String get wiedergabeTeilweise =>
+      'Some recordings are not available offline. The device voice reads missing sections.';
+
+  @override
+  String get wiedergabeAbschnitte => 'Sections';
+
+  @override
+  String get wiedergabeRuhe => 'Rest & reflect';
+
+  @override
+  String get wiedergabeEntfernen => 'Remove from continue listening';
+
+  @override
+  String get wiedergabeLaeuft => 'Playing';
+
+  @override
+  String get wiedergabeFortsetzen => 'Continue listening';
+
+  @override
+  String wiedergabeRunde(int runde) {
+    return 'Round $runde';
+  }
+
+  @override
+  String get sucheTitel => 'Explore & find';
+
+  @override
+  String get aufnahmeOffline => 'Recording available offline';
+
+  @override
+  String get wegTitel => 'Your personal path';
+
+  @override
+  String get wegEinladung =>
+      'Learn, explore, reflect. Three optional steps at your own pace, with no time limit or required answer.';
+
+  @override
+  String get wegWissen => 'Discover the knowledge';
+
+  @override
+  String get wegUeben => 'Try the exercise';
+
+  @override
+  String get wegNachspueren => 'Reflect';
+
+  @override
+  String get wegBeginnen => 'Begin this path';
+
+  @override
+  String get wegNochEinmal => 'Explore again';
+
+  @override
+  String get wegOeffnen => 'Open step';
+
+  @override
+  String get wegWeiter => 'Go to the next step';
+
+  @override
+  String get wegAbschliessen => 'Finish for now';
+
+  @override
+  String get wegFehler => 'Your progress could not be saved. Please try again.';
+
+  @override
+  String get aufnahmeGeraetestimme => 'Without recording: device voice';
+
+  @override
+  String get aufnahmeVerwalten => 'Download recordings';
+
+  @override
+  String get sucheFeld => 'Search courses, lessons and exercises';
+
+  @override
+  String get sucheLeeren => 'Clear search';
+
+  @override
+  String get sucheHinweis =>
+      'What would you like to explore? Search for a topic or an activity. Your search stays on this device and is not saved.';
+
+  @override
+  String get sucheLeer => 'Nothing found. Try a different word.';
+
+  @override
+  String get sucheFehler =>
+      'The content could not be loaded. Please reopen the search.';
+
+  @override
+  String get sucheKurs => 'Course';
+
+  @override
+  String get sucheLektion => 'Lesson';
+
+  @override
+  String get sucheAngebot => 'Audio & practice';
+
+  @override
+  String get suchePaarAbend => 'Guided evening together';
+
+  @override
+  String get sucheInnenansichten => 'Inner perspectives';
+
+  @override
   String get appName => 'VelvetPulse';
 
   @override
@@ -3651,6 +3910,258 @@ class AppLocalizationsEn extends AppLocalizations {
       'A few words for yourself, first thing in the morning.';
 
   @override
+  String get traumpraxisTitel => 'Your dream practice';
+
+  @override
+  String get praxisZeichenTitel => 'Your dream signs';
+
+  @override
+  String get praxisZeichenText =>
+      'What keeps appearing in your dreams? A place, an impossible transition, an unusual light? Name a sign you would like to recognise within a dream.';
+
+  @override
+  String get praxisZeichenLeer =>
+      'No dream signs yet. You can begin with a detail from your journal.';
+
+  @override
+  String get praxisZeichenFeld => 'My dream sign';
+
+  @override
+  String get praxisZeichenBeispiel =>
+      'For example: a doorway in an impossible place';
+
+  @override
+  String get praxisHinzufuegen => 'Add';
+
+  @override
+  String get praxisSpeichern => 'Save';
+
+  @override
+  String get praxisAbbrechen => 'Cancel';
+
+  @override
+  String get praxisBearbeiten => 'Edit';
+
+  @override
+  String get praxisLoeschen => 'Delete';
+
+  @override
+  String get praxisLoeschenFrage => 'Delete this entry?';
+
+  @override
+  String get praxisLoeschenText =>
+      'The entry will be removed. Restoring an older backup later will not automatically bring it back.';
+
+  @override
+  String get praxisFehler =>
+      'Saving did not work. Your existing data is preserved. Please try again.';
+
+  @override
+  String get praxisZeichenWaehlen => 'A sign for tonight';
+
+  @override
+  String get praxisZeichenAbsicht =>
+      'Imagine this sign appearing in your dream. You notice it and realise: I am dreaming. Then let your personal intention rest.';
+
+  @override
+  String get praxisAbendStart => 'Open your evening episode';
+
+  @override
+  String get praxisBeobachten => 'Reflect on today';
+
+  @override
+  String get praxisBeobachtungTitel => 'Your daily observation';
+
+  @override
+  String get praxisBeobachtungText =>
+      'What do you notice today? You can leave questions unanswered. An experienced orgasm is a possibility, not a nightly goal.';
+
+  @override
+  String get praxisSchlaf => 'How rested do you feel?';
+
+  @override
+  String get praxisLust => 'How does your desire feel today?';
+
+  @override
+  String get praxisUnbeantwortet => 'Leave unanswered';
+
+  @override
+  String get praxisSchlaf0 => 'Not rested at all';
+
+  @override
+  String get praxisSchlaf1 => 'Slightly rested';
+
+  @override
+  String get praxisSchlaf2 => 'Somewhat rested';
+
+  @override
+  String get praxisSchlaf3 => 'Well rested';
+
+  @override
+  String get praxisSchlaf4 => 'Very well rested';
+
+  @override
+  String get praxisLust0 => 'No desire noticeable';
+
+  @override
+  String get praxisLust1 => 'A little desire';
+
+  @override
+  String get praxisLust2 => 'Moderate desire';
+
+  @override
+  String get praxisLust3 => 'Clear desire';
+
+  @override
+  String get praxisLust4 => 'Strong desire';
+
+  @override
+  String get praxisSinnlich => 'Was your dream sensual?';
+
+  @override
+  String get praxisKlar => 'Did you know you were dreaming?';
+
+  @override
+  String get praxisOrgasmus => 'Did you experience an orgasm in your dream?';
+
+  @override
+  String get praxisJa => 'Yes';
+
+  @override
+  String get praxisNein => 'No';
+
+  @override
+  String get praxisNotiz => 'What would you like to remember?';
+
+  @override
+  String get praxisRueckblick => 'Your private review';
+
+  @override
+  String get praxisRueckblickText =>
+      'These are your own observations. Similar patterns may invite curiosity, but do not establish a cause. There are no points or target rates.';
+
+  @override
+  String get praxisRueckblickLeer =>
+      'No daily observations yet. Even a single note can be a beginning.';
+
+  @override
+  String get praxisNurOffeneFelder => 'No questions answered yet';
+
+  @override
+  String get praxisPfad => 'Your path for today';
+
+  @override
+  String get praxisPfadErinnern =>
+      'Begin with dream recall and bodily awareness. The first two episodes accompany you.';
+
+  @override
+  String get praxisPfadErkennen =>
+      'Connect a personal dream sign with your evening preparation. Episodes three to five explore recognising dreams.';
+
+  @override
+  String get praxisPfadEntfalten =>
+      'Explore pleasure within lucid dreams and notice what you might carry into the day. Episodes six to eight offer space for this.';
+
+  @override
+  String get traumpraxisNurSpicy =>
+      'This dream practice is part of Spicy mode for adults.';
+
+  @override
+  String get traumpraxisEinladung => 'Pleasure may linger beyond the night.';
+
+  @override
+  String get traumpraxisZiel =>
+      'Explore sensual dreams, becoming aware within a dream, and what you might carry into your day. An orgasm may be part of that experience. You choose how far you want to go.';
+
+  @override
+  String get traumpraxisErinnern => 'In the morning · Remember';
+
+  @override
+  String get traumpraxisErinnernText =>
+      'Write down what you remember: a place, a sensation, an encounter. You can mark sensuality, lucidity and an experienced orgasm in your journal. A dream without an orgasm, or a night with no recall, belongs here too.';
+
+  @override
+  String get traumpraxisErkennen => 'In the evening · Practise noticing';
+
+  @override
+  String get traumpraxisMildEinleitung =>
+      'This imagery exercise draws on MILD: connecting a remembered dream with the intention to recognise the next one. Keep it brief, without keeping yourself awake. You do not need an extra alarm for this exercise.';
+
+  @override
+  String get traumpraxisVorlage => 'A pleasant dream memory';
+
+  @override
+  String get traumpraxisOhneEintrag =>
+      'No suitable entry yet? Recall a pleasant dream. You can also begin by picturing a familiar place and rehearsing the moment of recognition.';
+
+  @override
+  String get traumpraxisMildSchritte =>
+      'Let your dream return to mind. Where was something unusual? Perhaps a place changed, or an impossible transition occurred.\n\nPicture that moment again. This time, you notice it and realise: I am dreaming. Let the image remain for a moment, without forcing anything to happen.';
+
+  @override
+  String get traumpraxisAbsicht =>
+      'Next time I dream, I want to remember that I am dreaming.';
+
+  @override
+  String get traumpraxisLoslassen =>
+      'Then let the intention rest. You are free to fall asleep. If the exercise makes you more alert, leave it for tonight. The eight evening episodes remain available to you.';
+
+  @override
+  String get traumpraxisRuhe => 'Rest can be enough today';
+
+  @override
+  String get traumpraxisMitnehmen =>
+      'During the day · Carry something pleasant with you';
+
+  @override
+  String get traumpraxisMitnehmenText =>
+      'If your dream felt pleasant, recall a sensation: warmth, lightness or closeness. What, if anything, can you still feel in your waking body? There may be a lot, a little or nothing. Skip this exercise if the dream was distressing.';
+
+  @override
+  String get traumpraxisNachspueren =>
+      'Choose a small, freely chosen sensual experience for your day: warm water on your skin, a soft fabric, or a quiet moment of bodily awareness. Afterwards, notice: Has your desire changed? Your curiosity? Or mostly your sense of calm? Write down your own observation, without having to judge it.';
+
+  @override
+  String get traumpraxisNotieren => 'Reflect in your journal';
+
+  @override
+  String get traumpraxisHoehepunkt => 'If you experience an orgasm in a dream';
+
+  @override
+  String get traumpraxisHoehepunktText =>
+      'You may enjoy and record the experience, including if it happens again. The app does not measure bodily responses: a remembered dream orgasm is a reported experience, not a physiological measurement. You do not have to stay in the dream or reach another orgasm.';
+
+  @override
+  String get traumpraxisHoeren => 'To listen';
+
+  @override
+  String get traumpraxisHoerenText =>
+      'Three short guided pieces with Victoria or Martin. They add to the practice, replace nothing, and end on their own. For you alone, not for listening together.';
+
+  @override
+  String get traumpraxisHoerenAbend =>
+      'Once before falling asleep or before an evening episode.';
+
+  @override
+  String get traumpraxisHoerenKlarheit =>
+      'In the daytime or early evening, awake, sitting or lying down.';
+
+  @override
+  String get traumpraxisHoerenMorgen =>
+      'After waking up or in a quiet moment during the day, then perhaps your daytime observation.';
+
+  @override
+  String get traumpraxisHoerenStarten => 'Listen';
+
+  @override
+  String get traumpraxisHoerenPaket =>
+      'The content of these pieces comes with the recordings. Download them in package management and the titles will appear here.';
+
+  @override
+  String get traumpraxisErkundung =>
+      'More pleasure in dreams and daily life is the aim of this exploration. Whether these exercises increase your waking desire remains an open question for you to observe. MILD is studied as a way to encourage lucid dreams; this brief evening adaptation and the daytime practice are not proven treatments. Restful sleep matters more than any particular dream experience.';
+
+  @override
   String get lustTitel => 'Pleasure in dreams';
 
   @override
@@ -4124,7 +4635,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String reihePartnerHinweis(String name) {
-    return 'The matching perspective of the same encounter: $name. Both follow the same sequence of scenes. You can start a shared playback this way, but the app does not sync the devices.';
+    return 'The matching perspective of the same encounter: $name. Both follow the same sequence of scenes. “Listen together” synchronises the same version on two devices. Different complementary perspectives still need to be coordinated by you.';
   }
 
   @override

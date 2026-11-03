@@ -6,6 +6,7 @@ import '../theme/app_theme.dart';
 import 'aussprache_melden.dart';
 import 'lautsprecher_frage.dart';
 import '../l10n/t.dart';
+import 'aufnahme_status.dart';
 
 class AudioPlayerCard extends StatefulWidget {
   final String textToRead;
@@ -159,6 +160,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
           const SizedBox(height: 10),
 
           // Slider / Progress bar
+          AufnahmeStatus(pfade: ['audio/${widget.contextId}.opus']),
           SliderTheme(
             data: SliderTheme.of(context).copyWith(
               trackHeight: 2,

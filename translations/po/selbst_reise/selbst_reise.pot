@@ -25,21 +25,21 @@ msgid "Schön, dass du dir diese Zeit nimmst. Mach es dir gemütlich, zieh die D
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: ankommen
-#. EN: Welcome to yourself. Let yourself sink into the surface beneath you, as if it were carrying you. Feel where your body rests: shoulders, back, pelvis, heels. There's nothing to do here. Only to feel.
+#. EN: Welcome to yourself. Let your weight settle into the surface beneath you. It is holding you. Feel where your body rests: shoulders, back, pelvis, heels. There's nothing to do here. Only to feel.
 msgctxt "self_block:ankommen_3#text"
-msgid "Willkommen bei dir. Lass dich in die Unterlage sinken, als würde sie dich tragen. Spür, wo dein Körper aufliegt: Schultern, Rücken, Becken, Fersen. Hier ist nichts zu tun. Nur zu spüren."
+msgid "Willkommen bei dir. Lass dein Gewicht an die Unterlage sinken. Sie trägt dich. Spür, wo dein Körper aufliegt: Schultern, Rücken, Becken, Fersen. Hier ist nichts zu tun. Nur zu spüren."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: atem
-#. EN: Place one hand on your heart and one on your belly. Breathe in deeply into your belly so that the lower hand rises. And out again slowly, through your slightly open mouth. Once more. With every exhale your body becomes a little heavier.
+#. EN: Place one hand on your heart and one on your belly. Let your breath come easily. Perhaps the hand on your belly rises with it. And out again slowly, through your slightly open mouth. Once more. Perhaps each exhale lets you give a little more of your weight to the surface beneath you.
 msgctxt "self_block:atem_1#text"
-msgid "Leg eine Hand auf dein Herz und eine auf deinen Bauch. Atme tief in den Bauch ein, so dass sich die untere Hand hebt. Und lang wieder aus, durch den leicht geöffneten Mund. Noch einmal. Mit jedem Ausatmen wird dein Körper ein wenig schwerer."
+msgid "Leg eine Hand auf dein Herz und eine auf deinen Bauch. Lass den Atem ruhig kommen. Vielleicht hebt sich dabei die Hand auf deinem Bauch. Und lang wieder aus, durch den leicht geöffneten Mund. Noch einmal. Vielleicht kannst du mit dem Ausatmen etwas mehr Gewicht abgeben."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: atem
-#. EN: Breathe in through your nose, and when your lungs are full, take one more small breath on top. Then let everything flow out long and soft. Let your jaw relax, your shoulders sink, your pelvic floor soften. Twice more, at your own pace.
+#. EN: Breathe in comfortably through your nose. If it feels easy, you can add a small second breath. Then let everything flow out long and soft. Let your jaw relax, your shoulders sink, your pelvic floor soften. Twice more, at your own pace.
 msgctxt "self_block:atem_2#text"
-msgid "Atme durch die Nase ein, und wenn die Lunge voll ist, nimm noch einen kleinen Atemzug dazu. Dann lass alles lang und weich hinausfließen. Lass dabei den Kiefer locker, die Schultern sinken, den Beckenboden weich werden. Noch zweimal, in deinem Tempo."
+msgid "Atme angenehm durch die Nase ein. Wenn es leicht geht, darf ein kleiner zweiter Atemzug dazukommen. Dann lass alles lang und weich hinausfließen. Lass dabei den Kiefer locker, die Schultern sinken, den Beckenboden weich werden. Noch zweimal, in deinem Tempo."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: gesicht, stufe: 1, tiefe: bekleidet
@@ -127,9 +127,9 @@ msgid "Lass deine Fingerspitzen über die Brust tanzen, kaum spürbar, und dann 
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: haut_bauch, stufe: 3, tiefe: haut
-#. EN: Glide with your oiled hands over your bare belly, from the centre to the sides, like waves on a beach. Let it become completely soft. A soft belly makes room for deep pleasure.
+#. EN: Glide with your oiled hands over your bare belly, from the centre to the sides, like waves on a beach. Let it become completely soft. Perhaps pleasure finds a little more room here too.
 msgctxt "self_block:haut_bauch_1#text"
-msgid "Gleite mit den eingeölten Händen über deinen nackten Bauch, von der Mitte zu den Seiten, wie Wellen am Strand. Lass ihn dabei ganz weich werden. Ein weicher Bauch macht Platz für tiefe Lust."
+msgid "Gleite mit den eingeölten Händen über deinen nackten Bauch, von der Mitte zu den Seiten, wie Wellen am Strand. Lass ihn dabei ganz weich werden. Vielleicht findet auch die Lust hier etwas mehr Raum."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: huefte, stufe: 3, tiefe: haut
@@ -151,9 +151,9 @@ msgid "Leg deine Hände warm auf die Innenschenkel und lass sie dort ruhen. Spü
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: damm, stufe: 4, tiefe: intim, koerper: vulva
-#. EN: Let one hand slide between your legs, to the perineum, the soft place between the vaginal opening and the anus. Lay two fingers flat on it and give gentle pressure, then release again. Small circles, very slowly. Many feel the deep roots of the clitoris here.
+#. EN: Let one hand slide between your legs, to the perineum, the soft place between the vaginal opening and the anus. Lay two fingers flat on it and give gentle pressure, then release again. Small circles, very slowly. Notice whether touch in this spot feels good to you.
 msgctxt "self_block:damm_1#text"
-msgid "Lass eine Hand zwischen deine Beine gleiten, zum Damm, der weichen Stelle zwischen Scheideneingang und After. Leg zwei Finger flach darauf und gib sanften Druck, dann lass wieder nach. Kleine Kreise, ganz langsam. Viele spüren hier die tiefen Wurzeln der Klitoris."
+msgid "Lass eine Hand zwischen deine Beine gleiten, zum Damm, der weichen Stelle zwischen Scheideneingang und After. Leg zwei Finger flach darauf und gib sanften Druck, dann lass wieder nach. Kleine Kreise, ganz langsam. Spür nach, ob dir die Berührung an dieser Stelle gefällt."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: genital, stufe: 5, tiefe: intim, koerper: vulva
@@ -205,9 +205,9 @@ msgid "Wende dich jetzt dem Damm zu, der Stelle zwischen Hoden und After. Gib mi
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: welle
-#. EN: Imagine your arousal on a scale from one to ten. When you're at about seven, slow down. Breathe out long, let your pelvic floor soften, and feel the wave sink a little. Then it may rise again.
+#. EN: Imagine your arousal on a scale from one to ten. When you're at about seven, slow down. Breathe out long, let your pelvic floor soften, and notice whether the wave settles a little. Then it may rise again.
 msgctxt "self_block:welle_1#text"
-msgid "Stell dir deine Erregung auf einer Skala von eins bis zehn vor. Wenn du bei etwa sieben bist, werde langsamer. Atme lang aus, lass den Beckenboden weich werden, und spür, wie die Welle ein wenig sinkt. Dann darf sie wieder steigen."
+msgid "Stell dir deine Erregung auf einer Skala von eins bis zehn vor. Wenn du bei etwa sieben bist, werde langsamer. Atme lang aus, lass den Beckenboden weich werden, und spür nach, ob die Welle ein wenig sinkt. Dann darf sie wieder steigen."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: welle
@@ -247,9 +247,9 @@ msgid "Es gibt nichts zu erreichen. Nur diesen Moment."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: ausklang
-#. EN: Now slow down until your hands lie completely still. Place one hand on your heart and one on your belly. Feel what's there: the warmth, the pulsing, the breath. Whatever happened today, it was exactly right.
+#. EN: Now slow down until your hands lie completely still. Place one hand on your heart and one on your belly. Feel what's there: the warmth, the pulsing, the breath. You can let today's experience stand as it is. You decide what you want to take from it.
 msgctxt "self_block:ausklang_1#text"
-msgid "Werde jetzt langsamer, bis deine Hände ganz still liegen. Leg eine Hand auf dein Herz und eine auf deinen Bauch. Spür nach: die Wärme, das Pulsieren, den Atem. Ganz gleich, was heute geschehen ist, es war genau richtig."
+msgid "Werde jetzt langsamer, bis deine Hände ganz still liegen. Leg eine Hand auf dein Herz und eine auf deinen Bauch. Spür nach: die Wärme, das Pulsieren, den Atem. Was du heute erlebt hast, darf so stehen bleiben. Du entscheidest, was du daraus mitnehmen möchtest."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: ausklang
@@ -265,9 +265,9 @@ msgid "Zum Schluss: Sag dir innerlich einen Satz, der sich gut anfühlt. Viellei
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: ankommen, tiefe: spicy
-#. EN: Welcome. Today is only about your pleasure. Get completely naked, put the lube next to you and open your legs. Nobody sees you, nobody hears you. Today you may be truly aroused, as much as you like. And if you want to stop, you stop.
+#. EN: Welcome. Today is only about your pleasure. Get completely naked, put the lube next to you and open your legs. Nobody sees you, nobody hears you. Today the pleasure is entirely yours, as much as you like. And if you want to stop, you stop.
 msgctxt "self_block:ankommen_s1#text"
-msgid "Willkommen. Heute geht es nur um deine Lust. Zieh dich ganz aus, leg das Gleitmittel neben dich und öffne die Beine. Niemand sieht dich, niemand hört dich. Heute darfst du richtig erregt sein, so sehr, wie du willst. Und wenn du aufhören willst, hörst du auf."
+msgid "Willkommen. Heute geht es nur um deine Lust. Zieh dich ganz aus, leg das Gleitmittel neben dich und öffne die Beine. Niemand sieht dich, niemand hört dich. Heute gehört die Lust ganz dir, so sehr, wie du willst. Und wenn du aufhören willst, hörst du auf."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: ankommen, tiefe: sehrSpicy
@@ -277,15 +277,15 @@ msgid "Willkommen. Heute wird's richtig dreckig. Zieh dich ganz aus, leg das Gle
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: ankommen, tiefe: spicy
-#. EN: There you are. Notice it: it's already throbbing between your legs, isn't it? Good. You don't have to be sensible today. Today you touch yourself however you want, as long as you want, as uninhibited as you want. Take a deep breath. And then begin.
+#. EN: There you are. Notice it: perhaps it's already throbbing between your legs. Perhaps desire is only just beginning. You don't have to be sensible today. Today you touch yourself however you want, as long as you want, as uninhibited as you want. Take a deep breath. And then begin.
 msgctxt "self_block:ankommen_s2#text"
-msgid "Da bist du. Spür mal hin: Es pocht schon zwischen deinen Beinen, oder? Gut. Heute musst du nicht vernünftig sein. Heute berührst du dich, wie du willst, so lange du willst, so hemmungslos du willst. Atme tief ein. Und dann fang an."
+msgid "Da bist du. Spür mal hin: Vielleicht pocht es schon zwischen deinen Beinen. Vielleicht beginnt die Lust gerade erst. Heute musst du nicht vernünftig sein. Heute berührst du dich, wie du willst, so lange du willst, so hemmungslos du willst. Atme tief ein. Und dann fang an."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: ankommen, tiefe: sehrSpicy
-#. EN: There you are. Notice it: it's already throbbing between your legs, isn't it? Good. You don't have to be good today. Today you touch yourself however you want, as long as you want, as dirty as you want. Take a deep breath. And then begin.
+#. EN: There you are. Notice it: perhaps it's already throbbing between your legs. Perhaps desire is only just beginning. You don't have to be good today. Today you touch yourself however you want, as long as you want, as dirty as you want. Take a deep breath. And then begin.
 msgctxt "self_block:ankommen_x2#text"
-msgid "Da bist du. Spür mal hin: Es pocht schon zwischen deinen Beinen, oder? Gut. Heute musst du nicht brav sein. Heute fasst du dich an, wie du willst, so lange du willst, so schmutzig du willst. Atme tief ein. Und dann fang an."
+msgid "Da bist du. Spür mal hin: Vielleicht pocht es schon zwischen deinen Beinen. Vielleicht beginnt die Lust gerade erst. Heute musst du nicht brav sein. Heute fasst du dich an, wie du willst, so lange du willst, so schmutzig du willst. Atme tief ein. Und dann fang an."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: brustwarzen, stufe: 4, tiefe: spicy
@@ -325,15 +325,15 @@ msgid "Fahr mit den Fingern durch deine Muschi. Spür, wie nass du schon bist. R
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: genital, stufe: 6, tiefe: spicy, koerper: vulva
-#. EN: Now your clitoris. Rub it fast and firm, exactly how you like it best. Don't stop. Let your hips buck, let yourself go. Moan when it wants to come out. You're full of desire right now, and you get to hear it.
+#. EN: Now your clitoris. Rub it fast and firm, exactly how you like it best. Don't stop. Let your hips buck, let yourself go. Moan when it wants to come out. You're full of desire right now. Hear yourself.
 msgctxt "self_block:vulva_s2#text"
-msgid "Jetzt die Klitoris. Reib sie schnell und fest, genau so, wie du es am liebsten hast. Hör nicht auf. Lass die Hüften zucken, lass dich gehen. Stöhn, wenn es heraus will. Du bist gerade voller Lust, und das darfst du hören."
+msgid "Jetzt die Klitoris. Reib sie schnell und fest, genau so, wie du es am liebsten hast. Hör nicht auf. Lass die Hüften zucken, lass dich gehen. Stöhn, wenn es heraus will. Du bist gerade voller Lust. Hör dich selbst."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: genital, stufe: 6, tiefe: sehrSpicy, koerper: vulva
-#. EN: Now rub your clit. Fast, firm, exactly how you like it best. Don't stop. Let your hips buck, let yourself go. Moan when it wants to come out. You're so horny right now, and you get to hear it.
+#. EN: Now rub your clit. Fast, firm, exactly how you like it best. Don't stop. Let your hips buck, let yourself go. Moan when it wants to come out. You're so horny right now. Hear yourself.
 msgctxt "self_block:vulva_x2#text"
-msgid "Jetzt reib deinen Kitzler. Schnell, fest, genau so, wie du es am liebsten hast. Hör nicht auf. Lass die Hüften zucken, lass dich gehen. Stöhn, wenn es raus will. Du bist so geil gerade, und das darfst du hören."
+msgid "Jetzt reib deinen Kitzler. Schnell, fest, genau so, wie du es am liebsten hast. Hör nicht auf. Lass die Hüften zucken, lass dich gehen. Stöhn, wenn es raus will. Du bist so geil gerade. Hör dich selbst."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: genital, stufe: 6, tiefe: spicy, koerper: vulva
@@ -421,15 +421,15 @@ msgid "Spiel mit ihm. Ein paar schnelle, harte Züge, dann quälend langsam. Dan
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: genital, stufe: 6, tiefe: spicy, koerper: penis
-#. EN: Take your testicles with your other hand. Knead them, draw them gently down while you keep stroking. Press two fingers on your perineum in rhythm. Feel the arousal reaching deep into your belly. Harder. Now.
+#. EN: Take your testicles with your other hand. Hold them gently and draw them down only very lightly, if that feels comfortable while you keep stroking. Press two fingers on your perineum in rhythm. Feel the arousal reaching deep into your belly. Stay with the pressure that feels good to you.
 msgctxt "self_block:penis_s4#text"
-msgid "Nimm mit der anderen Hand die Hoden. Knete sie, zieh sie sanft nach unten, während du weiterstreichst. Drück mit zwei Fingern im Takt auf den Damm. Spür, wie die Erregung bis tief in den Bauch geht. Fester. Jetzt."
+msgid "Nimm mit der anderen Hand die Hoden. Halte sie behutsam und zieh nur ganz leicht nach unten, wenn sich das angenehm anfühlt, während du weiterstreichst. Drück mit zwei Fingern im Takt auf den Damm. Spür, wie die Erregung bis tief in den Bauch geht. Bleib bei dem Druck, der dir gut tut."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: genital, stufe: 6, tiefe: sehrSpicy, koerper: penis
-#. EN: Grab your balls with your other hand. Knead them, pull them down while you keep stroking. Press two fingers on your taint, in rhythm. Feel it reaching deep into your belly. Harder. Now.
+#. EN: Grab your balls with your other hand. Hold them gently and draw them down only very lightly, if that feels comfortable while you keep stroking. Press two fingers on your taint, in rhythm. Feel it reaching deep into your belly. Stay with the pressure that feels good to you.
 msgctxt "self_block:penis_x4#text"
-msgid "Greif dir mit der anderen Hand die Eier. Knete sie, zieh sie runter, während du weiterwichst. Drück mit zwei Fingern auf den Damm, im Takt. Spür, wie es dir bis tief in den Bauch geht. Fester. Jetzt."
+msgid "Greif dir mit der anderen Hand die Eier. Halte sie behutsam und zieh nur ganz leicht nach unten, wenn sich das angenehm anfühlt, während du weiterwichst. Drück mit zwei Fingern auf den Damm, im Takt. Spür, wie es dir bis tief in den Bauch geht. Bleib bei dem Druck, der dir gut tut."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: beruehren, zone: genital, stufe: 6, tiefe: spicy, koerper: penis
@@ -505,15 +505,15 @@ msgid "Stopp, kurz bevor du kommst. Hand drauf, nicht bewegen. Spür, wie alles 
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: hoehepunkt, tiefe: spicy
-#. EN: Now you may. Come as strongly as you can. Faster, firmer, moan, let it all out. Or stay just short of it and tease yourself a little longer. You decide. I'll be quiet now.
+#. EN: Now you decide. Come as strongly as you can. Faster, firmer, moan, let it all out. Or stay just short of it and tease yourself a little longer. You decide. I'll be quiet now.
 msgctxt "self_block:hoehepunkt_1#text"
-msgid "Jetzt darfst du. Komm, so stark du kannst. Werde schneller, fester, stöhn, lass alles heraus. Oder bleib noch kurz davor und reiz dich ein bisschen länger. Du entscheidest. Ich bin jetzt still."
+msgid "Jetzt entscheidest du. Komm, so stark du kannst. Werde schneller, fester, stöhn, lass alles heraus. Oder bleib noch kurz davor und reiz dich ein bisschen länger. Du entscheidest. Ich bin jetzt still."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: hoehepunkt, tiefe: sehrSpicy
-#. EN: Now you may. Come as hard as you can. Faster, harder, moan, scream if you like, let it all out. Or stay just short of it and torment yourself a little longer. You decide. I'll be quiet now.
+#. EN: Now you decide. Come as hard as you can. Faster, harder, moan, scream if you like, let it all out. Or stay just short of it and torment yourself a little longer. You decide. I'll be quiet now.
 msgctxt "self_block:hoehepunkt_x1#text"
-msgid "Jetzt darfst du. Komm, so heftig du kannst. Mach schneller, härter, stöhn, schrei ruhig, lass alles raus. Oder bleib noch kurz davor und quäl dich ein bisschen länger. Du entscheidest. Ich bin jetzt still."
+msgid "Jetzt entscheidest du. Komm, so heftig du kannst. Mach schneller, härter, stöhn, schrei ruhig, lass alles raus. Oder bleib noch kurz davor und quäl dich ein bisschen länger. Du entscheidest. Ich bin jetzt still."
 msgstr ""
 
 #. Baustein der geführten Selbsterkundung, phase: hoehepunkt, tiefe: spicy

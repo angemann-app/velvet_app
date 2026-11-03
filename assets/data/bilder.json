@@ -10,57 +10,87 @@
   "bilder": {
     "audio.einschlaf.cover": {
       "format": "kopf",
-      "normal": "assets/images/guided_einschlaf.svg",
+      "normal": "assets/images/guided_einschlaf.webp",
       "alt": {
         "de": "Einschlafen",
         "en": "Falling asleep"
       },
-      "spicy": "assets/images/guided_einschlaf_spicy.svg"
+      "altePfade": [
+        "assets/images/guided_einschlaf.svg",
+        "assets/images/guided_einschlaf_spicy.svg"
+      ],
+      "spicy": "kurse/self_2_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "audio.paar.cover": {
       "format": "kopf",
-      "normal": "assets/images/guided_paar.svg",
+      "normal": "assets/images/guided_paar.webp",
       "alt": {
         "de": "Gemeinsamer Abend",
         "en": "Shared evening"
       },
-      "spicy": "assets/images/guided_paar_spicy.svg"
+      "altePfade": [
+        "assets/images/guided_paar.svg",
+        "assets/images/guided_paar_spicy.svg"
+      ],
+      "spicy": "kurse/spduo_3_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "audio.selbst.cover": {
       "format": "kopf",
-      "normal": "assets/images/guided_selbst.svg",
+      "normal": "assets/images/guided_selbst.webp",
       "alt": {
         "de": "Körperreise",
         "en": "Body journey"
       },
-      "spicy": "assets/images/guided_selbst_spicy.svg"
+      "altePfade": [
+        "assets/images/guided_selbst.svg",
+        "assets/images/guided_selbst_spicy.svg"
+      ],
+      "spicy": "kurse/self_3_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.communication_mind": {
       "format": "kopf",
-      "normal": "assets/images/ynm_communication_mind.svg",
+      "normal": "assets/images/ynm_communication_mind.webp",
       "alt": {
         "de": "Kommunikation und Kopf",
         "en": "Communication and mind"
       },
-      "spicy": "assets/images/ynm_communication_mind_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_communication_mind.svg",
+        "assets/images/ynm_communication_mind_spicy.svg"
+      ],
+      "spicy": "kurse/comm_3_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.deep_somatics": {
       "format": "kopf",
-      "normal": "assets/images/ynm_deep_somatics.svg",
+      "normal": "assets/images/ynm_deep_somatics.webp",
       "alt": {
         "de": "Tiefe Körperarbeit",
         "en": "Deep body work"
       },
-      "spicy": "assets/images/ynm_deep_somatics_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_deep_somatics.svg",
+        "assets/images/ynm_deep_somatics_spicy.svg"
+      ],
+      "spicy": "kurse/pelvic_3_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.fantasy_watching": {
       "format": "kopf",
-      "normal": "assets/images/ynm_fantasy_watching.svg",
+      "normal": "assets/images/ynm_fantasy_watching.webp",
       "alt": {
         "de": "Fantasie und Zuschauen",
         "en": "Fantasy and watching"
       },
-      "spicy": "assets/images/ynm_fantasy_watching_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_fantasy_watching.svg",
+        "assets/images/ynm_fantasy_watching_spicy.svg"
+      ],
+      "spicy": "kurse/spduo_4_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.heute.einladung": {
       "format": "hoch",
@@ -72,75 +102,115 @@
     },
     "bereich.mouth_kissing": {
       "format": "kopf",
-      "normal": "assets/images/ynm_mouth_kissing.svg",
+      "normal": "assets/images/ynm_mouth_kissing.webp",
       "alt": {
         "de": "Mund und Küsse",
         "en": "Mouth and kissing"
       },
-      "spicy": "assets/images/ynm_mouth_kissing_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_mouth_kissing.svg",
+        "assets/images/ynm_mouth_kissing_spicy.svg"
+      ],
+      "spicy": "kurse/tease_1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.positions_movement": {
       "format": "kopf",
-      "normal": "assets/images/ynm_positions_movement.svg",
+      "normal": "assets/images/ynm_positions_movement.webp",
       "alt": {
         "de": "Stellungen und Bewegung",
         "en": "Positions and movement"
       },
-      "spicy": "assets/images/ynm_positions_movement_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_positions_movement.svg",
+        "assets/images/ynm_positions_movement_spicy.svg"
+      ],
+      "spicy": "kurse/pos_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.power_dynamics": {
       "format": "kopf",
-      "normal": "assets/images/ynm_power_dynamics.svg",
+      "normal": "assets/images/ynm_power_dynamics.webp",
       "alt": {
         "de": "Macht und Hingabe",
         "en": "Power and surrender"
       },
-      "spicy": "assets/images/ynm_power_dynamics_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_power_dynamics.svg",
+        "assets/images/ynm_power_dynamics_spicy.svg"
+      ],
+      "spicy": "kurse/spduo_4_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.roles_settings": {
       "format": "kopf",
-      "normal": "assets/images/ynm_roles_settings.svg",
+      "normal": "assets/images/ynm_roles_settings.webp",
       "alt": {
         "de": "Rollen und Szenarien",
         "en": "Roles and settings"
       },
-      "spicy": "assets/images/ynm_roles_settings_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_roles_settings.svg",
+        "assets/images/ynm_roles_settings_spicy.svg"
+      ],
+      "spicy": "kurse/scen_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.sensory_basics": {
       "format": "kopf",
-      "normal": "assets/images/ynm_sensory_basics.svg",
+      "normal": "assets/images/ynm_sensory_basics.webp",
       "alt": {
         "de": "Sinne und Grundlagen",
         "en": "Senses and basics"
       },
-      "spicy": "assets/images/ynm_sensory_basics_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_sensory_basics.svg",
+        "assets/images/ynm_sensory_basics_spicy.svg"
+      ],
+      "spicy": "kurse/vocal_1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.spicy": {
       "format": "kopf",
-      "normal": "assets/images/ynm_spicy.svg",
+      "normal": "assets/images/ynm_spicy.webp",
       "alt": {
         "de": "Spicy",
         "en": "Spicy"
       },
-      "spicy": "assets/images/ynm_spicy_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_spicy.svg",
+        "assets/images/ynm_spicy_spicy.svg"
+      ],
+      "spicy": "kurse/spduo_4_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.touch_techniques": {
       "format": "kopf",
-      "normal": "assets/images/ynm_touch_techniques.svg",
+      "normal": "assets/images/ynm_touch_techniques.webp",
       "alt": {
         "de": "Berührung und Techniken",
         "en": "Touch and techniques"
       },
-      "spicy": "assets/images/ynm_touch_techniques_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_touch_techniques.svg",
+        "assets/images/ynm_touch_techniques_spicy.svg"
+      ],
+      "spicy": "kurse/touch_w_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "bereich.toys_aids": {
       "format": "kopf",
-      "normal": "assets/images/ynm_toys_aids.svg",
+      "normal": "assets/images/ynm_toys_aids.webp",
       "alt": {
         "de": "Spielzeug und Hilfsmittel",
         "en": "Toys and aids"
       },
-      "spicy": "assets/images/ynm_toys_aids_spicy.svg"
+      "altePfade": [
+        "assets/images/ynm_toys_aids.svg",
+        "assets/images/ynm_toys_aids_spicy.svg"
+      ],
+      "spicy": "kurse/toys_7_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "diagramm.anat_1": {
       "format": "diagramm",
@@ -594,246 +664,377 @@
     },
     "kurs.01.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_01.svg",
+      "normal": "assets/images/cover_01.webp",
       "alt": {
         "de": "1. Kopf und Körper verstehen",
         "en": "1. Understanding Mind and Body"
       },
-      "spicy": "assets/images/cover_01_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_01.svg",
+        "assets/images/cover_01_spicy.svg"
+      ],
+      "spicy": "assets/images/cover_01_spicy.webp"
     },
     "kurs.02.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_02.svg",
+      "normal": "assets/images/cover_02.webp",
       "alt": {
         "de": "4. Raus aus der Beobachter-Falle",
         "en": "4. Escaping the Spectator Trap"
       },
-      "spicy": "assets/images/cover_02_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_02.svg",
+        "assets/images/cover_02_spicy.svg"
+      ],
+      "spicy": "assets/images/cover_02_spicy.webp"
     },
     "kurs.03.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_03.svg",
+      "normal": "assets/images/cover_03.webp",
       "alt": {
         "de": "7. Beckenboden: Loslassen und Kraft",
         "en": "7. Pelvic Floor: Letting Go and Strength"
       },
-      "spicy": "assets/images/cover_03_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_03.svg",
+        "assets/images/cover_03_spicy.svg"
+      ],
+      "spicy": "kurse/pelvic_2_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.04.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_04.svg",
+      "normal": "assets/images/cover_04.webp",
       "alt": {
         "de": "10. Reize neu einstellen",
         "en": "10. Resetting Your Stimulation"
       },
-      "spicy": "assets/images/cover_04_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_04.svg",
+        "assets/images/cover_04_spicy.svg"
+      ],
+      "spicy": "assets/images/cover_04_spicy.webp"
     },
     "kurs.05.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_05.svg",
+      "normal": "assets/images/cover_05.webp",
       "alt": {
         "de": "12. Das Schweigen brechen",
         "en": "12. Breaking the Silence"
       },
-      "spicy": "assets/images/cover_05_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_05.svg",
+        "assets/images/cover_05_spicy.svg"
+      ],
+      "spicy": "kurse/comm_3_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.06.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_06.svg",
+      "normal": "assets/images/cover_06.webp",
       "alt": {
         "de": "9. Weibliche Lust und Körperwissen",
         "en": "9. Female Desire and Body Knowledge"
       },
-      "spicy": "assets/images/cover_06_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_06.svg",
+        "assets/images/cover_06_spicy.svg"
+      ],
+      "spicy": "kurse/female_3_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.07.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_07.svg",
+      "normal": "assets/images/cover_07.webp",
       "alt": {
         "de": "17. Das Paar-Labor: Nähe ohne Ziel",
         "en": "17. The Couples Lab: Closeness Without a Goal"
       },
-      "spicy": "assets/images/cover_07_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_07.svg",
+        "assets/images/cover_07_spicy.svg"
+      ],
+      "spicy": "kurse/couples_2_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.08.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_08.svg",
+      "normal": "assets/images/cover_08.webp",
       "alt": {
         "de": "18. Berührung, die trägt (Für Sie)",
         "en": "18. Touch That Carries (For Her)"
       },
-      "spicy": "assets/images/cover_08_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_08.svg",
+        "assets/images/cover_08_spicy.svg"
+      ],
+      "spicy": "kurse/touch_w_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.09.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_09.svg",
+      "normal": "assets/images/cover_09.webp",
       "alt": {
         "de": "19. Berührung neu lernen (Für Ihn)",
         "en": "19. Relearning Touch (For Him)"
       },
-      "spicy": "assets/images/cover_09_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_09.svg",
+        "assets/images/cover_09_spicy.svg"
+      ],
+      "spicy": "kurse/touch_m_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.10.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_10.svg",
+      "normal": "assets/images/cover_10.webp",
       "alt": {
         "de": "21. Hörbare Lust: Stimme, Kiefer und Becken",
         "en": "21. Audible Pleasure: Voice, Jaw and Pelvis"
       },
-      "spicy": "assets/images/cover_10_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_10.svg",
+        "assets/images/cover_10_spicy.svg"
+      ],
+      "spicy": "kurse/vocal_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.11.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_11.svg",
+      "normal": "assets/images/cover_11.webp",
       "alt": {
         "de": "15. Vorfreude und Langsamkeit",
         "en": "15. Anticipation and Slowness"
       },
-      "spicy": "assets/images/cover_11_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_11.svg",
+        "assets/images/cover_11_spicy.svg"
+      ],
+      "spicy": "kurse/tease_2_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.12.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_12.svg",
+      "normal": "assets/images/cover_12.webp",
       "alt": {
         "de": "23. Fantasien, Führung und Hingabe",
         "en": "23. Fantasies, Leading and Surrender"
       },
-      "spicy": "assets/images/cover_12_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_12.svg",
+        "assets/images/cover_12_spicy.svg"
+      ],
+      "spicy": "kurse/spduo_4_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.13.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_13.svg",
+      "normal": "assets/images/cover_13.webp",
       "alt": {
         "de": "6. Präsenz und erotisches Selbstmitgefühl",
         "en": "6. Presence and Erotic Self-Compassion"
       },
-      "spicy": "assets/images/cover_13_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_13.svg",
+        "assets/images/cover_13_spicy.svg"
+      ],
+      "spicy": "kurse/self_2_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.14.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_14.svg",
+      "normal": "assets/images/cover_14.webp",
       "alt": {
         "de": "20. Die Kunst der Intim-Massage",
         "en": "20. The Art of Intimate Massage"
       },
-      "spicy": "assets/images/cover_14_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_14.svg",
+        "assets/images/cover_14_spicy.svg"
+      ],
+      "spicy": "kurse/mass_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.15.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_15.svg",
+      "normal": "assets/images/cover_15.webp",
       "alt": {
         "de": "11. Prostata und Damm: Anatomie und Annäherung",
         "en": "11. Prostate and Perineum: Anatomy and Approach"
       },
-      "spicy": "assets/images/cover_15_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_15.svg",
+        "assets/images/cover_15_spicy.svg"
+      ],
+      "spicy": "kurse/prost_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.16.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_16.svg",
+      "normal": "assets/images/cover_16.webp",
       "alt": {
         "de": "22. Stellungen, die entspannen: Winkel, Nähe und Ausdauer",
         "en": "22. Positions That Relax: Angle, Closeness and Stamina"
       },
-      "spicy": "assets/images/cover_16_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_16.svg",
+        "assets/images/cover_16_spicy.svg"
+      ],
+      "spicy": "kurse/pos_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.17.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_17.svg",
+      "normal": "assets/images/cover_17.webp",
       "alt": {
         "de": "24. Kopfkino: Szenarien für zwei",
         "en": "24. Mental Movies: Scenarios for Two"
       },
-      "spicy": "assets/images/cover_17_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_17.svg",
+        "assets/images/cover_17_spicy.svg"
+      ],
+      "spicy": "kurse/scen_s1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.18.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_18.svg",
+      "normal": "assets/images/cover_18.webp",
       "alt": {
         "de": "8. Sich selbst erkunden",
         "en": "8. Exploring Yourself"
       },
-      "spicy": "assets/images/cover_18_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_18.svg",
+        "assets/images/cover_18_spicy.svg"
+      ],
+      "spicy": "kurse/self_3_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.19.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_19.svg",
+      "normal": "assets/images/cover_19.webp",
       "alt": {
         "de": "13. Unterschiedliche Lust: Wenn einer öfter will",
         "en": "13. Mismatched Desire: When One Wants It More Often"
       },
-      "spicy": "assets/images/cover_19_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_19.svg",
+        "assets/images/cover_19_spicy.svg"
+      ],
+      "spicy": "kurse/couples_2_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.20.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_20.svg",
+      "normal": "assets/images/cover_20.webp",
       "alt": {
         "de": "14. Lebensphasen: Lust im Wandel",
         "en": "14. Life Phases: Desire in Transition"
       },
-      "spicy": "assets/images/cover_20_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_20.svg",
+        "assets/images/cover_20_spicy.svg"
+      ],
+      "spicy": "kurse/beauty_2_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.21.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_21.svg",
+      "normal": "assets/images/cover_21.webp",
       "alt": {
         "de": "5. Schmerz, Scham und Leistungsdruck",
         "en": "5. Pain, Shame and Performance Pressure"
       },
-      "spicy": "assets/images/cover_21_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_21.svg",
+        "assets/images/cover_21_spicy.svg"
+      ],
+      "spicy": "assets/images/cover_21_spicy.webp"
     },
     "kurs.22.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_22.svg",
+      "normal": "assets/images/cover_22.webp",
       "alt": {
         "de": "2. Anatomie der Erregung",
         "en": "2. The Anatomy of Arousal"
       },
-      "spicy": "assets/images/cover_22_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_22.svg",
+        "assets/images/cover_22_spicy.svg"
+      ],
+      "spicy": "kurse/anat_1_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.23.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_23.svg",
+      "normal": "assets/images/cover_23.webp",
       "alt": {
         "de": "26. Spicy Solo: Lust ohne Bremse",
         "en": "26. Spicy Solo: Pleasure Without Brakes"
       },
-      "spicy": "assets/images/cover_23_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_23.svg",
+        "assets/images/cover_23_spicy.svg"
+      ],
+      "spicy": "kurse/spsolo_4_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.24.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_24.svg",
+      "normal": "assets/images/cover_24.webp",
       "alt": {
         "de": "27. Spicy zu zweit: Mehr wagen",
         "en": "27. Spicy Together: Dare More"
       },
-      "spicy": "assets/images/cover_24_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_24.svg",
+        "assets/images/cover_24_spicy.svg"
+      ],
+      "spicy": "kurse/spduo_4_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.25.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_25.svg",
+      "normal": "assets/images/cover_25.webp",
       "alt": {
         "de": "3. Jeder Körper ist schön und sexy",
         "en": "3. Every Body Is Beautiful and Sexy"
       },
-      "spicy": "assets/images/cover_25_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_25.svg",
+        "assets/images/cover_25_spicy.svg"
+      ],
+      "spicy": "kurse/beauty_6_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.26.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_26.svg",
+      "normal": "assets/images/cover_26.webp",
       "alt": {
         "de": "16. Alltagserotik: Lust zwischen Kaffee und Kalender",
         "en": "16. Everyday Eroticism: Desire Between Coffee and Calendar"
       },
-      "spicy": "assets/images/cover_26_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_26.svg",
+        "assets/images/cover_26_spicy.svg"
+      ],
+      "spicy": "kurse/alltag_7_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "kurs.27.titel": {
       "format": "kopf",
-      "normal": "assets/images/cover_27.svg",
+      "normal": "assets/images/cover_27.webp",
       "alt": {
         "de": "25. Toys: Spielzeug mit Köpfchen",
         "en": "25. Toys: Playthings with Know-How"
       },
-      "spicy": "assets/images/cover_27_spicy.svg"
+      "altePfade": [
+        "assets/images/cover_27.svg",
+        "assets/images/cover_27_spicy.svg"
+      ],
+      "spicy": "kurse/toys_7_spicy.webp",
+      "paketSpicy": "kurse-bilder-spicy"
     },
     "zeichnung.anat_1": {
       "format": "studie",

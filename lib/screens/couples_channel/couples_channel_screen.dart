@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import '../gemeinsam_screen.dart';
 import '../../widgets/design/vp_bild_feld.dart';
 import 'package:flutter/services.dart';
 import '../../models/couple_channel_models.dart';
@@ -918,6 +919,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
             ),
             if (msg.spicyEinladung && !isMe) _spicyAnnehmen(),
             if (msg.fotoId != null) _fotoZeile(msg, isMe ? textColor.withValues(alpha: 0.8) : AppTheme.tinteLeise),
+            if (msg.lessonId != null && GemeinsamRueckblickScreen.gueltigeId(msg.lessonId!))
+              TextButton(onPressed: () => Navigator.push(context, MaterialPageRoute(
+                builder: (_) => GemeinsamRueckblickScreen(id: msg.lessonId!))),
+                child: Text(t.gemeinsamRueckblick)),
             if (msg.lessonId != null && DataService.getLessonById(msg.lessonId!) != null)
               Padding(
                 padding: const EdgeInsets.only(top: 6),

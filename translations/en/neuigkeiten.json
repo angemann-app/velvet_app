@@ -638,6 +638,42 @@
           "text": "The audio series keeps playing with the screen off and no longer stops between scenes."
         }
       ]
+    },
+    {
+      "build": 59,
+      "version": "4.19.0-beta.1",
+      "punkte": [
+        {
+          "icon": "headphones",
+          "titel": "One player for everything",
+          "text": "Lessons and guided audio keep playing while you use the app. The mini player remembers your place; after reopening you continue from there on purpose."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Listen together",
+          "text": "Listen to the same recording at the same time: invitation, both ready, countdown. Either of you can pause; continuing needs both to be ready again. Afterwards, an optional shared reflection."
+        },
+        {
+          "icon": "school",
+          "titel": "Search and personal path",
+          "text": "The magnifier finds courses, lessons and exercises right on your device. On lessons you can start an optional path of knowledge, exercise and reflection."
+        },
+        {
+          "icon": "bedtime",
+          "titel": "Dream practice",
+          "text": "Evening preparation, dream signs, daytime observation and review in one place, with no interpretation and no pressure to succeed. Plus three short guided pieces for evening, clarity and morning, in Spicy mode only."
+        },
+        {
+          "icon": "record_voice_over",
+          "titel": "Newly recorded",
+          "text": "All recordings have been newly recorded, the Spicy texts phrased more directly, including the Very spicy versions. You download the recordings through package management."
+        },
+        {
+          "icon": "palette",
+          "titel": "New artwork and icon",
+          "text": "Course, audio and topic pictures in the magazine style; Spicy shows its own motifs. Plus a new app icon. The discreet Pulse icon remains available."
+        }
+      ]
     }
   ],
   "_source": {
@@ -673,6 +709,7 @@
     "news:55": "8e5b8ca49d01efaa",
     "news:56": "e5bb7c1308efaf7c",
     "news:57": "41de9b83fda3c38f",
-    "news:58": "e0e4be67dbd7672b"
+    "news:58": "e0e4be67dbd7672b",
+    "news:59": "56252afd43bd3f86"
   }
 }

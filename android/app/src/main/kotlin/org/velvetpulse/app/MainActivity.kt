@@ -4,6 +4,7 @@ import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.PowerManager
+import android.os.Build
 import android.view.WindowManager
 import io.flutter.embedding.android.FlutterFragmentActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -15,6 +16,28 @@ class MainActivity : FlutterFragmentActivity() {
     private var wachSperre: PowerManager.WakeLock? = null
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        val wiedergabe = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "velvetpulse/wiedergabe")
+        WiedergabeService.steuerung = WiedergabeService.Steuerung { aktion ->
+            runOnUiThread { wiedergabe.invokeMethod(aktion, null) }
+        }
+        wiedergabe.setMethodCallHandler { call, result ->
+            if (call.method != "zustand") { result.notImplemented(); return@setMethodCallHandler }
+            val aktiv = call.argument<Boolean>("aktiv") == true
+            val intent = Intent(this, WiedergabeService::class.java)
+            try {
+            if (!aktiv) {
+                stopService(intent)
+            } else {
+                intent.putExtra("spielt", call.argument<Boolean>("spielt") == true)
+                for (feld in listOf("titel", "pause", "beenden")) intent.putExtra(feld, call.argument<String>(feld))
+                intent.putExtra("position", call.argument<Number>("position")?.toLong() ?: 0L)
+                if (Build.VERSION.SDK_INT >= 26) startForegroundService(intent) else startService(intent)
+            }
+            result.success(null)
+            } catch (e: Exception) {
+                result.error("wiedergabe_service", e.javaClass.simpleName, null)
+            }
+        }
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "velvetpulse/privacy")
             .setMethodCallHandler { call, result ->
                 when (call.method) {
@@ -76,6 +99,8 @@ class MainActivity : FlutterFragmentActivity() {
     }
 
     override fun onDestroy() {
+        WiedergabeService.steuerung = null
+        stopService(Intent(this, WiedergabeService::class.java))
         wachSperre?.let { if (it.isHeld) it.release() }
         wachSperre = null
         super.onDestroy()

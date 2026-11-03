@@ -10,6 +10,7 @@ import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
 import 'einschlaf_reise_screen.dart';
 import 'traum_tagebuch_screen.dart';
+import 'traumpraxis_screen.dart';
 
 String lustFolgeTitel(int folge) => switch (folge) {
       1 => t.lustFolge1,
@@ -127,6 +128,12 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
                 padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
                 children: [
                   Text(t.lustSerieEinleitung, style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5)),
+                  const SizedBox(height: VpAbstand.l),
+                  OutlinedButton.icon(
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TraumpraxisScreen())),
+                    icon: const Icon(Icons.nights_stay_outlined),
+                    label: Text(t.traumpraxisTitel),
+                  ),
                   const SizedBox(height: 14),
                   if (!_paketDa || _daten == null) ...[_paketKarte(), const SizedBox(height: 18)],
                   _titel(t.selbstReiseYourBody),

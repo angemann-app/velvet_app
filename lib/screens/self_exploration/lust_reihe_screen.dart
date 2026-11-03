@@ -1,21 +1,19 @@
 import 'dart:async';
-import 'dart:io';
 
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import '../../widgets/aufnahme_status.dart';
+import '../../services/wiedergabe_plaene.dart';
+import '../../services/wiedergabe_dienst.dart';
+import '../wiedergabe_screen.dart';
 import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../l10n/t.dart';
 import '../../models/lust_reihe.dart';
-import '../../services/audio_ausgabe.dart';
 import '../../services/paket_verzeichnis.dart';
 import '../../services/pakete.dart';
-import '../../services/segment_takt.dart';
-import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
-import '../../services/wach_halten.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/lautsprecher_frage.dart';
 
@@ -34,21 +32,13 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   static const _keyVariante = 'reihe_variante';
   static const _keyPerspektive = 'reihe_perspektive';
 
-  final _player = AudioPlayer();
   ReiheDaten? _daten;
   bool _geladen = false;
   String? _folgeId;
   String _variante = 'soft';
   String? _perspektive;
 
-  ReiheFolge? _spiel; // läuft gerade
-  ReiheFassung? _fassung;
-  int _index = 0;
-  Duration _imSegment = Duration.zero;
-  bool _pausiert = false;
-  bool _fertig = false;
-  int _lauf = 0;
-  StreamSubscription<void>? _kopfhoererSub;
+  // läuft gerade
 
   String get _paket => Pakete.name(Pakete.reihe);
   bool get _paketDa => Pakete.version(_paket) > 0;
@@ -58,30 +48,14 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   ReiheFolge? get _folge {
     final d = _daten;
     if (d == null || d.folgen.isEmpty) return null;
-    return d.folgen.where((f) => f.id == _folgeId).firstOrNull ?? d.folgen.first;
+    return d.folgen.where((f) => f.id == _folgeId).firstOrNull ??
+        d.folgen.first;
   }
 
   @override
   void initState() {
     super.initState();
-    AudioAusgabe.instanz.initialisieren();
-    _kopfhoererSub = AudioAusgabe.instanz.onKopfhoererGetrennt.listen((_) {
-      if (!mounted) return;
-      if (StorageService.getPausiereBeiKopfhoererGetrennt() && _spiel != null && !_fertig && !_pausiert) {
-        _pauseUmschalten();
-      }
-    });
     _laden();
-  }
-
-  @override
-  void dispose() {
-    _lauf++;
-    _wachAus();
-    _kopfhoererSub?.cancel();
-    Sprachausgabe.vorlesenBeenden();
-    _player.dispose();
-    super.dispose();
   }
 
   Future<void> _laden() async {
@@ -96,7 +70,8 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
       _perspektive = prefs.getString(_keyPerspektive);
     });
     // Wer die Aufnahmen schon hat, bekommt die Bilder beim Öffnen nach, ohne dass etwas sichtbar wartet.
-    if (_paketDa && Pakete.version(Pakete.reiheBilder) == 0) unawaited(_bilderLaden());
+    if (_paketDa && Pakete.version(Pakete.reiheBilder) == 0)
+      unawaited(_bilderLaden());
     unawaited(_aktualisierungPruefen());
   }
 
@@ -109,9 +84,11 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     final neu = verzeichnis.paket(_paket);
     final bilder = verzeichnis.paket(Pakete.reiheBilder);
     // Führt das Verzeichnis keine Szenenbilder mehr (die alten Ölbilder wurden zurückgezogen), räumt die App sie auf.
-    if (bilder == null && Pakete.version(Pakete.reiheBilder) > 0) await Pakete.loeschen(Pakete.reiheBilder);
+    if (bilder == null && Pakete.version(Pakete.reiheBilder) > 0)
+      await Pakete.loeschen(Pakete.reiheBilder);
     if (!mounted) return;
-    setState(() => _neueVersion = neu != null && neu.version > Pakete.version(_paket));
+    setState(() =>
+        _neueVersion = neu != null && neu.version > Pakete.version(_paket));
     if (bilder != null && bilder.version > Pakete.version(Pakete.reiheBilder)) {
       try {
         await Pakete.laden(Pakete.reiheBilder, verzeichnis: verzeichnis);
@@ -123,7 +100,9 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     try {
       await Pakete.laden(_paket);
     } catch (_) {
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.reiheLadenFehler)));
+      if (mounted)
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text(t.reiheLadenFehler)));
     }
     await _bilderLaden();
     _neueVersion = false;
@@ -141,10 +120,13 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
 
   /// Die gewählte Fassung; fällt auf die erste der Variante zurück, wenn die Perspektive dort fehlt.
   ReiheFassung? _gewaehlt(ReiheFolge folge) {
-    final variante = folge.varianten(spicyErlaubt: _spicy).contains(_variante) ? _variante : 'soft';
+    final variante = folge.varianten(spicyErlaubt: _spicy).contains(_variante)
+        ? _variante
+        : 'soft';
     final liste = folge.fassungenVon(variante);
     if (liste.isEmpty) return null;
-    return liste.where((f) => f.perspektive == _perspektive).firstOrNull ?? liste.first;
+    return liste.where((f) => f.perspektive == _perspektive).firstOrNull ??
+        liste.first;
   }
 
   Future<void> _starten() async {
@@ -158,15 +140,10 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
     await prefs.setString(_keyFolge, folge.id);
     await prefs.setString(_keyVariante, fassung.variante);
     await prefs.setString(_keyPerspektive, fassung.perspektive);
-    setState(() {
-      _spiel = folge;
-      _fassung = fassung;
-      _index = 0;
-      _imSegment = Duration.zero;
-      _pausiert = false;
-      _fertig = false;
-    });
-    _abspielen(++_lauf);
+    if (!mounted) return;
+    final plan = WiedergabePlaene.reihe(_daten!, folge, fassung);
+    await hoerplanOeffnen(
+        context, () => WiedergabeDienst.instanz.starten(plan));
   }
 
   /// Anzeigename der Intensität; Sehr spicy erscheint, sobald das Paket Fassungen dafür enthält.
@@ -176,132 +153,15 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
         _ => t.reiheSoft,
       };
 
-  bool _abgebrochen(int lauf) => lauf != _lauf || !mounted;
-
-  /// Hält das Handy bei ausgeschaltetem Bildschirm wach, solange die Folge läuft (sonst bleibt sie zwischen den Szenen stehen).
-  bool _wach = false;
-
-  void _wachAn() {
-    if (_wach) return;
-    _wach = true;
-    WachHalten.halten();
-  }
-
-  void _wachAus() {
-    if (!_wach) return;
-    _wach = false;
-    WachHalten.freigeben();
-  }
-
-  /// Segment für Segment, ohne Stille dazwischen; die Szenen bleiben so für beide Perspektiven gleich.
-  /// Die nächste Szene beginnt, wenn die Aufnahme zu Ende ist (nicht, wenn ein Zähler abgelaufen ist): Bei ausgeschaltetem
-  /// Bildschirm bremst Android die App, ein Zähler bliebe stehen. Den Fortschritt zählt die tatsächlich vergangene Zeit.
-  Future<void> _abspielen(int lauf) async {
-    final folge = _spiel!, fassung = _fassung!, daten = _daten!;
-    _wachAn();
-    while (_index < fassung.segmente.length) {
-      final s = fassung.segmente[_index];
-      final dauer = daten.dauerVon(folge, fassung, s);
-      final pfad = ReiheDaten.audioPfad(folge, fassung, s);
-      // Nur mit Aufnahme meldet der Player das Ende; die Geräte-Stimme (ohne Aufnahme) läuft nach der geschätzten Dauer.
-      final ende = Sprachausgabe.quelle(pfad) != null ? _player.onPlayerComplete.map((_) {}).asBroadcastStream() : null;
-      // Erst lauschen (segmentAbwarten abonniert sofort), dann abspielen, damit kein Ende verloren geht.
-      final warten = segmentAbwarten(
-        dauer: dauer,
-        ende: ende,
-        pausiert: () => _pausiert,
-        abgebrochen: () => _abgebrochen(lauf),
-        fortschritt: (schritt) {
-          if (mounted) setState(() => _imSegment += schritt);
-        },
-      );
-      Sprachausgabe.sprich(_player, pfad, s.text);
-      if (!await warten || _abgebrochen(lauf)) return;
-      setState(() {
-        _index++;
-        _imSegment = Duration.zero;
-      });
-    }
-    _wachAus();
-    setState(() => _fertig = true);
-  }
-
-  void _pauseUmschalten() {
-    HapticFeedback.lightImpact();
-    setState(() => _pausiert = !_pausiert);
-    if (_pausiert) {
-      Sprachausgabe.pause(_player);
-      _wachAus(); // Pause: keine Sperre halten (Akku)
-    } else {
-      _player.resume().catchError((_) {});
-      _wachAn();
-    }
-  }
-
-  /// Springt zu einer Szene (Anfang des Segments) und spielt von dort weiter.
-  Future<void> _springe(int index) async {
-    final fassung = _fassung;
-    if (fassung == null) return;
-    HapticFeedback.selectionClick();
-    final lauf = ++_lauf; // beendet den laufenden Durchgang sofort
-    setState(() {
-      _index = index.clamp(0, fassung.segmente.length - 1);
-      _imSegment = Duration.zero;
-      _pausiert = false;
-      _fertig = false;
-    });
-    // Erst warten, bis das Stoppen durch ist: sonst würgt ein verspätetes stop() die neue Szene wieder ab.
-    await Sprachausgabe.stopp(_player);
-    if (_abgebrochen(lauf)) return; // inzwischen erneut gesprungen oder beendet
-    _abspielen(lauf);
-  }
-
-  void _beenden() {
-    _lauf++;
-    _wachAus();
-    Sprachausgabe.stopp(_player);
-    setState(() {
-      _spiel = null;
-      _fassung = null;
-      _fertig = false;
-      _pausiert = false;
-    });
-  }
-
-  Future<void> _fragBeenden() async {
-    final ja = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.papierErhoben,
-        title: Text(t.reiheBeendenFrage),
-        content: Text(t.reiheBeendenText),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.paarAbendContinue)),
-          TextButton(onPressed: () => Navigator.pop(context, true), child: Text(t.reiheBeenden)),
-        ],
-      ),
-    );
-    if (ja == true && mounted) _beenden();
-  }
-
   @override
   Widget build(BuildContext context) {
-    final laeuft = _spiel != null;
-    return PopScope(
-      canPop: !laeuft || _fertig,
-      onPopInvokedWithResult: (didPop, _) {
-        if (!didPop) _fragBeenden();
-      },
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: AppTheme.papier,
-        appBar: AppBar(backgroundColor: AppTheme.papier, title: Text(t.reiheTitel)),
+        appBar: AppBar(title: Text(t.reiheTitel)),
         body: SafeArea(
-          child: !_geladen
-              ? Center(child: CircularProgressIndicator(color: AppTheme.akzentTief))
-              : (laeuft ? _spieler() : _einrichtung()),
-        ),
-      ),
-    );
+            child: (_geladen ? true : null) == null
+                ? const Center(child: CircularProgressIndicator())
+                : _einrichtung()));
   }
 
   String _perspektiveName(ReiheFassung f) =>
@@ -315,16 +175,32 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   Widget _einrichtung() {
     final folge = _folge;
     final fassung = folge == null ? null : _gewaehlt(folge);
-    final partner = folge == null || fassung == null || folge.solo ? <ReiheFassung>[] : folge.partnerVon(fassung);
-    final perspektiven = folge == null || fassung == null ? <ReiheFassung>[] : folge.fassungenVon(fassung.variante);
+    final partner = folge == null || fassung == null || folge.solo
+        ? <ReiheFassung>[]
+        : folge.partnerVon(fassung);
+    final perspektiven = folge == null || fassung == null
+        ? <ReiheFassung>[]
+        : folge.fassungenVon(fassung.variante);
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
       children: [
-        Text(t.reiheEinleitung, style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5)),
+        Text(t.reiheEinleitung,
+            style: TextStyle(
+                fontSize: 14, color: AppTheme.tinteLeise, height: 1.5)),
         const SizedBox(height: 14),
-        if (!_paketDa || _daten == null || _neueVersion) ...[_paketKarte(), const SizedBox(height: 18)],
-        if (_daten != null && folge == null) Text(t.reiheLeer, style: TextStyle(color: AppTheme.tinteStumm)),
+        if (!_paketDa || _daten == null || _neueVersion) ...[
+          _paketKarte(),
+          const SizedBox(height: 18)
+        ],
+        if (_daten != null && folge == null)
+          Text(t.reiheLeer, style: TextStyle(color: AppTheme.tinteStumm)),
         if (folge != null && fassung != null) ...[
+          AufnahmeStatus(pfade: [
+            for (final segment in fassung.segmente)
+              ReiheDaten.audioPfad(folge, fassung, segment)
+          ], paketNamen: [
+            _paket
+          ]),
           _titel(t.reiheFolgen),
           for (final f in _daten!.folgen) _folgeKachel(f, f.id == folge.id),
           const SizedBox(height: 16),
@@ -332,7 +208,8 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             _titel(t.reiheVariante),
             Wrap(spacing: 8, children: [
               for (final v in folge.varianten(spicyErlaubt: _spicy))
-                _chip(_varianteName(v), fassung.variante == v, () => setState(() => _variante = v)),
+                _chip(_varianteName(v), fassung.variante == v,
+                    () => setState(() => _variante = v)),
             ]),
             const SizedBox(height: 16),
           ],
@@ -346,8 +223,10 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             const SizedBox(height: 12),
           ],
           if (partner.isNotEmpty)
-            Text(t.reihePartnerHinweis(partner.map(_perspektiveName).join(', ')),
-                style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
+            Text(
+                t.reihePartnerHinweis(partner.map(_perspektiveName).join(', ')),
+                style: TextStyle(
+                    fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
           const SizedBox(height: 8),
           Text(
             '${t.reiheDauer(_daten!.gesamt(folge, fassung).inMinutes.clamp(1, 999))} · ${t.reiheOffline}',
@@ -359,106 +238,31 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             child: ElevatedButton.icon(
               onPressed: _starten,
               icon: const Icon(Icons.play_arrow_rounded),
-              label: Text(t.reiheStart, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
+              label: Text(t.reiheStart,
+                  style:
+                      TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppTheme.akzent,
                 foregroundColor: AppTheme.aufAkzent,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(VpRadius.karte)),
               ),
             ),
           ),
-          if (Pakete.datei(ReiheDaten.audioPfad(folge, fassung, fassung.segmente.first)) == null) ...[
+          if (Pakete.datei(ReiheDaten.audioPfad(
+                  folge, fassung, fassung.segmente.first)) ==
+              null) ...[
             const SizedBox(height: 10),
-            Text(t.reiheKeineAufnahme, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
+            Text(t.reiheKeineAufnahme,
+                style: TextStyle(
+                    fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
           ],
         ],
         const SizedBox(height: 16),
-        Text(t.reiheHinweise, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
+        Text(t.reiheHinweise,
+            style: TextStyle(
+                fontSize: 12.5, color: AppTheme.tinteStumm, height: 1.5)),
       ],
-    );
-  }
-
-  Widget _spieler() {
-    final folge = _spiel!, fassung = _fassung!;
-    final szenen = fassung.segmente.length;
-    final i = _index.clamp(0, szenen - 1);
-    final szene = folge.szenen.where((s) => s.id == fassung.segmente[i].szene).firstOrNull;
-    final bild = Pakete.datei(ReiheDaten.bildPfad(folge, fassung, fassung.segmente[i]));
-    return Stack(fit: StackFit.expand, children: [
-      // Szenenbild als gedämpfter Hintergrund, beim Szenenwechsel übergeblendet; ohne Bild bleibt alles wie bisher.
-      AnimatedSwitcher(
-        duration: const Duration(milliseconds: 800),
-        child: bild == null
-            ? const SizedBox.expand(key: ValueKey('kein-bild'))
-            : Stack(key: ValueKey(bild), fit: StackFit.expand, children: [
-                Image.file(File(bild), fit: BoxFit.cover, errorBuilder: (_, __, ___) => const SizedBox.expand()),
-                DecoratedBox(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [AppTheme.papier.withValues(alpha: 0.55), AppTheme.papier.withValues(alpha: 0.85)],
-                    ),
-                  ),
-                ),
-              ]),
-      ),
-      _spielerInhalt(folge, fassung, i, szenen, szene),
-    ]);
-  }
-
-  Widget _spielerInhalt(ReiheFolge folge, ReiheFassung fassung, int i, int szenen, ReiheSzene? szene) {
-    return Padding(
-      padding: const EdgeInsets.all(24),
-      child: Column(children: [
-        const SizedBox(height: 12),
-        Text(folge.titel,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.tinte)),
-        const SizedBox(height: 6),
-        Text('${_varianteName(fassung.variante)} · ${_perspektiveName(fassung)}',
-            style: TextStyle(color: AppTheme.tinteStumm)),
-        const Spacer(),
-        Text(_fertig ? t.reiheFertig : t.reiheSzene(i + 1, szenen),
-            textAlign: TextAlign.center, style: TextStyle(fontSize: 15, color: AppTheme.tinteLeise)),
-        if (szene != null && !_fertig) ...[
-          const SizedBox(height: 8),
-          Text(szene.beschreibung, textAlign: TextAlign.center, style: TextStyle(fontSize: 13, color: AppTheme.tinteStumm)),
-        ],
-        const SizedBox(height: 18),
-        LinearProgressIndicator(
-          value: _fertig ? 1 : (i + 0.0) / szenen,
-          color: AppTheme.akzentTief,
-          backgroundColor: AppTheme.papierVertieft,
-        ),
-        const Spacer(),
-        if (_fertig)
-          ElevatedButton(onPressed: _beenden, child: Text(t.reiheBeenden))
-        else
-          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            IconButton(
-              tooltip: t.reiheSzeneZurueck,
-              iconSize: 32,
-              onPressed: () => _springe(_imSegment > const Duration(seconds: 4) ? i : i - 1),
-              icon: const Icon(Icons.skip_previous_rounded),
-            ),
-            const SizedBox(width: 12),
-            IconButton.filled(
-              iconSize: 40,
-              style: IconButton.styleFrom(backgroundColor: AppTheme.akzentTief),
-              onPressed: _pauseUmschalten,
-              icon: Icon(_pausiert ? Icons.play_arrow_rounded : Icons.pause_rounded),
-            ),
-            const SizedBox(width: 12),
-            IconButton(
-              tooltip: t.reiheSzeneVor,
-              iconSize: 32,
-              onPressed: i < szenen - 1 ? () => _springe(i + 1) : null,
-              icon: const Icon(Icons.skip_next_rounded),
-            ),
-          ]),
-        TextButton(onPressed: _fertig ? _beenden : _fragBeenden, child: Text(t.reiheBeenden)),
-      ]),
     );
   }
 
@@ -471,20 +275,32 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             decoration: BoxDecoration(
               color: AppTheme.papierErhoben,
               borderRadius: BorderRadius.circular(VpRadius.karte),
-              border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5)),
+              border:
+                  Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.5)),
             ),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-              Text(_paketDa ? t.reihePaketNeu : t.reihePaketFehlt, style: TextStyle(fontSize: 13.5, color: AppTheme.tinte, height: 1.5)),
-              const SizedBox(height: 10),
-              if (laeuft != null)
-                LinearProgressIndicator(value: laeuft, color: AppTheme.akzentTief, backgroundColor: AppTheme.papierVertieft)
-              else
-                OutlinedButton(
-                  onPressed: _paketLaden,
-                  style: OutlinedButton.styleFrom(foregroundColor: AppTheme.akzentTief, side: BorderSide(color: AppTheme.akzentTief)),
-                  child: Text(_paketDa ? t.audioPaketAktualisieren : t.reihePaketLaden),
-                ),
-            ]),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(_paketDa ? t.reihePaketNeu : t.reihePaketFehlt,
+                      style: TextStyle(
+                          fontSize: 13.5, color: AppTheme.tinte, height: 1.5)),
+                  const SizedBox(height: 10),
+                  if (laeuft != null)
+                    LinearProgressIndicator(
+                        value: laeuft,
+                        color: AppTheme.akzentTief,
+                        backgroundColor: AppTheme.papierVertieft)
+                  else
+                    OutlinedButton(
+                      onPressed: _paketLaden,
+                      style: OutlinedButton.styleFrom(
+                          foregroundColor: AppTheme.akzentTief,
+                          side: BorderSide(color: AppTheme.akzentTief)),
+                      child: Text(_paketDa
+                          ? t.audioPaketAktualisieren
+                          : t.reihePaketLaden),
+                    ),
+                ]),
           );
         },
       );
@@ -501,15 +317,24 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
             decoration: BoxDecoration(
-              color: aktiv ? AppTheme.akzentTief.withValues(alpha: 0.14) : AppTheme.papierErhoben,
+              color: aktiv
+                  ? AppTheme.akzentTief.withValues(alpha: 0.14)
+                  : AppTheme.papierErhoben,
               borderRadius: BorderRadius.circular(VpRadius.karte),
-              border: Border.all(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
+              border: Border.all(
+                  color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
             ),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(f.titel, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(f.titel,
+                  style: TextStyle(
+                      fontSize: 14.5,
+                      fontWeight: FontWeight.w700,
+                      color: AppTheme.tinte)),
               if (f.beschreibung.isNotEmpty) ...[
                 const SizedBox(height: 2),
-                Text(f.beschreibung, style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm)),
+                Text(f.beschreibung,
+                    style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm)),
               ],
             ]),
           ),
@@ -518,7 +343,11 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
 
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
+        child: Text(text,
+            style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w700,
+                color: AppTheme.tinte)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -531,7 +360,9 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
         selectedColor: AppTheme.akzentTief.withValues(alpha: 0.22),
         backgroundColor: AppTheme.papierErhoben,
         side: BorderSide(color: aktiv ? AppTheme.akzentTief : AppTheme.linie),
-        labelStyle: TextStyle(color: aktiv ? AppTheme.tinte : AppTheme.tinteLeise, fontWeight: FontWeight.w600),
+        labelStyle: TextStyle(
+            color: aktiv ? AppTheme.tinte : AppTheme.tinteLeise,
+            fontWeight: FontWeight.w600),
         showCheckmark: false,
       );
 }

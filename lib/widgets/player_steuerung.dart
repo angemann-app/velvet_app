@@ -13,6 +13,7 @@ class PlayerSteuerung extends StatelessWidget {
   final VoidCallback onBeenden;
   final VoidCallback onPause;
   final VoidCallback onUeberspringen;
+  final bool ueberspringenErlaubt;
 
   const PlayerSteuerung({
     super.key,
@@ -22,6 +23,7 @@ class PlayerSteuerung extends StatelessWidget {
     required this.onBeenden,
     required this.onPause,
     required this.onUeberspringen,
+    this.ueberspringenErlaubt = true,
   });
 
   @override
@@ -44,20 +46,27 @@ class PlayerSteuerung extends StatelessWidget {
                 width: 72,
                 height: 72,
                 decoration: BoxDecoration(shape: BoxShape.circle, color: farbe),
-                child: Icon(pausiert ? Icons.play_arrow_rounded : Icons.pause_rounded, size: 38, color: symbolFarbe),
+                child: Icon(
+                    pausiert ? Icons.play_arrow_rounded : Icons.pause_rounded,
+                    size: 38,
+                    color: symbolFarbe),
               ),
             ),
           ),
           const SizedBox(height: 6),
-          ExcludeSemantics(child: _beschriftung(pausiert ? t.playerSteuerungResume : t.playerSteuerungPause2)),
+          ExcludeSemantics(
+              child: _beschriftung(pausiert
+                  ? t.playerSteuerungResume
+                  : t.playerSteuerungPause2)),
         ]),
         const SizedBox(width: 20),
-        _knopf(Icons.skip_next_rounded, t.playerSteuerungSkip, onUeberspringen),
+        _knopf(Icons.skip_next_rounded, t.playerSteuerungSkip,
+            ueberspringenErlaubt ? onUeberspringen : null),
       ],
     );
   }
 
-  Widget _knopf(IconData icon, String text, VoidCallback onPressed) => Padding(
+  Widget _knopf(IconData icon, String text, VoidCallback? onPressed) => Padding(
         padding: const EdgeInsets.only(top: 12),
         child: Column(children: [
           IconButton(

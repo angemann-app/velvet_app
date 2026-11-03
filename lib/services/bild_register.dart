@@ -26,6 +26,12 @@ class BildEintrag {
   /// Paketname, wenn das Bild nicht in der APK liegt (`Pakete.datei`).
   final String? paket;
 
+  /// Abweichendes Paket nur für die Spicy-Illustration; Normal bleibt offline in der APK.
+  final String? paketSpicy;
+
+  /// Alte Inhaltspfade bleiben beim Austausch des Assets gültig.
+  final List<String> altePfade;
+
   final String altDe;
   final String altEn;
 
@@ -36,6 +42,8 @@ class BildEintrag {
     this.spicy,
     this.englisch,
     this.paket,
+    this.paketSpicy,
+    this.altePfade = const [],
     required this.altDe,
     required this.altEn,
   });
@@ -49,6 +57,9 @@ class BildEintrag {
       spicy: j['spicy'] as String?,
       englisch: j['englisch'] as String?,
       paket: j['paket'] as String?,
+      paketSpicy: j['paketSpicy'] as String?,
+      altePfade: List<String>.unmodifiable(
+          (j['altePfade'] as List?)?.cast<String>() ?? const <String>[]),
       altDe: (alt['de'] as String?) ?? '',
       altEn: (alt['en'] as String?) ?? '',
     );
@@ -92,9 +103,12 @@ class BildRegister {
       ..clear()
       ..addAll(((j['grafik'] as Map?) ?? const {}).keys.cast<String>());
     for (final e in ((j['bilder'] as Map?) ?? const {}).entries) {
-      final eintrag = BildEintrag.aus(e.key as String, Map<String, dynamic>.from(e.value as Map));
+      final eintrag = BildEintrag.aus(
+          e.key as String, Map<String, dynamic>.from(e.value as Map));
       _nachId[eintrag.id] = eintrag;
-      if (eintrag.normal != null) _nachPfad[eintrag.normal!] = eintrag;
+      for (final pfad in [eintrag.normal, ...eintrag.altePfade]) {
+        if (pfad != null) _nachPfad[pfad] = eintrag;
+      }
     }
     _geladen = true;
   }
@@ -112,8 +126,14 @@ class BildRegister {
   static BildQuelle? loese(BildEintrag e, {bool? spicy, bool? englisch}) {
     final sp = spicy ?? StorageService.spicyMode();
     final en = englisch ?? Sprache.englisch;
-    if (sp && e.spicy != null) return _quelle(e.spicy!, e.paket);
-    if (en && e.englisch != null) return _quelle(e.englisch!, e.paket);
+    if (sp && e.spicy != null) {
+      final quelle = _quelle(e.spicy!, e.paketSpicy ?? e.paket);
+      if (quelle != null) return quelle;
+    }
+    if (en && e.englisch != null) {
+      final quelle = _quelle(e.englisch!, e.paket);
+      if (quelle != null) return quelle;
+    }
     final normal = e.normal;
     return normal == null ? null : _quelle(normal, e.paket);
   }

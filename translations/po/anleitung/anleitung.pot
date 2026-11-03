@@ -44,6 +44,44 @@ msgid ""
 msgstr ""
 
 #. Abschnitt der Anleitung
+#. EN: Find content and follow your personal path
+msgctxt "guide:finden_weg#titel"
+msgid "Finden und dein persönlicher Weg"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Use the magnifying glass at the top to find courses, lessons and practice activities. Search runs only on your device, saves no search history and does not search private notes or messages. Spicy content appears only when spicy mode is enabled.
+#. EN: The lesson player shows whether the specific recording is available offline. If it is missing, the device voice can read the text. “Download recordings” opens the existing package manager.
+#. EN: Lessons with a linked exercise and reflection question offer a personal path: discover the knowledge, try the exercise and reflect. You open and confirm each step yourself, with no time limit or required answer. You can return to a path from Today. Your place on the path is included in your backup.
+msgctxt "guide:finden_weg#text"
+msgid ""
+"Über die Lupe oben findest du Kurse, Lektionen und Praxisangebote. Die Suche läuft nur auf deinem Gerät, speichert keine Suchhistorie und durchsucht keine privaten Notizen oder Nachrichten. Spicy-Inhalte erscheinen nur im eingeschalteten Spicy-Modus.\n"
+"Am Lektionsplayer steht, ob die konkrete Aufnahme offline vorhanden ist. Fehlt sie, kann die Geräte-Stimme vorlesen. Über „Aufnahmen laden“ öffnest du die bestehende Paketverwaltung.\n"
+"Lektionen mit verknüpfter Übung und Reflexionsfrage bieten einen persönlichen Weg: Wissen entdecken, Übung ausprobieren und Nachspüren. Du öffnest und bestätigst die Schritte selbst, ohne Zeitvorgabe oder Pflichtantwort. Ein begonnener Weg ist auf Heute wieder erreichbar. Sein Stand ist Teil deiner Sicherung."
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Continue listening and share an experience
+msgctxt "guide:weiterhoeren_gemeinsam#titel"
+msgid "Weiterhören und gemeinsam erleben"
+msgstr ""
+
+#. Abschnitt der Anleitung
+#. EN: Playback and continue listening: lessons and guided activities use one shared player. You can close the page and explore the app while a neutrally labelled mini player remains visible below. Reopening the app never starts playback by itself: you choose when to continue. Recordings resume at the saved section and position; a randomly assembled sequence is not regenerated. The device voice restarts a resumed section from the beginning. Your place is included in your backup.
+#. EN: Before and during playback you can see whether recordings are available offline. “Download recordings” opens the matching package manager, including the original language of a saved sequence. Missing content packages can be downloaded again.
+#. EN: Listen together: both of you open the app with a connected couple channel. Choose “Listen together” in the player. Your partner receives a neutral invitation that does not start audio. After accepting, each person explicitly confirms “Ready”. Both devices need the same recordings and sequence; actual files are compared. A shared countdown then begins. Either person can pause or end the activity at any time. Resuming needs both people to be ready again. Different complementary perspectives of an audio story are not synchronised yet.
+#. EN: If the connection is interrupted, your own recording continues locally. A remote pause cannot be delivered without a connection; you can always pause locally. Reconnecting never starts playback automatically. Spicy activities require the mode to be enabled on both devices.
+#. EN: Shared reflection is optional. You can choose a feeling and explicitly save and share your answer. Answers are revealed only after both people have shared. A failed send does not reveal anything early. Reopen a reflection from its message in the couple channel. Spicy reflections remain behind the mode.
+msgctxt "guide:weiterhoeren_gemeinsam#text"
+msgid ""
+"Wiedergabe und Weiterhören: Lektionen und geführte Angebote nutzen einen gemeinsamen Player. Du kannst die Seite schließen und in der App weitergehen. Unten bleibt ein neutral beschrifteter kleiner Player sichtbar. Nach dem erneuten Öffnen der App startet nichts von selbst: Du entscheidest, wann du weiterhörst. Aufnahmen setzen am gemerkten Abschnitt und der gemerkten Position fort; ein zufällig zusammengestellter Ablauf wird dabei nicht neu gewürfelt. Die Geräte-Stimme beginnt einen fortgesetzten Abschnitt von vorn. Der Wiedergabestand gehört zur Sicherung.\n"
+"Vor und während des Hörens siehst du, ob Aufnahmen offline vorliegen. Über „Aufnahmen laden“ öffnest du die passende Paketverwaltung, auch für die ursprüngliche Sprache eines gemerkten Ablaufs. Ein fehlendes Inhaltspaket kannst du nachladen.\n"
+"Gemeinsam hören: Öffnet beide die App mit verbundenem Paar-Kanal. Wähle im Player „Gemeinsam hören“. Eine neutrale Einladung erscheint beim Gegenüber; sie startet keine Aufnahme. Nach der Annahme bestätigen beide ausdrücklich „Bereit“. Beide brauchen dieselbe Aufnahme und denselben Ablauf; tatsächliche Dateien werden verglichen. Dann beginnt ein gemeinsamer Countdown. Beide können jederzeit pausieren oder beenden. Nach einer Pause müssen beide erneut bereit sein. Unterschiedliche Gegenperspektiven einer Hörgeschichte werden noch nicht synchronisiert.\n"
+"Bei unterbrochener Verbindung läuft die eigene Aufnahme lokal weiter. Eine Fernpause kann ohne Verbindung nicht zugestellt werden; lokal kannst du immer pausieren. Wiederverbinden startet nichts automatisch. Spicy-Angebote benötigen den eingeschalteten Modus bei beiden.\n"
+"Der gemeinsame Rückblick ist freiwillig. Du kannst ein Gefühl auswählen und deine Antwort ausdrücklich speichern und teilen. Antworten werden erst nach beiderseitigem Teilen aufgedeckt. Ein fehlgeschlagener Versand deckt nichts vorzeitig auf. Über die zugehörige Nachricht im Paar-Kanal öffnest du den Rückblick erneut. Spicy-Rückblicke bleiben hinter dem Modus."
+msgstr ""
+
+#. Abschnitt der Anleitung
 #. EN: Guided audio
 msgctxt "guide:gefuehrt#titel"
 msgid "Geführte Audios"
@@ -59,7 +97,8 @@ msgstr ""
 #. EN: In the dream journal, „This week“ shows a calm overview without scores. Below it and on the dream evening setup page you can switch on reality checks: two to four reminders a day, neutrally worded „A brief moment for you“, off by default. In the dream evening, „Wake me tonight“ sets the clock app's alarm for that one night, at most twice a week; afterwards a voice accompanies you back to sleep.
 #. EN: Pleasure in dreams (spicy mode only): eight evenings that build on each other, from a pleasurable body as you fall asleep to the lucid, sensual dream. The next episode unlocks after two evenings. From episode three you choose your body in the dream and with whom pleasure may unfold. The recordings come as a separate package.
 #. EN: All of them are put together anew every time. You can pause, skip and stop at any time.
-#. EN: Inner views (spicy mode only, 18+): continuous audio stories of about 15 to 25 minutes, not for falling asleep. They tell an encounter from the inside. You choose Soft or Spicy and a perspective; the matching perspective of the same encounter follows the same sequence of scenes, so two people can listen together. The app does not sync two devices, though: you start together yourselves. All characters are adults, everything happens by mutual consent, and none of it is a benchmark: every body experiences pleasure differently. The recordings come as a separate package and then play without a network. In the player you can pause and skip scenes. On the card, discreet mode only shows Audio story.
+#. EN: Inner views (spicy mode only, 18+): continuous audio stories of about 15 to 25 minutes, not for falling asleep. They tell an encounter from the inside. You choose Soft or Spicy and a perspective; the matching perspective of the same encounter follows the same sequence of scenes, so two people can listen together. “Listen together” synchronises the same version on two devices. Different complementary perspectives still need to be coordinated by you. All characters are adults, everything happens by mutual consent, and none of it is a benchmark: every body experiences pleasure differently. The recordings come as a separate package and then play without a network. In the player you can pause and skip scenes. On the card, discreet mode only shows Audio story.
+#. EN: Your dream practice: In Pleasure in dreams, connect recall, recognising dreams and noticing what lingers during the day. Under “Your dream signs”, add, edit or delete personal signs. For your evening preparation, choose a sign and a pleasant memory from your journal. Under “Reflect on today”, optionally record rest, waking desire, sensual or lucid dreams, any experienced orgasms and a note. Questions can remain unanswered. Your private review lets you view, edit and delete daily observations. Signs and observations stay local, are included in your backup and are not sent to a partner or the AI coach. More waking desire is an aim to explore, not a promised effect. For listening there are three short guided pieces for evening, clarity and morning, with Victoria or Martin. They are part of the guided recordings you download, and are for you alone.
 msgctxt "guide:gefuehrt#text"
 msgid ""
 "Auf dem Tab Heute liegen die geführten Audios als Reihe zum Wischen. Der Balken „Geführte Audios“ klappt sie ein und aus; die App merkt sich das.\n"
@@ -71,7 +110,8 @@ msgid ""
 "Im Traumtagebuch zeigt „Diese Woche“ eine ruhige Übersicht ohne Punkte. Darunter und auf der Einrichtungsseite des Traum-Abends lassen sich Realitätschecks einschalten: zwei bis vier Erinnerungen am Tag, neutral „Kurzer Moment für dich“, standardmäßig aus. Im Traum-Abend kannst du mit „Heute Nacht wecken“ den Wecker der Uhr-App für diese eine Nacht stellen, höchstens zweimal pro Woche; danach begleitet dich eine Stimme zurück in den Schlaf.\n"
 "Lust im Traum (nur im Spicy-Modus): acht Abende, die aufeinander aufbauen, vom lustvollen Körper beim Einschlafen bis zum luziden, sinnlichen Traum. Die nächste Folge wird nach zwei gehörten Abenden frei. Ab Folge drei wählst du deinen Körper im Traum und mit wem die Lust sich entfalten darf. Die Aufnahmen kommen als eigenes Paket.\n"
 "Alle werden jedes Mal neu zusammengestellt. Du kannst pausieren, überspringen und jederzeit beenden.\n"
-"Innenansichten (nur im Spicy-Modus, ab 18): zusammenhängende Hörgeschichten von rund 15 bis 25 Minuten, nicht zum Einschlafen. Sie erzählen eine Begegnung von innen. Du wählst Soft oder Spicy und eine Perspektive; die Gegenperspektive derselben Begegnung hat dieselbe Szenenfolge, so können zwei Menschen sie gemeinsam hören. Die App gleicht zwei Geräte allerdings nicht ab: Ihr startet selbst zusammen. Alle Figuren sind erwachsen, alles geschieht einvernehmlich, und nichts davon ist ein Maßstab: Jeder Körper erlebt Lust anders. Die Aufnahmen kommen als eigenes Paket und laufen danach ohne Netz. Im Player kannst du pausieren und Szenen überspringen. Auf der Karte steht im Diskretions-Modus nur Hörgeschichte."
+"Innenansichten (nur im Spicy-Modus, ab 18): zusammenhängende Hörgeschichten von rund 15 bis 25 Minuten, nicht zum Einschlafen. Sie erzählen eine Begegnung von innen. Du wählst Soft oder Spicy und eine Perspektive; die Gegenperspektive derselben Begegnung hat dieselbe Szenenfolge, so können zwei Menschen sie gemeinsam hören. „Gemeinsam hören“ gleicht dieselbe Fassung auf zwei Geräten ab. Unterschiedliche Gegenperspektiven stimmt ihr weiterhin selbst aufeinander ab. Alle Figuren sind erwachsen, alles geschieht einvernehmlich, und nichts davon ist ein Maßstab: Jeder Körper erlebt Lust anders. Die Aufnahmen kommen als eigenes Paket und laufen danach ohne Netz. Im Player kannst du pausieren und Szenen überspringen. Auf der Karte steht im Diskretions-Modus nur Hörgeschichte.\n"
+"Deine Traumpraxis: In Lust im Traum verbindest du Erinnern, bewusstes Erkennen und Nachspüren am Tag. Unter „Deine Traumzeichen“ legst du persönliche Zeichen an, bearbeitest oder löschst sie. Für deine Abendvorbereitung wählst du ein Zeichen und eine angenehme Erinnerung aus dem Tagebuch. Unter „Heute nachspüren“ hältst du freiwillig Erholung, Tageslust, sinnliche oder klare Träume, mögliche Höhepunkte und eine Notiz fest. Fragen dürfen offenbleiben. Im privaten Rückblick kannst du deine Tagesbeobachtungen ansehen, bearbeiten und löschen. Traumzeichen und Beobachtungen bleiben lokal, sind Teil deiner Sicherung und gehen nicht an Partner oder KI-Coach. Mehr Tageslust ist ein Erkundungsziel, kein versprochener Effekt. Zum Hören gibt es dort drei kurze Begleitungen für Abend, Klarheit und Morgen, mit Victoria oder Martin. Sie gehören zu den geführten Aufnahmen, die du nachlädst, und sind nur für dich allein."
 msgstr ""
 
 #. Abschnitt der Anleitung
@@ -217,10 +257,12 @@ msgstr ""
 #. Abschnitt der Anleitung
 #. EN: Under Profile and settings you choose “Appearance”: Paper (light, default), Night paper (dark) or Classic (the previous colours). The choice applies to the whole app straight away and is part of your backup.
 #. EN: Spicy mode has its own colours: deep burgundy and plum with warm paper white. Where an illustration is still missing, a drawn placeholder appears.
+#. EN: Course, audio and topic images use existing pencil drawings or restrained graphic compositions. More intense Spicy illustrations come from the course image pack and appear only in Spicy mode. Until the pack is downloaded, the regular image remains visible. The view updates automatically after installation.
 msgctxt "guide:darstellung#text"
 msgid ""
 "Unter Profil und Einstellungen wählst du „Darstellung“: Papier (hell, Standard), Nachtpapier (dunkel) oder Klassisch (die bisherigen Farben). Die Wahl gilt sofort für die ganze App und ist Teil deiner Sicherung.\n"
-"Im Spicy-Modus gelten eigene Farben: tiefes Bordeaux und Pflaume mit warmem Papierweiß. Wo noch keine Illustration liegt, steht ein gezeichneter Platzhalter."
+"Im Spicy-Modus gelten eigene Farben: tiefes Bordeaux und Pflaume mit warmem Papierweiß. Wo noch keine Illustration liegt, steht ein gezeichneter Platzhalter.\n"
+"Kurs-, Audio- und Themenbilder verwenden vorhandene Bleistiftzeichnungen oder ruhige grafische Motive. Die intensiveren Spicy-Illustrationen kommen aus dem Bildpaket der Kurse und erscheinen nur im Spicy-Modus. Ist das Paket noch nicht geladen, bleibt das reguläre Bild sichtbar. Nach dem Laden wechselt die Ansicht automatisch."
 msgstr ""
 
 #. Abschnitt der Anleitung

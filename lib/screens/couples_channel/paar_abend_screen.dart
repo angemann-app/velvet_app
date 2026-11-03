@@ -1,22 +1,22 @@
 import 'dart:async';
 
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import '../../services/wach_halten.dart';
+import '../../widgets/aufnahme_status.dart';
+import '../../services/pakete.dart';
+import '../../models/wiedergabe_plan.dart';
+import '../../services/wiedergabe_plaene.dart';
+import '../../services/wiedergabe_dienst.dart';
+import '../wiedergabe_screen.dart';
 import '../../theme/vp_tokens.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../models/paar_abend.dart';
-import '../../services/audio_ausgabe.dart';
 import '../../services/nostr_service.dart';
 import '../../services/testmodus.dart';
-import '../../services/sprachausgabe.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
-import '../../widgets/aussprache_melden.dart';
 import '../../widgets/lautsprecher_frage.dart';
-import '../../widgets/player_steuerung.dart';
 import '../../l10n/t.dart';
 
 /// Gemeinsamer, geführter Abend: Ein Handy liegt neben euch, die Stimme führt durch
@@ -29,7 +29,7 @@ class PaarAbendScreen extends StatefulWidget {
   State<PaarAbendScreen> createState() => _PaarAbendScreenState();
 }
 
-class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
+class _PaarAbendScreenState extends State<PaarAbendScreen> {
   static const _keyMinuten = 'paar_abend_minuten';
   static const _keyTiefe = 'paar_abend_tiefe';
   static const _keyStimme = 'paar_abend_stimme';
@@ -43,17 +43,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
   bool _ichZuerst = true;
   bool _teppich = true;
 
-  List<PaarSchritt>? _ablauf;
-  int _index = 0;
-  Duration _imSchritt = Duration.zero;
-  bool _pausiert = false;
-  bool _fertig = false;
-  int _lauf = 0; // erhöht sich bei jedem Start/Stopp, damit alte Abläufe sich beenden
-
-  final AudioPlayer _stimmePlayer = AudioPlayer();
-  final AudioPlayer _klangPlayer = AudioPlayer();
-  final AudioPlayer _teppichPlayer = AudioPlayer();
-  StreamSubscription<void>? _kopfhoererSub;
+  // erhöht sich bei jedem Start/Stopp, damit alte Abläufe sich beenden
 
   String get _ichName {
     final name = StorageService.getUserProfile()?.name.trim() ?? '';
@@ -69,18 +59,6 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
   @override
   void initState() {
     super.initState();
-    // Nur der Klangteppich hält den Audio-Fokus; Stimme und Klangschale spielen darüber, ohne ihn zu unterbrechen.
-    final ohneFokus = AudioContext(android: const AudioContextAndroid(audioFocus: AndroidAudioFocus.none));
-    _stimmePlayer.setAudioContext(ohneFokus).catchError((_) {});
-    _klangPlayer.setAudioContext(ohneFokus).catchError((_) {});
-    _teppichPlayer.setReleaseMode(ReleaseMode.loop).catchError((_) {});
-    AudioAusgabe.instanz.initialisieren();
-    _kopfhoererSub = AudioAusgabe.instanz.onKopfhoererGetrennt.listen((_) {
-      if (!mounted) return;
-      if (StorageService.getPausiereBeiKopfhoererGetrennt() && _ablauf != null && !_fertig && !_pausiert) {
-        _pauseUmschalten();
-      }
-    });
     _laden();
   }
 
@@ -91,21 +69,13 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
     setState(() {
       _daten = daten;
       _minuten = prefs.getInt(_keyMinuten) ?? 30;
-      _tiefe = tiefeAusName(prefs.getString(_keyTiefe), spicyErlaubt: StorageService.spicyMode());
+      _tiefe = tiefeAusName(prefs.getString(_keyTiefe),
+          spicyErlaubt: StorageService.spicyMode());
       _stimme = prefs.getString(_keyStimme) ??
-          (StorageService.getUserProfile()?.isFemale == true ? 'martin' : 'victoria');
+          (StorageService.getUserProfile()?.isFemale == true
+              ? 'martin'
+              : 'victoria');
     });
-  }
-
-  @override
-  void dispose() {
-    _lauf++;
-    _kopfhoererSub?.cancel();
-    Sprachausgabe.vorlesenBeenden();
-    _stimmePlayer.dispose();
-    _klangPlayer.dispose();
-    _teppichPlayer.dispose();
-    super.dispose();
   }
 
   // ---------------------------------------------------------------------------
@@ -124,29 +94,45 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
 
     final zuletzt = prefs.getStringList(_keyZuletzt) ?? [];
     final ablauf = daten.planen(
-        minuten: _minuten, tiefe: _tiefe, stimme: _stimme, zuletzt: zuletzt.toSet(), empfaenger: _empfaenger());
-    final neu = [for (final s in ablauf) if (s.baustein != null) s.baustein!.id];
+        minuten: _minuten,
+        tiefe: _tiefe,
+        stimme: _stimme,
+        zuletzt: zuletzt.toSet(),
+        empfaenger: _empfaenger());
+    final neu = [
+      for (final s in ablauf)
+        if (s.baustein != null) s.baustein!.id
+    ];
     // Die letzten zwei Abende merken, damit der nächste möglichst andere Varianten bekommt.
-    await prefs.setStringList(_keyZuletzt, [...neu, ...zuletzt].take(60).toList());
+    await prefs.setStringList(
+        _keyZuletzt, [...neu, ...zuletzt].take(60).toList());
 
-    setState(() {
-      _ablauf = Testmodus.kuerzen(ablauf);
-      _index = 0;
-      _imSchritt = Duration.zero;
-      _pausiert = false;
-      _fertig = false;
-    });
-    if (_teppich) {
-      _teppichPlayer.setVolume(0.35).catchError((_) {});
-      _teppichPlayer.play(AssetSource('audio/paar/klangteppich.opus')).catchError((_) {});
-    }
-    _abspielen(++_lauf);
+    if (!mounted) return;
+    final plan = WiedergabePlaene.schritte(
+        art: WiedergabeArt.paar,
+        titel: t.couplesChannelSharedEvening,
+        schritte: Testmodus.kuerzen(ablauf),
+        stimme: _stimme,
+        familie: (_) => 'paar',
+        spicy: _tiefe.istSpicy,
+        parameter: {
+          'teppich': _teppich,
+          'teppichLaut': 0.35,
+          'ichZuerst': _ichZuerst,
+          'tiefe': _tiefe.name
+        });
+    await hoerplanOeffnen(
+        context, () => WiedergabeDienst.instanz.starten(plan));
   }
 
   /// Körper der Person, die in Runde 1 und 2 empfängt. Das Gegenüber kommt aus dem Paar-Kanal;
   /// ist es unbekannt, nehmen wir bei Mann und Frau das andere Geschlecht an (wie bei den Coach-Fragen).
   List<String?> _empfaenger() {
-    String? koerper(String? geschlecht) => switch (geschlecht) { 'female' => 'vulva', 'male' => 'penis', _ => null };
+    String? koerper(String? geschlecht) => switch (geschlecht) {
+          'female' => 'vulva',
+          'male' => 'penis',
+          _ => null
+        };
     final ich = StorageService.getUserProfile()?.gender;
     final nostr = NostrService();
     final du = (nostr.isPaired ? nostr.partnerGenderNotifier.value : null) ??
@@ -155,145 +141,36 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
     return [koerper(erste), koerper(zweite)];
   }
 
-  bool _abgebrochen(int lauf) => lauf != _lauf || !mounted;
-
-  Future<void> _abspielen(int lauf) async {
-    wachAn(); // lange Wiedergabe: bei ausgeschaltetem Bildschirm wach bleiben
-    final ablauf = _ablauf!;
-    while (_index < ablauf.length) {
-      final schritt = ablauf[_index];
-      if (schritt.klang) {
-        _klangPlayer.play(AssetSource('audio/paar/klangschale.opus'), volume: 0.8).catchError((_) {});
-      } else if (schritt.baustein != null) {
-        Sprachausgabe.sprich(_stimmePlayer, 'audio/paar/${_stimme}_${schritt.baustein!.id}.opus',
-            schritt.baustein!.text);
-      }
-      // Die Zeit läuft selbst mit, statt auf das Ende der Aufnahme zu warten:
-      // So bleibt der Ablauf stabil, auch wenn eine Datei fehlt.
-      while (_imSchritt < schritt.dauer) {
-        await Future.delayed(const Duration(milliseconds: 250));
-        if (_abgebrochen(lauf)) return;
-        if (!_pausiert) setState(() => _imSchritt += const Duration(milliseconds: 250));
-      }
-      if (_abgebrochen(lauf)) return;
-      setState(() {
-        _index++;
-        _imSchritt = Duration.zero;
-      });
-    }
-    setState(() => _fertig = true);
-    await _teppichLeiser();
-    wachAus(); // erst nach dem Ausblenden des Klangteppichs
-  }
-
-  Future<void> _teppichLeiser() async {
-    for (var v = 0.35; v > 0; v -= 0.05) {
-      await _teppichPlayer.setVolume(v).catchError((_) {});
-      await Future.delayed(const Duration(milliseconds: 400));
-    }
-    await _teppichPlayer.stop().catchError((_) {});
-  }
-
-  void _pauseUmschalten() {
-    HapticFeedback.lightImpact();
-    setState(() => _pausiert = !_pausiert);
-    if (_pausiert) {
-      wachAus(); // Pause: Sperre frei (Akku)
-      Sprachausgabe.pause(_stimmePlayer);
-      _teppichPlayer.pause().catchError((_) {});
-    } else {
-      wachAn();
-      _stimmePlayer.resume().catchError((_) {});
-      if (_teppich) _teppichPlayer.resume().catchError((_) {});
-    }
-  }
-
-  /// Springt zum nächsten Schritt, z. B. wenn eine Stille zu lang ist.
-  void _weiter() {
-    final ablauf = _ablauf;
-    if (ablauf == null || _index >= ablauf.length) return;
-    HapticFeedback.selectionClick();
-    Sprachausgabe.stopp(_stimmePlayer);
-    setState(() => _imSchritt = ablauf[_index].dauer);
-  }
-
-  void _beenden() {
-    _lauf++;
-    wachAus();
-    Sprachausgabe.stopp(_stimmePlayer);
-    _klangPlayer.stop().catchError((_) {});
-    _teppichPlayer.stop().catchError((_) {});
-    setState(() {
-      _ablauf = null;
-      _fertig = false;
-      _pausiert = false;
-    });
-  }
-
-  Duration get _gesamt => _ablauf?.fold<Duration>(Duration.zero, (s, x) => s + x.dauer) ?? Duration.zero;
-
-  Duration get _vergangen {
-    final ablauf = _ablauf;
-    if (ablauf == null) return Duration.zero;
-    var d = _imSchritt;
-    for (var i = 0; i < _index && i < ablauf.length; i++) {
-      d += ablauf[i].dauer;
-    }
-    return d;
-  }
-
-  String _fmt(Duration d) =>
-      '${d.inMinutes.toString().padLeft(2, '0')}:${d.inSeconds.remainder(60).toString().padLeft(2, '0')}';
-
   // ---------------------------------------------------------------------------
   // Oberfläche
 
   @override
   Widget build(BuildContext context) {
-    final laeuft = _ablauf != null;
-    return PopScope(
-      canPop: !laeuft || _fertig,
-      onPopInvokedWithResult: (didPop, _) {
-        if (!didPop) _fragBeenden();
-      },
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: AppTheme.papier,
-        appBar: AppBar(
-          backgroundColor: AppTheme.papier,
-          title: Text(t.couplesChannelSharedEvening),
-        ),
+        appBar: AppBar(title: Text(t.couplesChannelSharedEvening)),
         body: SafeArea(
-          child: _daten == null
-              ? Center(child: CircularProgressIndicator(color: AppTheme.akzentTief))
-              : (laeuft ? _buildPlayer() : _buildEinrichtung()),
-        ),
-      ),
-    );
-  }
-
-  Future<void> _fragBeenden() async {
-    final ja = await showDialog<bool>(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.papierErhoben,
-        title: Text(t.paarAbendEndTheEvening),
-        content: Text(t.paarAbendTheGuidanceStopsThenYou),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(context, false), child: Text(t.paarAbendContinue)),
-          TextButton(onPressed: () => Navigator.pop(context, true), child: Text(t.playerSteuerungStop)),
-        ],
-      ),
-    );
-    if (ja == true && mounted) _beenden();
+            child: (_daten) == null
+                ? const Center(child: CircularProgressIndicator())
+                : _buildEinrichtung()));
   }
 
   Widget _buildEinrichtung() {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
       children: [
+        Text(t.wiedergabeStimmenStand, style: context.vp.typo.beschriftung),
+        AufnahmeStatus(pfade: [
+          for (final b in _daten!.bausteine)
+            'audio/paar/${_stimme}_${b.id}.opus'
+        ], paketNamen: [
+          Pakete.name(Pakete.gefuehrt)
+        ]),
+        const SizedBox(height: VpAbstand.l),
         Text(
           t.paarAbendPutThePhoneNextTo,
-          style: TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5),
+          style:
+              TextStyle(fontSize: 14, color: AppTheme.tinteLeise, height: 1.5),
         ),
         const SizedBox(height: 22),
         _titel(t.paarAbendDuration),
@@ -301,18 +178,25 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
           spacing: 8,
           children: [
             for (final m in _minutenOptionen)
-              _chip(t.paarAbendMMin(m), _minuten == m, () => setState(() => _minuten = m)),
+              _chip(t.paarAbendMMin(m), _minuten == m,
+                  () => setState(() => _minuten = m)),
           ],
         ),
         const SizedBox(height: 20),
         _titel(t.paarAbendHowFarMayItGo),
-        for (final tiefe in waehlbareTiefen(spicyErlaubt: StorageService.spicyMode()))
+        for (final tiefe
+            in waehlbareTiefen(spicyErlaubt: StorageService.spicyMode()))
           switch (tiefe) {
-            PaarTiefe.bekleidet => _tiefeOption(tiefe, t.paarAbendClothed, t.paarAbendBackShouldersHandsHeadLegs),
-            PaarTiefe.haut => _tiefeOption(tiefe, t.paarAbendSkinToSkin, t.paarAbendPlusMassageWithOilBelly),
-            PaarTiefe.intim => _tiefeOption(tiefe, t.paarAbendIntimate, t.paarAbendPlusChestInnerThighsAnd),
-            PaarTiefe.spicy => _tiefeOption(tiefe, t.spicyStufe, t.paarAbendSpicyText),
-            PaarTiefe.sehrSpicy => _tiefeOption(tiefe, t.sehrSpicyStufe, t.paarAbendSehrSpicyText),
+            PaarTiefe.bekleidet => _tiefeOption(tiefe, t.paarAbendClothed,
+                t.paarAbendBackShouldersHandsHeadLegs),
+            PaarTiefe.haut => _tiefeOption(tiefe, t.paarAbendSkinToSkin,
+                t.paarAbendPlusMassageWithOilBelly),
+            PaarTiefe.intim => _tiefeOption(
+                tiefe, t.paarAbendIntimate, t.paarAbendPlusChestInnerThighsAnd),
+            PaarTiefe.spicy =>
+              _tiefeOption(tiefe, t.spicyStufe, t.paarAbendSpicyText),
+            PaarTiefe.sehrSpicy =>
+              _tiefeOption(tiefe, t.sehrSpicyStufe, t.paarAbendSehrSpicyText),
           },
         const SizedBox(height: 20),
         _titel(t.paarAbendWhoGivesFirst),
@@ -320,8 +204,10 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
           spacing: 8,
           runSpacing: 8,
           children: [
-            _chip(_ichName == t.paarAbendYou ? t.paarAbendMe : _ichName, _ichZuerst, () => setState(() => _ichZuerst = true)),
-            _chip(NostrService().isPaired ? _partnerName : t.paarAbendMyPartner, !_ichZuerst, () => setState(() => _ichZuerst = false)),
+            _chip(_ichName == t.paarAbendYou ? t.paarAbendMe : _ichName,
+                _ichZuerst, () => setState(() => _ichZuerst = true)),
+            _chip(NostrService().isPaired ? _partnerName : t.paarAbendMyPartner,
+                !_ichZuerst, () => setState(() => _ichZuerst = false)),
           ],
         ),
         const SizedBox(height: 20),
@@ -329,8 +215,10 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
         Wrap(
           spacing: 8,
           children: [
-            _chip('Victoria', _stimme == 'victoria', () => setState(() => _stimme = 'victoria')),
-            _chip('Martin', _stimme == 'martin', () => setState(() => _stimme = 'martin')),
+            _chip('Victoria', _stimme == 'victoria',
+                () => setState(() => _stimme = 'victoria')),
+            _chip('Martin', _stimme == 'martin',
+                () => setState(() => _stimme = 'martin')),
           ],
         ),
         const SizedBox(height: 8),
@@ -339,7 +227,8 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
           value: _teppich,
           activeThumbColor: AppTheme.akzentTief,
           onChanged: (v) => setState(() => _teppich = v),
-          title: Text(t.paarAbendSoftSoundBed, style: TextStyle(color: AppTheme.tinte, fontSize: 14.5)),
+          title: Text(t.paarAbendSoftSoundBed,
+              style: TextStyle(color: AppTheme.tinte, fontSize: 14.5)),
           subtitle: Text(t.paarAbendCalmBackgroundDuringTheSilences,
               style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5)),
         ),
@@ -349,17 +238,22 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
           decoration: BoxDecoration(
             color: AppTheme.akzentTief.withValues(alpha: 0.08),
             borderRadius: BorderRadius.circular(VpRadius.karte),
-            border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.35)),
+            border:
+                Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.35)),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.handshake_outlined, color: AppTheme.akzentTief, size: 20),
+              Icon(Icons.handshake_outlined,
+                  color: AppTheme.akzentTief, size: 20),
               SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  _tiefe.istSpicy ? t.paarAbendSpicyHinweis : t.paarAbendAgreeOnAStopWord,
-                  style: TextStyle(fontSize: 13, color: AppTheme.tinte, height: 1.45),
+                  _tiefe.istSpicy
+                      ? t.paarAbendSpicyHinweis
+                      : t.paarAbendAgreeOnAStopWord,
+                  style: TextStyle(
+                      fontSize: 13, color: AppTheme.tinte, height: 1.45),
                 ),
               ),
             ],
@@ -371,11 +265,13 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
           child: ElevatedButton.icon(
             onPressed: _starten,
             icon: const Icon(Icons.play_arrow_rounded),
-            label: Text(t.paarAbendBeginTheEvening, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
+            label: Text(t.paarAbendBeginTheEvening,
+                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15.5)),
             style: ElevatedButton.styleFrom(
               backgroundColor: AppTheme.akzentTief,
               foregroundColor: AppTheme.papier,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(VpRadius.karte)),
             ),
           ),
         ),
@@ -386,7 +282,10 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
   Widget _titel(String text) => Padding(
         padding: const EdgeInsets.only(bottom: 10),
         child: Text(text,
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
+            style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w700,
+                color: AppTheme.tinte)),
       );
 
   Widget _chip(String label, bool aktiv, VoidCallback onTap) => ChoiceChip(
@@ -408,7 +307,9 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
 
   Widget _tiefeOption(PaarTiefe tiefe, String titel, String text) {
     final aktiv = _tiefe == tiefe;
-    final farbe = tiefe.index >= PaarTiefe.intim.index ? AppTheme.akzentTief : AppTheme.akzentTief;
+    final farbe = tiefe.index >= PaarTiefe.intim.index
+        ? AppTheme.akzentTief
+        : AppTheme.akzentTief;
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: InkWell(
@@ -420,23 +321,35 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
           decoration: BoxDecoration(
-            color: aktiv ? farbe.withValues(alpha: 0.12) : AppTheme.papierErhoben,
+            color:
+                aktiv ? farbe.withValues(alpha: 0.12) : AppTheme.papierErhoben,
             borderRadius: BorderRadius.circular(VpRadius.karte),
             border: Border.all(color: aktiv ? farbe : AppTheme.linie),
           ),
           child: Row(
             children: [
-              Icon(aktiv ? Icons.radio_button_checked_rounded : Icons.radio_button_off_rounded,
-                  color: aktiv ? farbe : AppTheme.tinteStumm, size: 20),
+              Icon(
+                  aktiv
+                      ? Icons.radio_button_checked_rounded
+                      : Icons.radio_button_off_rounded,
+                  color: aktiv ? farbe : AppTheme.tinteStumm,
+                  size: 20),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(titel,
-                        style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
+                        style: TextStyle(
+                            fontSize: 14.5,
+                            fontWeight: FontWeight.w700,
+                            color: AppTheme.tinte)),
                     const SizedBox(height: 2),
-                    Text(text, style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.35)),
+                    Text(text,
+                        style: TextStyle(
+                            fontSize: 12.5,
+                            color: AppTheme.tinteLeise,
+                            height: 1.35)),
                   ],
                 ),
               ),
@@ -445,125 +358,5 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> with WachHalter {
         ),
       ),
     );
-  }
-
-  Widget _buildPlayer() {
-    final ablauf = _ablauf!;
-    final schritt = _index < ablauf.length ? ablauf[_index] : null;
-    final runde = schritt?.runde ?? 0;
-    final ichGebe = (runde == 1) == _ichZuerst;
-    final gesamt = _gesamt;
-    final fortschritt = gesamt.inMilliseconds == 0 ? 0.0 : _vergangen.inMilliseconds / gesamt.inMilliseconds;
-
-    final String phase;
-    final String zeile;
-    if (_fertig || schritt == null) {
-      phase = t.paarAbendThankYouForYourEvening;
-      zeile = t.paarAbendStayLyingDownAsLong;
-    } else if (runde > 0) {
-      phase = t.paarAbendRoundRunde(runde);
-      zeile = ichGebe ? t.paarAbendYouGivePartnernameReceives(_partnerName) : t.paarAbendPartnernamePartnernameGivesYouReceive(_partnerName[0].toUpperCase(), _partnerName.substring(1));
-    } else {
-      final ersteRunde = ablauf.indexWhere((s) => s.runde == 1);
-      final letzteRunde = ablauf.lastIndexWhere((s) => s.runde == 2);
-      phase = _index < ersteRunde ? t.paarAbendArriving : (_index > letzteRunde ? t.paarAbendEnding : t.paarAbendChangeOfRoles);
-      zeile = t.paarAbendBreatheTogether;
-    }
-    final spricht = schritt?.baustein != null;
-    final stilleRest = schritt == null ? Duration.zero : schritt.dauer - _imSchritt;
-
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
-      child: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(4),
-            child: LinearProgressIndicator(
-              value: fortschritt.clamp(0.0, 1.0),
-              minHeight: 4,
-              backgroundColor: AppTheme.papierVertieft,
-              color: AppTheme.akzentTief,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(_fmt(_vergangen), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
-              Text(_fmt(gesamt), style: TextStyle(color: AppTheme.tinteStumm, fontSize: 12)),
-            ],
-          ),
-          const Spacer(),
-          AnimatedContainer(
-            duration: const Duration(milliseconds: 1200),
-            width: spricht ? 190 : 160,
-            height: spricht ? 190 : 160,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: AppTheme.akzentLeise,
-            border: Border.all(color: AppTheme.linieStark, width: 1),
-            ),
-            child: Center(
-              child: Icon(
-                _fertig ? Icons.favorite_rounded : (spricht ? Icons.graphic_eq_rounded : Icons.spa_rounded),
-                color: AppTheme.tinte.withValues(alpha: 0.85),
-                size: 44,
-              ),
-            ),
-          ),
-          const SizedBox(height: 28),
-          Text(phase,
-              style: TextStyle(fontFamily: VpTypo.serif, fontSize: 26, fontWeight: FontWeight.w600, color: AppTheme.tinte)),
-          const SizedBox(height: 8),
-          Text(zeile,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 15, color: AppTheme.tinteLeise, height: 1.4)),
-          const SizedBox(height: 10),
-          if (!_fertig && schritt != null)
-            Text(
-              _pausiert ? t.paarAbendPaused : (spricht ? t.paarAbendTheVoiceIsSpeaking : t.paarAbendSilenceStillerestLeft(_fmt(stilleRest))),
-              style: TextStyle(fontSize: 13, color: AppTheme.tinteStumm),
-            ),
-          const Spacer(),
-          if (_fertig)
-            SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: OutlinedButton(
-                onPressed: () => Navigator.of(context).pop(),
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: AppTheme.akzentTief,
-                  side: BorderSide(color: AppTheme.akzentTief),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
-                ),
-                child: Text(t.couplesChannelClose, style: TextStyle(fontWeight: FontWeight.w700)),
-              ),
-            )
-          else
-            PlayerSteuerung(
-              pausiert: _pausiert,
-              farbe: AppTheme.akzentTief,
-              symbolFarbe: AppTheme.papier,
-              onBeenden: _fragBeenden,
-              onPause: _pauseUmschalten,
-              onUeberspringen: _weiter,
-            ),
-          if (_letzteAnsage() case final b?) ...[
-            const SizedBox(height: 6),
-            AusspracheMeldenButton(wo: 'Gemeinsamer Abend, Baustein ${b.id}', stimme: _stimme),
-          ],
-        ],
-      ),
-    );
-  }
-
-  /// Die zuletzt gesprochene Ansage – darauf bezieht sich eine Aussprache-Meldung.
-  PaarBaustein? _letzteAnsage() {
-    final ablauf = _ablauf;
-    if (ablauf == null) return null;
-    for (var i = (_index < ablauf.length ? _index : ablauf.length - 1); i >= 0; i--) {
-      if (ablauf[i].baustein != null) return ablauf[i].baustein;
-    }
-    return null;
   }
 }

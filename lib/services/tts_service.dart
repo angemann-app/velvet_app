@@ -19,29 +19,27 @@ class TtsService {
   bool _initialized = false;
   String? _sprache;
 
-  Future<void> init() async {
+  Future<void> init({String? sprache}) async {
+    final code = sprache ?? Sprache.code;
     // Sprache der Geräte-Stimme folgt der App-Sprache, auch nach einem Wechsel.
-    if (_initialized && _sprache == Sprache.code) return;
+    if (_initialized && _sprache == code) return;
     if (_initialized) {
-      _sprache = Sprache.code;
-      await _flutterTts.setLanguage(Sprache.englisch ? 'en-US' : 'de-DE').timeout(const Duration(seconds: 2)).catchError((_) => null);
+      _sprache = code;
+      await _flutterTts
+          .setLanguage(code == 'en' ? 'en-US' : 'de-DE')
+          .timeout(const Duration(seconds: 2))
+          .catchError((_) => null);
       return;
     }
-    _sprache = Sprache.code;
+    _sprache = code;
 
     try {
       await _flutterTts
-          .setLanguage(Sprache.englisch ? 'en-US' : 'de-DE')
+          .setLanguage(code == 'en' ? 'en-US' : 'de-DE')
           .timeout(const Duration(seconds: 2));
-      await _flutterTts
-          .setSpeechRate(0.45)
-          .timeout(const Duration(seconds: 1));
-      await _flutterTts
-          .setVolume(1.0)
-          .timeout(const Duration(seconds: 1));
-      await _flutterTts
-          .setPitch(0.95)
-          .timeout(const Duration(seconds: 1));
+      await _flutterTts.setSpeechRate(0.45).timeout(const Duration(seconds: 1));
+      await _flutterTts.setVolume(1.0).timeout(const Duration(seconds: 1));
+      await _flutterTts.setPitch(0.95).timeout(const Duration(seconds: 1));
 
       _flutterTts.setStartHandler(() {
         stateNotifier.value = TtsPlaybackState.playing;
@@ -71,8 +69,9 @@ class TtsService {
     }
   }
 
-  Future<void> speak(String text, {required String contextId}) async {
-    await init();
+  Future<void> speak(String text,
+      {required String contextId, String? sprache}) async {
+    await init(sprache: sprache);
     try {
       if (stateNotifier.value == TtsPlaybackState.paused &&
           currentSpeakingIdNotifier.value == contextId) {

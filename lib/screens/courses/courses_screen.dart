@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../widgets/weg_begleiter.dart';
 import 'package:intl/intl.dart' show DateFormat;
 import '../../services/sprache.dart';
 import '../../theme/vp_palette.dart';
@@ -207,6 +208,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
           if (!widget.lernen) ...[
             // Kopf: Begrüßung ohne Prozentbalken und Serie (docs/konzepte/heute-und-produktschliff.md)
             _buildKopf(),
+            WegFortsetzen(oeffnen: _onLessonTap),
 
             const SizedBox(height: VpAbstand.xl),
 
@@ -382,7 +384,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
           child: SizedBox(
             height: bildHoehe,
             child: Stack(fit: StackFit.expand, children: [
-              const VpBildFeld('bereich.heute.einladung'),
+              if (n.$1.image case final bild?)
+                VpBildFeld.pfad(bild, format: VpBildFormat.kopf)
+              else
+                const VpBildFeld('bereich.heute.einladung'),
               if (spicy) ...[
                 DecoratedBox(
                   decoration: BoxDecoration(
@@ -504,7 +509,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
   Widget _kursBild(Course course, bool fertig) {
     final bild = course.image;
     return Stack(fit: StackFit.expand, children: [
-      if (bild != null && bild.endsWith('.svg'))
+      if (bild != null)
         VpBildFeld.pfad(bild, format: VpBildFormat.marke)
       else
         ColoredBox(

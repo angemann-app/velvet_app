@@ -72,23 +72,23 @@ msgstr ""
 #. Baustein der Traum-Reise, phase: traumbild, bild: warmes_wasser, teil: v1, stufe: spicy, koerper: vulva
 #. EN: You are drifting in dark, warm water, while deep beneath you a soft golden light shimmers through the depth.
 #. EN: Every small movement of the water glides like a tender touch across your bare skin, over your chest, your soft belly, and between your thighs. Your pelvis is wide and relaxed, your vulva and your labia resting warm in the water.
-#. EN: With every gentle wave, your pelvis responds with a quiet, warm pull, and your clitoris grows softly warm. These sensual waves and the golden shimmer may accompany you right into your dreams.
+#. EN: With every gentle wave, your pelvis responds with a quiet, warm pull, and your clitoris grows softly warm. Take these sensual waves and the golden shimmer into your dreams.
 msgctxt "dream_block:warmes_wasser_s_vulva#text"
 msgid ""
 "Du treibst in dunklem, körperwarmem Wasser, unter dem tief unten ein sanftes, goldenes Licht schimmert.\n"
 "Jede kleine Bewegung des Wassers streicht wie eine zärtliche Berührung über deine nackte Haut, über deine Brust, deinen weichen Bauch und zwischen deine Schenkel. Dein Becken ist weit und gelöst, deine Vulva und deine Schamlippen ruhen warm im Wasser.\n"
-"Mit jeder sanften Welle antwortet dein Becken mit einem leisen, warmen Ziehen, und deine Klitoris wird sanft durchströmt. Diese sinnlichen Wellen und das goldene Schimmern dürfen dich bis in deine Träume begleiten."
+"Mit jeder sanften Welle antwortet dein Becken mit einem leisen, warmen Ziehen, und deine Klitoris wird sanft durchströmt. Nimm diese sinnlichen Wellen und das goldene Schimmern mit in deine Träume."
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: traumbild, bild: warmes_wasser, teil: v1, stufe: spicy, koerper: penis
 #. EN: You are drifting in dark, warm water, while deep beneath you a soft golden light shimmers through the depth.
 #. EN: Every small movement of the water glides like a tender touch across your bare skin, over your chest, your soft belly, and between your thighs. Your pelvis is wide and relaxed, and your sex rests warm and heavy in the water.
-#. EN: With every gentle wave, your pelvis responds with a quiet, warm pull, and your penis slowly grows fuller and warmer. These sensual waves and the golden shimmer may accompany you right into your dreams.
+#. EN: With every gentle wave, your pelvis responds with a quiet, warm pull, and your penis slowly grows fuller and warmer. Take these sensual waves and the golden shimmer into your dreams.
 msgctxt "dream_block:warmes_wasser_s_penis#text"
 msgid ""
 "Du treibst in dunklem, körperwarmem Wasser, unter dem tief unten ein sanftes, goldenes Licht schimmert.\n"
 "Jede kleine Bewegung des Wassers streicht wie eine zärtliche Berührung über deine nackte Haut, über deine Brust, deinen weichen Bauch und zwischen deine Schenkel. Dein Becken ist weit und gelöst, und dein Geschlecht ruht warm und schwer im Wasser.\n"
-"Mit jeder sanften Welle antwortet dein Becken mit einem leisen, warmen Ziehen, und dein Penis wird langsam voller und wärmer. Diese sinnlichen Wellen und das goldene Schimmern dürfen dich bis in deine Träume begleiten."
+"Mit jeder sanften Welle antwortet dein Becken mit einem leisen, warmen Ziehen, und dein Penis wird langsam voller und wärmer. Nimm diese sinnlichen Wellen und das goldene Schimmern mit in deine Träume."
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: traumbild, bild: ort_fuer_mich, teil: v1
@@ -121,31 +121,31 @@ msgid ""
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: traumbild, bild: ort_fuer_mich, teil: f
-#. EN: In my dream, I find a place where I can enjoy.
+#. EN: In my dream, I may find a place to feel at ease.
 msgctxt "dream_block:ort_fuer_mich_f#text"
-msgid "Im Traum finde ich einen Ort, an dem ich genieße."
+msgid "Im Traum darf ich einen Ort zum Genießen finden."
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: traumbild, bild: ort_fuer_mich, teil: v1, stufe: spicy, koerper: vulva
 #. EN: You are lying bare beneath a light blanket in a room that belongs entirely to you. Outside the open window, warm sparks of light drift slowly up into the night.
 #. EN: Your skin is awake and sensitive to the soft fabric on your chest, your belly, and your hips. Your pelvis lies wide and heavy on the cushions.
-#. EN: Between your legs, a calm, pleasant warmth gathers in your vulva, your labia, and your clitoris. This quiet arousal may simply be there and gently accompany you into your dream.
+#. EN: Between your legs, a calm, pleasant warmth gathers in your vulva, your labia, and your clitoris. Feel this quiet arousal as you gently drift into your dream.
 msgctxt "dream_block:ort_fuer_mich_s_vulva#text"
 msgid ""
 "Du liegst unbekleidet unter einer federleichten Decke in einem Raum, der ganz dir gehört. Vor dem offenen Fenster steigen langsam warme Lichtfunken in die Nacht hinauf.\n"
 "Deine Haut ist wach und empfindlich für den weichen Stoff auf deiner Brust, deinem Bauch und deinen Hüften. Dein Becken liegt weit und schwer auf den Kissen.\n"
-"Zwischen deinen Beinen sammelt sich in deiner Vulva, deinen Schamlippen und deiner Klitoris eine ruhige, angenehme Wärme. Diese stille Erregung darf einfach da sein und dich sanft in deinen Traum begleiten."
+"Zwischen deinen Beinen sammelt sich in deiner Vulva, deinen Schamlippen und deiner Klitoris eine ruhige, angenehme Wärme. Spüre diese stille Erregung, während du sanft in deinen Traum gleitest."
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: traumbild, bild: ort_fuer_mich, teil: v1, stufe: spicy, koerper: penis
 #. EN: You are lying bare beneath a light blanket in a room that belongs entirely to you. Outside the open window, warm sparks of light drift slowly up into the night.
 #. EN: Your skin is awake and sensitive to the soft fabric on your chest, your belly, and your hips. Your pelvis lies wide and heavy on the cushions, and your pelvic floor is completely soft.
-#. EN: Between your legs, a calm, pleasant warmth spreads. Your penis quietly grows fuller, without any hurry. This quiet arousal may simply be there and gently accompany you into your dream.
+#. EN: Between your legs, a calm, pleasant warmth spreads. Your penis quietly grows fuller, without any hurry. Feel this quiet arousal as you gently drift into your dream.
 msgctxt "dream_block:ort_fuer_mich_s_penis#text"
 msgid ""
 "Du liegst unbekleidet unter einer federleichten Decke in einem Raum, der ganz dir gehört. Vor dem offenen Fenster steigen langsam warme Lichtfunken in die Nacht hinauf.\n"
 "Deine Haut ist wach und empfindlich für den weichen Stoff auf deiner Brust, deinem Bauch und deinen Hüften. Dein Becken liegt weit und schwer auf den Kissen, dein Beckenboden ist ganz weich.\n"
-"Zwischen deinen Beinen breitet sich eine ruhige, angenehme Wärme aus. Dein Penis wird leise voller, ganz ohne Eile. Diese stille Erregung darf einfach da sein und dich sanft in deinen Traum begleiten."
+"Zwischen deinen Beinen breitet sich eine ruhige, angenehme Wärme aus. Dein Penis wird leise voller, ganz ohne Eile. Spüre diese stille Erregung, während du sanft in deinen Traum gleitest."
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: traumbild, bild: koerper_im_licht, teil: v1
@@ -322,13 +322,13 @@ msgstr ""
 #. Baustein der Traum-Reise, phase: wach
 #. EN: Your dream is noted down, and everything around you is quiet and safe. Your body may immediately grow heavy again and sink back into the warmth of the bed.
 #. EN: Your breath flows long and gentle, all on its own. Your belly is soft, and your pelvis rests wide and relaxed on the mattress.
-#. EN: You are lying right at the threshold where the longest and calmest dreams of the night arise. Behind your closed eyelids, the image from the evening may quietly appear once more.
+#. EN: The night still has room for dreams. You may settle into its stillness again. Behind your closed eyelids, the image from the evening may quietly appear once more.
 #. EN: Perhaps the unusual light will meet you again in your dream, and you will calmly recognize where you are.
 msgctxt "dream_block:wach_1#text"
 msgid ""
 "Dein Traum ist festgehalten, und alles um dich her ist still und sicher. Dein Körper darf sofort wieder schwer werden und zurück in die Wärme des Bettes sinken.\n"
 "Dein Atem fließt lang und flach, ganz von allein. Dein Bauch ist weich, und dein Becken ruht weit und gelöst auf der Matratze.\n"
-"Du liegst genau an der Schwelle, an der die längsten und ruhigsten Träume der Nacht entstehen. Hinter deinen geschlossenen Lidern darf das Bild vom Abend noch einmal leise auftauchen.\n"
+"Die Nacht hat noch Raum für Träume. Du darfst wieder in ihre Stille sinken. Hinter deinen geschlossenen Lidern darf das Bild vom Abend noch einmal leise auftauchen.\n"
 "Vielleicht begegnet dir im Traum wieder das besondere Licht, und du erkennst ganz ruhig, wo du bist."
 msgstr ""
 
@@ -344,27 +344,27 @@ msgid ""
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: absicht
-#. EN: When I am dreaming, I recognize it. In my dream, I may enjoy.
+#. EN: When I am dreaming, I recognize it. In my dream, I am free to enjoy myself.
 msgctxt "dream_block:wach_absicht_1#text"
 msgid "Wenn ich träume, erkenne ich es. Im Traum darf ich genießen."
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: hinweis
-#. EN: Dreams can be invited, not controlled. With a little practice you remember more, and sometimes you notice in the dream that you are dreaming. What happens then is all yours.
+#. EN: Dreams can be invited, not controlled. With a little practice, you may remember them more often. Sometimes you may even notice, within a dream, that you are dreaming. What happens then is all yours.
 msgctxt "dream_block:hinweis_einstieg#text"
-msgid "Träume lassen sich einladen, nicht steuern. Mit etwas Übung erinnerst du mehr, und manchmal merkst du mitten im Traum, dass du träumst. Was dann geschieht, gehört ganz dir."
+msgid "Träume lassen sich einladen, nicht steuern. Mit etwas Übung erinnerst du dich vielleicht häufiger an sie. Manchmal bemerkst du sogar mitten im Traum, dass du träumst. Was dann geschieht, gehört ganz dir."
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: hinweis
-#. EN: During the transition between waking and dreaming, it can occasionally happen that your mind is already awake while your body is still resting in its natural sleep stillness. This is usually harmless, and your breathing continues normally. A calm breath through the nose and a gentle movement of a finger or a toe easily dissolve the heaviness, or you close your eyes and glide straight back into your dream. If it happens often or troubles you, talk to a doctor.
+#. EN: During the transition between waking and dreaming, it can occasionally happen that your mind is already awake while your body is still resting in its natural sleep stillness. This is usually harmless, and your breathing continues normally. It can feel frightening. Movement usually returns on its own after a short time. You do not have to force yourself straight back to sleep. If it happens often or troubles you, talk to a doctor.
 msgctxt "dream_block:hinweis_schlafparalyse#text"
-msgid "Beim Übergang zwischen Wachen und Träumen kann es selten vorkommen, dass dein Geist schon wach ist, während dein Körper noch in der natürlichen Schlafruhe liegt. Das ist in aller Regel harmlos, und deine Atmung fließt ganz normal weiter. Ein ruhiger Atemzug durch die Nase und eine sanfte Bewegung mit einem Finger oder einer Zehe lösen die Schwere leicht auf, oder du schließt die Augen und gleitest direkt zurück in deinen Traum. Wenn es häufig vorkommt oder dich belastet, sprich mit einer Ärztin oder einem Arzt."
+msgid "Beim Übergang zwischen Wachen und Träumen kann es selten vorkommen, dass dein Geist schon wach ist, während dein Körper noch in der natürlichen Schlafruhe liegt. Das ist in aller Regel harmlos, und deine Atmung fließt ganz normal weiter. Das kann sich beängstigend anfühlen. Die Beweglichkeit kehrt meist nach kurzer Zeit von selbst zurück. Du musst den Übergang zurück in den Schlaf nicht erzwingen. Wenn es häufig vorkommt oder dich belastet, sprich mit einer Ärztin oder einem Arzt."
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: hinweis
-#. EN: Sensual dreams and nighttime climaxes are a natural response of your body and a sign that your desire is alive and well. Who appears in a dream and what happens there need not have any meaning at all for your waking life. You may simply enjoy the memory or calmly let it pass on.
+#. EN: Sensual dreams and nighttime climaxes can be part of your experience. Their presence or absence says little, on its own, about your desire when awake. Who appears in a dream and what happens there need not have any meaning at all for your waking life. You may simply enjoy the memory or calmly let it pass on.
 msgctxt "dream_block:hinweis_tagebuch_sinnlich#text"
-msgid "Sinnliche Träume und nächtliche Höhepunkte sind eine natürliche Reaktion deines Körpers und ein Zeichen, dass deine Lust lebendig ist. Wer im Traum vorkommt und was dort geschieht, braucht im Wachleben keinerlei Bedeutung zu haben. Du darfst die Erinnerung einfach genießen oder ruhig weiterziehen lassen."
+msgid "Sinnliche Träume und nächtliche Höhepunkte können zu deinem Erleben gehören. Ob sie vorkommen oder ausbleiben, sagt für sich allein wenig über deine Lust im Wachleben aus. Wer im Traum vorkommt und was dort geschieht, braucht im Wachleben keinerlei Bedeutung zu haben. Du darfst die Erinnerung einfach genießen oder ruhig weiterziehen lassen."
 msgstr ""
 
 #. Baustein der Traum-Reise, phase: hinweis
@@ -397,7 +397,7 @@ msgstr ""
 
 #. Baustein der Traum-Reise, phase: wecken
 #. EN: When I am dreaming, I recognize it. My mind stays gentle and clear while my body sleeps deeply.
-#. EN: In my dream, I may feel carried and enjoy.
+#. EN: In my dream, I may let myself be carried and enjoy the feeling.
 msgctxt "dream_block:wecken_absicht#text"
 msgid ""
 "Wenn ich träume, erkenne ich es. Mein Geist bleibt sanft und klar, während mein Körper tief weiterschläft.\n"

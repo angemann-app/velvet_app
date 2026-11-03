@@ -1066,3 +1066,75 @@ msgstr ""
 msgctxt "news:58#1.text"
 msgid "Die Audioreihe läuft bei ausgeschaltetem Bildschirm weiter und bleibt nicht mehr zwischen den Szenen stehen."
 msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: One player for everything
+msgctxt "news:59#0.titel"
+msgid "Ein Player für alles"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: Lessons and guided audio keep playing while you use the app. The mini player remembers your place; after reopening you continue from there on purpose.
+msgctxt "news:59#0.text"
+msgid "Lektionen und geführte Audios laufen weiter, während du die App benutzt. Der kleine Player hält die Stelle fest; nach dem Öffnen machst du bewusst dort weiter."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: Listen together
+msgctxt "news:59#1.titel"
+msgid "Gemeinsam hören"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: Listen to the same recording at the same time: invitation, both ready, countdown. Either of you can pause; continuing needs both to be ready again. Afterwards, an optional shared reflection.
+msgctxt "news:59#1.text"
+msgid "Hört dieselbe Aufnahme zur gleichen Zeit: Einladung, beide bereit, Countdown. Pause geht von beiden Seiten, weiter erst, wenn beide wieder bereit sind. Danach ein freiwilliger gemeinsamer Rückblick."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: Search and personal path
+msgctxt "news:59#2.titel"
+msgid "Suche und persönlicher Weg"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: The magnifier finds courses, lessons and exercises right on your device. On lessons you can start an optional path of knowledge, exercise and reflection.
+msgctxt "news:59#2.text"
+msgid "Über die Lupe findest du Kurse, Lektionen und Übungen direkt auf dem Gerät. An Lektionen kannst du einen freiwilligen Weg aus Wissen, Übung und Nachspüren starten."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: Dream practice
+msgctxt "news:59#3.titel"
+msgid "Traumpraxis"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: Evening preparation, dream signs, daytime observation and review in one place, with no interpretation and no pressure to succeed. Plus three short guided pieces for evening, clarity and morning, in Spicy mode only.
+msgctxt "news:59#3.text"
+msgid "Abendvorbereitung, Traumzeichen, Tagesbeobachtung und Rückblick an einem Ort, ohne Deutung und ohne Erfolgsdruck. Dazu drei kurze Hörbegleitungen für Abend, Klarheit und Morgen, nur im Spicy-Modus."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: Newly recorded
+msgctxt "news:59#4.titel"
+msgid "Neu eingesprochen"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: All recordings have been newly recorded, the Spicy texts phrased more directly, including the Very spicy versions. You download the recordings through package management.
+msgctxt "news:59#4.text"
+msgid "Alle Aufnahmen sind neu eingesprochen, die Spicy-Texte direkter gefasst, auch die Fassungen von „Sehr spicy“. Die Aufnahmen lädst du über die Paketverwaltung nach."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: New artwork and icon
+msgctxt "news:59#5.titel"
+msgid "Neue Bildwelt und neues Symbol"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.1
+#. EN: Course, audio and topic pictures in the magazine style; Spicy shows its own motifs. Plus a new app icon. The discreet Pulse icon remains available.
+msgctxt "news:59#5.text"
+msgid "Kurs-, Audio- und Themenbilder im Stil des Magazins; Spicy zeigt eigene Motive. Dazu ein neues App-Symbol. Das diskrete Pulse-Symbol bleibt erhalten."
+msgstr ""

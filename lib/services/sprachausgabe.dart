@@ -22,11 +22,11 @@ class Sprachausgabe {
   static final TtsService _tts = TtsService();
 
   /// Aufnahme für [pfad] (z. B. 'audio/paar/victoria_ankommen_1.opus') oder null, wenn es keine gibt.
-  static Source? quelle(String pfad) {
+  static Source? quelle(String pfad, {String? sprache}) {
     if (pfad.startsWith('audio/cues/')) {
-      return AssetSource(Sprache.englisch ? 'audio/cues_en/${pfad.substring('audio/cues/'.length)}' : pfad);
+      return AssetSource((sprache ?? Sprache.code) == 'en' ? 'audio/cues_en/${pfad.substring('audio/cues/'.length)}' : pfad);
     }
-    final datei = Pakete.datei(pfad);
+    final datei = Pakete.datei(pfad, sprache: sprache);
     return datei == null ? null : DeviceFileSource(datei);
   }
 

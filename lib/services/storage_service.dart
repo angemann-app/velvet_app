@@ -15,8 +15,92 @@ import 'nostr_service.dart';
 import 'secret_store.dart';
 import 'testmodus.dart';
 import '../l10n/t.dart';
+import '../models/traumpraxis_daten.dart';
+import '../models/bedien_daten.dart';
 
 class StorageService {
+  static const _keyBedienung = 'bedienung';
+  static Future<void> _bedienSchreiben = Future<void>.value();
+  static final ValueNotifier<int> bedienAenderung = ValueNotifier(0);
+
+  static BedienDaten getBedienDaten() {
+    final raw = _prefs?.getString(_keyBedienung);
+    if (raw == null) return const BedienDaten();
+    try {
+      return BedienDaten.fromJson(Map<String, dynamic>.from(jsonDecode(raw) as Map));
+    } catch (_) {
+      return const BedienDaten();
+    }
+  }
+
+  static Future<T> _bedienOperation<T>(Future<T> Function() arbeit) {
+    final job = _bedienSchreiben.then((_) => arbeit());
+    _bedienSchreiben = job.then<void>((_) {}, onError: (Object _, StackTrace __) {});
+    return job;
+  }
+
+  /// Kleine Positionsschritte brauchen kein vollständiges Auto-Backup; bei
+  /// Pause/Ende wird gesichert. Manuelle Sicherungen enthalten immer den Stand.
+  static Future<void> saveBedienDaten(BedienDaten daten, {bool backup = true}) =>
+      _bedienOperation(() async {
+        var neu = BedienDaten.fromJson(daten.toJson());
+        final prefs = await _ensurePrefs();
+        final raw = prefs.getString(_keyBedienung);
+        final alt = raw == null ? const BedienDaten() : BedienDaten.fromJson(Map<String, dynamic>.from(jsonDecode(raw) as Map));
+        var w = neu.wiedergabe;var weg = neu.weg;
+        if (w != null && alt.wiedergabe != null && !w.geaendert.isAfter(alt.wiedergabe!.geaendert)) {
+          w = WiedergabeMerker(plan: w.plan, index: w.index, position: w.position,
+            geaendert: alt.wiedergabe!.geaendert.add(const Duration(microseconds: 1)));
+        }
+        if (weg != null && alt.weg != null && !weg.geaendert.isAfter(alt.weg!.geaendert)) {
+          weg = WegStand(lektion: weg.lektion, schritt: weg.schritt,
+            geaendert: alt.weg!.geaendert.add(const Duration(microseconds: 1)));
+        }
+        neu = alt.zusammen(BedienDaten(wiedergabe: w, weg: weg));
+        if (!await prefs.setString(_keyBedienung, jsonEncode(neu.toJson()))) {
+          throw StateError('Bedienungsstand nicht gespeichert');
+        }
+        bedienAenderung.value++;
+        if (backup) await AutoBackupService.saveAutoBackup();
+      });
+
+  static const _keyTraumpraxis = 'traumpraxis';
+
+  static TraumpraxisDaten getTraumpraxis() {
+    final raw = _prefs?.getString(_keyTraumpraxis);
+    if (raw == null) return const TraumpraxisDaten();
+    try {
+      return TraumpraxisDaten.fromJson(
+          Map<String, dynamic>.from(jsonDecode(raw) as Map));
+    } catch (_) {
+      return const TraumpraxisDaten();
+    }
+  }
+
+  static Future<void> savePraxisEintrag(PraxisEintrag eintrag) async {
+    // Auch aus Formularen nur validierte, kanonische Daten schreiben.
+    var validiert = PraxisEintrag.fromJson(eintrag.toJson());
+    final prefs = await _ensurePrefs();
+    // Beschädigte Bestandsdaten niemals durch eine leere Ansicht überschreiben.
+    final raw = prefs.getString(_keyTraumpraxis);
+    final bestand = raw == null
+        ? const TraumpraxisDaten()
+        : TraumpraxisDaten.fromJson(
+            Map<String, dynamic>.from(jsonDecode(raw) as Map));
+    final alt = bestand.eintraege
+        .where((e) => e.id == validiert.id && e.art == validiert.art)
+        .firstOrNull;
+    if (alt != null && !validiert.geaendert.isAfter(alt.geaendert)) {
+      validiert =
+          validiert.mitZeit(alt.geaendert.add(const Duration(microseconds: 1)));
+    }
+    final gespeichert = await prefs.setString(_keyTraumpraxis,
+        jsonEncode(bestand.zusammen(TraumpraxisDaten([validiert])).toJson()));
+    if (!gespeichert)
+      throw StateError('Traumpraxis konnte nicht gespeichert werden');
+    await AutoBackupService.saveAutoBackup();
+  }
+
   static const String _keyCompletedLessons = 'completed_lessons';
   static const String _keyReflectionAnswers = 'reflection_answers';
   static const String _keyCbtEntries = 'cbt_journal_entries';
@@ -45,7 +129,8 @@ class StorageService {
   static const String _keyNaechtlichesWecken = 'naechtliches_wecken';
   static const String _keyWeckenHeuteNacht = 'traum_wecken_heute_nacht';
   static const String _keyFrageVorLautsprecher = 'frage_vor_lautsprecher';
-  static const String _keyPausiereBeiKopfhoererGetrennt = 'pausiere_bei_kopfhoerer_getrennt';
+  static const String _keyPausiereBeiKopfhoererGetrennt =
+      'pausiere_bei_kopfhoerer_getrennt';
   static const String _keyKursFilter = 'kurs_filter';
   static const String _keyAudioBereichOffen = 'audio_bereich_offen';
   static const String _keyHalloGesendetAm = 'hallo_gesendet_am';
@@ -119,7 +204,8 @@ class StorageService {
     }
   }
 
-  static Future<void> saveReflectionAnswer(String lessonId, String answer) async {
+  static Future<void> saveReflectionAnswer(
+      String lessonId, String answer) async {
     final prefs = await _ensurePrefs();
     final jsonStr = prefs.getString(_keyReflectionAnswers);
     Map<String, dynamic> map = {};
@@ -173,15 +259,18 @@ class StorageService {
     final raw = _prefs?.getString(_keyRealitaetschecks);
     if (raw == null || raw.isEmpty) return const RealitaetscheckEinstellungen();
     try {
-      return RealitaetscheckEinstellungen.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+      return RealitaetscheckEinstellungen.fromJson(
+          jsonDecode(raw) as Map<String, dynamic>);
     } catch (_) {
       return const RealitaetscheckEinstellungen();
     }
   }
 
-  static Future<void> saveRealitaetschecks(RealitaetscheckEinstellungen einstellungen) async {
+  static Future<void> saveRealitaetschecks(
+      RealitaetscheckEinstellungen einstellungen) async {
     final prefs = await _ensurePrefs();
-    await prefs.setString(_keyRealitaetschecks, jsonEncode(einstellungen.toJson()));
+    await prefs.setString(
+        _keyRealitaetschecks, jsonEncode(einstellungen.toJson()));
     await AutoBackupService.saveAutoBackup();
   }
 
@@ -211,7 +300,8 @@ class StorageService {
 
   /// Ob der Bereich „Geführte Audios“ auf der Startseite aufgeklappt ist. Beim ersten Start offen
   /// (Konzept `heute-und-produktschliff.md`).
-  static bool getAudioBereichOffen() => _prefs?.getBool(_keyAudioBereichOffen) ?? true;
+  static bool getAudioBereichOffen() =>
+      _prefs?.getBool(_keyAudioBereichOffen) ?? true;
 
   static Future<void> setAudioBereichOffen(bool offen) async {
     final prefs = await _ensurePrefs();
@@ -219,7 +309,7 @@ class StorageService {
     await AutoBackupService.saveAutoBackup();
   }
 
-  /// Ob der Bereich 
+  /// Ob der Bereich
 
   static Future<void> setKursFilter(String value) async {
     if (!kursFilterWerte.contains(value)) return;
@@ -243,9 +333,11 @@ class StorageService {
   // Traumtagebuch (lib/models/traum_eintrag.dart)
   static List<TraumEintrag> getTraumEintraege() {
     final eintraege = <TraumEintrag>[];
-    for (final item in _prefs?.getStringList(_keyTraumTagebuch) ?? const <String>[]) {
+    for (final item
+        in _prefs?.getStringList(_keyTraumTagebuch) ?? const <String>[]) {
       try {
-        eintraege.add(TraumEintrag.fromJson(jsonDecode(item) as Map<String, dynamic>));
+        eintraege.add(
+            TraumEintrag.fromJson(jsonDecode(item) as Map<String, dynamic>));
       } catch (_) {}
     }
     eintraege.sort((a, b) => b.zeit.compareTo(a.zeit));
@@ -254,24 +346,28 @@ class StorageService {
 
   static Future<void> saveTraumEintrag(TraumEintrag eintrag) async {
     final prefs = await _ensurePrefs();
-    final eintraege = getTraumEintraege()..removeWhere((e) => e.id == eintrag.id);
+    final eintraege = getTraumEintraege()
+      ..removeWhere((e) => e.id == eintrag.id);
     eintraege.add(eintrag);
     eintraege.sort((a, b) => b.zeit.compareTo(a.zeit));
-    await prefs.setStringList(_keyTraumTagebuch, eintraege.map((e) => jsonEncode(e.toJson())).toList());
+    await prefs.setStringList(_keyTraumTagebuch,
+        eintraege.map((e) => jsonEncode(e.toJson())).toList());
     await AutoBackupService.saveAutoBackup();
   }
 
   static Future<void> deleteTraumEintrag(String id) async {
     final prefs = await _ensurePrefs();
     final eintraege = getTraumEintraege()..removeWhere((e) => e.id == id);
-    await prefs.setStringList(_keyTraumTagebuch, eintraege.map((e) => jsonEncode(e.toJson())).toList());
+    await prefs.setStringList(_keyTraumTagebuch,
+        eintraege.map((e) => jsonEncode(e.toJson())).toList());
     await AutoBackupService.saveAutoBackup();
   }
 
   /// Merkt sich, was heute Abend lief (z. B. 'traum:warmes_wasser', 'lust:3').
   static Future<void> merkeAbend(String abend) async {
     final prefs = await _ensurePrefs();
-    await prefs.setString(_keyLetzterAbend, jsonEncode({'abend': abend, 'zeit': DateTime.now().toIso8601String()}));
+    await prefs.setString(_keyLetzterAbend,
+        jsonEncode({'abend': abend, 'zeit': DateTime.now().toIso8601String()}));
   }
 
   /// Der Abend der letzten 18 Stunden, oder null.
@@ -279,7 +375,8 @@ class StorageService {
     try {
       final m = jsonDecode(_prefs?.getString(_keyLetzterAbend) ?? '') as Map;
       final zeit = DateTime.parse(m['zeit'] as String);
-      if ((jetzt ?? DateTime.now()).difference(zeit) > const Duration(hours: 18)) return null;
+      if ((jetzt ?? DateTime.now()).difference(zeit) >
+          const Duration(hours: 18)) return null;
       return m['abend'] as String?;
     } catch (_) {
       return null;
@@ -289,7 +386,8 @@ class StorageService {
   // Nächtliches Wecken (lib/services/naechtliches_wecken.dart): Zeitpunkte der letzten Weck-Nächte.
   static List<DateTime> getNaechtlichesWecken() {
     final zeiten = <DateTime>[];
-    for (final raw in _prefs?.getStringList(_keyNaechtlichesWecken) ?? const <String>[]) {
+    for (final raw
+        in _prefs?.getStringList(_keyNaechtlichesWecken) ?? const <String>[]) {
       try {
         zeiten.add(DateTime.parse(raw));
       } catch (_) {}
@@ -307,7 +405,8 @@ class StorageService {
       zeit.toIso8601String(): zeit,
     }.values.toList()
       ..sort((a, b) => b.compareTo(a));
-    await prefs.setStringList(_keyNaechtlichesWecken, alle.map((z) => z.toIso8601String()).toList());
+    await prefs.setStringList(
+        _keyNaechtlichesWecken, alle.map((z) => z.toIso8601String()).toList());
     await prefs.setString(_keyWeckenHeuteNacht, zeit.toIso8601String());
     await AutoBackupService.saveAutoBackup();
   }
@@ -334,7 +433,8 @@ class StorageService {
   // Lust im Traum: an wie vielen Abenden jede Folge gehört wurde ({"1": 2, "2": 1}).
   static Map<int, int> getLustFortschritt() {
     try {
-      final m = jsonDecode(_prefs?.getString(_keyLustFortschritt) ?? '{}') as Map;
+      final m =
+          jsonDecode(_prefs?.getString(_keyLustFortschritt) ?? '{}') as Map;
       return m.map((k, v) => MapEntry(int.parse(k.toString()), v as int));
     } catch (_) {
       return {};
@@ -345,7 +445,8 @@ class StorageService {
     final prefs = await _ensurePrefs();
     final f = getLustFortschritt();
     f[folge] = (f[folge] ?? 0) + 1;
-    await prefs.setString(_keyLustFortschritt, jsonEncode(f.map((k, v) => MapEntry('$k', v))));
+    await prefs.setString(
+        _keyLustFortschritt, jsonEncode(f.map((k, v) => MapEntry('$k', v))));
     await AutoBackupService.saveAutoBackup();
   }
 
@@ -360,7 +461,8 @@ class StorageService {
   // Gemini API Key – liegt im SecretStore, nie in den SharedPreferences oder im Backup.
   static String? getApiKey() => SecretStore.read(SecretStore.apiKey);
 
-  static Future<void> saveApiKey(String key, {bool triggerBackup = true}) async {
+  static Future<void> saveApiKey(String key,
+      {bool triggerBackup = true}) async {
     final trimmed = key.trim();
     await SecretStore.write(SecretStore.apiKey, trimmed);
     if (triggerBackup) {
@@ -371,7 +473,8 @@ class StorageService {
   // Persönliche Ansprache: Name des Gegenübers in Lektionstexten (Standard: an)
   static const String _keyPersonalizeNames = 'personalize_names';
 
-  static bool personalizeNames() => _prefs?.getBool(_keyPersonalizeNames) ?? true;
+  static bool personalizeNames() =>
+      _prefs?.getBool(_keyPersonalizeNames) ?? true;
 
   static Future<void> setPersonalizeNames(bool value) async {
     final prefs = await _ensurePrefs();
@@ -404,7 +507,8 @@ class StorageService {
   }
 
   /// Ändert sich bei jeder neuen Wahl, damit die App sich neu aufbaut (wie [spicyAenderung]).
-  static final ValueNotifier<String> designAenderung = ValueNotifier<String>('papier');
+  static final ValueNotifier<String> designAenderung =
+      ValueNotifier<String>('papier');
 
   static Future<void> setDesignPalette(String value) async {
     if (!designWerte.contains(value)) return;
@@ -584,8 +688,11 @@ class StorageService {
       'reflectionAnswers': _prefs?.getString(_keyReflectionAnswers),
       'cbtEntries': getCbtEntries().map((e) => e.toJson()).toList(),
       'traumTagebuch': getTraumEintraege().map((e) => e.toJson()).toList(),
+      'traumpraxis': getTraumpraxis().toJson(),
+      'bedienung': getBedienDaten().toJson(),
       'realitaetschecks': getRealitaetschecks().toJson(),
-      'naechtlichesWecken': getNaechtlichesWecken().map((z) => z.toIso8601String()).toList(),
+      'naechtlichesWecken':
+          getNaechtlichesWecken().map((z) => z.toIso8601String()).toList(),
       'frageVorLautsprecher': getFrageVorLautsprecher(),
       'pausiereBeiKopfhoererGetrennt': getPausiereBeiKopfhoererGetrennt(),
       'kursFilter': getKursFilter(),
@@ -627,7 +734,8 @@ class StorageService {
       await importBackup(backup, secrets: backup.plaintextSecrets);
       return true;
     } catch (e) {
-      debugPrint('importUserData abgelehnt: ${e is BackupException ? e.message : e.runtimeType}');
+      debugPrint(
+          'importUserData abgelehnt: ${e is BackupException ? e.message : e.runtimeType}');
       return false;
     }
   }
@@ -635,7 +743,12 @@ class StorageService {
   /// Spielt eine geprüfte Sicherung ein. Alles wird erst vorbereitet und dann
   /// geschrieben; scheitert ein Schreibvorgang, wird der vorherige Stand
   /// wiederhergestellt. [secrets] sind die entschlüsselten bzw. Klartext-Geheimnisse.
-  static Future<void> importBackup(ValidatedBackup backup, {Map<String, String> secrets = const {}}) async {
+  static Future<void> importBackup(ValidatedBackup backup,
+      {Map<String, String> secrets = const {}}) =>
+      _bedienOperation(() => _importBackup(backup, secrets: secrets));
+
+  static Future<void> _importBackup(ValidatedBackup backup,
+      {Map<String, String> secrets = const {}}) async {
     final prefs = await _ensurePrefs();
     final d = backup.data;
 
@@ -644,38 +757,49 @@ class StorageService {
     UserProfile? profile;
     if (d['userProfile'] is Map) {
       try {
-        profile = UserProfile.fromJson(Map<String, dynamic>.from(d['userProfile'] as Map));
+        profile = UserProfile.fromJson(
+            Map<String, dynamic>.from(d['userProfile'] as Map));
       } catch (_) {
         throw BackupException(t.storageServiceTheBackupIsDamagedProfile);
       }
       writes[_keyUserProfile] = jsonEncode(profile.toJson());
     }
     if (d['completedLessons'] is List) {
-      writes[_keyCompletedLessons] =
-          {...getCompletedLessons(), ...(d['completedLessons'] as List).map((e) => e.toString())}.toList();
+      writes[_keyCompletedLessons] = {
+        ...getCompletedLessons(),
+        ...(d['completedLessons'] as List).map((e) => e.toString())
+      }.toList();
     }
-    if (d['reflectionAnswers'] is String && (d['reflectionAnswers'] as String).isNotEmpty) {
-      final imported = _textMap(d['reflectionAnswers'] as String, t.storageServiceReflections);
-      writes[_keyReflectionAnswers] = jsonEncode({..._lokaleMap(prefs, _keyReflectionAnswers), ...imported});
+    if (d['reflectionAnswers'] is String &&
+        (d['reflectionAnswers'] as String).isNotEmpty) {
+      final imported = _textMap(
+          d['reflectionAnswers'] as String, t.storageServiceReflections);
+      writes[_keyReflectionAnswers] = jsonEncode(
+          {..._lokaleMap(prefs, _keyReflectionAnswers), ...imported});
     }
     if (d['cbtEntries'] is List) {
       final entries = {for (final e in getCbtEntries()) e.id: e};
       for (final item in d['cbtEntries'] as List) {
         if (item is! Map) continue;
         try {
-          final entry = CbtJournalEntry.fromJson(Map<String, dynamic>.from(item));
+          final entry =
+              CbtJournalEntry.fromJson(Map<String, dynamic>.from(item));
           entries[entry.id] = entry;
         } catch (_) {}
       }
-      final sorted = entries.values.toList()..sort((a, b) => b.timestamp.compareTo(a.timestamp));
-      writes[_keyCbtEntries] = sorted.map((e) => jsonEncode(e.toJson())).toList();
+      final sorted = entries.values.toList()
+        ..sort((a, b) => b.timestamp.compareTo(a.timestamp));
+      writes[_keyCbtEntries] =
+          sorted.map((e) => jsonEncode(e.toJson())).toList();
     }
     if (d['realitaetschecks'] is Map) {
       try {
-        final rc = RealitaetscheckEinstellungen.fromJson(Map<String, dynamic>.from(d['realitaetschecks'] as Map));
+        final rc = RealitaetscheckEinstellungen.fromJson(
+            Map<String, dynamic>.from(d['realitaetschecks'] as Map));
         writes[_keyRealitaetschecks] = jsonEncode(rc.toJson());
       } catch (_) {
-        throw BackupException(t.storageServiceTheBackupIsDamagedFeld('realitaetschecks'));
+        throw BackupException(
+            t.storageServiceTheBackupIsDamagedFeld('realitaetschecks'));
       }
     }
     if (d['traumTagebuch'] is List) {
@@ -687,8 +811,29 @@ class StorageService {
           eintraege[e.id] = e;
         } catch (_) {}
       }
-      final sortiert = eintraege.values.toList()..sort((a, b) => b.zeit.compareTo(a.zeit));
-      writes[_keyTraumTagebuch] = sortiert.map((e) => jsonEncode(e.toJson())).toList();
+      final sortiert = eintraege.values.toList()
+        ..sort((a, b) => b.zeit.compareTo(a.zeit));
+      writes[_keyTraumTagebuch] =
+          sortiert.map((e) => jsonEncode(e.toJson())).toList();
+    }
+    if (d['traumpraxis'] is Map) {
+      try {
+        final imported = TraumpraxisDaten.fromJson(
+            Map<String, dynamic>.from(d['traumpraxis'] as Map));
+        writes[_keyTraumpraxis] =
+            jsonEncode(getTraumpraxis().zusammen(imported).toJson());
+      } catch (_) {
+        throw BackupException(
+            t.storageServiceTheBackupIsDamagedFeld('traumpraxis'));
+      }
+    }
+    if (d['bedienung'] is Map) {
+      try {
+        final imported = BedienDaten.fromJson(Map<String, dynamic>.from(d['bedienung'] as Map));
+        writes[_keyBedienung] = jsonEncode(getBedienDaten().zusammen(imported).toJson());
+      } catch (_) {
+        throw BackupException(t.storageServiceTheBackupIsDamagedFeld('bedienung'));
+      }
     }
     if (d['naechtlichesWecken'] is List) {
       final zeiten = <String, DateTime>{
@@ -700,25 +845,33 @@ class StorageService {
           zeiten[parsed.toIso8601String()] = parsed;
         }
       } catch (_) {
-        throw BackupException(t.storageServiceTheBackupIsDamagedFeld('naechtlichesWecken'));
+        throw BackupException(
+            t.storageServiceTheBackupIsDamagedFeld('naechtlichesWecken'));
       }
       final sortiert = zeiten.values.toList()..sort((a, b) => b.compareTo(a));
-      writes[_keyNaechtlichesWecken] = sortiert.map((z) => z.toIso8601String()).toList();
+      writes[_keyNaechtlichesWecken] =
+          sortiert.map((z) => z.toIso8601String()).toList();
     }
     if (d['frageVorLautsprecher'] is bool) {
       writes[_keyFrageVorLautsprecher] = d['frageVorLautsprecher'] as bool;
     }
     if (d['pausiereBeiKopfhoererGetrennt'] is bool) {
-      writes[_keyPausiereBeiKopfhoererGetrennt] = d['pausiereBeiKopfhoererGetrennt'] as bool;
+      writes[_keyPausiereBeiKopfhoererGetrennt] =
+          d['pausiereBeiKopfhoererGetrennt'] as bool;
     }
     // Die eigene Wahl auf diesem Gerät gewinnt; fehlt sie, gilt die aus der Sicherung.
-    if (d['kursFilter'] is String && kursFilterWerte.contains(d['kursFilter']) && _prefs?.getString(_keyKursFilter) == null) {
+    if (d['kursFilter'] is String &&
+        kursFilterWerte.contains(d['kursFilter']) &&
+        _prefs?.getString(_keyKursFilter) == null) {
       writes[_keyKursFilter] = d['kursFilter'] as String;
     }
-    if (d['designPalette'] is String && designWerte.contains(d['designPalette']) && _prefs?.getString(_keyDesignPalette) == null) {
+    if (d['designPalette'] is String &&
+        designWerte.contains(d['designPalette']) &&
+        _prefs?.getString(_keyDesignPalette) == null) {
       writes[_keyDesignPalette] = d['designPalette'] as String;
     }
-    if (d['audioBereichOffen'] is bool && _prefs?.getBool(_keyAudioBereichOffen) == null) {
+    if (d['audioBereichOffen'] is bool &&
+        _prefs?.getBool(_keyAudioBereichOffen) == null) {
       writes[_keyAudioBereichOffen] = d['audioBereichOffen'] as bool;
     }
     if (d.containsKey('halloGesendetAm') && d['halloGesendetAm'] is String) {
@@ -727,11 +880,13 @@ class StorageService {
       if (lokal == null || lokal.isEmpty) {
         writes[_keyHalloGesendetAm] = backup;
       } else {
-        writes[_keyHalloGesendetAm] = lokal.compareTo(backup) <= 0 ? lokal : backup;
+        writes[_keyHalloGesendetAm] =
+            lokal.compareTo(backup) <= 0 ? lokal : backup;
       }
     }
     // Fortschritt: je Folge der größere Stand, damit nichts wieder gesperrt wird.
-    if (d['lustFortschritt'] is String && (d['lustFortschritt'] as String).isNotEmpty) {
+    if (d['lustFortschritt'] is String &&
+        (d['lustFortschritt'] as String).isNotEmpty) {
       final f = getLustFortschritt();
       try {
         final importiert = jsonDecode(d['lustFortschritt'] as String) as Map;
@@ -741,9 +896,11 @@ class StorageService {
           if (n > (f[folge] ?? 0)) f[folge] = n;
         }
       } catch (_) {
-        throw BackupException(t.storageServiceTheBackupIsDamagedFeld('lustFortschritt'));
+        throw BackupException(
+            t.storageServiceTheBackupIsDamagedFeld('lustFortschritt'));
       }
-      writes[_keyLustFortschritt] = jsonEncode(f.map((k, v) => MapEntry('$k', v)));
+      writes[_keyLustFortschritt] =
+          jsonEncode(f.map((k, v) => MapEntry('$k', v)));
     }
     // Wie bei den Reflexionen: zusammenführen statt überschreiben. Bei gleichem Tag bzw.
     // gleicher Frage gilt die Sicherung, alles nur lokal Vorhandene bleibt.
@@ -755,6 +912,7 @@ class StorageService {
           if (date is String) byDate[date] = raw;
         } catch (_) {}
       }
+
       (prefs.getStringList(_keyDailyCheckIns) ?? []).forEach(add);
       for (final e in d['dailyCheckIns'] as List) {
         add(e.toString());
@@ -763,20 +921,26 @@ class StorageService {
       writes[_keyDailyCheckIns] = [for (final date in dates) byDate[date]!];
     }
     if (d['yesNoMaybe'] is String && (d['yesNoMaybe'] as String).isNotEmpty) {
-      final imported = _textMap(d['yesNoMaybe'] as String, t.storageServiceYesNoList);
-      writes[_keyYesNoMaybe] = jsonEncode({..._lokaleMap(prefs, _keyYesNoMaybe), ...imported});
+      final imported =
+          _textMap(d['yesNoMaybe'] as String, t.storageServiceYesNoList);
+      writes[_keyYesNoMaybe] =
+          jsonEncode({..._lokaleMap(prefs, _keyYesNoMaybe), ...imported});
     }
-    if (d['streakCount'] is int && (d['streakCount'] as int) > getStreakCount()) {
+    if (d['streakCount'] is int &&
+        (d['streakCount'] as int) > getStreakCount()) {
       writes[_keyStreakCount] = d['streakCount'] as int;
     }
 
     // Paar-Kanal: Der Partner passt nur, wenn auch der eigene Schlüssel mitkommt oder
     // die Sicherung von genau diesem Schlüssel stammt. Sonst wäre die Verbindung nur scheinbar da.
     final newPriv = secrets['nostrPrivKey'];
-    if (newPriv != null && d['nostrPubKey'] != null && KeyApi().getPublicKey(newPriv) != d['nostrPubKey']) {
+    if (newPriv != null &&
+        d['nostrPubKey'] != null &&
+        KeyApi().getPublicKey(newPriv) != d['nostrPubKey']) {
       throw BackupException(t.storageServiceTheKeysInTheBackup);
     }
-    final sameIdentity = d['nostrPubKey'] == null || d['nostrPubKey'] == NostrService().myPublicKey;
+    final sameIdentity = d['nostrPubKey'] == null ||
+        d['nostrPubKey'] == NostrService().myPublicKey;
     if (newPriv != null || sameIdentity) {
       for (final (field, key) in [
         ('nostrPartnerPubKey', _keyPartnerPubKey),
@@ -803,8 +967,10 @@ class StorageService {
       for (final entry in writes.entries) {
         await _put(prefs, entry.key, entry.value);
       }
-      if (secrets['apiKey'] != null) await SecretStore.write(SecretStore.apiKey, secrets['apiKey']);
-      if (newPriv != null) await SecretStore.write(SecretStore.nostrPrivKey, newPriv);
+      if (secrets['apiKey'] != null)
+        await SecretStore.write(SecretStore.apiKey, secrets['apiKey']);
+      if (newPriv != null)
+        await SecretStore.write(SecretStore.nostrPrivKey, newPriv);
     } catch (e) {
       for (final entry in before.entries) {
         await _put(prefs, entry.key, entry.value);
@@ -817,6 +983,7 @@ class StorageService {
 
     if (profile != null) _inMemoryProfile = profile;
     await NostrService().reloadKeysFromPrefs();
+    bedienAenderung.value++;
     await AutoBackupService.saveAutoBackup();
   }
 
@@ -840,7 +1007,8 @@ class StorageService {
     return {};
   }
 
-  static Future<void> _put(SharedPreferences prefs, String key, Object? value) async {
+  static Future<void> _put(
+      SharedPreferences prefs, String key, Object? value) async {
     switch (value) {
       case null:
         await prefs.remove(key);

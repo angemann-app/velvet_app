@@ -13,6 +13,11 @@ import 'ueben/ueben_screen.dart';
 import 'whats_new_screen.dart';
 import 'anleitung_screen.dart';
 import '../l10n/t.dart';
+import 'suche_screen.dart';
+import 'wiedergabe_screen.dart';
+import '../services/wiedergabe_dienst.dart';
+import '../services/gemeinsam_dienst.dart';
+import 'gemeinsam_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -34,6 +39,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   @override
   void initState() {
     super.initState();
+    WiedergabeDienst.instanz.initialisieren();
+    GemeinsamDienst.instanz;
     // Nach einem Update einmal zeigen, was neu ist; danach höchstens einmal täglich
     // nach einer neuen Version auf GitHub schauen.
     WidgetsBinding.instance.addPostFrameCallback((_) async {
@@ -106,6 +113,12 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         ),
         actions: [
           IconButton(
+            tooltip: t.sucheTitel,
+            icon: const Icon(Icons.search_rounded),
+            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (_) => SucheScreen(onNavigateToTool: _navigateToTab))),
+          ),
+          IconButton(
             onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AnleitungScreen())),
             icon: const Icon(Icons.help_outline_rounded),
             tooltip: t.anleitungTitel,
@@ -134,7 +147,10 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         ],
         ),
       ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: Column(mainAxisSize: MainAxisSize.min, children: [
+        const GemeinsamLeiste(),
+        const WiedergabeMini(),
+        Container(
         decoration: BoxDecoration(
           border: Border(top: BorderSide(color: AppTheme.linie, width: VpLinie.haar)),
         ),
@@ -170,6 +186,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
             ),          ],
         ),
       ),
+      ]),
     );
   }
 }

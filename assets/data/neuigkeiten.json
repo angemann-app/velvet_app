@@ -638,6 +638,42 @@
           "text": "Die Audioreihe läuft bei ausgeschaltetem Bildschirm weiter und bleibt nicht mehr zwischen den Szenen stehen."
         }
       ]
+    },
+    {
+      "build": 59,
+      "version": "4.19.0-beta.1",
+      "punkte": [
+        {
+          "icon": "headphones",
+          "titel": "Ein Player für alles",
+          "text": "Lektionen und geführte Audios laufen weiter, während du die App benutzt. Der kleine Player hält die Stelle fest; nach dem Öffnen machst du bewusst dort weiter."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Gemeinsam hören",
+          "text": "Hört dieselbe Aufnahme zur gleichen Zeit: Einladung, beide bereit, Countdown. Pause geht von beiden Seiten, weiter erst, wenn beide wieder bereit sind. Danach ein freiwilliger gemeinsamer Rückblick."
+        },
+        {
+          "icon": "school",
+          "titel": "Suche und persönlicher Weg",
+          "text": "Über die Lupe findest du Kurse, Lektionen und Übungen direkt auf dem Gerät. An Lektionen kannst du einen freiwilligen Weg aus Wissen, Übung und Nachspüren starten."
+        },
+        {
+          "icon": "bedtime",
+          "titel": "Traumpraxis",
+          "text": "Abendvorbereitung, Traumzeichen, Tagesbeobachtung und Rückblick an einem Ort, ohne Deutung und ohne Erfolgsdruck. Dazu drei kurze Hörbegleitungen für Abend, Klarheit und Morgen, nur im Spicy-Modus."
+        },
+        {
+          "icon": "record_voice_over",
+          "titel": "Neu eingesprochen",
+          "text": "Alle Aufnahmen sind neu eingesprochen, die Spicy-Texte direkter gefasst, auch die Fassungen von „Sehr spicy“. Die Aufnahmen lädst du über die Paketverwaltung nach."
+        },
+        {
+          "icon": "palette",
+          "titel": "Neue Bildwelt und neues Symbol",
+          "text": "Kurs-, Audio- und Themenbilder im Stil des Magazins; Spicy zeigt eigene Motive. Dazu ein neues App-Symbol. Das diskrete Pulse-Symbol bleibt erhalten."
+        }
+      ]
     }
   ]
 }

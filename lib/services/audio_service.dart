@@ -1,197 +1,87 @@
-import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
-import 'audio_ausgabe.dart';
-import 'sprachausgabe.dart';
-import 'storage_service.dart';
-import 'tts_service.dart';
+import '../models/wiedergabe_plan.dart';
+import 'data_service.dart';
+import 'sprache.dart';
+import 'wiedergabe_dienst.dart';
+import 'wiedergabe_lauf.dart';
 
+/// Kompatible Lektionsschnittstelle; auch Lektionen gehören zur einen globalen
+/// Sitzung. Keine zweite native Wiedergabe neben den geführten Angeboten.
 class AudioService {
-  static final AudioService _instance = AudioService._internal();
-  factory AudioService() => _instance;
-  AudioService._internal() {
-    _init();
+  static final _instanz = AudioService._();
+  factory AudioService() => _instanz;
+  AudioService._() {
+    _dienst.lauf.addListener(_aktualisieren);
+  }
+  final _dienst = WiedergabeDienst.instanz;
+  final stateNotifier = ValueNotifier<PlayerState>(PlayerState.stopped);
+  final currentLessonIdNotifier = ValueNotifier<String?>(null);
+  final positionNotifier = ValueNotifier<Duration>(Duration.zero);
+  final durationNotifier = ValueNotifier<Duration>(Duration.zero);
+  final isUsingTtsFallbackNotifier = ValueNotifier<bool>(false);
+
+  void _aktualisieren() {
+    final l = _dienst.lauf;
+    final istLektion = l.plan?.art == WiedergabeArt.lektion;
+    currentLessonIdNotifier.value = istLektion ? l.plan!.id : null;
+    stateNotifier.value = !istLektion
+        ? PlayerState.stopped
+        : switch (l.zustand) {
+            WiedergabeZustand.spielt => PlayerState.playing,
+            WiedergabeZustand.pause => PlayerState.paused,
+            WiedergabeZustand.fertig => PlayerState.completed,
+            _ => PlayerState.stopped,
+          };
+    positionNotifier.value = istLektion ? l.aufnahmePosition : Duration.zero;
+    durationNotifier.value = istLektion
+        ? (l.nativeLaenge > Duration.zero ? l.nativeLaenge : l.dauer)
+        : Duration.zero;
+    isUsingTtsFallbackNotifier.value = istLektion && l.geraetestimme;
   }
 
-  final AudioPlayer _player = AudioPlayer();
-  final TtsService _ttsFallback = TtsService();
+  bool isCurrentLesson(String id) => currentLessonIdNotifier.value == id;
+  bool isPlaying(String id) =>
+      isCurrentLesson(id) && stateNotifier.value == PlayerState.playing;
+  bool isPaused(String id) =>
+      isCurrentLesson(id) && stateNotifier.value == PlayerState.paused;
 
-  final ValueNotifier<PlayerState> stateNotifier =
-      ValueNotifier<PlayerState>(PlayerState.stopped);
-  final ValueNotifier<String?> currentLessonIdNotifier =
-      ValueNotifier<String?>(null);
-  final ValueNotifier<Duration> positionNotifier =
-      ValueNotifier<Duration>(Duration.zero);
-  final ValueNotifier<Duration> durationNotifier =
-      ValueNotifier<Duration>(Duration.zero);
-  final ValueNotifier<bool> isUsingTtsFallbackNotifier =
-      ValueNotifier<bool>(false);
-
-  bool _initialized = false;
-  StreamSubscription? _stateSub;
-  StreamSubscription? _posSub;
-  StreamSubscription? _durSub;
-  StreamSubscription? _kopfhoererSub;
-
-  void _init() {
-    if (_initialized) return;
-
-    _stateSub = _player.onPlayerStateChanged.listen((state) {
-      stateNotifier.value = state;
-      if (state == PlayerState.completed) {
-        positionNotifier.value = Duration.zero;
-      }
-    });
-
-    _posSub = _player.onPositionChanged.listen((pos) {
-      positionNotifier.value = pos;
-    });
-
-    _durSub = _player.onDurationChanged.listen((dur) {
-      if (dur != Duration.zero) {
-        durationNotifier.value = dur;
-      }
-    });
-
-    // Liest die Geräte-Stimme vor (Aufnahme fehlt), spiegelt sie ihren Zustand in
-    // stateNotifier, damit der Player Pause und Weiter anzeigt.
-    _ttsFallback.stateNotifier.addListener(() {
-      if (!isUsingTtsFallbackNotifier.value) return;
-      stateNotifier.value = switch (_ttsFallback.stateNotifier.value) {
-        TtsPlaybackState.playing => PlayerState.playing,
-        TtsPlaybackState.paused => PlayerState.paused,
-        TtsPlaybackState.stopped => PlayerState.stopped,
-      };
-    });
-
-    AudioAusgabe.instanz.initialisieren();
-    _kopfhoererSub = AudioAusgabe.instanz.onKopfhoererGetrennt.listen((_) {
-      if (StorageService.getPausiereBeiKopfhoererGetrennt() &&
-          stateNotifier.value == PlayerState.playing) {
-        pause();
-      }
-    });
-
-    _initialized = true;
-  }
-
-  /// Text für die Geräte-Stimme, um nach einer Pause weiterzulesen.
-  String? _fallbackText;
-
-  bool isCurrentLesson(String lessonId) {
-    return currentLessonIdNotifier.value == lessonId;
-  }
-
-  bool isPlaying(String lessonId) {
-    return isCurrentLesson(lessonId) &&
-        stateNotifier.value == PlayerState.playing;
-  }
-
-  bool isPaused(String lessonId) {
-    return isCurrentLesson(lessonId) &&
-        stateNotifier.value == PlayerState.paused;
-  }
-
-  Future<void> playLesson(String lessonId, {String? fallbackText}) async {
-    _init();
-
-    // If currently paused on this lesson, resume
-    if (isPaused(lessonId)) {
-      if (isUsingTtsFallbackNotifier.value && fallbackText != null) {
-        await _ttsFallback.speak(fallbackText, contextId: lessonId);
-      } else {
-        await _player.resume();
-      }
-      return;
-    }
-
-    // If already playing this lesson, do nothing
-    if (isPlaying(lessonId)) {
-      return;
-    }
-
-    // Stop current
-    await stop();
-
-    currentLessonIdNotifier.value = lessonId;
-    isUsingTtsFallbackNotifier.value = false;
-    positionNotifier.value = Duration.zero;
-    durationNotifier.value = Duration.zero;
-
-    try {
-      // Deutsch aus den Assets, Englisch aus dem Audiopaket; fehlt die Aufnahme, liest die Geräte-Stimme.
-      final source = Sprachausgabe.quelle('audio/$lessonId.opus');
-      if (source == null) throw StateError('keine Aufnahme in dieser Sprache');
-      await _player.play(source);
-      debugPrint('AudioService: Playing neural asset audio/$lessonId.opus');
-    } catch (e) {
-      debugPrint('AudioService: Asset playback failed ($e), falling back to TTS');
-      isUsingTtsFallbackNotifier.value = true;
-      _fallbackText = fallbackText;
-      if (fallbackText != null && fallbackText.isNotEmpty) {
-        await _ttsFallback.speak(fallbackText, contextId: lessonId);
+  Future<void> playLesson(String id, {String? fallbackText}) async {
+    await _dienst.initialisieren();
+    if (isPlaying(id)) return;
+    if (isPaused(id)) return _dienst.weiter();
+    final db = await DataService.loadDatabase();
+    for (final kurs in db.courses) {
+      for (final lektion in kurs.lessons) {
+        if (lektion.id != id) continue;
+        await _dienst.starten(WiedergabePlan(
+            art: WiedergabeArt.lektion,
+            id: id,
+            sprache: Sprache.code,
+            spicy: kurs.spicy || lektion.spicy,
+            titel: lektion.title,
+            abschnitte: [
+              WiedergabeAbschnitt(
+                  id: id,
+                  art: AbschnittArt.sprache,
+                  dauer: Duration(
+                      minutes:
+                          lektion.durationMin > 0 ? lektion.durationMin : 3),
+                  pfad: 'audio/$id.opus',
+                  text: fallbackText ?? lektion.content,
+                  aufnahmeEnde: true)
+            ]));
+        return;
       }
     }
   }
 
-  Future<void> pause() async {
-    if (isUsingTtsFallbackNotifier.value) {
-      await _ttsFallback.pause();
-    } else {
-      await _player.pause();
-    }
-  }
-
-  Future<void> resume() async {
-    final currentId = currentLessonIdNotifier.value;
-    if (currentId != null) {
-      if (isUsingTtsFallbackNotifier.value) {
-        final text = _fallbackText;
-        if (text != null && text.isNotEmpty) await _ttsFallback.speak(text, contextId: currentId);
-      } else {
-        await _player.resume();
-      }
-    }
-  }
-
-  Future<void> stop() async {
-    try {
-      await _player.stop();
-    } catch (_) {}
-    try {
-      await _ttsFallback.stop();
-    } catch (_) {}
-
-    stateNotifier.value = PlayerState.stopped;
-    positionNotifier.value = Duration.zero;
-  }
-
-  Future<void> seek(Duration position) async {
-    if (!isUsingTtsFallbackNotifier.value) {
-      await _player.seek(position);
-    }
-  }
-
-  Future<void> seekRelative(int seconds) async {
-    if (isUsingTtsFallbackNotifier.value) return;
-
-    final currentPos = positionNotifier.value;
-    final totalDur = durationNotifier.value;
-
-    int newSec = currentPos.inSeconds + seconds;
-    if (newSec < 0) newSec = 0;
-    if (totalDur != Duration.zero && newSec > totalDur.inSeconds) {
-      newSec = totalDur.inSeconds;
-    }
-
-    await seek(Duration(seconds: newSec));
-  }
-
-  void dispose() {
-    _stateSub?.cancel();
-    _posSub?.cancel();
-    _durSub?.cancel();
-    _kopfhoererSub?.cancel();
-    _player.dispose();
-  }
+  Future<void> pause() => _dienst.pause();
+  Future<void> resume() => _dienst.weiter();
+  Future<void> stop() => _dienst.beenden(entfernen: true);
+  Future<void> seek(Duration position) => _dienst.lauf.suchen(position);
+  Future<void> seekRelative(int seconds) =>
+      seek(positionNotifier.value + Duration(seconds: seconds));
+  // Der globale Dienst bleibt beim Verlassen einer Lektionsseite bestehen.
+  void dispose() {}
 }

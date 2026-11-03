@@ -9,6 +9,267 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
+  String get gemeinsamWiedergabeFehler =>
+      'Eine Wiedergabe konnte nicht starten. Prüft die Aufnahmen und die Audioausgabe und versucht es erneut.';
+
+  @override
+  String get gemeinsamZurueckziehen => 'Einladung zurückziehen';
+
+  @override
+  String get aufnahmePaketFehlt =>
+      'Das passende Inhaltspaket muss geladen werden.';
+
+  @override
+  String get wiedergabeStimmenStand => 'Aufnahmen für diese Stimme';
+
+  @override
+  String get gemeinsamAntwortZuLang =>
+      'Der Rückblick ist zu lang. Kürze ihn bitte etwas und versuche es erneut.';
+
+  @override
+  String get gemeinsamGefuehlRuhig => 'Ruhig';
+
+  @override
+  String get gemeinsamGefuehlNah => 'Verbunden';
+
+  @override
+  String get gemeinsamGefuehlOffen => 'Noch offen';
+
+  @override
+  String get gemeinsamGefuehlBewegt => 'Bewegt';
+
+  @override
+  String get gemeinsamTitel => 'Gemeinsame Übung';
+
+  @override
+  String get gemeinsamHinweis =>
+      'Ihr hört denselben Ablauf auf euren eigenen Geräten. Beide brauchen passende Aufnahmen und bestätigen ihre Bereitschaft. Kopfhörer können angenehm sein. Jede Person kann pausieren; weiter geht es erst, wenn beide bereit sind. Eine Einladung beginnt den Ablauf von vorn.';
+
+  @override
+  String get gemeinsamAnnehmen => 'Annehmen';
+
+  @override
+  String get gemeinsamSpaeter => 'Später';
+
+  @override
+  String get gemeinsamWarten => 'Du bist bereit. Warte auf dein Gegenüber.';
+
+  @override
+  String get gemeinsamBereitHinweis =>
+      'Richte dich in Ruhe ein und bestätige dann deine Bereitschaft.';
+
+  @override
+  String get gemeinsamBereit => 'Bereit';
+
+  @override
+  String get gemeinsamPlayer => 'Wiedergabe öffnen';
+
+  @override
+  String get gemeinsamRueckblick => 'Gemeinsamer Rückblick';
+
+  @override
+  String get gemeinsamBeenden => 'Für beide beenden';
+
+  @override
+  String get gemeinsamSchliessen => 'Schließen';
+
+  @override
+  String get gemeinsamEinladung => 'Eine Einladung wartet auf dich.';
+
+  @override
+  String get gemeinsamVorbereiten => 'In Ruhe bereit werden';
+
+  @override
+  String get gemeinsamWartenAnnahme => 'Warte auf dein Gegenüber.';
+
+  @override
+  String get gemeinsamLaeuft => 'Ihr hört gemeinsam.';
+
+  @override
+  String get gemeinsamPause => 'Pause. Weiter erst, wenn beide bereit sind.';
+
+  @override
+  String get gemeinsamAbgeschlossen => 'Euer gemeinsamer Moment ist beendet.';
+
+  @override
+  String get gemeinsamAufnahmenFehlen =>
+      'Passende Aufnahmen fehlen oder unterscheiden sich. Ladet beide die aktuellen Aufnahmen und ladet euch erneut ein. Gemeinsames Hören verwendet keine Geräte-Stimme.';
+
+  @override
+  String get gemeinsamPartnerFehlt =>
+      'Dein Gegenüber ist gerade nicht erreichbar, bereits beschäftigt oder braucht eine aktuelle App. Öffnet beide den Paar-Kanal und versucht es erneut.';
+
+  @override
+  String get gemeinsamFehler =>
+      'Die Verbindung hat nicht geklappt. Bitte versucht es erneut.';
+
+  @override
+  String get gemeinsamLeer => 'Wähle bei einer Wiedergabe „Gemeinsam hören“.';
+
+  @override
+  String get gemeinsamStatusOeffnen => 'Gemeinsamen Ablauf öffnen';
+
+  @override
+  String get gemeinsamStarten => 'Gemeinsam hören';
+
+  @override
+  String get gemeinsamDuEmpfaengst => 'Du empfängst, dein Gegenüber gibt.';
+
+  @override
+  String get gemeinsamVerbindungFehlt =>
+      'Die Verbindung zum Gegenüber ist unterbrochen. Deine Wiedergabe läuft lokal weiter. Du kannst jederzeit pausieren; ein Wiederverbinden startet nichts automatisch.';
+
+  @override
+  String get gemeinsamRueckblickFrage => 'Wie war dieser Moment für dich?';
+
+  @override
+  String get gemeinsamRueckblickHinweis =>
+      'Dein Rückblick ist freiwillig. Die Antwort deines Gegenübers wird erst sichtbar, wenn ihr beide eine eigene Antwort geteilt habt.';
+
+  @override
+  String get gemeinsamAntwort => 'Dein Rückblick';
+
+  @override
+  String get gemeinsamTeilen => 'Antwort speichern und teilen';
+
+  @override
+  String get gemeinsamGeteilt => 'Dein Rückblick wurde geteilt.';
+
+  @override
+  String get gemeinsamNochVerdeckt =>
+      'Der gemeinsame Rückblick ist noch verdeckt.';
+
+  @override
+  String gemeinsamCountdown(int sekunden) {
+    return 'Gemeinsamer Start in $sekunden';
+  }
+
+  @override
+  String get wiedergabeNeutral => 'Wiedergabe';
+
+  @override
+  String get wiedergabeLeer => 'Keine zugängliche Wiedergabe ausgewählt.';
+
+  @override
+  String get wiedergabeBehalten =>
+      'Du kannst diese Seite schließen und während des Hörens weiter entdecken.';
+
+  @override
+  String get wiedergabeTts =>
+      'Geräte-Stimme: Beim Wiederaufnehmen beginnt dieser Abschnitt von vorn.';
+
+  @override
+  String get wiedergabeFehler =>
+      'Die Wiedergabe konnte nicht fortgesetzt werden. Prüfe die Aufnahmen und versuche es erneut.';
+
+  @override
+  String get wiedergabeFertig => 'Für diesen Moment abgeschlossen.';
+
+  @override
+  String get wiedergabeTeilweise =>
+      'Nicht alle Aufnahmen sind offline vorhanden. Fehlende Texte liest die Geräte-Stimme.';
+
+  @override
+  String get wiedergabeAbschnitte => 'Abschnitte';
+
+  @override
+  String get wiedergabeRuhe => 'Ruhe & Nachspüren';
+
+  @override
+  String get wiedergabeEntfernen => 'Aus Weiterhören entfernen';
+
+  @override
+  String get wiedergabeLaeuft => 'Läuft weiter';
+
+  @override
+  String get wiedergabeFortsetzen => 'Weiterhören';
+
+  @override
+  String wiedergabeRunde(int runde) {
+    return 'Runde $runde';
+  }
+
+  @override
+  String get sucheTitel => 'Entdecken & finden';
+
+  @override
+  String get aufnahmeOffline => 'Aufnahme offline verfügbar';
+
+  @override
+  String get wegTitel => 'Dein persönlicher Weg';
+
+  @override
+  String get wegEinladung =>
+      'Wissen, Ausprobieren, Nachspüren. Drei freiwillige Schritte in deinem Tempo – ohne Zeitvorgabe oder Pflichtantwort.';
+
+  @override
+  String get wegWissen => 'Wissen entdecken';
+
+  @override
+  String get wegUeben => 'Übung ausprobieren';
+
+  @override
+  String get wegNachspueren => 'Nachspüren';
+
+  @override
+  String get wegBeginnen => 'Diesen Weg beginnen';
+
+  @override
+  String get wegNochEinmal => 'Noch einmal entdecken';
+
+  @override
+  String get wegOeffnen => 'Schritt öffnen';
+
+  @override
+  String get wegWeiter => 'Zum nächsten Schritt';
+
+  @override
+  String get wegAbschliessen => 'Für mich abschließen';
+
+  @override
+  String get wegFehler =>
+      'Der Stand konnte nicht gespeichert werden. Bitte versuche es noch einmal.';
+
+  @override
+  String get aufnahmeGeraetestimme => 'Ohne Aufnahme: Geräte-Stimme';
+
+  @override
+  String get aufnahmeVerwalten => 'Aufnahmen laden';
+
+  @override
+  String get sucheFeld => 'Kurse, Lektionen und Übungen suchen';
+
+  @override
+  String get sucheLeeren => 'Suche leeren';
+
+  @override
+  String get sucheHinweis =>
+      'Was möchtest du entdecken? Suche nach einem Thema oder einem Angebot. Deine Suche bleibt auf diesem Gerät und wird nicht gespeichert.';
+
+  @override
+  String get sucheLeer =>
+      'Dazu wurde nichts gefunden. Versuche ein anderes Wort.';
+
+  @override
+  String get sucheFehler =>
+      'Die Inhalte konnten nicht geladen werden. Öffne die Suche bitte erneut.';
+
+  @override
+  String get sucheKurs => 'Kurs';
+
+  @override
+  String get sucheLektion => 'Lektion';
+
+  @override
+  String get sucheAngebot => 'Audio & Praxis';
+
+  @override
+  String get suchePaarAbend => 'Geführter Paar-Abend';
+
+  @override
+  String get sucheInnenansichten => 'Innenansichten';
+
+  @override
   String get appName => 'VelvetPulse';
 
   @override
@@ -3666,6 +3927,257 @@ class AppLocalizationsDe extends AppLocalizations {
       'Ein paar Worte für dich, gleich am Morgen.';
 
   @override
+  String get traumpraxisTitel => 'Deine Traumpraxis';
+
+  @override
+  String get praxisZeichenTitel => 'Deine Traumzeichen';
+
+  @override
+  String get praxisZeichenText =>
+      'Was taucht in deinen Träumen wieder auf? Ein Ort, ein unmöglicher Übergang, ein besonderes Licht? Benenne ein Zeichen, an dem du einen Traum erkennen möchtest.';
+
+  @override
+  String get praxisZeichenLeer =>
+      'Noch keine Traumzeichen. Du kannst mit einem Detail aus deinem Tagebuch beginnen.';
+
+  @override
+  String get praxisZeichenFeld => 'Mein Traumzeichen';
+
+  @override
+  String get praxisZeichenBeispiel =>
+      'Zum Beispiel: eine Tür an einem unmöglichen Ort';
+
+  @override
+  String get praxisHinzufuegen => 'Hinzufügen';
+
+  @override
+  String get praxisSpeichern => 'Speichern';
+
+  @override
+  String get praxisAbbrechen => 'Abbrechen';
+
+  @override
+  String get praxisBearbeiten => 'Bearbeiten';
+
+  @override
+  String get praxisLoeschen => 'Löschen';
+
+  @override
+  String get praxisLoeschenFrage => 'Diesen Eintrag löschen?';
+
+  @override
+  String get praxisLoeschenText =>
+      'Der Eintrag wird entfernt. Eine spätere Wiederherstellung einer älteren Sicherung holt ihn nicht automatisch zurück.';
+
+  @override
+  String get praxisFehler =>
+      'Das Speichern hat nicht geklappt. Deine bisherigen Daten bleiben erhalten. Bitte versuche es erneut.';
+
+  @override
+  String get praxisZeichenWaehlen => 'Ein Zeichen für heute Abend';
+
+  @override
+  String get praxisZeichenAbsicht =>
+      'Stell dir vor, dieses Zeichen erscheint in deinem Traum. Du bemerkst es und erkennst: Ich träume. Danach darf deine persönliche Absicht ruhen.';
+
+  @override
+  String get praxisAbendStart => 'Zu deiner Abendfolge';
+
+  @override
+  String get praxisBeobachten => 'Heute nachspüren';
+
+  @override
+  String get praxisBeobachtungTitel => 'Deine Tagesbeobachtung';
+
+  @override
+  String get praxisBeobachtungText =>
+      'Was beobachtest du heute? Du kannst einzelne Fragen offenlassen. Ein erlebter Höhepunkt ist eine Möglichkeit, kein Ziel für jeden Abend.';
+
+  @override
+  String get praxisSchlaf => 'Wie erholt bist du?';
+
+  @override
+  String get praxisLust => 'Wie fühlt sich deine Lust heute an?';
+
+  @override
+  String get praxisUnbeantwortet => 'Offenlassen';
+
+  @override
+  String get praxisSchlaf0 => 'Gar nicht erholt';
+
+  @override
+  String get praxisSchlaf1 => 'Wenig erholt';
+
+  @override
+  String get praxisSchlaf2 => 'Teils erholt';
+
+  @override
+  String get praxisSchlaf3 => 'Gut erholt';
+
+  @override
+  String get praxisSchlaf4 => 'Sehr erholt';
+
+  @override
+  String get praxisLust0 => 'Keine Lust spürbar';
+
+  @override
+  String get praxisLust1 => 'Wenig Lust';
+
+  @override
+  String get praxisLust2 => 'Mittlere Lust';
+
+  @override
+  String get praxisLust3 => 'Deutliche Lust';
+
+  @override
+  String get praxisLust4 => 'Viel Lust';
+
+  @override
+  String get praxisSinnlich => 'War dein Traum sinnlich?';
+
+  @override
+  String get praxisKlar => 'Wusstest du im Traum, dass du träumst?';
+
+  @override
+  String get praxisOrgasmus => 'Hast du im Traum einen Orgasmus erlebt?';
+
+  @override
+  String get praxisJa => 'Ja';
+
+  @override
+  String get praxisNein => 'Nein';
+
+  @override
+  String get praxisNotiz => 'Was möchtest du festhalten?';
+
+  @override
+  String get praxisRueckblick => 'Dein privater Rückblick';
+
+  @override
+  String get praxisRueckblickText =>
+      'Hier stehen deine eigenen Beobachtungen. Ähnliche Verläufe können neugierig machen, belegen aber keine Ursache. Es gibt keine Punkte und keine Zielquote.';
+
+  @override
+  String get praxisRueckblickLeer =>
+      'Noch keine Tagesbeobachtung. Schon eine einzelne Notiz kann ein Anfang sein.';
+
+  @override
+  String get praxisNurOffeneFelder => 'Noch keine Fragen beantwortet';
+
+  @override
+  String get praxisPfad => 'Dein Weg für heute';
+
+  @override
+  String get praxisPfadErinnern =>
+      'Beginne mit Erinnern und Körperwahrnehmung. Die ersten beiden Folgen begleiten dich dabei.';
+
+  @override
+  String get praxisPfadErkennen =>
+      'Verbinde ein persönliches Traumzeichen mit deiner Abendvorbereitung. Die Folgen drei bis fünf vertiefen das Erkennen.';
+
+  @override
+  String get praxisPfadEntfalten =>
+      'Du kannst Lust im Klartraum erkunden und nachspüren, was du in den Tag mitnehmen möchtest. Die Folgen sechs bis acht geben dir dafür Raum.';
+
+  @override
+  String get traumpraxisNurSpicy =>
+      'Diese Traumpraxis gehört zum Spicy-Modus für Erwachsene.';
+
+  @override
+  String get traumpraxisEinladung => 'Lust darf über die Nacht hinausreichen.';
+
+  @override
+  String get traumpraxisZiel =>
+      'Erkunde sinnliche Träume, das bewusste Erkennen im Traum und das, was davon am Tag nachklingen darf. Ein Höhepunkt kann dazugehören. Du bestimmst, wie weit du gehen möchtest.';
+
+  @override
+  String get traumpraxisErinnern => 'Am Morgen · Erinnern';
+
+  @override
+  String get traumpraxisErinnernText =>
+      'Halte fest, woran du dich erinnerst: einen Ort, eine Empfindung, eine Begegnung. Sinnlichkeit, Klarheit und ein erlebter Höhepunkt dürfen im Tagebuch markiert werden. Auch ein Traum ohne Höhepunkt oder eine Nacht ohne Erinnerung gehört dazu.';
+
+  @override
+  String get traumpraxisErkennen => 'Am Abend · Erkennen üben';
+
+  @override
+  String get traumpraxisMildEinleitung =>
+      'Diese Vorstellungsübung orientiert sich an MILD: Du verbindest die Erinnerung an einen Traum mit der Absicht, den nächsten Traum zu erkennen. Übe kurz und ohne dich wachzuhalten. Einen zusätzlichen Wecker brauchst du dafür nicht.';
+
+  @override
+  String get traumpraxisVorlage => 'Eine angenehme Traumerinnerung';
+
+  @override
+  String get traumpraxisOhneEintrag =>
+      'Noch kein passender Eintrag? Erinnere dich an einen angenehmen Traum. Du kannst zunächst auch nur einen vertrauten Ort vor Augen haben und das bewusste Erkennen üben.';
+
+  @override
+  String get traumpraxisMildSchritte =>
+      'Rufe deinen Traum ruhig in Erinnerung. Wo war etwas ungewöhnlich? Vielleicht ein Ort, der sich verändert hat, oder ein unmöglicher Übergang.\n\nStell dir dieselbe Stelle noch einmal vor. Diesmal bemerkst du sie und erkennst: Ich träume. Lass die Vorstellung für einen Moment bestehen, ohne eine Handlung erzwingen zu müssen.';
+
+  @override
+  String get traumpraxisAbsicht =>
+      'Wenn ich wieder träume, möchte ich mich daran erinnern, dass ich träume.';
+
+  @override
+  String get traumpraxisLoslassen =>
+      'Danach darf die Absicht ruhen. Du darfst einschlafen. Wenn die Übung dich wacher macht, lässt du sie für heute los. Die acht Abendfolgen stehen dir weiterhin zur Verfügung.';
+
+  @override
+  String get traumpraxisRuhe => 'Heute darf Ruhe genügen';
+
+  @override
+  String get traumpraxisMitnehmen => 'Am Tag · Das Angenehme mitnehmen';
+
+  @override
+  String get traumpraxisMitnehmenText =>
+      'Wenn dein Traum angenehm war, erinnere dich an eine Empfindung: Wärme, Leichtigkeit oder Nähe. Was davon ist jetzt, im wachen Körper, noch spürbar? Es darf viel sein, wenig oder gar nichts. Bei einem belastenden Traum lässt du diese Übung aus.';
+
+  @override
+  String get traumpraxisNachspueren =>
+      'Wähle eine kleine, freiwillige sinnliche Erfahrung für deinen Tag: warmes Wasser auf der Haut, einen weichen Stoff oder einen Moment ungestörter Körperwahrnehmung. Spüre danach nach: Hat sich deine Lust verändert? Deine Neugier? Oder vor allem deine Ruhe? Notiere deine eigene Beobachtung, ohne sie bewerten zu müssen.';
+
+  @override
+  String get traumpraxisNotieren => 'Im Tagebuch nachspüren';
+
+  @override
+  String get traumpraxisHoehepunkt => 'Wenn du im Traum einen Orgasmus erlebst';
+
+  @override
+  String get traumpraxisHoehepunktText =>
+      'Du darfst das Erlebnis genießen und festhalten, auch wenn es sich wiederholt. Die App misst keine körperlichen Reaktionen: Ein erinnerter Orgasmus im Traum ist ein berichtetes Erlebnis, kein körperlicher Messbefund. Du musst weder im Traum bleiben noch einen weiteren Höhepunkt erreichen.';
+
+  @override
+  String get traumpraxisHoeren => 'Zum Hören';
+
+  @override
+  String get traumpraxisHoerenText =>
+      'Drei kurze Begleitungen mit Victoria oder Martin. Sie ergänzen die Praxis, ersetzen nichts davon und enden von selbst. Nur für dich allein, nicht für das gemeinsame Hören.';
+
+  @override
+  String get traumpraxisHoerenAbend =>
+      'Einmal vor dem Einschlafen oder vor einer Abendfolge.';
+
+  @override
+  String get traumpraxisHoerenKlarheit =>
+      'Tagsüber oder am frühen Abend, wach und im Sitzen oder Liegen.';
+
+  @override
+  String get traumpraxisHoerenMorgen =>
+      'Nach dem Aufwachen oder in einem ruhigen Moment am Tag, danach gern die Tagesbeobachtung.';
+
+  @override
+  String get traumpraxisHoerenStarten => 'Anhören';
+
+  @override
+  String get traumpraxisHoerenPaket =>
+      'Der Inhalt dieser Begleitungen kommt mit den Aufnahmen. Lade sie in der Paketverwaltung nach, dann erscheinen die Titel hier.';
+
+  @override
+  String get traumpraxisErkundung =>
+      'Mehr Lust im Traum und im Alltag ist das Ziel dieser Erkundung. Ob diese Übungen deine Tageslust erhöhen, ist offen und individuell zu beobachten. MILD wird zur Klartraumförderung untersucht; diese kurze Abendfassung und der Transfer in den Tag sind keine nachgewiesene Behandlung. Erholsamer Schlaf bleibt wichtiger als ein bestimmtes Traumerlebnis.';
+
+  @override
   String get lustTitel => 'Lust im Traum';
 
   @override
@@ -4143,7 +4655,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String reihePartnerHinweis(String name) {
-    return 'Die passende Gegenperspektive derselben Begegnung: $name. Beide folgen derselben Szenenfolge. Eine gemeinsame Wiedergabe lässt sich so starten, die App gleicht die Geräte aber nicht ab.';
+    return 'Die passende Gegenperspektive derselben Begegnung: $name. Beide folgen derselben Szenenfolge. „Gemeinsam hören“ gleicht dieselbe Fassung auf zwei Geräten ab. Unterschiedliche Gegenperspektiven stimmt ihr weiterhin selbst aufeinander ab.';
   }
 
   @override

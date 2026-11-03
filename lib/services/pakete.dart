@@ -62,9 +62,10 @@ class Pakete {
 
   /// Vollständiger Pfad einer Aufnahme (z. B. 'audio/paar/victoria_ankommen_1.opus') in der aktuellen Sprache,
   /// oder null. Englisch fällt zusätzlich auf das alte Audiopaket zurück, damit nichts verloren geht.
-  static String? datei(String pfad) {
+  static String? datei(String pfad, {String? sprache}) {
+    final code = sprache ?? Sprache.code;
     for (final art in _alle) {
-      final o = _ordner(name(art));
+      final o = _ordner(name(art, code));
       if (o == null) break;
       final f = File('$o/$pfad');
       if (f.existsSync()) return f.path;
@@ -75,7 +76,7 @@ class Pakete {
       final f = File('$ordner/$pfad');
       if (f.existsSync()) return f.path;
     }
-    return Sprache.englisch ? AudioPaket.datei(pfad) : null;
+    return code == 'en' ? AudioPaket.datei(pfad) : null;
   }
 
   /// Installierte Version, 0 ohne Paket.

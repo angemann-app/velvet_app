@@ -103,20 +103,25 @@ class VpKarte extends StatelessWidget {
     final deko = BoxDecoration(
       color: AppTheme.papierErhoben,
       borderRadius: radius,
-      border: rahmen == VpRahmen.akzent
-          ? Border(
-              left: BorderSide(color: AppTheme.akzentTief, width: VpLinie.akzent),
-              top: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
-              right: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
-              bottom: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
-            )
-          : Border.all(color: AppTheme.linie, width: VpLinie.haar),
+      border: Border.all(color: AppTheme.linie, width: VpLinie.haar),
     );
     return Material(
       color: Colors.transparent,
       child: Ink(
         decoration: deko,
-        child: InkWell(onTap: onTap, borderRadius: radius, child: inhalt),
+        child: ClipRRect(
+          borderRadius: radius,
+          child: Stack(children: [
+            InkWell(onTap: onTap, borderRadius: radius, child: inhalt),
+            // Unterschiedliche Randfarben zusammen mit borderRadius kann
+            // BoxDecoration nicht zeichnen. Akzent separat, am Radius beschnitten.
+            if (rahmen == VpRahmen.akzent)
+              Positioned(
+                left: 0, top: 0, bottom: 0, width: VpLinie.akzent,
+                child: IgnorePointer(child: ColoredBox(color: AppTheme.akzentTief)),
+              ),
+          ]),
+        ),
       ),
     );
   }

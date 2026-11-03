@@ -24,7 +24,7 @@
     {
       "id": "runde_start_2",
       "phase": "runde_start",
-      "text": "Eine neue Runde beginnt. Findet eure Plätze. Wer empfängt, liegt warm und bequem und darf ab jetzt jede Verantwortung abgeben. Wer gibt, reibt die Hände aneinander, bis sie warm werden. Lege sie zuerst einfach ruhig auf den Körper deines Gegenübers. Noch keine Bewegung. Nur ankommen."
+      "text": "Eine neue Runde beginnt. Findet eure Plätze. Wer empfängt, liegt warm und bequem und darf die Führung abgeben und jederzeit sagen, was gut tut. Wer gibt, reibt die Hände aneinander, bis sie warm werden. Lege sie zuerst einfach ruhig auf den Körper deines Gegenübers. Noch keine Bewegung. Nur ankommen."
     },
     {
       "id": "zone_ruecken_1",
@@ -216,7 +216,7 @@
       "zone": "arme",
       "stufe": 2,
       "tiefe": "bekleidet",
-      "text": "Streiche mit den Fingerspitzen die Innenseite der Arme entlang, vom Handgelenk bis in die Armbeuge und weiter. Die Haut dort ist dünn und empfindsam. Je langsamer, desto schöner."
+      "text": "Streiche mit den Fingerspitzen die Innenseite der Arme entlang, vom Handgelenk bis in die Armbeuge und weiter. Die Haut dort ist dünn und empfindsam. Findet ein Tempo, bei dem die Berührung angenehm nachklingt."
     },
     {
       "id": "zone_haende_2",
@@ -272,7 +272,7 @@
       "zone": "ganzkoerper",
       "stufe": 3,
       "tiefe": "haut",
-      "text": "Verbinde jetzt alles. Lange Striche über den ganzen Körper, vom Nacken bis zu den Füßen, und wieder zurück. Lass keine Stelle aus. Du malst deinem Gegenüber ein Bild von sich selbst."
+      "text": "Verbinde jetzt alles. Lange Striche über den ganzen Körper, vom Nacken bis zu den Füßen, und wieder zurück. Bleib bei den Stellen, die ihr miteinander vereinbart habt. Du malst deinem Gegenüber ein Bild von sich selbst."
     },
     {
       "id": "zone_brust_3",
@@ -313,7 +313,7 @@
     {
       "id": "erinnerung_5",
       "phase": "erinnerung",
-      "text": "Achte auf den Atem deines Gegenübers. Er zeigt dir den Weg."
+      "text": "Achte auf den Atem deines Gegenübers. Er kann dir Hinweise geben. Frag leise nach, wenn du unsicher bist."
     },
     {
       "id": "erinnerung_6",
@@ -323,7 +323,7 @@
     {
       "id": "check_in_1",
       "phase": "check_in",
-      "text": "Halte einen Moment inne. Wer empfängt, sag mit einem Wort, wie es dir gerade geht. Grün, gelb oder rot. Dann geht es weiter."
+      "text": "Halte einen Moment inne. Wer empfängt, sag mit einem Wort, wie es dir gerade geht. Grün, gelb oder rot. Bei Grün geht es weiter. Bei Gelb pausiert ihr und klärt, was sich ändern soll. Bei Rot hört ihr auf."
     },
     {
       "id": "check_in_2",
@@ -363,7 +363,7 @@
     {
       "id": "ausklang_2",
       "phase": "ausklang",
-      "text": "Kommt langsam zur Ruhe. Haltet euch einfach im Arm. Spürt die Wärme und den Atem des anderen. Danke euch für diese Zeit miteinander."
+      "text": "Kommt langsam zur Ruhe. Haltet euch einfach im Arm. Spürt die Wärme und den Atem des anderen. Dankt euch für diese Zeit miteinander."
     },
     {
       "id": "ausklang_3",
@@ -374,7 +374,7 @@
       "id": "ankommen_s1",
       "phase": "ankommen",
       "tiefe": "spicy",
-      "text": "Willkommen zu eurem Spicy-Abend. Heute darf es heiß werden. Legt Gleitmittel, ein Handtuch und vielleicht ein Tuch für die Augen bereit. Vereinbart jetzt euer Stoppwort. Fällt es, wird es sofort ruhig, ohne Diskussion. Alles andere ist erlaubt, wenn ihr beide es wollt."
+      "text": "Willkommen zu eurem Spicy-Abend. Heute wird es heiß. Legt Gleitmittel, ein Handtuch und vielleicht ein Tuch für die Augen bereit. Vereinbart jetzt euer Stoppwort. Fällt es, wird es sofort ruhig, ohne Diskussion. Alles andere ist erlaubt, wenn ihr beide es wollt."
     },
     {
       "id": "ankommen_x1",
@@ -404,19 +404,19 @@
       "id": "runde_start_x1",
       "phase": "runde_start",
       "tiefe": "sehrSpicy",
-      "text": "Wer empfängt, legt sich hin, Augen zu oder Tuch drum. Wer gibt, darf jetzt mit dem anderen machen, was abgesprochen ist. Heiß machen, hinhalten, zappeln lassen. Und erst dann geben, wenn laut gebettelt wird."
+      "text": "Wer empfängt, legt sich hin, Augen zu oder Tuch drum. Wer gibt, führt jetzt, genau wie abgesprochen. Heiß machen, hinhalten, zappeln lassen. Und erst dann geben, wenn laut gebettelt wird."
     },
     {
       "id": "runde_start_s2",
       "phase": "runde_start",
       "tiefe": "spicy",
-      "text": "Neue Runde. Wer empfängt, macht es sich bequem und darf nur nehmen. Wer gibt, darf frech sein, fordernd sogar, aber immer aufmerksam. Atem, Laute, Bewegungen verraten dir, was gefällt."
+      "text": "Neue Runde. Wer empfängt, macht es sich bequem und nimmt. Wer gibt, ist frech, fordernd sogar, und bleibt aufmerksam. Atem, Laute und Bewegungen geben dir Hinweise. Ein leises Nachfragen gehört dazu."
     },
     {
       "id": "runde_start_x2",
       "phase": "runde_start",
       "tiefe": "sehrSpicy",
-      "text": "Nächste Runde. Wer empfängt, liegt da, spreizt die Beine und lässt sich verwöhnen und verschlingen, ganz wie abgesprochen. Wer gibt, darf gierig sein. Jedes Stöhnen sagt dir, wo du weitermachen sollst."
+      "text": "Nächste Runde. Wer empfängt, liegt da, spreizt die Beine und lässt sich verwöhnen und verschlingen, ganz wie abgesprochen. Wer gibt, ist gierig. Hör auf das Stöhnen und die Worte. Lass dir sagen, wo du weitermachen sollst."
     },
     {
       "id": "necken_s1",
@@ -440,7 +440,7 @@
       "zone": "necken",
       "stufe": 5,
       "tiefe": "spicy",
-      "text": "Berühre jetzt nur mit deinem Atem. Hauch über Hals, Brust, Bauch, Innenschenkel, ganz nah am Geschlecht. Fast eine Berührung, aber eben nicht. Wer empfängt, darf zeigen, wie sehr es kribbelt."
+      "text": "Berühre jetzt nur mit deinem Atem. Hauch über Hals, Brust, Bauch, Innenschenkel, ganz nah am Geschlecht. Fast eine Berührung, aber eben nicht. Wer empfängt, zeigt, wie sehr es kribbelt."
     },
     {
       "id": "necken_x2",
@@ -536,7 +536,7 @@
       "zone": "lust",
       "stufe": 6,
       "tiefe": "spicy",
-      "text": "Wer empfängt, legt die eigene Hand auf die gebende Hand und führt sie. Wo, wie schnell, wie fest. Wer gibt, lässt sich führen und lernt. Kein Wort nötig, der Körper sagt alles."
+      "text": "Wer empfängt, legt die eigene Hand auf die gebende Hand und führt sie. Wo, wie schnell, wie fest. Wer gibt, lässt sich führen und lernt. Zeig es mit deinen Händen. Sag es mit deinen Worten."
     },
     {
       "id": "lust_x4",
@@ -618,31 +618,31 @@
       "id": "runde_ende_s1",
       "phase": "runde_ende",
       "tiefe": "spicy",
-      "text": "Diese Runde geht zu Ende. Wenn ihr wollt, darf es jetzt bis zum Höhepunkt gehen. Oder ihr werdet langsamer und lasst die Lust nachglühen. Beides ist schön. Nehmt euch die Zeit, die ihr braucht."
+      "text": "Diese Runde geht zu Ende. Wenn ihr wollt, bleibt ihr jetzt auf dem Weg zum Höhepunkt. Oder ihr werdet langsamer und lasst die Lust nachglühen. Beides ist schön. Nehmt euch die Zeit, die ihr braucht."
     },
     {
       "id": "runde_ende_x1",
       "phase": "runde_ende",
       "tiefe": "sehrSpicy",
-      "text": "Die Runde ist fast vorbei. Wer empfangen hat, darf jetzt kommen, wenn er oder sie will. Wer gibt, macht weiter, härter, bis es so weit ist, und schaut dabei genau hin. Oder ihr hört knapp davor auf und spart es euch auf."
+      "text": "Die Runde ist fast vorbei. Wer empfangen hat, darf jetzt kommen, wenn er oder sie will. Wer gibt, bleibt bei dem Druck und Rhythmus, die gewünscht sind, und schaut dabei genau hin. Oder ihr hört knapp davor auf und spart es euch auf."
     },
     {
       "id": "runde_ende_s2",
       "phase": "runde_ende",
       "tiefe": "spicy",
-      "text": "Werdet langsamer. Lasst die Hände dort ruhen, wo es heiß ist. Wer empfangen hat, wünscht sich jetzt, wie es endet: Höhepunkt, oder Stille und Halten. Wer gegeben hat, schenkt genau das."
+      "text": "Werdet langsamer. Lasst die Hände dort ruhen, wo es heiß ist. Wer empfangen hat, wünscht sich jetzt, wie es endet: Höhepunkt, oder Stille und Halten. Wer gegeben hat, folgt diesem Wunsch. Nehmt euch Zeit für diesen Abschluss."
     },
     {
       "id": "runde_ende_x2",
       "phase": "runde_ende",
       "tiefe": "sehrSpicy",
-      "text": "Werdet langsamer. Wer empfangen hat, sagt jetzt, wie es enden soll: kommen, oder einfach festgehalten werden. Wer gegeben hat, liefert genau das."
+      "text": "Werdet langsamer. Wer empfangen hat, sagt jetzt, wie es enden soll: kommen, oder einfach festgehalten werden. Wer gegeben hat, folgt diesem Wunsch. Nehmt euch Zeit für diesen Abschluss."
     },
     {
       "id": "wechsel_s1",
       "phase": "wechsel",
       "tiefe": "spicy",
-      "text": "Rollentausch. Ein Kuss, ein Blick, ein Schluck Wasser. Wer eben genießen durfte, darf jetzt verführen. Necken ist erlaubt, Eile nicht."
+      "text": "Rollentausch. Ein Kuss, ein Blick, ein Schluck Wasser. Wer eben genossen hat, verführt jetzt. Necken ist erlaubt, Eile nicht."
     },
     {
       "id": "wechsel_x1",
@@ -654,7 +654,7 @@
       "id": "wechsel_s2",
       "phase": "wechsel",
       "tiefe": "spicy",
-      "text": "Zeit zu tauschen. Sagt euch in einem Satz, was in der ersten Runde am heißesten war. Dann legt sich hin, wer gegeben hat, und darf jetzt nehmen."
+      "text": "Zeit zu tauschen. Sagt euch in einem Satz, was in der ersten Runde am heißesten war. Dann legt sich hin, wer gegeben hat, und nimmt jetzt."
     },
     {
       "id": "wechsel_x2",
@@ -756,7 +756,7 @@
       "stufe": 5,
       "tiefe": "sehrSpicy",
       "koerper": "vulva",
-      "text": "Ein Nippel im Mund, der andere zwischen deinen Fingern, und zwick im Takt. Die freie Hand reibt sie gleichzeitig zwischen den Beinen. Hör, wie sie stöhnt, und hör nicht auf, bevor sie bettelt."
+      "text": "Ein Nippel im Mund, der andere zwischen deinen Fingern, und zwick im Takt. Die freie Hand reibt sie gleichzeitig zwischen den Beinen. Hör auf ihr Stöhnen und ihre Worte. Will sie eine Pause, hältst du inne."
     }
   ]
 }

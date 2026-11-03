@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../services/bild_register.dart';
+import '../../services/pakete.dart';
 import '../../services/sprache.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/vp_palette.dart';
@@ -29,7 +30,11 @@ class VpBildFeld extends StatelessWidget {
   final String? beschreibung;
 
   /// Nach ID aus dem Register (`kurs.01.titel`).
-  const VpBildFeld(String id, {super.key, this.fit, this.alsSeitenverhaeltnis = false, this.beschreibung})
+  const VpBildFeld(String id,
+      {super.key,
+      this.fit,
+      this.alsSeitenverhaeltnis = false,
+      this.beschreibung})
       : cacheBreite = null,
         _id = id,
         _eintrag = null,
@@ -38,7 +43,12 @@ class VpBildFeld extends StatelessWidget {
 
   /// Für Bestandsinhalte: der Pfad aus den Inhaltsdateien (`assets/images/cover_01.svg`). Ist er im Register, gelten dessen
   /// Fassungen (Spicy, Englisch); sonst wird das Asset unverändert gezeigt.
-  VpBildFeld.pfad(String pfad, {super.key, VpBildFormat? format, this.fit, this.alsSeitenverhaeltnis = false, this.beschreibung})
+  VpBildFeld.pfad(String pfad,
+      {super.key,
+      VpBildFormat? format,
+      this.fit,
+      this.alsSeitenverhaeltnis = false,
+      this.beschreibung})
       : cacheBreite = null,
         _id = null,
         _eintrag = BildRegister.nachPfad(pfad) ??
@@ -55,14 +65,24 @@ class VpBildFeld extends StatelessWidget {
   /// Eine Datei auf dem Gerät (Paketbild, Foto der Lektion). Fehlt sie, steht der Platzhalter da.
   /// [cacheBreite] begrenzt die Auflösung im Speicher (große Studien).
   const VpBildFeld.datei(String pfad,
-      {super.key, required VpBildFormat format, this.fit, this.alsSeitenverhaeltnis = false, this.beschreibung, this.cacheBreite})
+      {super.key,
+      required VpBildFormat format,
+      this.fit,
+      this.alsSeitenverhaeltnis = false,
+      this.beschreibung,
+      this.cacheBreite})
       : _id = null,
         _eintrag = null,
         _datei = pfad,
         _format = format;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) => ValueListenableBuilder<int>(
+        valueListenable: Pakete.stand,
+        builder: (context, _, __) => _baueBild(context),
+      );
+
+  Widget _baueBild(BuildContext context) {
     final id = _id;
     final eintrag = _eintrag ?? (id != null ? BildRegister.eintrag(id) : null);
     final format = _format ?? eintrag?.format ?? VpBildFormat.kopf;
@@ -79,25 +99,38 @@ class VpBildFeld extends StatelessWidget {
     } else if (quelle.istDatei) {
       final f = File(quelle.pfad);
       inhalt = f.existsSync()
-          ? Image.file(f, fit: fit ?? _fuer(format), cacheWidth: cacheBreite, errorBuilder: (_, __, ___) => platzhalter)
+          ? Image.file(f,
+              fit: fit ?? _fuer(format),
+              cacheWidth: cacheBreite,
+              errorBuilder: (_, __, ___) => platzhalter)
           : platzhalter;
     } else if (quelle.istSvg) {
-      final pfad = (format == VpBildFormat.diagramm || format == VpBildFormat.studie) && eintrag?.englisch == null
-          ? Sprache.bild(quelle.pfad)
-          : quelle.pfad;
-      inhalt = SvgPicture.asset(pfad, fit: fit ?? _fuer(format), placeholderBuilder: (_) => platzhalter, errorBuilder: (_, __, ___) => platzhalter);
+      final pfad =
+          (format == VpBildFormat.diagramm || format == VpBildFormat.studie) &&
+                  eintrag?.englisch == null
+              ? Sprache.bild(quelle.pfad)
+              : quelle.pfad;
+      inhalt = SvgPicture.asset(pfad,
+          fit: fit ?? _fuer(format),
+          placeholderBuilder: (_) => platzhalter,
+          errorBuilder: (_, __, ___) => platzhalter);
     } else {
-      inhalt = Image.asset(quelle.pfad, fit: fit ?? _fuer(format), errorBuilder: (_, __, ___) => platzhalter);
+      inhalt = Image.asset(quelle.pfad,
+          fit: fit ?? _fuer(format), errorBuilder: (_, __, ___) => platzhalter);
     }
 
     final alt = beschreibung ?? eintrag?.alt(Sprache.englisch);
     Widget feld = inhalt;
-    if (alsSeitenverhaeltnis) feld = AspectRatio(aspectRatio: format.verhaeltnis, child: feld);
-    if (alt != null && alt.isNotEmpty) feld = Semantics(image: true, label: alt, child: ExcludeSemantics(child: feld));
+    if (alsSeitenverhaeltnis)
+      feld = AspectRatio(aspectRatio: format.verhaeltnis, child: feld);
+    if (alt != null && alt.isNotEmpty)
+      feld = Semantics(
+          image: true, label: alt, child: ExcludeSemantics(child: feld));
     return feld;
   }
 
-  static BoxFit _fuer(VpBildFormat f) => f == VpBildFormat.diagramm ? BoxFit.contain : BoxFit.cover;
+  static BoxFit _fuer(VpBildFormat f) =>
+      f == VpBildFormat.diagramm ? BoxFit.contain : BoxFit.cover;
 }
 
 /// Der gezeichnete Platzhalter: Raster, Konstruktionsbögen, Eck- und Kreuzmarken in den Farben der aktuellen Atmosphäre.
@@ -161,15 +194,19 @@ class _PlatzhalterMaler extends CustomPainter {
     FeinRaster(linie.withValues(alpha: 0.55)).paint(canvas, s);
 
     // Zirkelschlag um einen aus der ID abgeleiteten Mittelpunkt.
-    final mitte = Offset(0.2 + r.nextDouble() * 0.6, 0.3 + r.nextDouble() * 0.5);
-    KonstruktionsBogen(akzent.withValues(alpha: 0.7), mitte: mitte, ringe: 3 + (saat % 2)).paint(canvas, s);
+    final mitte =
+        Offset(0.2 + r.nextDouble() * 0.6, 0.3 + r.nextDouble() * 0.5);
+    KonstruktionsBogen(akzent.withValues(alpha: 0.7),
+            mitte: mitte, ringe: 3 + (saat % 2))
+        .paint(canvas, s);
 
     // Eine Orientierungsachse, leicht geneigt.
     final achse = Paint()
       ..color = linie.withValues(alpha: 0.6)
       ..strokeWidth = 0.8;
     final x0 = s.width * (0.15 + r.nextDouble() * 0.2);
-    canvas.drawLine(Offset(x0, s.height * 0.12), Offset(x0 + s.width * 0.08, s.height * 0.88), achse);
+    canvas.drawLine(Offset(x0, s.height * 0.12),
+        Offset(x0 + s.width * 0.08, s.height * 0.88), achse);
 
     // Spicy: dichte Schraffur in einem Streifen und weiche Vignette statt Leere.
     if (spicy) {
@@ -181,7 +218,8 @@ class _PlatzhalterMaler extends CustomPainter {
       canvas.save();
       canvas.clipRect(Rect.fromLTWH(bandX, 0, bandBreite, s.height));
       for (double d = -s.height; d < bandBreite + s.height; d += 4) {
-        canvas.drawLine(Offset(bandX + d, s.height), Offset(bandX + d + s.height * 0.6, 0), schraff);
+        canvas.drawLine(Offset(bandX + d, s.height),
+            Offset(bandX + d + s.height * 0.6, 0), schraff);
       }
       canvas.restore();
       canvas.drawRect(
@@ -205,5 +243,9 @@ class _PlatzhalterMaler extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _PlatzhalterMaler o) =>
-      o.saat != saat || o.linie != linie || o.akzent != akzent || o.flaeche != flaeche || o.spicy != spicy;
+      o.saat != saat ||
+      o.linie != linie ||
+      o.akzent != akzent ||
+      o.flaeche != flaeche ||
+      o.spicy != spicy;
 }

@@ -4,6 +4,10 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velvetpulse/models/traum_eintrag.dart';
+import 'package:velvetpulse/models/traumpraxis_daten.dart';
+import 'package:velvetpulse/models/bedien_daten.dart';
+import 'package:velvetpulse/models/wiedergabe_plan.dart';
+import 'package:velvetpulse/models/gemeinsam_antwort.dart';
 import 'package:velvetpulse/services/backup_codec.dart';
 import 'package:velvetpulse/services/nostr_service.dart';
 import 'package:velvetpulse/services/secret_store.dart';
@@ -31,8 +35,177 @@ void main() {
     await NostrService().reloadKeysFromPrefs();
   });
 
-  test('Realitätscheck-Einstellungen sind in der Sicherung und werden wiederhergestellt', () async {
-    await StorageService.saveRealitaetschecks(const RealitaetscheckEinstellungen(
+  test(
+      'Gemeinsamer Rückblick bleibt mit Gefühl und Freigabe im bestehenden Backup-Feld erhalten',
+      () async {
+    final id = 'ge_n_${'a' * 32}';
+    final antwort = const GemeinsamAntwort('Ein ruhiger Moment',
+            gefuehl: 'ruhig', geteilt: true)
+        .speichern();
+    await StorageService.saveReflectionAnswer(id, antwort);
+    final export = StorageService.exportAllUserData();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('reflection_answers');
+    await StorageService.importBackup(BackupCodec.validate(export));
+    final restored =
+        GemeinsamAntwort.lesen(StorageService.getReflectionAnswer(id));
+    expect(restored.text, 'Ein ruhiger Moment');
+    expect(restored.gefuehl, 'ruhig');
+    expect(restored.geteilt, isTrue);
+  });
+
+  test('Bedienung: parallele lokale Änderungen bleiben getrennt erhalten',
+      () async {
+    final zeit = DateTime.utc(2026, 11, 2);
+    await Future.wait([
+      StorageService.saveBedienDaten(
+          BedienDaten(
+              weg: WegStand(lektion: 'l1', schritt: 1, geaendert: zeit)),
+          backup: false),
+      StorageService.saveBedienDaten(
+          BedienDaten(
+              wiedergabe: WiedergabeMerker(
+                  plan: null,
+                  index: 0,
+                  position: Duration.zero,
+                  geaendert: zeit)),
+          backup: false),
+    ]);
+    expect(StorageService.getBedienDaten().weg!.schritt, 1);
+    expect(StorageService.getBedienDaten().wiedergabe!.geloescht, isTrue);
+    expect(StorageService.exportAllUserData()['bedienung'],
+        StorageService.getBedienDaten().toJson());
+  });
+
+  test('Bedienung: zurückgestellte Uhr verliert keine bewusste lokale Änderung',
+      () async {
+    final zeit = DateTime.utc(2026, 11, 2);
+    await StorageService.saveBedienDaten(
+        BedienDaten(weg: WegStand(lektion: 'l1', schritt: 1, geaendert: zeit)),
+        backup: false);
+    await StorageService.saveBedienDaten(
+        BedienDaten(
+            weg: WegStand(
+                lektion: 'l1',
+                schritt: 2,
+                geaendert: zeit.subtract(const Duration(days: 1)))),
+        backup: false);
+    expect(StorageService.getBedienDaten().weg!.schritt, 2);
+    expect(
+        StorageService.getBedienDaten().weg!.geaendert.isAfter(zeit), isTrue);
+  });
+
+  test(
+      'Bedienung: Export, Wiederherstellung und Löschmarkierung gegen alte Sicherung',
+      () async {
+    final zeit = DateTime.utc(2026, 11, 2);
+    final plan = WiedergabePlan(
+        art: WiedergabeArt.lektion,
+        id: 'l1',
+        sprache: 'de',
+        spicy: false,
+        titel: 'Nur flüchtig',
+        abschnitte: const [
+          WiedergabeAbschnitt(
+              id: 'l1',
+              art: AbschnittArt.sprache,
+              dauer: Duration(minutes: 2),
+              pfad: 'audio/l1.opus',
+              text: 'Nicht sichern')
+        ]);
+    await StorageService.saveBedienDaten(
+        BedienDaten(
+            wiedergabe: WiedergabeMerker(
+                plan: plan,
+                index: 0,
+                position: const Duration(seconds: 17),
+                geaendert: zeit)),
+        backup: false);
+    final export = StorageService.exportAllUserData();
+    expect(jsonEncode(export['bedienung']), isNot(contains('Nicht sichern')));
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('bedienung');
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getBedienDaten().wiedergabe!.position.inSeconds, 17);
+    await StorageService.saveBedienDaten(
+        BedienDaten(
+            wiedergabe: WiedergabeMerker(
+                plan: null,
+                index: 0,
+                position: Duration.zero,
+                geaendert: zeit.add(const Duration(seconds: 1)))),
+        backup: false);
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getBedienDaten().wiedergabe!.geloescht, isTrue);
+    export.remove('bedienung');
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getBedienDaten().wiedergabe!.geloescht, isTrue);
+  });
+
+  test(
+      'Bedienung: beschädigte Sicherung wird vor anderen Schreibvorgängen abgewiesen',
+      () async {
+    final vorher = StorageService.exportAllUserData();
+    final defekt = {
+      ...vorher,
+      'completedLessons': ['neu'],
+      'bedienung': {'schema': 999}
+    };
+    await expectLater(StorageService.importBackup(BackupCodec.validate(defekt)),
+        throwsA(isA<BackupException>()));
+    final nachher = StorageService.exportAllUserData()..remove('exportedAt');
+    vorher.remove('exportedAt');
+    expect(nachher, vorher);
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('bedienung', 'kaputter Bestand');
+    await expectLater(
+        StorageService.saveBedienDaten(
+            BedienDaten(
+                weg: WegStand(
+                    lektion: 'l1',
+                    schritt: 0,
+                    geaendert: DateTime.utc(2026, 11, 2))),
+            backup: false),
+        throwsA(isA<FormatException>()));
+    expect(prefs.getString('bedienung'), 'kaputter Bestand');
+  });
+
+  test(
+      'Traumpraxis: beschädigte lokale Daten werden beim Speichern nicht überschrieben',
+      () async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('traumpraxis', 'kaputter Bestand');
+    await expectLater(
+        StorageService.savePraxisEintrag(PraxisEintrag(
+            id: 'neu',
+            art: 'zeichen',
+            geaendert: DateTime(2026, 11, 1),
+            text: 'Eine Tür')),
+        throwsA(isA<FormatException>()));
+    expect(prefs.getString('traumpraxis'), 'kaputter Bestand');
+  });
+
+  test(
+      'Traumpraxis: doppelte IDs werden vor der Anzeige deterministisch zusammengeführt',
+      () {
+    final first = PraxisEintrag(
+        id: 'a', art: 'zeichen', geaendert: DateTime(2026, 10, 1), text: 'Alt');
+    final second = PraxisEintrag(
+        id: 'a', art: 'zeichen', geaendert: DateTime(2026, 11, 1), text: 'Neu');
+    final data = TraumpraxisDaten.fromJson({
+      'version': 1,
+      'eintraege': [first.toJson(), second.toJson()]
+    });
+    expect(data.zeichen.single.text, 'Neu');
+    expect(() => PraxisEintrag.fromJson({...first.toJson(), 'text': ''}),
+        throwsFormatException);
+  });
+
+  test(
+      'Realitätscheck-Einstellungen sind in der Sicherung und werden wiederhergestellt',
+      () async {
+    await StorageService.saveRealitaetschecks(
+        const RealitaetscheckEinstellungen(
       aktiv: true,
       vonStunde: 10,
       bisStunde: 20,
@@ -46,7 +219,8 @@ void main() {
       'anzahlProTag': 4,
     });
 
-    await StorageService.saveRealitaetschecks(const RealitaetscheckEinstellungen(aktiv: false));
+    await StorageService.saveRealitaetschecks(
+        const RealitaetscheckEinstellungen(aktiv: false));
     expect(StorageService.getRealitaetschecks().aktiv, isFalse);
 
     await StorageService.importBackup(BackupCodec.validate(export));
@@ -57,7 +231,107 @@ void main() {
     expect(restored.anzahlProTag, 4);
   });
 
-  test('Lautsprecher-Einstellungen sind in der Sicherung und werden wiederhergestellt', () async {
+  test(
+      'Traumpraxis: Export, Wiederherstellung und älterer Stand überschreibt nichts',
+      () async {
+    final a = PraxisEintrag(
+        id: 'zeichen-a',
+        art: 'zeichen',
+        geaendert: DateTime(2026, 11, 1),
+        text: 'Eine zweite Tür');
+    await StorageService.savePraxisEintrag(a);
+    final export = StorageService.exportAllUserData();
+    expect((export['traumpraxis'] as Map)['version'], 1);
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('traumpraxis');
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getTraumpraxis().zeichen.single.text, a.text);
+    await StorageService.savePraxisEintrag(a.mitZeit(DateTime(2026, 11, 2)));
+    final current = StorageService.getTraumpraxis().toJson();
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getTraumpraxis().toJson(), current);
+    export.remove('traumpraxis');
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getTraumpraxis().toJson(), current);
+  });
+
+  test(
+      'Traumpraxis: Löschung überlebt alte Backups; gleiche Zeit bevorzugt Löschung',
+      () async {
+    final date = DateTime(2026, 11, 1);
+    await StorageService.savePraxisEintrag(PraxisEintrag(
+        id: 'a', art: 'zeichen', geaendert: date, text: 'Privates Zeichen'));
+    final old = StorageService.exportAllUserData();
+    await StorageService.savePraxisEintrag(PraxisEintrag(
+        id: 'a', art: 'zeichen', geaendert: date, geloescht: true));
+    await StorageService.importBackup(BackupCodec.validate(old));
+    expect(StorageService.getTraumpraxis().zeichen, isEmpty);
+    expect(jsonEncode(StorageService.getTraumpraxis().toJson()),
+        isNot(contains('Privates Zeichen')));
+    final alive = TraumpraxisDaten(
+        [PraxisEintrag(id: 'b', art: 'zeichen', geaendert: date, text: 'Alt')]);
+    final deleted = TraumpraxisDaten([
+      PraxisEintrag(id: 'b', art: 'zeichen', geaendert: date, geloescht: true)
+    ]);
+    expect(alive.zusammen(deleted).toJson(), deleted.zusammen(alive).toJson());
+    expect(deleted.zusammen(alive).zeichen, isEmpty);
+  });
+
+  test(
+      'Traumpraxis: offene Fragen und mehrere Tage bleiben beim Merge erhalten',
+      () async {
+    final day1 = PraxisEintrag(
+        id: '2026-10-31',
+        art: 'tag',
+        geaendert: DateTime(2026, 11, 1),
+        lust: 0,
+        hoehepunkt: false);
+    final day2 = PraxisEintrag(
+        id: '2026-11-01',
+        art: 'tag',
+        geaendert: DateTime(2026, 11, 1),
+        schlaf: 4,
+        sinnlich: true);
+    await StorageService.savePraxisEintrag(day1);
+    final export = StorageService.exportAllUserData()
+      ..['traumpraxis'] = TraumpraxisDaten([day2]).toJson();
+    await StorageService.importBackup(BackupCodec.validate(export));
+    final days = StorageService.getTraumpraxis().tage;
+    expect(days.map((e) => e.id), ['2026-11-01', '2026-10-31']);
+    expect(days.first.lust, isNull);
+    expect(days.first.hoehepunkt, isNull);
+    expect(days.last.lust, 0);
+    expect(days.last.hoehepunkt, isFalse);
+  });
+
+  test('Traumpraxis: beschädigtes Backup schreibt auch andere Felder nicht',
+      () async {
+    final before = StorageService.exportAllUserData();
+    final bad = {
+      ...before,
+      'completedLessons': ['unbeabsichtigt'],
+      'traumpraxis': {
+        'version': 1,
+        'eintraege': [
+          {
+            'id': '2026-11-01',
+            'art': 'tag',
+            'geaendert': '2026-11-01',
+            'lust': 8
+          }
+        ]
+      }
+    };
+    await expectLater(StorageService.importBackup(BackupCodec.validate(bad)),
+        throwsA(isA<BackupException>()));
+    expect(StorageService.getCompletedLessons(),
+        isNot(contains('unbeabsichtigt')));
+    expect(StorageService.getTraumpraxis().tage, isEmpty);
+  });
+
+  test(
+      'Lautsprecher-Einstellungen sind in der Sicherung und werden wiederhergestellt',
+      () async {
     expect(StorageService.getFrageVorLautsprecher(), isTrue);
     expect(StorageService.getPausiereBeiKopfhoererGetrennt(), isTrue);
 
@@ -76,11 +350,15 @@ void main() {
     expect(StorageService.getPausiereBeiKopfhoererGetrennt(), isFalse);
   });
 
-  test('Kursfilter wird gemerkt (auch „Alle Kurse“), steht in der Sicherung und die eigene Wahl gewinnt', () async {
-    expect(StorageService.getKursFilter(), isNull, reason: 'noch nie gewählt: Profil darf vorschlagen');
+  test(
+      'Kursfilter wird gemerkt (auch „Alle Kurse“), steht in der Sicherung und die eigene Wahl gewinnt',
+      () async {
+    expect(StorageService.getKursFilter(), isNull,
+        reason: 'noch nie gewählt: Profil darf vorschlagen');
 
     await StorageService.setKursFilter('all');
-    expect(StorageService.getKursFilter(), 'all', reason: '„Alle Kurse“ ist eine Wahl und bleibt');
+    expect(StorageService.getKursFilter(), 'all',
+        reason: '„Alle Kurse“ ist eine Wahl und bleibt');
     await StorageService.setKursFilter('unsinn');
     expect(StorageService.getKursFilter(), 'all');
 
@@ -89,10 +367,14 @@ void main() {
 
     await StorageService.setKursFilter('men');
     await StorageService.importBackup(BackupCodec.validate(export));
-    expect(StorageService.getKursFilter(), 'men', reason: 'die Wahl auf diesem Gerät gewinnt');
+    expect(StorageService.getKursFilter(), 'men',
+        reason: 'die Wahl auf diesem Gerät gewinnt');
   });
-  test('Audio-Bereich auf der Startseite: standardmäßig offen, Wahl wird gemerkt, steht in der Sicherung, eigene Wahl gewinnt', () async {
-    expect(StorageService.getAudioBereichOffen(), isTrue, reason: 'beim ersten Start offen');
+  test(
+      'Audio-Bereich auf der Startseite: standardmäßig offen, Wahl wird gemerkt, steht in der Sicherung, eigene Wahl gewinnt',
+      () async {
+    expect(StorageService.getAudioBereichOffen(), isTrue,
+        reason: 'beim ersten Start offen');
     await StorageService.setAudioBereichOffen(false);
     expect(StorageService.getAudioBereichOffen(), isFalse);
 
@@ -101,10 +383,12 @@ void main() {
 
     await StorageService.setAudioBereichOffen(true);
     await StorageService.importBackup(BackupCodec.validate(export));
-    expect(StorageService.getAudioBereichOffen(), isTrue, reason: 'die Wahl auf diesem Gerät gewinnt');
+    expect(StorageService.getAudioBereichOffen(), isTrue,
+        reason: 'die Wahl auf diesem Gerät gewinnt');
   });
 
-  test('Hallo-Merker ist in der Sicherung und wird wiederhergestellt', () async {
+  test('Hallo-Merker ist in der Sicherung und wird wiederhergestellt',
+      () async {
     expect(StorageService.getHalloGesendetAm(), isNull);
 
     await StorageService.setHalloGesendetAm('2026-10-28T09:30:00.000');
@@ -126,20 +410,30 @@ void main() {
   test('Einspielen führt Check-ins und Ja/Nein-Antworten zusammen', () async {
     final backup = StorageService.exportAllUserData()
       ..['yesNoMaybe'] = jsonEncode({'a': 'maybe', 'b': 'no'})
-      ..['dailyCheckIns'] = [checkIn('2026-10-21', 2), checkIn('2026-10-22', 5)];
+      ..['dailyCheckIns'] = [
+        checkIn('2026-10-21', 2),
+        checkIn('2026-10-22', 5)
+      ];
     await StorageService.importBackup(BackupCodec.validate(backup));
 
     final prefs = await SharedPreferences.getInstance();
-    expect(jsonDecode(prefs.getString(StorageService.keyYesNoMaybe)!), {'a': 'maybe', 'b': 'no', 'c': 'no'});
+    expect(jsonDecode(prefs.getString(StorageService.keyYesNoMaybe)!),
+        {'a': 'maybe', 'b': 'no', 'c': 'no'});
     final dates = [
-      for (final raw in prefs.getStringList('daily_check_ins')!) (jsonDecode(raw) as Map)['date'],
+      for (final raw in prefs.getStringList('daily_check_ins')!)
+        (jsonDecode(raw) as Map)['date'],
     ];
     expect(dates, ['2026-10-22', '2026-10-21', '2026-10-20']);
     // Am gleichen Tag gilt die Sicherung.
-    expect((jsonDecode(prefs.getStringList('daily_check_ins')!.first) as Map)['mood'], 5);
+    expect(
+        (jsonDecode(prefs.getStringList('daily_check_ins')!.first)
+            as Map)['mood'],
+        5);
   });
 
-  test('Beschädigte Felder: verständliche Meldung, und es wird nichts verändert', () async {
+  test(
+      'Beschädigte Felder: verständliche Meldung, und es wird nichts verändert',
+      () async {
     final prefs = await SharedPreferences.getInstance();
     final vorher = {for (final k in prefs.getKeys()) k: prefs.get(k)};
     for (final (feld, wert) in [
@@ -151,20 +445,26 @@ void main() {
       final backup = StorageService.exportAllUserData()..[feld] = wert;
       await expectLater(
         StorageService.importBackup(BackupCodec.validate(backup)),
-        throwsA(isA<BackupException>().having((e) => e.message, 'Meldung', contains('beschädigt'))),
+        throwsA(isA<BackupException>()
+            .having((e) => e.message, 'Meldung', contains('beschädigt'))),
         reason: '$feld = $wert',
       );
-      expect({for (final k in prefs.getKeys()) k: prefs.get(k)}, vorher, reason: '$feld = $wert');
+      expect({for (final k in prefs.getKeys()) k: prefs.get(k)}, vorher,
+          reason: '$feld = $wert');
     }
   });
 
-  test('Abgeschnittene Datei wird abgelehnt, eine Sicherung ohne Daten ändert nichts Wesentliches', () async {
+  test(
+      'Abgeschnittene Datei wird abgelehnt, eine Sicherung ohne Daten ändert nichts Wesentliches',
+      () async {
     final voll = jsonEncode(StorageService.exportAllUserData());
-    expect(() => BackupCodec.validate(voll.substring(0, voll.length ~/ 2)), throwsA(isA<BackupException>()));
+    expect(() => BackupCodec.validate(voll.substring(0, voll.length ~/ 2)),
+        throwsA(isA<BackupException>()));
 
     final prefs = await SharedPreferences.getInstance();
     final yesNoVorher = prefs.getString(StorageService.keyYesNoMaybe);
-    await StorageService.importBackup(BackupCodec.validate({'app': 'VelvetPulse', 'schema': 2}));
+    await StorageService.importBackup(
+        BackupCodec.validate({'app': 'VelvetPulse', 'schema': 2}));
     expect(prefs.getString(StorageService.keyYesNoMaybe), yesNoVorher);
     expect(prefs.getStringList('daily_check_ins'), hasLength(2));
   });
@@ -172,14 +472,23 @@ void main() {
   test('Beschädigter Passwort-Block: Fehlermeldung statt Absturz', () async {
     for (final block in [
       <String, dynamic>{'v': 1, 'kdf': 'pbkdf2-sha256', 'iter': 210000},
-      <String, dynamic>{'v': 1, 'kdf': 'pbkdf2-sha256', 'iter': 210000, 'salt': '!!', 'nonce': 'x', 'ct': 'y'},
+      <String, dynamic>{
+        'v': 1,
+        'kdf': 'pbkdf2-sha256',
+        'iter': 210000,
+        'salt': '!!',
+        'nonce': 'x',
+        'ct': 'y'
+      },
       <String, dynamic>{'v': 2},
     ]) {
-      await expectLater(BackupCodec.decryptSecrets(block, 'egal'), throwsA(isA<BackupException>()));
+      await expectLater(BackupCodec.decryptSecrets(block, 'egal'),
+          throwsA(isA<BackupException>()));
     }
   });
 
-  test('Traumtagebuch und Lust-Fortschritt sind in der Sicherung enthalten', () async {
+  test('Traumtagebuch und Lust-Fortschritt sind in der Sicherung enthalten',
+      () async {
     final eintrag = TraumEintrag(
       id: 'a',
       zeit: DateTime(2026, 10, 27, 7),
@@ -195,10 +504,16 @@ void main() {
     expect(jsonDecode(export['lustFortschritt'] as String), {'1': 2});
   });
 
-  test('Einspielen führt Traumtagebuch und Lust-Fortschritt zusammen', () async {
-    final a = TraumEintrag(id: 'a', zeit: DateTime(2026, 10, 27, 7), text: 'lokal', marken: {'erinnert'});
+  test('Einspielen führt Traumtagebuch und Lust-Fortschritt zusammen',
+      () async {
+    final a = TraumEintrag(
+        id: 'a',
+        zeit: DateTime(2026, 10, 27, 7),
+        text: 'lokal',
+        marken: {'erinnert'});
     await StorageService.saveTraumEintrag(a);
-    await StorageService.saveTraumEintrag(TraumEintrag(id: 'b', zeit: DateTime(2026, 10, 26, 7)));
+    await StorageService.saveTraumEintrag(
+        TraumEintrag(id: 'b', zeit: DateTime(2026, 10, 26, 7)));
     await StorageService.lustAbendGehoert(1);
     await StorageService.lustAbendGehoert(1);
 
@@ -210,13 +525,17 @@ void main() {
       ..['lustFortschritt'] = jsonEncode({'1': 1, '2': 3});
     expect(await StorageService.importUserData(backup), isTrue);
 
-    final eintraege = {for (final e in StorageService.getTraumEintraege()) e.id: e};
+    final eintraege = {
+      for (final e in StorageService.getTraumEintraege()) e.id: e
+    };
     expect(eintraege.keys, containsAll(['a', 'b', 'c']));
     expect(eintraege['a']!.text, 'aus Sicherung');
     expect(StorageService.getLustFortschritt(), {1: 2, 2: 3});
   });
 
-  test('Nächtliches Wecken ist in der Sicherung enthalten und wird beim Einspielen zusammengeführt', () async {
+  test(
+      'Nächtliches Wecken ist in der Sicherung enthalten und wird beim Einspielen zusammengeführt',
+      () async {
     final z1 = DateTime(2026, 10, 25, 4, 0);
     final z2 = DateTime(2026, 10, 27, 4, 15);
     await StorageService.saveNaechtlichesWecken(z1);

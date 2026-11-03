@@ -98,6 +98,480 @@ abstract class AppLocalizations {
     Locale('en')
   ];
 
+  /// No description provided for @gemeinsamWiedergabeFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine Wiedergabe konnte nicht starten. Prüft die Aufnahmen und die Audioausgabe und versucht es erneut.'**
+  String get gemeinsamWiedergabeFehler;
+
+  /// No description provided for @gemeinsamZurueckziehen.
+  ///
+  /// In de, this message translates to:
+  /// **'Einladung zurückziehen'**
+  String get gemeinsamZurueckziehen;
+
+  /// No description provided for @aufnahmePaketFehlt.
+  ///
+  /// In de, this message translates to:
+  /// **'Das passende Inhaltspaket muss geladen werden.'**
+  String get aufnahmePaketFehlt;
+
+  /// No description provided for @wiedergabeStimmenStand.
+  ///
+  /// In de, this message translates to:
+  /// **'Aufnahmen für diese Stimme'**
+  String get wiedergabeStimmenStand;
+
+  /// No description provided for @gemeinsamAntwortZuLang.
+  ///
+  /// In de, this message translates to:
+  /// **'Der Rückblick ist zu lang. Kürze ihn bitte etwas und versuche es erneut.'**
+  String get gemeinsamAntwortZuLang;
+
+  /// No description provided for @gemeinsamGefuehlRuhig.
+  ///
+  /// In de, this message translates to:
+  /// **'Ruhig'**
+  String get gemeinsamGefuehlRuhig;
+
+  /// No description provided for @gemeinsamGefuehlNah.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbunden'**
+  String get gemeinsamGefuehlNah;
+
+  /// No description provided for @gemeinsamGefuehlOffen.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch offen'**
+  String get gemeinsamGefuehlOffen;
+
+  /// No description provided for @gemeinsamGefuehlBewegt.
+  ///
+  /// In de, this message translates to:
+  /// **'Bewegt'**
+  String get gemeinsamGefuehlBewegt;
+
+  /// No description provided for @gemeinsamTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsame Übung'**
+  String get gemeinsamTitel;
+
+  /// No description provided for @gemeinsamHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Ihr hört denselben Ablauf auf euren eigenen Geräten. Beide brauchen passende Aufnahmen und bestätigen ihre Bereitschaft. Kopfhörer können angenehm sein. Jede Person kann pausieren; weiter geht es erst, wenn beide bereit sind. Eine Einladung beginnt den Ablauf von vorn.'**
+  String get gemeinsamHinweis;
+
+  /// No description provided for @gemeinsamAnnehmen.
+  ///
+  /// In de, this message translates to:
+  /// **'Annehmen'**
+  String get gemeinsamAnnehmen;
+
+  /// No description provided for @gemeinsamSpaeter.
+  ///
+  /// In de, this message translates to:
+  /// **'Später'**
+  String get gemeinsamSpaeter;
+
+  /// No description provided for @gemeinsamWarten.
+  ///
+  /// In de, this message translates to:
+  /// **'Du bist bereit. Warte auf dein Gegenüber.'**
+  String get gemeinsamWarten;
+
+  /// No description provided for @gemeinsamBereitHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Richte dich in Ruhe ein und bestätige dann deine Bereitschaft.'**
+  String get gemeinsamBereitHinweis;
+
+  /// No description provided for @gemeinsamBereit.
+  ///
+  /// In de, this message translates to:
+  /// **'Bereit'**
+  String get gemeinsamBereit;
+
+  /// No description provided for @gemeinsamPlayer.
+  ///
+  /// In de, this message translates to:
+  /// **'Wiedergabe öffnen'**
+  String get gemeinsamPlayer;
+
+  /// No description provided for @gemeinsamRueckblick.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsamer Rückblick'**
+  String get gemeinsamRueckblick;
+
+  /// No description provided for @gemeinsamBeenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Für beide beenden'**
+  String get gemeinsamBeenden;
+
+  /// No description provided for @gemeinsamSchliessen.
+  ///
+  /// In de, this message translates to:
+  /// **'Schließen'**
+  String get gemeinsamSchliessen;
+
+  /// No description provided for @gemeinsamEinladung.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine Einladung wartet auf dich.'**
+  String get gemeinsamEinladung;
+
+  /// No description provided for @gemeinsamVorbereiten.
+  ///
+  /// In de, this message translates to:
+  /// **'In Ruhe bereit werden'**
+  String get gemeinsamVorbereiten;
+
+  /// No description provided for @gemeinsamWartenAnnahme.
+  ///
+  /// In de, this message translates to:
+  /// **'Warte auf dein Gegenüber.'**
+  String get gemeinsamWartenAnnahme;
+
+  /// No description provided for @gemeinsamLaeuft.
+  ///
+  /// In de, this message translates to:
+  /// **'Ihr hört gemeinsam.'**
+  String get gemeinsamLaeuft;
+
+  /// No description provided for @gemeinsamPause.
+  ///
+  /// In de, this message translates to:
+  /// **'Pause. Weiter erst, wenn beide bereit sind.'**
+  String get gemeinsamPause;
+
+  /// No description provided for @gemeinsamAbgeschlossen.
+  ///
+  /// In de, this message translates to:
+  /// **'Euer gemeinsamer Moment ist beendet.'**
+  String get gemeinsamAbgeschlossen;
+
+  /// No description provided for @gemeinsamAufnahmenFehlen.
+  ///
+  /// In de, this message translates to:
+  /// **'Passende Aufnahmen fehlen oder unterscheiden sich. Ladet beide die aktuellen Aufnahmen und ladet euch erneut ein. Gemeinsames Hören verwendet keine Geräte-Stimme.'**
+  String get gemeinsamAufnahmenFehlen;
+
+  /// No description provided for @gemeinsamPartnerFehlt.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Gegenüber ist gerade nicht erreichbar, bereits beschäftigt oder braucht eine aktuelle App. Öffnet beide den Paar-Kanal und versucht es erneut.'**
+  String get gemeinsamPartnerFehlt;
+
+  /// No description provided for @gemeinsamFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Verbindung hat nicht geklappt. Bitte versucht es erneut.'**
+  String get gemeinsamFehler;
+
+  /// No description provided for @gemeinsamLeer.
+  ///
+  /// In de, this message translates to:
+  /// **'Wähle bei einer Wiedergabe „Gemeinsam hören“.'**
+  String get gemeinsamLeer;
+
+  /// No description provided for @gemeinsamStatusOeffnen.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsamen Ablauf öffnen'**
+  String get gemeinsamStatusOeffnen;
+
+  /// No description provided for @gemeinsamStarten.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsam hören'**
+  String get gemeinsamStarten;
+
+  /// No description provided for @gemeinsamDuEmpfaengst.
+  ///
+  /// In de, this message translates to:
+  /// **'Du empfängst, dein Gegenüber gibt.'**
+  String get gemeinsamDuEmpfaengst;
+
+  /// No description provided for @gemeinsamVerbindungFehlt.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Verbindung zum Gegenüber ist unterbrochen. Deine Wiedergabe läuft lokal weiter. Du kannst jederzeit pausieren; ein Wiederverbinden startet nichts automatisch.'**
+  String get gemeinsamVerbindungFehlt;
+
+  /// No description provided for @gemeinsamRueckblickFrage.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie war dieser Moment für dich?'**
+  String get gemeinsamRueckblickFrage;
+
+  /// No description provided for @gemeinsamRueckblickHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Rückblick ist freiwillig. Die Antwort deines Gegenübers wird erst sichtbar, wenn ihr beide eine eigene Antwort geteilt habt.'**
+  String get gemeinsamRueckblickHinweis;
+
+  /// No description provided for @gemeinsamAntwort.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Rückblick'**
+  String get gemeinsamAntwort;
+
+  /// No description provided for @gemeinsamTeilen.
+  ///
+  /// In de, this message translates to:
+  /// **'Antwort speichern und teilen'**
+  String get gemeinsamTeilen;
+
+  /// No description provided for @gemeinsamGeteilt.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Rückblick wurde geteilt.'**
+  String get gemeinsamGeteilt;
+
+  /// No description provided for @gemeinsamNochVerdeckt.
+  ///
+  /// In de, this message translates to:
+  /// **'Der gemeinsame Rückblick ist noch verdeckt.'**
+  String get gemeinsamNochVerdeckt;
+
+  /// No description provided for @gemeinsamCountdown.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsamer Start in {sekunden}'**
+  String gemeinsamCountdown(int sekunden);
+
+  /// No description provided for @wiedergabeNeutral.
+  ///
+  /// In de, this message translates to:
+  /// **'Wiedergabe'**
+  String get wiedergabeNeutral;
+
+  /// No description provided for @wiedergabeLeer.
+  ///
+  /// In de, this message translates to:
+  /// **'Keine zugängliche Wiedergabe ausgewählt.'**
+  String get wiedergabeLeer;
+
+  /// No description provided for @wiedergabeBehalten.
+  ///
+  /// In de, this message translates to:
+  /// **'Du kannst diese Seite schließen und während des Hörens weiter entdecken.'**
+  String get wiedergabeBehalten;
+
+  /// No description provided for @wiedergabeTts.
+  ///
+  /// In de, this message translates to:
+  /// **'Geräte-Stimme: Beim Wiederaufnehmen beginnt dieser Abschnitt von vorn.'**
+  String get wiedergabeTts;
+
+  /// No description provided for @wiedergabeFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Wiedergabe konnte nicht fortgesetzt werden. Prüfe die Aufnahmen und versuche es erneut.'**
+  String get wiedergabeFehler;
+
+  /// No description provided for @wiedergabeFertig.
+  ///
+  /// In de, this message translates to:
+  /// **'Für diesen Moment abgeschlossen.'**
+  String get wiedergabeFertig;
+
+  /// No description provided for @wiedergabeTeilweise.
+  ///
+  /// In de, this message translates to:
+  /// **'Nicht alle Aufnahmen sind offline vorhanden. Fehlende Texte liest die Geräte-Stimme.'**
+  String get wiedergabeTeilweise;
+
+  /// No description provided for @wiedergabeAbschnitte.
+  ///
+  /// In de, this message translates to:
+  /// **'Abschnitte'**
+  String get wiedergabeAbschnitte;
+
+  /// No description provided for @wiedergabeRuhe.
+  ///
+  /// In de, this message translates to:
+  /// **'Ruhe & Nachspüren'**
+  String get wiedergabeRuhe;
+
+  /// No description provided for @wiedergabeEntfernen.
+  ///
+  /// In de, this message translates to:
+  /// **'Aus Weiterhören entfernen'**
+  String get wiedergabeEntfernen;
+
+  /// No description provided for @wiedergabeLaeuft.
+  ///
+  /// In de, this message translates to:
+  /// **'Läuft weiter'**
+  String get wiedergabeLaeuft;
+
+  /// No description provided for @wiedergabeFortsetzen.
+  ///
+  /// In de, this message translates to:
+  /// **'Weiterhören'**
+  String get wiedergabeFortsetzen;
+
+  /// No description provided for @wiedergabeRunde.
+  ///
+  /// In de, this message translates to:
+  /// **'Runde {runde}'**
+  String wiedergabeRunde(int runde);
+
+  /// No description provided for @sucheTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Entdecken & finden'**
+  String get sucheTitel;
+
+  /// No description provided for @aufnahmeOffline.
+  ///
+  /// In de, this message translates to:
+  /// **'Aufnahme offline verfügbar'**
+  String get aufnahmeOffline;
+
+  /// No description provided for @wegTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein persönlicher Weg'**
+  String get wegTitel;
+
+  /// No description provided for @wegEinladung.
+  ///
+  /// In de, this message translates to:
+  /// **'Wissen, Ausprobieren, Nachspüren. Drei freiwillige Schritte in deinem Tempo – ohne Zeitvorgabe oder Pflichtantwort.'**
+  String get wegEinladung;
+
+  /// No description provided for @wegWissen.
+  ///
+  /// In de, this message translates to:
+  /// **'Wissen entdecken'**
+  String get wegWissen;
+
+  /// No description provided for @wegUeben.
+  ///
+  /// In de, this message translates to:
+  /// **'Übung ausprobieren'**
+  String get wegUeben;
+
+  /// No description provided for @wegNachspueren.
+  ///
+  /// In de, this message translates to:
+  /// **'Nachspüren'**
+  String get wegNachspueren;
+
+  /// No description provided for @wegBeginnen.
+  ///
+  /// In de, this message translates to:
+  /// **'Diesen Weg beginnen'**
+  String get wegBeginnen;
+
+  /// No description provided for @wegNochEinmal.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch einmal entdecken'**
+  String get wegNochEinmal;
+
+  /// No description provided for @wegOeffnen.
+  ///
+  /// In de, this message translates to:
+  /// **'Schritt öffnen'**
+  String get wegOeffnen;
+
+  /// No description provided for @wegWeiter.
+  ///
+  /// In de, this message translates to:
+  /// **'Zum nächsten Schritt'**
+  String get wegWeiter;
+
+  /// No description provided for @wegAbschliessen.
+  ///
+  /// In de, this message translates to:
+  /// **'Für mich abschließen'**
+  String get wegAbschliessen;
+
+  /// No description provided for @wegFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Der Stand konnte nicht gespeichert werden. Bitte versuche es noch einmal.'**
+  String get wegFehler;
+
+  /// No description provided for @aufnahmeGeraetestimme.
+  ///
+  /// In de, this message translates to:
+  /// **'Ohne Aufnahme: Geräte-Stimme'**
+  String get aufnahmeGeraetestimme;
+
+  /// No description provided for @aufnahmeVerwalten.
+  ///
+  /// In de, this message translates to:
+  /// **'Aufnahmen laden'**
+  String get aufnahmeVerwalten;
+
+  /// No description provided for @sucheFeld.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurse, Lektionen und Übungen suchen'**
+  String get sucheFeld;
+
+  /// No description provided for @sucheLeeren.
+  ///
+  /// In de, this message translates to:
+  /// **'Suche leeren'**
+  String get sucheLeeren;
+
+  /// No description provided for @sucheHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Was möchtest du entdecken? Suche nach einem Thema oder einem Angebot. Deine Suche bleibt auf diesem Gerät und wird nicht gespeichert.'**
+  String get sucheHinweis;
+
+  /// No description provided for @sucheLeer.
+  ///
+  /// In de, this message translates to:
+  /// **'Dazu wurde nichts gefunden. Versuche ein anderes Wort.'**
+  String get sucheLeer;
+
+  /// No description provided for @sucheFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Inhalte konnten nicht geladen werden. Öffne die Suche bitte erneut.'**
+  String get sucheFehler;
+
+  /// No description provided for @sucheKurs.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurs'**
+  String get sucheKurs;
+
+  /// No description provided for @sucheLektion.
+  ///
+  /// In de, this message translates to:
+  /// **'Lektion'**
+  String get sucheLektion;
+
+  /// No description provided for @sucheAngebot.
+  ///
+  /// In de, this message translates to:
+  /// **'Audio & Praxis'**
+  String get sucheAngebot;
+
+  /// No description provided for @suchePaarAbend.
+  ///
+  /// In de, this message translates to:
+  /// **'Geführter Paar-Abend'**
+  String get suchePaarAbend;
+
+  /// No description provided for @sucheInnenansichten.
+  ///
+  /// In de, this message translates to:
+  /// **'Innenansichten'**
+  String get sucheInnenansichten;
+
   /// No description provided for @appName.
   ///
   /// In de, this message translates to:
@@ -6273,6 +6747,450 @@ abstract class AppLocalizations {
   /// **'Ein paar Worte für dich, gleich am Morgen.'**
   String get tagebuchKarteTextNeutral;
 
+  /// No description provided for @traumpraxisTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine Traumpraxis'**
+  String get traumpraxisTitel;
+
+  /// No description provided for @praxisZeichenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine Traumzeichen'**
+  String get praxisZeichenTitel;
+
+  /// No description provided for @praxisZeichenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Was taucht in deinen Träumen wieder auf? Ein Ort, ein unmöglicher Übergang, ein besonderes Licht? Benenne ein Zeichen, an dem du einen Traum erkennen möchtest.'**
+  String get praxisZeichenText;
+
+  /// No description provided for @praxisZeichenLeer.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch keine Traumzeichen. Du kannst mit einem Detail aus deinem Tagebuch beginnen.'**
+  String get praxisZeichenLeer;
+
+  /// No description provided for @praxisZeichenFeld.
+  ///
+  /// In de, this message translates to:
+  /// **'Mein Traumzeichen'**
+  String get praxisZeichenFeld;
+
+  /// No description provided for @praxisZeichenBeispiel.
+  ///
+  /// In de, this message translates to:
+  /// **'Zum Beispiel: eine Tür an einem unmöglichen Ort'**
+  String get praxisZeichenBeispiel;
+
+  /// No description provided for @praxisHinzufuegen.
+  ///
+  /// In de, this message translates to:
+  /// **'Hinzufügen'**
+  String get praxisHinzufuegen;
+
+  /// No description provided for @praxisSpeichern.
+  ///
+  /// In de, this message translates to:
+  /// **'Speichern'**
+  String get praxisSpeichern;
+
+  /// No description provided for @praxisAbbrechen.
+  ///
+  /// In de, this message translates to:
+  /// **'Abbrechen'**
+  String get praxisAbbrechen;
+
+  /// No description provided for @praxisBearbeiten.
+  ///
+  /// In de, this message translates to:
+  /// **'Bearbeiten'**
+  String get praxisBearbeiten;
+
+  /// No description provided for @praxisLoeschen.
+  ///
+  /// In de, this message translates to:
+  /// **'Löschen'**
+  String get praxisLoeschen;
+
+  /// No description provided for @praxisLoeschenFrage.
+  ///
+  /// In de, this message translates to:
+  /// **'Diesen Eintrag löschen?'**
+  String get praxisLoeschenFrage;
+
+  /// No description provided for @praxisLoeschenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Der Eintrag wird entfernt. Eine spätere Wiederherstellung einer älteren Sicherung holt ihn nicht automatisch zurück.'**
+  String get praxisLoeschenText;
+
+  /// No description provided for @praxisFehler.
+  ///
+  /// In de, this message translates to:
+  /// **'Das Speichern hat nicht geklappt. Deine bisherigen Daten bleiben erhalten. Bitte versuche es erneut.'**
+  String get praxisFehler;
+
+  /// No description provided for @praxisZeichenWaehlen.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Zeichen für heute Abend'**
+  String get praxisZeichenWaehlen;
+
+  /// No description provided for @praxisZeichenAbsicht.
+  ///
+  /// In de, this message translates to:
+  /// **'Stell dir vor, dieses Zeichen erscheint in deinem Traum. Du bemerkst es und erkennst: Ich träume. Danach darf deine persönliche Absicht ruhen.'**
+  String get praxisZeichenAbsicht;
+
+  /// No description provided for @praxisAbendStart.
+  ///
+  /// In de, this message translates to:
+  /// **'Zu deiner Abendfolge'**
+  String get praxisAbendStart;
+
+  /// No description provided for @praxisBeobachten.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute nachspüren'**
+  String get praxisBeobachten;
+
+  /// No description provided for @praxisBeobachtungTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine Tagesbeobachtung'**
+  String get praxisBeobachtungTitel;
+
+  /// No description provided for @praxisBeobachtungText.
+  ///
+  /// In de, this message translates to:
+  /// **'Was beobachtest du heute? Du kannst einzelne Fragen offenlassen. Ein erlebter Höhepunkt ist eine Möglichkeit, kein Ziel für jeden Abend.'**
+  String get praxisBeobachtungText;
+
+  /// No description provided for @praxisSchlaf.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie erholt bist du?'**
+  String get praxisSchlaf;
+
+  /// No description provided for @praxisLust.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie fühlt sich deine Lust heute an?'**
+  String get praxisLust;
+
+  /// No description provided for @praxisUnbeantwortet.
+  ///
+  /// In de, this message translates to:
+  /// **'Offenlassen'**
+  String get praxisUnbeantwortet;
+
+  /// No description provided for @praxisSchlaf0.
+  ///
+  /// In de, this message translates to:
+  /// **'Gar nicht erholt'**
+  String get praxisSchlaf0;
+
+  /// No description provided for @praxisSchlaf1.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenig erholt'**
+  String get praxisSchlaf1;
+
+  /// No description provided for @praxisSchlaf2.
+  ///
+  /// In de, this message translates to:
+  /// **'Teils erholt'**
+  String get praxisSchlaf2;
+
+  /// No description provided for @praxisSchlaf3.
+  ///
+  /// In de, this message translates to:
+  /// **'Gut erholt'**
+  String get praxisSchlaf3;
+
+  /// No description provided for @praxisSchlaf4.
+  ///
+  /// In de, this message translates to:
+  /// **'Sehr erholt'**
+  String get praxisSchlaf4;
+
+  /// No description provided for @praxisLust0.
+  ///
+  /// In de, this message translates to:
+  /// **'Keine Lust spürbar'**
+  String get praxisLust0;
+
+  /// No description provided for @praxisLust1.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenig Lust'**
+  String get praxisLust1;
+
+  /// No description provided for @praxisLust2.
+  ///
+  /// In de, this message translates to:
+  /// **'Mittlere Lust'**
+  String get praxisLust2;
+
+  /// No description provided for @praxisLust3.
+  ///
+  /// In de, this message translates to:
+  /// **'Deutliche Lust'**
+  String get praxisLust3;
+
+  /// No description provided for @praxisLust4.
+  ///
+  /// In de, this message translates to:
+  /// **'Viel Lust'**
+  String get praxisLust4;
+
+  /// No description provided for @praxisSinnlich.
+  ///
+  /// In de, this message translates to:
+  /// **'War dein Traum sinnlich?'**
+  String get praxisSinnlich;
+
+  /// No description provided for @praxisKlar.
+  ///
+  /// In de, this message translates to:
+  /// **'Wusstest du im Traum, dass du träumst?'**
+  String get praxisKlar;
+
+  /// No description provided for @praxisOrgasmus.
+  ///
+  /// In de, this message translates to:
+  /// **'Hast du im Traum einen Orgasmus erlebt?'**
+  String get praxisOrgasmus;
+
+  /// No description provided for @praxisJa.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja'**
+  String get praxisJa;
+
+  /// No description provided for @praxisNein.
+  ///
+  /// In de, this message translates to:
+  /// **'Nein'**
+  String get praxisNein;
+
+  /// No description provided for @praxisNotiz.
+  ///
+  /// In de, this message translates to:
+  /// **'Was möchtest du festhalten?'**
+  String get praxisNotiz;
+
+  /// No description provided for @praxisRueckblick.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein privater Rückblick'**
+  String get praxisRueckblick;
+
+  /// No description provided for @praxisRueckblickText.
+  ///
+  /// In de, this message translates to:
+  /// **'Hier stehen deine eigenen Beobachtungen. Ähnliche Verläufe können neugierig machen, belegen aber keine Ursache. Es gibt keine Punkte und keine Zielquote.'**
+  String get praxisRueckblickText;
+
+  /// No description provided for @praxisRueckblickLeer.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch keine Tagesbeobachtung. Schon eine einzelne Notiz kann ein Anfang sein.'**
+  String get praxisRueckblickLeer;
+
+  /// No description provided for @praxisNurOffeneFelder.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch keine Fragen beantwortet'**
+  String get praxisNurOffeneFelder;
+
+  /// No description provided for @praxisPfad.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Weg für heute'**
+  String get praxisPfad;
+
+  /// No description provided for @praxisPfadErinnern.
+  ///
+  /// In de, this message translates to:
+  /// **'Beginne mit Erinnern und Körperwahrnehmung. Die ersten beiden Folgen begleiten dich dabei.'**
+  String get praxisPfadErinnern;
+
+  /// No description provided for @praxisPfadErkennen.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbinde ein persönliches Traumzeichen mit deiner Abendvorbereitung. Die Folgen drei bis fünf vertiefen das Erkennen.'**
+  String get praxisPfadErkennen;
+
+  /// No description provided for @praxisPfadEntfalten.
+  ///
+  /// In de, this message translates to:
+  /// **'Du kannst Lust im Klartraum erkunden und nachspüren, was du in den Tag mitnehmen möchtest. Die Folgen sechs bis acht geben dir dafür Raum.'**
+  String get praxisPfadEntfalten;
+
+  /// No description provided for @traumpraxisNurSpicy.
+  ///
+  /// In de, this message translates to:
+  /// **'Diese Traumpraxis gehört zum Spicy-Modus für Erwachsene.'**
+  String get traumpraxisNurSpicy;
+
+  /// No description provided for @traumpraxisEinladung.
+  ///
+  /// In de, this message translates to:
+  /// **'Lust darf über die Nacht hinausreichen.'**
+  String get traumpraxisEinladung;
+
+  /// No description provided for @traumpraxisZiel.
+  ///
+  /// In de, this message translates to:
+  /// **'Erkunde sinnliche Träume, das bewusste Erkennen im Traum und das, was davon am Tag nachklingen darf. Ein Höhepunkt kann dazugehören. Du bestimmst, wie weit du gehen möchtest.'**
+  String get traumpraxisZiel;
+
+  /// No description provided for @traumpraxisErinnern.
+  ///
+  /// In de, this message translates to:
+  /// **'Am Morgen · Erinnern'**
+  String get traumpraxisErinnern;
+
+  /// No description provided for @traumpraxisErinnernText.
+  ///
+  /// In de, this message translates to:
+  /// **'Halte fest, woran du dich erinnerst: einen Ort, eine Empfindung, eine Begegnung. Sinnlichkeit, Klarheit und ein erlebter Höhepunkt dürfen im Tagebuch markiert werden. Auch ein Traum ohne Höhepunkt oder eine Nacht ohne Erinnerung gehört dazu.'**
+  String get traumpraxisErinnernText;
+
+  /// No description provided for @traumpraxisErkennen.
+  ///
+  /// In de, this message translates to:
+  /// **'Am Abend · Erkennen üben'**
+  String get traumpraxisErkennen;
+
+  /// No description provided for @traumpraxisMildEinleitung.
+  ///
+  /// In de, this message translates to:
+  /// **'Diese Vorstellungsübung orientiert sich an MILD: Du verbindest die Erinnerung an einen Traum mit der Absicht, den nächsten Traum zu erkennen. Übe kurz und ohne dich wachzuhalten. Einen zusätzlichen Wecker brauchst du dafür nicht.'**
+  String get traumpraxisMildEinleitung;
+
+  /// No description provided for @traumpraxisVorlage.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine angenehme Traumerinnerung'**
+  String get traumpraxisVorlage;
+
+  /// No description provided for @traumpraxisOhneEintrag.
+  ///
+  /// In de, this message translates to:
+  /// **'Noch kein passender Eintrag? Erinnere dich an einen angenehmen Traum. Du kannst zunächst auch nur einen vertrauten Ort vor Augen haben und das bewusste Erkennen üben.'**
+  String get traumpraxisOhneEintrag;
+
+  /// No description provided for @traumpraxisMildSchritte.
+  ///
+  /// In de, this message translates to:
+  /// **'Rufe deinen Traum ruhig in Erinnerung. Wo war etwas ungewöhnlich? Vielleicht ein Ort, der sich verändert hat, oder ein unmöglicher Übergang.\n\nStell dir dieselbe Stelle noch einmal vor. Diesmal bemerkst du sie und erkennst: Ich träume. Lass die Vorstellung für einen Moment bestehen, ohne eine Handlung erzwingen zu müssen.'**
+  String get traumpraxisMildSchritte;
+
+  /// No description provided for @traumpraxisAbsicht.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn ich wieder träume, möchte ich mich daran erinnern, dass ich träume.'**
+  String get traumpraxisAbsicht;
+
+  /// No description provided for @traumpraxisLoslassen.
+  ///
+  /// In de, this message translates to:
+  /// **'Danach darf die Absicht ruhen. Du darfst einschlafen. Wenn die Übung dich wacher macht, lässt du sie für heute los. Die acht Abendfolgen stehen dir weiterhin zur Verfügung.'**
+  String get traumpraxisLoslassen;
+
+  /// No description provided for @traumpraxisRuhe.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute darf Ruhe genügen'**
+  String get traumpraxisRuhe;
+
+  /// No description provided for @traumpraxisMitnehmen.
+  ///
+  /// In de, this message translates to:
+  /// **'Am Tag · Das Angenehme mitnehmen'**
+  String get traumpraxisMitnehmen;
+
+  /// No description provided for @traumpraxisMitnehmenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn dein Traum angenehm war, erinnere dich an eine Empfindung: Wärme, Leichtigkeit oder Nähe. Was davon ist jetzt, im wachen Körper, noch spürbar? Es darf viel sein, wenig oder gar nichts. Bei einem belastenden Traum lässt du diese Übung aus.'**
+  String get traumpraxisMitnehmenText;
+
+  /// No description provided for @traumpraxisNachspueren.
+  ///
+  /// In de, this message translates to:
+  /// **'Wähle eine kleine, freiwillige sinnliche Erfahrung für deinen Tag: warmes Wasser auf der Haut, einen weichen Stoff oder einen Moment ungestörter Körperwahrnehmung. Spüre danach nach: Hat sich deine Lust verändert? Deine Neugier? Oder vor allem deine Ruhe? Notiere deine eigene Beobachtung, ohne sie bewerten zu müssen.'**
+  String get traumpraxisNachspueren;
+
+  /// No description provided for @traumpraxisNotieren.
+  ///
+  /// In de, this message translates to:
+  /// **'Im Tagebuch nachspüren'**
+  String get traumpraxisNotieren;
+
+  /// No description provided for @traumpraxisHoehepunkt.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn du im Traum einen Orgasmus erlebst'**
+  String get traumpraxisHoehepunkt;
+
+  /// No description provided for @traumpraxisHoehepunktText.
+  ///
+  /// In de, this message translates to:
+  /// **'Du darfst das Erlebnis genießen und festhalten, auch wenn es sich wiederholt. Die App misst keine körperlichen Reaktionen: Ein erinnerter Orgasmus im Traum ist ein berichtetes Erlebnis, kein körperlicher Messbefund. Du musst weder im Traum bleiben noch einen weiteren Höhepunkt erreichen.'**
+  String get traumpraxisHoehepunktText;
+
+  /// No description provided for @traumpraxisHoeren.
+  ///
+  /// In de, this message translates to:
+  /// **'Zum Hören'**
+  String get traumpraxisHoeren;
+
+  /// No description provided for @traumpraxisHoerenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Drei kurze Begleitungen mit Victoria oder Martin. Sie ergänzen die Praxis, ersetzen nichts davon und enden von selbst. Nur für dich allein, nicht für das gemeinsame Hören.'**
+  String get traumpraxisHoerenText;
+
+  /// No description provided for @traumpraxisHoerenAbend.
+  ///
+  /// In de, this message translates to:
+  /// **'Einmal vor dem Einschlafen oder vor einer Abendfolge.'**
+  String get traumpraxisHoerenAbend;
+
+  /// No description provided for @traumpraxisHoerenKlarheit.
+  ///
+  /// In de, this message translates to:
+  /// **'Tagsüber oder am frühen Abend, wach und im Sitzen oder Liegen.'**
+  String get traumpraxisHoerenKlarheit;
+
+  /// No description provided for @traumpraxisHoerenMorgen.
+  ///
+  /// In de, this message translates to:
+  /// **'Nach dem Aufwachen oder in einem ruhigen Moment am Tag, danach gern die Tagesbeobachtung.'**
+  String get traumpraxisHoerenMorgen;
+
+  /// No description provided for @traumpraxisHoerenStarten.
+  ///
+  /// In de, this message translates to:
+  /// **'Anhören'**
+  String get traumpraxisHoerenStarten;
+
+  /// No description provided for @traumpraxisHoerenPaket.
+  ///
+  /// In de, this message translates to:
+  /// **'Der Inhalt dieser Begleitungen kommt mit den Aufnahmen. Lade sie in der Paketverwaltung nach, dann erscheinen die Titel hier.'**
+  String get traumpraxisHoerenPaket;
+
+  /// No description provided for @traumpraxisErkundung.
+  ///
+  /// In de, this message translates to:
+  /// **'Mehr Lust im Traum und im Alltag ist das Ziel dieser Erkundung. Ob diese Übungen deine Tageslust erhöhen, ist offen und individuell zu beobachten. MILD wird zur Klartraumförderung untersucht; diese kurze Abendfassung und der Transfer in den Tag sind keine nachgewiesene Behandlung. Erholsamer Schlaf bleibt wichtiger als ein bestimmtes Traumerlebnis.'**
+  String get traumpraxisErkundung;
+
   /// No description provided for @lustTitel.
   ///
   /// In de, this message translates to:
@@ -6972,7 +7890,7 @@ abstract class AppLocalizations {
   /// No description provided for @reihePartnerHinweis.
   ///
   /// In de, this message translates to:
-  /// **'Die passende Gegenperspektive derselben Begegnung: {name}. Beide folgen derselben Szenenfolge. Eine gemeinsame Wiedergabe lässt sich so starten, die App gleicht die Geräte aber nicht ab.'**
+  /// **'Die passende Gegenperspektive derselben Begegnung: {name}. Beide folgen derselben Szenenfolge. „Gemeinsam hören“ gleicht dieselbe Fassung auf zwei Geräten ab. Unterschiedliche Gegenperspektiven stimmt ihr weiterhin selbst aufeinander ab.'**
   String reihePartnerHinweis(String name);
 
   /// No description provided for @reiheDauer.
