@@ -62,7 +62,22 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
   @override
   void initState() {
     super.initState();
+    StorageService.spicyAenderung.addListener(_modusGeaendert);
     _laden();
+  }
+
+  /// Endet der Spicy-Modus, während die Reihe offen ist (z. B. erneute Abfrage nach langer Pause im Hintergrund),
+  /// schließt sich die Seite, statt Folgen zu zeigen, die nicht mehr spielen.
+  void _modusGeaendert() {
+    if (!mounted || StorageService.spicyMode()) return;
+    final route = ModalRoute.of(context);
+    if (route != null) Navigator.of(context).removeRoute(route);
+  }
+
+  @override
+  void dispose() {
+    StorageService.spicyAenderung.removeListener(_modusGeaendert);
+    super.dispose();
   }
 
   Future<void> _laden() async {
