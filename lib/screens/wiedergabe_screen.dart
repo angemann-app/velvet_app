@@ -75,7 +75,8 @@ class WiedergabeScreen extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.only(bottom: VpAbstand.xl),
                                 child: GestureDetector(
-                                    onTap: p.art == WiedergabeArt.reihe
+                                    onTap: ReiheGalerieScreen.aktiv &&
+                                            p.art == WiedergabeArt.reihe
                                         ? () => _galerieOeffnen(context, p)
                                         : null,
                                     child: AspectRatio(

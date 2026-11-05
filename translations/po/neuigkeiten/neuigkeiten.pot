@@ -1224,13 +1224,13 @@ msgid "Zum Einschalten gibst du Monat und Jahr deiner Geburt an und bestätigst 
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.4
-#. EN: Pictures for the audio stories, threesome episodes play
+#. EN: Threesome episodes play, new texts
 msgctxt "news:62#0.titel"
-msgid "Bilder zu den Hörgeschichten, Dreier-Folgen spielen"
+msgid "Dreier-Folgen spielen, neue Texte"
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.4
-#. EN: Tap the scene picture in the player or choose “View pictures” on the episode: the pictures open full screen, you swipe between scenes and zoom with two fingers. Only in spicy mode and never with the discreet app icon. The threesome episodes now play reliably.
+#. EN: The episodes for three now play reliably, in all three levels. The Soft and Spicy versions have been rewritten and are much longer, as are four roles in Very spicy. Everything has been newly recorded.
 msgctxt "news:62#0.text"
-msgid "Tippe im Player auf das Szenenbild oder wähle „Bilder ansehen“ bei der Folge: Die Bilder erscheinen im Vollbild, du wischst zwischen den Szenen und zoomst mit zwei Fingern. Nur im Spicy-Modus und nie mit dem diskreten App-Symbol. Die Folgen zu dritt spielen jetzt zuverlässig."
+msgid "Die Folgen zu dritt spielen jetzt zuverlässig, in allen drei Stufen. Die Fassungen für Soft und Spicy sind neu geschrieben und deutlich länger, ebenso vier Rollen in Sehr spicy. Alles ist neu eingesprochen."
 msgstr ""

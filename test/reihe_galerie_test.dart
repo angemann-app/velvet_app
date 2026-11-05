@@ -84,7 +84,8 @@ void main() {
     test('Ohne Spicy gibt es für Spicy-Stufen nichts', () {
       final f = _folge(bildersatz: 'stufe');
       expect(ReiheGalerieScreen.bilder(f, 'sehrspicy', null, spicyErlaubt: false, dateiVon: suche), isEmpty);
-      expect(ReiheGalerieScreen.hatBilder(f, null, spicyErlaubt: false, dateiVon: suche), isTrue); // Soft
+      expect(ReiheGalerieScreen.hatBilder(f, null, spicyErlaubt: false, dateiVon: suche),
+          ReiheGalerieScreen.aktiv); // Soft; solange die Galerie abgeschaltet ist, gibt es nie Bilder
       expect(ReiheGalerieScreen.hatBilder(f, null, spicyErlaubt: true, dateiVon: (_) => null), isFalse);
     });
   });

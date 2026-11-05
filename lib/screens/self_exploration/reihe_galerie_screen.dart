@@ -54,8 +54,12 @@ class ReiheGalerieScreen extends StatefulWidget {
   }
 
   /// Gibt es in irgendeiner erlaubten Stufe mindestens ein Bild? Dann lohnt sich der Einstieg.
+  /// Die Galerie ist gebaut, aber noch nicht freigeschaltet (Beta 62): erst, wenn die Bilder fertig sind.
+  static const bool aktiv = false;
+
   static bool hatBilder(ReiheFolge folge, String? perspektive,
           {required bool spicyErlaubt, String? Function(String pfad)? dateiVon}) =>
+      aktiv &&
       folge
           .varianten(spicyErlaubt: spicyErlaubt)
           .any((v) => bilder(folge, v, perspektive, spicyErlaubt: spicyErlaubt, dateiVon: dateiVon).isNotEmpty);

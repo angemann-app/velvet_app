@@ -727,9 +727,9 @@
       "version": "4.19.0-beta.4",
       "punkte": [
         {
-          "icon": "photo_library",
-          "titel": "Pictures for the audio stories, threesome episodes play",
-          "text": "Tap the scene picture in the player or choose “View pictures” on the episode: the pictures open full screen, you swipe between scenes and zoom with two fingers. Only in spicy mode and never with the discreet app icon. The threesome episodes now play reliably."
+          "icon": "headphones",
+          "titel": "Threesome episodes play, new texts",
+          "text": "The episodes for three now play reliably, in all three levels. The Soft and Spicy versions have been rewritten and are much longer, as are four roles in Very spicy. Everything has been newly recorded."
         }
       ]
     }
@@ -771,6 +771,6 @@
     "news:59": "56252afd43bd3f86",
     "news:60": "24de6b882a4a33d6",
     "news:61": "be425719260a4169",
-    "news:62": "fc39752a85dc7968"
+    "news:62": "dcbfa81253a3f822"
   }
 }
