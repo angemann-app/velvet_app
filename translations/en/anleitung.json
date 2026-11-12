@@ -6,7 +6,7 @@
       "icon": "flag",
       "titel": "Getting started",
       "bild": "00_onboarding.png",
-      "text": "On first launch you create a small profile: name, gender, relationship status and your focus. All questions are optional; for gender there is also “Not specified”, and nothing is preselected. The app uses it to choose suitable courses, voices and example questions. Everything stays on your phone.\nHas someone invited you? Then tap “Someone invited me” right at the start. Three calm screens explain what this is about: nothing is a task, “no” is always an answer, and everything stays on your phone. After that you can set things up in peace, connect with that person, or just have a look first.\nYou can reach your profile at any time via the person icon at the top of the start page. That's also where you'll find language, discretion, backup, spicy mode and updates. In your profile you can also say, if you like, what your body is like. Exercises and audios use this to pick fitting voices and words; you can leave it empty and change it at any time."
+      "text": "On first launch you create a small profile: name, gender, relationship status and your focus. All questions are optional; for gender there is also “Not specified”, and nothing is preselected. The app uses it to choose suitable courses, voices and example questions. Everything stays on your phone.\nHas someone invited you? Then tap “Someone invited me” right at the start. Three calm screens explain what this is about: nothing is a task, “no” is always an answer, and everything stays on your phone. After that you can set things up in peace, connect with that person, or just have a look first.\nYou can reach your profile at any time via the person icon at the top of the start page, next to search and help. That's also where you'll find language, discretion, backup, spicy mode and updates. In your profile you can also say, if you like, what your body is like. Exercises and audios use this to pick fitting voices and words; you can leave it empty and change it at any time."
     },
     {
       "id": "erste_woche",
@@ -25,7 +25,7 @@
       "id": "finden_weg",
       "icon": "search",
       "titel": "Find content and follow your personal path",
-      "text": "Use the magnifying glass at the top to find courses, lessons and practice activities. Search runs only on your device, saves no search history and does not search private notes or messages. Spicy content appears only when spicy mode is enabled.\nThe lesson player shows whether the specific recording is available offline. If it is missing, the device voice can read the text. “Download recordings” opens the existing package manager.\nLessons with a linked exercise and reflection question offer a personal path: discover the knowledge, try the exercise and reflect. You open and confirm each step yourself, with no time limit or required answer. You can return to a path from Today. Your place on the path is included in your backup."
+      "text": "Use the magnifying glass at the top to find courses, lessons and practice activities. Search runs only on your device, saves no search history and does not search private notes or messages. Spicy content appears only when spicy mode is enabled.\nThe lesson player shows the play button first. If the specific recording is missing, a small “Device voice” note appears below it: your phone's voice then reads the text, and “Download recordings” opens the package manager.\nLessons with a linked exercise and reflection question offer a personal path: discover the knowledge, try the exercise and reflect. You open and confirm each step yourself, with no time limit or required answer. You can return to a path from Today. Your place on the path is included in your backup."
     },
     {
       "id": "weiterhoeren_gemeinsam",
@@ -52,7 +52,7 @@
       "icon": "fitness",
       "titel": "Training and quick help",
       "bild": "02_training.png",
-      "text": "The Practice tab, under Body, contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.\nThe “Help” button at the top right opens a calm sheet. You choose what is going on: nervous, my body isn't going along, pain, “I don't want to go on”, my partner is quiet, afterwards. You get a few steps and sentences you can say.\nThere you also find help when a no isn't respected or there is pressure, with contacts for Germany, Austria, Switzerland, the United Kingdom and the USA. “Leave quickly” closes the sheet at once.\nQuestions about body and desire are answered by the lessons under Learn. For pain or lasting difficulties, see your doctor; for conflict or pressure, a counselling service."
+      "text": "The Practice tab, under Body, contains the pelvic floor timer with four exercise types (programme and settings unfold from two rows) and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.\nThe “Help” button at the top right opens a calm sheet. You choose what is going on: nervous, my body isn't going along, pain, “I don't want to go on”, my partner is quiet, afterwards. You get a few steps and sentences you can say.\nThere you also find help when a no isn't respected or there is pressure, with contacts for Germany, Austria, Switzerland, the United Kingdom and the USA. “Leave quickly” closes the sheet at once.\nQuestions about body and desire are answered by the lessons under Learn. For pain or lasting difficulties, see your doctor; for conflict or pressure, a counselling service."
     },
     {
       "id": "reframing",
@@ -66,7 +66,7 @@
       "icon": "favorite",
       "titel": "Couple channel",
       "bild": "04_paarkanal_verbunden.png",
-      "text": "In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.\nSparks: with one tap you show what you're in the mood for today, or not. “Not today” is always one tap away. The other person can answer “Not today” and “Let's talk” with “Thanks for telling me”.\nSpicy invitation: whoever is invited can answer “Not right now”, no explanation needed.\nDisconnecting: in the menu you disconnect, after two confirmations. Your partner gets a calm notice (you can switch it off and disconnect quietly) and decides for themselves whether to delete this connection's data too. If the notice doesn't arrive (app closed, no connection), everything there stays until they delete it themselves. Sent messages and photos can't be taken back.\nMessages: with read receipts, which you can switch off in the menu.\nExplore together: in the fantasy map each of you answers separately with “Yes, please”, “Maybe” or “Rather not”. Under “My answers” you only see your own. Under “Together” only what you both want appears; a “Maybe” shows up there to talk about, a “Rather not” never does. While there is no overlap yet, it stays quiet, without cheering and without pressure. In spicy mode there are also scenes to try, whole evenings that you answer the same way.\nLearning together: share lessons and exchange answers to the reflection questions."
+      "text": "In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.\nUnder your name, two buttons lead straight to the “Shared evening” and the “Fantasy map”.\nSparks: with one tap you show what you're in the mood for today, or not. “Not today” is always one tap away. The other person can answer “Not today” and “Let's talk” with “Thanks for telling me”.\nSpicy invitation: whoever is invited can answer “Not right now”, no explanation needed.\nDisconnecting: in the menu you disconnect, after two confirmations. Your partner gets a calm notice (you can switch it off and disconnect quietly) and decides for themselves whether to delete this connection's data too. If the notice doesn't arrive (app closed, no connection), everything there stays until they delete it themselves. Sent messages and photos can't be taken back.\nMessages: with read receipts, which you can switch off in the menu.\nExplore together: in the fantasy map each of you answers separately with “Yes, please”, “Maybe” or “Rather not”. Under “My answers” you only see your own. Under “Together” only what you both want appears; a “Maybe” shows up there to talk about, a “Rather not” never does. While there is no overlap yet, it stays quiet, without cheering and without pressure. In spicy mode there are also scenes to try, whole evenings that you answer the same way.\nLearning together: share lessons and exchange answers to the reflection questions."
     },
     {
       "id": "spicy",
@@ -122,17 +122,17 @@
     "guide:diskretion": "7d5894d8a6d7e73a",
     "guide:erste_woche": "222ee5fe38b304d0",
     "guide:fantasien": "77c0adb1c77263cd",
-    "guide:finden_weg": "f4f608d67fd739ce",
+    "guide:finden_weg": "49804810be859be2",
     "guide:gefuehrt": "be1306cc8637fdea",
     "guide:hilfe": "0f67b34ec65bbd7e",
     "guide:kurse": "d3540d2c8b9c68af",
-    "guide:paar": "9c7f12ea8c6c140b",
+    "guide:paar": "f2a0ee3ad0a27b9c",
     "guide:reframing": "a0ea4f55c9482b5e",
     "guide:schlafdaten": "4dee96a0257be825",
     "guide:spicy": "1f8ce28a3410b943",
     "guide:sprache": "e06647757a6f7c49",
-    "guide:start": "f83b3d63bf1f78ee",
-    "guide:training": "6c41e74b3d536ff0",
+    "guide:start": "15a162aab7be19db",
+    "guide:training": "4aa59c34c884db5f",
     "guide:updates": "26cd13ac56425202",
     "guide:weiterhoeren_gemeinsam": "3b474e3cd9a24cb4"
   }

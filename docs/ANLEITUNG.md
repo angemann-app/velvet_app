@@ -30,7 +30,7 @@ Beim ersten Start legst du ein kleines Profil an: Name, Geschlecht, Beziehungsst
 
 Hat dich jemand eingeladen? Dann tippst du ganz am Anfang auf „Jemand hat mich eingeladen“. Drei ruhige Bildschirme erklären, worum es geht: Nichts ist eine Aufgabe, „Nein“ ist immer eine Antwort, und alles bleibt auf deinem Handy. Danach richtest du in Ruhe ein, verbindest dich mit der Person oder schaust erst einmal nur.
 
-Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Startseite. Dort findest du auch Sprache, Diskretion, Sicherung, Spicy-Modus und Updates. Im Profil kannst du außerdem freiwillig angeben, wie dein Körper ist. Das nutzen Übungen und Audios, um Stimme und Worte passend zu wählen; du kannst es leer lassen und jederzeit ändern.
+Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Startseite, neben Suche und Hilfe. Dort findest du auch Sprache, Diskretion, Sicherung, Spicy-Modus und Updates. Im Profil kannst du außerdem freiwillig angeben, wie dein Körper ist. Das nutzen Übungen und Audios, um Stimme und Worte passend zu wählen; du kannst es leer lassen und jederzeit ändern.
 
 
 ## Eure erste Woche
@@ -57,7 +57,7 @@ Mit „Als abgeschlossen markieren“ zählt dein Fortschritt.
 
 Über die Lupe oben findest du Kurse, Lektionen und Praxisangebote. Die Suche läuft nur auf deinem Gerät, speichert keine Suchhistorie und durchsucht keine privaten Notizen oder Nachrichten. Spicy-Inhalte erscheinen nur im eingeschalteten Spicy-Modus.
 
-Am Lektionsplayer steht, ob die konkrete Aufnahme offline vorhanden ist. Fehlt sie, kann die Geräte-Stimme vorlesen. Über „Aufnahmen laden“ öffnest du die bestehende Paketverwaltung.
+Der Lektionsplayer zeigt zuerst den Abspielknopf. Fehlt die konkrete Aufnahme, steht darunter klein „Geräte-Stimme“: Dann liest die Stimme deines Handys vor, und über „Aufnahmen laden“ öffnest du die Paketverwaltung.
 
 Lektionen mit verknüpfter Übung und Reflexionsfrage bieten einen persönlichen Weg: Wissen entdecken, Übung ausprobieren und Nachspüren. Du öffnest und bestätigst die Schritte selbst, ohne Zeitvorgabe oder Pflichtantwort. Ein begonnener Weg ist auf Heute wieder erreichbar. Sein Stand ist Teil deiner Sicherung.
 
@@ -111,7 +111,7 @@ Was dir beim Hören, Lesen oder Tagträumen in den Sinn kommt, gehört dir. Eine
 
 <img src="anleitung/02_training.png" width="260" alt="Training und Akuthilfe">
 
-Im Tab Üben, Bereich Körper, findest du den Beckenboden-Timer mit vier Übungsarten und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.
+Im Tab Üben, Bereich Körper, findest du den Beckenboden-Timer mit vier Übungsarten (Programm und Einstellungen klappen über zwei Zeilen auf) und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.
 
 Der Knopf „Hilfe“ oben rechts öffnet ein ruhiges Blatt. Du wählst, was gerade los ist: nervös, der Körper macht nicht mit, Schmerz, „ich möchte nicht mehr“, das Gegenüber wird still, danach. Du bekommst wenige Schritte und Sätze, die du sagen kannst.
 
@@ -134,6 +134,8 @@ Auf der Startseite wartet außerdem der 30-Sekunden-Check-in: Wie stehen Stress 
 <img src="anleitung/04_paarkanal_verbunden.png" width="260" alt="Paar-Kanal">
 
 Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt. Haben beide Handys eine neue Version, gehen sie versiegelt (NIP-17): Die Server sehen dann nicht mehr, wer wem wann schreibt. Das stellt sich von selbst ein, mit älteren Versionen klappt es weiter wie bisher.
+
+Unter deinem Namen führen zwei Schaltflächen direkt zum „Gemeinsamen Abend“ und zur „Fantasie-Landkarte“.
 
 Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht. „Heute lieber nicht“ ist immer sofort erreichbar. Auf „Heute lieber nicht“ und „Lass uns reden“ kann das Gegenüber mit „Danke fürs Sagen“ antworten.
 
