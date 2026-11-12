@@ -9153,3 +9153,81 @@ msgstr ""
 msgctxt "ui:ersteWocheS7Text#text"
 msgid "Zum Schluss ein Blick zurück, ohne Zeugnis. Zwei Fragen genügen, antwortet laut oder nur für euch, ganz wie es sich anfühlt. Danach könnt ihr weitermachen, wenn ihr mögt, oder es einfach gut sein lassen."
 msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: You and {name}
+msgctxt "ui:heutePaarDuUnd#text"
+msgid "Du und {name}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: For you two
+msgctxt "ui:heutePaarEyebrow#text"
+msgid "Für euch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Today, together
+msgctxt "ui:heutePaarTitel#text"
+msgid "Heute zu zweit"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: At your pace, with one voice
+msgctxt "ui:heutePaarAbendMeta#text"
+msgid "In eurem Tempo, mit einer Stimme"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Audios for you two
+msgctxt "ui:heutePaarAudios#text"
+msgid "Audios für euch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Listen together
+msgctxt "ui:heutePaarAudiosMeta#text"
+msgid "Zu zweit hören"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Us: a message or a spark to {name}
+msgctxt "ui:heutePaarWir#text"
+msgid "Wir: eine Nachricht oder ein Funke an {name}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Invite your partner
+msgctxt "ui:heutePaarEinladen#text"
+msgid "Partner:in einladen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Already have a code?
+msgctxt "ui:heutePaarSchonCode#text"
+msgid "Schon einen Code?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Connect
+msgctxt "ui:heutePaarVerbinden#text"
+msgid "Verbinden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: More just for you
+msgctxt "ui:heutePaarMehrAllein#text"
+msgid "Mehr für dich allein"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You are in the middle of a path
+msgctxt "ui:heutePaarWegMeta#text"
+msgid "Du bist mitten in einem Weg"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: If you both like – a no counts fully
+msgctxt "ui:ersteWocheUnterzeileVorsichtig#text"
+msgid "Wenn ihr beide mögt – ein Nein ist vollwertig"
+msgstr ""

@@ -5335,4 +5335,48 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get ersteWocheS7Text =>
       'To finish, a look back, with no grades. Two questions are enough. Answer aloud or just for yourselves, however it feels. After that you can carry on if you like, or simply let it be.';
+
+  @override
+  String heutePaarDuUnd(Object name) {
+    return 'You and $name';
+  }
+
+  @override
+  String get heutePaarEyebrow => 'For you two';
+
+  @override
+  String get heutePaarTitel => 'Today, together';
+
+  @override
+  String get heutePaarAbendMeta => 'At your pace, with one voice';
+
+  @override
+  String get heutePaarAudios => 'Audios for you two';
+
+  @override
+  String get heutePaarAudiosMeta => 'Listen together';
+
+  @override
+  String heutePaarWir(Object name) {
+    return 'Us: a message or a spark to $name';
+  }
+
+  @override
+  String get heutePaarEinladen => 'Invite your partner';
+
+  @override
+  String get heutePaarSchonCode => 'Already have a code?';
+
+  @override
+  String get heutePaarVerbinden => 'Connect';
+
+  @override
+  String get heutePaarMehrAllein => 'More just for you';
+
+  @override
+  String get heutePaarWegMeta => 'You are in the middle of a path';
+
+  @override
+  String get ersteWocheUnterzeileVorsichtig =>
+      'If you both like – a no counts fully';
 }

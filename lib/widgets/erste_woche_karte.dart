@@ -21,7 +21,10 @@ class ErsteWocheKarte extends StatefulWidget {
   /// Für Tests: aktuelle Zeit.
   final DateTime Function()? jetzt;
 
-  const ErsteWocheKarte({super.key, this.imTabWir = false, this.jetzt});
+  /// Optionale leise Unterzeile (nur auf Heute, z. B. bei Dating mit Paar-Fokus).
+  final String? unterzeile;
+
+  const ErsteWocheKarte({super.key, this.imTabWir = false, this.jetzt, this.unterzeile});
 
   @override
   State<ErsteWocheKarte> createState() => _ErsteWocheKarteState();
@@ -130,6 +133,10 @@ class _ErsteWocheKarteState extends State<ErsteWocheKarte> {
         Text(schritt.titel, style: typo.titel),
         const SizedBox(height: VpAbstand.xs),
         Text(zeile, style: typo.beschriftung.copyWith(color: AppTheme.tinteStumm)),
+        if (widget.unterzeile != null) ...[
+          const SizedBox(height: VpAbstand.xs),
+          Text(widget.unterzeile!, style: typo.fliesstextKlein),
+        ],
         if (stand == null || stand.beginn == null) ...[
           const SizedBox(height: VpAbstand.s),
           Text(t.ersteWocheEinstieg, style: typo.fliesstextKlein),

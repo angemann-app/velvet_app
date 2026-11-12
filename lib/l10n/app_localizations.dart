@@ -9128,6 +9128,84 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Zum Schluss ein Blick zurück, ohne Zeugnis. Zwei Fragen genügen, antwortet laut oder nur für euch, ganz wie es sich anfühlt. Danach könnt ihr weitermachen, wenn ihr mögt, oder es einfach gut sein lassen.'**
   String get ersteWocheS7Text;
+
+  /// No description provided for @heutePaarDuUnd.
+  ///
+  /// In de, this message translates to:
+  /// **'Du und {name}'**
+  String heutePaarDuUnd(Object name);
+
+  /// No description provided for @heutePaarEyebrow.
+  ///
+  /// In de, this message translates to:
+  /// **'Für euch'**
+  String get heutePaarEyebrow;
+
+  /// No description provided for @heutePaarTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute zu zweit'**
+  String get heutePaarTitel;
+
+  /// No description provided for @heutePaarAbendMeta.
+  ///
+  /// In de, this message translates to:
+  /// **'In eurem Tempo, mit einer Stimme'**
+  String get heutePaarAbendMeta;
+
+  /// No description provided for @heutePaarAudios.
+  ///
+  /// In de, this message translates to:
+  /// **'Audios für euch'**
+  String get heutePaarAudios;
+
+  /// No description provided for @heutePaarAudiosMeta.
+  ///
+  /// In de, this message translates to:
+  /// **'Zu zweit hören'**
+  String get heutePaarAudiosMeta;
+
+  /// No description provided for @heutePaarWir.
+  ///
+  /// In de, this message translates to:
+  /// **'Wir: eine Nachricht oder ein Funke an {name}'**
+  String heutePaarWir(Object name);
+
+  /// No description provided for @heutePaarEinladen.
+  ///
+  /// In de, this message translates to:
+  /// **'Partner:in einladen'**
+  String get heutePaarEinladen;
+
+  /// No description provided for @heutePaarSchonCode.
+  ///
+  /// In de, this message translates to:
+  /// **'Schon einen Code?'**
+  String get heutePaarSchonCode;
+
+  /// No description provided for @heutePaarVerbinden.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbinden'**
+  String get heutePaarVerbinden;
+
+  /// No description provided for @heutePaarMehrAllein.
+  ///
+  /// In de, this message translates to:
+  /// **'Mehr für dich allein'**
+  String get heutePaarMehrAllein;
+
+  /// No description provided for @heutePaarWegMeta.
+  ///
+  /// In de, this message translates to:
+  /// **'Du bist mitten in einem Weg'**
+  String get heutePaarWegMeta;
+
+  /// No description provided for @ersteWocheUnterzeileVorsichtig.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn ihr beide mögt – ein Nein ist vollwertig'**
+  String get ersteWocheUnterzeileVorsichtig;
 }
 
 class _AppLocalizationsDelegate

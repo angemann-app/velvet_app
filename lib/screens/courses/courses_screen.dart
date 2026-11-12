@@ -16,9 +16,27 @@ import '../../widgets/gefuehrte_audios.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/daily_checkin_card.dart';
 import '../../widgets/daily_simmering_card.dart';
+import '../../services/nostr_service.dart';
+import '../../widgets/erste_woche_karte.dart';
+import '../couples_channel/invite_partner.dart';
+import '../couples_channel/pairing_modal.dart';
+import '../couples_channel/paar_abend_screen.dart';
+import '../../services/audio_gruppen.dart';
 import '../onboarding/onboarding_screen.dart';
 import 'lesson_detail_screen.dart';
 import '../../l10n/t.dart';
+
+/// Paar-Modus auf „Heute“: Fokus Paar und nicht Single (docs/konzepte/eine-tonlage.md).
+bool istPaarModus(UserProfile? p) =>
+    p != null && p.primaryGoal == 'couple_intimacy' && p.relationshipStatus != 'single';
+
+/// Dating oder kompliziert mit Paar-Fokus: gleiche Seite, die Karte trägt eine vorsichtigere Unterzeile.
+bool istPaarModusVorsichtig(UserProfile? p) =>
+    istPaarModus(p) && (p!.relationshipStatus == 'dating' || p.relationshipStatus == 'complicated');
+
+/// „Mehr für dich allein“ auf Heute (Paar-Modus): nur für diese Sitzung aufgeklappt, kein Speicherschlüssel.
+@visibleForTesting
+bool heutePaarMehrOffen = false;
 
 /// Zwei Gesichter derselben Daten: **Heute** (Kopf, nächster Schritt, Check-in/Funke, geführte Audios) und **Lernen**
 /// (Filter und Kurse nach Schwerpunkten). Siehe docs/konzepte/heute-und-produktschliff.md.
@@ -197,7 +215,9 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 : const SizedBox.shrink(),
           ),
 
-          if (!widget.lernen) ...[
+          if (!widget.lernen && istPaarModus(_profile)) ...[
+            ..._buildPaarHeute(filteredCourses.length, completedCount, showCouples),
+          ] else if (!widget.lernen) ...[
             // Kopf: Begrüßung ohne Prozentbalken und Serie (docs/konzepte/heute-und-produktschliff.md)
             _buildKopf(),
             WegFortsetzen(oeffnen: _onLessonTap),
@@ -264,6 +284,118 @@ class _CoursesScreenState extends State<CoursesScreen> {
     );
   }
 
+  /// Heute im Paar-Modus (docs/konzepte/eine-tonlage.md, „Heute bei Fokus Paar“).
+  List<Widget> _buildPaarHeute(int kurseAnzahl, int erledigt, bool showCouples) {
+    final typo = context.vp.typo;
+    final pfeil = Icon(Icons.arrow_forward_rounded, color: AppTheme.akzentTief, size: 20);
+    return [
+      _buildKopf(paar: true),
+      const SizedBox(height: VpAbstand.xl),
+      ErsteWocheKarte(unterzeile: istPaarModusVorsichtig(_profile) ? t.ersteWocheUnterzeileVorsichtig : null),
+      VpAbschnitt(eyebrow: t.heutePaarEyebrow, titel: t.heutePaarTitel),
+      VpListenzeile(
+        titel: t.couplesChannelSharedEvening,
+        meta: t.heutePaarAbendMeta,
+        trailing: pfeil,
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PaarAbendScreen())),
+      ),
+      VpListenzeile(
+        titel: t.heutePaarAudios,
+        meta: t.heutePaarAudiosMeta,
+        trailing: pfeil,
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (_) => const AudioGruppeSeite(gruppe: AudioGruppe.fuerUns, mitPaar: true))),
+      ),
+      AnimatedBuilder(
+        animation: Listenable.merge([NostrService().partnerPubKeyNotifier, NostrService().partnerNameNotifier]),
+        builder: (context, _) {
+          if (NostrService().isPaired) {
+            return VpListenzeile(
+              titel: t.heutePaarWir(NostrService().partnerName),
+              trailing: pfeil,
+              onTap: () => widget.onNavigateToTool(3),
+            );
+          }
+          return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            VpListenzeile(
+              titel: t.heutePaarEinladen,
+              trailing: pfeil,
+              onTap: () => invitePartner(context),
+            ),
+            Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              spacing: VpAbstand.xs,
+              children: [
+                Text(t.heutePaarSchonCode, style: typo.beschriftung.copyWith(color: AppTheme.tinteStumm)),
+                TextButton(
+                  onPressed: () => showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    builder: (_) => const PairingModal(),
+                  ),
+                  child: Text(t.heutePaarVerbinden),
+                ),
+              ],
+            ),
+          ]);
+        },
+      ),
+      const SizedBox(height: VpAbstand.m),
+      const AufnahmenHinweis(),
+      const SizedBox(height: VpAbstand.s),
+      // Leise, standardmäßig eingeklappt.
+      ValueListenableBuilder<int>(
+        valueListenable: StorageService.bedienAenderung,
+        builder: (context, _, __) {
+          final weg = StorageService.getBedienDaten().weg;
+          final wegLaeuft = weg != null && !weg.fertig;
+          return Semantics(
+            button: true,
+            expanded: heutePaarMehrOffen,
+            child: InkWell(
+              onTap: () => setState(() => heutePaarMehrOffen = !heutePaarMehrOffen),
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(minHeight: 48),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: VpAbstand.s),
+                  child: Row(children: [
+                    Expanded(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Text(t.heutePaarMehrAllein,
+                            style: typo.fliesstext.copyWith(color: AppTheme.tinteStumm, fontWeight: FontWeight.w600)),
+                        if (wegLaeuft)
+                          Text(t.heutePaarWegMeta, style: typo.beschriftung.copyWith(color: AppTheme.tinteStumm)),
+                      ]),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: VpAbstand.m),
+                      child: Icon(heutePaarMehrOffen ? Icons.remove_rounded : Icons.add_rounded,
+                          color: AppTheme.tinteStumm, size: 22),
+                    ),
+                  ]),
+                ),
+              ),
+            ),
+          );
+        },
+      ),
+      if (heutePaarMehrOffen) ...[
+        WegFortsetzen(oeffnen: _onLessonTap),
+        const SizedBox(height: VpAbstand.xl),
+        _buildNaechsterSchritt(erledigt),
+        const SizedBox(height: VpAbstand.xxl),
+        VpAbschnitt(titel: t.heuteFuerHeute),
+        const SizedBox(height: VpAbstand.m),
+        const _HeuteReiter(),
+        const SizedBox(height: VpAbstand.xl),
+        AudioGruppenBereich(mitPaar: showCouples),
+        const SizedBox(height: VpAbstand.l),
+        _buildKurseKarte(kurseAnzahl),
+      ],
+    ];
+  }
+
   /// Heute: leiser Verweis in den Tab „Lernen“ (eine Zeile, kein Rahmen).
   Widget _buildKurseKarte(int anzahl) {
     return VpListenzeile(
@@ -295,7 +427,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
     }
   }
 
-  Widget _buildKopf() {
+  Widget _buildKopf({bool paar = false}) {
     final typo = context.vp.typo;
     final spicy = AppTheme.paletteId == VpPaletteId.spicy;
     final datum = _datum();
@@ -311,14 +443,27 @@ class _CoursesScreenState extends State<CoursesScreen> {
               if (datum.isNotEmpty) ...[VpEyebrow(datum), const SizedBox(height: VpAbstand.s)],
               Text(_profile != null ? t.coursesHelloProfilename(_profile!.name) : t.coursesWelcome, style: anzeige),
               const SizedBox(height: VpAbstand.s),
-              Text(
-                // Beim neutralen Fokus 'open' (Erstmal umsehen) steht keine Fokus-Zeile, sondern der freundliche Text.
-                _profile != null && _profile!.primaryGoal != 'open'
-                    ? t.coursesYourFocusGoallabel(_profile!.goalLabel)
-                    : t.coursesUnderstandTheBiologyQuietThe,
-                style: typo.fliesstextKlein,
-              ),
-              const SizedBox(height: VpAbstand.s),
+              if (paar)
+                // Paar-Modus: gekoppelt „Du und {Name}“, sonst keine Zusatzzeile.
+                AnimatedBuilder(
+                  animation: Listenable.merge([NostrService().partnerPubKeyNotifier, NostrService().partnerNameNotifier]),
+                  builder: (context, _) => NostrService().isPaired
+                      ? Padding(
+                          padding: const EdgeInsets.only(bottom: VpAbstand.s),
+                          child: Text(t.heutePaarDuUnd(NostrService().partnerName), style: typo.fliesstextKlein),
+                        )
+                      : const SizedBox.shrink(),
+                )
+              else ...[
+                Text(
+                  // Beim neutralen Fokus 'open' (Erstmal umsehen) steht keine Fokus-Zeile, sondern der freundliche Text.
+                  _profile != null && _profile!.primaryGoal != 'open'
+                      ? t.coursesYourFocusGoallabel(_profile!.goalLabel)
+                      : t.coursesUnderstandTheBiologyQuietThe,
+                  style: typo.fliesstextKlein,
+                ),
+                const SizedBox(height: VpAbstand.s),
+              ],
               Row(mainAxisSize: MainAxisSize.min, children: [
                 Icon(Icons.lock_outline_rounded, size: 13, color: AppTheme.tinteStumm),
                 const SizedBox(width: 5),

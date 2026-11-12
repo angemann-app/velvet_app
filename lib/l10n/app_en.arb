@@ -1672,5 +1672,32 @@
   "ersteWocheS6Titel": "One easy sentence",
   "ersteWocheS6Text": "A conversation is easier once there is calm and trust. Pick one of the three sentence starters from the lesson and say it, if you like. That is all it takes. This is not a talk about problems.",
   "ersteWocheS7Titel": "A look back without judging",
-  "ersteWocheS7Text": "To finish, a look back, with no grades. Two questions are enough. Answer aloud or just for yourselves, however it feels. After that you can carry on if you like, or simply let it be."
+  "ersteWocheS7Text": "To finish, a look back, with no grades. Two questions are enough. Answer aloud or just for yourselves, however it feels. After that you can carry on if you like, or simply let it be.",
+  "heutePaarDuUnd": "You and {name}",
+  "heutePaarEyebrow": "For you two",
+  "heutePaarTitel": "Today, together",
+  "heutePaarAbendMeta": "At your pace, with one voice",
+  "heutePaarAudios": "Audios for you two",
+  "heutePaarAudiosMeta": "Listen together",
+  "heutePaarWir": "Us: a message or a spark to {name}",
+  "heutePaarEinladen": "Invite your partner",
+  "heutePaarSchonCode": "Already have a code?",
+  "heutePaarVerbinden": "Connect",
+  "heutePaarMehrAllein": "More just for you",
+  "heutePaarWegMeta": "You are in the middle of a path",
+  "ersteWocheUnterzeileVorsichtig": "If you both like – a no counts fully",
+  "@heutePaarDuUnd": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "@heutePaarWir": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  }
 }

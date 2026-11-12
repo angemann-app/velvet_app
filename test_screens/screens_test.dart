@@ -21,6 +21,7 @@ import 'package:velvetpulse/screens/couples_channel/paar_abend_screen.dart';
 import 'package:velvetpulse/services/erste_woche_dienst.dart';
 import 'package:velvetpulse/models/bedien_daten.dart';
 import 'package:velvetpulse/screens/couples_channel/pairing_modal.dart';
+import 'package:velvetpulse/screens/courses/courses_screen.dart' show heutePaarMehrOffen;
 import 'package:velvetpulse/screens/courses/lesson_detail_screen.dart';
 import 'package:velvetpulse/screens/main_navigation_screen.dart';
 import 'package:velvetpulse/screens/suche_screen.dart';
@@ -261,6 +262,35 @@ Future<void> _abwickeln(WidgetTester tester, Future<void> arbeit) async {
   expect(fehler, isNull);
 }
 
+/// Heute mit einem anderen Profil (Paar-Modus, Dating, Single, anderer Fokus), danach das Standardprofil wieder setzen.
+Future<void> _heuteMitProfil(WidgetTester tester, List<String> errors, String name,
+    String status, String ziel, {bool aufgeklappt = false}) async {
+  await tester.runAsync(() => StorageService.saveUserProfile(
+      UserProfile(name: 'Alex', gender: 'other', age: 35, relationshipStatus: status, primaryGoal: ziel),
+      triggerBackup: false));
+  await tester.pumpWidget(const SizedBox());
+  await tester.pumpWidget(_app(const MainNavigationScreen()));
+  await _shot(tester, name, errors);
+  if (aufgeklappt) {
+    // Die Zeile liegt zunächst außerhalb des gebauten Bereichs: erst scrollen, dann öffnen.
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, -900));
+    await _shot(tester, '${name}_unten', errors);
+    await _tippe(tester, find.text(t.heutePaarMehrAllein));
+    await tester.pump();
+    await _shot(tester, '${name}_offen', errors);
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, -900));
+    await _shot(tester, '${name}_offen_unten', errors);
+    // Wieder schließen (der Zustand gilt für die ganze Sitzung).
+    heutePaarMehrOffen = false;
+  } else {
+    await tester.drag(find.byType(Scrollable).first, const Offset(0, -900));
+    await _shot(tester, '${name}_unten', errors);
+  }
+  await tester.runAsync(() => StorageService.saveUserProfile(
+      UserProfile(name: 'Alex', gender: 'other', age: 35, relationshipStatus: 'relationship', primaryGoal: 'performance_anxiety'),
+      triggerBackup: false));
+}
+
 void main() {
   Sprache.geraetFuerTest = _sprache;
   testWidgets('Screens rendern', (tester) async {
@@ -436,6 +466,13 @@ void main() {
       await tester.drag(find.byType(Scrollable).first, const Offset(0, -900));
       await _shot(tester, '01_kurse_unten', errors);
 
+      // Heute im Paar-Modus (ungekoppelt), Dating mit Paar-Fokus, Single mit Paar-Fokus (unverändert).
+      await _heuteMitProfil(tester, errors, '01_heute_paar', 'relationship', 'couple_intimacy', aufgeklappt: true);
+      await _heuteMitProfil(tester, errors, '01_heute_paar_dating', 'dating', 'couple_intimacy');
+      await _heuteMitProfil(tester, errors, '01_heute_single_paarfokus', 'single', 'couple_intimacy');
+      await tester.pumpWidget(const SizedBox());
+      await tester.pumpWidget(_app(const MainNavigationScreen()));
+
       await _tippe(tester, find.text(t.navLernen).last);
       await _shot(tester, '01_lernen', errors);
       await _tippe(tester, find.text(t.navUeben).last);
@@ -499,6 +536,11 @@ void main() {
       await tester.pumpWidget(_app(const MainNavigationScreen()));
       await _tippe(tester, find.text(t.navWir).last);
       await _shot(tester, '04_paarkanal_verbunden', errors);
+      // Heute im Paar-Modus, gekoppelt („Du und Anna“, Zeile „Wir“).
+      await _heuteMitProfil(tester, errors, '01_heute_paar_gekoppelt', 'relationship', 'couple_intimacy');
+      await tester.pumpWidget(const SizedBox());
+      await tester.pumpWidget(_app(const MainNavigationScreen()));
+      await _tippe(tester, find.text(t.navWir).last);
       await _tippe(tester, find.text(t.couplesChannelWishes));
       await _shot(tester, '04_paarkanal_wuensche', errors);
       // Eure erste Woche: Schritt 2 gemacht, Schritt 3 ausgeblendet, dann Karte weg und wieder zeigen.

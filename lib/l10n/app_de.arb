@@ -2423,5 +2423,32 @@
   "ersteWocheS6Titel": "Ein Satz, der leicht fällt",
   "ersteWocheS6Text": "Ein Gespräch fällt leichter, wenn Ruhe und Vertrauen da sind. Sucht euch aus der Lektion einen der drei Satzbausteine aus und sagt ihn, wenn ihr mögt. Mehr braucht es nicht, es ist kein Problemgespräch.",
   "ersteWocheS7Titel": "Rückblick ohne Bewertung",
-  "ersteWocheS7Text": "Zum Schluss ein Blick zurück, ohne Zeugnis. Zwei Fragen genügen, antwortet laut oder nur für euch, ganz wie es sich anfühlt. Danach könnt ihr weitermachen, wenn ihr mögt, oder es einfach gut sein lassen."
+  "ersteWocheS7Text": "Zum Schluss ein Blick zurück, ohne Zeugnis. Zwei Fragen genügen, antwortet laut oder nur für euch, ganz wie es sich anfühlt. Danach könnt ihr weitermachen, wenn ihr mögt, oder es einfach gut sein lassen.",
+  "heutePaarDuUnd": "Du und {name}",
+  "heutePaarEyebrow": "Für euch",
+  "heutePaarTitel": "Heute zu zweit",
+  "heutePaarAbendMeta": "In eurem Tempo, mit einer Stimme",
+  "heutePaarAudios": "Audios für euch",
+  "heutePaarAudiosMeta": "Zu zweit hören",
+  "heutePaarWir": "Wir: eine Nachricht oder ein Funke an {name}",
+  "heutePaarEinladen": "Partner:in einladen",
+  "heutePaarSchonCode": "Schon einen Code?",
+  "heutePaarVerbinden": "Verbinden",
+  "heutePaarMehrAllein": "Mehr für dich allein",
+  "heutePaarWegMeta": "Du bist mitten in einem Weg",
+  "ersteWocheUnterzeileVorsichtig": "Wenn ihr beide mögt – ein Nein ist vollwertig",
+  "@heutePaarDuUnd": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  },
+  "@heutePaarWir": {
+    "placeholders": {
+      "name": {
+        "type": "Object"
+      }
+    }
+  }
 }

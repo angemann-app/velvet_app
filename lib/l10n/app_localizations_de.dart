@@ -5366,4 +5366,48 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get ersteWocheS7Text =>
       'Zum Schluss ein Blick zurück, ohne Zeugnis. Zwei Fragen genügen, antwortet laut oder nur für euch, ganz wie es sich anfühlt. Danach könnt ihr weitermachen, wenn ihr mögt, oder es einfach gut sein lassen.';
+
+  @override
+  String heutePaarDuUnd(Object name) {
+    return 'Du und $name';
+  }
+
+  @override
+  String get heutePaarEyebrow => 'Für euch';
+
+  @override
+  String get heutePaarTitel => 'Heute zu zweit';
+
+  @override
+  String get heutePaarAbendMeta => 'In eurem Tempo, mit einer Stimme';
+
+  @override
+  String get heutePaarAudios => 'Audios für euch';
+
+  @override
+  String get heutePaarAudiosMeta => 'Zu zweit hören';
+
+  @override
+  String heutePaarWir(Object name) {
+    return 'Wir: eine Nachricht oder ein Funke an $name';
+  }
+
+  @override
+  String get heutePaarEinladen => 'Partner:in einladen';
+
+  @override
+  String get heutePaarSchonCode => 'Schon einen Code?';
+
+  @override
+  String get heutePaarVerbinden => 'Verbinden';
+
+  @override
+  String get heutePaarMehrAllein => 'Mehr für dich allein';
+
+  @override
+  String get heutePaarWegMeta => 'Du bist mitten in einem Weg';
+
+  @override
+  String get ersteWocheUnterzeileVorsichtig =>
+      'Wenn ihr beide mögt – ein Nein ist vollwertig';
 }
