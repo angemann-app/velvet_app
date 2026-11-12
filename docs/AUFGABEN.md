@@ -78,3 +78,4 @@ führt nach dem OK des Nutzers zusammen. Ablauf in `docs/AUSSPRACHE.md` (früher
   OpenCode als Helfer (PR #25, #26), Texte und deutsche Aufnahmen „Lust im Traum“ (lokal), Serie „Lust im
   Traum“ und Traumtagebuch in der App, Startseite mit Schwerpunkten (PR #35), Wochenrückblick, Realitätschecks
   und nächtliches Wecken von Antigravity (AG-5 bis AG-7, PR #42).
+- 12.11.2026, Claude Code: KI-Coach vollständig entfernt (Konzept `docs/konzepte/coach-entfernen.md`; Branch `claude/coach-entfernen-20261112`, nicht zusammengeführt, nicht gebaut): Code, Gemini-Abhängigkeit, ARB-Schlüssel, Anleitung und Doku weg; Üben hat zwei Kapitel; beim Start werden Gemini-Schlüssel und Chatverlauf gelöscht, alte Sicherungen mit `apiKey` bleiben einspielbar; „Was ist neu“ Build 64 (4.19.0-beta.6, `pubspec.yaml` noch unverändert).

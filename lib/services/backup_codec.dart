@@ -9,8 +9,8 @@ import '../l10n/t.dart';
 
 /// Format und Prüfung von Sicherungen.
 ///
-/// Schema 2 (ab 4.3.0): keine Geheimnisse im Klartext. API-Key und privater
-/// Nostr-Schlüssel stehen nur, wenn der Nutzer es beim Export wählt, im Block
+/// Schema 2 (ab 4.3.0): keine Geheimnisse im Klartext. Der private
+/// Nostr-Schlüssel steht nur, wenn der Nutzer es beim Export wählt, im Block
 /// `secrets`, verschlüsselt mit einem Passwort (PBKDF2-HMAC-SHA256 + AES-256-GCM).
 /// Das Passwort steht nicht in der Datei. Ältere Versionen ignorieren `secrets`.
 ///
@@ -111,11 +111,10 @@ class BackupCodec {
     // Schema 1: Geheimnisse im Klartext.
     final legacySecrets = <String, String>{};
     if (foundSchema == 1) {
+      // Der frühere Gemini-Schlüssel („apiKey“) in alten Sicherungen wird gelesen (Größenprüfung),
+      // aber verworfen: Den KI-Coach gibt es nicht mehr, der Schlüssel wird nie gespeichert.
       final apiKey = data['apiKey'];
-      if (apiKey is String && apiKey.trim().isNotEmpty) {
-        _checkSize(apiKey, 'apiKey');
-        legacySecrets['apiKey'] = apiKey.trim();
-      }
+      if (apiKey is String) _checkSize(apiKey, 'apiKey');
       final priv = data['nostrPrivKey'];
       if (priv != null) {
         if (priv is! String || !isValidPrivateKeyHex(priv)) {

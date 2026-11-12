@@ -110,34 +110,26 @@ Pakete nach; bis dahin liest die Stimme des Handys vor.
 - **Updates direkt in der App** aus den GitHub-Releases, mit Prüfsummen-Kontrolle;
   wahlweise **stabil** oder **Beta**.
 
-### KI-Coach (optional)
-- Vertraulicher Gesprächspartner über **Google Gemini** mit eigenem API-Key (*bring your own key*).
-
 ## Datenschutz
 
 | Was | Wo |
 |---|---|
 | Profil, Fortschritt, Tagebuch, Check-ins | nur auf dem Gerät (`SharedPreferences`), unverschlüsselt im privaten App-Speicher |
-| API-Key, privater Schlüssel des Paar-Kanals | im Android-Keystore verschlüsselt, nicht im Cloud-Backup und nicht im normalen Backup |
+| Privater Schlüssel des Paar-Kanals | im Android-Keystore verschlüsselt, nicht im Cloud-Backup und nicht im normalen Backup |
 | Automatisches Backup | privater App-Speicher (für andere Apps nicht lesbar), ohne Geheimnisse, über Androids Cloud-Backup gesichert |
 | Fotos im Paar-Chat | AES-256-GCM-verschlüsselt, direkt von Handy zu Handy (WebRTC). Für den Verbindungsaufbau sieht ein öffentlicher STUN-Server von Google die IP-Adressen, nie das Foto. Beim Empfänger nur einmal ansehbar, Bildschirmfotos gesperrt. |
 | Paar-Kanal | NIP-17 über öffentliche Nostr-Server (Gift Wrap mit NIP-44, sobald beide Handys es können; bis dahin NIP-04). Den Inhalt können die Server nicht lesen. Mit NIP-17 sehen sie nur, dass jemand an diesen Empfänger schreibt: nicht den Absender, nicht den echten Zeitpunkt (der sichtbare Zeitstempel ist zufällig bis zu zwei Tage zurückgesetzt) und die Länge nur grob (Auffüllung). Mit NIP-04 sehen sie die öffentlichen Schlüssel von Absender und Empfänger, Zeitpunkt und Größe jeder Nachricht. Immer sichtbar: die IP-Adresse und bei Lesebestätigungen und den flüchtigen Foto-Signalen, dass dieses Paar aktiv ist (deren Inhalt ist NIP-44-verschlüsselt). Eingehende Nachrichten werden auf ID, Signatur, Empfänger und Absender geprüft, bei NIP-17 auf allen drei Stufen (Hülle, Siegel, Rumor). Keine Vorwärtssicherheit: Wer einen privaten Schlüssel erbeutet, kann alte, noch gespeicherte Nachrichten weiterhin öffnen. |
 | Rückmeldung (*Rückmeldung senden*) | nur was man eintippt, dazu App-Version und Sprache, als NIP-17-Nachricht über die Nostr-Server an das Rückmelde-Postfach des Projekts, von einem frischen Einmal-Schlüssel ohne Bezug zum Paar-Kanal (die Hülle von noch einem anderen frischen Schlüssel). Die Server sehen die IP-Adresse, nicht den Inhalt. |
-| KI-Coach | Nachrichten, Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen an Google Gemini – nur wenn du einen eigenen API-Key hinterlegst |
 
 Es gibt keine Benutzerkonten, kein Tracking und keinen eigenen Server.
 Die Fingerabdruck-Sperre schützt den Zugang zur App, sie verschlüsselt keine gespeicherten Daten.
 
 **Sicherungen** (*Profil → Backup exportieren*): „Nur Daten“ enthält keine Geheimnisse. „Mit Passwort“ nimmt
-zusätzlich Paar-Verbindung und API-Key mit, verschlüsselt mit PBKDF2-SHA256 und AES-256-GCM. Das Passwort
+zusätzlich die Paar-Verbindung mit, verschlüsselt mit PBKDF2-SHA256 und AES-256-GCM. Das Passwort
 steht nicht in der Sicherung. Dateien in Download oder Documents werden nie automatisch eingelesen.
 Nach einer Wiederherstellung aus Googles Cloud-Backup muss der Paar-Kanal neu gekoppelt werden.
 
-## Gemini-API-Key hinterlegen (optional)
-
-1. Bei [Google AI Studio](https://aistudio.google.com/) anmelden.
-2. **Get API key → Create API key** wählen.
-3. In der App im Tab **KI-Coach** auf das Einstellungs-Symbol tippen und den Schlüssel einfügen.
+Die einzigen Netzwege sind der Paar-Kanal (Nostr, verschlüsselt) und die Suche nach Updates (GitHub). Der frühere KI-Coach (Google Gemini) ist seit 12.11.2026 entfernt; beim ersten Start löscht die App einen davon gespeicherten Schlüssel und Chatverlauf.
 
 ## Entwicklung
 

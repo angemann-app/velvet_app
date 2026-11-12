@@ -1,6 +1,7 @@
 // Regressionstests zum Sicherheits-Audit v4.2.0+17 (docs/SICHERHEIT_AUDIT_BASELINE.md).
 // Nur synthetische Schlüssel und Werte, kein Netz nötig.
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -51,26 +52,40 @@ void main() {
   group('A: keine Geheimnisse im Klartext', () {
     test('Altbestand wandert aus den SharedPreferences in den sicheren Speicher', () async {
       final priv = keyApi.generatePrivateKey();
-      final prefs = await freshApp(prefs: {'gemini_api_key': fakeApiKey, 'velvet_nostr_privkey': priv});
-      expect(prefs.getString('gemini_api_key'), isNull);
+      final prefs = await freshApp(prefs: {'velvet_nostr_privkey': priv});
       expect(prefs.getString('velvet_nostr_privkey'), isNull);
-      expect(StorageService.getApiKey(), fakeApiKey);
       expect(NostrService().myPublicKey, keyApi.getPublicKey(priv));
     });
 
-    test('Normales Backup und Auto-Backup enthalten weder API-Key noch privaten Schlüssel', () async {
-      await freshApp();
-      await StorageService.saveApiKey(fakeApiKey, triggerBackup: false);
+    test('Migration: Altlasten des KI-Coachs werden gelöscht, der Nostr-Schlüssel bleibt', () async {
+      final priv = keyApi.generatePrivateKey();
+      final prefs = await freshApp(
+        prefs: {'gemini_api_key': fakeApiKey, 'ai_chat_history': ['{}'], 'velvet_nostr_privkey': priv},
+        secure: {'gemini_api_key': fakeApiKey},
+      );
+      expect(prefs.getString('gemini_api_key'), isNull);
+      expect(prefs.containsKey('ai_chat_history'), isFalse);
+      expect(await const FlutterSecureStorage().read(key: 'gemini_api_key'), isNull);
+      expect(SecretStore.read('gemini_api_key'), isNull);
+      expect(NostrService().myPublicKey, keyApi.getPublicKey(priv));
+      // Zweiter Start: nichts mehr da, kein Fehler (idempotent).
+      SecretStore.resetForTest();
+      await SecretStore.init(prefs);
+      expect(NostrService().myPublicKey, keyApi.getPublicKey(priv));
+    });
+
+    test('Normales Backup und Auto-Backup enthalten weder Chatverlauf noch Schlüssel', () async {
+      await freshApp(prefs: {'ai_chat_history': ['{}']});
       final json = jsonEncode(StorageService.exportAllUserData());
       expect(json, isNot(contains(fakeApiKey)));
       expect(json, isNot(contains(NostrService().myPrivateKey)));
       expect(json, isNot(contains('nostrPrivKey')));
       expect(json, isNot(contains('apiKey')));
+      expect(json, isNot(contains('ai_chat_history')));
     });
 
     test('Export mit Passwort: verschlüsselt, mit richtigem Passwort lesbar, sonst nicht', () async {
       await freshApp();
-      await StorageService.saveApiKey(fakeApiKey, triggerBackup: false);
       final data = await StorageService.exportWithSecrets('richtiges-passwort');
       final json = jsonEncode(data);
       expect(json, isNot(contains(fakeApiKey)));
@@ -79,7 +94,7 @@ void main() {
       final backup = BackupCodec.validate(json);
       expect(backup.needsPassword, isTrue);
       final secrets = await BackupCodec.decryptSecrets(backup.encryptedSecrets!, 'richtiges-passwort');
-      expect(secrets['apiKey'], fakeApiKey);
+      expect(secrets.containsKey('apiKey'), isFalse);
       expect(secrets['nostrPrivKey'], NostrService().myPrivateKey);
 
       await expectLater(BackupCodec.decryptSecrets(backup.encryptedSecrets!, 'falsch'), throwsA(isA<BackupException>()));
@@ -89,9 +104,8 @@ void main() {
       await expectLater(BackupCodec.decryptSecrets(tampered, 'richtiges-passwort'), throwsA(isA<BackupException>()));
     });
 
-    test('Umzug: Sicherung mit Passwort stellt Verbindung und API-Key auf einem neuen Gerät her', () async {
+    test('Umzug: Sicherung mit Passwort stellt die Verbindung auf einem neuen Gerät her', () async {
       await freshApp();
-      await StorageService.saveApiKey(fakeApiKey, triggerBackup: false);
       final partner = keyApi.getPublicKey(keyApi.generatePrivateKey());
       await NostrService().setPartner(partner, name: 'Anna');
       final oldPub = NostrService().myPublicKey;
@@ -104,7 +118,6 @@ void main() {
       await StorageService.importBackup(backup, secrets: secrets);
       expect(NostrService().myPublicKey, oldPub);
       expect(NostrService().partnerPublicKey, partner);
-      expect(StorageService.getApiKey(), fakeApiKey);
     });
 
     test('Ohne Schlüssel auf neuem Gerät wird keine scheinbare Paar-Verbindung übernommen', () async {
@@ -163,9 +176,34 @@ void main() {
       final backup = BackupCodec.validate(legacy);
       expect(backup.hasPlaintextSecrets, isTrue);
       await StorageService.importBackup(backup, secrets: backup.plaintextSecrets);
-      expect(StorageService.getApiKey(), fakeApiKey);
+      // Der alte Gemini-Schlüssel wird gelesen, aber verworfen (KI-Coach entfernt).
+      expect(SecretStore.read('gemini_api_key'), isNull);
       expect(NostrService().myPublicKey, keyApi.getPublicKey(priv));
       expect(StorageService.isLessonCompleted('tease_1'), isTrue);
+    });
+
+    test('Alte Sicherung mit Passwort und apiKey in den Geheimnissen: Schlüssel wird nicht gespeichert', () async {
+      await freshApp();
+      final exported = jsonEncode(await StorageService.exportWithSecrets('pass-1234'));
+      final backup = BackupCodec.validate(exported);
+      final secrets = await BackupCodec.decryptSecrets(backup.encryptedSecrets!, 'pass-1234');
+      secrets['apiKey'] = fakeApiKey; // wie von einer Version mit KI-Coach erzeugt
+      await StorageService.importBackup(backup, secrets: secrets);
+      expect(SecretStore.read('gemini_api_key'), isNull);
+      expect(SecretStore.read('apiKey'), isNull);
+    });
+
+    test('Rückfall: kein Coach-Code und keine Coach-Texte mehr', () {
+      final lib = Directory('lib').listSync(recursive: true).whereType<File>().where((f) => f.path.endsWith('.dart'));
+      for (final f in lib) {
+        expect(f.readAsStringSync(), isNot(contains('google_generative_ai')), reason: f.path);
+      }
+      expect(File('pubspec.yaml').readAsStringSync(), isNot(contains('google_generative_ai')));
+      for (final name in ['app_de.arb', 'app_en.arb']) {
+        final arb = jsonDecode(File('lib/l10n/$name').readAsStringSync()) as Map<String, dynamic>;
+        final rest = arb.keys.where((k) => RegExp(r'^@?(aiCoach|aiService|coachQ|apiKeyGuideSheet)').hasMatch(k));
+        expect(rest, isEmpty, reason: name);
+      }
     });
 
     test('Nicht zusammenpassende Schlüssel: Abbruch, vorheriger Stand bleibt unverändert', () async {

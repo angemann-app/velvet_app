@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../l10n/t.dart';
 import '../../widgets/design/vp_tabs.dart';
-import '../ai_coach/ai_coach_screen.dart';
 import '../cbt/cbt_journal_screen.dart';
 import '../training/training_screen.dart';
 
-/// Tab „Üben“: Körper (Beckenboden und Atem), Gedanken (Reframing) und der KI-Coach unter einem Dach
-/// (docs/konzepte/heute-und-produktschliff.md, Punkt 5). Die drei Bereiche behalten ihren Zustand.
+/// Tab „Üben“: Körper (Beckenboden und Atem) und Gedanken (Reframing) unter einem Dach
+/// (docs/konzepte/heute-und-produktschliff.md, Punkt 5). Die beiden Bereiche behalten ihren Zustand.
 class UebenScreen extends StatefulWidget {
   final GlobalKey<TrainingScreenState>? trainingKey;
 
@@ -18,7 +17,7 @@ class UebenScreen extends StatefulWidget {
 }
 
 class UebenScreenState extends State<UebenScreen> {
-  static const koerper = 0, gedanken = 1, coach = 2;
+  static const koerper = 0, gedanken = 1;
 
   int _bereich = koerper;
 
@@ -31,9 +30,9 @@ class UebenScreenState extends State<UebenScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      // Drei Kapitel auf einer Linie: Körper, Gedanken, Coach.
+      // Zwei Kapitel auf einer Linie (je halbe Breite): Körper, Gedanken.
       VpKapitelLeiste(
-        titel: [t.uebenKoerper, t.uebenGedanken, t.uebenCoach],
+        titel: [t.uebenKoerper, t.uebenGedanken],
         index: _bereich,
         onChanged: waehle,
       ),
@@ -41,7 +40,6 @@ class UebenScreenState extends State<UebenScreen> {
         child: IndexedStack(index: _bereich, children: [
           TrainingScreen(key: widget.trainingKey),
           const CbtJournalScreen(),
-          const AiCoachScreen(),
         ]),
       ),
     ]);
