@@ -35,15 +35,15 @@ void main() {
       text('tinte auf papierErhoben', p.tinte, p.papierErhoben);
       text('tinteLeise auf papier', p.tinteLeise, p.papier);
       text('tinteLeise auf papierErhoben', p.tinteLeise, p.papierErhoben);
-      text('tinteStumm auf papier', p.tinteStumm, p.papier);
-      text('tinteStumm auf papierErhoben', p.tinteStumm, p.papierErhoben);
+      text('tinteStumm auf papier (kleine Zeilen, 5,5 : 1)', p.tinteStumm, p.papier, 5.5);
+      text('tinteStumm auf papierErhoben (kleine Zeilen, 5,5 : 1)', p.tinteStumm, p.papierErhoben, 5.5);
       text('akzentTief auf papier', p.akzentTief, p.papier);
       text('akzentTief auf papierErhoben', p.akzentTief, p.papierErhoben);
       text('aufAkzent auf akzent (Button)', p.aufAkzent, p.akzent);
       // Eingelassene Flächen (Felder, gewählte Elemente) tragen denselben Text wie die Karte.
       text('tinte auf papierVertieft', p.tinte, p.papierVertieft);
       text('tinteLeise auf papierVertieft', p.tinteLeise, p.papierVertieft);
-      text('tinteStumm auf papierVertieft', p.tinteStumm, p.papierVertieft);
+      text('tinteStumm auf papierVertieft (kleine Zeilen, 5,5 : 1)', p.tinteStumm, p.papierVertieft, 5.5);
       text('akzentTief auf papierVertieft', p.akzentTief, p.papierVertieft);
       text('tinte auf akzentLeise über papierErhoben (gewählte Chips)', p.tinte, Color.alphaBlend(p.akzentLeise, p.papierErhoben));
       text('aufStatus auf statusJa (Ja-Knopf)', p.istDunkel ? p.aufAkzent : p.papierErhoben, p.statusJa, 3);

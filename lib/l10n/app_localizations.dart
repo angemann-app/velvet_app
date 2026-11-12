@@ -4563,7 +4563,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingSkipGoStraightToThe.
   ///
   /// In de, this message translates to:
-  /// **'Später, direkt zur App'**
+  /// **'Überspringen'**
   String get onboardingSkipGoStraightToThe;
 
   /// No description provided for @onboardingVersionData.

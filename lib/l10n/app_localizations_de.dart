@@ -2643,7 +2643,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get onboardingPersonaliseProgrammeNow => 'Fertig, los geht\'s';
 
   @override
-  String get onboardingSkipGoStraightToThe => 'Später, direkt zur App';
+  String get onboardingSkipGoStraightToThe => 'Überspringen';
 
   @override
   String onboardingVersionData(Object data) {

@@ -2632,7 +2632,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboardingPersonaliseProgrammeNow => 'Done, let\'s go';
 
   @override
-  String get onboardingSkipGoStraightToThe => 'Later, straight to the app';
+  String get onboardingSkipGoStraightToThe => 'Skip';
 
   @override
   String onboardingVersionData(Object data) {
