@@ -5417,4 +5417,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get fotoHinweisTrennung =>
       'Photos you send stay on the other person\'s phone, even if you disconnect later.';
+
+  @override
+  String get yesNoMaybeInfoZeile => 'How this works';
 }

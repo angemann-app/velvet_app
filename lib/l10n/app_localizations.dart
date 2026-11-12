@@ -9277,6 +9277,12 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.'**
   String get fotoHinweisTrennung;
+
+  /// No description provided for @yesNoMaybeInfoZeile.
+  ///
+  /// In de, this message translates to:
+  /// **'Wie das hier funktioniert'**
+  String get yesNoMaybeInfoZeile;
 }
 
 class _AppLocalizationsDelegate

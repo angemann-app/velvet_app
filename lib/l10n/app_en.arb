@@ -1747,5 +1747,6 @@
       "name": { "type": "Object" }
     }
   },
-  "fotoHinweisTrennung": "Photos you send stay on the other person's phone, even if you disconnect later."
+  "fotoHinweisTrennung": "Photos you send stay on the other person's phone, even if you disconnect later.",
+  "yesNoMaybeInfoZeile": "How this works"
 }

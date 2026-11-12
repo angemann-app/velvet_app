@@ -5441,4 +5441,7 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get fotoHinweisTrennung =>
       'Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.';
+
+  @override
+  String get yesNoMaybeInfoZeile => 'Wie das hier funktioniert';
 }

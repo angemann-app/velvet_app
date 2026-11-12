@@ -37,6 +37,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
   Map<String, String> _myAnswers = {};
   String _selectedFilter = 'all'; // 'all', 'open', 'yes', 'maybe', 'no'
 
+  bool _infoOffen = false;
   VelvetDatabase? _db;
   String? _nurKategorie;
 
@@ -44,6 +45,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
   void initState() {
     super.initState();
     _nurKategorie = widget.nurKategorie;
+    // Beim allerersten Besuch ist der Erklärkasten offen und gilt danach als gesehen.
+    _infoOffen = !StorageService.ynmInfoGesehen();
+    if (_infoOffen) unawaited(StorageService.setYnmInfoGesehen(true));
     _tabController = TabController(length: 2, vsync: this);
     _loadInitialData();
   }
@@ -283,23 +287,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
     return Scaffold(
       backgroundColor: AppTheme.papier,
       appBar: AppBar(
-        title: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              t.couplesChannelFantasyMap,
-              style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800),
-            ),
-            Text(
-              t.yesNoMaybeYesMaybeNo,
-              style: TextStyle(
-                  fontSize: 11,
-                  color: AppTheme.akzentTief,
-                  fontWeight: FontWeight.w500),
-            ),
-          ],
-        ),
+        // Einzeiliger Serif-Titel des Themes: Der frühere zweizeilige Titel war höher als die Toolbar und wurde oben
+        // abgeschnitten. Die Unterzeile „Ja / Vielleicht / Lieber nicht“ tragen jetzt die Filterchips.
+        title: Text(t.couplesChannelFantasyMap, maxLines: 1, overflow: TextOverflow.ellipsis),
         actions: [
           AnimatedBuilder(
             animation: Listenable.merge([
@@ -344,14 +334,10 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               labelStyle:
                   const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
               tabs: [
-                Tab(
-                  icon: const Icon(Icons.list_alt_rounded, size: 18),
-                  text: t.yesNoMaybeMeineAntworten,
-                ),
-                Tab(
-                  icon: const Icon(Icons.favorite_rounded, size: 18),
-                  text: t.yesNoMaybeGemeinsam,
-                ),
+                // Symbol und Text nebeneinander, 40 pt hoch: Ein Tab mit Symbol über dem Text ist 72 pt hoch, passt nicht in
+                // die 48 pt der AppBar-Unterkante und schob den Titel nach oben aus dem Bild.
+                _reiterTab(Icons.list_alt_rounded, t.yesNoMaybeMeineAntworten),
+                _reiterTab(Icons.favorite_rounded, t.yesNoMaybeGemeinsam),
               ],
             ),
           ),
@@ -378,64 +364,12 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
       children: [
-        // Intro Card with Stats
-        Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: AppTheme.papierErhoben,
-            borderRadius: BorderRadius.circular(VpRadius.karte),
-            border: Border.all(color: AppTheme.linie),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Icon(Icons.shield_outlined,
-                      color: AppTheme.akzentTief, size: 20),
-                  SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      t.yesNoMaybeDigitalSafeSpace,
-                      style: TextStyle(
-                        color: AppTheme.akzentTief,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 12,
-                        letterSpacing: 0.8,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 8),
-              Text(
-                t.yesNoMaybeFindOutWhatExcitesYou,
-                style: TextStyle(
-                  color: AppTheme.tinteLeise,
-                  fontSize: 13,
-                  height: 1.45,
-                ),
-              ),
-              const SizedBox(height: 14),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  _buildStatPill(
-                      t.yesNoMaybeYes, '$yesCount', AppTheme.statusJa),
-                  _buildStatPill(
-                      t.yesNoMaybeMaybe, '$maybeCount', AppTheme.akzentTief),
-                  _buildStatPill(
-                      t.yesNoMaybeNo, '$noCount', AppTheme.akzentTief),
-                ],
-              ),
-            ],
-          ),
-        ),
+        // Erklärkasten: beim ersten Besuch offen, danach eine Zeile zum Aufklappen. Der Text bleibt unverändert.
+        _buildInfoKasten(),
 
-        const SizedBox(height: 14),
+        const SizedBox(height: 12),
 
-        // Filter Bar
+        // Filterleiste, zugleich Zähler (die Zahlen stehen in den Chips).
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -483,7 +417,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(VpRadius.karte),
                   child: SizedBox(
-                    height: 96,
+                    height: 72,
                     width: double.infinity,
                     child: VpBildFeld.pfad(category.image,
                         format: VpBildFormat.kopf),
@@ -541,35 +475,62 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
     );
   }
 
-  Widget _buildStatPill(String label, String value, Color color) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-      decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.15),
-        borderRadius: BorderRadius.circular(VpRadius.feld),
-        border: Border.all(color: color.withValues(alpha: 0.4)),
+  Tab _reiterTab(IconData icon, String text) => Tab(
+        height: 40,
+        child: Row(mainAxisSize: MainAxisSize.min, children: [
+          Icon(icon, size: 18),
+          const SizedBox(width: 6),
+          Flexible(child: Text(text, maxLines: 1, overflow: TextOverflow.ellipsis)),
+        ]),
+      );
+
+  Widget _buildInfoKasten() {
+    final kopf = Row(children: [
+      Icon(Icons.shield_outlined, color: AppTheme.akzentTief, size: 20),
+      const SizedBox(width: 8),
+      Expanded(
+        child: Text(
+          _infoOffen ? t.yesNoMaybeDigitalSafeSpace : t.yesNoMaybeInfoZeile,
+          style: context.vp.typo.eyebrow.copyWith(color: AppTheme.akzentTief),
+        ),
       ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: 11,
-              fontWeight: FontWeight.bold,
-              color: color,
+      Icon(_infoOffen ? Icons.expand_less_rounded : Icons.expand_more_rounded,
+          color: AppTheme.tinteLeise, size: 24),
+    ]);
+    return Semantics(
+      button: true,
+      expanded: _infoOffen,
+      child: Material(
+        color: Colors.transparent,
+        child: Ink(
+          decoration: BoxDecoration(
+            color: AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: AppTheme.linie, width: VpLinie.haar),
+          ),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            onTap: () => setState(() => _infoOffen = !_infoOffen),
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: 16, vertical: _infoOffen ? 14 : 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  kopf,
+                  if (_infoOffen) ...[
+                    const SizedBox(height: 8),
+                    Text(
+                      t.yesNoMaybeFindOutWhatExcitesYou,
+                      style: TextStyle(
+                          color: AppTheme.tinteLeise, fontSize: 13, height: 1.45),
+                    ),
+                  ],
+                ],
+              ),
             ),
           ),
-          const SizedBox(width: 4),
-          Text(
-            value,
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w800,
-              color: AppTheme.tinte,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
