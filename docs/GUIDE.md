@@ -9,6 +9,7 @@ This guide is also inside the app (question mark at the top right, or in your pr
 - [Find content and follow your personal path](#find-content-and-follow-your-personal-path)
 - [Continue listening and share an experience](#continue-listening-and-share-an-experience)
 - [Guided audio](#guided-audio)
+- [Fantasies are free](#fantasies-are-free)
 - [Training and quick help](#training-and-quick-help)
 - [Reframing journal and check-in](#reframing-journal-and-check-in)
 - [Couple channel](#couple-channel)
@@ -90,6 +91,11 @@ Inner views (spicy mode only, 18+): continuous audio stories of about 15 to 25 m
 Your dream practice: In Pleasure in dreams, connect recall, recognising dreams and noticing what lingers during the day. Under “Your dream signs”, add, edit or delete personal signs. For your evening preparation, choose a sign and a pleasant memory from your journal. Under “Reflect on today”, optionally record rest, waking desire, sensual or lucid dreams, any experienced orgasms and a note. Questions can remain unanswered. Your private review lets you view, edit and delete daily observations. Signs and observations stay local, are included in your backup and are not sent to a partner or the AI coach. More waking desire is an aim to explore, not a promised effect. For listening there are three short guided pieces for evening, clarity and morning, with Victoria or Martin. They are part of the guided recordings you download, and are for you alone.
 
 
+## Fantasies are free
+
+Whatever comes to mind while you listen, read or daydream belongs to you. A fantasy isn't a wish you have to act on, and it isn't a verdict on your relationship. It can even include things you'd never want in real life. Whether you share any of it, and what and when, is up to you. Your journal and your dreams stay on this device and in backups you make yourself; your partner only sees what you deliberately send in the couple channel, and the app lock in your profile adds extra protection from curious eyes.
+
+
 ## Training and quick help
 
 <img src="anleitung/02_training.png" width="260" alt="Training and quick help">
@@ -125,7 +131,7 @@ Learning together: share lessons and exchange answers to the reflection question
 
 ## Spicy mode (18+)
 
-You switch on spicy mode in your profile. For that you enter the month and year you were born (the app only calculates and does not store the date) and confirm your device lock once (PIN, pattern or fingerprint). Without a screen lock set up, the mode is not available. After an app restart or 30 minutes in the background, the app asks for the device lock again; you can turn that off in your profile. Anyone who enters an age under 18 is locked out for a while. Everything stays on your device, there is no ID check and no third-party service. It unlocks: the levels “Spicy” and “Extra spicy” in the body journey and the shared evening, courses 26 and 27, spicy lessons in other courses and additional questions in the yes/maybe/no list. The app also takes on a red look.
+You switch on spicy mode in your profile. For that you enter the month and year you were born (the app only calculates and does not store the date) and confirm your device lock once (PIN, pattern or fingerprint). Without a screen lock set up, the mode is not available. After an app restart or 5 hours in the background, the app asks for the device lock again; if the time in the background has run out, it tells you when you come back and offers to unlock again. You can turn that off in your profile. Anyone who enters an age under 18 is locked out for a while. Everything stays on your device, there is no ID check and no third-party service. It unlocks: the levels “Spicy” and “Extra spicy” in the body journey and the shared evening, courses 26 and 27, spicy lessons in other courses and additional questions in the yes/maybe/no list. The app also takes on a red look.
 
 In the couple chat you get hot sparks, messages that disappear after reading, and photos that travel encrypted directly from phone to phone and can be viewed only once. To set up the connection, a public helper server (STUN, run by Google) sees your IP addresses, but never the photo. Photos are still experimental: on some mobile networks the direct connection can't be made. If a photo is waiting, the app keeps trying on its own while it's open; “Try again now” tries right away. If you like, you'll find a photo idea there every day, entirely optional and gone at once with “Not today”. Use the chat menu to invite your partner to spicy mode.
 
@@ -145,7 +151,7 @@ The example questions adapt to your profile.
 
 Everything you enter stays on your phone. Secrets such as keys are kept in Android's protected storage.
 
-In your profile you can lock the app with your fingerprint; content is then also hidden in the app overview and screenshots are blocked. The discreet app icon shows a neutral name instead of VelvetPulse.
+The app lock is on by default: during setup the app turns it on if your phone has a screen lock. It then asks for your fingerprint, face, PIN or pattern when you open it and after one minute in the background; content is also hidden in the app overview and screenshots are blocked. If you used VelvetPulse before, you are asked once whether the app should be locked. You can turn the lock off or back on in your profile at any time. The discreet app icon shows a neutral name instead of VelvetPulse.
 
 The app asks before playing through the speaker, and pauses if headphones are disconnected.
 

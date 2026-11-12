@@ -33,9 +33,13 @@ mit Hürden. Der Schutz hängt an der Ehrlichkeit der Person und an der Gerätes
   Fingerabdruck). **Ohne Sperre wird Spicy nicht angeboten**; Hinweis, die Gerätesperre einzurichten.
 - Beim Einschalten einmal Gerätesperre bestätigen (`authenticate`). Das liest und sendet nichts.
 - Danach gilt der Spicy-Modus als „entsperrt“ für die Dauer einer Sitzung. Nach **Neustart der App** oder **mehr als
-  30 Minuten im Hintergrund** fragt die App beim ersten Spicy-Zugriff erneut nach der Gerätesperre (Einstellung im Profil:
+  5 Stunden im Hintergrund** fragt die App beim ersten Spicy-Zugriff erneut nach der Gerätesperre (Einstellung im Profil:
   „Spicy immer erneut absichern“, Standard **an**; wer das nicht will, schaltet es aus und der Schalter bleibt wie heute).
 - Ist die Gerätesperre später weg (Gerät entsperrt gesetzt), fällt Spicy auf **aus** zurück.
+
+> **Nachtrag 12.11.2026:** Die früheren 30 Minuten waren zu kurz. Entschieden: fest **5 Stunden** im Hintergrund
+> (`AlterDienst.erneutNach`, keine Auswahl im Profil). Läuft die Frist ab, zeigt die App beim Zurückkehren einmal den
+> Hinweis „Spicy-Modus ist aus“ mit „Wieder entsperren“. Einzelheiten in `privatsphaere-schutz.md`, Abschnitt b.
 
 ## Schicht 3: Sicherung, Pakete, Paar-Kanal
 
@@ -66,6 +70,7 @@ Benachrichtigungen neutral (kein „Sex“ in Titeln der Systembenachrichtigunge
 
 1. Sperrfrist 30 Tage: ja.
 2. Erneute Abfrage der Gerätesperre nach App-Neustart oder 30 Minuten im Hintergrund: ja (abschaltbar im Profil).
+   Seit 12.11.2026: 5 Stunden statt 30 Minuten (siehe Nachtrag in Schicht 2).
 3. Altbestand: wer Spicy schon an hat, bestätigt Alter und Gerätesperre einmal neu; bis dahin bleibt Spicy aus, die Wahl bleibt erhalten.
 
 ## Umsetzung

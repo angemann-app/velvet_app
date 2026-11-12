@@ -18,6 +18,7 @@ import 'services/sprache.dart';
 import 'services/update_service.dart';
 import 'services/whats_new.dart';
 import 'widgets/app_lock.dart';
+import 'widgets/spicy_abgelaufen_hinweis.dart';
 import 'theme/app_theme.dart';
 import 'screens/main_navigation_screen.dart';
 import 'screens/self_exploration/schlafdaten_screen.dart';
@@ -74,7 +75,19 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
     Sprache.wahl.addListener(_spracheGewechselt);
     StorageService.spicyAenderung.addListener(_spicyGewechselt);
     StorageService.designAenderung.addListener(_spicyGewechselt);
+    AlterDienst.ablauf.addListener(_spicyAbgelaufen);
     _initApp();
+  }
+
+  /// Spicy-Entsperrung nach langer Zeit im Hintergrund verfallen: nach dem nächsten Bild einmal den Hinweis zeigen,
+  /// über der Seite, die gerade offen ist.
+  void _spicyAbgelaufen() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final kontext = VelvetPulseApp.navigatorKey.currentContext;
+      if (!mounted || kontext == null) return;
+      spicyAbgelaufenZeigenWennNoetig(kontext);
+    });
+    WidgetsBinding.instance.ensureVisualUpdate();
   }
 
   /// Spicy an oder aus, oder neue Darstellung: Die Farben hängen daran (AppTheme), also alles neu aufbauen.

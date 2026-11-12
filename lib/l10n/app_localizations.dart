@@ -5814,7 +5814,7 @@ abstract class AppLocalizations {
   /// No description provided for @alterAbsichernText.
   ///
   /// In de, this message translates to:
-  /// **'Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach deiner Gerätesperre.'**
+  /// **'Nach einem App-Neustart oder 5 Stunden im Hintergrund fragt die App wieder nach deiner Gerätesperre.'**
   String get alterAbsichernText;
 
   /// No description provided for @alterGesperrtKurz.
@@ -8708,6 +8708,114 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel.'**
   String schlafBlickBilanz(int klar, int tage);
+
+  /// No description provided for @appSperreNeuTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur für dich'**
+  String get appSperreNeuTitel;
+
+  /// No description provided for @appSperreNeuText.
+  ///
+  /// In de, this message translates to:
+  /// **'VelvetPulse öffnet sich nur mit deiner Gerätesperre, also mit Fingerabdruck, Gesicht, PIN oder Muster. So bleibt bei dir, was du hier erkundest. Im Profil kannst du das jederzeit ändern.'**
+  String get appSperreNeuText;
+
+  /// No description provided for @appSperreNeuOk.
+  ///
+  /// In de, this message translates to:
+  /// **'Gut so'**
+  String get appSperreNeuOk;
+
+  /// No description provided for @appSperreFrageTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'VelvetPulse nur für dich öffnen?'**
+  String get appSperreFrageTitel;
+
+  /// No description provided for @appSperreFrageText.
+  ///
+  /// In de, this message translates to:
+  /// **'Dann fragt die App beim Öffnen und nach einer kurzen Pause nach deiner Gerätesperre. So liest niemand mit, wenn dein Handy mal herumliegt.'**
+  String get appSperreFrageText;
+
+  /// No description provided for @appSperreFrageJa.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja, sperren'**
+  String get appSperreFrageJa;
+
+  /// No description provided for @appSperreFrageNein.
+  ///
+  /// In de, this message translates to:
+  /// **'Nicht jetzt'**
+  String get appSperreFrageNein;
+
+  /// No description provided for @appSperreKeineTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Handy hat noch keine Bildschirmsperre'**
+  String get appSperreKeineTitel;
+
+  /// No description provided for @appSperreKeineText.
+  ///
+  /// In de, this message translates to:
+  /// **'Richte in den Android-Einstellungen eine PIN, ein Muster oder einen Fingerabdruck ein (meist unter „Sicherheit“ oder „Sperrbildschirm“). Danach kannst du im Profil die App-Sperre einschalten.'**
+  String get appSperreKeineText;
+
+  /// No description provided for @appSperreKeineOk.
+  ///
+  /// In de, this message translates to:
+  /// **'Verstanden'**
+  String get appSperreKeineOk;
+
+  /// No description provided for @fantasieHinweisTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine Fantasie gehört dir'**
+  String get fantasieHinweisTitel;
+
+  /// No description provided for @fantasieHinweisText.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine Fantasie ist kein Wunsch, den du erfüllen musst, und kein Urteil über deine Beziehung. Was dir hier in den Sinn kommt, darf einfach da sein. Ob, was und wann du davon teilst, entscheidest du.'**
+  String get fantasieHinweisText;
+
+  /// No description provided for @fantasieHinweisDrei.
+  ///
+  /// In de, this message translates to:
+  /// **'Auch eine Szene zu dritt heißt nicht, dass deiner Beziehung etwas fehlt.'**
+  String get fantasieHinweisDrei;
+
+  /// No description provided for @fantasieHinweisOk.
+  ///
+  /// In de, this message translates to:
+  /// **'Gut zu wissen'**
+  String get fantasieHinweisOk;
+
+  /// No description provided for @spicyAbgelaufenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Spicy-Modus ist aus'**
+  String get spicyAbgelaufenTitel;
+
+  /// No description provided for @spicyAbgelaufenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Die App war länger als 5 Stunden im Hintergrund. Damit niemand mitliest, der dein Handy in die Hand nimmt, wurde der Spicy-Modus ausgeschaltet. Deine Einstellungen und Inhalte bleiben, wie sie sind.'**
+  String get spicyAbgelaufenText;
+
+  /// No description provided for @spicyAbgelaufenEntsperren.
+  ///
+  /// In de, this message translates to:
+  /// **'Wieder entsperren'**
+  String get spicyAbgelaufenEntsperren;
+
+  /// No description provided for @spicyAbgelaufenSpaeter.
+  ///
+  /// In de, this message translates to:
+  /// **'Später'**
+  String get spicyAbgelaufenSpaeter;
 }
 
 class _AppLocalizationsDelegate

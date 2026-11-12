@@ -732,6 +732,27 @@
           "text": "The episodes for three now play reliably, in all three levels. The Soft and Spicy versions have been rewritten and are much longer, as are four roles in Very spicy. Everything has been newly recorded."
         }
       ]
+    },
+    {
+      "build": 63,
+      "version": "4.19.0-beta.5",
+      "punkte": [
+        {
+          "icon": "lock",
+          "titel": "Just for you",
+          "text": "The app lock is now on by default if your phone has a screen lock. If you already use VelvetPulse, you are asked once. You can change it any time in your profile."
+        },
+        {
+          "icon": "lock",
+          "titel": "Spicy stays open longer",
+          "text": "Spicy mode only asks for your device lock again after 5 hours in the background. When that time has run out, the app tells you and offers to unlock again."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Fantasies are free",
+          "text": "A short note the first time you open it and a new section in the guide: whatever comes to mind belongs to you, and you decide what you share."
+        }
+      ]
     }
   ],
   "_source": {
@@ -771,6 +792,7 @@
     "news:59": "56252afd43bd3f86",
     "news:60": "24de6b882a4a33d6",
     "news:61": "be425719260a4169",
-    "news:62": "dcbfa81253a3f822"
+    "news:62": "dcbfa81253a3f822",
+    "news:63": "f88f95aa0ce1aff4"
   }
 }

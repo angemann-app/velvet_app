@@ -163,6 +163,8 @@ class StorageService {
   static const String _keyKursFilter = 'kurs_filter';
   static const String _keyAudioBereichOffen = 'audio_bereich_offen';
   static const String _keyHalloGesendetAm = 'hallo_gesendet_am';
+  // Fantasie-Hinweis einmal gesehen (lib/widgets/fantasie_hinweis.dart); in der Sicherung, beim Merge gewinnt true.
+  static const String keyFantasieHinweisGesehen = 'fantasie_hinweis_gesehen';
 
   static SharedPreferences? _prefs;
   static UserProfile? _inMemoryProfile;
@@ -356,6 +358,15 @@ class StorageService {
     } else {
       await prefs.setString(_keyHalloGesendetAm, value);
     }
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  static bool fantasieHinweisGesehen() =>
+      _prefs?.getBool(keyFantasieHinweisGesehen) ?? false;
+
+  static Future<void> setFantasieHinweisGesehen(bool value) async {
+    final prefs = await _ensurePrefs();
+    await prefs.setBool(keyFantasieHinweisGesehen, value);
     await AutoBackupService.saveAutoBackup();
   }
 
@@ -734,6 +745,7 @@ class StorageService {
       'designPalette': designPalette(),
       'audioBereichOffen': _prefs?.getBool(_keyAudioBereichOffen),
       'halloGesendetAm': getHalloGesendetAm(),
+      'fantasieHinweisGesehen': fantasieHinweisGesehen(),
       'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
       'dailyCheckIns': _prefs?.getStringList(_keyDailyCheckIns),
       'yesNoMaybe': _prefs?.getString(_keyYesNoMaybe),
@@ -929,6 +941,10 @@ class StorageService {
         writes[_keyHalloGesendetAm] =
             lokal.compareTo(backup) <= 0 ? lokal : backup;
       }
+    }
+    // Fantasie-Hinweis: einmal gesehen bleibt gesehen (true gewinnt), ein false aus der Sicherung ändert nichts.
+    if (d['fantasieHinweisGesehen'] == true) {
+      writes[keyFantasieHinweisGesehen] = true;
     }
     // Fortschritt: je Folge der größere Stand, damit nichts wieder gesperrt wird.
     if (d['lustFortschritt'] is String &&

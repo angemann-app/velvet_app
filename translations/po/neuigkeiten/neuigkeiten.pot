@@ -1234,3 +1234,39 @@ msgstr ""
 msgctxt "news:62#0.text"
 msgid "Die Folgen zu dritt spielen jetzt zuverlässig, in allen drei Stufen. Die Fassungen für Soft und Spicy sind neu geschrieben und deutlich länger, ebenso vier Rollen in Sehr spicy. Alles ist neu eingesprochen."
 msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.5
+#. EN: Just for you
+msgctxt "news:63#0.titel"
+msgid "Nur für dich"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.5
+#. EN: The app lock is now on by default if your phone has a screen lock. If you already use VelvetPulse, you are asked once. You can change it any time in your profile.
+msgctxt "news:63#0.text"
+msgid "Die App-Sperre ist jetzt Standard, wenn dein Handy eine Bildschirmsperre hat. Wer VelvetPulse schon nutzt, wird einmal gefragt. Im Profil kannst du sie jederzeit ändern."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.5
+#. EN: Spicy stays open longer
+msgctxt "news:63#1.titel"
+msgid "Spicy bleibt länger offen"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.5
+#. EN: Spicy mode only asks for your device lock again after 5 hours in the background. When that time has run out, the app tells you and offers to unlock again.
+msgctxt "news:63#1.text"
+msgid "Der Spicy-Modus fragt erst nach 5 Stunden im Hintergrund wieder nach deiner Gerätesperre. Ist die Zeit abgelaufen, sagt dir die App das und bietet an, wieder zu entsperren."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.5
+#. EN: Fantasies are free
+msgctxt "news:63#2.titel"
+msgid "Fantasien sind frei"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.5
+#. EN: A short note the first time you open it and a new section in the guide: whatever comes to mind belongs to you, and you decide what you share.
+msgctxt "news:63#2.text"
+msgid "Ein kurzer Hinweis beim ersten Öffnen und ein neuer Abschnitt in der Anleitung: Was dir in den Sinn kommt, gehört dir, und du entscheidest, was du teilst."
+msgstr ""

@@ -9,6 +9,7 @@ Diese Anleitung steht auch in der App (Fragezeichen oben rechts oder im Profil).
 - [Finden und dein persönlicher Weg](#finden-und-dein-persönlicher-weg)
 - [Weiterhören und gemeinsam erleben](#weiterhören-und-gemeinsam-erleben)
 - [Geführte Audios](#geführte-audios)
+- [Fantasien sind frei](#fantasien-sind-frei)
 - [Training und Akuthilfe](#training-und-akuthilfe)
 - [Reframing-Tagebuch und Check-in](#reframing-tagebuch-und-check-in)
 - [Paar-Kanal](#paar-kanal)
@@ -90,6 +91,11 @@ Innenansichten (nur im Spicy-Modus, ab 18): zusammenhängende Hörgeschichten vo
 Deine Traumpraxis: In Lust im Traum verbindest du Erinnern, bewusstes Erkennen und Nachspüren am Tag. Unter „Deine Traumzeichen“ legst du persönliche Zeichen an, bearbeitest oder löschst sie. Für deine Abendvorbereitung wählst du ein Zeichen und eine angenehme Erinnerung aus dem Tagebuch. Unter „Heute nachspüren“ hältst du freiwillig Erholung, Tageslust, sinnliche oder klare Träume, mögliche Höhepunkte und eine Notiz fest. Fragen dürfen offenbleiben. Im privaten Rückblick kannst du deine Tagesbeobachtungen ansehen, bearbeiten und löschen. Traumzeichen und Beobachtungen bleiben lokal, sind Teil deiner Sicherung und gehen nicht an Partner oder KI-Coach. Mehr Tageslust ist ein Erkundungsziel, kein versprochener Effekt. Zum Hören gibt es dort drei kurze Begleitungen für Abend, Klarheit und Morgen, mit Victoria oder Martin. Sie gehören zu den geführten Aufnahmen, die du nachlädst, und sind nur für dich allein.
 
 
+## Fantasien sind frei
+
+Was dir beim Hören, Lesen oder Tagträumen in den Sinn kommt, gehört dir. Eine Fantasie ist kein Wunsch, den du erfüllen musst, und kein Urteil über deine Beziehung. Sie darf auch Dinge enthalten, die du im echten Leben nie wollen würdest. Ob, was und wann du davon teilst, entscheidest du. Dein Tagebuch und deine Träume bleiben auf diesem Gerät und in Sicherungen, die du selbst anlegst; nur was du ausdrücklich im Paar-Kanal sendest, sieht dein Gegenüber, und die App-Sperre im Profil schützt zusätzlich vor neugierigen Blicken.
+
+
 ## Training und Akuthilfe
 
 <img src="anleitung/02_training.png" width="260" alt="Training und Akuthilfe">
@@ -125,7 +131,7 @@ Gemeinsam lernen: Lektionen teilen und Antworten auf die Reflexionsfragen austau
 
 ## Spicy-Modus (ab 18)
 
-Den Spicy-Modus schaltest du im Profil ein. Dafür gibst du Monat und Jahr deiner Geburt an (die App rechnet nur nach und speichert das Datum nicht) und bestätigst einmal deine Gerätesperre (PIN, Muster oder Fingerabdruck). Ohne eingerichtete Bildschirmsperre ist der Modus nicht verfügbar. Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach der Gerätesperre; im Profil kannst du das abschalten. Wer sich als unter 18 angibt, wird für eine Weile gesperrt. Alles bleibt auf deinem Gerät, es gibt keine Ausweisprüfung und keinen Drittdienst. Er schaltet frei: die Stufen „Spicy“ und „Sehr spicy“ in Körperreise und Gemeinsamem Abend, die Kurse 26 und 27, Spicy-Lektionen in weiteren Kursen und zusätzliche Fragen in der Ja/Vielleicht/Nein-Liste. Die App bekommt dann einen roten Look.
+Den Spicy-Modus schaltest du im Profil ein. Dafür gibst du Monat und Jahr deiner Geburt an (die App rechnet nur nach und speichert das Datum nicht) und bestätigst einmal deine Gerätesperre (PIN, Muster oder Fingerabdruck). Ohne eingerichtete Bildschirmsperre ist der Modus nicht verfügbar. Nach einem App-Neustart oder 5 Stunden im Hintergrund fragt die App wieder nach der Gerätesperre; ist die Zeit im Hintergrund abgelaufen, sagt sie dir das beim Zurückkehren und bietet an, wieder zu entsperren. Im Profil kannst du das abschalten. Wer sich als unter 18 angibt, wird für eine Weile gesperrt. Alles bleibt auf deinem Gerät, es gibt keine Ausweisprüfung und keinen Drittdienst. Er schaltet frei: die Stufen „Spicy“ und „Sehr spicy“ in Körperreise und Gemeinsamem Abend, die Kurse 26 und 27, Spicy-Lektionen in weiteren Kursen und zusätzliche Fragen in der Ja/Vielleicht/Nein-Liste. Die App bekommt dann einen roten Look.
 
 Im Paar-Chat kommen heiße Funken dazu, Nachrichten, die nach dem Lesen verschwinden, und Fotos, die verschlüsselt direkt von Handy zu Handy gehen und sich nur einmal ansehen lassen. Für den Verbindungsaufbau sieht ein öffentlicher Hilfsserver (STUN, von Google) eure IP-Adressen, aber nie das Foto. Die Fotos sind noch experimentell: In manchen Mobilfunknetzen kommt die direkte Verbindung nicht zustande. Wartet ein Foto, versucht die App es von selbst immer wieder, solange sie offen ist; mit „Jetzt erneut versuchen“ geht es sofort. Wer mag, findet dort jeden Tag eine Foto-Idee, ganz freiwillig und mit „Heute nicht“ sofort weg. Über das Menü im Chat lädst du dein Gegenüber zum Spicy-Modus ein.
 
@@ -145,7 +151,7 @@ Die Beispielfragen passen sich deinem Profil an.
 
 Alles, was du einträgst, bleibt auf deinem Handy. Geheimnisse wie Schlüssel liegen im geschützten Speicher von Android.
 
-Im Profil kannst du die App mit Fingerabdruck sperren; dann sind Inhalte auch in der App-Übersicht verborgen und Screenshots blockiert. Das diskrete App-Symbol zeigt statt VelvetPulse einen neutralen Namen.
+Die App-Sperre ist Standard: Bei der Einrichtung schaltet die App sie ein, wenn dein Handy eine Bildschirmsperre hat. Dann fragt sie beim Öffnen und nach einer Minute im Hintergrund nach Fingerabdruck, Gesicht, PIN oder Muster; Inhalte sind auch in der App-Übersicht verborgen und Screenshots blockiert. Wer VelvetPulse schon vorher genutzt hat, wird einmal gefragt, ob die App gesperrt werden soll. Im Profil kannst du die Sperre jederzeit aus- oder wieder einschalten. Das diskrete App-Symbol zeigt statt VelvetPulse einen neutralen Namen.
 
 Vor der Wiedergabe über den Lautsprecher fragt die App nach, und wenn Kopfhörer getrennt werden, pausiert sie.
 

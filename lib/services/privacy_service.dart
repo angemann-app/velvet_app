@@ -4,6 +4,21 @@ import 'package:local_auth/local_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../l10n/t.dart';
 
+/// Ergebnis der Standard-Einrichtung der App-Sperre am Ende des Onboardings.
+enum SperrEinrichtung {
+  /// Sperre ist jetzt an (Gerätesperre wurde bestätigt).
+  eingeschaltet,
+
+  /// War schon an, nichts zu tun.
+  schonAn,
+
+  /// Das Gerät hat keine Bildschirmsperre; die Sperre bleibt aus.
+  nichtMoeglich,
+
+  /// Die Bestätigung wurde abgebrochen oder ist misslungen; die Sperre bleibt aus.
+  abgebrochen,
+}
+
 /// Diskretions-Modus: App-Sperre per Fingerabdruck und unauffälliges App-Symbol.
 class PrivacyService {
   static String _keyLockEnabled = 'privacy_lock_enabled';
@@ -23,6 +38,46 @@ class PrivacyService {
   static Future<bool> isLockEnabled() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getBool(_keyLockEnabled) ?? false;
+  }
+
+  /// Merker, dass die App-Sperre einmal angeboten bzw. eingerichtet wurde (docs/konzepte/privatsphaere-schutz.md, a).
+  /// Gerätegebunden und bewusst **nicht** in Sicherung oder Backup-Merge: Eine Sicherung auf einem anderen Gerät
+  /// darf dort keine Sperrentscheidung übertragen.
+  static const String keyFrageGestellt = 'app_sperre_frage_gestellt';
+
+  static Future<void> _frageMerken() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(keyFrageGestellt, true);
+  }
+
+  /// Neue Einrichtung (Ende des Onboardings): Die Sperre wird Standard, wenn das Gerät eine Bildschirmsperre hat.
+  /// Dafür einmal die Gerätesperre bestätigen (wie beim Einschalten im Profil), sonst könnte man sich aussperren.
+  static Future<SperrEinrichtung> standardEinrichten() async {
+    await _frageMerken();
+    if (await isLockEnabled()) return SperrEinrichtung.schonAn;
+    if (!await isSupported()) return SperrEinrichtung.nichtMoeglich;
+    return await setLockEnabled(true) ? SperrEinrichtung.eingeschaltet : SperrEinrichtung.abgebrochen;
+  }
+
+  /// Bestand: Soll beim Start einmal gefragt werden, ob die App gesperrt werden soll?
+  /// Wer schon eine Sperre hat, wird nie gefragt (Merker wird gesetzt). Ohne Bildschirmsperre wird nichts gezeigt
+  /// und nichts gemerkt; der Schalter im Profil bleibt der Weg.
+  static Future<bool> frageNoetig() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool(keyFrageGestellt) ?? false) return false;
+    if (await isLockEnabled()) {
+      await _frageMerken();
+      return false;
+    }
+    return isSupported();
+  }
+
+  /// Antwort auf die Bestandsfrage: Bei „Ja“ wird gesperrt (mit Bestätigung), in jedem Fall fragt die App
+  /// danach nie wieder von selbst. Gibt zurück, ob die Sperre jetzt an ist.
+  static Future<bool> frageBeantworten(bool sperren) async {
+    await _frageMerken();
+    if (!sperren) return false;
+    return setLockEnabled(true);
   }
 
   static Future<bool> isDiscreetIcon() async {

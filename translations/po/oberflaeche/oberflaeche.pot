@@ -5832,9 +5832,9 @@ msgid "Immer erneut absichern"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: After an app restart or 30 minutes in the background, the app asks for your device lock again.
+#. EN: After an app restart or 5 hours in the background, the app asks for your device lock again.
 msgctxt "ui:alterAbsichernText#text"
-msgid "Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach deiner Gerätesperre."
+msgid "Nach einem App-Neustart oder 5 Stunden im Hintergrund fragt die App wieder nach deiner Gerätesperre."
 msgstr ""
 
 #. Text der Oberfläche
@@ -8732,4 +8732,112 @@ msgstr ""
 #. EN: {klar} of {tage} days with personal entries include a reported lucid dream. This is a reflection, not a performance goal.
 msgctxt "ui:schlafBlickBilanz#text"
 msgid "{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Just for you
+msgctxt "ui:appSperreNeuTitel#text"
+msgid "Nur für dich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: VelvetPulse only opens with your device lock: fingerprint, face, PIN or pattern. That way, what you explore here stays with you. You can change this any time in your profile.
+msgctxt "ui:appSperreNeuText#text"
+msgid "VelvetPulse öffnet sich nur mit deiner Gerätesperre, also mit Fingerabdruck, Gesicht, PIN oder Muster. So bleibt bei dir, was du hier erkundest. Im Profil kannst du das jederzeit ändern."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sounds good
+msgctxt "ui:appSperreNeuOk#text"
+msgid "Gut so"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Keep VelvetPulse just for you?
+msgctxt "ui:appSperreFrageTitel#text"
+msgid "VelvetPulse nur für dich öffnen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The app will then ask for your device lock when you open it and after a short break. That way nobody can look in if your phone is lying around.
+msgctxt "ui:appSperreFrageText#text"
+msgid "Dann fragt die App beim Öffnen und nach einer kurzen Pause nach deiner Gerätesperre. So liest niemand mit, wenn dein Handy mal herumliegt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes, lock it
+msgctxt "ui:appSperreFrageJa#text"
+msgid "Ja, sperren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not now
+msgctxt "ui:appSperreFrageNein#text"
+msgid "Nicht jetzt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your phone doesn't have a screen lock yet
+msgctxt "ui:appSperreKeineTitel#text"
+msgid "Dein Handy hat noch keine Bildschirmsperre"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Set up a PIN, pattern or fingerprint in your Android settings (usually under “Security” or “Lock screen”). Then you can turn on the app lock in your profile.
+msgctxt "ui:appSperreKeineText#text"
+msgid "Richte in den Android-Einstellungen eine PIN, ein Muster oder einen Fingerabdruck ein (meist unter „Sicherheit“ oder „Sperrbildschirm“). Danach kannst du im Profil die App-Sperre einschalten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Got it
+msgctxt "ui:appSperreKeineOk#text"
+msgid "Verstanden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your fantasies are yours
+msgctxt "ui:fantasieHinweisTitel#text"
+msgid "Deine Fantasie gehört dir"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A fantasy isn't a wish you have to act on, and it isn't a verdict on your relationship. Whatever comes to mind here is allowed to just be. Whether you share any of it, and what and when, is up to you.
+msgctxt "ui:fantasieHinweisText#text"
+msgid "Eine Fantasie ist kein Wunsch, den du erfüllen musst, und kein Urteil über deine Beziehung. Was dir hier in den Sinn kommt, darf einfach da sein. Ob, was und wann du davon teilst, entscheidest du."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A scene with three people doesn't mean anything is missing from your relationship either.
+msgctxt "ui:fantasieHinweisDrei#text"
+msgid "Auch eine Szene zu dritt heißt nicht, dass deiner Beziehung etwas fehlt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Good to know
+msgctxt "ui:fantasieHinweisOk#text"
+msgid "Gut zu wissen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Spicy mode is off
+msgctxt "ui:spicyAbgelaufenTitel#text"
+msgid "Spicy-Modus ist aus"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The app was in the background for more than 5 hours. So that nobody who picks up your phone can look in, Spicy mode was switched off. Your settings and content are unchanged.
+msgctxt "ui:spicyAbgelaufenText#text"
+msgid "Die App war länger als 5 Stunden im Hintergrund. Damit niemand mitliest, der dein Handy in die Hand nimmt, wurde der Spicy-Modus ausgeschaltet. Deine Einstellungen und Inhalte bleiben, wie sie sind."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Unlock again
+msgctxt "ui:spicyAbgelaufenEntsperren#text"
+msgid "Wieder entsperren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Later
+msgctxt "ui:spicyAbgelaufenSpaeter#text"
+msgid "Später"
 msgstr ""

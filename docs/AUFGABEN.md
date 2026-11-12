@@ -57,6 +57,8 @@ führt nach dem OK des Nutzers zusammen. Ablauf in `docs/AUSSPRACHE.md` (früher
 
 ## Erledigt
 
+- 12.11.2026, Claude: Schutz der Privatsphäre (`docs/konzepte/privatsphaere-schutz.md`, Branch `claude/privatsphaere-20261112`, nicht gemergt): App-Sperre ist Standard bei neuer Einrichtung (mit Bildschirmsperre), Bestand wird einmal gefragt; Spicy-Frist fest 5 Stunden mit einmaligem Hinweis „Spicy-Modus ist aus“ beim Zurückkehren; Fantasie-Hinweis einmal je Gerät (Lust im Traum, Innenansichten, Zusatzsatz bei „Zu dritt“), Merker in Sicherung und Merge. Anleitung „Fantasien sind frei“, App-Sperre-Abschnitt, „Was ist neu“ für Build 63, DE/EN, PO abgeglichen. Tests in `test/privatsphaere_test.dart` und `test/backup_merge_test.dart`; Screens-Test um die fünf Blätter erweitert.
+
 - 03.11.2026, Codex: optionaler Schlafdaten-Abgleich DE/EN unter Traumpraxis mit Siebentage-Traumrückblick und freiwilligem nächsten Schritt, native Health-Connect-Brücke ab Android 14 ohne neue Abhängigkeit, manuelle Quellenwahl, Backup-Merge und getrenntes Löschen. 454 Tests und 4 Bildschirmtests grün; Analyse ohne Befund, Android-Kompilierung erfolgreich. Keine Geräteprüfung oder Veröffentlichung behauptet.
 
 - 02.11.2026, Codex: App-Icon auf Magazin-Markenzeichen umgestellt, Android-7-Dichten/adaptive Ebenen/Themensymbol fertig, neutrales Pulse-Symbol erhalten. Native Icon-Ressourcen isoliert erfolgreich kompiliert/verlinkt; vollständiger Offline-Gradle-Build wegen fehlender Cache-Abhängigkeiten nicht bestätigt. Kein Release beauftragt. Anschließend technische Endprüfung der vorhandenen Neuvertonung aufgenommen.

@@ -8,6 +8,7 @@ import '../../models/lust_im_traum.dart';
 import '../../services/pakete.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/fantasie_hinweis.dart';
 import 'einschlaf_reise_screen.dart';
 import 'traum_tagebuch_screen.dart';
 import 'traumpraxis_screen.dart';
@@ -70,7 +71,16 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
       // Vorauswahl: die höchste freie Folge.
       _folge = [for (var f = 1; f <= LustDaten.folgen; f++) if (LustDaten.frei(f, fortschritt)) f].last;
     });
+    // Beim ersten Öffnen, vor der Wahl des Gegenübers, einmal je Gerät (docs/konzepte/privatsphaere-schutz.md, c).
+    if (!_fantasieHinweisGeprueft) {
+      _fantasieHinweisGeprueft = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) fantasieHinweisEinmal(context);
+      });
+    }
   }
+
+  bool _fantasieHinweisGeprueft = false;
 
   Future<void> _paketLaden() async {
     try {

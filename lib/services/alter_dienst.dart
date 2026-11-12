@@ -18,8 +18,22 @@ class AlterDienst with WidgetsBindingObserver {
   static const int mindestalter = 18;
   static const Duration sperrfrist = Duration(days: 30);
 
-  /// Nach so langer Zeit im Hintergrund fragt Spicy wieder nach der Gerätesperre.
-  static Duration erneutNach = const Duration(minutes: 30);
+  /// Nach so langer Zeit im Hintergrund fragt Spicy wieder nach der Gerätesperre
+  /// (docs/konzepte/privatsphaere-schutz.md, Entscheidung 12.11.2026: fest 5 Stunden).
+  static const Duration standardErneutNach = Duration(hours: 5);
+  static Duration erneutNach = standardErneutNach;
+
+  /// Zählt hoch, wenn die Entsperrung wegen langer Zeit im Hintergrund verfallen ist und Spicy gewählt war.
+  /// main.dart zeigt dann einmal den Hinweis „Spicy-Modus ist aus“ (abholen mit [ablaufHinweisAbholen]).
+  static final ValueNotifier<int> ablauf = ValueNotifier<int>(0);
+  static bool _ablaufHinweisOffen = false;
+
+  /// True genau einmal je Ablauf: Wer den Hinweis zeigt, holt ihn damit ab.
+  static bool ablaufHinweisAbholen() {
+    final offen = _ablaufHinweisOffen;
+    _ablaufHinweisOffen = false;
+    return offen;
+  }
 
   /// Erst [init] schaltet die Prüfung scharf. Ohne [init] (Tests) verhält sich `spicyMode()` wie bisher.
   static bool _pruefen = false;
@@ -51,7 +65,8 @@ class AlterDienst with WidgetsBindingObserver {
     _pruefen = false;
     _bestaetigt = _gesperrtBis = _entsperrt = _imHintergrundSeit = null;
     _absichern = true;
-    erneutNach = const Duration(minutes: 30);
+    _ablaufHinweisOffen = false;
+    erneutNach = standardErneutNach;
   }
 
   static DateTime? _zeit(int? ms) =>
@@ -112,6 +127,7 @@ class AlterDienst with WidgetsBindingObserver {
   static Future<bool> entsperren() async {
     if (!await PrivacyService.authenticate(reason: t.alterSperreGrund)) return false;
     _entsperrt = DateTime.now();
+    _ablaufHinweisOffen = false;
     _melden();
     return true;
   }
@@ -143,6 +159,11 @@ class AlterDienst with WidgetsBindingObserver {
     if (!_pruefen || !_absichern || _entsperrt == null || seit == null) return;
     if ((jetzt ?? DateTime.now()).difference(seit) > erneutNach) {
       _entsperrt = null;
+      // Nur wer Spicy gewählt hat, merkt den Wechsel; dann einmal klar sagen, warum die Farben umspringen.
+      if (StorageService.spicyGewaehlt()) {
+        _ablaufHinweisOffen = true;
+        ablauf.value++;
+      }
       _melden();
     }
   }

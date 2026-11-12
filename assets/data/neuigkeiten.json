@@ -732,6 +732,27 @@
           "text": "Die Folgen zu dritt spielen jetzt zuverlässig, in allen drei Stufen. Die Fassungen für Soft und Spicy sind neu geschrieben und deutlich länger, ebenso vier Rollen in Sehr spicy. Alles ist neu eingesprochen."
         }
       ]
+    },
+    {
+      "build": 63,
+      "version": "4.19.0-beta.5",
+      "punkte": [
+        {
+          "icon": "lock",
+          "titel": "Nur für dich",
+          "text": "Die App-Sperre ist jetzt Standard, wenn dein Handy eine Bildschirmsperre hat. Wer VelvetPulse schon nutzt, wird einmal gefragt. Im Profil kannst du sie jederzeit ändern."
+        },
+        {
+          "icon": "lock",
+          "titel": "Spicy bleibt länger offen",
+          "text": "Der Spicy-Modus fragt erst nach 5 Stunden im Hintergrund wieder nach deiner Gerätesperre. Ist die Zeit abgelaufen, sagt dir die App das und bietet an, wieder zu entsperren."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Fantasien sind frei",
+          "text": "Ein kurzer Hinweis beim ersten Öffnen und ein neuer Abschnitt in der Anleitung: Was dir in den Sinn kommt, gehört dir, und du entscheidest, was du teilst."
+        }
+      ]
     }
   ]
 }

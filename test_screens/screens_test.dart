@@ -49,6 +49,10 @@ import 'package:velvetpulse/services/storage_service.dart';
 import 'package:velvetpulse/services/bild_register.dart';
 import 'package:velvetpulse/services/pakete.dart';
 import 'package:velvetpulse/theme/app_theme.dart';
+import 'package:velvetpulse/widgets/app_sperre_frage.dart';
+import 'package:velvetpulse/widgets/fantasie_hinweis.dart';
+import 'package:velvetpulse/widgets/hinweis_blatt.dart';
+import 'package:velvetpulse/widgets/spicy_abgelaufen_hinweis.dart';
 
 const _fontDir = 'C:/TOOLS/flutter/bin/cache/artifacts/material_fonts';
 
@@ -585,6 +589,30 @@ void main() {
       await tester.pumpWidget(_app(const TraumTagebuchScreen()));
       await _shot(tester, '14_traumtagebuch', errors);
       await tester.pumpWidget(const SizedBox());
+
+      // Einmalige Hinweis-Blätter (docs/konzepte/privatsphaere-schutz.md), wie in der App von unten über einer Seite.
+      for (final (name, blatt) in <(String, Widget)>[
+        ('26_app_sperre_neu', const AppSperreNeuBlatt()),
+        ('26_app_sperre_keine', const AppSperreKeineBlatt()),
+        ('26_app_sperre_frage', const AppSperreFrageBlatt()),
+        ('27_fantasie_hinweis', const FantasieHinweisBlatt(drei: true)),
+        ('28_spicy_abgelaufen', const SpicyAbgelaufenBlatt()),
+      ]) {
+        await tester.pumpWidget(_app(Scaffold(
+          body: Builder(
+            builder: (context) => Center(
+              child: TextButton(
+                onPressed: () => zeigeHinweisBlatt<void>(context, (_) => blatt),
+                child: const Text('Blatt'),
+              ),
+            ),
+          ),
+        )));
+        await _tippe(tester, find.text('Blatt'));
+        await tester.pumpAndSettle();
+        await _shot(tester, name, errors);
+        await tester.pumpWidget(const SizedBox());
+      }
     }
     if (_spicy && !_nurBedienung && !_nurPlayer) {
       // Ausschließlich erfundene Vorschauwerte, keine privaten Nutzereinträge.
@@ -654,6 +682,8 @@ void main() {
       await tester.pumpWidget(const SizedBox());
     }
     if (!_nurTraumpraxis && !_nurBedienung && !_nurPlayer) {
+      // Der Fantasie-Hinweis hat oben ein eigenes Bild; hier die Seite selbst.
+      await tester.runAsync(() => StorageService.setFantasieHinweisGesehen(true));
       await tester.pumpWidget(_app(const LustImTraumScreen()));
       for (var i = 0;
           i < 10 && find.text(t.lustFolgen).evaluate().isEmpty;

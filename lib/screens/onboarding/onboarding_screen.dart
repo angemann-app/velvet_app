@@ -14,6 +14,7 @@ import '../../services/privacy_service.dart';
 import '../../services/update_service.dart';
 import '../../widgets/backup_dialogs.dart';
 import '../../widgets/update_dialog.dart';
+import '../../widgets/app_sperre_frage.dart';
 import '../../theme/app_theme.dart';
 import '../main_navigation_screen.dart';
 import '../../l10n/t.dart';
@@ -105,13 +106,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           );
         }
       } else {
-        if (widget.onComplete != null) {
-          widget.onComplete!();
-        } else if (mounted) {
-          Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => const MainNavigationScreen()),
-          );
-        }
+        await _einrichtungAbschliessen();
       }
     } catch (e) {
       debugPrint('Onboarding submit error: $e');
@@ -135,6 +130,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       if (mounted) {
         setState(() => _isSubmitting = false);
       }
+    }
+  }
+
+  /// Ende der Ersteinrichtung: App-Sperre als Standard einrichten (docs/konzepte/privatsphaere-schutz.md, a),
+  /// dann zur App.
+  Future<void> _einrichtungAbschliessen() async {
+    try {
+      if (mounted) await appSperreEinrichten(context);
+    } catch (e) {
+      debugPrint('App-Sperre einrichten: $e');
+    }
+    if (widget.onComplete != null) {
+      widget.onComplete!();
+    } else if (mounted) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => const MainNavigationScreen()),
+      );
     }
   }
 
@@ -818,13 +830,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             } catch (e) {
                               debugPrint('Onboarding skip error: $e');
                             }
-                            if (widget.onComplete != null) {
-                              widget.onComplete!();
-                            } else if (mounted) {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(builder: (context) => const MainNavigationScreen()),
-                              );
-                            }
+                            await _einrichtungAbschliessen();
                           },
                     icon: Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.tinteStumm),
                     label: Text(

@@ -3389,7 +3389,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get alterAbsichernText =>
-      'After an app restart or 30 minutes in the background, the app asks for your device lock again.';
+      'After an app restart or 5 hours in the background, the app asks for your device lock again.';
 
   @override
   String get alterGesperrtKurz => 'Locked. Turn on to unlock.';
@@ -5101,4 +5101,65 @@ class AppLocalizationsEn extends AppLocalizations {
   String schlafBlickBilanz(int klar, int tage) {
     return '$klar of $tage days with personal entries include a reported lucid dream. This is a reflection, not a performance goal.';
   }
+
+  @override
+  String get appSperreNeuTitel => 'Just for you';
+
+  @override
+  String get appSperreNeuText =>
+      'VelvetPulse only opens with your device lock: fingerprint, face, PIN or pattern. That way, what you explore here stays with you. You can change this any time in your profile.';
+
+  @override
+  String get appSperreNeuOk => 'Sounds good';
+
+  @override
+  String get appSperreFrageTitel => 'Keep VelvetPulse just for you?';
+
+  @override
+  String get appSperreFrageText =>
+      'The app will then ask for your device lock when you open it and after a short break. That way nobody can look in if your phone is lying around.';
+
+  @override
+  String get appSperreFrageJa => 'Yes, lock it';
+
+  @override
+  String get appSperreFrageNein => 'Not now';
+
+  @override
+  String get appSperreKeineTitel =>
+      'Your phone doesn\'t have a screen lock yet';
+
+  @override
+  String get appSperreKeineText =>
+      'Set up a PIN, pattern or fingerprint in your Android settings (usually under “Security” or “Lock screen”). Then you can turn on the app lock in your profile.';
+
+  @override
+  String get appSperreKeineOk => 'Got it';
+
+  @override
+  String get fantasieHinweisTitel => 'Your fantasies are yours';
+
+  @override
+  String get fantasieHinweisText =>
+      'A fantasy isn\'t a wish you have to act on, and it isn\'t a verdict on your relationship. Whatever comes to mind here is allowed to just be. Whether you share any of it, and what and when, is up to you.';
+
+  @override
+  String get fantasieHinweisDrei =>
+      'A scene with three people doesn\'t mean anything is missing from your relationship either.';
+
+  @override
+  String get fantasieHinweisOk => 'Good to know';
+
+  @override
+  String get spicyAbgelaufenTitel => 'Spicy mode is off';
+
+  @override
+  String get spicyAbgelaufenText =>
+      'The app was in the background for more than 5 hours. So that nobody who picks up your phone can look in, Spicy mode was switched off. Your settings and content are unchanged.';
+
+  @override
+  String get spicyAbgelaufenEntsperren => 'Unlock again';
+
+  @override
+  String get spicyAbgelaufenSpaeter => 'Later';
 }

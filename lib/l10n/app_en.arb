@@ -983,7 +983,7 @@
   "alterSperreFehltText": "First set up a screen lock (PIN, pattern or fingerprint) on your device. It protects this area from other people.",
   "alterSperreGrund": "Please confirm that you want to open this area.",
   "alterAbsichern": "Always ask again",
-  "alterAbsichernText": "After an app restart or 30 minutes in the background, the app asks for your device lock again.",
+  "alterAbsichernText": "After an app restart or 5 hours in the background, the app asks for your device lock again.",
   "alterGesperrtKurz": "Locked. Turn on to unlock.",
   "spicyStufe": "Spicy",
   "selbstReiseSpicyText": "Start right on the skin, then waves of arousal to just before the edge, and at the end your choice: come or savour.",
@@ -1550,5 +1550,23 @@
         "type": "int"
       }
     }
-  }
+  },
+  "appSperreNeuTitel": "Just for you",
+  "appSperreNeuText": "VelvetPulse only opens with your device lock: fingerprint, face, PIN or pattern. That way, what you explore here stays with you. You can change this any time in your profile.",
+  "appSperreNeuOk": "Sounds good",
+  "appSperreFrageTitel": "Keep VelvetPulse just for you?",
+  "appSperreFrageText": "The app will then ask for your device lock when you open it and after a short break. That way nobody can look in if your phone is lying around.",
+  "appSperreFrageJa": "Yes, lock it",
+  "appSperreFrageNein": "Not now",
+  "appSperreKeineTitel": "Your phone doesn't have a screen lock yet",
+  "appSperreKeineText": "Set up a PIN, pattern or fingerprint in your Android settings (usually under “Security” or “Lock screen”). Then you can turn on the app lock in your profile.",
+  "appSperreKeineOk": "Got it",
+  "fantasieHinweisTitel": "Your fantasies are yours",
+  "fantasieHinweisText": "A fantasy isn't a wish you have to act on, and it isn't a verdict on your relationship. Whatever comes to mind here is allowed to just be. Whether you share any of it, and what and when, is up to you.",
+  "fantasieHinweisDrei": "A scene with three people doesn't mean anything is missing from your relationship either.",
+  "fantasieHinweisOk": "Good to know",
+  "spicyAbgelaufenTitel": "Spicy mode is off",
+  "spicyAbgelaufenText": "The app was in the background for more than 5 hours. So that nobody who picks up your phone can look in, Spicy mode was switched off. Your settings and content are unchanged.",
+  "spicyAbgelaufenEntsperren": "Unlock again",
+  "spicyAbgelaufenSpaeter": "Later"
 }

@@ -57,6 +57,8 @@ class BackupCodec {
     'pausiereBeiKopfhoererGetrennt': bool,
     // Freiwilliges Hallo: wann einmal anonym gesendet wurde.
     'halloGesendetAm': String,
+    // Fantasie-Hinweis einmal gesehen (docs/konzepte/privatsphaere-schutz.md, c).
+    'fantasieHinweisGesehen': bool,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.

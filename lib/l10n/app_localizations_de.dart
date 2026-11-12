@@ -3402,7 +3402,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get alterAbsichernText =>
-      'Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach deiner Gerätesperre.';
+      'Nach einem App-Neustart oder 5 Stunden im Hintergrund fragt die App wieder nach deiner Gerätesperre.';
 
   @override
   String get alterGesperrtKurz => 'Gesperrt. Zum Entsperren einschalten.';
@@ -5126,4 +5126,65 @@ class AppLocalizationsDe extends AppLocalizations {
   String schlafBlickBilanz(int klar, int tage) {
     return '$klar von $tage Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel.';
   }
+
+  @override
+  String get appSperreNeuTitel => 'Nur für dich';
+
+  @override
+  String get appSperreNeuText =>
+      'VelvetPulse öffnet sich nur mit deiner Gerätesperre, also mit Fingerabdruck, Gesicht, PIN oder Muster. So bleibt bei dir, was du hier erkundest. Im Profil kannst du das jederzeit ändern.';
+
+  @override
+  String get appSperreNeuOk => 'Gut so';
+
+  @override
+  String get appSperreFrageTitel => 'VelvetPulse nur für dich öffnen?';
+
+  @override
+  String get appSperreFrageText =>
+      'Dann fragt die App beim Öffnen und nach einer kurzen Pause nach deiner Gerätesperre. So liest niemand mit, wenn dein Handy mal herumliegt.';
+
+  @override
+  String get appSperreFrageJa => 'Ja, sperren';
+
+  @override
+  String get appSperreFrageNein => 'Nicht jetzt';
+
+  @override
+  String get appSperreKeineTitel =>
+      'Dein Handy hat noch keine Bildschirmsperre';
+
+  @override
+  String get appSperreKeineText =>
+      'Richte in den Android-Einstellungen eine PIN, ein Muster oder einen Fingerabdruck ein (meist unter „Sicherheit“ oder „Sperrbildschirm“). Danach kannst du im Profil die App-Sperre einschalten.';
+
+  @override
+  String get appSperreKeineOk => 'Verstanden';
+
+  @override
+  String get fantasieHinweisTitel => 'Deine Fantasie gehört dir';
+
+  @override
+  String get fantasieHinweisText =>
+      'Eine Fantasie ist kein Wunsch, den du erfüllen musst, und kein Urteil über deine Beziehung. Was dir hier in den Sinn kommt, darf einfach da sein. Ob, was und wann du davon teilst, entscheidest du.';
+
+  @override
+  String get fantasieHinweisDrei =>
+      'Auch eine Szene zu dritt heißt nicht, dass deiner Beziehung etwas fehlt.';
+
+  @override
+  String get fantasieHinweisOk => 'Gut zu wissen';
+
+  @override
+  String get spicyAbgelaufenTitel => 'Spicy-Modus ist aus';
+
+  @override
+  String get spicyAbgelaufenText =>
+      'Die App war länger als 5 Stunden im Hintergrund. Damit niemand mitliest, der dein Handy in die Hand nimmt, wurde der Spicy-Modus ausgeschaltet. Deine Einstellungen und Inhalte bleiben, wie sie sind.';
+
+  @override
+  String get spicyAbgelaufenEntsperren => 'Wieder entsperren';
+
+  @override
+  String get spicyAbgelaufenSpaeter => 'Später';
 }

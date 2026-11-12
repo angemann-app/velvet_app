@@ -6,6 +6,7 @@ import '../theme/app_theme.dart';
 import '../theme/vp_tokens.dart';
 import '../widgets/sos_button.dart';
 import '../widgets/update_dialog.dart';
+import '../widgets/app_sperre_frage.dart';
 import 'courses/courses_screen.dart';
 import 'training/training_screen.dart';
 import 'couples_channel/couples_channel_screen.dart';
@@ -45,6 +46,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     // nach einer neuen Version auf GitHub schauen.
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (mounted) await showWhatsNewIfUpdated(context);
+      // Bestand: einmal fragen, ob die App gesperrt werden soll (docs/konzepte/privatsphaere-schutz.md, a).
+      if (mounted) await appSperreFrageWennNoetig(context);
       if (mounted) checkForUpdateAndPrompt(context);
     });
   }

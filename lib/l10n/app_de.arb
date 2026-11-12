@@ -1595,7 +1595,7 @@
   "alterSperreFehltText": "Richte zuerst eine Bildschirmsperre (PIN, Muster oder Fingerabdruck) auf deinem Gerät ein. Sie schützt diesen Bereich vor fremdem Zugriff.",
   "alterSperreGrund": "Bitte bestätige, dass du diesen Bereich öffnen willst.",
   "alterAbsichern": "Immer erneut absichern",
-  "alterAbsichernText": "Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach deiner Gerätesperre.",
+  "alterAbsichernText": "Nach einem App-Neustart oder 5 Stunden im Hintergrund fragt die App wieder nach deiner Gerätesperre.",
   "alterGesperrtKurz": "Gesperrt. Zum Entsperren einschalten.",
   "spicyStufe": "Spicy",
   "selbstReiseSpicyText": "Direkt auf der Haut beginnen, dann Erregungswellen bis kurz vor die Kante, und am Ende deine Wahl: kommen oder genießen.",
@@ -2301,5 +2301,23 @@
         "type": "int"
       }
     }
-  }
+  },
+  "appSperreNeuTitel": "Nur für dich",
+  "appSperreNeuText": "VelvetPulse öffnet sich nur mit deiner Gerätesperre, also mit Fingerabdruck, Gesicht, PIN oder Muster. So bleibt bei dir, was du hier erkundest. Im Profil kannst du das jederzeit ändern.",
+  "appSperreNeuOk": "Gut so",
+  "appSperreFrageTitel": "VelvetPulse nur für dich öffnen?",
+  "appSperreFrageText": "Dann fragt die App beim Öffnen und nach einer kurzen Pause nach deiner Gerätesperre. So liest niemand mit, wenn dein Handy mal herumliegt.",
+  "appSperreFrageJa": "Ja, sperren",
+  "appSperreFrageNein": "Nicht jetzt",
+  "appSperreKeineTitel": "Dein Handy hat noch keine Bildschirmsperre",
+  "appSperreKeineText": "Richte in den Android-Einstellungen eine PIN, ein Muster oder einen Fingerabdruck ein (meist unter „Sicherheit“ oder „Sperrbildschirm“). Danach kannst du im Profil die App-Sperre einschalten.",
+  "appSperreKeineOk": "Verstanden",
+  "fantasieHinweisTitel": "Deine Fantasie gehört dir",
+  "fantasieHinweisText": "Eine Fantasie ist kein Wunsch, den du erfüllen musst, und kein Urteil über deine Beziehung. Was dir hier in den Sinn kommt, darf einfach da sein. Ob, was und wann du davon teilst, entscheidest du.",
+  "fantasieHinweisDrei": "Auch eine Szene zu dritt heißt nicht, dass deiner Beziehung etwas fehlt.",
+  "fantasieHinweisOk": "Gut zu wissen",
+  "spicyAbgelaufenTitel": "Spicy-Modus ist aus",
+  "spicyAbgelaufenText": "Die App war länger als 5 Stunden im Hintergrund. Damit niemand mitliest, der dein Handy in die Hand nimmt, wurde der Spicy-Modus ausgeschaltet. Deine Einstellungen und Inhalte bleiben, wie sie sind.",
+  "spicyAbgelaufenEntsperren": "Wieder entsperren",
+  "spicyAbgelaufenSpaeter": "Später"
 }
