@@ -700,22 +700,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                // Platz für die Unterzeile (der Wortlaut kommt aus dem Text-Paket): mindestens zwei Zeilen hoch,
-                // damit das Layout beim Austausch des Textes nicht springt.
-                Center(
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(minHeight: 36),
-                    child: Text(
-                    t.onboardingYourPrivateCoachingProgrammeFor,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 13,
-                      color: AppTheme.tinteLeise,
-                      height: 1.4,
-                    ),
-                  ),
-                  ),
-                ),
+                // Platz für die Unterzeile unter dem Willkommen, zwei Zeilen hoch. Der Wortlaut kommt aus dem Text-Paket;
+                // bis dahin bleibt die Zeile leer (der frühere Satz ist ausgeblendet, `onboardingYourPrivateCoachingProgrammeFor`
+                // ist noch in den ARB-Dateien).
+                const SizedBox(height: 36),
                 const SizedBox(height: 18),
                 _buildVersprechen(),
                 const SizedBox(height: 16),
