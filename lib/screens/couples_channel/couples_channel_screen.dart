@@ -25,6 +25,7 @@ import 'package:image_picker/image_picker.dart';
 import 'foto_ansicht.dart';
 import '../../services/storage_service.dart';
 import 'partner_profile_dialog.dart';
+import '../sos/sos_modal.dart';
 import 'pairing_modal.dart';
 import '../../l10n/t.dart';
 
@@ -947,6 +948,11 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           ),
           Switch(value: false, onChanged: (_) => _trennenGegenueber()),
         ]),
+        TextButton(
+          onPressed: () => SosModal.show(context),
+          style: TextButton.styleFrom(padding: EdgeInsets.zero, alignment: Alignment.centerLeft),
+          child: Text(t.trennungHilfe, style: TextStyle(color: AppTheme.akzentTief)),
+        ),
       ]),
     );
   }
@@ -959,14 +965,16 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     required String titel2,
     required String text2,
     required String ja,
+    Widget? inhalt1,
   }) async {
-    Future<bool> dialog(String titel, String text, String knopf) async =>
+    Future<bool> dialog(String titel, String text, String knopf, {Widget? inhalt}) async =>
         await showDialog<bool>(
           context: context,
           builder: (ctx) => AlertDialog(
             backgroundColor: AppTheme.papierErhoben,
             title: Text(titel, style: TextStyle(fontSize: 18)),
-            content: Text(text, style: TextStyle(color: AppTheme.tinteLeise, height: 1.45)),
+            content: inhalt ??
+                Text(text, style: TextStyle(color: AppTheme.tinteLeise, height: 1.45)),
             actions: [
               TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
               TextButton(
@@ -977,7 +985,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           ),
         ) ??
         false;
-    if (!await dialog(titel1, text1, weiter) || !mounted) return false;
+    if (!await dialog(titel1, text1, weiter, inhalt: inhalt1) || !mounted) return false;
     return await dialog(titel2, text2, ja) && mounted;
   }
 
@@ -1458,6 +1466,10 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
 
   Future<void> _confirmUnpair() async {
     final name = _nostr.partnerName;
+    // Der Hinweis ist wählbar: Wer sich vor einer kontrollierenden Person schützen will, trennt still.
+    // Hat das Gegenüber schon getrennt, gibt es nichts zu senden.
+    final hinweis = ValueNotifier<bool>(true);
+    final getrennt = _nostr.partnerGetrenntNotifier.value;
     final ja = await _zweimalBestaetigen(
       titel1: t.trennungDialog1Titel,
       text1: t.trennungDialog1(name),
@@ -1465,14 +1477,38 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       titel2: t.trennungDialog2Titel,
       text2: t.trennungDialog2,
       ja: t.trennungDialog2Ja,
+      inhalt1: SingleChildScrollView(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+          Text(t.trennungDialog1(name), style: TextStyle(color: AppTheme.tinteLeise, height: 1.45)),
+          if (!getrennt)
+            ValueListenableBuilder<bool>(
+              valueListenable: hinweis,
+              builder: (context, an, _) => SwitchListTile(
+                contentPadding: EdgeInsets.zero,
+                value: an,
+                onChanged: (v) => hinweis.value = v,
+                title: Text(t.trennungHinweisSenden(name), style: TextStyle(fontSize: 14, color: AppTheme.tinte)),
+                subtitle: Text(an ? t.trennungHinweisInfoAn : t.trennungHinweisInfoAus(name),
+                    style: TextStyle(fontSize: 12.5, color: AppTheme.tinteLeise, height: 1.4)),
+              ),
+            ),
+          TextButton(
+            onPressed: () => SosModal.show(context),
+            style: TextButton.styleFrom(padding: EdgeInsets.zero, alignment: Alignment.centerLeft),
+            child: Text(t.trennungHilfe, style: TextStyle(color: AppTheme.akzentTief)),
+          ),
+        ]),
+      ),
     );
+    final mitHinweis = hinweis.value;
+    hinweis.dispose();
     if (!ja || _trennt) return;
     // Erst der Hinweis ans Gegenüber, dann wird hier aufgeräumt; das Trennen scheitert nie am Hinweis.
     final messenger = ScaffoldMessenger.of(context);
     _trennt = true;
     final bool hinweisGesendet;
     try {
-      hinweisGesendet = await _nostr.trennenMitHinweis();
+      hinweisGesendet = await _nostr.trennenMitHinweis(hinweis: mitHinweis);
     } finally {
       _trennt = false;
     }

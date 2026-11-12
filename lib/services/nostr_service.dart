@@ -1084,9 +1084,10 @@ class NostrService {
   /// Trennt von dieser Seite: erst der Hinweis ans Gegenüber (ist gerade kein Server verbunden, wartet die
   /// App kurz), dann wird auf diesem Handy aufgeräumt wie bei [unpairPartner]. Das Trennen selbst scheitert
   /// nie am Hinweis. Gibt zurück, ob der Hinweis rausging.
-  Future<bool> trennenMitHinweis({Duration warten = const Duration(seconds: 6)}) async {
-    // Hat das Gegenüber schon getrennt, gibt es niemanden mehr zu benachrichtigen.
-    if (partnerGetrenntNotifier.value) {
+  Future<bool> trennenMitHinweis({bool hinweis = true, Duration warten = const Duration(seconds: 6)}) async {
+    // Ohne Hinweis (wer sich schützen will, trennt still) oder wenn das Gegenüber schon getrennt hat:
+    // nur hier aufräumen, nichts wird gesendet.
+    if (!hinweis || partnerGetrenntNotifier.value) {
       await unpairPartner();
       return true;
     }

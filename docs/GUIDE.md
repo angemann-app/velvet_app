@@ -118,7 +118,7 @@ Sparks: with one tap you show what you're in the mood for today, or not. “Not 
 
 Spicy invitation: whoever is invited can answer “Not right now”, no explanation needed.
 
-Disconnecting: in the menu you disconnect, after two confirmations. Your partner gets a calm notice and decides for themselves whether to delete this connection's data too. If the notice doesn't arrive (app closed, no connection), everything there stays until they delete it themselves. Sent messages and photos can't be taken back.
+Disconnecting: in the menu you disconnect, after two confirmations. Your partner gets a calm notice (you can switch it off and disconnect quietly) and decides for themselves whether to delete this connection's data too. If the notice doesn't arrive (app closed, no connection), everything there stays until they delete it themselves. Sent messages and photos can't be taken back.
 
 Messages: with read receipts, which you can switch off in the menu.
 

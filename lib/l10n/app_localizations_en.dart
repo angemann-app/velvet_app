@@ -5107,7 +5107,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String trennungDialog1(Object name) {
-    return 'The history with $name, $name\'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nOn $name\'s phone, whatever is there stays until they delete it themselves. We\'ll send a short notice; if it doesn\'t arrive (app closed, no connection), nothing changes there.';
+    return 'The history with $name, $name\'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nOn $name\'s phone, whatever is there stays until they delete it themselves.';
   }
 
   @override
@@ -5186,6 +5186,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get funkeTippLabel => 'Just for you';
+
+  @override
+  String trennungHinweisSenden(Object name) {
+    return 'Send $name a notice';
+  }
+
+  @override
+  String get trennungHinweisInfoAn =>
+      'If it doesn\'t arrive (app closed, no connection), nothing changes there.';
+
+  @override
+  String trennungHinweisInfoAus(Object name) {
+    return '$name won\'t be told about the disconnection. On $name\'s phone everything stays until they delete it themselves.';
+  }
+
+  @override
+  String get trennungHilfe => 'Do you need support?';
 
   @override
   String funkeDankeAntwort(Object name) {

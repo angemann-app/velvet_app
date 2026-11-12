@@ -8743,12 +8743,12 @@ msgstr ""
 #. Platzhalter unverändert übernehmen: {name}
 #. EN: The history with {name}, {name}'s answers and the shared reflections will be deleted on this phone. Your own answers stay.
 #. EN:
-#. EN: On {name}'s phone, whatever is there stays until they delete it themselves. We'll send a short notice; if it doesn't arrive (app closed, no connection), nothing changes there.
+#. EN: On {name}'s phone, whatever is there stays until they delete it themselves.
 msgctxt "ui:trennungDialog1#text"
 msgid ""
 "Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n"
 "\n"
-"Auf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht. Wir senden einen kurzen Hinweis; kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert."
+"Auf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht."
 msgstr ""
 
 #. Text der Oberfläche
@@ -8886,6 +8886,30 @@ msgstr ""
 #. EN: Just for you
 msgctxt "ui:funkeTippLabel#text"
 msgid "Nur für dich"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Send {name} a notice
+msgctxt "ui:trennungHinweisSenden#text"
+msgid "Hinweis an {name} senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: If it doesn't arrive (app closed, no connection), nothing changes there.
+msgctxt "ui:trennungHinweisInfoAn#text"
+msgid "Kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: {name} won't be told about the disconnection. On {name}'s phone everything stays until they delete it themselves.
+msgctxt "ui:trennungHinweisInfoAus#text"
+msgid "{name} erfährt nichts von der Trennung. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Do you need support?
+msgctxt "ui:trennungHilfe#text"
+msgid "Brauchst du Unterstützung?"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {name}

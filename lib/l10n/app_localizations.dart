@@ -8718,7 +8718,7 @@ abstract class AppLocalizations {
   /// No description provided for @trennungDialog1.
   ///
   /// In de, this message translates to:
-  /// **'Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht. Wir senden einen kurzen Hinweis; kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.'**
+  /// **'Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht.'**
   String trennungDialog1(Object name);
 
   /// No description provided for @trennungDialog1Weiter.
@@ -8852,6 +8852,30 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Nur für dich'**
   String get funkeTippLabel;
+
+  /// No description provided for @trennungHinweisSenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Hinweis an {name} senden'**
+  String trennungHinweisSenden(Object name);
+
+  /// No description provided for @trennungHinweisInfoAn.
+  ///
+  /// In de, this message translates to:
+  /// **'Kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.'**
+  String get trennungHinweisInfoAn;
+
+  /// No description provided for @trennungHinweisInfoAus.
+  ///
+  /// In de, this message translates to:
+  /// **'{name} erfährt nichts von der Trennung. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht.'**
+  String trennungHinweisInfoAus(Object name);
+
+  /// No description provided for @trennungHilfe.
+  ///
+  /// In de, this message translates to:
+  /// **'Brauchst du Unterstützung?'**
+  String get trennungHilfe;
 
   /// No description provided for @funkeDankeAntwort.
   ///

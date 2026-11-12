@@ -1552,7 +1552,7 @@
     }
   },
   "trennungDialog1Titel": "Disconnect?",
-  "trennungDialog1": "The history with {name}, {name}'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nOn {name}'s phone, whatever is there stays until they delete it themselves. We'll send a short notice; if it doesn't arrive (app closed, no connection), nothing changes there.",
+  "trennungDialog1": "The history with {name}, {name}'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nOn {name}'s phone, whatever is there stays until they delete it themselves.",
   "@trennungDialog1": {
     "placeholders": {
       "name": { "type": "Object" }
@@ -1595,6 +1595,20 @@
   "funkeTippNein": "A no today isn't a no to you. You don't need to ask follow-up questions.",
   "funkeTippReden": "You don't have to answer right away. Say when it suits you.",
   "funkeTippLabel": "Just for you",
+  "trennungHinweisSenden": "Send {name} a notice",
+  "@trennungHinweisSenden": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungHinweisInfoAn": "If it doesn't arrive (app closed, no connection), nothing changes there.",
+  "trennungHinweisInfoAus": "{name} won't be told about the disconnection. On {name}'s phone everything stays until they delete it themselves.",
+  "@trennungHinweisInfoAus": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungHilfe": "Do you need support?",
   "funkeDankeAntwort": "{name}: Thanks for telling me.",
   "@funkeDankeAntwort": {
     "placeholders": {

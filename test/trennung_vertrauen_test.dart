@@ -78,6 +78,12 @@ void main() {
       expect(nostr.messagesNotifier.value, isEmpty);
     });
 
+    test('Still trennen: ohne Hinweis wird nichts gesendet, hier ist trotzdem aufgeräumt', () async {
+      expect(await nostr.trennenMitHinweis(hinweis: false), isTrue);
+      expect(gesendet, isEmpty);
+      expect(nostr.isPaired, isFalse);
+    });
+
     test('Kommt der Hinweis nicht raus, wird trotzdem getrennt und das ehrlich gemeldet', () async {
       nostr.senderFuerTest = (_) => false;
       final hinweisGesendet = await nostr.trennenMitHinweis(warten: Duration.zero);

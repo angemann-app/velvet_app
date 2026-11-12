@@ -2303,7 +2303,7 @@
     }
   },
   "trennungDialog1Titel": "Verbindung trennen?",
-  "trennungDialog1": "Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht. Wir senden einen kurzen Hinweis; kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.",
+  "trennungDialog1": "Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht.",
   "@trennungDialog1": {
     "placeholders": {
       "name": { "type": "Object" }
@@ -2346,6 +2346,20 @@
   "funkeTippNein": "Ein Nein heute ist kein Nein zu dir. Du musst nichts nachfragen.",
   "funkeTippReden": "Du musst nicht sofort antworten. Sag, wann es für dich passt.",
   "funkeTippLabel": "Nur für dich",
+  "trennungHinweisSenden": "Hinweis an {name} senden",
+  "@trennungHinweisSenden": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungHinweisInfoAn": "Kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.",
+  "trennungHinweisInfoAus": "{name} erfährt nichts von der Trennung. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht.",
+  "@trennungHinweisInfoAus": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungHilfe": "Brauchst du Unterstützung?",
   "funkeDankeAntwort": "{name}: Danke fürs Sagen.",
   "@funkeDankeAntwort": {
     "placeholders": {

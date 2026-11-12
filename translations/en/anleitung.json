@@ -53,7 +53,7 @@
       "icon": "favorite",
       "titel": "Couple channel",
       "bild": "04_paarkanal_verbunden.png",
-      "text": "In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.\nSparks: with one tap you show what you're in the mood for today, or not. “Not today” is always one tap away. The other person can answer “Not today” and “Let's talk” with “Thanks for telling me”.\nSpicy invitation: whoever is invited can answer “Not right now”, no explanation needed.\nDisconnecting: in the menu you disconnect, after two confirmations. Your partner gets a calm notice and decides for themselves whether to delete this connection's data too. If the notice doesn't arrive (app closed, no connection), everything there stays until they delete it themselves. Sent messages and photos can't be taken back.\nMessages: with read receipts, which you can switch off in the menu.\nExplore together: in the fantasy map each of you answers separately with “Yes, please”, “Maybe” or “Rather not”. Only what you both want becomes visible (a match); a “Maybe” shows up under “To talk about”, a “Rather not” never does. In spicy mode there are also scenes to try, whole evenings that you answer the same way.\nLearning together: share lessons and exchange answers to the reflection questions."
+      "text": "In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.\nSparks: with one tap you show what you're in the mood for today, or not. “Not today” is always one tap away. The other person can answer “Not today” and “Let's talk” with “Thanks for telling me”.\nSpicy invitation: whoever is invited can answer “Not right now”, no explanation needed.\nDisconnecting: in the menu you disconnect, after two confirmations. Your partner gets a calm notice (you can switch it off and disconnect quietly) and decides for themselves whether to delete this connection's data too. If the notice doesn't arrive (app closed, no connection), everything there stays until they delete it themselves. Sent messages and photos can't be taken back.\nMessages: with read receipts, which you can switch off in the menu.\nExplore together: in the fantasy map each of you answers separately with “Yes, please”, “Maybe” or “Rather not”. Only what you both want becomes visible (a match); a “Maybe” shows up under “To talk about”, a “Rather not” never does. In spicy mode there are also scenes to try, whole evenings that you answer the same way.\nLearning together: share lessons and exchange answers to the reflection questions."
     },
     {
       "id": "spicy",
@@ -119,7 +119,7 @@
     "guide:gefuehrt": "4f7e92c902929646",
     "guide:hilfe": "0f67b34ec65bbd7e",
     "guide:kurse": "045961b7f5f350ad",
-    "guide:paar": "7fa1c78c49c8f918",
+    "guide:paar": "26601e979b03f57c",
     "guide:reframing": "a0ea4f55c9482b5e",
     "guide:schlafdaten": "4dee96a0257be825",
     "guide:spicy": "650678626e8e07ad",

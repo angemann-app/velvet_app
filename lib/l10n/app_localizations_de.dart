@@ -5132,7 +5132,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String trennungDialog1(Object name) {
-    return 'Auf diesem Handy werden der Verlauf mit $name, die Antworten von $name und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von $name bleibt, was dort liegt, bis die Person selbst löscht. Wir senden einen kurzen Hinweis; kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.';
+    return 'Auf diesem Handy werden der Verlauf mit $name, die Antworten von $name und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von $name bleibt, was dort liegt, bis die Person selbst löscht.';
   }
 
   @override
@@ -5212,6 +5212,23 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get funkeTippLabel => 'Nur für dich';
+
+  @override
+  String trennungHinweisSenden(Object name) {
+    return 'Hinweis an $name senden';
+  }
+
+  @override
+  String get trennungHinweisInfoAn =>
+      'Kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.';
+
+  @override
+  String trennungHinweisInfoAus(Object name) {
+    return '$name erfährt nichts von der Trennung. Auf dem Handy von $name bleibt alles, bis die Person selbst löscht.';
+  }
+
+  @override
+  String get trennungHilfe => 'Brauchst du Unterstützung?';
 
   @override
   String funkeDankeAntwort(Object name) {
