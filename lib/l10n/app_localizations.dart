@@ -1040,6 +1040,66 @@ abstract class AppLocalizations {
   /// **'Ins Netz geht nur, was du selbst einschaltest: KI-Coach, Paar-Kanal und die Suche nach Updates.'**
   String get onboardingVersprechenNetz;
 
+  /// No description provided for @onboardingEingeladenLink.
+  ///
+  /// In de, this message translates to:
+  /// **'Jemand hat mich eingeladen'**
+  String get onboardingEingeladenLink;
+
+  /// No description provided for @onboardingEingeladenTitel1.
+  ///
+  /// In de, this message translates to:
+  /// **'Schön, dass du da bist'**
+  String get onboardingEingeladenTitel1;
+
+  /// No description provided for @onboardingEingeladenText1.
+  ///
+  /// In de, this message translates to:
+  /// **'Jemand, der dir wichtig ist, hat dich eingeladen, VelvetPulse auszuprobieren. Die App ist ein ruhiger Ort für Nähe, Körper und Gespräche, zum Lesen, Hören und Üben, allein oder zu zweit. Du musst nichts können und nichts leisten.'**
+  String get onboardingEingeladenText1;
+
+  /// No description provided for @onboardingEingeladenTitel2.
+  ///
+  /// In de, this message translates to:
+  /// **'Nein ist immer eine Antwort'**
+  String get onboardingEingeladenTitel2;
+
+  /// No description provided for @onboardingEingeladenText2.
+  ///
+  /// In de, this message translates to:
+  /// **'Nichts hier ist eine Aufgabe. Zu jedem Schritt gibt es ein „Heute nicht“, und es hat keine Folgen. Deine Antworten bleiben bei dir, bis du dich verbindest. Auch danach sieht dein Gegenüber nicht, was du ansiehst, ausprobierst oder überspringst, nur, was du selbst schickst. Zwei Ausnahmen: Bei den Wünschen seht ihr beide nur, wo ihr übereinstimmt, und im Chat sieht dein Gegenüber, ob du gelesen hast (abschaltbar).'**
+  String get onboardingEingeladenText2;
+
+  /// No description provided for @onboardingEingeladenTitel3.
+  ///
+  /// In de, this message translates to:
+  /// **'Alles bleibt auf deinem Handy'**
+  String get onboardingEingeladenTitel3;
+
+  /// No description provided for @onboardingEingeladenText3.
+  ///
+  /// In de, this message translates to:
+  /// **'Kein Konto, keine Werbung, keine Auswertung. Du kannst jederzeit aufhören, die App schließen oder sie ganz entfernen. Verbinden mit der Person, die dich eingeladen hat, geht später und nur, wenn du magst.'**
+  String get onboardingEingeladenText3;
+
+  /// No description provided for @onboardingEingeladenEinrichten.
+  ///
+  /// In de, this message translates to:
+  /// **'Einrichten (fünf kurze Fragen, alle freiwillig)'**
+  String get onboardingEingeladenEinrichten;
+
+  /// No description provided for @onboardingEingeladenVerbinden.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit der Person verbinden'**
+  String get onboardingEingeladenVerbinden;
+
+  /// No description provided for @onboardingEingeladenNurSchauen.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich schau erst mal nur'**
+  String get onboardingEingeladenNurSchauen;
+
   /// No description provided for @onboardingSchritt.
   ///
   /// In de, this message translates to:
@@ -2199,13 +2259,13 @@ abstract class AppLocalizations {
   /// No description provided for @invitePartnerIDLikeToTry.
   ///
   /// In de, this message translates to:
-  /// **'\nIch möchte VelvetPulse mit dir ausprobieren 💛 Eine private App nur für uns zwei.\n\n1. App laden (Android):\n{stableApkUrl}\nWenn Android fragt, die Installation erlauben.\n\n2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n\n3. Schick mir danach einen Funken, dann sind wir verbunden.\n\nAusführliche Anleitung: {testerGuideUrl}'**
+  /// **'\nIch möchte VelvetPulse mit dir ausprobieren 💛 Eine private App für Nähe und Gespräche, nur für uns zwei. Du musst nichts können, und zu allem darfst du „Heute nicht“ oder „Nein“ sagen. Schau gern erst mal nur rein. Alles bleibt auf deinem Handy.\n\n1. App laden (Android):\n{stableApkUrl}\nWenn Android fragt, die Installation erlauben. Tippe beim ersten Start auf „Jemand hat mich eingeladen“.\n\n2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n\n3. Schick mir danach einen Funken, dann sind wir verbunden.\n\nAusführliche Anleitung: {testerGuideUrl}'**
   String invitePartnerIDLikeToTry(Object stableApkUrl, Object testerGuideUrl);
 
   /// No description provided for @invitePartnerYouSendALinkTo.
   ///
   /// In de, this message translates to:
-  /// **'Du schickst einen Link zur App und deinen Verbindungscode, z. B. per Messenger. Sobald sich dein Gegenüber meldet, bestätigst du hier die Verbindung.'**
+  /// **'Du schickst einen Link zur App und deinen Verbindungscode, z. B. per Messenger. Dein Gegenüber kann sich in Ruhe umsehen und entscheidet selbst, ob und wann es sich verbindet. Dann bestätigst du hier die Verbindung.'**
   String get invitePartnerYouSendALinkTo;
 
   /// No description provided for @invitePartnerNameEGAnna.
@@ -2277,7 +2337,7 @@ abstract class AppLocalizations {
   /// No description provided for @invitePartnerAsSoonAsNameInstalls.
   ///
   /// In de, this message translates to:
-  /// **'Sobald {name} die App installiert, deinen Code eingibt und dir einen Funken schickt, kannst du die Verbindung hier bestätigen.'**
+  /// **'Sobald {name} die App installiert, deinen Code eingibt und dir einen Funken schickt, kannst du die Verbindung hier bestätigen. Lass {name} Zeit.'**
   String invitePartnerAsSoonAsNameInstalls(Object name);
 
   /// No description provided for @invitePartnerDecline.

@@ -408,6 +408,17 @@ void main() {
       await _shot(tester, '00_suche', errors);
       await tester.pumpWidget(_app(const OnboardingScreen()));
       await _shot(tester, '00_onboarding', errors);
+      // Sanfter Start für eingeladene Personen: drei Bildschirme.
+      await _tippe(tester, find.text(t.onboardingEingeladenLink));
+      await tester.pump();
+      await _shot(tester, '00_onboarding_eingeladen_1', errors);
+      await _tippe(tester, find.text(t.onboardingWeiter));
+      await tester.pump();
+      await _shot(tester, '00_onboarding_eingeladen_2', errors);
+      await _tippe(tester, find.text(t.onboardingWeiter));
+      await tester.pump();
+      await _shot(tester, '00_onboarding_eingeladen_3', errors);
+      await tester.pumpWidget(_app(OnboardingScreen(key: UniqueKey())));
       // Frage 2 (Geschlecht, 2×2 ohne Vorauswahl) und das Profil-Bearbeiten mit der Körperkarte.
       await _tippe(tester, find.text(t.onboardingLosGehts));
       await tester.pump();

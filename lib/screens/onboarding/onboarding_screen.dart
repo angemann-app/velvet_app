@@ -21,6 +21,7 @@ import '../../services/sprache.dart';
 import '../../widgets/aufnahmen_karte.dart';
 import '../../widgets/spicy_modus_dialog.dart';
 import '../anleitung_screen.dart';
+import '../couples_channel/pairing_modal.dart';
 import '../rueckmeldung_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -52,6 +53,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   // Ersteinrichtung in Schritten: 0 Willkommen (Versprechen), 1 bis 5 je eine Frage. Beim Bearbeiten des Profils gilt alles auf einer Seite.
   int _schritt = 0;
   static const _fragen = 5;
+  // Sanfter Start für eingeladene Personen: drei ruhige Bildschirme vor den Fragen. Gilt nur, solange das Onboarding offen ist.
+  bool _eingeladen = false;
+  int _einladungsSchritt = 1;
   bool _lockEnabled = false;
   bool _discreetIcon = false;
   UpdateChannel _updateChannel = UpdateChannel.stable;
@@ -142,6 +146,50 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         setState(() => _isSubmitting = false);
       }
     }
+  }
+
+  /// Speichert ein Standardprofil (ohne Angaben: „Keine Angabe“, Fokus „offen“), damit die App starten kann.
+  Future<void> _standardprofilSpeichern() async {
+    final defaultProfile = UserProfile(
+      name: t.paarAbendYou,
+      gender: _selectedGender ?? 'unspecified',
+      age: _selectedAge,
+      relationshipStatus: _selectedRelationship,
+      primaryGoal: _zielGewaehlt ? _selectedGoal : 'open',
+    );
+    try {
+      await StorageService.saveUserProfile(defaultProfile);
+    } catch (e) {
+      debugPrint('Onboarding skip error: $e');
+    }
+  }
+
+  void _weiterZurApp() {
+    if (widget.onComplete != null) {
+      widget.onComplete!();
+    } else if (mounted) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => const MainNavigationScreen()),
+      );
+    }
+  }
+
+  /// „Überspringen“ und „Ich schau erst mal nur“: Standardprofil speichern und direkt in die App.
+  Future<void> _ueberspringen() async {
+    await _standardprofilSpeichern();
+    _weiterZurApp();
+  }
+
+  /// Verbinden mit der einladenden Person: derselbe Dialog wie im Tab „Wir“. Gelingt es, geht es in die App.
+  Future<void> _mitPersonVerbinden() async {
+    HapticFeedback.lightImpact();
+    final verbunden = await showModalBottomSheet<bool>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => const PairingModal(),
+    );
+    if (verbunden == true && mounted) await _ueberspringen();
   }
 
   Future<void> _promptRestoreBackup() async {
@@ -453,8 +501,130 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     }
   }
 
+  /// Sanfter Start: drei ruhige Bildschirme, ohne Fortschrittsbalken und ohne Druck.
+  Widget _buildEingeladen() {
+    final n = _einladungsSchritt;
+    final icon = switch (n) {
+      1 => Icons.favorite_border_rounded,
+      2 => Icons.front_hand_outlined,
+      _ => Icons.lock_outline_rounded,
+    };
+    final titel = switch (n) {
+      1 => t.onboardingEingeladenTitel1,
+      2 => t.onboardingEingeladenTitel2,
+      _ => t.onboardingEingeladenTitel3,
+    };
+    final text = switch (n) {
+      1 => t.onboardingEingeladenText1,
+      2 => t.onboardingEingeladenText2,
+      _ => t.onboardingEingeladenText3,
+    };
+
+    Widget weg(String label, VoidCallback? onPressed, {bool betont = false}) => SizedBox(
+          width: double.infinity,
+          child: betont
+              ? ElevatedButton(
+                  onPressed: onPressed,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppTheme.akzent,
+                    foregroundColor: AppTheme.aufAkzent,
+                    minimumSize: const Size.fromHeight(54),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
+                  ),
+                  child: Text(label,
+                      textAlign: TextAlign.center, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                )
+              : OutlinedButton(
+                  onPressed: onPressed,
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: AppTheme.akzentTief,
+                    minimumSize: const Size.fromHeight(54),
+                    side: BorderSide(color: AppTheme.akzentTief.withValues(alpha: 0.6)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(VpRadius.karte)),
+                  ),
+                  child: Text(label,
+                      textAlign: TextAlign.center, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
+                ),
+        );
+
+    return Scaffold(
+      backgroundColor: AppTheme.papier,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: TextButton.icon(
+                  onPressed: () => setState(() {
+                    if (n == 1) {
+                      _eingeladen = false;
+                    } else {
+                      _einladungsSchritt--;
+                    }
+                  }),
+                  icon: Icon(Icons.arrow_back_rounded, size: 18, color: AppTheme.tinteLeise),
+                  label: Text(t.onboardingZurueck, style: TextStyle(color: AppTheme.tinteLeise)),
+                ),
+              ),
+              const SizedBox(height: 12),
+              Center(
+                child: Container(
+                  width: 64,
+                  height: 64,
+                  decoration: BoxDecoration(
+                    color: AppTheme.papierErhoben,
+                    borderRadius: BorderRadius.circular(VpRadius.karte),
+                    border: Border.all(color: AppTheme.linie),
+                  ),
+                  child: Icon(icon, color: AppTheme.akzentTief, size: 32),
+                ),
+              ),
+              const SizedBox(height: 22),
+              Text(
+                titel,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: VpTypo.serif,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                  color: AppTheme.tinte,
+                  letterSpacing: -0.5,
+                ),
+              ),
+              const SizedBox(height: 14),
+              Text(
+                text,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 15, color: AppTheme.tinteLeise, height: 1.5),
+              ),
+              const SizedBox(height: 28),
+              if (n < 3) ...[
+                weg(t.onboardingWeiter, () => setState(() => _einladungsSchritt++), betont: true),
+                const SizedBox(height: 10),
+                weg(t.onboardingEingeladenNurSchauen, _isSubmitting ? null : _ueberspringen),
+              ] else ...[
+                weg(t.onboardingEingeladenEinrichten, () => setState(() {
+                      _eingeladen = false;
+                      _schritt = 1;
+                    })),
+                const SizedBox(height: 10),
+                weg(t.onboardingEingeladenVerbinden, _isSubmitting ? null : _mitPersonVerbinden),
+                const SizedBox(height: 10),
+                weg(t.onboardingEingeladenNurSchauen, _isSubmitting ? null : _ueberspringen),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (!widget.isEditing && _eingeladen) return _buildEingeladen();
     return Scaffold(
       backgroundColor: AppTheme.papier,
       appBar: widget.isEditing
@@ -573,7 +743,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: Text(t.onboardingLosGehts, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
                   ),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 4),
+                // Ruhiger dritter Weg für Menschen, die eingeladen wurden.
+                SizedBox(
+                  width: double.infinity,
+                  child: TextButton.icon(
+                    onPressed: () => setState(() {
+                      _eingeladen = true;
+                      _einladungsSchritt = 1;
+                    }),
+                    icon: Icon(Icons.favorite_border_rounded, size: 18, color: AppTheme.akzentTief),
+                    label: Text(
+                      t.onboardingEingeladenLink,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: AppTheme.akzentTief, fontSize: 14.5, fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ),
               ],
 
               if (!widget.isEditing && _schritt >= 1) ...[
@@ -799,29 +985,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 const SizedBox(height: 12),
                 Center(
                   child: TextButton.icon(
-                    onPressed: _isSubmitting
-                        ? null
-                        : () async {
-                            final defaultProfile = UserProfile(
-                              name: t.paarAbendYou,
-                              gender: _selectedGender ?? 'unspecified',
-                              age: _selectedAge,
-                              relationshipStatus: _selectedRelationship,
-                              primaryGoal: _zielGewaehlt ? _selectedGoal : 'open',
-                            );
-                            try {
-                              await StorageService.saveUserProfile(defaultProfile);
-                            } catch (e) {
-                              debugPrint('Onboarding skip error: $e');
-                            }
-                            if (widget.onComplete != null) {
-                              widget.onComplete!();
-                            } else if (mounted) {
-                              Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(builder: (context) => const MainNavigationScreen()),
-                              );
-                            }
-                          },
+                    onPressed: _isSubmitting ? null : _ueberspringen,
                     icon: Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.tinteStumm),
                     label: Text(
                       t.onboardingSkipGoStraightToThe,

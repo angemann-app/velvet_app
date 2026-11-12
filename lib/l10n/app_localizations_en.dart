@@ -534,6 +534,40 @@ class AppLocalizationsEn extends AppLocalizations {
       'Only what you switch on yourself goes online: the AI coach, the couple channel and the check for updates.';
 
   @override
+  String get onboardingEingeladenLink => 'Someone invited me';
+
+  @override
+  String get onboardingEingeladenTitel1 => 'Glad you\'re here';
+
+  @override
+  String get onboardingEingeladenText1 =>
+      'Someone who matters to you has invited you to try VelvetPulse. It\'s a quiet place for closeness, body and conversation, to read, listen and practise, alone or together. You don\'t need to be good at anything or achieve anything.';
+
+  @override
+  String get onboardingEingeladenTitel2 => 'No is always an answer';
+
+  @override
+  String get onboardingEingeladenText2 =>
+      'Nothing here is an assignment. Every step has a “Not today”, and it has no consequences. Your answers stay with you until you connect. Even then, your partner can\'t see what you look at, try or skip, only what you send yourself. Two exceptions: with wishes, you both only see where you match, and in the chat your partner can see whether you\'ve read their messages (can be switched off).';
+
+  @override
+  String get onboardingEingeladenTitel3 => 'Everything stays on your phone';
+
+  @override
+  String get onboardingEingeladenText3 =>
+      'No account, no ads, no tracking. You can stop at any time, close the app or remove it completely. Connecting with the person who invited you can happen later, and only if you like.';
+
+  @override
+  String get onboardingEingeladenEinrichten =>
+      'Set up (five short questions, all optional)';
+
+  @override
+  String get onboardingEingeladenVerbinden => 'Connect with the person';
+
+  @override
+  String get onboardingEingeladenNurSchauen => 'I\'ll just have a look';
+
+  @override
   String onboardingSchritt(int n, int gesamt) {
     return 'Question $n of $gesamt';
   }
@@ -1222,12 +1256,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String invitePartnerIDLikeToTry(Object stableApkUrl, Object testerGuideUrl) {
-    return '\nI\'d like to try VelvetPulse with you 💛 A private app just for the two of us.\n\n1. Get the app (Android):\n$stableApkUrl\nIf Android asks, allow the installation.\n\n2. I\'ll send you my connection code as a separate message. Copy it and paste it into the app: Couple channel › Connect with partner › Scan partner › paste code › “Connect & pair”.\n\n3. Then send me a spark, and we\'re connected.\n\nDetailed guide (German): $testerGuideUrl';
+    return '\nI\'d like to try VelvetPulse with you 💛 A private app for closeness and conversation, just for the two of us. You don\'t need to be good at anything, and you can say “not today” or “no” to anything. Feel free to just have a look first. Everything stays on your phone.\n\n1. Get the app (Android):\n$stableApkUrl\nIf Android asks, allow the installation. On first start, tap “Someone invited me”.\n\n2. I\'ll send you my connection code as a separate message. Copy it and paste it into the app: Couple channel › Connect with partner › Scan partner › paste code › “Connect & pair”.\n\n3. Then send me a spark, and we\'re connected.\n\nDetailed guide (German): $testerGuideUrl';
   }
 
   @override
   String get invitePartnerYouSendALinkTo =>
-      'You send a link to the app and your connection code, e.g. via a messenger. As soon as your partner replies, you confirm the connection here.';
+      'You send a link to the app and your connection code, e.g. via a messenger. Your partner can take a look in peace and decides whether and when to connect. You then confirm the connection here.';
 
   @override
   String get invitePartnerNameEGAnna => 'Name, e.g. Anna';
@@ -1273,7 +1307,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String invitePartnerAsSoonAsNameInstalls(Object name) {
-    return 'As soon as $name installs the app, enters your code and sends you a spark, you can confirm the connection here.';
+    return 'As soon as $name installs the app, enters your code and sends you a spark, you can confirm the connection here. Give $name time.';
   }
 
   @override
