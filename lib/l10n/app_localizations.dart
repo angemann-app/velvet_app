@@ -9283,6 +9283,18 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Wie das hier funktioniert'**
   String get yesNoMaybeInfoZeile;
+
+  /// No description provided for @lektionEyebrow.
+  ///
+  /// In de, this message translates to:
+  /// **'Lektion · {durationMin} Min.'**
+  String lektionEyebrow(Object durationMin);
+
+  /// No description provided for @lektionEyebrowAudio.
+  ///
+  /// In de, this message translates to:
+  /// **'Audio-Übung · {durationMin} Min.'**
+  String lektionEyebrowAudio(Object durationMin);
 }
 
 class _AppLocalizationsDelegate

@@ -5444,4 +5444,14 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get yesNoMaybeInfoZeile => 'Wie das hier funktioniert';
+
+  @override
+  String lektionEyebrow(Object durationMin) {
+    return 'Lektion · $durationMin Min.';
+  }
+
+  @override
+  String lektionEyebrowAudio(Object durationMin) {
+    return 'Audio-Übung · $durationMin Min.';
+  }
 }
