@@ -149,15 +149,14 @@ steht. `flutter test` ist nicht nötig (die Bilder sind noch nicht eingetragen).
 **Nicht tun:** andere Bilder „nebenbei verbessern“, Bilder in `bilder.json` eintragen, Menschen mit erkennbarem Geschlecht zeichnen,
 Lektionstexte oder Audio anfassen.
 
-### AG-30: Sechs Lektionen neu einsprechen (Deutsch und Englisch) – **noch nicht starten**
+### AG-30: Sechs Lektionen neu einsprechen (Deutsch und Englisch)
 
-**Wartet auf Claude und den Nutzer.** Dieser Auftrag wird erst gültig, wenn hier die Zeile „Texte freigegeben am …“ steht. Bis
-dahin überspringen und den nächsten offenen Auftrag nehmen.
+**Texte freigegeben am 12.11.2026** (Nutzer). Der Auftrag ist offen und kommt nach AG-29 dran.
 
 Hintergrund: `docs/konzepte/eine-tonlage.md`, Abschnitt „Als Liste gemeldet … (gesprochene Texte)“. Die App spricht inzwischen
-alle Paarformen an; sechs gesprochene Lektionen nennen aber noch fest „Frauen“, „Männer“ oder „der Mann“. Claude schreibt diese
-Texte körperbezogen um (Deutsch und Englisch), der Nutzer liest gegen, danach wird neu eingesprochen. **An den Texten ändert
-Antigravity nichts.**
+alle Paarformen an; sechs gesprochene Lektionen nannten noch fest „Frauen“, „Männer“ oder „der Mann“. Claude hat diese Texte
+körperbezogen umgeschrieben (Deutsch und Englisch, Commit `e6ad4fe` auf `main`), der Nutzer hat sie freigegeben. Jetzt wird neu
+eingesprochen. **An den Texten ändert Antigravity nichts.**
 
 | Lektion | Kurs | Stimme (wie bisher) |
 |---|---|---|
@@ -172,15 +171,23 @@ Antigravity nichts.**
 **Zu tun:**
 1. Deutsch: `C:\TOOLS\kikiri-venv\Scripts\python.exe tools/generate_audio.py female_1 touch_w_1 touch_m_1 mass_1 mass_2 pos_1`.
    Die Stimmenwahl trifft das Werkzeug selbst (Kategorie des Kurses), nichts von Hand umstellen.
-2. Englisch: mit `tools/generate_audio_en.py` dieselben sechs Lektionen, wie in `README.md` beschrieben.
-3. Betonung: Es gilt der Weg aus `CLAUDE.md` („Betonung beim Einsprechen“). Steht eine der sechs Lektionen in
-   `reihe_ausdruck.AUSDRUCK_LEKTIONEN`, spricht das Werkzeug sie mit dem Profil; sonst normal. Kein neues Profil erfinden.
+   Die sechs Dateien liegen danach unter `assets/audio/<lektion>.opus` und gehören in den Pull Request.
+2. Englisch: `tools/generate_audio_en.py` kennt keine Auswahl einzelner Lektionen. Es spricht alles, was fehlt oder dessen Text
+   sich geändert hat (Prüfsummen in `build/audio_en_texte.json`). **Deshalb zuerst prüfen:** Liegen in deinem Klon unter
+   `build\audio_en\audio\` die bisherigen englischen Aufnahmen und gibt es `build\audio_en_texte.json`? Nur dann starten:
+   `C:\TOOLS\kikiri-venv\Scripts\python.exe tools/generate_audio_en.py --hoechstens 6`. Fehlt der Ordner oder die Datei, würde
+   das Werkzeug alle englischen Aufnahmen neu sprechen: dann **nicht** starten, den englischen Teil im Bericht als „nicht
+   gemacht, Grundstand fehlt“ vermerken; Claude holt ihn nach. Nach dem Lauf prüfen, dass genau die sechs Lektionen neu sind
+   (Änderungsdatum). `build/` liegt nicht im Repository: Die englischen Dateien bleiben in `build\audio_en\audio\`, der Bericht
+   nennt die vollen Pfade, Claude holt sie dort ab. Nichts packen (`--packen` nicht verwenden).
+3. Betonung: Keine der sechs Lektionen steht in `reihe_ausdruck.AUSDRUCK_LEKTIONEN`; sie werden normal gesprochen wie die
+   Nachbarlektionen. Kein neues Profil erfinden und die Liste nicht erweitern.
 4. Aussprache: Fällt ein Wort auf, nach `docs/AUSSPRACHE.md` in `tools/aussprache.json` ergänzen und nur diese Lektion neu sprechen.
 5. Jede Aufnahme einmal ganz anhören (oder ausdrücklich „nicht prüfbar“ schreiben): Titel richtig, kein abgeschnittenes Ende,
    Stimmenwechsel an den Absätzen, neue Wörter („Menschen mit Vulva“, „die empfangende Person“) sauber gesprochen.
 
-**Erlaubte Dateien:** die zwölf neuen Aufnahmen und die zugehörigen Einträge in `dauer.json`, bei Bedarf `tools/aussprache.json`,
-und der Bericht `docs/pruefungen/AG30_NEUAUFNAHME.md` (je Aufnahme: Datei, Dauer, angehört ja/nein, Auffälligkeiten).
+**Erlaubte Dateien:** die sechs deutschen Aufnahmen unter `assets/audio/`, eine vom Werkzeug geänderte `dauer.json`, bei Bedarf
+`tools/aussprache.json`, und der Bericht `docs/pruefungen/AG30_NEUAUFNAHME.md` (je Aufnahme: Datei, Dauer, angehört ja/nein, Auffälligkeiten).
 
 **Nie zwei Kokoro-Läufe gleichzeitig.** Die bisherigen Aufnahmen bleiben in den veröffentlichten Paketen unberührt.
 
