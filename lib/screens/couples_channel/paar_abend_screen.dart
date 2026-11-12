@@ -126,7 +126,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
   }
 
   /// Körper der Person, die in Runde 1 und 2 empfängt. Das Gegenüber kommt aus dem Paar-Kanal;
-  /// ist es unbekannt, nehmen wir bei Mann und Frau das andere Geschlecht an (wie bei den Coach-Fragen).
+  /// ist es unbekannt, nehmen wir bei Mann und Frau das andere Geschlecht an.
   List<String?> _empfaenger() {
     String? koerper(String? geschlecht) => switch (geschlecht) {
           'female' => 'vulva',

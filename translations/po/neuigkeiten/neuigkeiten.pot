@@ -1246,3 +1246,15 @@ msgstr ""
 msgctxt "news:63#0.text"
 msgid "Trennst du die Verbindung, bekommt dein Gegenüber einen ruhigen Hinweis und entscheidet selbst, ob es die Daten dieser Verbindung ebenfalls löscht. Auf eine Einladung zum Spicy-Modus antwortest du mit „Gerade nicht“, auf „Heute lieber nicht“ und „Lass uns reden“ mit „Danke fürs Sagen“."
 msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.6
+#. EN: The AI coach has been removed
+msgctxt "news:64#0.titel"
+msgid "Der KI-Coach ist entfernt"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.6
+#. EN: We have removed the AI coach. It only ever knew one side of a relationship, and its answers came from an outside service. If you used it, your key and your conversation with the coach have been deleted from this device; you can delete the key at Google yourself.
+msgctxt "news:64#0.text"
+msgid "Wir haben den KI-Coach entfernt: Er kannte immer nur eine Seite einer Beziehung, und seine Antworten kamen von einem fremden Dienst. Falls du ihn genutzt hast, sind dein Schlüssel und dein Gespräch mit dem Coach von diesem Gerät gelöscht; den Schlüssel kannst du bei Google selbst löschen."
+msgstr ""

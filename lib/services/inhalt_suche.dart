@@ -2,7 +2,7 @@ import '../models/content_models.dart';
 import 'such_index.dart';
 
 /// Nur öffentliche, bereits gefilterte Inhalte. Kein Zugriff auf gespeicherte
-/// Antworten, Tagebücher, Paar-Nachrichten oder Coach-Verläufe.
+/// Antworten, Tagebücher, Paar-Nachrichten.
 class InhaltSuche {
   final List<Course> kurse;
   final List<SuchEintrag> angebote;

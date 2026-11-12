@@ -743,6 +743,17 @@
           "text": "Trennst du die Verbindung, bekommt dein Gegenüber einen ruhigen Hinweis und entscheidet selbst, ob es die Daten dieser Verbindung ebenfalls löscht. Auf eine Einladung zum Spicy-Modus antwortest du mit „Gerade nicht“, auf „Heute lieber nicht“ und „Lass uns reden“ mit „Danke fürs Sagen“."
         }
       ]
+    },
+    {
+      "build": 64,
+      "version": "4.19.0-beta.6",
+      "punkte": [
+        {
+          "icon": "lock",
+          "titel": "Der KI-Coach ist entfernt",
+          "text": "Wir haben den KI-Coach entfernt: Er kannte immer nur eine Seite einer Beziehung, und seine Antworten kamen von einem fremden Dienst. Falls du ihn genutzt hast, sind dein Schlüssel und dein Gespräch mit dem Coach von diesem Gerät gelöscht; den Schlüssel kannst du bei Google selbst löschen."
+        }
+      ]
     }
   ]
 }

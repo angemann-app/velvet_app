@@ -743,6 +743,17 @@
           "text": "If you disconnect, your partner gets a calm notice and decides for themselves whether to delete this connection's data too. Answer an invitation to spicy mode with “Not right now”, and “Not today” and “Let's talk” with “Thanks for telling me”."
         }
       ]
+    },
+    {
+      "build": 64,
+      "version": "4.19.0-beta.6",
+      "punkte": [
+        {
+          "icon": "lock",
+          "titel": "The AI coach has been removed",
+          "text": "We have removed the AI coach. It only ever knew one side of a relationship, and its answers came from an outside service. If you used it, your key and your conversation with the coach have been deleted from this device; you can delete the key at Google yourself."
+        }
+      ]
     }
   ],
   "_source": {
@@ -783,6 +794,7 @@
     "news:60": "24de6b882a4a33d6",
     "news:61": "be425719260a4169",
     "news:62": "dcbfa81253a3f822",
-    "news:63": "f4604d0ac75d4b10"
+    "news:63": "f4604d0ac75d4b10",
+    "news:64": "5eeb844b01575b86"
   }
 }

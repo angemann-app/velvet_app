@@ -60,7 +60,6 @@ auf eine ältere Version zurücksetzen.
 
 - Profil, Fortschritt und Tagebuch bleiben **nur auf deinem Handy**.
 - Der **Paar-Kanal** ist Ende-zu-Ende-verschlüsselt: Die Server können den Inhalt nicht lesen, sehen aber, *dass*, *wann* und *wie oft* zwischen zwei (namenlosen) Schlüsseln geschrieben wird, sowie die IP-Adresse.
-- Der **KI-Coach** funktioniert nur mit deinem eigenen Google-Gemini-Schlüssel; dann gehen die Fragen an Google.
 - Es gibt keine Konten, kein Tracking und keine Werbung.
 
 ## 5. Feedback

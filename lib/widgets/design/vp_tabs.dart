@@ -33,7 +33,7 @@ class VpTabs {
   }
 }
 
-/// Kapitelleiste der ersten Ebene („01 Körper · 02 Gedanken · 03 Coach“): Serif-Nummern, darunter eine Linie mit Akzentstrich
+/// Kapitelleiste der ersten Ebene („01 Körper · 02 Gedanken“): Serif-Nummern, darunter eine Linie mit Akzentstrich
 /// unter dem gewählten Kapitel.
 class VpKapitelLeiste extends StatelessWidget {
   final List<String> titel;

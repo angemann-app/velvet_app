@@ -5,6 +5,8 @@ Stand: 23.10.2026. Teil 1 ist die Baseline vor den Änderungen, Teil 2 das Ergeb
 
 ## Teil 2: Ergebnis
 
+> **Vermerk 12.11.2026:** Der KI-Coach (Gemini) wurde entfernt. `lib/services/ai_service.dart` und der API-Key im `SecretStore` entfallen; beim Start löscht die App Altbestände (Schlüssel, Chatverlauf). Alte Sicherungen mit `apiKey` bleiben einspielbar, der Schlüssel wird verworfen. Die folgenden Angaben zum API-Key sind historisch.
+
 | Befund | Status | Wo |
 |---|---|---|
 | A: Geheimnisse im Klartext | **behoben** (Gerätetest offen) | `lib/services/secret_store.dart`, `backup_codec.dart`, `storage_service.dart:325-460`, `res/xml/*_rules.xml` |

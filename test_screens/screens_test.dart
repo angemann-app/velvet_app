@@ -437,8 +437,6 @@ void main() {
       await _shot(tester, '02_training', errors);
       await _tippe(tester, find.text(t.uebenGedanken));
       await _shot(tester, '03_reframing', errors);
-      await _tippe(tester, find.text(t.uebenCoach));
-      await _shot(tester, '05_kicoach', errors);
       await _tippe(tester, find.text(t.navWir).last);
       await _shot(tester, '04_paarkanal', errors);
       // Offene Einladung, auf die sich jemand gemeldet hat.

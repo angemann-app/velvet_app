@@ -5,7 +5,6 @@ import 'package:nostr_tools/nostr_tools.dart' show KeyApi;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/journal_entry.dart';
 import 'alter_dienst.dart';
-import '../models/chat_message.dart';
 import '../models/daily_checkin.dart';
 import '../models/traum_eintrag.dart';
 import 'realitaetscheck.dart';
@@ -133,7 +132,6 @@ class StorageService {
   static const String _keyCompletedLessons = 'completed_lessons';
   static const String _keyReflectionAnswers = 'reflection_answers';
   static const String _keyCbtEntries = 'cbt_journal_entries';
-  static const String _keyChatHistory = 'ai_chat_history';
   static const String _keyStreakCount = 'streak_count';
   static const String _keyLastActiveDate = 'last_active_date';
   static const String _keyDailyCheckIns = 'daily_check_ins';
@@ -487,18 +485,6 @@ class StorageService {
     await AutoBackupService.saveAutoBackup();
   }
 
-  // Gemini API Key – liegt im SecretStore, nie in den SharedPreferences oder im Backup.
-  static String? getApiKey() => SecretStore.read(SecretStore.apiKey);
-
-  static Future<void> saveApiKey(String key,
-      {bool triggerBackup = true}) async {
-    final trimmed = key.trim();
-    await SecretStore.write(SecretStore.apiKey, trimmed);
-    if (triggerBackup) {
-      await AutoBackupService.saveAutoBackup();
-    }
-  }
-
   // Persönliche Ansprache: Name des Gegenübers in Lektionstexten (Standard: an)
   static const String _keyPersonalizeNames = 'personalize_names';
 
@@ -550,30 +536,6 @@ class StorageService {
     await prefs.setString(_keyDesignPalette, value);
     designAenderung.value = value;
     unawaited(AutoBackupService.saveAutoBackup());
-  }
-
-  // AI Chat Messages
-  static List<ChatMessage> getChatHistory() {
-    final list = _prefs?.getStringList(_keyChatHistory) ?? [];
-    final messages = <ChatMessage>[];
-    for (final item in list) {
-      try {
-        final map = jsonDecode(item) as Map<String, dynamic>;
-        messages.add(ChatMessage.fromJson(map));
-      } catch (_) {}
-    }
-    return messages;
-  }
-
-  static Future<void> saveChatHistory(List<ChatMessage> messages) async {
-    final prefs = await _ensurePrefs();
-    final rawList = messages.map((m) => jsonEncode(m.toJson())).toList();
-    await prefs.setStringList(_keyChatHistory, rawList);
-  }
-
-  static Future<void> clearChatHistory() async {
-    final prefs = await _ensurePrefs();
-    await prefs.remove(_keyChatHistory);
   }
 
   // Streaks
@@ -668,7 +630,6 @@ class StorageService {
     }
 
     if (getCompletedLessons().isNotEmpty ||
-        (getApiKey() != null && getApiKey()!.trim().isNotEmpty) ||
         getCbtEntries().isNotEmpty) {
       _prefs?.setBool(_keyHasCompletedOnboarding, true);
       return true;
@@ -752,13 +713,12 @@ class StorageService {
     };
   }
 
-  /// Sicherung für den Umzug auf ein anderes Gerät: zusätzlich API-Key und
-  /// privater Nostr-Schlüssel, verschlüsselt mit dem Passwort des Nutzers.
+  /// Sicherung für den Umzug auf ein anderes Gerät: zusätzlich der
+  /// private Nostr-Schlüssel, verschlüsselt mit dem Passwort des Nutzers.
   static Future<Map<String, dynamic>> exportWithSecrets(String password) async {
     final data = exportAllUserData();
     final secrets = <String, String>{
       'nostrPrivKey': NostrService().myPrivateKey,
-      if (getApiKey() != null) 'apiKey': getApiKey()!,
     };
     data['secrets'] = await BackupCodec.encryptSecrets(secrets, password);
     return data;
@@ -1010,15 +970,12 @@ class StorageService {
     // 2. Schreiben, bei Fehler alles zurück.
     final before = {for (final key in writes.keys) key: prefs.get(key)};
     final secretsBefore = {
-      SecretStore.apiKey: SecretStore.read(SecretStore.apiKey),
       SecretStore.nostrPrivKey: SecretStore.read(SecretStore.nostrPrivKey),
     };
     try {
       for (final entry in writes.entries) {
         await _put(prefs, entry.key, entry.value);
       }
-      if (secrets['apiKey'] != null)
-        await SecretStore.write(SecretStore.apiKey, secrets['apiKey']);
       if (newPriv != null)
         await SecretStore.write(SecretStore.nostrPrivKey, newPriv);
     } catch (e) {

@@ -297,9 +297,6 @@ class AppLocalizationsDe extends AppLocalizations {
   String get mainNavigationCoupleChannel => 'Paar-Kanal';
 
   @override
-  String get mainNavigationAiCoach => 'KI-Coach';
-
-  @override
   String get mainNavigationCourses => 'Heute';
 
   @override
@@ -482,30 +479,6 @@ class AppLocalizationsDe extends AppLocalizations {
       'Hier ist mindestens ein „Vielleicht“ dabei. Sprecht kurz darüber, was ihr euch vorstellen könnt.';
 
   @override
-  String get aiCoachEinrichtungTitel => 'Dein KI-Coach';
-
-  @override
-  String get aiCoachEinrichtungText =>
-      'Stell Fragen zu Körper, Lust und Beziehung, vertraulich und ohne Urteil. Er ersetzt keine ärztliche oder therapeutische Hilfe.';
-
-  @override
-  String get aiCoachEinrichtungSchritt1 =>
-      'Einen kostenlosen Schlüssel bei Google erstellen';
-
-  @override
-  String get aiCoachEinrichtungKnopf1 => 'Anleitung';
-
-  @override
-  String get aiCoachEinrichtungSchritt2 => 'Den Schlüssel hier einfügen';
-
-  @override
-  String get aiCoachEinrichtungKnopf2 => 'Einfügen';
-
-  @override
-  String get aiCoachEinrichtungDatenschutz =>
-      'Nur deine Fragen gehen an Googles Gemini. Alles andere bleibt auf deinem Handy.';
-
-  @override
   String get onboardingLosGehts => 'Loslegen';
 
   @override
@@ -530,7 +503,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboardingVersprechenNetz =>
-      'Ins Netz geht nur, was du selbst einschaltest: KI-Coach, Paar-Kanal und die Suche nach Updates.';
+      'Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates.';
 
   @override
   String onboardingSchritt(int n, int gesamt) {
@@ -554,9 +527,6 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get uebenGedanken => 'Gedanken';
-
-  @override
-  String get uebenCoach => 'KI-Coach';
 
   @override
   String coursesYourFocusGoallabel(Object goalLabel) {
@@ -2363,201 +2333,6 @@ class AppLocalizationsDe extends AppLocalizations {
   String get kegelGuideSheetBackToTraining => 'Zurück zum Training';
 
   @override
-  String get aiCoachAsAWomanHowDo =>
-      'Wie entspanne ich als Frau meinen Beckenboden beim Sex?';
-
-  @override
-  String get aiCoachHowCanWeStopPerformance =>
-      'Wie stoppen wir zu zweit den Leistungsdruck im Bett?';
-
-  @override
-  String get aiCoachWhatToDoAboutRacing =>
-      'Was tun bei akutem Kopfkino & Spectatoring?';
-
-  @override
-  String get aiCoachHowDoIExplainResponsive =>
-      'Wie erkläre ich meinem Partner die responsive Lust?';
-
-  @override
-  String get aiCoachWhyDoesTheReverseKegel =>
-      'Warum hilft der Reverse Kegel bei Nervosität?';
-
-  @override
-  String get aiCoachWelcomeToConfidentialSomaticRelationship =>
-      'Willkommen im vertraulichen Somatik- & Beziehungs-Coaching. Ich begleite euch – ob als Frau, Mann oder als Paar – bei allen Fragen zu Beckenboden-Entspannung, Überwindung von Kopfkino und Leistungsdruck, Scham und erfüllender, absichtsloser Intimität.\n\nWorüber möchtet ihr sprechen oder was beschäftigt dein Nervensystem gerade am meisten?';
-
-  @override
-  String get aiCoachPleaseAddYourGeminiApi =>
-      'Bitte hinterlege zuerst deinen Gemini API-Key, um mit dem Coach zu schreiben.';
-
-  @override
-  String get aiCoachNoApiKeyAddedPlease =>
-      'Kein API-Key hinterlegt. Bitte klicke oben auf das Zahnrad-Symbol.';
-
-  @override
-  String get aiCoachGoogleRejectedTheApiKey =>
-      'Der API-Key wurde von Google als ungültig abgelehnt. Bitte überprüfe den Key im Google AI Studio.';
-
-  @override
-  String aiCoachConnectionErrorCleanerr(Object cleanErr) {
-    return 'Verbindungsfehler: $cleanErr';
-  }
-
-  @override
-  String get aiCoachCheckKey => 'Key prüfen';
-
-  @override
-  String get aiCoachGeminiApiKey => 'Gemini API-Key';
-
-  @override
-  String get aiCoachPrivateCoachingUsesGoogleGemini =>
-      'Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten.';
-
-  @override
-  String get aiCoachFreeViaAistudioGoogleCom =>
-      'Kostenlos via aistudio.google.com';
-
-  @override
-  String get aiCoachShowGuide => 'Anleitung anzeigen';
-
-  @override
-  String get aiCoachPleaseEnterAKeyFirst => 'Bitte gib zuerst einen Key ein.';
-
-  @override
-  String get aiCoachCheckingConnection => 'Prüfe Verbindung...';
-
-  @override
-  String get aiCoachTestConnection => 'Verbindung testen';
-
-  @override
-  String get aiCoachApiKeyRemoved => 'API-Key entfernt.';
-
-  @override
-  String get aiCoachApiKeySaved => 'API-Key erfolgreich gespeichert.';
-
-  @override
-  String get aiCoachClearChatHistory => 'Chatverlauf leeren?';
-
-  @override
-  String get aiCoachDoYouWantToDelete =>
-      'Möchtest du alle bisherigen Nachrichten dieses Dialogs löschen?';
-
-  @override
-  String get aiCoachChatHistoryClearedWhatWould =>
-      'Chatverlauf zurückgesetzt. Worüber möchtest du sprechen?';
-
-  @override
-  String get aiCoachClear => 'Leeren';
-
-  @override
-  String get aiCoachGeminiAiConnected => 'Gemini KI verbunden';
-
-  @override
-  String get aiCoachNoApiKeyAdded => 'Kein API-Key hinterlegt';
-
-  @override
-  String get aiCoachGuideCreateAKey => 'Anleitung: Key erstellen';
-
-  @override
-  String get aiCoachClearChat => 'Chat leeren';
-
-  @override
-  String get aiCoachApiKeySettings => 'API-Key Einstellungen';
-
-  @override
-  String get aiCoachNoApiKeyYetCreated =>
-      'Noch kein API-Key? In 2 Min. kostenlos erstellt.';
-
-  @override
-  String get aiCoachGuide => 'Anleitung';
-
-  @override
-  String get aiCoachCoachIsThinking => 'Coach reflektiert...';
-
-  @override
-  String get aiCoachAskAConfidentialQuestion => 'Vertrauliche Frage stellen...';
-
-  @override
-  String get apiKeyGuideSheetFreeGeminiApiKey => 'Kostenlosen Gemini API-Key';
-
-  @override
-  String get apiKeyGuideSheetCreatedStepByStepIn =>
-      'Schritt-für-Schritt in 2 Minuten erstellt';
-
-  @override
-  String get apiKeyGuideSheetFreeAndWhatHappensTo =>
-      'Kostenlos – und was mit deinen Daten passiert: ';
-
-  @override
-  String get apiKeyGuideSheetGoogleAiStudioHasA =>
-      'Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen.';
-
-  @override
-  String get apiKeyGuideSheetOpenGoogleAiStudio => 'Google AI Studio aufrufen';
-
-  @override
-  String get apiKeyGuideSheetOpenGoogleSOfficialDeveloper =>
-      'Öffne im Browser (Chrome, Safari, Firefox) die offizielle Entwickler-Plattform von Google:\n';
-
-  @override
-  String get apiKeyGuideSheetLinkCopiedToClipboard =>
-      'Link in Zwischenablage kopiert!';
-
-  @override
-  String get apiKeyGuideSheetCopy => 'Kopieren';
-
-  @override
-  String get apiKeyGuideSheetSignInWithAGoogle => 'Mit Google-Konto anmelden';
-
-  @override
-  String get apiKeyGuideSheetSignInWithYourExisting =>
-      'Melde dich mit deinem bestehenden Google-Konto (Gmail) an. Es ist keine Kreditkarte oder Zahlungsmethode erforderlich.';
-
-  @override
-  String get apiKeyGuideSheetClickGetApiKey => '\"Get API key\" anklicken';
-
-  @override
-  String get apiKeyGuideSheetInTheMenuAtThe =>
-      'Klicke im Menü links oben auf den blauen Button \"Get API key\" (oder \"API-Schlüssel anfordern\").';
-
-  @override
-  String get apiKeyGuideSheetChooseCreateApiKeyIn =>
-      '\"Create API key in new project\" wählen';
-
-  @override
-  String get apiKeyGuideSheetChooseTheOptionCreateApi =>
-      'Wähle die Option \"Create API key in new project\". Google richtet sofort automatisch im Hintergrund ein kostenloses Projekt ein.';
-
-  @override
-  String get apiKeyGuideSheetCopyTheKeyPasteIt =>
-      'Key kopieren & in VelvetPulse einfügen';
-
-  @override
-  String get apiKeyGuideSheetCopyTheGeneratedStringIt =>
-      'Kopiere die erzeugte Zeichenkette. Sie beginnt typischerweise mit \"AIzaSy...\" – füge sie anschließend hier in die App ein.';
-
-  @override
-  String get apiKeyGuideSheetFrequentlyAskedQuestions => 'Häufige Fragen:';
-
-  @override
-  String get apiKeyGuideSheetDoesItCostAnything => 'Kostet die Nutzung etwas?';
-
-  @override
-  String get apiKeyGuideSheetNotWithinTheFreeTier =>
-      'Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern.';
-
-  @override
-  String get apiKeyGuideSheetWhichModelIsUsed => 'Welches Modell wird genutzt?';
-
-  @override
-  String get apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest =>
-      'VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key.';
-
-  @override
-  String get apiKeyGuideSheetEnterApiKeyConnectNow =>
-      'API-Key jetzt eintragen & verbinden';
-
-  @override
   String get dailyCheckinCardVeryCalm => 'Sehr ruhig';
 
   @override
@@ -2705,7 +2480,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboardingPrivateProfileJournalProgressStay =>
-      'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der KI-Coach (Google Gemini), der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).';
+      'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates (GitHub).';
 
   @override
   String get onboardingAlreadyUsingVelvetpulse => 'Bereits VelvetPulse-Nutzer?';
@@ -2729,7 +2504,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboardingAdjustsCourseRecommendationsPelvicFloor =>
-      'Passt Kursempfehlungen, Beckenboden-Physiologie und KI-Antworten an.';
+      'Passt Kursempfehlungen und die Beckenboden-Physiologie an.';
 
   @override
   String get onboardingMale => 'Männlich';
@@ -2877,7 +2652,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboardingEverythingStaysLocalOnYour =>
-      'Alles bleibt lokal auf deinem Gerät und übersteht Updates. API-Key und Paar-Verbindung liegen verschlüsselt im Android-Schlüsselspeicher und gehen nur mit Passwort in eine Sicherung.';
+      'Alles bleibt lokal auf deinem Gerät und übersteht Updates. Die Paar-Verbindung liegt verschlüsselt im Android-Schlüsselspeicher und geht nur mit Passwort in eine Sicherung.';
 
   @override
   String get onboardingExportBackup => 'Backup exportieren';
@@ -2887,7 +2662,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get backupDialogsOnlyYourDataProfileProgress =>
-      'Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n\nMit Passwort: zusätzlich die Verbindung im Paar-Kanal und dein API-Key, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy.';
+      'Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n\nMit Passwort: zusätzlich die Verbindung im Paar-Kanal, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy.';
 
   @override
   String get backupDialogsDataOnly => 'Nur Daten';
@@ -2906,7 +2681,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get backupDialogsThisBackupComesFromAn =>
-      'Diese Sicherung stammt aus einer älteren Version und enthält deinen API-Key und deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n\nLösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort.';
+      'Diese Sicherung stammt aus einer älteren Version und enthält deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n\nLösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort.';
 
   @override
   String get backupDialogsRestore => 'Einspielen';
@@ -2916,7 +2691,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get backupDialogsThisAlsoBringsBackThe =>
-      'Damit kommen auch die Verbindung im Paar-Kanal und dein API-Key zurück.';
+      'Damit kommt auch die Verbindung im Paar-Kanal zurück.';
 
   @override
   String get backupDialogsPassword => 'Passwort';
@@ -2954,7 +2729,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get backupDialogsPasswordCannotBeReset =>
-      '\n\nOhne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen.';
+      '\n\nOhne dein Passwort lässt sich die Verbindung nicht wiederherstellen. Auch wir können es nicht zurücksetzen.';
 
   @override
   String get checkinActionBreathed => 'Bewusst tief geatmet (Physiol. Seufzer)';
@@ -3279,38 +3054,6 @@ class AppLocalizationsDe extends AppLocalizations {
   String get yesNoMaybeModelsNotForMe => 'Kommt für mich nicht infrage';
 
   @override
-  String get aiServiceYouAreTheConfidentialSomatic =>
-      'Du bist der vertrauliche Somatik-, KVT- und Erotik-Coach in der App VelvetPulse.\n\nDeine Grundhaltung & Tonalität:\n1. Charakter: Du bist eine faszinierende Mischung aus brillantem Neurowissenschaftler/Sexualtherapeuten und einem weltgewandten, charmant-frivolen Verführer auf Augenhöhe.\n2. Sprache: Du sprichst reines, flüssiges Deutsch – vollkommen frei von englischen Modewörtern oder Anglizismen. Du sprichst absolut schamfrei, sinnlich, warm und mit einem leichten, wissenden Augenzwinkern über Lust, Haut, Feuchtigkeit, Erektionen, Damm-Entspannung, Hingabe und Kopfkino. Vermeide jede sterile Krankenhaus-Sprache und jeden belehrenden Ton!\n3. Methodik: Verbinde Kognitive Verhaltenstherapie (das Entzaubern spießiger Leistungs- und Prüfungsgedanken) immer direkt mit lustvoller Somatik (Beckenboden wie warmen Honig schmelzen lassen, aktives Beckenboden-Öffnen, tiefe Kehlkopf-Seufzer, Vagus-Beruhigung, Kunst der Zeitlupe, sinnliches Umkreisen, reines Sinnesspüren).\n4. Kernbotschaft: Zeige dem Nutzer in jeder Zeile, dass sein Körper völlig in Ordnung ist und dass Langsamkeit, Pausen und das \'Nicht-Funktionieren-Müssen\' kein Defekt sind, sondern der Schlüssel zu viel tieferer, unanständig guter Ekstase.\n5. Format: Antworte stets kompakt (2-3 prägnante, atmosphärische Absätze) und beende JEDE Antwort mit genau EINER offenen, leicht herausfordernden oder spür-orientierten Reflexionsfrage.\n6. Sicherheit: Du stellst keine Diagnosen. Bei Schmerzen, Blutungen oder anhaltenden Beschwerden empfiehlst du freundlich eine ärztliche Abklärung.';
-
-  @override
-  String aiServiceConnectionSuccessfulModelslengthModelsAvailable(
-      Object modelsLength, Object join) {
-    return 'Verbindung erfolgreich! $modelsLength Modelle verfügbar (z. B. $join).';
-  }
-
-  @override
-  String get aiServiceNoAvailableTextModelsFound =>
-      'Keine verfügbaren Textmodelle für diesen Key gefunden. Bitte prüfe die API-Berechtigungen.';
-
-  @override
-  String get aiServiceTheApiKeyIsInvalid =>
-      'Der API-Key ist ungültig. Bitte prüfe ihn im Google AI Studio.';
-
-  @override
-  String aiServiceUserContextNameProfilenameGender(
-      Object profileName,
-      Object genderLabel,
-      Object age,
-      Object relationshipLabel,
-      Object goalLabel) {
-    return '\n\nKONTEXT DES NUTZERS:\n- Name/Rufname: $profileName\n- Geschlecht: $genderLabel\n- Alter: $age Jahre\n- Beziehungsstatus: $relationshipLabel\n- Hauptfokus: $goalLabel\nSprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an.';
-  }
-
-  @override
-  String get aiServiceReceivedAnEmptyAnswerFrom =>
-      'Leere Antwort vom KI-Modell erhalten.';
-
-  @override
   String get backupCodecTheBackupIsTooLarge => 'Die Sicherung ist zu groß.';
 
   @override
@@ -3608,63 +3351,6 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get audioPaketAktualisieren => 'Aktualisieren';
-
-  @override
-  String get coachQHerOrgasm =>
-      'Wie bringe ich meine Partnerin zum Höhepunkt, ohne Druck zu machen?';
-
-  @override
-  String get coachQWomenRelax =>
-      'Was hilft Frauen, beim Sex wirklich loszulassen?';
-
-  @override
-  String get coachQHerDesire =>
-      'Warum braucht sie oft länger, bis sie Lust bekommt?';
-
-  @override
-  String get coachQAskHer =>
-      'Wie frage ich sie, was ihr gefällt, ohne dass es peinlich wird?';
-
-  @override
-  String get coachQMyPressure =>
-      'Wie werde ich den Leistungsdruck im Bett los?';
-
-  @override
-  String get coachQShowHim =>
-      'Wie zeige ich ihm, wie ich berührt werden möchte?';
-
-  @override
-  String get coachQMenPressure =>
-      'Was hilft Männern gegen Leistungsdruck im Bett?';
-
-  @override
-  String get coachQPleaseHim =>
-      'Wie verwöhne ich ihn mit Händen und Mund noch besser?';
-
-  @override
-  String get coachQWishesLimits =>
-      'Wie sprechen wir offen über Wünsche und Grenzen?';
-
-  @override
-  String get coachQHerTouch =>
-      'Wie finden wir heraus, welche Berührung ihr am meisten gefällt?';
-
-  @override
-  String get coachQDesireGap =>
-      'Wie gehen wir damit um, dass einer öfter Lust hat?';
-
-  @override
-  String get coachQKnowBody =>
-      'Wie lerne ich meinen eigenen Körper besser kennen?';
-
-  @override
-  String get coachQFemaleDesire => 'Was sollte ich über weibliche Lust wissen?';
-
-  @override
-  String get coachQMaleDesire => 'Was sollte ich über männliche Lust wissen?';
-
-  @override
-  String get coachQShowTouch => 'Wie zeige ich, wie ich berührt werden möchte?';
 
   @override
   String get gefuehrtTitel => 'Geführte Audios';
@@ -4095,7 +3781,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get tagebuchPrivat =>
-      'Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an den KI-Coach und nicht an dein Gegenüber; sie sind Teil deiner verschlüsselten Sicherung.';
+      'Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an dein Gegenüber und nicht ins Netz; sie sind Teil deiner verschlüsselten Sicherung.';
 
   @override
   String get tagebuchHinweisText => 'Stichworte, ein Bild, ein Gefühl …';
@@ -5076,7 +4762,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get schlafDatenschutz =>
-      'VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an Coach oder Paarraum.';
+      'VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an dein Gegenüber oder den Paarraum.';
 
   @override
   String get schlafHinweis =>
