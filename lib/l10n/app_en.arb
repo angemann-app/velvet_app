@@ -1752,5 +1752,11 @@
   "lektionEyebrow": "Lesson · {durationMin} min",
   "lektionEyebrowAudio": "Audio exercise · {durationMin} min",
   "playerZeit": "{vergangen} of {gesamt}",
-  "wiedergabeTeil": "Part {nr} of {anzahl}"
+  "wiedergabeTeil": "Part {nr} of {anzahl}",
+  "kegelRunden": "{n} rounds",
+  "kegelStufeLeicht": "easy",
+  "kegelStufeMittel": "medium",
+  "kegelStufeStark": "strong",
+  "kegelMitStimme": "with voice",
+  "kegelNurVibration": "vibration only"
 }

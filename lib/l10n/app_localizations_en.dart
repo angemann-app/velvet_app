@@ -5440,4 +5440,24 @@ class AppLocalizationsEn extends AppLocalizations {
   String wiedergabeTeil(int nr, int anzahl) {
     return 'Part $nr of $anzahl';
   }
+
+  @override
+  String kegelRunden(int n) {
+    return '$n rounds';
+  }
+
+  @override
+  String get kegelStufeLeicht => 'easy';
+
+  @override
+  String get kegelStufeMittel => 'medium';
+
+  @override
+  String get kegelStufeStark => 'strong';
+
+  @override
+  String get kegelMitStimme => 'with voice';
+
+  @override
+  String get kegelNurVibration => 'vibration only';
 }

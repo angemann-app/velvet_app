@@ -9307,6 +9307,42 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Teil {nr} von {anzahl}'**
   String wiedergabeTeil(int nr, int anzahl);
+
+  /// No description provided for @kegelRunden.
+  ///
+  /// In de, this message translates to:
+  /// **'{n} Runden'**
+  String kegelRunden(int n);
+
+  /// No description provided for @kegelStufeLeicht.
+  ///
+  /// In de, this message translates to:
+  /// **'leicht'**
+  String get kegelStufeLeicht;
+
+  /// No description provided for @kegelStufeMittel.
+  ///
+  /// In de, this message translates to:
+  /// **'mittel'**
+  String get kegelStufeMittel;
+
+  /// No description provided for @kegelStufeStark.
+  ///
+  /// In de, this message translates to:
+  /// **'stark'**
+  String get kegelStufeStark;
+
+  /// No description provided for @kegelMitStimme.
+  ///
+  /// In de, this message translates to:
+  /// **'mit Stimme'**
+  String get kegelMitStimme;
+
+  /// No description provided for @kegelNurVibration.
+  ///
+  /// In de, this message translates to:
+  /// **'nur Vibration'**
+  String get kegelNurVibration;
 }
 
 class _AppLocalizationsDelegate
