@@ -1781,12 +1781,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               Icon(Icons.waving_hand_rounded, color: AppTheme.akzentTief, size: 20),
               const SizedBox(width: 8),
-              Text(
-                t.halloTitel,
-                style: TextStyle(
-                  color: AppTheme.tinte,
-                  fontSize: 14.5,
-                  fontWeight: FontWeight.w700,
+              Expanded(
+                child: Text(
+                  t.halloTitel,
+                  style: TextStyle(
+                    color: AppTheme.tinte,
+                    fontSize: 14.5,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ],

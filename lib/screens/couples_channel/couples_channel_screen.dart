@@ -685,7 +685,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       children: [
         _buildHeader(),
         _buildAngebote(),
-        const PartnerProfilePrompt(),
+        // Die einmalige Nachfrage macht bei großer Schrift auf kleinem Display den Chat unbenutzbar: dann später.
+        if (MediaQuery.of(context).size.height / MediaQuery.of(context).textScaler.scale(1) >= 500)
+          const PartnerProfilePrompt(),
         // Bei geöffneter Tastatur verschwindet die Karte, damit der Chat Platz hat.
         if (_karteOben && MediaQuery.of(context).viewInsets.bottom == 0)
           const Padding(
@@ -735,10 +737,12 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   Widget _buildAngebote() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
-      child: Align(
-        alignment: Alignment.centerLeft,
-        child: Wrap(spacing: VpAbstand.s, runSpacing: VpAbstand.xs, children: [
+      // Immer eine Zeile (bei großer Schrift waagerecht scrollbar), damit der Chat Platz behält.
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(children: [
           VpChip(label: t.couplesChannelSharedEvening, icon: Icons.spa_outlined, onTap: _openAbend),
+          const SizedBox(width: VpAbstand.s),
           VpChip(label: t.couplesChannelFantasyMap, icon: Icons.explore_outlined, onTap: _openFantasyMap),
         ]),
       ),
