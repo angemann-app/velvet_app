@@ -1750,5 +1750,7 @@
   "fotoHinweisTrennung": "Photos you send stay on the other person's phone, even if you disconnect later.",
   "yesNoMaybeInfoZeile": "How this works",
   "lektionEyebrow": "Lesson · {durationMin} min",
-  "lektionEyebrowAudio": "Audio exercise · {durationMin} min"
+  "lektionEyebrowAudio": "Audio exercise · {durationMin} min",
+  "playerZeit": "{vergangen} of {gesamt}",
+  "wiedergabeTeil": "Part {nr} of {anzahl}"
 }

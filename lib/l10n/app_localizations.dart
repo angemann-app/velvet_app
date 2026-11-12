@@ -9295,6 +9295,18 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Audio-Übung · {durationMin} Min.'**
   String lektionEyebrowAudio(Object durationMin);
+
+  /// No description provided for @playerZeit.
+  ///
+  /// In de, this message translates to:
+  /// **'{vergangen} von {gesamt}'**
+  String playerZeit(String vergangen, String gesamt);
+
+  /// No description provided for @wiedergabeTeil.
+  ///
+  /// In de, this message translates to:
+  /// **'Teil {nr} von {anzahl}'**
+  String wiedergabeTeil(int nr, int anzahl);
 }
 
 class _AppLocalizationsDelegate

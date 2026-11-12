@@ -5430,4 +5430,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String lektionEyebrowAudio(Object durationMin) {
     return 'Audio exercise · $durationMin min';
   }
+
+  @override
+  String playerZeit(String vergangen, String gesamt) {
+    return '$vergangen of $gesamt';
+  }
+
+  @override
+  String wiedergabeTeil(int nr, int anzahl) {
+    return 'Part $nr of $anzahl';
+  }
 }
