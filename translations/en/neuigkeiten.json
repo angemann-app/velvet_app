@@ -775,6 +775,37 @@
           "text": "A short note the first time you open Pleasure in dreams or the inner views, and a new section in the guide: whatever comes to mind belongs to you, and you decide what you share."
         }
       ]
+    },
+    {
+      "build": 66,
+      "version": "4.20.0-beta.1",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Help for everyone",
+          "text": "The “Help” button at the top right first asks “What's going on?” and then shows a few calm steps, for every body and also for the person next to you. New is a fixed section with places to turn to when a no is not respected or there is pressure."
+        },
+        {
+          "icon": "person",
+          "titel": "For every kind of couple",
+          "text": "During setup you choose between woman, man, non-binary and not specified. Courses and filters speak of bodies instead of gender (“With a vulva”, “With a penis”), and six lessons have been reworded for this."
+        },
+        {
+          "icon": "spa",
+          "titel": "Your first week",
+          "text": "Seven small steps for two in the Us tab, each a quarter of an hour at most and each with “Not today”. If you were invited, you get your own gentle start the first time you open the app."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Today for two",
+          "text": "If your focus is time together, Today first shows what you can do as a couple. Everything else is below, under “More just for you”."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Tidied up",
+          "text": "Today shows “For today” without scrolling, the player puts title and play button first, and Practise and the fantasy map get to the point sooner. The wording is plainer in many places, and there are four new drawings."
+        }
+      ]
     }
   ],
   "_source": {
@@ -817,6 +848,7 @@
     "news:62": "dcbfa81253a3f822",
     "news:63": "f4604d0ac75d4b10",
     "news:64": "5eeb844b01575b86",
-    "news:65": "2a0af564b9bf0ebb"
+    "news:65": "2a0af564b9bf0ebb",
+    "news:66": "b3b511c8f9c2fe36"
   }
 }

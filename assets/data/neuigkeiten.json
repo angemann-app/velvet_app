@@ -775,6 +775,37 @@
           "text": "Ein kurzer Hinweis beim ersten Öffnen von Lust im Traum oder den Innenansichten und ein neuer Abschnitt in der Anleitung: Was dir in den Sinn kommt, gehört dir, und du entscheidest, was du teilst."
         }
       ]
+    },
+    {
+      "build": 66,
+      "version": "4.20.0-beta.1",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Hilfe für alle",
+          "text": "Der Knopf „Hilfe“ oben rechts fragt zuerst „Was ist gerade los?“ und zeigt dann wenige ruhige Schritte, für jeden Körper und auch für die Person daneben. Neu ist ein fester Teil mit Anlaufstellen, wenn ein Nein nicht gilt oder Druck im Spiel ist."
+        },
+        {
+          "icon": "person",
+          "titel": "Für jede Paarform",
+          "text": "Beim Einrichten wählst du zwischen Frau, Mann, Divers und Keine Angabe. Kurse und Filter sprechen vom Körper statt vom Geschlecht („Mit Vulva“, „Mit Penis“), sechs Lektionen sind dafür neu formuliert."
+        },
+        {
+          "icon": "spa",
+          "titel": "Eure erste Woche",
+          "text": "Sieben kleine Schritte für zwei im Tab Wir, jeder höchstens eine Viertelstunde und jeder mit „Heute nicht“. Wer eingeladen wurde, bekommt beim ersten Start einen eigenen, sanften Einstieg."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Heute für zwei",
+          "text": "Ist dein Fokus die Zeit zu zweit, zeigt Heute zuerst, was ihr gemeinsam tun könnt. Alles andere findest du darunter unter „Mehr für dich allein“."
+        },
+        {
+          "icon": "new_releases",
+          "titel": "Aufgeräumt",
+          "text": "Heute zeigt „Für heute“ ohne Scrollen, der Player stellt Titel und Abspielknopf nach vorn, Üben und die Fantasie-Landkarte beginnen schneller mit dem Eigentlichen. Die Sprache ist an vielen Stellen schlichter, und es gibt vier neue Zeichnungen."
+        }
+      ]
     }
   ]
 }

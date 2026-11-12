@@ -1294,3 +1294,63 @@ msgstr ""
 msgctxt "news:65#2.text"
 msgid "Ein kurzer Hinweis beim ersten Öffnen von Lust im Traum oder den Innenansichten und ein neuer Abschnitt in der Anleitung: Was dir in den Sinn kommt, gehört dir, und du entscheidest, was du teilst."
 msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: Help for everyone
+msgctxt "news:66#0.titel"
+msgid "Hilfe für alle"
+msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: The “Help” button at the top right first asks “What's going on?” and then shows a few calm steps, for every body and also for the person next to you. New is a fixed section with places to turn to when a no is not respected or there is pressure.
+msgctxt "news:66#0.text"
+msgid "Der Knopf „Hilfe“ oben rechts fragt zuerst „Was ist gerade los?“ und zeigt dann wenige ruhige Schritte, für jeden Körper und auch für die Person daneben. Neu ist ein fester Teil mit Anlaufstellen, wenn ein Nein nicht gilt oder Druck im Spiel ist."
+msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: For every kind of couple
+msgctxt "news:66#1.titel"
+msgid "Für jede Paarform"
+msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: During setup you choose between woman, man, non-binary and not specified. Courses and filters speak of bodies instead of gender (“With a vulva”, “With a penis”), and six lessons have been reworded for this.
+msgctxt "news:66#1.text"
+msgid "Beim Einrichten wählst du zwischen Frau, Mann, Divers und Keine Angabe. Kurse und Filter sprechen vom Körper statt vom Geschlecht („Mit Vulva“, „Mit Penis“), sechs Lektionen sind dafür neu formuliert."
+msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: Your first week
+msgctxt "news:66#2.titel"
+msgid "Eure erste Woche"
+msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: Seven small steps for two in the Us tab, each a quarter of an hour at most and each with “Not today”. If you were invited, you get your own gentle start the first time you open the app.
+msgctxt "news:66#2.text"
+msgid "Sieben kleine Schritte für zwei im Tab Wir, jeder höchstens eine Viertelstunde und jeder mit „Heute nicht“. Wer eingeladen wurde, bekommt beim ersten Start einen eigenen, sanften Einstieg."
+msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: Today for two
+msgctxt "news:66#3.titel"
+msgid "Heute für zwei"
+msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: If your focus is time together, Today first shows what you can do as a couple. Everything else is below, under “More just for you”.
+msgctxt "news:66#3.text"
+msgid "Ist dein Fokus die Zeit zu zweit, zeigt Heute zuerst, was ihr gemeinsam tun könnt. Alles andere findest du darunter unter „Mehr für dich allein“."
+msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: Tidied up
+msgctxt "news:66#4.titel"
+msgid "Aufgeräumt"
+msgstr ""
+
+#. Was ist neu in Version 4.20.0-beta.1
+#. EN: Today shows “For today” without scrolling, the player puts title and play button first, and Practise and the fantasy map get to the point sooner. The wording is plainer in many places, and there are four new drawings.
+msgctxt "news:66#4.text"
+msgid "Heute zeigt „Für heute“ ohne Scrollen, der Player stellt Titel und Abspielknopf nach vorn, Üben und die Fantasie-Landkarte beginnen schneller mit dem Eigentlichen. Die Sprache ist an vielen Stellen schlichter, und es gibt vier neue Zeichnungen."
+msgstr ""
