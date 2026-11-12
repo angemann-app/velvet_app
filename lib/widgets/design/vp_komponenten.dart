@@ -11,12 +11,19 @@ import 'vp_grafik.dart';
 class VpEyebrow extends StatelessWidget {
   final String text;
   final Color? farbe;
-  const VpEyebrow(this.text, {super.key, this.farbe});
+  /// true: eine Zeile, ohne Umbruch (Ellipse nur als Notbremse), z. B. „Lektion · 6 Min.“.
+  final bool einzeilig;
+  const VpEyebrow(this.text, {super.key, this.farbe, this.einzeilig = false});
 
   @override
   Widget build(BuildContext context) {
     final stil = context.vp.typo.eyebrow;
-    return Text(text.toUpperCase(), style: farbe == null ? stil : stil.copyWith(color: farbe));
+    return Text(
+      text.toUpperCase(),
+      maxLines: einzeilig ? 1 : null,
+      overflow: einzeilig ? TextOverflow.ellipsis : null,
+      style: farbe == null ? stil : stil.copyWith(color: farbe),
+    );
   }
 }
 

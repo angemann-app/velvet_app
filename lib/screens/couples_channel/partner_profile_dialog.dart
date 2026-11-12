@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/vp_tokens.dart';
+import '../../widgets/design/vp_komponenten.dart';
 import '../../l10n/t.dart';
 
 Map<String?, String> get partnerGenderLabels => {
@@ -83,19 +84,13 @@ class PartnerProfilePrompt extends StatelessWidget {
         future: nostr.partnerProfilePromptDismissed(),
         builder: (context, snap) {
           if (!nostr.partnerProfileIncomplete || snap.data != false) return const SizedBox.shrink();
-          return Container(
-            margin: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+          // VpKarte statt Container mit gemischten Randfarben und Radius: Letzteres zeichnet in der Debug-Version nichts
+          // (Assertion), die Karte stand dann leer über dem Verlauf.
+          return Padding(
+            padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+            child: VpKarte(
+            rahmen: VpRahmen.akzent,
             padding: const EdgeInsets.fromLTRB(14, 12, 6, 6),
-            decoration: BoxDecoration(
-              color: AppTheme.papierErhoben,
-              borderRadius: BorderRadius.circular(VpRadius.karte),
-              border: Border(
-                left: BorderSide(color: AppTheme.akzentTief, width: VpLinie.akzent),
-                top: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
-                right: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
-                bottom: BorderSide(color: AppTheme.linie, width: VpLinie.haar),
-              ),
-            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -121,6 +116,7 @@ class PartnerProfilePrompt extends StatelessWidget {
                   ],
                 ),
               ],
+            ),
             ),
           );
         },

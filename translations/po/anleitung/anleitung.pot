@@ -20,12 +20,12 @@ msgstr ""
 #. Abschnitt der Anleitung
 #. EN: On first launch you create a small profile: name, gender, relationship status and your focus. All questions are optional; for gender there is also “Not specified”, and nothing is preselected. The app uses it to choose suitable courses, voices and example questions. Everything stays on your phone.
 #. EN: Has someone invited you? Then tap “Someone invited me” right at the start. Three calm screens explain what this is about: nothing is a task, “no” is always an answer, and everything stays on your phone. After that you can set things up in peace, connect with that person, or just have a look first.
-#. EN: You can reach your profile at any time via the person icon at the top of the start page. That's also where you'll find language, discretion, backup, spicy mode and updates. In your profile you can also say, if you like, what your body is like. Exercises and audios use this to pick fitting voices and words; you can leave it empty and change it at any time.
+#. EN: You can reach your profile at any time via the person icon at the top of the start page, next to search and help. That's also where you'll find language, discretion, backup, spicy mode and updates. In your profile you can also say, if you like, what your body is like. Exercises and audios use this to pick fitting voices and words; you can leave it empty and change it at any time.
 msgctxt "guide:start#text"
 msgid ""
 "Beim ersten Start legst du ein kleines Profil an: Name, Geschlecht, Beziehungsstatus und dein Fokus. Alle Fragen sind freiwillig; beim Geschlecht gibt es auch „Keine Angabe“, und nichts ist vorausgewählt. Daraus wählt die App passende Kurse, Stimmen und Beispielfragen aus. Alles bleibt auf deinem Handy.\n"
 "Hat dich jemand eingeladen? Dann tippst du ganz am Anfang auf „Jemand hat mich eingeladen“. Drei ruhige Bildschirme erklären, worum es geht: Nichts ist eine Aufgabe, „Nein“ ist immer eine Antwort, und alles bleibt auf deinem Handy. Danach richtest du in Ruhe ein, verbindest dich mit der Person oder schaust erst einmal nur.\n"
-"Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Startseite. Dort findest du auch Sprache, Diskretion, Sicherung, Spicy-Modus und Updates. Im Profil kannst du außerdem freiwillig angeben, wie dein Körper ist. Das nutzen Übungen und Audios, um Stimme und Worte passend zu wählen; du kannst es leer lassen und jederzeit ändern."
+"Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Startseite, neben Suche und Hilfe. Dort findest du auch Sprache, Diskretion, Sicherung, Spicy-Modus und Updates. Im Profil kannst du außerdem freiwillig angeben, wie dein Körper ist. Das nutzen Übungen und Audios, um Stimme und Worte passend zu wählen; du kannst es leer lassen und jederzeit ändern."
 msgstr ""
 
 #. Abschnitt der Anleitung
@@ -70,12 +70,12 @@ msgstr ""
 
 #. Abschnitt der Anleitung
 #. EN: Use the magnifying glass at the top to find courses, lessons and practice activities. Search runs only on your device, saves no search history and does not search private notes or messages. Spicy content appears only when spicy mode is enabled.
-#. EN: The lesson player shows whether the specific recording is available offline. If it is missing, the device voice can read the text. “Download recordings” opens the existing package manager.
+#. EN: The lesson player shows the play button first. If the specific recording is missing, a small “Device voice” note appears below it: your phone's voice then reads the text, and “Download recordings” opens the package manager.
 #. EN: Lessons with a linked exercise and reflection question offer a personal path: discover the knowledge, try the exercise and reflect. You open and confirm each step yourself, with no time limit or required answer. You can return to a path from Today. Your place on the path is included in your backup.
 msgctxt "guide:finden_weg#text"
 msgid ""
 "Über die Lupe oben findest du Kurse, Lektionen und Praxisangebote. Die Suche läuft nur auf deinem Gerät, speichert keine Suchhistorie und durchsucht keine privaten Notizen oder Nachrichten. Spicy-Inhalte erscheinen nur im eingeschalteten Spicy-Modus.\n"
-"Am Lektionsplayer steht, ob die konkrete Aufnahme offline vorhanden ist. Fehlt sie, kann die Geräte-Stimme vorlesen. Über „Aufnahmen laden“ öffnest du die bestehende Paketverwaltung.\n"
+"Der Lektionsplayer zeigt zuerst den Abspielknopf. Fehlt die konkrete Aufnahme, steht darunter klein „Geräte-Stimme“: Dann liest die Stimme deines Handys vor, und über „Aufnahmen laden“ öffnest du die Paketverwaltung.\n"
 "Lektionen mit verknüpfter Übung und Reflexionsfrage bieten einen persönlichen Weg: Wissen entdecken, Übung ausprobieren und Nachspüren. Du öffnest und bestätigst die Schritte selbst, ohne Zeitvorgabe oder Pflichtantwort. Ein begonnener Weg ist auf Heute wieder erreichbar. Sein Stand ist Teil deiner Sicherung."
 msgstr ""
 
@@ -152,13 +152,13 @@ msgid "Training und Akuthilfe"
 msgstr ""
 
 #. Abschnitt der Anleitung
-#. EN: The Practice tab, under Body, contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
+#. EN: The Practice tab, under Body, contains the pelvic floor timer with four exercise types (programme and settings unfold from two rows) and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
 #. EN: The “Help” button at the top right opens a calm sheet. You choose what is going on: nervous, my body isn't going along, pain, “I don't want to go on”, my partner is quiet, afterwards. You get a few steps and sentences you can say.
 #. EN: There you also find help when a no isn't respected or there is pressure, with contacts for Germany, Austria, Switzerland, the United Kingdom and the USA. “Leave quickly” closes the sheet at once.
 #. EN: Questions about body and desire are answered by the lessons under Learn. For pain or lasting difficulties, see your doctor; for conflict or pressure, a counselling service.
 msgctxt "guide:training#text"
 msgid ""
-"Im Tab Üben, Bereich Körper, findest du den Beckenboden-Timer mit vier Übungsarten und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.\n"
+"Im Tab Üben, Bereich Körper, findest du den Beckenboden-Timer mit vier Übungsarten (Programm und Einstellungen klappen über zwei Zeilen auf) und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.\n"
 "Der Knopf „Hilfe“ oben rechts öffnet ein ruhiges Blatt. Du wählst, was gerade los ist: nervös, der Körper macht nicht mit, Schmerz, „ich möchte nicht mehr“, das Gegenüber wird still, danach. Du bekommst wenige Schritte und Sätze, die du sagen kannst.\n"
 "Dort findest du auch Hilfe, wenn ein Nein nicht gilt oder Druck im Spiel ist, mit Anlaufstellen für Deutschland, Österreich, die Schweiz, das Vereinigte Königreich und die USA. „Schnell verlassen“ schließt das Blatt sofort.\n"
 "Fragen zu Körper und Lust beantworten die Lektionen unter Lernen. Bei Schmerzen oder anhaltenden Beschwerden hilft eine ärztliche Praxis, bei Streit oder Druck eine Beratungsstelle."
@@ -187,6 +187,7 @@ msgstr ""
 
 #. Abschnitt der Anleitung
 #. EN: In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.
+#. EN: Under your name, two buttons lead straight to the “Shared evening” and the “Fantasy map”.
 #. EN: Sparks: with one tap you show what you're in the mood for today, or not. “Not today” is always one tap away. The other person can answer “Not today” and “Let's talk” with “Thanks for telling me”.
 #. EN: Spicy invitation: whoever is invited can answer “Not right now”, no explanation needed.
 #. EN: Disconnecting: in the menu you disconnect, after two confirmations. Your partner gets a calm notice (you can switch it off and disconnect quietly) and decides for themselves whether to delete this connection's data too. If the notice doesn't arrive (app closed, no connection), everything there stays until they delete it themselves. Sent messages and photos can't be taken back.
@@ -196,6 +197,7 @@ msgstr ""
 msgctxt "guide:paar#text"
 msgid ""
 "Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt. Haben beide Handys eine neue Version, gehen sie versiegelt (NIP-17): Die Server sehen dann nicht mehr, wer wem wann schreibt. Das stellt sich von selbst ein, mit älteren Versionen klappt es weiter wie bisher.\n"
+"Unter deinem Namen führen zwei Schaltflächen direkt zum „Gemeinsamen Abend“ und zur „Fantasie-Landkarte“.\n"
 "Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht. „Heute lieber nicht“ ist immer sofort erreichbar. Auf „Heute lieber nicht“ und „Lass uns reden“ kann das Gegenüber mit „Danke fürs Sagen“ antworten.\n"
 "Spicy-Einladung: Wer eingeladen wird, kann „Gerade nicht“ antworten, ohne Erklärung.\n"
 "Trennen: Im Menü trennst du die Verbindung, nach zwei Bestätigungen. Dein Gegenüber bekommt einen ruhigen Hinweis (du kannst ihn abwählen und still trennen) und entscheidet selbst, ob es die Daten dieser Verbindung ebenfalls löscht. Kommt der Hinweis nicht an (App geschlossen, kein Netz), bleibt dort alles, bis die Person selbst löscht. Gesendete Nachrichten und Fotos lassen sich nicht zurückholen.\n"

@@ -30,7 +30,7 @@ On first launch you create a small profile: name, gender, relationship status an
 
 Has someone invited you? Then tap “Someone invited me” right at the start. Three calm screens explain what this is about: nothing is a task, “no” is always an answer, and everything stays on your phone. After that you can set things up in peace, connect with that person, or just have a look first.
 
-You can reach your profile at any time via the person icon at the top of the start page. That's also where you'll find language, discretion, backup, spicy mode and updates. In your profile you can also say, if you like, what your body is like. Exercises and audios use this to pick fitting voices and words; you can leave it empty and change it at any time.
+You can reach your profile at any time via the person icon at the top of the start page, next to search and help. That's also where you'll find language, discretion, backup, spicy mode and updates. In your profile you can also say, if you like, what your body is like. Exercises and audios use this to pick fitting voices and words; you can leave it empty and change it at any time.
 
 
 ## Your first week together
@@ -57,7 +57,7 @@ Tapping “Mark as completed” counts towards your progress.
 
 Use the magnifying glass at the top to find courses, lessons and practice activities. Search runs only on your device, saves no search history and does not search private notes or messages. Spicy content appears only when spicy mode is enabled.
 
-The lesson player shows whether the specific recording is available offline. If it is missing, the device voice can read the text. “Download recordings” opens the existing package manager.
+The lesson player shows the play button first. If the specific recording is missing, a small “Device voice” note appears below it: your phone's voice then reads the text, and “Download recordings” opens the package manager.
 
 Lessons with a linked exercise and reflection question offer a personal path: discover the knowledge, try the exercise and reflect. You open and confirm each step yourself, with no time limit or required answer. You can return to a path from Today. Your place on the path is included in your backup.
 
@@ -111,7 +111,7 @@ Whatever comes to mind while you listen, read or daydream belongs to you. A fant
 
 <img src="anleitung/02_training.png" width="260" alt="Training and quick help">
 
-The Practice tab, under Body, contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
+The Practice tab, under Body, contains the pelvic floor timer with four exercise types (programme and settings unfold from two rows) and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
 
 The “Help” button at the top right opens a calm sheet. You choose what is going on: nervous, my body isn't going along, pain, “I don't want to go on”, my partner is quiet, afterwards. You get a few steps and sentences you can say.
 
@@ -134,6 +134,8 @@ The start page also has the 30-second check-in: how do stress and desire relate 
 <img src="anleitung/04_paarkanal_verbunden.png" width="260" alt="Couple channel">
 
 In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.
+
+Under your name, two buttons lead straight to the “Shared evening” and the “Fantasy map”.
 
 Sparks: with one tap you show what you're in the mood for today, or not. “Not today” is always one tap away. The other person can answer “Not today” and “Let's talk” with “Thanks for telling me”.
 

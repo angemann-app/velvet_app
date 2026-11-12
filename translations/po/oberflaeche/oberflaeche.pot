@@ -4521,9 +4521,9 @@ msgid "Fertig, los geht's"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Later, straight to the app
+#. EN: Skip
 msgctxt "ui:onboardingSkipGoStraightToThe#text"
-msgid "Später, direkt zur App"
+msgid "Überspringen"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {data}
@@ -9277,4 +9277,76 @@ msgstr ""
 #. EN: Photos you send stay on the other person's phone, even if you disconnect later.
 msgctxt "ui:fotoHinweisTrennung#text"
 msgid "Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Nothing has to be answered. Your partner never sees a “Rather not”.
+msgctxt "ui:yesNoMaybeInfoZeile#text"
+msgid "Nichts muss beantwortet werden. Ein „Lieber nicht“ sieht dein Gegenüber nie."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: All
+msgctxt "ui:yesNoMaybeAlleKurz#text"
+msgid "Alle"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {durationMin}
+#. EN: Lesson · {durationMin} min
+msgctxt "ui:lektionEyebrow#text"
+msgid "Lektion · {durationMin} Min."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {durationMin}
+#. EN: Audio exercise · {durationMin} min
+msgctxt "ui:lektionEyebrowAudio#text"
+msgid "Audio-Übung · {durationMin} Min."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {vergangen}, {gesamt}
+#. EN: {vergangen} of {gesamt}
+msgctxt "ui:playerZeit#text"
+msgid "{vergangen} von {gesamt}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {nr}, {anzahl}
+#. EN: Part {nr} of {anzahl}
+msgctxt "ui:wiedergabeTeil#text"
+msgid "Teil {nr} von {anzahl}"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: {n} rounds
+msgctxt "ui:kegelRunden#text"
+msgid "{n} Runden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: easy
+msgctxt "ui:kegelStufeLeicht#text"
+msgid "leicht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: medium
+msgctxt "ui:kegelStufeMittel#text"
+msgid "mittel"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: strong
+msgctxt "ui:kegelStufeStark#text"
+msgid "stark"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: with voice
+msgctxt "ui:kegelMitStimme#text"
+msgid "mit Stimme"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: vibration only
+msgctxt "ui:kegelNurVibration#text"
+msgid "nur Vibration"
 msgstr ""

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../l10n/t.dart';
 import '../services/aufnahme_stand.dart';
 import '../services/pakete.dart';
+import '../theme/app_theme.dart';
 import '../theme/vp_tokens.dart';
 import 'aufnahmen_karte.dart';
 import '../services/paket_verzeichnis.dart';
@@ -15,19 +16,44 @@ class AufnahmeStatus extends StatelessWidget {
   final List<String>? paketNamen;
   final bool geraeteStimmeMoeglich;
   final bool erneutLaden;
+
+  /// Klein und nur sichtbar, wenn eine Aufnahme fehlt (oder erneut geladen werden soll): Der Player zeigt Titel und
+  /// Abspielknopf zuerst, die Hinweise zur Aufnahme stehen leise darunter.
+  final bool kompakt;
   const AufnahmeStatus(
       {super.key,
       required this.pfade,
       this.sprache,
       this.paketNamen,
       this.geraeteStimmeMoeglich = true,
-      this.erneutLaden = false});
+      this.erneutLaden = false,
+      this.kompakt = false});
 
   @override
   Widget build(BuildContext context) => ValueListenableBuilder<int>(
       valueListenable: Pakete.stand,
       builder: (context, _, child) {
         final stand = AufnahmeStand.pruefen(pfade, sprache: sprache);
+        if (kompakt) {
+          if (stand.vollstaendig && !erneutLaden) return const SizedBox.shrink();
+          return Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              spacing: VpAbstand.xs,
+              children: [
+                Icon(Icons.voice_chat_outlined, size: 15, color: AppTheme.tinteLeise),
+                Text(
+                    geraeteStimmeMoeglich ? t.aufnahmeGeraetestimme : t.aufnahmePaketFehlt,
+                    style: context.vp.typo.beschriftung.copyWith(color: AppTheme.tinteLeise)),
+                TextButton(
+                    style: TextButton.styleFrom(
+                        visualDensity: VisualDensity.compact,
+                        minimumSize: const Size(0, 36),
+                        padding: const EdgeInsets.symmetric(horizontal: VpAbstand.s)),
+                    onPressed: () => _verwalten(context),
+                    child: Text(t.aufnahmeVerwalten,
+                        style: const TextStyle(fontSize: 13))),
+              ]);
+        }
         return Wrap(
             crossAxisAlignment: WrapCrossAlignment.center,
             spacing: VpAbstand.s,
@@ -44,18 +70,20 @@ class AufnahmeStatus extends StatelessWidget {
                   style: context.vp.typo.beschriftung),
               if (!stand.vollstaendig || erneutLaden)
                 TextButton(
-                    onPressed: () => showModalBottomSheet<void>(
-                        context: context,
-                        isScrollControlled: true,
-                        builder: (_) => SafeArea(
-                            child: SingleChildScrollView(
-                                padding: const EdgeInsets.all(VpAbstand.rand),
-                                child: paketNamen == null
-                                    ? const AufnahmenKarte()
-                                    : _PlanPakete(namen: paketNamen!)))),
+                    onPressed: () => _verwalten(context),
                     child: Text(t.aufnahmeVerwalten)),
             ]);
       });
+
+  void _verwalten(BuildContext context) => showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      builder: (_) => SafeArea(
+          child: SingleChildScrollView(
+              padding: const EdgeInsets.all(VpAbstand.rand),
+              child: paketNamen == null
+                  ? const AufnahmenKarte()
+                  : _PlanPakete(namen: paketNamen!))));
 }
 
 /// Verzeichnisabruf erst beim bewusst geöffneten Downloadfenster. Auch eigene

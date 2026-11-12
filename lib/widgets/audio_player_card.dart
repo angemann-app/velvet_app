@@ -7,6 +7,7 @@ import 'aussprache_melden.dart';
 import 'lautsprecher_frage.dart';
 import '../l10n/t.dart';
 import 'aufnahme_status.dart';
+import 'hoerzeit.dart';
 
 class AudioPlayerCard extends StatefulWidget {
   final String textToRead;
@@ -58,12 +59,6 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
     if (mounted) {
       setState(() {});
     }
-  }
-
-  String _formatDuration(Duration d) {
-    final minutes = d.inMinutes.remainder(60).toString().padLeft(2, '0');
-    final seconds = d.inSeconds.remainder(60).toString().padLeft(2, '0');
-    return '$minutes:$seconds';
   }
 
   @override
@@ -128,11 +123,6 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
                     ),
                   ),
                 ]),
-              ),              const SizedBox(width: 8),
-              // Time Display (01:24 / 04:15)
-              Text(
-                '${_formatDuration(currentPos)} / ${_formatDuration(totalDur)}',
-                style: context.vp.typo.zahl.copyWith(color: AppTheme.tinteLeise, fontSize: 14, fontWeight: FontWeight.w400),
               ),
             ],
           ),
@@ -158,43 +148,6 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
           ),
 
           const SizedBox(height: 10),
-
-          // Slider / Progress bar
-          AufnahmeStatus(pfade: ['audio/${widget.contextId}.opus']),
-          SliderTheme(
-            data: SliderTheme.of(context).copyWith(
-              trackHeight: 2,
-              activeTrackColor: accentColor,
-              inactiveTrackColor: AppTheme.linieStark,
-              disabledActiveTrackColor: AppTheme.linieStark,
-              disabledInactiveTrackColor: AppTheme.linie,
-              thumbColor: accentColor,
-              disabledThumbColor: AppTheme.linieStark,
-              thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 5, disabledThumbRadius: 4),
-              overlayColor: accentColor.withValues(alpha: 0.2),
-              overlayShape: const RoundSliderOverlayShape(overlayRadius: 14),
-            ),
-            child: Slider(
-              min: 0.0,
-              max: totalMs,
-              value: posMs,
-              onChanged: isCurrent
-                  ? (val) {
-                      setState(() {
-                        _dragValue = val;
-                      });
-                    }
-                  : null,
-              onChangeEnd: isCurrent
-                  ? (val) {
-                      _audioService.seek(Duration(milliseconds: val.toInt()));
-                      setState(() {
-                        _dragValue = null;
-                      });
-                    }
-                  : null,
-            ),
-          ),
 
           // Controls Row: -10s, Play/Pause, +10s, Stop
           Row(
@@ -274,6 +227,47 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
               ],
             ],
           ),
+          // Fortschritt mit menschlicher Zeit
+          SliderTheme(
+            data: SliderTheme.of(context).copyWith(
+              trackHeight: 2,
+              activeTrackColor: accentColor,
+              inactiveTrackColor: AppTheme.linieStark,
+              disabledActiveTrackColor: AppTheme.linieStark,
+              disabledInactiveTrackColor: AppTheme.linie,
+              thumbColor: accentColor,
+              disabledThumbColor: AppTheme.linieStark,
+              thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 5, disabledThumbRadius: 4),
+              overlayColor: accentColor.withValues(alpha: 0.2),
+              overlayShape: const RoundSliderOverlayShape(overlayRadius: 14),
+            ),
+            child: Slider(
+              min: 0.0,
+              max: totalMs,
+              value: posMs,
+              onChanged: isCurrent
+                  ? (val) {
+                      setState(() {
+                        _dragValue = val;
+                      });
+                    }
+                  : null,
+              onChangeEnd: isCurrent
+                  ? (val) {
+                      _audioService.seek(Duration(milliseconds: val.toInt()));
+                      setState(() {
+                        _dragValue = null;
+                      });
+                    }
+                  : null,
+            ),
+          ),
+
+          Center(
+            child: Text(hoerzeitVon(currentPos, totalDur), style: context.vp.typo.beschriftung.copyWith(color: AppTheme.tinteLeise)),
+          ),
+          // Hinweis zur Aufnahme: klein, nur wenn sie fehlt.
+          AufnahmeStatus(pfade: ['audio/${widget.contextId}.opus'], kompakt: true),
           // Bei der Geräte-Stimme (Fallback) hilft eine Meldung nichts.
           if (widget.meldeOrt != null && !isUsingFallback)
             AusspracheMeldenButton(

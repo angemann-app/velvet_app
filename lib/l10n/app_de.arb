@@ -1297,7 +1297,7 @@
   "onboardingUnderstandResponsiveDesireEaseOrgasm": "Verstehen, wie Lust bei dir entsteht, und den Druck herausnehmen.",
   "onboardingSaveChanges": "Änderungen speichern",
   "onboardingPersonaliseProgrammeNow": "Fertig, los geht's",
-  "onboardingSkipGoStraightToThe": "Später, direkt zur App",
+  "onboardingSkipGoStraightToThe": "Überspringen",
   "onboardingVersionData": "Version {data}",
   "@onboardingVersionData": {
     "placeholders": {
@@ -2483,5 +2483,22 @@
       "name": { "type": "Object" }
     }
   },
-  "fotoHinweisTrennung": "Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt."
+  "fotoHinweisTrennung": "Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.",
+  "yesNoMaybeInfoZeile": "Nichts muss beantwortet werden. Ein „Lieber nicht“ sieht dein Gegenüber nie.",
+  "yesNoMaybeAlleKurz": "Alle",
+  "lektionEyebrow": "Lektion · {durationMin} Min.",
+  "@lektionEyebrow": { "placeholders": { "durationMin": { "type": "Object" } } },
+  "lektionEyebrowAudio": "Audio-Übung · {durationMin} Min.",
+  "@lektionEyebrowAudio": { "placeholders": { "durationMin": { "type": "Object" } } },
+  "playerZeit": "{vergangen} von {gesamt}",
+  "@playerZeit": { "placeholders": { "vergangen": { "type": "String" }, "gesamt": { "type": "String" } } },
+  "wiedergabeTeil": "Teil {nr} von {anzahl}",
+  "@wiedergabeTeil": { "placeholders": { "nr": { "type": "int" }, "anzahl": { "type": "int" } } },
+  "kegelRunden": "{n} Runden",
+  "@kegelRunden": { "placeholders": { "n": { "type": "int" } } },
+  "kegelStufeLeicht": "leicht",
+  "kegelStufeMittel": "mittel",
+  "kegelStufeStark": "stark",
+  "kegelMitStimme": "mit Stimme",
+  "kegelNurVibration": "nur Vibration"
 }

@@ -394,8 +394,11 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
             ],
             _spicyBilder(lesson),
 
-            // Kopf im Magazinstil: Eyebrow (Kurs, Art, Dauer), Serif-Titel, Einleitung, Haarlinie.
-            VpEyebrow('${widget.courseTitle} · ${lesson.isAudioExercise ? t.lessonDetailAudioExercise : t.lessonDetailLesson} · ${t.lessonDetailDurationminMinRead(lesson.durationMin)}'),
+            // Kopf im Magazinstil: Eyebrow (Art, Dauer; der Kurstitel steht schon oben in der Leiste), Serif-Titel, Einleitung, Haarlinie.
+            VpEyebrow(
+              lesson.isAudioExercise ? t.lektionEyebrowAudio(lesson.durationMin) : t.lektionEyebrow(lesson.durationMin),
+              einzeilig: true,
+            ),
             const SizedBox(height: VpAbstand.s),
             Text(lesson.title, style: context.vp.typo.anzeige.copyWith(fontSize: 30)),
             const SizedBox(height: VpAbstand.m),

@@ -674,17 +674,20 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   // ---------------------------------------------------------------------------
   // Verbunden
 
-  /// Auf kleinen Displays oder bei großer Schrift würde die Karte über den Tabs den Chat verdrängen;
-  /// dann steht sie oben im Tab „Gemeinsam entdecken“.
+  /// Die Karte über den Tabs verdrängt den Chat (sie ist fast 300 pt hoch, dazu Kopf, Chips und die Profil-Nachfrage).
+  /// Nur auf wirklich hohen Displays steht sie dort, sonst oben im Tab „Gemeinsam entdecken“.
   bool get _karteOben {
     final mq = MediaQuery.of(context);
-    return mq.size.height / mq.textScaler.scale(1) >= 700;
+    return mq.size.height / mq.textScaler.scale(1) >= 900;
   }
   Widget _buildPaired() {
     return Column(
       children: [
         _buildHeader(),
-        const PartnerProfilePrompt(),
+        _buildAngebote(),
+        // Die einmalige Nachfrage macht bei großer Schrift auf kleinem Display den Chat unbenutzbar: dann später.
+        if (MediaQuery.of(context).size.height / MediaQuery.of(context).textScaler.scale(1) >= 500)
+          const PartnerProfilePrompt(),
         // Bei geöffneter Tastatur verschwindet die Karte, damit der Chat Platz hat.
         if (_karteOben && MediaQuery.of(context).viewInsets.bottom == 0)
           const Padding(
@@ -727,6 +730,22 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           ),
         ),
       ],
+    );
+  }
+
+  /// Zwei Wege in den gemeinsamen Teil, beschriftet statt nur als Symbol. Beides ist ein Angebot, keine Aufgabe.
+  Widget _buildAngebote() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
+      // Immer eine Zeile (bei großer Schrift waagerecht scrollbar), damit der Chat Platz behält.
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(children: [
+          VpChip(label: t.couplesChannelSharedEvening, icon: Icons.spa_outlined, onTap: _openAbend),
+          const SizedBox(width: VpAbstand.s),
+          VpChip(label: t.couplesChannelFantasyMap, icon: Icons.explore_outlined, onTap: _openFantasyMap),
+        ]),
+      ),
     );
   }
 
@@ -794,16 +813,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                   ),
                 ),
               ),
-              IconButton(
-                onPressed: _openAbend,
-                icon: Icon(Icons.spa_outlined, color: AppTheme.akzentTief, size: 22),
-                tooltip: t.couplesChannelSharedEvening,
-              ),
-              IconButton(
-                onPressed: _openFantasyMap,
-                icon: Icon(Icons.explore_outlined, color: AppTheme.akzentTief, size: 22),
-                tooltip: t.couplesChannelFantasyMap,
-              ),
+              // Gemeinsamer Abend und Fantasie-Landkarte stehen als beschriftete Chips unter der Kopfzeile (_buildAngebote).
               PopupMenuButton<String>(
                 icon: Icon(Icons.more_vert_rounded, color: AppTheme.tinteLeise),
                 color: AppTheme.papierErhoben,

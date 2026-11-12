@@ -532,6 +532,25 @@ void main() {
         throwsA(isA<BackupException>()));
   });
 
+  test('Info-Kasten der Fantasie-Landkarte: Merker ist in der Sicherung, beim Merge gewinnt true', () async {
+    expect(StorageService.ynmInfoGesehen(), isFalse);
+    await StorageService.setYnmInfoGesehen(true);
+    final export = StorageService.exportAllUserData();
+    expect(export['ynmInfoGesehen'], isTrue);
+    expect(BackupCodec.validate(export).data['ynmInfoGesehen'], isTrue);
+
+    await StorageService.setYnmInfoGesehen(false);
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.ynmInfoGesehen(), isTrue);
+
+    final alt = StorageService.exportAllUserData()..['ynmInfoGesehen'] = false;
+    await StorageService.importBackup(BackupCodec.validate(alt));
+    expect(StorageService.ynmInfoGesehen(), isTrue);
+
+    expect(() => BackupCodec.validate(StorageService.exportAllUserData()..['ynmInfoGesehen'] = 'ja'),
+        throwsA(isA<BackupException>()));
+  });
+
   test('Die Ja/Nein-Liste ist in der Sicherung enthalten', () {
     final export = StorageService.exportAllUserData();
     expect(jsonDecode(export['yesNoMaybe'] as String), {'a': 'yes', 'c': 'no'});

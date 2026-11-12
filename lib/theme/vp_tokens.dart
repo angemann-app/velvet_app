@@ -118,8 +118,8 @@ class VpTypo {
       fliesstext: TextStyle(fontSize: 15, height: 1.5, color: p.tinte),
       fliesstextKlein: TextStyle(fontSize: 13.5, height: 1.45, color: p.tinteLeise),
       // Versalien setzt die Komponente (`VpEyebrow`), hier nur Schnitt und Sperrung.
-      eyebrow: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, letterSpacing: 1.4, color: p.tinteStumm),
-      beschriftung: TextStyle(fontSize: 12.5, height: 1.35, color: p.tinteLeise),
+      eyebrow: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, letterSpacing: 1.4, color: p.tinteLeise),
+      beschriftung: TextStyle(fontSize: 13, height: 1.35, color: p.tinteLeise),
     );
   }
 }

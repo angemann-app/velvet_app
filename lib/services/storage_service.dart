@@ -406,6 +406,18 @@ class StorageService {
     await AutoBackupService.saveAutoBackup();
   }
 
+  // Fantasie-Landkarte: Erklärkasten „Digitaler Safe Space“ nach dem ersten Besuch eingeklappt.
+  // In der Sicherung, beim Merge gewinnt true (wie der Fantasie-Hinweis).
+  static const String keyYnmInfoGesehen = 'ynm_info_gesehen';
+
+  static bool ynmInfoGesehen() => _prefs?.getBool(keyYnmInfoGesehen) ?? false;
+
+  static Future<void> setYnmInfoGesehen(bool value) async {
+    final prefs = await _ensurePrefs();
+    await prefs.setBool(keyYnmInfoGesehen, value);
+    await AutoBackupService.saveAutoBackup();
+  }
+
   // Traumtagebuch (lib/models/traum_eintrag.dart)
   static List<TraumEintrag> getTraumEintraege() {
     final eintraege = <TraumEintrag>[];
@@ -746,6 +758,7 @@ class StorageService {
       'audioBereichOffen': _prefs?.getBool(_keyAudioBereichOffen),
       'halloGesendetAm': getHalloGesendetAm(),
       'fantasieHinweisGesehen': fantasieHinweisGesehen(),
+      'ynmInfoGesehen': ynmInfoGesehen(),
       'lustFortschritt': _prefs?.getString(_keyLustFortschritt),
       'dailyCheckIns': _prefs?.getStringList(_keyDailyCheckIns),
       'yesNoMaybe': _prefs?.getString(_keyYesNoMaybe),
@@ -952,6 +965,9 @@ class StorageService {
     // Fantasie-Hinweis: einmal gesehen bleibt gesehen (true gewinnt), ein false aus der Sicherung ändert nichts.
     if (d['fantasieHinweisGesehen'] == true) {
       writes[keyFantasieHinweisGesehen] = true;
+    }
+    if (d['ynmInfoGesehen'] == true) {
+      writes[keyYnmInfoGesehen] = true;
     }
     // Fortschritt: je Folge der größere Stand, damit nichts wieder gesperrt wird.
     if (d['lustFortschritt'] is String &&

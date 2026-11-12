@@ -18,6 +18,8 @@ import '../services/privacy_service.dart';
 import 'gemeinsam_screen.dart';
 import 'self_exploration/reihe_galerie_screen.dart';
 import '../widgets/aufnahme_status.dart';
+import '../widgets/design/vp_bild_feld.dart';
+import '../widgets/hoerzeit.dart';
 import '../services/wiedergabe_plaene.dart';
 
 String hoerzeit(Duration d) =>
@@ -70,32 +72,44 @@ class WiedergabeScreen extends StatelessWidget {
                       child: ListView(
                           padding: const EdgeInsets.all(VpAbstand.rand),
                           children: [
-                          if (datei != null)
-                            Padding(
-                                padding:
-                                    const EdgeInsets.only(bottom: VpAbstand.xl),
-                                child: GestureDetector(
-                                    onTap: ReiheGalerieScreen.aktiv &&
-                                            p.art == WiedergabeArt.reihe
-                                        ? () => _galerieOeffnen(context, p)
-                                        : null,
-                                    child: AspectRatio(
-                                        aspectRatio:
-                                            VpBildFormat.kopf.verhaeltnis,
-                                        child: Image.file(File(datei),
-                                            fit: BoxFit.cover,
-                                            errorBuilder: (_, error, stack) =>
-                                                const SizedBox.shrink())))),
+                          // Szenenbild der Folge, sonst eine ruhige Titelfläche (immer dieselbe, verrät nichts).
+                          // Im Diskretions-Modus (App-Symbol getarnt) bleibt es bei der Titelfläche.
+                          FutureBuilder<bool>(
+                              future: PrivacyService.isDiscreetIcon(),
+                              builder: (context, diskret) => Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: VpAbstand.l),
+                                  child: datei != null &&
+                                          diskret.data == false
+                                      ? GestureDetector(
+                                          onTap: ReiheGalerieScreen.aktiv &&
+                                                  p.art == WiedergabeArt.reihe
+                                              ? () => _galerieOeffnen(context, p)
+                                              : null,
+                                          child: AspectRatio(
+                                              aspectRatio:
+                                                  VpBildFormat.kopf.verhaeltnis,
+                                              child: Image.file(File(datei),
+                                                  fit: BoxFit.cover,
+                                                  errorBuilder: (_, error,
+                                                          stack) =>
+                                                      const SizedBox.shrink())))
+                                      : ClipRRect(
+                                          borderRadius: BorderRadius.circular(
+                                              VpRadius.karte),
+                                          child: const SizedBox(
+                                              height: 96,
+                                              child: VpBildFeld(
+                                                  'wiedergabe.ruhe'))))),
                           Text(p.titel.isEmpty ? t.wiedergabeNeutral : p.titel,
                               style: context.vp.typo.anzeige),
+                          if (p.abschnitte.length > 1) ...[
+                            const SizedBox(height: VpAbstand.s),
+                            Text(t.wiedergabeTeil(l.index + 1, p.abschnitte.length),
+                                style: context.vp.typo.beschriftung.copyWith(
+                                    color: AppTheme.tinteLeise)),
+                          ],
                           const SizedBox(height: VpAbstand.m),
-                          Text(t.wiedergabeBehalten,
-                              style: context.vp.typo.fliesstextKlein),
-                          const SizedBox(height: VpAbstand.l),
-                          Text(
-                              '${l.index + 1} / ${p.abschnitte.length} · ${hoerzeit(l.vergangen)} / ${hoerzeit(l.dauer)}',
-                              style: context.vp.typo.zahl),
-                          const SizedBox(height: VpAbstand.s),
                           if (s!.runde > 0)
                             Text(t.wiedergabeRunde(s.runde),
                                 style: context.vp.typo.titel),
@@ -142,8 +156,13 @@ class WiedergabeScreen extends StatelessWidget {
                                 onUeberspringen: () => l.naechster()),
                           const SizedBox(height: VpAbstand.l),
                           _AbschnittRegler(lauf: l, gemeinsam: gemeinsam.aktiv),
-                          const SizedBox(height: VpAbstand.l),
+                          Center(
+                              child: Text(hoerzeitVon(l.vergangen, l.dauer),
+                                  style: context.vp.typo.beschriftung.copyWith(
+                                      color: AppTheme.tinteLeise))),
+                          const SizedBox(height: VpAbstand.s),
                           AufnahmeStatus(
+                              kompakt: true,
                               pfade: p.abschnitte
                                   .where((s) => s.pfad != null)
                                   .map((s) => s.pfad!)
@@ -155,7 +174,10 @@ class WiedergabeScreen extends StatelessWidget {
                               geraeteStimmeMoeglich: p.abschnitte
                                   .where((s) => s.art == AbschnittArt.sprache)
                                   .every((s) => s.text.isNotEmpty)),
-                          const SizedBox(height: VpAbstand.xl),
+                          const SizedBox(height: VpAbstand.m),
+                          Text(t.wiedergabeBehalten,
+                              style: context.vp.typo.fliesstextKlein),
+                          const SizedBox(height: VpAbstand.l),
                           ExpansionTile(
                               title: Text(t.wiedergabeAbschnitte),
                               children: [

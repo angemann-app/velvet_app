@@ -2643,7 +2643,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get onboardingPersonaliseProgrammeNow => 'Fertig, los geht\'s';
 
   @override
-  String get onboardingSkipGoStraightToThe => 'Später, direkt zur App';
+  String get onboardingSkipGoStraightToThe => 'Überspringen';
 
   @override
   String onboardingVersionData(Object data) {
@@ -5441,4 +5441,51 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get fotoHinweisTrennung =>
       'Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.';
+
+  @override
+  String get yesNoMaybeInfoZeile =>
+      'Nichts muss beantwortet werden. Ein „Lieber nicht“ sieht dein Gegenüber nie.';
+
+  @override
+  String get yesNoMaybeAlleKurz => 'Alle';
+
+  @override
+  String lektionEyebrow(Object durationMin) {
+    return 'Lektion · $durationMin Min.';
+  }
+
+  @override
+  String lektionEyebrowAudio(Object durationMin) {
+    return 'Audio-Übung · $durationMin Min.';
+  }
+
+  @override
+  String playerZeit(String vergangen, String gesamt) {
+    return '$vergangen von $gesamt';
+  }
+
+  @override
+  String wiedergabeTeil(int nr, int anzahl) {
+    return 'Teil $nr von $anzahl';
+  }
+
+  @override
+  String kegelRunden(int n) {
+    return '$n Runden';
+  }
+
+  @override
+  String get kegelStufeLeicht => 'leicht';
+
+  @override
+  String get kegelStufeMittel => 'mittel';
+
+  @override
+  String get kegelStufeStark => 'stark';
+
+  @override
+  String get kegelMitStimme => 'mit Stimme';
+
+  @override
+  String get kegelNurVibration => 'nur Vibration';
 }

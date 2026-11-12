@@ -53,6 +53,8 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
   KegelLevel _level = KegelLevel.leicht;
   int _totalRounds = 10;
   bool _voiceCues = true;
+  bool _programmOffen = false;
+  bool _einstellungenOffen = false;
 
   bool _isRunning = false;
   int _currentRound = 1;
@@ -343,11 +345,18 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
     final currentPhase = phases[_currentPhaseIndex];
     final minutes = (_totalSeconds / 60).ceil();
 
+    return LayoutBuilder(builder: (context, box) {
+    // Der Kreis wird in den freien Platz eingepasst, damit er vollständig sichtbar bleibt (Rest der Seite: ca. 420 pt,
+    // der Kreis atmet bis zum 1,2-Fachen).
+    final kreis = ((box.maxHeight - 420) / 1.2).clamp(140.0, 200.0);
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       child: Column(
         children: [
-          // Übungsart
+          // Zwei leise Zeilen statt zweier offener Kästen: Programm und Einstellungen klappen bei Bedarf auf.
+          _auswahlZeile(Icons.tune_rounded, _programmZusammenfassung(), _programmOffen, () => setState(() => _programmOffen = !_programmOffen)),
+          if (_programmOffen) ...[
+            const SizedBox(height: 6),
           Container(
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
@@ -373,10 +382,11 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               ],
             ),
           ),
-
-          const SizedBox(height: 12),
-
-          // Einstellungen
+          ],
+          const SizedBox(height: 6),
+          _auswahlZeile(Icons.settings_outlined, _einstellungenZusammenfassung(minutes), _einstellungenOffen, () => setState(() => _einstellungenOffen = !_einstellungenOffen)),
+          if (_einstellungenOffen) ...[
+            const SizedBox(height: 6),
           Container(
             padding: const EdgeInsets.fromLTRB(14, 10, 8, 10),
             decoration: BoxDecoration(
@@ -397,9 +407,9 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                 if (_selectedPreset != KegelPreset.impulse) ...[
                   const SizedBox(height: 8),
                   Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [SizedBox(width: 64, child: Text(t.kegelTimerViewLevel, style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5))),
-                      _buildOptionChip('leicht', _level == KegelLevel.leicht, () => _changeSettings(() => _level = KegelLevel.leicht)),
-                      _buildOptionChip('mittel', _level == KegelLevel.mittel, () => _changeSettings(() => _level = KegelLevel.mittel)),
-                      _buildOptionChip('stark', _level == KegelLevel.fortgeschritten,
+                      _buildOptionChip(t.kegelStufeLeicht, _level == KegelLevel.leicht, () => _changeSettings(() => _level = KegelLevel.leicht)),
+                      _buildOptionChip(t.kegelStufeMittel, _level == KegelLevel.mittel, () => _changeSettings(() => _level = KegelLevel.mittel)),
+                      _buildOptionChip(t.kegelStufeStark, _level == KegelLevel.fortgeschritten,
                           () => _changeSettings(() => _level = KegelLevel.fortgeschritten)),
                     ],
                   ),
@@ -426,6 +436,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
               ],
             ),
           ),
+          ],
 
           const SizedBox(height: 16),
 
@@ -439,10 +450,12 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
             ],
           ),
 
-          const SizedBox(height: 28),
+          const SizedBox(height: 16),
 
           // Atmender Kreis
-          Center(
+          SizedBox(
+            height: kreis * 1.2,
+            child: Center(
             child: AnimatedBuilder(
               animation: _animController,
               builder: (context, child) {
@@ -450,15 +463,16 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                 return Transform.scale(
                   scale: currentPhase.circleScaleTarget + pulse,
                   child: Container(
-                    width: 210,
-                    height: 210,
+                    width: kreis,
+                    height: kreis,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: currentPhase.color.withValues(alpha: 0.10),
                       border: Border.all(color: currentPhase.color, width: 3.5),
                     ),
                     child: Center(
-                      child: Column(
+                      // Bei kleinem Kreis oder großer Schrift schrumpft der Inhalt, statt überzulaufen.
+                      child: MediaQuery.withClampedTextScaling(maxScaleFactor: 1.15, child: FittedBox(fit: BoxFit.scaleDown, child: ConstrainedBox(constraints: BoxConstraints(maxWidth: kreis - 16), child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
@@ -477,15 +491,15 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                             ),
                           ),
                         ],
-                      ),
+                      )))),
                     ),
                   ),
                 );
               },
             ),
-          ),
+          )),
 
-          const SizedBox(height: 28),
+          const SizedBox(height: 16),
 
           // Anweisung
           Container(
@@ -575,6 +589,59 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
 
           const SizedBox(height: 24),
         ],
+      ),
+    );
+    });
+  }
+
+  (String, String) _presetTexte() => switch (_selectedPreset) {
+        KegelPreset.loslassen => (t.kegelTimerViewLetGo, t.kegelTimerViewWiden),
+        KegelPreset.kraeftigen => (t.kegelTimerViewStrengthen, t.kegelTimerViewHoldRelease),
+        KegelPreset.impulse => (t.kegelTimerViewQuickPulses, t.kegelTimerViewQuickOnQuickOff),
+        KegelPreset.wellen => (t.kegelTimerViewWaves, t.kegelTimerViewSoftWhenAroused),
+      };
+
+  String _programmZusammenfassung() {
+    final (name, sub) = _presetTexte();
+    return '$name · $sub';
+  }
+
+  String _einstellungenZusammenfassung(int minuten) {
+    final stufe = switch (_level) {
+      KegelLevel.leicht => t.kegelStufeLeicht,
+      KegelLevel.mittel => t.kegelStufeMittel,
+      _ => t.kegelStufeStark,
+    };
+    return [
+      t.kegelRunden(_totalRounds),
+      if (_selectedPreset != KegelPreset.impulse) stufe,
+      _voiceCues ? t.kegelMitStimme : t.kegelNurVibration,
+    ].join(' · ');
+  }
+
+  /// Eine aufklappbare Zeile (ganze Zeile ist die Tippfläche, mindestens 48 pt).
+  Widget _auswahlZeile(IconData icon, String text, bool offen, VoidCallback onTap) {
+    return Semantics(
+      button: true,
+      expanded: offen,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        child: Container(
+          constraints: const BoxConstraints(minHeight: 48),
+          padding: const EdgeInsets.symmetric(horizontal: 14),
+          decoration: BoxDecoration(
+            color: AppTheme.papierErhoben,
+            borderRadius: BorderRadius.circular(VpRadius.karte),
+            border: Border.all(color: AppTheme.linie, width: VpLinie.haar),
+          ),
+          child: Row(children: [
+            Icon(icon, size: 18, color: AppTheme.tinteLeise),
+            const SizedBox(width: 10),
+            Expanded(child: Text(text, style: TextStyle(color: AppTheme.tinte, fontSize: 14, fontWeight: FontWeight.w600))),
+            Icon(offen ? Icons.expand_less_rounded : Icons.expand_more_rounded, color: AppTheme.tinteLeise),
+          ]),
+        ),
       ),
     );
   }

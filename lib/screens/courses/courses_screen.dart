@@ -22,7 +22,6 @@ import '../couples_channel/invite_partner.dart';
 import '../couples_channel/pairing_modal.dart';
 import '../couples_channel/paar_abend_screen.dart';
 import '../../services/audio_gruppen.dart';
-import '../onboarding/onboarding_screen.dart';
 import 'lesson_detail_screen.dart';
 import '../../l10n/t.dart';
 
@@ -101,16 +100,6 @@ class _CoursesScreenState extends State<CoursesScreen> {
         // Keine Vorbelegung des Filters nach Geschlecht: Standard ist „Alle Kurse“ (Konzept eine-tonlage.md).
       });
     }
-  }
-
-  void _openProfileEditor() async {
-    await Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => const OnboardingScreen(isEditing: true),
-      ),
-    );
-    // Immer neu laden: auch ohne Speichern kann sich z. B. der Spicy-Modus geändert haben.
-    _loadData();
   }
 
   void _onLessonTap(Course course, Lesson lesson) async {
@@ -246,8 +235,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
             _buildKurseKarte(filteredCourses.length),
           ] else ...[
             // Filter nach Zielgruppe
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
+            _RandAuslauf(
               child: Row(
                 children: [
                   _buildCategoryChip('all', t.coursesAllCourses, Icons.apps_rounded),
@@ -472,12 +460,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
             ],
           ),
         ),
-        IconButton(
-          onPressed: _openProfileEditor,
-          tooltip: t.coursesProfileSettings,
-          visualDensity: VisualDensity.compact,
-          icon: Icon(Icons.account_circle_outlined, color: AppTheme.akzentTief, size: 30),
-        ),
+        // Das Profil-Symbol sitzt in der oberen Reihe (main_navigation_screen.dart), neben Suche und Hilfe.
       ],
     );
   }
@@ -516,7 +499,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
       n.$2.title,
       style: spicy ? typo.ueberschrift.copyWith(fontSize: 26, fontStyle: FontStyle.italic, color: AppTheme.aufBild) : typo.ueberschrift,
     );
-    final bildHoehe = spicy ? 300.0 : 190.0;
+    // Niedrig, damit „Für heute“ ohne Scrollen sichtbar bleibt (Spicy etwas höher für die Poster-Wirkung).
+    final bildHoehe = spicy ? 168.0 : 92.0;
     return VpKarte(
       rahmen: VpRahmen.gerahmt,
       padding: EdgeInsets.zero,
@@ -623,6 +607,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
         expanded: offen,
         child: InkWell(
           onTap: () => setState(() => _offen = offen ? ({..._offen!}..remove(s)) : {..._offen!, s}),
+          // Die ganze Kopfzeile ist die Tippfläche; der Pfeil zeigt, ob der Schwerpunkt offen oder zu ist.
           child: Padding(
             padding: const EdgeInsets.only(top: VpAbstand.l),
             child: VpAbschnitt(
@@ -631,8 +616,12 @@ class _CoursesScreenState extends State<CoursesScreen> {
               text: _schwerpunktText(s),
               linie: false,
               trailing: Padding(
-                padding: const EdgeInsets.only(left: VpAbstand.m),
-                child: Icon(offen ? Icons.remove_rounded : Icons.add_rounded, color: AppTheme.tinteStumm, size: 22),
+                padding: const EdgeInsets.only(left: VpAbstand.s),
+                child: SizedBox(
+                  width: 48,
+                  height: 48,
+                  child: Icon(offen ? Icons.expand_less_rounded : Icons.expand_more_rounded, color: AppTheme.tinteLeise, size: 28),
+                ),
               ),
             ),
           ),
@@ -774,5 +763,49 @@ class _HeuteReiterState extends State<_HeuteReiter> {
       const SizedBox(height: VpAbstand.m),
       if (_gewaehlt == 0) const DailyCheckInCard() else const DailySimmeringCard(),
     ]);
+  }
+}
+
+
+/// Waagerechte Leiste, die rechts weich ausläuft, solange es weitergeht; am Ende verschwindet der Auslauf.
+/// (Zeigt, dass die Filterchips scrollbar sind, ohne ein zusätzliches Symbol.)
+class _RandAuslauf extends StatefulWidget {
+  final Widget child;
+  const _RandAuslauf({required this.child});
+
+  @override
+  State<_RandAuslauf> createState() => _RandAuslaufState();
+}
+
+class _RandAuslaufState extends State<_RandAuslauf> {
+  bool _amEnde = false;
+
+  bool _pruefe(ScrollMetrics m) {
+    final ende = m.extentAfter < 2;
+    if (ende != _amEnde) setState(() => _amEnde = ende);
+    return false;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return NotificationListener<ScrollMetricsNotification>(
+      onNotification: (n) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) _pruefe(n.metrics);
+        });
+        return false;
+      },
+      child: NotificationListener<ScrollNotification>(
+        onNotification: (n) => _pruefe(n.metrics),
+        child: ShaderMask(
+          shaderCallback: (rect) => LinearGradient(
+            colors: [Colors.white, Colors.white, _amEnde ? Colors.white : Colors.transparent],
+            stops: const [0, 0.88, 1],
+          ).createShader(rect),
+          blendMode: BlendMode.dstIn,
+          child: SingleChildScrollView(scrollDirection: Axis.horizontal, child: widget.child),
+        ),
+      ),
+    );
   }
 }

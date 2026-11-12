@@ -4563,7 +4563,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingSkipGoStraightToThe.
   ///
   /// In de, this message translates to:
-  /// **'Später, direkt zur App'**
+  /// **'Überspringen'**
   String get onboardingSkipGoStraightToThe;
 
   /// No description provided for @onboardingVersionData.
@@ -9277,6 +9277,78 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.'**
   String get fotoHinweisTrennung;
+
+  /// No description provided for @yesNoMaybeInfoZeile.
+  ///
+  /// In de, this message translates to:
+  /// **'Nichts muss beantwortet werden. Ein „Lieber nicht“ sieht dein Gegenüber nie.'**
+  String get yesNoMaybeInfoZeile;
+
+  /// No description provided for @yesNoMaybeAlleKurz.
+  ///
+  /// In de, this message translates to:
+  /// **'Alle'**
+  String get yesNoMaybeAlleKurz;
+
+  /// No description provided for @lektionEyebrow.
+  ///
+  /// In de, this message translates to:
+  /// **'Lektion · {durationMin} Min.'**
+  String lektionEyebrow(Object durationMin);
+
+  /// No description provided for @lektionEyebrowAudio.
+  ///
+  /// In de, this message translates to:
+  /// **'Audio-Übung · {durationMin} Min.'**
+  String lektionEyebrowAudio(Object durationMin);
+
+  /// No description provided for @playerZeit.
+  ///
+  /// In de, this message translates to:
+  /// **'{vergangen} von {gesamt}'**
+  String playerZeit(String vergangen, String gesamt);
+
+  /// No description provided for @wiedergabeTeil.
+  ///
+  /// In de, this message translates to:
+  /// **'Teil {nr} von {anzahl}'**
+  String wiedergabeTeil(int nr, int anzahl);
+
+  /// No description provided for @kegelRunden.
+  ///
+  /// In de, this message translates to:
+  /// **'{n} Runden'**
+  String kegelRunden(int n);
+
+  /// No description provided for @kegelStufeLeicht.
+  ///
+  /// In de, this message translates to:
+  /// **'leicht'**
+  String get kegelStufeLeicht;
+
+  /// No description provided for @kegelStufeMittel.
+  ///
+  /// In de, this message translates to:
+  /// **'mittel'**
+  String get kegelStufeMittel;
+
+  /// No description provided for @kegelStufeStark.
+  ///
+  /// In de, this message translates to:
+  /// **'stark'**
+  String get kegelStufeStark;
+
+  /// No description provided for @kegelMitStimme.
+  ///
+  /// In de, this message translates to:
+  /// **'mit Stimme'**
+  String get kegelMitStimme;
+
+  /// No description provided for @kegelNurVibration.
+  ///
+  /// In de, this message translates to:
+  /// **'nur Vibration'**
+  String get kegelNurVibration;
 }
 
 class _AppLocalizationsDelegate

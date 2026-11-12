@@ -64,6 +64,8 @@ class BackupCodec {
     'koerperVoreinstellung': String,
     // Fantasie-Hinweis einmal gesehen (docs/konzepte/privatsphaere-schutz.md, c).
     'fantasieHinweisGesehen': bool,
+    // Fantasie-Landkarte: Erklärkasten nach dem ersten Besuch eingeklappt.
+    'ynmInfoGesehen': bool,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.

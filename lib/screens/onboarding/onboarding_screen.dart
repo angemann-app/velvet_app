@@ -700,17 +700,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                Center(
-                  child: Text(
-                    t.onboardingYourPrivateCoachingProgrammeFor,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 13,
-                      color: AppTheme.tinteLeise,
-                      height: 1.4,
-                    ),
-                  ),
-                ),
+                // Platz für die Unterzeile unter dem Willkommen, zwei Zeilen hoch. Der Wortlaut kommt aus dem Text-Paket;
+                // bis dahin bleibt die Zeile leer (der frühere Satz ist ausgeblendet, `onboardingYourPrivateCoachingProgrammeFor`
+                // ist noch in den ARB-Dateien).
+                const SizedBox(height: 36),
                 const SizedBox(height: 18),
                 _buildVersprechen(),
                 const SizedBox(height: 16),
@@ -1020,10 +1013,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Center(
                   child: TextButton.icon(
                     onPressed: _isSubmitting ? null : _ueberspringen,
-                    icon: Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.tinteStumm),
+                    icon: Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.tinteLeise),
                     label: Text(
                       t.onboardingSkipGoStraightToThe,
-                      style: TextStyle(color: AppTheme.tinteStumm, fontSize: 13),
+                      style: TextStyle(color: AppTheme.tinteLeise, fontSize: 14),
                     ),
                   ),
                 ),
@@ -1776,12 +1769,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               Icon(Icons.waving_hand_rounded, color: AppTheme.akzentTief, size: 20),
               const SizedBox(width: 8),
-              Text(
-                t.halloTitel,
-                style: TextStyle(
-                  color: AppTheme.tinte,
-                  fontSize: 14.5,
-                  fontWeight: FontWeight.w700,
+              Expanded(
+                child: Text(
+                  t.halloTitel,
+                  style: TextStyle(
+                    color: AppTheme.tinte,
+                    fontSize: 14.5,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ],
