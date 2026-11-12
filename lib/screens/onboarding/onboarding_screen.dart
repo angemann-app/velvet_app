@@ -39,7 +39,12 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final TextEditingController _nameController = TextEditingController();
-  String _selectedGender = 'male';
+  // Keine Vorauswahl: wer nichts wählt, wird als "Keine Angabe" ('unspecified') gespeichert.
+  String? _selectedGender;
+  // Körper-Voreinstellung (nur im Profil): 'vulva', 'penis', 'beides' oder null (später fragen).
+  String? _koerper = StorageService.getKoerperVoreinstellung();
+  // Ob der Fokus bewusst gewählt wurde; sonst speichert "Überspringen" den neutralen Fokus 'open'.
+  bool _zielGewaehlt = false;
   int _selectedAge = 32;
   String _selectedRelationship = 'relationship';
   String _selectedGoal = 'performance_anxiety';
@@ -69,6 +74,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       _selectedAge = existing.age;
       _selectedRelationship = existing.relationshipStatus;
       _selectedGoal = existing.primaryGoal;
+      _zielGewaehlt = true;
     }
   }
 
@@ -86,7 +92,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       final name = _nameController.text.trim().isEmpty ? t.onboardingGuest : _nameController.text.trim();
       final profile = UserProfile(
         name: name,
-        gender: _selectedGender,
+        gender: _selectedGender ?? 'unspecified',
         age: _selectedAge,
         relationshipStatus: _selectedRelationship,
         primaryGoal: _selectedGoal,
@@ -624,43 +630,33 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm),
               ),
               const SizedBox(height: 10),
+              // 2×2-Raster: Frau, Mann, Divers, Keine Angabe (keine Vorauswahl)
               Row(
                 children: [
-                  Expanded(
-                    child: _buildSelectCard(
-                      id: 'male',
-                      current: _selectedGender,
-                      label: t.onboardingMale,
-                      icon: Icons.male_rounded,
-                      activeColor: AppTheme.akzent,
-                      onTap: () => setState(() => _selectedGender = 'male'),
-                    ),
-                  ),
+                  Expanded(child: _geschlechtKarte('female', t.onboardingFemale, Icons.female_rounded)),
                   const SizedBox(width: 10),
-                  Expanded(
-                    child: _buildSelectCard(
-                      id: 'female',
-                      current: _selectedGender,
-                      label: t.onboardingFemale,
-                      icon: Icons.female_rounded,
-                      activeColor: AppTheme.akzentTief,
-                      onTap: () => setState(() => _selectedGender = 'female'),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: _buildSelectCard(
-                      id: 'other',
-                      current: _selectedGender,
-                      label: t.partnerProfileDialogNonBinary,
-                      icon: Icons.all_inclusive_rounded,
-                      activeColor: AppTheme.akzentTief,
-                      onTap: () => setState(() => _selectedGender = 'other'),
-                    ),
-                  ),
+                  Expanded(child: _geschlechtKarte('male', t.onboardingMale, Icons.male_rounded)),
                 ],
               ),
-
+              const SizedBox(height: 10),
+              Row(
+                children: [
+                  Expanded(child: _geschlechtKarte('other', t.partnerProfileDialogNonBinary, Icons.all_inclusive_rounded)),
+                  const SizedBox(width: 10),
+                  Expanded(
+                      child: _geschlechtKarte(
+                          'unspecified', t.partnerProfileDialogNotSpecified, Icons.radio_button_unchecked_rounded)),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Text(
+                t.onboardingGenderWeitergehen,
+                style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm),
+              ),
+              if (widget.isEditing) ...[
+                const SizedBox(height: 20),
+                _buildKoerperKarte(),
+              ],
               ],
 
               // 3. Age
@@ -808,10 +804,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         : () async {
                             final defaultProfile = UserProfile(
                               name: t.paarAbendYou,
-                              gender: _selectedGender,
+                              gender: _selectedGender ?? 'unspecified',
                               age: _selectedAge,
                               relationshipStatus: _selectedRelationship,
-                              primaryGoal: _selectedGoal,
+                              primaryGoal: _zielGewaehlt ? _selectedGoal : 'open',
                             );
                             try {
                               await StorageService.saveUserProfile(defaultProfile);
@@ -933,21 +929,72 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       children: [
         Icon(icon, color: AppTheme.akzentTief, size: 18),
         const SizedBox(width: 8),
-        Text(
-          title,
-          style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w700,
-            color: AppTheme.tinte,
+        Expanded(
+          child: Text(
+            title,
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w700,
+              color: AppTheme.tinte,
+            ),
           ),
         ),
       ],
     );
   }
 
+  Widget _geschlechtKarte(String id, String label, IconData icon) => _buildSelectCard(
+        id: id,
+        current: _selectedGender,
+        label: label,
+        icon: icon,
+        activeColor: AppTheme.akzentTief,
+        onTap: () => setState(() => _selectedGender = id),
+      );
+
+  /// Körper-Voreinstellung (nur im Profil, freiwillig, unabhängig vom Geschlecht). Wird sofort gespeichert.
+  Widget _buildKoerperKarte() {
+    Future<void> waehlen(String? wert) async {
+      setState(() => _koerper = wert);
+      await StorageService.setKoerperVoreinstellung(wert);
+    }
+
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(t.onboardingKoerperTitel, style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
+          const SizedBox(height: 4),
+          Text(t.onboardingKoerperText, style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm, height: 1.35)),
+          const SizedBox(height: 10),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              _buildChoiceChip(
+                  id: 'vulva', current: _koerper ?? '', label: t.onboardingKoerperVulva, onTap: () => waehlen('vulva')),
+              _buildChoiceChip(
+                  id: 'penis', current: _koerper ?? '', label: t.onboardingKoerperPenis, onTap: () => waehlen('penis')),
+              _buildChoiceChip(
+                  id: 'beides', current: _koerper ?? '', label: t.onboardingKoerperBeides, onTap: () => waehlen('beides')),
+              _buildChoiceChip(
+                  id: '', current: _koerper ?? '', label: t.onboardingKoerperSpaeter, onTap: () => waehlen(null)),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildSelectCard({
     required String id,
-    required String current,
+    required String? current,
     required String label,
     required IconData icon,
     required Color activeColor,
@@ -958,7 +1005,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       onTap: onTap,
       borderRadius: BorderRadius.circular(VpRadius.karte),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 14),
+        constraints: const BoxConstraints(minHeight: 72),
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 6),
+        alignment: Alignment.center,
         decoration: BoxDecoration(
           color: isSelected ? activeColor.withValues(alpha: 0.18) : AppTheme.papierErhoben,
           borderRadius: BorderRadius.circular(VpRadius.karte),
@@ -968,11 +1017,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
         ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Icon(icon, color: isSelected ? activeColor : AppTheme.tinteLeise, size: 24),
             const SizedBox(height: 6),
             Text(
               label,
+              maxLines: 2,
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
@@ -1024,7 +1076,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }) {
     final isSelected = _selectedGoal == id;
     return InkWell(
-      onTap: () => setState(() => _selectedGoal = id),
+      onTap: () => setState(() {
+        _selectedGoal = id;
+        _zielGewaehlt = true;
+      }),
       borderRadius: BorderRadius.circular(VpRadius.karte),
       child: Container(
         padding: const EdgeInsets.all(14),
@@ -1431,12 +1486,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               Icon(Icons.shield_rounded, color: AppTheme.akzentTief, size: 20),
               SizedBox(width: 8),
-              Text(
-                t.onboardingPrivacyUpdateSafety,
-                style: TextStyle(
-                  color: AppTheme.tinte,
-                  fontSize: 14.5,
-                  fontWeight: FontWeight.w700,
+              Expanded(
+                child: Text(
+                  t.onboardingPrivacyUpdateSafety,
+                  style: TextStyle(
+                    color: AppTheme.tinte,
+                    fontSize: 14.5,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ],

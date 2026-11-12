@@ -1,10 +1,10 @@
 
 import '../l10n/t.dart';class UserProfile {
   final String name;
-  final String gender; // 'male', 'female', 'other'
+  final String gender; // 'male', 'female', 'other' (Divers), 'unspecified' (Keine Angabe; auch Standard bei Altdaten ohne Wert)
   final int age;
   final String relationshipStatus; // 'relationship', 'dating', 'single', 'complicated'
-  final String primaryGoal; // 'performance_anxiety', 'pelvic_somatics', 'couple_intimacy', 'body_pleasure'
+  final String primaryGoal; // 'performance_anxiety', 'pelvic_somatics', 'couple_intimacy', 'body_pleasure'; 'open' = Erstmal umsehen (nur beim Überspringen, keine Kachel)
 
   UserProfile({
     required this.name,
@@ -24,8 +24,10 @@ import '../l10n/t.dart';class UserProfile {
         return t.onboardingFemale;
       case 'male':
         return t.onboardingMale;
-      default:
+      case 'other':
         return t.userProfileNonBinaryOpen;
+      default:
+        return t.partnerProfileDialogNotSpecified;
     }
   }
 
@@ -50,6 +52,8 @@ import '../l10n/t.dart';class UserProfile {
         return t.userProfileCoupleIntimacyCloseness;
       case 'body_pleasure':
         return t.userProfileDesireRelaxation;
+      case 'open':
+        return t.userProfileJustLookingAround;
       default:
         return t.userProfileEasingPerformancePressure;
     }
@@ -63,9 +67,15 @@ import '../l10n/t.dart';class UserProfile {
         'primary_goal': primaryGoal,
       };
 
+  /// Gespeicherte Werte bleiben; fehlende oder unbekannte werden zu 'unspecified'.
+  static String _normGender(Object? roh) {
+    const erlaubt = {'male', 'female', 'other', 'unspecified'};
+    return roh is String && erlaubt.contains(roh) ? roh : 'unspecified';
+  }
+
   factory UserProfile.fromJson(Map<String, dynamic> json) => UserProfile(
         name: json['name'] as String? ?? t.onboardingGuest,
-        gender: json['gender'] as String? ?? 'male',
+        gender: _normGender(json['gender']),
         age: (json['age'] as num?)?.toInt() ?? 30,
         relationshipStatus: json['relationship_status'] as String? ?? 'relationship',
         primaryGoal: json['primary_goal'] as String? ?? 'performance_anxiety',

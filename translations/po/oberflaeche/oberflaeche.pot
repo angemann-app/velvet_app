@@ -4384,27 +4384,69 @@ msgid "Dein Vorname oder Pseudonym"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: 2. Your gender
+#. EN: 2. Your gender (optional)
 msgctxt "ui:onboardingYourGender#text"
-msgid "2. Dein Geschlecht"
+msgid "2. Dein Geschlecht (freiwillig)"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Adjusts course recommendations, pelvic floor content and AI answers.
+#. EN: We only use this to suggest a voice and a first selection of courses, and to keep lessons clear when they talk about “she” or “he”. You can change it any time, and it stays on your phone. “Not specified” is completely fine.
 msgctxt "ui:onboardingAdjustsCourseRecommendationsPelvicFloor#text"
-msgid "Passt Kursempfehlungen, Beckenboden-Physiologie und KI-Antworten an."
+msgid "Wir nutzen das nur, um dir eine passende Stimme und eine erste Kursauswahl vorzuschlagen und um Lektionen verständlich zu halten, wenn von „sie“ oder „er“ die Rede ist. Du kannst es jederzeit ändern, und es bleibt auf deinem Handy. „Keine Angabe“ ist völlig in Ordnung."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Male
+#. EN: Man
 msgctxt "ui:onboardingMale#text"
-msgid "Männlich"
+msgid "Mann"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Female
+#. EN: Woman
 msgctxt "ui:onboardingFemale#text"
-msgid "Weiblich"
+msgid "Frau"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You can also just carry on.
+msgctxt "ui:onboardingGenderWeitergehen#text"
+msgid "Du kannst auch einfach weitergehen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Body-related exercises (optional)
+msgctxt "ui:onboardingKoerperTitel#text"
+msgid "Körperbezogene Übungen (freiwillig)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Some exercises and body journeys speak about the body very concretely. So we don't suggest anything that doesn't fit you: which description fits best? This is separate from your gender. You can skip it, and we'll only ask when an exercise needs it.
+msgctxt "ui:onboardingKoerperText#text"
+msgid "Manche Übungen und Körperreisen sprechen den Körper ganz konkret an. Damit wir dir nichts vorschlagen, das nicht zu dir passt: Welche Beschreibung stimmt am ehesten? Das ist unabhängig von deinem Geschlecht. Du kannst überspringen, dann fragen wir erst, wenn eine Übung es braucht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Vulva
+msgctxt "ui:onboardingKoerperVulva#text"
+msgid "Vulva"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Penis
+msgctxt "ui:onboardingKoerperPenis#text"
+msgid "Penis"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Both, or something else
+msgctxt "ui:onboardingKoerperBeides#text"
+msgid "Beides oder anders"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Ask me later
+msgctxt "ui:onboardingKoerperSpaeter#text"
+msgid "Später fragen"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {selectedAge}
@@ -5242,6 +5284,12 @@ msgstr ""
 #. EN: Desire & relaxation
 msgctxt "ui:userProfileDesireRelaxation#text"
 msgid "Lust & Entspannung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Just looking around
+msgctxt "ui:userProfileJustLookingAround#text"
+msgid "Erstmal umsehen"
 msgstr ""
 
 #. Text der Oberfläche

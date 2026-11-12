@@ -80,15 +80,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
         _completedLessonIds = completed;
         _profile = profile;
         _isLoading = false;
-
-        // Nur solange nie gewählt wurde, schlägt das Profil einen Filter vor; wer „Alle Kurse“ gewählt hat, behält das.
-        if (StorageService.getKursFilter() == null && _selectedCategory == 'all' && profile != null) {
-          if (profile.isFemale) {
-            _selectedCategory = 'women';
-          } else if (profile.isMale) {
-            _selectedCategory = 'men';
-          }
-        }
+        // Keine Vorbelegung des Filters nach Geschlecht: Standard ist „Alle Kurse“ (Konzept eine-tonlage.md).
       });
     }
   }
@@ -316,7 +308,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
               Text(_profile != null ? t.coursesHelloProfilename(_profile!.name) : t.coursesWelcome, style: anzeige),
               const SizedBox(height: VpAbstand.s),
               Text(
-                _profile != null ? t.coursesYourFocusGoallabel(_profile!.goalLabel) : t.coursesUnderstandTheBiologyQuietThe,
+                // Beim neutralen Fokus 'open' (Erstmal umsehen) steht keine Fokus-Zeile, sondern der freundliche Text.
+                _profile != null && _profile!.primaryGoal != 'open'
+                    ? t.coursesYourFocusGoallabel(_profile!.goalLabel)
+                    : t.coursesUnderstandTheBiologyQuietThe,
                 style: typo.fliesstextKlein,
               ),
               const SizedBox(height: VpAbstand.s),

@@ -57,14 +57,13 @@ class _LustImTraumScreenState extends State<LustImTraumScreen> {
   Future<void> _laden() async {
     final prefs = await SharedPreferences.getInstance();
     final daten = await LustDaten.laden();
-    final profil = StorageService.getUserProfile();
     final fortschritt = StorageService.getLustFortschritt();
     if (!mounted) return;
     setState(() {
       _daten = daten;
       _geladen = true;
       _fortschritt = fortschritt;
-      _bett = prefs.getString(_keyBett) ?? (profil?.isMale == true ? 'penis' : 'vulva');
+      _bett = prefs.getString(_keyBett) ?? StorageService.koerperVorschlag();
       _traumKoerper = prefs.getString(_keyTraumkoerper);
       _gegenueber = prefs.getString(_keyGegenueber) ?? 'niemand';
       // Vorauswahl: die höchste freie Folge.

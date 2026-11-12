@@ -125,20 +125,23 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
         context, () => WiedergabeDienst.instanz.starten(plan));
   }
 
-  /// Körper der Person, die in Runde 1 und 2 empfängt. Das Gegenüber kommt aus dem Paar-Kanal;
-  /// ist es unbekannt, nehmen wir bei Mann und Frau das andere Geschlecht an (wie bei den Coach-Fragen).
+  /// Körper der Person, die in Runde 1 und 2 empfängt. Eigener Körper: die gespeicherte Wahl, sonst
+  /// aus dem Geschlecht (Frau, Mann; sonst offen). Das Gegenüber kommt aus dem Paar-Kanal; ist es
+  /// unbekannt oder divers, bleibt der Körper offen (null), es wird nichts angenommen.
   List<String?> _empfaenger() {
     String? koerper(String? geschlecht) => switch (geschlecht) {
           'female' => 'vulva',
           'male' => 'penis',
           _ => null
         };
-    final ich = StorageService.getUserProfile()?.gender;
+    final gewaehlt = StorageService.getKoerperVoreinstellung();
+    final ich = (gewaehlt == 'vulva' || gewaehlt == 'penis')
+        ? gewaehlt
+        : koerper(StorageService.getUserProfile()?.gender);
     final nostr = NostrService();
-    final du = (nostr.isPaired ? nostr.partnerGenderNotifier.value : null) ??
-        switch (ich) { 'male' => 'female', 'female' => 'male', _ => null };
+    final du = koerper(nostr.isPaired ? nostr.partnerGenderNotifier.value : null);
     final (erste, zweite) = _ichZuerst ? (du, ich) : (ich, du);
-    return [koerper(erste), koerper(zweite)];
+    return [erste, zweite];
   }
 
   // ---------------------------------------------------------------------------

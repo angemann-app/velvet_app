@@ -371,6 +371,41 @@ void main() {
         reason: 'die Wahl auf diesem Gerät gewinnt');
   });
   test(
+      'Körper-Voreinstellung: Standard leer, Wahl steht in der Sicherung, eigene Wahl gewinnt, fehlende wird übernommen',
+      () async {
+    expect(StorageService.getKoerperVoreinstellung(), isNull);
+    expect(StorageService.koerperVorschlag(), 'vulva',
+        reason: 'ohne Wahl und ohne Mann: wie bisher vulva');
+
+    await StorageService.setKoerperVoreinstellung('unsinn');
+    expect(StorageService.getKoerperVoreinstellung(), isNull,
+        reason: 'unbekannte Werte werden nicht gespeichert');
+
+    await StorageService.setKoerperVoreinstellung('penis');
+    expect(StorageService.getKoerperVoreinstellung(), 'penis');
+    expect(StorageService.koerperVorschlag(), 'penis');
+
+    final export = StorageService.exportAllUserData();
+    expect(export['koerperVoreinstellung'], 'penis');
+
+    // Anderer Wert auf diesem Gerät: die eigene Wahl gewinnt.
+    await StorageService.setKoerperVoreinstellung('vulva');
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getKoerperVoreinstellung(), 'vulva');
+
+    // Nicht gesetzt: die Sicherung füllt auf.
+    await StorageService.setKoerperVoreinstellung(null);
+    expect(StorageService.getKoerperVoreinstellung(), isNull);
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.getKoerperVoreinstellung(), 'penis');
+
+    // „Beides“ bleibt gespeichert, der Vorschlag für Einzelwahl fällt auf das Geschlecht zurück.
+    await StorageService.setKoerperVoreinstellung('beides');
+    expect(StorageService.getKoerperVoreinstellung(), 'beides');
+    expect(StorageService.koerperVorschlag(), 'vulva');
+  });
+
+  test(
       'Audio-Bereich auf der Startseite: standardmäßig offen, Wahl wird gemerkt, steht in der Sicherung, eigene Wahl gewinnt',
       () async {
     expect(StorageService.getAudioBereichOffen(), isTrue,

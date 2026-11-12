@@ -2547,17 +2547,39 @@ class AppLocalizationsEn extends AppLocalizations {
   String get onboardingYourFirstNameOrA => 'Your first name or a nickname';
 
   @override
-  String get onboardingYourGender => '2. Your gender';
+  String get onboardingYourGender => '2. Your gender (optional)';
 
   @override
   String get onboardingAdjustsCourseRecommendationsPelvicFloor =>
-      'Adjusts course recommendations, pelvic floor content and AI answers.';
+      'We only use this to suggest a voice and a first selection of courses, and to keep lessons clear when they talk about “she” or “he”. You can change it any time, and it stays on your phone. “Not specified” is completely fine.';
 
   @override
-  String get onboardingMale => 'Male';
+  String get onboardingMale => 'Man';
 
   @override
-  String get onboardingFemale => 'Female';
+  String get onboardingFemale => 'Woman';
+
+  @override
+  String get onboardingGenderWeitergehen => 'You can also just carry on.';
+
+  @override
+  String get onboardingKoerperTitel => 'Body-related exercises (optional)';
+
+  @override
+  String get onboardingKoerperText =>
+      'Some exercises and body journeys speak about the body very concretely. So we don\'t suggest anything that doesn\'t fit you: which description fits best? This is separate from your gender. You can skip it, and we\'ll only ask when an exercise needs it.';
+
+  @override
+  String get onboardingKoerperVulva => 'Vulva';
+
+  @override
+  String get onboardingKoerperPenis => 'Penis';
+
+  @override
+  String get onboardingKoerperBeides => 'Both, or something else';
+
+  @override
+  String get onboardingKoerperSpaeter => 'Ask me later';
 
   @override
   String onboardingYourAgeSelectedageYears(Object selectedAge) {
@@ -3052,6 +3074,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get userProfileDesireRelaxation => 'Desire & relaxation';
+
+  @override
+  String get userProfileJustLookingAround => 'Just looking around';
 
   @override
   String get userProfileEasingPerformancePressure => 'Less pressure';

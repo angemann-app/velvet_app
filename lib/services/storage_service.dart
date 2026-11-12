@@ -161,6 +161,7 @@ class StorageService {
   static const String _keyPausiereBeiKopfhoererGetrennt =
       'pausiere_bei_kopfhoerer_getrennt';
   static const String _keyKursFilter = 'kurs_filter';
+  static const String _keyKoerperVoreinstellung = 'koerper_voreinstellung';
   static const String _keyAudioBereichOffen = 'audio_bereich_offen';
   static const String _keyHalloGesendetAm = 'hallo_gesendet_am';
 
@@ -345,6 +346,34 @@ class StorageService {
     final prefs = await _ensurePrefs();
     await prefs.setString(_keyKursFilter, value);
     await AutoBackupService.saveAutoBackup();
+  }
+
+  /// Körper für körperbezogene Übungen, unabhängig vom Geschlecht: 'vulva', 'penis' oder 'beides'. Null = nicht gesetzt (dann wird aus dem Geschlecht vorgeschlagen).
+  static const koerperVoreinstellungWerte = {'vulva', 'penis', 'beides'};
+
+  static String? getKoerperVoreinstellung() {
+    final v = _prefs?.getString(_keyKoerperVoreinstellung);
+    return v != null && koerperVoreinstellungWerte.contains(v) ? v : null;
+  }
+
+  /// Null löscht die Wahl (zurück zu nicht gesetzt).
+  static Future<void> setKoerperVoreinstellung(String? value) async {
+    if (value != null && !koerperVoreinstellungWerte.contains(value)) return;
+    final prefs = await _ensurePrefs();
+    if (value == null) {
+      await prefs.remove(_keyKoerperVoreinstellung);
+    } else {
+      await prefs.setString(_keyKoerperVoreinstellung, value);
+    }
+    await AutoBackupService.saveAutoBackup();
+  }
+
+  /// Körper-Vorschlag für Übungen mit nur einer Wahl: die gespeicherte Wahl ('vulva' oder 'penis'),
+  /// sonst wie bisher aus dem Geschlecht (Mann: penis, sonst vulva). Eine Voreinstellung, nie eine Tatsache.
+  static String koerperVorschlag() {
+    final k = getKoerperVoreinstellung();
+    if (k == 'vulva' || k == 'penis') return k!;
+    return getUserProfile()?.isMale == true ? 'penis' : 'vulva';
   }
 
   static String? getHalloGesendetAm() => _prefs?.getString(_keyHalloGesendetAm);
@@ -731,6 +760,7 @@ class StorageService {
       'frageVorLautsprecher': getFrageVorLautsprecher(),
       'pausiereBeiKopfhoererGetrennt': getPausiereBeiKopfhoererGetrennt(),
       'kursFilter': getKursFilter(),
+      'koerperVoreinstellung': getKoerperVoreinstellung(),
       'designPalette': designPalette(),
       'audioBereichOffen': _prefs?.getBool(_keyAudioBereichOffen),
       'halloGesendetAm': getHalloGesendetAm(),
@@ -910,6 +940,12 @@ class StorageService {
         kursFilterWerte.contains(d['kursFilter']) &&
         _prefs?.getString(_keyKursFilter) == null) {
       writes[_keyKursFilter] = d['kursFilter'] as String;
+    }
+    // Auch hier gewinnt die eigene Wahl auf diesem Gerät.
+    if (d['koerperVoreinstellung'] is String &&
+        koerperVoreinstellungWerte.contains(d['koerperVoreinstellung']) &&
+        _prefs?.getString(_keyKoerperVoreinstellung) == null) {
+      writes[_keyKoerperVoreinstellung] = d['koerperVoreinstellung'] as String;
     }
     if (d['designPalette'] is String &&
         designWerte.contains(d['designPalette']) &&

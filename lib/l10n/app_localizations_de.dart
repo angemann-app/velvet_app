@@ -2562,17 +2562,40 @@ class AppLocalizationsDe extends AppLocalizations {
   String get onboardingYourFirstNameOrA => 'Dein Vorname oder Pseudonym';
 
   @override
-  String get onboardingYourGender => '2. Dein Geschlecht';
+  String get onboardingYourGender => '2. Dein Geschlecht (freiwillig)';
 
   @override
   String get onboardingAdjustsCourseRecommendationsPelvicFloor =>
-      'Passt Kursempfehlungen, Beckenboden-Physiologie und KI-Antworten an.';
+      'Wir nutzen das nur, um dir eine passende Stimme und eine erste Kursauswahl vorzuschlagen und um Lektionen verständlich zu halten, wenn von „sie“ oder „er“ die Rede ist. Du kannst es jederzeit ändern, und es bleibt auf deinem Handy. „Keine Angabe“ ist völlig in Ordnung.';
 
   @override
-  String get onboardingMale => 'Männlich';
+  String get onboardingMale => 'Mann';
 
   @override
-  String get onboardingFemale => 'Weiblich';
+  String get onboardingFemale => 'Frau';
+
+  @override
+  String get onboardingGenderWeitergehen =>
+      'Du kannst auch einfach weitergehen.';
+
+  @override
+  String get onboardingKoerperTitel => 'Körperbezogene Übungen (freiwillig)';
+
+  @override
+  String get onboardingKoerperText =>
+      'Manche Übungen und Körperreisen sprechen den Körper ganz konkret an. Damit wir dir nichts vorschlagen, das nicht zu dir passt: Welche Beschreibung stimmt am ehesten? Das ist unabhängig von deinem Geschlecht. Du kannst überspringen, dann fragen wir erst, wenn eine Übung es braucht.';
+
+  @override
+  String get onboardingKoerperVulva => 'Vulva';
+
+  @override
+  String get onboardingKoerperPenis => 'Penis';
+
+  @override
+  String get onboardingKoerperBeides => 'Beides oder anders';
+
+  @override
+  String get onboardingKoerperSpaeter => 'Später fragen';
 
   @override
   String onboardingYourAgeSelectedageYears(Object selectedAge) {
@@ -3070,6 +3093,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get userProfileDesireRelaxation => 'Lust & Entspannung';
+
+  @override
+  String get userProfileJustLookingAround => 'Erstmal umsehen';
 
   @override
   String get userProfileEasingPerformancePressure => 'Weniger Druck';

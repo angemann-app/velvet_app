@@ -57,6 +57,8 @@ class BackupCodec {
     'pausiereBeiKopfhoererGetrennt': bool,
     // Freiwilliges Hallo: wann einmal anonym gesendet wurde.
     'halloGesendetAm': String,
+    // Körper-Voreinstellung für körperbezogene Übungen ('vulva', 'penis', 'beides').
+    'koerperVoreinstellung': String,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.

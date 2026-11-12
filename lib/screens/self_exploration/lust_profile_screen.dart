@@ -130,7 +130,9 @@ class _LustProfileScreenState extends State<LustProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isFemale = StorageService.getUserProfile()?.isFemale == true;
+    // Reihenfolge nach gespeichertem Körper, sonst wie bisher nach Geschlecht.
+    final koerper = StorageService.getKoerperVoreinstellung();
+    final isFemale = koerper == 'vulva' || (koerper != 'penis' && StorageService.getUserProfile()?.isFemale == true);
     final first = isFemale ? (t.lustProfileWithVulva, _vulvaTechniques) : (t.lustProfileWithPenis, _penisTechniques);
     final second = isFemale ? (t.lustProfileWithPenis, _penisTechniques) : (t.lustProfileWithVulva, _vulvaTechniques);
 

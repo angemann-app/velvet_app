@@ -408,6 +408,14 @@ void main() {
       await _shot(tester, '00_suche', errors);
       await tester.pumpWidget(_app(const OnboardingScreen()));
       await _shot(tester, '00_onboarding', errors);
+      // Frage 2 (Geschlecht, 2×2 ohne Vorauswahl) und das Profil-Bearbeiten mit der Körperkarte.
+      await _tippe(tester, find.text(t.onboardingLosGehts));
+      await tester.pump();
+      await _tippe(tester, find.text(t.onboardingWeiter));
+      await tester.pump();
+      await _shot(tester, '00_onboarding_geschlecht', errors);
+      await tester.pumpWidget(_app(const OnboardingScreen(isEditing: true)));
+      await _shot(tester, '00_profil_bearbeiten', errors);
 
       await tester.pumpWidget(_app(const MainNavigationScreen()));
       await _shot(tester, '01_kurse', errors);

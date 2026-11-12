@@ -4420,26 +4420,68 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingYourGender.
   ///
   /// In de, this message translates to:
-  /// **'2. Dein Geschlecht'**
+  /// **'2. Dein Geschlecht (freiwillig)'**
   String get onboardingYourGender;
 
   /// No description provided for @onboardingAdjustsCourseRecommendationsPelvicFloor.
   ///
   /// In de, this message translates to:
-  /// **'Passt Kursempfehlungen, Beckenboden-Physiologie und KI-Antworten an.'**
+  /// **'Wir nutzen das nur, um dir eine passende Stimme und eine erste Kursauswahl vorzuschlagen und um Lektionen verständlich zu halten, wenn von „sie“ oder „er“ die Rede ist. Du kannst es jederzeit ändern, und es bleibt auf deinem Handy. „Keine Angabe“ ist völlig in Ordnung.'**
   String get onboardingAdjustsCourseRecommendationsPelvicFloor;
 
   /// No description provided for @onboardingMale.
   ///
   /// In de, this message translates to:
-  /// **'Männlich'**
+  /// **'Mann'**
   String get onboardingMale;
 
   /// No description provided for @onboardingFemale.
   ///
   /// In de, this message translates to:
-  /// **'Weiblich'**
+  /// **'Frau'**
   String get onboardingFemale;
+
+  /// No description provided for @onboardingGenderWeitergehen.
+  ///
+  /// In de, this message translates to:
+  /// **'Du kannst auch einfach weitergehen.'**
+  String get onboardingGenderWeitergehen;
+
+  /// No description provided for @onboardingKoerperTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Körperbezogene Übungen (freiwillig)'**
+  String get onboardingKoerperTitel;
+
+  /// No description provided for @onboardingKoerperText.
+  ///
+  /// In de, this message translates to:
+  /// **'Manche Übungen und Körperreisen sprechen den Körper ganz konkret an. Damit wir dir nichts vorschlagen, das nicht zu dir passt: Welche Beschreibung stimmt am ehesten? Das ist unabhängig von deinem Geschlecht. Du kannst überspringen, dann fragen wir erst, wenn eine Übung es braucht.'**
+  String get onboardingKoerperText;
+
+  /// No description provided for @onboardingKoerperVulva.
+  ///
+  /// In de, this message translates to:
+  /// **'Vulva'**
+  String get onboardingKoerperVulva;
+
+  /// No description provided for @onboardingKoerperPenis.
+  ///
+  /// In de, this message translates to:
+  /// **'Penis'**
+  String get onboardingKoerperPenis;
+
+  /// No description provided for @onboardingKoerperBeides.
+  ///
+  /// In de, this message translates to:
+  /// **'Beides oder anders'**
+  String get onboardingKoerperBeides;
+
+  /// No description provided for @onboardingKoerperSpaeter.
+  ///
+  /// In de, this message translates to:
+  /// **'Später fragen'**
+  String get onboardingKoerperSpaeter;
 
   /// No description provided for @onboardingYourAgeSelectedageYears.
   ///
@@ -5262,6 +5304,12 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Lust & Entspannung'**
   String get userProfileDesireRelaxation;
+
+  /// No description provided for @userProfileJustLookingAround.
+  ///
+  /// In de, this message translates to:
+  /// **'Erstmal umsehen'**
+  String get userProfileJustLookingAround;
 
   /// No description provided for @userProfileEasingPerformancePressure.
   ///
