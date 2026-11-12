@@ -1882,15 +1882,15 @@ msgid "Beckenboden, Kopfkino, Anatomie und Zyklus – Wissen, das Druck nimmt."
 msgstr ""
 
 #. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
-#. EN: The Female Pelvic Floor: Letting Go Instead of Holding On
+#. EN: The Pelvic Floor with a Vulva: Letting Go Instead of Holding On
 msgctxt "lesson:female_1#title"
-msgid "Der weibliche Beckenboden: Loslassen statt Festhalten"
+msgid "Beckenboden mit Vulva: Loslassen statt Festhalten"
 msgstr ""
 
 #. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
-#. EN: Why many women have a pelvic floor that tends to be too tense – and how targeted opening can help.
+#. EN: Why the pelvic floor of many people with a vulva tends to be too tense – and how targeted opening can help.
 msgctxt "lesson:female_1#summary"
-msgid "Warum viele Frauen einen eher zu angespannten Beckenboden haben – und wie gezieltes Öffnen helfen kann."
+msgid "Warum der Beckenboden bei vielen Menschen mit Vulva eher zu angespannt ist – und wie gezieltes Öffnen helfen kann."
 msgstr ""
 
 #. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
@@ -4241,34 +4241,34 @@ msgid "Warum ein plötzlicher Tempowechsel die aufsteigende Erregung oft abreiß
 msgstr ""
 
 #. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
-#. EN: Many women know this moment: a touch finally feels right, the breath deepens, the pelvis moves along slightly – and a “yes, just like that” slips out. The partner takes it as a starting signal, speeds up, presses harder or changes the spot. And the feeling that was within reach a moment ago is gone.
+#. EN: Many people with a vulva know this moment: a touch finally feels right, the breath deepens, the pelvis moves along slightly – and a “yes, just like that” slips out. The partner takes it as a starting signal, speeds up, presses harder or changes the spot. And the feeling that was within reach a moment ago is gone.
 #. EN:
 #. EN: Why it works
-#. EN: In large survey studies on female pleasure, this point is among the most common wishes: when something is good, it should stay that way. For many women, arousal builds through a constant stimulus that the body can settle into. An abrupt change pulls attention back into the head: “What's happening now? Will it come back?” That is the spectator trap from course 4, and it reliably presses the brake from course 1.
+#. EN: In large surveys of women about their pleasure, this point is among the most common wishes: when something is good, it should stay that way. For many, arousal builds through a constant stimulus that the body can settle into. An abrupt change pulls attention back into the head: “What's happening now? Will it come back?” That is the spectator trap from course 4, and it reliably presses the brake from course 1.
 #. EN: Consistency can make it easier to stay with a pleasant sensation. Feedback guides whether to continue or change something.
 #. EN:
 #. EN: The exercise
 #. EN: Agree on a simple rule: when a touch triggers a deep exhale, a sigh or a “just like that”, everything stays as it is – the same pace, the same pressure, the same spot. Continue while it feels comfortable; two or three minutes can be a guide. Don't speed up, don't press harder.
-#. EN: If {W2:her} body seems to seek more, check before increasing pace or pressure. A movement can mean different things; her feedback gives you direction.
+#. EN: If {W:the receiving person} seems to seek more, check before increasing pace or pressure. A movement can mean different things; their feedback gives you direction.
 #. EN: It works the same way alone: notice whether you become impatient as soon as it gets good – and try to stay with the rhythm exactly then.
 #. EN:
 #. EN: Consent and safety
-#. EN: Only {W:she} can say what “just like that” means. Ask instead of guessing, and agree that a quick “slower”, “firmer” or “different” is always welcome – without anyone having to feel criticised.
+#. EN: Only {W:the receiving person} can say what “just like that” means. Ask instead of guessing, and agree that a quick “slower”, “firmer” or “different” is always welcome – without anyone having to feel criticised.
 msgctxt "lesson:touch_w_1#content"
 msgid ""
-"Viele Frauen kennen diesen Moment: Eine Berührung fühlt sich endlich richtig an, der Atem wird tiefer, das Becken bewegt sich leicht mit – und ein „Ja, genau so“ entfährt. Das Gegenüber versteht das als Startsignal, wird schneller, drückt fester oder wechselt die Stelle. Und das Gefühl, das eben noch zum Greifen nah war, ist weg.\n"
+"Viele Menschen mit Vulva kennen diesen Moment: Eine Berührung fühlt sich endlich richtig an, der Atem wird tiefer, das Becken bewegt sich leicht mit – und ein „Ja, genau so“ entfährt. Das Gegenüber versteht das als Startsignal, wird schneller, drückt fester oder wechselt die Stelle. Und das Gefühl, das eben noch zum Greifen nah war, ist weg.\n"
 "\n"
 "Warum das wirkt\n"
-"In großen Befragungsstudien zur weiblichen Lust gehört dieser Punkt zu den häufigsten Wünschen: Wenn etwas gut ist, soll es so bleiben. Erregung baut sich bei vielen Frauen über einen gleichbleibenden Reiz auf, in den der Körper sich einschwingen kann. Ein abrupter Wechsel holt die Aufmerksamkeit zurück in den Kopf: „Was passiert jetzt? Kommt es zurück?“ Das ist die Beobachter-Falle aus Kurs 4, und sie tritt zuverlässig auf die Bremse aus Kurs 1.\n"
+"In großen Befragungen von Frauen zu ihrer Lust gehört dieser Punkt zu den häufigsten Wünschen: Wenn etwas gut ist, soll es so bleiben. Erregung baut sich bei vielen über einen gleichbleibenden Reiz auf, in den der Körper sich einschwingen kann. Ein abrupter Wechsel holt die Aufmerksamkeit zurück in den Kopf: „Was passiert jetzt? Kommt es zurück?“ Das ist die Beobachter-Falle aus Kurs 4, und sie tritt zuverlässig auf die Bremse aus Kurs 1.\n"
 "Gleichmäßigkeit kann es leichter machen, bei einer angenehmen Empfindung zu bleiben. Die Rückmeldung bestimmt, ob ihr dabei bleibt oder etwas verändert.\n"
 "\n"
 "Die Übung\n"
 "Vereinbart eine einfache Regel: Wenn eine Berührung ein tiefes Ausatmen, ein Seufzen oder ein „genau so“ auslöst, bleibt alles, wie es ist – dasselbe Tempo, derselbe Druck, dieselbe Stelle. Bleibt dabei, solange es angenehm ist; zwei oder drei Minuten können eine Orientierung sein. Nicht schneller werden, nicht fester drücken.\n"
-"Wenn {W2:ihr} Körper mehr zu suchen scheint, fragt nach, bevor ihr Tempo oder Druck steigert. Eine Bewegung kann vieles bedeuten; ihre Rückmeldung gibt euch die Richtung.\n"
+"Scheint {W:die empfangende Person} mehr zu suchen, fragt nach, bevor ihr Tempo oder Druck steigert. Eine Bewegung kann vieles bedeuten; ihre Rückmeldung gibt euch die Richtung.\n"
 "Allein funktioniert das genauso: Beobachte, ob du selbst ungeduldig wirst, sobald es schön wird – und probiere, genau dann beim Rhythmus zu bleiben.\n"
 "\n"
 "Einvernehmen und Sicherheit\n"
-"Was „genau so“ bedeutet, kann nur {W:sie} sagen. Fragt nach, statt zu raten, und vereinbart, dass ein kurzes „langsamer“, „fester“ oder „anders“ jederzeit willkommen ist – ohne dass sich jemand kritisiert fühlen muss."
+"Was „genau so“ bedeutet, kann nur {W:die empfangende Person} sagen. Fragt nach, statt zu raten, und vereinbart, dass ein kurzes „langsamer“, „fester“ oder „anders“ jederzeit willkommen ist – ohne dass sich jemand kritisiert fühlen muss."
 msgstr ""
 
 #. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
@@ -4640,7 +4640,7 @@ msgid "Warum ein jahrelang trainierter fester, trockener Griff die Empfindung ab
 msgstr ""
 
 #. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
-#. EN: Since adolescence, many men have got used to masturbating quickly, dry and with a very firm grip. Alone, that works reliably – and precisely because of that it can become a problem in an encounter with another person. This is sometimes called the death-grip pattern in everyday language; it is not a separate medical diagnosis.
+#. EN: Since adolescence, many people with a penis have got used to masturbating quickly, dry and with a very firm grip. Alone, that works reliably – and precisely because of that it can become a problem in an encounter with another person. This is sometimes called the death-grip pattern in everyday language; it is not a separate medical diagnosis.
 #. EN:
 #. EN: Why it works
 #. EN: The nervous system gets used to what it often receives. Training a firm, fast stimulus over years teaches it: arousal only happens with a lot of pressure. A vagina, a mouth or someone else's hand, by contrast, feel softer, warmer and broader. The brain then reports: “Not enough.” The result can be a fading erection or the feeling of having to go very hard and fast to feel anything at all – and the spectator trap from course 4 kicks in.
@@ -4649,7 +4649,7 @@ msgstr ""
 #. EN: The exercise
 #. EN: For the next two weeks, the rule for solo practice is: no fist.
 #. EN: Use a lubricant intended for genital use and add more as needed. Work with the open, flat hand, the soft heel of the hand, or both flat hands on either side of the shaft. Vary the pressure from feather-light to warmly enveloping – but stay below your usual pressure.
-#. EN: At first this often feels like “not enough”, and arousal rises more slowly. That's the relearning. Stay curious instead of pressing harder. After a few weeks many men report that being touched by another person feels much more intense again.
+#. EN: At first this often feels like “not enough”, and arousal rises more slowly. That's the relearning. Stay curious instead of pressing harder. After a few weeks many report that being touched by another person feels much more intense again.
 #. EN:
 #. EN: Consent and safety
 #. EN: If you're in a relationship, it can be a relief to talk about it openly: “I'm practising feeling finer touch again.” That takes away your partner's worry of doing something wrong.
@@ -4658,7 +4658,7 @@ msgstr ""
 #. EN: If erectile problems occur regardless of the situation, for example in the morning or during masturbation too, have it checked by a doctor. Erectile dysfunction can be an early warning sign of cardiovascular disease or diabetes.
 msgctxt "lesson:touch_m_1#content"
 msgid ""
-"Viele Männer haben sich seit der Jugend angewöhnt, sich schnell, trocken und mit sehr festem Griff selbst zu befriedigen. Das funktioniert allein zuverlässig – und kann genau deshalb in der Begegnung mit einem anderen Menschen zum Problem werden. Dafür wird umgangssprachlich der Ausdruck Klammergriff-Muster verwendet; er ist keine eigenständige medizinische Diagnose.\n"
+"Viele Menschen mit Penis haben sich seit der Jugend angewöhnt, sich schnell, trocken und mit sehr festem Griff selbst zu befriedigen. Das funktioniert allein zuverlässig – und kann genau deshalb in der Begegnung mit einem anderen Menschen zum Problem werden. Dafür wird umgangssprachlich der Ausdruck Klammergriff-Muster verwendet; er ist keine eigenständige medizinische Diagnose.\n"
 "\n"
 "Warum das wirkt\n"
 "Das Nervensystem gewöhnt sich an das, was es oft bekommt. Wer über Jahre einen festen, schnellen Reiz trainiert, lernt: Erregung entsteht nur bei viel Druck. Eine Vagina, ein Mund oder eine fremde Hand fühlen sich dagegen weicher, wärmer und flächiger an. Das Gehirn meldet dann: „Zu wenig.“ Die Folge kann ein Nachlassen der Erektion sein oder das Gefühl, sehr hart und schnell werden zu müssen, um überhaupt etwas zu spüren – und schon meldet sich die Beobachter-Falle aus Kurs 4.\n"
@@ -4667,7 +4667,7 @@ msgid ""
 "Die Übung\n"
 "Für die nächsten zwei Wochen gilt beim Solo-Training: keine Faust.\n"
 "Nimm ein für den Genitalbereich geeignetes Gleitmittel und ergänze es bei Bedarf. Arbeite mit der offenen, flachen Hand, dem weichen Handballen oder mit beiden flachen Händen links und rechts am Schaft. Variiere den Druck von federleicht bis warm umhüllend – aber bleib unter deinem gewohnten Druck.\n"
-"Am Anfang fühlt sich das oft nach „zu wenig“ an, und die Erregung steigt langsamer. Das ist das Umlernen. Bleib neugierig, statt nachzudrücken. Nach einigen Wochen berichten viele Männer, dass Berührung durch einen anderen Menschen wieder deutlich intensiver wirkt.\n"
+"Am Anfang fühlt sich das oft nach „zu wenig“ an, und die Erregung steigt langsamer. Das ist das Umlernen. Bleib neugierig, statt nachzudrücken. Nach einigen Wochen berichten viele, dass Berührung durch einen anderen Menschen wieder deutlich intensiver wirkt.\n"
 "\n"
 "Einvernehmen und Sicherheit\n"
 "Wenn du in einer Partnerschaft bist, kann es entlasten, offen darüber zu sprechen: „Ich trainiere gerade, feinere Berührung wieder zu spüren.“ Das nimmt dem Gegenüber die Sorge, etwas falsch zu machen.\n"
@@ -4964,7 +4964,7 @@ msgstr ""
 #. Lektion im Kurs „20. Die Kunst der Intim-Massage“
 #. EN: One Gives, One Receives
 msgctxt "lesson:mass_1#title"
-msgid "Einer gibt, einer empfängt"
+msgid "Eine Person gibt, eine empfängt"
 msgstr ""
 
 #. Lektion im Kurs „20. Die Kunst der Intim-Massage“
@@ -4978,7 +4978,7 @@ msgstr ""
 #. EN:
 #. EN: Why it works
 #. EN: One-sidedness is a relief. The receiving person has nothing to achieve – no stroking back, no moaning out of politeness, no orgasm. That removes a large part of the spectator trap from course 4. The person giving can stay attentive to the touch without having to receive at the same time. They may still feel aroused themselves. It's the same principle as sensate focus in course 17: touch without a goal.
-#. EN: The terms yoni massage for women and lingam massage for men come from tantric traditions. For the exercise you don't need a world view, just time and agreement.
+#. EN: The terms yoni massage, for the vulva, and lingam massage, for the penis, come from tantric traditions. For the exercise you don't need a world view, just time and agreement.
 #. EN:
 #. EN: The exercise
 #. EN: Plan about forty-five minutes. One person gives, sits comfortably and may stay dressed. The other receives, lies naked and warmly covered on a soft surface.
@@ -4989,11 +4989,11 @@ msgstr ""
 #. EN: Discuss beforehand which areas may be touched and which may not – the session may also leave out the genitals entirely. Agree on a safeword and a sign for “slower”. Orgasm is explicitly not a goal. If it comes, it's welcome; if not, nothing has gone wrong. Oil and latex condoms don't mix; if you use condoms, choose a water- or silicone-based lubricant.
 msgctxt "lesson:mass_1#content"
 msgid ""
-"Beim Sex versuchen oft beide gleichzeitig zu geben und zu empfangen. Das klingt romantisch, ist für den Kopf aber eine Doppelaufgabe: Während du berührt wirst und eigentlich loslassen möchtest, überlegst du schon, was deine Hände als Nächstes beim anderen tun sollen. Keiner von beiden kommt ganz beim Spüren an.\n"
+"Beim Sex versuchen oft beide gleichzeitig zu geben und zu empfangen. Das klingt romantisch, ist für den Kopf aber eine Doppelaufgabe: Während du berührt wirst und eigentlich loslassen möchtest, überlegst du schon, was deine Hände als Nächstes bei deinem Gegenüber tun sollen. Niemand von euch kommt ganz beim Spüren an.\n"
 "\n"
 "Warum das wirkt\n"
 "Einseitigkeit entlastet. Die empfangende Person hat nichts zu leisten – kein Zurückstreicheln, kein Stöhnen aus Höflichkeit, keinen Höhepunkt. Damit fällt ein großer Teil der Beobachter-Falle aus Kurs 4 weg. Die gebende Person kann ihre Aufmerksamkeit bei der Berührung lassen, ohne zugleich selbst empfangen zu müssen. Auch dabei darf eigene Erregung entstehen. Das ist dasselbe Prinzip wie beim Sensate Focus in Kurs 17: Berührung ohne Ziel.\n"
-"Die Begriffe Yoni-Massage für Frauen und Lingam-Massage für Männer stammen aus tantrischen Traditionen. Für die Übung braucht ihr keine Weltanschauung, nur Zeit und Absprache.\n"
+"Die Begriffe Yoni-Massage, für die Vulva, und Lingam-Massage, für den Penis, stammen aus tantrischen Traditionen. Für die Übung braucht ihr keine Weltanschauung, nur Zeit und Absprache.\n"
 "\n"
 "Die Übung\n"
 "Plant etwa fünfundvierzig Minuten ein. Eine Person gibt, sitzt bequem und darf bekleidet bleiben. Die andere empfängt, liegt nackt und warm zugedeckt auf einer weichen Unterlage.\n"
@@ -5017,21 +5017,21 @@ msgid "Die Yoni-Massage: Behutsam und Schritt für Schritt"
 msgstr ""
 
 #. Lektion im Kurs „20. Die Kunst der Intim-Massage“
-#. EN: A guide in three phases – from arriving and outer touch to inner massage, if she wants it.
+#. EN: A guide in three phases – from arriving and outer touch to inner massage, if your partner wants it.
 msgctxt "lesson:mass_2#summary"
-msgid "Eine Anleitung in drei Phasen – vom Ankommen über die äußere Berührung bis zur inneren Massage, wenn sie das möchte."
+msgid "Eine Anleitung in drei Phasen – vom Ankommen über die äußere Berührung bis zur inneren Massage, wenn dein Gegenüber das möchte."
 msgstr ""
 
 #. Lektion im Kurs „20. Die Kunst der Intim-Massage“
 #. EN: The word yoni comes from Sanskrit and is often translated as “origin” or “sacred space”. In this massage you never approach directly, but the way you approach someone who first needs to build trust.
 #. EN:
 #. EN: Why it works
-#. EN: Many women experience genital touch as goal-directed and fast. This massage reverses that: lots of time around the area, touch without a goal and full control for the receiver. That releases the brake from course 1 and gives the whole tissue time to fill with blood – including the inner parts of the clitoris that lie around the vulva and vaginal entrance.
+#. EN: Many people with a vulva experience genital touch as goal-directed and fast. This massage reverses that: lots of time around the area, touch without a goal and full control for the receiver. That releases the brake from course 1 and gives the whole tissue time to fill with blood – including the inner parts of the clitoris that lie around the vulva and vaginal entrance.
 #. EN:
 #. EN: The exercise
-#. EN: Phase one, arriving, about ten minutes: {W:she} lies on her back, knees supported by cushions so she can lie comfortably. With plenty of warm oil, stroke over the lower belly, groin and inner thighs. Again and again, stroke just past the vulva without touching it. Only when {W2:her} breath deepens do you go further – and only after a yes.
-#. EN: Phase two, outside: imagine the vulva as a clock face, twelve o'clock at the top by the mons, six o'clock at the bottom towards the perineum. With both thumbs, stroke very slowly from twelve to six over the outer labia. You can touch them gently between thumb and index finger and adjust the pressure according to her feedback. Circle the clitoral hood at the top with a flat finger without stimulating the tip directly.
-#. EN: Phase three, inside – only if {W:she} wants it: ask quietly: “May a finger come in?” Glide in only a few centimetres and stay completely still for half a minute. Then turn the fingertip upwards towards the navel. There the front wall is slightly rougher, often called the G-area. Instead of in and out, make a slow, inviting come-hither movement while the other hand rests calmly on the mons. The breathing pacer helps you breathe calmly together.
+#. EN: Phase one, arriving, about ten minutes: {W:the receiving person} lies on their back, knees supported by cushions so they can lie comfortably. With plenty of warm oil, stroke over the lower belly, groin and inner thighs. Again and again, stroke just past the vulva without touching it. Only when {W2:their} breath deepens do you go further – and only after a yes.
+#. EN: Phase two, outside: imagine the vulva as a clock face, twelve o'clock at the top by the mons, six o'clock at the bottom towards the perineum. With both thumbs, stroke very slowly from twelve to six over the outer labia. You can touch them gently between thumb and index finger and adjust the pressure according to your partner's feedback. Circle the clitoral hood at the top with a flat finger without stimulating the tip directly.
+#. EN: Phase three, inside – only if {W:your partner} wants it: ask quietly: “May a finger come in?” Glide in only a few centimetres and stay completely still for half a minute. Then turn the fingertip upwards towards the navel. There the front wall is slightly rougher, often called the G-area. Instead of in and out, make a slow, inviting come-hither movement while the other hand rests calmly on the mons. The breathing pacer helps you breathe calmly together.
 #. EN:
 #. EN: Consent and safety
 #. EN: Each phase begins with a question, and a no or “not yet” is always right. Hands washed, nails short and smooth. After contact with the anal area, don't move to the vulva without washing your hands. Pause immediately if there is pain; if penetration regularly hurts, a gynaecological check-up or pelvic floor therapy helps. Sometimes this kind of touch also releases strong emotions, tears included. Ask whether closeness, a pause or some space would feel welcome.
@@ -5040,21 +5040,21 @@ msgid ""
 "Das Wort Yoni stammt aus dem Sanskrit und wird oft mit „Ursprung“ oder „heiliger Raum“ übersetzt. Bei dieser Massage nähert ihr euch nie direkt, sondern so, wie man sich jemandem nähert, der erst Vertrauen fassen darf.\n"
 "\n"
 "Warum das wirkt\n"
-"Viele Frauen erleben genitale Berührung als zielgerichtet und schnell. Diese Massage dreht das um: Viel Zeit an der Umgebung, Berührung ohne Ziel und volle Kontrolle für die Empfangende. Das löst die Bremse aus Kurs 1 und gibt dem ganzen Gewebe Zeit, sich zu durchbluten – auch den inneren Teilen der Klitoris, die rund um Vulva und Vaginaleingang liegen.\n"
+"Viele Menschen mit Vulva erleben genitale Berührung als zielgerichtet und schnell. Diese Massage dreht das um: Viel Zeit an der Umgebung, Berührung ohne Ziel und volle Kontrolle für die empfangende Person. Das löst die Bremse aus Kurs 1 und gibt dem ganzen Gewebe Zeit, sich zu durchbluten – auch den inneren Teilen der Klitoris, die rund um Vulva und Vaginaleingang liegen.\n"
 "\n"
 "Die Übung\n"
-"Phase eins, ankommen, etwa zehn Minuten: {W:Sie} liegt auf dem Rücken, die Knie mit Kissen unterstützt, damit sie bequem liegen kann. Mit viel warmem Öl streichst du über Unterbauch, Leisten und die Innenseiten der Oberschenkel. Streiche immer wieder knapp an der Vulva vorbei, ohne sie zu berühren. Erst wenn {W2:ihr} Atem tief wird, geht es weiter – und erst nach einem Ja.\n"
-"Phase zwei, außen: Stell dir die Vulva wie ein Zifferblatt vor, zwölf Uhr ist oben am Venushügel, sechs Uhr unten zum Damm. Streiche mit beiden Daumen ganz langsam von zwölf nach sechs über die äußeren Schamlippen. Du kannst sie sanft zwischen Daumen und Zeigefinger berühren und nach ihrer Rückmeldung den Druck anpassen. Umkreise oben die Klitorisvorhaut mit flachem Finger, ohne die Spitze direkt zu reizen.\n"
-"Phase drei, innen – nur wenn {W:sie} es möchte: Frage leise: „Darf ein Finger hinein?“ Gleite nur wenige Zentimeter ein und bleibe eine halbe Minute ganz still. Dann wende die Fingerkuppe nach oben Richtung Bauchnabel. Dort ist die vordere Wand etwas rauer, oft G-Zone genannt. Statt Rein und Raus eine langsame, einladende Komm-her-Bewegung, während die andere Hand ruhig auf dem Venushügel liegt. Der Atem-Taktgeber hilft euch, gemeinsam ruhig zu atmen.\n"
+"Phase eins, ankommen, etwa zehn Minuten: {W:Die empfangende Person} liegt auf dem Rücken, die Knie mit Kissen unterstützt, damit sie bequem liegen kann. Mit viel warmem Öl streichst du über Unterbauch, Leisten und die Innenseiten der Oberschenkel. Streiche immer wieder knapp an der Vulva vorbei, ohne sie zu berühren. Erst wenn {W2:ihr} Atem tief wird, geht es weiter – und erst nach einem Ja.\n"
+"Phase zwei, außen: Stell dir die Vulva wie ein Zifferblatt vor, zwölf Uhr ist oben am Venushügel, sechs Uhr unten zum Damm. Streiche mit beiden Daumen ganz langsam von zwölf nach sechs über die äußeren Schamlippen. Du kannst sie sanft zwischen Daumen und Zeigefinger berühren und nach der Rückmeldung deines Gegenübers den Druck anpassen. Umkreise oben die Klitorisvorhaut mit flachem Finger, ohne die Spitze direkt zu reizen.\n"
+"Phase drei, innen – nur wenn {W:dein Gegenüber} es möchte: Frage leise: „Darf ein Finger hinein?“ Gleite nur wenige Zentimeter ein und bleibe eine halbe Minute ganz still. Dann wende die Fingerkuppe nach oben Richtung Bauchnabel. Dort ist die vordere Wand etwas rauer, oft G-Zone genannt. Statt Rein und Raus eine langsame, einladende Komm-her-Bewegung, während die andere Hand ruhig auf dem Venushügel liegt. Der Atem-Taktgeber hilft euch, gemeinsam ruhig zu atmen.\n"
 "\n"
 "Einvernehmen und Sicherheit\n"
 "Jede Phase beginnt mit einer Frage, und ein Nein oder „noch nicht“ ist jederzeit richtig. Hände gewaschen, Nägel kurz und glatt. Nach dem Kontakt mit dem Analbereich nicht ohne Händewaschen zur Vulva wechseln. Bei Schmerzen sofort pausieren; wenn Eindringen regelmäßig schmerzt, ist eine gynäkologische Abklärung oder eine Beckenbodentherapie hilfreich. Manchmal lösen solche Berührungen auch starke Gefühle aus, Tränen eingeschlossen. Frage dann, ob Nähe, eine Pause oder etwas Abstand willkommen ist."
 msgstr ""
 
 #. Lektion im Kurs „20. Die Kunst der Intim-Massage“
-#. EN: How does your picture of female arousal change when the tip of the clitoris isn't touched directly at all for the first quarter of an hour?
+#. EN: How does your picture of arousal change when the tip of the clitoris isn't touched directly at all for the first quarter of an hour?
 msgctxt "lesson:mass_2#reflection_question"
-msgid "Wie verändert sich dein Bild von weiblicher Erregung, wenn die Klitorisspitze in der ersten Viertelstunde überhaupt nicht direkt berührt wird?"
+msgid "Wie verändert sich dein Bild von Erregung, wenn die Klitorisspitze in der ersten Viertelstunde überhaupt nicht direkt berührt wird?"
 msgstr ""
 
 #. Lektion im Kurs „20. Die Kunst der Intim-Massage“
@@ -5486,33 +5486,33 @@ msgstr ""
 #. EN: A familiar position can feel different with a change of angle. Coital alignment focuses on broad contact and a rocking movement. It may suit you, or you may prefer another movement. You are exploring the kinds of closeness and friction you enjoy together.
 #. EN:
 #. EN: Why it works
-#. EN: The so-called coital alignment technique, called the high merge here, changes two things: the man's pubic bone rests flat against the clitoris, and instead of thrusting there is an even rocking. It thus combines the consistency from course 18 with the relaxed pelvis from course 19. Small studies suggest that some women reach orgasm more easily this way. Above all, though, it takes pace and pressure off both.
+#. EN: The so-called coital alignment technique, called the high merge here, changes two things: the penetrating person's pubic bone rests flat against the clitoris, and instead of thrusting there is an even rocking. It thus combines the consistency from course 18 with the relaxed pelvis from course 19. Small studies suggest that orgasm becomes easier to reach for some this way. Above all, though, it takes pace and pressure off both.
 #. EN:
 #. EN: The exercise
-#. EN: First: you start in the familiar position, {M:him} on top, after he has entered gently.
-#. EN: Second: instead of thrusting back and forth, {M:he} slides his whole body a few centimetres upwards, towards her head. His weight rests on his forearms, chest to chest.
-#. EN: Third: this brings the base of his penis and his pubic bone into calm, broad contact with her clitoris and mons.
-#. EN: The movement: no pulling out. You stay deeply connected and move your pelvises in a slow, rocking motion, like two gears gliding along each other. When {W:she} presses her pelvis up, {M:he} yields; when he moves forward, she comes towards him.
-#. EN: For {W:her}, this creates steady pressure on the clitoris together with closeness. For {M:him}, the sensitive glans rests deep inside instead of being rubbed quickly – good for practising wave surfing from course 19.
+#. EN: First: you start in the familiar position. One person lies on top and has already entered gently, the other lies underneath.
+#. EN: Second: instead of thrusting back and forth, {M:the person on top} slides their whole body a few centimetres upwards, towards the head of the bed. The weight rests on the forearms, chest to chest.
+#. EN: Third: this brings the base of the penis and the pubic bone into calm, broad contact with the clitoris and mons.
+#. EN: The movement: no pulling out. You stay deeply connected and move your pelvises in a slow, rocking motion, like two gears gliding along each other. When {W:the person underneath} presses their pelvis up, {M:the person on top} yields, and the other way round.
+#. EN: For {W:the person underneath}, this creates steady pressure on the clitoris together with closeness. For {M:the person on top}, the sensitive glans rests deep inside instead of being rubbed quickly – good for practising wave surfing from course 19.
 #. EN:
 #. EN: Consent and safety
-#. EN: It often takes a few attempts until the angle is right. Laugh about it, adjust together, and let {W:her} say when the contact is right.
+#. EN: It often takes a few attempts until the angle is right. Laugh about it, adjust together, and let {W:the person underneath} say when the contact is right.
 msgctxt "lesson:pos_1#content"
 msgid ""
 "Eine vertraute Stellung kann sich durch einen anderen Winkel neu anfühlen. Bei der Coital Alignment Technique stehen flächiger Kontakt und eine wiegende Bewegung im Mittelpunkt. Vielleicht passt das zu euch, vielleicht bleibt ihr lieber bei einer anderen Bewegung. Ihr erkundet, welche Form von Nähe und Reibung ihr gemeinsam mögt.\n"
 "\n"
 "Warum das wirkt\n"
-"Die sogenannte Coital Alignment Technique, hier hohe Verschmelzung genannt, verändert zwei Dinge: Das Schambein des Mannes liegt flächig auf der Klitoris, und statt Stoßen gibt es ein gleichmäßiges Wiegen. Damit verbindet sie die Gleichmäßigkeit aus Kurs 18 mit dem entspannten Becken aus Kurs 19. Kleine Studien deuten darauf hin, dass manche Frauen so leichter zum Höhepunkt kommen. Vor allem aber nimmt sie beiden Tempo und Druck.\n"
+"Die sogenannte Coital Alignment Technique, hier hohe Verschmelzung genannt, verändert zwei Dinge: Das Schambein der eindringenden Person liegt flächig auf der Klitoris, und statt Stoßen gibt es ein gleichmäßiges Wiegen. Damit verbindet sie die Gleichmäßigkeit aus Kurs 18 mit dem entspannten Becken aus Kurs 19. Kleine Studien deuten darauf hin, dass der Höhepunkt so für manche leichter erreichbar wird. Vor allem aber nimmt sie beiden Tempo und Druck.\n"
 "\n"
 "Die Übung\n"
-"Erstens: Ihr beginnt in der vertrauten Position, {M:er} oben, nachdem er sanft eingedrungen ist.\n"
-"Zweitens: Statt vor und zurück zu stoßen, rutscht {M:er} mit dem ganzen Körper einige Zentimeter nach oben, Richtung ihres Kopfes. Sein Gewicht ruht auf den Unterarmen, Brust an Brust.\n"
-"Drittens: Dadurch liegen die Basis seines Penis und sein Schambein mit ruhigem, flächigem Kontakt auf ihrer Klitoris und dem Venushügel.\n"
-"Die Bewegung: kein Herausziehen. Ihr bleibt tief verbunden und bewegt die Becken in einer langsamen, wiegenden Schaukelbewegung, wie zwei Zahnräder, die aneinander entlanggleiten. Drückt {W:sie} ihr Becken nach oben, gibt {M:er} nach; schiebt er sich nach vorn, kommt sie ihm entgegen.\n"
-"Für {W:sie} entsteht gleichmäßiger Druck auf der Klitoris bei gleichzeitiger Nähe. Für {M:ihn} ruht die empfindliche Eichel in der Tiefe, statt schnell gerieben zu werden – gut, um das Wellen-Surfen aus Kurs 19 zu üben.\n"
+"Erstens: Ihr beginnt in der vertrauten Position. Eine Person liegt oben und ist bereits sanft eingedrungen, die andere liegt unten.\n"
+"Zweitens: Statt vor und zurück zu stoßen, rutscht {M:die Person oben} mit dem ganzen Körper einige Zentimeter nach oben, in Richtung Kopfende. Das Gewicht ruht auf den Unterarmen, Brust an Brust.\n"
+"Drittens: Dadurch liegen die Peniswurzel und das Schambein mit ruhigem, flächigem Kontakt auf Klitoris und Venushügel.\n"
+"Die Bewegung: kein Herausziehen. Ihr bleibt tief verbunden und bewegt die Becken in einer langsamen, wiegenden Schaukelbewegung, wie zwei Zahnräder, die aneinander entlanggleiten. Drückt {W:die Person unten} das Becken nach oben, gibt {M:die Person oben} nach, und umgekehrt.\n"
+"Für {W:die Person unten} entsteht gleichmäßiger Druck auf der Klitoris bei gleichzeitiger Nähe. Für {M:die Person oben} ruht die empfindliche Eichel in der Tiefe, statt schnell gerieben zu werden – gut, um das Wellen-Surfen aus Kurs 19 zu üben.\n"
 "\n"
 "Einvernehmen und Sicherheit\n"
-"Es braucht oft ein paar Versuche, bis der Winkel passt. Lacht darüber, korrigiert gemeinsam, und lasst {W:sie} sagen, wann der Kontakt richtig ist."
+"Es braucht oft ein paar Versuche, bis der Winkel passt. Lacht darüber, korrigiert gemeinsam, und lasst {W:die Person unten} sagen, wann der Kontakt richtig ist."
 msgstr ""
 
 #. Lektion im Kurs „22. Stellungen, die entspannen: Winkel, Nähe und Ausdauer“

@@ -324,8 +324,8 @@
       "format": "diagramm",
       "normal": "assets/images/diagram_female_1.svg",
       "alt": {
-        "de": "Diagramm zur Lektion „Der weibliche Beckenboden: Loslassen statt Festhalten“",
-        "en": "Diagram for the lesson “The Female Pelvic Floor: Letting Go Instead of Holding On”"
+        "de": "Diagramm zur Lektion „Beckenboden mit Vulva: Loslassen statt Festhalten“",
+        "en": "Diagram for the lesson “The Pelvic Floor with a Vulva: Letting Go Instead of Holding On”"
       },
       "englisch": "assets/images/diagram_female_1_en.svg"
     },
@@ -1067,7 +1067,7 @@
       "format": "studie",
       "normal": "assets/images/zeichnung_mass_1.svg",
       "alt": {
-        "de": "Körperzeichnung zur Lektion „Einer gibt, einer empfängt“",
+        "de": "Körperzeichnung zur Lektion „Eine Person gibt, eine empfängt“",
         "en": "Body drawing for the lesson “One Gives, One Receives”"
       },
       "englisch": "assets/images/zeichnung_mass_1_en.svg"
