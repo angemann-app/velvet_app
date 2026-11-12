@@ -235,8 +235,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
             _buildKurseKarte(filteredCourses.length),
           ] else ...[
             // Filter nach Zielgruppe
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
+            _RandAuslauf(
               child: Row(
                 children: [
                   _buildCategoryChip('all', t.coursesAllCourses, Icons.apps_rounded),
@@ -608,6 +607,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
         expanded: offen,
         child: InkWell(
           onTap: () => setState(() => _offen = offen ? ({..._offen!}..remove(s)) : {..._offen!, s}),
+          // Die ganze Kopfzeile ist die Tippfläche; der Pfeil zeigt, ob der Schwerpunkt offen oder zu ist.
           child: Padding(
             padding: const EdgeInsets.only(top: VpAbstand.l),
             child: VpAbschnitt(
@@ -616,8 +616,12 @@ class _CoursesScreenState extends State<CoursesScreen> {
               text: _schwerpunktText(s),
               linie: false,
               trailing: Padding(
-                padding: const EdgeInsets.only(left: VpAbstand.m),
-                child: Icon(offen ? Icons.remove_rounded : Icons.add_rounded, color: AppTheme.tinteStumm, size: 22),
+                padding: const EdgeInsets.only(left: VpAbstand.s),
+                child: SizedBox(
+                  width: 48,
+                  height: 48,
+                  child: Icon(offen ? Icons.expand_less_rounded : Icons.expand_more_rounded, color: AppTheme.tinteLeise, size: 28),
+                ),
               ),
             ),
           ),
@@ -759,5 +763,49 @@ class _HeuteReiterState extends State<_HeuteReiter> {
       const SizedBox(height: VpAbstand.m),
       if (_gewaehlt == 0) const DailyCheckInCard() else const DailySimmeringCard(),
     ]);
+  }
+}
+
+
+/// Waagerechte Leiste, die rechts weich ausläuft, solange es weitergeht; am Ende verschwindet der Auslauf.
+/// (Zeigt, dass die Filterchips scrollbar sind, ohne ein zusätzliches Symbol.)
+class _RandAuslauf extends StatefulWidget {
+  final Widget child;
+  const _RandAuslauf({required this.child});
+
+  @override
+  State<_RandAuslauf> createState() => _RandAuslaufState();
+}
+
+class _RandAuslaufState extends State<_RandAuslauf> {
+  bool _amEnde = false;
+
+  bool _pruefe(ScrollMetrics m) {
+    final ende = m.extentAfter < 2;
+    if (ende != _amEnde) setState(() => _amEnde = ende);
+    return false;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return NotificationListener<ScrollMetricsNotification>(
+      onNotification: (n) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) _pruefe(n.metrics);
+        });
+        return false;
+      },
+      child: NotificationListener<ScrollNotification>(
+        onNotification: (n) => _pruefe(n.metrics),
+        child: ShaderMask(
+          shaderCallback: (rect) => LinearGradient(
+            colors: [Colors.white, Colors.white, _amEnde ? Colors.white : Colors.transparent],
+            stops: const [0, 0.88, 1],
+          ).createShader(rect),
+          blendMode: BlendMode.dstIn,
+          child: SingleChildScrollView(scrollDirection: Axis.horizontal, child: widget.child),
+        ),
+      ),
+    );
   }
 }
