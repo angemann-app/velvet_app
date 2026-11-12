@@ -35,8 +35,8 @@ Richtung abgestimmt, Muster gezeigt, offene Fragen am Ende des Konzepts. Stufen:
 Status: gebaut (Stufen 1 bis 5, Branch `claude/eine-tonlage-20261112`, Anleitung DE/EN nachgezogen), main am 12.11.2026 eingearbeitet; wartet auf Beta und Freigabe des Nutzers. Offene Folgepunkte:
 - (a) Bestehender Fehler: Die Whitelist in `backup_codec.dart` enthält vermutlich `kursFilter`, `designPalette`, `audioBereichOffen` nicht (Merge-Tests laufen trivial). Prüfen und beheben.
 - (b) SVG-Symbole (Geschlechtsauswahl, Landkarte, Einladung) statt Material-Icons; Abschnitt `symbole` im Bild-Register.
-- (c) AG-Bildauftrag: 9 Bleistift-Motive (zu_zweit, erste_woche, einladung), Entwurf im Konzept; nach OK des Nutzers in `AG.md` eintragen.
-- (d) Gesprochene Lektionstexte mit Frau/Mann neu schreiben und neu einsprechen (Liste im Konzept), nur nach Entscheidung des Nutzers.
+- (c) AG-Bildauftrag → AG-27 (12.11.2026 eingetragen): zunächst vier Motive ohne erkennbares Geschlecht (zu_zweit, erste_woche, einladung_willkommen, heute_einladung); Varianten je Paarform erst, wenn die App sie auswählen kann.
+- (d) Gesprochene Lektionstexte mit Frau/Mann neu schreiben (Claude, sechs Lektionen DE/EN, Nutzer liest gegen), danach neu einsprechen → AG-28 (eingetragen, gesperrt bis zur Textfreigabe).
 - (e) „Was ist neu“-Eintrag und Build-Nummer vor dem Release.
 - (f) Erledigt beim Zusammenführen: Die zwei Texte `onboardingVersprechenNetz` und `onboardingPrivateProfileJournalProgressStay` stehen in der Fassung „ohne Coach“.
 - (g) Name „Fantasie-Landkarte“ offen.
