@@ -384,7 +384,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         const ErsteWocheKarte(imTabWir: true),
         ClipRRect(
           borderRadius: BorderRadius.circular(VpRadius.karte),
-          child: SizedBox(height: 150, width: double.infinity, child: VpBildFeld('kurs.11.titel')),
+          child: SizedBox(height: 200, width: double.infinity, child: VpBildFeld('bereich.zu_zweit.kopf')),
         ),
         const SizedBox(height: 20),
         Text(

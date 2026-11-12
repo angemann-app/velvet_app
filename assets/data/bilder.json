@@ -92,9 +92,33 @@
       "spicy": "kurse/spduo_4_spicy.webp",
       "paketSpicy": "kurse-bilder-spicy"
     },
+    "bereich.einladung.willkommen": {
+      "format": "hoch",
+      "normal": "assets/images/bereich_einladung_willkommen.webp",
+      "alt": {
+        "de": "Ein Tisch mit zwei Tassen und einem freien Stuhl",
+        "en": "A table with two cups and a free chair"
+      }
+    },
+    "bereich.erste_woche.kopf": {
+      "format": "kopf",
+      "normal": "assets/images/bereich_erste_woche_kopf.webp",
+      "alt": {
+        "de": "Ein Pfad aus sieben Trittsteinen, davor zwei Paar Schuhe",
+        "en": "A path of seven stepping stones with two pairs of shoes in front"
+      }
+    },
+    "bereich.zu_zweit.kopf": {
+      "format": "kopf",
+      "normal": "assets/images/bereich_zu_zweit_kopf.webp",
+      "alt": {
+        "de": "Zwei Menschen sitzen eng nebeneinander auf einem Sofa, von hinten gesehen",
+        "en": "Two people sitting close together on a sofa, seen from behind"
+      }
+    },
     "bereich.heute.einladung": {
       "format": "hoch",
-      "ausstehend": true,
+      "normal": "assets/images/bereich_heute_einladung.webp",
       "alt": {
         "de": "Einladung zum nächsten Schritt",
         "en": "Invitation to the next step"
