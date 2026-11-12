@@ -503,7 +503,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboardingVersprechenNetz =>
-      'Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal und die Suche nach Updates.';
+      'Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates.';
 
   @override
   String onboardingSchritt(int n, int gesamt) {
@@ -2480,7 +2480,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboardingPrivateProfileJournalProgressStay =>
-      'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).';
+      'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates (GitHub).';
 
   @override
   String get onboardingAlreadyUsingVelvetpulse => 'Bereits VelvetPulse-Nutzer?';

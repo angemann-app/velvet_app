@@ -129,7 +129,7 @@ couple connection, encrypted with PBKDF2-SHA256 and AES-256-GCM. The password is
 in the backup. Files in Download or Documents are never read in automatically.
 After restoring from Google's cloud backup, the couple channel has to be paired again.
 
-The only network paths are the couple channel (Nostr, encrypted) and the update check (GitHub). The former AI coach (Google Gemini) was removed on 12 Nov 2026; on first start the app deletes a stored key and chat history left from it.
+The only network paths are the couple channel (Nostr, encrypted), downloading the recording packages (Cloudflare R2, GitHub) and the update check (GitHub); a Google STUN server helps set up photo connections (see table). The former AI coach (Google Gemini) was removed on 12 Nov 2026; on first start the app deletes a stored key and chat history left from it.
 
 ## Development
 

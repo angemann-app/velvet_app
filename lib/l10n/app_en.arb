@@ -161,7 +161,7 @@
   "onboardingMehrDatenschutz": "More about privacy",
   "onboardingVersprechenLokal": "Everything stays on your phone: profile, journal and progress.",
   "onboardingVersprechenKeinKonto": "No account, no ads, no tracking.",
-  "onboardingVersprechenNetz": "Only what you switch on yourself goes online: the couple channel and the search for updates.",
+  "onboardingVersprechenNetz": "Only what you switch on yourself goes online: the couple channel, downloading recordings and the search for updates.",
   "onboardingSchritt": "Question {n} of {gesamt}",
   "@onboardingSchritt": {
     "placeholders": {
@@ -729,7 +729,7 @@
   "onboardingProfilePersonalisation": "Profile & personalisation",
   "onboardingWelcomeToVelvetpulse": "Welcome to VelvetPulse",
   "onboardingYourPrivateCoachingProgrammeFor": "Your private coaching programme for calm, pelvic floor & intimacy.",
-  "onboardingPrivateProfileJournalProgressStay": "Private: profile, journal & progress stay on your phone. Only the encrypted couple channel and the update check (GitHub) go online.",
+  "onboardingPrivateProfileJournalProgressStay": "Private: profile, journal & progress stay on your phone. Only the encrypted couple channel, downloading recordings and the update check (GitHub) go online.",
   "onboardingAlreadyUsingVelvetpulse": "Already using VelvetPulse?",
   "onboardingLoadABackupFromFile": "Load a backup from file or clipboard",
   "onboardingRestore": "Restore",

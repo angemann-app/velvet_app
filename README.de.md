@@ -129,7 +129,7 @@ zusätzlich die Paar-Verbindung mit, verschlüsselt mit PBKDF2-SHA256 und AES-25
 steht nicht in der Sicherung. Dateien in Download oder Documents werden nie automatisch eingelesen.
 Nach einer Wiederherstellung aus Googles Cloud-Backup muss der Paar-Kanal neu gekoppelt werden.
 
-Die einzigen Netzwege sind der Paar-Kanal (Nostr, verschlüsselt) und die Suche nach Updates (GitHub). Der frühere KI-Coach (Google Gemini) ist seit 12.11.2026 entfernt; beim ersten Start löscht die App einen davon gespeicherten Schlüssel und Chatverlauf.
+Die einzigen Netzwege sind der Paar-Kanal (Nostr, verschlüsselt), das Laden der Aufnahmen-Pakete (Cloudflare R2, GitHub) und die Suche nach Updates (GitHub); beim Foto-Verbindungsaufbau hilft ein Google-STUN-Server (siehe Tabelle). Der frühere KI-Coach (Google Gemini) ist seit 12.11.2026 entfernt; beim ersten Start löscht die App einen davon gespeicherten Schlüssel und Chatverlauf.
 
 ## Entwicklung
 

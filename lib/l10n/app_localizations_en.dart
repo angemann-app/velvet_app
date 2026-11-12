@@ -501,7 +501,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingVersprechenNetz =>
-      'Only what you switch on yourself goes online: the couple channel and the search for updates.';
+      'Only what you switch on yourself goes online: the couple channel, downloading recordings and the search for updates.';
 
   @override
   String onboardingSchritt(int n, int gesamt) {
@@ -2473,7 +2473,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingPrivateProfileJournalProgressStay =>
-      'Private: profile, journal & progress stay on your phone. Only the encrypted couple channel and the update check (GitHub) go online.';
+      'Private: profile, journal & progress stay on your phone. Only the encrypted couple channel, downloading recordings and the update check (GitHub) go online.';
 
   @override
   String get onboardingAlreadyUsingVelvetpulse => 'Already using VelvetPulse?';

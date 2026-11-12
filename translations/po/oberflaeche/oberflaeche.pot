@@ -899,9 +899,9 @@ msgid "Kein Konto, keine Werbung, keine Auswertung."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Only what you switch on yourself goes online: the couple channel and the search for updates.
+#. EN: Only what you switch on yourself goes online: the couple channel, downloading recordings and the search for updates.
 msgctxt "ui:onboardingVersprechenNetz#text"
-msgid "Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal und die Suche nach Updates."
+msgid "Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates."
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {n}, {gesamt}
@@ -4239,9 +4239,9 @@ msgid "Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intim
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Private: profile, journal & progress stay on your phone. Only the encrypted couple channel and the update check (GitHub) go online.
+#. EN: Private: profile, journal & progress stay on your phone. Only the encrypted couple channel, downloading recordings and the update check (GitHub) go online.
 msgctxt "ui:onboardingPrivateProfileJournalProgressStay#text"
-msgid "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub)."
+msgid "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates (GitHub)."
 msgstr ""
 
 #. Text der Oberfläche

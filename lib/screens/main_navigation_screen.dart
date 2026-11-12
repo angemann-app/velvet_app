@@ -69,7 +69,6 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       default:
         _showTab(_ueben);
         final bereich = switch (index) {
-          1 => UebenScreenState.koerper,
           2 => UebenScreenState.gedanken,
           _ => UebenScreenState.koerper,
         };

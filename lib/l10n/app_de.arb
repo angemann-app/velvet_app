@@ -203,7 +203,7 @@
   "onboardingMehrDatenschutz": "Mehr zum Datenschutz",
   "onboardingVersprechenLokal": "Alles bleibt auf deinem Handy: Profil, Tagebuch und Fortschritt.",
   "onboardingVersprechenKeinKonto": "Kein Konto, keine Werbung, keine Auswertung.",
-  "onboardingVersprechenNetz": "Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal und die Suche nach Updates.",
+  "onboardingVersprechenNetz": "Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates.",
   "onboardingSchritt": "Frage {n} von {gesamt}",
   "@onboardingSchritt": {
     "placeholders": {
@@ -1243,7 +1243,7 @@
   "onboardingProfilePersonalisation": "Profil & Personalisierung",
   "onboardingWelcomeToVelvetpulse": "Willkommen bei VelvetPulse",
   "onboardingYourPrivateCoachingProgrammeFor": "Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intimität.",
-  "onboardingPrivateProfileJournalProgressStay": "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).",
+  "onboardingPrivateProfileJournalProgressStay": "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates (GitHub).",
   "onboardingAlreadyUsingVelvetpulse": "Bereits VelvetPulse-Nutzer?",
   "onboardingLoadABackupFromFile": "Sicherung aus Datei oder Zwischenablage laden",
   "onboardingRestore": "Wiederherstellen",

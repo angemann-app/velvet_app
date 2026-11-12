@@ -983,7 +983,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingVersprechenNetz.
   ///
   /// In de, this message translates to:
-  /// **'Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal und die Suche nach Updates.'**
+  /// **'Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates.'**
   String get onboardingVersprechenNetz;
 
   /// No description provided for @onboardingSchritt.
@@ -4281,7 +4281,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingPrivateProfileJournalProgressStay.
   ///
   /// In de, this message translates to:
-  /// **'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).'**
+  /// **'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates (GitHub).'**
   String get onboardingPrivateProfileJournalProgressStay;
 
   /// No description provided for @onboardingAlreadyUsingVelvetpulse.
