@@ -96,15 +96,28 @@ stillschweigend zu übergehen.
 
 ## Offene Aufträge
 
-### AG-27: Vier Bleistift-Bilder für „Zu zweit“, „Eure erste Woche“ und die Einladung
+**Zum Stand der Liste (12.11.2026, bitte zuerst lesen):**
+
+- **Der nächste Auftrag ist AG-29.** AG-25 (vier korrigierte Bilder) und AG-26 (Hörstichprobe) sind geliefert und abgenommen; sie
+  stehen unten nur noch zur Ablage. Nicht noch einmal bearbeiten.
+- **Die Nummern AG-27 und AG-28 sind vergeben und abgebrochen.** Sie standen für die Nachbesserung der Sehr-spicy-Szenenbilder
+  (15 von 35, dann 6 von 15) und wurden am 07.11.2026 auf Entscheidung des Nutzers beendet. Daran nicht weiterarbeiten, die Ordner
+  `build/redaktion/sehrspicy_bilder_abgabe*` nicht anfassen. Die Nummern werden nicht wiederverwendet, deshalb geht es mit AG-29 weiter.
+- **Im Ordner `C:\TOOLS\workspace\mojo` liegt ein ungesicherter Stand** (unter anderem eine ältere `AG.md` mit den Texten zu AG-27
+  und AG-28 vom 07.11.). Maßgeblich ist allein diese Datei auf `main`, wie du sie mit `git pull` in `mojo-ag` bekommst. In
+  `C:\TOOLS\workspace\mojo` nichts lesen, übernehmen, sichern oder verwerfen; das klärt Claude mit dem Nutzer.
+- Weißt du zu AG-25 oder AG-26 etwas, das diesem Stand widerspricht (zum Beispiel ein offener Pull Request), schreib es in den
+  Bericht zu AG-29 unter „Offen oder unsicher“.
+
+### AG-29: Vier Bleistift-Bilder für „Zu zweit“, „Eure erste Woche“ und die Einladung
 
 Stand 12.11.2026, von Claude Code. Hintergrund: `docs/konzepte/eine-tonlage.md`, Abschnitt „Bilder und Symbole“. Die App hat neue
 Bereiche für Paare bekommen; dort stehen bisher gezeichnete Platzhalter. Gebraucht werden vier ruhige Bilder, die **jede Paarform**
 meinen können (Frau und Mann, zwei Frauen, zwei Männer, nicht eindeutig). Deshalb gilt für alle vier: **Man erkennt kein Geschlecht.**
 Varianten je Paarform kommen später in einem eigenen Auftrag, sobald die App sie auswählen kann.
 
-**Branch:** `ag/27-paar-bilder-<datum>`. **Erlaubte Dateien:** nur die vier neuen WebP unter `assets/images/` und der Bericht
-`docs/pruefungen/AG27_PAAR_BILDER.md`. `assets/data/bilder.json`, `lib/`, Texte und `AG.md` nicht ändern; das Einbauen macht Claude.
+**Branch:** `ag/29-paar-bilder-<datum>`. **Erlaubte Dateien:** nur die vier neuen WebP unter `assets/images/` und der Bericht
+`docs/pruefungen/AG29_PAAR_BILDER.md`. `assets/data/bilder.json`, `lib/`, Texte und `AG.md` nicht ändern; das Einbauen macht Claude.
 
 **Stil (wie AG-22 bis AG-24):** detailed pencil drawing, technical illustration style, soft shading, faint blueprint grid with thin
 dimension lines and thin arrows, off-white paper, dezente Rosé-Akzente, **keine Schrift, keine Zahlen**. Das Bild füllt die ganze
@@ -127,7 +140,7 @@ keinem Bild Schriftzeichen, auch nicht angedeutet am Rand. Fehlgriffe neu erzeug
 **Das Warten:** Ist die Bildgenerierung nicht verfügbar (Kapazitätslimit, 429, „Resource Exhausted“), nicht abbrechen und nicht
 „fertig“ melden. Im Bericht notieren, warten (Wartezeit aus der Meldung, sonst 30 Minuten) und dasselbe Motiv erneut versuchen.
 
-**Bericht** `docs/pruefungen/AG27_PAAR_BILDER.md`: Tabelle mit Datei, Maßen, Größe, Zahl der Versuche und einem Satz, was zu sehen
+**Bericht** `docs/pruefungen/AG29_PAAR_BILDER.md`: Tabelle mit Datei, Maßen, Größe, Zahl der Versuche und einem Satz, was zu sehen
 ist; dazu, was unsicher ist.
 
 **Fertig, wenn:** alle vier Dateien mit richtigen Maßen im Branch liegen, der Bericht dabei ist und der Pull Request gegen `main`
@@ -136,7 +149,7 @@ steht. `flutter test` ist nicht nötig (die Bilder sind noch nicht eingetragen).
 **Nicht tun:** andere Bilder „nebenbei verbessern“, Bilder in `bilder.json` eintragen, Menschen mit erkennbarem Geschlecht zeichnen,
 Lektionstexte oder Audio anfassen.
 
-### AG-28: Sechs Lektionen neu einsprechen (Deutsch und Englisch) – **noch nicht starten**
+### AG-30: Sechs Lektionen neu einsprechen (Deutsch und Englisch) – **noch nicht starten**
 
 **Wartet auf Claude und den Nutzer.** Dieser Auftrag wird erst gültig, wenn hier die Zeile „Texte freigegeben am …“ steht. Bis
 dahin überspringen und den nächsten offenen Auftrag nehmen.
@@ -154,7 +167,7 @@ Antigravity nichts.**
 | `mass_1`, `mass_2` | 20 | beide im Wechsel |
 | `pos_1` | 22 | beide im Wechsel |
 
-**Branch:** `ag/28-neuaufnahme-<datum>`, vorher `git pull`, damit die freigegebenen Texte da sind.
+**Branch:** `ag/30-neuaufnahme-<datum>`, vorher `git pull`, damit die freigegebenen Texte da sind.
 
 **Zu tun:**
 1. Deutsch: `C:\TOOLS\kikiri-venv\Scripts\python.exe tools/generate_audio.py female_1 touch_w_1 touch_m_1 mass_1 mass_2 pos_1`.
@@ -167,14 +180,14 @@ Antigravity nichts.**
    Stimmenwechsel an den Absätzen, neue Wörter („Menschen mit Vulva“, „die empfangende Person“) sauber gesprochen.
 
 **Erlaubte Dateien:** die zwölf neuen Aufnahmen und die zugehörigen Einträge in `dauer.json`, bei Bedarf `tools/aussprache.json`,
-und der Bericht `docs/pruefungen/AG28_NEUAUFNAHME.md` (je Aufnahme: Datei, Dauer, angehört ja/nein, Auffälligkeiten).
+und der Bericht `docs/pruefungen/AG30_NEUAUFNAHME.md` (je Aufnahme: Datei, Dauer, angehört ja/nein, Auffälligkeiten).
 
 **Nie zwei Kokoro-Läufe gleichzeitig.** Die bisherigen Aufnahmen bleiben in den veröffentlichten Paketen unberührt.
 
 **Nicht tun:** Texte ändern, `tools/pakete/versionen.json` hochzählen, `tools/pakete_hochladen.ps1` ausführen, andere Lektionen
 „mit neu sprechen“. Paket, Hörabnahme mit dem Nutzer und Veröffentlichung macht Claude.
 
-### AG-26: Gezielte Audio-Hörstichprobe (von Claude zu koordinieren)
+### AG-26: Gezielte Audio-Hörstichprobe (erledigt, nicht bearbeiten)
 
 **Aktuell abgeschlossen:** Finale AG-Aufnahme vom Nutzer freigegeben und durch Codex anhand SHA256/Dekodierung geprüft. Exakte Datei lokal gesichert unter `build/redaktion/gesamt/korrektur-ag26/abgenommen-ag/`. Kein weiterer Hör-/Syntheseauftrag. Paketübernahme durch Claude offen; siehe `docs/pruefungen/AG26_FINALE_UEBERGABE.md`. Bericht-PR noch nicht zusammengeführt; nicht als bereits gemergt verbuchen.
 
@@ -183,7 +196,7 @@ Nutzerentscheidung vom 02.11.2026: Stichproben reichen. Verbindlicher Auftrag: `
 Eigener Klon/Branch `ag/26-audio-stichprobe-20261102`; einzige erlaubte Änderung `docs/pruefungen/AG26_AUDIO_STICHPROBE.md`. Produktionsdateien nur lesen/abspielen, keine Neuvertonung oder Uploads. Private Innenansichten/Abendfolgen ausgeschlossen. Bei fehlender akustischer Prüfmöglichkeit ausdrücklich „nicht prüfbar“. Auftrag vorbereitet, Hörabnahme offen. Da dieser Stand noch lokal ist, stellt Claude AG den Auftrag und die lokalen Eingaben bereit; nicht durch bloßes Pull als verfügbar voraussetzen.
 
 
-### AG-25: Korrektur von vier Bildern (drei Kursbilder und eine Szene der Audioreihe)
+### AG-25: Korrektur von vier Bildern (erledigt, nicht bearbeiten)
 
 **Kein Branch, kein Pull Request, kein Commit.** Rückmeldung vom 01.11.2026 nach der Durchsicht von AG-22 bis AG-24: Der Nutzer ist mit den Bildern sehr zufrieden. Nur diese vier
 passen nicht und werden neu erzeugt, **sonst nichts**. **Gleiche Ausnahme mit ausdrücklicher Freigabe des Nutzers (01.11.2026) wie AG-22 bis AG-24:** Die Motive dürfen an dein
