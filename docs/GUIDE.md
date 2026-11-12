@@ -5,6 +5,7 @@ This guide is also inside the app (question mark at the top right, or in your pr
 ## Contents
 
 - [Getting started](#getting-started)
+- [Your first week together](#your-first-week-together)
 - [Courses and lessons](#courses-and-lessons)
 - [Find content and follow your personal path](#find-content-and-follow-your-personal-path)
 - [Continue listening and share an experience](#continue-listening-and-share-an-experience)
@@ -25,16 +26,27 @@ This guide is also inside the app (question mark at the top right, or in your pr
 
 <img src="anleitung/00_onboarding.png" width="260" alt="Getting started">
 
-On first launch you create a small profile: name, gender, relationship status and your focus. The app uses it to choose suitable courses, voices and example questions. Everything stays on your phone.
+On first launch you create a small profile: name, gender, relationship status and your focus. All questions are optional; for gender there is also “Not specified”, and nothing is preselected. The app uses it to choose suitable courses, voices and example questions. Everything stays on your phone.
 
-You can reach your profile at any time via the person icon at the top of the start page. That's also where you'll find language, discretion, backup, spicy mode and updates.
+Has someone invited you? Then tap “Someone invited me” right at the start. Three calm screens explain what this is about: nothing is a task, “no” is always an answer, and everything stays on your phone. After that you can set things up in peace, connect with that person, or just have a look first.
+
+You can reach your profile at any time via the person icon at the top of the start page. That's also where you'll find language, discretion, backup, spicy mode and updates. In your profile you can also say, if you like, what your body is like. Exercises and audios use this to pick fitting voices and words; you can leave it empty and change it at any time.
+
+
+## Your first week together
+
+For couples who have just connected: seven small steps, one a day, at your own pace. You find the “Your first week” card in the Us tab. Each step is small, such as listening to something together or asking each other a question.
+
+Every step has a “Not today”. The step then waits and nothing expires, and there are no points and no streaks. If you like, “Tell them where I am” sends one single sentence to your partner; that is entirely up to you.
+
+Your progress stays on your phone and is part of your backup. You can fold the card away and show it again later.
 
 
 ## Courses and lessons
 
 <img src="anleitung/01_kurse.png" width="260" alt="Courses and lessons">
 
-The Today tab is your start page. At the top is “Your next step”: the next open lesson, at first from the focus area matching your focus. Below it you choose between check-in and spark. All courses are in the Learn tab, grouped into six focus areas: Foundations, Accepting and letting go, Discovering yourself, Desire as a couple, Touch, and Fantasy and play. Tapping a focus area opens its courses; at first the one matching your focus is open. Use the filters above to choose, for example, “For her”, “For him” or “For couples”.
+The Today tab is your start page. At the top is “Your next step”: the next open lesson, at first from the focus area matching your focus. Below it you choose between check-in and spark. If your focus is “Couple”, Today shows less at once: “Today, together” with your next steps and audios for the two of you, and, folded away under “More just for you”, everything you can use on your own. All courses are in the Learn tab, grouped into six focus areas: Foundations, Accepting and letting go, Discovering yourself, Desire as a couple, Touch, and Fantasy and play. Tapping a focus area opens its courses; at first the one matching your focus is open. Use the filters above to choose, for example, “With a vulva”, “With a penis” or “Together”.
 
 Every lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.
 
@@ -118,7 +130,7 @@ Sparks: with one tap you show what you're in the mood for today, or not.
 
 Messages: with read receipts, which you can switch off in the menu.
 
-Explore together: in the fantasy map each of you answers separately with “Yes, please”, “Maybe” or “Rather not”. Only what you both want becomes visible (a match); a “Maybe” shows up under “To talk about”, a “Rather not” never does. In spicy mode there are also scenes to try, whole evenings that you answer the same way.
+Explore together: in the fantasy map each of you answers separately with “Yes, please”, “Maybe” or “Rather not”. Under “My answers” you only see your own. Under “Together” only what you both want appears; a “Maybe” shows up there to talk about, a “Rather not” never does. While there is no overlap yet, it stays quiet, without cheering and without pressure. In spicy mode there are also scenes to try, whole evenings that you answer the same way.
 
 Learning together: share lessons and exchange answers to the reflection questions.
 

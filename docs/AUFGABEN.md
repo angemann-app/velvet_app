@@ -26,6 +26,19 @@ Serie, Traumtagebuch und Paket sind gebaut (siehe Konzept, „Umsetzung“). Off
 
 Richtung abgestimmt, Muster gezeigt, offene Fragen am Ende des Konzepts. Stufen: 1 Heute-Seite (Audio-Bereich dauerhaft einklappbar), 2 Kurs-Zeilen mit Titelbildern, 3 SOS-Symbol, 4 Tab-Umbau, 5 KI-Coach-Einstieg und Onboarding.
 
+## 1c. Eine Tonlage, alle Paare (Konzept: docs/konzepte/eine-tonlage.md)
+
+Status: gebaut (Stufen 1 bis 5, Branch `claude/eine-tonlage-20261112`, Anleitung DE/EN nachgezogen), wartet auf Beta und Freigabe des Nutzers. Nicht zusammengeführt. Offene Folgepunkte:
+- (a) Bestehender Fehler: Die Whitelist in `backup_codec.dart` enthält vermutlich `kursFilter`, `designPalette`, `audioBereichOffen` nicht (Merge-Tests laufen trivial). Prüfen und beheben.
+- (b) SVG-Symbole (Geschlechtsauswahl, Landkarte, Einladung) statt Material-Icons; Abschnitt `symbole` im Bild-Register.
+- (c) AG-Bildauftrag: 9 Bleistift-Motive (zu_zweit, erste_woche, einladung), Entwurf im Konzept; nach OK des Nutzers in `AG.md` eintragen.
+- (d) Gesprochene Lektionstexte mit Frau/Mann neu schreiben und neu einsprechen (Liste im Konzept), nur nach Entscheidung des Nutzers.
+- (e) „Was ist neu“-Eintrag und Build-Nummer vor dem Release.
+- (f) Die zwei Coach-abhängigen Texte (`onboardingVersprechenNetz`, `onboardingPrivateProfileJournalProgressStay`) nach der Coach-Entfernung ändern.
+- (g) Name „Fantasie-Landkarte“ offen.
+- (h) Funke-Kacheln weiter prüfen.
+- (i) Beim Zusammenführen Überschneidungen mit Coach-Entfernung, SOS und Paar-Vertrauen beachten (`app_de.arb`, `app_en.arb`, `onboarding_screen.dart`, `courses_screen.dart`, `couples_channel_screen.dart`, `storage_service.dart`).
+
 ## 2. Pflege: technische Schulden (nach AG-8 und AG-9)
 
 - **Abspieler entflechten:** `einschlaf_reise_screen.dart` trägt Einschlafen, Traum-Abend, Lust im Traum und

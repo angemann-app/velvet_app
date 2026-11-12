@@ -3,6 +3,7 @@
 Stand: Entwurf vom 31.10.2026, Richtung vom Nutzer abgestimmt („Gehe mit allem mit“), Einzelheiten offen.
 Ausgangspunkt war ein Blick von oben auf die App als Produktdesigner. Baut auf `startseite.md` und
 `redesign-bleistift.md` auf.
+Vermerk 12.11.2026: Heute im Paar-Modus, Geschlechtsauswahl und „Eure erste Woche“ stehen in `eine-tonlage.md`.
 
 ## Leitgedanke
 

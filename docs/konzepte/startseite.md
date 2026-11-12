@@ -2,6 +2,11 @@
 
 Stand: abgestimmt und umgesetzt am 27.10.2026 (4.12.0-beta.2).
 
+## Paar-Modus (12.11.2026)
+
+Bei Fokus „Paar“ zeigt Heute deutlich weniger Blöcke: „Heute zu zweit“ (Eure erste Woche, Abend, Audios, Wir) und „Mehr für dich
+allein“ eingeklappt. Gebaut auf Branch `claude/eine-tonlage-20261112`, siehe `eine-tonlage.md`, Abschnitt 6.
+
 ## Problem
 
 Die Startseite war überladen: Begrüßung, Hinweis, bis zu sechs große Audio-Karten, Check-in, Funke,

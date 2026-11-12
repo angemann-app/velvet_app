@@ -5,6 +5,7 @@ Diese Anleitung steht auch in der App (Fragezeichen oben rechts oder im Profil).
 ## Inhalt
 
 - [Erste Schritte](#erste-schritte)
+- [Eure erste Woche](#eure-erste-woche)
 - [Kurse und Lektionen](#kurse-und-lektionen)
 - [Finden und dein persönlicher Weg](#finden-und-dein-persönlicher-weg)
 - [Weiterhören und gemeinsam erleben](#weiterhören-und-gemeinsam-erleben)
@@ -25,16 +26,27 @@ Diese Anleitung steht auch in der App (Fragezeichen oben rechts oder im Profil).
 
 <img src="anleitung/00_onboarding.png" width="260" alt="Erste Schritte">
 
-Beim ersten Start legst du ein kleines Profil an: Name, Geschlecht, Beziehungsstatus und dein Fokus. Daraus wählt die App passende Kurse, Stimmen und Beispielfragen aus. Alles bleibt auf deinem Handy.
+Beim ersten Start legst du ein kleines Profil an: Name, Geschlecht, Beziehungsstatus und dein Fokus. Alle Fragen sind freiwillig; beim Geschlecht gibt es auch „Keine Angabe“, und nichts ist vorausgewählt. Daraus wählt die App passende Kurse, Stimmen und Beispielfragen aus. Alles bleibt auf deinem Handy.
 
-Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Startseite. Dort findest du auch Sprache, Diskretion, Sicherung, Spicy-Modus und Updates.
+Hat dich jemand eingeladen? Dann tippst du ganz am Anfang auf „Jemand hat mich eingeladen“. Drei ruhige Bildschirme erklären, worum es geht: Nichts ist eine Aufgabe, „Nein“ ist immer eine Antwort, und alles bleibt auf deinem Handy. Danach richtest du in Ruhe ein, verbindest dich mit der Person oder schaust erst einmal nur.
+
+Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Startseite. Dort findest du auch Sprache, Diskretion, Sicherung, Spicy-Modus und Updates. Im Profil kannst du außerdem freiwillig angeben, wie dein Körper ist. Das nutzen Übungen und Audios, um Stimme und Worte passend zu wählen; du kannst es leer lassen und jederzeit ändern.
+
+
+## Eure erste Woche
+
+Für Paare, die sich gerade verbunden haben: sieben kleine Schritte, einer pro Tag, in eurem Tempo. Die Karte „Eure erste Woche“ findest du im Tab Wir. Jeder Schritt ist klein, etwa gemeinsam etwas hören oder einander eine Frage stellen.
+
+Zu jedem Schritt gibt es „Heute nicht“. Der Schritt wartet dann, ohne dass etwas verfällt, und es gibt keine Punkte und keine Serien. Wenn du magst, kannst du mit „Sagen, wo ich bin“ einen einzelnen Satz an dein Gegenüber schicken; das bleibt dir überlassen.
+
+Dein Stand in der Woche bleibt auf deinem Handy und ist Teil deiner Sicherung. Du kannst die Karte einklappen und später wieder zeigen.
 
 
 ## Kurse und Lektionen
 
 <img src="anleitung/01_kurse.png" width="260" alt="Kurse und Lektionen">
 
-Der Tab Heute ist deine Startseite. Oben steht „Dein nächster Schritt“: die nächste offene Lektion, am Anfang aus dem Schwerpunkt deines Fokus. Darunter wählst du zwischen Check-in und Funke. Alle Kurse findest du im Tab Lernen, geordnet nach sechs Schwerpunkten: Grundlagen, Annehmen und Lösen, Sich selbst entdecken, Lust als Paar, Berührung sowie Fantasie und Spiel. Ein Tipp auf einen Schwerpunkt klappt seine Kurse auf; anfangs ist der offen, der zu deinem Fokus passt. Mit den Filtern darüber wählst du zum Beispiel „Mit Vulva“, „Mit Penis“ oder „Zu zweit“.
+Der Tab Heute ist deine Startseite. Oben steht „Dein nächster Schritt“: die nächste offene Lektion, am Anfang aus dem Schwerpunkt deines Fokus. Darunter wählst du zwischen Check-in und Funke. Ist dein Fokus „Paar“, zeigt Heute weniger auf einmal: „Heute zu zweit“ mit euren nächsten Schritten und Audios für euch, und unter „Mehr für dich allein“ (eingeklappt) alles, was du allein nutzen kannst. Alle Kurse findest du im Tab Lernen, geordnet nach sechs Schwerpunkten: Grundlagen, Annehmen und Lösen, Sich selbst entdecken, Lust als Paar, Berührung sowie Fantasie und Spiel. Ein Tipp auf einen Schwerpunkt klappt seine Kurse auf; anfangs ist der offen, der zu deinem Fokus passt. Mit den Filtern darüber wählst du zum Beispiel „Mit Vulva“, „Mit Penis“ oder „Zu zweit“.
 
 Jede Lektion hat einen Text, eine Aufnahme zum Anhören und am Ende eine Frage zum Nachdenken. Manche Lektionen haben unten einen Knopf, der dich direkt zur passenden Übung bringt, etwa zum Beckenboden-Timer oder zu einem geführten Audio.
 
@@ -118,7 +130,7 @@ Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.
 
 Nachrichten: mit Lesebestätigung, die ihr im Menü abschalten könnt.
 
-Gemeinsam entdecken: In der Fantasie-Landkarte antwortet jeder für sich mit „Ja, gern“, „Vielleicht“ oder „Lieber nicht“. Sichtbar wird nur, was ihr beide wollt (Treffer); ein „Vielleicht“ erscheint zum Besprechen, ein „Lieber nicht“ nie. Im Spicy-Modus kommen Szenen zum Ausprobieren dazu, ganze Abende, die ihr genauso beantwortet.
+Gemeinsam entdecken: In der Fantasie-Landkarte antwortet jeder für sich mit „Ja, gern“, „Vielleicht“ oder „Lieber nicht“. Unter „Meine Antworten“ siehst du nur deine eigenen. Unter „Gemeinsam“ erscheint nur, was ihr beide wollt; ein „Vielleicht“ steht dort zum Besprechen, ein „Lieber nicht“ nie. Gibt es noch keine Übereinstimmung, bleibt es dort ruhig, ohne Jubel und ohne Druck. Im Spicy-Modus kommen Szenen zum Ausprobieren dazu, ganze Abende, die ihr genauso beantwortet.
 
 Gemeinsam lernen: Lektionen teilen und Antworten auf die Reflexionsfragen austauschen.
 
