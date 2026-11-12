@@ -122,11 +122,13 @@ msgstr ""
 
 #. Abschnitt der Anleitung
 #. EN: The Practice tab, under Body, contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
-#. EN: The SOS button at the top right helps in moments of pressure or anxiety, with short steps for before, in the moment and afterwards.
+#. EN: The “Help” button at the top right opens a calm sheet. You choose what is going on: nervous, my body isn't going along, pain, “I don't want to go on”, my partner is quiet, afterwards. You get a few steps and sentences you can say.
+#. EN: There you also find help when a no isn't respected or there is pressure, with contacts for Germany, Austria, Switzerland, the United Kingdom and the USA. “Leave quickly” closes the sheet at once.
 msgctxt "guide:training#text"
 msgid ""
 "Im Tab Üben, Bereich Körper, findest du den Beckenboden-Timer mit vier Übungsarten und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.\n"
-"Der SOS-Knopf oben rechts hilft in Momenten mit Druck oder Angst: mit kurzen Schritten für vorher, im Moment und danach."
+"Der Knopf „Hilfe“ oben rechts öffnet ein ruhiges Blatt. Du wählst, was gerade los ist: nervös, der Körper macht nicht mit, Schmerz, „ich möchte nicht mehr“, das Gegenüber wird still, danach. Du bekommst wenige Schritte und Sätze, die du sagen kannst.\n"
+"Dort findest du auch Hilfe, wenn ein Nein nicht gilt oder Druck im Spiel ist, mit Anlaufstellen für Deutschland, Österreich, die Schweiz, das Vereinigte Königreich und die USA. „Schnell verlassen“ schließt das Blatt sofort."
 msgstr ""
 
 #. Abschnitt der Anleitung

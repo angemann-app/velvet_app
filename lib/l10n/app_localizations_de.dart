@@ -837,37 +837,204 @@ class AppLocalizationsDe extends AppLocalizations {
       'Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, wird der Herzschlag mit jedem Ausatmen ein wenig langsamer. Das ist ein normaler Reflex, den viele als beruhigend erleben.';
 
   @override
-  String get sosModalSosQuickHelp => 'SOS Akut-Hilfe';
+  String get sosTitel => 'Hilfe';
 
   @override
-  String get sosModalCalmDownRightNowEmergency =>
-      'Sofortige Down-Regulation & Notfall-Schritte';
+  String get sosAuswahlTitel => 'Was ist gerade los?';
 
   @override
-  String get sosModalBefore => 'Vorab';
+  String get sosAuswahlUntertitel =>
+      'Du musst nichts erklären. Such aus, was am ehesten passt.';
 
   @override
-  String get sosModalInTheMoment => 'Im Moment';
+  String get sosAuswahlHilfe => 'Ich werde gedrängt, mein Nein gilt nicht';
 
   @override
-  String get sosModalAfterwards => 'Danach';
+  String get sosWeiter => 'Weiter';
 
   @override
-  String get sosModalYourMantraForThisMoment => 'DEIN MANTRA FÜR DIESEN MOMENT';
+  String get sosZurueck => 'Zurück';
 
   @override
-  String sosModalMantra(Object mantra) {
-    return '„$mantra“';
+  String get sosZurAuswahl => 'Zur Auswahl';
+
+  @override
+  String get sosSchliessen => 'Schließen';
+
+  @override
+  String sosSchrittVon(int aktuell, int gesamt) {
+    return 'Schritt $aktuell von $gesamt';
   }
 
   @override
-  String get sosModalImmediateStepsTickOff => 'SOFORT-SCHRITTE (ABHAKEN)';
+  String get sosSatzTitel => 'Ein Satz, den du sagen kannst';
 
   @override
-  String sosModalCheckedlengthImmediatestepslengthDone(
-      Object checkedLength, Object immediateStepsLength) {
-    return '$checkedLength/$immediateStepsLength erledigt';
+  String get sosHilfeKnopf => 'Hilfe bei Druck oder Gewalt';
+
+  @override
+  String get sosHilfeTitel => 'Hilfe, wenn ein Nein nicht gilt';
+
+  @override
+  String get sosHilfeEinstieg =>
+      'Wenn du Nein gesagt hast oder nichts sagen konntest und es trotzdem weiterging, ist das nicht in Ordnung. Du bist nicht schuld. Auch nicht, wenn ihr ein Paar seid, wenn du vorher Ja gesagt hast oder wenn du es nicht deutlich genug gesagt hast. Erstarren ist eine normale Schutzreaktion.';
+
+  @override
+  String get sosHilfeGiltTitel => 'Was gilt';
+
+  @override
+  String get sosHilfeGilt1 =>
+      'Ein Nein gilt, auch mittendrin und auch in einer Beziehung.';
+
+  @override
+  String get sosHilfeGilt2 =>
+      'Ein Ja nach Überreden, Drängen, Schmollen, Drohen oder Schweigen als Druckmittel ist keine freie Zustimmung.';
+
+  @override
+  String get sosHilfeGilt3 =>
+      'Wer schläft, bewusstlos, stark betrunken oder berauscht ist oder Angst hat, kann nicht frei zustimmen.';
+
+  @override
+  String get sosHilfeGilt4 =>
+      'Du musst nichts beweisen, um Hilfe zu bekommen. Beratung geht auch ohne Anzeige. Du entscheidest, was du tust und wann.';
+
+  @override
+  String get sosHilfeNotrufTitel => 'Bei akuter Gefahr';
+
+  @override
+  String get sosHilfeAnrufenTitel => 'Mit jemandem sprechen';
+
+  @override
+  String get sosHilfeDiskretion =>
+      'Anrufe stehen in der Anrufliste und manchmal auf der Rechnung. Aus der Anrufliste kannst du sie löschen. Ein Chat steht im Browserverlauf. Ein privates Fenster hinterlässt weniger.';
+
+  @override
+  String sosHilfeStand(String stand) {
+    return 'Stand der Angaben: $stand. Nummern und Zeiten können sich ändern.';
   }
+
+  @override
+  String get sosHilfeAnrufen => 'Anrufen';
+
+  @override
+  String get sosHilfeWebseite => 'Webseite';
+
+  @override
+  String sosSatzZitat(String satz) {
+    return '„$satz“';
+  }
+
+  @override
+  String sosHilfeAnrufenNummer(String nummer) {
+    return '$nummer anrufen';
+  }
+
+  @override
+  String sosHilfeNummerWaehlen(String nummer) {
+    return 'Bitte wähle $nummer';
+  }
+
+  @override
+  String get sosHilfeSchnellVerlassen => 'Schnell verlassen';
+
+  @override
+  String get sosLandDe => 'Deutschland';
+
+  @override
+  String get sosLandAt => 'Österreich';
+
+  @override
+  String get sosLandCh => 'Schweiz';
+
+  @override
+  String get sosLandUk => 'Vereinigtes Königreich';
+
+  @override
+  String get sosLandUs => 'USA';
+
+  @override
+  String get sosNotrufDe => 'Polizei 110 · Rettung und Feuerwehr 112';
+
+  @override
+  String get sosNotrufAt => 'Polizei 133 · Rettung 144 · europaweit 112';
+
+  @override
+  String get sosNotrufCh => 'Polizei 117 · Sanität 144 · 112';
+
+  @override
+  String get sosNotrufUk => '999 (Polizei, Rettung)';
+
+  @override
+  String get sosNotrufUs => '911 (Polizei, Rettung)';
+
+  @override
+  String get sosStelleDeFrauenName => 'Hilfetelefon Gewalt gegen Frauen';
+
+  @override
+  String get sosStelleDeFrauenHinweis =>
+      'Rund um die Uhr, kostenlos und anonym. Berät auch bei sexueller Gewalt, per Telefon, Chat und in vielen Sprachen.';
+
+  @override
+  String get sosStelleDeMaennerName => 'Hilfetelefon Gewalt an Männern';
+
+  @override
+  String get sosStelleDeMaennerHinweis =>
+      'Kostenlos und anonym, per Telefon und Chat. Zeiten laut Anbieter: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr.';
+
+  @override
+  String get sosStelleDeWeisserName => 'WEISSER RING Opfer-Telefon';
+
+  @override
+  String get sosStelleDeWeisserHinweis =>
+      'Täglich 7 bis 22 Uhr, kostenlos und anonym, für Opfer von Straftaten.';
+
+  @override
+  String get sosStelleDeSeelsorgeName => 'Telefonseelsorge';
+
+  @override
+  String get sosStelleDeSeelsorgeHinweis =>
+      'Rund um die Uhr und kostenlos, auch unter 0800 111 0 222. Chat nach Anmeldung. Beratung auf Deutsch.';
+
+  @override
+  String get sosStelleAtFrauenName => 'Frauenhelpline gegen Gewalt';
+
+  @override
+  String get sosStelleAtFrauenHinweis =>
+      'Rund um die Uhr, kostenlos, auf Wunsch anonym, in mehreren Sprachen.';
+
+  @override
+  String get sosStelleAtGewaltschutzName => 'Gewaltschutzzentren';
+
+  @override
+  String get sosStelleAtGewaltschutzHinweis => 'Kostenlos und anonym.';
+
+  @override
+  String get sosStelleChOpferhilfeName => 'Opferhilfe 142';
+
+  @override
+  String get sosStelleChOpferhilfeHinweis =>
+      'Seit 1. Mai 2026 in der ganzen Schweiz, rund um die Uhr, kostenlos und anonym. Kein Notruf: Bei Gefahr zuerst die Polizei rufen.';
+
+  @override
+  String get sosStelleUkRapeName => 'Rape Crisis Support Line';
+
+  @override
+  String get sosStelleUkRapeHinweis =>
+      'Rund um die Uhr, kostenlos, auch per Chat. Für Menschen ab 16 in England und Wales, die Vergewaltigung oder sexuelle Gewalt erlebt haben.';
+
+  @override
+  String get sosStelleUsRainnName => 'RAINN National Sexual Assault Hotline';
+
+  @override
+  String get sosStelleUsRainnHinweis =>
+      'Rund um die Uhr, kostenlos und vertraulich, auf Englisch und Spanisch. Chat auf online.rainn.org.';
+
+  @override
+  String get sosStelleUs988Name => '988 Suicide & Crisis Lifeline';
+
+  @override
+  String get sosStelleUs988Hinweis =>
+      'Anruf oder SMS, rund um die Uhr, kostenlos, bei seelischen Krisen.';
 
   @override
   String get appLockLocked => 'Gesperrt';

@@ -7345,129 +7345,327 @@ msgid "Welche Rolle hat sich für dich überraschend gut angefühlt, und was has
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Before the situation: from exam stress to the crackle of anticipation
-msgctxt "sos:sos_before#title"
-msgid "Vor der Situation: Vom Prüfungsstress ins Vorfreude-Knistern"
+#. EN: I feel nervous or unsure
+msgctxt "sos:sos_nervoes#title"
+msgid "Ich bin nervös oder unsicher"
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Even before the date, or while brushing your teeth before bed, you notice your head racing and building up a performance test.
-msgctxt "sos:sos_before#situation"
-msgid "Du merkst schon vor dem Date oder beim Zähneputzen vorm Schlafengehen, dass dein Kopf rattert und einen Leistungstest aufbaut."
+#. EN: Nerves before closeness are common. Your body is getting ready, even if it feels like tension. Sometimes nerves are a quiet no. You can take that seriously too. You don't have to perform tonight.
+msgctxt "sos:sos_nervoes#intro"
+msgid "Nervosität vor Nähe ist häufig. Dein Körper macht sich bereit, auch wenn es sich nach Anspannung anfühlt. Manchmal ist Nervosität auch ein leises Nein. Auch das darfst du ernst nehmen. Du musst heute nichts leisten."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Reframe the adrenaline: tell yourself inwardly: 'My heart isn't pounding from fear, but because this person matters to me. My body is getting ready.'
-msgctxt "sos:sos_before#immediate_steps.0"
-msgid "Adrenalin umdeuten: Sag dir innerlich: 'Mein Herz klopft nicht vor Angst, sondern weil mir dieser Mensch wichtig ist. Mein Körper macht sich bereit.'"
+#. EN: Breathe in three times and let each breath out last longer than the breath in. That's all it takes.
+msgctxt "sos:sos_nervoes#steps.0"
+msgid "Atme dreimal ein und lass die Luft länger wieder hinaus, als du eingeatmet hast. Mehr braucht es nicht."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: 3x physiological sigh: breathe in twice through the nose deep into the belly, open your lips loosely and breathe out extremely long and audibly.
-msgctxt "sos:sos_before#immediate_steps.1"
-msgid "3x Physiologischer Seufzer: Doppelt durch die Nase tief in den Bauch einatmen, Lippen locker öffnen und extrem lang und hörbar ausatmen."
+#. EN: Let your jaw and shoulders drop. You can rest a hand on your chest or belly.
+msgctxt "sos:sos_nervoes#steps.1"
+msgid "Lass Kiefer und Schultern los. Du kannst eine Hand auf Brust oder Bauch legen."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Quick relaxation for face and neck (30 seconds): gently knead both earlobes with a slight downward pull and stroke your jaw soft.
-msgctxt "sos:sos_before#immediate_steps.2"
-msgid "Schnelle Entspannung für Gesicht und Nacken (30 Sekunden): Knete sanft beide Ohrläppchen mit leichtem Zug nach unten und streiche deinen Kiefer weich aus."
+#. EN: Ask yourself: what do I want tonight? “Just cuddling” and “not tonight” are complete answers.
+msgctxt "sos:sos_nervoes#steps.2"
+msgid "Frag dich: Was möchte ich heute Abend? „Nur kuscheln“ und „heute lieber nicht“ sind vollwertige Antworten."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Pelvic floor melt: standing or sitting, consciously let your lower belly, buttocks and perineum sink downwards (pelvic floor opener).
-msgctxt "sos:sos_before#immediate_steps.3"
-msgid "Beckenboden-Schmelze: Lass im Stehen oder Sitzen bewusst deinen Unterbauch, dein Gesäß und deinen Damm nach unten sinken (Beckenboden-Öffner)."
+#. EN: My head is pretty full today. I'd like to start slowly.
+msgctxt "sos:sos_nervoes#phrases.0"
+msgid "Mein Kopf ist heute ziemlich voll. Ich würde gern langsam anfangen."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: The 90-percent promise: make a pact with yourself: 'Tonight penetration isn't my obligatory goal at all. I'm going in to taste skin, to kiss and to enjoy. Everything else is a forbidden bonus.'
-msgctxt "sos:sos_before#immediate_steps.4"
-msgid "Das 90-Prozent-Versprechen: Triff einen Pakt mit dir: 'Heute Abend ist Penetration gar nicht mein Pflichtziel. Ich gehe da rein, um Haut zu schmecken, zu küssen und zu genießen. Alles andere ist verbotener Bonus.'"
+#. EN: I'm nervous. Can we just be close for a while first?
+msgctxt "sos:sos_nervoes#phrases.1"
+msgid "Ich bin nervös. Können wir erst einmal einfach nah beieinander sein?"
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Tonight I'm not someone taking an exam, but someone savouring. I'm here to feel, not to deliver.
-msgctxt "sos:sos_before#mantra"
-msgid "Ich bin heute Abend kein Prüfling, sondern ein Genießer. Ich bin hier, um zu spüren, nicht um abzuliefern."
+#. EN: Closeness needs no goal. You can stop at any time.
+msgctxt "sos:sos_nervoes#closing"
+msgid "Nähe braucht kein Ziel. Du darfst jederzeit anhalten."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: In the middle of the moment: when your head shuts down or the response fades
-msgctxt "sos:sos_during#title"
-msgid "Mitten im Moment: Wenn der Kopf dichtmacht oder die Reaktion nachlässt"
+#. EN: My body isn't going along right now
+msgctxt "sos:sos_koerper#title"
+msgid "Mein Körper macht gerade nicht mit"
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: You're in the middle of things, slip into the spectator trap ('Is it still working?') and notice the erection softening or your pelvis cramping.
-msgctxt "sos:sos_during#situation"
-msgid "Du bist mitten im Geschehen, rutschst in die Beobachter-Falle ('Klappt es noch?') und merkst, wie die Erektion weicher wird oder dein Becken verkrampft."
+#. EN: Arousal comes and goes, in every body: the erection fades, wetness stays away, the mind shuts down. That says nothing about you or about your closeness. Often it's stress.
+msgctxt "sos:sos_koerper#intro"
+msgid "Erregung kommt und geht, bei allen Körpern: Die Erektion lässt nach, die Feuchtigkeit bleibt aus, der Kopf macht dicht. Das sagt nichts über dich und nichts über eure Nähe. Oft ist es Stress."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Stop the cramp immediately: whatever you do, don't try to force anything by thrusting faster, clenching your buttocks or holding your breath!
-msgctxt "sos:sos_during#immediate_steps.0"
-msgid "Sofortiger Stopp des Krampfes: Versuche auf keinen Fall, durch schnelleres Stoßen, Zusammenkneifen der Pobacken oder Luftanhalten etwas zu erzwingen!"
+#. EN: Pause for a moment. More speed or pressure usually makes it harder. Breathe out.
+msgctxt "sos:sos_koerper#steps.0"
+msgid "Halte kurz inne. Mehr Tempo oder Druck macht es meist schwerer. Atme aus."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Turn the floodlight around (focus shift): take the pressure off yourself and give your full attention to your partner's body for 2 minutes (neck, chest, thighs).
-msgctxt "sos:sos_during#immediate_steps.1"
-msgid "Flutlicht umdrehen (Fokus-Shift): Nimm den Druck von dir und schenke deine volle Aufmerksamkeit 2 Minuten dem Körper deines Gegenübers (Hals, Brust, Schenkel)."
+#. EN: Turn your attention to what you feel right now: the warmth of skin, one breath, your partner's hand.
+msgctxt "sos:sos_koerper#steps.1"
+msgid "Richte die Aufmerksamkeit auf das, was du gerade spürst: die Wärme der Haut, einen Atemzug, die Hand deines Gegenübers."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Light a sensory anchor: open your jaw, let a deep sigh be heard and for 30 seconds feel only the heat and moisture under your lips or palms.
-msgctxt "sos:sos_during#immediate_steps.2"
-msgid "Spür-Anker zünden: Öffne deinen Kiefer, lass ein tiefes Seufzen hören und fühle für 30 Sekunden ausschließlich die Hitze und Feuchtigkeit unter Lippen oder Handflächen."
+#. EN: Say it in one sentence, whenever you like. Being honest is easier than covering up: your partner notices that something is different anyway, and often takes silence personally.
+msgctxt "sos:sos_koerper#steps.2"
+msgid "Sag es, sobald du magst, mit einem Satz. Ehrlich ist leichter als überspielen: Dein Gegenüber merkt ohnehin, dass etwas anders ist, und bezieht Schweigen oft auf sich."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Use a charming pressure breaker: smile at your partner and murmur: 'You're driving me so crazy right now that I need to shift down a gear – let's breathe wrapped tightly around each other for a minute.'
-msgctxt "sos:sos_during#immediate_steps.3"
-msgid "Charmanten Druckbrecher nutzen: Lächle dein Gegenüber an und raune: 'Du machst mich gerade so verrückt, dass ich kurz einen Gang zurückschalten muss – lass uns eine Minute ganz eng umschlungen atmen.'"
+#. EN: You can change the touch: stroking, kissing, talking, a break. Nothing has to be “finished”. If it happens often, it's worth talking to a GP, urologist or gynecologist.
+msgctxt "sos:sos_koerper#steps.3"
+msgid "Ihr könnt die Berührung wechseln: streicheln, küssen, reden, eine Pause. Es muss nichts „fertig“ werden. Kommt es oft vor, lohnt sich ein Gespräch in der Hausarzt-, Urologie- oder Gynäkologiepraxis."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: A pause only makes the game hotter. Jaw loose, perineum soft, back to the heat of the skin.
-msgctxt "sos:sos_during#mantra"
-msgid "Eine Pause macht das Spiel nur heißer. Kiefer locker, Damm weich, zurück zur Hitze der Haut."
+#. EN: My body isn't going along right now. It's not you. Can we slow down for a moment?
+msgctxt "sos:sos_koerper#phrases.0"
+msgid "Mein Körper macht gerade nicht mit. Das liegt nicht an dir. Können wir kurz langsamer machen?"
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: After a difficult moment: shame detox and connection
-msgctxt "sos:sos_after#title"
-msgid "Nach einem schwierigen Moment: Scham-Detox und Verbundenheit"
+#. EN: I'm in my head right now. Would you just hold me?
+msgctxt "sos:sos_koerper#phrases.1"
+msgid "Ich bin gerade im Kopf. Magst du mich einfach halten?"
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: It didn't go like in the movies, things were stopped and your inner critic would most like to sink into the ground.
-msgctxt "sos:sos_after#situation"
-msgid "Es lief nicht wie im Film, der Akt wurde abgebrochen und dein innerer Kritiker will sich am liebsten im Erdboden verkriechen."
+#. EN: A pause is not a failure.
+msgctxt "sos:sos_koerper#closing"
+msgid "Eine Pause ist kein Scheitern."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: No withdrawing (keep body contact!): the only real mistake now would be to turn away or stare silently at the ceiling. Pull your partner close to your chest, hold their hand.
-msgctxt "sos:sos_after#immediate_steps.0"
-msgid "Rückzugs-Verbot (Körperkontakt halten!): Der einzige echte Fehler wäre jetzt, dich wegzudrehen oder stumm an die Decke zu starren. Zieh deinen Partner eng an deine Brust, halte die Hand."
+#. EN: It hurts or my body tenses up
+msgctxt "sos:sos_schmerz#title"
+msgid "Es tut weh oder mein Körper verkrampft"
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: Separate biology from identity: your stress system simply had too much leftover adrenaline in the tank. That's a harmless vascular reaction of your nervous system – not a statement about your worth as a lover.
-msgctxt "sos:sos_after#immediate_steps.1"
-msgid "Biologie von Identität trennen: Dein Sympathikus hatte schlicht zu viel Rest-Adrenalin im Tank. Das ist eine harmlose Gefäßreaktion deines Nervensystems – keine Aussage über deinen Wert als Liebhaber."
+#. EN: Pain is a signal, not a sign that you're doing something wrong. You don't have to put up with it.
+msgctxt "sos:sos_schmerz#intro"
+msgid "Schmerz ist ein Signal, kein Zeichen, dass du etwas falsch machst. Du musst ihn nicht aushalten."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: CBT reset for tomorrow: later, calmly open the CBT journal in the app and expose the catastrophic thought so your brain doesn't store a false fear file.
-msgctxt "sos:sos_after#immediate_steps.2"
-msgid "KVT-Reset für morgen: Öffne später in Ruhe das KVT-Journal in der App und entlarve den Katastrophengedanken, damit dein Gehirn keine falsche Angst-Datei abspeichert."
+#. EN: Stop. Say “stop” or “wait”, even if it feels awkward. Stop moving. If something is inside you, slowly separate.
+msgctxt "sos:sos_schmerz#steps.0"
+msgid "Stopp. Sag „Stopp“ oder „Warte“, auch wenn es sich unangenehm anfühlt. Haltet an. Wenn etwas in dir ist, löst euch langsam voneinander."
 msgstr ""
 
 #. Soforthilfe-Karte (SOS)
-#. EN: True confidence shows in how warm and close I stay when something goes imperfectly.
-msgctxt "sos:sos_after#mantra"
-msgid "Wahre Souveränität zeigt sich darin, wie warm und nah ich bleibe, wenn etwas unperfekt läuft."
+#. EN: Breathe out slowly and let your belly, buttocks and pelvic floor soften as much as you can. Tension eases with calm and warmth, not with pushing through.
+msgctxt "sos:sos_schmerz#steps.1"
+msgid "Atme langsam aus und lass Bauch, Gesäß und Beckenboden sinken, so gut es geht. Gegen Verkrampfen helfen Ruhe und Wärme, nicht Durchhalten."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Decide what feels good now: another position, more lubricant, a different pace, something else entirely, or calling it a night.
+msgctxt "sos:sos_schmerz#steps.2"
+msgid "Entscheide, was jetzt guttut: andere Position, mehr Gleitmittel, anderes Tempo, etwas ganz anderes oder Schluss für heute."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: If pain comes up often, it can be looked into and often treated, for example by a gynecologist, a urologist or in pelvic floor physiotherapy. With sudden severe pain, bleeding, fever or pain that lasts afterwards, get it checked soon. You're not alone with this.
+msgctxt "sos:sos_schmerz#steps.3"
+msgid "Wenn Schmerz öfter kommt, lässt er sich abklären und oft behandeln, zum Beispiel in der Gynäkologie, Urologie oder bei Beckenboden-Physiotherapie. Bei plötzlichem starkem Schmerz, Blutung, Fieber oder Schmerz, der danach anhält, lass es bald ärztlich ansehen. Du bist damit nicht allein."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: It hurts. Please pause for a moment.
+msgctxt "sos:sos_schmerz#phrases.0"
+msgid "Es tut weh. Bitte halte kurz inne."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: I'm tensing up. I need a break.
+msgctxt "sos:sos_schmerz#phrases.1"
+msgid "Ich verkrampfe gerade. Ich brauche eine Pause."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Pain is a good reason to stop.
+msgctxt "sos:sos_schmerz#closing"
+msgid "Schmerz ist ein guter Grund aufzuhören."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: I don't want to go on
+msgctxt "sos:sos_nichtmehr#title"
+msgid "Ich möchte gerade nicht mehr"
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: You can say “no more” at any time, even in the middle of things and even if you said yes earlier. You don't need a reason.
+msgctxt "sos:sos_nichtmehr#intro"
+msgid "Du darfst jederzeit „nicht mehr“ sagen, auch mittendrin und auch, wenn du vorher Ja gesagt hast. Das braucht keine Begründung."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Notice what in you says “no”: body, feeling, a thought. That is reason enough.
+msgctxt "sos:sos_nichtmehr#steps.0"
+msgid "Nimm wahr, was in dir „Nein“ sagt: Körper, Gefühl, ein Gedanke. Das genügt als Grund."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Say it short and clear. You don't have to wrap it in kindness or explain.
+msgctxt "sos:sos_nichtmehr#steps.1"
+msgid "Sag es kurz und deutlich. Du musst es nicht freundlich verpacken oder erklären."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: You may move, cover yourself, get up, change rooms.
+msgctxt "sos:sos_nichtmehr#steps.2"
+msgid "Du darfst dich bewegen, dich bedecken, aufstehen, den Raum wechseln."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: If your partner doesn't stop or talks you around, that is not on you. There is help for that (button below).
+msgctxt "sos:sos_nichtmehr#steps.3"
+msgid "Wenn dein Gegenüber nicht aufhört oder dich überredet, liegt das nicht an dir. Dafür gibt es Hilfe (Knopf unten)."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: I want to stop.
+msgctxt "sos:sos_nichtmehr#phrases.0"
+msgid "Ich möchte aufhören."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: I don't want to go on.
+msgctxt "sos:sos_nichtmehr#phrases.1"
+msgid "Ich will jetzt nicht mehr."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Stop.
+msgctxt "sos:sos_nichtmehr#phrases.2"
+msgid "Stopp."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: A no needs no but.
+msgctxt "sos:sos_nichtmehr#closing"
+msgid "Ein Nein braucht kein Aber."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: My partner seems quiet or is pulling back
+msgctxt "sos:sos_gegenueber#title"
+msgid "Mein Gegenüber wirkt still oder zieht sich zurück"
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: You sense that something is tipping. You don't have to fix anything or guess. You can stop and ask.
+msgctxt "sos:sos_gegenueber#intro"
+msgid "Du merkst, dass etwas kippt. Du musst nichts lösen und nichts erraten. Du kannst anhalten und fragen."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Pause and take your hands away.
+msgctxt "sos:sos_gegenueber#steps.0"
+msgid "Halte inne und nimm die Hände weg."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Ask softly and openly: “Is everything okay? Do you want to go on, take a break or stop?”
+msgctxt "sos:sos_gegenueber#steps.1"
+msgid "Frag leise und offen: „Ist alles gut? Möchtest du weitermachen, eine Pause oder aufhören?“"
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Really listen to the answer. Hesitation, silence or “I don't know” is not a yes. When in doubt: stop.
+msgctxt "sos:sos_gegenueber#steps.2"
+msgid "Hör die Antwort wirklich an. Zögern, Schweigen oder „Ich weiß nicht“ ist kein Ja. Im Zweifel: aufhören."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Answer without blame, even if it stings: “Thank you for telling me.” Your own feelings can have their space later.
+msgctxt "sos:sos_gegenueber#steps.3"
+msgid "Antworte ohne Vorwurf, auch wenn es dich kränkt: „Danke, dass du es sagst.“ Deine eigenen Gefühle haben später Platz."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: I notice something is different. Would you like a break?
+msgctxt "sos:sos_gegenueber#phrases.0"
+msgid "Ich merke, dass etwas anders ist. Möchtest du eine Pause?"
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Thank you for telling me. That's completely okay.
+msgctxt "sos:sos_gegenueber#phrases.1"
+msgid "Danke, dass du es mir sagst. Das ist völlig in Ordnung."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Stopping is a sign of care. If it left you unsettled yourself: talk about it later.
+msgctxt "sos:sos_gegenueber#closing"
+msgid "Anhalten ist ein Zeichen von Zuneigung. Wenn es dich selbst verunsichert hat: Sprecht später darüber."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: It didn't go as expected
+msgctxt "sos:sos_danach#title"
+msgid "Es lief anders als gedacht"
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Maybe it was stopped, maybe it was just different from what you hoped. Shame afterwards is common and usually eases. If a boundary was crossed, that is not just “different”. Then this is about you, not about talking it through. Help is below.
+msgctxt "sos:sos_danach#intro"
+msgid "Vielleicht wurde abgebrochen, vielleicht war es nur anders als erhofft. Scham danach ist verbreitet und wird meist leichter. Wenn eine Grenze überschritten wurde, ist das nicht einfach „anders gelaufen“. Dann geht es um dich, nicht ums Reden. Hilfe findest du unten."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Stay close if that feels good for both of you: hold a hand, breathe side by side. If someone needs distance, that is fine too. Then say briefly: “I need a moment and I'll come back.”
+msgctxt "sos:sos_danach#steps.0"
+msgid "Bleibt beieinander, wenn es für euch beide guttut: eine Hand halten, nebeneinander atmen. Braucht jemand Abstand, ist das auch in Ordnung. Sag dann kurz: „Ich brauche einen Moment und komme wieder.“"
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Separate what happened from what you are worth. A body reacts to stress, tiredness and thoughts. That says nothing about you.
+msgctxt "sos:sos_danach#steps.1"
+msgid "Trenne, was geschehen ist, von dem, was du wert bist. Ein Körper reagiert auf Stress, Müdigkeit und Gedanken. Das ist keine Aussage über dich."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Talk about it when you are both ready, today or tomorrow, without blame. Course 12 has sentences for that. In the “Reframing” section you can first write down for yourself what happened.
+msgctxt "sos:sos_danach#steps.2"
+msgid "Sprecht darüber, wenn ihr beide bereit seid, heute oder morgen, ohne Schuldzuweisung. Kurs 12 hat Sätze dafür. Im Bereich „Reframing“ kannst du erst für dich aufschreiben, was los war."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Ask each other: what was good for us? What would I like to be different next time?
+msgctxt "sos:sos_danach#steps.3"
+msgid "Fragt euch beide: Was hat uns gutgetan? Was wünsche ich mir beim nächsten Mal anders?"
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: Thank you for being there. It was hard, but I'd like to talk about it with you.
+msgctxt "sos:sos_danach#phrases.0"
+msgid "Danke, dass du da warst. Es war schwer, aber ich möchte mit dir darüber reden."
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: I need a bit of quiet. Can I come to you later?
+msgctxt "sos:sos_danach#phrases.1"
+msgid "Ich brauche kurz Ruhe. Kann ich dich später ansprechen?"
+msgstr ""
+
+#. Soforthilfe-Karte (SOS)
+#. EN: You don't have to sort it out tonight.
+msgctxt "sos:sos_danach#closing"
+msgid "Ihr müsst das nicht heute klären."
 msgstr ""
 
 #. Glaubenssatz mit Gegenstück

@@ -20,6 +20,7 @@ import 'package:velvetpulse/screens/couples_channel/paar_abend_screen.dart';
 import 'package:velvetpulse/screens/couples_channel/pairing_modal.dart';
 import 'package:velvetpulse/screens/courses/lesson_detail_screen.dart';
 import 'package:velvetpulse/screens/main_navigation_screen.dart';
+import 'package:velvetpulse/screens/sos/sos_modal.dart';
 import 'package:velvetpulse/screens/suche_screen.dart';
 import 'package:velvetpulse/widgets/weg_begleiter.dart';
 import 'package:velvetpulse/screens/wiedergabe_screen.dart';
@@ -406,6 +407,22 @@ void main() {
     if (!_nurTraumpraxis && !_nurBedienung && !_nurPlayer) {
       await tester.pumpWidget(_app(SucheScreen(anfang: _sprache == 'en' ? 'breath' : 'Atem')));
       await _shot(tester, '00_suche', errors);
+      // Hilfe-Blatt: Auswahl, ein Weg (Einstieg, Schritt, Sätze) und der feste Hilfe-Teil.
+      final sosKarten = DataService.getSosCards();
+      await tester.pumpWidget(_app(const Align(alignment: Alignment.bottomCenter, child: SosModal())));
+      await _shot(tester, '00_sos_auswahl', errors);
+      await _tippe(tester, find.text(sosKarten[3].title));
+      await _shot(tester, '00_sos_weg_einstieg', errors);
+      await _tippe(tester, find.text(t.sosWeiter));
+      await tester.pump(const Duration(milliseconds: 400));
+      await _shot(tester, '00_sos_weg_schritt', errors);
+      for (var i = 0; i < sosKarten[3].steps.length; i++) {
+        await tester.tap(find.text(t.sosWeiter).last, warnIfMissed: false);
+        await tester.pumpAndSettle();
+      }
+      await _shot(tester, '00_sos_weg_saetze', errors);
+      await tester.pumpWidget(_app(Align(alignment: Alignment.bottomCenter, child: SosModal(key: UniqueKey(), startHilfe: true))));
+      await _shot(tester, '00_sos_hilfe', errors);
       await tester.pumpWidget(_app(const OnboardingScreen()));
       await _shot(tester, '00_onboarding', errors);
 

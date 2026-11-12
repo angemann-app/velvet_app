@@ -248,37 +248,46 @@ class Lesson {
 class SosCard {
   final String id;
   final String title;
-  final String situation;
-  final List<String> immediateSteps;
-  final String mantra;
+  final String intro;
+  final List<String> steps;
+  final List<String> phrases;
+  final String closing;
+
+  /// Zeigt am Ende den Knopf zum festen Hilfe-Teil („Hilfe bei Druck oder Gewalt“).
+  final bool toHelp;
 
   SosCard({
     required this.id,
     required this.title,
-    required this.situation,
-    required this.immediateSteps,
-    required this.mantra,
+    required this.intro,
+    required this.steps,
+    required this.phrases,
+    required this.closing,
+    this.toHelp = false,
   });
+
+  static List<String> _liste(Object? v) => (v as List<dynamic>?)?.map((e) => e.toString()).toList() ?? [];
 
   factory SosCard.fromJson(Map<String, dynamic> json) {
     return SosCard(
       id: json['id'] as String? ?? '',
       title: json['title'] as String? ?? '',
-      situation: json['situation'] as String? ?? '',
-      immediateSteps: (json['immediate_steps'] as List<dynamic>?)
-              ?.map((e) => e.toString())
-              .toList() ??
-          [],
-      mantra: json['mantra'] as String? ?? '',
+      intro: json['intro'] as String? ?? '',
+      steps: _liste(json['steps']),
+      phrases: _liste(json['phrases']),
+      closing: json['closing'] as String? ?? '',
+      toHelp: json['to_help'] as bool? ?? false,
     );
   }
 
   Map<String, dynamic> toJson() => {
         'id': id,
         'title': title,
-        'situation': situation,
-        'immediate_steps': immediateSteps,
-        'mantra': mantra,
+        'intro': intro,
+        'steps': steps,
+        'phrases': phrases,
+        'closing': closing,
+        'to_help': toHelp,
       };
 }
 

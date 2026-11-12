@@ -1533,60 +1533,353 @@ abstract class AppLocalizations {
   /// **'Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, wird der Herzschlag mit jedem Ausatmen ein wenig langsamer. Das ist ein normaler Reflex, den viele als beruhigend erleben.'**
   String get breathPacerViewBackgroundWhenTheExhaleLasts;
 
-  /// No description provided for @sosModalSosQuickHelp.
+  /// No description provided for @sosTitel.
   ///
   /// In de, this message translates to:
-  /// **'SOS Akut-Hilfe'**
-  String get sosModalSosQuickHelp;
+  /// **'Hilfe'**
+  String get sosTitel;
 
-  /// No description provided for @sosModalCalmDownRightNowEmergency.
+  /// No description provided for @sosAuswahlTitel.
   ///
   /// In de, this message translates to:
-  /// **'Sofortige Down-Regulation & Notfall-Schritte'**
-  String get sosModalCalmDownRightNowEmergency;
+  /// **'Was ist gerade los?'**
+  String get sosAuswahlTitel;
 
-  /// No description provided for @sosModalBefore.
+  /// No description provided for @sosAuswahlUntertitel.
   ///
   /// In de, this message translates to:
-  /// **'Vorab'**
-  String get sosModalBefore;
+  /// **'Du musst nichts erklären. Such aus, was am ehesten passt.'**
+  String get sosAuswahlUntertitel;
 
-  /// No description provided for @sosModalInTheMoment.
+  /// No description provided for @sosAuswahlHilfe.
   ///
   /// In de, this message translates to:
-  /// **'Im Moment'**
-  String get sosModalInTheMoment;
+  /// **'Ich werde gedrängt, mein Nein gilt nicht'**
+  String get sosAuswahlHilfe;
 
-  /// No description provided for @sosModalAfterwards.
+  /// No description provided for @sosWeiter.
   ///
   /// In de, this message translates to:
-  /// **'Danach'**
-  String get sosModalAfterwards;
+  /// **'Weiter'**
+  String get sosWeiter;
 
-  /// No description provided for @sosModalYourMantraForThisMoment.
+  /// No description provided for @sosZurueck.
   ///
   /// In de, this message translates to:
-  /// **'DEIN MANTRA FÜR DIESEN MOMENT'**
-  String get sosModalYourMantraForThisMoment;
+  /// **'Zurück'**
+  String get sosZurueck;
 
-  /// No description provided for @sosModalMantra.
+  /// No description provided for @sosZurAuswahl.
   ///
   /// In de, this message translates to:
-  /// **'„{mantra}“'**
-  String sosModalMantra(Object mantra);
+  /// **'Zur Auswahl'**
+  String get sosZurAuswahl;
 
-  /// No description provided for @sosModalImmediateStepsTickOff.
+  /// No description provided for @sosSchliessen.
   ///
   /// In de, this message translates to:
-  /// **'SOFORT-SCHRITTE (ABHAKEN)'**
-  String get sosModalImmediateStepsTickOff;
+  /// **'Schließen'**
+  String get sosSchliessen;
 
-  /// No description provided for @sosModalCheckedlengthImmediatestepslengthDone.
+  /// No description provided for @sosSchrittVon.
   ///
   /// In de, this message translates to:
-  /// **'{checkedLength}/{immediateStepsLength} erledigt'**
-  String sosModalCheckedlengthImmediatestepslengthDone(
-      Object checkedLength, Object immediateStepsLength);
+  /// **'Schritt {aktuell} von {gesamt}'**
+  String sosSchrittVon(int aktuell, int gesamt);
+
+  /// No description provided for @sosSatzTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Satz, den du sagen kannst'**
+  String get sosSatzTitel;
+
+  /// No description provided for @sosHilfeKnopf.
+  ///
+  /// In de, this message translates to:
+  /// **'Hilfe bei Druck oder Gewalt'**
+  String get sosHilfeKnopf;
+
+  /// No description provided for @sosHilfeTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Hilfe, wenn ein Nein nicht gilt'**
+  String get sosHilfeTitel;
+
+  /// No description provided for @sosHilfeEinstieg.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn du Nein gesagt hast oder nichts sagen konntest und es trotzdem weiterging, ist das nicht in Ordnung. Du bist nicht schuld. Auch nicht, wenn ihr ein Paar seid, wenn du vorher Ja gesagt hast oder wenn du es nicht deutlich genug gesagt hast. Erstarren ist eine normale Schutzreaktion.'**
+  String get sosHilfeEinstieg;
+
+  /// No description provided for @sosHilfeGiltTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Was gilt'**
+  String get sosHilfeGiltTitel;
+
+  /// No description provided for @sosHilfeGilt1.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Nein gilt, auch mittendrin und auch in einer Beziehung.'**
+  String get sosHilfeGilt1;
+
+  /// No description provided for @sosHilfeGilt2.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Ja nach Überreden, Drängen, Schmollen, Drohen oder Schweigen als Druckmittel ist keine freie Zustimmung.'**
+  String get sosHilfeGilt2;
+
+  /// No description provided for @sosHilfeGilt3.
+  ///
+  /// In de, this message translates to:
+  /// **'Wer schläft, bewusstlos, stark betrunken oder berauscht ist oder Angst hat, kann nicht frei zustimmen.'**
+  String get sosHilfeGilt3;
+
+  /// No description provided for @sosHilfeGilt4.
+  ///
+  /// In de, this message translates to:
+  /// **'Du musst nichts beweisen, um Hilfe zu bekommen. Beratung geht auch ohne Anzeige. Du entscheidest, was du tust und wann.'**
+  String get sosHilfeGilt4;
+
+  /// No description provided for @sosHilfeNotrufTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Bei akuter Gefahr'**
+  String get sosHilfeNotrufTitel;
+
+  /// No description provided for @sosHilfeAnrufenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit jemandem sprechen'**
+  String get sosHilfeAnrufenTitel;
+
+  /// No description provided for @sosHilfeDiskretion.
+  ///
+  /// In de, this message translates to:
+  /// **'Anrufe stehen in der Anrufliste und manchmal auf der Rechnung. Aus der Anrufliste kannst du sie löschen. Ein Chat steht im Browserverlauf. Ein privates Fenster hinterlässt weniger.'**
+  String get sosHilfeDiskretion;
+
+  /// No description provided for @sosHilfeStand.
+  ///
+  /// In de, this message translates to:
+  /// **'Stand der Angaben: {stand}. Nummern und Zeiten können sich ändern.'**
+  String sosHilfeStand(String stand);
+
+  /// No description provided for @sosHilfeAnrufen.
+  ///
+  /// In de, this message translates to:
+  /// **'Anrufen'**
+  String get sosHilfeAnrufen;
+
+  /// No description provided for @sosHilfeWebseite.
+  ///
+  /// In de, this message translates to:
+  /// **'Webseite'**
+  String get sosHilfeWebseite;
+
+  /// No description provided for @sosSatzZitat.
+  ///
+  /// In de, this message translates to:
+  /// **'„{satz}“'**
+  String sosSatzZitat(String satz);
+
+  /// No description provided for @sosHilfeAnrufenNummer.
+  ///
+  /// In de, this message translates to:
+  /// **'{nummer} anrufen'**
+  String sosHilfeAnrufenNummer(String nummer);
+
+  /// No description provided for @sosHilfeNummerWaehlen.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte wähle {nummer}'**
+  String sosHilfeNummerWaehlen(String nummer);
+
+  /// No description provided for @sosHilfeSchnellVerlassen.
+  ///
+  /// In de, this message translates to:
+  /// **'Schnell verlassen'**
+  String get sosHilfeSchnellVerlassen;
+
+  /// No description provided for @sosLandDe.
+  ///
+  /// In de, this message translates to:
+  /// **'Deutschland'**
+  String get sosLandDe;
+
+  /// No description provided for @sosLandAt.
+  ///
+  /// In de, this message translates to:
+  /// **'Österreich'**
+  String get sosLandAt;
+
+  /// No description provided for @sosLandCh.
+  ///
+  /// In de, this message translates to:
+  /// **'Schweiz'**
+  String get sosLandCh;
+
+  /// No description provided for @sosLandUk.
+  ///
+  /// In de, this message translates to:
+  /// **'Vereinigtes Königreich'**
+  String get sosLandUk;
+
+  /// No description provided for @sosLandUs.
+  ///
+  /// In de, this message translates to:
+  /// **'USA'**
+  String get sosLandUs;
+
+  /// No description provided for @sosNotrufDe.
+  ///
+  /// In de, this message translates to:
+  /// **'Polizei 110 · Rettung und Feuerwehr 112'**
+  String get sosNotrufDe;
+
+  /// No description provided for @sosNotrufAt.
+  ///
+  /// In de, this message translates to:
+  /// **'Polizei 133 · Rettung 144 · europaweit 112'**
+  String get sosNotrufAt;
+
+  /// No description provided for @sosNotrufCh.
+  ///
+  /// In de, this message translates to:
+  /// **'Polizei 117 · Sanität 144 · 112'**
+  String get sosNotrufCh;
+
+  /// No description provided for @sosNotrufUk.
+  ///
+  /// In de, this message translates to:
+  /// **'999 (Polizei, Rettung)'**
+  String get sosNotrufUk;
+
+  /// No description provided for @sosNotrufUs.
+  ///
+  /// In de, this message translates to:
+  /// **'911 (Polizei, Rettung)'**
+  String get sosNotrufUs;
+
+  /// No description provided for @sosStelleDeFrauenName.
+  ///
+  /// In de, this message translates to:
+  /// **'Hilfetelefon Gewalt gegen Frauen'**
+  String get sosStelleDeFrauenName;
+
+  /// No description provided for @sosStelleDeFrauenHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Rund um die Uhr, kostenlos und anonym. Berät auch bei sexueller Gewalt, per Telefon, Chat und in vielen Sprachen.'**
+  String get sosStelleDeFrauenHinweis;
+
+  /// No description provided for @sosStelleDeMaennerName.
+  ///
+  /// In de, this message translates to:
+  /// **'Hilfetelefon Gewalt an Männern'**
+  String get sosStelleDeMaennerName;
+
+  /// No description provided for @sosStelleDeMaennerHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Kostenlos und anonym, per Telefon und Chat. Zeiten laut Anbieter: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr.'**
+  String get sosStelleDeMaennerHinweis;
+
+  /// No description provided for @sosStelleDeWeisserName.
+  ///
+  /// In de, this message translates to:
+  /// **'WEISSER RING Opfer-Telefon'**
+  String get sosStelleDeWeisserName;
+
+  /// No description provided for @sosStelleDeWeisserHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Täglich 7 bis 22 Uhr, kostenlos und anonym, für Opfer von Straftaten.'**
+  String get sosStelleDeWeisserHinweis;
+
+  /// No description provided for @sosStelleDeSeelsorgeName.
+  ///
+  /// In de, this message translates to:
+  /// **'Telefonseelsorge'**
+  String get sosStelleDeSeelsorgeName;
+
+  /// No description provided for @sosStelleDeSeelsorgeHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Rund um die Uhr und kostenlos, auch unter 0800 111 0 222. Chat nach Anmeldung. Beratung auf Deutsch.'**
+  String get sosStelleDeSeelsorgeHinweis;
+
+  /// No description provided for @sosStelleAtFrauenName.
+  ///
+  /// In de, this message translates to:
+  /// **'Frauenhelpline gegen Gewalt'**
+  String get sosStelleAtFrauenName;
+
+  /// No description provided for @sosStelleAtFrauenHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Rund um die Uhr, kostenlos, auf Wunsch anonym, in mehreren Sprachen.'**
+  String get sosStelleAtFrauenHinweis;
+
+  /// No description provided for @sosStelleAtGewaltschutzName.
+  ///
+  /// In de, this message translates to:
+  /// **'Gewaltschutzzentren'**
+  String get sosStelleAtGewaltschutzName;
+
+  /// No description provided for @sosStelleAtGewaltschutzHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Kostenlos und anonym.'**
+  String get sosStelleAtGewaltschutzHinweis;
+
+  /// No description provided for @sosStelleChOpferhilfeName.
+  ///
+  /// In de, this message translates to:
+  /// **'Opferhilfe 142'**
+  String get sosStelleChOpferhilfeName;
+
+  /// No description provided for @sosStelleChOpferhilfeHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Seit 1. Mai 2026 in der ganzen Schweiz, rund um die Uhr, kostenlos und anonym. Kein Notruf: Bei Gefahr zuerst die Polizei rufen.'**
+  String get sosStelleChOpferhilfeHinweis;
+
+  /// No description provided for @sosStelleUkRapeName.
+  ///
+  /// In de, this message translates to:
+  /// **'Rape Crisis Support Line'**
+  String get sosStelleUkRapeName;
+
+  /// No description provided for @sosStelleUkRapeHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Rund um die Uhr, kostenlos, auch per Chat. Für Menschen ab 16 in England und Wales, die Vergewaltigung oder sexuelle Gewalt erlebt haben.'**
+  String get sosStelleUkRapeHinweis;
+
+  /// No description provided for @sosStelleUsRainnName.
+  ///
+  /// In de, this message translates to:
+  /// **'RAINN National Sexual Assault Hotline'**
+  String get sosStelleUsRainnName;
+
+  /// No description provided for @sosStelleUsRainnHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Rund um die Uhr, kostenlos und vertraulich, auf Englisch und Spanisch. Chat auf online.rainn.org.'**
+  String get sosStelleUsRainnHinweis;
+
+  /// No description provided for @sosStelleUs988Name.
+  ///
+  /// In de, this message translates to:
+  /// **'988 Suicide & Crisis Lifeline'**
+  String get sosStelleUs988Name;
+
+  /// No description provided for @sosStelleUs988Hinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Anruf oder SMS, rund um die Uhr, kostenlos, bei seelischen Krisen.'**
+  String get sosStelleUs988Hinweis;
 
   /// No description provided for @appLockLocked.
   ///

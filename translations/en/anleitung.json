@@ -39,7 +39,7 @@
       "icon": "fitness",
       "titel": "Training and quick help",
       "bild": "02_training.png",
-      "text": "The Practice tab, under Body, contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.\nThe SOS button at the top right helps in moments of pressure or anxiety, with short steps for before, in the moment and afterwards."
+      "text": "The Practice tab, under Body, contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.\nThe “Help” button at the top right opens a calm sheet. You choose what is going on: nervous, my body isn't going along, pain, “I don't want to go on”, my partner is quiet, afterwards. You get a few steps and sentences you can say.\nThere you also find help when a no isn't respected or there is pressure, with contacts for Germany, Austria, Switzerland, the United Kingdom and the USA. “Leave quickly” closes the sheet at once."
     },
     {
       "id": "reframing",
@@ -125,7 +125,7 @@
     "guide:spicy": "650678626e8e07ad",
     "guide:sprache": "e06647757a6f7c49",
     "guide:start": "143baac086526c8b",
-    "guide:training": "ca4606c55c562195",
+    "guide:training": "344fd09295217343",
     "guide:updates": "26cd13ac56425202",
     "guide:weiterhoeren_gemeinsam": "3b474e3cd9a24cb4"
   }
