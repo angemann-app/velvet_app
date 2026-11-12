@@ -700,8 +700,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
+                // Platz für die Unterzeile (der Wortlaut kommt aus dem Text-Paket): mindestens zwei Zeilen hoch,
+                // damit das Layout beim Austausch des Textes nicht springt.
                 Center(
-                  child: Text(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(minHeight: 36),
+                    child: Text(
                     t.onboardingYourPrivateCoachingProgrammeFor,
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -709,6 +713,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       color: AppTheme.tinteLeise,
                       height: 1.4,
                     ),
+                  ),
                   ),
                 ),
                 const SizedBox(height: 18),
@@ -1020,10 +1025,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Center(
                   child: TextButton.icon(
                     onPressed: _isSubmitting ? null : _ueberspringen,
-                    icon: Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.tinteStumm),
+                    icon: Icon(Icons.arrow_forward_rounded, size: 16, color: AppTheme.tinteLeise),
                     label: Text(
                       t.onboardingSkipGoStraightToThe,
-                      style: TextStyle(color: AppTheme.tinteStumm, fontSize: 13),
+                      style: TextStyle(color: AppTheme.tinteLeise, fontSize: 14),
                     ),
                   ),
                 ),

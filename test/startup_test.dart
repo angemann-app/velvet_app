@@ -11,7 +11,7 @@ import 'package:velvetpulse/services/storage_service.dart';
 import 'package:velvetpulse/theme/app_theme.dart';
 
 void main() {
-  for (final label in ['Später, direkt zur App', "Fertig, los geht's"]) {
+  for (final label in ['Überspringen', "Fertig, los geht's"]) {
     testWidgets('Onboarding "$label" -> alle Tabs', (tester) async {
       SharedPreferences.setMockInitialValues({});
       PrivacyService.unterstuetztFuerTest = true;
