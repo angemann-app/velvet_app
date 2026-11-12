@@ -9,8 +9,8 @@ import '../l10n/t.dart';
 
 /// Format und Prüfung von Sicherungen.
 ///
-/// Schema 2 (ab 4.3.0): keine Geheimnisse im Klartext. API-Key und privater
-/// Nostr-Schlüssel stehen nur, wenn der Nutzer es beim Export wählt, im Block
+/// Schema 2 (ab 4.3.0): keine Geheimnisse im Klartext. Der private
+/// Nostr-Schlüssel steht nur, wenn der Nutzer es beim Export wählt, im Block
 /// `secrets`, verschlüsselt mit einem Passwort (PBKDF2-HMAC-SHA256 + AES-256-GCM).
 /// Das Passwort steht nicht in der Datei. Ältere Versionen ignorieren `secrets`.
 ///
@@ -42,6 +42,9 @@ class BackupCodec {
     'nostrPartnerGender': String,
     // Für welches Gegenüber NIP-17 angekündigt wurde (öffentlicher Schlüssel, siehe NostrService).
     'nostrPartnerNip17': String,
+    // Trenn-Stand ('1' = das Gegenüber hat getrennt) und Beginn der Verbindung (Unix-Sekunden als Text).
+    'nostrPartnerGetrennt': String,
+    'nostrPartnerSeit': String,
     // Traumtagebuch (Liste von TraumEintrag) und Fortschritt der Serie „Lust im Traum“ (JSON {Folge: Abende}).
     'traumTagebuch': List,
     'traumpraxis': Map,
@@ -59,6 +62,8 @@ class BackupCodec {
     'halloGesendetAm': String,
     // Körper-Voreinstellung für körperbezogene Übungen ('vulva', 'penis', 'beides').
     'koerperVoreinstellung': String,
+    // Fantasie-Hinweis einmal gesehen (docs/konzepte/privatsphaere-schutz.md, c).
+    'fantasieHinweisGesehen': bool,
   };
 
   /// Prüft eine Sicherung vollständig, bevor irgendetwas gespeichert wird.
@@ -100,14 +105,20 @@ class BackupCodec {
       }
     }
 
+    final getrennt = clean['nostrPartnerGetrennt'] as String?;
+    final seit = clean['nostrPartnerSeit'] as String?;
+    if ((getrennt != null && getrennt.isNotEmpty && getrennt != '1') ||
+        (seit != null && seit.isNotEmpty && !RegExp(r'^\d{1,12}$').hasMatch(seit))) {
+      throw BackupException(t.backupCodecTheBackupIsDamagedField(getrennt != null && getrennt != '1' ? 'nostrPartnerGetrennt' : 'nostrPartnerSeit'));
+    }
+
     // Schema 1: Geheimnisse im Klartext.
     final legacySecrets = <String, String>{};
     if (foundSchema == 1) {
+      // Der frühere Gemini-Schlüssel („apiKey“) in alten Sicherungen wird gelesen (Größenprüfung),
+      // aber verworfen: Den KI-Coach gibt es nicht mehr, der Schlüssel wird nie gespeichert.
       final apiKey = data['apiKey'];
-      if (apiKey is String && apiKey.trim().isNotEmpty) {
-        _checkSize(apiKey, 'apiKey');
-        legacySecrets['apiKey'] = apiKey.trim();
-      }
+      if (apiKey is String) _checkSize(apiKey, 'apiKey');
       final priv = data['nostrPrivKey'];
       if (priv != null) {
         if (priv is! String || !isValidPrivateKeyHex(priv)) {

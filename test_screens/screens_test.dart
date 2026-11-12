@@ -24,6 +24,7 @@ import 'package:velvetpulse/screens/couples_channel/pairing_modal.dart';
 import 'package:velvetpulse/screens/courses/courses_screen.dart' show heutePaarMehrOffen;
 import 'package:velvetpulse/screens/courses/lesson_detail_screen.dart';
 import 'package:velvetpulse/screens/main_navigation_screen.dart';
+import 'package:velvetpulse/screens/sos/sos_modal.dart';
 import 'package:velvetpulse/screens/suche_screen.dart';
 import 'package:velvetpulse/widgets/weg_begleiter.dart';
 import 'package:velvetpulse/screens/wiedergabe_screen.dart';
@@ -53,6 +54,10 @@ import 'package:velvetpulse/services/storage_service.dart';
 import 'package:velvetpulse/services/bild_register.dart';
 import 'package:velvetpulse/services/pakete.dart';
 import 'package:velvetpulse/theme/app_theme.dart';
+import 'package:velvetpulse/widgets/app_sperre_frage.dart';
+import 'package:velvetpulse/widgets/fantasie_hinweis.dart';
+import 'package:velvetpulse/widgets/hinweis_blatt.dart';
+import 'package:velvetpulse/widgets/spicy_abgelaufen_hinweis.dart';
 
 const _fontDir = 'C:/TOOLS/flutter/bin/cache/artifacts/material_fonts';
 
@@ -439,6 +444,22 @@ void main() {
     if (!_nurTraumpraxis && !_nurBedienung && !_nurPlayer) {
       await tester.pumpWidget(_app(SucheScreen(anfang: _sprache == 'en' ? 'breath' : 'Atem')));
       await _shot(tester, '00_suche', errors);
+      // Hilfe-Blatt: Auswahl, ein Weg (Einstieg, Schritt, Sätze) und der feste Hilfe-Teil.
+      final sosKarten = DataService.getSosCards();
+      await tester.pumpWidget(_app(const Align(alignment: Alignment.bottomCenter, child: SosModal())));
+      await _shot(tester, '00_sos_auswahl', errors);
+      await _tippe(tester, find.text(sosKarten[3].title));
+      await _shot(tester, '00_sos_weg_einstieg', errors);
+      await _tippe(tester, find.text(t.sosWeiter));
+      await tester.pump(const Duration(milliseconds: 400));
+      await _shot(tester, '00_sos_weg_schritt', errors);
+      for (var i = 0; i < sosKarten[3].steps.length; i++) {
+        await tester.tap(find.text(t.sosWeiter).last, warnIfMissed: false);
+        await tester.pumpAndSettle();
+      }
+      await _shot(tester, '00_sos_weg_saetze', errors);
+      await tester.pumpWidget(_app(Align(alignment: Alignment.bottomCenter, child: SosModal(key: UniqueKey(), startHilfe: true))));
+      await _shot(tester, '00_sos_hilfe', errors);
       await tester.pumpWidget(_app(const OnboardingScreen()));
       await _shot(tester, '00_onboarding', errors);
       // Sanfter Start für eingeladene Personen: drei Bildschirme.
@@ -485,8 +506,6 @@ void main() {
       await _shot(tester, '02_training', errors);
       await _tippe(tester, find.text(t.uebenGedanken));
       await _shot(tester, '03_reframing', errors);
-      await _tippe(tester, find.text(t.uebenCoach));
-      await _shot(tester, '05_kicoach', errors);
       await _tippe(tester, find.text(t.navWir).last);
       await _shot(tester, '04_paarkanal', errors);
       // Offene Einladung, auf die sich jemand gemeldet hat.
@@ -675,6 +694,30 @@ void main() {
       await tester.pumpWidget(_app(const TraumTagebuchScreen()));
       await _shot(tester, '14_traumtagebuch', errors);
       await tester.pumpWidget(const SizedBox());
+
+      // Einmalige Hinweis-Blätter (docs/konzepte/privatsphaere-schutz.md), wie in der App von unten über einer Seite.
+      for (final (name, blatt) in <(String, Widget)>[
+        ('26_app_sperre_neu', const AppSperreNeuBlatt()),
+        ('26_app_sperre_keine', const AppSperreKeineBlatt()),
+        ('26_app_sperre_frage', const AppSperreFrageBlatt()),
+        ('27_fantasie_hinweis', const FantasieHinweisBlatt(drei: true)),
+        ('28_spicy_abgelaufen', const SpicyAbgelaufenBlatt()),
+      ]) {
+        await tester.pumpWidget(_app(Scaffold(
+          body: Builder(
+            builder: (context) => Center(
+              child: TextButton(
+                onPressed: () => zeigeHinweisBlatt<void>(context, (_) => blatt),
+                child: const Text('Blatt'),
+              ),
+            ),
+          ),
+        )));
+        await _tippe(tester, find.text('Blatt'));
+        await tester.pumpAndSettle();
+        await _shot(tester, name, errors);
+        await tester.pumpWidget(const SizedBox());
+      }
     }
     if (_spicy && !_nurBedienung && !_nurPlayer) {
       // Ausschließlich erfundene Vorschauwerte, keine privaten Nutzereinträge.
@@ -744,6 +787,8 @@ void main() {
       await tester.pumpWidget(const SizedBox());
     }
     if (!_nurTraumpraxis && !_nurBedienung && !_nurPlayer) {
+      // Der Fantasie-Hinweis hat oben ein eigenes Bild; hier die Seite selbst.
+      await tester.runAsync(() => StorageService.setFantasieHinweisGesehen(true));
       await tester.pumpWidget(_app(const LustImTraumScreen()));
       for (var i = 0;
           i < 10 && find.text(t.lustFolgen).evaluate().isEmpty;

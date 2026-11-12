@@ -25,7 +25,7 @@ String praxisLustName(int wert) => [
       t.praxisLust4
     ][wert];
 
-/// Persönliche Daten bleiben in StorageService, nicht im Paket oder KI-Coach.
+/// Persönliche Daten bleiben in StorageService, nicht im Paket.
 class PraxisVerwaltung extends StatefulWidget {
   final PraxisAnsicht ansicht;
   final String? tag;

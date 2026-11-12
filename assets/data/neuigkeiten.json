@@ -732,6 +732,49 @@
           "text": "Die Folgen zu dritt spielen jetzt zuverlässig, in allen drei Stufen. Die Fassungen für Soft und Spicy sind neu geschrieben und deutlich länger, ebenso vier Rollen in Sehr spicy. Alles ist neu eingesprochen."
         }
       ]
+    },
+    {
+      "build": 63,
+      "version": "4.19.0-beta.5",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Ruhiger trennen, freundlich Nein sagen",
+          "text": "Trennst du die Verbindung, bekommt dein Gegenüber einen ruhigen Hinweis und entscheidet selbst, ob es die Daten dieser Verbindung ebenfalls löscht. Auf eine Einladung zum Spicy-Modus antwortest du mit „Gerade nicht“, auf „Heute lieber nicht“ und „Lass uns reden“ mit „Danke fürs Sagen“."
+        }
+      ]
+    },
+    {
+      "build": 64,
+      "version": "4.19.0-beta.6",
+      "punkte": [
+        {
+          "icon": "lock",
+          "titel": "Der KI-Coach ist entfernt",
+          "text": "Wir haben den KI-Coach entfernt: Er kannte immer nur eine Seite einer Beziehung, und seine Antworten kamen von einem fremden Dienst. Falls du ihn genutzt hast, sind dein Schlüssel und dein Gespräch mit dem Coach von diesem Gerät gelöscht; den Schlüssel kannst du bei Google selbst löschen."
+        }
+      ]
+    },
+    {
+      "build": 65,
+      "version": "4.19.0-beta.7",
+      "punkte": [
+        {
+          "icon": "lock",
+          "titel": "Nur für dich",
+          "text": "Die App-Sperre ist jetzt Standard, wenn dein Handy eine Bildschirmsperre hat. Wer VelvetPulse schon nutzt, wird einmal gefragt. Im Profil kannst du sie jederzeit ändern."
+        },
+        {
+          "icon": "lock",
+          "titel": "Spicy bleibt länger offen",
+          "text": "Der Spicy-Modus fragt erst nach 5 Stunden im Hintergrund wieder nach deiner Gerätesperre. Ist die Zeit abgelaufen, sagt dir die App das und bietet an, wieder zu entsperren."
+        },
+        {
+          "icon": "favorite",
+          "titel": "Fantasien sind frei",
+          "text": "Ein kurzer Hinweis beim ersten Öffnen von Lust im Traum oder den Innenansichten und ein neuer Abschnitt in der Anleitung: Was dir in den Sinn kommt, gehört dir, und du entscheidest, was du teilst."
+        }
+      ]
     }
   ]
 }

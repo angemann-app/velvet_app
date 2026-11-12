@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velvetpulse/l10n/t.dart';
 import 'package:velvetpulse/screens/onboarding/onboarding_screen.dart';
+import 'package:velvetpulse/services/privacy_service.dart';
 import 'package:velvetpulse/services/storage_service.dart';
 import 'package:velvetpulse/theme/app_theme.dart';
 
@@ -59,13 +60,18 @@ void main() {
 
   testWidgets('Sanfter Start: "Ich schau erst mal nur" speichert Standardprofil und geht in die App', (tester) async {
     var fertig = false;
+    // Am Ende der Einrichtung richtet die App die App-Sperre ein; hier ohne Bildschirmsperre (Hinweisblatt).
+    PrivacyService.unterstuetztFuerTest = false;
+    addTearDown(() => PrivacyService.unterstuetztFuerTest = null);
     await _start(tester, onComplete: () => fertig = true);
     expect(StorageService.getUserProfile(), isNull);
 
     await _tippe(tester, find.text(t.onboardingEingeladenLink));
     await _tippe(tester, find.text(t.onboardingEingeladenNurSchauen));
     await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 200)));
-    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+    await _tippe(tester, find.text(t.appSperreKeineOk));
+    await tester.pump(const Duration(milliseconds: 500));
 
     final profil = StorageService.getUserProfile();
     expect(profil, isNotNull);

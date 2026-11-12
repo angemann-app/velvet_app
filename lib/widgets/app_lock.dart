@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'design/vp_komponenten.dart';
+import 'app_sperre_frage.dart';
+import 'hinweis_blatt.dart';
 import '../services/privacy_service.dart';
 import '../theme/app_theme.dart';
 import '../l10n/t.dart';
@@ -11,10 +13,17 @@ class AppLock extends StatefulWidget {
   /// Vor dem ersten Bild ermittelt, damit beim Start nichts kurz durchblitzt.
   final bool initiallyLocked;
 
-  const AppLock({super.key, required this.child, this.initiallyLocked = false});
+  /// Navigator der App (AppLock liegt darüber), um bei weggefallener Bildschirmsperre einen Hinweis zu zeigen.
+  final GlobalKey<NavigatorState>? navigatorKey;
+
+  const AppLock({super.key, required this.child, this.initiallyLocked = false, this.navigatorKey});
 
   @visibleForTesting
   static void zuruecksetzenFuerTest() => _AppLockState._sitzungEntsperrt = false;
+
+  /// Nach dem Einschalten der Sperre (Onboarding, Bestandsfrage) ist die Gerätesperre gerade bestätigt:
+  /// Die Sitzung gilt als entsperrt, damit z. B. ein Sprachwechsel (baut die App neu auf) nicht sofort sperrt.
+  static void alsEntsperrtMerken() => _AppLockState._sitzungEntsperrt = true;
 
   @override
   State<AppLock> createState() => _AppLockState();
@@ -45,11 +54,34 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
 
   Future<void> _init() async {
     _enabled = await PrivacyService.isLockEnabled();
-    if (!_enabled || !mounted) return;
+    if (!mounted) return;
+    if (!_enabled) {
+      if (_locked) setState(() => _locked = false);
+      return;
+    }
+    if (await _bildschirmsperreWeg()) return;
     await PrivacyService.applySecureFlag(true);
-    if (_sitzungEntsperrt) return;
+    if (_sitzungEntsperrt || !mounted) return;
     setState(() => _locked = true);
     _unlock();
+  }
+
+  /// Ist die Bildschirmsperre des Geräts weg, ließe sich die App nie mehr entsperren. Dann nie aussperren:
+  /// Sperre abschalten (samt Secure-Flag), entsperren und einmal erklären, wie man sie wieder einrichtet.
+  Future<bool> _bildschirmsperreWeg() async {
+    if (await PrivacyService.isSupported()) return false;
+    await PrivacyService.setLockEnabled(false);
+    _enabled = false;
+    if (!mounted) return true;
+    setState(() => _locked = false);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final kontext = widget.navigatorKey?.currentContext;
+      if (kontext != null && kontext.mounted) {
+        zeigeHinweisBlatt<void>(kontext, (_) => const AppSperreKeineBlatt());
+      }
+    });
+    WidgetsBinding.instance.ensureVisualUpdate();
+    return true;
   }
 
   @override
@@ -64,6 +96,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
       final since = _backgroundSince;
       _backgroundSince = null;
       if (_enabled && !_locked && since != null && DateTime.now().difference(since) > PrivacyService.relockAfter) {
+        if (await _bildschirmsperreWeg()) return;
         _sitzungEntsperrt = false;
         setState(() => _locked = true);
         _unlock();
@@ -72,6 +105,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
   }
 
   Future<void> _unlock() async {
+    if (await _bildschirmsperreWeg()) return;
     final ok = await PrivacyService.authenticate();
     if (ok) _sitzungEntsperrt = true;
     if (ok && mounted) setState(() => _locked = false);

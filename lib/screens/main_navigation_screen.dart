@@ -6,6 +6,7 @@ import '../theme/app_theme.dart';
 import '../theme/vp_tokens.dart';
 import '../widgets/sos_button.dart';
 import '../widgets/update_dialog.dart';
+import '../widgets/app_sperre_frage.dart';
 import 'courses/courses_screen.dart';
 import 'training/training_screen.dart';
 import 'couples_channel/couples_channel_screen.dart';
@@ -45,6 +46,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     // nach einer neuen Version auf GitHub schauen.
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (mounted) await showWhatsNewIfUpdated(context);
+      // Bestand: einmal fragen, ob die App gesperrt werden soll (docs/konzepte/privatsphaere-schutz.md, a).
+      if (mounted) await appSperreFrageWennNoetig(context);
       if (mounted) checkForUpdateAndPrompt(context);
     });
   }
@@ -59,7 +62,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   }
 
   /// Sprung aus Lektionen und Karten. Die Nummern sind die der alten fünf Tabs und bleiben dem Aufrufer so erhalten:
-  /// 0 Kurse, 1 Training (mit `subTab` kegel/breath), 2 Reframing, 3 Paar-Kanal, 4 KI-Coach.
+  /// 0 Kurse, 1 Training (mit `subTab` kegel/breath), 2 Reframing, 3 Paar-Kanal. Die frühere 4 (KI-Coach) fällt auf Körper zurück.
   void _navigateToTab(int index, {String? subTab}) {
     switch (index) {
       case 0:
@@ -69,9 +72,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       default:
         _showTab(_ueben);
         final bereich = switch (index) {
-          1 => UebenScreenState.koerper,
           2 => UebenScreenState.gedanken,
-          _ => UebenScreenState.coach,
+          _ => UebenScreenState.koerper,
         };
         WidgetsBinding.instance.addPostFrameCallback((_) {
           _uebenKey.currentState?.waehle(bereich);

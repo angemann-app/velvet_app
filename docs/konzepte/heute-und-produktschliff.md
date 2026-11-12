@@ -1,6 +1,8 @@
 # Konzept: „Heute“ und Produktschliff
 
 Stand: Entwurf vom 31.10.2026, Richtung vom Nutzer abgestimmt („Gehe mit allem mit“), Einzelheiten offen.
+
+> **Vermerk 12.11.2026: Der KI-Coach ist entfallen** (`docs/konzepte/coach-entfernen.md`). Die Stellen zum Coach unten (Punkte 5 und 6, Stufe 5) sind überholt; Üben hat nur noch Körper und Gedanken.
 Ausgangspunkt war ein Blick von oben auf die App als Produktdesigner. Baut auf `startseite.md` und
 `redesign-bleistift.md` auf.
 Vermerk 12.11.2026: Heute im Paar-Modus, Geschlechtsauswahl und „Eure erste Woche“ stehen in `eine-tonlage.md`.

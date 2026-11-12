@@ -12,13 +12,13 @@ Generated automatically, do not edit. Percentages by words of the German source;
 
 | Bereich / Area | Aktuell / Up to date | Überholt / Outdated | Fehlt / Missing | Datei / File |
 |---|---|---|---|---|
-| Oberfläche (Knöpfe, Menüs, Meldungen) | 1516 | 0 | 0 | (direkt gepflegt) |
-| Kurse und Lektionen | 667 | 0 | 0 | (direkt gepflegt) |
+| Oberfläche (Knöpfe, Menüs, Meldungen) | 1528 | 0 | 0 | (direkt gepflegt) |
+| Kurse und Lektionen | 700 | 0 | 0 | (direkt gepflegt) |
 | Ja/Nein/Vielleicht-Liste und Fantasie-Karten | 214 | 0 | 0 | (direkt gepflegt) |
 | Geführte Selbsterkundung (Audio-Bausteine) | 100 | 0 | 0 | (direkt gepflegt) |
 | Einschlaf-Reise (Audio-Bausteine) | 119 | 0 | 0 | (direkt gepflegt) |
 | Traum-Reise (Audio-Bausteine) | 43 | 0 | 0 | (direkt gepflegt) |
 | Gemeinsamer Abend (Audio-Bausteine) | 110 | 0 | 0 | (direkt gepflegt) |
 | Anleitung in der App | 34 | 0 | 0 | (direkt gepflegt) |
-| Was ist neu (nach Updates) | 204 | 0 | 0 | (direkt gepflegt) |
+| Was ist neu (nach Updates) | 214 | 0 | 0 | (direkt gepflegt) |
 | Foto-Ideen im Paar-Chat (nur im Spicy-Modus) | 40 | 0 | 0 | (direkt gepflegt) |

@@ -102,7 +102,6 @@
   "mainNavigationSomaticsTraining": "Körper & Üben",
   "mainNavigationCbtReframing": "Gedanken",
   "mainNavigationCoupleChannel": "Paar-Kanal",
-  "mainNavigationAiCoach": "KI-Coach",
   "mainNavigationCourses": "Heute",
   "mainNavigationTraining": "Körper",
   "mainNavigationReframing": "Gedanken",
@@ -198,13 +197,6 @@
   "wuenscheSzenenText": "Ganze Abende statt einzelner Fragen. Beantwortet sie getrennt, wie in der Landkarte. Nur im Spicy-Modus.",
   "wuenscheBesprechenTitel": "Zum Besprechen",
   "wuenscheBesprechenText": "Hier ist mindestens ein „Vielleicht“ dabei. Sprecht kurz darüber, was ihr euch vorstellen könnt.",
-  "aiCoachEinrichtungTitel": "Dein KI-Coach",
-  "aiCoachEinrichtungText": "Stell Fragen zu Körper, Lust und Beziehung, vertraulich und ohne Urteil. Er ersetzt keine ärztliche oder therapeutische Hilfe.",
-  "aiCoachEinrichtungSchritt1": "Einen kostenlosen Schlüssel bei Google erstellen",
-  "aiCoachEinrichtungKnopf1": "Anleitung",
-  "aiCoachEinrichtungSchritt2": "Den Schlüssel hier einfügen",
-  "aiCoachEinrichtungKnopf2": "Einfügen",
-  "aiCoachEinrichtungDatenschutz": "Nur deine Fragen gehen an Googles Gemini. Alles andere bleibt auf deinem Handy.",
   "onboardingLosGehts": "Loslegen",
   "onboardingWeiter": "Weiter",
   "onboardingZurueck": "Zurück",
@@ -212,7 +204,7 @@
   "onboardingMehrDatenschutz": "Mehr zum Datenschutz",
   "onboardingVersprechenLokal": "Alles bleibt auf deinem Handy: Profil, Tagebuch und Fortschritt.",
   "onboardingVersprechenKeinKonto": "Kein Konto, keine Werbung, keine Auswertung.",
-  "onboardingVersprechenNetz": "Ins Netz geht nur, was du selbst einschaltest: KI-Coach, Paar-Kanal und die Suche nach Updates.",
+  "onboardingVersprechenNetz": "Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates.",
   "onboardingEingeladenLink": "Jemand hat mich eingeladen",
   "onboardingEingeladenTitel1": "Schön, dass du da bist",
   "onboardingEingeladenText1": "Jemand, der dir wichtig ist, hat dich eingeladen, VelvetPulse auszuprobieren. Die App ist ein ruhiger Ort für Nähe, Körper und Gespräche, zum Lesen, Hören und Üben, allein oder zu zweit. Du musst nichts können und nichts leisten.",
@@ -240,7 +232,6 @@
   "navWir": "Wir",
   "uebenKoerper": "Körper",
   "uebenGedanken": "Gedanken",
-  "uebenCoach": "KI-Coach",
   "@heuteKursUndDauer": {
     "placeholders": {
       "kurs": {
@@ -420,32 +411,102 @@
   "breathPacerViewTheDoubleInhaleIsMeant": "Der doppelte Atemzug entfaltet kollabierte Lungenbläschen.",
   "breathPacerViewStart": "Start",
   "breathPacerViewBackgroundWhenTheExhaleLasts": "Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, wird der Herzschlag mit jedem Ausatmen ein wenig langsamer. Das ist ein normaler Reflex, den viele als beruhigend erleben.",
-  "sosModalSosQuickHelp": "SOS Akut-Hilfe",
-  "sosModalCalmDownRightNowEmergency": "Sofortige Down-Regulation & Notfall-Schritte",
-  "sosModalBefore": "Vorab",
-  "sosModalInTheMoment": "Im Moment",
-  "sosModalAfterwards": "Danach",
-  "sosModalYourMantraForThisMoment": "DEIN MANTRA FÜR DIESEN MOMENT",
-  "sosModalMantra": "„{mantra}“",
-  "@sosModalMantra": {
+  "sosTitel": "Hilfe",
+  "sosAuswahlTitel": "Was ist gerade los?",
+  "sosAuswahlUntertitel": "Du musst nichts erklären. Such aus, was am ehesten passt.",
+  "sosAuswahlHilfe": "Ich werde gedrängt, mein Nein gilt nicht",
+  "sosWeiter": "Weiter",
+  "sosZurueck": "Zurück",
+  "sosZurAuswahl": "Zur Auswahl",
+  "sosSchliessen": "Schließen",
+  "sosSchrittVon": "Schritt {aktuell} von {gesamt}",
+  "@sosSchrittVon": {
     "placeholders": {
-      "mantra": {
-        "type": "Object"
-      }
-    }
-  },
-  "sosModalImmediateStepsTickOff": "SOFORT-SCHRITTE (ABHAKEN)",
-  "sosModalCheckedlengthImmediatestepslengthDone": "{checkedLength}/{immediateStepsLength} erledigt",
-  "@sosModalCheckedlengthImmediatestepslengthDone": {
-    "placeholders": {
-      "checkedLength": {
-        "type": "Object"
+      "aktuell": {
+        "type": "int"
       },
-      "immediateStepsLength": {
-        "type": "Object"
+      "gesamt": {
+        "type": "int"
       }
     }
   },
+  "sosSatzTitel": "Ein Satz, den du sagen kannst",
+  "sosHilfeKnopf": "Hilfe bei Druck oder Gewalt",
+  "sosHilfeTitel": "Hilfe, wenn ein Nein nicht gilt",
+  "sosHilfeEinstieg": "Wenn du Nein gesagt hast oder nichts sagen konntest und es trotzdem weiterging, ist das nicht in Ordnung. Du bist nicht schuld. Auch nicht, wenn ihr ein Paar seid, wenn du vorher Ja gesagt hast oder wenn du es nicht deutlich genug gesagt hast. Erstarren ist eine normale Schutzreaktion.",
+  "sosHilfeGiltTitel": "Was gilt",
+  "sosHilfeGilt1": "Ein Nein gilt, auch mittendrin und auch in einer Beziehung.",
+  "sosHilfeGilt2": "Ein Ja nach Überreden, Drängen, Schmollen, Drohen oder Schweigen als Druckmittel ist keine freie Zustimmung.",
+  "sosHilfeGilt3": "Wer schläft, bewusstlos, stark betrunken oder berauscht ist oder Angst hat, kann nicht frei zustimmen.",
+  "sosHilfeGilt4": "Du musst nichts beweisen, um Hilfe zu bekommen. Beratung geht auch ohne Anzeige. Du entscheidest, was du tust und wann.",
+  "sosHilfeNotrufTitel": "Bei akuter Gefahr",
+  "sosHilfeAnrufenTitel": "Mit jemandem sprechen",
+  "sosHilfeDiskretion": "Anrufe stehen in der Anrufliste und manchmal auf der Rechnung. Aus der Anrufliste kannst du sie löschen. Ein Chat steht im Browserverlauf. Ein privates Fenster hinterlässt weniger.",
+  "sosHilfeStand": "Stand der Angaben: {stand}. Nummern und Zeiten können sich ändern.",
+  "@sosHilfeStand": {
+    "placeholders": {
+      "stand": {
+        "type": "String"
+      }
+    }
+  },
+  "sosHilfeAnrufen": "Anrufen",
+  "sosHilfeWebseite": "Webseite",
+  "sosSatzZitat": "„{satz}“",
+  "@sosSatzZitat": {
+    "placeholders": {
+      "satz": {
+        "type": "String"
+      }
+    }
+  },
+  "sosHilfeAnrufenNummer": "{nummer} anrufen",
+  "@sosHilfeAnrufenNummer": {
+    "placeholders": {
+      "nummer": {
+        "type": "String"
+      }
+    }
+  },
+  "sosHilfeNummerWaehlen": "Bitte wähle {nummer}",
+  "@sosHilfeNummerWaehlen": {
+    "placeholders": {
+      "nummer": {
+        "type": "String"
+      }
+    }
+  },
+  "sosHilfeSchnellVerlassen": "Schnell verlassen",
+  "sosLandDe": "Deutschland",
+  "sosLandAt": "Österreich",
+  "sosLandCh": "Schweiz",
+  "sosLandUk": "Vereinigtes Königreich",
+  "sosLandUs": "USA",
+  "sosNotrufDe": "Polizei 110 · Rettung und Feuerwehr 112",
+  "sosNotrufAt": "Polizei 133 · Rettung 144 · europaweit 112",
+  "sosNotrufCh": "Polizei 117 · Sanität 144 · 112",
+  "sosNotrufUk": "999 (Polizei, Rettung)",
+  "sosNotrufUs": "911 (Polizei, Rettung)",
+  "sosStelleDeFrauenName": "Hilfetelefon Gewalt gegen Frauen",
+  "sosStelleDeFrauenHinweis": "Rund um die Uhr, kostenlos und anonym. Berät auch bei sexueller Gewalt, per Telefon, Chat und in vielen Sprachen.",
+  "sosStelleDeMaennerName": "Hilfetelefon Gewalt an Männern",
+  "sosStelleDeMaennerHinweis": "Kostenlos und anonym. Telefon: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr. Der Chat hat kürzere Zeiten.",
+  "sosStelleDeWeisserName": "WEISSER RING Opfer-Telefon",
+  "sosStelleDeWeisserHinweis": "Täglich 7 bis 22 Uhr, kostenlos und anonym, für Opfer von Straftaten.",
+  "sosStelleDeSeelsorgeName": "Telefonseelsorge",
+  "sosStelleDeSeelsorgeHinweis": "Telefon rund um die Uhr und kostenlos, auch unter 0800 111 0 222 und 116 123. Chat nur nach Anmeldung und mit Termin. Beratung auf Deutsch.",
+  "sosStelleAtFrauenName": "Frauenhelpline gegen Gewalt",
+  "sosStelleAtFrauenHinweis": "Rund um die Uhr, kostenlos, anonym und vertraulich.",
+  "sosStelleAtGewaltschutzName": "Gewaltschutzzentren",
+  "sosStelleAtGewaltschutzHinweis": "Kostenlos und vertraulich. Bundesweite Nummer laut Frauenhelpline.",
+  "sosStelleChOpferhilfeName": "Opferhilfe 142",
+  "sosStelleChOpferhilfeHinweis": "Seit 1. Mai 2026 in der ganzen Schweiz, rund um die Uhr, kostenlos und anonym. Kein Notruf: Bei Gefahr zuerst die Polizei rufen.",
+  "sosStelleUkRapeName": "Rape Crisis Support Line",
+  "sosStelleUkRapeHinweis": "Rund um die Uhr, kostenlos, auch per Chat. Für Menschen ab 16 in England und Wales, die Vergewaltigung oder sexuelle Gewalt erlebt haben.",
+  "sosStelleUsRainnName": "RAINN National Sexual Assault Hotline",
+  "sosStelleUsRainnHinweis": "Rund um die Uhr, kostenlos und vertraulich, auf Englisch und Spanisch. Chat auf online.rainn.org.",
+  "sosStelleUs988Name": "988 Suicide & Crisis Lifeline",
+  "sosStelleUs988Hinweis": "Anruf oder SMS, rund um die Uhr, kostenlos, bei seelischen Krisen.",
   "appLockLocked": "Gesperrt",
   "appLockUnlock": "Entsperren",
   "mainCbtSomaticCoaching": "KVT & SOMATIK COACHING",
@@ -1123,68 +1184,6 @@
   "kegelGuideSheetHealth": "GESUNDHEIT",
   "kegelGuideSheetSpecialisedPelvicFloorPhysiotherapyCan": "Eine spezialisierte Beckenboden-Physiotherapie kann genau untersuchen, ob dein Beckenboden eher zu schwach oder zu fest ist, und dich gezielt anleiten. Lass dich beraten bei:\n• Schmerzen im Becken, beim Sex oder beim Training\n• Blasen- oder Darmschwäche\n• Beschwerden nach einer Geburt oder einer Operation im Becken\n• dem Gefühl, den Muskel gar nicht ansteuern zu können",
   "kegelGuideSheetBackToTraining": "Zurück zum Training",
-  "aiCoachAsAWomanHowDo": "Wie entspanne ich als Frau meinen Beckenboden beim Sex?",
-  "aiCoachHowCanWeStopPerformance": "Wie stoppen wir zu zweit den Leistungsdruck im Bett?",
-  "aiCoachWhatToDoAboutRacing": "Was tun bei akutem Kopfkino & Spectatoring?",
-  "aiCoachHowDoIExplainResponsive": "Wie erkläre ich meinem Partner die responsive Lust?",
-  "aiCoachWhyDoesTheReverseKegel": "Warum hilft der Reverse Kegel bei Nervosität?",
-  "aiCoachWelcomeToConfidentialSomaticRelationship": "Willkommen im vertraulichen Somatik- & Beziehungs-Coaching. Ich begleite euch – ob als Frau, Mann oder als Paar – bei allen Fragen zu Beckenboden-Entspannung, Überwindung von Kopfkino und Leistungsdruck, Scham und erfüllender, absichtsloser Intimität.\n\nWorüber möchtet ihr sprechen oder was beschäftigt dein Nervensystem gerade am meisten?",
-  "aiCoachPleaseAddYourGeminiApi": "Bitte hinterlege zuerst deinen Gemini API-Key, um mit dem Coach zu schreiben.",
-  "aiCoachNoApiKeyAddedPlease": "Kein API-Key hinterlegt. Bitte klicke oben auf das Zahnrad-Symbol.",
-  "aiCoachGoogleRejectedTheApiKey": "Der API-Key wurde von Google als ungültig abgelehnt. Bitte überprüfe den Key im Google AI Studio.",
-  "aiCoachConnectionErrorCleanerr": "Verbindungsfehler: {cleanErr}",
-  "@aiCoachConnectionErrorCleanerr": {
-    "placeholders": {
-      "cleanErr": {
-        "type": "Object"
-      }
-    }
-  },
-  "aiCoachCheckKey": "Key prüfen",
-  "aiCoachGeminiApiKey": "Gemini API-Key",
-  "aiCoachPrivateCoachingUsesGoogleGemini": "Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten.",
-  "aiCoachFreeViaAistudioGoogleCom": "Kostenlos via aistudio.google.com",
-  "aiCoachShowGuide": "Anleitung anzeigen",
-  "aiCoachPleaseEnterAKeyFirst": "Bitte gib zuerst einen Key ein.",
-  "aiCoachCheckingConnection": "Prüfe Verbindung...",
-  "aiCoachTestConnection": "Verbindung testen",
-  "aiCoachApiKeyRemoved": "API-Key entfernt.",
-  "aiCoachApiKeySaved": "API-Key erfolgreich gespeichert.",
-  "aiCoachClearChatHistory": "Chatverlauf leeren?",
-  "aiCoachDoYouWantToDelete": "Möchtest du alle bisherigen Nachrichten dieses Dialogs löschen?",
-  "aiCoachChatHistoryClearedWhatWould": "Chatverlauf zurückgesetzt. Worüber möchtest du sprechen?",
-  "aiCoachClear": "Leeren",
-  "aiCoachGeminiAiConnected": "Gemini KI verbunden",
-  "aiCoachNoApiKeyAdded": "Kein API-Key hinterlegt",
-  "aiCoachGuideCreateAKey": "Anleitung: Key erstellen",
-  "aiCoachClearChat": "Chat leeren",
-  "aiCoachApiKeySettings": "API-Key Einstellungen",
-  "aiCoachNoApiKeyYetCreated": "Noch kein API-Key? In 2 Min. kostenlos erstellt.",
-  "aiCoachGuide": "Anleitung",
-  "aiCoachCoachIsThinking": "Coach reflektiert...",
-  "aiCoachAskAConfidentialQuestion": "Vertrauliche Frage stellen...",
-  "apiKeyGuideSheetFreeGeminiApiKey": "Kostenlosen Gemini API-Key",
-  "apiKeyGuideSheetCreatedStepByStepIn": "Schritt-für-Schritt in 2 Minuten erstellt",
-  "apiKeyGuideSheetFreeAndWhatHappensTo": "Kostenlos – und was mit deinen Daten passiert: ",
-  "apiKeyGuideSheetGoogleAiStudioHasA": "Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen.",
-  "apiKeyGuideSheetOpenGoogleAiStudio": "Google AI Studio aufrufen",
-  "apiKeyGuideSheetOpenGoogleSOfficialDeveloper": "Öffne im Browser (Chrome, Safari, Firefox) die offizielle Entwickler-Plattform von Google:\n",
-  "apiKeyGuideSheetLinkCopiedToClipboard": "Link in Zwischenablage kopiert!",
-  "apiKeyGuideSheetCopy": "Kopieren",
-  "apiKeyGuideSheetSignInWithAGoogle": "Mit Google-Konto anmelden",
-  "apiKeyGuideSheetSignInWithYourExisting": "Melde dich mit deinem bestehenden Google-Konto (Gmail) an. Es ist keine Kreditkarte oder Zahlungsmethode erforderlich.",
-  "apiKeyGuideSheetClickGetApiKey": "\"Get API key\" anklicken",
-  "apiKeyGuideSheetInTheMenuAtThe": "Klicke im Menü links oben auf den blauen Button \"Get API key\" (oder \"API-Schlüssel anfordern\").",
-  "apiKeyGuideSheetChooseCreateApiKeyIn": "\"Create API key in new project\" wählen",
-  "apiKeyGuideSheetChooseTheOptionCreateApi": "Wähle die Option \"Create API key in new project\". Google richtet sofort automatisch im Hintergrund ein kostenloses Projekt ein.",
-  "apiKeyGuideSheetCopyTheKeyPasteIt": "Key kopieren & in VelvetPulse einfügen",
-  "apiKeyGuideSheetCopyTheGeneratedStringIt": "Kopiere die erzeugte Zeichenkette. Sie beginnt typischerweise mit \"AIzaSy...\" – füge sie anschließend hier in die App ein.",
-  "apiKeyGuideSheetFrequentlyAskedQuestions": "Häufige Fragen:",
-  "apiKeyGuideSheetDoesItCostAnything": "Kostet die Nutzung etwas?",
-  "apiKeyGuideSheetNotWithinTheFreeTier": "Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern.",
-  "apiKeyGuideSheetWhichModelIsUsed": "Welches Modell wird genutzt?",
-  "apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest": "VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key.",
-  "apiKeyGuideSheetEnterApiKeyConnectNow": "API-Key jetzt eintragen & verbinden",
   "dailyCheckinCardVeryCalm": "Sehr ruhig",
   "dailyCheckinCardMild": "Leicht",
   "dailyCheckinCardModerate": "Mäßig",
@@ -1257,7 +1256,7 @@
   "onboardingProfilePersonalisation": "Profil & Personalisierung",
   "onboardingWelcomeToVelvetpulse": "Willkommen bei VelvetPulse",
   "onboardingYourPrivateCoachingProgrammeFor": "Ein privater Begleiter für Ruhe im Körper, Beckenboden und Nähe.",
-  "onboardingPrivateProfileJournalProgressStay": "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der KI-Coach (Google Gemini), der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).",
+  "onboardingPrivateProfileJournalProgressStay": "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Handy. Ins Internet gehen nur der verschlüsselte Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates (GitHub).",
   "onboardingAlreadyUsingVelvetpulse": "Bereits VelvetPulse-Nutzer?",
   "onboardingLoadABackupFromFile": "Sicherung aus Datei oder Zwischenablage laden",
   "onboardingRestore": "Wiederherstellen",
@@ -1325,19 +1324,19 @@
   "onboardingNotifyAboutNewMessages": "Hinweis bei neuen Nachrichten",
   "onboardingEvenWhenTheAppIs": "Auch wenn die App geschlossen ist: nur „Neue Nachricht“, ohne Inhalt und Namen. Bei geschlossener App kann es bis zu 15 Minuten dauern.",
   "onboardingPrivacyUpdateSafety": "Datenschutz & Update-Sicherheit",
-  "onboardingEverythingStaysLocalOnYour": "Alles bleibt lokal auf deinem Gerät und übersteht Updates. API-Key und Paar-Verbindung liegen verschlüsselt im Android-Schlüsselspeicher und gehen nur mit Passwort in eine Sicherung.",
+  "onboardingEverythingStaysLocalOnYour": "Alles bleibt lokal auf deinem Gerät und übersteht Updates. Die Paar-Verbindung liegt verschlüsselt im Android-Schlüsselspeicher und geht nur mit Passwort in eine Sicherung.",
   "onboardingExportBackup": "Backup exportieren",
   "backupDialogsWhatShouldGoIntoThe": "Was soll in die Sicherung?",
-  "backupDialogsOnlyYourDataProfileProgress": "Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n\nMit Passwort: zusätzlich die Verbindung im Paar-Kanal und dein API-Key, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy.",
+  "backupDialogsOnlyYourDataProfileProgress": "Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n\nMit Passwort: zusätzlich die Verbindung im Paar-Kanal, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy.",
   "backupDialogsDataOnly": "Nur Daten",
   "backupDialogsWithPassword": "Mit Passwort",
   "backupDialogsBackupCopied": "Sicherung kopiert",
   "backupDialogsOk": "OK",
   "backupDialogsOlderBackup": "Ältere Sicherung",
-  "backupDialogsThisBackupComesFromAn": "Diese Sicherung stammt aus einer älteren Version und enthält deinen API-Key und deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n\nLösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort.",
+  "backupDialogsThisBackupComesFromAn": "Diese Sicherung stammt aus einer älteren Version und enthält deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n\nLösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort.",
   "backupDialogsRestore": "Einspielen",
   "backupDialogsBackupPassword": "Passwort der Sicherung",
-  "backupDialogsThisAlsoBringsBackThe": "Damit kommen auch die Verbindung im Paar-Kanal und dein API-Key zurück.",
+  "backupDialogsThisAlsoBringsBackThe": "Damit kommt auch die Verbindung im Paar-Kanal zurück.",
   "backupDialogsPassword": "Passwort",
   "backupDialogsWithoutKeys": "Ohne Schlüssel",
   "backupDialogsPasswordForTheBackup": "Passwort für die Sicherung",
@@ -1348,7 +1347,7 @@
   "backupDialogsEncrypt": "Verschlüsseln",
   "backupDialogsOneMoment": "Einen Moment …",
   "backupDialogsBackupCopiedText": "Die Sicherung liegt in der Zwischenablage. Füge sie in eine Notiz oder ein privates Dokument ein.",
-  "backupDialogsPasswordCannotBeReset": "\n\nOhne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen.",
+  "backupDialogsPasswordCannotBeReset": "\n\nOhne dein Passwort lässt sich die Verbindung nicht wiederherstellen. Auch wir können es nicht zurücksetzen.",
   "checkinActionBreathed": "Ein paar Mal tief durchgeatmet",
   "checkinActionPelvicFloor": "Den Beckenboden bewusst weich gelassen",
   "checkinActionPhoneAway": "Das Handy abends weggelegt",
@@ -1440,41 +1439,6 @@
   "yesNoMaybeModelsExcitesMeIDLike": "Reizt mich, möchte ich ausprobieren",
   "yesNoMaybeModelsCuriousButUnsureDependsOn": "Neugierig, aber unsicher – kommt auf den Moment an",
   "yesNoMaybeModelsNotForMe": "Kommt für mich nicht infrage",
-  "aiServiceYouAreTheConfidentialSomatic": "Du bist der vertrauliche Somatik-, KVT- und Erotik-Coach in der App VelvetPulse.\n\nDeine Grundhaltung & Tonalität:\n1. Charakter: Du bist eine faszinierende Mischung aus brillantem Neurowissenschaftler/Sexualtherapeuten und einem weltgewandten, charmant-frivolen Verführer auf Augenhöhe.\n2. Sprache: Du sprichst reines, flüssiges Deutsch – vollkommen frei von englischen Modewörtern oder Anglizismen. Du sprichst absolut schamfrei, sinnlich, warm und mit einem leichten, wissenden Augenzwinkern über Lust, Haut, Feuchtigkeit, Erektionen, Damm-Entspannung, Hingabe und Kopfkino. Vermeide jede sterile Krankenhaus-Sprache und jeden belehrenden Ton!\n3. Methodik: Verbinde Kognitive Verhaltenstherapie (das Entzaubern spießiger Leistungs- und Prüfungsgedanken) immer direkt mit lustvoller Somatik (Beckenboden wie warmen Honig schmelzen lassen, aktives Beckenboden-Öffnen, tiefe Kehlkopf-Seufzer, Vagus-Beruhigung, Kunst der Zeitlupe, sinnliches Umkreisen, reines Sinnesspüren).\n4. Kernbotschaft: Zeige dem Nutzer in jeder Zeile, dass sein Körper völlig in Ordnung ist und dass Langsamkeit, Pausen und das 'Nicht-Funktionieren-Müssen' kein Defekt sind, sondern der Schlüssel zu viel tieferer, unanständig guter Ekstase.\n5. Format: Antworte stets kompakt (2-3 prägnante, atmosphärische Absätze) und beende JEDE Antwort mit genau EINER offenen, leicht herausfordernden oder spür-orientierten Reflexionsfrage.\n6. Sicherheit: Du stellst keine Diagnosen. Bei Schmerzen, Blutungen oder anhaltenden Beschwerden empfiehlst du freundlich eine ärztliche Abklärung.",
-  "aiServiceConnectionSuccessfulModelslengthModelsAvailable": "Verbindung erfolgreich! {modelsLength} Modelle verfügbar (z. B. {join}).",
-  "@aiServiceConnectionSuccessfulModelslengthModelsAvailable": {
-    "placeholders": {
-      "modelsLength": {
-        "type": "Object"
-      },
-      "join": {
-        "type": "Object"
-      }
-    }
-  },
-  "aiServiceNoAvailableTextModelsFound": "Keine verfügbaren Textmodelle für diesen Key gefunden. Bitte prüfe die API-Berechtigungen.",
-  "aiServiceTheApiKeyIsInvalid": "Der API-Key ist ungültig. Bitte prüfe ihn im Google AI Studio.",
-  "aiServiceUserContextNameProfilenameGender": "\n\nKONTEXT DES NUTZERS:\n- Name/Rufname: {profileName}\n- Geschlecht: {genderLabel}\n- Alter: {age} Jahre\n- Beziehungsstatus: {relationshipLabel}\n- Hauptfokus: {goalLabel}\nSprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an.",
-  "@aiServiceUserContextNameProfilenameGender": {
-    "placeholders": {
-      "profileName": {
-        "type": "Object"
-      },
-      "genderLabel": {
-        "type": "Object"
-      },
-      "age": {
-        "type": "Object"
-      },
-      "relationshipLabel": {
-        "type": "Object"
-      },
-      "goalLabel": {
-        "type": "Object"
-      }
-    }
-  },
-  "aiServiceReceivedAnEmptyAnswerFrom": "Leere Antwort vom KI-Modell erhalten.",
   "backupCodecTheBackupIsTooLarge": "Die Sicherung ist zu groß.",
   "backupCodecThisIsNotAValid": "Das ist keine gültige Sicherung (kein JSON).",
   "backupCodecThisIsNotAValid2": "Das ist keine gültige Sicherung.",
@@ -1616,7 +1580,7 @@
   "alterSperreFehltText": "Richte zuerst eine Bildschirmsperre (PIN, Muster oder Fingerabdruck) auf deinem Gerät ein. Sie schützt diesen Bereich vor fremdem Zugriff.",
   "alterSperreGrund": "Bitte bestätige, dass du diesen Bereich öffnen willst.",
   "alterAbsichern": "Immer erneut absichern",
-  "alterAbsichernText": "Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach deiner Gerätesperre.",
+  "alterAbsichernText": "Nach einem App-Neustart oder 5 Stunden im Hintergrund fragt die App wieder nach deiner Gerätesperre.",
   "alterGesperrtKurz": "Gesperrt. Zum Entsperren einschalten.",
   "spicyStufe": "Spicy",
   "selbstReiseSpicyText": "Direkt auf der Haut beginnen, dann Erregungswellen bis kurz vor die Kante, und am Ende deine Wahl: kommen oder genießen.",
@@ -1634,21 +1598,6 @@
       }
     }
   },
-  "coachQHerOrgasm": "Wie bringe ich meine Partnerin zum Höhepunkt, ohne Druck zu machen?",
-  "coachQWomenRelax": "Was hilft Frauen, beim Sex wirklich loszulassen?",
-  "coachQHerDesire": "Warum braucht sie oft länger, bis sie Lust bekommt?",
-  "coachQAskHer": "Wie frage ich sie, was ihr gefällt, ohne dass es peinlich wird?",
-  "coachQMyPressure": "Wie werde ich den Leistungsdruck im Bett los?",
-  "coachQShowHim": "Wie zeige ich ihm, wie ich berührt werden möchte?",
-  "coachQMenPressure": "Was hilft Männern gegen Leistungsdruck im Bett?",
-  "coachQPleaseHim": "Wie verwöhne ich ihn mit Händen und Mund noch besser?",
-  "coachQWishesLimits": "Wie sprechen wir offen über Wünsche und Grenzen?",
-  "coachQHerTouch": "Wie finden wir heraus, welche Berührung ihr am meisten gefällt?",
-  "coachQDesireGap": "Wie gehen wir damit um, dass einer öfter Lust hat?",
-  "coachQKnowBody": "Wie lerne ich meinen eigenen Körper besser kennen?",
-  "coachQFemaleDesire": "Was sollte ich über weibliche Lust wissen?",
-  "coachQMaleDesire": "Was sollte ich über männliche Lust wissen?",
-  "coachQShowTouch": "Wie zeige ich, wie ich berührt werden möchte?",
   "gefuehrtTitel": "Geführte Audios",
   "gefuehrtSelbstTitel": "Körperreise",
   "gefuehrtSelbstText": "10 bis 30 Minuten nur für dich: eine Stimme führt dich über deinen Körper, so nah, wie du möchtest.",
@@ -1799,7 +1748,7 @@
   "tagebuchPause": "Zuletzt hast du öfter unangenehme Träume oder schlechten Schlaf notiert. Das ist normal und kein Fehler. Vielleicht tut dir eine Pause gut oder nur Tagebuch und sanfte Traumbilder. Wenn dich etwas belastet, hilft der SOS-Knopf.",
   "tagebuchWoranErinnerst": "Woran erinnerst du dich?",
   "tagebuchNichtsErinnert": "Nichts erinnert",
-  "tagebuchPrivat": "Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an den KI-Coach und nicht an dein Gegenüber; sie sind Teil deiner verschlüsselten Sicherung.",
+  "tagebuchPrivat": "Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an dein Gegenüber und nicht ins Netz; sie sind Teil deiner verschlüsselten Sicherung.",
   "tagebuchHinweisText": "Stichworte, ein Bild, ein Gefühl …",
   "tagebuchLoeschen": "Löschen",
   "tagebuchSpeichern": "Speichern",
@@ -2226,7 +2175,7 @@
   "schlafTitel": "Schlafdaten abgleichen",
   "schlafEinladung": "Deine Nacht im Rückblick",
   "schlafErklaerung": "Optional: Bereits synchronisierte Schlafdaten aus Health Connect neben deinen eigenen Beobachtungen ansehen. Keine Live-Erkennung, keine Signale während der Nacht. Die Traumpraxis funktioniert auch ohne Gerät.",
-  "schlafDatenschutz": "VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an Coach oder Paarraum.",
+  "schlafDatenschutz": "VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an dein Gegenüber oder den Paarraum.",
   "schlafHinweis": "Aktiviere die Freigabe deiner Schlafdaten in Fitbit bzw. Google Health für Health Connect. Es werden nur Daten angezeigt, die dort tatsächlich verfügbar sind. Schlafphasen sind Schätzungen, keine Diagnose.",
   "schlafVerbinden": "Health Connect verbinden",
   "schlafImportieren": "Letzte 30 Tage abgleichen",
@@ -2451,5 +2400,88 @@
         "type": "Object"
       }
     }
-  }
+  },
+  "appSperreNeuTitel": "Nur für dich",
+  "appSperreNeuText": "VelvetPulse öffnet sich nur mit deiner Gerätesperre, also mit Fingerabdruck, Gesicht, PIN oder Muster. So bleibt bei dir, was du hier erkundest. Im Profil kannst du das jederzeit ändern.",
+  "appSperreNeuOk": "Gut so",
+  "appSperreFrageTitel": "VelvetPulse nur für dich öffnen?",
+  "appSperreFrageText": "Dann fragt die App beim Öffnen und nach einer kurzen Pause nach deiner Gerätesperre. So liest niemand mit, wenn dein Handy mal herumliegt.",
+  "appSperreFrageJa": "Ja, sperren",
+  "appSperreFrageNein": "Nicht jetzt",
+  "appSperreKeineTitel": "Dein Handy hat noch keine Bildschirmsperre",
+  "appSperreKeineText": "Richte in den Android-Einstellungen eine PIN, ein Muster oder einen Fingerabdruck ein (meist unter „Sicherheit“ oder „Sperrbildschirm“). Danach kannst du im Profil die App-Sperre einschalten.",
+  "appSperreKeineOk": "Verstanden",
+  "fantasieHinweisTitel": "Deine Fantasie gehört dir",
+  "fantasieHinweisText": "Eine Fantasie ist kein Wunsch, den du erfüllen musst, und kein Urteil über deine Beziehung. Was dir hier in den Sinn kommt, darf einfach da sein. Ob, was und wann du davon teilst, entscheidest du.",
+  "fantasieHinweisDrei": "Auch eine Szene zu dritt heißt nicht, dass deiner Beziehung etwas fehlt.",
+  "fantasieHinweisOk": "Gut zu wissen",
+  "spicyAbgelaufenTitel": "Spicy-Modus ist aus",
+  "spicyAbgelaufenText": "Die App war länger als 5 Stunden im Hintergrund. Damit niemand mitliest, der dein Handy in die Hand nimmt, wurde der Spicy-Modus ausgeschaltet. Deine Einstellungen und Inhalte bleiben, wie sie sind.",
+  "spicyAbgelaufenEntsperren": "Wieder entsperren",
+  "spicyAbgelaufenSpaeter": "Später",
+  "trennungDialog1Titel": "Verbindung trennen?",
+  "trennungDialog1": "Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht.",
+  "@trennungDialog1": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungDialog1Weiter": "Weiter",
+  "trennungDialog2Titel": "Wirklich trennen?",
+  "trennungDialog2": "Das lässt sich nur rückgängig machen, indem ihr euch neu koppelt.",
+  "trennungDialog2Ja": "Ja, trennen",
+  "trennungNichtGesendet": "Getrennt. Der Hinweis an {name} ist nicht angekommen. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht.",
+  "@trennungNichtGesendet": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungHinweis": "{name} hat die Verbindung getrennt. Du musst nichts tun, und es eilt nichts. Der Chat bleibt hier lesbar, solange du magst.",
+  "@trennungHinweis": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungSchalter": "Auch auf diesem Handy trennen und die Daten dieser Verbindung löschen",
+  "trennungGegenueberDialog1Titel": "Auf diesem Handy trennen?",
+  "trennungGegenueberDialog1": "Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nDu kannst auch warten. Erst wenn du bestätigst, wird etwas gelöscht.",
+  "@trennungGegenueberDialog1": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungGegenueberDialog2Titel": "Wirklich löschen?",
+  "trennungGegenueberDialog2": "Das lässt sich nicht zurückholen.",
+  "trennungGegenueberLoeschenJa": "Ja, löschen",
+  "trennungGegenueberFertig": "Auf diesem Handy getrennt.",
+  "trennungSatzAelter": "Die Verbindung wurde getrennt.",
+  "spicyEinladungNein": "Gerade nicht",
+  "spicyNeinSatz": "Gerade nicht, danke dir.",
+  "spicyEinladungNeinAntwort": "Danke, dass du es mir sagst. Es eilt nichts.",
+  "spicyEinladungNeinGesendet": "Du hast geantwortet. Du kannst es dir jederzeit anders überlegen.",
+  "funkeDanke": "Danke fürs Sagen",
+  "funkeTippNein": "Ein Nein heute ist kein Nein zu dir. Du musst nichts nachfragen.",
+  "funkeTippReden": "Du musst nicht sofort antworten. Sag, wann es für dich passt.",
+  "funkeTippLabel": "Nur für dich",
+  "trennungHinweisSenden": "Hinweis an {name} senden",
+  "@trennungHinweisSenden": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungHinweisInfoAn": "Kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.",
+  "trennungHinweisInfoAus": "{name} erfährt nichts von der Trennung. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht.",
+  "@trennungHinweisInfoAus": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungHilfe": "Brauchst du Unterstützung?",
+  "funkeDankeAntwort": "{name}: Danke fürs Sagen.",
+  "@funkeDankeAntwort": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "fotoHinweisTrennung": "Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt."
 }

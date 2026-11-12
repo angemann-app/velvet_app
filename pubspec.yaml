@@ -14,7 +14,6 @@ dependencies:
   cupertino_icons: ^1.0.6
   shared_preferences: ^2.2.2
   flutter_tts: ^4.0.2
-  google_generative_ai: ^0.4.4
   audioplayers: ^6.1.0
   audio_session: ^0.2.4
   nostr_tools: ^1.0.9
@@ -81,6 +80,7 @@ flutter:
     - translations/en/anleitung.json
     - translations/en/foto_ideen.json
     - assets/images/
+    - assets/icons/
     - assets/fonts/SourceSerif4-OFL.txt
     # Aufnahmen kommen als Pakete nach (lib/services/pakete.dart, tools/pakete_bauen.py). In der App bleiben nur
     # die Ansagen des Beckenboden-Trainings (Deutsch und Englisch), Klangschale, Klangteppich und die Längen der

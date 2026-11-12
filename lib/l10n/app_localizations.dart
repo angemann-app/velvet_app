@@ -626,12 +626,6 @@ abstract class AppLocalizations {
   /// **'Paar-Kanal'**
   String get mainNavigationCoupleChannel;
 
-  /// No description provided for @mainNavigationAiCoach.
-  ///
-  /// In de, this message translates to:
-  /// **'KI-Coach'**
-  String get mainNavigationAiCoach;
-
   /// No description provided for @mainNavigationCourses.
   ///
   /// In de, this message translates to:
@@ -950,48 +944,6 @@ abstract class AppLocalizations {
   /// **'Hier ist mindestens ein „Vielleicht“ dabei. Sprecht kurz darüber, was ihr euch vorstellen könnt.'**
   String get wuenscheBesprechenText;
 
-  /// No description provided for @aiCoachEinrichtungTitel.
-  ///
-  /// In de, this message translates to:
-  /// **'Dein KI-Coach'**
-  String get aiCoachEinrichtungTitel;
-
-  /// No description provided for @aiCoachEinrichtungText.
-  ///
-  /// In de, this message translates to:
-  /// **'Stell Fragen zu Körper, Lust und Beziehung, vertraulich und ohne Urteil. Er ersetzt keine ärztliche oder therapeutische Hilfe.'**
-  String get aiCoachEinrichtungText;
-
-  /// No description provided for @aiCoachEinrichtungSchritt1.
-  ///
-  /// In de, this message translates to:
-  /// **'Einen kostenlosen Schlüssel bei Google erstellen'**
-  String get aiCoachEinrichtungSchritt1;
-
-  /// No description provided for @aiCoachEinrichtungKnopf1.
-  ///
-  /// In de, this message translates to:
-  /// **'Anleitung'**
-  String get aiCoachEinrichtungKnopf1;
-
-  /// No description provided for @aiCoachEinrichtungSchritt2.
-  ///
-  /// In de, this message translates to:
-  /// **'Den Schlüssel hier einfügen'**
-  String get aiCoachEinrichtungSchritt2;
-
-  /// No description provided for @aiCoachEinrichtungKnopf2.
-  ///
-  /// In de, this message translates to:
-  /// **'Einfügen'**
-  String get aiCoachEinrichtungKnopf2;
-
-  /// No description provided for @aiCoachEinrichtungDatenschutz.
-  ///
-  /// In de, this message translates to:
-  /// **'Nur deine Fragen gehen an Googles Gemini. Alles andere bleibt auf deinem Handy.'**
-  String get aiCoachEinrichtungDatenschutz;
-
   /// No description provided for @onboardingLosGehts.
   ///
   /// In de, this message translates to:
@@ -1037,7 +989,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingVersprechenNetz.
   ///
   /// In de, this message translates to:
-  /// **'Ins Netz geht nur, was du selbst einschaltest: KI-Coach, Paar-Kanal und die Suche nach Updates.'**
+  /// **'Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates.'**
   String get onboardingVersprechenNetz;
 
   /// No description provided for @onboardingEingeladenLink.
@@ -1141,12 +1093,6 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Gedanken'**
   String get uebenGedanken;
-
-  /// No description provided for @uebenCoach.
-  ///
-  /// In de, this message translates to:
-  /// **'KI-Coach'**
-  String get uebenCoach;
 
   /// No description provided for @coursesYourFocusGoallabel.
   ///
@@ -1599,60 +1545,353 @@ abstract class AppLocalizations {
   /// **'Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, wird der Herzschlag mit jedem Ausatmen ein wenig langsamer. Das ist ein normaler Reflex, den viele als beruhigend erleben.'**
   String get breathPacerViewBackgroundWhenTheExhaleLasts;
 
-  /// No description provided for @sosModalSosQuickHelp.
+  /// No description provided for @sosTitel.
   ///
   /// In de, this message translates to:
-  /// **'SOS Akut-Hilfe'**
-  String get sosModalSosQuickHelp;
+  /// **'Hilfe'**
+  String get sosTitel;
 
-  /// No description provided for @sosModalCalmDownRightNowEmergency.
+  /// No description provided for @sosAuswahlTitel.
   ///
   /// In de, this message translates to:
-  /// **'Sofortige Down-Regulation & Notfall-Schritte'**
-  String get sosModalCalmDownRightNowEmergency;
+  /// **'Was ist gerade los?'**
+  String get sosAuswahlTitel;
 
-  /// No description provided for @sosModalBefore.
+  /// No description provided for @sosAuswahlUntertitel.
   ///
   /// In de, this message translates to:
-  /// **'Vorab'**
-  String get sosModalBefore;
+  /// **'Du musst nichts erklären. Such aus, was am ehesten passt.'**
+  String get sosAuswahlUntertitel;
 
-  /// No description provided for @sosModalInTheMoment.
+  /// No description provided for @sosAuswahlHilfe.
   ///
   /// In de, this message translates to:
-  /// **'Im Moment'**
-  String get sosModalInTheMoment;
+  /// **'Ich werde gedrängt, mein Nein gilt nicht'**
+  String get sosAuswahlHilfe;
 
-  /// No description provided for @sosModalAfterwards.
+  /// No description provided for @sosWeiter.
   ///
   /// In de, this message translates to:
-  /// **'Danach'**
-  String get sosModalAfterwards;
+  /// **'Weiter'**
+  String get sosWeiter;
 
-  /// No description provided for @sosModalYourMantraForThisMoment.
+  /// No description provided for @sosZurueck.
   ///
   /// In de, this message translates to:
-  /// **'DEIN MANTRA FÜR DIESEN MOMENT'**
-  String get sosModalYourMantraForThisMoment;
+  /// **'Zurück'**
+  String get sosZurueck;
 
-  /// No description provided for @sosModalMantra.
+  /// No description provided for @sosZurAuswahl.
   ///
   /// In de, this message translates to:
-  /// **'„{mantra}“'**
-  String sosModalMantra(Object mantra);
+  /// **'Zur Auswahl'**
+  String get sosZurAuswahl;
 
-  /// No description provided for @sosModalImmediateStepsTickOff.
+  /// No description provided for @sosSchliessen.
   ///
   /// In de, this message translates to:
-  /// **'SOFORT-SCHRITTE (ABHAKEN)'**
-  String get sosModalImmediateStepsTickOff;
+  /// **'Schließen'**
+  String get sosSchliessen;
 
-  /// No description provided for @sosModalCheckedlengthImmediatestepslengthDone.
+  /// No description provided for @sosSchrittVon.
   ///
   /// In de, this message translates to:
-  /// **'{checkedLength}/{immediateStepsLength} erledigt'**
-  String sosModalCheckedlengthImmediatestepslengthDone(
-      Object checkedLength, Object immediateStepsLength);
+  /// **'Schritt {aktuell} von {gesamt}'**
+  String sosSchrittVon(int aktuell, int gesamt);
+
+  /// No description provided for @sosSatzTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Satz, den du sagen kannst'**
+  String get sosSatzTitel;
+
+  /// No description provided for @sosHilfeKnopf.
+  ///
+  /// In de, this message translates to:
+  /// **'Hilfe bei Druck oder Gewalt'**
+  String get sosHilfeKnopf;
+
+  /// No description provided for @sosHilfeTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Hilfe, wenn ein Nein nicht gilt'**
+  String get sosHilfeTitel;
+
+  /// No description provided for @sosHilfeEinstieg.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn du Nein gesagt hast oder nichts sagen konntest und es trotzdem weiterging, ist das nicht in Ordnung. Du bist nicht schuld. Auch nicht, wenn ihr ein Paar seid, wenn du vorher Ja gesagt hast oder wenn du es nicht deutlich genug gesagt hast. Erstarren ist eine normale Schutzreaktion.'**
+  String get sosHilfeEinstieg;
+
+  /// No description provided for @sosHilfeGiltTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Was gilt'**
+  String get sosHilfeGiltTitel;
+
+  /// No description provided for @sosHilfeGilt1.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Nein gilt, auch mittendrin und auch in einer Beziehung.'**
+  String get sosHilfeGilt1;
+
+  /// No description provided for @sosHilfeGilt2.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Ja nach Überreden, Drängen, Schmollen, Drohen oder Schweigen als Druckmittel ist keine freie Zustimmung.'**
+  String get sosHilfeGilt2;
+
+  /// No description provided for @sosHilfeGilt3.
+  ///
+  /// In de, this message translates to:
+  /// **'Wer schläft, bewusstlos, stark betrunken oder berauscht ist oder Angst hat, kann nicht frei zustimmen.'**
+  String get sosHilfeGilt3;
+
+  /// No description provided for @sosHilfeGilt4.
+  ///
+  /// In de, this message translates to:
+  /// **'Du musst nichts beweisen, um Hilfe zu bekommen. Beratung geht auch ohne Anzeige. Du entscheidest, was du tust und wann.'**
+  String get sosHilfeGilt4;
+
+  /// No description provided for @sosHilfeNotrufTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Bei akuter Gefahr'**
+  String get sosHilfeNotrufTitel;
+
+  /// No description provided for @sosHilfeAnrufenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Mit jemandem sprechen'**
+  String get sosHilfeAnrufenTitel;
+
+  /// No description provided for @sosHilfeDiskretion.
+  ///
+  /// In de, this message translates to:
+  /// **'Anrufe stehen in der Anrufliste und manchmal auf der Rechnung. Aus der Anrufliste kannst du sie löschen. Ein Chat steht im Browserverlauf. Ein privates Fenster hinterlässt weniger.'**
+  String get sosHilfeDiskretion;
+
+  /// No description provided for @sosHilfeStand.
+  ///
+  /// In de, this message translates to:
+  /// **'Stand der Angaben: {stand}. Nummern und Zeiten können sich ändern.'**
+  String sosHilfeStand(String stand);
+
+  /// No description provided for @sosHilfeAnrufen.
+  ///
+  /// In de, this message translates to:
+  /// **'Anrufen'**
+  String get sosHilfeAnrufen;
+
+  /// No description provided for @sosHilfeWebseite.
+  ///
+  /// In de, this message translates to:
+  /// **'Webseite'**
+  String get sosHilfeWebseite;
+
+  /// No description provided for @sosSatzZitat.
+  ///
+  /// In de, this message translates to:
+  /// **'„{satz}“'**
+  String sosSatzZitat(String satz);
+
+  /// No description provided for @sosHilfeAnrufenNummer.
+  ///
+  /// In de, this message translates to:
+  /// **'{nummer} anrufen'**
+  String sosHilfeAnrufenNummer(String nummer);
+
+  /// No description provided for @sosHilfeNummerWaehlen.
+  ///
+  /// In de, this message translates to:
+  /// **'Bitte wähle {nummer}'**
+  String sosHilfeNummerWaehlen(String nummer);
+
+  /// No description provided for @sosHilfeSchnellVerlassen.
+  ///
+  /// In de, this message translates to:
+  /// **'Schnell verlassen'**
+  String get sosHilfeSchnellVerlassen;
+
+  /// No description provided for @sosLandDe.
+  ///
+  /// In de, this message translates to:
+  /// **'Deutschland'**
+  String get sosLandDe;
+
+  /// No description provided for @sosLandAt.
+  ///
+  /// In de, this message translates to:
+  /// **'Österreich'**
+  String get sosLandAt;
+
+  /// No description provided for @sosLandCh.
+  ///
+  /// In de, this message translates to:
+  /// **'Schweiz'**
+  String get sosLandCh;
+
+  /// No description provided for @sosLandUk.
+  ///
+  /// In de, this message translates to:
+  /// **'Vereinigtes Königreich'**
+  String get sosLandUk;
+
+  /// No description provided for @sosLandUs.
+  ///
+  /// In de, this message translates to:
+  /// **'USA'**
+  String get sosLandUs;
+
+  /// No description provided for @sosNotrufDe.
+  ///
+  /// In de, this message translates to:
+  /// **'Polizei 110 · Rettung und Feuerwehr 112'**
+  String get sosNotrufDe;
+
+  /// No description provided for @sosNotrufAt.
+  ///
+  /// In de, this message translates to:
+  /// **'Polizei 133 · Rettung 144 · europaweit 112'**
+  String get sosNotrufAt;
+
+  /// No description provided for @sosNotrufCh.
+  ///
+  /// In de, this message translates to:
+  /// **'Polizei 117 · Sanität 144 · 112'**
+  String get sosNotrufCh;
+
+  /// No description provided for @sosNotrufUk.
+  ///
+  /// In de, this message translates to:
+  /// **'999 (Polizei, Rettung)'**
+  String get sosNotrufUk;
+
+  /// No description provided for @sosNotrufUs.
+  ///
+  /// In de, this message translates to:
+  /// **'911 (Polizei, Rettung)'**
+  String get sosNotrufUs;
+
+  /// No description provided for @sosStelleDeFrauenName.
+  ///
+  /// In de, this message translates to:
+  /// **'Hilfetelefon Gewalt gegen Frauen'**
+  String get sosStelleDeFrauenName;
+
+  /// No description provided for @sosStelleDeFrauenHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Rund um die Uhr, kostenlos und anonym. Berät auch bei sexueller Gewalt, per Telefon, Chat und in vielen Sprachen.'**
+  String get sosStelleDeFrauenHinweis;
+
+  /// No description provided for @sosStelleDeMaennerName.
+  ///
+  /// In de, this message translates to:
+  /// **'Hilfetelefon Gewalt an Männern'**
+  String get sosStelleDeMaennerName;
+
+  /// No description provided for @sosStelleDeMaennerHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Kostenlos und anonym. Telefon: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr. Der Chat hat kürzere Zeiten.'**
+  String get sosStelleDeMaennerHinweis;
+
+  /// No description provided for @sosStelleDeWeisserName.
+  ///
+  /// In de, this message translates to:
+  /// **'WEISSER RING Opfer-Telefon'**
+  String get sosStelleDeWeisserName;
+
+  /// No description provided for @sosStelleDeWeisserHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Täglich 7 bis 22 Uhr, kostenlos und anonym, für Opfer von Straftaten.'**
+  String get sosStelleDeWeisserHinweis;
+
+  /// No description provided for @sosStelleDeSeelsorgeName.
+  ///
+  /// In de, this message translates to:
+  /// **'Telefonseelsorge'**
+  String get sosStelleDeSeelsorgeName;
+
+  /// No description provided for @sosStelleDeSeelsorgeHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Telefon rund um die Uhr und kostenlos, auch unter 0800 111 0 222 und 116 123. Chat nur nach Anmeldung und mit Termin. Beratung auf Deutsch.'**
+  String get sosStelleDeSeelsorgeHinweis;
+
+  /// No description provided for @sosStelleAtFrauenName.
+  ///
+  /// In de, this message translates to:
+  /// **'Frauenhelpline gegen Gewalt'**
+  String get sosStelleAtFrauenName;
+
+  /// No description provided for @sosStelleAtFrauenHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Rund um die Uhr, kostenlos, anonym und vertraulich.'**
+  String get sosStelleAtFrauenHinweis;
+
+  /// No description provided for @sosStelleAtGewaltschutzName.
+  ///
+  /// In de, this message translates to:
+  /// **'Gewaltschutzzentren'**
+  String get sosStelleAtGewaltschutzName;
+
+  /// No description provided for @sosStelleAtGewaltschutzHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Kostenlos und vertraulich. Bundesweite Nummer laut Frauenhelpline.'**
+  String get sosStelleAtGewaltschutzHinweis;
+
+  /// No description provided for @sosStelleChOpferhilfeName.
+  ///
+  /// In de, this message translates to:
+  /// **'Opferhilfe 142'**
+  String get sosStelleChOpferhilfeName;
+
+  /// No description provided for @sosStelleChOpferhilfeHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Seit 1. Mai 2026 in der ganzen Schweiz, rund um die Uhr, kostenlos und anonym. Kein Notruf: Bei Gefahr zuerst die Polizei rufen.'**
+  String get sosStelleChOpferhilfeHinweis;
+
+  /// No description provided for @sosStelleUkRapeName.
+  ///
+  /// In de, this message translates to:
+  /// **'Rape Crisis Support Line'**
+  String get sosStelleUkRapeName;
+
+  /// No description provided for @sosStelleUkRapeHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Rund um die Uhr, kostenlos, auch per Chat. Für Menschen ab 16 in England und Wales, die Vergewaltigung oder sexuelle Gewalt erlebt haben.'**
+  String get sosStelleUkRapeHinweis;
+
+  /// No description provided for @sosStelleUsRainnName.
+  ///
+  /// In de, this message translates to:
+  /// **'RAINN National Sexual Assault Hotline'**
+  String get sosStelleUsRainnName;
+
+  /// No description provided for @sosStelleUsRainnHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Rund um die Uhr, kostenlos und vertraulich, auf Englisch und Spanisch. Chat auf online.rainn.org.'**
+  String get sosStelleUsRainnHinweis;
+
+  /// No description provided for @sosStelleUs988Name.
+  ///
+  /// In de, this message translates to:
+  /// **'988 Suicide & Crisis Lifeline'**
+  String get sosStelleUs988Name;
+
+  /// No description provided for @sosStelleUs988Hinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Anruf oder SMS, rund um die Uhr, kostenlos, bei seelischen Krisen.'**
+  String get sosStelleUs988Hinweis;
 
   /// No description provided for @appLockLocked.
   ///
@@ -3870,336 +4109,6 @@ abstract class AppLocalizations {
   /// **'Zurück zum Training'**
   String get kegelGuideSheetBackToTraining;
 
-  /// No description provided for @aiCoachAsAWomanHowDo.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie entspanne ich als Frau meinen Beckenboden beim Sex?'**
-  String get aiCoachAsAWomanHowDo;
-
-  /// No description provided for @aiCoachHowCanWeStopPerformance.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie stoppen wir zu zweit den Leistungsdruck im Bett?'**
-  String get aiCoachHowCanWeStopPerformance;
-
-  /// No description provided for @aiCoachWhatToDoAboutRacing.
-  ///
-  /// In de, this message translates to:
-  /// **'Was tun bei akutem Kopfkino & Spectatoring?'**
-  String get aiCoachWhatToDoAboutRacing;
-
-  /// No description provided for @aiCoachHowDoIExplainResponsive.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie erkläre ich meinem Partner die responsive Lust?'**
-  String get aiCoachHowDoIExplainResponsive;
-
-  /// No description provided for @aiCoachWhyDoesTheReverseKegel.
-  ///
-  /// In de, this message translates to:
-  /// **'Warum hilft der Reverse Kegel bei Nervosität?'**
-  String get aiCoachWhyDoesTheReverseKegel;
-
-  /// No description provided for @aiCoachWelcomeToConfidentialSomaticRelationship.
-  ///
-  /// In de, this message translates to:
-  /// **'Willkommen im vertraulichen Somatik- & Beziehungs-Coaching. Ich begleite euch – ob als Frau, Mann oder als Paar – bei allen Fragen zu Beckenboden-Entspannung, Überwindung von Kopfkino und Leistungsdruck, Scham und erfüllender, absichtsloser Intimität.\n\nWorüber möchtet ihr sprechen oder was beschäftigt dein Nervensystem gerade am meisten?'**
-  String get aiCoachWelcomeToConfidentialSomaticRelationship;
-
-  /// No description provided for @aiCoachPleaseAddYourGeminiApi.
-  ///
-  /// In de, this message translates to:
-  /// **'Bitte hinterlege zuerst deinen Gemini API-Key, um mit dem Coach zu schreiben.'**
-  String get aiCoachPleaseAddYourGeminiApi;
-
-  /// No description provided for @aiCoachNoApiKeyAddedPlease.
-  ///
-  /// In de, this message translates to:
-  /// **'Kein API-Key hinterlegt. Bitte klicke oben auf das Zahnrad-Symbol.'**
-  String get aiCoachNoApiKeyAddedPlease;
-
-  /// No description provided for @aiCoachGoogleRejectedTheApiKey.
-  ///
-  /// In de, this message translates to:
-  /// **'Der API-Key wurde von Google als ungültig abgelehnt. Bitte überprüfe den Key im Google AI Studio.'**
-  String get aiCoachGoogleRejectedTheApiKey;
-
-  /// No description provided for @aiCoachConnectionErrorCleanerr.
-  ///
-  /// In de, this message translates to:
-  /// **'Verbindungsfehler: {cleanErr}'**
-  String aiCoachConnectionErrorCleanerr(Object cleanErr);
-
-  /// No description provided for @aiCoachCheckKey.
-  ///
-  /// In de, this message translates to:
-  /// **'Key prüfen'**
-  String get aiCoachCheckKey;
-
-  /// No description provided for @aiCoachGeminiApiKey.
-  ///
-  /// In de, this message translates to:
-  /// **'Gemini API-Key'**
-  String get aiCoachGeminiApiKey;
-
-  /// No description provided for @aiCoachPrivateCoachingUsesGoogleGemini.
-  ///
-  /// In de, this message translates to:
-  /// **'Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten.'**
-  String get aiCoachPrivateCoachingUsesGoogleGemini;
-
-  /// No description provided for @aiCoachFreeViaAistudioGoogleCom.
-  ///
-  /// In de, this message translates to:
-  /// **'Kostenlos via aistudio.google.com'**
-  String get aiCoachFreeViaAistudioGoogleCom;
-
-  /// No description provided for @aiCoachShowGuide.
-  ///
-  /// In de, this message translates to:
-  /// **'Anleitung anzeigen'**
-  String get aiCoachShowGuide;
-
-  /// No description provided for @aiCoachPleaseEnterAKeyFirst.
-  ///
-  /// In de, this message translates to:
-  /// **'Bitte gib zuerst einen Key ein.'**
-  String get aiCoachPleaseEnterAKeyFirst;
-
-  /// No description provided for @aiCoachCheckingConnection.
-  ///
-  /// In de, this message translates to:
-  /// **'Prüfe Verbindung...'**
-  String get aiCoachCheckingConnection;
-
-  /// No description provided for @aiCoachTestConnection.
-  ///
-  /// In de, this message translates to:
-  /// **'Verbindung testen'**
-  String get aiCoachTestConnection;
-
-  /// No description provided for @aiCoachApiKeyRemoved.
-  ///
-  /// In de, this message translates to:
-  /// **'API-Key entfernt.'**
-  String get aiCoachApiKeyRemoved;
-
-  /// No description provided for @aiCoachApiKeySaved.
-  ///
-  /// In de, this message translates to:
-  /// **'API-Key erfolgreich gespeichert.'**
-  String get aiCoachApiKeySaved;
-
-  /// No description provided for @aiCoachClearChatHistory.
-  ///
-  /// In de, this message translates to:
-  /// **'Chatverlauf leeren?'**
-  String get aiCoachClearChatHistory;
-
-  /// No description provided for @aiCoachDoYouWantToDelete.
-  ///
-  /// In de, this message translates to:
-  /// **'Möchtest du alle bisherigen Nachrichten dieses Dialogs löschen?'**
-  String get aiCoachDoYouWantToDelete;
-
-  /// No description provided for @aiCoachChatHistoryClearedWhatWould.
-  ///
-  /// In de, this message translates to:
-  /// **'Chatverlauf zurückgesetzt. Worüber möchtest du sprechen?'**
-  String get aiCoachChatHistoryClearedWhatWould;
-
-  /// No description provided for @aiCoachClear.
-  ///
-  /// In de, this message translates to:
-  /// **'Leeren'**
-  String get aiCoachClear;
-
-  /// No description provided for @aiCoachGeminiAiConnected.
-  ///
-  /// In de, this message translates to:
-  /// **'Gemini KI verbunden'**
-  String get aiCoachGeminiAiConnected;
-
-  /// No description provided for @aiCoachNoApiKeyAdded.
-  ///
-  /// In de, this message translates to:
-  /// **'Kein API-Key hinterlegt'**
-  String get aiCoachNoApiKeyAdded;
-
-  /// No description provided for @aiCoachGuideCreateAKey.
-  ///
-  /// In de, this message translates to:
-  /// **'Anleitung: Key erstellen'**
-  String get aiCoachGuideCreateAKey;
-
-  /// No description provided for @aiCoachClearChat.
-  ///
-  /// In de, this message translates to:
-  /// **'Chat leeren'**
-  String get aiCoachClearChat;
-
-  /// No description provided for @aiCoachApiKeySettings.
-  ///
-  /// In de, this message translates to:
-  /// **'API-Key Einstellungen'**
-  String get aiCoachApiKeySettings;
-
-  /// No description provided for @aiCoachNoApiKeyYetCreated.
-  ///
-  /// In de, this message translates to:
-  /// **'Noch kein API-Key? In 2 Min. kostenlos erstellt.'**
-  String get aiCoachNoApiKeyYetCreated;
-
-  /// No description provided for @aiCoachGuide.
-  ///
-  /// In de, this message translates to:
-  /// **'Anleitung'**
-  String get aiCoachGuide;
-
-  /// No description provided for @aiCoachCoachIsThinking.
-  ///
-  /// In de, this message translates to:
-  /// **'Coach reflektiert...'**
-  String get aiCoachCoachIsThinking;
-
-  /// No description provided for @aiCoachAskAConfidentialQuestion.
-  ///
-  /// In de, this message translates to:
-  /// **'Vertrauliche Frage stellen...'**
-  String get aiCoachAskAConfidentialQuestion;
-
-  /// No description provided for @apiKeyGuideSheetFreeGeminiApiKey.
-  ///
-  /// In de, this message translates to:
-  /// **'Kostenlosen Gemini API-Key'**
-  String get apiKeyGuideSheetFreeGeminiApiKey;
-
-  /// No description provided for @apiKeyGuideSheetCreatedStepByStepIn.
-  ///
-  /// In de, this message translates to:
-  /// **'Schritt-für-Schritt in 2 Minuten erstellt'**
-  String get apiKeyGuideSheetCreatedStepByStepIn;
-
-  /// No description provided for @apiKeyGuideSheetFreeAndWhatHappensTo.
-  ///
-  /// In de, this message translates to:
-  /// **'Kostenlos – und was mit deinen Daten passiert: '**
-  String get apiKeyGuideSheetFreeAndWhatHappensTo;
-
-  /// No description provided for @apiKeyGuideSheetGoogleAiStudioHasA.
-  ///
-  /// In de, this message translates to:
-  /// **'Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen.'**
-  String get apiKeyGuideSheetGoogleAiStudioHasA;
-
-  /// No description provided for @apiKeyGuideSheetOpenGoogleAiStudio.
-  ///
-  /// In de, this message translates to:
-  /// **'Google AI Studio aufrufen'**
-  String get apiKeyGuideSheetOpenGoogleAiStudio;
-
-  /// No description provided for @apiKeyGuideSheetOpenGoogleSOfficialDeveloper.
-  ///
-  /// In de, this message translates to:
-  /// **'Öffne im Browser (Chrome, Safari, Firefox) die offizielle Entwickler-Plattform von Google:\n'**
-  String get apiKeyGuideSheetOpenGoogleSOfficialDeveloper;
-
-  /// No description provided for @apiKeyGuideSheetLinkCopiedToClipboard.
-  ///
-  /// In de, this message translates to:
-  /// **'Link in Zwischenablage kopiert!'**
-  String get apiKeyGuideSheetLinkCopiedToClipboard;
-
-  /// No description provided for @apiKeyGuideSheetCopy.
-  ///
-  /// In de, this message translates to:
-  /// **'Kopieren'**
-  String get apiKeyGuideSheetCopy;
-
-  /// No description provided for @apiKeyGuideSheetSignInWithAGoogle.
-  ///
-  /// In de, this message translates to:
-  /// **'Mit Google-Konto anmelden'**
-  String get apiKeyGuideSheetSignInWithAGoogle;
-
-  /// No description provided for @apiKeyGuideSheetSignInWithYourExisting.
-  ///
-  /// In de, this message translates to:
-  /// **'Melde dich mit deinem bestehenden Google-Konto (Gmail) an. Es ist keine Kreditkarte oder Zahlungsmethode erforderlich.'**
-  String get apiKeyGuideSheetSignInWithYourExisting;
-
-  /// No description provided for @apiKeyGuideSheetClickGetApiKey.
-  ///
-  /// In de, this message translates to:
-  /// **'\"Get API key\" anklicken'**
-  String get apiKeyGuideSheetClickGetApiKey;
-
-  /// No description provided for @apiKeyGuideSheetInTheMenuAtThe.
-  ///
-  /// In de, this message translates to:
-  /// **'Klicke im Menü links oben auf den blauen Button \"Get API key\" (oder \"API-Schlüssel anfordern\").'**
-  String get apiKeyGuideSheetInTheMenuAtThe;
-
-  /// No description provided for @apiKeyGuideSheetChooseCreateApiKeyIn.
-  ///
-  /// In de, this message translates to:
-  /// **'\"Create API key in new project\" wählen'**
-  String get apiKeyGuideSheetChooseCreateApiKeyIn;
-
-  /// No description provided for @apiKeyGuideSheetChooseTheOptionCreateApi.
-  ///
-  /// In de, this message translates to:
-  /// **'Wähle die Option \"Create API key in new project\". Google richtet sofort automatisch im Hintergrund ein kostenloses Projekt ein.'**
-  String get apiKeyGuideSheetChooseTheOptionCreateApi;
-
-  /// No description provided for @apiKeyGuideSheetCopyTheKeyPasteIt.
-  ///
-  /// In de, this message translates to:
-  /// **'Key kopieren & in VelvetPulse einfügen'**
-  String get apiKeyGuideSheetCopyTheKeyPasteIt;
-
-  /// No description provided for @apiKeyGuideSheetCopyTheGeneratedStringIt.
-  ///
-  /// In de, this message translates to:
-  /// **'Kopiere die erzeugte Zeichenkette. Sie beginnt typischerweise mit \"AIzaSy...\" – füge sie anschließend hier in die App ein.'**
-  String get apiKeyGuideSheetCopyTheGeneratedStringIt;
-
-  /// No description provided for @apiKeyGuideSheetFrequentlyAskedQuestions.
-  ///
-  /// In de, this message translates to:
-  /// **'Häufige Fragen:'**
-  String get apiKeyGuideSheetFrequentlyAskedQuestions;
-
-  /// No description provided for @apiKeyGuideSheetDoesItCostAnything.
-  ///
-  /// In de, this message translates to:
-  /// **'Kostet die Nutzung etwas?'**
-  String get apiKeyGuideSheetDoesItCostAnything;
-
-  /// No description provided for @apiKeyGuideSheetNotWithinTheFreeTier.
-  ///
-  /// In de, this message translates to:
-  /// **'Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern.'**
-  String get apiKeyGuideSheetNotWithinTheFreeTier;
-
-  /// No description provided for @apiKeyGuideSheetWhichModelIsUsed.
-  ///
-  /// In de, this message translates to:
-  /// **'Welches Modell wird genutzt?'**
-  String get apiKeyGuideSheetWhichModelIsUsed;
-
-  /// No description provided for @apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest.
-  ///
-  /// In de, this message translates to:
-  /// **'VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key.'**
-  String get apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest;
-
-  /// No description provided for @apiKeyGuideSheetEnterApiKeyConnectNow.
-  ///
-  /// In de, this message translates to:
-  /// **'API-Key jetzt eintragen & verbinden'**
-  String get apiKeyGuideSheetEnterApiKeyConnectNow;
-
   /// No description provided for @dailyCheckinCardVeryCalm.
   ///
   /// In de, this message translates to:
@@ -4450,7 +4359,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingPrivateProfileJournalProgressStay.
   ///
   /// In de, this message translates to:
-  /// **'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der KI-Coach (Google Gemini), der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub).'**
+  /// **'Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Handy. Ins Internet gehen nur der verschlüsselte Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates (GitHub).'**
   String get onboardingPrivateProfileJournalProgressStay;
 
   /// No description provided for @onboardingAlreadyUsingVelvetpulse.
@@ -4774,7 +4683,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingEverythingStaysLocalOnYour.
   ///
   /// In de, this message translates to:
-  /// **'Alles bleibt lokal auf deinem Gerät und übersteht Updates. API-Key und Paar-Verbindung liegen verschlüsselt im Android-Schlüsselspeicher und gehen nur mit Passwort in eine Sicherung.'**
+  /// **'Alles bleibt lokal auf deinem Gerät und übersteht Updates. Die Paar-Verbindung liegt verschlüsselt im Android-Schlüsselspeicher und geht nur mit Passwort in eine Sicherung.'**
   String get onboardingEverythingStaysLocalOnYour;
 
   /// No description provided for @onboardingExportBackup.
@@ -4792,7 +4701,7 @@ abstract class AppLocalizations {
   /// No description provided for @backupDialogsOnlyYourDataProfileProgress.
   ///
   /// In de, this message translates to:
-  /// **'Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n\nMit Passwort: zusätzlich die Verbindung im Paar-Kanal und dein API-Key, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy.'**
+  /// **'Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n\nMit Passwort: zusätzlich die Verbindung im Paar-Kanal, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy.'**
   String get backupDialogsOnlyYourDataProfileProgress;
 
   /// No description provided for @backupDialogsDataOnly.
@@ -4828,7 +4737,7 @@ abstract class AppLocalizations {
   /// No description provided for @backupDialogsThisBackupComesFromAn.
   ///
   /// In de, this message translates to:
-  /// **'Diese Sicherung stammt aus einer älteren Version und enthält deinen API-Key und deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n\nLösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort.'**
+  /// **'Diese Sicherung stammt aus einer älteren Version und enthält deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n\nLösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort.'**
   String get backupDialogsThisBackupComesFromAn;
 
   /// No description provided for @backupDialogsRestore.
@@ -4846,7 +4755,7 @@ abstract class AppLocalizations {
   /// No description provided for @backupDialogsThisAlsoBringsBackThe.
   ///
   /// In de, this message translates to:
-  /// **'Damit kommen auch die Verbindung im Paar-Kanal und dein API-Key zurück.'**
+  /// **'Damit kommt auch die Verbindung im Paar-Kanal zurück.'**
   String get backupDialogsThisAlsoBringsBackThe;
 
   /// No description provided for @backupDialogsPassword.
@@ -4912,7 +4821,7 @@ abstract class AppLocalizations {
   /// No description provided for @backupDialogsPasswordCannotBeReset.
   ///
   /// In de, this message translates to:
-  /// **'\n\nOhne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen.'**
+  /// **'\n\nOhne dein Passwort lässt sich die Verbindung nicht wiederherstellen. Auch wir können es nicht zurücksetzen.'**
   String get backupDialogsPasswordCannotBeReset;
 
   /// No description provided for @checkinActionBreathed.
@@ -5461,48 +5370,6 @@ abstract class AppLocalizations {
   /// **'Kommt für mich nicht infrage'**
   String get yesNoMaybeModelsNotForMe;
 
-  /// No description provided for @aiServiceYouAreTheConfidentialSomatic.
-  ///
-  /// In de, this message translates to:
-  /// **'Du bist der vertrauliche Somatik-, KVT- und Erotik-Coach in der App VelvetPulse.\n\nDeine Grundhaltung & Tonalität:\n1. Charakter: Du bist eine faszinierende Mischung aus brillantem Neurowissenschaftler/Sexualtherapeuten und einem weltgewandten, charmant-frivolen Verführer auf Augenhöhe.\n2. Sprache: Du sprichst reines, flüssiges Deutsch – vollkommen frei von englischen Modewörtern oder Anglizismen. Du sprichst absolut schamfrei, sinnlich, warm und mit einem leichten, wissenden Augenzwinkern über Lust, Haut, Feuchtigkeit, Erektionen, Damm-Entspannung, Hingabe und Kopfkino. Vermeide jede sterile Krankenhaus-Sprache und jeden belehrenden Ton!\n3. Methodik: Verbinde Kognitive Verhaltenstherapie (das Entzaubern spießiger Leistungs- und Prüfungsgedanken) immer direkt mit lustvoller Somatik (Beckenboden wie warmen Honig schmelzen lassen, aktives Beckenboden-Öffnen, tiefe Kehlkopf-Seufzer, Vagus-Beruhigung, Kunst der Zeitlupe, sinnliches Umkreisen, reines Sinnesspüren).\n4. Kernbotschaft: Zeige dem Nutzer in jeder Zeile, dass sein Körper völlig in Ordnung ist und dass Langsamkeit, Pausen und das \'Nicht-Funktionieren-Müssen\' kein Defekt sind, sondern der Schlüssel zu viel tieferer, unanständig guter Ekstase.\n5. Format: Antworte stets kompakt (2-3 prägnante, atmosphärische Absätze) und beende JEDE Antwort mit genau EINER offenen, leicht herausfordernden oder spür-orientierten Reflexionsfrage.\n6. Sicherheit: Du stellst keine Diagnosen. Bei Schmerzen, Blutungen oder anhaltenden Beschwerden empfiehlst du freundlich eine ärztliche Abklärung.'**
-  String get aiServiceYouAreTheConfidentialSomatic;
-
-  /// No description provided for @aiServiceConnectionSuccessfulModelslengthModelsAvailable.
-  ///
-  /// In de, this message translates to:
-  /// **'Verbindung erfolgreich! {modelsLength} Modelle verfügbar (z. B. {join}).'**
-  String aiServiceConnectionSuccessfulModelslengthModelsAvailable(
-      Object modelsLength, Object join);
-
-  /// No description provided for @aiServiceNoAvailableTextModelsFound.
-  ///
-  /// In de, this message translates to:
-  /// **'Keine verfügbaren Textmodelle für diesen Key gefunden. Bitte prüfe die API-Berechtigungen.'**
-  String get aiServiceNoAvailableTextModelsFound;
-
-  /// No description provided for @aiServiceTheApiKeyIsInvalid.
-  ///
-  /// In de, this message translates to:
-  /// **'Der API-Key ist ungültig. Bitte prüfe ihn im Google AI Studio.'**
-  String get aiServiceTheApiKeyIsInvalid;
-
-  /// No description provided for @aiServiceUserContextNameProfilenameGender.
-  ///
-  /// In de, this message translates to:
-  /// **'\n\nKONTEXT DES NUTZERS:\n- Name/Rufname: {profileName}\n- Geschlecht: {genderLabel}\n- Alter: {age} Jahre\n- Beziehungsstatus: {relationshipLabel}\n- Hauptfokus: {goalLabel}\nSprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an.'**
-  String aiServiceUserContextNameProfilenameGender(
-      Object profileName,
-      Object genderLabel,
-      Object age,
-      Object relationshipLabel,
-      Object goalLabel);
-
-  /// No description provided for @aiServiceReceivedAnEmptyAnswerFrom.
-  ///
-  /// In de, this message translates to:
-  /// **'Leere Antwort vom KI-Modell erhalten.'**
-  String get aiServiceReceivedAnEmptyAnswerFrom;
-
   /// No description provided for @backupCodecTheBackupIsTooLarge.
   ///
   /// In de, this message translates to:
@@ -5940,7 +5807,7 @@ abstract class AppLocalizations {
   /// No description provided for @alterAbsichernText.
   ///
   /// In de, this message translates to:
-  /// **'Nach einem App-Neustart oder 30 Minuten im Hintergrund fragt die App wieder nach deiner Gerätesperre.'**
+  /// **'Nach einem App-Neustart oder 5 Stunden im Hintergrund fragt die App wieder nach deiner Gerätesperre.'**
   String get alterAbsichernText;
 
   /// No description provided for @alterGesperrtKurz.
@@ -6002,96 +5869,6 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Aktualisieren'**
   String get audioPaketAktualisieren;
-
-  /// No description provided for @coachQHerOrgasm.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie bringe ich meine Partnerin zum Höhepunkt, ohne Druck zu machen?'**
-  String get coachQHerOrgasm;
-
-  /// No description provided for @coachQWomenRelax.
-  ///
-  /// In de, this message translates to:
-  /// **'Was hilft Frauen, beim Sex wirklich loszulassen?'**
-  String get coachQWomenRelax;
-
-  /// No description provided for @coachQHerDesire.
-  ///
-  /// In de, this message translates to:
-  /// **'Warum braucht sie oft länger, bis sie Lust bekommt?'**
-  String get coachQHerDesire;
-
-  /// No description provided for @coachQAskHer.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie frage ich sie, was ihr gefällt, ohne dass es peinlich wird?'**
-  String get coachQAskHer;
-
-  /// No description provided for @coachQMyPressure.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie werde ich den Leistungsdruck im Bett los?'**
-  String get coachQMyPressure;
-
-  /// No description provided for @coachQShowHim.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie zeige ich ihm, wie ich berührt werden möchte?'**
-  String get coachQShowHim;
-
-  /// No description provided for @coachQMenPressure.
-  ///
-  /// In de, this message translates to:
-  /// **'Was hilft Männern gegen Leistungsdruck im Bett?'**
-  String get coachQMenPressure;
-
-  /// No description provided for @coachQPleaseHim.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie verwöhne ich ihn mit Händen und Mund noch besser?'**
-  String get coachQPleaseHim;
-
-  /// No description provided for @coachQWishesLimits.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie sprechen wir offen über Wünsche und Grenzen?'**
-  String get coachQWishesLimits;
-
-  /// No description provided for @coachQHerTouch.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie finden wir heraus, welche Berührung ihr am meisten gefällt?'**
-  String get coachQHerTouch;
-
-  /// No description provided for @coachQDesireGap.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie gehen wir damit um, dass einer öfter Lust hat?'**
-  String get coachQDesireGap;
-
-  /// No description provided for @coachQKnowBody.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie lerne ich meinen eigenen Körper besser kennen?'**
-  String get coachQKnowBody;
-
-  /// No description provided for @coachQFemaleDesire.
-  ///
-  /// In de, this message translates to:
-  /// **'Was sollte ich über weibliche Lust wissen?'**
-  String get coachQFemaleDesire;
-
-  /// No description provided for @coachQMaleDesire.
-  ///
-  /// In de, this message translates to:
-  /// **'Was sollte ich über männliche Lust wissen?'**
-  String get coachQMaleDesire;
-
-  /// No description provided for @coachQShowTouch.
-  ///
-  /// In de, this message translates to:
-  /// **'Wie zeige ich, wie ich berührt werden möchte?'**
-  String get coachQShowTouch;
 
   /// No description provided for @gefuehrtTitel.
   ///
@@ -6870,7 +6647,7 @@ abstract class AppLocalizations {
   /// No description provided for @tagebuchPrivat.
   ///
   /// In de, this message translates to:
-  /// **'Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an den KI-Coach und nicht an dein Gegenüber; sie sind Teil deiner verschlüsselten Sicherung.'**
+  /// **'Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an dein Gegenüber und nicht ins Netz; sie sind Teil deiner verschlüsselten Sicherung.'**
   String get tagebuchPrivat;
 
   /// No description provided for @tagebuchHinweisText.
@@ -8454,7 +8231,7 @@ abstract class AppLocalizations {
   /// No description provided for @schlafDatenschutz.
   ///
   /// In de, this message translates to:
-  /// **'VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an Coach oder Paarraum.'**
+  /// **'VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an dein Gegenüber oder den Paarraum.'**
   String get schlafDatenschutz;
 
   /// No description provided for @schlafHinweis.
@@ -9212,6 +8989,294 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Wenn ihr beide mögt – ein Nein ist vollwertig'**
   String get ersteWocheUnterzeileVorsichtig;
+
+  /// No description provided for @appSperreNeuTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur für dich'**
+  String get appSperreNeuTitel;
+
+  /// No description provided for @appSperreNeuText.
+  ///
+  /// In de, this message translates to:
+  /// **'VelvetPulse öffnet sich nur mit deiner Gerätesperre, also mit Fingerabdruck, Gesicht, PIN oder Muster. So bleibt bei dir, was du hier erkundest. Im Profil kannst du das jederzeit ändern.'**
+  String get appSperreNeuText;
+
+  /// No description provided for @appSperreNeuOk.
+  ///
+  /// In de, this message translates to:
+  /// **'Gut so'**
+  String get appSperreNeuOk;
+
+  /// No description provided for @appSperreFrageTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'VelvetPulse nur für dich öffnen?'**
+  String get appSperreFrageTitel;
+
+  /// No description provided for @appSperreFrageText.
+  ///
+  /// In de, this message translates to:
+  /// **'Dann fragt die App beim Öffnen und nach einer kurzen Pause nach deiner Gerätesperre. So liest niemand mit, wenn dein Handy mal herumliegt.'**
+  String get appSperreFrageText;
+
+  /// No description provided for @appSperreFrageJa.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja, sperren'**
+  String get appSperreFrageJa;
+
+  /// No description provided for @appSperreFrageNein.
+  ///
+  /// In de, this message translates to:
+  /// **'Nicht jetzt'**
+  String get appSperreFrageNein;
+
+  /// No description provided for @appSperreKeineTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Dein Handy hat noch keine Bildschirmsperre'**
+  String get appSperreKeineTitel;
+
+  /// No description provided for @appSperreKeineText.
+  ///
+  /// In de, this message translates to:
+  /// **'Richte in den Android-Einstellungen eine PIN, ein Muster oder einen Fingerabdruck ein (meist unter „Sicherheit“ oder „Sperrbildschirm“). Danach kannst du im Profil die App-Sperre einschalten.'**
+  String get appSperreKeineText;
+
+  /// No description provided for @appSperreKeineOk.
+  ///
+  /// In de, this message translates to:
+  /// **'Verstanden'**
+  String get appSperreKeineOk;
+
+  /// No description provided for @fantasieHinweisTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Deine Fantasie gehört dir'**
+  String get fantasieHinweisTitel;
+
+  /// No description provided for @fantasieHinweisText.
+  ///
+  /// In de, this message translates to:
+  /// **'Eine Fantasie ist kein Wunsch, den du erfüllen musst, und kein Urteil über deine Beziehung. Was dir hier in den Sinn kommt, darf einfach da sein. Ob, was und wann du davon teilst, entscheidest du.'**
+  String get fantasieHinweisText;
+
+  /// No description provided for @fantasieHinweisDrei.
+  ///
+  /// In de, this message translates to:
+  /// **'Auch eine Szene zu dritt heißt nicht, dass deiner Beziehung etwas fehlt.'**
+  String get fantasieHinweisDrei;
+
+  /// No description provided for @fantasieHinweisOk.
+  ///
+  /// In de, this message translates to:
+  /// **'Gut zu wissen'**
+  String get fantasieHinweisOk;
+
+  /// No description provided for @spicyAbgelaufenTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Spicy-Modus ist aus'**
+  String get spicyAbgelaufenTitel;
+
+  /// No description provided for @spicyAbgelaufenText.
+  ///
+  /// In de, this message translates to:
+  /// **'Die App war länger als 5 Stunden im Hintergrund. Damit niemand mitliest, der dein Handy in die Hand nimmt, wurde der Spicy-Modus ausgeschaltet. Deine Einstellungen und Inhalte bleiben, wie sie sind.'**
+  String get spicyAbgelaufenText;
+
+  /// No description provided for @spicyAbgelaufenEntsperren.
+  ///
+  /// In de, this message translates to:
+  /// **'Wieder entsperren'**
+  String get spicyAbgelaufenEntsperren;
+
+  /// No description provided for @spicyAbgelaufenSpaeter.
+  ///
+  /// In de, this message translates to:
+  /// **'Später'**
+  String get spicyAbgelaufenSpaeter;
+
+  /// No description provided for @trennungDialog1Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbindung trennen?'**
+  String get trennungDialog1Titel;
+
+  /// No description provided for @trennungDialog1.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht.'**
+  String trennungDialog1(Object name);
+
+  /// No description provided for @trennungDialog1Weiter.
+  ///
+  /// In de, this message translates to:
+  /// **'Weiter'**
+  String get trennungDialog1Weiter;
+
+  /// No description provided for @trennungDialog2Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Wirklich trennen?'**
+  String get trennungDialog2Titel;
+
+  /// No description provided for @trennungDialog2.
+  ///
+  /// In de, this message translates to:
+  /// **'Das lässt sich nur rückgängig machen, indem ihr euch neu koppelt.'**
+  String get trennungDialog2;
+
+  /// No description provided for @trennungDialog2Ja.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja, trennen'**
+  String get trennungDialog2Ja;
+
+  /// No description provided for @trennungNichtGesendet.
+  ///
+  /// In de, this message translates to:
+  /// **'Getrennt. Der Hinweis an {name} ist nicht angekommen. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht.'**
+  String trennungNichtGesendet(Object name);
+
+  /// No description provided for @trennungHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'{name} hat die Verbindung getrennt. Du musst nichts tun, und es eilt nichts. Der Chat bleibt hier lesbar, solange du magst.'**
+  String trennungHinweis(Object name);
+
+  /// No description provided for @trennungSchalter.
+  ///
+  /// In de, this message translates to:
+  /// **'Auch auf diesem Handy trennen und die Daten dieser Verbindung löschen'**
+  String get trennungSchalter;
+
+  /// No description provided for @trennungGegenueberDialog1Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf diesem Handy trennen?'**
+  String get trennungGegenueberDialog1Titel;
+
+  /// No description provided for @trennungGegenueberDialog1.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nDu kannst auch warten. Erst wenn du bestätigst, wird etwas gelöscht.'**
+  String trennungGegenueberDialog1(Object name);
+
+  /// No description provided for @trennungGegenueberDialog2Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Wirklich löschen?'**
+  String get trennungGegenueberDialog2Titel;
+
+  /// No description provided for @trennungGegenueberDialog2.
+  ///
+  /// In de, this message translates to:
+  /// **'Das lässt sich nicht zurückholen.'**
+  String get trennungGegenueberDialog2;
+
+  /// No description provided for @trennungGegenueberLoeschenJa.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja, löschen'**
+  String get trennungGegenueberLoeschenJa;
+
+  /// No description provided for @trennungGegenueberFertig.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf diesem Handy getrennt.'**
+  String get trennungGegenueberFertig;
+
+  /// No description provided for @trennungSatzAelter.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Verbindung wurde getrennt.'**
+  String get trennungSatzAelter;
+
+  /// No description provided for @spicyEinladungNein.
+  ///
+  /// In de, this message translates to:
+  /// **'Gerade nicht'**
+  String get spicyEinladungNein;
+
+  /// No description provided for @spicyNeinSatz.
+  ///
+  /// In de, this message translates to:
+  /// **'Gerade nicht, danke dir.'**
+  String get spicyNeinSatz;
+
+  /// No description provided for @spicyEinladungNeinAntwort.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke, dass du es mir sagst. Es eilt nichts.'**
+  String get spicyEinladungNeinAntwort;
+
+  /// No description provided for @spicyEinladungNeinGesendet.
+  ///
+  /// In de, this message translates to:
+  /// **'Du hast geantwortet. Du kannst es dir jederzeit anders überlegen.'**
+  String get spicyEinladungNeinGesendet;
+
+  /// No description provided for @funkeDanke.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke fürs Sagen'**
+  String get funkeDanke;
+
+  /// No description provided for @funkeTippNein.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Nein heute ist kein Nein zu dir. Du musst nichts nachfragen.'**
+  String get funkeTippNein;
+
+  /// No description provided for @funkeTippReden.
+  ///
+  /// In de, this message translates to:
+  /// **'Du musst nicht sofort antworten. Sag, wann es für dich passt.'**
+  String get funkeTippReden;
+
+  /// No description provided for @funkeTippLabel.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur für dich'**
+  String get funkeTippLabel;
+
+  /// No description provided for @trennungHinweisSenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Hinweis an {name} senden'**
+  String trennungHinweisSenden(Object name);
+
+  /// No description provided for @trennungHinweisInfoAn.
+  ///
+  /// In de, this message translates to:
+  /// **'Kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.'**
+  String get trennungHinweisInfoAn;
+
+  /// No description provided for @trennungHinweisInfoAus.
+  ///
+  /// In de, this message translates to:
+  /// **'{name} erfährt nichts von der Trennung. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht.'**
+  String trennungHinweisInfoAus(Object name);
+
+  /// No description provided for @trennungHilfe.
+  ///
+  /// In de, this message translates to:
+  /// **'Brauchst du Unterstützung?'**
+  String get trennungHilfe;
+
+  /// No description provided for @funkeDankeAntwort.
+  ///
+  /// In de, this message translates to:
+  /// **'{name}: Danke fürs Sagen.'**
+  String funkeDankeAntwort(Object name);
+
+  /// No description provided for @fotoHinweisTrennung.
+  ///
+  /// In de, this message translates to:
+  /// **'Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.'**
+  String get fotoHinweisTrennung;
 }
 
 class _AppLocalizationsDelegate

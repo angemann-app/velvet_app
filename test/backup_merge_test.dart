@@ -504,6 +504,34 @@ void main() {
     expect(StorageService.getHalloGesendetAm(), '2026-10-28T09:30:00.000');
   });
 
+  test('Fantasie-Hinweis-Merker ist in der Sicherung, beim Merge gewinnt true',
+      () async {
+    expect(StorageService.fantasieHinweisGesehen(), isFalse);
+    expect(StorageService.exportAllUserData()['fantasieHinweisGesehen'], isFalse);
+
+    await StorageService.setFantasieHinweisGesehen(true);
+    final export = StorageService.exportAllUserData();
+    expect(export['fantasieHinweisGesehen'], isTrue);
+    expect(BackupCodec.validate(export).data['fantasieHinweisGesehen'], isTrue);
+
+    // Wiederherstellen auf einem Gerät, das ihn noch nicht gesehen hat.
+    await StorageService.setFantasieHinweisGesehen(false);
+    await StorageService.importBackup(BackupCodec.validate(export));
+    expect(StorageService.fantasieHinweisGesehen(), isTrue);
+
+    // Ein false aus einer älteren Sicherung setzt ein gesehenes true nicht zurück.
+    final alt = StorageService.exportAllUserData()
+      ..['fantasieHinweisGesehen'] = false;
+    await StorageService.importBackup(BackupCodec.validate(alt));
+    expect(StorageService.fantasieHinweisGesehen(), isTrue);
+
+    // Falscher Typ: verständlich abgelehnt.
+    expect(
+        () => BackupCodec.validate(
+            StorageService.exportAllUserData()..['fantasieHinweisGesehen'] = 'ja'),
+        throwsA(isA<BackupException>()));
+  });
+
   test('Die Ja/Nein-Liste ist in der Sicherung enthalten', () {
     final export = StorageService.exportAllUserData();
     expect(jsonDecode(export['yesNoMaybe'] as String), {'a': 'yes', 'c': 'no'});

@@ -4,6 +4,21 @@ import 'package:local_auth/local_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../l10n/t.dart';
 
+/// Ergebnis der Standard-Einrichtung der App-Sperre am Ende des Onboardings.
+enum SperrEinrichtung {
+  /// Sperre ist jetzt an (Gerätesperre wurde bestätigt).
+  eingeschaltet,
+
+  /// War schon an, nichts zu tun.
+  schonAn,
+
+  /// Das Gerät hat keine Bildschirmsperre; die Sperre bleibt aus.
+  nichtMoeglich,
+
+  /// Die Bestätigung wurde abgebrochen oder ist misslungen; die Sperre bleibt aus.
+  abgebrochen,
+}
+
 /// Diskretions-Modus: App-Sperre per Fingerabdruck und unauffälliges App-Symbol.
 class PrivacyService {
   static String _keyLockEnabled = 'privacy_lock_enabled';
@@ -23,6 +38,52 @@ class PrivacyService {
   static Future<bool> isLockEnabled() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getBool(_keyLockEnabled) ?? false;
+  }
+
+  /// Merker, dass die App-Sperre einmal angeboten bzw. eingerichtet wurde (docs/konzepte/privatsphaere-schutz.md, a).
+  /// Gerätegebunden und bewusst **nicht** in Sicherung oder Backup-Merge: Eine Sicherung auf einem anderen Gerät
+  /// darf dort keine Sperrentscheidung übertragen.
+  static const String keyFrageGestellt = 'app_sperre_frage_gestellt';
+
+  static Future<void> _frageMerken() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(keyFrageGestellt, true);
+  }
+
+  /// Neue Einrichtung (Ende des Onboardings): Die Sperre wird Standard, wenn das Gerät eine Bildschirmsperre hat.
+  /// Dafür einmal die Gerätesperre bestätigen (wie beim Einschalten im Profil), sonst könnte man sich aussperren.
+  /// Wird die Bestätigung abgebrochen, bleibt der Merker ungesetzt: Dann fragt die App später einmal (Bestandsfrage).
+  static Future<SperrEinrichtung> standardEinrichten() async {
+    final ergebnis = await isLockEnabled()
+        ? SperrEinrichtung.schonAn
+        : !await isSupported()
+            ? SperrEinrichtung.nichtMoeglich
+            : await setLockEnabled(true)
+                ? SperrEinrichtung.eingeschaltet
+                : SperrEinrichtung.abgebrochen;
+    if (ergebnis != SperrEinrichtung.abgebrochen) await _frageMerken();
+    return ergebnis;
+  }
+
+  /// Bestand: Soll beim Start einmal gefragt werden, ob die App gesperrt werden soll?
+  /// Wer schon eine Sperre hat, wird nie gefragt (Merker wird gesetzt). Ohne Bildschirmsperre wird nichts gezeigt
+  /// und nichts gemerkt; der Schalter im Profil bleibt der Weg.
+  static Future<bool> frageNoetig() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool(keyFrageGestellt) ?? false) return false;
+    if (await isLockEnabled()) {
+      await _frageMerken();
+      return false;
+    }
+    return isSupported();
+  }
+
+  /// Antwort auf die Bestandsfrage: Bei „Ja“ wird gesperrt (mit Bestätigung), in jedem Fall fragt die App
+  /// danach nie wieder von selbst. Gibt zurück, ob die Sperre jetzt an ist.
+  static Future<bool> frageBeantworten(bool sperren) async {
+    await _frageMerken();
+    if (!sperren) return false;
+    return setLockEnabled(true);
   }
 
   static Future<bool> isDiscreetIcon() async {
@@ -48,20 +109,43 @@ class PrivacyService {
   @visibleForTesting
   static Future<bool> Function()? authenticateFuerTest;
 
+  /// Uhr, in Tests ersetzbar.
+  @visibleForTesting
+  static DateTime Function() uhr = DateTime.now;
+
+  /// Zeitpunkt der letzten erfolgreichen Bestätigung der Gerätesperre. Nur im Speicher, nie gespeichert.
+  static DateTime? _letzteBestaetigung;
+
+  @visibleForTesting
+  static void bestaetigungVergessenFuerTest() => _letzteBestaetigung = null;
+
+  /// Wurde die Gerätesperre in den letzten [dauer] erfolgreich bestätigt (z. B. hat die App-Sperre gerade entsperrt)?
+  static bool kuerzlichBestaetigt(Duration dauer) {
+    final zuletzt = _letzteBestaetigung;
+    if (zuletzt == null) return false;
+    final her = uhr().difference(zuletzt);
+    return !her.isNegative && her <= dauer;
+  }
+
   /// Fragt Fingerabdruck oder Geräte-PIN ab. Gibt true bei Erfolg zurück.
   static Future<bool> authenticate({String? reason}) async {
-    if (authenticateFuerTest != null) return authenticateFuerTest!();
+    if (authenticateFuerTest != null) return _merken(await authenticateFuerTest!());
     reason ??= t.privacyServiceUnlockTheApp;
     if (_authenticating) return false;
     _authenticating = true;
     try {
-      return await _auth.authenticate(localizedReason: reason, persistAcrossBackgrounding: true);
+      return _merken(await _auth.authenticate(localizedReason: reason, persistAcrossBackgrounding: true));
     } catch (e) {
       debugPrint('PrivacyService authenticate error: $e');
       return false;
     } finally {
       _authenticating = false;
     }
+  }
+
+  static bool _merken(bool ok) {
+    if (ok) _letzteBestaetigung = uhr();
+    return ok;
   }
 
   /// Schaltet die Sperre um. Beim Einschalten wird zuerst einmal entsperrt,

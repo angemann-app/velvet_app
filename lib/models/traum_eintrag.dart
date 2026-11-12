@@ -1,5 +1,5 @@
 /// Ein Eintrag im Traumtagebuch (docs/konzepte/traum-reise.md, „Traumtagebuch“). Privat: geht nie
-/// automatisch an Partner:in oder KI-Coach, ist aber Teil der verschlüsselten Sicherung.
+/// automatisch an Partner:in, ist aber Teil der verschlüsselten Sicherung.
 class TraumEintrag {
   /// Markierungen in der Reihenfolge der Anzeige. „nichts“ steht für „Nichts erinnert“.
   static const markierungen = ['erinnert', 'luzide', 'sinnlich', 'hoehepunkt', 'unangenehm', 'schlecht_geschlafen'];

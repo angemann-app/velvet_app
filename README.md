@@ -110,34 +110,26 @@ The recordings (German and English) are downloaded inside the app as packs; unti
 - **Updates directly in the app** from the GitHub releases, with checksum verification;
   choose **stable** or **beta**.
 
-### AI coach (optional)
-- A confidential conversation partner via **Google Gemini** with your own API key (*bring your own key*).
-
 ## Privacy
 
 | What | Where |
 |---|---|
 | Profile, progress, journal, check-ins | only on the device (`SharedPreferences`), unencrypted in the app's private storage |
-| API key, couple channel private key | encrypted in the Android Keystore, not in the cloud backup and not in the normal backup |
+| Couple channel private key | encrypted in the Android Keystore, not in the cloud backup and not in the normal backup |
 | Automatic backup | the app's private storage (not readable by other apps), without secrets, backed up via Android's cloud backup |
 | Photos in the couple chat | encrypted with AES-256-GCM, directly from phone to phone (WebRTC). To set up the connection, a public STUN server run by Google sees the IP addresses, never the photo. Viewable only once by the recipient, screenshots blocked. |
 | Couple channel | NIP-17 over public Nostr relays (gift wrap with NIP-44, as soon as both phones support it; until then NIP-04). The relays cannot read the content. With NIP-17 they only see that someone writes to this recipient: not the sender, not the real time (the visible timestamp is moved back randomly by up to two days), and the length only roughly (padding). With NIP-04 they see the public keys of sender and recipient, the time and size of every message. Always visible: the IP address and, for read receipts and the short-lived photo signals, that this pair is active (their content is NIP-44 encrypted). Incoming messages are checked for ID, signature, recipient and sender, with NIP-17 at all three layers (wrap, seal, rumor). No forward secrecy: whoever obtains a private key can still open old messages stored on the relays. |
 | Feedback (*Send feedback*) | only what you type, plus app version and language, as a NIP-17 message over the Nostr relays to the project's feedback inbox, from a fresh one-time key with no link to the couple channel (the wrap uses yet another fresh key). The relays see the IP address, not the content. |
-| AI coach | messages, name, age, gender, relationship status and focus are sent to Google Gemini, only if you add your own API key |
 
 There are no user accounts, no tracking and no server of our own.
 The fingerprint lock protects access to the app; it does not encrypt stored data.
 
 **Backups** (*Profile → Export backup*): "Data only" contains no secrets. "With password" also includes the
-couple connection and API key, encrypted with PBKDF2-SHA256 and AES-256-GCM. The password is not stored
+couple connection, encrypted with PBKDF2-SHA256 and AES-256-GCM. The password is not stored
 in the backup. Files in Download or Documents are never read in automatically.
 After restoring from Google's cloud backup, the couple channel has to be paired again.
 
-## Adding a Gemini API key (optional)
-
-1. Sign in to [Google AI Studio](https://aistudio.google.com/).
-2. Choose **Get API key → Create API key**.
-3. In the app, open the **AI coach** tab, tap the settings icon and paste the key.
+The only network paths are the couple channel (Nostr, encrypted), downloading the recording packages (Cloudflare R2, GitHub) and the update check (GitHub); a Google STUN server helps set up photo connections (see table). The former AI coach (Google Gemini) was removed on 12 Nov 2026; on first start the app deletes a stored key and chat history left from it.
 
 ## Development
 

@@ -17,6 +17,7 @@ import '../../services/pakete.dart';
 import '../../services/privacy_service.dart';
 import '../../services/storage_service.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/fantasie_hinweis.dart';
 import '../../widgets/lautsprecher_frage.dart';
 
 /// Audioreihe „Innenansichten“ (docs/konzepte/lust-audioreihe.md): zusammenhängende Erzählungen, Soft und
@@ -91,10 +92,25 @@ class _LustReiheScreenState extends State<LustReiheScreen> {
       _variante = prefs.getString(_keyVariante) ?? 'soft';
       _perspektive = prefs.getString(_keyPerspektive);
     });
+    _fantasieHinweisPruefen();
     // Wer die Aufnahmen schon hat, bekommt die Bilder beim Öffnen nach, ohne dass etwas sichtbar wartet.
     if (_paketDa && Pakete.version(Pakete.reiheBilder) == 0)
       unawaited(_bilderLaden());
     unawaited(_aktualisierungPruefen());
+  }
+
+  bool _fantasieHinweisGeprueft = false;
+
+  /// Fantasie-Hinweis einmal je Gerät, sobald die Folgenliste zu sehen ist (docs/konzepte/privatsphaere-schutz.md, c).
+  /// Stehen Folgen „Zu dritt“ in der Liste, kommt der Zusatzsatz dazu. Kam der Hinweis schon bei Lust im Traum,
+  /// erscheint er hier nicht erneut.
+  void _fantasieHinweisPruefen() {
+    if (_fantasieHinweisGeprueft || _folgen.isEmpty) return;
+    _fantasieHinweisGeprueft = true;
+    final drei = _folgen.any((f) => f.typ == 'trio');
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) fantasieHinweisEinmal(context, drei: drei);
+    });
   }
 
   /// Gibt es im Verzeichnis eine neuere Fassung des Reihen-Pakets (neue Folgen), zeigt die Karte „Aktualisieren“.

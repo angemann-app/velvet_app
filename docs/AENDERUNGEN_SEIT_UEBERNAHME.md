@@ -306,7 +306,7 @@ Alle Kursinhalte stehen in `assets/data/velvet_content.json`.
   Migrationstests (ältere Versionen sprechen nur NIP-04).
 - **Englisches Audiopaket v2:** Spicy-Bausteine und Kurse 23/24 fehlen in `audio-en-v1` (Geräte-Stimme
   springt ein).
-- **Lokaler KI-Coach:** Messung auf dem Handy des Users steht aus. Test-App außerhalb des Repos unter
+- **Lokaler KI-Coach: entfallen 12.11.2026** (der KI-Coach wurde ganz entfernt, siehe `docs/konzepte/coach-entfernen.md`; `tools/handy_ki_test.ps1` ist gelöscht). Frühere Notiz: Messung auf dem Handy des Users steht aus. Test-App außerhalb des Repos unter
   `C:\TOOLS\workspace\vp_ki_test` (lädt Modelle selbst, Bericht per Teilen); Kabel-Weg
   (`tools/handy_ki_test.ps1`) scheiterte, weil das Xiaomi bei langen Übertragungen die USB-Verbindung verliert.
 - Später geplant:

@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Geheimnisse (Gemini-API-Key, privater Nostr-Schlüssel) liegen nicht in den
+/// Geheimnisse (privater Nostr-Schlüssel) liegen nicht in den
 /// SharedPreferences, sondern in einem vom Android-Keystore verschlüsselten Speicher.
 /// Dessen Dateien sind vom Cloud-Backup und von der Geräteübertragung ausgenommen
 /// (res/xml/backup_rules.xml, data_extraction_rules.xml): Der Keystore-Schlüssel
@@ -13,9 +13,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// neuer Wert nur für diese Sitzung im Arbeitsspeicher. Ein Altbestand bleibt in den
 /// SharedPreferences, bis er einmal erfolgreich umgezogen ist.
 class SecretStore {
-  static const String apiKey = 'gemini_api_key';
   static const String nostrPrivKey = 'velvet_nostr_privkey';
-  static const List<String> _all = [apiKey, nostrPrivKey];
+  static const List<String> _all = [nostrPrivKey];
+
+  /// Altlasten des entfernten KI-Coachs (12.11.2026): Gemini-Schlüssel (Keystore und frühere
+  /// SharedPreferences) und Chatverlauf. [init] löscht sie bei jedem Start; Löschen eines
+  /// nicht vorhandenen Eintrags ist harmlos, daher braucht es keinen Merker.
+  static const String _altGeminiSchluessel = 'gemini_api_key';
+  static const String _altChatVerlauf = 'ai_chat_history';
 
   static const FlutterSecureStorage _storage = FlutterSecureStorage();
   static final Map<String, String> _cache = {};
@@ -25,6 +30,7 @@ class SecretStore {
   /// (Versionen bis 4.3.0-beta.1) einmalig in den sicheren Speicher.
   static Future<void> init(SharedPreferences prefs) async {
     if (_ready) return;
+    await _altlastenLoeschen(prefs);
     for (final key in _all) {
       String? value;
       try {
@@ -45,6 +51,16 @@ class SecretStore {
       if (value != null && value.isNotEmpty) _cache[key] = value;
     }
     _ready = true;
+  }
+
+  static Future<void> _altlastenLoeschen(SharedPreferences prefs) async {
+    await _deleteQuietly(_altGeminiSchluessel);
+    try {
+      await prefs.remove(_altGeminiSchluessel);
+      await prefs.remove(_altChatVerlauf);
+    } catch (e) {
+      debugPrint('SecretStore: Altlasten nicht gelöscht (${e.runtimeType})');
+    }
   }
 
   static String? read(String key) => _cache[key];
