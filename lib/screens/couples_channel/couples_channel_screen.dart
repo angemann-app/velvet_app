@@ -26,6 +26,7 @@ import 'foto_ansicht.dart';
 import '../../services/storage_service.dart';
 import 'partner_profile_dialog.dart';
 import 'pairing_modal.dart';
+import '../../widgets/erste_woche_karte.dart';
 import '../../l10n/t.dart';
 
 /// Schnelle Funken: ein Tippen sagt, worauf man heute Lust hat – oder eben nicht.
@@ -359,6 +360,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
       children: [
+        const ErsteWocheKarte(imTabWir: true),
         ClipRRect(
           borderRadius: BorderRadius.circular(VpRadius.karte),
           child: SizedBox(height: 150, width: double.infinity, child: VpBildFeld('kurs.11.titel')),
@@ -551,11 +553,23 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   // ---------------------------------------------------------------------------
   // Verbunden
 
+  /// Auf kleinen Displays oder bei großer Schrift würde die Karte über den Tabs den Chat verdrängen;
+  /// dann steht sie oben im Tab „Gemeinsam entdecken“.
+  bool get _karteOben {
+    final mq = MediaQuery.of(context);
+    return mq.size.height / mq.textScaler.scale(1) >= 700;
+  }
   Widget _buildPaired() {
     return Column(
       children: [
         _buildHeader(),
         const PartnerProfilePrompt(),
+        // Bei geöffneter Tastatur verschwindet die Karte, damit der Chat Platz hat.
+        if (_karteOben && MediaQuery.of(context).viewInsets.bottom == 0)
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 8, 16, 0),
+            child: ErsteWocheKarte(imTabWir: true),
+          ),
         VpTabs.leiste(
           controller: _subTabController,
           tabs: [
@@ -1046,6 +1060,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
         return ListView(
           padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
           children: [
+            if (!_karteOben) const ErsteWocheKarte(imTabWir: true),
             Padding(
               padding: EdgeInsets.fromLTRB(2, 4, 2, 14),
               child: Text(

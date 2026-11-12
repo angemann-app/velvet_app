@@ -1571,5 +1571,106 @@
         "type": "int"
       }
     }
-  }
+  },
+  "ersteWocheEyebrow": "Your first week",
+  "ersteWocheEinstieg": "Seven small steps, each no longer than a quarter of an hour. You don't have to do any of them, and none is a test. Every one has a “Not today”.",
+  "ersteWocheSchrittMin": "Step {n} · about {min} min.",
+  "@ersteWocheSchrittMin": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheSchrittNr": "Step {n}",
+  "@ersteWocheSchrittNr": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheAnsehen": "Take a look",
+  "ersteWocheHeuteNicht": "Not today",
+  "ersteWocheHeuteNichtAntwort": "All good. The step will wait, and nothing expires.",
+  "ersteWocheZugeklappt": "Your first week is waiting, no rush.",
+  "ersteWocheMenue": "More",
+  "ersteWocheUeberspringen": "Skip this step",
+  "ersteWocheAusblenden": "Hide",
+  "ersteWocheWiederZeigen": "Show your first week again",
+  "ersteWocheLangePause": "Carry on with step {n}, whenever you like",
+  "@ersteWocheLangePause": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheGeschafft": "Your first week is behind you",
+  "ersteWocheZumAbend": "Carry on with the shared evening",
+  "ersteWocheGutSo": "Sounds good",
+  "ersteWochePunktOffen": "Step {n}: open",
+  "@ersteWochePunktOffen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWochePunktGetan": "Step {n}: done",
+  "@ersteWochePunktGetan": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWochePunktUebersprungen": "Step {n}: skipped",
+  "@ersteWochePunktUebersprungen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheGemacht": "We did this",
+  "ersteWocheLektionOeffnen": "Open the lesson",
+  "ersteWocheLandkarteOeffnen": "Open the fantasy map",
+  "ersteWocheAlternative": "Rather each on our own",
+  "ersteWocheFragen": "Two questions are enough",
+  "ersteWocheFrage1": "What was lovely?",
+  "ersteWocheFrage2": "What shall we do again?",
+  "ersteWocheWeiterMenue": "A menu for your wishes",
+  "ersteWocheWeiterTitel": "If you like, carry on like this",
+  "ersteWocheNichtVerfuegbar": "That is not available right now.",
+  "ersteWocheSagenWo": "Tell them where I am",
+  "ersteWocheNachricht": "I did step {n}. If you like, have a look at the next one. No pressure.",
+  "@ersteWocheNachricht": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheNachrichtTitel": "Send this?",
+  "ersteWocheNachrichtHinweis": "You can change the text. Nothing is sent until you tap “Send”.",
+  "ersteWocheAbbrechen": "Cancel",
+  "ersteWocheSenden": "Send",
+  "ersteWocheS1Titel": "One word that stops everything",
+  "ersteWocheS1Text": "Before anything else, you need one word that stops everything at once. The lesson shows a traffic light for wishes and limits. If you like, you then agree on a word for “stop”. Knowing that stop always counts makes it easier to be open to everything else.",
+  "ersteWocheS2Titel": "Breathing together",
+  "ersteWocheS2Text": "Arriving together, without a touch that wants something. If you like, you breathe in the same rhythm for a few minutes, and the pacer helps. If you'd rather not lie close yet, each of you can do it alone with a short audio exercise.",
+  "ersteWocheS3Titel": "Why pressure is nobody's fault",
+  "ersteWocheS3Text": "Many couples feel pressure around closeness and take it as their own fault. The lesson explains the body's accelerator and brake: it is not a defect, it is how every body works. If you like, each of you reads it on your own. Nobody has to talk about it afterwards.",
+  "ersteWocheS4Titel": "Touch without a goal",
+  "ersteWocheS4Text": "Now touch, clothed and without a goal: back, shoulders, arms, hands, feet. Nothing has to come of it, and either of you can say “stop” at any time. About 10 to 15 minutes, you decide.",
+  "ersteWocheS5Titel": "Gathering wishes quietly",
+  "ersteWocheS5Text": "After touching, you may know a little better what feels good. In the fantasy map, only the calm category “Sensuality & Senses” is meant. Each of you answers for yourself, and answering alone works too. Only what you both like is shown.",
+  "ersteWocheS6Titel": "One easy sentence",
+  "ersteWocheS6Text": "A conversation is easier once there is calm and trust. Pick one of the three sentence starters from the lesson and say it, if you like. That is all it takes. This is not a talk about problems.",
+  "ersteWocheS7Titel": "A look back without judging",
+  "ersteWocheS7Text": "To finish, a look back, with no grades. Two questions are enough. Answer aloud or just for yourselves, however it feels. After that you can carry on if you like, or simply let it be."
 }

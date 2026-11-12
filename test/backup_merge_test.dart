@@ -77,6 +77,64 @@ void main() {
         StorageService.getBedienDaten().toJson());
   });
 
+  test('Eure erste Woche: Stand steht in der Sicherung, jüngere Änderung gewinnt, Sicherung ohne Feld bleibt importierbar',
+      () async {
+    final t1 = DateTime.utc(2026, 11, 12, 9);
+    await StorageService.saveBedienDaten(
+        BedienDaten(
+            ersteWoche: ErsteWocheStand(
+                beginn: t1,
+                schritte: const {1: ErsteWocheStand.getan},
+                geaendert: t1)),
+        backup: false);
+    final export = StorageService.exportAllUserData();
+    expect((export['bedienung'] as Map)['ersteWoche'], isNotNull);
+    expect(StorageService.getBedienDaten().ersteWoche!.schritte, {1: 'getan'});
+
+    // Jüngere Änderung auf diesem Gerät gewinnt gegen die ältere Sicherung.
+    await StorageService.saveBedienDaten(
+        BedienDaten(
+            ersteWoche: ErsteWocheStand(
+                beginn: t1,
+                schritte: const {
+                  1: ErsteWocheStand.getan,
+                  2: ErsteWocheStand.uebersprungen
+                },
+                ausgeblendet: true,
+                geaendert: t1.add(const Duration(hours: 1)))),
+        backup: false);
+    await StorageService.importBackup(BackupCodec.validate(export));
+    final danach = StorageService.getBedienDaten().ersteWoche!;
+    expect(danach.schritte.length, 2);
+    expect(danach.ausgeblendet, isTrue);
+
+    // Gleichstand der Zeit: eigene Änderung wird trotzdem nicht verworfen.
+    await StorageService.saveBedienDaten(
+        BedienDaten(
+            ersteWoche: ErsteWocheStand(
+                beginn: t1,
+                schritte: const {3: ErsteWocheStand.getan},
+                geaendert: t1.add(const Duration(hours: 1)))),
+        backup: false);
+    expect(StorageService.getBedienDaten().ersteWoche!.schritte, {3: 'getan'});
+  });
+
+  test('Eure erste Woche: Sicherung ohne das Feld und kaputte Werte', () async {
+    final ohne = StorageService.exportAllUserData();
+    (ohne['bedienung'] as Map).remove('ersteWoche');
+    await StorageService.importBackup(BackupCodec.validate(ohne));
+    expect(StorageService.getBedienDaten().ersteWoche, isNull);
+    expect(BedienDaten.fromJson({'schema': 1}).ersteWoche, isNull);
+    expect(
+        () => BedienDaten.fromJson({
+              'schema': 1,
+              'ersteWoche': {
+                'schritte': {'9': 'getan'},
+                'geaendert': '2026-11-12T09:00:00Z'
+              }
+            }),
+        throwsFormatException);
+  });
   test('Bedienung: zurückgestellte Uhr verliert keine bewusste lokale Änderung',
       () async {
     final zeit = DateTime.utc(2026, 11, 2);

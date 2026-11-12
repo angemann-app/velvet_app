@@ -8834,6 +8834,300 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel.'**
   String schlafBlickBilanz(int klar, int tage);
+
+  /// No description provided for @ersteWocheEyebrow.
+  ///
+  /// In de, this message translates to:
+  /// **'Eure erste Woche'**
+  String get ersteWocheEyebrow;
+
+  /// No description provided for @ersteWocheEinstieg.
+  ///
+  /// In de, this message translates to:
+  /// **'Sieben kleine Schritte, jeder höchstens eine Viertelstunde. Ihr müsst keinen davon machen, und keiner ist eine Prüfung. Zu jedem gibt es ein „Heute nicht“.'**
+  String get ersteWocheEinstieg;
+
+  /// No description provided for @ersteWocheSchrittMin.
+  ///
+  /// In de, this message translates to:
+  /// **'Schritt {n} · ca. {min} Min.'**
+  String ersteWocheSchrittMin(int n, int min);
+
+  /// No description provided for @ersteWocheSchrittNr.
+  ///
+  /// In de, this message translates to:
+  /// **'Schritt {n}'**
+  String ersteWocheSchrittNr(int n);
+
+  /// No description provided for @ersteWocheAnsehen.
+  ///
+  /// In de, this message translates to:
+  /// **'Ansehen'**
+  String get ersteWocheAnsehen;
+
+  /// No description provided for @ersteWocheHeuteNicht.
+  ///
+  /// In de, this message translates to:
+  /// **'Heute nicht'**
+  String get ersteWocheHeuteNicht;
+
+  /// No description provided for @ersteWocheHeuteNichtAntwort.
+  ///
+  /// In de, this message translates to:
+  /// **'Alles gut. Der Schritt wartet, ohne dass etwas verfällt.'**
+  String get ersteWocheHeuteNichtAntwort;
+
+  /// No description provided for @ersteWocheZugeklappt.
+  ///
+  /// In de, this message translates to:
+  /// **'Eure erste Woche wartet, ohne Eile.'**
+  String get ersteWocheZugeklappt;
+
+  /// No description provided for @ersteWocheMenue.
+  ///
+  /// In de, this message translates to:
+  /// **'Mehr'**
+  String get ersteWocheMenue;
+
+  /// No description provided for @ersteWocheUeberspringen.
+  ///
+  /// In de, this message translates to:
+  /// **'Diesen Schritt überspringen'**
+  String get ersteWocheUeberspringen;
+
+  /// No description provided for @ersteWocheAusblenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Ausblenden'**
+  String get ersteWocheAusblenden;
+
+  /// No description provided for @ersteWocheWiederZeigen.
+  ///
+  /// In de, this message translates to:
+  /// **'Eure erste Woche wieder zeigen'**
+  String get ersteWocheWiederZeigen;
+
+  /// No description provided for @ersteWocheLangePause.
+  ///
+  /// In de, this message translates to:
+  /// **'Weiter mit Schritt {n}, wenn ihr mögt'**
+  String ersteWocheLangePause(int n);
+
+  /// No description provided for @ersteWocheGeschafft.
+  ///
+  /// In de, this message translates to:
+  /// **'Eure erste Woche liegt hinter euch'**
+  String get ersteWocheGeschafft;
+
+  /// No description provided for @ersteWocheZumAbend.
+  ///
+  /// In de, this message translates to:
+  /// **'Weiter mit dem Gemeinsamen Abend'**
+  String get ersteWocheZumAbend;
+
+  /// No description provided for @ersteWocheGutSo.
+  ///
+  /// In de, this message translates to:
+  /// **'Gut so'**
+  String get ersteWocheGutSo;
+
+  /// No description provided for @ersteWochePunktOffen.
+  ///
+  /// In de, this message translates to:
+  /// **'Schritt {n}: offen'**
+  String ersteWochePunktOffen(int n);
+
+  /// No description provided for @ersteWochePunktGetan.
+  ///
+  /// In de, this message translates to:
+  /// **'Schritt {n}: gemacht'**
+  String ersteWochePunktGetan(int n);
+
+  /// No description provided for @ersteWochePunktUebersprungen.
+  ///
+  /// In de, this message translates to:
+  /// **'Schritt {n}: übersprungen'**
+  String ersteWochePunktUebersprungen(int n);
+
+  /// No description provided for @ersteWocheGemacht.
+  ///
+  /// In de, this message translates to:
+  /// **'Haben wir gemacht'**
+  String get ersteWocheGemacht;
+
+  /// No description provided for @ersteWocheLektionOeffnen.
+  ///
+  /// In de, this message translates to:
+  /// **'Lektion öffnen'**
+  String get ersteWocheLektionOeffnen;
+
+  /// No description provided for @ersteWocheLandkarteOeffnen.
+  ///
+  /// In de, this message translates to:
+  /// **'Fantasie-Landkarte öffnen'**
+  String get ersteWocheLandkarteOeffnen;
+
+  /// No description provided for @ersteWocheAlternative.
+  ///
+  /// In de, this message translates to:
+  /// **'Lieber jede Person für sich'**
+  String get ersteWocheAlternative;
+
+  /// No description provided for @ersteWocheFragen.
+  ///
+  /// In de, this message translates to:
+  /// **'Zwei Fragen genügen'**
+  String get ersteWocheFragen;
+
+  /// No description provided for @ersteWocheFrage1.
+  ///
+  /// In de, this message translates to:
+  /// **'Was war schön?'**
+  String get ersteWocheFrage1;
+
+  /// No description provided for @ersteWocheFrage2.
+  ///
+  /// In de, this message translates to:
+  /// **'Was machen wir davon wieder?'**
+  String get ersteWocheFrage2;
+
+  /// No description provided for @ersteWocheWeiterMenue.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Menü für eure Wünsche'**
+  String get ersteWocheWeiterMenue;
+
+  /// No description provided for @ersteWocheWeiterTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Wenn ihr mögt, geht es so weiter'**
+  String get ersteWocheWeiterTitel;
+
+  /// No description provided for @ersteWocheNichtVerfuegbar.
+  ///
+  /// In de, this message translates to:
+  /// **'Das ist gerade nicht verfügbar.'**
+  String get ersteWocheNichtVerfuegbar;
+
+  /// No description provided for @ersteWocheSagenWo.
+  ///
+  /// In de, this message translates to:
+  /// **'Sagen, wo ich bin'**
+  String get ersteWocheSagenWo;
+
+  /// No description provided for @ersteWocheNachricht.
+  ///
+  /// In de, this message translates to:
+  /// **'Ich habe Schritt {n} gemacht. Wenn du magst, schau dir den nächsten an. Kein Druck.'**
+  String ersteWocheNachricht(int n);
+
+  /// No description provided for @ersteWocheNachrichtTitel.
+  ///
+  /// In de, this message translates to:
+  /// **'Das schicken?'**
+  String get ersteWocheNachrichtTitel;
+
+  /// No description provided for @ersteWocheNachrichtHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'Du kannst den Text ändern. Gesendet wird erst, wenn du auf „Senden“ tippst.'**
+  String get ersteWocheNachrichtHinweis;
+
+  /// No description provided for @ersteWocheAbbrechen.
+  ///
+  /// In de, this message translates to:
+  /// **'Abbrechen'**
+  String get ersteWocheAbbrechen;
+
+  /// No description provided for @ersteWocheSenden.
+  ///
+  /// In de, this message translates to:
+  /// **'Senden'**
+  String get ersteWocheSenden;
+
+  /// No description provided for @ersteWocheS1Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Wort, das alles anhält'**
+  String get ersteWocheS1Titel;
+
+  /// No description provided for @ersteWocheS1Text.
+  ///
+  /// In de, this message translates to:
+  /// **'Bevor etwas anderes kommt, braucht ihr ein Wort, das alles sofort anhält. Die Lektion zeigt eine Ampel für Wünsche und Grenzen. Wenn ihr mögt, verabredet ihr danach ein Wort für „Stopp“. Wer weiß, dass Stopp immer gilt, kann sich auf alles Weitere leichter einlassen.'**
+  String get ersteWocheS1Text;
+
+  /// No description provided for @ersteWocheS2Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Zusammen atmen'**
+  String get ersteWocheS2Titel;
+
+  /// No description provided for @ersteWocheS2Text.
+  ///
+  /// In de, this message translates to:
+  /// **'Ankommen, ohne dass eine Berührung etwas will. Wenn ihr mögt, atmet ihr ein paar Minuten im gleichen Takt, der Taktgeber hilft dabei. Möchtet ihr noch nicht eng beieinander liegen, geht es auch jede Person für sich mit einer kurzen Audio-Übung.'**
+  String get ersteWocheS2Text;
+
+  /// No description provided for @ersteWocheS3Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Warum Druck keine Schuld ist'**
+  String get ersteWocheS3Titel;
+
+  /// No description provided for @ersteWocheS3Text.
+  ///
+  /// In de, this message translates to:
+  /// **'Viele Paare spüren Druck, wenn es um Nähe geht, und halten das für ihre Schuld. Die Lektion erklärt Gaspedal und Bremse im Körper: Das ist kein Defekt, so arbeitet jeder Körper. Wenn ihr mögt, lest sie jede Person für sich. Danach muss niemand darüber sprechen.'**
+  String get ersteWocheS3Text;
+
+  /// No description provided for @ersteWocheS4Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Berührung ohne Ziel'**
+  String get ersteWocheS4Titel;
+
+  /// No description provided for @ersteWocheS4Text.
+  ///
+  /// In de, this message translates to:
+  /// **'Jetzt Berührung, bekleidet und ohne Ziel: Rücken, Schultern, Arme, Hände, Füße. Nichts muss daraus werden, und jede Person kann jederzeit „Stopp“ sagen. Etwa 10 bis 15 Minuten, ihr entscheidet.'**
+  String get ersteWocheS4Text;
+
+  /// No description provided for @ersteWocheS5Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Wünsche leise sammeln'**
+  String get ersteWocheS5Titel;
+
+  /// No description provided for @ersteWocheS5Text.
+  ///
+  /// In de, this message translates to:
+  /// **'Nach der Berührung wisst ihr vielleicht ein wenig besser, was sich gut anfühlt. In der Fantasie-Landkarte ist nur die ruhige Kategorie „Sinnlichkeit & Sinne“ gemeint. Jede Person antwortet für sich, das geht auch allein. Gezeigt wird nur, was ihr beide mögt.'**
+  String get ersteWocheS5Text;
+
+  /// No description provided for @ersteWocheS6Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Satz, der leicht fällt'**
+  String get ersteWocheS6Titel;
+
+  /// No description provided for @ersteWocheS6Text.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Gespräch fällt leichter, wenn Ruhe und Vertrauen da sind. Sucht euch aus der Lektion einen der drei Satzbausteine aus und sagt ihn, wenn ihr mögt. Mehr braucht es nicht, es ist kein Problemgespräch.'**
+  String get ersteWocheS6Text;
+
+  /// No description provided for @ersteWocheS7Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Rückblick ohne Bewertung'**
+  String get ersteWocheS7Titel;
+
+  /// No description provided for @ersteWocheS7Text.
+  ///
+  /// In de, this message translates to:
+  /// **'Zum Schluss ein Blick zurück, ohne Zeugnis. Zwei Fragen genügen, antwortet laut oder nur für euch, ganz wie es sich anfühlt. Danach könnt ihr weitermachen, wenn ihr mögt, oder es einfach gut sein lassen.'**
+  String get ersteWocheS7Text;
 }
 
 class _AppLocalizationsDelegate

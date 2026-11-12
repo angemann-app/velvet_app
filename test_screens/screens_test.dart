@@ -16,7 +16,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:velvetpulse/models/user_profile.dart';
+import 'package:velvetpulse/screens/couples_channel/erste_woche_screen.dart';
 import 'package:velvetpulse/screens/couples_channel/paar_abend_screen.dart';
+import 'package:velvetpulse/services/erste_woche_dienst.dart';
+import 'package:velvetpulse/models/bedien_daten.dart';
 import 'package:velvetpulse/screens/couples_channel/pairing_modal.dart';
 import 'package:velvetpulse/screens/courses/lesson_detail_screen.dart';
 import 'package:velvetpulse/screens/main_navigation_screen.dart';
@@ -498,7 +501,23 @@ void main() {
       await _shot(tester, '04_paarkanal_verbunden', errors);
       await _tippe(tester, find.text(t.couplesChannelWishes));
       await _shot(tester, '04_paarkanal_wuensche', errors);
-
+      // Eure erste Woche: Schritt 2 gemacht, Schritt 3 ausgeblendet, dann Karte weg und wieder zeigen.
+      await tester.runAsync(() async {
+        await ErsteWocheDienst.markieren(1, ErsteWocheStand.getan, backup: false);
+        await ErsteWocheDienst.markieren(2, ErsteWocheStand.uebersprungen, backup: false);
+      });
+      await tester.pump();
+      await _shot(tester, '04_erste_woche_verbunden', errors);
+      await tester.runAsync(() => ErsteWocheDienst.ausgeblendet(true, backup: false));
+      await tester.pump();
+      await _shot(tester, '04_erste_woche_ausgeblendet', errors);
+      await tester.runAsync(() => ErsteWocheDienst.ausgeblendet(false, backup: false));
+      await tester.pump();
+      for (final nr in [1, 5, 7]) {
+        await tester.pumpWidget(const SizedBox());
+        await tester.pumpWidget(_app(ErsteWocheScreen(nr: nr)));
+        await _shot(tester, '04_erste_woche_schritt$nr', errors);
+      }
       await tester.pumpWidget(const SizedBox());
       await tester.pumpWidget(_app(const PaarAbendScreen()));
       await tester

@@ -74,16 +74,101 @@ class WegStand {
   }
 }
 
+/// Stand von „Eure erste Woche“: sieben freiwillige Schritte, nur lokal. Kein Zähler, keine Erinnerung.
+/// Schritt-Nummern 1 bis 7; Wert „getan“ oder „uebersprungen“. „Heute nicht“ wird nicht gespeichert.
+class ErsteWocheStand {
+  static const anzahl = 7;
+  static const getan = 'getan';
+  static const uebersprungen = 'uebersprungen';
+
+  final DateTime? beginn;
+  final Map<int, String> schritte;
+  final bool ausgeblendet;
+  final DateTime geaendert;
+
+  const ErsteWocheStand(
+      {this.beginn,
+      this.schritte = const {},
+      this.ausgeblendet = false,
+      required this.geaendert});
+
+  /// Erster Schritt, der weder getan noch übersprungen ist; null, wenn alle sieben erledigt sind.
+  int? get aktuellerSchritt {
+    for (var n = 1; n <= anzahl; n++) {
+      if (!schritte.containsKey(n)) return n;
+    }
+    return null;
+  }
+
+  bool get abgeschlossen => aktuellerSchritt == null;
+
+  ErsteWocheStand kopie(
+          {DateTime? beginn,
+          Map<int, String>? schritte,
+          bool? ausgeblendet,
+          required DateTime geaendert}) =>
+      ErsteWocheStand(
+          beginn: beginn ?? this.beginn,
+          schritte: schritte ?? this.schritte,
+          ausgeblendet: ausgeblendet ?? this.ausgeblendet,
+          geaendert: geaendert);
+
+  /// Markiert einen Schritt (getan oder übersprungen); setzt beim ersten Mal den Beginn.
+  ErsteWocheStand mitSchritt(int nr, String wert, DateTime jetzt) =>
+      kopie(
+          beginn: beginn ?? jetzt,
+          schritte: {...schritte, nr: wert},
+          geaendert: jetzt);
+
+  Map<String, dynamic> toJson() => {
+        if (beginn != null) 'beginn': beginn!.toUtc().toIso8601String(),
+        'schritte': {
+          for (final e in (schritte.entries.toList()
+            ..sort((a, b) => a.key.compareTo(b.key))))
+            '${e.key}': e.value
+        },
+        'ausgeblendet': ausgeblendet,
+        'geaendert': geaendert.toUtc().toIso8601String()
+      };
+
+  factory ErsteWocheStand.fromJson(Map<String, dynamic> j) {
+    final roh = j['schritte'];
+    final schritte = <int, String>{};
+    if (roh != null) {
+      if (roh is! Map) throw const FormatException('Ungültige erste Woche');
+      for (final e in roh.entries) {
+        final nr = int.tryParse('${e.key}');
+        if (nr == null ||
+            nr < 1 ||
+            nr > anzahl ||
+            (e.value != getan && e.value != uebersprungen)) {
+          throw const FormatException('Ungültiger Schritt der ersten Woche');
+        }
+        schritte[nr] = e.value as String;
+      }
+    }
+    if (j['ausgeblendet'] != null && j['ausgeblendet'] is! bool) {
+      throw const FormatException('Ungültige erste Woche');
+    }
+    return ErsteWocheStand(
+        beginn: j['beginn'] == null ? null : _zeit(j['beginn']),
+        schritte: schritte,
+        ausgeblendet: j['ausgeblendet'] == true,
+        geaendert: _zeit(j['geaendert']));
+  }
+}
+
 class BedienDaten {
   final WiedergabeMerker? wiedergabe;
   final WegStand? weg;
-  const BedienDaten({this.wiedergabe, this.weg});
+  final ErsteWocheStand? ersteWoche;
+  const BedienDaten({this.wiedergabe, this.weg, this.ersteWoche});
   Map<String, dynamic> toJson() => {
         'schema': 1,
         if (wiedergabe != null) 'wiedergabe': wiedergabe!.toJson(),
-        if (weg != null) 'weg': weg!.toJson()
+        if (weg != null) 'weg': weg!.toJson(),
+        if (ersteWoche != null) 'ersteWoche': ersteWoche!.toJson()
       };
-
   factory BedienDaten.fromJson(Map<String, dynamic> j) {
     if (j['schema'] != 1)
       throw const FormatException('Unbekannter Bedienungsstand');
@@ -94,13 +179,19 @@ class BedienDaten {
                 Map<String, dynamic>.from(j['wiedergabe'] as Map)),
         weg: j['weg'] == null
             ? null
-            : WegStand.fromJson(Map<String, dynamic>.from(j['weg'] as Map)));
+            : WegStand.fromJson(Map<String, dynamic>.from(j['weg'] as Map)),
+        ersteWoche: j['ersteWoche'] == null
+            ? null
+            : ErsteWocheStand.fromJson(
+                Map<String, dynamic>.from(j['ersteWoche'] as Map)));
   }
 
   BedienDaten zusammen(BedienDaten other) => BedienDaten(
       wiedergabe: _neu(
           wiedergabe, other.wiedergabe, (v) => v.geaendert, (v) => v.toJson()),
-      weg: _neu(weg, other.weg, (v) => v.geaendert, (v) => v.toJson()));
+      weg: _neu(weg, other.weg, (v) => v.geaendert, (v) => v.toJson()),
+      ersteWoche: _neu(ersteWoche, other.ersteWoche, (v) => v.geaendert,
+          (v) => v.toJson()));
 }
 
 T? _neu<T>(T? a, T? b, DateTime Function(T) zeit,

@@ -8859,3 +8859,297 @@ msgstr ""
 msgctxt "ui:schlafBlickBilanz#text"
 msgid "{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your first week
+msgctxt "ui:ersteWocheEyebrow#text"
+msgid "Eure erste Woche"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Seven small steps, each no longer than a quarter of an hour. You don't have to do any of them, and none is a test. Every one has a “Not today”.
+msgctxt "ui:ersteWocheEinstieg#text"
+msgid "Sieben kleine Schritte, jeder höchstens eine Viertelstunde. Ihr müsst keinen davon machen, und keiner ist eine Prüfung. Zu jedem gibt es ein „Heute nicht“."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}, {min}
+#. EN: Step {n} · about {min} min.
+msgctxt "ui:ersteWocheSchrittMin#text"
+msgid "Schritt {n} · ca. {min} Min."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: Step {n}
+msgctxt "ui:ersteWocheSchrittNr#text"
+msgid "Schritt {n}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Take a look
+msgctxt "ui:ersteWocheAnsehen#text"
+msgid "Ansehen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not today
+msgctxt "ui:ersteWocheHeuteNicht#text"
+msgid "Heute nicht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: All good. The step will wait, and nothing expires.
+msgctxt "ui:ersteWocheHeuteNichtAntwort#text"
+msgid "Alles gut. Der Schritt wartet, ohne dass etwas verfällt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your first week is waiting, no rush.
+msgctxt "ui:ersteWocheZugeklappt#text"
+msgid "Eure erste Woche wartet, ohne Eile."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: More
+msgctxt "ui:ersteWocheMenue#text"
+msgid "Mehr"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Skip this step
+msgctxt "ui:ersteWocheUeberspringen#text"
+msgid "Diesen Schritt überspringen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Hide
+msgctxt "ui:ersteWocheAusblenden#text"
+msgid "Ausblenden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Show your first week again
+msgctxt "ui:ersteWocheWiederZeigen#text"
+msgid "Eure erste Woche wieder zeigen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: Carry on with step {n}, whenever you like
+msgctxt "ui:ersteWocheLangePause#text"
+msgid "Weiter mit Schritt {n}, wenn ihr mögt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your first week is behind you
+msgctxt "ui:ersteWocheGeschafft#text"
+msgid "Eure erste Woche liegt hinter euch"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Carry on with the shared evening
+msgctxt "ui:ersteWocheZumAbend#text"
+msgid "Weiter mit dem Gemeinsamen Abend"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Sounds good
+msgctxt "ui:ersteWocheGutSo#text"
+msgid "Gut so"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: Step {n}: open
+msgctxt "ui:ersteWochePunktOffen#text"
+msgid "Schritt {n}: offen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: Step {n}: done
+msgctxt "ui:ersteWochePunktGetan#text"
+msgid "Schritt {n}: gemacht"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: Step {n}: skipped
+msgctxt "ui:ersteWochePunktUebersprungen#text"
+msgid "Schritt {n}: übersprungen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: We did this
+msgctxt "ui:ersteWocheGemacht#text"
+msgid "Haben wir gemacht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open the lesson
+msgctxt "ui:ersteWocheLektionOeffnen#text"
+msgid "Lektion öffnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Open the fantasy map
+msgctxt "ui:ersteWocheLandkarteOeffnen#text"
+msgid "Fantasie-Landkarte öffnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Rather each on our own
+msgctxt "ui:ersteWocheAlternative#text"
+msgid "Lieber jede Person für sich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Two questions are enough
+msgctxt "ui:ersteWocheFragen#text"
+msgid "Zwei Fragen genügen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What was lovely?
+msgctxt "ui:ersteWocheFrage1#text"
+msgid "Was war schön?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What shall we do again?
+msgctxt "ui:ersteWocheFrage2#text"
+msgid "Was machen wir davon wieder?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A menu for your wishes
+msgctxt "ui:ersteWocheWeiterMenue#text"
+msgid "Ein Menü für eure Wünsche"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: If you like, carry on like this
+msgctxt "ui:ersteWocheWeiterTitel#text"
+msgid "Wenn ihr mögt, geht es so weiter"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: That is not available right now.
+msgctxt "ui:ersteWocheNichtVerfuegbar#text"
+msgid "Das ist gerade nicht verfügbar."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Tell them where I am
+msgctxt "ui:ersteWocheSagenWo#text"
+msgid "Sagen, wo ich bin"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {n}
+#. EN: I did step {n}. If you like, have a look at the next one. No pressure.
+msgctxt "ui:ersteWocheNachricht#text"
+msgid "Ich habe Schritt {n} gemacht. Wenn du magst, schau dir den nächsten an. Kein Druck."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send this?
+msgctxt "ui:ersteWocheNachrichtTitel#text"
+msgid "Das schicken?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You can change the text. Nothing is sent until you tap “Send”.
+msgctxt "ui:ersteWocheNachrichtHinweis#text"
+msgid "Du kannst den Text ändern. Gesendet wird erst, wenn du auf „Senden“ tippst."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Cancel
+msgctxt "ui:ersteWocheAbbrechen#text"
+msgid "Abbrechen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Send
+msgctxt "ui:ersteWocheSenden#text"
+msgid "Senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: One word that stops everything
+msgctxt "ui:ersteWocheS1Titel#text"
+msgid "Ein Wort, das alles anhält"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Before anything else, you need one word that stops everything at once. The lesson shows a traffic light for wishes and limits. If you like, you then agree on a word for “stop”. Knowing that stop always counts makes it easier to be open to everything else.
+msgctxt "ui:ersteWocheS1Text#text"
+msgid "Bevor etwas anderes kommt, braucht ihr ein Wort, das alles sofort anhält. Die Lektion zeigt eine Ampel für Wünsche und Grenzen. Wenn ihr mögt, verabredet ihr danach ein Wort für „Stopp“. Wer weiß, dass Stopp immer gilt, kann sich auf alles Weitere leichter einlassen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Breathing together
+msgctxt "ui:ersteWocheS2Titel#text"
+msgid "Zusammen atmen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Arriving together, without a touch that wants something. If you like, you breathe in the same rhythm for a few minutes, and the pacer helps. If you'd rather not lie close yet, each of you can do it alone with a short audio exercise.
+msgctxt "ui:ersteWocheS2Text#text"
+msgid "Ankommen, ohne dass eine Berührung etwas will. Wenn ihr mögt, atmet ihr ein paar Minuten im gleichen Takt, der Taktgeber hilft dabei. Möchtet ihr noch nicht eng beieinander liegen, geht es auch jede Person für sich mit einer kurzen Audio-Übung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Why pressure is nobody's fault
+msgctxt "ui:ersteWocheS3Titel#text"
+msgid "Warum Druck keine Schuld ist"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Many couples feel pressure around closeness and take it as their own fault. The lesson explains the body's accelerator and brake: it is not a defect, it is how every body works. If you like, each of you reads it on your own. Nobody has to talk about it afterwards.
+msgctxt "ui:ersteWocheS3Text#text"
+msgid "Viele Paare spüren Druck, wenn es um Nähe geht, und halten das für ihre Schuld. Die Lektion erklärt Gaspedal und Bremse im Körper: Das ist kein Defekt, so arbeitet jeder Körper. Wenn ihr mögt, lest sie jede Person für sich. Danach muss niemand darüber sprechen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Touch without a goal
+msgctxt "ui:ersteWocheS4Titel#text"
+msgid "Berührung ohne Ziel"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Now touch, clothed and without a goal: back, shoulders, arms, hands, feet. Nothing has to come of it, and either of you can say “stop” at any time. About 10 to 15 minutes, you decide.
+msgctxt "ui:ersteWocheS4Text#text"
+msgid "Jetzt Berührung, bekleidet und ohne Ziel: Rücken, Schultern, Arme, Hände, Füße. Nichts muss daraus werden, und jede Person kann jederzeit „Stopp“ sagen. Etwa 10 bis 15 Minuten, ihr entscheidet."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Gathering wishes quietly
+msgctxt "ui:ersteWocheS5Titel#text"
+msgid "Wünsche leise sammeln"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: After touching, you may know a little better what feels good. In the fantasy map, only the calm category “Sensuality & Senses” is meant. Each of you answers for yourself, and answering alone works too. Only what you both like is shown.
+msgctxt "ui:ersteWocheS5Text#text"
+msgid "Nach der Berührung wisst ihr vielleicht ein wenig besser, was sich gut anfühlt. In der Fantasie-Landkarte ist nur die ruhige Kategorie „Sinnlichkeit & Sinne“ gemeint. Jede Person antwortet für sich, das geht auch allein. Gezeigt wird nur, was ihr beide mögt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: One easy sentence
+msgctxt "ui:ersteWocheS6Titel#text"
+msgid "Ein Satz, der leicht fällt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A conversation is easier once there is calm and trust. Pick one of the three sentence starters from the lesson and say it, if you like. That is all it takes. This is not a talk about problems.
+msgctxt "ui:ersteWocheS6Text#text"
+msgid "Ein Gespräch fällt leichter, wenn Ruhe und Vertrauen da sind. Sucht euch aus der Lektion einen der drei Satzbausteine aus und sagt ihn, wenn ihr mögt. Mehr braucht es nicht, es ist kein Problemgespräch."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A look back without judging
+msgctxt "ui:ersteWocheS7Titel#text"
+msgid "Rückblick ohne Bewertung"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: To finish, a look back, with no grades. Two questions are enough. Answer aloud or just for yourselves, however it feels. After that you can carry on if you like, or simply let it be.
+msgctxt "ui:ersteWocheS7Text#text"
+msgid "Zum Schluss ein Blick zurück, ohne Zeugnis. Zwei Fragen genügen, antwortet laut oder nur für euch, ganz wie es sich anfühlt. Danach könnt ihr weitermachen, wenn ihr mögt, oder es einfach gut sein lassen."
+msgstr ""

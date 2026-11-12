@@ -5164,4 +5164,175 @@ class AppLocalizationsEn extends AppLocalizations {
   String schlafBlickBilanz(int klar, int tage) {
     return '$klar of $tage days with personal entries include a reported lucid dream. This is a reflection, not a performance goal.';
   }
+
+  @override
+  String get ersteWocheEyebrow => 'Your first week';
+
+  @override
+  String get ersteWocheEinstieg =>
+      'Seven small steps, each no longer than a quarter of an hour. You don\'t have to do any of them, and none is a test. Every one has a “Not today”.';
+
+  @override
+  String ersteWocheSchrittMin(int n, int min) {
+    return 'Step $n · about $min min.';
+  }
+
+  @override
+  String ersteWocheSchrittNr(int n) {
+    return 'Step $n';
+  }
+
+  @override
+  String get ersteWocheAnsehen => 'Take a look';
+
+  @override
+  String get ersteWocheHeuteNicht => 'Not today';
+
+  @override
+  String get ersteWocheHeuteNichtAntwort =>
+      'All good. The step will wait, and nothing expires.';
+
+  @override
+  String get ersteWocheZugeklappt => 'Your first week is waiting, no rush.';
+
+  @override
+  String get ersteWocheMenue => 'More';
+
+  @override
+  String get ersteWocheUeberspringen => 'Skip this step';
+
+  @override
+  String get ersteWocheAusblenden => 'Hide';
+
+  @override
+  String get ersteWocheWiederZeigen => 'Show your first week again';
+
+  @override
+  String ersteWocheLangePause(int n) {
+    return 'Carry on with step $n, whenever you like';
+  }
+
+  @override
+  String get ersteWocheGeschafft => 'Your first week is behind you';
+
+  @override
+  String get ersteWocheZumAbend => 'Carry on with the shared evening';
+
+  @override
+  String get ersteWocheGutSo => 'Sounds good';
+
+  @override
+  String ersteWochePunktOffen(int n) {
+    return 'Step $n: open';
+  }
+
+  @override
+  String ersteWochePunktGetan(int n) {
+    return 'Step $n: done';
+  }
+
+  @override
+  String ersteWochePunktUebersprungen(int n) {
+    return 'Step $n: skipped';
+  }
+
+  @override
+  String get ersteWocheGemacht => 'We did this';
+
+  @override
+  String get ersteWocheLektionOeffnen => 'Open the lesson';
+
+  @override
+  String get ersteWocheLandkarteOeffnen => 'Open the fantasy map';
+
+  @override
+  String get ersteWocheAlternative => 'Rather each on our own';
+
+  @override
+  String get ersteWocheFragen => 'Two questions are enough';
+
+  @override
+  String get ersteWocheFrage1 => 'What was lovely?';
+
+  @override
+  String get ersteWocheFrage2 => 'What shall we do again?';
+
+  @override
+  String get ersteWocheWeiterMenue => 'A menu for your wishes';
+
+  @override
+  String get ersteWocheWeiterTitel => 'If you like, carry on like this';
+
+  @override
+  String get ersteWocheNichtVerfuegbar => 'That is not available right now.';
+
+  @override
+  String get ersteWocheSagenWo => 'Tell them where I am';
+
+  @override
+  String ersteWocheNachricht(int n) {
+    return 'I did step $n. If you like, have a look at the next one. No pressure.';
+  }
+
+  @override
+  String get ersteWocheNachrichtTitel => 'Send this?';
+
+  @override
+  String get ersteWocheNachrichtHinweis =>
+      'You can change the text. Nothing is sent until you tap “Send”.';
+
+  @override
+  String get ersteWocheAbbrechen => 'Cancel';
+
+  @override
+  String get ersteWocheSenden => 'Send';
+
+  @override
+  String get ersteWocheS1Titel => 'One word that stops everything';
+
+  @override
+  String get ersteWocheS1Text =>
+      'Before anything else, you need one word that stops everything at once. The lesson shows a traffic light for wishes and limits. If you like, you then agree on a word for “stop”. Knowing that stop always counts makes it easier to be open to everything else.';
+
+  @override
+  String get ersteWocheS2Titel => 'Breathing together';
+
+  @override
+  String get ersteWocheS2Text =>
+      'Arriving together, without a touch that wants something. If you like, you breathe in the same rhythm for a few minutes, and the pacer helps. If you\'d rather not lie close yet, each of you can do it alone with a short audio exercise.';
+
+  @override
+  String get ersteWocheS3Titel => 'Why pressure is nobody\'s fault';
+
+  @override
+  String get ersteWocheS3Text =>
+      'Many couples feel pressure around closeness and take it as their own fault. The lesson explains the body\'s accelerator and brake: it is not a defect, it is how every body works. If you like, each of you reads it on your own. Nobody has to talk about it afterwards.';
+
+  @override
+  String get ersteWocheS4Titel => 'Touch without a goal';
+
+  @override
+  String get ersteWocheS4Text =>
+      'Now touch, clothed and without a goal: back, shoulders, arms, hands, feet. Nothing has to come of it, and either of you can say “stop” at any time. About 10 to 15 minutes, you decide.';
+
+  @override
+  String get ersteWocheS5Titel => 'Gathering wishes quietly';
+
+  @override
+  String get ersteWocheS5Text =>
+      'After touching, you may know a little better what feels good. In the fantasy map, only the calm category “Sensuality & Senses” is meant. Each of you answers for yourself, and answering alone works too. Only what you both like is shown.';
+
+  @override
+  String get ersteWocheS6Titel => 'One easy sentence';
+
+  @override
+  String get ersteWocheS6Text =>
+      'A conversation is easier once there is calm and trust. Pick one of the three sentence starters from the lesson and say it, if you like. That is all it takes. This is not a talk about problems.';
+
+  @override
+  String get ersteWocheS7Titel => 'A look back without judging';
+
+  @override
+  String get ersteWocheS7Text =>
+      'To finish, a look back, with no grades. Two questions are enough. Answer aloud or just for yourselves, however it feels. After that you can carry on if you like, or simply let it be.';
 }

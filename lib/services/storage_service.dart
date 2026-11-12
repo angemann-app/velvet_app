@@ -85,7 +85,11 @@ class StorageService {
           weg = WegStand(lektion: weg.lektion, schritt: weg.schritt,
             geaendert: alt.weg!.geaendert.add(const Duration(microseconds: 1)));
         }
-        neu = alt.zusammen(BedienDaten(wiedergabe: w, weg: weg));
+        var ew = neu.ersteWoche;
+        if (ew != null && alt.ersteWoche != null && !ew.geaendert.isAfter(alt.ersteWoche!.geaendert)) {
+          ew = ew.kopie(geaendert: alt.ersteWoche!.geaendert.add(const Duration(microseconds: 1)));
+        }
+        neu = alt.zusammen(BedienDaten(wiedergabe: w, weg: weg, ersteWoche: ew));
         if (!await prefs.setString(_keyBedienung, jsonEncode(neu.toJson()))) {
           throw StateError('Bedienungsstand nicht gespeichert');
         }

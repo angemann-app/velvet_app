@@ -2322,5 +2322,106 @@
         "type": "int"
       }
     }
-  }
+  },
+  "ersteWocheEyebrow": "Eure erste Woche",
+  "ersteWocheEinstieg": "Sieben kleine Schritte, jeder höchstens eine Viertelstunde. Ihr müsst keinen davon machen, und keiner ist eine Prüfung. Zu jedem gibt es ein „Heute nicht“.",
+  "ersteWocheSchrittMin": "Schritt {n} · ca. {min} Min.",
+  "@ersteWocheSchrittMin": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheSchrittNr": "Schritt {n}",
+  "@ersteWocheSchrittNr": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheAnsehen": "Ansehen",
+  "ersteWocheHeuteNicht": "Heute nicht",
+  "ersteWocheHeuteNichtAntwort": "Alles gut. Der Schritt wartet, ohne dass etwas verfällt.",
+  "ersteWocheZugeklappt": "Eure erste Woche wartet, ohne Eile.",
+  "ersteWocheMenue": "Mehr",
+  "ersteWocheUeberspringen": "Diesen Schritt überspringen",
+  "ersteWocheAusblenden": "Ausblenden",
+  "ersteWocheWiederZeigen": "Eure erste Woche wieder zeigen",
+  "ersteWocheLangePause": "Weiter mit Schritt {n}, wenn ihr mögt",
+  "@ersteWocheLangePause": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheGeschafft": "Eure erste Woche liegt hinter euch",
+  "ersteWocheZumAbend": "Weiter mit dem Gemeinsamen Abend",
+  "ersteWocheGutSo": "Gut so",
+  "ersteWochePunktOffen": "Schritt {n}: offen",
+  "@ersteWochePunktOffen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWochePunktGetan": "Schritt {n}: gemacht",
+  "@ersteWochePunktGetan": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWochePunktUebersprungen": "Schritt {n}: übersprungen",
+  "@ersteWochePunktUebersprungen": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheGemacht": "Haben wir gemacht",
+  "ersteWocheLektionOeffnen": "Lektion öffnen",
+  "ersteWocheLandkarteOeffnen": "Fantasie-Landkarte öffnen",
+  "ersteWocheAlternative": "Lieber jede Person für sich",
+  "ersteWocheFragen": "Zwei Fragen genügen",
+  "ersteWocheFrage1": "Was war schön?",
+  "ersteWocheFrage2": "Was machen wir davon wieder?",
+  "ersteWocheWeiterMenue": "Ein Menü für eure Wünsche",
+  "ersteWocheWeiterTitel": "Wenn ihr mögt, geht es so weiter",
+  "ersteWocheNichtVerfuegbar": "Das ist gerade nicht verfügbar.",
+  "ersteWocheSagenWo": "Sagen, wo ich bin",
+  "ersteWocheNachricht": "Ich habe Schritt {n} gemacht. Wenn du magst, schau dir den nächsten an. Kein Druck.",
+  "@ersteWocheNachricht": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "ersteWocheNachrichtTitel": "Das schicken?",
+  "ersteWocheNachrichtHinweis": "Du kannst den Text ändern. Gesendet wird erst, wenn du auf „Senden“ tippst.",
+  "ersteWocheAbbrechen": "Abbrechen",
+  "ersteWocheSenden": "Senden",
+  "ersteWocheS1Titel": "Ein Wort, das alles anhält",
+  "ersteWocheS1Text": "Bevor etwas anderes kommt, braucht ihr ein Wort, das alles sofort anhält. Die Lektion zeigt eine Ampel für Wünsche und Grenzen. Wenn ihr mögt, verabredet ihr danach ein Wort für „Stopp“. Wer weiß, dass Stopp immer gilt, kann sich auf alles Weitere leichter einlassen.",
+  "ersteWocheS2Titel": "Zusammen atmen",
+  "ersteWocheS2Text": "Ankommen, ohne dass eine Berührung etwas will. Wenn ihr mögt, atmet ihr ein paar Minuten im gleichen Takt, der Taktgeber hilft dabei. Möchtet ihr noch nicht eng beieinander liegen, geht es auch jede Person für sich mit einer kurzen Audio-Übung.",
+  "ersteWocheS3Titel": "Warum Druck keine Schuld ist",
+  "ersteWocheS3Text": "Viele Paare spüren Druck, wenn es um Nähe geht, und halten das für ihre Schuld. Die Lektion erklärt Gaspedal und Bremse im Körper: Das ist kein Defekt, so arbeitet jeder Körper. Wenn ihr mögt, lest sie jede Person für sich. Danach muss niemand darüber sprechen.",
+  "ersteWocheS4Titel": "Berührung ohne Ziel",
+  "ersteWocheS4Text": "Jetzt Berührung, bekleidet und ohne Ziel: Rücken, Schultern, Arme, Hände, Füße. Nichts muss daraus werden, und jede Person kann jederzeit „Stopp“ sagen. Etwa 10 bis 15 Minuten, ihr entscheidet.",
+  "ersteWocheS5Titel": "Wünsche leise sammeln",
+  "ersteWocheS5Text": "Nach der Berührung wisst ihr vielleicht ein wenig besser, was sich gut anfühlt. In der Fantasie-Landkarte ist nur die ruhige Kategorie „Sinnlichkeit & Sinne“ gemeint. Jede Person antwortet für sich, das geht auch allein. Gezeigt wird nur, was ihr beide mögt.",
+  "ersteWocheS6Titel": "Ein Satz, der leicht fällt",
+  "ersteWocheS6Text": "Ein Gespräch fällt leichter, wenn Ruhe und Vertrauen da sind. Sucht euch aus der Lektion einen der drei Satzbausteine aus und sagt ihn, wenn ihr mögt. Mehr braucht es nicht, es ist kein Problemgespräch.",
+  "ersteWocheS7Titel": "Rückblick ohne Bewertung",
+  "ersteWocheS7Text": "Zum Schluss ein Blick zurück, ohne Zeugnis. Zwei Fragen genügen, antwortet laut oder nur für euch, ganz wie es sich anfühlt. Danach könnt ihr weitermachen, wenn ihr mögt, oder es einfach gut sein lassen."
 }
