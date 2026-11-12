@@ -1,6 +1,6 @@
 # Konzept: Oberfläche aufräumen
 
-Stand 12.11.2026, Entwurf zur Abstimmung. **Nichts davon ist umgesetzt.**
+Stand 12.11.2026, abgestimmt (Empfehlungen angenommen) und umgesetzt, siehe „Umsetzungsstand“ am Ende.
 
 Maßstab: Der Magazin-Look (`designsystem-magazin.md`) bleibt. Aufräumen heißt: Inhalt vor Technik, das Wichtige ohne Scrollen,
 nichts Unbeschriftetes, das man erraten muss. Es entsteht kein neuer Stil und keine neue Komponentenfamilie; wo es geht, werden
@@ -243,3 +243,33 @@ Kein neues Bild wird für die Umsetzung gebraucht; alles überbrückt der Platzh
    Empfehlung: beides in kleinen Schritten, erst Farbe.
 8. **Onboarding-Unterzeile.** Nur Platz vorsehen (wie beauftragt); soll ich die Zeile bis zum Text-Paket ausblenden (Empfehlung) oder
    mit dem heutigen Satz belassen?
+
+## Umsetzungsstand (12.11.2026)
+
+Branch `claude/oberflaeche-aufraeumen-20261112` (Worktree `C:\TOOLS\workspace\mojo_aufraeumen`), je Bildschirm ein Commit. Nicht
+zusammengeführt, nicht gebaut, nicht veröffentlicht. Vorher/Nachher: `build/aufraeumen/vorher` und `build/aufraeumen/nachher`.
+
+| # | Bildschirm | Ergebnis | Abweichung vom Konzept |
+|---|---|---|---|
+| 1 | Heute | Bild 92 pt (Spicy 168 pt), Profil-Symbol nur auf Heute oben; „Für heute“ und Check-in ohne Scrollen sichtbar | |
+| 2 | Paar-Kanal | beschriftete Chips „Gemeinsamer Abend“ und „Fantasie-Landkarte“ | Die leere Karte war `PartnerProfilePrompt`: Randfarben mit Radius lösen in der Debug-Version eine Assertion aus, die Karte blieb leer. Jetzt `VpKarte`. Zusätzlich: Karte „Eure erste Woche“ steht erst ab 900 pt Höhe über den Reitern (sonst in „Gemeinsam entdecken“), Profil-Nachfrage erst bei genug Platz, Chips einzeilig scrollbar |
+| 3 | Fantasie-Landkarte | Zähler und Filter eine Leiste, Infokasten klappt nach dem ersten Besuch ein (`ynmInfoGesehen`), Kategoriebild 72 pt | Ursache des abgeschnittenen Titels war nicht der Titel, sondern die Reiter mit Symbol über dem Text (72 pt in 48 pt Platz). Reiter jetzt 40 pt, Titel einzeilig |
+| 4 | Lektion | Eyebrow „Lektion · 6 Min.“ einzeilig, Kurstitel nur in der Leiste | |
+| 5 | Player und Wiedergabe | Knopf zuerst, Aufnahme-Hinweis klein und nur wenn nötig, „1:24 von 6:00“, „Teil 2 von 3“ nur bei mehreren Teilen, Titelfläche statt leerer Seite | Im Diskretions-Modus zeigt die Seite nie das Szenenbild |
+| 6 | Üben | Programm und Einstellungen als zwei aufklappbare Zeilen, Kreis vollständig und eingepasst | Obere Reiter-Reihe bleibt (Körper, Gedanken; der Coach ist in `main` schon entfernt) |
+| 7 | Lernen | ganze Schwerpunkt-Kopfzeile tippbar, 48-pt-Pfeil; Filterleiste läuft rechts aus | |
+| 8 | Onboarding | „Überspringen“ / „Skip“, Platz für die Unterzeile | Altlast behoben: Hallo-Titel im Profil lief bei großer Schrift über |
+| 9 | Lesbarkeit | `tinteStumm` dunkler (Papier `5C5850`, Nachtpapier `B8B3A7`, Spicy `BBA5AB`), Eyebrow 12 pt in `tinteLeise`, Beschriftung 13 pt; Test verlangt 5,5 : 1 | |
+
+Geprüft: `flutter analyze` ohne Befund, `flutter test` grün (einschließlich `backup_merge_test`, `security_test`, Kontrast- und
+Übersetzungstests), Layout-Läufe ohne Überlauf in Papier, Nachtpapier und Spicy bei Skala 1,0 und 1,6 (360 × 640) sowie Skala 1,3
+(390 × 844). Testbilder sind **kein** Gerätetest. Bekannte Grenze: Bei Skala 1,6 auf 360 × 640 kürzt die Leiste auf Heute den
+Titel („Heu…“), weil nun vier Symbole neben dem Titel stehen.
+
+## Entwurf „Was ist neu“ (Build-Nummer offen, erst beim Release eintragen)
+
+- Heute: Das Titelbild ist niedriger, dein Tagesimpuls steht ohne Scrollen da; das Profil sitzt oben neben Suche und Hilfe.
+- Fantasie-Landkarte: Die Erklärung klappt nach dem ersten Besuch ein, Zähler und Filter sind eine Leiste.
+- Player: Abspielknopf zuerst, Zeit als „1:24 von 6:00“.
+- Üben: Programm und Einstellungen klappen bei Bedarf auf, der Kreis passt immer auf den Bildschirm.
+- Kleine graue Zeilen sind besser lesbar.
