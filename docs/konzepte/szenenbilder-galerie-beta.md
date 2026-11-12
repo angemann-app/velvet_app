@@ -162,3 +162,6 @@ im Player und „Bilder ansehen“ in der Einrichtung (nur mit Bildern und ohne 
 (`stufe` oder `fassung`, ohne Angabe `fassung`); in `reihe.json` steht `stufe` für alle Folgen außer „Der andere Körper“. Tests:
 `test/reihe_galerie_test.dart`. Entschieden: Bildstile bleiben getrennt (Nutzer, 03.11.2026). Offen: Welche Sehr-spicy-Bilder ins Paket
 `reihe-bilder` kommen (Namen `<folge>_sehrspicy_<szene>.webp`, bei den Dreier-Folgen `drei_ffm_sehrspicy_<szene>.webp`).
+### 5.7 Entscheidung zum Bildstil (07.11.2026, Nutzer)
+
+**Fotoähnliche Bilder werden nicht genutzt**, das heißt keine Chiaroscuro-Aktstudien (DreamShaper 8, Abschnitt 1 und 5.2 sind damit überholt), keine Nachbesserungen aus AG-27 und AG-28. Die Galerie zeigt **nur Bilder im Bleistift-Stil** (AG-22 bis AG-24): Soft und Spicy der fünf Folgen (je 29 Bilder, `reihe\bilder\ag\`) und die Sehr-spicy-Sätze „Der andere Körper“ (Frau und Mann, 12 Bilder, `reihe\bilder\sehrspicy\`). Für die übrigen Sehr-spicy-Stufen und die Dreier-Folgen gibt es vorerst keine Bilder; die Galerie zeigt nur Stufen, die das Paket hat. Die 35 Fotobilder und alle Zwischenstände liegen unter `build\redaktion\` und gehen nicht ins Paket.
