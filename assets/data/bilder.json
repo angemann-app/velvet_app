@@ -733,8 +733,8 @@
       "format": "kopf",
       "normal": "assets/images/cover_06.webp",
       "alt": {
-        "de": "9. Weibliche Lust und Körperwissen",
-        "en": "9. Female Desire and Body Knowledge"
+        "de": "9. Lust und Körperwissen mit Vulva",
+        "en": "9. Desire and Body Knowledge with a Vulva"
       },
       "altePfade": [
         "assets/images/cover_06.svg",
@@ -761,8 +761,8 @@
       "format": "kopf",
       "normal": "assets/images/cover_08.webp",
       "alt": {
-        "de": "18. Berührung, die trägt (Für Sie)",
-        "en": "18. Touch That Carries (For Her)"
+        "de": "18. Berührung, die trägt (mit Vulva)",
+        "en": "18. Touch That Carries (with a vulva)"
       },
       "altePfade": [
         "assets/images/cover_08.svg",
@@ -775,8 +775,8 @@
       "format": "kopf",
       "normal": "assets/images/cover_09.webp",
       "alt": {
-        "de": "19. Berührung neu lernen (Für Ihn)",
-        "en": "19. Relearning Touch (For Him)"
+        "de": "19. Berührung neu lernen (mit Penis)",
+        "en": "19. Relearning Touch (with a penis)"
       },
       "altePfade": [
         "assets/images/cover_09.svg",

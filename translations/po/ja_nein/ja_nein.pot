@@ -457,15 +457,15 @@ msgid "Verbunden bleiben und einfach atmen, küssen, spüren. Klingt unspektakul
 msgstr ""
 
 #. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
-#. EN: She decides every millimetre during penetration
+#. EN: Whoever receives decides every millimetre during penetration
 msgctxt "ynm:item_44#text"
-msgid "Sie bestimmt beim Eindringen jeden Millimeter"
+msgid "Wer aufnimmt, bestimmt beim Eindringen jeden Millimeter"
 msgstr ""
 
 #. Frage in „Stellungen & Bewegung“: Aussage und Erklärung
-#. EN: He doesn't move, she leads and sinks at her own pace. Especially helpful with a tense pelvic floor or if penetration has hurt before.
+#. EN: The one penetrating doesn't move; the one receiving leads and sinks at their own pace. Especially helpful with a tense pelvic floor or if penetration has hurt before.
 msgctxt "ynm:item_44#explanation"
-msgid "Er bewegt sich nicht, sie führt und sinkt in ihrem Tempo. Besonders hilfreich bei einem angespannten Beckenboden oder wenn Eindringen schon einmal wehgetan hat."
+msgid "Wer eindringt, bewegt sich nicht; wer aufnimmt, führt und sinkt im eigenen Tempo. Besonders hilfreich bei einem angespannten Beckenboden oder wenn Eindringen schon einmal wehgetan hat."
 msgstr ""
 
 #. Kategorie der Ja/Nein/Vielleicht-Liste
@@ -583,9 +583,9 @@ msgid "Lingam-Massage: lange, absichtslose Massage des Penis"
 msgstr ""
 
 #. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
-#. EN: From the base to the tip, also when soft. Without any expectation of erection or ejaculation – exactly that lets many men let go completely for the first time.
+#. EN: From the base to the tip, also when soft. Without any expectation of erection or ejaculation – exactly that lets many people with a penis let go completely for the first time.
 msgctxt "ynm:item_15#explanation"
-msgid "Von der Basis bis zur Spitze, auch im weichen Zustand. Ohne Erwartung an Erektion oder Samenerguss – genau das lässt viele Männer zum ersten Mal ganz loslassen."
+msgid "Von der Basis bis zur Spitze, auch im weichen Zustand. Ohne Erwartung an Erektion oder Samenerguss – genau das lässt viele Menschen mit Penis zum ersten Mal ganz loslassen."
 msgstr ""
 
 #. Frage in „Intim-Massage, Prostata & Damm“: Aussage und Erklärung
@@ -679,9 +679,9 @@ msgid "Ein Auflegevibrator beim gemeinsamen Sex"
 msgstr ""
 
 #. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
-#. EN: Many women come more easily during sex when the clitoris is additionally stimulated evenly. A small vibrator is a fellow player here, not competition.
+#. EN: Many people with a clitoris come more easily during sex when it is additionally stimulated evenly. A small vibrator is a fellow player here, not competition.
 msgctxt "ynm:item_50#explanation"
-msgid "Viele Frauen kommen beim Sex leichter, wenn die Klitoris zusätzlich gleichmäßig stimuliert wird. Ein kleiner Vibrator ist dabei Mitspieler, keine Konkurrenz."
+msgid "Viele Menschen mit Klitoris kommen beim Sex leichter, wenn diese zusätzlich gleichmäßig stimuliert wird. Ein kleiner Vibrator ist dabei Mitspieler, keine Konkurrenz."
 msgstr ""
 
 #. Frage in „Spielzeug & Hilfsmittel“: Aussage und Erklärung
@@ -1099,15 +1099,15 @@ msgid "Rollen & Sinne"
 msgstr ""
 
 #. Fantasie-Karte: Titel, Beschreibung, Schlagwort
-#. EN: 45 min. yoni worship (for her)
+#. EN: 45 min. yoni worship (one person receives)
 msgctxt "fantasy:match_yoni_ritual#title"
-msgid "45 Min. Yoni-Verehrung (Nur für Sie)"
+msgid "45 Min. Yoni-Verehrung (eine Person empfängt)"
 msgstr ""
 
 #. Fantasie-Karte: Titel, Beschreibung, Schlagwort
-#. EN: She only has to lie there, close her eyes and receive – with warm oil, without giving anything in return.
+#. EN: One person simply lies there, closes their eyes and receives, with warm oil, giving nothing in return.
 msgctxt "fantasy:match_yoni_ritual#subtitle"
-msgid "Sie darf nur daliegen, die Augen schließen und empfangen – mit warmem Öl, ohne jede Gegenleistung."
+msgid "Eine Person liegt nur da, schließt die Augen und empfängt, mit warmem Öl, ohne jede Gegenleistung."
 msgstr ""
 
 #. Fantasie-Karte: Titel, Beschreibung, Schlagwort
@@ -1117,9 +1117,9 @@ msgid "Intim-Massage"
 msgstr ""
 
 #. Fantasie-Karte: Titel, Beschreibung, Schlagwort
-#. EN: 45 min. lingam & perineum journey (for him)
+#. EN: 45 min. lingam & perineum journey (one person receives)
 msgctxt "fantasy:match_lingam_ritual#title"
-msgid "45 Min. Lingam- & Damm-Reise (Nur für Ihn)"
+msgid "45 Min. Lingam- & Damm-Reise (eine Person empfängt)"
 msgstr ""
 
 #. Fantasie-Karte: Titel, Beschreibung, Schlagwort

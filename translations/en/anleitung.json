@@ -13,7 +13,7 @@
       "icon": "school",
       "titel": "Courses and lessons",
       "bild": "01_kurse.png",
-      "text": "The Today tab is your start page. At the top is “Your next step”: the next open lesson, at first from the focus area matching your focus. Below it you choose between check-in and spark. All courses are in the Learn tab, grouped into six focus areas: Foundations, Accepting and letting go, Discovering yourself, Desire as a couple, Touch, and Fantasy and play. Tapping a focus area opens its courses; at first the one matching your focus is open. Use the filters above to choose, for example, “For her”, “For him” or “For couples”.\nEvery lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.\nTapping “Mark as completed” counts towards your progress."
+      "text": "The Today tab is your start page. At the top is “Your next step”: the next open lesson, at first from the focus area matching your focus. Below it you choose between check-in and spark. All courses are in the Learn tab, grouped into six focus areas: Foundations, Accepting and letting go, Discovering yourself, Desire as a couple, Touch, and Fantasy and play. Tapping a focus area opens its courses; at first the one matching your focus is open. Use the filters above to choose, for example, “With a vulva”, “With a penis” or “Together”.\nEvery lesson has a text, a recording to listen to and a question to reflect on at the end. Some lessons have a button at the bottom that takes you straight to the matching exercise, such as the pelvic floor timer or a guided audio.\nTapping “Mark as completed” counts towards your progress."
     },
     {
       "id": "finden_weg",
@@ -118,7 +118,7 @@
     "guide:finden_weg": "f4f608d67fd739ce",
     "guide:gefuehrt": "4f7e92c902929646",
     "guide:hilfe": "0f67b34ec65bbd7e",
-    "guide:kurse": "045961b7f5f350ad",
+    "guide:kurse": "dd076bc9dacfdaac",
     "guide:paar": "b55d28b867fc979a",
     "guide:reframing": "a0ea4f55c9482b5e",
     "guide:schlafdaten": "4dee96a0257be825",

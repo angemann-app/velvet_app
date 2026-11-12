@@ -34,7 +34,7 @@ Dein Profil erreichst du jederzeit über das Personen-Symbol oben auf der Starts
 
 <img src="anleitung/01_kurse.png" width="260" alt="Kurse und Lektionen">
 
-Der Tab Heute ist deine Startseite. Oben steht „Dein nächster Schritt“: die nächste offene Lektion, am Anfang aus dem Schwerpunkt deines Fokus. Darunter wählst du zwischen Check-in und Funke. Alle Kurse findest du im Tab Lernen, geordnet nach sechs Schwerpunkten: Grundlagen, Annehmen und Lösen, Sich selbst entdecken, Lust als Paar, Berührung sowie Fantasie und Spiel. Ein Tipp auf einen Schwerpunkt klappt seine Kurse auf; anfangs ist der offen, der zu deinem Fokus passt. Mit den Filtern darüber wählst du zum Beispiel „Für Sie“, „Für Ihn“ oder „Für Paare“.
+Der Tab Heute ist deine Startseite. Oben steht „Dein nächster Schritt“: die nächste offene Lektion, am Anfang aus dem Schwerpunkt deines Fokus. Darunter wählst du zwischen Check-in und Funke. Alle Kurse findest du im Tab Lernen, geordnet nach sechs Schwerpunkten: Grundlagen, Annehmen und Lösen, Sich selbst entdecken, Lust als Paar, Berührung sowie Fantasie und Spiel. Ein Tipp auf einen Schwerpunkt klappt seine Kurse auf; anfangs ist der offen, der zu deinem Fokus passt. Mit den Filtern darüber wählst du zum Beispiel „Mit Vulva“, „Mit Penis“ oder „Zu zweit“.
 
 Jede Lektion hat einen Text, eine Aufnahme zum Anhören und am Ende eine Frage zum Nachdenken. Manche Lektionen haben unten einen Knopf, der dich direkt zur passenden Übung bringt, etwa zum Beckenboden-Timer oder zu einem geführten Audio.
 

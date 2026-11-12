@@ -151,14 +151,14 @@ const List<FantasyOption> defaultFantasyOptions = [
   ),
   FantasyOption(
     id: 'match_yoni_ritual',
-    title: '45 Min. Yoni-Verehrung (Nur für Sie)',
-    subtitle: 'Sie darf nur daliegen, die Augen schließen und empfangen – mit warmem Öl, ohne jede Gegenleistung.',
+    title: '45 Min. Yoni-Verehrung (eine Person empfängt)',
+    subtitle: 'Eine Person liegt nur da, schließt die Augen und empfängt, mit warmem Öl, ohne jede Gegenleistung.',
     tag: 'Intim-Massage',
     icon: Icons.spa_rounded,
   ),
   FantasyOption(
     id: 'match_lingam_ritual',
-    title: '45 Min. Lingam- & Damm-Reise (Nur für Ihn)',
+    title: '45 Min. Lingam- & Damm-Reise (eine Person empfängt)',
     subtitle: 'Eine langsame, beidhändige Ölmassage von Bauch, Damm und Schaft – völlig ohne Leistungs- oder Erfolgsdruck.',
     tag: 'Intim-Massage',
     icon: Icons.self_improvement_rounded,

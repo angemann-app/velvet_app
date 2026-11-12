@@ -408,13 +408,17 @@ class AppLocalizationsDe extends AppLocalizations {
   String get coursesTouch => 'Berührung';
 
   @override
-  String get coursesForHer => 'Für Sie';
+  String get coursesForHer => 'Mit Vulva';
 
   @override
-  String get coursesForHim => 'Für Ihn';
+  String get coursesForHim => 'Mit Penis';
 
   @override
-  String get coursesForCouples => 'Für Paare';
+  String get coursesForCouples => 'Zu zweit';
+
+  @override
+  String get coursesKoerperHilfe =>
+      'Kurse zum Körperwissen. Ihr könnt beides ansehen.';
 
   @override
   String get coursesCoupleChannel => 'PAAR-KANAL';
@@ -1872,10 +1876,10 @@ class AppLocalizationsDe extends AppLocalizations {
       'Die häufigsten mentalen Fallen bei Leistungsangst – und die biologische Wahrheit dahinter. Tippe auf eine Karte, um sie direkt in dein eigenes Journal zu übernehmen.';
 
   @override
-  String get beliefLibraryViewForHer => 'FÜR SIE';
+  String get beliefLibraryViewForHer => 'Für Menschen mit Vulva';
 
   @override
-  String get beliefLibraryViewForHim => 'FÜR IHN';
+  String get beliefLibraryViewForHim => 'Für Menschen mit Penis';
 
   @override
   String get beliefLibraryViewTypicalMisbeliefMentalMovie =>
@@ -3101,10 +3105,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get userProfileEasingPerformancePressure => 'Weniger Druck';
 
   @override
-  String get contentModelsTheArtOfTouchFor => 'BERÜHRUNGSKUNST • FÜR SIE';
+  String get contentModelsTheArtOfTouchFor => 'BERÜHRUNGSKUNST • MIT VULVA';
 
   @override
-  String get contentModelsTouchLabForHim => 'TAST-LABOR • FÜR IHN';
+  String get contentModelsTouchLabForHim => 'TAST-LABOR • MIT PENIS';
 
   @override
   String get contentModelsSelfExploration => 'SELBST ERKUNDEN';
@@ -3122,13 +3126,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get contentModelsBodyPresence => 'KÖRPER-PRÄSENZ';
 
   @override
-  String get contentModelsForHer => 'FÜR SIE';
+  String get contentModelsForHer => 'MIT VULVA';
 
   @override
   String get contentModelsForCouples => 'FÜR PAARE';
 
   @override
-  String get contentModelsForHim => 'FÜR IHN';
+  String get contentModelsForHim => 'MIT PENIS';
 
   @override
   String get yesNoMaybeModelsExcitesMeIDLike =>

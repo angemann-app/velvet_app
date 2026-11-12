@@ -452,9 +452,9 @@ const List<YesNoMaybeCategory> velvetYesNoMaybeCategories = [
       YesNoMaybeItem(
         id: 'item_44',
         categoryId: 'positions_movement',
-        text: 'Sie bestimmt beim Eindringen jeden Millimeter',
+        text: 'Wer aufnimmt, bestimmt beim Eindringen jeden Millimeter',
         explanation:
-            'Er bewegt sich nicht, sie führt und sinkt in ihrem Tempo. Besonders hilfreich bei einem angespannten '
+            'Wer eindringt, bewegt sich nicht; wer aufnimmt, führt und sinkt im eigenen Tempo. Besonders hilfreich bei einem angespannten '
             'Beckenboden oder wenn Eindringen schon einmal wehgetan hat.',
         lessonId: 'pos_3',
       ),
@@ -546,7 +546,7 @@ const List<YesNoMaybeCategory> velvetYesNoMaybeCategories = [
         text: 'Lingam-Massage: lange, absichtslose Massage des Penis',
         explanation:
             'Von der Basis bis zur Spitze, auch im weichen Zustand. Ohne Erwartung an Erektion oder Samenerguss – '
-            'genau das lässt viele Männer zum ersten Mal ganz loslassen.',
+            'genau das lässt viele Menschen mit Penis zum ersten Mal ganz loslassen.',
         lessonId: 'mass_3',
         image: _imgLingam,
       ),
@@ -621,7 +621,7 @@ const List<YesNoMaybeCategory> velvetYesNoMaybeCategories = [
         categoryId: 'toys_aids',
         text: 'Ein Auflegevibrator beim gemeinsamen Sex',
         explanation:
-            'Viele Frauen kommen beim Sex leichter, wenn die Klitoris zusätzlich gleichmäßig stimuliert wird. '
+            'Viele Menschen mit Klitoris kommen beim Sex leichter, wenn diese zusätzlich gleichmäßig stimuliert wird. '
             'Ein kleiner Vibrator ist dabei Mitspieler, keine Konkurrenz.',
       ),
       YesNoMaybeItem(

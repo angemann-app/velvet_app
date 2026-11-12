@@ -240,6 +240,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
                 ],
               ),
             ),
+            if (_selectedCategory == 'women' || _selectedCategory == 'men') ...[
+              const SizedBox(height: VpAbstand.s),
+              Text(t.coursesKoerperHilfe, style: context.vp.typo.beschriftung.copyWith(color: AppTheme.tinteStumm)),
+            ],
 
             const SizedBox(height: VpAbstand.xl),
 

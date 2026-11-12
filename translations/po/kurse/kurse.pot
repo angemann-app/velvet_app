@@ -431,9 +431,9 @@ msgid "3. Jeder Körper ist schön und sexy"
 msgstr ""
 
 #. Kurs: Titel und Untertitel
-#. EN: Out of comparison, into feeling: how women and men can see their bodies with kind eyes and feel desirable in them.
+#. EN: Out of comparison, into feeling: how people of any gender can see their bodies with kind eyes and feel desirable in them.
 msgctxt "course:course_every_body#subtitle"
-msgid "Raus aus dem Vergleich, rein ins Spüren: wie Frauen und Männer ihren Körper mit freundlichen Augen sehen und sich darin begehrenswert fühlen."
+msgid "Raus aus dem Vergleich, rein ins Spüren: wie Menschen jeden Geschlechts ihren Körper mit freundlichen Augen sehen und sich darin begehrenswert fühlen."
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
@@ -443,9 +443,9 @@ msgid "Der Mythos vom perfekten Körper"
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
-#. EN: Where the idea of the “right” body comes from, and how varied the bodies of women and men really are.
+#. EN: Where the idea of the “right” body comes from, and how varied bodies really are.
 msgctxt "lesson:beauty_1#summary"
-msgid "Woher die Vorstellung vom „richtigen“ Körper kommt und wie vielfältig die Körper von Frauen und Männern wirklich sind."
+msgid "Woher die Vorstellung vom „richtigen“ Körper kommt und wie vielfältig Körper wirklich sind."
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
@@ -508,9 +508,9 @@ msgid "Der freundliche Blick in den Spiegel"
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
-#. EN: Describing instead of judging: a mirror exercise for women and men that quietens the inner critic.
+#. EN: Describing instead of judging: a mirror exercise that quietens the inner critic.
 msgctxt "lesson:beauty_2#summary"
-msgid "Beschreiben statt bewerten: eine Spiegel-Übung für Frauen und Männer, die den inneren Kritiker leiser macht."
+msgid "Beschreiben statt bewerten: eine Spiegel-Übung, die den inneren Kritiker leiser macht."
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
@@ -575,9 +575,9 @@ msgid "Sexy ist ein Gefühl, kein Maß"
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
-#. EN: What attraction really is about, and how women and men can feel desirable in their bodies.
+#. EN: What attraction really is about, and how you can feel desirable in your own body.
 msgctxt "lesson:beauty_3#summary"
-msgid "Was Anziehung wirklich ausmacht, und wie sich Frauen und Männer in ihrem Körper begehrenswert fühlen."
+msgid "Was Anziehung wirklich ausmacht, und wie man sich im eigenen Körper begehrenswert fühlt."
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
@@ -642,9 +642,9 @@ msgid "Licht an: Scham im Bett lösen"
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
-#. EN: When the light has to go off or the blanket has to stay on: how women and men can quieten shame together.
+#. EN: When the light has to go off or the blanket has to stay on: how you can quieten shame together.
 msgctxt "lesson:beauty_4#summary"
-msgid "Wenn das Licht ausgehen muss oder die Decke nicht wegdarf: wie Frauen und Männer Scham gemeinsam leiser machen."
+msgid "Wenn das Licht ausgehen muss oder die Decke nicht wegdarf: wie ihr Scham gemeinsam leiser macht."
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
@@ -699,9 +699,9 @@ msgid "Wenn der Körper sich verändert"
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
-#. EN: Pregnancy, ageing, illness, scars: how women and men can stay kind to their bodies, even as they change.
+#. EN: Pregnancy, ageing, illness, scars: how to stay kind to your body, even as it changes.
 msgctxt "lesson:beauty_5#summary"
-msgid "Schwangerschaft, Älterwerden, Krankheit, Narben: wie Frauen und Männer freundlich zu ihrem Körper bleiben, auch wenn er sich verändert."
+msgid "Schwangerschaft, Älterwerden, Krankheit, Narben: wie man freundlich zum eigenen Körper bleibt, auch wenn er sich verändert."
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
@@ -764,9 +764,9 @@ msgid "Verpackt: Wäsche für jeden Körper"
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
-#. EN: Sexy lingerie isn't just for models: how women and men find underwear they like themselves in.
+#. EN: Sexy lingerie isn't just for models: how to find underwear you like yourself in.
 msgctxt "lesson:beauty_6#summary"
-msgid "Erotische Wäsche ist nicht nur für Models: wie Frauen und Männer Wäsche finden, in der sie sich selbst gefallen."
+msgid "Erotische Wäsche ist nicht nur für Models: wie man Wäsche findet, in der man sich selbst gefällt."
 msgstr ""
 
 #. Lektion im Kurs „3. Jeder Körper ist schön und sexy“
@@ -1870,9 +1870,9 @@ msgid "Was hast du auf dieser Reise über dich entdeckt – und was möchtest du
 msgstr ""
 
 #. Kurs: Titel und Untertitel
-#. EN: 9. Female Desire and Body Knowledge
+#. EN: 9. Desire and Body Knowledge with a Vulva
 msgctxt "course:course_female_somatics#title"
-msgid "9. Weibliche Lust und Körperwissen"
+msgid "9. Lust und Körperwissen mit Vulva"
 msgstr ""
 
 #. Kurs: Titel und Untertitel
@@ -1881,19 +1881,19 @@ msgctxt "course:course_female_somatics#subtitle"
 msgid "Beckenboden, Kopfkino, Anatomie und Zyklus – Wissen, das Druck nimmt."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: The Female Pelvic Floor: Letting Go Instead of Holding On
 msgctxt "lesson:female_1#title"
 msgid "Der weibliche Beckenboden: Loslassen statt Festhalten"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: Why many women have a pelvic floor that tends to be too tense – and how targeted opening can help.
 msgctxt "lesson:female_1#summary"
 msgid "Warum viele Frauen einen eher zu angespannten Beckenboden haben – und wie gezieltes Öffnen helfen kann."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: Contracting can be easier to imagine than releasing. The pelvic floor needs both. After childbirth, with bladder weakness or with pain, training needs can differ considerably. This lesson brings attention to an area that may keep holding on when you would like to relax.
 #. EN:
 #. EN: Why it works
@@ -1922,25 +1922,25 @@ msgid ""
 "Schmerzen beim Sex, ein Brennen oder wenn Eindringen gar nicht möglich ist, sind gut behandelbar – aber nicht allein mit einer App. Eine gynäkologische Untersuchung und eine spezialisierte Beckenboden-Physiotherapie können sehr viel bewirken."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: In everyday life or when being touched, can you feel whether your pelvic floor softly yields or unconsciously closes up protectively?
 msgctxt "lesson:female_1#reflection_question"
 msgid "Spürst du im Alltag oder bei Berührung, ob dein Beckenboden weich nachgibt oder unbewusst schützend dichtmacht?"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: Mental Movies and the Pressure to Be Quick Enough
 msgctxt "lesson:female_2#title"
 msgid "Kopfkino und der Druck, schnell genug zu sein"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: How the worry of taking too long or having to orgasm slows desire – and what really awakens it.
 msgctxt "lesson:female_2#summary"
 msgid "Wie die Sorge, zu lange zu brauchen oder kommen zu müssen, die Lust bremst – und was Lust wirklich weckt."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: Women can experience performance pressure too, even when it goes unspoken. While many men fear coming too soon or losing their erection, many women's mental movie circles around similar questions: “I'm taking too long, my partner is getting impatient.” “What do I look like in this position?” “I have to come now so he feels validated.”
 #. EN:
 #. EN: Why it works
@@ -1965,25 +1965,25 @@ msgid ""
 "Und nimm deine wichtigste Bremse in den Blick: Was müsste anders sein, damit du dich in diesem Moment entspannter fühlst? Ein Gedanke dazu gehört ins Reframing-Tagebuch."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: Which expectation or thought is your biggest inner brake when it comes to your own desire?
 msgctxt "lesson:female_2#reflection_question"
 msgid "Welche Erwartung oder welcher Gedanke ist bei dir die größte innere Bremse, wenn es um deine eigene Lust geht?"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: The Clitoris: Bigger Than You Think
 msgctxt "lesson:female_3#title"
 msgid "Die Klitoris: größer, als man denkt"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: Why the clitoris is a whole system of erectile tissue – and why it takes time to awaken.
 msgctxt "lesson:female_3#summary"
 msgid "Warum die Klitoris ein ganzes Schwellkörpersystem ist – und warum es Zeit braucht, bis es erwacht."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: The idea still persists that the clitoris is a small point at the top of the labia. In fact, the visible part is only the tip.
 #. EN:
 #. EN: Why it works
@@ -2006,25 +2006,25 @@ msgid ""
 "Achte dabei auf die Veränderungen: Wärme, Fülle, Feuchtigkeit. Sie können dir etwas über deine körperliche Reaktion sagen. Ob du eine Berührung möchtest, bestimmst du selbst."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: How does it feel to think that plenty of time isn't a long wait, but simply anatomy?
 msgctxt "lesson:female_3#reflection_question"
 msgid "Wie fühlt sich der Gedanke an, dass ausgiebige Zeit kein langes Warten ist, sondern schlicht Anatomie?"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: The Cycle and Desire
 msgctxt "lesson:female_4#title"
 msgid "Der Zyklus und die Lust"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: How hormones can change desire over the month – and why fluctuations are normal.
 msgctxt "lesson:female_4#summary"
 msgid "Wie Hormone das Verlangen über den Monat verändern können – und warum Schwankungen normal sind."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: You may notice days when you seek closeness and others when you would rather be alone. A menstrual cycle can play a part without setting a pattern you can recognise. This lesson invites you to get to know your experience rather than measure it against a calendar.
 #. EN:
 #. EN: Why it works
@@ -2059,25 +2059,25 @@ msgid ""
 "Starke Schmerzen während der Periode, plötzliche anhaltende Lustlosigkeit oder Beschwerden in den Wechseljahren sind ein guter Grund für ein gynäkologisches Gespräch."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: In which phase of your cycle do you most feel like passion, and when more like security and comfort?
 msgctxt "lesson:female_4#reflection_question"
 msgid "In welcher Phase deines Zyklus spürst du am ehesten Lust auf Leidenschaft, und wann eher auf Geborgenheit?"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: Squirting: what we know and what we don’t
 msgctxt "lesson:female_5#title"
 msgid "Squirting: Was man weiß und was nicht"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: Female ejaculation, squirting and urine leakage are not the same thing. What studies show, what is open, and why nobody has to experience it.
 msgctxt "lesson:female_5#summary"
 msgid "Weibliche Ejakulation, Squirting und Harnverlust sind nicht dasselbe. Was Studien zeigen, was offen ist, und warum niemand es erleben muss."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: An experience can bring curiosity and leave questions behind. With squirting, images and claims often crowd out the space for your own response. This lesson grew from a community question and separates what is known from what remains open.
 #. EN:
 #. EN: Few topics come with as many claims as squirting. Here is what is established and what stays open.
@@ -2124,25 +2124,25 @@ msgid ""
 "Bei Brennen beim Wasserlassen, Blut im Urin, Schmerzen beim Sex oder ungewolltem Harnverlust im Alltag oder beim Sex, der dich belastet, sprich mit einer Ärztin oder einem Arzt. Beckenbodentraining kann helfen."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: When exploring, what matters more to you: experiencing something specific, or feeling at ease, even if nothing happens?
 msgctxt "lesson:female_5#reflection_question"
 msgid "Was ist dir beim Erkunden wichtiger: etwas Bestimmtes zu erleben oder dich dabei wohlzufühlen, auch wenn nichts passiert?"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: The cervix: anatomy, sensations, caution
 msgctxt "lesson:female_6#title"
 msgid "Der Gebärmutterhals: Anatomie, Empfindungen, Vorsicht"
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: What the cervix is, what research says about sensations and “cervical orgasms”, and why depth is no yardstick.
 msgctxt "lesson:female_6#summary"
 msgid "Was der Gebärmutterhals ist, was Forschung über Empfindungen und „Gebärmutterhals-Orgasmen“ sagt, und warum Tiefe kein Maßstab ist."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: Discussions of the cervix often come with sweeping promises. Here we begin with the body itself: location, sensitivity and differences in experience. This community question gets a framework in which curiosity and clear boundaries can sit alongside each other.
 #. EN:
 #. EN: The cervix is the lower, narrow part of the womb and reaches into the top of the vagina. With a finger you can feel it as a firm bump with a small opening, the cervical os.
@@ -2189,7 +2189,7 @@ msgid ""
 "Tiefe Schmerzen beim Sex können auf Endometriose, Entzündungen, Zysten oder Verspannungen hinweisen. Blutungen nach dem Sex außerhalb der Periode, Ausfluss mit Geruch, Fieber oder Unterbauchschmerz gehören ärztlich abgeklärt. Nicht „durchhalten“."
 msgstr ""
 
-#. Lektion im Kurs „9. Weibliche Lust und Körperwissen“
+#. Lektion im Kurs „9. Lust und Körperwissen mit Vulva“
 #. EN: How does pressure deep in the vagina feel to you, neutral, pleasant or rather unpleasant, and what follows from that for you?
 msgctxt "lesson:female_6#reflection_question"
 msgid "Wie fühlt sich Druck tief in der Scheide für dich an, neutral, angenehm oder eher unangenehm, und was folgt für dich daraus?"
@@ -4217,9 +4217,9 @@ msgid "Fällt es dir leichter, ein Grün auszusprechen oder ein Gelb?"
 msgstr ""
 
 #. Kurs: Titel und Untertitel
-#. EN: 18. Touch That Carries (For Her)
+#. EN: 18. Touch That Carries (with a vulva)
 msgctxt "course:course_touch_women#title"
-msgid "18. Berührung, die trägt (Für Sie)"
+msgid "18. Berührung, die trägt (mit Vulva)"
 msgstr ""
 
 #. Kurs: Titel und Untertitel
@@ -4228,19 +4228,19 @@ msgctxt "course:course_touch_women#subtitle"
 msgid "Was die Lustforschung über Rhythmus, Umkreisen, Pausen und Reiz-Schichtung weiß – und warum Langsamkeit dabei die Bremse löst."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Consistency: When “Just Like That” Is Allowed to Stay Just Like That
 msgctxt "lesson:touch_w_1#title"
 msgid "Gleichmäßigkeit: Wenn genau so genau so bleiben darf"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Why a sudden change of pace often cuts off rising arousal – and how a steady rhythm carries it.
 msgctxt "lesson:touch_w_1#summary"
 msgid "Warum ein plötzlicher Tempowechsel die aufsteigende Erregung oft abreißen lässt – und wie ein beständiger Rhythmus sie trägt."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Many women know this moment: a touch finally feels right, the breath deepens, the pelvis moves along slightly – and a “yes, just like that” slips out. The partner takes it as a starting signal, speeds up, presses harder or changes the spot. And the feeling that was within reach a moment ago is gone.
 #. EN:
 #. EN: Why it works
@@ -4271,25 +4271,25 @@ msgid ""
 "Was „genau so“ bedeutet, kann nur {W:sie} sagen. Fragt nach, statt zu raten, und vereinbart, dass ein kurzes „langsamer“, „fester“ oder „anders“ jederzeit willkommen ist – ohne dass sich jemand kritisiert fühlen muss."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Do you recognise a moment when a rising wave fizzled out because the touch suddenly became faster or more goal-directed – and what would you have wished for in that moment?
 msgctxt "lesson:touch_w_1#reflection_question"
 msgid "Erkennst du einen Moment, in dem eine aufsteigende Welle verpufft ist, weil die Berührung plötzlich schneller oder zielstrebiger wurde – und was hättest du dir in diesem Moment gewünscht?"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Circling and the Flat Finger
 msgctxt "lesson:touch_w_2#title"
 msgid "Umkreisen und der flache Finger"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Why direct, pointed pressure on the clitoris often overstimulates – and how wide circles and flat fingers awaken all the tissue.
 msgctxt "lesson:touch_w_2#summary"
 msgid "Warum direkter, spitzer Druck auf die Klitoris oft überreizt – und wie weite Kreise und flache Finger das ganze Gewebe wecken."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: A small area can be intensely sensitive. For many, the visible clitoral glans responds strongly to direct touch; comfort depends on pressure, the moment and personal preference. It is worth beginning attentively and being shown which touch is welcome.
 #. EN:
 #. EN: Why it works
@@ -4316,25 +4316,25 @@ msgid ""
 "Jeder Körper reagiert anders, und an verschiedenen Tagen auch unterschiedlich. Fragt nach („Mehr Druck oder weniger?“) und lasst euch zeigen, was gerade gut ist – etwa indem ihre Hand die Hand des Gegenübers führt. Ausreichend Gleitmittel schützt die empfindliche Haut. Wenn Berührung im Genitalbereich regelmäßig brennt oder schmerzt, lohnt sich eine gynäkologische Abklärung."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: What difference arises in your body when touch doesn't target a single point, but sets the whole tissue in motion flat and broad?
 msgctxt "lesson:touch_w_2#reflection_question"
 msgid "Welcher Unterschied entsteht in deinem Körper, wenn die Berührung nicht auf einen Punkt zielt, sondern flach und breit das ganze Gewebe in Bewegung versetzt?"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Waves Instead of a Sprint: Enjoying the Plateau
 msgctxt "lesson:touch_w_3#title"
 msgid "Wellen statt Sprint: Das Plateau genießen"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: How consciously letting arousal rise and subside removes time pressure – and often makes orgasm, when it comes, deeper.
 msgctxt "lesson:touch_w_3#summary"
 msgid "Wie bewusstes Steigen und Abklingenlassen der Erregung den Zeitdruck herausnimmt – und den Höhepunkt, wenn er kommt, oft tiefer macht."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: In films, female arousal looks like a light switch: touched briefly, sped up, done. Many women experience it differently. Their arousal builds in waves, and it is precisely the time at a high level, the so-called plateau, that makes the difference for many.
 #. EN:
 #. EN: Why it works
@@ -4363,25 +4363,25 @@ msgid ""
 "Zu zweit braucht es dafür ein Zeichen, etwa eine Hand auf der Hand des Gegenübers für „jetzt langsamer“. Für die berührende Person gilt: Das Abklingen ist kein Fehler, sondern Teil des Spiels."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: What happens to your inner time pressure when you plan to visit seven several times today and let it subside again, without thinking about a finale?
 msgctxt "lesson:touch_w_3#reflection_question"
 msgid "Was passiert mit deinem inneren Zeitdruck, wenn du dir vornimmst, die Sieben heute mehrmals zu besuchen und wieder abklingen zu lassen, ohne an ein Finale zu denken?"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Layering Sensations: When the Mind May Take a Break
 msgctxt "lesson:touch_w_4#title"
 msgid "Reiz-Schichtung: Wenn der Kopf Pause machen darf"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: How several calm stimuli at once – outside, inside and in the breath – leave no room for the brooding mind.
 msgctxt "lesson:touch_w_4#summary"
 msgid "Wie mehrere ruhige Reize zugleich – außen, innen und im Atem – dem grübelnden Verstand keinen Platz mehr lassen."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Some women experience lovely touch and still can't get out of their heads on the final stretch. “Will I come or not? Is it taking too long?” Attention can move back and forth between a sensation and the judgement of it.
 #. EN:
 #. EN: Why it works
@@ -4412,25 +4412,25 @@ msgid ""
 "Ob und was eindringen darf, entscheidet {W:sie} – jedes Mal neu. Die zweite Schicht funktioniert auch vollständig von außen. Fragt nach, bevor sich etwas Grundlegendes ändert, und haltet Gleitmittel bereit."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“
 #. EN: Which combination of movement and calm, heavy holding gives your body the strongest sense of being allowed to let go?
 msgctxt "lesson:touch_w_4#reflection_question"
 msgid "Welche Kombination aus Bewegung und ruhigem, schwerem Halt gibt deinem Körper das stärkste Gefühl, sich fallen lassen zu dürfen?"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: Spicy: Pleasuring the Clitoris Properly
 msgctxt "lesson:touch_w_s1#title"
 msgid "Spicy: Die Klitoris richtig verwöhnen"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: Techniques, pace and pressure for the clitoris, with hand, mouth and toy, up to multiple orgasms.
 msgctxt "lesson:touch_w_s1#summary"
 msgid "Techniken, Tempo und Druck für die Klitoris, mit Hand, Mund und Toy, bis zu mehreren Höhepunkten."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: Good touch begins with attention: noticing what is welcome and responding to it. With the clitoris, patience matters especially. The glans is the part most visible from outside, partly or fully covered by its hood; the body and crura lie mainly within. The kind of touch she enjoys is something you can discover together, through touch and her response.
 #. EN:
 #. EN: Start before you start
@@ -4479,25 +4479,25 @@ msgid ""
 "Nehmt euch eine halbe Stunde, in der nur die Frau verwöhnt wird. Probiert jede Technik eine Minute lang, sie sagt eine Zahl von eins bis zehn. Am Ende kommt die Technik mit der höchsten Zahl, so lange sie will."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: Which technique surprised you, and what made it special?
 msgctxt "lesson:touch_w_s1#reflection_question"
 msgid "Welche Technik hat überrascht, und was hat sie besonders gemacht?"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: Spicy: trying squirting, alone and together
 msgctxt "lesson:touch_w_s2#title"
 msgid "Spicy: Squirting ausprobieren, allein und zu zweit"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: No technique with a success guarantee, just possibilities to be curious: separate for alone and together, with stop and without a goal.
 msgctxt "lesson:touch_w_s2#summary"
 msgid "Keine Technik mit Erfolgsgarantie, sondern Möglichkeiten zum Neugierigsein: getrennt für allein und zu zweit, mit Stopp und ohne Ziel."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: This lesson began with a question from the community. You are curious about squirting or want to understand an experience of your own. Here you will find room to explore and clear guidance. The exploration is yours; a particular result is not the goal.
 #. EN:
 #. EN: First: the techniques described here are not a scientifically established procedure with a predictable result. They draw mainly on personal experience and guides. If nothing happens, it was still a valid try. Pain, burning or discomfort mean stop.
@@ -4544,25 +4544,25 @@ msgid ""
 "Brennen, Blut, anhaltende Schmerzen oder Harnverlust, der dich belastet: ärztlich abklären lassen."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: What would make it easier for you to relax while trying: a pad, a stop word, a talk beforehand?
 msgctxt "lesson:touch_w_s2#reflection_question"
 msgid "Was würde es dir leichter machen, dich beim Ausprobieren zu entspannen: eine Unterlage, ein Stoppwort, ein Gespräch vorher?"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: Spicy: deep touch, alone and together
 msgctxt "lesson:touch_w_s3#title"
 msgid "Spicy: Tiefe Berührung, allein und zu zweit"
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: Deep touch without a goal: safety first, the person with the cervix controls depth, separate for alone and together.
 msgctxt "lesson:touch_w_s3#summary"
 msgid "Tiefe Berührung ohne Ziel: Sicherheit zuerst, die Person mit Gebärmutterhals steuert die Tiefe, getrennt für allein und zu zweit."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: This subject also comes from a community request. Deeper touch invites curiosity and calls for a clear sense of your boundaries. This lesson offers guidance: pay attention, choose deliberately and stay with what feels good to you.
 #. EN:
 #. EN: The practice described here is not a scientifically established procedure with a particular outcome. This text combines personal experience with general sexual-health guidance. Depth is no yardstick, and nobody has to like it. **Pain, cramps or pressure with discomfort mean stop**, always, without justification. Because arousal dulls pain, it can show up later at high arousal: take pain after sex seriously. Some programmes say pain at the start is part of discovery or only shows you have not felt your body enough so far. That is not true: pain is a signal, not a rite of passage.
@@ -4609,16 +4609,16 @@ msgid ""
 "Wiederkehrende tiefe Schmerzen oder Blutungen nach dem Sex gehören ärztlich abgeklärt. Bei starken oder zunehmenden Schmerzen, Fieber, Kreislaufproblemen oder stärkerer Blutung rasch medizinische Hilfe suchen; nicht erst eine Woche abwarten."
 msgstr ""
 
-#. Lektion im Kurs „18. Berührung, die trägt (Für Sie)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „18. Berührung, die trägt (mit Vulva)“ (nur im Spicy-Modus)
 #. EN: Who decides depth for the two of you, and how do you say “stop” so that it is easy to hear?
 msgctxt "lesson:touch_w_s3#reflection_question"
 msgid "Wer bestimmt bei euch die Tiefe, und wie sagst du „Stopp“ so, dass es leicht ist, es auch zu hören?"
 msgstr ""
 
 #. Kurs: Titel und Untertitel
-#. EN: 19. Relearning Touch (For Him)
+#. EN: 19. Relearning Touch (with a penis)
 msgctxt "course:course_touch_men#title"
-msgid "19. Berührung neu lernen (Für Ihn)"
+msgid "19. Berührung neu lernen (mit Penis)"
 msgstr ""
 
 #. Kurs: Titel und Untertitel
@@ -4627,19 +4627,19 @@ msgctxt "course:course_touch_men#subtitle"
 msgid "Wie feinere Berührung, ein entspanntes Becken und frühes Gegensteuern zu mehr Gefühl und natürlicher Ausdauer führen."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Open Hand Instead of Death Grip
 msgctxt "lesson:touch_m_1#title"
 msgid "Offene Hand statt Klammergriff"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Why a firm, dry grip trained over years can dull sensation – and how to retune your nervous system.
 msgctxt "lesson:touch_m_1#summary"
 msgid "Warum ein jahrelang trainierter fester, trockener Griff die Empfindung abstumpfen kann – und wie du dein Nervensystem neu einstimmst."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Since adolescence, many men have got used to masturbating quickly, dry and with a very firm grip. Alone, that works reliably – and precisely because of that it can become a problem in an encounter with another person. This is sometimes called the death-grip pattern in everyday language; it is not a separate medical diagnosis.
 #. EN:
 #. EN: Why it works
@@ -4676,25 +4676,25 @@ msgid ""
 "Wenn Erektionsprobleme unabhängig von der Situation auftreten, etwa auch morgens oder bei der Selbstbefriedigung, lass das ärztlich abklären. Erektionsstörungen können ein frühes Warnzeichen für Herz-Kreislauf-Erkrankungen oder Diabetes sein."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: When you compare your usual way of touching yourself with the soft warmth of another body – how much has your nervous system adjusted to firm pressure so far?
 msgctxt "lesson:touch_m_1#reflection_question"
 msgid "Wenn du deine gewohnte Art der Selbstberührung mit der weichen Wärme eines anderen Körpers vergleichst – wie sehr hat sich dein Nervensystem bisher auf festen Druck eingestellt?"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Including the Whole Pelvis: Root, Groin and Perineum
 msgctxt "lesson:touch_m_2#title"
 msgid "Das ganze Becken einbeziehen: Wurzel, Leisten und Damm"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Why focusing on the glans often rushes towards orgasm – and how touch at the base makes arousal deeper and calmer.
 msgctxt "lesson:touch_m_2#summary"
 msgid "Warum der Fokus auf die Eichel oft schnell zum Höhepunkt drängt – und wie Berührung an der Basis Erregung tiefer und ruhiger macht."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Many men who come too soon or are under performance pressure focus all their attention on a few centimetres: the glans and the frenulum on its underside. That's where particularly sensitive nerve endings sit that quickly trigger the ejaculation reflex – especially when the pelvic floor is tight with tension at the same time.
 #. EN:
 #. EN: Why it works
@@ -4725,25 +4725,25 @@ msgid ""
 "Für manche Männer ist Berührung am Damm ungewohnt oder mit Scham besetzt. Dass sie angenehm sein kann, hat nichts mit sexueller Orientierung zu tun, sondern mit Anatomie. Geh in deinem Tempo vor. Zu zweit gilt: Die berührte Person sagt, wie viel Druck gut ist."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: How does your body react when the glans is left alone for a while and the root and perineum are touched warmly and calmly instead?
 msgctxt "lesson:touch_m_2#reflection_question"
 msgid "Wie reagiert dein Körper, wenn die Eichel eine Weile in Ruhe gelassen wird und stattdessen die Wurzel und der Damm warm und ruhig berührt werden?"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Surfing the Waves: Stamina Through More Feeling, Not Less
 msgctxt "lesson:touch_m_3#title"
 msgid "Wellen surfen: Ausdauer durch mehr Gefühl statt weniger"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Why distraction and numbing aren't the solution – and how to learn to read your arousal early and steer in time.
 msgctxt "lesson:touch_m_3#summary"
 msgid "Warum Ablenkung und Betäubung nicht die Lösung sind – und wie du lernst, deine Erregung früh zu lesen und rechtzeitig gegenzusteuern."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: When you reach orgasm sooner than you want, the next encounter can start to feel like a test. Here you practise noticing changes in arousal earlier and choosing a pause. Medical options, including appropriate topical medication, also exist. The right support depends on your situation.
 #. EN:
 #. EN: Why it works
@@ -4778,25 +4778,25 @@ msgid ""
 "Wenn der Samenerguss fast immer innerhalb kurzer Zeit kommt und dich belastet, gibt es neben diesem Training auch gute urologische und sexualtherapeutische Hilfe."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: How do you recognise in your body – in your breath, pelvic floor or a pull in your testicles – that you're moving from a relaxed six to an eight?
 msgctxt "lesson:touch_m_3#reflection_question"
 msgid "Woran erkennst du in deinem Körper – an Atem, Beckenboden oder einem Ziehen in den Hoden –, dass du gerade von einer entspannten Sechs auf eine Acht wechselst?"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Letting Go Instead of Clenching: The Relaxed Pelvic Floor
 msgctxt "lesson:touch_m_4#title"
 msgid "Loslassen statt Zukneifen: Der entspannte Beckenboden"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Why many men unconsciously tense their buttocks and pelvic floor at high arousal – and how actively softening calms the reflex.
 msgctxt "lesson:touch_m_4#summary"
 msgid "Warum viele Männer bei hoher Erregung unbewusst Po und Beckenboden anspannen – und wie aktives Weichwerden den Reflex beruhigt."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Watch yourself next time it gets really intense. In that moment many men reflexively tense their buttocks, clench the pelvic floor and hold their breath. It feels like control – but often has the opposite effect.
 #. EN:
 #. EN: Why it works
@@ -4825,25 +4825,25 @@ msgid ""
 "Diese Übung ist rein körperlich und für dich allein gut machbar. Wenn du sie zu zweit ausprobierst, hilft ein kurzer Satz vorab: „Ich übe gerade, locker zu bleiben – lass uns langsam machen.“"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Right now, while reading, can you consciously let your buttocks and pelvic floor sink a little softer as you breathe in? What do you feel?
 msgctxt "lesson:touch_m_4#reflection_question"
 msgid "Kannst du jetzt, beim Lesen, deinen Po und deinen Beckenboden beim Einatmen bewusst noch ein Stück weicher sinken lassen? Was spürst du dabei?"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Orgasm and Ejaculation: Two Processes That Can Be Separated
 msgctxt "lesson:touch_m_5#title"
 msgid "Höhepunkt und Samenerguss: Zwei Vorgänge, die sich trennen lassen"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: Why male orgasm and ejaculation aren't the same thing – and what that can mean for pressure, stamina and pleasure.
 msgctxt "lesson:touch_m_5#summary"
 msgid "Warum der männliche Orgasmus und die Ejakulation nicht dasselbe sind – und was das für Druck, Ausdauer und Genuss bedeuten kann."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: For many men it's a law of nature: orgasm means ejaculation, and then it's over. The erection fades, tiredness comes, the game is finished.
 #. EN:
 #. EN: Why it works
@@ -4872,25 +4872,25 @@ msgid ""
 "Mach daraus kein Projekt, das dein Gegenüber beobachten oder bewerten muss. Und wenn bei dem Versuch Schmerzen, ein dauerhaftes Druckgefühl in den Hoden oder Blut im Sperma auftreten, brich ab und lass das ärztlich abklären."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“
 #. EN: How does your view of stamina change when the goal of sex is no longer a single moment at the end, but feeling along the way?
 msgctxt "lesson:touch_m_5#reflection_question"
 msgid "Wie verändert sich dein Blick auf Ausdauer, wenn das Ziel beim Sex nicht mehr ein einziger Moment am Ende ist, sondern das Spüren auf dem Weg dorthin?"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“ (nur im Spicy-Modus)
 #. EN: Spicy: Handwork That Blows Him Away
 msgctxt "lesson:touch_m_s1#title"
 msgid "Spicy: Handarbeit, die umhaut"
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“ (nur im Spicy-Modus)
 #. EN: Grips, pace and the most sensitive spots: how hands can really pleasure a penis.
 msgctxt "lesson:touch_m_s1#summary"
 msgid "Griffe, Tempo und die empfindlichsten Stellen: wie Hände einen Penis richtig verwöhnen."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“ (nur im Spicy-Modus)
 #. EN: A hand learns through feedback. Change a familiar movement, adjust the pace, soften your grip. Technique becomes an attentive exchange. Pleasuring a penis by hand means more than moving up and down. Find out what he enjoys in that moment.
 #. EN:
 #. EN: The most sensitive spots
@@ -4943,7 +4943,7 @@ msgid ""
 "Eine halbe Stunde nur für ihn. Probiert jeden Griff eine Minute lang, er sagt eine Zahl von eins bis zehn. Am Ende kommt der Griff mit der höchsten Zahl, mit zweimal Kante vor dem Höhepunkt."
 msgstr ""
 
-#. Lektion im Kurs „19. Berührung neu lernen (Für Ihn)“ (nur im Spicy-Modus)
+#. Lektion im Kurs „19. Berührung neu lernen (mit Penis)“ (nur im Spicy-Modus)
 #. EN: Which grip was new for you, and which one is staying?
 msgctxt "lesson:touch_m_s1#reflection_question"
 msgid "Welcher Griff war neu für euch, und welcher bleibt?"
@@ -5477,9 +5477,9 @@ msgid "Wiegen statt Stoßen: Die hohe Verschmelzung"
 msgstr ""
 
 #. Lektion im Kurs „22. Stellungen, die entspannen: Winkel, Nähe und Ausdauer“
-#. EN: A variation of the missionary position that encourages contact with the clitoris and takes the thrusting stress off the man.
+#. EN: A variation of the missionary position that encourages contact with the clitoris and takes the thrusting stress off the penetrating person.
 msgctxt "lesson:pos_1#summary"
-msgid "Eine Variante der Missionarsstellung, die Kontakt zur Klitoris fördert und dem Mann den Stoß-Stress nimmt."
+msgid "Eine Variante der Missionarsstellung, die Kontakt zur Klitoris fördert und der eindringenden Person den Stoß-Stress nimmt."
 msgstr ""
 
 #. Lektion im Kurs „22. Stellungen, die entspannen: Winkel, Nähe und Ausdauer“
@@ -7549,9 +7549,9 @@ msgid "Identitäts-Verzerrung"
 msgstr ""
 
 #. Glaubenssatz mit Gegenstück
-#. EN: My worth as a man depends directly on how hard my erection is.
+#. EN: My worth depends directly on how hard my erection is.
 msgctxt "belief:belief_masculinity#irrational_thought"
-msgid "Mein Wert als Mann hängt direkt von der Härte meiner Erektion ab."
+msgid "Mein Wert hängt direkt von der Härte meiner Erektion ab."
 msgstr ""
 
 #. Glaubenssatz mit Gegenstück
@@ -7723,9 +7723,9 @@ msgid "Wenn mein Körper noch nicht hart oder noch nicht feucht ist, beweist das
 msgstr ""
 
 #. Glaubenssatz mit Gegenstück
-#. EN: Research calls this arousal non-concordance: desire in the mind and the genital response often don't move in step. A man can burn with desire while his penis is still soft, for example because there is still tension in his body. A woman can be deeply aroused and still stay dry, for example depending on her cycle, age or medication.
+#. EN: Research calls this arousal non-concordance: desire in the mind and the genital response often don't move in step. Someone with a penis can burn with desire while it is still soft, for example because there is still tension in the body. Someone with a vulva can be deeply aroused and still stay dry, for example depending on cycle, age or medication.
 msgctxt "belief:belief_non_concordance#reality_check"
-msgid "Die Forschung nennt das fehlende Übereinstimmung von Kopf und Körper (englisch arousal non-concordance): Lust im Kopf und Reaktion der Genitalien laufen oft nicht im Gleichschritt. Ein Mann kann vor Lust brennen, während sein Penis noch weich ist, etwa weil noch Anspannung im Körper steckt. Eine Frau kann tief erregt sein und trotzdem trocken bleiben, zum Beispiel je nach Zyklus, Alter oder Medikamenten."
+msgid "Die Forschung nennt das fehlende Übereinstimmung von Kopf und Körper (englisch arousal non-concordance): Lust im Kopf und Reaktion der Genitalien laufen oft nicht im Gleichschritt. Wer einen Penis hat, kann vor Lust brennen, während er noch weich ist, etwa weil noch Anspannung im Körper steckt. Wer eine Vulva hat, kann tief erregt sein und trotzdem trocken bleiben, zum Beispiel je nach Zyklus, Alter oder Medikamenten."
 msgstr ""
 
 #. Glaubenssatz mit Gegenstück
@@ -7753,9 +7753,9 @@ msgid "Einer bekommt die Augen verbunden und weiß nicht, ob als Nächstes warme
 msgstr ""
 
 #. Wunsch-Karte
-#. EN: 45 minutes of yoni worship (for her)
+#. EN: 45 minutes of yoni worship (one person receives)
 msgctxt "match:match_yoni_ritual#title"
-msgid "45 Minuten Yoni-Verehrung (Nur für Sie)"
+msgid "45 Minuten Yoni-Verehrung (eine Person empfängt)"
 msgstr ""
 
 #. Wunsch-Karte
@@ -7765,15 +7765,15 @@ msgid "Intim-Massage"
 msgstr ""
 
 #. Wunsch-Karte
-#. EN: She only has to lie there, close her eyes and receive – with warm oil, without giving anything in return.
+#. EN: One person simply lies there, closes their eyes and receives, with warm oil, giving nothing in return.
 msgctxt "match:match_yoni_ritual#description"
-msgid "Sie darf nur daliegen, die Augen schließen und empfangen – mit warmem Öl, ohne jede Gegenleistung."
+msgid "Eine Person liegt nur da, schließt die Augen und empfängt, mit warmem Öl, ohne jede Gegenleistung."
 msgstr ""
 
 #. Wunsch-Karte
-#. EN: 45-minute lingam and perineum journey (for him)
+#. EN: 45-minute lingam and perineum journey (one person receives)
 msgctxt "match:match_lingam_ritual#title"
-msgid "45 Minuten Lingam- und Damm-Reise (Nur für Ihn)"
+msgid "45 Minuten Lingam- und Damm-Reise (eine Person empfängt)"
 msgstr ""
 
 #. Wunsch-Karte

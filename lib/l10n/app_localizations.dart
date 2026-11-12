@@ -815,20 +815,26 @@ abstract class AppLocalizations {
   /// No description provided for @coursesForHer.
   ///
   /// In de, this message translates to:
-  /// **'Für Sie'**
+  /// **'Mit Vulva'**
   String get coursesForHer;
 
   /// No description provided for @coursesForHim.
   ///
   /// In de, this message translates to:
-  /// **'Für Ihn'**
+  /// **'Mit Penis'**
   String get coursesForHim;
 
   /// No description provided for @coursesForCouples.
   ///
   /// In de, this message translates to:
-  /// **'Für Paare'**
+  /// **'Zu zweit'**
   String get coursesForCouples;
+
+  /// No description provided for @coursesKoerperHilfe.
+  ///
+  /// In de, this message translates to:
+  /// **'Kurse zum Körperwissen. Ihr könnt beides ansehen.'**
+  String get coursesKoerperHilfe;
 
   /// No description provided for @coursesCoupleChannel.
   ///
@@ -3253,13 +3259,13 @@ abstract class AppLocalizations {
   /// No description provided for @beliefLibraryViewForHer.
   ///
   /// In de, this message translates to:
-  /// **'FÜR SIE'**
+  /// **'Für Menschen mit Vulva'**
   String get beliefLibraryViewForHer;
 
   /// No description provided for @beliefLibraryViewForHim.
   ///
   /// In de, this message translates to:
-  /// **'FÜR IHN'**
+  /// **'Für Menschen mit Penis'**
   String get beliefLibraryViewForHim;
 
   /// No description provided for @beliefLibraryViewTypicalMisbeliefMentalMovie.
@@ -5320,13 +5326,13 @@ abstract class AppLocalizations {
   /// No description provided for @contentModelsTheArtOfTouchFor.
   ///
   /// In de, this message translates to:
-  /// **'BERÜHRUNGSKUNST • FÜR SIE'**
+  /// **'BERÜHRUNGSKUNST • MIT VULVA'**
   String get contentModelsTheArtOfTouchFor;
 
   /// No description provided for @contentModelsTouchLabForHim.
   ///
   /// In de, this message translates to:
-  /// **'TAST-LABOR • FÜR IHN'**
+  /// **'TAST-LABOR • MIT PENIS'**
   String get contentModelsTouchLabForHim;
 
   /// No description provided for @contentModelsSelfExploration.
@@ -5362,7 +5368,7 @@ abstract class AppLocalizations {
   /// No description provided for @contentModelsForHer.
   ///
   /// In de, this message translates to:
-  /// **'FÜR SIE'**
+  /// **'MIT VULVA'**
   String get contentModelsForHer;
 
   /// No description provided for @contentModelsForCouples.
@@ -5374,7 +5380,7 @@ abstract class AppLocalizations {
   /// No description provided for @contentModelsForHim.
   ///
   /// In de, this message translates to:
-  /// **'FÜR IHN'**
+  /// **'MIT PENIS'**
   String get contentModelsForHim;
 
   /// No description provided for @yesNoMaybeModelsExcitesMeIDLike.

@@ -731,21 +731,27 @@ msgid "Berührung"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: For her
+#. EN: With a vulva
 msgctxt "ui:coursesForHer#text"
-msgid "Für Sie"
+msgid "Mit Vulva"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: For him
+#. EN: With a penis
 msgctxt "ui:coursesForHim#text"
-msgid "Für Ihn"
+msgid "Mit Penis"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: For couples
+#. EN: Together
 msgctxt "ui:coursesForCouples#text"
-msgid "Für Paare"
+msgid "Zu zweit"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Courses about body knowledge. You can look at both.
+msgctxt "ui:coursesKoerperHilfe#text"
+msgid "Kurse zum Körperwissen. Ihr könnt beides ansehen."
 msgstr ""
 
 #. Text der Oberfläche
@@ -3199,15 +3205,15 @@ msgid "Die häufigsten mentalen Fallen bei Leistungsangst – und die biologisch
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: FOR HER
+#. EN: For people with a vulva
 msgctxt "ui:beliefLibraryViewForHer#text"
-msgid "FÜR SIE"
+msgid "Für Menschen mit Vulva"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: FOR HIM
+#. EN: For people with a penis
 msgctxt "ui:beliefLibraryViewForHim#text"
-msgid "FÜR IHN"
+msgid "Für Menschen mit Penis"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5299,15 +5305,15 @@ msgid "Weniger Druck"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: THE ART OF TOUCH • FOR HER
+#. EN: THE ART OF TOUCH • WITH A VULVA
 msgctxt "ui:contentModelsTheArtOfTouchFor#text"
-msgid "BERÜHRUNGSKUNST • FÜR SIE"
+msgid "BERÜHRUNGSKUNST • MIT VULVA"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: TOUCH LAB • FOR HIM
+#. EN: TOUCH LAB • WITH A PENIS
 msgctxt "ui:contentModelsTouchLabForHim#text"
-msgid "TAST-LABOR • FÜR IHN"
+msgid "TAST-LABOR • MIT PENIS"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5341,9 +5347,9 @@ msgid "KÖRPER-PRÄSENZ"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: FOR HER
+#. EN: WITH A VULVA
 msgctxt "ui:contentModelsForHer#text"
-msgid "FÜR SIE"
+msgid "MIT VULVA"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5353,9 +5359,9 @@ msgid "FÜR PAARE"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: FOR HIM
+#. EN: WITH A PENIS
 msgctxt "ui:contentModelsForHim#text"
-msgid "FÜR IHN"
+msgid "MIT PENIS"
 msgstr ""
 
 #. Text der Oberfläche
