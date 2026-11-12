@@ -1550,5 +1550,56 @@
         "type": "int"
       }
     }
-  }
+  },
+  "trennungDialog1Titel": "Disconnect?",
+  "trennungDialog1": "The history with {name}, {name}'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nOn {name}'s phone, whatever is there stays until they delete it themselves. We'll send a short notice; if it doesn't arrive (app closed, no connection), nothing changes there.",
+  "@trennungDialog1": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungDialog1Weiter": "Continue",
+  "trennungDialog2Titel": "Really disconnect?",
+  "trennungDialog2": "This can only be undone by pairing again.",
+  "trennungDialog2Ja": "Yes, disconnect",
+  "trennungNichtGesendet": "Disconnected. The notice to {name} didn't go through. On {name}'s phone everything stays until they delete it themselves.",
+  "@trennungNichtGesendet": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungHinweis": "{name} has ended the connection. You don't need to do anything, and there's no hurry. The chat stays readable here for as long as you like.",
+  "@trennungHinweis": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungSchalter": "Also disconnect on this phone and delete this connection's data",
+  "trennungGegenueberDialog1Titel": "Disconnect on this phone?",
+  "trennungGegenueberDialog1": "The history with {name}, {name}'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nYou can also wait. Nothing is deleted until you confirm.",
+  "@trennungGegenueberDialog1": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungGegenueberDialog2Titel": "Really delete?",
+  "trennungGegenueberDialog2": "This can't be brought back.",
+  "trennungGegenueberLoeschenJa": "Yes, delete",
+  "trennungGegenueberFertig": "Disconnected on this phone.",
+  "trennungSatzAelter": "The connection was ended.",
+  "spicyEinladungNein": "Not right now",
+  "spicyNeinSatz": "Not right now, thank you.",
+  "spicyEinladungNeinAntwort": "Thank you for telling me. There's no rush.",
+  "spicyEinladungNeinGesendet": "You've replied. You can change your mind any time.",
+  "funkeDanke": "Thanks for telling me",
+  "funkeTippNein": "A no today isn't a no to you. You don't need to ask follow-up questions.",
+  "funkeTippReden": "You don't have to answer right away. Say when it suits you.",
+  "funkeTippLabel": "Just for you",
+  "funkeDankeAntwort": "{name}: Thanks for telling me.",
+  "@funkeDankeAntwort": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "fotoHinweisTrennung": "Photos you send stay on the other person's phone, even if you disconnect later."
 }

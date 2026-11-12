@@ -35,8 +35,10 @@ List<(String, String)> get _sparks => [
   ('🥂', t.couplesChannelLookingForwardToLater),
   ('🐢', t.couplesChannelVerySlowlyToday),
   ('💬', t.couplesChannelLetSTalk),
-  ('🌙', t.couplesChannelNotToday),
 ];
+
+/// „Heute lieber nicht“ steht fest vor der Leiste, ohne Wischen erreichbar.
+(String, String) get _funkeNein => ('🌙', t.couplesChannelNotToday);
 
 /// Heiße Funken, nur im Spicy-Modus (Spicy und Sehr spicy gemischt, der Schalter ist die Entscheidung).
 List<(String, String)> get _spicySparks => [
@@ -67,6 +69,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   /// Nächste Nachricht oder nächster Funke verschwindet nach dem Lesen (nur im Spicy-Modus).
   bool _verschwinden = false;
   Timer? _aufraeumTimer;
+
+  /// Läuft gerade das Trennen (Hinweis wird gesendet)? Verhindert einen zweiten Hinweis.
+  bool _trennt = false;
 
   /// Für den Haken im Menü; die Karte selbst fragt FotoIdeen direkt.
   bool _ideenAn = true;
@@ -145,6 +150,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
 
   /// Foto auswählen, verschlüsseln und direkt ans Gegenüber schicken (oder warten lassen).
   Future<void> _fotoSenden() async {
+    // Einmal je Verbindung ein ruhiger Satz dazu, dass Gesendetes beim anderen bleibt.
+    final trennHinweis = await _nostr.fotoHinweisOffen();
+    if (!mounted) return;
     final quelle = await showModalBottomSheet<ImageSource>(
       context: context,
       backgroundColor: AppTheme.papierErhoben,
@@ -170,6 +178,15 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
               ),
             ]),
           ),
+          if (trennHinweis)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(t.fotoHinweisTrennung,
+                    style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm, height: 1.4)),
+              ),
+            ),
           ListTile(
             leading: const Icon(Icons.photo_camera_outlined),
             title: Text(t.fotoKamera),
@@ -189,6 +206,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
       ),
     );
     if (quelle == null) return;
+    if (trennHinweis) unawaited(_nostr.fotoHinweisGesehen());
     final gewaehlt = await ImagePicker().pickImage(source: quelle, maxWidth: 1600, maxHeight: 1600, imageQuality: 82);
     if (gewaehlt == null || !mounted) return;
     final messenger = ScaffoldMessenger.of(context);
@@ -287,7 +305,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
 
   void _sendSpark(String emoji, String text) async {
     HapticFeedback.mediumImpact();
-    final success = await _nostr.sendQuickPing(emoji, text, verschwindet: _verschwindenAktiv);
+    // Auf diese beiden Funken kann das Gegenüber antworten (Zusatzfeld, ältere Versionen ignorieren es).
+    final funke = text == _funkeNein.$2 ? 'nein' : (text == t.couplesChannelLetSTalk ? 'reden' : null);
+    final success = await _nostr.sendQuickPing(emoji, text, verschwindet: _verschwindenAktiv, funke: funke);
     if (!mounted) return;
     if (success) {
       _scrollToBottom();
@@ -482,31 +502,131 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   }
 
   /// Knopf unter einer Einladung des Gegenübers: einschalten (mit Altersabfrage) oder Hinweis, dass er schon an ist.
-  Widget _spicyAnnehmen() {
+  Widget _spicyAnnehmen(CoupleMessage msg) {
     return ValueListenableBuilder<bool>(
       valueListenable: StorageService.spicyAenderung,
       builder: (context, an, _) => Padding(
         padding: const EdgeInsets.only(top: 6),
-        child: an
-            ? Text(t.spicyEinladungSchonAn, style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm))
-            : InkWell(
-                onTap: () => spicyModusEinschalten(context),
-                borderRadius: BorderRadius.circular(VpRadius.karte),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: AppTheme.akzentTief.withValues(alpha: 0.16),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+                // „Gerade nicht“ gibt es auch, wenn der Spicy-Modus schon an ist.
+                if (an) Text(t.spicyEinladungSchonAn, style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm)),
+                // Hat das Gegenüber getrennt, hört niemand mehr zu: dann keine Antwort-Knöpfe.
+                if (!_nostr.partnerGetrenntNotifier.value)
+                Wrap(spacing: 8, runSpacing: 6, children: [
+                  if (!an)
+                  InkWell(
+                    onTap: () => spicyModusEinschalten(context),
                     borderRadius: BorderRadius.circular(VpRadius.karte),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: AppTheme.akzentTief.withValues(alpha: 0.16),
+                        borderRadius: BorderRadius.circular(VpRadius.karte),
+                      ),
+                      child: Row(mainAxisSize: MainAxisSize.min, children: [
+                        Icon(Icons.spa_outlined, size: 15, color: AppTheme.akzentTief),
+                        const SizedBox(width: 6),
+                        Text(t.spicyEinladungAnnehmen,
+                            style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: AppTheme.akzentTief)),
+                      ]),
+                    ),
                   ),
-                  child: Row(mainAxisSize: MainAxisSize.min, children: [
-                    Icon(Icons.spa_outlined, size: 15, color: AppTheme.akzentTief),
-                    const SizedBox(width: 6),
-                    Text(t.spicyEinladungAnnehmen,
-                        style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: AppTheme.akzentTief)),
-                  ]),
-                ),
-              ),
+                  if (!msg.beantwortet)
+                    InkWell(
+                      onTap: () => _spicyAbsagen(msg),
+                      borderRadius: BorderRadius.circular(VpRadius.karte),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(VpRadius.karte),
+                          border: Border.all(color: AppTheme.linieStark),
+                        ),
+                        child: Text(t.spicyEinladungNein,
+                            style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
+                      ),
+                    ),
+                ]),
+                if (msg.beantwortet && !_nostr.partnerGetrenntNotifier.value)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 6),
+                    child: Text(t.spicyEinladungNeinGesendet,
+                        style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm, height: 1.4)),
+                  ),
+              ]),
       ),
+    );
+  }
+
+  /// „Gerade nicht“: ohne Erklärung, kommt beim Einladenden als warmer Satz an.
+  Future<void> _spicyAbsagen(CoupleMessage msg) async {
+    HapticFeedback.lightImpact();
+    final ok = await _nostr.sendAntwort('spicy_nein', t.spicyNeinSatz, aufId: msg.id);
+    if (!mounted || ok) return;
+    _showSendError();
+  }
+
+  /// Der angezeigte Satz einer Nachricht. Antworten des Gegenübers setzt die App in der eigenen Sprache
+  /// zusammen; für ältere Versionen steht im Klartext der Satz des Absenders.
+  String _bubbleText(CoupleMessage msg) {
+    // „Gerade nicht“ steht in der Blase der antwortenden Person (ihre Worte); der warme Satz kommt
+    // als Zeile darunter (_antwortZeile), nicht als ihr Text.
+    if (!msg.isMe && msg.antwort == 'spicy_nein') return t.spicyNeinSatz;
+    if (!msg.isMe && msg.antwort == 'danke') {
+      final name = _nostr.partnerName.trim();
+      return name.isEmpty || name == 'Partner' ? t.funkeDanke : t.funkeDankeAntwort(name);
+    }
+    return msg.text ?? '';
+  }
+
+  Widget _antwortZeile(CoupleMessage msg) => Padding(
+        padding: const EdgeInsets.only(top: 6),
+        child: Text(t.spicyEinladungNeinAntwort,
+            style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.4)),
+      );
+
+  /// Unter „Heute lieber nicht“ und „Lass uns reden“ des Gegenübers: ein kurzer Tipp und ein Knopf,
+  /// den die Person selbst antippt. Das Gerät antwortet nie von allein.
+  Widget _funkeAntwort(CoupleMessage msg) {
+    // Nur für Neues und noch Unbeantwortetes: alte Funken im Verlauf bleiben ruhig.
+    if (msg.beantwortet ||
+        _nostr.partnerGetrenntNotifier.value ||
+        DateTime.now().difference(msg.createdAt) > const Duration(days: 2)) {
+      return const SizedBox.shrink();
+    }
+    final tipp = msg.funke == 'nein' ? t.funkeTippNein : t.funkeTippReden;
+    return Padding(
+      padding: const EdgeInsets.only(top: 6),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+        // Als Tipp nur für diese Person gekennzeichnet, damit er nicht wie ein Satz des Absenders wirkt.
+        Row(mainAxisSize: MainAxisSize.min, children: [
+          Icon(Icons.lightbulb_outline, size: 13, color: AppTheme.tinteStumm),
+          const SizedBox(width: 4),
+          Text(t.funkeTippLabel,
+              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: AppTheme.tinteStumm)),
+        ]),
+        const SizedBox(height: 2),
+        Text(tipp, style: TextStyle(fontSize: 12, color: AppTheme.tinteLeise, height: 1.4)),
+        Padding(
+            padding: const EdgeInsets.only(top: 6),
+            child: InkWell(
+              onTap: () async {
+                HapticFeedback.lightImpact();
+                final ok = await _nostr.sendAntwort('danke', t.funkeDanke, aufId: msg.id);
+                if (mounted && !ok) _showSendError();
+              },
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  color: AppTheme.akzentTief.withValues(alpha: 0.16),
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
+                ),
+                child: Text(t.funkeDanke,
+                    style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700, color: AppTheme.akzentTief)),
+              ),
+            ),
+          ),
+      ]),
     );
   }
 
@@ -784,23 +904,133 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
   }
 
   Widget _buildMessagesTab() {
-    return Column(
-      children: [
-        _fotoIdee(),
-        Expanded(child: _buildChatStream()),
-        _buildSparkBar(),
-        _buildChatInputBar(),
-      ],
+    return ValueListenableBuilder<bool>(
+      valueListenable: _nostr.partnerGetrenntNotifier,
+      builder: (context, getrennt, _) {
+        // Hat das Gegenüber getrennt, ist der Chat nur noch zum Lesen da: Senden ginge ins Leere.
+        if (getrennt) {
+          return Column(children: [
+            _getrenntKarte(),
+            Expanded(child: _buildChatStream()),
+          ]);
+        }
+        return Column(
+          children: [
+            _fotoIdee(),
+            Expanded(child: _buildChatStream()),
+            _buildSparkBar(),
+            _buildChatInputBar(),
+          ],
+        );
+      },
     );
   }
 
+  /// Ruhiger Hinweis, wenn das Gegenüber die Verbindung getrennt hat. Nichts eilt: Wer nichts tut, behält alles.
+  Widget _getrenntKarte() {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(14, 12, 14, 4),
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: AppTheme.papierErhoben,
+        borderRadius: BorderRadius.circular(VpRadius.karte),
+        border: Border.all(color: AppTheme.linie),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(t.trennungHinweis(_nostr.partnerName),
+            style: TextStyle(color: AppTheme.tinte, fontSize: 14, height: 1.45)),
+        const SizedBox(height: 8),
+        Row(children: [
+          Expanded(
+            child: Text(t.trennungSchalter,
+                style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13, height: 1.4)),
+          ),
+          Switch(value: false, onChanged: (_) => _trennenGegenueber()),
+        ]),
+      ]),
+    );
+  }
+
+  /// Zweistufig bestätigt: erst sagen, was gelöscht wird, dann noch einmal fragen.
+  Future<bool> _zweimalBestaetigen({
+    required String titel1,
+    required String text1,
+    required String weiter,
+    required String titel2,
+    required String text2,
+    required String ja,
+  }) async {
+    Future<bool> dialog(String titel, String text, String knopf) async =>
+        await showDialog<bool>(
+          context: context,
+          builder: (ctx) => AlertDialog(
+            backgroundColor: AppTheme.papierErhoben,
+            title: Text(titel, style: TextStyle(fontSize: 18)),
+            content: Text(text, style: TextStyle(color: AppTheme.tinteLeise, height: 1.45)),
+            actions: [
+              TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
+              TextButton(
+                onPressed: () => Navigator.pop(ctx, true),
+                child: Text(knopf, style: TextStyle(color: AppTheme.akzentTief)),
+              ),
+            ],
+          ),
+        ) ??
+        false;
+    if (!await dialog(titel1, text1, weiter) || !mounted) return false;
+    return await dialog(titel2, text2, ja) && mounted;
+  }
+
+  /// Das Gegenüber hat getrennt; diese Person entscheidet selbst, ob auch hier gelöscht wird.
+  Future<void> _trennenGegenueber() async {
+    final name = _nostr.partnerName;
+    final ja = await _zweimalBestaetigen(
+      titel1: t.trennungGegenueberDialog1Titel,
+      text1: t.trennungGegenueberDialog1(name),
+      weiter: t.trennungDialog1Weiter,
+      titel2: t.trennungGegenueberDialog2Titel,
+      text2: t.trennungGegenueberDialog2,
+      ja: t.trennungGegenueberLoeschenJa,
+    );
+    if (!ja) return;
+    await _nostr.unpairPartner();
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.trennungGegenueberFertig)));
+  }
+
   Widget _buildSparkBar() {
+    final (neinEmoji, neinText) = _funkeNein;
     return Container(
       height: 48,
       decoration: BoxDecoration(
         color: AppTheme.papier,
         border: Border(top: BorderSide(color: AppTheme.linie, width: VpLinie.haar)),
       ),
+      child: Row(children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(12, 8, 0, 8),
+          child: InkWell(
+            onTap: () => _sendSpark(neinEmoji, neinText),
+            borderRadius: BorderRadius.circular(VpRadius.chip),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(VpRadius.chip),
+                border: Border.all(color: AppTheme.linieStark),
+              ),
+              child: Text('$neinEmoji  $neinText',
+                  style: TextStyle(fontSize: 12.5, color: AppTheme.tinte, fontWeight: FontWeight.w600)),
+            ),
+          ),
+        ),
+        Expanded(child: _sparkListe()),
+      ]),
+    );
+  }
+
+  Widget _sparkListe() {
+    return ClipRect(
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -909,7 +1139,7 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
           crossAxisAlignment: isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
           children: [
             Text(
-              isSpark ? '${msg.emoji ?? '💗'}  ${msg.text ?? ''}' : (msg.text ?? ''),
+              isSpark ? '${msg.emoji ?? '💗'}  ${msg.text ?? ''}' : _bubbleText(msg),
               style: TextStyle(
                 color: textColor,
                 fontSize: isSpark ? 15 : 14,
@@ -917,7 +1147,9 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
                 height: 1.4,
               ),
             ),
-            if (msg.spicyEinladung && !isMe) _spicyAnnehmen(),
+            if (msg.spicyEinladung && !isMe) _spicyAnnehmen(msg),
+            if (!isMe && msg.antwort == 'spicy_nein') _antwortZeile(msg),
+            if (isSpark && !isMe && msg.funke != null) _funkeAntwort(msg),
             if (msg.fotoId != null) _fotoZeile(msg, isMe ? textColor.withValues(alpha: 0.8) : AppTheme.tinteLeise),
             if (msg.lessonId != null && GemeinsamRueckblickScreen.gueltigeId(msg.lessonId!))
               TextButton(onPressed: () => Navigator.push(context, MaterialPageRoute(
@@ -1226,28 +1458,27 @@ class _CouplesChannelScreenState extends State<CouplesChannelScreen>
 
   Future<void> _confirmUnpair() async {
     final name = _nostr.partnerName;
-    final ja = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        backgroundColor: AppTheme.papierErhoben,
-        title: Text(t.couplesChannelDisconnect2, style: TextStyle(fontSize: 18)),
-        content: Text(
-          t.couplesChannelTheHistoryWithNameName(name, name, name),
-          style: TextStyle(color: AppTheme.tinteLeise, height: 1.45),
-        ),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(t.ausspracheMeldenCancel)),
-          TextButton(
-            onPressed: () => Navigator.pop(ctx, true),
-            child: Text(t.couplesChannelDisconnect3, style: TextStyle(color: AppTheme.akzentTief)),
-          ),
-        ],
-      ),
+    final ja = await _zweimalBestaetigen(
+      titel1: t.trennungDialog1Titel,
+      text1: t.trennungDialog1(name),
+      weiter: t.trennungDialog1Weiter,
+      titel2: t.trennungDialog2Titel,
+      text2: t.trennungDialog2,
+      ja: t.trennungDialog2Ja,
     );
-    if (ja != true) return;
-    await _nostr.unpairPartner();
-    if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.couplesChannelDisconnected)));
+    if (!ja || _trennt) return;
+    // Erst der Hinweis ans Gegenüber, dann wird hier aufgeräumt; das Trennen scheitert nie am Hinweis.
+    final messenger = ScaffoldMessenger.of(context);
+    _trennt = true;
+    final bool hinweisGesendet;
+    try {
+      hinweisGesendet = await _nostr.trennenMitHinweis();
+    } finally {
+      _trennt = false;
+    }
+    messenger.showSnackBar(SnackBar(
+      content: Text(hinweisGesendet ? t.couplesChannelDisconnected : t.trennungNichtGesendet(name)),
+    ));
   }
 
   void _showInfoDialog() {

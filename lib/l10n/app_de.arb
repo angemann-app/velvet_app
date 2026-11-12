@@ -2301,5 +2301,56 @@
         "type": "int"
       }
     }
-  }
+  },
+  "trennungDialog1Titel": "Verbindung trennen?",
+  "trennungDialog1": "Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht. Wir senden einen kurzen Hinweis; kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.",
+  "@trennungDialog1": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungDialog1Weiter": "Weiter",
+  "trennungDialog2Titel": "Wirklich trennen?",
+  "trennungDialog2": "Das lässt sich nur rückgängig machen, indem ihr euch neu koppelt.",
+  "trennungDialog2Ja": "Ja, trennen",
+  "trennungNichtGesendet": "Getrennt. Der Hinweis an {name} ist nicht angekommen. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht.",
+  "@trennungNichtGesendet": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungHinweis": "{name} hat die Verbindung getrennt. Du musst nichts tun, und es eilt nichts. Der Chat bleibt hier lesbar, solange du magst.",
+  "@trennungHinweis": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungSchalter": "Auch auf diesem Handy trennen und die Daten dieser Verbindung löschen",
+  "trennungGegenueberDialog1Titel": "Auf diesem Handy trennen?",
+  "trennungGegenueberDialog1": "Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nDu kannst auch warten. Erst wenn du bestätigst, wird etwas gelöscht.",
+  "@trennungGegenueberDialog1": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "trennungGegenueberDialog2Titel": "Wirklich löschen?",
+  "trennungGegenueberDialog2": "Das lässt sich nicht zurückholen.",
+  "trennungGegenueberLoeschenJa": "Ja, löschen",
+  "trennungGegenueberFertig": "Auf diesem Handy getrennt.",
+  "trennungSatzAelter": "Die Verbindung wurde getrennt.",
+  "spicyEinladungNein": "Gerade nicht",
+  "spicyNeinSatz": "Gerade nicht, danke dir.",
+  "spicyEinladungNeinAntwort": "Danke, dass du es mir sagst. Es eilt nichts.",
+  "spicyEinladungNeinGesendet": "Du hast geantwortet. Du kannst es dir jederzeit anders überlegen.",
+  "funkeDanke": "Danke fürs Sagen",
+  "funkeTippNein": "Ein Nein heute ist kein Nein zu dir. Du musst nichts nachfragen.",
+  "funkeTippReden": "Du musst nicht sofort antworten. Sag, wann es für dich passt.",
+  "funkeTippLabel": "Nur für dich",
+  "funkeDankeAntwort": "{name}: Danke fürs Sagen.",
+  "@funkeDankeAntwort": {
+    "placeholders": {
+      "name": { "type": "Object" }
+    }
+  },
+  "fotoHinweisTrennung": "Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt."
 }

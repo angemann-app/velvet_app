@@ -114,7 +114,11 @@ The start page also has the 30-second check-in: how do stress and desire relate 
 
 In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.
 
-Sparks: with one tap you show what you're in the mood for today, or not.
+Sparks: with one tap you show what you're in the mood for today, or not. “Not today” is always one tap away. The other person can answer “Not today” and “Let's talk” with “Thanks for telling me”.
+
+Spicy invitation: whoever is invited can answer “Not right now”, no explanation needed.
+
+Disconnecting: in the menu you disconnect, after two confirmations. Your partner gets a calm notice and decides for themselves whether to delete this connection's data too. If the notice doesn't arrive (app closed, no connection), everything there stays until they delete it themselves. Sent messages and photos can't be taken back.
 
 Messages: with read receipts, which you can switch off in the menu.
 

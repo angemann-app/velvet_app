@@ -152,14 +152,18 @@ msgstr ""
 
 #. Abschnitt der Anleitung
 #. EN: In the couple channel you connect with your partner: by invitation straight from the app or via QR code. There's no account and no phone number, and messages are end-to-end encrypted. When both phones have a new version, messages travel sealed (NIP-17): the relays can no longer see who writes to whom and when. This happens by itself, and older versions keep working as before.
-#. EN: Sparks: with one tap you show what you're in the mood for today, or not.
+#. EN: Sparks: with one tap you show what you're in the mood for today, or not. “Not today” is always one tap away. The other person can answer “Not today” and “Let's talk” with “Thanks for telling me”.
+#. EN: Spicy invitation: whoever is invited can answer “Not right now”, no explanation needed.
+#. EN: Disconnecting: in the menu you disconnect, after two confirmations. Your partner gets a calm notice and decides for themselves whether to delete this connection's data too. If the notice doesn't arrive (app closed, no connection), everything there stays until they delete it themselves. Sent messages and photos can't be taken back.
 #. EN: Messages: with read receipts, which you can switch off in the menu.
 #. EN: Explore together: in the fantasy map each of you answers separately with “Yes, please”, “Maybe” or “Rather not”. Only what you both want becomes visible (a match); a “Maybe” shows up under “To talk about”, a “Rather not” never does. In spicy mode there are also scenes to try, whole evenings that you answer the same way.
 #. EN: Learning together: share lessons and exchange answers to the reflection questions.
 msgctxt "guide:paar#text"
 msgid ""
 "Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt. Haben beide Handys eine neue Version, gehen sie versiegelt (NIP-17): Die Server sehen dann nicht mehr, wer wem wann schreibt. Das stellt sich von selbst ein, mit älteren Versionen klappt es weiter wie bisher.\n"
-"Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.\n"
+"Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht. „Heute lieber nicht“ ist immer sofort erreichbar. Auf „Heute lieber nicht“ und „Lass uns reden“ kann das Gegenüber mit „Danke fürs Sagen“ antworten.\n"
+"Spicy-Einladung: Wer eingeladen wird, kann „Gerade nicht“ antworten, ohne Erklärung.\n"
+"Trennen: Im Menü trennst du die Verbindung, nach zwei Bestätigungen. Dein Gegenüber bekommt einen ruhigen Hinweis und entscheidet selbst, ob es die Daten dieser Verbindung ebenfalls löscht. Kommt der Hinweis nicht an (App geschlossen, kein Netz), bleibt dort alles, bis die Person selbst löscht. Gesendete Nachrichten und Fotos lassen sich nicht zurückholen.\n"
 "Nachrichten: mit Lesebestätigung, die ihr im Menü abschalten könnt.\n"
 "Gemeinsam entdecken: In der Fantasie-Landkarte antwortet jeder für sich mit „Ja, gern“, „Vielleicht“ oder „Lieber nicht“. Sichtbar wird nur, was ihr beide wollt (Treffer); ein „Vielleicht“ erscheint zum Besprechen, ein „Lieber nicht“ nie. Im Spicy-Modus kommen Szenen zum Ausprobieren dazu, ganze Abende, die ihr genauso beantwortet.\n"
 "Gemeinsam lernen: Lektionen teilen und Antworten auf die Reflexionsfragen austauschen."

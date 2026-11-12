@@ -8733,3 +8733,169 @@ msgstr ""
 msgctxt "ui:schlafBlickBilanz#text"
 msgid "{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel."
 msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnect?
+msgctxt "ui:trennungDialog1Titel#text"
+msgid "Verbindung trennen?"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: The history with {name}, {name}'s answers and the shared reflections will be deleted on this phone. Your own answers stay.
+#. EN:
+#. EN: On {name}'s phone, whatever is there stays until they delete it themselves. We'll send a short notice; if it doesn't arrive (app closed, no connection), nothing changes there.
+msgctxt "ui:trennungDialog1#text"
+msgid ""
+"Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n"
+"\n"
+"Auf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht. Wir senden einen kurzen Hinweis; kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Continue
+msgctxt "ui:trennungDialog1Weiter#text"
+msgid "Weiter"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Really disconnect?
+msgctxt "ui:trennungDialog2Titel#text"
+msgid "Wirklich trennen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This can only be undone by pairing again.
+msgctxt "ui:trennungDialog2#text"
+msgid "Das lässt sich nur rückgängig machen, indem ihr euch neu koppelt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes, disconnect
+msgctxt "ui:trennungDialog2Ja#text"
+msgid "Ja, trennen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Disconnected. The notice to {name} didn't go through. On {name}'s phone everything stays until they delete it themselves.
+msgctxt "ui:trennungNichtGesendet#text"
+msgid "Getrennt. Der Hinweis an {name} ist nicht angekommen. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: {name} has ended the connection. You don't need to do anything, and there's no hurry. The chat stays readable here for as long as you like.
+msgctxt "ui:trennungHinweis#text"
+msgid "{name} hat die Verbindung getrennt. Du musst nichts tun, und es eilt nichts. Der Chat bleibt hier lesbar, solange du magst."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Also disconnect on this phone and delete this connection's data
+msgctxt "ui:trennungSchalter#text"
+msgid "Auch auf diesem Handy trennen und die Daten dieser Verbindung löschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnect on this phone?
+msgctxt "ui:trennungGegenueberDialog1Titel#text"
+msgid "Auf diesem Handy trennen?"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: The history with {name}, {name}'s answers and the shared reflections will be deleted on this phone. Your own answers stay.
+#. EN:
+#. EN: You can also wait. Nothing is deleted until you confirm.
+msgctxt "ui:trennungGegenueberDialog1#text"
+msgid ""
+"Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n"
+"\n"
+"Du kannst auch warten. Erst wenn du bestätigst, wird etwas gelöscht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Really delete?
+msgctxt "ui:trennungGegenueberDialog2Titel#text"
+msgid "Wirklich löschen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This can't be brought back.
+msgctxt "ui:trennungGegenueberDialog2#text"
+msgid "Das lässt sich nicht zurückholen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes, delete
+msgctxt "ui:trennungGegenueberLoeschenJa#text"
+msgid "Ja, löschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnected on this phone.
+msgctxt "ui:trennungGegenueberFertig#text"
+msgid "Auf diesem Handy getrennt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The connection was ended.
+msgctxt "ui:trennungSatzAelter#text"
+msgid "Die Verbindung wurde getrennt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not right now
+msgctxt "ui:spicyEinladungNein#text"
+msgid "Gerade nicht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not right now, thank you.
+msgctxt "ui:spicyNeinSatz#text"
+msgid "Gerade nicht, danke dir."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thank you for telling me. There's no rush.
+msgctxt "ui:spicyEinladungNeinAntwort#text"
+msgid "Danke, dass du es mir sagst. Es eilt nichts."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You've replied. You can change your mind any time.
+msgctxt "ui:spicyEinladungNeinGesendet#text"
+msgid "Du hast geantwortet. Du kannst es dir jederzeit anders überlegen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thanks for telling me
+msgctxt "ui:funkeDanke#text"
+msgid "Danke fürs Sagen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A no today isn't a no to you. You don't need to ask follow-up questions.
+msgctxt "ui:funkeTippNein#text"
+msgid "Ein Nein heute ist kein Nein zu dir. Du musst nichts nachfragen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You don't have to answer right away. Say when it suits you.
+msgctxt "ui:funkeTippReden#text"
+msgid "Du musst nicht sofort antworten. Sag, wann es für dich passt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Just for you
+msgctxt "ui:funkeTippLabel#text"
+msgid "Nur für dich"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: {name}: Thanks for telling me.
+msgctxt "ui:funkeDankeAntwort#text"
+msgid "{name}: Danke fürs Sagen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Photos you send stay on the other person's phone, even if you disconnect later.
+msgctxt "ui:fotoHinweisTrennung#text"
+msgid "Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt."
+msgstr ""

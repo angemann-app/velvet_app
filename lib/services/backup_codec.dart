@@ -42,6 +42,9 @@ class BackupCodec {
     'nostrPartnerGender': String,
     // Für welches Gegenüber NIP-17 angekündigt wurde (öffentlicher Schlüssel, siehe NostrService).
     'nostrPartnerNip17': String,
+    // Trenn-Stand ('1' = das Gegenüber hat getrennt) und Beginn der Verbindung (Unix-Sekunden als Text).
+    'nostrPartnerGetrennt': String,
+    'nostrPartnerSeit': String,
     // Traumtagebuch (Liste von TraumEintrag) und Fortschritt der Serie „Lust im Traum“ (JSON {Folge: Abende}).
     'traumTagebuch': List,
     'traumpraxis': Map,
@@ -96,6 +99,13 @@ class BackupCodec {
       if (key != null && key.isNotEmpty && !isValidPublicKeyHex(key)) {
         throw BackupException(t.backupCodecTheBackupContainsAnInvalid);
       }
+    }
+
+    final getrennt = clean['nostrPartnerGetrennt'] as String?;
+    final seit = clean['nostrPartnerSeit'] as String?;
+    if ((getrennt != null && getrennt.isNotEmpty && getrennt != '1') ||
+        (seit != null && seit.isNotEmpty && !RegExp(r'^\d{1,12}$').hasMatch(seit))) {
+      throw BackupException(t.backupCodecTheBackupIsDamagedField(getrennt != null && getrennt != '1' ? 'nostrPartnerGetrennt' : 'nostrPartnerSeit'));
     }
 
     // Schema 1: Geheimnisse im Klartext.

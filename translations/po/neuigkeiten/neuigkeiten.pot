@@ -1234,3 +1234,15 @@ msgstr ""
 msgctxt "news:62#0.text"
 msgid "Die Folgen zu dritt spielen jetzt zuverlässig, in allen drei Stufen. Die Fassungen für Soft und Spicy sind neu geschrieben und deutlich länger, ebenso vier Rollen in Sehr spicy. Alles ist neu eingesprochen."
 msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.5
+#. EN: Disconnect calmly, say no kindly
+msgctxt "news:63#0.titel"
+msgid "Ruhiger trennen, freundlich Nein sagen"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.5
+#. EN: If you disconnect, your partner gets a calm notice and decides for themselves whether to delete this connection's data too. Answer an invitation to spicy mode with “Not right now”, and “Not today” and “Let's talk” with “Thanks for telling me”.
+msgctxt "news:63#0.text"
+msgid "Trennst du die Verbindung, bekommt dein Gegenüber einen ruhigen Hinweis und entscheidet selbst, ob es die Daten dieser Verbindung ebenfalls löscht. Auf eine Einladung zum Spicy-Modus antwortest du mit „Gerade nicht“, auf „Heute lieber nicht“ und „Lass uns reden“ mit „Danke fürs Sagen“."
+msgstr ""

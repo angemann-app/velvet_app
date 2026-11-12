@@ -114,7 +114,11 @@ Auf der Startseite wartet außerdem der 30-Sekunden-Check-in: Wie stehen Stress 
 
 Im Paar-Kanal verbindest du dich mit deinem Gegenüber: per Einladung direkt aus der App oder per QR-Code. Es gibt kein Konto und keine Telefonnummer, Nachrichten sind Ende-zu-Ende-verschlüsselt. Haben beide Handys eine neue Version, gehen sie versiegelt (NIP-17): Die Server sehen dann nicht mehr, wer wem wann schreibt. Das stellt sich von selbst ein, mit älteren Versionen klappt es weiter wie bisher.
 
-Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht.
+Funken: Mit einem Tipp zeigst du, worauf du heute Lust hast, oder eben nicht. „Heute lieber nicht“ ist immer sofort erreichbar. Auf „Heute lieber nicht“ und „Lass uns reden“ kann das Gegenüber mit „Danke fürs Sagen“ antworten.
+
+Spicy-Einladung: Wer eingeladen wird, kann „Gerade nicht“ antworten, ohne Erklärung.
+
+Trennen: Im Menü trennst du die Verbindung, nach zwei Bestätigungen. Dein Gegenüber bekommt einen ruhigen Hinweis und entscheidet selbst, ob es die Daten dieser Verbindung ebenfalls löscht. Kommt der Hinweis nicht an (App geschlossen, kein Netz), bleibt dort alles, bis die Person selbst löscht. Gesendete Nachrichten und Fotos lassen sich nicht zurückholen.
 
 Nachrichten: mit Lesebestätigung, die ihr im Menü abschalten könnt.
 

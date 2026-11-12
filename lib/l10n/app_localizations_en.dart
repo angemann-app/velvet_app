@@ -5101,4 +5101,98 @@ class AppLocalizationsEn extends AppLocalizations {
   String schlafBlickBilanz(int klar, int tage) {
     return '$klar of $tage days with personal entries include a reported lucid dream. This is a reflection, not a performance goal.';
   }
+
+  @override
+  String get trennungDialog1Titel => 'Disconnect?';
+
+  @override
+  String trennungDialog1(Object name) {
+    return 'The history with $name, $name\'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nOn $name\'s phone, whatever is there stays until they delete it themselves. We\'ll send a short notice; if it doesn\'t arrive (app closed, no connection), nothing changes there.';
+  }
+
+  @override
+  String get trennungDialog1Weiter => 'Continue';
+
+  @override
+  String get trennungDialog2Titel => 'Really disconnect?';
+
+  @override
+  String get trennungDialog2 => 'This can only be undone by pairing again.';
+
+  @override
+  String get trennungDialog2Ja => 'Yes, disconnect';
+
+  @override
+  String trennungNichtGesendet(Object name) {
+    return 'Disconnected. The notice to $name didn\'t go through. On $name\'s phone everything stays until they delete it themselves.';
+  }
+
+  @override
+  String trennungHinweis(Object name) {
+    return '$name has ended the connection. You don\'t need to do anything, and there\'s no hurry. The chat stays readable here for as long as you like.';
+  }
+
+  @override
+  String get trennungSchalter =>
+      'Also disconnect on this phone and delete this connection\'s data';
+
+  @override
+  String get trennungGegenueberDialog1Titel => 'Disconnect on this phone?';
+
+  @override
+  String trennungGegenueberDialog1(Object name) {
+    return 'The history with $name, $name\'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nYou can also wait. Nothing is deleted until you confirm.';
+  }
+
+  @override
+  String get trennungGegenueberDialog2Titel => 'Really delete?';
+
+  @override
+  String get trennungGegenueberDialog2 => 'This can\'t be brought back.';
+
+  @override
+  String get trennungGegenueberLoeschenJa => 'Yes, delete';
+
+  @override
+  String get trennungGegenueberFertig => 'Disconnected on this phone.';
+
+  @override
+  String get trennungSatzAelter => 'The connection was ended.';
+
+  @override
+  String get spicyEinladungNein => 'Not right now';
+
+  @override
+  String get spicyNeinSatz => 'Not right now, thank you.';
+
+  @override
+  String get spicyEinladungNeinAntwort =>
+      'Thank you for telling me. There\'s no rush.';
+
+  @override
+  String get spicyEinladungNeinGesendet =>
+      'You\'ve replied. You can change your mind any time.';
+
+  @override
+  String get funkeDanke => 'Thanks for telling me';
+
+  @override
+  String get funkeTippNein =>
+      'A no today isn\'t a no to you. You don\'t need to ask follow-up questions.';
+
+  @override
+  String get funkeTippReden =>
+      'You don\'t have to answer right away. Say when it suits you.';
+
+  @override
+  String get funkeTippLabel => 'Just for you';
+
+  @override
+  String funkeDankeAntwort(Object name) {
+    return '$name: Thanks for telling me.';
+  }
+
+  @override
+  String get fotoHinweisTrennung =>
+      'Photos you send stay on the other person\'s phone, even if you disconnect later.';
 }

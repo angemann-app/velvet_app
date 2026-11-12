@@ -5126,4 +5126,99 @@ class AppLocalizationsDe extends AppLocalizations {
   String schlafBlickBilanz(int klar, int tage) {
     return '$klar von $tage Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel.';
   }
+
+  @override
+  String get trennungDialog1Titel => 'Verbindung trennen?';
+
+  @override
+  String trennungDialog1(Object name) {
+    return 'Auf diesem Handy werden der Verlauf mit $name, die Antworten von $name und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von $name bleibt, was dort liegt, bis die Person selbst löscht. Wir senden einen kurzen Hinweis; kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.';
+  }
+
+  @override
+  String get trennungDialog1Weiter => 'Weiter';
+
+  @override
+  String get trennungDialog2Titel => 'Wirklich trennen?';
+
+  @override
+  String get trennungDialog2 =>
+      'Das lässt sich nur rückgängig machen, indem ihr euch neu koppelt.';
+
+  @override
+  String get trennungDialog2Ja => 'Ja, trennen';
+
+  @override
+  String trennungNichtGesendet(Object name) {
+    return 'Getrennt. Der Hinweis an $name ist nicht angekommen. Auf dem Handy von $name bleibt alles, bis die Person selbst löscht.';
+  }
+
+  @override
+  String trennungHinweis(Object name) {
+    return '$name hat die Verbindung getrennt. Du musst nichts tun, und es eilt nichts. Der Chat bleibt hier lesbar, solange du magst.';
+  }
+
+  @override
+  String get trennungSchalter =>
+      'Auch auf diesem Handy trennen und die Daten dieser Verbindung löschen';
+
+  @override
+  String get trennungGegenueberDialog1Titel => 'Auf diesem Handy trennen?';
+
+  @override
+  String trennungGegenueberDialog1(Object name) {
+    return 'Auf diesem Handy werden der Verlauf mit $name, die Antworten von $name und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nDu kannst auch warten. Erst wenn du bestätigst, wird etwas gelöscht.';
+  }
+
+  @override
+  String get trennungGegenueberDialog2Titel => 'Wirklich löschen?';
+
+  @override
+  String get trennungGegenueberDialog2 => 'Das lässt sich nicht zurückholen.';
+
+  @override
+  String get trennungGegenueberLoeschenJa => 'Ja, löschen';
+
+  @override
+  String get trennungGegenueberFertig => 'Auf diesem Handy getrennt.';
+
+  @override
+  String get trennungSatzAelter => 'Die Verbindung wurde getrennt.';
+
+  @override
+  String get spicyEinladungNein => 'Gerade nicht';
+
+  @override
+  String get spicyNeinSatz => 'Gerade nicht, danke dir.';
+
+  @override
+  String get spicyEinladungNeinAntwort =>
+      'Danke, dass du es mir sagst. Es eilt nichts.';
+
+  @override
+  String get spicyEinladungNeinGesendet =>
+      'Du hast geantwortet. Du kannst es dir jederzeit anders überlegen.';
+
+  @override
+  String get funkeDanke => 'Danke fürs Sagen';
+
+  @override
+  String get funkeTippNein =>
+      'Ein Nein heute ist kein Nein zu dir. Du musst nichts nachfragen.';
+
+  @override
+  String get funkeTippReden =>
+      'Du musst nicht sofort antworten. Sag, wann es für dich passt.';
+
+  @override
+  String get funkeTippLabel => 'Nur für dich';
+
+  @override
+  String funkeDankeAntwort(Object name) {
+    return '$name: Danke fürs Sagen.';
+  }
+
+  @override
+  String get fotoHinweisTrennung =>
+      'Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.';
 }

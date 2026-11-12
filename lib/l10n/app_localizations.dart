@@ -8708,6 +8708,162 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'{klar} von {tage} Tagen mit eigenen Angaben enthalten einen berichteten Klartraum. Das ist ein Rückblick, kein Leistungsziel.'**
   String schlafBlickBilanz(int klar, int tage);
+
+  /// No description provided for @trennungDialog1Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Verbindung trennen?'**
+  String get trennungDialog1Titel;
+
+  /// No description provided for @trennungDialog1.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nAuf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht. Wir senden einen kurzen Hinweis; kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert.'**
+  String trennungDialog1(Object name);
+
+  /// No description provided for @trennungDialog1Weiter.
+  ///
+  /// In de, this message translates to:
+  /// **'Weiter'**
+  String get trennungDialog1Weiter;
+
+  /// No description provided for @trennungDialog2Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Wirklich trennen?'**
+  String get trennungDialog2Titel;
+
+  /// No description provided for @trennungDialog2.
+  ///
+  /// In de, this message translates to:
+  /// **'Das lässt sich nur rückgängig machen, indem ihr euch neu koppelt.'**
+  String get trennungDialog2;
+
+  /// No description provided for @trennungDialog2Ja.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja, trennen'**
+  String get trennungDialog2Ja;
+
+  /// No description provided for @trennungNichtGesendet.
+  ///
+  /// In de, this message translates to:
+  /// **'Getrennt. Der Hinweis an {name} ist nicht angekommen. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht.'**
+  String trennungNichtGesendet(Object name);
+
+  /// No description provided for @trennungHinweis.
+  ///
+  /// In de, this message translates to:
+  /// **'{name} hat die Verbindung getrennt. Du musst nichts tun, und es eilt nichts. Der Chat bleibt hier lesbar, solange du magst.'**
+  String trennungHinweis(Object name);
+
+  /// No description provided for @trennungSchalter.
+  ///
+  /// In de, this message translates to:
+  /// **'Auch auf diesem Handy trennen und die Daten dieser Verbindung löschen'**
+  String get trennungSchalter;
+
+  /// No description provided for @trennungGegenueberDialog1Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf diesem Handy trennen?'**
+  String get trennungGegenueberDialog1Titel;
+
+  /// No description provided for @trennungGegenueberDialog1.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n\nDu kannst auch warten. Erst wenn du bestätigst, wird etwas gelöscht.'**
+  String trennungGegenueberDialog1(Object name);
+
+  /// No description provided for @trennungGegenueberDialog2Titel.
+  ///
+  /// In de, this message translates to:
+  /// **'Wirklich löschen?'**
+  String get trennungGegenueberDialog2Titel;
+
+  /// No description provided for @trennungGegenueberDialog2.
+  ///
+  /// In de, this message translates to:
+  /// **'Das lässt sich nicht zurückholen.'**
+  String get trennungGegenueberDialog2;
+
+  /// No description provided for @trennungGegenueberLoeschenJa.
+  ///
+  /// In de, this message translates to:
+  /// **'Ja, löschen'**
+  String get trennungGegenueberLoeschenJa;
+
+  /// No description provided for @trennungGegenueberFertig.
+  ///
+  /// In de, this message translates to:
+  /// **'Auf diesem Handy getrennt.'**
+  String get trennungGegenueberFertig;
+
+  /// No description provided for @trennungSatzAelter.
+  ///
+  /// In de, this message translates to:
+  /// **'Die Verbindung wurde getrennt.'**
+  String get trennungSatzAelter;
+
+  /// No description provided for @spicyEinladungNein.
+  ///
+  /// In de, this message translates to:
+  /// **'Gerade nicht'**
+  String get spicyEinladungNein;
+
+  /// No description provided for @spicyNeinSatz.
+  ///
+  /// In de, this message translates to:
+  /// **'Gerade nicht, danke dir.'**
+  String get spicyNeinSatz;
+
+  /// No description provided for @spicyEinladungNeinAntwort.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke, dass du es mir sagst. Es eilt nichts.'**
+  String get spicyEinladungNeinAntwort;
+
+  /// No description provided for @spicyEinladungNeinGesendet.
+  ///
+  /// In de, this message translates to:
+  /// **'Du hast geantwortet. Du kannst es dir jederzeit anders überlegen.'**
+  String get spicyEinladungNeinGesendet;
+
+  /// No description provided for @funkeDanke.
+  ///
+  /// In de, this message translates to:
+  /// **'Danke fürs Sagen'**
+  String get funkeDanke;
+
+  /// No description provided for @funkeTippNein.
+  ///
+  /// In de, this message translates to:
+  /// **'Ein Nein heute ist kein Nein zu dir. Du musst nichts nachfragen.'**
+  String get funkeTippNein;
+
+  /// No description provided for @funkeTippReden.
+  ///
+  /// In de, this message translates to:
+  /// **'Du musst nicht sofort antworten. Sag, wann es für dich passt.'**
+  String get funkeTippReden;
+
+  /// No description provided for @funkeTippLabel.
+  ///
+  /// In de, this message translates to:
+  /// **'Nur für dich'**
+  String get funkeTippLabel;
+
+  /// No description provided for @funkeDankeAntwort.
+  ///
+  /// In de, this message translates to:
+  /// **'{name}: Danke fürs Sagen.'**
+  String funkeDankeAntwort(Object name);
+
+  /// No description provided for @fotoHinweisTrennung.
+  ///
+  /// In de, this message translates to:
+  /// **'Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.'**
+  String get fotoHinweisTrennung;
 }
 
 class _AppLocalizationsDelegate

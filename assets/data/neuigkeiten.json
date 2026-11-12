@@ -732,6 +732,17 @@
           "text": "Die Folgen zu dritt spielen jetzt zuverlässig, in allen drei Stufen. Die Fassungen für Soft und Spicy sind neu geschrieben und deutlich länger, ebenso vier Rollen in Sehr spicy. Alles ist neu eingesprochen."
         }
       ]
+    },
+    {
+      "build": 63,
+      "version": "4.19.0-beta.5",
+      "punkte": [
+        {
+          "icon": "favorite",
+          "titel": "Ruhiger trennen, freundlich Nein sagen",
+          "text": "Trennst du die Verbindung, bekommt dein Gegenüber einen ruhigen Hinweis und entscheidet selbst, ob es die Daten dieser Verbindung ebenfalls löscht. Auf eine Einladung zum Spicy-Modus antwortest du mit „Gerade nicht“, auf „Heute lieber nicht“ und „Lass uns reden“ mit „Danke fürs Sagen“."
+        }
+      ]
     }
   ]
 }
