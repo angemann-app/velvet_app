@@ -82,10 +82,12 @@ void main() {
       expect(await PrivacyService.frageNoetig(), isFalse);
     });
 
-    test('Bestätigung abgebrochen: Sperre bleibt aus, niemand sperrt sich aus', () async {
+    test('Bestätigung abgebrochen: Sperre bleibt aus, später kommt einmal die Bestandsfrage', () async {
       await starten(bestaetigt: false);
       expect(await PrivacyService.standardEinrichten(), SperrEinrichtung.abgebrochen);
       expect(await sperreAn(), isFalse);
+      expect(await merker(), isNull);
+      expect(await PrivacyService.frageNoetig(), isTrue);
     });
 
     testWidgets('Blatt „Nur für dich“ nach dem Einschalten', (tester) async {

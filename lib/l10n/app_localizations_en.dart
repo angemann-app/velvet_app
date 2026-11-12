@@ -5117,7 +5117,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appSperreFrageText =>
-      'The app will then ask for your device lock when you open it and after a short break. That way nobody can look in if your phone is lying around.';
+      'The app will then ask for your device lock when you open it and after a short time in the background. That way nobody can look in if your phone is lying around.';
 
   @override
   String get appSperreFrageJa => 'Yes, lock it';

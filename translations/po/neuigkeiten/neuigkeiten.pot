@@ -1266,7 +1266,7 @@ msgid "Fantasien sind frei"
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.5
-#. EN: A short note the first time you open it and a new section in the guide: whatever comes to mind belongs to you, and you decide what you share.
+#. EN: A short note the first time you open Pleasure in dreams or the inner views, and a new section in the guide: whatever comes to mind belongs to you, and you decide what you share.
 msgctxt "news:63#2.text"
-msgid "Ein kurzer Hinweis beim ersten Öffnen und ein neuer Abschnitt in der Anleitung: Was dir in den Sinn kommt, gehört dir, und du entscheidest, was du teilst."
+msgid "Ein kurzer Hinweis beim ersten Öffnen von Lust im Traum oder den Innenansichten und ein neuer Abschnitt in der Anleitung: Was dir in den Sinn kommt, gehört dir, und du entscheidest, was du teilst."
 msgstr ""

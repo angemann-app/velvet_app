@@ -52,11 +52,17 @@ class PrivacyService {
 
   /// Neue Einrichtung (Ende des Onboardings): Die Sperre wird Standard, wenn das Gerät eine Bildschirmsperre hat.
   /// Dafür einmal die Gerätesperre bestätigen (wie beim Einschalten im Profil), sonst könnte man sich aussperren.
+  /// Wird die Bestätigung abgebrochen, bleibt der Merker ungesetzt: Dann fragt die App später einmal (Bestandsfrage).
   static Future<SperrEinrichtung> standardEinrichten() async {
-    await _frageMerken();
-    if (await isLockEnabled()) return SperrEinrichtung.schonAn;
-    if (!await isSupported()) return SperrEinrichtung.nichtMoeglich;
-    return await setLockEnabled(true) ? SperrEinrichtung.eingeschaltet : SperrEinrichtung.abgebrochen;
+    final ergebnis = await isLockEnabled()
+        ? SperrEinrichtung.schonAn
+        : !await isSupported()
+            ? SperrEinrichtung.nichtMoeglich
+            : await setLockEnabled(true)
+                ? SperrEinrichtung.eingeschaltet
+                : SperrEinrichtung.abgebrochen;
+    if (ergebnis != SperrEinrichtung.abgebrochen) await _frageMerken();
+    return ergebnis;
   }
 
   /// Bestand: Soll beim Start einmal gefragt werden, ob die App gesperrt werden soll?

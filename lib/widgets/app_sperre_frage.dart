@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../l10n/t.dart';
 import '../services/privacy_service.dart';
+import 'app_lock.dart';
 import 'hinweis_blatt.dart';
 
 /// App-Sperre als Standard (docs/konzepte/privatsphaere-schutz.md, a).
@@ -13,6 +14,8 @@ Future<void> appSperreEinrichten(BuildContext context) async {
   if (!context.mounted) return;
   switch (ergebnis) {
     case SperrEinrichtung.eingeschaltet:
+      // Gerätesperre gerade bestätigt: Diese Sitzung gilt als entsperrt.
+      AppLock.alsEntsperrtMerken();
       await zeigeHinweisBlatt<void>(context, (_) => const AppSperreNeuBlatt());
     case SperrEinrichtung.nichtMoeglich:
       await zeigeHinweisBlatt<void>(context, (_) => const AppSperreKeineBlatt());
@@ -27,7 +30,7 @@ Future<void> appSperreEinrichten(BuildContext context) async {
 Future<void> appSperreFrageWennNoetig(BuildContext context) async {
   if (!await PrivacyService.frageNoetig() || !context.mounted) return;
   final ja = await zeigeHinweisBlatt<bool>(context, (_) => const AppSperreFrageBlatt());
-  await PrivacyService.frageBeantworten(ja == true);
+  if (await PrivacyService.frageBeantworten(ja == true)) AppLock.alsEntsperrtMerken();
 }
 
 class AppSperreNeuBlatt extends StatelessWidget {

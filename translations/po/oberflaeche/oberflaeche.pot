@@ -8759,7 +8759,7 @@ msgid "VelvetPulse nur für dich öffnen?"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: The app will then ask for your device lock when you open it and after a short break. That way nobody can look in if your phone is lying around.
+#. EN: The app will then ask for your device lock when you open it and after a short time in the background. That way nobody can look in if your phone is lying around.
 msgctxt "ui:appSperreFrageText#text"
 msgid "Dann fragt die App beim Öffnen und nach einer kurzen Pause nach deiner Gerätesperre. So liest niemand mit, wenn dein Handy mal herumliegt."
 msgstr ""

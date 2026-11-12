@@ -1555,7 +1555,7 @@
   "appSperreNeuText": "VelvetPulse only opens with your device lock: fingerprint, face, PIN or pattern. That way, what you explore here stays with you. You can change this any time in your profile.",
   "appSperreNeuOk": "Sounds good",
   "appSperreFrageTitel": "Keep VelvetPulse just for you?",
-  "appSperreFrageText": "The app will then ask for your device lock when you open it and after a short break. That way nobody can look in if your phone is lying around.",
+  "appSperreFrageText": "The app will then ask for your device lock when you open it and after a short time in the background. That way nobody can look in if your phone is lying around.",
   "appSperreFrageJa": "Yes, lock it",
   "appSperreFrageNein": "Not now",
   "appSperreKeineTitel": "Your phone doesn't have a screen lock yet",

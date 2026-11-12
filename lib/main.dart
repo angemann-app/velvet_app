@@ -192,7 +192,7 @@ class _VelvetPulseAppState extends State<VelvetPulseApp> {
         dragDevices: PointerDeviceKind.values.toSet(),
       ),
       builder: (context, child) => _isInitialized
-          ? AppLock(initiallyLocked: _lockEnabled, child: child!)
+          ? AppLock(initiallyLocked: _lockEnabled, navigatorKey: VelvetPulseApp.navigatorKey, child: child!)
           : child!,
       home: !_isInitialized
           ? Scaffold(
