@@ -9281,8 +9281,14 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeInfoZeile.
   ///
   /// In de, this message translates to:
-  /// **'Wie das hier funktioniert'**
+  /// **'Nichts muss beantwortet werden. Ein „Lieber nicht“ sieht dein Gegenüber nie.'**
   String get yesNoMaybeInfoZeile;
+
+  /// No description provided for @yesNoMaybeAlleKurz.
+  ///
+  /// In de, this message translates to:
+  /// **'Alle'**
+  String get yesNoMaybeAlleKurz;
 
   /// No description provided for @lektionEyebrow.
   ///

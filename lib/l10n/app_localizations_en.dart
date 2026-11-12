@@ -5419,7 +5419,11 @@ class AppLocalizationsEn extends AppLocalizations {
       'Photos you send stay on the other person\'s phone, even if you disconnect later.';
 
   @override
-  String get yesNoMaybeInfoZeile => 'How this works';
+  String get yesNoMaybeInfoZeile =>
+      'Nothing has to be answered. Your partner never sees a “Rather not”.';
+
+  @override
+  String get yesNoMaybeAlleKurz => 'All';
 
   @override
   String lektionEyebrow(Object durationMin) {

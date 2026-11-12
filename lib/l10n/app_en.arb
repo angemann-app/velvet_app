@@ -1748,7 +1748,8 @@
     }
   },
   "fotoHinweisTrennung": "Photos you send stay on the other person's phone, even if you disconnect later.",
-  "yesNoMaybeInfoZeile": "How this works",
+  "yesNoMaybeInfoZeile": "Nothing has to be answered. Your partner never sees a “Rather not”.",
+  "yesNoMaybeAlleKurz": "All",
   "lektionEyebrow": "Lesson · {durationMin} min",
   "lektionEyebrowAudio": "Audio exercise · {durationMin} min",
   "playerZeit": "{vergangen} of {gesamt}",

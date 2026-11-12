@@ -359,7 +359,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
   Widget _buildQuestionnaireTab() {
     final yesCount = _myAnswers.values.where((v) => v == 'yes').length;
     final maybeCount = _myAnswers.values.where((v) => v == 'maybe').length;
-    final noCount = _myAnswers.values.where((v) => v == 'no').length;
+    // „Lieber nicht“ wird bewusst nicht gezählt.
 
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
@@ -374,10 +374,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              _buildFilterChip(
-                  'all',
-                  t.yesNoMaybeAllEintraegelength(
-                      ListenUebersetzung.eintraege.length)),
+              _buildFilterChip('all', t.yesNoMaybeAlleKurz),
               const SizedBox(width: 8),
               _buildFilterChip('open', t.yesNoMaybeOpen),
               const SizedBox(width: 8),
@@ -386,7 +383,7 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               _buildFilterChip(
                   'maybe', t.yesNoMaybeMaybeMaybecount(maybeCount)),
               const SizedBox(width: 8),
-              _buildFilterChip('no', t.yesNoMaybeNoNocount(noCount)),
+              _buildFilterChip('no', t.yesNoMaybeNo),
             ],
           ),
         ),

@@ -273,3 +273,9 @@ Titel („Heu…“), weil nun vier Symbole neben dem Titel stehen.
 - Player: Abspielknopf zuerst, Zeit als „1:24 von 6:00“.
 - Üben: Programm und Einstellungen klappen bei Bedarf auf, der Kreis passt immer auf den Bildschirm.
 - Kleine graue Zeilen sind besser lesbar.
+
+## Prüfung durch die Sexualtherapeut:in (12.11.2026) und Folgen
+
+- **Umgesetzt:** Die eingeklappte Zeile der Fantasie-Landkarte nennt jetzt die Kernzusage selbst („Nichts muss beantwortet werden. Ein „Lieber nicht“ sieht dein Gegenüber nie.“); nur der ausführliche Text klappt ein. Die Filterchips „Alle“ und „Lieber nicht“ tragen keine Zahl mehr (65 als Gesamtzahl wirkt wie ein Berg Aufgaben, „Lieber nicht“ wird nicht gezählt); „Ja, gern“ und „Vielleicht“ behalten ihre Zahl.
+- **Regel:** Die Chips „Gemeinsamer Abend“ und „Fantasie-Landkarte“ im Paar-Kanal bekommen nie einen Hinweispunkt, Zähler oder „neu“-Marke (Erwartungsdruck). Reihenfolge Abend vor Landkarte bleibt.
+- **Offen (Entscheidung des Nutzers):** Chips schon im Zustand „verbindet …“ zeigen oder erst, wenn die Verbindung steht (Empfehlung der Prüfung: erst „verbunden“). Zusätzlich offen: Die Karte „Eure erste Woche“ darf kein „ihr solltet“ und keine Fristen tragen; der Text wurde hier nicht geprüft.

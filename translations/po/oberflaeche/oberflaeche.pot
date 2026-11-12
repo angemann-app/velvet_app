@@ -9280,9 +9280,15 @@ msgid "Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch sp�
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: How this works
+#. EN: Nothing has to be answered. Your partner never sees a “Rather not”.
 msgctxt "ui:yesNoMaybeInfoZeile#text"
-msgid "Wie das hier funktioniert"
+msgid "Nichts muss beantwortet werden. Ein „Lieber nicht“ sieht dein Gegenüber nie."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: All
+msgctxt "ui:yesNoMaybeAlleKurz#text"
+msgid "Alle"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {durationMin}

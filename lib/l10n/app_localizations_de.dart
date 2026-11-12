@@ -5443,7 +5443,11 @@ class AppLocalizationsDe extends AppLocalizations {
       'Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.';
 
   @override
-  String get yesNoMaybeInfoZeile => 'Wie das hier funktioniert';
+  String get yesNoMaybeInfoZeile =>
+      'Nichts muss beantwortet werden. Ein „Lieber nicht“ sieht dein Gegenüber nie.';
+
+  @override
+  String get yesNoMaybeAlleKurz => 'Alle';
 
   @override
   String lektionEyebrow(Object durationMin) {

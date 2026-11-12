@@ -2484,7 +2484,8 @@
     }
   },
   "fotoHinweisTrennung": "Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt.",
-  "yesNoMaybeInfoZeile": "Wie das hier funktioniert",
+  "yesNoMaybeInfoZeile": "Nichts muss beantwortet werden. Ein „Lieber nicht“ sieht dein Gegenüber nie.",
+  "yesNoMaybeAlleKurz": "Alle",
   "lektionEyebrow": "Lektion · {durationMin} Min.",
   "@lektionEyebrow": { "placeholders": { "durationMin": { "type": "Object" } } },
   "lektionEyebrowAudio": "Audio-Übung · {durationMin} Min.",
