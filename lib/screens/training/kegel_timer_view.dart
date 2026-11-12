@@ -348,7 +348,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
     return LayoutBuilder(builder: (context, box) {
     // Der Kreis wird in den freien Platz eingepasst, damit er vollständig sichtbar bleibt (Rest der Seite: ca. 420 pt,
     // der Kreis atmet bis zum 1,2-Fachen).
-    final kreis = ((box.maxHeight - 420) / 1.2).clamp(130.0, 200.0);
+    final kreis = ((box.maxHeight - 420) / 1.2).clamp(140.0, 200.0);
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       child: Column(
@@ -471,7 +471,8 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                       border: Border.all(color: currentPhase.color, width: 3.5),
                     ),
                     child: Center(
-                      child: Column(
+                      // Bei kleinem Kreis oder großer Schrift schrumpft der Inhalt, statt überzulaufen.
+                      child: FittedBox(fit: BoxFit.scaleDown, child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
@@ -490,7 +491,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                             ),
                           ),
                         ],
-                      ),
+                      )),
                     ),
                   ),
                 );
