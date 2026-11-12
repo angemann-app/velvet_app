@@ -68,7 +68,6 @@ seinem OK führt Claude zusammen, trägt den Auftrag unter „Erledigt“ ein un
 
 ## Gesperrt (hier arbeitet gerade Claude Code)
 
-- 12.11.2026, Branch `claude/coach-entfernen-20261112` (Worktree `C:\TOOLS\workspace\mojo_coach`): KI-Coach entfernen. Betrifft `lib/screens/ai_coach/`, `lib/screens/ueben/`, `lib/screens/main_navigation_screen.dart`, `lib/services/{ai_service,coach_vorschlaege,storage_service,secret_store,backup_codec}.dart`, `lib/models/chat_message.dart`, `lib/l10n/app_{de,en}.arb`, `pubspec.yaml`, `assets/data/{anleitung,neuigkeiten}.json` samt `translations/en/`, README, Anleitung, Tests.
 
 
 
