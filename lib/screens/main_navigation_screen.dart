@@ -11,6 +11,7 @@ import 'courses/courses_screen.dart';
 import 'training/training_screen.dart';
 import 'couples_channel/couples_channel_screen.dart';
 import 'ueben/ueben_screen.dart';
+import 'onboarding/onboarding_screen.dart';
 import 'whats_new_screen.dart';
 import 'anleitung_screen.dart';
 import '../l10n/t.dart';
@@ -81,6 +82,13 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
         });
     }
   }
+
+  Future<void> _profilBearbeiten() async {
+    await Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OnboardingScreen(isEditing: true)));
+    // Auch ohne Speichern kann sich z. B. der Spicy-Modus geändert haben: Heute und Lernen laden neu.
+    _tabWechsel.value++;
+  }
+
   String _getAppBarTitle(int index) {
     switch (index) {
       case _heute:
@@ -114,6 +122,13 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
           overflow: TextOverflow.ellipsis,
         ),
         actions: [
+          // Profil nur auf „Heute“, dort wo die Begrüßung steht.
+          if (_currentIndex == _heute)
+            IconButton(
+              tooltip: t.coursesProfileSettings,
+              icon: const Icon(Icons.account_circle_outlined),
+              onPressed: _profilBearbeiten,
+            ),
           IconButton(
             tooltip: t.sucheTitel,
             icon: const Icon(Icons.search_rounded),

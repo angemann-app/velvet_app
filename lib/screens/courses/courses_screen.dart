@@ -22,7 +22,6 @@ import '../couples_channel/invite_partner.dart';
 import '../couples_channel/pairing_modal.dart';
 import '../couples_channel/paar_abend_screen.dart';
 import '../../services/audio_gruppen.dart';
-import '../onboarding/onboarding_screen.dart';
 import 'lesson_detail_screen.dart';
 import '../../l10n/t.dart';
 
@@ -101,16 +100,6 @@ class _CoursesScreenState extends State<CoursesScreen> {
         // Keine Vorbelegung des Filters nach Geschlecht: Standard ist „Alle Kurse“ (Konzept eine-tonlage.md).
       });
     }
-  }
-
-  void _openProfileEditor() async {
-    await Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => const OnboardingScreen(isEditing: true),
-      ),
-    );
-    // Immer neu laden: auch ohne Speichern kann sich z. B. der Spicy-Modus geändert haben.
-    _loadData();
   }
 
   void _onLessonTap(Course course, Lesson lesson) async {
@@ -472,12 +461,7 @@ class _CoursesScreenState extends State<CoursesScreen> {
             ],
           ),
         ),
-        IconButton(
-          onPressed: _openProfileEditor,
-          tooltip: t.coursesProfileSettings,
-          visualDensity: VisualDensity.compact,
-          icon: Icon(Icons.account_circle_outlined, color: AppTheme.akzentTief, size: 30),
-        ),
+        // Das Profil-Symbol sitzt in der oberen Reihe (main_navigation_screen.dart), neben Suche und Hilfe.
       ],
     );
   }
@@ -516,7 +500,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
       n.$2.title,
       style: spicy ? typo.ueberschrift.copyWith(fontSize: 26, fontStyle: FontStyle.italic, color: AppTheme.aufBild) : typo.ueberschrift,
     );
-    final bildHoehe = spicy ? 300.0 : 190.0;
+    // Niedrig, damit „Für heute“ ohne Scrollen sichtbar bleibt (Spicy etwas höher für die Poster-Wirkung).
+    final bildHoehe = spicy ? 168.0 : 92.0;
     return VpKarte(
       rahmen: VpRahmen.gerahmt,
       padding: EdgeInsets.zero,
