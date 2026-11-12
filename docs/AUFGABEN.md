@@ -11,6 +11,10 @@ Für jede Aufgabe eine eigene Sitzung und ein eigener Branch.
 
 Freigegeben am 02.11.2026, Branch `codex/bedienung-audio-gemeinsam-20261102`, Konzept `docs/konzepte/bedienung-audio-wege.md`. Implementiert: lokale Suche, persönlicher Weg, globaler Player/Mini-Player, genaue Wiederaufnahme des gespeicherten Ablaufs, Offline-/Downloadwege, gemeinsames Hören derselben Fassung und freiwilliger gemeinsamer Rückblick. 419 Tests grün, Analyse ohne Befund; DE/EN und alle Atmosphären sowie kleine/große Displays geprüft. Gemeinsames Hören braucht passende tatsächliche Aufnahmen auf beiden Geräten; keine Geräte-Stimme. **Offen im Team:** Claude baut/veröffentlicht morgen eine Beta für den In-App-Download; erst danach echter Geräte-/Zweigeräte-/Hintergrundtest. Kein USB-/Alpha-Weg. Übergabe `docs/UEBERGABE_BETA_BEDIENUNG.md`, aktuelle Belege `docs/ZUSAMMENARBEIT_CODEX_CLAUDE.md`. Keine APK und keine Veröffentlichung durch Codex.
 
+## 0b. SOS neu: für alle, mit Hilfe bei Druck (Konzept: docs/konzepte/sos-neu.md)
+
+12.11.2026, Branch `claude/sos-neu-20261112` (eigene Worktree `../mojo_sos`), nicht zusammengeführt. Umgesetzt: sechs neue Wege (DE/EN), Auswahl „Was ist gerade los?“, fester Hilfe-Teil mit Anlaufstellen für DE/AT/CH/UK/US, neues Symbol „Hilfe“. Offen: Gegenlese der Texte, Original-Quellen der Nummern einzeln lesen, Test am Gerät (Anrufen, Schnell verlassen), „Was ist neu“-Eintrag beim Release, Stellen für queere Menschen und Österreich (Männer), Abschnitt nach einem Übergriff (offene Fragen 6 und 7).
+
 ## 1. Lust im Traum: Rest
 
 Weiterentwicklung 01.11.2026 → `docs/konzepte/traumpraxis.md`: persönlicher Übungsweg, dauerhafte Traumzeichen, Abendvorbereitung und privater Tagesrückblick im Codex-Branch implementiert, DE/EN, mit Sicherung und Merge. Renderprüfung beider Sprachen und Formular-/Backup-Tests bestanden. Noch nicht veröffentlicht; echter Gerätetest und Release stehen aus. Keine Behauptung eines nachgewiesenen Lustzuwachses. Aktuelle Übergabe und Prüflogs in `docs/ZUSAMMENARBEIT_CODEX_CLAUDE.md`.

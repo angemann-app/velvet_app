@@ -1887,40 +1887,106 @@
   ],
   "sos_cards": [
     {
-      "id": "sos_before",
-      "title": "Vor der Situation: Vom Prüfungsstress ins Vorfreude-Knistern",
-      "situation": "Du merkst schon vor dem Date oder beim Zähneputzen vorm Schlafengehen, dass dein Kopf rattert und einen Leistungstest aufbaut.",
-      "immediate_steps": [
-        "Adrenalin umdeuten: Sag dir innerlich: 'Mein Herz klopft nicht vor Angst, sondern weil mir dieser Mensch wichtig ist. Mein Körper macht sich bereit.'",
-        "3x Physiologischer Seufzer: Doppelt durch die Nase tief in den Bauch einatmen, Lippen locker öffnen und extrem lang und hörbar ausatmen.",
-        "Schnelle Entspannung für Gesicht und Nacken (30 Sekunden): Knete sanft beide Ohrläppchen mit leichtem Zug nach unten und streiche deinen Kiefer weich aus.",
-        "Beckenboden-Schmelze: Lass im Stehen oder Sitzen bewusst deinen Unterbauch, dein Gesäß und deinen Damm nach unten sinken (Beckenboden-Öffner).",
-        "Das 90-Prozent-Versprechen: Triff einen Pakt mit dir: 'Heute Abend ist Penetration gar nicht mein Pflichtziel. Ich gehe da rein, um Haut zu schmecken, zu küssen und zu genießen. Alles andere ist verbotener Bonus.'"
+      "id": "sos_nervoes",
+      "title": "Ich bin nervös oder unsicher",
+      "intro": "Nervosität vor Nähe ist häufig. Dein Körper macht sich bereit, auch wenn es sich nach Anspannung anfühlt. Manchmal ist Nervosität auch ein leises Nein. Auch das darfst du ernst nehmen. Du musst heute nichts leisten.",
+      "steps": [
+        "Atme dreimal ein und lass die Luft länger wieder hinaus, als du eingeatmet hast. Mehr braucht es nicht.",
+        "Lass Kiefer und Schultern los. Du kannst eine Hand auf Brust oder Bauch legen.",
+        "Frag dich: Was möchte ich heute Abend? „Nur kuscheln“ und „heute lieber nicht“ sind vollwertige Antworten."
       ],
-      "mantra": "Ich bin heute Abend kein Prüfling, sondern ein Genießer. Ich bin hier, um zu spüren, nicht um abzuliefern."
+      "phrases": [
+        "Mein Kopf ist heute ziemlich voll. Ich würde gern langsam anfangen.",
+        "Ich bin nervös. Können wir erst einmal einfach nah beieinander sein?"
+      ],
+      "closing": "Nähe braucht kein Ziel. Du darfst jederzeit anhalten.",
+      "to_help": false
     },
     {
-      "id": "sos_during",
-      "title": "Mitten im Moment: Wenn der Kopf dichtmacht oder die Reaktion nachlässt",
-      "situation": "Du bist mitten im Geschehen, rutschst in die Beobachter-Falle ('Klappt es noch?') und merkst, wie die Erektion weicher wird oder dein Becken verkrampft.",
-      "immediate_steps": [
-        "Sofortiger Stopp des Krampfes: Versuche auf keinen Fall, durch schnelleres Stoßen, Zusammenkneifen der Pobacken oder Luftanhalten etwas zu erzwingen!",
-        "Flutlicht umdrehen (Fokus-Shift): Nimm den Druck von dir und schenke deine volle Aufmerksamkeit 2 Minuten dem Körper deines Gegenübers (Hals, Brust, Schenkel).",
-        "Spür-Anker zünden: Öffne deinen Kiefer, lass ein tiefes Seufzen hören und fühle für 30 Sekunden ausschließlich die Hitze und Feuchtigkeit unter Lippen oder Handflächen.",
-        "Charmanten Druckbrecher nutzen: Lächle dein Gegenüber an und raune: 'Du machst mich gerade so verrückt, dass ich kurz einen Gang zurückschalten muss – lass uns eine Minute ganz eng umschlungen atmen.'"
+      "id": "sos_koerper",
+      "title": "Mein Körper macht gerade nicht mit",
+      "intro": "Erregung kommt und geht, bei allen Körpern: Die Erektion lässt nach, die Feuchtigkeit bleibt aus, der Kopf macht dicht. Das sagt nichts über dich und nichts über eure Nähe. Oft ist es Stress.",
+      "steps": [
+        "Halte kurz inne. Mehr Tempo oder Druck macht es meist schwerer. Atme aus.",
+        "Richte die Aufmerksamkeit auf das, was du gerade spürst: die Wärme der Haut, einen Atemzug, die Hand deines Gegenübers.",
+        "Sag es, sobald du magst, mit einem Satz. Ehrlich ist leichter als überspielen: Dein Gegenüber merkt ohnehin, dass etwas anders ist, und bezieht Schweigen oft auf sich.",
+        "Ihr könnt die Berührung wechseln: streicheln, küssen, reden, eine Pause. Es muss nichts „fertig“ werden. Kommt es oft vor, lohnt sich ein Gespräch in der Hausarzt-, Urologie- oder Gynäkologiepraxis."
       ],
-      "mantra": "Eine Pause macht das Spiel nur heißer. Kiefer locker, Damm weich, zurück zur Hitze der Haut."
+      "phrases": [
+        "Mein Körper macht gerade nicht mit. Das liegt nicht an dir. Können wir kurz langsamer machen?",
+        "Ich bin gerade im Kopf. Magst du mich einfach halten?"
+      ],
+      "closing": "Eine Pause ist kein Scheitern.",
+      "to_help": false
     },
     {
-      "id": "sos_after",
-      "title": "Nach einem schwierigen Moment: Scham-Detox und Verbundenheit",
-      "situation": "Es lief nicht wie im Film, der Akt wurde abgebrochen und dein innerer Kritiker will sich am liebsten im Erdboden verkriechen.",
-      "immediate_steps": [
-        "Rückzugs-Verbot (Körperkontakt halten!): Der einzige echte Fehler wäre jetzt, dich wegzudrehen oder stumm an die Decke zu starren. Zieh deinen Partner eng an deine Brust, halte die Hand.",
-        "Biologie von Identität trennen: Dein Sympathikus hatte schlicht zu viel Rest-Adrenalin im Tank. Das ist eine harmlose Gefäßreaktion deines Nervensystems – keine Aussage über deinen Wert als Liebhaber.",
-        "KVT-Reset für morgen: Öffne später in Ruhe das KVT-Journal in der App und entlarve den Katastrophengedanken, damit dein Gehirn keine falsche Angst-Datei abspeichert."
+      "id": "sos_schmerz",
+      "title": "Es tut weh oder mein Körper verkrampft",
+      "intro": "Schmerz ist ein Signal, kein Zeichen, dass du etwas falsch machst. Du musst ihn nicht aushalten.",
+      "steps": [
+        "Stopp. Sag „Stopp“ oder „Warte“, auch wenn es sich unangenehm anfühlt. Haltet an. Wenn etwas in dir ist, löst euch langsam voneinander.",
+        "Atme langsam aus und lass Bauch, Gesäß und Beckenboden sinken, so gut es geht. Gegen Verkrampfen helfen Ruhe und Wärme, nicht Durchhalten.",
+        "Entscheide, was jetzt guttut: andere Position, mehr Gleitmittel, anderes Tempo, etwas ganz anderes oder Schluss für heute.",
+        "Wenn Schmerz öfter kommt, lässt er sich abklären und oft behandeln, zum Beispiel in der Gynäkologie, Urologie oder bei Beckenboden-Physiotherapie. Bei plötzlichem starkem Schmerz, Blutung, Fieber oder Schmerz, der danach anhält, lass es bald ärztlich ansehen. Du bist damit nicht allein."
       ],
-      "mantra": "Wahre Souveränität zeigt sich darin, wie warm und nah ich bleibe, wenn etwas unperfekt läuft."
+      "phrases": [
+        "Es tut weh. Bitte halte kurz inne.",
+        "Ich verkrampfe gerade. Ich brauche eine Pause."
+      ],
+      "closing": "Schmerz ist ein guter Grund aufzuhören.",
+      "to_help": false
+    },
+    {
+      "id": "sos_nichtmehr",
+      "title": "Ich möchte gerade nicht mehr",
+      "intro": "Du darfst jederzeit „nicht mehr“ sagen, auch mittendrin und auch, wenn du vorher Ja gesagt hast. Das braucht keine Begründung.",
+      "steps": [
+        "Nimm wahr, was in dir „Nein“ sagt: Körper, Gefühl, ein Gedanke. Das genügt als Grund.",
+        "Sag es kurz und deutlich. Du musst es nicht freundlich verpacken oder erklären.",
+        "Du darfst dich bewegen, dich bedecken, aufstehen, den Raum wechseln.",
+        "Wenn dein Gegenüber nicht aufhört oder dich überredet, liegt das nicht an dir. Dafür gibt es Hilfe (Knopf unten)."
+      ],
+      "phrases": [
+        "Ich möchte aufhören.",
+        "Ich will jetzt nicht mehr.",
+        "Stopp."
+      ],
+      "closing": "Ein Nein braucht kein Aber.",
+      "to_help": true
+    },
+    {
+      "id": "sos_gegenueber",
+      "title": "Mein Gegenüber wirkt still oder zieht sich zurück",
+      "intro": "Du merkst, dass etwas kippt. Du musst nichts lösen und nichts erraten. Du kannst anhalten und fragen.",
+      "steps": [
+        "Halte inne und nimm die Hände weg.",
+        "Frag leise und offen: „Ist alles gut? Möchtest du weitermachen, eine Pause oder aufhören?“",
+        "Hör die Antwort wirklich an. Zögern, Schweigen oder „Ich weiß nicht“ ist kein Ja. Im Zweifel: aufhören.",
+        "Antworte ohne Vorwurf, auch wenn es dich kränkt: „Danke, dass du es sagst.“ Deine eigenen Gefühle haben später Platz."
+      ],
+      "phrases": [
+        "Ich merke, dass etwas anders ist. Möchtest du eine Pause?",
+        "Danke, dass du es mir sagst. Das ist völlig in Ordnung."
+      ],
+      "closing": "Anhalten ist ein Zeichen von Zuneigung. Wenn es dich selbst verunsichert hat: Sprecht später darüber.",
+      "to_help": false
+    },
+    {
+      "id": "sos_danach",
+      "title": "Es lief anders als gedacht",
+      "intro": "Vielleicht wurde abgebrochen, vielleicht war es nur anders als erhofft. Scham danach ist verbreitet und wird meist leichter. Wenn eine Grenze überschritten wurde, ist das nicht einfach „anders gelaufen“. Dann geht es um dich, nicht ums Reden. Hilfe findest du unten.",
+      "steps": [
+        "Bleibt beieinander, wenn es für euch beide guttut: eine Hand halten, nebeneinander atmen. Braucht jemand Abstand, ist das auch in Ordnung. Sag dann kurz: „Ich brauche einen Moment und komme wieder.“",
+        "Trenne, was geschehen ist, von dem, was du wert bist. Ein Körper reagiert auf Stress, Müdigkeit und Gedanken. Das ist keine Aussage über dich.",
+        "Sprecht darüber, wenn ihr beide bereit seid, heute oder morgen, ohne Schuldzuweisung. Kurs 12 hat Sätze dafür. Im Bereich „Reframing“ kannst du erst für dich aufschreiben, was los war.",
+        "Fragt euch beide: Was hat uns gutgetan? Was wünsche ich mir beim nächsten Mal anders?"
+      ],
+      "phrases": [
+        "Danke, dass du da warst. Es war schwer, aber ich möchte mit dir darüber reden.",
+        "Ich brauche kurz Ruhe. Kann ich dich später ansprechen?"
+      ],
+      "closing": "Ihr müsst das nicht heute klären.",
+      "to_help": true
     }
   ],
   "belief_library": [

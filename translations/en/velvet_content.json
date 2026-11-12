@@ -1748,40 +1748,106 @@
   ],
   "sos_cards": [
     {
-      "id": "sos_before",
-      "title": "Before the situation: from exam stress to the crackle of anticipation",
-      "situation": "Even before the date, or while brushing your teeth before bed, you notice your head racing and building up a performance test.",
-      "immediate_steps": [
-        "Reframe the adrenaline: tell yourself inwardly: 'My heart isn't pounding from fear, but because this person matters to me. My body is getting ready.'",
-        "3x physiological sigh: breathe in twice through the nose deep into the belly, open your lips loosely and breathe out extremely long and audibly.",
-        "Quick relaxation for face and neck (30 seconds): gently knead both earlobes with a slight downward pull and stroke your jaw soft.",
-        "Pelvic floor melt: standing or sitting, consciously let your lower belly, buttocks and perineum sink downwards (pelvic floor opener).",
-        "The 90-percent promise: make a pact with yourself: 'Tonight penetration isn't my obligatory goal at all. I'm going in to taste skin, to kiss and to enjoy. Everything else is a forbidden bonus.'"
+      "id": "sos_nervoes",
+      "title": "I feel nervous or unsure",
+      "intro": "Nerves before closeness are common. Your body is getting ready, even if it feels like tension. Sometimes nerves are a quiet no. You can take that seriously too. You don't have to perform tonight.",
+      "steps": [
+        "Breathe in three times and let each breath out last longer than the breath in. That's all it takes.",
+        "Let your jaw and shoulders drop. You can rest a hand on your chest or belly.",
+        "Ask yourself: what do I want tonight? “Just cuddling” and “not tonight” are complete answers."
       ],
-      "mantra": "Tonight I'm not someone taking an exam, but someone savouring. I'm here to feel, not to deliver."
+      "phrases": [
+        "My head is pretty full today. I'd like to start slowly.",
+        "I'm nervous. Can we just be close for a while first?"
+      ],
+      "closing": "Closeness needs no goal. You can stop at any time.",
+      "to_help": false
     },
     {
-      "id": "sos_during",
-      "title": "In the middle of the moment: when your head shuts down or the response fades",
-      "situation": "You're in the middle of things, slip into the spectator trap ('Is it still working?') and notice the erection softening or your pelvis cramping.",
-      "immediate_steps": [
-        "Stop the cramp immediately: whatever you do, don't try to force anything by thrusting faster, clenching your buttocks or holding your breath!",
-        "Turn the floodlight around (focus shift): take the pressure off yourself and give your full attention to your partner's body for 2 minutes (neck, chest, thighs).",
-        "Light a sensory anchor: open your jaw, let a deep sigh be heard and for 30 seconds feel only the heat and moisture under your lips or palms.",
-        "Use a charming pressure breaker: smile at your partner and murmur: 'You're driving me so crazy right now that I need to shift down a gear – let's breathe wrapped tightly around each other for a minute.'"
+      "id": "sos_koerper",
+      "title": "My body isn't going along right now",
+      "intro": "Arousal comes and goes, in every body: the erection fades, wetness stays away, the mind shuts down. That says nothing about you or about your closeness. Often it's stress.",
+      "steps": [
+        "Pause for a moment. More speed or pressure usually makes it harder. Breathe out.",
+        "Turn your attention to what you feel right now: the warmth of skin, one breath, your partner's hand.",
+        "Say it in one sentence, whenever you like. Being honest is easier than covering up: your partner notices that something is different anyway, and often takes silence personally.",
+        "You can change the touch: stroking, kissing, talking, a break. Nothing has to be “finished”. If it happens often, it's worth talking to a GP, urologist or gynecologist."
       ],
-      "mantra": "A pause only makes the game hotter. Jaw loose, perineum soft, back to the heat of the skin."
+      "phrases": [
+        "My body isn't going along right now. It's not you. Can we slow down for a moment?",
+        "I'm in my head right now. Would you just hold me?"
+      ],
+      "closing": "A pause is not a failure.",
+      "to_help": false
     },
     {
-      "id": "sos_after",
-      "title": "After a difficult moment: shame detox and connection",
-      "situation": "It didn't go like in the movies, things were stopped and your inner critic would most like to sink into the ground.",
-      "immediate_steps": [
-        "No withdrawing (keep body contact!): the only real mistake now would be to turn away or stare silently at the ceiling. Pull your partner close to your chest, hold their hand.",
-        "Separate biology from identity: your stress system simply had too much leftover adrenaline in the tank. That's a harmless vascular reaction of your nervous system – not a statement about your worth as a lover.",
-        "CBT reset for tomorrow: later, calmly open the CBT journal in the app and expose the catastrophic thought so your brain doesn't store a false fear file."
+      "id": "sos_schmerz",
+      "title": "It hurts or my body tenses up",
+      "intro": "Pain is a signal, not a sign that you're doing something wrong. You don't have to put up with it.",
+      "steps": [
+        "Stop. Say “stop” or “wait”, even if it feels awkward. Stop moving. If something is inside you, slowly separate.",
+        "Breathe out slowly and let your belly, buttocks and pelvic floor soften as much as you can. Tension eases with calm and warmth, not with pushing through.",
+        "Decide what feels good now: another position, more lubricant, a different pace, something else entirely, or calling it a night.",
+        "If pain comes up often, it can be looked into and often treated, for example by a gynecologist, a urologist or in pelvic floor physiotherapy. With sudden severe pain, bleeding, fever or pain that lasts afterwards, get it checked soon. You're not alone with this."
       ],
-      "mantra": "True confidence shows in how warm and close I stay when something goes imperfectly."
+      "phrases": [
+        "It hurts. Please pause for a moment.",
+        "I'm tensing up. I need a break."
+      ],
+      "closing": "Pain is a good reason to stop.",
+      "to_help": false
+    },
+    {
+      "id": "sos_nichtmehr",
+      "title": "I don't want to go on",
+      "intro": "You can say “no more” at any time, even in the middle of things and even if you said yes earlier. You don't need a reason.",
+      "steps": [
+        "Notice what in you says “no”: body, feeling, a thought. That is reason enough.",
+        "Say it short and clear. You don't have to wrap it in kindness or explain.",
+        "You may move, cover yourself, get up, change rooms.",
+        "If your partner doesn't stop or talks you around, that is not on you. There is help for that (button below)."
+      ],
+      "phrases": [
+        "I want to stop.",
+        "I don't want to go on.",
+        "Stop."
+      ],
+      "closing": "A no needs no but.",
+      "to_help": true
+    },
+    {
+      "id": "sos_gegenueber",
+      "title": "My partner seems quiet or is pulling back",
+      "intro": "You sense that something is tipping. You don't have to fix anything or guess. You can stop and ask.",
+      "steps": [
+        "Pause and take your hands away.",
+        "Ask softly and openly: “Is everything okay? Do you want to go on, take a break or stop?”",
+        "Really listen to the answer. Hesitation, silence or “I don't know” is not a yes. When in doubt: stop.",
+        "Answer without blame, even if it stings: “Thank you for telling me.” Your own feelings can have their space later."
+      ],
+      "phrases": [
+        "I notice something is different. Would you like a break?",
+        "Thank you for telling me. That's completely okay."
+      ],
+      "closing": "Stopping is a sign of care. If it left you unsettled yourself: talk about it later.",
+      "to_help": false
+    },
+    {
+      "id": "sos_danach",
+      "title": "It didn't go as expected",
+      "intro": "Maybe it was stopped, maybe it was just different from what you hoped. Shame afterwards is common and usually eases. If a boundary was crossed, that is not just “different”. Then this is about you, not about talking it through. Help is below.",
+      "steps": [
+        "Stay close if that feels good for both of you: hold a hand, breathe side by side. If someone needs distance, that is fine too. Then say briefly: “I need a moment and I'll come back.”",
+        "Separate what happened from what you are worth. A body reacts to stress, tiredness and thoughts. That says nothing about you.",
+        "Talk about it when you are both ready, today or tomorrow, without blame. Course 12 has sentences for that. In the “Reframing” section you can first write down for yourself what happened.",
+        "Ask each other: what was good for us? What would I like to be different next time?"
+      ],
+      "phrases": [
+        "Thank you for being there. It was hard, but I'd like to talk about it with you.",
+        "I need a bit of quiet. Can I come to you later?"
+      ],
+      "closing": "You don't have to sort it out tonight.",
+      "to_help": true
     }
   ],
   "belief_library": [
@@ -2127,8 +2193,11 @@
     "match:match_sensory_talk": "27dba43e7aba9d99",
     "match:match_wrists": "be8ef66f7b7685b5",
     "match:match_yoni_ritual": "d0b841726ab0c3aa",
-    "sos:sos_after": "7839ed8f38737b7a",
-    "sos:sos_before": "854a461e0831f317",
-    "sos:sos_during": "2fb0b18d1cae1d70"
+    "sos:sos_danach": "aba225e4003c6c3d",
+    "sos:sos_gegenueber": "6f6347a3992160ce",
+    "sos:sos_koerper": "08460e36646c3ea7",
+    "sos:sos_nervoes": "b9b6e0b698ac30d8",
+    "sos:sos_nichtmehr": "339994ee3a348b56",
+    "sos:sos_schmerz": "9f07e3b9de726b34"
   }
 }

@@ -96,7 +96,9 @@ Your dream practice: In Pleasure in dreams, connect recall, recognising dreams a
 
 The Practice tab, under Body, contains the pelvic floor timer with four exercise types and spoken cues, plus the breathing pacer, for example for 4-7-8 breathing.
 
-The SOS button at the top right helps in moments of pressure or anxiety, with short steps for before, in the moment and afterwards.
+The “Help” button at the top right opens a calm sheet. You choose what is going on: nervous, my body isn't going along, pain, “I don't want to go on”, my partner is quiet, afterwards. You get a few steps and sentences you can say.
+
+There you also find help when a no isn't respected or there is pressure, with contacts for Germany, Austria, Switzerland, the United Kingdom and the USA. “Leave quickly” closes the sheet at once.
 
 
 ## Reframing journal and check-in

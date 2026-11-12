@@ -1451,57 +1451,351 @@ msgid "Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, wird der 
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: SOS quick help
-msgctxt "ui:sosModalSosQuickHelp#text"
-msgid "SOS Akut-Hilfe"
+#. EN: Help
+msgctxt "ui:sosTitel#text"
+msgid "Hilfe"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Calm down right now & emergency steps
-msgctxt "ui:sosModalCalmDownRightNowEmergency#text"
-msgid "Sofortige Down-Regulation & Notfall-Schritte"
+#. EN: What's going on right now?
+msgctxt "ui:sosAuswahlTitel#text"
+msgid "Was ist gerade los?"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Before
-msgctxt "ui:sosModalBefore#text"
-msgid "Vorab"
+#. EN: You don't have to explain anything. Pick what fits best.
+msgctxt "ui:sosAuswahlUntertitel#text"
+msgid "Du musst nichts erklären. Such aus, was am ehesten passt."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: In the moment
-msgctxt "ui:sosModalInTheMoment#text"
-msgid "Im Moment"
+#. EN: I'm being pushed, my no isn't respected
+msgctxt "ui:sosAuswahlHilfe#text"
+msgid "Ich werde gedrängt, mein Nein gilt nicht"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Afterwards
-msgctxt "ui:sosModalAfterwards#text"
-msgid "Danach"
+#. EN: Next
+msgctxt "ui:sosWeiter#text"
+msgid "Weiter"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: YOUR MANTRA FOR THIS MOMENT
-msgctxt "ui:sosModalYourMantraForThisMoment#text"
-msgid "DEIN MANTRA FÜR DIESEN MOMENT"
-msgstr ""
-
-#. Platzhalter unverändert übernehmen: {mantra}
-#. EN: “{mantra}”
-msgctxt "ui:sosModalMantra#text"
-msgid "„{mantra}“"
+#. EN: Back
+msgctxt "ui:sosZurueck#text"
+msgid "Zurück"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: IMMEDIATE STEPS (TICK OFF)
-msgctxt "ui:sosModalImmediateStepsTickOff#text"
-msgid "SOFORT-SCHRITTE (ABHAKEN)"
+#. EN: Back to choices
+msgctxt "ui:sosZurAuswahl#text"
+msgid "Zur Auswahl"
 msgstr ""
 
-#. Platzhalter unverändert übernehmen: {checkedLength}, {immediateStepsLength}
-#. EN: {checkedLength}/{immediateStepsLength} done
-msgctxt "ui:sosModalCheckedlengthImmediatestepslengthDone#text"
-msgid "{checkedLength}/{immediateStepsLength} erledigt"
+#. Text der Oberfläche
+#. EN: Close
+msgctxt "ui:sosSchliessen#text"
+msgid "Schließen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {aktuell}, {gesamt}
+#. EN: Step {aktuell} of {gesamt}
+msgctxt "ui:sosSchrittVon#text"
+msgid "Schritt {aktuell} von {gesamt}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A sentence you can say
+msgctxt "ui:sosSatzTitel#text"
+msgid "Ein Satz, den du sagen kannst"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Help with pressure or violence
+msgctxt "ui:sosHilfeKnopf#text"
+msgid "Hilfe bei Druck oder Gewalt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Help when a no isn't respected
+msgctxt "ui:sosHilfeTitel#text"
+msgid "Hilfe, wenn ein Nein nicht gilt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: If you said no, or couldn't say anything, and it went on anyway, that is not okay. It is not your fault. Not even if you're a couple, if you said yes earlier, or if you didn't say it clearly enough. Freezing is a normal protective response.
+msgctxt "ui:sosHilfeEinstieg#text"
+msgid "Wenn du Nein gesagt hast oder nichts sagen konntest und es trotzdem weiterging, ist das nicht in Ordnung. Du bist nicht schuld. Auch nicht, wenn ihr ein Paar seid, wenn du vorher Ja gesagt hast oder wenn du es nicht deutlich genug gesagt hast. Erstarren ist eine normale Schutzreaktion."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What's true
+msgctxt "ui:sosHilfeGiltTitel#text"
+msgid "Was gilt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A no counts, even in the middle of things and even in a relationship.
+msgctxt "ui:sosHilfeGilt1#text"
+msgid "Ein Nein gilt, auch mittendrin und auch in einer Beziehung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A yes that comes after persuading, pushing, sulking, threats or silence used as pressure is not free consent.
+msgctxt "ui:sosHilfeGilt2#text"
+msgid "Ein Ja nach Überreden, Drängen, Schmollen, Drohen oder Schweigen als Druckmittel ist keine freie Zustimmung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Someone who is asleep, unconscious, very drunk or high, or afraid cannot freely consent.
+msgctxt "ui:sosHilfeGilt3#text"
+msgid "Wer schläft, bewusstlos, stark betrunken oder berauscht ist oder Angst hat, kann nicht frei zustimmen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You don't have to prove anything to get help. Counseling is possible without reporting to the police. You decide what to do and when.
+msgctxt "ui:sosHilfeGilt4#text"
+msgid "Du musst nichts beweisen, um Hilfe zu bekommen. Beratung geht auch ohne Anzeige. Du entscheidest, was du tust und wann."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: In immediate danger
+msgctxt "ui:sosHilfeNotrufTitel#text"
+msgid "Bei akuter Gefahr"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Talk to someone
+msgctxt "ui:sosHilfeAnrufenTitel#text"
+msgid "Mit jemandem sprechen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Calls appear in your call log and sometimes on your bill. You can delete them from the call log. A chat shows up in your browser history. A private window leaves less behind.
+msgctxt "ui:sosHilfeDiskretion#text"
+msgid "Anrufe stehen in der Anrufliste und manchmal auf der Rechnung. Aus der Anrufliste kannst du sie löschen. Ein Chat steht im Browserverlauf. Ein privates Fenster hinterlässt weniger."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {stand}
+#. EN: Information as of {stand}. Numbers and hours can change.
+msgctxt "ui:sosHilfeStand#text"
+msgid "Stand der Angaben: {stand}. Nummern und Zeiten können sich ändern."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Call
+msgctxt "ui:sosHilfeAnrufen#text"
+msgid "Anrufen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Website
+msgctxt "ui:sosHilfeWebseite#text"
+msgid "Webseite"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {satz}
+#. EN: “{satz}”
+msgctxt "ui:sosSatzZitat#text"
+msgid "„{satz}“"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {nummer}
+#. EN: Call {nummer}
+msgctxt "ui:sosHilfeAnrufenNummer#text"
+msgid "{nummer} anrufen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {nummer}
+#. EN: Please dial {nummer}
+msgctxt "ui:sosHilfeNummerWaehlen#text"
+msgid "Bitte wähle {nummer}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Leave quickly
+msgctxt "ui:sosHilfeSchnellVerlassen#text"
+msgid "Schnell verlassen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Germany
+msgctxt "ui:sosLandDe#text"
+msgid "Deutschland"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Austria
+msgctxt "ui:sosLandAt#text"
+msgid "Österreich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Switzerland
+msgctxt "ui:sosLandCh#text"
+msgid "Schweiz"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: United Kingdom
+msgctxt "ui:sosLandUk#text"
+msgid "Vereinigtes Königreich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: USA
+msgctxt "ui:sosLandUs#text"
+msgid "USA"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Police 110 · ambulance and fire 112
+msgctxt "ui:sosNotrufDe#text"
+msgid "Polizei 110 · Rettung und Feuerwehr 112"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Police 133 · ambulance 144 · Europe-wide 112
+msgctxt "ui:sosNotrufAt#text"
+msgid "Polizei 133 · Rettung 144 · europaweit 112"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Police 117 · ambulance 144 · 112
+msgctxt "ui:sosNotrufCh#text"
+msgid "Polizei 117 · Sanität 144 · 112"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 999 (police, ambulance)
+msgctxt "ui:sosNotrufUk#text"
+msgid "999 (Polizei, Rettung)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 911 (police, ambulance)
+msgctxt "ui:sosNotrufUs#text"
+msgid "911 (Polizei, Rettung)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Violence Against Women helpline (Germany)
+msgctxt "ui:sosStelleDeFrauenName#text"
+msgid "Hilfetelefon Gewalt gegen Frauen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Around the clock, free and anonymous. Also advises on sexual violence, by phone, chat and in many languages.
+msgctxt "ui:sosStelleDeFrauenHinweis#text"
+msgid "Rund um die Uhr, kostenlos und anonym. Berät auch bei sexueller Gewalt, per Telefon, Chat und in vielen Sprachen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Violence Against Men helpline (Germany)
+msgctxt "ui:sosStelleDeMaennerName#text"
+msgid "Hilfetelefon Gewalt an Männern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Free and anonymous. Phone: Mon to Thu 8 am to 8 pm, Fri 8 am to 3 pm. The chat has shorter hours.
+msgctxt "ui:sosStelleDeMaennerHinweis#text"
+msgid "Kostenlos und anonym. Telefon: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr. Der Chat hat kürzere Zeiten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: WEISSER RING victim helpline (Germany)
+msgctxt "ui:sosStelleDeWeisserName#text"
+msgid "WEISSER RING Opfer-Telefon"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Daily 7 am to 10 pm, free and anonymous, for victims of crime.
+msgctxt "ui:sosStelleDeWeisserHinweis#text"
+msgid "Täglich 7 bis 22 Uhr, kostenlos und anonym, für Opfer von Straftaten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Telefonseelsorge (crisis line, Germany)
+msgctxt "ui:sosStelleDeSeelsorgeName#text"
+msgid "Telefonseelsorge"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Phone around the clock and free, also at 0800 111 0 222 and 116 123. Chat only after registering and with an appointment. Counseling in German.
+msgctxt "ui:sosStelleDeSeelsorgeHinweis#text"
+msgid "Telefon rund um die Uhr und kostenlos, auch unter 0800 111 0 222 und 116 123. Chat nur nach Anmeldung und mit Termin. Beratung auf Deutsch."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Women's helpline against violence (Austria)
+msgctxt "ui:sosStelleAtFrauenName#text"
+msgid "Frauenhelpline gegen Gewalt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Around the clock, free, anonymous and confidential.
+msgctxt "ui:sosStelleAtFrauenHinweis#text"
+msgid "Rund um die Uhr, kostenlos, anonym und vertraulich."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Violence protection centers (Austria)
+msgctxt "ui:sosStelleAtGewaltschutzName#text"
+msgid "Gewaltschutzzentren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Free and confidential. Nationwide number according to the Frauenhelpline.
+msgctxt "ui:sosStelleAtGewaltschutzHinweis#text"
+msgid "Kostenlos und vertraulich. Bundesweite Nummer laut Frauenhelpline."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Victim support 142 (Switzerland)
+msgctxt "ui:sosStelleChOpferhilfeName#text"
+msgid "Opferhilfe 142"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Across Switzerland since 1 May 2026, around the clock, free and anonymous. Not an emergency line: in danger, call the police first.
+msgctxt "ui:sosStelleChOpferhilfeHinweis#text"
+msgid "Seit 1. Mai 2026 in der ganzen Schweiz, rund um die Uhr, kostenlos und anonym. Kein Notruf: Bei Gefahr zuerst die Polizei rufen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Rape Crisis Support Line (England and Wales)
+msgctxt "ui:sosStelleUkRapeName#text"
+msgid "Rape Crisis Support Line"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Around the clock, free, also by chat. For people aged 16 and over in England and Wales affected by rape or sexual violence.
+msgctxt "ui:sosStelleUkRapeHinweis#text"
+msgid "Rund um die Uhr, kostenlos, auch per Chat. Für Menschen ab 16 in England und Wales, die Vergewaltigung oder sexuelle Gewalt erlebt haben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: RAINN National Sexual Assault Hotline (USA)
+msgctxt "ui:sosStelleUsRainnName#text"
+msgid "RAINN National Sexual Assault Hotline"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Around the clock, free and confidential, in English and Spanish. Chat at online.rainn.org.
+msgctxt "ui:sosStelleUsRainnHinweis#text"
+msgid "Rund um die Uhr, kostenlos und vertraulich, auf Englisch und Spanisch. Chat auf online.rainn.org."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 988 Suicide & Crisis Lifeline (USA)
+msgctxt "ui:sosStelleUs988Name#text"
+msgid "988 Suicide & Crisis Lifeline"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Call or text, around the clock, free, for emotional crises.
+msgctxt "ui:sosStelleUs988Hinweis#text"
+msgid "Anruf oder SMS, rund um die Uhr, kostenlos, bei seelischen Krisen."
 msgstr ""
 
 #. Text der Oberfläche

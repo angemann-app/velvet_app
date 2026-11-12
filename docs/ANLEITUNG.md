@@ -96,7 +96,9 @@ Deine Traumpraxis: In Lust im Traum verbindest du Erinnern, bewusstes Erkennen u
 
 Im Tab Üben, Bereich Körper, findest du den Beckenboden-Timer mit vier Übungsarten und Sprachansagen sowie den Atem-Taktgeber, etwa für die 4-7-8-Atmung.
 
-Der SOS-Knopf oben rechts hilft in Momenten mit Druck oder Angst: mit kurzen Schritten für vorher, im Moment und danach.
+Der Knopf „Hilfe“ oben rechts öffnet ein ruhiges Blatt. Du wählst, was gerade los ist: nervös, der Körper macht nicht mit, Schmerz, „ich möchte nicht mehr“, das Gegenüber wird still, danach. Du bekommst wenige Schritte und Sätze, die du sagen kannst.
+
+Dort findest du auch Hilfe, wenn ein Nein nicht gilt oder Druck im Spiel ist, mit Anlaufstellen für Deutschland, Österreich, die Schweiz, das Vereinigte Königreich und die USA. „Schnell verlassen“ schließt das Blatt sofort.
 
 
 ## Reframing-Tagebuch und Check-in

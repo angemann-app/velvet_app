@@ -409,32 +409,102 @@
   "breathPacerViewTheDoubleInhaleIsMeant": "Der doppelte Atemzug entfaltet kollabierte Lungenbläschen.",
   "breathPacerViewStart": "Start",
   "breathPacerViewBackgroundWhenTheExhaleLasts": "Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, wird der Herzschlag mit jedem Ausatmen ein wenig langsamer. Das ist ein normaler Reflex, den viele als beruhigend erleben.",
-  "sosModalSosQuickHelp": "SOS Akut-Hilfe",
-  "sosModalCalmDownRightNowEmergency": "Sofortige Down-Regulation & Notfall-Schritte",
-  "sosModalBefore": "Vorab",
-  "sosModalInTheMoment": "Im Moment",
-  "sosModalAfterwards": "Danach",
-  "sosModalYourMantraForThisMoment": "DEIN MANTRA FÜR DIESEN MOMENT",
-  "sosModalMantra": "„{mantra}“",
-  "@sosModalMantra": {
+  "sosTitel": "Hilfe",
+  "sosAuswahlTitel": "Was ist gerade los?",
+  "sosAuswahlUntertitel": "Du musst nichts erklären. Such aus, was am ehesten passt.",
+  "sosAuswahlHilfe": "Ich werde gedrängt, mein Nein gilt nicht",
+  "sosWeiter": "Weiter",
+  "sosZurueck": "Zurück",
+  "sosZurAuswahl": "Zur Auswahl",
+  "sosSchliessen": "Schließen",
+  "sosSchrittVon": "Schritt {aktuell} von {gesamt}",
+  "@sosSchrittVon": {
     "placeholders": {
-      "mantra": {
-        "type": "Object"
-      }
-    }
-  },
-  "sosModalImmediateStepsTickOff": "SOFORT-SCHRITTE (ABHAKEN)",
-  "sosModalCheckedlengthImmediatestepslengthDone": "{checkedLength}/{immediateStepsLength} erledigt",
-  "@sosModalCheckedlengthImmediatestepslengthDone": {
-    "placeholders": {
-      "checkedLength": {
-        "type": "Object"
+      "aktuell": {
+        "type": "int"
       },
-      "immediateStepsLength": {
-        "type": "Object"
+      "gesamt": {
+        "type": "int"
       }
     }
   },
+  "sosSatzTitel": "Ein Satz, den du sagen kannst",
+  "sosHilfeKnopf": "Hilfe bei Druck oder Gewalt",
+  "sosHilfeTitel": "Hilfe, wenn ein Nein nicht gilt",
+  "sosHilfeEinstieg": "Wenn du Nein gesagt hast oder nichts sagen konntest und es trotzdem weiterging, ist das nicht in Ordnung. Du bist nicht schuld. Auch nicht, wenn ihr ein Paar seid, wenn du vorher Ja gesagt hast oder wenn du es nicht deutlich genug gesagt hast. Erstarren ist eine normale Schutzreaktion.",
+  "sosHilfeGiltTitel": "Was gilt",
+  "sosHilfeGilt1": "Ein Nein gilt, auch mittendrin und auch in einer Beziehung.",
+  "sosHilfeGilt2": "Ein Ja nach Überreden, Drängen, Schmollen, Drohen oder Schweigen als Druckmittel ist keine freie Zustimmung.",
+  "sosHilfeGilt3": "Wer schläft, bewusstlos, stark betrunken oder berauscht ist oder Angst hat, kann nicht frei zustimmen.",
+  "sosHilfeGilt4": "Du musst nichts beweisen, um Hilfe zu bekommen. Beratung geht auch ohne Anzeige. Du entscheidest, was du tust und wann.",
+  "sosHilfeNotrufTitel": "Bei akuter Gefahr",
+  "sosHilfeAnrufenTitel": "Mit jemandem sprechen",
+  "sosHilfeDiskretion": "Anrufe stehen in der Anrufliste und manchmal auf der Rechnung. Aus der Anrufliste kannst du sie löschen. Ein Chat steht im Browserverlauf. Ein privates Fenster hinterlässt weniger.",
+  "sosHilfeStand": "Stand der Angaben: {stand}. Nummern und Zeiten können sich ändern.",
+  "@sosHilfeStand": {
+    "placeholders": {
+      "stand": {
+        "type": "String"
+      }
+    }
+  },
+  "sosHilfeAnrufen": "Anrufen",
+  "sosHilfeWebseite": "Webseite",
+  "sosSatzZitat": "„{satz}“",
+  "@sosSatzZitat": {
+    "placeholders": {
+      "satz": {
+        "type": "String"
+      }
+    }
+  },
+  "sosHilfeAnrufenNummer": "{nummer} anrufen",
+  "@sosHilfeAnrufenNummer": {
+    "placeholders": {
+      "nummer": {
+        "type": "String"
+      }
+    }
+  },
+  "sosHilfeNummerWaehlen": "Bitte wähle {nummer}",
+  "@sosHilfeNummerWaehlen": {
+    "placeholders": {
+      "nummer": {
+        "type": "String"
+      }
+    }
+  },
+  "sosHilfeSchnellVerlassen": "Schnell verlassen",
+  "sosLandDe": "Deutschland",
+  "sosLandAt": "Österreich",
+  "sosLandCh": "Schweiz",
+  "sosLandUk": "Vereinigtes Königreich",
+  "sosLandUs": "USA",
+  "sosNotrufDe": "Polizei 110 · Rettung und Feuerwehr 112",
+  "sosNotrufAt": "Polizei 133 · Rettung 144 · europaweit 112",
+  "sosNotrufCh": "Polizei 117 · Sanität 144 · 112",
+  "sosNotrufUk": "999 (Polizei, Rettung)",
+  "sosNotrufUs": "911 (Polizei, Rettung)",
+  "sosStelleDeFrauenName": "Hilfetelefon Gewalt gegen Frauen",
+  "sosStelleDeFrauenHinweis": "Rund um die Uhr, kostenlos und anonym. Berät auch bei sexueller Gewalt, per Telefon, Chat und in vielen Sprachen.",
+  "sosStelleDeMaennerName": "Hilfetelefon Gewalt an Männern",
+  "sosStelleDeMaennerHinweis": "Kostenlos und anonym. Telefon: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr. Der Chat hat kürzere Zeiten.",
+  "sosStelleDeWeisserName": "WEISSER RING Opfer-Telefon",
+  "sosStelleDeWeisserHinweis": "Täglich 7 bis 22 Uhr, kostenlos und anonym, für Opfer von Straftaten.",
+  "sosStelleDeSeelsorgeName": "Telefonseelsorge",
+  "sosStelleDeSeelsorgeHinweis": "Telefon rund um die Uhr und kostenlos, auch unter 0800 111 0 222 und 116 123. Chat nur nach Anmeldung und mit Termin. Beratung auf Deutsch.",
+  "sosStelleAtFrauenName": "Frauenhelpline gegen Gewalt",
+  "sosStelleAtFrauenHinweis": "Rund um die Uhr, kostenlos, anonym und vertraulich.",
+  "sosStelleAtGewaltschutzName": "Gewaltschutzzentren",
+  "sosStelleAtGewaltschutzHinweis": "Kostenlos und vertraulich. Bundesweite Nummer laut Frauenhelpline.",
+  "sosStelleChOpferhilfeName": "Opferhilfe 142",
+  "sosStelleChOpferhilfeHinweis": "Seit 1. Mai 2026 in der ganzen Schweiz, rund um die Uhr, kostenlos und anonym. Kein Notruf: Bei Gefahr zuerst die Polizei rufen.",
+  "sosStelleUkRapeName": "Rape Crisis Support Line",
+  "sosStelleUkRapeHinweis": "Rund um die Uhr, kostenlos, auch per Chat. Für Menschen ab 16 in England und Wales, die Vergewaltigung oder sexuelle Gewalt erlebt haben.",
+  "sosStelleUsRainnName": "RAINN National Sexual Assault Hotline",
+  "sosStelleUsRainnHinweis": "Rund um die Uhr, kostenlos und vertraulich, auf Englisch und Spanisch. Chat auf online.rainn.org.",
+  "sosStelleUs988Name": "988 Suicide & Crisis Lifeline",
+  "sosStelleUs988Hinweis": "Anruf oder SMS, rund um die Uhr, kostenlos, bei seelischen Krisen.",
   "appLockLocked": "Gesperrt",
   "appLockUnlock": "Entsperren",
   "mainCbtSomaticCoaching": "KVT & SOMATIK COACHING",
