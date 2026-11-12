@@ -973,7 +973,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sosStelleDeMaennerHinweis =>
-      'Free and anonymous, by phone and chat. Hours according to the provider: Mon to Thu 8 am to 8 pm, Fri 8 am to 3 pm.';
+      'Free and anonymous. Phone: Mon to Thu 8 am to 8 pm, Fri 8 am to 3 pm. The chat has shorter hours.';
 
   @override
   String get sosStelleDeWeisserName => 'WEISSER RING victim helpline (Germany)';
@@ -988,7 +988,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sosStelleDeSeelsorgeHinweis =>
-      'Around the clock and free, also at 0800 111 0 222. Chat after registering. Counseling in German.';
+      'Phone around the clock and free, also at 0800 111 0 222 and 116 123. Chat only after registering and with an appointment. Counseling in German.';
 
   @override
   String get sosStelleAtFrauenName =>
@@ -996,14 +996,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sosStelleAtFrauenHinweis =>
-      'Around the clock, free, anonymous on request, in several languages.';
+      'Around the clock, free, anonymous and confidential.';
 
   @override
   String get sosStelleAtGewaltschutzName =>
       'Violence protection centers (Austria)';
 
   @override
-  String get sosStelleAtGewaltschutzHinweis => 'Free and anonymous.';
+  String get sosStelleAtGewaltschutzHinweis =>
+      'Free and confidential. Nationwide number according to the Frauenhelpline.';
 
   @override
   String get sosStelleChOpferhilfeName => 'Victim support 142 (Switzerland)';

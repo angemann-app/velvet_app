@@ -1697,9 +1697,9 @@ msgid "Hilfetelefon Gewalt an Männern"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Free and anonymous, by phone and chat. Hours according to the provider: Mon to Thu 8 am to 8 pm, Fri 8 am to 3 pm.
+#. EN: Free and anonymous. Phone: Mon to Thu 8 am to 8 pm, Fri 8 am to 3 pm. The chat has shorter hours.
 msgctxt "ui:sosStelleDeMaennerHinweis#text"
-msgid "Kostenlos und anonym, per Telefon und Chat. Zeiten laut Anbieter: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr."
+msgid "Kostenlos und anonym. Telefon: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr. Der Chat hat kürzere Zeiten."
 msgstr ""
 
 #. Text der Oberfläche
@@ -1721,9 +1721,9 @@ msgid "Telefonseelsorge"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Around the clock and free, also at 0800 111 0 222. Chat after registering. Counseling in German.
+#. EN: Phone around the clock and free, also at 0800 111 0 222 and 116 123. Chat only after registering and with an appointment. Counseling in German.
 msgctxt "ui:sosStelleDeSeelsorgeHinweis#text"
-msgid "Rund um die Uhr und kostenlos, auch unter 0800 111 0 222. Chat nach Anmeldung. Beratung auf Deutsch."
+msgid "Telefon rund um die Uhr und kostenlos, auch unter 0800 111 0 222 und 116 123. Chat nur nach Anmeldung und mit Termin. Beratung auf Deutsch."
 msgstr ""
 
 #. Text der Oberfläche
@@ -1733,9 +1733,9 @@ msgid "Frauenhelpline gegen Gewalt"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Around the clock, free, anonymous on request, in several languages.
+#. EN: Around the clock, free, anonymous and confidential.
 msgctxt "ui:sosStelleAtFrauenHinweis#text"
-msgid "Rund um die Uhr, kostenlos, auf Wunsch anonym, in mehreren Sprachen."
+msgid "Rund um die Uhr, kostenlos, anonym und vertraulich."
 msgstr ""
 
 #. Text der Oberfläche
@@ -1745,9 +1745,9 @@ msgid "Gewaltschutzzentren"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Free and anonymous.
+#. EN: Free and confidential. Nationwide number according to the Frauenhelpline.
 msgctxt "ui:sosStelleAtGewaltschutzHinweis#text"
-msgid "Kostenlos und anonym."
+msgid "Kostenlos und vertraulich. Bundesweite Nummer laut Frauenhelpline."
 msgstr ""
 
 #. Text der Oberfläche

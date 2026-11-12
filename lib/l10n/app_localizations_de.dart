@@ -979,7 +979,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get sosStelleDeMaennerHinweis =>
-      'Kostenlos und anonym, per Telefon und Chat. Zeiten laut Anbieter: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr.';
+      'Kostenlos und anonym. Telefon: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr. Der Chat hat kürzere Zeiten.';
 
   @override
   String get sosStelleDeWeisserName => 'WEISSER RING Opfer-Telefon';
@@ -993,20 +993,21 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get sosStelleDeSeelsorgeHinweis =>
-      'Rund um die Uhr und kostenlos, auch unter 0800 111 0 222. Chat nach Anmeldung. Beratung auf Deutsch.';
+      'Telefon rund um die Uhr und kostenlos, auch unter 0800 111 0 222 und 116 123. Chat nur nach Anmeldung und mit Termin. Beratung auf Deutsch.';
 
   @override
   String get sosStelleAtFrauenName => 'Frauenhelpline gegen Gewalt';
 
   @override
   String get sosStelleAtFrauenHinweis =>
-      'Rund um die Uhr, kostenlos, auf Wunsch anonym, in mehreren Sprachen.';
+      'Rund um die Uhr, kostenlos, anonym und vertraulich.';
 
   @override
   String get sosStelleAtGewaltschutzName => 'Gewaltschutzzentren';
 
   @override
-  String get sosStelleAtGewaltschutzHinweis => 'Kostenlos und anonym.';
+  String get sosStelleAtGewaltschutzHinweis =>
+      'Kostenlos und vertraulich. Bundesweite Nummer laut Frauenhelpline.';
 
   @override
   String get sosStelleChOpferhilfeName => 'Opferhilfe 142';

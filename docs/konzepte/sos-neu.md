@@ -173,8 +173,18 @@ Quellen (Suchtreffer, vor dem Bauen einzeln auf der Originalseite gegenlesen): [
 [Rape Crisis England & Wales](https://rapecrisis.org.uk/get-help/want-to-talk/), [gov.uk](https://www.gov.uk/government/news/new-24-7-support-service-for-victims-of-rape-launched),
 [RAINN](https://www.rainn.org/about-national-sexual-assault-telephone-hotline).
 
-**Noch zu prüfen, bevor es in die App kommt (nicht erfunden, nicht bestätigt):**
-- Notrufnummern 110/112/133/117/144/999/911: allgemein bekannt, aber noch nicht aus einer Behördenseite belegt.
+**Gegenlesen auf den Originalseiten am 12.11.2026 (Ergebnis, danach die App-Texte angepasst):**
+- Bestätigt: hilfetelefon.de (116 016, rund um die Uhr, kostenlos, anonym), maennerhilfetelefon.de (Telefonzeiten wie angegeben, Chat mit kürzeren Zeiten),
+  weisser-ring.de/hilfe-fuer-opfer/opfer-telefon (116 006, 7 Tage 7 bis 22 Uhr, kostenfrei, anonym) und Bundesnetzagentur (116 006, kostenfrei),
+  telefonseelsorge.de (0800 1110111, 0800 1110222, zusätzlich 116 123; Chat nur nach Anmeldung und mit Termin, auf Deutsch),
+  frauenhelpline.at (0800/222 555, rund um die Uhr, kostenlos, anonym; „mehrsprachig“ nur für Infomaterial belegt, daher gestrichen),
+  oesterreich.gv.at (133, 144, 112), opferhilfe-schweiz.ch und bj.admin.ch (142 ab 1. Mai 2026, rund um die Uhr, kein Notruf),
+  rapecrisis.org.uk und 247sexualabusesupport.org.uk (0808 500 2222, 24/7, ab 16, England und Wales), 988lifeline.org (Anruf oder SMS 988, 24/7),
+  gov.uk (999, auch 112 nutzbar).
+- Nur teilweise belegt: Gewaltschutzzentren 0800 700 217 steht auf frauenhelpline.at („in ganz Österreich“), nicht auf den Seiten der Zentren; „anonym“ dort nicht belegt, daher „kostenlos und vertraulich, laut Frauenhelpline“.
+  RAINN: die Nummer 1-800-656-4673 steht auf justice.gov/ovw („National Sexual Assault Hotline“); rainn.org selbst war nicht lesbar (403), „rund um die Uhr, kostenlos, vertraulich, Englisch und Spanisch“ stammt aus Suchtreffern.
+- Nicht lesbar: ch.ch (Notrufe 117/144/118/112 aus Suchtreffern von ch.ch und Kantonen, Seiten jetzt 404), 911 (nur justice.gov: „call 911“), alte bmwet-Seite (404).
+- Notrufnummern 110/112: bundesregierung.de (Archivseite) bestätigt.
 - Hilfetelefon Sexueller Missbrauch (0800 22 55 530): Zeiten widersprüchlich, richtet sich vor allem an Betroffene von Missbrauch in der Kindheit; bleibt vorerst draußen.
 - Schweiz: Die Dargebotene Hand (143) taucht in keiner gelesenen Quelle auf; bleibt draußen, bis belegt.
 - Österreich: eine Männer-Stelle ist nicht belegt. Ebenso Stellen speziell für queere Menschen und für Männer in der Schweiz, UK und USA.

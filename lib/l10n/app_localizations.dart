@@ -1782,7 +1782,7 @@ abstract class AppLocalizations {
   /// No description provided for @sosStelleDeMaennerHinweis.
   ///
   /// In de, this message translates to:
-  /// **'Kostenlos und anonym, per Telefon und Chat. Zeiten laut Anbieter: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr.'**
+  /// **'Kostenlos und anonym. Telefon: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr. Der Chat hat kürzere Zeiten.'**
   String get sosStelleDeMaennerHinweis;
 
   /// No description provided for @sosStelleDeWeisserName.
@@ -1806,7 +1806,7 @@ abstract class AppLocalizations {
   /// No description provided for @sosStelleDeSeelsorgeHinweis.
   ///
   /// In de, this message translates to:
-  /// **'Rund um die Uhr und kostenlos, auch unter 0800 111 0 222. Chat nach Anmeldung. Beratung auf Deutsch.'**
+  /// **'Telefon rund um die Uhr und kostenlos, auch unter 0800 111 0 222 und 116 123. Chat nur nach Anmeldung und mit Termin. Beratung auf Deutsch.'**
   String get sosStelleDeSeelsorgeHinweis;
 
   /// No description provided for @sosStelleAtFrauenName.
@@ -1818,7 +1818,7 @@ abstract class AppLocalizations {
   /// No description provided for @sosStelleAtFrauenHinweis.
   ///
   /// In de, this message translates to:
-  /// **'Rund um die Uhr, kostenlos, auf Wunsch anonym, in mehreren Sprachen.'**
+  /// **'Rund um die Uhr, kostenlos, anonym und vertraulich.'**
   String get sosStelleAtFrauenHinweis;
 
   /// No description provided for @sosStelleAtGewaltschutzName.
@@ -1830,7 +1830,7 @@ abstract class AppLocalizations {
   /// No description provided for @sosStelleAtGewaltschutzHinweis.
   ///
   /// In de, this message translates to:
-  /// **'Kostenlos und anonym.'**
+  /// **'Kostenlos und vertraulich. Bundesweite Nummer laut Frauenhelpline.'**
   String get sosStelleAtGewaltschutzHinweis;
 
   /// No description provided for @sosStelleChOpferhilfeName.
