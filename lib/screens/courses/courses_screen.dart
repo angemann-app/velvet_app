@@ -35,7 +35,7 @@ bool istPaarModusVorsichtig(UserProfile? p) =>
     istPaarModus(p) && (p!.relationshipStatus == 'dating' || p.relationshipStatus == 'complicated');
 
 /// „Mehr für dich allein“ auf Heute (Paar-Modus): nur für diese Sitzung aufgeklappt, kein Speicherschlüssel.
-@visibleForTesting
+/// Bewusst öffentlich: Tests setzen den Wert zurück; der Wert ist harmlos.
 bool heutePaarMehrOffen = false;
 
 /// Zwei Gesichter derselben Daten: **Heute** (Kopf, nächster Schritt, Check-in/Funke, geführte Audios) und **Lernen**

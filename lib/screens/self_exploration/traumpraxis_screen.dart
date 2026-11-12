@@ -53,9 +53,7 @@ class _TraumpraxisScreenState extends State<TraumpraxisScreen> {
           ? 'martin'
           : prefs.getString('traum_stimme') == 'victoria'
               ? 'victoria'
-              : StorageService.getUserProfile()?.isMale == true
-                  ? 'martin'
-                  : 'victoria';
+              : StorageService.stimmenVorschlag();
     });
   }
 

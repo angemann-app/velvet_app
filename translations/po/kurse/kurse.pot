@@ -7723,9 +7723,9 @@ msgid "Wenn mein Körper noch nicht hart oder noch nicht feucht ist, beweist das
 msgstr ""
 
 #. Glaubenssatz mit Gegenstück
-#. EN: Research calls this arousal non-concordance: desire in the mind and the genital response often don't move in step. Someone with a penis can burn with desire while it is still soft, for example because there is still tension in the body. Someone with a vulva can be deeply aroused and still stay dry, for example depending on cycle, age or medication.
+#. EN: Research calls this arousal non-concordance: desire in the mind and the genital response often don't move in step. Someone with a penis can burn with desire while the penis is still soft, for example because there is still tension in the body. Someone with a vulva can be deeply aroused and still stay dry, for example depending on cycle, age or medication.
 msgctxt "belief:belief_non_concordance#reality_check"
-msgid "Die Forschung nennt das fehlende Übereinstimmung von Kopf und Körper (englisch arousal non-concordance): Lust im Kopf und Reaktion der Genitalien laufen oft nicht im Gleichschritt. Wer einen Penis hat, kann vor Lust brennen, während er noch weich ist, etwa weil noch Anspannung im Körper steckt. Wer eine Vulva hat, kann tief erregt sein und trotzdem trocken bleiben, zum Beispiel je nach Zyklus, Alter oder Medikamenten."
+msgid "Die Forschung nennt das fehlende Übereinstimmung von Kopf und Körper (englisch arousal non-concordance): Lust im Kopf und Reaktion der Genitalien laufen oft nicht im Gleichschritt. Wer einen Penis hat, kann vor Lust brennen, während der Penis noch weich ist, etwa weil noch Anspannung im Körper steckt. Wer eine Vulva hat, kann tief erregt sein und trotzdem trocken bleiben, zum Beispiel je nach Zyklus, Alter oder Medikamenten."
 msgstr ""
 
 #. Glaubenssatz mit Gegenstück

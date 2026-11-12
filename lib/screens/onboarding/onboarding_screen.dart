@@ -44,11 +44,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   String? _selectedGender;
   // Körper-Voreinstellung (nur im Profil): 'vulva', 'penis', 'beides' oder null (später fragen).
   String? _koerper = StorageService.getKoerperVoreinstellung();
-  // Ob der Fokus bewusst gewählt wurde; sonst speichert "Überspringen" den neutralen Fokus 'open'.
-  bool _zielGewaehlt = false;
   int _selectedAge = 32;
   String _selectedRelationship = 'relationship';
-  String _selectedGoal = 'performance_anxiety';
+  // Keine Vorauswahl: wer nichts wählt, wird mit dem neutralen Fokus 'open' gespeichert.
+  String? _selectedGoal;
   bool _isSubmitting = false;
   // Ersteinrichtung in Schritten: 0 Willkommen (Versprechen), 1 bis 5 je eine Frage. Beim Bearbeiten des Profils gilt alles auf einer Seite.
   int _schritt = 0;
@@ -77,8 +76,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       _selectedGender = existing.gender;
       _selectedAge = existing.age;
       _selectedRelationship = existing.relationshipStatus;
-      _selectedGoal = existing.primaryGoal;
-      _zielGewaehlt = true;
+      _selectedGoal = existing.primaryGoal == 'open' ? null : existing.primaryGoal;
     }
   }
 
@@ -99,7 +97,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         gender: _selectedGender ?? 'unspecified',
         age: _selectedAge,
         relationshipStatus: _selectedRelationship,
-        primaryGoal: _selectedGoal,
+        primaryGoal: _selectedGoal ?? 'open',
       );
 
       await StorageService.saveUserProfile(profile);
@@ -155,7 +153,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       gender: _selectedGender ?? 'unspecified',
       age: _selectedAge,
       relationshipStatus: _selectedRelationship,
-      primaryGoal: _zielGewaehlt ? _selectedGoal : 'open',
+      primaryGoal: _selectedGoal ?? 'open',
     );
     try {
       await StorageService.saveUserProfile(defaultProfile);
@@ -176,19 +174,32 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   /// „Überspringen“ und „Ich schau erst mal nur“: Standardprofil speichern und direkt in die App.
   Future<void> _ueberspringen() async {
-    await _standardprofilSpeichern();
-    _weiterZurApp();
+    if (_isSubmitting) return; // gegen Doppeltippen
+    setState(() => _isSubmitting = true);
+    try {
+      await _standardprofilSpeichern();
+      _weiterZurApp();
+    } finally {
+      if (mounted) setState(() => _isSubmitting = false);
+    }
   }
 
   /// Verbinden mit der einladenden Person: derselbe Dialog wie im Tab „Wir“. Gelingt es, geht es in die App.
   Future<void> _mitPersonVerbinden() async {
+    if (_isSubmitting) return; // gegen Doppeltippen
     HapticFeedback.lightImpact();
-    final verbunden = await showModalBottomSheet<bool>(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: Colors.transparent,
-      builder: (_) => const PairingModal(),
-    );
+    setState(() => _isSubmitting = true);
+    bool? verbunden;
+    try {
+      verbunden = await showModalBottomSheet<bool>(
+        context: context,
+        isScrollControlled: true,
+        backgroundColor: Colors.transparent,
+        builder: (_) => const PairingModal(),
+      );
+    } finally {
+      if (mounted) setState(() => _isSubmitting = false);
+    }
     if (verbunden == true && mounted) await _ueberspringen();
   }
 
@@ -486,7 +497,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             _selectedGender = profile.gender;
             _selectedAge = profile.age;
             _selectedRelationship = profile.relationshipStatus;
-            _selectedGoal = profile.primaryGoal;
+            _selectedGoal = profile.primaryGoal == 'open' ? null : profile.primaryGoal;
           }
         });
       } else {
@@ -624,7 +635,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    if (!widget.isEditing && _eingeladen) return _buildEingeladen();
+    if (!widget.isEditing && _eingeladen) {
+      // Systemzurück geht im Einladungsmodus einen Schritt zurück, statt die App zu schließen.
+      return PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, _) {
+          if (didPop) return;
+          setState(() {
+            if (_einladungsSchritt == 1) {
+              _eingeladen = false;
+            } else {
+              _einladungsSchritt--;
+            }
+          });
+        },
+        child: _buildEingeladen(),
+      );
+    }
     return Scaffold(
       backgroundColor: AppTheme.papier,
       appBar: widget.isEditing
@@ -936,6 +963,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 title: t.onboardingDesireSelfAcceptanceBodyAwareness,
                 subtitle: t.onboardingUnderstandResponsiveDesireEaseOrgasm,
               ),
+              const SizedBox(height: 8),
+              Text(
+                t.onboardingGenderWeitergehen,
+                style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm),
+              ),
 
               ],
 
@@ -1240,10 +1272,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }) {
     final isSelected = _selectedGoal == id;
     return InkWell(
-      onTap: () => setState(() {
-        _selectedGoal = id;
-        _zielGewaehlt = true;
-      }),
+      onTap: () => setState(() => _selectedGoal = id),
       borderRadius: BorderRadius.circular(VpRadius.karte),
       child: Container(
         padding: const EdgeInsets.all(14),

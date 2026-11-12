@@ -51,8 +51,7 @@ class _WeckenScreenState extends State<WeckenScreen> {
     if (!mounted) return;
     setState(() {
       _traumDaten = traumDaten;
-      _stimme = prefs.getString('traum_stimme') ??
-          (profil?.isMale == true ? 'martin' : 'victoria');
+      _stimme = prefs.getString('traum_stimme') ?? StorageService.stimmenVorschlag(profil);
     });
   }
 

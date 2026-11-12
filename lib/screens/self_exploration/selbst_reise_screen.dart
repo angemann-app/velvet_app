@@ -61,8 +61,7 @@ class _SelbstReiseScreenState extends State<SelbstReiseScreen> {
       _tiefe = tiefeAusName(prefs.getString(_keyTiefe),
           spicyErlaubt: StorageService.spicyMode());
       _koerper = prefs.getString(_keyKoerper) ?? StorageService.koerperVorschlag();
-      _stimme = prefs.getString(_keyStimme) ??
-          (profil?.isMale == true ? 'martin' : 'victoria');
+      _stimme = prefs.getString(_keyStimme) ?? StorageService.stimmenVorschlag(profil);
     });
   }
 

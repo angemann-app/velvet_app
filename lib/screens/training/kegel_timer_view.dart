@@ -216,8 +216,8 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
     super.dispose();
   }
 
-  /// Victoria für Frauen-Profile, sonst Martin – wie bei den Lektionen.
-  String get _voiceName => StorageService.getUserProfile()?.isFemale == true ? 'victoria' : 'martin';
+  /// Martin für Männer-Profile, sonst Victoria – wie bei den Reisen (siehe [StorageService.stimmenVorschlag]).
+  String get _voiceName => StorageService.stimmenVorschlag();
 
   /// Text der Ansage, für die Geräte-Stimme, solange keine Aufnahme in dieser Sprache da ist.
   String _ansageText(String cue) => switch (cue) {

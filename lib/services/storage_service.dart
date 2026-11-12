@@ -380,6 +380,11 @@ class StorageService {
     return getUserProfile()?.isMale == true ? 'penis' : 'vulva';
   }
 
+  /// Stimmen-Vorschlag ('martin' oder 'victoria') für alle Übungen: Mann Martin, sonst Victoria
+  /// (auch bei „Divers“ und „Keine Angabe“). Nur ein Vorschlag, die Stimme bleibt frei wählbar.
+  static String stimmenVorschlag([UserProfile? profil]) =>
+      (profil ?? getUserProfile())?.isMale == true ? 'martin' : 'victoria';
+
   static String? getHalloGesendetAm() => _prefs?.getString(_keyHalloGesendetAm);
 
   static Future<void> setHalloGesendetAm(String? value) async {

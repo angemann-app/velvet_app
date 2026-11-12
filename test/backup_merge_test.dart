@@ -125,11 +125,20 @@ void main() {
     await StorageService.importBackup(BackupCodec.validate(ohne));
     expect(StorageService.getBedienDaten().ersteWoche, isNull);
     expect(BedienDaten.fromJson({'schema': 1}).ersteWoche, isNull);
+    // Unbekannte Schritte werden übersprungen, ein kaputtes Feld bleibt ein Fehler.
+    final tolerant = BedienDaten.fromJson({
+      'schema': 1,
+      'ersteWoche': {
+        'schritte': {'9': 'getan', '1': 'getan'},
+        'geaendert': '2026-11-12T09:00:00Z'
+      }
+    });
+    expect(tolerant.ersteWoche!.schritte, {1: 'getan'});
     expect(
         () => BedienDaten.fromJson({
               'schema': 1,
               'ersteWoche': {
-                'schritte': {'9': 'getan'},
+                'schritte': 'kaputt',
                 'geaendert': '2026-11-12T09:00:00Z'
               }
             }),

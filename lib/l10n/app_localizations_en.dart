@@ -551,7 +551,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Nothing here is an assignment. Every step has a “Not today”, and it has no consequences. Your answers stay with you until you connect. Even then, your partner can\'t see what you look at, try or skip, only what you send yourself. Two exceptions: with wishes, you both only see where you match, and in the chat your partner can see whether you\'ve read their messages (can be switched off).';
 
   @override
-  String get onboardingEingeladenTitel3 => 'Everything stays on your phone';
+  String get onboardingEingeladenTitel3 => 'Your data stays on your phone';
 
   @override
   String get onboardingEingeladenText3 =>
@@ -1064,7 +1064,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get couplesChannelVoteSeparatelyAWishOnly =>
-      'Answer separately. A wish only becomes visible when you\'ve both said “Yes, please”. A “Maybe” goes to “To talk about”. Your partner never sees a “Rather not”.';
+      'Answer separately. A wish only becomes visible when you\'ve both said “Yes, please”. A “Maybe” goes to “To talk about”. A “Rather not” is not shown to your partner.';
 
   @override
   String couplesChannelQuestionsInSeveralAreasWith(int fragen, int bereiche) {
@@ -1256,7 +1256,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String invitePartnerIDLikeToTry(Object stableApkUrl, Object testerGuideUrl) {
-    return '\nI\'d like to try VelvetPulse with you 💛 A private app for closeness and conversation, just for the two of us. You don\'t need to be good at anything, and you can say “not today” or “no” to anything. Feel free to just have a look first. Everything stays on your phone.\n\n1. Get the app (Android):\n$stableApkUrl\nIf Android asks, allow the installation. On first start, tap “Someone invited me”.\n\n2. I\'ll send you my connection code as a separate message. Copy it and paste it into the app: Couple channel › Connect with partner › Scan partner › paste code › “Connect & pair”.\n\n3. Then send me a spark, and we\'re connected.\n\nDetailed guide (German): $testerGuideUrl';
+    return '\nI\'d like to try VelvetPulse with you 💛 A private app for closeness and conversation, just for the two of us. You don\'t need to be good at anything, and you can say “not today” or “no” to anything. Feel free to just have a look first. Your data stays on your phone.\n\n1. Get the app (Android):\n$stableApkUrl\nIf Android asks, allow the installation. On first start, tap “Someone invited me”.\n\n2. I\'ll send you my connection code as a separate message. Copy it and paste it into the app: Couple channel › Connect with partner › Scan partner › paste code › “Connect & pair”.\n\n3. Then send me a spark, and we\'re connected.\n\nDetailed guide (German): $testerGuideUrl';
   }
 
   @override
@@ -1675,7 +1675,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get yesNoMaybeFindOutWhatExcitesYou =>
-      'Take your time to notice what you like, what might be okay and what you\'d rather not. You don\'t have to answer anything. Not sure what something means? Tap the i. If you\'re connected, only places where you both said at least “Maybe” become visible. Your partner never sees a “Rather not”.';
+      'Take your time to notice what you like, what might be okay and what you\'d rather not. You don\'t have to answer anything. Not sure what something means? Tap the i. If you\'re connected, only places where you both said at least “Maybe” become visible. A “Rather not” is not shown to your partner.';
 
   @override
   String get yesNoMaybeYes => 'Yes, please';
@@ -1732,7 +1732,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get yesNoMaybeNoRejectionAllLimitsWere =>
-      'Only what you both said is shown here. Everything else stays private. A “Rather not” is a complete answer.';
+      'Only what you both said is shown here. Everything else is not shown to your partner. A “Rather not” is a complete answer.';
 
   @override
   String get yesNoMaybePerfectMatchBothSaidYes => 'You both said yes';
@@ -2589,7 +2589,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingAdjustsCourseRecommendationsPelvicFloor =>
-      'We only use this to suggest a voice and a first selection of courses, and to keep lessons clear when they talk about “she” or “he”. You can change it any time, and it stays on your phone. “Not specified” is completely fine.';
+      'We only use this to suggest a voice and a body setting, and to keep lessons clear when they talk about “she” or “he”. You can change it any time, and it stays on your phone. “Not specified” is completely fine.';
 
   @override
   String get onboardingMale => 'Man';
@@ -3007,7 +3007,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardBringYourArousalToLevel =>
-      'Notice how your arousal feels today and let it come and go without a goal. If it gets to be too much, pause, breathe out deeply 3 times and let your pelvic floor soften.';
+      'If you like: notice how your arousal feels today and let it come and go without a goal. If it gets to be too much, pause, breathe out deeply 3 times and let your pelvic floor soften.';
 
   @override
   String get dailySimmeringCardScreenFreeSensing => 'Screen-free sensing';
@@ -5219,7 +5219,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get ersteWocheZumAbend => 'Carry on with the shared evening';
 
   @override
-  String get ersteWocheGutSo => 'Sounds good';
+  String get ersteWocheGutSo => 'That\'s enough for now';
 
   @override
   String ersteWochePunktOffen(int n) {
@@ -5244,6 +5244,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get ersteWocheLandkarteOeffnen => 'Open the fantasy map';
+
+  @override
+  String get ersteWocheAlleBereiche => 'See all areas';
 
   @override
   String get ersteWocheAlternative => 'Rather each on our own';
@@ -5292,7 +5295,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get ersteWocheS1Text =>
-      'Before anything else, you need one word that stops everything at once. The lesson shows a traffic light for wishes and limits. If you like, you then agree on a word for “stop”. Knowing that stop always counts makes it easier to be open to everything else.';
+      'Before anything else, a word that stops everything at once is helpful. The lesson shows a traffic light for wishes and limits. If you like, you then agree on a word for “stop”. Knowing that stop always counts makes it easier to be open to everything else.';
 
   @override
   String get ersteWocheS2Titel => 'Breathing together';
@@ -5313,7 +5316,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get ersteWocheS4Text =>
-      'Now touch, clothed and without a goal: back, shoulders, arms, hands, feet. Nothing has to come of it, and either of you can say “stop” at any time. About 10 to 15 minutes, you decide.';
+      'If you like: touch, clothed and without a goal, for example back, shoulders, arms, hands, feet. Nothing has to come of it, and either of you can say “stop” at any time. About 10 to 15 minutes, you decide.';
 
   @override
   String get ersteWocheS5Titel => 'Gathering wishes quietly';

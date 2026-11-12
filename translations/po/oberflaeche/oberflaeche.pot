@@ -989,9 +989,9 @@ msgid "Nichts hier ist eine Aufgabe. Zu jedem Schritt gibt es ein „Heute nicht
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Everything stays on your phone
+#. EN: Your data stays on your phone
 msgctxt "ui:onboardingEingeladenTitel3#text"
-msgid "Alles bleibt auf deinem Handy"
+msgid "Deine Daten bleiben auf deinem Handy"
 msgstr ""
 
 #. Text der Oberfläche
@@ -1847,9 +1847,9 @@ msgid "Senden"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Answer separately. A wish only becomes visible when you've both said “Yes, please”. A “Maybe” goes to “To talk about”. Your partner never sees a “Rather not”.
+#. EN: Answer separately. A wish only becomes visible when you've both said “Yes, please”. A “Maybe” goes to “To talk about”. A “Rather not” is not shown to your partner.
 msgctxt "ui:couplesChannelVoteSeparatelyAWishOnly#text"
-msgid "Antwortet getrennt. Ein Wunsch wird erst sichtbar, wenn ihr beide „Ja, gern“ gesagt habt. Ein „Vielleicht“ kommt zu „Zum Besprechen“. Ein „Lieber nicht“ sieht dein Gegenüber nie."
+msgid "Antwortet getrennt. Ein Wunsch wird erst sichtbar, wenn ihr beide „Ja, gern“ gesagt habt. Ein „Vielleicht“ kommt zu „Zum Besprechen“. Ein „Lieber nicht“ wird deinem Gegenüber nicht angezeigt."
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {fragen}, {bereiche}
@@ -2177,7 +2177,7 @@ msgstr ""
 
 #. Platzhalter unverändert übernehmen: {stableApkUrl}, {testerGuideUrl}
 #. EN:
-#. EN: I'd like to try VelvetPulse with you 💛 A private app for closeness and conversation, just for the two of us. You don't need to be good at anything, and you can say “not today” or “no” to anything. Feel free to just have a look first. Everything stays on your phone.
+#. EN: I'd like to try VelvetPulse with you 💛 A private app for closeness and conversation, just for the two of us. You don't need to be good at anything, and you can say “not today” or “no” to anything. Feel free to just have a look first. Your data stays on your phone.
 #. EN:
 #. EN: 1. Get the app (Android):
 #. EN: {stableApkUrl}
@@ -2191,7 +2191,7 @@ msgstr ""
 msgctxt "ui:invitePartnerIDLikeToTry#text"
 msgid ""
 "\n"
-"Ich möchte VelvetPulse mit dir ausprobieren 💛 Eine private App für Nähe und Gespräche, nur für uns zwei. Du musst nichts können, und zu allem darfst du „Heute nicht“ oder „Nein“ sagen. Schau gern erst mal nur rein. Alles bleibt auf deinem Handy.\n"
+"Ich möchte VelvetPulse mit dir ausprobieren 💛 Eine private App für Nähe und Gespräche, nur für uns zwei. Du musst nichts können, und zu allem darfst du „Heute nicht“ oder „Nein“ sagen. Schau gern erst mal nur rein. Deine Daten bleiben auf deinem Handy.\n"
 "\n"
 "1. App laden (Android):\n"
 "{stableApkUrl}\n"
@@ -2900,9 +2900,9 @@ msgid "Deine Antworten, dein Tempo"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Take your time to notice what you like, what might be okay and what you'd rather not. You don't have to answer anything. Not sure what something means? Tap the i. If you're connected, only places where you both said at least “Maybe” become visible. Your partner never sees a “Rather not”.
+#. EN: Take your time to notice what you like, what might be okay and what you'd rather not. You don't have to answer anything. Not sure what something means? Tap the i. If you're connected, only places where you both said at least “Maybe” become visible. A “Rather not” is not shown to your partner.
 msgctxt "ui:yesNoMaybeFindOutWhatExcitesYou#text"
-msgid "Hier darfst du in Ruhe spüren, was dir gefällt, was vielleicht und was lieber nicht. Du musst nichts beantworten. Unklar, was gemeint ist? Tippe auf das i. Wenn ihr verbunden seid, wird nur sichtbar, wo ihr beide mindestens „Vielleicht“ gesagt habt. Ein „Lieber nicht“ sieht dein Gegenüber nie."
+msgid "Hier darfst du in Ruhe spüren, was dir gefällt, was vielleicht und was lieber nicht. Du musst nichts beantworten. Unklar, was gemeint ist? Tippe auf das i. Wenn ihr verbunden seid, wird nur sichtbar, wo ihr beide mindestens „Vielleicht“ gesagt habt. Ein „Lieber nicht“ wird deinem Gegenüber nicht angezeigt."
 msgstr ""
 
 #. Text der Oberfläche
@@ -2984,9 +2984,9 @@ msgid "Ja bei euch beiden: {yesMatchesLength} · Gemeinsam neugierig: {curiosity
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Only what you both said is shown here. Everything else stays private. A “Rather not” is a complete answer.
+#. EN: Only what you both said is shown here. Everything else is not shown to your partner. A “Rather not” is a complete answer.
 msgctxt "ui:yesNoMaybeNoRejectionAllLimitsWere#text"
-msgid "Hier steht nur, was ihr beide gesagt habt. Alles andere bleibt bei jedem für sich. Ein „Lieber nicht“ ist eine vollwertige Antwort."
+msgid "Hier steht nur, was ihr beide gesagt habt. Alles andere wird deinem Gegenüber nicht angezeigt. Ein „Lieber nicht“ ist eine vollwertige Antwort."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4456,9 +4456,9 @@ msgid "2. Dein Geschlecht (freiwillig)"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: We only use this to suggest a voice and a first selection of courses, and to keep lessons clear when they talk about “she” or “he”. You can change it any time, and it stays on your phone. “Not specified” is completely fine.
+#. EN: We only use this to suggest a voice and a body setting, and to keep lessons clear when they talk about “she” or “he”. You can change it any time, and it stays on your phone. “Not specified” is completely fine.
 msgctxt "ui:onboardingAdjustsCourseRecommendationsPelvicFloor#text"
-msgid "Wir nutzen das nur, um dir eine passende Stimme und eine erste Kursauswahl vorzuschlagen und um Lektionen verständlich zu halten, wenn von „sie“ oder „er“ die Rede ist. Du kannst es jederzeit ändern, und es bleibt auf deinem Handy. „Keine Angabe“ ist völlig in Ordnung."
+msgid "Wir nutzen das nur, um dir eine passende Stimme und einen Körper-Vorschlag zu machen und um Lektionen verständlich zu halten, wenn von „sie“ oder „er“ die Rede ist. Du kannst es jederzeit ändern, und es bleibt auf deinem Handy. „Keine Angabe“ ist völlig in Ordnung."
 msgstr ""
 
 #. Text der Oberfläche
@@ -5173,9 +5173,9 @@ msgid "KURS 19 • AUSDAUER"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Notice how your arousal feels today and let it come and go without a goal. If it gets to be too much, pause, breathe out deeply 3 times and let your pelvic floor soften.
+#. EN: If you like: notice how your arousal feels today and let it come and go without a goal. If it gets to be too much, pause, breathe out deeply 3 times and let your pelvic floor soften.
 msgctxt "ui:dailySimmeringCardBringYourArousalToLevel#text"
-msgid "Spür heute, wie sich deine Erregung anfühlt, und lass sie ohne Ziel kommen und gehen. Wird es zu viel, halte inne, atme 3x tief aus und lass den Beckenboden weich werden."
+msgid "Wenn du magst: Spür heute, wie sich deine Erregung anfühlt, und lass sie ohne Ziel kommen und gehen. Wird es zu viel, halte inne, atme 3x tief aus und lass den Beckenboden weich werden."
 msgstr ""
 
 #. Text der Oberfläche
@@ -8951,9 +8951,9 @@ msgid "Weiter mit dem Gemeinsamen Abend"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Sounds good
+#. EN: That's enough for now
 msgctxt "ui:ersteWocheGutSo#text"
-msgid "Gut so"
+msgid "Das reicht mir"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {n}
@@ -8990,6 +8990,12 @@ msgstr ""
 #. EN: Open the fantasy map
 msgctxt "ui:ersteWocheLandkarteOeffnen#text"
 msgid "Fantasie-Landkarte öffnen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: See all areas
+msgctxt "ui:ersteWocheAlleBereiche#text"
+msgid "Alle Bereiche ansehen"
 msgstr ""
 
 #. Text der Oberfläche
@@ -9077,9 +9083,9 @@ msgid "Ein Wort, das alles anhält"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Before anything else, you need one word that stops everything at once. The lesson shows a traffic light for wishes and limits. If you like, you then agree on a word for “stop”. Knowing that stop always counts makes it easier to be open to everything else.
+#. EN: Before anything else, a word that stops everything at once is helpful. The lesson shows a traffic light for wishes and limits. If you like, you then agree on a word for “stop”. Knowing that stop always counts makes it easier to be open to everything else.
 msgctxt "ui:ersteWocheS1Text#text"
-msgid "Bevor etwas anderes kommt, braucht ihr ein Wort, das alles sofort anhält. Die Lektion zeigt eine Ampel für Wünsche und Grenzen. Wenn ihr mögt, verabredet ihr danach ein Wort für „Stopp“. Wer weiß, dass Stopp immer gilt, kann sich auf alles Weitere leichter einlassen."
+msgid "Hilfreich, bevor etwas anderes kommt: ein Wort, das alles sofort anhält. Die Lektion zeigt eine Ampel für Wünsche und Grenzen. Wenn ihr mögt, verabredet ihr danach ein Wort für „Stopp“. Wer weiß, dass Stopp immer gilt, kann sich auf alles Weitere leichter einlassen."
 msgstr ""
 
 #. Text der Oberfläche
@@ -9113,9 +9119,9 @@ msgid "Berührung ohne Ziel"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Now touch, clothed and without a goal: back, shoulders, arms, hands, feet. Nothing has to come of it, and either of you can say “stop” at any time. About 10 to 15 minutes, you decide.
+#. EN: If you like: touch, clothed and without a goal, for example back, shoulders, arms, hands, feet. Nothing has to come of it, and either of you can say “stop” at any time. About 10 to 15 minutes, you decide.
 msgctxt "ui:ersteWocheS4Text#text"
-msgid "Jetzt Berührung, bekleidet und ohne Ziel: Rücken, Schultern, Arme, Hände, Füße. Nichts muss daraus werden, und jede Person kann jederzeit „Stopp“ sagen. Etwa 10 bis 15 Minuten, ihr entscheidet."
+msgid "Wenn ihr mögt: Berührung, bekleidet und ohne Ziel, zum Beispiel Rücken, Schultern, Arme, Hände, Füße. Nichts muss daraus werden, und jede Person kann jederzeit „Stopp“ sagen. Etwa 10 bis 15 Minuten, ihr entscheidet."
 msgstr ""
 
 #. Text der Oberfläche
@@ -9199,7 +9205,7 @@ msgstr ""
 #. Text der Oberfläche
 #. EN: Invite your partner
 msgctxt "ui:heutePaarEinladen#text"
-msgid "Partner:in einladen"
+msgid "Dein Gegenüber einladen"
 msgstr ""
 
 #. Text der Oberfläche

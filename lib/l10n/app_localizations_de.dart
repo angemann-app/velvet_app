@@ -554,7 +554,8 @@ class AppLocalizationsDe extends AppLocalizations {
       'Nichts hier ist eine Aufgabe. Zu jedem Schritt gibt es ein „Heute nicht“, und es hat keine Folgen. Deine Antworten bleiben bei dir, bis du dich verbindest. Auch danach sieht dein Gegenüber nicht, was du ansiehst, ausprobierst oder überspringst, nur, was du selbst schickst. Zwei Ausnahmen: Bei den Wünschen seht ihr beide nur, wo ihr übereinstimmt, und im Chat sieht dein Gegenüber, ob du gelesen hast (abschaltbar).';
 
   @override
-  String get onboardingEingeladenTitel3 => 'Alles bleibt auf deinem Handy';
+  String get onboardingEingeladenTitel3 =>
+      'Deine Daten bleiben auf deinem Handy';
 
   @override
   String get onboardingEingeladenText3 =>
@@ -1074,7 +1075,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get couplesChannelVoteSeparatelyAWishOnly =>
-      'Antwortet getrennt. Ein Wunsch wird erst sichtbar, wenn ihr beide „Ja, gern“ gesagt habt. Ein „Vielleicht“ kommt zu „Zum Besprechen“. Ein „Lieber nicht“ sieht dein Gegenüber nie.';
+      'Antwortet getrennt. Ein Wunsch wird erst sichtbar, wenn ihr beide „Ja, gern“ gesagt habt. Ein „Vielleicht“ kommt zu „Zum Besprechen“. Ein „Lieber nicht“ wird deinem Gegenüber nicht angezeigt.';
 
   @override
   String couplesChannelQuestionsInSeveralAreasWith(int fragen, int bereiche) {
@@ -1266,7 +1267,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String invitePartnerIDLikeToTry(Object stableApkUrl, Object testerGuideUrl) {
-    return '\nIch möchte VelvetPulse mit dir ausprobieren 💛 Eine private App für Nähe und Gespräche, nur für uns zwei. Du musst nichts können, und zu allem darfst du „Heute nicht“ oder „Nein“ sagen. Schau gern erst mal nur rein. Alles bleibt auf deinem Handy.\n\n1. App laden (Android):\n$stableApkUrl\nWenn Android fragt, die Installation erlauben. Tippe beim ersten Start auf „Jemand hat mich eingeladen“.\n\n2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n\n3. Schick mir danach einen Funken, dann sind wir verbunden.\n\nAusführliche Anleitung: $testerGuideUrl';
+    return '\nIch möchte VelvetPulse mit dir ausprobieren 💛 Eine private App für Nähe und Gespräche, nur für uns zwei. Du musst nichts können, und zu allem darfst du „Heute nicht“ oder „Nein“ sagen. Schau gern erst mal nur rein. Deine Daten bleiben auf deinem Handy.\n\n1. App laden (Android):\n$stableApkUrl\nWenn Android fragt, die Installation erlauben. Tippe beim ersten Start auf „Jemand hat mich eingeladen“.\n\n2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n\n3. Schick mir danach einen Funken, dann sind wir verbunden.\n\nAusführliche Anleitung: $testerGuideUrl';
   }
 
   @override
@@ -1687,7 +1688,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get yesNoMaybeFindOutWhatExcitesYou =>
-      'Hier darfst du in Ruhe spüren, was dir gefällt, was vielleicht und was lieber nicht. Du musst nichts beantworten. Unklar, was gemeint ist? Tippe auf das i. Wenn ihr verbunden seid, wird nur sichtbar, wo ihr beide mindestens „Vielleicht“ gesagt habt. Ein „Lieber nicht“ sieht dein Gegenüber nie.';
+      'Hier darfst du in Ruhe spüren, was dir gefällt, was vielleicht und was lieber nicht. Du musst nichts beantworten. Unklar, was gemeint ist? Tippe auf das i. Wenn ihr verbunden seid, wird nur sichtbar, wo ihr beide mindestens „Vielleicht“ gesagt habt. Ein „Lieber nicht“ wird deinem Gegenüber nicht angezeigt.';
 
   @override
   String get yesNoMaybeYes => 'Ja, gern';
@@ -1744,7 +1745,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get yesNoMaybeNoRejectionAllLimitsWere =>
-      'Hier steht nur, was ihr beide gesagt habt. Alles andere bleibt bei jedem für sich. Ein „Lieber nicht“ ist eine vollwertige Antwort.';
+      'Hier steht nur, was ihr beide gesagt habt. Alles andere wird deinem Gegenüber nicht angezeigt. Ein „Lieber nicht“ ist eine vollwertige Antwort.';
 
   @override
   String get yesNoMaybePerfectMatchBothSaidYes => 'Ihr beide: Ja';
@@ -2604,7 +2605,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboardingAdjustsCourseRecommendationsPelvicFloor =>
-      'Wir nutzen das nur, um dir eine passende Stimme und eine erste Kursauswahl vorzuschlagen und um Lektionen verständlich zu halten, wenn von „sie“ oder „er“ die Rede ist. Du kannst es jederzeit ändern, und es bleibt auf deinem Handy. „Keine Angabe“ ist völlig in Ordnung.';
+      'Wir nutzen das nur, um dir eine passende Stimme und einen Körper-Vorschlag zu machen und um Lektionen verständlich zu halten, wenn von „sie“ oder „er“ die Rede ist. Du kannst es jederzeit ändern, und es bleibt auf deinem Handy. „Keine Angabe“ ist völlig in Ordnung.';
 
   @override
   String get onboardingMale => 'Mann';
@@ -3027,7 +3028,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailySimmeringCardBringYourArousalToLevel =>
-      'Spür heute, wie sich deine Erregung anfühlt, und lass sie ohne Ziel kommen und gehen. Wird es zu viel, halte inne, atme 3x tief aus und lass den Beckenboden weich werden.';
+      'Wenn du magst: Spür heute, wie sich deine Erregung anfühlt, und lass sie ohne Ziel kommen und gehen. Wird es zu viel, halte inne, atme 3x tief aus und lass den Beckenboden weich werden.';
 
   @override
   String get dailySimmeringCardScreenFreeSensing => 'Bildschirmfreies Spüren';
@@ -5250,7 +5251,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get ersteWocheZumAbend => 'Weiter mit dem Gemeinsamen Abend';
 
   @override
-  String get ersteWocheGutSo => 'Gut so';
+  String get ersteWocheGutSo => 'Das reicht mir';
 
   @override
   String ersteWochePunktOffen(int n) {
@@ -5275,6 +5276,9 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get ersteWocheLandkarteOeffnen => 'Fantasie-Landkarte öffnen';
+
+  @override
+  String get ersteWocheAlleBereiche => 'Alle Bereiche ansehen';
 
   @override
   String get ersteWocheAlternative => 'Lieber jede Person für sich';
@@ -5323,7 +5327,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get ersteWocheS1Text =>
-      'Bevor etwas anderes kommt, braucht ihr ein Wort, das alles sofort anhält. Die Lektion zeigt eine Ampel für Wünsche und Grenzen. Wenn ihr mögt, verabredet ihr danach ein Wort für „Stopp“. Wer weiß, dass Stopp immer gilt, kann sich auf alles Weitere leichter einlassen.';
+      'Hilfreich, bevor etwas anderes kommt: ein Wort, das alles sofort anhält. Die Lektion zeigt eine Ampel für Wünsche und Grenzen. Wenn ihr mögt, verabredet ihr danach ein Wort für „Stopp“. Wer weiß, dass Stopp immer gilt, kann sich auf alles Weitere leichter einlassen.';
 
   @override
   String get ersteWocheS2Titel => 'Zusammen atmen';
@@ -5344,7 +5348,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get ersteWocheS4Text =>
-      'Jetzt Berührung, bekleidet und ohne Ziel: Rücken, Schultern, Arme, Hände, Füße. Nichts muss daraus werden, und jede Person kann jederzeit „Stopp“ sagen. Etwa 10 bis 15 Minuten, ihr entscheidet.';
+      'Wenn ihr mögt: Berührung, bekleidet und ohne Ziel, zum Beispiel Rücken, Schultern, Arme, Hände, Füße. Nichts muss daraus werden, und jede Person kann jederzeit „Stopp“ sagen. Etwa 10 bis 15 Minuten, ihr entscheidet.';
 
   @override
   String get ersteWocheS5Titel => 'Wünsche leise sammeln';
@@ -5393,7 +5397,7 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get heutePaarEinladen => 'Partner:in einladen';
+  String get heutePaarEinladen => 'Dein Gegenüber einladen';
 
   @override
   String get heutePaarSchonCode => 'Schon einen Code?';

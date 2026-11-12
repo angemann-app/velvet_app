@@ -19,6 +19,14 @@ import '../../theme/app_theme.dart';
 import '../../widgets/lautsprecher_frage.dart';
 import '../../l10n/t.dart';
 
+/// Körper aus dem Geschlecht ('female' Vulva, 'male' Penis); unbekannt, divers oder keine Angabe: null,
+/// es wird nichts angenommen.
+String? paarAbendKoerper(String? geschlecht) => switch (geschlecht) {
+      'female' => 'vulva',
+      'male' => 'penis',
+      _ => null
+    };
+
 /// Gemeinsamer, geführter Abend: Ein Handy liegt neben euch, die Stimme führt durch
 /// Ankommen, zwei Berührungsrunden mit Rollenwechsel und Ausklang.
 /// Jeder Abend wird aus den Bausteinen in assets/data/paar_abend.json neu zusammengestellt.
@@ -129,11 +137,7 @@ class _PaarAbendScreenState extends State<PaarAbendScreen> {
   /// aus dem Geschlecht (Frau, Mann; sonst offen). Das Gegenüber kommt aus dem Paar-Kanal; ist es
   /// unbekannt oder divers, bleibt der Körper offen (null), es wird nichts angenommen.
   List<String?> _empfaenger() {
-    String? koerper(String? geschlecht) => switch (geschlecht) {
-          'female' => 'vulva',
-          'male' => 'penis',
-          _ => null
-        };
+    final koerper = paarAbendKoerper;
     final gewaehlt = StorageService.getKoerperVoreinstellung();
     final ich = (gewaehlt == 'vulva' || gewaehlt == 'penis')
         ? gewaehlt

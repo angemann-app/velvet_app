@@ -19,7 +19,10 @@ import '../couples_channel/pairing_modal.dart';
 import '../../l10n/t.dart';
 
 class YesNoMaybeScreen extends StatefulWidget {
-  const YesNoMaybeScreen({super.key});
+  /// Zeigt zunächst nur diese Kategorie (z. B. 'sensory_basics'); null zeigt alle.
+  /// Spicy-Kategorien erscheinen weiter nur im Spicy-Modus (der Filter wirkt auf die sichtbaren).
+  final String? nurKategorie;
+  const YesNoMaybeScreen({super.key, this.nurKategorie});
 
   @override
   State<YesNoMaybeScreen> createState() => _YesNoMaybeScreenState();
@@ -35,10 +38,12 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
   String _selectedFilter = 'all'; // 'all', 'open', 'yes', 'maybe', 'no'
 
   VelvetDatabase? _db;
+  String? _nurKategorie;
 
   @override
   void initState() {
     super.initState();
+    _nurKategorie = widget.nurKategorie;
     _tabController = TabController(length: 2, vsync: this);
     _loadInitialData();
   }
@@ -389,13 +394,15 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   Icon(Icons.shield_outlined,
                       color: AppTheme.akzentTief, size: 20),
                   SizedBox(width: 8),
-                  Text(
-                    t.yesNoMaybeDigitalSafeSpace,
-                    style: TextStyle(
-                      color: AppTheme.akzentTief,
-                      fontWeight: FontWeight.w800,
-                      fontSize: 12,
-                      letterSpacing: 0.8,
+                  Expanded(
+                    child: Text(
+                      t.yesNoMaybeDigitalSafeSpace,
+                      style: TextStyle(
+                        color: AppTheme.akzentTief,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 12,
+                        letterSpacing: 0.8,
+                      ),
                     ),
                   ),
                 ],
@@ -453,7 +460,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
         const SizedBox(height: 16),
 
         // Categories & Items
-        ...ListenUebersetzung.kategorien.map((category) {
+        ...ListenUebersetzung.kategorien
+            .where((c) => _nurKategorie == null || c.id == _nurKategorie)
+            .map((category) {
           final filteredItems = category.items.where((item) {
             final vote = _myAnswers[item.id];
             if (_selectedFilter == 'open') return vote == null || vote.isEmpty;
@@ -519,6 +528,15 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
             ],
           );
         }),
+        if (_nurKategorie != null)
+          Align(
+            alignment: Alignment.centerLeft,
+            child: TextButton(
+              onPressed: () => setState(() => _nurKategorie = null),
+              child: Text(t.ersteWocheAlleBereiche,
+                  style: TextStyle(color: AppTheme.tinteStumm)),
+            ),
+          ),
       ],
     );
   }

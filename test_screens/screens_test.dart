@@ -458,6 +458,12 @@ void main() {
       await _tippe(tester, find.text(t.onboardingWeiter));
       await tester.pump();
       await _shot(tester, '00_onboarding_geschlecht', errors);
+      // Frage 5 (Schwerpunkt, ohne Vorauswahl, mit Hinweis „Du kannst auch einfach weitergehen“).
+      for (var i = 0; i < 3; i++) {
+        await _tippe(tester, find.text(t.onboardingWeiter));
+        await tester.pump();
+      }
+      await _shot(tester, '00_onboarding_frage5', errors);
       await tester.pumpWidget(_app(const OnboardingScreen(isEditing: true)));
       await _shot(tester, '00_profil_bearbeiten', errors);
 
@@ -583,6 +589,10 @@ void main() {
       await tester.pumpWidget(_app(const Scaffold(body: PairingModal())));
       await _shot(tester, '04_paarkanal_koppeln', errors);
 
+      await tester.pumpWidget(_app(const YesNoMaybeScreen(nurKategorie: 'sensory_basics')));
+      await tester.drag(find.byType(Scrollable).first, const Offset(0, -1400));
+      await _shot(tester, '07_landkarte_erste_woche_unten', errors);
+      await tester.pumpWidget(const SizedBox());
       await tester.pumpWidget(_app(const YesNoMaybeScreen()));
       await _shot(tester, '07_ja_nein_vielleicht', errors);
       await _tippe(tester, find.byIcon(Icons.info_outline_rounded).first);

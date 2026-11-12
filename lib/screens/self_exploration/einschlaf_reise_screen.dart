@@ -111,8 +111,7 @@ class _EinschlafReiseScreenState extends State<EinschlafReiseScreen> {
       _koerper = prefs.getString(_keyKoerper) ?? 'neutral';
       _spicy =
           StorageService.spicyMode() && (prefs.getBool(_keySpicy) ?? false);
-      _stimme = prefs.getString(_keyStimme) ??
-          (profil?.isMale == true ? 'martin' : 'victoria');
+      _stimme = prefs.getString(_keyStimme) ?? StorageService.stimmenVorschlag(profil);
     });
   }
 

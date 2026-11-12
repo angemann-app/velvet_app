@@ -138,11 +138,13 @@ class ErsteWocheStand {
       if (roh is! Map) throw const FormatException('Ungültige erste Woche');
       for (final e in roh.entries) {
         final nr = int.tryParse('${e.key}');
+        // Unbekannte Schritte oder Werte (z. B. aus einer neueren Version) werden übersprungen,
+        // damit ein einzelner Eintrag nicht den ganzen Bedienungsstand unlesbar macht.
         if (nr == null ||
             nr < 1 ||
             nr > anzahl ||
             (e.value != getan && e.value != uebersprungen)) {
-          throw const FormatException('Ungültiger Schritt der ersten Woche');
+          continue;
         }
         schritte[nr] = e.value as String;
       }

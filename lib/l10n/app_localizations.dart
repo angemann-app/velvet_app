@@ -1073,7 +1073,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingEingeladenTitel3.
   ///
   /// In de, this message translates to:
-  /// **'Alles bleibt auf deinem Handy'**
+  /// **'Deine Daten bleiben auf deinem Handy'**
   String get onboardingEingeladenTitel3;
 
   /// No description provided for @onboardingEingeladenText3.
@@ -1933,7 +1933,7 @@ abstract class AppLocalizations {
   /// No description provided for @couplesChannelVoteSeparatelyAWishOnly.
   ///
   /// In de, this message translates to:
-  /// **'Antwortet getrennt. Ein Wunsch wird erst sichtbar, wenn ihr beide „Ja, gern“ gesagt habt. Ein „Vielleicht“ kommt zu „Zum Besprechen“. Ein „Lieber nicht“ sieht dein Gegenüber nie.'**
+  /// **'Antwortet getrennt. Ein Wunsch wird erst sichtbar, wenn ihr beide „Ja, gern“ gesagt habt. Ein „Vielleicht“ kommt zu „Zum Besprechen“. Ein „Lieber nicht“ wird deinem Gegenüber nicht angezeigt.'**
   String get couplesChannelVoteSeparatelyAWishOnly;
 
   /// No description provided for @couplesChannelQuestionsInSeveralAreasWith.
@@ -2259,7 +2259,7 @@ abstract class AppLocalizations {
   /// No description provided for @invitePartnerIDLikeToTry.
   ///
   /// In de, this message translates to:
-  /// **'\nIch möchte VelvetPulse mit dir ausprobieren 💛 Eine private App für Nähe und Gespräche, nur für uns zwei. Du musst nichts können, und zu allem darfst du „Heute nicht“ oder „Nein“ sagen. Schau gern erst mal nur rein. Alles bleibt auf deinem Handy.\n\n1. App laden (Android):\n{stableApkUrl}\nWenn Android fragt, die Installation erlauben. Tippe beim ersten Start auf „Jemand hat mich eingeladen“.\n\n2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n\n3. Schick mir danach einen Funken, dann sind wir verbunden.\n\nAusführliche Anleitung: {testerGuideUrl}'**
+  /// **'\nIch möchte VelvetPulse mit dir ausprobieren 💛 Eine private App für Nähe und Gespräche, nur für uns zwei. Du musst nichts können, und zu allem darfst du „Heute nicht“ oder „Nein“ sagen. Schau gern erst mal nur rein. Deine Daten bleiben auf deinem Handy.\n\n1. App laden (Android):\n{stableApkUrl}\nWenn Android fragt, die Installation erlauben. Tippe beim ersten Start auf „Jemand hat mich eingeladen“.\n\n2. Meinen Verbindungscode schicke ich dir gleich als eigene Nachricht. Kopiere ihn und füge ihn in der App ein: Paar-Kanal › Mit Partner verbinden › Partner scannen › Code einfügen › „Verbinden & Koppeln“.\n\n3. Schick mir danach einen Funken, dann sind wir verbunden.\n\nAusführliche Anleitung: {testerGuideUrl}'**
   String invitePartnerIDLikeToTry(Object stableApkUrl, Object testerGuideUrl);
 
   /// No description provided for @invitePartnerYouSendALinkTo.
@@ -2957,7 +2957,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeFindOutWhatExcitesYou.
   ///
   /// In de, this message translates to:
-  /// **'Hier darfst du in Ruhe spüren, was dir gefällt, was vielleicht und was lieber nicht. Du musst nichts beantworten. Unklar, was gemeint ist? Tippe auf das i. Wenn ihr verbunden seid, wird nur sichtbar, wo ihr beide mindestens „Vielleicht“ gesagt habt. Ein „Lieber nicht“ sieht dein Gegenüber nie.'**
+  /// **'Hier darfst du in Ruhe spüren, was dir gefällt, was vielleicht und was lieber nicht. Du musst nichts beantworten. Unklar, was gemeint ist? Tippe auf das i. Wenn ihr verbunden seid, wird nur sichtbar, wo ihr beide mindestens „Vielleicht“ gesagt habt. Ein „Lieber nicht“ wird deinem Gegenüber nicht angezeigt.'**
   String get yesNoMaybeFindOutWhatExcitesYou;
 
   /// No description provided for @yesNoMaybeYes.
@@ -3042,7 +3042,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeNoRejectionAllLimitsWere.
   ///
   /// In de, this message translates to:
-  /// **'Hier steht nur, was ihr beide gesagt habt. Alles andere bleibt bei jedem für sich. Ein „Lieber nicht“ ist eine vollwertige Antwort.'**
+  /// **'Hier steht nur, was ihr beide gesagt habt. Alles andere wird deinem Gegenüber nicht angezeigt. Ein „Lieber nicht“ ist eine vollwertige Antwort.'**
   String get yesNoMaybeNoRejectionAllLimitsWere;
 
   /// No description provided for @yesNoMaybePerfectMatchBothSaidYes.
@@ -4492,7 +4492,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingAdjustsCourseRecommendationsPelvicFloor.
   ///
   /// In de, this message translates to:
-  /// **'Wir nutzen das nur, um dir eine passende Stimme und eine erste Kursauswahl vorzuschlagen und um Lektionen verständlich zu halten, wenn von „sie“ oder „er“ die Rede ist. Du kannst es jederzeit ändern, und es bleibt auf deinem Handy. „Keine Angabe“ ist völlig in Ordnung.'**
+  /// **'Wir nutzen das nur, um dir eine passende Stimme und einen Körper-Vorschlag zu machen und um Lektionen verständlich zu halten, wenn von „sie“ oder „er“ die Rede ist. Du kannst es jederzeit ändern, und es bleibt auf deinem Handy. „Keine Angabe“ ist völlig in Ordnung.'**
   String get onboardingAdjustsCourseRecommendationsPelvicFloor;
 
   /// No description provided for @onboardingMale.
@@ -5194,7 +5194,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardBringYourArousalToLevel.
   ///
   /// In de, this message translates to:
-  /// **'Spür heute, wie sich deine Erregung anfühlt, und lass sie ohne Ziel kommen und gehen. Wird es zu viel, halte inne, atme 3x tief aus und lass den Beckenboden weich werden.'**
+  /// **'Wenn du magst: Spür heute, wie sich deine Erregung anfühlt, und lass sie ohne Ziel kommen und gehen. Wird es zu viel, halte inne, atme 3x tief aus und lass den Beckenboden weich werden.'**
   String get dailySimmeringCardBringYourArousalToLevel;
 
   /// No description provided for @dailySimmeringCardScreenFreeSensing.
@@ -8928,7 +8928,7 @@ abstract class AppLocalizations {
   /// No description provided for @ersteWocheGutSo.
   ///
   /// In de, this message translates to:
-  /// **'Gut so'**
+  /// **'Das reicht mir'**
   String get ersteWocheGutSo;
 
   /// No description provided for @ersteWochePunktOffen.
@@ -8966,6 +8966,12 @@ abstract class AppLocalizations {
   /// In de, this message translates to:
   /// **'Fantasie-Landkarte öffnen'**
   String get ersteWocheLandkarteOeffnen;
+
+  /// No description provided for @ersteWocheAlleBereiche.
+  ///
+  /// In de, this message translates to:
+  /// **'Alle Bereiche ansehen'**
+  String get ersteWocheAlleBereiche;
 
   /// No description provided for @ersteWocheAlternative.
   ///
@@ -9054,7 +9060,7 @@ abstract class AppLocalizations {
   /// No description provided for @ersteWocheS1Text.
   ///
   /// In de, this message translates to:
-  /// **'Bevor etwas anderes kommt, braucht ihr ein Wort, das alles sofort anhält. Die Lektion zeigt eine Ampel für Wünsche und Grenzen. Wenn ihr mögt, verabredet ihr danach ein Wort für „Stopp“. Wer weiß, dass Stopp immer gilt, kann sich auf alles Weitere leichter einlassen.'**
+  /// **'Hilfreich, bevor etwas anderes kommt: ein Wort, das alles sofort anhält. Die Lektion zeigt eine Ampel für Wünsche und Grenzen. Wenn ihr mögt, verabredet ihr danach ein Wort für „Stopp“. Wer weiß, dass Stopp immer gilt, kann sich auf alles Weitere leichter einlassen.'**
   String get ersteWocheS1Text;
 
   /// No description provided for @ersteWocheS2Titel.
@@ -9090,7 +9096,7 @@ abstract class AppLocalizations {
   /// No description provided for @ersteWocheS4Text.
   ///
   /// In de, this message translates to:
-  /// **'Jetzt Berührung, bekleidet und ohne Ziel: Rücken, Schultern, Arme, Hände, Füße. Nichts muss daraus werden, und jede Person kann jederzeit „Stopp“ sagen. Etwa 10 bis 15 Minuten, ihr entscheidet.'**
+  /// **'Wenn ihr mögt: Berührung, bekleidet und ohne Ziel, zum Beispiel Rücken, Schultern, Arme, Hände, Füße. Nichts muss daraus werden, und jede Person kann jederzeit „Stopp“ sagen. Etwa 10 bis 15 Minuten, ihr entscheidet.'**
   String get ersteWocheS4Text;
 
   /// No description provided for @ersteWocheS5Titel.
@@ -9174,7 +9180,7 @@ abstract class AppLocalizations {
   /// No description provided for @heutePaarEinladen.
   ///
   /// In de, this message translates to:
-  /// **'Partner:in einladen'**
+  /// **'Dein Gegenüber einladen'**
   String get heutePaarEinladen;
 
   /// No description provided for @heutePaarSchonCode.

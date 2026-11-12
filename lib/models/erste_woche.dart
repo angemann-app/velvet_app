@@ -1,8 +1,11 @@
 import '../l10n/t.dart';
 import 'bedien_daten.dart';
 
+/// Kategorie der Fantasie-Landkarte, die Schritt 5 zeigt („Sinnlichkeit & Sinne“, ruhig, nicht Spicy).
+const ersteWocheKategorie = 'sensory_basics';
+
 /// Wohin ein Schritt von „Eure erste Woche“ führt.
-enum ErsteWocheZiel { lektion, paarAbend, landkarte, rueckblick }
+enum ErsteWocheZiel { lektion, landkarte, rueckblick }
 
 /// Ein Schritt der ersten Woche (docs/konzepte/eine-tonlage.md, Teil 4b).
 /// Alle Inhalte sind vorhandene Bausteine; die Texte stehen in den ARB-Dateien (`ersteWocheS<n>…`).
@@ -64,6 +67,15 @@ class ErsteWoche {
   ];
 
   static ErsteWocheSchritt schritt(int nr) => schritte[nr - 1];
+
+  /// „Sagen, wo ich bin“: gesendet wird nur nach ausdrücklichem „Senden“ ([bestaetigt] == true)
+  /// und mit nicht leerem Text. Liefert null, wenn nichts gesendet wurde, sonst das Ergebnis von [senden].
+  static Future<bool?> nachrichtSenden(
+      bool? bestaetigt, String text, Future<bool> Function(String text) senden) async {
+    final t = text.trim();
+    if (bestaetigt != true || t.isEmpty) return null;
+    return senden(t);
+  }
 
   /// Lange nichts getan? Dann lädt die Karte nur noch sanft ein (kein Zähler, keine Meldung).
   static bool istLangePause(ErsteWocheStand? s, DateTime jetzt) =>

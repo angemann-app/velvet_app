@@ -18,7 +18,10 @@ import 'paar_abend_screen.dart';
 /// „Diesen Schritt überspringen“ sind gleich ruhig; „Heute nicht“ speichert nichts.
 class ErsteWocheScreen extends StatelessWidget {
   final int nr;
-  const ErsteWocheScreen({super.key, required this.nr});
+
+  /// Nur für Tests ausschaltbar: Auto-Backup nach dem Markieren.
+  final bool backup;
+  const ErsteWocheScreen({super.key, required this.nr, this.backup = true});
 
   ErsteWocheSchritt get _schritt => ErsteWoche.schritt(nr);
 
@@ -49,11 +52,9 @@ class ErsteWocheScreen extends StatelessWidget {
       case ErsteWocheZiel.lektion:
         _lektion(context, _schritt.lektion!);
       case ErsteWocheZiel.landkarte:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => const YesNoMaybeScreen()));
-      case ErsteWocheZiel.paarAbend:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => const PaarAbendScreen()));
+        // Nur die ruhige Kategorie „Sinnlichkeit & Sinne“; „Alle Bereiche ansehen“ hebt den Filter auf.
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (_) => const YesNoMaybeScreen(nurKategorie: ersteWocheKategorie)));
       case ErsteWocheZiel.rueckblick:
         break;
     }
@@ -61,7 +62,7 @@ class ErsteWocheScreen extends StatelessWidget {
 
   Future<void> _markieren(BuildContext context, String wert) async {
     final nav = Navigator.of(context);
-    await ErsteWocheDienst.markieren(nr, wert);
+    await ErsteWocheDienst.markieren(nr, wert, backup: backup);
     nav.pop();
   }
 
@@ -92,9 +93,8 @@ class ErsteWocheScreen extends StatelessWidget {
     );
     final text = controller.text.trim();
     controller.dispose();
-    if (senden != true || text.isEmpty) return;
-    final ok = await NostrService().sendChatMessage(text);
-    if (!ok) {
+    final ok = await ErsteWoche.nachrichtSenden(senden, text, NostrService().sendChatMessage);
+    if (ok == false) {
       messenger.showSnackBar(SnackBar(content: Text(t.lessonDetailSendingDidnTWorkPlease)));
     }
   }
@@ -106,7 +106,6 @@ class ErsteWocheScreen extends StatelessWidget {
     final hauptText = switch (s.ziel) {
       ErsteWocheZiel.lektion => t.ersteWocheLektionOeffnen,
       ErsteWocheZiel.landkarte => t.ersteWocheLandkarteOeffnen,
-      ErsteWocheZiel.paarAbend => t.couplesChannelSharedEvening,
       ErsteWocheZiel.rueckblick => null,
     };
     return Scaffold(
