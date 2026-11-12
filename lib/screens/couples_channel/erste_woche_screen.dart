@@ -9,6 +9,7 @@ import '../../services/erste_woche_dienst.dart';
 import '../../services/nostr_service.dart';
 import '../../theme/app_theme.dart';
 import '../../theme/vp_tokens.dart';
+import '../../widgets/design/vp_bild_feld.dart';
 import '../../widgets/design/vp_komponenten.dart';
 import '../courses/lesson_detail_screen.dart';
 import '../yes_no_maybe/yes_no_maybe_screen.dart';
@@ -115,6 +116,12 @@ class ErsteWocheScreen extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
           children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(VpRadius.karte),
+              // Ganzes 3:2-Bild: Pfad und Schuhe gehören zusammen, ein flacher Streifen schneidet die Schuhe ab.
+              child: const AspectRatio(aspectRatio: 3 / 2, child: VpBildFeld('bereich.erste_woche.kopf')),
+            ),
+            const SizedBox(height: VpAbstand.l),
             VpEyebrow(t.ersteWocheSchrittMin(nr, s.minuten)),
             const SizedBox(height: VpAbstand.s),
             Text(s.titel, style: typo.ueberschrift),

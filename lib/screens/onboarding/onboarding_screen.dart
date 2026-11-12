@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../theme/vp_tokens.dart';
+import '../../widgets/design/vp_bild_feld.dart';
 import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import '../../services/rueckmeldung.dart';
@@ -583,18 +584,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
               ),
               const SizedBox(height: 12),
-              Center(
-                child: Container(
-                  width: 64,
-                  height: 64,
-                  decoration: BoxDecoration(
-                    color: AppTheme.papierErhoben,
+              // Erster Bildschirm mit dem Willkommensbild (freier Stuhl), die beiden folgenden bleiben bei ruhigen Symbolen.
+              if (n == 1)
+                Center(
+                  child: ClipRRect(
                     borderRadius: BorderRadius.circular(VpRadius.karte),
-                    border: Border.all(color: AppTheme.linie),
+                    child: const SizedBox(
+                        width: 180, height: 240, child: VpBildFeld('bereich.einladung.willkommen')),
                   ),
-                  child: Icon(icon, color: AppTheme.akzentTief, size: 32),
+                )
+              else
+                Center(
+                  child: Container(
+                    width: 64,
+                    height: 64,
+                    decoration: BoxDecoration(
+                      color: AppTheme.papierErhoben,
+                      borderRadius: BorderRadius.circular(VpRadius.karte),
+                      border: Border.all(color: AppTheme.linie),
+                    ),
+                    child: Icon(icon, color: AppTheme.akzentTief, size: 32),
+                  ),
                 ),
-              ),
               const SizedBox(height: 22),
               Text(
                 titel,
