@@ -472,7 +472,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                     ),
                     child: Center(
                       // Bei kleinem Kreis oder großer Schrift schrumpft der Inhalt, statt überzulaufen.
-                      child: FittedBox(fit: BoxFit.scaleDown, child: Column(
+                      child: FittedBox(fit: BoxFit.scaleDown, child: ConstrainedBox(constraints: BoxConstraints(maxWidth: kreis - 16), child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
@@ -491,7 +491,7 @@ class _KegelTimerViewState extends State<KegelTimerView> with SingleTickerProvid
                             ),
                           ),
                         ],
-                      )),
+                      ))),
                     ),
                   ),
                 );
