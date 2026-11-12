@@ -12,7 +12,8 @@ Future<void> spicyAbgelaufenZeigenWennNoetig(BuildContext context) async {
   if (!AlterDienst.ablaufHinweisAbholen()) return;
   if (StorageService.spicyMode() || !StorageService.spicyGewaehlt()) return;
   final entsperren = await zeigeHinweisBlatt<bool>(context, (_) => const SpicyAbgelaufenBlatt());
-  if (entsperren == true) await AlterDienst.entsperren();
+  // Hat die App-Sperre beim Zurückkehren gerade bestätigt, reicht das: nur eine Abfrage.
+  if (entsperren == true) await AlterDienst.entsperren(kuerzlichReicht: true);
 }
 
 class SpicyAbgelaufenBlatt extends StatelessWidget {

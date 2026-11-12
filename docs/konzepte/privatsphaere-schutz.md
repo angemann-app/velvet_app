@@ -104,6 +104,11 @@ außerhalb des Spicy-Modus (Lust im Traum ist dort nutzbar?) neutral bleibt (Fra
 1. Spicy-Dauer: **5 Stunden** im Hintergrund (Variante A, Standard 5 h statt 2 h). Läuft die Frist ab, zeigt die App einen **klaren
    Hinweis, dass Spicy deaktiviert wurde** (Blatt/Snackbar beim Zurückkehren, neutral formuliert, mit Knopf „Wieder entsperren“),
    statt dass die Farben stumm umspringen. Texte folgen in der Umsetzung (`spicyAbgelaufen…`, DE/EN).
+   Nachtrag Umsetzung: Nach dem Ablauf gibt es nur **eine** Abfrage der Gerätesperre. `PrivacyService` merkt sich (nur im
+   Speicher) den Zeitpunkt der letzten erfolgreichen Bestätigung; „Wieder entsperren“ (`AlterDienst.entsperren(kuerzlichReicht:
+   true)`) fragt nicht erneut, wenn diese höchstens 2 Minuten zurückliegt (z. B. hat die App-Sperre gerade entsperrt). Spicy
+   bleibt nach dem Ablauf trotzdem aus, bis man „Wieder entsperren“ tippt; Frist und Schutz bleiben gleich. Das Einschalten im
+   Spicy-Dialog fragt immer.
 
 ## Offene Fragen
 

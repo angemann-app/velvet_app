@@ -123,9 +123,16 @@ class AlterDienst with WidgetsBindingObserver {
     return false;
   }
 
+  /// So kurz zurückliegend darf eine Bestätigung der Gerätesperre sein, damit „Wieder entsperren“ nicht erneut fragt.
+  static const Duration kuerzlichBestaetigt = Duration(minutes: 2);
+
   /// Fragt die Gerätesperre ab und merkt sich bei Erfolg die Entsperrung für diese Sitzung.
-  static Future<bool> entsperren() async {
-    if (!await PrivacyService.authenticate(reason: t.alterSperreGrund)) return false;
+  /// [kuerzlichReicht]: Nur für „Wieder entsperren“ nach Ablauf der Frist. Hat die Gerätesperre in den letzten
+  /// [kuerzlichBestaetigt] schon bestätigt (z. B. die App-Sperre beim Zurückkehren), wird nicht ein zweites Mal gefragt.
+  /// Das Einschalten im Spicy-Dialog fragt immer.
+  static Future<bool> entsperren({bool kuerzlichReicht = false}) async {
+    final ohneFrage = kuerzlichReicht && PrivacyService.kuerzlichBestaetigt(kuerzlichBestaetigt);
+    if (!ohneFrage && !await PrivacyService.authenticate(reason: t.alterSperreGrund)) return false;
     _entsperrt = DateTime.now();
     _ablaufHinweisOffen = false;
     _melden();

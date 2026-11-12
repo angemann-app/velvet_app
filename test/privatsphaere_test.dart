@@ -24,6 +24,8 @@ void main() {
     StorageService.resetForTest();
     AlterDienst.zuruecksetzen();
     abfragen = 0;
+    PrivacyService.uhr = DateTime.now;
+    PrivacyService.bestaetigungVergessenFuerTest();
     PrivacyService.unterstuetztFuerTest = unterstuetzt;
     PrivacyService.authenticateFuerTest = () async {
       abfragen++;
@@ -39,6 +41,8 @@ void main() {
     AlterDienst.zuruecksetzen();
     PrivacyService.authenticateFuerTest = null;
     PrivacyService.unterstuetztFuerTest = null;
+    PrivacyService.uhr = DateTime.now;
+    PrivacyService.bestaetigungVergessenFuerTest();
   });
 
   /// Seite mit einem Knopf, der [aktion] startet; so laufen die Blätter wie in der App.
@@ -215,6 +219,54 @@ void main() {
       AlterDienst.hintergrundStartFuerTest(DateTime.now().subtract(const Duration(hours: 6)));
       AlterDienst.hintergrundEnde();
       expect(AlterDienst.ablaufHinweisAbholen(), isFalse);
+    });
+
+    group('Nur eine Abfrage nach dem Ablauf', () {
+      final t0 = DateTime(2026, 11, 12, 22);
+
+      Future<void> abgelaufen() async {
+        await spicyEntsperrt();
+        // Um t0 entsperrt die App-Sperre beim Zurückkehren (eine Bestätigung der Gerätesperre).
+        PrivacyService.uhr = () => t0;
+        expect(await PrivacyService.authenticate(), isTrue);
+        AlterDienst.hintergrundStartFuerTest(DateTime.now().subtract(const Duration(hours: 6)));
+        AlterDienst.hintergrundEnde();
+        expect(StorageService.spicyMode(), isFalse, reason: 'nach Ablauf bleibt Spicy aus, bis man entsperrt');
+      }
+
+      test('„Wieder entsperren“ 1:59 nach einer Bestätigung fragt nicht erneut', () async {
+        await abgelaufen();
+        final vorher = abfragen;
+        PrivacyService.uhr = () => t0.add(const Duration(minutes: 1, seconds: 59));
+        expect(await AlterDienst.entsperren(kuerzlichReicht: true), isTrue);
+        expect(abfragen, vorher);
+        expect(StorageService.spicyMode(), isTrue);
+      });
+
+      test('„Wieder entsperren“ 2:01 nach einer Bestätigung fragt erneut', () async {
+        await abgelaufen();
+        final vorher = abfragen;
+        PrivacyService.uhr = () => t0.add(const Duration(minutes: 2, seconds: 1));
+        expect(await AlterDienst.entsperren(kuerzlichReicht: true), isTrue);
+        expect(abfragen, vorher + 1);
+        expect(StorageService.spicyMode(), isTrue);
+      });
+
+      test('Misslingt die Abfrage nach 2:01, bleibt Spicy aus', () async {
+        await abgelaufen();
+        PrivacyService.uhr = () => t0.add(const Duration(minutes: 2, seconds: 1));
+        PrivacyService.authenticateFuerTest = () async => false;
+        expect(await AlterDienst.entsperren(kuerzlichReicht: true), isFalse);
+        expect(StorageService.spicyMode(), isFalse);
+      });
+
+      test('Ohne Abkürzung (Einschalten im Spicy-Dialog) wird immer gefragt', () async {
+        await abgelaufen();
+        final vorher = abfragen;
+        PrivacyService.uhr = () => t0.add(const Duration(seconds: 10));
+        expect(await AlterDienst.entsperren(), isTrue);
+        expect(abfragen, vorher + 1);
+      });
     });
 
     test('Ohne gewähltes Spicy kein Hinweis', () async {

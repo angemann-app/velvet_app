@@ -109,20 +109,43 @@ class PrivacyService {
   @visibleForTesting
   static Future<bool> Function()? authenticateFuerTest;
 
+  /// Uhr, in Tests ersetzbar.
+  @visibleForTesting
+  static DateTime Function() uhr = DateTime.now;
+
+  /// Zeitpunkt der letzten erfolgreichen Bestätigung der Gerätesperre. Nur im Speicher, nie gespeichert.
+  static DateTime? _letzteBestaetigung;
+
+  @visibleForTesting
+  static void bestaetigungVergessenFuerTest() => _letzteBestaetigung = null;
+
+  /// Wurde die Gerätesperre in den letzten [dauer] erfolgreich bestätigt (z. B. hat die App-Sperre gerade entsperrt)?
+  static bool kuerzlichBestaetigt(Duration dauer) {
+    final zuletzt = _letzteBestaetigung;
+    if (zuletzt == null) return false;
+    final her = uhr().difference(zuletzt);
+    return !her.isNegative && her <= dauer;
+  }
+
   /// Fragt Fingerabdruck oder Geräte-PIN ab. Gibt true bei Erfolg zurück.
   static Future<bool> authenticate({String? reason}) async {
-    if (authenticateFuerTest != null) return authenticateFuerTest!();
+    if (authenticateFuerTest != null) return _merken(await authenticateFuerTest!());
     reason ??= t.privacyServiceUnlockTheApp;
     if (_authenticating) return false;
     _authenticating = true;
     try {
-      return await _auth.authenticate(localizedReason: reason, persistAcrossBackgrounding: true);
+      return _merken(await _auth.authenticate(localizedReason: reason, persistAcrossBackgrounding: true));
     } catch (e) {
       debugPrint('PrivacyService authenticate error: $e');
       return false;
     } finally {
       _authenticating = false;
     }
+  }
+
+  static bool _merken(bool ok) {
+    if (ok) _letzteBestaetigung = uhr();
+    return ok;
   }
 
   /// Schaltet die Sperre um. Beim Einschalten wird zuerst einmal entsperrt,
