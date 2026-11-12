@@ -62,7 +62,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   }
 
   /// Sprung aus Lektionen und Karten. Die Nummern sind die der alten fünf Tabs und bleiben dem Aufrufer so erhalten:
-  /// 0 Kurse, 1 Training (mit `subTab` kegel/breath), 2 Reframing, 3 Paar-Kanal, 4 KI-Coach.
+  /// 0 Kurse, 1 Training (mit `subTab` kegel/breath), 2 Reframing, 3 Paar-Kanal. Die frühere 4 (KI-Coach) fällt auf Körper zurück.
   void _navigateToTab(int index, {String? subTab}) {
     switch (index) {
       case 0:
@@ -72,9 +72,8 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
       default:
         _showTab(_ueben);
         final bereich = switch (index) {
-          1 => UebenScreenState.koerper,
           2 => UebenScreenState.gedanken,
-          _ => UebenScreenState.coach,
+          _ => UebenScreenState.koerper,
         };
         WidgetsBinding.instance.addPostFrameCallback((_) {
           _uebenKey.currentState?.waehle(bereich);

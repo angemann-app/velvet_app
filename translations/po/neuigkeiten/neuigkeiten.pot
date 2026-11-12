@@ -1236,37 +1236,61 @@ msgid "Die Folgen zu dritt spielen jetzt zuverlässig, in allen drei Stufen. Die
 msgstr ""
 
 #. Was ist neu in Version 4.19.0-beta.5
-#. EN: Just for you
+#. EN: Disconnect calmly, say no kindly
 msgctxt "news:63#0.titel"
+msgid "Ruhiger trennen, freundlich Nein sagen"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.5
+#. EN: If you disconnect, your partner gets a calm notice and decides for themselves whether to delete this connection's data too. Answer an invitation to spicy mode with “Not right now”, and “Not today” and “Let's talk” with “Thanks for telling me”.
+msgctxt "news:63#0.text"
+msgid "Trennst du die Verbindung, bekommt dein Gegenüber einen ruhigen Hinweis und entscheidet selbst, ob es die Daten dieser Verbindung ebenfalls löscht. Auf eine Einladung zum Spicy-Modus antwortest du mit „Gerade nicht“, auf „Heute lieber nicht“ und „Lass uns reden“ mit „Danke fürs Sagen“."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.6
+#. EN: The AI coach has been removed
+msgctxt "news:64#0.titel"
+msgid "Der KI-Coach ist entfernt"
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.6
+#. EN: We have removed the AI coach. It only ever knew one side of a relationship, and its answers came from an outside service. If you used it, your key and your conversation with the coach have been deleted from this device; you can delete the key at Google yourself.
+msgctxt "news:64#0.text"
+msgid "Wir haben den KI-Coach entfernt: Er kannte immer nur eine Seite einer Beziehung, und seine Antworten kamen von einem fremden Dienst. Falls du ihn genutzt hast, sind dein Schlüssel und dein Gespräch mit dem Coach von diesem Gerät gelöscht; den Schlüssel kannst du bei Google selbst löschen."
+msgstr ""
+
+#. Was ist neu in Version 4.19.0-beta.7
+#. EN: Just for you
+msgctxt "news:65#0.titel"
 msgid "Nur für dich"
 msgstr ""
 
-#. Was ist neu in Version 4.19.0-beta.5
+#. Was ist neu in Version 4.19.0-beta.7
 #. EN: The app lock is now on by default if your phone has a screen lock. If you already use VelvetPulse, you are asked once. You can change it any time in your profile.
-msgctxt "news:63#0.text"
+msgctxt "news:65#0.text"
 msgid "Die App-Sperre ist jetzt Standard, wenn dein Handy eine Bildschirmsperre hat. Wer VelvetPulse schon nutzt, wird einmal gefragt. Im Profil kannst du sie jederzeit ändern."
 msgstr ""
 
-#. Was ist neu in Version 4.19.0-beta.5
+#. Was ist neu in Version 4.19.0-beta.7
 #. EN: Spicy stays open longer
-msgctxt "news:63#1.titel"
+msgctxt "news:65#1.titel"
 msgid "Spicy bleibt länger offen"
 msgstr ""
 
-#. Was ist neu in Version 4.19.0-beta.5
+#. Was ist neu in Version 4.19.0-beta.7
 #. EN: Spicy mode only asks for your device lock again after 5 hours in the background. When that time has run out, the app tells you and offers to unlock again.
-msgctxt "news:63#1.text"
+msgctxt "news:65#1.text"
 msgid "Der Spicy-Modus fragt erst nach 5 Stunden im Hintergrund wieder nach deiner Gerätesperre. Ist die Zeit abgelaufen, sagt dir die App das und bietet an, wieder zu entsperren."
 msgstr ""
 
-#. Was ist neu in Version 4.19.0-beta.5
+#. Was ist neu in Version 4.19.0-beta.7
 #. EN: Fantasies are free
-msgctxt "news:63#2.titel"
+msgctxt "news:65#2.titel"
 msgid "Fantasien sind frei"
 msgstr ""
 
-#. Was ist neu in Version 4.19.0-beta.5
+#. Was ist neu in Version 4.19.0-beta.7
 #. EN: A short note the first time you open Pleasure in dreams or the inner views, and a new section in the guide: whatever comes to mind belongs to you, and you decide what you share.
-msgctxt "news:63#2.text"
+msgctxt "news:65#2.text"
 msgid "Ein kurzer Hinweis beim ersten Öffnen von Lust im Traum oder den Innenansichten und ein neuer Abschnitt in der Anleitung: Was dir in den Sinn kommt, gehört dir, und du entscheidest, was du teilst."
 msgstr ""

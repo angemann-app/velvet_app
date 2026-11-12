@@ -38,7 +38,23 @@ class CoupleMessage {
 
   /// Foto, das direkt von Handy zu Handy übertragen wird (lib/services/foto_kanal.dart).
   final String? fotoId;
+
+  /// Antwort auf eine Einladung oder einen Funken (`spicy_nein`, `danke`); als Chat-Nachricht mit
+  /// lesbarem Text, ältere Versionen zeigen den Text. Nur bekannte Werte (siehe [antwortArten]).
+  final String? antwort;
+
+  /// Art eines Funkens, auf den man antworten kann (`nein` = „Heute lieber nicht“, `reden`).
+  final String? funke;
+
+  /// Auf diese Einladung oder diesen Funken habe ich schon geantwortet (nur lokal).
+  final bool beantwortet;
   final DateTime createdAt;
+
+  /// Bekannte Werte von [antwort]; alles andere wird beim Empfang verworfen.
+  static const antwortArten = {'spicy_nein', 'danke'};
+
+  /// Bekannte Werte von [funke].
+  static const funkeArten = {'nein', 'reden'};
 
   const CoupleMessage({
     required this.id,
@@ -54,10 +70,17 @@ class CoupleMessage {
     this.verschwindet = false,
     this.loeschenAb,
     this.fotoId,
+    this.antwort,
+    this.funke,
+    this.beantwortet = false,
     required this.createdAt,
   });
 
-  CoupleMessage mitLoeschzeit(DateTime zeit) => CoupleMessage(
+  CoupleMessage mitLoeschzeit(DateTime zeit) => _kopie(loeschenAb: zeit);
+
+  CoupleMessage alsBeantwortet() => _kopie(beantwortet: true);
+
+  CoupleMessage _kopie({DateTime? loeschenAb, bool? beantwortet}) => CoupleMessage(
         id: id,
         senderPubkey: senderPubkey,
         isMe: isMe,
@@ -69,8 +92,11 @@ class CoupleMessage {
         lessonId: lessonId,
         spicyEinladung: spicyEinladung,
         verschwindet: verschwindet,
-        loeschenAb: zeit,
+        loeschenAb: loeschenAb ?? this.loeschenAb,
         fotoId: fotoId,
+        antwort: antwort,
+        funke: funke,
+        beantwortet: beantwortet ?? this.beantwortet,
         createdAt: createdAt,
       );
 
@@ -89,6 +115,9 @@ class CoupleMessage {
       if (verschwindet) 'verschwindet': true,
       if (loeschenAb != null) 'loeschenAb': loeschenAb!.toIso8601String(),
       if (fotoId != null) 'fotoId': fotoId,
+      if (antwort != null) 'antwort': antwort,
+      if (funke != null) 'funke': funke,
+      if (beantwortet) 'beantwortet': true,
       'createdAt': createdAt.toIso8601String(),
     };
   }
@@ -111,6 +140,9 @@ class CoupleMessage {
       verschwindet: map['verschwindet'] == true,
       loeschenAb: DateTime.tryParse(map['loeschenAb'] as String? ?? ''),
       fotoId: map['fotoId'] as String?,
+      antwort: antwortArten.contains(map['antwort']) ? map['antwort'] as String : null,
+      funke: funkeArten.contains(map['funke']) ? map['funke'] as String : null,
+      beantwortet: map['beantwortet'] == true,
       createdAt: map['createdAt'] != null
           ? DateTime.tryParse(map['createdAt'] as String) ?? DateTime.now()
           : DateTime.now(),

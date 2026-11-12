@@ -55,6 +55,23 @@ class NostrService {
   /// abgeholte Nachrichten lösen das nicht aus.
   static const String _keyNip17Seit = 'velvet_partner_nip17_seit';
 
+  // Trennen mit Hinweis (docs/konzepte/paar-kanal-vertrauen.md): Das Gegenüber bekommt eine normale
+  // Chat-Nachricht mit lesbarem Satz und dem Zusatzfeld `trennung`. Neue Versionen zeigen statt einer
+  // Blase eine ruhige Karte, ältere den Satz.
+  static const String _keyPartnerGetrennt = 'velvet_partner_getrennt';
+  static const String keyPartnerGetrennt = _keyPartnerGetrennt;
+
+  /// Seit wann (Unix-Sekunden) die Verbindung zur jetzigen Person besteht. Ein nach einem erneuten
+  /// Koppeln noch auf den Servern liegender alter Trenn-Hinweis zählt damit nicht.
+  static const String _keyPartnerSeit = 'velvet_partner_seit';
+  static const String keyPartnerSeit = _keyPartnerSeit;
+  static const String _keyFotoHinweis = 'velvet_foto_hinweis_gesehen';
+
+  /// Zusatzfelder im JSON der Chat-Nachricht (alle optional, ältere Versionen ignorieren sie).
+  static const String trennungFeld = 'trennung';
+  static const String antwortFeld = 'antwort';
+  static const String funkeFeld = 'funke';
+
   /// Feld im verschlüsselten JSON jeder per NIP-04 gesendeten Nachricht: „ich verstehe NIP-17“.
   /// Ältere Versionen ignorieren unbekannte Felder.
   static const String nip17Feld = 'nip17';
@@ -98,6 +115,11 @@ class NostrService {
 
   final ValueNotifier<String?> partnerPubKeyNotifier =
       ValueNotifier<String?>(null);
+
+  /// Das Gegenüber hat die Verbindung getrennt (Hinweis angekommen). Der Chat bleibt lesbar, bis diese
+  /// Person selbst über [unpairPartner] löscht.
+  final ValueNotifier<bool> partnerGetrenntNotifier = ValueNotifier<bool>(false);
+  int _partnerSeit = 0;
 
   final ValueNotifier<String> partnerNameNotifier =
       ValueNotifier<String>('Partner');
@@ -303,6 +325,8 @@ class NostrService {
     partnerReadUntil.value = prefs.getInt(_keyPartnerReadUntil);
     _readSentUntil = prefs.getInt(_keyReadSentUntil) ?? 0;
     partnerGenderNotifier.value = prefs.getString(_keyPartnerGender);
+    partnerGetrenntNotifier.value = _partnerPublicKey != null && (prefs.getString(_keyPartnerGetrennt) == '1');
+    _partnerSeit = int.tryParse(prefs.getString(_keyPartnerSeit) ?? '') ?? 0;
     partnerPubKeyNotifier.value = _partnerPublicKey;
     partnerNameNotifier.value = _partnerName;
 
@@ -710,6 +734,8 @@ class NostrService {
     var spicyEinladung = false;
     var verschwindet = false;
     String? fotoId;
+    String? antwort;
+    String? funke;
     if (_geloeschteIds.contains(eventId)) return;
 
     try {
@@ -717,10 +743,23 @@ class NostrService {
       if (data is Map<String, dynamic>) {
         final typ = data['type'] as String?;
         verschwindet = data['vanish'] == true;
+        final a = data[antwortFeld];
+        if (a is String && CoupleMessage.antwortArten.contains(a)) antwort = a;
+        // Trenn-Hinweis: kein Verlaufseintrag, sondern ein Stand (ruhige Karte). Nur vom gekoppelten Gegenüber
+        // und nur, wenn er nach dem Koppeln geschrieben wurde (sonst ein alter Hinweis auf den Servern).
+        if (typ == 'chat' && data[trennungFeld] == 1) {
+          final zeit = timestamp.millisecondsSinceEpoch ~/ 1000;
+          if (!isMe && isPaired && senderPubkey == _partnerPublicKey && zeit >= _partnerSeit) {
+            _partnerGetrenntSetzen();
+          }
+          return;
+        }
         if (typ == 'ping') {
           type = CoupleMessageType.ping;
           emoji = data['emoji'] as String?;
           text = data['text'] as String?;
+          final f = data[funkeFeld];
+          if (f is String && CoupleMessage.funkeArten.contains(f)) funke = f;
         } else if (typ == 'fantasy_vote') {
           type = CoupleMessageType.fantasyVote;
           fantasyId = data['fantasyId'] as String?;
@@ -774,6 +813,8 @@ class NostrService {
       spicyEinladung: spicyEinladung,
       verschwindet: verschwindet,
       fotoId: fotoId,
+      antwort: antwort,
+      funke: funke,
       createdAt: timestamp,
     );
 
@@ -907,6 +948,14 @@ class NostrService {
 
     await prefs.setString(_keyPartnerPubKey, _partnerPublicKey!);
     await prefs.setString(_keyPartnerName, _partnerName);
+    // Eine bestehende Verbindung behält ihren Stand; neu gekoppelt (Trennen oder neue Person räumt auf) wird ab jetzt gezählt.
+    // Koppeln sich beide nach einem Trennen wieder (auch ohne dass die andere Seite gelöscht hat), gilt die Verbindung neu.
+    if (_partnerSeit == 0 || partnerGetrenntNotifier.value) {
+      _partnerSeit = DateTime.now().millisecondsSinceEpoch ~/ 1000;
+      await prefs.setString(_keyPartnerSeit, '$_partnerSeit');
+      partnerGetrenntNotifier.value = false;
+      await prefs.remove(_keyPartnerGetrennt);
+    }
     // Hat die angenommene Verbindungsanfrage schon NIP-17 angekündigt, gilt das jetzt.
     if (_nip17Anfrage == cleanKey) _nip17Merken(cleanKey);
     _nip17Anfrage = null;
@@ -974,6 +1023,12 @@ class NostrService {
     await prefs.remove(_keyNip17Seit);
     _faehigGesendet = false;
     _letzteFaehigAntwort = 0;
+    // Neue Verbindung, neuer Anfang: Trenn-Stand, Zählung und der einmalige Foto-Hinweis gelten nur für die bisherige Person.
+    partnerGetrenntNotifier.value = false;
+    await prefs.remove(_keyPartnerGetrennt);
+    _partnerSeit = 0;
+    await prefs.remove(_keyPartnerSeit);
+    await prefs.remove(_keyFotoHinweis);
   }
 
   /// Fehlen Name oder Geschlecht des Gegenübers, fragt der Paar-Kanal einmal nach.
@@ -1006,6 +1061,71 @@ class NostrService {
   /// Lektion empfehlen. Ältere Versionen zeigen nur den Text.
   Future<bool> sendLessonShare(String lessonId, String lessonTitle, String courseTitle) =>
       _sendLearning({'text': t.nostrServiceHaveAReadLessontitleCoursetitle(lessonTitle, courseTitle), 'lesson': lessonId});
+
+  void _partnerGetrenntSetzen() {
+    if (partnerGetrenntNotifier.value) return;
+    partnerGetrenntNotifier.value = true;
+    unawaited(SharedPreferences.getInstance().then((p) => p.setString(_keyPartnerGetrennt, '1')));
+  }
+
+  /// Schickt dem Gegenüber den Trenn-Hinweis (normale Chat-Nachricht mit neutralem Satz und Zusatzfeld,
+  /// auf den Servern höchstens [serverAblauf] lang). Kein Verlaufseintrag.
+  Future<bool> sendeTrennungsHinweis() async {
+    if (!isPaired) return false;
+    final payload = jsonEncode({
+      'type': 'chat',
+      'text': t.trennungSatzAelter,
+      trennungFeld: 1,
+      'timestamp': DateTime.now().millisecondsSinceEpoch,
+    });
+    return _senden(payload, (_) {}, extraTags: _ablaufTag());
+  }
+
+  /// Trennt von dieser Seite: erst der Hinweis ans Gegenüber (ist gerade kein Server verbunden, wartet die
+  /// App kurz), dann wird auf diesem Handy aufgeräumt wie bei [unpairPartner]. Das Trennen selbst scheitert
+  /// nie am Hinweis. Gibt zurück, ob der Hinweis rausging.
+  Future<bool> trennenMitHinweis({bool hinweis = true, Duration warten = const Duration(seconds: 6)}) async {
+    // Ohne Hinweis (wer sich schützen will, trennt still) oder wenn das Gegenüber schon getrennt hat:
+    // nur hier aufräumen, nichts wird gesendet.
+    if (!hinweis || partnerGetrenntNotifier.value) {
+      await unpairPartner();
+      return true;
+    }
+    var gesendet = await sendeTrennungsHinweis();
+    if (!gesendet && isPaired && !isConnected) {
+      final verbunden = Completer<void>();
+      void pruefen() {
+        if (isConnected && !verbunden.isCompleted) verbunden.complete();
+      }
+
+      statusNotifier.addListener(pruefen);
+      await verbunden.future.timeout(warten, onTimeout: () {});
+      statusNotifier.removeListener(pruefen);
+      if (isConnected) gesendet = await sendeTrennungsHinweis();
+    }
+    await unpairPartner();
+    return gesendet;
+  }
+
+  /// Antwort auf eine Einladung oder einen Funken ([code] aus [CoupleMessage.antwortArten]). [text] ist der
+  /// lesbare Satz für ältere Versionen. Markiert die Nachricht [aufId] als beantwortet.
+  Future<bool> sendAntwort(String code, String text, {String? aufId}) async {
+    if (!CoupleMessage.antwortArten.contains(code)) return false;
+    final ok = await _sendLearning({'text': text, antwortFeld: code});
+    if (ok && aufId != null) await markiereBeantwortet(aufId);
+    return ok;
+  }
+
+  Future<void> markiereBeantwortet(String id) async {
+    messagesNotifier.value = [for (final m in messagesNotifier.value) m.id == id ? m.alsBeantwortet() : m];
+    await _saveMessagesToCache();
+  }
+
+  /// Der einmalige Satz beim Foto-Senden („bleibt beim anderen“) ist für diese Verbindung noch nicht gezeigt worden.
+  Future<bool> fotoHinweisOffen() async =>
+      !((await SharedPreferences.getInstance()).getBool(_keyFotoHinweis) ?? false);
+
+  Future<void> fotoHinweisGesehen() async => (await SharedPreferences.getInstance()).setBool(_keyFotoHinweis, true);
 
   /// Zum Spicy-Modus einladen. Einschalten muss das Gegenüber selbst (mit Altersabfrage);
   /// ältere Versionen zeigen nur den Text.
@@ -1040,13 +1160,14 @@ class NostrService {
     } catch (_) {}
   }
 
-  Future<bool> sendQuickPing(String emoji, String label, {bool verschwindet = false}) async {
+  Future<bool> sendQuickPing(String emoji, String label, {bool verschwindet = false, String? funke}) async {
     if (!isPaired) return false;
 
     final payload = jsonEncode({
       'type': 'ping',
       'emoji': emoji,
       'text': label,
+      if (funke != null && CoupleMessage.funkeArten.contains(funke)) funkeFeld: funke,
       if (verschwindet) 'vanish': true,
       'timestamp': DateTime.now().millisecondsSinceEpoch,
     });
@@ -1166,6 +1287,8 @@ class NostrService {
   Future<bool> _senden(String plaintext, void Function(String eventId) onSuccess,
       {List<List<String>> extraTags = const []}) async {
     if (_myPrivateKey == null || _partnerPublicKey == null) return false;
+    // Hat das Gegenüber getrennt, würde alles ins Leere gehen (und „gesendet“ vortäuschen).
+    if (partnerGetrenntNotifier.value) return false;
     if (!partnerNip17) {
       return _sendeEvent(kind: 4, plaintext: plaintext, onSuccess: onSuccess, extraTags: extraTags);
     }

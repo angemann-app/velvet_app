@@ -132,6 +132,36 @@ der APK**, sondern später als `bilder/…` im Nur-R2-Paket der Reihe. Spicy-Mot
 - **Umbenennung am 04.11.2026:** Das GitHub-Konto wird in lotus-atelier umbenannt und der Verlauf umgeschrieben (docs/UMBENENNUNG.md). Bis dahin den Kontonamen nicht neu festschreiben; danach nur frische Klone benutzen.
 
 - Größere Änderungen auf einem eigenen Branch, nicht direkt auf `main`.
+- **Mehrere Sitzungen, eine gemeinsame Beta (Vorgehen seit 12.11.2026):** Arbeiten mehrere Sitzungen parallel
+  und sollen zusammen in eine Beta, gilt:
+  - **Eigener Worktree und Branch je Sitzung**, ausgehend vom Stand des Integrationsbranchs
+    (`claude/beta-integration`, legt die Leitung an). Nie im Hauptordner Branches wechseln, nie `git add -A`,
+    nur eigene Dateien stagen. Nichts selbst in `main` oder den Integrationsbranch zusammenführen.
+  - **Gemeinsame Dateien nicht anfassen:** `assets/data/neuigkeiten.json`, `translations/en/neuigkeiten.json`,
+    `docs/AUFGABEN.md`, `translations/STATUS.md`, `translations/po/**` (die `.pot`-Dateien) und die erzeugten
+    `lib/l10n/app_localizations*.dart` nur nach Absprache. „Was ist neu“ liefert jede Sitzung stattdessen als kurze
+    Notiz (Symbol, Titel, Text, auch englisch) im Abschlussbericht; Einträge, Prüfsummen (`STAMP`) und PO-Abgleich
+    macht die Leitung einmal am Schluss, damit es nur einen Eintrag mit einer Build-Nummer gibt. Die Anleitung
+    (`anleitung.json` DE/EN, `docs/ANLEITUNG.md`, `docs/GUIDE.md`) pflegt die Sitzung selbst, weil sie ihre Funktion kennt.
+  - **ARB:** Neue Schlüssel in `app_de.arb` und `app_en.arb` am Ende anhängen, eigene Schlüssel mit einheitlichem
+    Vorsatz der Funktion; keine bestehenden Schlüssel umbenennen. Die erzeugten Dateien nie von Hand mergen,
+    sondern mit `flutter gen-l10n` neu erzeugen.
+  - **Überschneidungen:** Jeder Auftrag nennt die erlaubten Dateien. Berührt eine Sitzung Dateien außerhalb davon
+    (besonders `nostr_service.dart`, `storage_service.dart`, `backup_codec.dart`, Paar-Kanal-Bildschirm), meldet
+    sie das im Bericht, statt breit umzubauen. Überschneiden sich zwei Aufträge deutlich, laufen sie nacheinander.
+  - **Abschlussbericht je Sitzung:** geänderte Dateien, was geprüft ist (Analyse, Tests, Bildschirmtests) und was
+    nicht, nichts am Gerät Getestetes als getestet melden, Notiz für „Was ist neu“, offene Fragen.
+  - **Zusammenführen durch die Leitung**, nacheinander, tiefste Eingriffe zuerst (Dienste, Datenformate,
+    Sicherung), dann Oberflächen, zuletzt Texte und Inhalte. Nach jedem Zusammenführen: ARB-Konflikte durch
+    Behalten beider Seiten lösen, `flutter gen-l10n`, `flutter analyze`, `flutter test`. `security_test.dart` und
+    `backup_merge_test.dart` bleiben grün. Ein roter Test geht an den Branch zurück, der ihn auslöst.
+  - **Vor der Beta, einmal:** Gesamtdiff gegenlesen (besonders Stellen, an denen zwei Sitzungen sich berühren),
+    „Was ist neu“ für die neue Build-Nummer (DE und EN) mit allen Punkten, `STAMP` und PO-Abgleich, `AUFGABEN.md`
+    nachziehen, Analyse, alle Tests und `test_screens/screens_test.dart` (Bilder ansehen). Danach Bau und
+    Veröffentlichung nur mit ausdrücklicher Freigabe des Nutzers für genau diese Version und Build-Nummer.
+    Fehler nach dem Zusammenführen werden auf dem Integrationsbranch behoben, nicht in den Einzelbranches.
+  - **Gerätetest ist Sache des Nutzers:** Bis er getestet hat, gilt nichts als am Gerät geprüft. Beta und Stabil
+    müssen mit alter und neuer Version zusammen laufen (siehe Update-Kanäle).
 - Releases baut und veröffentlicht Claude Code mit `tools/release.ps1`, aber nur nach ausdrücklicher
   Freigabe des Nutzers für genau dieses Release (Version und Build-Nummer). Die Build-Nummer steigt immer,
   über Beta und Stabil hinweg; vorher braucht es einen „Was ist neu“-Eintrag für diese Build-Nummer.

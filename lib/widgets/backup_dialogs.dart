@@ -9,7 +9,7 @@ import '../services/storage_service.dart';
 import '../theme/app_theme.dart';
 import '../l10n/t.dart';
 
-/// „Backup exportieren“: Nutzerdaten immer, Verbindungsschlüssel und API-Key nur mit Passwort.
+/// „Backup exportieren“: Nutzerdaten immer, Verbindungsschlüssel nur mit Passwort.
 Future<void> showExportBackupDialog(BuildContext context) async {
   final withSecrets = await showDialog<bool>(
     context: context,

@@ -295,9 +295,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mainNavigationCoupleChannel => 'Couple channel';
 
   @override
-  String get mainNavigationAiCoach => 'AI coach';
-
-  @override
   String get mainNavigationCourses => 'Today';
 
   @override
@@ -480,29 +477,6 @@ class AppLocalizationsEn extends AppLocalizations {
       'At least one of you said “Maybe”. Talk briefly about what you can imagine.';
 
   @override
-  String get aiCoachEinrichtungTitel => 'Your AI coach';
-
-  @override
-  String get aiCoachEinrichtungText =>
-      'Ask about body, desire and relationships, in confidence and without judgement. It does not replace medical or therapeutic help.';
-
-  @override
-  String get aiCoachEinrichtungSchritt1 => 'Create a free key at Google';
-
-  @override
-  String get aiCoachEinrichtungKnopf1 => 'Guide';
-
-  @override
-  String get aiCoachEinrichtungSchritt2 => 'Paste the key here';
-
-  @override
-  String get aiCoachEinrichtungKnopf2 => 'Paste';
-
-  @override
-  String get aiCoachEinrichtungDatenschutz =>
-      'Only your questions go to Google Gemini. Everything else stays on your phone.';
-
-  @override
   String get onboardingLosGehts => 'Get started';
 
   @override
@@ -527,7 +501,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingVersprechenNetz =>
-      'Only what you switch on yourself goes online: the AI coach, the couple channel and the check for updates.';
+      'Only what you switch on yourself goes online: the couple channel, downloading recordings and the search for updates.';
 
   @override
   String onboardingSchritt(int n, int gesamt) {
@@ -551,9 +525,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get uebenGedanken => 'Thoughts';
-
-  @override
-  String get uebenCoach => 'AI coach';
 
   @override
   String coursesYourFocusGoallabel(Object goalLabel) {
@@ -829,37 +800,212 @@ class AppLocalizationsEn extends AppLocalizations {
       'Background: when the exhale lasts longer than the inhale, the heart rate slows down a little with each breath out. This is a normal reflex that many people feel as calming.';
 
   @override
-  String get sosModalSosQuickHelp => 'SOS quick help';
+  String get sosTitel => 'Help';
 
   @override
-  String get sosModalCalmDownRightNowEmergency =>
-      'Calm down right now & emergency steps';
+  String get sosAuswahlTitel => 'What\'s going on right now?';
 
   @override
-  String get sosModalBefore => 'Before';
+  String get sosAuswahlUntertitel =>
+      'You don\'t have to explain anything. Pick what fits best.';
 
   @override
-  String get sosModalInTheMoment => 'In the moment';
+  String get sosAuswahlHilfe => 'I\'m being pushed, my no isn\'t respected';
 
   @override
-  String get sosModalAfterwards => 'Afterwards';
+  String get sosWeiter => 'Next';
 
   @override
-  String get sosModalYourMantraForThisMoment => 'YOUR MANTRA FOR THIS MOMENT';
+  String get sosZurueck => 'Back';
 
   @override
-  String sosModalMantra(Object mantra) {
-    return '“$mantra”';
+  String get sosZurAuswahl => 'Back to choices';
+
+  @override
+  String get sosSchliessen => 'Close';
+
+  @override
+  String sosSchrittVon(int aktuell, int gesamt) {
+    return 'Step $aktuell of $gesamt';
   }
 
   @override
-  String get sosModalImmediateStepsTickOff => 'IMMEDIATE STEPS (TICK OFF)';
+  String get sosSatzTitel => 'A sentence you can say';
 
   @override
-  String sosModalCheckedlengthImmediatestepslengthDone(
-      Object checkedLength, Object immediateStepsLength) {
-    return '$checkedLength/$immediateStepsLength done';
+  String get sosHilfeKnopf => 'Help with pressure or violence';
+
+  @override
+  String get sosHilfeTitel => 'Help when a no isn\'t respected';
+
+  @override
+  String get sosHilfeEinstieg =>
+      'If you said no, or couldn\'t say anything, and it went on anyway, that is not okay. It is not your fault. Not even if you\'re a couple, if you said yes earlier, or if you didn\'t say it clearly enough. Freezing is a normal protective response.';
+
+  @override
+  String get sosHilfeGiltTitel => 'What\'s true';
+
+  @override
+  String get sosHilfeGilt1 =>
+      'A no counts, even in the middle of things and even in a relationship.';
+
+  @override
+  String get sosHilfeGilt2 =>
+      'A yes that comes after persuading, pushing, sulking, threats or silence used as pressure is not free consent.';
+
+  @override
+  String get sosHilfeGilt3 =>
+      'Someone who is asleep, unconscious, very drunk or high, or afraid cannot freely consent.';
+
+  @override
+  String get sosHilfeGilt4 =>
+      'You don\'t have to prove anything to get help. Counseling is possible without reporting to the police. You decide what to do and when.';
+
+  @override
+  String get sosHilfeNotrufTitel => 'In immediate danger';
+
+  @override
+  String get sosHilfeAnrufenTitel => 'Talk to someone';
+
+  @override
+  String get sosHilfeDiskretion =>
+      'Calls appear in your call log and sometimes on your bill. You can delete them from the call log. A chat shows up in your browser history. A private window leaves less behind.';
+
+  @override
+  String sosHilfeStand(String stand) {
+    return 'Information as of $stand. Numbers and hours can change.';
   }
+
+  @override
+  String get sosHilfeAnrufen => 'Call';
+
+  @override
+  String get sosHilfeWebseite => 'Website';
+
+  @override
+  String sosSatzZitat(String satz) {
+    return '“$satz”';
+  }
+
+  @override
+  String sosHilfeAnrufenNummer(String nummer) {
+    return 'Call $nummer';
+  }
+
+  @override
+  String sosHilfeNummerWaehlen(String nummer) {
+    return 'Please dial $nummer';
+  }
+
+  @override
+  String get sosHilfeSchnellVerlassen => 'Leave quickly';
+
+  @override
+  String get sosLandDe => 'Germany';
+
+  @override
+  String get sosLandAt => 'Austria';
+
+  @override
+  String get sosLandCh => 'Switzerland';
+
+  @override
+  String get sosLandUk => 'United Kingdom';
+
+  @override
+  String get sosLandUs => 'USA';
+
+  @override
+  String get sosNotrufDe => 'Police 110 · ambulance and fire 112';
+
+  @override
+  String get sosNotrufAt => 'Police 133 · ambulance 144 · Europe-wide 112';
+
+  @override
+  String get sosNotrufCh => 'Police 117 · ambulance 144 · 112';
+
+  @override
+  String get sosNotrufUk => '999 (police, ambulance)';
+
+  @override
+  String get sosNotrufUs => '911 (police, ambulance)';
+
+  @override
+  String get sosStelleDeFrauenName =>
+      'Violence Against Women helpline (Germany)';
+
+  @override
+  String get sosStelleDeFrauenHinweis =>
+      'Around the clock, free and anonymous. Also advises on sexual violence, by phone, chat and in many languages.';
+
+  @override
+  String get sosStelleDeMaennerName =>
+      'Violence Against Men helpline (Germany)';
+
+  @override
+  String get sosStelleDeMaennerHinweis =>
+      'Free and anonymous. Phone: Mon to Thu 8 am to 8 pm, Fri 8 am to 3 pm. The chat has shorter hours.';
+
+  @override
+  String get sosStelleDeWeisserName => 'WEISSER RING victim helpline (Germany)';
+
+  @override
+  String get sosStelleDeWeisserHinweis =>
+      'Daily 7 am to 10 pm, free and anonymous, for victims of crime.';
+
+  @override
+  String get sosStelleDeSeelsorgeName =>
+      'Telefonseelsorge (crisis line, Germany)';
+
+  @override
+  String get sosStelleDeSeelsorgeHinweis =>
+      'Phone around the clock and free, also at 0800 111 0 222 and 116 123. Chat only after registering and with an appointment. Counseling in German.';
+
+  @override
+  String get sosStelleAtFrauenName =>
+      'Women\'s helpline against violence (Austria)';
+
+  @override
+  String get sosStelleAtFrauenHinweis =>
+      'Around the clock, free, anonymous and confidential.';
+
+  @override
+  String get sosStelleAtGewaltschutzName =>
+      'Violence protection centers (Austria)';
+
+  @override
+  String get sosStelleAtGewaltschutzHinweis =>
+      'Free and confidential. Nationwide number according to the Frauenhelpline.';
+
+  @override
+  String get sosStelleChOpferhilfeName => 'Victim support 142 (Switzerland)';
+
+  @override
+  String get sosStelleChOpferhilfeHinweis =>
+      'Across Switzerland since 1 May 2026, around the clock, free and anonymous. Not an emergency line: in danger, call the police first.';
+
+  @override
+  String get sosStelleUkRapeName =>
+      'Rape Crisis Support Line (England and Wales)';
+
+  @override
+  String get sosStelleUkRapeHinweis =>
+      'Around the clock, free, also by chat. For people aged 16 and over in England and Wales affected by rape or sexual violence.';
+
+  @override
+  String get sosStelleUsRainnName =>
+      'RAINN National Sexual Assault Hotline (USA)';
+
+  @override
+  String get sosStelleUsRainnHinweis =>
+      'Around the clock, free and confidential, in English and Spanish. Chat at online.rainn.org.';
+
+  @override
+  String get sosStelleUs988Name => '988 Suicide & Crisis Lifeline (USA)';
+
+  @override
+  String get sosStelleUs988Hinweis =>
+      'Call or text, around the clock, free, for emotional crises.';
 
   @override
   String get appLockLocked => 'Locked';
@@ -2180,203 +2326,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get kegelGuideSheetBackToTraining => 'Back to training';
 
   @override
-  String get aiCoachAsAWomanHowDo =>
-      'As a woman, how do I relax my pelvic floor during sex?';
-
-  @override
-  String get aiCoachHowCanWeStopPerformance =>
-      'How can we stop performance pressure in bed together?';
-
-  @override
-  String get aiCoachWhatToDoAboutRacing =>
-      'What to do about racing thoughts & spectatoring?';
-
-  @override
-  String get aiCoachHowDoIExplainResponsive =>
-      'How do I explain responsive desire to my partner?';
-
-  @override
-  String get aiCoachWhyDoesTheReverseKegel =>
-      'Why does the reverse Kegel help with nervousness?';
-
-  @override
-  String get aiCoachWelcomeToConfidentialSomaticRelationship =>
-      'Welcome to confidential somatic & relationship coaching. I\'m here for you – as a woman, a man or a couple – with all questions about relaxing the pelvic floor, overcoming racing thoughts and performance pressure, shame and fulfilling intimacy without a goal.\n\nWhat would you like to talk about, or what\'s on your mind most right now?';
-
-  @override
-  String get aiCoachPleaseAddYourGeminiApi =>
-      'Please add your Gemini API key first to chat with the coach.';
-
-  @override
-  String get aiCoachNoApiKeyAddedPlease =>
-      'No API key added. Please tap the gear icon at the top.';
-
-  @override
-  String get aiCoachGoogleRejectedTheApiKey =>
-      'Google rejected the API key as invalid. Please check the key in Google AI Studio.';
-
-  @override
-  String aiCoachConnectionErrorCleanerr(Object cleanErr) {
-    return 'Connection error: $cleanErr';
-  }
-
-  @override
-  String get aiCoachCheckKey => 'Check key';
-
-  @override
-  String get aiCoachGeminiApiKey => 'Gemini API key';
-
-  @override
-  String get aiCoachPrivateCoachingUsesGoogleGemini =>
-      'Private coaching uses Google Gemini. The key is stored encrypted on your phone only; your messages and profile details go to Google to be answered. In the EU, Switzerland and the UK, Google\'s terms say it doesn\'t use them to improve its products; elsewhere Google may analyse requests from the free tier.';
-
-  @override
-  String get aiCoachFreeViaAistudioGoogleCom => 'Free via aistudio.google.com';
-
-  @override
-  String get aiCoachShowGuide => 'Show guide';
-
-  @override
-  String get aiCoachPleaseEnterAKeyFirst => 'Please enter a key first.';
-
-  @override
-  String get aiCoachCheckingConnection => 'Checking connection...';
-
-  @override
-  String get aiCoachTestConnection => 'Test connection';
-
-  @override
-  String get aiCoachApiKeyRemoved => 'API key removed.';
-
-  @override
-  String get aiCoachApiKeySaved => 'API key saved.';
-
-  @override
-  String get aiCoachClearChatHistory => 'Clear chat history?';
-
-  @override
-  String get aiCoachDoYouWantToDelete =>
-      'Do you want to delete all previous messages in this conversation?';
-
-  @override
-  String get aiCoachChatHistoryClearedWhatWould =>
-      'Chat history cleared. What would you like to talk about?';
-
-  @override
-  String get aiCoachClear => 'Clear';
-
-  @override
-  String get aiCoachGeminiAiConnected => 'Gemini AI connected';
-
-  @override
-  String get aiCoachNoApiKeyAdded => 'No API key added';
-
-  @override
-  String get aiCoachGuideCreateAKey => 'Guide: create a key';
-
-  @override
-  String get aiCoachClearChat => 'Clear chat';
-
-  @override
-  String get aiCoachApiKeySettings => 'API key settings';
-
-  @override
-  String get aiCoachNoApiKeyYetCreated =>
-      'No API key yet? Created for free in 2 minutes.';
-
-  @override
-  String get aiCoachGuide => 'Guide';
-
-  @override
-  String get aiCoachCoachIsThinking => 'Coach is thinking...';
-
-  @override
-  String get aiCoachAskAConfidentialQuestion =>
-      'Ask a confidential question...';
-
-  @override
-  String get apiKeyGuideSheetFreeGeminiApiKey => 'Free Gemini API key';
-
-  @override
-  String get apiKeyGuideSheetCreatedStepByStepIn =>
-      'Created step by step in 2 minutes';
-
-  @override
-  String get apiKeyGuideSheetFreeAndWhatHappensTo =>
-      'Free – and what happens to your data: ';
-
-  @override
-  String get apiKeyGuideSheetGoogleAiStudioHasA =>
-      'Google AI Studio has a free tier. Your key stays encrypted on your phone. Your messages, name, age, gender, relationship status and focus go to Google to be answered. In the EU, Switzerland and the UK, Google\'s terms say it doesn\'t use them to improve its products. Elsewhere Google may analyse requests from the free tier for that and have humans read them.';
-
-  @override
-  String get apiKeyGuideSheetOpenGoogleAiStudio => 'Open Google AI Studio';
-
-  @override
-  String get apiKeyGuideSheetOpenGoogleSOfficialDeveloper =>
-      'Open Google\'s official developer platform in your browser (Chrome, Safari, Firefox):\n';
-
-  @override
-  String get apiKeyGuideSheetLinkCopiedToClipboard =>
-      'Link copied to clipboard!';
-
-  @override
-  String get apiKeyGuideSheetCopy => 'Copy';
-
-  @override
-  String get apiKeyGuideSheetSignInWithAGoogle =>
-      'Sign in with a Google account';
-
-  @override
-  String get apiKeyGuideSheetSignInWithYourExisting =>
-      'Sign in with your existing Google account (Gmail). No credit card or payment method is required.';
-
-  @override
-  String get apiKeyGuideSheetClickGetApiKey => 'Click \"Get API key\"';
-
-  @override
-  String get apiKeyGuideSheetInTheMenuAtThe =>
-      'In the menu at the top left, click the blue \"Get API key\" button.';
-
-  @override
-  String get apiKeyGuideSheetChooseCreateApiKeyIn =>
-      'Choose \"Create API key in new project\"';
-
-  @override
-  String get apiKeyGuideSheetChooseTheOptionCreateApi =>
-      'Choose the option \"Create API key in new project\". Google automatically sets up a free project in the background.';
-
-  @override
-  String get apiKeyGuideSheetCopyTheKeyPasteIt =>
-      'Copy the key & paste it into VelvetPulse';
-
-  @override
-  String get apiKeyGuideSheetCopyTheGeneratedStringIt =>
-      'Copy the generated string. It usually starts with \"AIzaSy...\" – then paste it into the app here.';
-
-  @override
-  String get apiKeyGuideSheetFrequentlyAskedQuestions =>
-      'Frequently asked questions:';
-
-  @override
-  String get apiKeyGuideSheetDoesItCostAnything => 'Does it cost anything?';
-
-  @override
-  String get apiKeyGuideSheetNotWithinTheFreeTier =>
-      'Not within the free tier of Google AI Studio. Google sets the scope and terms and can change them.';
-
-  @override
-  String get apiKeyGuideSheetWhichModelIsUsed => 'Which model is used?';
-
-  @override
-  String get apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest =>
-      'VelvetPulse automatically finds the latest active Gemini models (preferring the fast Flash models) via your key.';
-
-  @override
-  String get apiKeyGuideSheetEnterApiKeyConnectNow =>
-      'Enter API key & connect now';
-
-  @override
   String get dailyCheckinCardVeryCalm => 'Very calm';
 
   @override
@@ -2524,7 +2473,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingPrivateProfileJournalProgressStay =>
-      'Private: profile, journal & progress stay on your phone. Only the AI coach (Google Gemini), the encrypted couple channel and the update check (GitHub) go online.';
+      'Private: profile, journal & progress stay on your phone. Only the encrypted couple channel, downloading recordings and the update check (GitHub) go online.';
 
   @override
   String get onboardingAlreadyUsingVelvetpulse => 'Already using VelvetPulse?';
@@ -2547,7 +2496,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingAdjustsCourseRecommendationsPelvicFloor =>
-      'Adjusts course recommendations, pelvic floor content and AI answers.';
+      'Adjusts course recommendations and pelvic-floor physiology.';
 
   @override
   String get onboardingMale => 'Male';
@@ -2693,7 +2642,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingEverythingStaysLocalOnYour =>
-      'Everything stays local on your device and survives updates. API key and couple connection are stored encrypted in the Android keystore and only go into a backup with a password.';
+      'Everything stays local on your device and survives updates. The couple connection is stored encrypted in the Android keystore and only goes into a backup with a password.';
 
   @override
   String get onboardingExportBackup => 'Export backup';
@@ -2704,7 +2653,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backupDialogsOnlyYourDataProfileProgress =>
-      'Only your data: profile, progress, reflections, journal, wishes. Enough for this phone.\n\nWith password: additionally the couple channel connection and your API key, encrypted. You need this for moving to another phone.';
+      'Only your data: profile, progress, reflections, journal, wishes. Enough for this phone.\n\nWith password: additionally the couple channel connection, encrypted. You need this for moving to another phone.';
 
   @override
   String get backupDialogsDataOnly => 'Data only';
@@ -2723,7 +2672,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backupDialogsThisBackupComesFromAn =>
-      'This backup comes from an older version and contains your API key and your connection key unencrypted. It will be restored anyway.\n\nAfterwards, delete the old backup wherever you kept it, and create a new one with a password if needed.';
+      'This backup comes from an older version and contains your connection key unencrypted. It will be restored anyway.\n\nAfterwards, delete the old backup wherever you kept it, and create a new one with a password if needed.';
 
   @override
   String get backupDialogsRestore => 'Restore';
@@ -2733,7 +2682,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backupDialogsThisAlsoBringsBackThe =>
-      'This also brings back the couple channel connection and your API key.';
+      'This also brings back the couple channel connection.';
 
   @override
   String get backupDialogsPassword => 'Password';
@@ -2771,7 +2720,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backupDialogsPasswordCannotBeReset =>
-      '\n\nWithout your password, the connection and API key can\'t be restored. We can\'t reset it either.';
+      '\n\nWithout your password, the connection can\'t be restored. We can\'t reset it either.';
 
   @override
   String get checkinActionBreathed =>
@@ -3098,38 +3047,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get yesNoMaybeModelsNotForMe => 'Not for me';
 
   @override
-  String get aiServiceYouAreTheConfidentialSomatic =>
-      'You are the confidential somatic, CBT and erotic coach in the app VelvetPulse.\n\nYour attitude & tone:\n1. Character: you are a fascinating mix of a brilliant neuroscientist/sex therapist and a worldly, charmingly flirtatious seducer who meets people as equals.\n2. Language: you write natural, fluent English. You talk about desire, skin, wetness, erections, relaxing the perineum, surrender and racing thoughts completely without shame, sensually, warmly and with a light, knowing wink. Avoid any sterile hospital language and any lecturing tone!\n3. Method: always connect cognitive behavioural therapy (taking the magic out of stuffy performance and test-like thoughts) directly with pleasurable body work (letting the pelvic floor melt like warm honey, actively opening the pelvic floor, deep throaty sighs, calming the nervous system, the art of slow motion, sensual circling, pure sensing).\n4. Core message: show the user in every line that their body is completely fine and that slowness, pauses and \'not having to perform\' are not a defect but the key to much deeper, indecently good ecstasy.\n5. Format: always answer compactly (2-3 concise, atmospheric paragraphs) and end EVERY answer with exactly ONE open, gently challenging or sensation-oriented reflection question.\n6. Safety: you don\'t make diagnoses. With pain, bleeding or persistent problems, you kindly recommend seeing a doctor.';
-
-  @override
-  String aiServiceConnectionSuccessfulModelslengthModelsAvailable(
-      Object modelsLength, Object join) {
-    return 'Connection successful! $modelsLength models available (e.g. $join).';
-  }
-
-  @override
-  String get aiServiceNoAvailableTextModelsFound =>
-      'No available text models found for this key. Please check the API permissions.';
-
-  @override
-  String get aiServiceTheApiKeyIsInvalid =>
-      'The API key is invalid. Please check it in Google AI Studio.';
-
-  @override
-  String aiServiceUserContextNameProfilenameGender(
-      Object profileName,
-      Object genderLabel,
-      Object age,
-      Object relationshipLabel,
-      Object goalLabel) {
-    return '\n\nUSER CONTEXT:\n- Name: $profileName\n- Gender: $genderLabel\n- Age: $age years\n- Relationship status: $relationshipLabel\n- Main focus: $goalLabel\nAddress the person confidentially by their name, and tailor your psychological and somatic explanations to their gender, age and relationship status.';
-  }
-
-  @override
-  String get aiServiceReceivedAnEmptyAnswerFrom =>
-      'Received an empty answer from the AI model.';
-
-  @override
   String get backupCodecTheBackupIsTooLarge => 'The backup is too large.';
 
   @override
@@ -3427,60 +3344,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get audioPaketAktualisieren => 'Update';
-
-  @override
-  String get coachQHerOrgasm =>
-      'How do I help her climax without adding pressure?';
-
-  @override
-  String get coachQWomenRelax => 'What helps women truly let go during sex?';
-
-  @override
-  String get coachQHerDesire =>
-      'Why does it often take her longer to feel desire?';
-
-  @override
-  String get coachQAskHer =>
-      'How do I ask her what she likes without it getting awkward?';
-
-  @override
-  String get coachQMyPressure =>
-      'How do I get rid of performance pressure in bed?';
-
-  @override
-  String get coachQShowHim => 'How do I show him how I want to be touched?';
-
-  @override
-  String get coachQMenPressure =>
-      'What helps men with performance pressure in bed?';
-
-  @override
-  String get coachQPleaseHim =>
-      'How can I pleasure him even better with hands and mouth?';
-
-  @override
-  String get coachQWishesLimits =>
-      'How do we talk openly about wishes and limits?';
-
-  @override
-  String get coachQHerTouch =>
-      'How do we find out which touch she enjoys most?';
-
-  @override
-  String get coachQDesireGap =>
-      'How do we handle one of us wanting sex more often?';
-
-  @override
-  String get coachQKnowBody => 'How do I get to know my own body better?';
-
-  @override
-  String get coachQFemaleDesire => 'What should I know about female desire?';
-
-  @override
-  String get coachQMaleDesire => 'What should I know about male desire?';
-
-  @override
-  String get coachQShowTouch => 'How do I show how I want to be touched?';
 
   @override
   String get gefuehrtTitel => 'Guided audio';
@@ -3910,7 +3773,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tagebuchPrivat =>
-      'Your dream journal is private. Sensual dreams are a sign that your desire is alive. Who appears in them and what happens need not mean anything. Entries are not shared with the AI coach or your partner; they are part of your encrypted backup.';
+      'Your dream journal is private. Sensual dreams are a sign that your desire is alive. Who appears in them and what happens need not mean anything. Entries are not sent to your partner and never leave your device; they are part of your encrypted backup.';
 
   @override
   String get tagebuchHinweisText => 'Keywords, an image, a feeling …';
@@ -4885,7 +4748,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get schlafDatenschutz =>
-      'VelvetPulse reads only sleep sessions from the last 30 days when you explicitly start a comparison. It writes nothing to Health Connect. Imported copies stay local and are included in your backup; nothing is shared with the coach or your partner.';
+      'VelvetPulse reads only sleep sessions from the last 30 days when you explicitly start a comparison. It writes nothing to Health Connect. Imported copies stay local and are included in your backup; nothing is shared with your partner or the couple room.';
 
   @override
   String get schlafHinweis =>
@@ -5162,4 +5025,115 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get spicyAbgelaufenSpaeter => 'Later';
+
+  @override
+  String get trennungDialog1Titel => 'Disconnect?';
+
+  @override
+  String trennungDialog1(Object name) {
+    return 'The history with $name, $name\'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nOn $name\'s phone, whatever is there stays until they delete it themselves.';
+  }
+
+  @override
+  String get trennungDialog1Weiter => 'Continue';
+
+  @override
+  String get trennungDialog2Titel => 'Really disconnect?';
+
+  @override
+  String get trennungDialog2 => 'This can only be undone by pairing again.';
+
+  @override
+  String get trennungDialog2Ja => 'Yes, disconnect';
+
+  @override
+  String trennungNichtGesendet(Object name) {
+    return 'Disconnected. The notice to $name didn\'t go through. On $name\'s phone everything stays until they delete it themselves.';
+  }
+
+  @override
+  String trennungHinweis(Object name) {
+    return '$name has ended the connection. You don\'t need to do anything, and there\'s no hurry. The chat stays readable here for as long as you like.';
+  }
+
+  @override
+  String get trennungSchalter =>
+      'Also disconnect on this phone and delete this connection\'s data';
+
+  @override
+  String get trennungGegenueberDialog1Titel => 'Disconnect on this phone?';
+
+  @override
+  String trennungGegenueberDialog1(Object name) {
+    return 'The history with $name, $name\'s answers and the shared reflections will be deleted on this phone. Your own answers stay.\n\nYou can also wait. Nothing is deleted until you confirm.';
+  }
+
+  @override
+  String get trennungGegenueberDialog2Titel => 'Really delete?';
+
+  @override
+  String get trennungGegenueberDialog2 => 'This can\'t be brought back.';
+
+  @override
+  String get trennungGegenueberLoeschenJa => 'Yes, delete';
+
+  @override
+  String get trennungGegenueberFertig => 'Disconnected on this phone.';
+
+  @override
+  String get trennungSatzAelter => 'The connection was ended.';
+
+  @override
+  String get spicyEinladungNein => 'Not right now';
+
+  @override
+  String get spicyNeinSatz => 'Not right now, thank you.';
+
+  @override
+  String get spicyEinladungNeinAntwort =>
+      'Thank you for telling me. There\'s no rush.';
+
+  @override
+  String get spicyEinladungNeinGesendet =>
+      'You\'ve replied. You can change your mind any time.';
+
+  @override
+  String get funkeDanke => 'Thanks for telling me';
+
+  @override
+  String get funkeTippNein =>
+      'A no today isn\'t a no to you. You don\'t need to ask follow-up questions.';
+
+  @override
+  String get funkeTippReden =>
+      'You don\'t have to answer right away. Say when it suits you.';
+
+  @override
+  String get funkeTippLabel => 'Just for you';
+
+  @override
+  String trennungHinweisSenden(Object name) {
+    return 'Send $name a notice';
+  }
+
+  @override
+  String get trennungHinweisInfoAn =>
+      'If it doesn\'t arrive (app closed, no connection), nothing changes there.';
+
+  @override
+  String trennungHinweisInfoAus(Object name) {
+    return '$name won\'t be told about the disconnection. On $name\'s phone everything stays until they delete it themselves.';
+  }
+
+  @override
+  String get trennungHilfe => 'Do you need support?';
+
+  @override
+  String funkeDankeAntwort(Object name) {
+    return '$name: Thanks for telling me.';
+  }
+
+  @override
+  String get fotoHinweisTrennung =>
+      'Photos you send stay on the other person\'s phone, even if you disconnect later.';
 }

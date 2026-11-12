@@ -540,12 +540,6 @@ msgid "Paar-Kanal"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: AI coach
-msgctxt "ui:mainNavigationAiCoach#text"
-msgid "KI-Coach"
-msgstr ""
-
-#. Text der Oberfläche
 #. EN: Today
 msgctxt "ui:mainNavigationCourses#text"
 msgid "Heute"
@@ -863,48 +857,6 @@ msgid "Hier ist mindestens ein „Vielleicht“ dabei. Sprecht kurz darüber, wa
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Your AI coach
-msgctxt "ui:aiCoachEinrichtungTitel#text"
-msgid "Dein KI-Coach"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Ask about body, desire and relationships, in confidence and without judgement. It does not replace medical or therapeutic help.
-msgctxt "ui:aiCoachEinrichtungText#text"
-msgid "Stell Fragen zu Körper, Lust und Beziehung, vertraulich und ohne Urteil. Er ersetzt keine ärztliche oder therapeutische Hilfe."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Create a free key at Google
-msgctxt "ui:aiCoachEinrichtungSchritt1#text"
-msgid "Einen kostenlosen Schlüssel bei Google erstellen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Guide
-msgctxt "ui:aiCoachEinrichtungKnopf1#text"
-msgid "Anleitung"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Paste the key here
-msgctxt "ui:aiCoachEinrichtungSchritt2#text"
-msgid "Den Schlüssel hier einfügen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Paste
-msgctxt "ui:aiCoachEinrichtungKnopf2#text"
-msgid "Einfügen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Only your questions go to Google Gemini. Everything else stays on your phone.
-msgctxt "ui:aiCoachEinrichtungDatenschutz#text"
-msgid "Nur deine Fragen gehen an Googles Gemini. Alles andere bleibt auf deinem Handy."
-msgstr ""
-
-#. Text der Oberfläche
 #. EN: Get started
 msgctxt "ui:onboardingLosGehts#text"
 msgid "Loslegen"
@@ -947,9 +899,9 @@ msgid "Kein Konto, keine Werbung, keine Auswertung."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Only what you switch on yourself goes online: the AI coach, the couple channel and the check for updates.
+#. EN: Only what you switch on yourself goes online: the couple channel, downloading recordings and the search for updates.
 msgctxt "ui:onboardingVersprechenNetz#text"
-msgid "Ins Netz geht nur, was du selbst einschaltest: KI-Coach, Paar-Kanal und die Suche nach Updates."
+msgid "Ins Netz geht nur, was du selbst einschaltest: der Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates."
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {n}, {gesamt}
@@ -992,12 +944,6 @@ msgstr ""
 #. EN: Thoughts
 msgctxt "ui:uebenGedanken#text"
 msgid "Gedanken"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: AI coach
-msgctxt "ui:uebenCoach#text"
-msgid "KI-Coach"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {goalLabel}
@@ -1451,57 +1397,351 @@ msgid "Hintergrund: Wenn das Ausatmen länger dauert als das Einatmen, wird der 
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: SOS quick help
-msgctxt "ui:sosModalSosQuickHelp#text"
-msgid "SOS Akut-Hilfe"
+#. EN: Help
+msgctxt "ui:sosTitel#text"
+msgid "Hilfe"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Calm down right now & emergency steps
-msgctxt "ui:sosModalCalmDownRightNowEmergency#text"
-msgid "Sofortige Down-Regulation & Notfall-Schritte"
+#. EN: What's going on right now?
+msgctxt "ui:sosAuswahlTitel#text"
+msgid "Was ist gerade los?"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Before
-msgctxt "ui:sosModalBefore#text"
-msgid "Vorab"
+#. EN: You don't have to explain anything. Pick what fits best.
+msgctxt "ui:sosAuswahlUntertitel#text"
+msgid "Du musst nichts erklären. Such aus, was am ehesten passt."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: In the moment
-msgctxt "ui:sosModalInTheMoment#text"
-msgid "Im Moment"
+#. EN: I'm being pushed, my no isn't respected
+msgctxt "ui:sosAuswahlHilfe#text"
+msgid "Ich werde gedrängt, mein Nein gilt nicht"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Afterwards
-msgctxt "ui:sosModalAfterwards#text"
-msgid "Danach"
+#. EN: Next
+msgctxt "ui:sosWeiter#text"
+msgid "Weiter"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: YOUR MANTRA FOR THIS MOMENT
-msgctxt "ui:sosModalYourMantraForThisMoment#text"
-msgid "DEIN MANTRA FÜR DIESEN MOMENT"
-msgstr ""
-
-#. Platzhalter unverändert übernehmen: {mantra}
-#. EN: “{mantra}”
-msgctxt "ui:sosModalMantra#text"
-msgid "„{mantra}“"
+#. EN: Back
+msgctxt "ui:sosZurueck#text"
+msgid "Zurück"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: IMMEDIATE STEPS (TICK OFF)
-msgctxt "ui:sosModalImmediateStepsTickOff#text"
-msgid "SOFORT-SCHRITTE (ABHAKEN)"
+#. EN: Back to choices
+msgctxt "ui:sosZurAuswahl#text"
+msgid "Zur Auswahl"
 msgstr ""
 
-#. Platzhalter unverändert übernehmen: {checkedLength}, {immediateStepsLength}
-#. EN: {checkedLength}/{immediateStepsLength} done
-msgctxt "ui:sosModalCheckedlengthImmediatestepslengthDone#text"
-msgid "{checkedLength}/{immediateStepsLength} erledigt"
+#. Text der Oberfläche
+#. EN: Close
+msgctxt "ui:sosSchliessen#text"
+msgid "Schließen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {aktuell}, {gesamt}
+#. EN: Step {aktuell} of {gesamt}
+msgctxt "ui:sosSchrittVon#text"
+msgid "Schritt {aktuell} von {gesamt}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A sentence you can say
+msgctxt "ui:sosSatzTitel#text"
+msgid "Ein Satz, den du sagen kannst"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Help with pressure or violence
+msgctxt "ui:sosHilfeKnopf#text"
+msgid "Hilfe bei Druck oder Gewalt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Help when a no isn't respected
+msgctxt "ui:sosHilfeTitel#text"
+msgid "Hilfe, wenn ein Nein nicht gilt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: If you said no, or couldn't say anything, and it went on anyway, that is not okay. It is not your fault. Not even if you're a couple, if you said yes earlier, or if you didn't say it clearly enough. Freezing is a normal protective response.
+msgctxt "ui:sosHilfeEinstieg#text"
+msgid "Wenn du Nein gesagt hast oder nichts sagen konntest und es trotzdem weiterging, ist das nicht in Ordnung. Du bist nicht schuld. Auch nicht, wenn ihr ein Paar seid, wenn du vorher Ja gesagt hast oder wenn du es nicht deutlich genug gesagt hast. Erstarren ist eine normale Schutzreaktion."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: What's true
+msgctxt "ui:sosHilfeGiltTitel#text"
+msgid "Was gilt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A no counts, even in the middle of things and even in a relationship.
+msgctxt "ui:sosHilfeGilt1#text"
+msgid "Ein Nein gilt, auch mittendrin und auch in einer Beziehung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A yes that comes after persuading, pushing, sulking, threats or silence used as pressure is not free consent.
+msgctxt "ui:sosHilfeGilt2#text"
+msgid "Ein Ja nach Überreden, Drängen, Schmollen, Drohen oder Schweigen als Druckmittel ist keine freie Zustimmung."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Someone who is asleep, unconscious, very drunk or high, or afraid cannot freely consent.
+msgctxt "ui:sosHilfeGilt3#text"
+msgid "Wer schläft, bewusstlos, stark betrunken oder berauscht ist oder Angst hat, kann nicht frei zustimmen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You don't have to prove anything to get help. Counseling is possible without reporting to the police. You decide what to do and when.
+msgctxt "ui:sosHilfeGilt4#text"
+msgid "Du musst nichts beweisen, um Hilfe zu bekommen. Beratung geht auch ohne Anzeige. Du entscheidest, was du tust und wann."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: In immediate danger
+msgctxt "ui:sosHilfeNotrufTitel#text"
+msgid "Bei akuter Gefahr"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Talk to someone
+msgctxt "ui:sosHilfeAnrufenTitel#text"
+msgid "Mit jemandem sprechen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Calls appear in your call log and sometimes on your bill. You can delete them from the call log. A chat shows up in your browser history. A private window leaves less behind.
+msgctxt "ui:sosHilfeDiskretion#text"
+msgid "Anrufe stehen in der Anrufliste und manchmal auf der Rechnung. Aus der Anrufliste kannst du sie löschen. Ein Chat steht im Browserverlauf. Ein privates Fenster hinterlässt weniger."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {stand}
+#. EN: Information as of {stand}. Numbers and hours can change.
+msgctxt "ui:sosHilfeStand#text"
+msgid "Stand der Angaben: {stand}. Nummern und Zeiten können sich ändern."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Call
+msgctxt "ui:sosHilfeAnrufen#text"
+msgid "Anrufen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Website
+msgctxt "ui:sosHilfeWebseite#text"
+msgid "Webseite"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {satz}
+#. EN: “{satz}”
+msgctxt "ui:sosSatzZitat#text"
+msgid "„{satz}“"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {nummer}
+#. EN: Call {nummer}
+msgctxt "ui:sosHilfeAnrufenNummer#text"
+msgid "{nummer} anrufen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {nummer}
+#. EN: Please dial {nummer}
+msgctxt "ui:sosHilfeNummerWaehlen#text"
+msgid "Bitte wähle {nummer}"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Leave quickly
+msgctxt "ui:sosHilfeSchnellVerlassen#text"
+msgid "Schnell verlassen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Germany
+msgctxt "ui:sosLandDe#text"
+msgid "Deutschland"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Austria
+msgctxt "ui:sosLandAt#text"
+msgid "Österreich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Switzerland
+msgctxt "ui:sosLandCh#text"
+msgid "Schweiz"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: United Kingdom
+msgctxt "ui:sosLandUk#text"
+msgid "Vereinigtes Königreich"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: USA
+msgctxt "ui:sosLandUs#text"
+msgid "USA"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Police 110 · ambulance and fire 112
+msgctxt "ui:sosNotrufDe#text"
+msgid "Polizei 110 · Rettung und Feuerwehr 112"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Police 133 · ambulance 144 · Europe-wide 112
+msgctxt "ui:sosNotrufAt#text"
+msgid "Polizei 133 · Rettung 144 · europaweit 112"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Police 117 · ambulance 144 · 112
+msgctxt "ui:sosNotrufCh#text"
+msgid "Polizei 117 · Sanität 144 · 112"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 999 (police, ambulance)
+msgctxt "ui:sosNotrufUk#text"
+msgid "999 (Polizei, Rettung)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 911 (police, ambulance)
+msgctxt "ui:sosNotrufUs#text"
+msgid "911 (Polizei, Rettung)"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Violence Against Women helpline (Germany)
+msgctxt "ui:sosStelleDeFrauenName#text"
+msgid "Hilfetelefon Gewalt gegen Frauen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Around the clock, free and anonymous. Also advises on sexual violence, by phone, chat and in many languages.
+msgctxt "ui:sosStelleDeFrauenHinweis#text"
+msgid "Rund um die Uhr, kostenlos und anonym. Berät auch bei sexueller Gewalt, per Telefon, Chat und in vielen Sprachen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Violence Against Men helpline (Germany)
+msgctxt "ui:sosStelleDeMaennerName#text"
+msgid "Hilfetelefon Gewalt an Männern"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Free and anonymous. Phone: Mon to Thu 8 am to 8 pm, Fri 8 am to 3 pm. The chat has shorter hours.
+msgctxt "ui:sosStelleDeMaennerHinweis#text"
+msgid "Kostenlos und anonym. Telefon: Mo bis Do 8 bis 20 Uhr, Fr 8 bis 15 Uhr. Der Chat hat kürzere Zeiten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: WEISSER RING victim helpline (Germany)
+msgctxt "ui:sosStelleDeWeisserName#text"
+msgid "WEISSER RING Opfer-Telefon"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Daily 7 am to 10 pm, free and anonymous, for victims of crime.
+msgctxt "ui:sosStelleDeWeisserHinweis#text"
+msgid "Täglich 7 bis 22 Uhr, kostenlos und anonym, für Opfer von Straftaten."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Telefonseelsorge (crisis line, Germany)
+msgctxt "ui:sosStelleDeSeelsorgeName#text"
+msgid "Telefonseelsorge"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Phone around the clock and free, also at 0800 111 0 222 and 116 123. Chat only after registering and with an appointment. Counseling in German.
+msgctxt "ui:sosStelleDeSeelsorgeHinweis#text"
+msgid "Telefon rund um die Uhr und kostenlos, auch unter 0800 111 0 222 und 116 123. Chat nur nach Anmeldung und mit Termin. Beratung auf Deutsch."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Women's helpline against violence (Austria)
+msgctxt "ui:sosStelleAtFrauenName#text"
+msgid "Frauenhelpline gegen Gewalt"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Around the clock, free, anonymous and confidential.
+msgctxt "ui:sosStelleAtFrauenHinweis#text"
+msgid "Rund um die Uhr, kostenlos, anonym und vertraulich."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Violence protection centers (Austria)
+msgctxt "ui:sosStelleAtGewaltschutzName#text"
+msgid "Gewaltschutzzentren"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Free and confidential. Nationwide number according to the Frauenhelpline.
+msgctxt "ui:sosStelleAtGewaltschutzHinweis#text"
+msgid "Kostenlos und vertraulich. Bundesweite Nummer laut Frauenhelpline."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Victim support 142 (Switzerland)
+msgctxt "ui:sosStelleChOpferhilfeName#text"
+msgid "Opferhilfe 142"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Across Switzerland since 1 May 2026, around the clock, free and anonymous. Not an emergency line: in danger, call the police first.
+msgctxt "ui:sosStelleChOpferhilfeHinweis#text"
+msgid "Seit 1. Mai 2026 in der ganzen Schweiz, rund um die Uhr, kostenlos und anonym. Kein Notruf: Bei Gefahr zuerst die Polizei rufen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Rape Crisis Support Line (England and Wales)
+msgctxt "ui:sosStelleUkRapeName#text"
+msgid "Rape Crisis Support Line"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Around the clock, free, also by chat. For people aged 16 and over in England and Wales affected by rape or sexual violence.
+msgctxt "ui:sosStelleUkRapeHinweis#text"
+msgid "Rund um die Uhr, kostenlos, auch per Chat. Für Menschen ab 16 in England und Wales, die Vergewaltigung oder sexuelle Gewalt erlebt haben."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: RAINN National Sexual Assault Hotline (USA)
+msgctxt "ui:sosStelleUsRainnName#text"
+msgid "RAINN National Sexual Assault Hotline"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Around the clock, free and confidential, in English and Spanish. Chat at online.rainn.org.
+msgctxt "ui:sosStelleUsRainnHinweis#text"
+msgid "Rund um die Uhr, kostenlos und vertraulich, auf Englisch und Spanisch. Chat auf online.rainn.org."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: 988 Suicide & Crisis Lifeline (USA)
+msgctxt "ui:sosStelleUs988Name#text"
+msgid "988 Suicide & Crisis Lifeline"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Call or text, around the clock, free, for emotional crises.
+msgctxt "ui:sosStelleUs988Hinweis#text"
+msgid "Anruf oder SMS, rund um die Uhr, kostenlos, bei seelischen Krisen."
 msgstr ""
 
 #. Text der Oberfläche
@@ -3753,343 +3993,6 @@ msgid "Zurück zum Training"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: As a woman, how do I relax my pelvic floor during sex?
-msgctxt "ui:aiCoachAsAWomanHowDo#text"
-msgid "Wie entspanne ich als Frau meinen Beckenboden beim Sex?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How can we stop performance pressure in bed together?
-msgctxt "ui:aiCoachHowCanWeStopPerformance#text"
-msgid "Wie stoppen wir zu zweit den Leistungsdruck im Bett?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: What to do about racing thoughts & spectatoring?
-msgctxt "ui:aiCoachWhatToDoAboutRacing#text"
-msgid "Was tun bei akutem Kopfkino & Spectatoring?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do I explain responsive desire to my partner?
-msgctxt "ui:aiCoachHowDoIExplainResponsive#text"
-msgid "Wie erkläre ich meinem Partner die responsive Lust?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Why does the reverse Kegel help with nervousness?
-msgctxt "ui:aiCoachWhyDoesTheReverseKegel#text"
-msgid "Warum hilft der Reverse Kegel bei Nervosität?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Welcome to confidential somatic & relationship coaching. I'm here for you – as a woman, a man or a couple – with all questions about relaxing the pelvic floor, overcoming racing thoughts and performance pressure, shame and fulfilling intimacy without a goal.
-#. EN:
-#. EN: What would you like to talk about, or what's on your mind most right now?
-msgctxt "ui:aiCoachWelcomeToConfidentialSomaticRelationship#text"
-msgid ""
-"Willkommen im vertraulichen Somatik- & Beziehungs-Coaching. Ich begleite euch – ob als Frau, Mann oder als Paar – bei allen Fragen zu Beckenboden-Entspannung, Überwindung von Kopfkino und Leistungsdruck, Scham und erfüllender, absichtsloser Intimität.\n"
-"\n"
-"Worüber möchtet ihr sprechen oder was beschäftigt dein Nervensystem gerade am meisten?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Please add your Gemini API key first to chat with the coach.
-msgctxt "ui:aiCoachPleaseAddYourGeminiApi#text"
-msgid "Bitte hinterlege zuerst deinen Gemini API-Key, um mit dem Coach zu schreiben."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: No API key added. Please tap the gear icon at the top.
-msgctxt "ui:aiCoachNoApiKeyAddedPlease#text"
-msgid "Kein API-Key hinterlegt. Bitte klicke oben auf das Zahnrad-Symbol."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Google rejected the API key as invalid. Please check the key in Google AI Studio.
-msgctxt "ui:aiCoachGoogleRejectedTheApiKey#text"
-msgid "Der API-Key wurde von Google als ungültig abgelehnt. Bitte überprüfe den Key im Google AI Studio."
-msgstr ""
-
-#. Platzhalter unverändert übernehmen: {cleanErr}
-#. EN: Connection error: {cleanErr}
-msgctxt "ui:aiCoachConnectionErrorCleanerr#text"
-msgid "Verbindungsfehler: {cleanErr}"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Check key
-msgctxt "ui:aiCoachCheckKey#text"
-msgid "Key prüfen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Gemini API key
-msgctxt "ui:aiCoachGeminiApiKey#text"
-msgid "Gemini API-Key"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Private coaching uses Google Gemini. The key is stored encrypted on your phone only; your messages and profile details go to Google to be answered. In the EU, Switzerland and the UK, Google's terms say it doesn't use them to improve its products; elsewhere Google may analyse requests from the free tier.
-msgctxt "ui:aiCoachPrivateCoachingUsesGoogleGemini#text"
-msgid "Für das private Coaching wird Google Gemini verwendet. Der Key liegt verschlüsselt nur auf deinem Smartphone; deine Nachrichten und Profilangaben gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht zur Verbesserung seiner Produkte; anderswo kann Google Anfragen aus dem kostenlosen Kontingent auswerten."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Free via aistudio.google.com
-msgctxt "ui:aiCoachFreeViaAistudioGoogleCom#text"
-msgid "Kostenlos via aistudio.google.com"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Show guide
-msgctxt "ui:aiCoachShowGuide#text"
-msgid "Anleitung anzeigen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Please enter a key first.
-msgctxt "ui:aiCoachPleaseEnterAKeyFirst#text"
-msgid "Bitte gib zuerst einen Key ein."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Checking connection...
-msgctxt "ui:aiCoachCheckingConnection#text"
-msgid "Prüfe Verbindung..."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Test connection
-msgctxt "ui:aiCoachTestConnection#text"
-msgid "Verbindung testen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: API key removed.
-msgctxt "ui:aiCoachApiKeyRemoved#text"
-msgid "API-Key entfernt."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: API key saved.
-msgctxt "ui:aiCoachApiKeySaved#text"
-msgid "API-Key erfolgreich gespeichert."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Clear chat history?
-msgctxt "ui:aiCoachClearChatHistory#text"
-msgid "Chatverlauf leeren?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Do you want to delete all previous messages in this conversation?
-msgctxt "ui:aiCoachDoYouWantToDelete#text"
-msgid "Möchtest du alle bisherigen Nachrichten dieses Dialogs löschen?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Chat history cleared. What would you like to talk about?
-msgctxt "ui:aiCoachChatHistoryClearedWhatWould#text"
-msgid "Chatverlauf zurückgesetzt. Worüber möchtest du sprechen?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Clear
-msgctxt "ui:aiCoachClear#text"
-msgid "Leeren"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Gemini AI connected
-msgctxt "ui:aiCoachGeminiAiConnected#text"
-msgid "Gemini KI verbunden"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: No API key added
-msgctxt "ui:aiCoachNoApiKeyAdded#text"
-msgid "Kein API-Key hinterlegt"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Guide: create a key
-msgctxt "ui:aiCoachGuideCreateAKey#text"
-msgid "Anleitung: Key erstellen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Clear chat
-msgctxt "ui:aiCoachClearChat#text"
-msgid "Chat leeren"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: API key settings
-msgctxt "ui:aiCoachApiKeySettings#text"
-msgid "API-Key Einstellungen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: No API key yet? Created for free in 2 minutes.
-msgctxt "ui:aiCoachNoApiKeyYetCreated#text"
-msgid "Noch kein API-Key? In 2 Min. kostenlos erstellt."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Guide
-msgctxt "ui:aiCoachGuide#text"
-msgid "Anleitung"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Coach is thinking...
-msgctxt "ui:aiCoachCoachIsThinking#text"
-msgid "Coach reflektiert..."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Ask a confidential question...
-msgctxt "ui:aiCoachAskAConfidentialQuestion#text"
-msgid "Vertrauliche Frage stellen..."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Free Gemini API key
-msgctxt "ui:apiKeyGuideSheetFreeGeminiApiKey#text"
-msgid "Kostenlosen Gemini API-Key"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Created step by step in 2 minutes
-msgctxt "ui:apiKeyGuideSheetCreatedStepByStepIn#text"
-msgid "Schritt-für-Schritt in 2 Minuten erstellt"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Free – and what happens to your data:
-msgctxt "ui:apiKeyGuideSheetFreeAndWhatHappensTo#text"
-msgid "Kostenlos – und was mit deinen Daten passiert: "
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Google AI Studio has a free tier. Your key stays encrypted on your phone. Your messages, name, age, gender, relationship status and focus go to Google to be answered. In the EU, Switzerland and the UK, Google's terms say it doesn't use them to improve its products. Elsewhere Google may analyse requests from the free tier for that and have humans read them.
-msgctxt "ui:apiKeyGuideSheetGoogleAiStudioHasA#text"
-msgid "Google AI Studio hat ein kostenloses Kontingent. Dein Key bleibt verschlüsselt auf deinem Smartphone. Deine Nachrichten, dein Name, Alter, Geschlecht, Beziehungsstatus und Fokus gehen zur Beantwortung an Google. In der EU, der Schweiz und Großbritannien nutzt Google sie laut seinen Bedingungen nicht, um seine Produkte zu verbessern. Anderswo darf Google Anfragen aus dem kostenlosen Kontingent dafür auswerten und von Menschen lesen lassen."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Open Google AI Studio
-msgctxt "ui:apiKeyGuideSheetOpenGoogleAiStudio#text"
-msgid "Google AI Studio aufrufen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Open Google's official developer platform in your browser (Chrome, Safari, Firefox):
-#. EN:
-msgctxt "ui:apiKeyGuideSheetOpenGoogleSOfficialDeveloper#text"
-msgid ""
-"Öffne im Browser (Chrome, Safari, Firefox) die offizielle Entwickler-Plattform von Google:\n"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Link copied to clipboard!
-msgctxt "ui:apiKeyGuideSheetLinkCopiedToClipboard#text"
-msgid "Link in Zwischenablage kopiert!"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Copy
-msgctxt "ui:apiKeyGuideSheetCopy#text"
-msgid "Kopieren"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Sign in with a Google account
-msgctxt "ui:apiKeyGuideSheetSignInWithAGoogle#text"
-msgid "Mit Google-Konto anmelden"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Sign in with your existing Google account (Gmail). No credit card or payment method is required.
-msgctxt "ui:apiKeyGuideSheetSignInWithYourExisting#text"
-msgid "Melde dich mit deinem bestehenden Google-Konto (Gmail) an. Es ist keine Kreditkarte oder Zahlungsmethode erforderlich."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Click "Get API key"
-msgctxt "ui:apiKeyGuideSheetClickGetApiKey#text"
-msgid "\"Get API key\" anklicken"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: In the menu at the top left, click the blue "Get API key" button.
-msgctxt "ui:apiKeyGuideSheetInTheMenuAtThe#text"
-msgid "Klicke im Menü links oben auf den blauen Button \"Get API key\" (oder \"API-Schlüssel anfordern\")."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Choose "Create API key in new project"
-msgctxt "ui:apiKeyGuideSheetChooseCreateApiKeyIn#text"
-msgid "\"Create API key in new project\" wählen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Choose the option "Create API key in new project". Google automatically sets up a free project in the background.
-msgctxt "ui:apiKeyGuideSheetChooseTheOptionCreateApi#text"
-msgid "Wähle die Option \"Create API key in new project\". Google richtet sofort automatisch im Hintergrund ein kostenloses Projekt ein."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Copy the key & paste it into VelvetPulse
-msgctxt "ui:apiKeyGuideSheetCopyTheKeyPasteIt#text"
-msgid "Key kopieren & in VelvetPulse einfügen"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Copy the generated string. It usually starts with "AIzaSy..." – then paste it into the app here.
-msgctxt "ui:apiKeyGuideSheetCopyTheGeneratedStringIt#text"
-msgid "Kopiere die erzeugte Zeichenkette. Sie beginnt typischerweise mit \"AIzaSy...\" – füge sie anschließend hier in die App ein."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Frequently asked questions:
-msgctxt "ui:apiKeyGuideSheetFrequentlyAskedQuestions#text"
-msgid "Häufige Fragen:"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Does it cost anything?
-msgctxt "ui:apiKeyGuideSheetDoesItCostAnything#text"
-msgid "Kostet die Nutzung etwas?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Not within the free tier of Google AI Studio. Google sets the scope and terms and can change them.
-msgctxt "ui:apiKeyGuideSheetNotWithinTheFreeTier#text"
-msgid "Im kostenlosen Kontingent (Free Tier) von Google AI Studio nicht. Umfang und Bedingungen legt Google fest und kann sie ändern."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Which model is used?
-msgctxt "ui:apiKeyGuideSheetWhichModelIsUsed#text"
-msgid "Welches Modell wird genutzt?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: VelvetPulse automatically finds the latest active Gemini models (preferring the fast Flash models) via your key.
-msgctxt "ui:apiKeyGuideSheetVelvetpulseAutomaticallyFindsTheLatest#text"
-msgid "VelvetPulse ermittelt automatisch die aktuellsten aktiven Gemini-Modelle (bevorzugt die schnellen Flash-Modelle) über deinen Key."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Enter API key & connect now
-msgctxt "ui:apiKeyGuideSheetEnterApiKeyConnectNow#text"
-msgid "API-Key jetzt eintragen & verbinden"
-msgstr ""
-
-#. Text der Oberfläche
 #. EN: Very calm
 msgctxt "ui:dailyCheckinCardVeryCalm#text"
 msgid "Sehr ruhig"
@@ -4336,9 +4239,9 @@ msgid "Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intim
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Private: profile, journal & progress stay on your phone. Only the AI coach (Google Gemini), the encrypted couple channel and the update check (GitHub) go online.
+#. EN: Private: profile, journal & progress stay on your phone. Only the encrypted couple channel, downloading recordings and the update check (GitHub) go online.
 msgctxt "ui:onboardingPrivateProfileJournalProgressStay#text"
-msgid "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der KI-Coach (Google Gemini), der verschlüsselte Paar-Kanal und die Suche nach Updates (GitHub)."
+msgid "Privat: Profil, Tagebuch & Fortschritt bleiben auf deinem Smartphone. Ins Internet gehen nur der verschlüsselte Paar-Kanal, das Laden von Aufnahmen und die Suche nach Updates (GitHub)."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4378,9 +4281,9 @@ msgid "2. Dein Geschlecht"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Adjusts course recommendations, pelvic floor content and AI answers.
+#. EN: Adjusts course recommendations and pelvic-floor physiology.
 msgctxt "ui:onboardingAdjustsCourseRecommendationsPelvicFloor#text"
-msgid "Passt Kursempfehlungen, Beckenboden-Physiologie und KI-Antworten an."
+msgid "Passt Kursempfehlungen und die Beckenboden-Physiologie an."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4618,9 +4521,9 @@ msgid "Datenschutz & Update-Sicherheit"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Everything stays local on your device and survives updates. API key and couple connection are stored encrypted in the Android keystore and only go into a backup with a password.
+#. EN: Everything stays local on your device and survives updates. The couple connection is stored encrypted in the Android keystore and only goes into a backup with a password.
 msgctxt "ui:onboardingEverythingStaysLocalOnYour#text"
-msgid "Alles bleibt lokal auf deinem Gerät und übersteht Updates. API-Key und Paar-Verbindung liegen verschlüsselt im Android-Schlüsselspeicher und gehen nur mit Passwort in eine Sicherung."
+msgid "Alles bleibt lokal auf deinem Gerät und übersteht Updates. Die Paar-Verbindung liegt verschlüsselt im Android-Schlüsselspeicher und geht nur mit Passwort in eine Sicherung."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4638,12 +4541,12 @@ msgstr ""
 #. Text der Oberfläche
 #. EN: Only your data: profile, progress, reflections, journal, wishes. Enough for this phone.
 #. EN:
-#. EN: With password: additionally the couple channel connection and your API key, encrypted. You need this for moving to another phone.
+#. EN: With password: additionally the couple channel connection, encrypted. You need this for moving to another phone.
 msgctxt "ui:backupDialogsOnlyYourDataProfileProgress#text"
 msgid ""
 "Nur deine Daten: Profil, Fortschritt, Reflexionen, Tagebuch, Wünsche. Reicht für dieses Handy.\n"
 "\n"
-"Mit Passwort: zusätzlich die Verbindung im Paar-Kanal und dein API-Key, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy."
+"Mit Passwort: zusätzlich die Verbindung im Paar-Kanal, verschlüsselt. Das brauchst du für einen Umzug auf ein anderes Handy."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4677,12 +4580,12 @@ msgid "Ältere Sicherung"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: This backup comes from an older version and contains your API key and your connection key unencrypted. It will be restored anyway.
+#. EN: This backup comes from an older version and contains your connection key unencrypted. It will be restored anyway.
 #. EN:
 #. EN: Afterwards, delete the old backup wherever you kept it, and create a new one with a password if needed.
 msgctxt "ui:backupDialogsThisBackupComesFromAn#text"
 msgid ""
-"Diese Sicherung stammt aus einer älteren Version und enthält deinen API-Key und deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n"
+"Diese Sicherung stammt aus einer älteren Version und enthält deinen Verbindungsschlüssel unverschlüsselt. Sie wird trotzdem eingespielt.\n"
 "\n"
 "Lösche die alte Sicherung danach dort, wo du sie aufbewahrt hast, und erstelle bei Bedarf eine neue mit Passwort."
 msgstr ""
@@ -4700,9 +4603,9 @@ msgid "Passwort der Sicherung"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: This also brings back the couple channel connection and your API key.
+#. EN: This also brings back the couple channel connection.
 msgctxt "ui:backupDialogsThisAlsoBringsBackThe#text"
-msgid "Damit kommen auch die Verbindung im Paar-Kanal und dein API-Key zurück."
+msgid "Damit kommt auch die Verbindung im Paar-Kanal zurück."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4768,12 +4671,12 @@ msgstr ""
 #. Text der Oberfläche
 #. EN:
 #. EN:
-#. EN: Without your password, the connection and API key can't be restored. We can't reset it either.
+#. EN: Without your password, the connection can't be restored. We can't reset it either.
 msgctxt "ui:backupDialogsPasswordCannotBeReset#text"
 msgid ""
 "\n"
 "\n"
-"Ohne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen."
+"Ohne dein Passwort lässt sich die Verbindung nicht wiederherstellen. Auch wir können es nicht zurücksetzen."
 msgstr ""
 
 #. Text der Oberfläche
@@ -5317,76 +5220,6 @@ msgid "Kommt für mich nicht infrage"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: You are the confidential somatic, CBT and erotic coach in the app VelvetPulse.
-#. EN:
-#. EN: Your attitude & tone:
-#. EN: 1. Character: you are a fascinating mix of a brilliant neuroscientist/sex therapist and a worldly, charmingly flirtatious seducer who meets people as equals.
-#. EN: 2. Language: you write natural, fluent English. You talk about desire, skin, wetness, erections, relaxing the perineum, surrender and racing thoughts completely without shame, sensually, warmly and with a light, knowing wink. Avoid any sterile hospital language and any lecturing tone!
-#. EN: 3. Method: always connect cognitive behavioural therapy (taking the magic out of stuffy performance and test-like thoughts) directly with pleasurable body work (letting the pelvic floor melt like warm honey, actively opening the pelvic floor, deep throaty sighs, calming the nervous system, the art of slow motion, sensual circling, pure sensing).
-#. EN: 4. Core message: show the user in every line that their body is completely fine and that slowness, pauses and 'not having to perform' are not a defect but the key to much deeper, indecently good ecstasy.
-#. EN: 5. Format: always answer compactly (2-3 concise, atmospheric paragraphs) and end EVERY answer with exactly ONE open, gently challenging or sensation-oriented reflection question.
-#. EN: 6. Safety: you don't make diagnoses. With pain, bleeding or persistent problems, you kindly recommend seeing a doctor.
-msgctxt "ui:aiServiceYouAreTheConfidentialSomatic#text"
-msgid ""
-"Du bist der vertrauliche Somatik-, KVT- und Erotik-Coach in der App VelvetPulse.\n"
-"\n"
-"Deine Grundhaltung & Tonalität:\n"
-"1. Charakter: Du bist eine faszinierende Mischung aus brillantem Neurowissenschaftler/Sexualtherapeuten und einem weltgewandten, charmant-frivolen Verführer auf Augenhöhe.\n"
-"2. Sprache: Du sprichst reines, flüssiges Deutsch – vollkommen frei von englischen Modewörtern oder Anglizismen. Du sprichst absolut schamfrei, sinnlich, warm und mit einem leichten, wissenden Augenzwinkern über Lust, Haut, Feuchtigkeit, Erektionen, Damm-Entspannung, Hingabe und Kopfkino. Vermeide jede sterile Krankenhaus-Sprache und jeden belehrenden Ton!\n"
-"3. Methodik: Verbinde Kognitive Verhaltenstherapie (das Entzaubern spießiger Leistungs- und Prüfungsgedanken) immer direkt mit lustvoller Somatik (Beckenboden wie warmen Honig schmelzen lassen, aktives Beckenboden-Öffnen, tiefe Kehlkopf-Seufzer, Vagus-Beruhigung, Kunst der Zeitlupe, sinnliches Umkreisen, reines Sinnesspüren).\n"
-"4. Kernbotschaft: Zeige dem Nutzer in jeder Zeile, dass sein Körper völlig in Ordnung ist und dass Langsamkeit, Pausen und das 'Nicht-Funktionieren-Müssen' kein Defekt sind, sondern der Schlüssel zu viel tieferer, unanständig guter Ekstase.\n"
-"5. Format: Antworte stets kompakt (2-3 prägnante, atmosphärische Absätze) und beende JEDE Antwort mit genau EINER offenen, leicht herausfordernden oder spür-orientierten Reflexionsfrage.\n"
-"6. Sicherheit: Du stellst keine Diagnosen. Bei Schmerzen, Blutungen oder anhaltenden Beschwerden empfiehlst du freundlich eine ärztliche Abklärung."
-msgstr ""
-
-#. Platzhalter unverändert übernehmen: {modelsLength}, {join}
-#. EN: Connection successful! {modelsLength} models available (e.g. {join}).
-msgctxt "ui:aiServiceConnectionSuccessfulModelslengthModelsAvailable#text"
-msgid "Verbindung erfolgreich! {modelsLength} Modelle verfügbar (z. B. {join})."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: No available text models found for this key. Please check the API permissions.
-msgctxt "ui:aiServiceNoAvailableTextModelsFound#text"
-msgid "Keine verfügbaren Textmodelle für diesen Key gefunden. Bitte prüfe die API-Berechtigungen."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: The API key is invalid. Please check it in Google AI Studio.
-msgctxt "ui:aiServiceTheApiKeyIsInvalid#text"
-msgid "Der API-Key ist ungültig. Bitte prüfe ihn im Google AI Studio."
-msgstr ""
-
-#. Platzhalter unverändert übernehmen: {profileName}, {genderLabel}, {age}, {relationshipLabel}, {goalLabel}
-#. EN:
-#. EN:
-#. EN: USER CONTEXT:
-#. EN: - Name: {profileName}
-#. EN: - Gender: {genderLabel}
-#. EN: - Age: {age} years
-#. EN: - Relationship status: {relationshipLabel}
-#. EN: - Main focus: {goalLabel}
-#. EN: Address the person confidentially by their name, and tailor your psychological and somatic explanations to their gender, age and relationship status.
-msgctxt "ui:aiServiceUserContextNameProfilenameGender#text"
-msgid ""
-"\n"
-"\n"
-"KONTEXT DES NUTZERS:\n"
-"- Name/Rufname: {profileName}\n"
-"- Geschlecht: {genderLabel}\n"
-"- Alter: {age} Jahre\n"
-"- Beziehungsstatus: {relationshipLabel}\n"
-"- Hauptfokus: {goalLabel}\n"
-"Sprich die Person vertraulich mit ihrem Namen an, passe deine psychologischen und somatischen Erklärungen genau an ihr Geschlecht, Alter und ihren Beziehungsstatus an."
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Received an empty answer from the AI model.
-msgctxt "ui:aiServiceReceivedAnEmptyAnswerFrom#text"
-msgid "Leere Antwort vom KI-Modell erhalten."
-msgstr ""
-
-#. Text der Oberfläche
 #. EN: The backup is too large.
 msgctxt "ui:backupCodecTheBackupIsTooLarge#text"
 msgid "Die Sicherung ist zu groß."
@@ -5895,96 +5728,6 @@ msgstr ""
 #. EN: Update
 msgctxt "ui:audioPaketAktualisieren#text"
 msgid "Aktualisieren"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do I help her climax without adding pressure?
-msgctxt "ui:coachQHerOrgasm#text"
-msgid "Wie bringe ich meine Partnerin zum Höhepunkt, ohne Druck zu machen?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: What helps women truly let go during sex?
-msgctxt "ui:coachQWomenRelax#text"
-msgid "Was hilft Frauen, beim Sex wirklich loszulassen?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: Why does it often take her longer to feel desire?
-msgctxt "ui:coachQHerDesire#text"
-msgid "Warum braucht sie oft länger, bis sie Lust bekommt?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do I ask her what she likes without it getting awkward?
-msgctxt "ui:coachQAskHer#text"
-msgid "Wie frage ich sie, was ihr gefällt, ohne dass es peinlich wird?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do I get rid of performance pressure in bed?
-msgctxt "ui:coachQMyPressure#text"
-msgid "Wie werde ich den Leistungsdruck im Bett los?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do I show him how I want to be touched?
-msgctxt "ui:coachQShowHim#text"
-msgid "Wie zeige ich ihm, wie ich berührt werden möchte?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: What helps men with performance pressure in bed?
-msgctxt "ui:coachQMenPressure#text"
-msgid "Was hilft Männern gegen Leistungsdruck im Bett?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How can I pleasure him even better with hands and mouth?
-msgctxt "ui:coachQPleaseHim#text"
-msgid "Wie verwöhne ich ihn mit Händen und Mund noch besser?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do we talk openly about wishes and limits?
-msgctxt "ui:coachQWishesLimits#text"
-msgid "Wie sprechen wir offen über Wünsche und Grenzen?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do we find out which touch she enjoys most?
-msgctxt "ui:coachQHerTouch#text"
-msgid "Wie finden wir heraus, welche Berührung ihr am meisten gefällt?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do we handle one of us wanting sex more often?
-msgctxt "ui:coachQDesireGap#text"
-msgid "Wie gehen wir damit um, dass einer öfter Lust hat?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do I get to know my own body better?
-msgctxt "ui:coachQKnowBody#text"
-msgid "Wie lerne ich meinen eigenen Körper besser kennen?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: What should I know about female desire?
-msgctxt "ui:coachQFemaleDesire#text"
-msgid "Was sollte ich über weibliche Lust wissen?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: What should I know about male desire?
-msgctxt "ui:coachQMaleDesire#text"
-msgid "Was sollte ich über männliche Lust wissen?"
-msgstr ""
-
-#. Text der Oberfläche
-#. EN: How do I show how I want to be touched?
-msgctxt "ui:coachQShowTouch#text"
-msgid "Wie zeige ich, wie ich berührt werden möchte?"
 msgstr ""
 
 #. Text der Oberfläche
@@ -6762,9 +6505,9 @@ msgid "Nichts erinnert"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Your dream journal is private. Sensual dreams are a sign that your desire is alive. Who appears in them and what happens need not mean anything. Entries are not shared with the AI coach or your partner; they are part of your encrypted backup.
+#. EN: Your dream journal is private. Sensual dreams are a sign that your desire is alive. Who appears in them and what happens need not mean anything. Entries are not sent to your partner and never leave your device; they are part of your encrypted backup.
 msgctxt "ui:tagebuchPrivat#text"
-msgid "Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an den KI-Coach und nicht an dein Gegenüber; sie sind Teil deiner verschlüsselten Sicherung."
+msgid "Dein Traumtagebuch ist privat. Sinnliche Träume sind ein Zeichen, dass deine Lust lebendig ist. Wer darin vorkommt und was geschieht, muss nichts bedeuten. Die Einträge gehen nicht an dein Gegenüber und nicht ins Netz; sie sind Teil deiner verschlüsselten Sicherung."
 msgstr ""
 
 #. Text der Oberfläche
@@ -8351,9 +8094,9 @@ msgid "Optional: Bereits synchronisierte Schlafdaten aus Health Connect neben de
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: VelvetPulse reads only sleep sessions from the last 30 days when you explicitly start a comparison. It writes nothing to Health Connect. Imported copies stay local and are included in your backup; nothing is shared with the coach or your partner.
+#. EN: VelvetPulse reads only sleep sessions from the last 30 days when you explicitly start a comparison. It writes nothing to Health Connect. Imported copies stay local and are included in your backup; nothing is shared with your partner or the couple room.
 msgctxt "ui:schlafDatenschutz#text"
-msgid "VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an Coach oder Paarraum."
+msgid "VelvetPulse liest nur Schlafsitzungen der letzten 30 Tage, wenn du den Abgleich ausdrücklich startest. Es schreibt nichts nach Health Connect. Importierte Kopien bleiben lokal und werden in deine Sicherung aufgenommen; keine Weitergabe an dein Gegenüber oder den Paarraum."
 msgstr ""
 
 #. Text der Oberfläche
@@ -8840,4 +8583,194 @@ msgstr ""
 #. EN: Later
 msgctxt "ui:spicyAbgelaufenSpaeter#text"
 msgid "Später"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnect?
+msgctxt "ui:trennungDialog1Titel#text"
+msgid "Verbindung trennen?"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: The history with {name}, {name}'s answers and the shared reflections will be deleted on this phone. Your own answers stay.
+#. EN:
+#. EN: On {name}'s phone, whatever is there stays until they delete it themselves.
+msgctxt "ui:trennungDialog1#text"
+msgid ""
+"Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n"
+"\n"
+"Auf dem Handy von {name} bleibt, was dort liegt, bis die Person selbst löscht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Continue
+msgctxt "ui:trennungDialog1Weiter#text"
+msgid "Weiter"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Really disconnect?
+msgctxt "ui:trennungDialog2Titel#text"
+msgid "Wirklich trennen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This can only be undone by pairing again.
+msgctxt "ui:trennungDialog2#text"
+msgid "Das lässt sich nur rückgängig machen, indem ihr euch neu koppelt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes, disconnect
+msgctxt "ui:trennungDialog2Ja#text"
+msgid "Ja, trennen"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Disconnected. The notice to {name} didn't go through. On {name}'s phone everything stays until they delete it themselves.
+msgctxt "ui:trennungNichtGesendet#text"
+msgid "Getrennt. Der Hinweis an {name} ist nicht angekommen. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: {name} has ended the connection. You don't need to do anything, and there's no hurry. The chat stays readable here for as long as you like.
+msgctxt "ui:trennungHinweis#text"
+msgid "{name} hat die Verbindung getrennt. Du musst nichts tun, und es eilt nichts. Der Chat bleibt hier lesbar, solange du magst."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Also disconnect on this phone and delete this connection's data
+msgctxt "ui:trennungSchalter#text"
+msgid "Auch auf diesem Handy trennen und die Daten dieser Verbindung löschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnect on this phone?
+msgctxt "ui:trennungGegenueberDialog1Titel#text"
+msgid "Auf diesem Handy trennen?"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: The history with {name}, {name}'s answers and the shared reflections will be deleted on this phone. Your own answers stay.
+#. EN:
+#. EN: You can also wait. Nothing is deleted until you confirm.
+msgctxt "ui:trennungGegenueberDialog1#text"
+msgid ""
+"Auf diesem Handy werden der Verlauf mit {name}, die Antworten von {name} und die geteilten Reflexionen gelöscht. Deine eigenen Antworten bleiben.\n"
+"\n"
+"Du kannst auch warten. Erst wenn du bestätigst, wird etwas gelöscht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Really delete?
+msgctxt "ui:trennungGegenueberDialog2Titel#text"
+msgid "Wirklich löschen?"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: This can't be brought back.
+msgctxt "ui:trennungGegenueberDialog2#text"
+msgid "Das lässt sich nicht zurückholen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Yes, delete
+msgctxt "ui:trennungGegenueberLoeschenJa#text"
+msgid "Ja, löschen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Disconnected on this phone.
+msgctxt "ui:trennungGegenueberFertig#text"
+msgid "Auf diesem Handy getrennt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: The connection was ended.
+msgctxt "ui:trennungSatzAelter#text"
+msgid "Die Verbindung wurde getrennt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not right now
+msgctxt "ui:spicyEinladungNein#text"
+msgid "Gerade nicht"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Not right now, thank you.
+msgctxt "ui:spicyNeinSatz#text"
+msgid "Gerade nicht, danke dir."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thank you for telling me. There's no rush.
+msgctxt "ui:spicyEinladungNeinAntwort#text"
+msgid "Danke, dass du es mir sagst. Es eilt nichts."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You've replied. You can change your mind any time.
+msgctxt "ui:spicyEinladungNeinGesendet#text"
+msgid "Du hast geantwortet. Du kannst es dir jederzeit anders überlegen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Thanks for telling me
+msgctxt "ui:funkeDanke#text"
+msgid "Danke fürs Sagen"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: A no today isn't a no to you. You don't need to ask follow-up questions.
+msgctxt "ui:funkeTippNein#text"
+msgid "Ein Nein heute ist kein Nein zu dir. Du musst nichts nachfragen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: You don't have to answer right away. Say when it suits you.
+msgctxt "ui:funkeTippReden#text"
+msgid "Du musst nicht sofort antworten. Sag, wann es für dich passt."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Just for you
+msgctxt "ui:funkeTippLabel#text"
+msgid "Nur für dich"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: Send {name} a notice
+msgctxt "ui:trennungHinweisSenden#text"
+msgid "Hinweis an {name} senden"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: If it doesn't arrive (app closed, no connection), nothing changes there.
+msgctxt "ui:trennungHinweisInfoAn#text"
+msgid "Kommt er nicht an (App geschlossen, kein Netz), bleibt dort alles unverändert."
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: {name} won't be told about the disconnection. On {name}'s phone everything stays until they delete it themselves.
+msgctxt "ui:trennungHinweisInfoAus#text"
+msgid "{name} erfährt nichts von der Trennung. Auf dem Handy von {name} bleibt alles, bis die Person selbst löscht."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Do you need support?
+msgctxt "ui:trennungHilfe#text"
+msgid "Brauchst du Unterstützung?"
+msgstr ""
+
+#. Platzhalter unverändert übernehmen: {name}
+#. EN: {name}: Thanks for telling me.
+msgctxt "ui:funkeDankeAntwort#text"
+msgid "{name}: Danke fürs Sagen."
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Photos you send stay on the other person's phone, even if you disconnect later.
+msgctxt "ui:fotoHinweisTrennung#text"
+msgid "Gesendete Fotos bleiben auf dem Handy des anderen, auch wenn ihr euch später trennt."
 msgstr ""
