@@ -98,7 +98,7 @@ stillschweigend zu übergehen.
 
 **Zum Stand der Liste (12.11.2026, bitte zuerst lesen):**
 
-- **Der nächste Auftrag ist AG-29.** AG-25 (vier korrigierte Bilder) und AG-26 (Hörstichprobe) sind geliefert und abgenommen; sie
+- **Zurzeit ist kein Auftrag offen** (Stand 12.11.2026 abends). AG-29 und AG-30 sind geliefert und stehen unter „Erledigt“. AG-25 (vier korrigierte Bilder) und AG-26 (Hörstichprobe) sind geliefert und abgenommen; sie
   stehen unten nur noch zur Ablage. Nicht noch einmal bearbeiten.
 - **Die Nummern AG-27 und AG-28 sind vergeben und abgebrochen.** Sie standen für die Nachbesserung der Sehr-spicy-Szenenbilder
   (15 von 35, dann 6 von 15) und wurden am 07.11.2026 auf Entscheidung des Nutzers beendet. Daran nicht weiterarbeiten, die Ordner
@@ -108,91 +108,6 @@ stillschweigend zu übergehen.
   `C:\TOOLS\workspace\mojo` nichts lesen, übernehmen, sichern oder verwerfen; das klärt Claude mit dem Nutzer.
 - Weißt du zu AG-25 oder AG-26 etwas, das diesem Stand widerspricht (zum Beispiel ein offener Pull Request), schreib es in den
   Bericht zu AG-29 unter „Offen oder unsicher“.
-
-### AG-29: Vier Bleistift-Bilder für „Zu zweit“, „Eure erste Woche“ und die Einladung
-
-Stand 12.11.2026, von Claude Code. Hintergrund: `docs/konzepte/eine-tonlage.md`, Abschnitt „Bilder und Symbole“. Die App hat neue
-Bereiche für Paare bekommen; dort stehen bisher gezeichnete Platzhalter. Gebraucht werden vier ruhige Bilder, die **jede Paarform**
-meinen können (Frau und Mann, zwei Frauen, zwei Männer, nicht eindeutig). Deshalb gilt für alle vier: **Man erkennt kein Geschlecht.**
-Varianten je Paarform kommen später in einem eigenen Auftrag, sobald die App sie auswählen kann.
-
-**Branch:** `ag/29-paar-bilder-<datum>`. **Erlaubte Dateien:** nur die vier neuen WebP unter `assets/images/` und der Bericht
-`docs/pruefungen/AG29_PAAR_BILDER.md`. `assets/data/bilder.json`, `lib/`, Texte und `AG.md` nicht ändern; das Einbauen macht Claude.
-
-**Stil (wie AG-22 bis AG-24):** detailed pencil drawing, technical illustration style, soft shading, faint blueprint grid with thin
-dimension lines and thin arrows, off-white paper, dezente Rosé-Akzente, **keine Schrift, keine Zahlen**. Das Bild füllt die ganze
-Fläche mit hellem Papierton, ohne grauen Rand, ohne Blattkante, ohne Stift oder Schneidematte. Keine Fotos, kein Foto-Effekt.
-Alle Personen sind erwachsen und bekleidet, nichts Erotisches, nichts, was auf einem Sperrbildschirm auffiele.
-
-| Datei | Format | Motiv |
-|---|---|---|
-| `assets/images/bereich_zu_zweit_kopf.webp` | 3:2, 1200 × 800 | Zwei Erwachsene sitzen eng nebeneinander auf einem Sofa, **von hinten** gesehen, die Köpfe leicht zueinander geneigt, eine Decke über beiden Schultern. Frisuren und Kleidung so, dass kein Geschlecht ablesbar ist (keine langen Haare, keine Bärte, weite Pullover). Ruhig, vertraut. |
-| `assets/images/bereich_erste_woche_kopf.webp` | 3:2, 1200 × 800 | **Ohne Menschen:** ein Pfad aus **genau sieben** flachen Trittsteinen, der leicht geschwungen ins Bild führt; am Anfang stehen zwei Paar schlichte Schuhe nebeneinander. Die Maßlinien begleiten den Pfad. Wirkt einladend, nicht wie eine Aufgabe. |
-| `assets/images/bereich_einladung_willkommen.webp` | 3:4, 900 × 1200 | **Ohne Menschen:** ein kleiner Tisch mit zwei Tassen, daneben zwei Stühle; einer ist ein Stück zurückgezogen und frei, als dürfe sich jemand setzen. Warmes Licht von der Seite. Sagt: Du bist willkommen, nichts wird erwartet. |
-| `assets/images/bereich_heute_einladung.webp` | 3:4, 900 × 1200 | **Ohne Menschen:** eine halb geöffnete Tür, durch die weiches Licht auf den Boden fällt; daneben eine Pflanze oder ein Mantelhaken. Sagt: der nächste Schritt, wenn du magst. |
-
-**Technik:** WebP, je Datei unter 150 KB, genau die angegebenen Maße, Dateinamen genau wie in der Tabelle.
-
-**Jedes Bild ansehen, bevor es zählt:** Bei `bereich_zu_zweit_kopf` sind es genau zwei Personen mit je zwei Schultern, keine
-verwachsenen Körper, kein drittes Paar Hände. Bei `bereich_erste_woche_kopf` Steine zählen (sieben) und Schuhe zählen (vier). In
-keinem Bild Schriftzeichen, auch nicht angedeutet am Rand. Fehlgriffe neu erzeugen.
-
-**Das Warten:** Ist die Bildgenerierung nicht verfügbar (Kapazitätslimit, 429, „Resource Exhausted“), nicht abbrechen und nicht
-„fertig“ melden. Im Bericht notieren, warten (Wartezeit aus der Meldung, sonst 30 Minuten) und dasselbe Motiv erneut versuchen.
-
-**Bericht** `docs/pruefungen/AG29_PAAR_BILDER.md`: Tabelle mit Datei, Maßen, Größe, Zahl der Versuche und einem Satz, was zu sehen
-ist; dazu, was unsicher ist.
-
-**Fertig, wenn:** alle vier Dateien mit richtigen Maßen im Branch liegen, der Bericht dabei ist und der Pull Request gegen `main`
-steht. `flutter test` ist nicht nötig (die Bilder sind noch nicht eingetragen).
-
-**Nicht tun:** andere Bilder „nebenbei verbessern“, Bilder in `bilder.json` eintragen, Menschen mit erkennbarem Geschlecht zeichnen,
-Lektionstexte oder Audio anfassen.
-
-### AG-30: Sechs Lektionen neu einsprechen (Deutsch und Englisch)
-
-**Texte freigegeben am 12.11.2026** (Nutzer). Der Auftrag ist offen und kommt nach AG-29 dran.
-
-Hintergrund: `docs/konzepte/eine-tonlage.md`, Abschnitt „Als Liste gemeldet … (gesprochene Texte)“. Die App spricht inzwischen
-alle Paarformen an; sechs gesprochene Lektionen nannten noch fest „Frauen“, „Männer“ oder „der Mann“. Claude hat diese Texte
-körperbezogen umgeschrieben (Deutsch und Englisch, Commit `e6ad4fe` auf `main`), der Nutzer hat sie freigegeben. Jetzt wird neu
-eingesprochen. **An den Texten ändert Antigravity nichts.**
-
-| Lektion | Kurs | Stimme (wie bisher) |
-|---|---|---|
-| `female_1` (auch der gesprochene Titel) | 9 | Victoria |
-| `touch_w_1` | 18 | Victoria |
-| `touch_m_1` | 19 | Martin |
-| `mass_1`, `mass_2` | 20 | beide im Wechsel |
-| `pos_1` | 22 | beide im Wechsel |
-
-**Branch:** `ag/30-neuaufnahme-<datum>`, vorher `git pull`, damit die freigegebenen Texte da sind.
-
-**Zu tun:**
-1. Deutsch: `C:\TOOLS\kikiri-venv\Scripts\python.exe tools/generate_audio.py female_1 touch_w_1 touch_m_1 mass_1 mass_2 pos_1`.
-   Die Stimmenwahl trifft das Werkzeug selbst (Kategorie des Kurses), nichts von Hand umstellen.
-   Die sechs Dateien liegen danach unter `assets/audio/<lektion>.opus` und gehören in den Pull Request.
-2. Englisch: `tools/generate_audio_en.py` kennt keine Auswahl einzelner Lektionen. Es spricht alles, was fehlt oder dessen Text
-   sich geändert hat (Prüfsummen in `build/audio_en_texte.json`). **Deshalb zuerst prüfen:** Liegen in deinem Klon unter
-   `build\audio_en\audio\` die bisherigen englischen Aufnahmen und gibt es `build\audio_en_texte.json`? Nur dann starten:
-   `C:\TOOLS\kikiri-venv\Scripts\python.exe tools/generate_audio_en.py --hoechstens 6`. Fehlt der Ordner oder die Datei, würde
-   das Werkzeug alle englischen Aufnahmen neu sprechen: dann **nicht** starten, den englischen Teil im Bericht als „nicht
-   gemacht, Grundstand fehlt“ vermerken; Claude holt ihn nach. Nach dem Lauf prüfen, dass genau die sechs Lektionen neu sind
-   (Änderungsdatum). `build/` liegt nicht im Repository: Die englischen Dateien bleiben in `build\audio_en\audio\`, der Bericht
-   nennt die vollen Pfade, Claude holt sie dort ab. Nichts packen (`--packen` nicht verwenden).
-3. Betonung: Keine der sechs Lektionen steht in `reihe_ausdruck.AUSDRUCK_LEKTIONEN`; sie werden normal gesprochen wie die
-   Nachbarlektionen. Kein neues Profil erfinden und die Liste nicht erweitern.
-4. Aussprache: Fällt ein Wort auf, nach `docs/AUSSPRACHE.md` in `tools/aussprache.json` ergänzen und nur diese Lektion neu sprechen.
-5. Jede Aufnahme einmal ganz anhören (oder ausdrücklich „nicht prüfbar“ schreiben): Titel richtig, kein abgeschnittenes Ende,
-   Stimmenwechsel an den Absätzen, neue Wörter („Menschen mit Vulva“, „die empfangende Person“) sauber gesprochen.
-
-**Erlaubte Dateien:** die sechs deutschen Aufnahmen unter `assets/audio/`, eine vom Werkzeug geänderte `dauer.json`, bei Bedarf
-`tools/aussprache.json`, und der Bericht `docs/pruefungen/AG30_NEUAUFNAHME.md` (je Aufnahme: Datei, Dauer, angehört ja/nein, Auffälligkeiten).
-
-**Nie zwei Kokoro-Läufe gleichzeitig.** Die bisherigen Aufnahmen bleiben in den veröffentlichten Paketen unberührt.
-
-**Nicht tun:** Texte ändern, `tools/pakete/versionen.json` hochzählen, `tools/pakete_hochladen.ps1` ausführen, andere Lektionen
-„mit neu sprechen“. Paket, Hörabnahme mit dem Nutzer und Veröffentlichung macht Claude.
 
 ### AG-26: Gezielte Audio-Hörstichprobe (erledigt, nicht bearbeiten)
 
@@ -244,6 +159,9 @@ Seit 27.10.2026 erledigt das Claude Code mit OpenCode (Ablauf in `docs/AUSSPRACH
 keine Aussprache-Meldungen mehr ab und legt keine `aussprache/`-Branches mehr an.
 
 ## Erledigt
+
+- 12.11.2026, AG-29 (`ag/29-paar-bilder-20261112`): vier Bleistift-Bilder ohne erkennbares Geschlecht (Zu zweit, Eure erste Woche, Einladung, Heute). Vom Nutzer freigegeben, von Claude eingebaut (Bildregister, Paar-Kanal, Schritt-Seite, sanfter Start).
+- 12.11.2026, AG-30 (`ag/30-neuaufnahme-20261112`): sechs Lektionen deutsch neu eingesprochen (female_1, touch_w_1, touch_m_1, mass_1, mass_2, pos_1), vom Nutzer abgenommen. Die englischen Aufnahmen hat Claude gezielt nachgeholt (`build\redaktion\ag30_en`); Hörabnahme Englisch und Paketbau sind offen.
 
 - 02.11.2026, Codex: Bedienung/Player/gemeinsames Hören implementiert und automatisch geprüft (419 Tests, Analyse, DE/EN-Renderansichten). Übergabe `docs/UEBERGABE_BETA_BEDIENUNG.md`; Nutzer hat den Build ausdrücklich Claude zugeordnet. Native App-/Handytests bleiben offen; kein Codex-Release.
 
