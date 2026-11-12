@@ -286,10 +286,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mainNavigationProgrammeCourses => 'Today';
 
   @override
-  String get mainNavigationSomaticsTraining => 'Somatics & training';
+  String get mainNavigationSomaticsTraining => 'Body & practice';
 
   @override
-  String get mainNavigationCbtReframing => 'CBT reframing';
+  String get mainNavigationCbtReframing => 'Thoughts';
 
   @override
   String get mainNavigationCoupleChannel => 'Couple channel';
@@ -301,10 +301,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mainNavigationCourses => 'Today';
 
   @override
-  String get mainNavigationTraining => 'Training';
+  String get mainNavigationTraining => 'Body';
 
   @override
-  String get mainNavigationReframing => 'Reframing';
+  String get mainNavigationReframing => 'Thoughts';
 
   @override
   String get whatsNewWelcomeBack => 'Welcome back';
@@ -422,10 +422,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get coursesSendSparksSecretlyMatchWishes =>
-      'Send sparks & secretly match wishes';
+      'Send sparks & compare wishes, only what you both want becomes visible';
 
   @override
-  String get coursesYourCurriculum => 'YOUR CURRICULUM';
+  String get coursesYourCurriculum => 'YOUR COURSES';
 
   @override
   String coursesHelloProfilename(Object profileName) {
@@ -562,7 +562,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get coursesUnderstandTheBiologyQuietThe =>
-      'Understand the biology. Quiet the head. Feel the body.';
+      'Understand what\'s happening in you. Settle. Feel your body.';
 
   @override
   String get coursesProfileSettings => 'Profile & settings';
@@ -585,7 +585,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get coursesPracticeBreath => 'Practice: breath';
 
   @override
-  String get coursesPracticeCbt => 'Practice: CBT';
+  String get coursesPracticeCbt => 'Practice: thoughts';
 
   @override
   String get lessonDetailLessonMarkedAsCompleted =>
@@ -661,7 +661,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get lessonDetailStartBreathPacerDownRegulation =>
-      'Start breath pacer (down-regulation)';
+      'Start the breathing guide';
 
   @override
   String get lessonDetailCalmDownWithBreathingOr =>
@@ -931,7 +931,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Show with one tap what you\'re in the mood for today – or not.';
 
   @override
-  String get couplesChannelSecretlyMatchWishes => 'Secretly match wishes';
+  String get couplesChannelSecretlyMatchWishes => 'Compare wishes quietly';
 
   @override
   String get couplesChannelYouVoteSeparatelyOnlyWhat =>
@@ -955,7 +955,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get couplesChannelYouCanAlsoFillIt =>
-      'You can also fill it in alone – and match it with your partner later.';
+      'You can also fill it in alone and compare it with your partner later.';
 
   @override
   String get couplesChannelSharedEvening => 'Shared evening';
@@ -1026,7 +1026,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get couplesChannelVoteSeparatelyAWishOnly =>
-      'Vote separately. A wish only shows up as a match when you both say “Yes, please”. A “Maybe” goes into “To talk about”, a “Rather not” is never shown.';
+      'Answer separately. A wish only becomes visible when you\'ve both said “Yes, please”. A “Maybe” goes to “To talk about”. Your partner never sees a “Rather not”.';
 
   @override
   String couplesChannelQuestionsInSeveralAreasWith(int fragen, int bereiche) {
@@ -1034,16 +1034,16 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get couplesChannelYouHaveAMatch => 'You have a match';
+  String get couplesChannelYouHaveAMatch => 'You both said yes to one thing';
 
   @override
   String couplesChannelYouHaveMatcheslengthMatches(Object matchesLength) {
-    return 'You have $matchesLength matches';
+    return 'You both said yes to $matchesLength things';
   }
 
   @override
   String get couplesChannelAMatchIsAnInvitation =>
-      'A match is an invitation, not a promise. Talk briefly beforehand about how you imagine it.';
+      'A shared yes is an invitation, not a promise. Talk briefly beforehand about how you imagine it. And “not today” always counts.';
 
   @override
   String get couplesChannelYesPlease => 'Yes, please';
@@ -1596,11 +1596,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get yesNoMaybeMatchingAnswersEncrypted =>
-      'Matching answers, encrypted …';
+      'Comparing answers, encrypted …';
 
   @override
   String yesNoMaybeCountAnswersMatched(Object count) {
-    return '$count answers matched!';
+    return 'Done: $count answers compared.';
   }
 
   @override
@@ -1610,28 +1610,34 @@ class AppLocalizationsEn extends AppLocalizations {
   String get yesNoMaybeYesMaybeNo => 'Yes, please / Maybe / Rather not';
 
   @override
-  String get yesNoMaybeSyncWithPartner => 'Sync with partner';
+  String get yesNoMaybeSyncWithPartner => 'Compare with your partner';
 
   @override
-  String get yesNoMaybePairingRequired => 'Pairing required';
+  String get yesNoMaybePairingRequired => 'Connect first';
 
   @override
   String yesNoMaybeQuestionsAnsweredcountTotalitems(
       Object answeredCount, Object totalItems) {
-    return 'Questions ($answeredCount/$totalItems)';
+    return 'Questions ($answeredCount of $totalItems)';
   }
 
   @override
   String yesNoMaybeMatchesMatchcount(Object matchCount) {
-    return 'Matches ($matchCount)';
+    return 'Together ($matchCount)';
   }
 
   @override
-  String get yesNoMaybeDigitalSafeSpace => 'DIGITAL SAFE SPACE';
+  String get yesNoMaybeMeineAntworten => 'My answers';
+
+  @override
+  String get yesNoMaybeGemeinsam => 'Together';
+
+  @override
+  String get yesNoMaybeDigitalSafeSpace => 'Your answers, your pace';
 
   @override
   String get yesNoMaybeFindOutWhatExcitesYou =>
-      'Find out what excites you and where your limits are. Not sure what is meant? Tap “Learn more”. If you\'re connected in the couple channel, you only see what you both want – a no stays invisible.';
+      'Take your time to notice what you like, what might be okay and what you\'d rather not. You don\'t have to answer anything. Not sure what something means? Tap the i. If you\'re connected, only places where you both said at least “Maybe” become visible. Your partner never sees a “Rather not”.';
 
   @override
   String get yesNoMaybeYes => 'Yes, please';
@@ -1666,44 +1672,43 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get yesNoMaybePairingRequired2 => 'Pairing required';
+  String get yesNoMaybePairingRequired2 => 'Connect first';
 
   @override
   String get yesNoMaybeConnectWithYourPartnerIn =>
-      'Connect with your partner in the couple channel via QR code. Your answers are then matched end-to-end encrypted.';
+      'Once you\'re connected in the couple channel, you can compare your answers, encrypted. Only what you share becomes visible. Filling it in alone works too.';
 
   @override
-  String get yesNoMaybePairViaQrCodeNow => 'Pair via QR code now';
+  String get yesNoMaybePairViaQrCodeNow => 'Connect via QR code';
 
   @override
   String yesNoMaybePerfectMatchWithPartnername(Object partnerName) {
-    return 'PERFECT MATCH WITH $partnerName';
+    return 'Together with $partnerName';
   }
 
   @override
   String yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(
       Object yesMatchesLength, Object curiosityMatchesLength) {
-    return '$yesMatchesLength shared yeses & $curiosityMatchesLength points of curiosity discovered!';
+    return 'Yes from both of you: $yesMatchesLength · Curious together: $curiosityMatchesLength';
   }
 
   @override
   String get yesNoMaybeNoRejectionAllLimitsWere =>
-      'No rejection: all limits were kept discreetly. Only real shared desire is revealed.';
+      'Only what you both said is shown here. Everything else stays private. A “Rather not” is a complete answer.';
 
   @override
-  String get yesNoMaybePerfectMatchBothSaidYes =>
-      'Perfect match (both said YES)';
+  String get yesNoMaybePerfectMatchBothSaidYes => 'You both said yes';
 
   @override
   String get yesNoMaybeSharedCuriosityOpenToExploring =>
-      'Shared curiosity (open to exploring)';
+      'Curious together, a maybe is enough';
 
   @override
-  String get yesNoMaybeNoMatchesYet => 'No matches yet';
+  String get yesNoMaybeNoMatchesYet => 'It\'s still quiet here';
 
   @override
   String get yesNoMaybeBothKeepVotingInThe =>
-      'Both keep voting in the questions. As soon as you\'ve both rated the same item yes or maybe, it lights up here.';
+      'That doesn\'t mean anything is missing. Maybe you haven\'t answered everything yet, or your answers simply lie in different places. Both are normal. There\'s nothing you have to do.';
 
   @override
   String get yesNoMaybeYouBothYes => 'You both: yes';
@@ -1712,7 +1717,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get yesNoMaybeCuriousTogether => 'Curious together';
 
   @override
-  String get yesNoMaybeCourse => 'Course ▶';
+  String get yesNoMaybeCourse => 'Learn more';
 
   @override
   String get cbtNewEntryPleaseChooseAtLeastOne =>
@@ -2420,7 +2425,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailyCheckinCardHowDoStressPerformancePressure =>
-      'How do stress & performance pressure relate today?';
+      'How are you doing today?';
 
   @override
   String get dailyCheckinCardEverydayStressTodayJobAppointments =>
@@ -2428,11 +2433,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailyCheckinCardInnerPerformancePressureRacingThoughts =>
-      '2. Inner performance pressure & racing thoughts';
+      '2. How much inner pressure do you feel?';
 
   @override
-  String get dailyCheckinCardWhatDidYouGoodToday =>
-      '3. What did you some good today?';
+  String get dailyCheckinCardWhatDidYouGoodToday => '3. What felt good today?';
 
   @override
   String get dailyCheckinCardSaveDailyCheckIn => 'Save daily check-in';
@@ -2442,11 +2446,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailyCheckinCardCoachingInsightYourEverydayStress =>
-      'Coaching insight: your everyday stress is high today. Remember: stress and exhaustion often slow desire down by themselves. That\'s a normal reaction, not a defect.';
+      'Your everyday stress is high today. That\'s okay: stress and tiredness often slow desire down all by themselves. That\'s normal, not a flaw.';
 
   @override
   String get dailyCheckinCardCoachingInsightWhenEverydayStress =>
-      'Coaching insight: when everyday stress drops, it\'s often easier to relax. Use today\'s calm to feel into your body without pressure to perform.';
+      'When everyday life is calmer, relaxing often comes more easily. If you like, simply feel into your body today, with no goal at all.';
 
   @override
   String get onboardingGuest => 'Guest';
@@ -2520,7 +2524,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingYourPrivateCoachingProgrammeFor =>
-      'Your private coaching programme for calm, pelvic floor & intimacy.';
+      'A private companion for calm in your body, your pelvic floor and closeness.';
 
   @override
   String get onboardingPrivateProfileJournalProgressStay =>
@@ -2578,48 +2582,48 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onboardingWhatSYourBiggestPriority =>
-      '5. What\'s your biggest priority right now?';
+      '5. What would you most like right now?';
 
   @override
   String get onboardingStopPerformancePressureRacingThoughts =>
-      'Stop performance pressure & racing thoughts';
+      'Less pressure, a calmer mind';
 
   @override
   String get onboardingBreakThoughtLoopsStopSpectatoring =>
-      'Break thought loops, stop spectatoring.';
+      'Out of your head and back into feeling, without watching yourself.';
 
   @override
   String get onboardingPelvicFloorRelaxationBodyAwareness =>
-      'Pelvic floor relaxation & body awareness';
+      'Relax your pelvic floor & feel your body';
 
   @override
   String get onboardingReleaseTensionPractiseReverseKegels =>
-      'Release tension, practise reverse Kegels, calm down.';
+      'Let go of tension, let your pelvic floor soften, find calm.';
 
   @override
   String get onboardingCoupleIntimacyPressureFreeSex =>
-      'Couple intimacy & pressure-free sex';
+      'Closeness together, without pressure';
 
   @override
   String get onboardingSensateFocusTogetherCalmingEach =>
-      'Sensate focus together, calming each other & vulnerable closeness.';
+      'Touch without a goal, settling together, being allowed to be close.';
 
   @override
   String get onboardingDesireSelfAcceptanceBodyAwareness =>
-      'Desire, self-acceptance & body awareness';
+      'Desire, accepting yourself & feeling your body';
 
   @override
   String get onboardingUnderstandResponsiveDesireEaseOrgasm =>
-      'Understand responsive desire, ease orgasm pressure.';
+      'Understand how desire arises for you, and take the pressure off.';
 
   @override
   String get onboardingSaveChanges => 'Save changes';
 
   @override
-  String get onboardingPersonaliseProgrammeNow => 'Personalise programme now';
+  String get onboardingPersonaliseProgrammeNow => 'Done, let\'s go';
 
   @override
-  String get onboardingSkipGoStraightToThe => 'Skip & go straight to the app';
+  String get onboardingSkipGoStraightToThe => 'Later, straight to the app';
 
   @override
   String onboardingVersionData(Object data) {
@@ -2774,12 +2778,10 @@ class AppLocalizationsEn extends AppLocalizations {
       '\n\nWithout your password, the connection and API key can\'t be restored. We can\'t reset it either.';
 
   @override
-  String get checkinActionBreathed =>
-      'Breathed deeply on purpose (physiological sigh)';
+  String get checkinActionBreathed => 'Took a few deep breaths';
 
   @override
-  String get checkinActionPelvicFloor =>
-      'Relaxed the pelvic floor (reverse Kegel)';
+  String get checkinActionPelvicFloor => 'Let my pelvic floor soften';
 
   @override
   String get checkinActionPhoneAway => 'Put the phone away in the evening';
@@ -2788,10 +2790,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get checkinActionWalk => 'Went for a walk in fresh air';
 
   @override
-  String get checkinActionSkinContact => 'Focused on skin contact';
+  String get checkinActionSkinContact => 'Noticed skin contact';
 
   @override
-  String get checkinActionOpenWord => 'Dared an open word with my partner';
+  String get checkinActionOpenWord => 'Shared an honest word with my partner';
 
   @override
   String get dailySimmeringCardTheSecondWallTease => 'The 45-second wall tease';
@@ -2801,7 +2803,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardTodayBrieflyPressYourPartner =>
-      'Today, briefly press your partner against the wall with intent, or hold them gently. Slowly kiss their neck, murmur a promise into their ear – and after exactly 45 seconds smile and walk on: \"We\'ll save the rest for later.\"';
+      'If you both enjoy this kind of thing: draw your partner close for a moment today, kiss their neck slowly, whisper a promise in their ear. After 45 seconds, smile and walk on: \"We\'ll save the rest for later.\"';
 
   @override
   String get dailySimmeringCardJawMeltVoiceActivation =>
@@ -2823,7 +2825,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardThisAfternoonSendYourPartner =>
-      'This afternoon, send your partner an unannounced message: \"Tonight from 9 pm your body is mine. You don\'t have to do anything but be there.\"';
+      'Only if you both like this: send your partner a message this afternoon that builds anticipation without expecting anything.';
 
   @override
   String get dailySimmeringCardSlowMotionWhilePouring =>
@@ -2849,15 +2851,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardTheStrictNoPenetrationRule =>
-      'The strict no-penetration rule';
+      'No penetration today';
 
   @override
   String get dailySimmeringCardCourseSensateFocus =>
-      'COURSE 17 • SENSATE FOCUS';
+      'COURSE 17 • TOUCH WITHOUT A GOAL';
 
   @override
   String get dailySimmeringCardAgreeTodayYouMayHug =>
-      'Agree today: you may hug, kiss and caress each other naked – but penetration is strictly off-limits. Everything may happen, nothing has to.';
+      'Agree today: you may hug, kiss and caress each other naked – penetration stays out of it today. Everything may happen, nothing has to.';
 
   @override
   String get dailySimmeringCardSensoryNarratingWordsInThe =>
@@ -2887,7 +2889,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'The seated pelvic floor check';
 
   @override
-  String get dailySimmeringCardCoursesBody => 'COURSES 3 & 9 • BODY';
+  String get dailySimmeringCardCoursesBody => 'COURSES 7 & 9 • BODY';
 
   @override
   String get dailySimmeringCardNoticeRightNowAreYou =>
@@ -2918,7 +2920,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Broad palm touch with warm oil';
 
   @override
-  String get dailySimmeringCardCourseBodyLab => 'COURSE 19 • BODY LAB';
+  String get dailySimmeringCardCourseBodyLab => 'COURSE 19 • RELEARNING TOUCH';
 
   @override
   String get dailySimmeringCardTodaySkipAnyTightGrip =>
@@ -2937,7 +2939,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardPlateauSurfingAtLevel =>
-      'Plateau surfing at level 7';
+      'Feeling arousal without a goal';
 
   @override
   String get dailySimmeringCardCourseStayingPower =>
@@ -2945,7 +2947,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardBringYourArousalToLevel =>
-      'Bring your arousal to level 7. As soon as it climbs to 8: stop all movement (stillness), breathe out deeply 3 times and let your pelvic floor sink down.';
+      'Notice how your arousal feels today and let it come and go without a goal. If it gets to be too much, pause, breathe out deeply 3 times and let your pelvic floor soften.';
 
   @override
   String get dailySimmeringCardScreenFreeSensing => 'Screen-free sensing';
@@ -2964,7 +2966,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dailySimmeringCardCourseMultipleOrgasms =>
-      'COURSE 19 • MULTIPLE ORGASMS';
+      'COURSE 19 • LETTING GO';
 
   @override
   String get dailySimmeringCardObserveYourReflexesWhenArousal =>
@@ -2994,11 +2996,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'Look at your body today without judgement. Tell yourself: \"My body is alive, breathing and capable of deep pleasure.\"';
 
   @override
-  String get dailySimmeringCardPhysiologicalSighQuickCalming =>
-      'Physiological sigh (quick calming)';
+  String get dailySimmeringCardPhysiologicalSighQuickCalming => 'The long sigh';
 
   @override
-  String get dailySimmeringCardToolCalmDown => 'TOOL • CALM DOWN';
+  String get dailySimmeringCardToolCalmDown => 'PRACTICE • CALM';
 
   @override
   String get dailySimmeringCardBreatheInTwiceDeeplyThrough =>
@@ -3027,7 +3028,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dailySimmeringCardOpen => 'OPEN';
 
   @override
-  String get userProfileNonBinaryOpen => 'Non-binary / open';
+  String get userProfileNonBinaryOpen => 'Non-binary';
 
   @override
   String get userProfileInARelationshipMarried => 'In a relationship / married';
@@ -3043,7 +3044,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get userProfileComplicated => 'Complicated';
 
   @override
-  String get userProfilePelvicFloorBody => 'Pelvic floor & body';
+  String get userProfilePelvicFloorBody => 'Pelvic floor & feeling your body';
 
   @override
   String get userProfileCoupleIntimacyCloseness =>
@@ -3053,8 +3054,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get userProfileDesireRelaxation => 'Desire & relaxation';
 
   @override
-  String get userProfileEasingPerformancePressure =>
-      'Easing performance pressure';
+  String get userProfileEasingPerformancePressure => 'Less pressure';
 
   @override
   String get contentModelsTheArtOfTouchFor => 'THE ART OF TOUCH • FOR HER';

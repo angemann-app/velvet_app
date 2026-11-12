@@ -522,15 +522,15 @@ msgid "Heute"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Somatics & training
+#. EN: Body & practice
 msgctxt "ui:mainNavigationSomaticsTraining#text"
-msgid "Somatik & Training"
+msgid "Körper & Üben"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: CBT reframing
+#. EN: Thoughts
 msgctxt "ui:mainNavigationCbtReframing#text"
-msgid "KVT-Reframing"
+msgid "Gedanken"
 msgstr ""
 
 #. Text der Oberfläche
@@ -552,15 +552,15 @@ msgid "Heute"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Training
+#. EN: Body
 msgctxt "ui:mainNavigationTraining#text"
-msgid "Training"
+msgid "Körper"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Reframing
+#. EN: Thoughts
 msgctxt "ui:mainNavigationReframing#text"
-msgid "Reframing"
+msgid "Gedanken"
 msgstr ""
 
 #. Text der Oberfläche
@@ -761,15 +761,15 @@ msgid "Euer privater Raum"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Send sparks & secretly match wishes
+#. EN: Send sparks & compare wishes, only what you both want becomes visible
 msgctxt "ui:coursesSendSparksSecretlyMatchWishes#text"
-msgid "Funken senden & Wünsche heimlich abgleichen"
+msgid "Funken schicken & Wünsche vergleichen, sichtbar wird nur, was ihr beide wollt"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: YOUR CURRICULUM
+#. EN: YOUR COURSES
 msgctxt "ui:coursesYourCurriculum#text"
-msgid "DEIN CURRICULUM"
+msgid "DEINE KURSE"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {profileName}
@@ -1007,9 +1007,9 @@ msgid "Dein Fokus: {goalLabel}"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Understand the biology. Quiet the head. Feel the body.
+#. EN: Understand what's happening in you. Settle. Feel your body.
 msgctxt "ui:coursesUnderstandTheBiologyQuietThe#text"
-msgid "Biologie verstehen. Kopfkino stoppen. Körper spüren."
+msgid "Verstehen, was in dir passiert. Zur Ruhe kommen. Den Körper spüren."
 msgstr ""
 
 #. Text der Oberfläche
@@ -1043,9 +1043,9 @@ msgid "Praxis: Atem"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Practice: CBT
+#. EN: Practice: thoughts
 msgctxt "ui:coursesPracticeCbt#text"
-msgid "Praxis: KVT"
+msgid "Praxis: Gedanken"
 msgstr ""
 
 #. Text der Oberfläche
@@ -1157,15 +1157,15 @@ msgid "Direkt in die Entspannungs- & Kräftigungs-Praxis einsteigen"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Start breath pacer (down-regulation)
+#. EN: Start the breathing guide
 msgctxt "ui:lessonDetailStartBreathPacerDownRegulation#text"
-msgid "Atem-Pacer (Down-Regulation) starten"
+msgid "Atem-Begleiter starten (langes Ausatmen)"
 msgstr ""
 
 #. Text der Oberfläche
 #. EN: Calm down with 4-7-8 breathing or the sigh
 msgctxt "ui:lessonDetailCalmDownWithBreathingOr#text"
-msgid "Vagusnerv aktivieren & Adrenalin senken mit 4-7-8 oder Seufzer"
+msgid "Mit 4-7-8-Atmung oder dem langen Seufzer zur Ruhe kommen"
 msgstr ""
 
 #. Text der Oberfläche
@@ -1607,9 +1607,9 @@ msgid "Mit einem Tippen zeigen, worauf du heute Lust hast – oder eben nicht."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Secretly match wishes
+#. EN: Compare wishes quietly
 msgctxt "ui:couplesChannelSecretlyMatchWishes#text"
-msgid "Wünsche heimlich abgleichen"
+msgid "Wünsche leise vergleichen"
 msgstr ""
 
 #. Text der Oberfläche
@@ -1649,9 +1649,9 @@ msgid "Wie funktioniert das?"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: You can also fill it in alone – and match it with your partner later.
+#. EN: You can also fill it in alone and compare it with your partner later.
 msgctxt "ui:couplesChannelYouCanAlsoFillIt#text"
-msgid "Kannst du auch allein ausfüllen – und später mit deinem Gegenüber abgleichen."
+msgid "Kannst du auch allein ausfüllen und später mit deinem Gegenüber vergleichen."
 msgstr ""
 
 #. Text der Oberfläche
@@ -1781,9 +1781,9 @@ msgid "Senden"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Vote separately. A wish only shows up as a match when you both say “Yes, please”. A “Maybe” goes into “To talk about”, a “Rather not” is never shown.
+#. EN: Answer separately. A wish only becomes visible when you've both said “Yes, please”. A “Maybe” goes to “To talk about”. Your partner never sees a “Rather not”.
 msgctxt "ui:couplesChannelVoteSeparatelyAWishOnly#text"
-msgid "Stimmt getrennt ab. Ein Wunsch erscheint erst als Treffer, wenn ihr beide „Ja, gern“ sagt. Ein „Vielleicht“ landet zum Besprechen, ein „Lieber nicht“ wird nie angezeigt."
+msgid "Antwortet getrennt. Ein Wunsch wird erst sichtbar, wenn ihr beide „Ja, gern“ gesagt habt. Ein „Vielleicht“ kommt zu „Zum Besprechen“. Ein „Lieber nicht“ sieht dein Gegenüber nie."
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {fragen}, {bereiche}
@@ -1793,21 +1793,21 @@ msgid "{fragen} Fragen in {bereiche} Bereichen – mit passenden Kurs-Empfehlung
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: You have a match
+#. EN: You both said yes to one thing
 msgctxt "ui:couplesChannelYouHaveAMatch#text"
-msgid "Ihr habt ein Match"
+msgid "Bei einer Sache sagt ihr beide Ja"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {matchesLength}
-#. EN: You have {matchesLength} matches
+#. EN: You both said yes to {matchesLength} things
 msgctxt "ui:couplesChannelYouHaveMatcheslengthMatches#text"
-msgid "Ihr habt {matchesLength} Matches"
+msgid "Bei {matchesLength} Dingen sagt ihr beide Ja"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: A match is an invitation, not a promise. Talk briefly beforehand about how you imagine it.
+#. EN: A shared yes is an invitation, not a promise. Talk briefly beforehand about how you imagine it. And “not today” always counts.
 msgctxt "ui:couplesChannelAMatchIsAnInvitation#text"
-msgid "Ein Match ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt."
+msgid "Ein gemeinsames Ja ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt. Und ein „Heute nicht“ gilt immer."
 msgstr ""
 
 #. Text der Oberfläche
@@ -2768,15 +2768,15 @@ msgid "Tipp: Noch schöner als jede Nachricht ist es, die Hand deines Gegenüber
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Matching answers, encrypted …
+#. EN: Comparing answers, encrypted …
 msgctxt "ui:yesNoMaybeMatchingAnswersEncrypted#text"
-msgid "Antworten werden verschlüsselt abgeglichen …"
+msgid "Antworten werden verschlüsselt verglichen …"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {count}
-#. EN: {count} answers matched!
+#. EN: Done: {count} answers compared.
 msgctxt "ui:yesNoMaybeCountAnswersMatched#text"
-msgid "{count} Antworten erfolgreich abgeglichen!"
+msgid "Fertig: {count} Antworten verglichen."
 msgstr ""
 
 #. Text der Oberfläche
@@ -2792,39 +2792,51 @@ msgid "Ja, gern / Vielleicht / Lieber nicht"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Sync with partner
+#. EN: Compare with your partner
 msgctxt "ui:yesNoMaybeSyncWithPartner#text"
-msgid "Mit Partner synchronisieren"
+msgid "Mit deinem Gegenüber vergleichen"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Pairing required
+#. EN: Connect first
 msgctxt "ui:yesNoMaybePairingRequired#text"
-msgid "Koppeln erforderlich"
+msgid "Erst verbinden"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {answeredCount}, {totalItems}
-#. EN: Questions ({answeredCount}/{totalItems})
+#. EN: Questions ({answeredCount} of {totalItems})
 msgctxt "ui:yesNoMaybeQuestionsAnsweredcountTotalitems#text"
-msgid "Fragenkatalog ({answeredCount}/{totalItems})"
+msgid "Fragenkatalog ({answeredCount} von {totalItems})"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {matchCount}
-#. EN: Matches ({matchCount})
+#. EN: Together ({matchCount})
 msgctxt "ui:yesNoMaybeMatchesMatchcount#text"
-msgid "Matches ({matchCount})"
+msgid "Gemeinsam ({matchCount})"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: DIGITAL SAFE SPACE
+#. EN: My answers
+msgctxt "ui:yesNoMaybeMeineAntworten#text"
+msgid "Meine Antworten"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Together
+msgctxt "ui:yesNoMaybeGemeinsam#text"
+msgid "Gemeinsam"
+msgstr ""
+
+#. Text der Oberfläche
+#. EN: Your answers, your pace
 msgctxt "ui:yesNoMaybeDigitalSafeSpace#text"
-msgid "DIGITALER SAFE SPACE"
+msgid "Deine Antworten, dein Tempo"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Find out what excites you and where your limits are. Not sure what is meant? Tap “Learn more”. If you're connected in the couple channel, you only see what you both want – a no stays invisible.
+#. EN: Take your time to notice what you like, what might be okay and what you'd rather not. You don't have to answer anything. Not sure what something means? Tap the i. If you're connected, only places where you both said at least “Maybe” become visible. Your partner never sees a “Rather not”.
 msgctxt "ui:yesNoMaybeFindOutWhatExcitesYou#text"
-msgid "Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar."
+msgid "Hier darfst du in Ruhe spüren, was dir gefällt, was vielleicht und was lieber nicht. Du musst nichts beantworten. Unklar, was gemeint ist? Tippe auf das i. Wenn ihr verbunden seid, wird nur sichtbar, wo ihr beide mindestens „Vielleicht“ gesagt habt. Ein „Lieber nicht“ sieht dein Gegenüber nie."
 msgstr ""
 
 #. Text der Oberfläche
@@ -2876,63 +2888,63 @@ msgid "Lieber nicht ({noCount})"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Pairing required
+#. EN: Connect first
 msgctxt "ui:yesNoMaybePairingRequired2#text"
-msgid "Kopplung erforderlich"
+msgid "Erst verbinden"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Connect with your partner in the couple channel via QR code. Your answers are then matched end-to-end encrypted.
+#. EN: Once you're connected in the couple channel, you can compare your answers, encrypted. Only what you share becomes visible. Filling it in alone works too.
 msgctxt "ui:yesNoMaybeConnectWithYourPartnerIn#text"
-msgid "Verbinde dich im Paar-Kanal per QR-Code mit deinem Gegenüber. Eure Antworten werden dann Ende-zu-Ende-verschlüsselt abgeglichen."
+msgid "Wenn ihr im Paar-Kanal verbunden seid, könnt ihr eure Antworten verschlüsselt vergleichen. Sichtbar wird nur das Gemeinsame. Allein ausfüllen geht auch."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Pair via QR code now
+#. EN: Connect via QR code
 msgctxt "ui:yesNoMaybePairViaQrCodeNow#text"
-msgid "Jetzt per QR-Code koppeln"
+msgid "Per QR-Code verbinden"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {partnerName}
-#. EN: PERFECT MATCH WITH {partnerName}
+#. EN: Together with {partnerName}
 msgctxt "ui:yesNoMaybePerfectMatchWithPartnername#text"
-msgid "VOLLTREFFER MIT {partnerName}"
+msgid "Gemeinsam mit {partnerName}"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {yesMatchesLength}, {curiosityMatchesLength}
-#. EN: {yesMatchesLength} shared yeses & {curiosityMatchesLength} points of curiosity discovered!
+#. EN: Yes from both of you: {yesMatchesLength} · Curious together: {curiosityMatchesLength}
 msgctxt "ui:yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints#text"
-msgid "{yesMatchesLength} gemeinsame Ja-Übereinstimmungen & {curiosityMatchesLength} Neugier-Punkte entdeckt!"
+msgid "Ja bei euch beiden: {yesMatchesLength} · Gemeinsam neugierig: {curiosityMatchesLength}"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: No rejection: all limits were kept discreetly. Only real shared desire is revealed.
+#. EN: Only what you both said is shown here. Everything else stays private. A “Rather not” is a complete answer.
 msgctxt "ui:yesNoMaybeNoRejectionAllLimitsWere#text"
-msgid "Keine Zurückweisung: Alle Grenzen wurden diskret gewahrt. Nur echte gemeinsame Lust wird enthüllt."
+msgid "Hier steht nur, was ihr beide gesagt habt. Alles andere bleibt bei jedem für sich. Ein „Lieber nicht“ ist eine vollwertige Antwort."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Perfect match (both said YES)
+#. EN: You both said yes
 msgctxt "ui:yesNoMaybePerfectMatchBothSaidYes#text"
-msgid "Volltreffer (Beide haben JA gesagt)"
+msgid "Ihr beide: Ja"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Shared curiosity (open to exploring)
+#. EN: Curious together, a maybe is enough
 msgctxt "ui:yesNoMaybeSharedCuriosityOpenToExploring#text"
-msgid "Gemeinsame Neugier (Offen für Erkundung)"
+msgid "Gemeinsame Neugier, ein Vielleicht reicht"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: No matches yet
+#. EN: It's still quiet here
 msgctxt "ui:yesNoMaybeNoMatchesYet#text"
-msgid "Noch keine Übereinstimmungen"
+msgid "Hier ist es noch still"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Both keep voting in the questions. As soon as you've both rated the same item yes or maybe, it lights up here.
+#. EN: That doesn't mean anything is missing. Maybe you haven't answered everything yet, or your answers simply lie in different places. Both are normal. There's nothing you have to do.
 msgctxt "ui:yesNoMaybeBothKeepVotingInThe#text"
-msgid "Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Ja oder Vielleicht bewertet habt, leuchtet er hier auf."
+msgid "Das heißt nicht, dass etwas fehlt. Vielleicht habt ihr noch nicht alles beantwortet, oder eure Antworten liegen einfach an verschiedenen Stellen. Beides ist normal. Ihr müsst nichts tun."
 msgstr ""
 
 #. Text der Oberfläche
@@ -2948,9 +2960,9 @@ msgid "Gemeinsam neugierig"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Course ▶
+#. EN: Learn more
 msgctxt "ui:yesNoMaybeCourse#text"
-msgid "Kurs ▶"
+msgid "Mehr dazu"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4168,9 +4180,9 @@ msgid "Stress: {stressLevel} • Druck: {pressureLevel}"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: How do stress & performance pressure relate today?
+#. EN: How are you doing today?
 msgctxt "ui:dailyCheckinCardHowDoStressPerformancePressure#text"
-msgid "Wie stehen Stress & Leistungsdruck heute zueinander?"
+msgid "Wie geht es dir heute?"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4180,15 +4192,15 @@ msgid "1. Alltagsstress heute (Job, Termine, Schlaf)"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: 2. Inner performance pressure & racing thoughts
+#. EN: 2. How much inner pressure do you feel?
 msgctxt "ui:dailyCheckinCardInnerPerformancePressureRacingThoughts#text"
-msgid "2. Innerer Leistungsdruck & Kopfkino"
+msgid "2. Wie viel Druck spürst du innerlich?"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: 3. What did you some good today?
+#. EN: 3. What felt good today?
 msgctxt "ui:dailyCheckinCardWhatDidYouGoodToday#text"
-msgid "3. Was hat deinem Nervensystem heute gut getan?"
+msgid "3. Was hat dir heute gut getan?"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4204,15 +4216,15 @@ msgid "Werte aktualisieren"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Coaching insight: your everyday stress is high today. Remember: stress and exhaustion often slow desire down by themselves. That's a normal reaction, not a defect.
+#. EN: Your everyday stress is high today. That's okay: stress and tiredness often slow desire down all by themselves. That's normal, not a flaw.
 msgctxt "ui:dailyCheckinCardCoachingInsightYourEverydayStress#text"
-msgid "Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt."
+msgid "Dein Alltagsstress ist heute hoch. Das ist okay: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist normal und kein Fehler von dir."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Coaching insight: when everyday stress drops, it's often easier to relax. Use today's calm to feel into your body without pressure to perform.
+#. EN: When everyday life is calmer, relaxing often comes more easily. If you like, simply feel into your body today, with no goal at all.
 msgctxt "ui:dailyCheckinCardCoachingInsightWhenEverydayStress#text"
-msgid "Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren."
+msgid "Wenn der Alltag ruhiger ist, fällt Entspannen oft leichter. Wenn du magst, spür heute einfach in deinen Körper, ganz ohne Ziel."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4330,9 +4342,9 @@ msgid "Willkommen bei VelvetPulse"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Your private coaching programme for calm, pelvic floor & intimacy.
+#. EN: A private companion for calm in your body, your pelvic floor and closeness.
 msgctxt "ui:onboardingYourPrivateCoachingProgrammeFor#text"
-msgid "Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intimität."
+msgid "Ein privater Begleiter für Ruhe im Körper, Beckenboden und Nähe."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4432,57 +4444,57 @@ msgid "Es ist kompliziert"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: 5. What's your biggest priority right now?
+#. EN: 5. What would you most like right now?
 msgctxt "ui:onboardingWhatSYourBiggestPriority#text"
-msgid "5. Was ist aktuell deine größte Priorität?"
+msgid "5. Was wünschst du dir im Moment am meisten?"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Stop performance pressure & racing thoughts
+#. EN: Less pressure, a calmer mind
 msgctxt "ui:onboardingStopPerformancePressureRacingThoughts#text"
-msgid "Leistungsdruck & Kopfkino stoppen"
+msgid "Weniger Druck, ein ruhigerer Kopf"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Break thought loops, stop spectatoring.
+#. EN: Out of your head and back into feeling, without watching yourself.
 msgctxt "ui:onboardingBreakThoughtLoopsStopSpectatoring#text"
-msgid "Gedankenkreise durchbrechen, Spectatoring beenden."
+msgid "Aus dem Kopf zurück ins Spüren, ohne dich selbst zu beobachten."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Pelvic floor relaxation & body awareness
+#. EN: Relax your pelvic floor & feel your body
 msgctxt "ui:onboardingPelvicFloorRelaxationBodyAwareness#text"
-msgid "Beckenboden-Entspannung & Somatik"
+msgid "Beckenboden entspannen & den Körper spüren"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Release tension, practise reverse Kegels, calm down.
+#. EN: Let go of tension, let your pelvic floor soften, find calm.
 msgctxt "ui:onboardingReleaseTensionPractiseReverseKegels#text"
-msgid "Hypertonie lösen, Reverse Kegel trainieren, Vagusnerv beruhigen."
+msgid "Anspannung loslassen, den Beckenboden weich werden lassen, zur Ruhe kommen."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Couple intimacy & pressure-free sex
+#. EN: Closeness together, without pressure
 msgctxt "ui:onboardingCoupleIntimacyPressureFreeSex#text"
-msgid "Paar-Intimität & Druckfreier Sex"
+msgid "Nähe zu zweit, ohne Druck"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Sensate focus together, calming each other & vulnerable closeness.
+#. EN: Touch without a goal, settling together, being allowed to be close.
 msgctxt "ui:onboardingSensateFocusTogetherCalmingEach#text"
-msgid "Sensate Focus zu zweit, Co-Regulierung & verletzliche Nähe."
+msgid "Berührung ohne Ziel, gemeinsam zur Ruhe kommen, sich nahe sein dürfen."
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Desire, self-acceptance & body awareness
+#. EN: Desire, accepting yourself & feeling your body
 msgctxt "ui:onboardingDesireSelfAcceptanceBodyAwareness#text"
-msgid "Lust, Selbstannahme & Körperempfinden"
+msgid "Lust, dich annehmen & deinen Körper spüren"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Understand responsive desire, ease orgasm pressure.
+#. EN: Understand how desire arises for you, and take the pressure off.
 msgctxt "ui:onboardingUnderstandResponsiveDesireEaseOrgasm#text"
-msgid "Responsive Lust verstehen, Orgasmusdruck abbauen."
+msgid "Verstehen, wie Lust bei dir entsteht, und den Druck herausnehmen."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4492,15 +4504,15 @@ msgid "Änderungen speichern"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Personalise programme now
+#. EN: Done, let's go
 msgctxt "ui:onboardingPersonaliseProgrammeNow#text"
-msgid "Programm jetzt personalisieren"
+msgid "Fertig, los geht's"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Skip & go straight to the app
+#. EN: Later, straight to the app
 msgctxt "ui:onboardingSkipGoStraightToThe#text"
-msgid "Überspringen & Direkt zur App"
+msgid "Später, direkt zur App"
 msgstr ""
 
 #. Platzhalter unverändert übernehmen: {data}
@@ -4777,15 +4789,15 @@ msgid ""
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Breathed deeply on purpose (physiological sigh)
+#. EN: Took a few deep breaths
 msgctxt "ui:checkinActionBreathed#text"
-msgid "Bewusst tief geatmet (Physiol. Seufzer)"
+msgid "Ein paar Mal tief durchgeatmet"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Relaxed the pelvic floor (reverse Kegel)
+#. EN: Let my pelvic floor soften
 msgctxt "ui:checkinActionPelvicFloor#text"
-msgid "Beckenboden entspannt (Reverse Kegel)"
+msgid "Den Beckenboden bewusst weich gelassen"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4801,15 +4813,15 @@ msgid "Spaziergang an frischer Luft gemacht"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Focused on skin contact
+#. EN: Noticed skin contact
 msgctxt "ui:checkinActionSkinContact#text"
-msgid "Fokus auf Hautkontakt gelenkt"
+msgid "Hautkontakt bewusst gespürt"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Dared an open word with my partner
+#. EN: Shared an honest word with my partner
 msgctxt "ui:checkinActionOpenWord#text"
-msgid "Offenes Wort mit Partner/in gewagt"
+msgid "Ein offenes Wort mit meinem Gegenüber gesprochen"
 msgstr ""
 
 #. Text der Oberfläche
@@ -4825,9 +4837,9 @@ msgid "KURS 15 • TEASING"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Today, briefly press your partner against the wall with intent, or hold them gently. Slowly kiss their neck, murmur a promise into their ear – and after exactly 45 seconds smile and walk on: "We'll save the rest for later."
+#. EN: If you both enjoy this kind of thing: draw your partner close for a moment today, kiss their neck slowly, whisper a promise in their ear. After 45 seconds, smile and walk on: "We'll save the rest for later."
 msgctxt "ui:dailySimmeringCardTodayBrieflyPressYourPartner#text"
-msgid "Drücke deinen Partner heute kurz fordernd an die Wand oder halte ihn sanft fest. Küsse langsam den Hals, raune ein Versprechen ins Ohr – und lächle nach genau 45 Sekunden und gehe weiter: \"Den Rest heben wir uns für später auf.\""
+msgid "Wenn ihr beide so etwas mögt: Zieh dein Gegenüber heute kurz an dich, küss langsam den Hals, flüstere ein Versprechen ins Ohr. Nach 45 Sekunden lächelst du und gehst weiter: \"Den Rest heben wir uns für später auf.\""
 msgstr ""
 
 #. Text der Oberfläche
@@ -4861,9 +4873,9 @@ msgid "KURS 15 • KOPFKINO"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: This afternoon, send your partner an unannounced message: "Tonight from 9 pm your body is mine. You don't have to do anything but be there."
+#. EN: Only if you both like this: send your partner a message this afternoon that builds anticipation without expecting anything.
 msgctxt "ui:dailySimmeringCardThisAfternoonSendYourPartner#text"
-msgid "Schicke deinem Gegenüber heute Nachmittag eine unangekündigte Nachricht: \"Heute Abend ab 21 Uhr gehört dein Körper mir. Du musst nichts tun, außer da zu sein.\""
+msgid "Nur wenn ihr das mögt: Schick deinem Gegenüber heute Nachmittag eine Nachricht, die Vorfreude macht, ohne etwas zu erwarten."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4881,7 +4893,7 @@ msgstr ""
 #. Text der Oberfläche
 #. EN: Today, touch your partner during an everyday moment (at the table, on the sofa) at an extreme 10% slow-motion pace. Stroke the back of their hand and forearm teasingly slowly for 60 seconds.
 msgctxt "ui:dailySimmeringCardTodayTouchYourPartnerDuring#text"
-msgid "Berühre deinen Partner heute bei einer Alltagsgelegenheit (am Tisch, auf dem Sofa) im extremen 10%-Zeitlupen-Tempo. Streiche 60 Sekunden quälend langsam über Handrücken und Unterarm."
+msgid "Berühre dein Gegenüber heute bei einer Alltagsgelegenheit (am Tisch, auf dem Sofa) im extremen 10%-Zeitlupen-Tempo. Streiche 60 Sekunden ganz langsam über Handrücken und Unterarm."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4903,21 +4915,21 @@ msgid "Verabredet für heute Abend: Einer bekommt die Augen verbunden und darf a
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: The strict no-penetration rule
+#. EN: No penetration today
 msgctxt "ui:dailySimmeringCardTheStrictNoPenetrationRule#text"
-msgid "Das strikte Penetrations-Verbot"
+msgid "Heute ohne Eindringen"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 17 • SENSATE FOCUS
+#. EN: COURSE 17 • TOUCH WITHOUT A GOAL
 msgctxt "ui:dailySimmeringCardCourseSensateFocus#text"
-msgid "KURS 17 • SENSATE FOCUS"
+msgid "KURS 17 • BERÜHRUNG OHNE ZIEL"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Agree today: you may hug, kiss and caress each other naked – but penetration is strictly off-limits. Everything may happen, nothing has to.
+#. EN: Agree today: you may hug, kiss and caress each other naked – penetration stays out of it today. Everything may happen, nothing has to.
 msgctxt "ui:dailySimmeringCardAgreeTodayYouMayHug#text"
-msgid "Verabredet heute: Ihr dürft euch nackt umarmen, küssen und streicheln – aber Penetration ist strikt tabu. Alles darf sein, nichts muss."
+msgid "Verabredet heute: Ihr dürft euch nackt umarmen, küssen und streicheln – Eindringen bleibt heute außen vor. Alles darf sein, nichts muss."
 msgstr ""
 
 #. Text der Oberfläche
@@ -4935,7 +4947,7 @@ msgstr ""
 #. Text der Oberfläche
 #. EN: Tonight in the dark, whisper one single honest, sensual sensation into your partner's ear: "It drives me crazy how warm and soft your skin feels under my hand right now."
 msgctxt "ui:dailySimmeringCardTonightInTheDarkWhisper#text"
-msgid "Flüstere deinem Partner heute im Dunkeln eine einzige ehrliche, sinnliche Empfindung ins Ohr: \"Es macht mich verrückt, wie warm und weich deine Haut gerade unter meiner Hand ist.\""
+msgid "Flüstere deinem Gegenüber heute im Dunkeln eine einzige ehrliche, sinnliche Empfindung ins Ohr: \"Es macht mich verrückt, wie warm und weich deine Haut gerade unter meiner Hand ist.\""
 msgstr ""
 
 #. Text der Oberfläche
@@ -4963,9 +4975,9 @@ msgid "Der Beckenboden-Check im Sitzen"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSES 3 & 9 • BODY
+#. EN: COURSES 7 & 9 • BODY
 msgctxt "ui:dailySimmeringCardCoursesBody#text"
-msgid "KURS 7 & 9 • SOMATIK"
+msgid "KURS 7 & 9 • KÖRPER"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5011,9 +5023,9 @@ msgid "Broad Palm Touch mit warmem Öl"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 19 • BODY LAB
+#. EN: COURSE 19 • RELEARNING TOUCH
 msgctxt "ui:dailySimmeringCardCourseBodyLab#text"
-msgid "KURS 19 • SOMATISCHES LAB"
+msgid "KURS 19 • BERÜHRUNG NEU LERNEN"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5041,9 +5053,9 @@ msgid "Lass die hochsensible Spitze heute für 10 Minuten völlig unberührt. Ko
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Plateau surfing at level 7
+#. EN: Feeling arousal without a goal
 msgctxt "ui:dailySimmeringCardPlateauSurfingAtLevel#text"
-msgid "Plateau-Surfen auf Stufe 7"
+msgid "Erregung ohne Ziel spüren"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5053,15 +5065,15 @@ msgid "KURS 19 • AUSDAUER"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Bring your arousal to level 7. As soon as it climbs to 8: stop all movement (stillness), breathe out deeply 3 times and let your pelvic floor sink down.
+#. EN: Notice how your arousal feels today and let it come and go without a goal. If it gets to be too much, pause, breathe out deeply 3 times and let your pelvic floor soften.
 msgctxt "ui:dailySimmeringCardBringYourArousalToLevel#text"
-msgid "Bringe deine Erregung auf Stufe 7. Sobald sie auf 8 klettert: Stoppe jede Bewegung (Stillness), atme 3x tief aus und lass den Beckenboden nach unten sinken."
+msgid "Spür heute, wie sich deine Erregung anfühlt, und lass sie ohne Ziel kommen und gehen. Wird es zu viel, halte inne, atme 3x tief aus und lass den Beckenboden weich werden."
 msgstr ""
 
 #. Text der Oberfläche
 #. EN: Screen-free sensing
 msgctxt "ui:dailySimmeringCardScreenFreeSensing#text"
-msgid "Dopamin-Reset: Bildschirmfreies Spüren"
+msgid "Bildschirmfreies Spüren"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5083,9 +5095,9 @@ msgid "Der Schließmuskel-Entlastungstest"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: COURSE 19 • MULTIPLE ORGASMS
+#. EN: COURSE 19 • LETTING GO
 msgctxt "ui:dailySimmeringCardCourseMultipleOrgasms#text"
-msgid "KURS 19 • MULTI-ORGASMIE"
+msgid "KURS 19 • LOSLASSEN"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5131,15 +5143,15 @@ msgid "Betrachte deinen Körper heute ohne Bewertung. Sag dir: \"Mein Körper is
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Physiological sigh (quick calming)
+#. EN: The long sigh
 msgctxt "ui:dailySimmeringCardPhysiologicalSighQuickCalming#text"
-msgid "Physiologischer Seufzer (Quick-Downregulation)"
+msgid "Der lange Seufzer"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: TOOL • CALM DOWN
+#. EN: PRACTICE • CALM
 msgctxt "ui:dailySimmeringCardToolCalmDown#text"
-msgid "TOOL • VAGUS-RESET"
+msgid "ÜBUNG • RUHE"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5185,9 +5197,9 @@ msgid "ÖFFNEN"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Non-binary / open
+#. EN: Non-binary
 msgctxt "ui:userProfileNonBinaryOpen#text"
-msgid "Divers / Offen"
+msgid "Divers / nicht-binär"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5215,9 +5227,9 @@ msgid "Kompliziert"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Pelvic floor & body
+#. EN: Pelvic floor & feeling your body
 msgctxt "ui:userProfilePelvicFloorBody#text"
-msgid "Beckenboden & Somatik"
+msgid "Beckenboden & Körper spüren"
 msgstr ""
 
 #. Text der Oberfläche
@@ -5233,9 +5245,9 @@ msgid "Lust & Entspannung"
 msgstr ""
 
 #. Text der Oberfläche
-#. EN: Easing performance pressure
+#. EN: Less pressure
 msgctxt "ui:userProfileEasingPerformancePressure#text"
-msgid "Leistungsdruck abbauen"
+msgid "Weniger Druck"
 msgstr ""
 
 #. Text der Oberfläche

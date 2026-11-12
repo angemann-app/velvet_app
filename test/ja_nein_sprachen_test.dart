@@ -55,7 +55,7 @@ void main() {
       expect(DataService.getLessonById(i.lessonId!), isNotNull, reason: '${i.id} → ${i.lessonId}');
     }
     expect(YesNoMaybeVote.yes.label, 'Yes, please');
-    expect(t.yesNoMaybeNoMatchesYet, 'No matches yet');
+    expect(t.yesNoMaybeNoMatchesYet, "It's still quiet here");
   });
 
   test('Deutsch: Originaltexte, auch die neuen Fragen', () async {

@@ -180,27 +180,35 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 child: Container(
                   width: 40,
                   height: 4,
-                  decoration: BoxDecoration(color: AppTheme.linie, borderRadius: BorderRadius.circular(2)),
+                  decoration: BoxDecoration(
+                      color: AppTheme.linie,
+                      borderRadius: BorderRadius.circular(2)),
                 ),
               ),
               const SizedBox(height: 18),
               Text(
                 item.text,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppTheme.tinte, height: 1.3),
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
+                    color: AppTheme.tinte,
+                    height: 1.3),
               ),
               if (item.image != null) ...[
                 const SizedBox(height: 16),
                 VpTafel(
                   child: AspectRatio(
                     aspectRatio: 4 / 3,
-                    child: VpBildFeld.pfad(item.image!, format: VpBildFormat.diagramm),
+                    child: VpBildFeld.pfad(item.image!,
+                        format: VpBildFormat.diagramm),
                   ),
                 ),
               ],
               const SizedBox(height: 16),
               Text(
                 item.explanation,
-                style: TextStyle(fontSize: 14.5, color: AppTheme.tinteLeise, height: 1.55),
+                style: TextStyle(
+                    fontSize: 14.5, color: AppTheme.tinteLeise, height: 1.55),
               ),
               if (linked != null) ...[
                 const SizedBox(height: 22),
@@ -210,7 +218,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     Navigator.of(ctx).pop();
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => LessonDetailScreen(lesson: linked.$1, courseTitle: linked.$2.title),
+                        builder: (_) => LessonDetailScreen(
+                            lesson: linked.$1, courseTitle: linked.$2.title),
                       ),
                     );
                   },
@@ -219,11 +228,13 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     decoration: BoxDecoration(
                       color: AppTheme.akzentTief.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(VpRadius.karte),
-                      border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.4)),
+                      border: Border.all(
+                          color: AppTheme.akzentTief.withValues(alpha: 0.4)),
                     ),
                     child: Row(
                       children: [
-                        Icon(Icons.menu_book_rounded, color: AppTheme.akzentTief),
+                        Icon(Icons.menu_book_rounded,
+                            color: AppTheme.akzentTief),
                         const SizedBox(width: 12),
                         Expanded(
                           child: Column(
@@ -231,17 +242,25 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                             children: [
                               Text(t.yesNoMaybeReadMore,
                                   style: TextStyle(
-                                      fontSize: 11, fontWeight: FontWeight.w800, color: AppTheme.akzentTief, letterSpacing: 0.6)),
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w800,
+                                      color: AppTheme.akzentTief,
+                                      letterSpacing: 0.6)),
                               const SizedBox(height: 2),
                               Text(linked.$1.title,
                                   style: TextStyle(
-                                      fontSize: 14, fontWeight: FontWeight.w700, color: AppTheme.tinte)),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w700,
+                                      color: AppTheme.tinte)),
                               Text(linked.$2.title,
-                                  style: TextStyle(fontSize: 12, color: AppTheme.tinteStumm)),
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: AppTheme.tinteStumm)),
                             ],
                           ),
                         ),
-                        Icon(Icons.chevron_right_rounded, color: AppTheme.tinteStumm),
+                        Icon(Icons.chevron_right_rounded,
+                            color: AppTheme.tinteStumm),
                       ],
                     ),
                   ),
@@ -256,9 +275,6 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
 
   @override
   Widget build(BuildContext context) {
-    final totalItems = ListenUebersetzung.eintraege.length;
-    final answeredCount = _myAnswers.values.where((v) => v.isNotEmpty).length;
-
     return Scaffold(
       backgroundColor: AppTheme.papier,
       appBar: AppBar(
@@ -272,7 +288,10 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
             ),
             Text(
               t.yesNoMaybeYesMaybeNo,
-              style: TextStyle(fontSize: 11, color: AppTheme.akzentTief, fontWeight: FontWeight.w500),
+              style: TextStyle(
+                  fontSize: 11,
+                  color: AppTheme.akzentTief,
+                  fontWeight: FontWeight.w500),
             ),
           ],
         ),
@@ -290,7 +309,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   Icons.sync_rounded,
                   color: isPaired ? AppTheme.akzentTief : AppTheme.tinteStumm,
                 ),
-                tooltip: isPaired ? t.yesNoMaybeSyncWithPartner : t.yesNoMaybePairingRequired,
+                tooltip: isPaired
+                    ? t.yesNoMaybeSyncWithPartner
+                    : t.yesNoMaybePairingRequired,
               );
             },
           ),
@@ -309,42 +330,22 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
               indicator: BoxDecoration(
                 color: AppTheme.akzentTief.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(VpRadius.karte),
-                border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.6)),
+                border: Border.all(
+                    color: AppTheme.akzentTief.withValues(alpha: 0.6)),
               ),
               indicatorSize: TabBarIndicatorSize.tab,
               labelColor: AppTheme.akzentTief,
               unselectedLabelColor: AppTheme.tinteLeise,
-              labelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
+              labelStyle:
+                  const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
               tabs: [
                 Tab(
                   icon: const Icon(Icons.list_alt_rounded, size: 18),
-                  text: t.yesNoMaybeQuestionsAnsweredcountTotalitems(answeredCount, totalItems),
+                  text: t.yesNoMaybeMeineAntworten,
                 ),
-                AnimatedBuilder(
-                  animation: Listenable.merge([
-                    _nostr.myFantasyVotesNotifier,
-                    _nostr.partnerFantasyVotesNotifier,
-                  ]),
-                  builder: (context, _) {
-                    final partnerVotes = _nostr.partnerFantasyVotesNotifier.value;
-                    int matchCount = 0;
-                    for (var item in ListenUebersetzung.eintraege) {
-                      final myV = _myAnswers[item.id] ?? _nostr.myFantasyVotesNotifier.value[item.id];
-                      final pV = partnerVotes[item.id];
-                      if (myV == 'yes' && pV == 'yes') {
-                        matchCount++;
-                      }
-                    }
-                    return Tab(
-                      icon: Badge(
-                        isLabelVisible: matchCount > 0,
-                        label: Text('$matchCount'),
-                        backgroundColor: AppTheme.statusJa,
-                        child: const Icon(Icons.favorite_rounded, size: 18),
-                      ),
-                      text: t.yesNoMaybeMatchesMatchcount(matchCount),
-                    );
-                  },
+                Tab(
+                  icon: const Icon(Icons.favorite_rounded, size: 18),
+                  text: t.yesNoMaybeGemeinsam,
                 ),
               ],
             ),
@@ -385,7 +386,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
             children: [
               Row(
                 children: [
-                  Icon(Icons.shield_outlined, color: AppTheme.akzentTief, size: 20),
+                  Icon(Icons.shield_outlined,
+                      color: AppTheme.akzentTief, size: 20),
                   SizedBox(width: 8),
                   Text(
                     t.yesNoMaybeDigitalSafeSpace,
@@ -412,9 +414,12 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 spacing: 8,
                 runSpacing: 8,
                 children: [
-                  _buildStatPill(t.yesNoMaybeYes, '$yesCount', AppTheme.statusJa),
-                  _buildStatPill(t.yesNoMaybeMaybe, '$maybeCount', AppTheme.akzentTief),
-                  _buildStatPill(t.yesNoMaybeNo, '$noCount', AppTheme.akzentTief),
+                  _buildStatPill(
+                      t.yesNoMaybeYes, '$yesCount', AppTheme.statusJa),
+                  _buildStatPill(
+                      t.yesNoMaybeMaybe, '$maybeCount', AppTheme.akzentTief),
+                  _buildStatPill(
+                      t.yesNoMaybeNo, '$noCount', AppTheme.akzentTief),
                 ],
               ),
             ],
@@ -428,13 +433,17 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              _buildFilterChip('all', t.yesNoMaybeAllEintraegelength(ListenUebersetzung.eintraege.length)),
+              _buildFilterChip(
+                  'all',
+                  t.yesNoMaybeAllEintraegelength(
+                      ListenUebersetzung.eintraege.length)),
               const SizedBox(width: 8),
               _buildFilterChip('open', t.yesNoMaybeOpen),
               const SizedBox(width: 8),
               _buildFilterChip('yes', t.yesNoMaybeYesYescount(yesCount)),
               const SizedBox(width: 8),
-              _buildFilterChip('maybe', t.yesNoMaybeMaybeMaybecount(maybeCount)),
+              _buildFilterChip(
+                  'maybe', t.yesNoMaybeMaybeMaybecount(maybeCount)),
               const SizedBox(width: 8),
               _buildFilterChip('no', t.yesNoMaybeNoNocount(noCount)),
             ],
@@ -467,7 +476,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                   child: SizedBox(
                     height: 96,
                     width: double.infinity,
-                    child: VpBildFeld.pfad(category.image, format: VpBildFormat.kopf),
+                    child: VpBildFeld.pfad(category.image,
+                        format: VpBildFormat.kopf),
                   ),
                 ),
               ),
@@ -558,7 +568,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
         decoration: BoxDecoration(
-          color: isSelected ? AppTheme.akzentTief.withValues(alpha: 0.2) : AppTheme.papierErhoben,
+          color: isSelected
+              ? AppTheme.akzentTief.withValues(alpha: 0.2)
+              : AppTheme.papierErhoben,
           borderRadius: BorderRadius.circular(VpRadius.karte),
           border: Border.all(
             color: isSelected ? AppTheme.akzentTief : AppTheme.linie,
@@ -587,7 +599,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
         color: AppTheme.papierErhoben,
         borderRadius: BorderRadius.circular(VpRadius.karte),
         border: Border.all(
-          color: currentVote != null ? currentVote.color.withValues(alpha: 0.35) : AppTheme.linie,
+          color: currentVote != null
+              ? currentVote.color.withValues(alpha: 0.35)
+              : AppTheme.linie,
           width: currentVote != null ? 1.2 : 0.8,
         ),
       ),
@@ -689,7 +703,10 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 color: isActive ? color : AppTheme.tinteStumm,
               ),
               const SizedBox(width: 6),
-              Flexible(child: Text(vote.label, textAlign: TextAlign.center,
+              Flexible(
+                  child: Text(
+                vote.label,
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 12.5,
                   fontWeight: isActive ? FontWeight.w800 : FontWeight.w600,
@@ -730,22 +747,28 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     decoration: BoxDecoration(
                       color: AppTheme.akzentTief.withValues(alpha: 0.15),
                       shape: BoxShape.circle,
-                      border: Border.all(color: AppTheme.akzentTief.withValues(alpha: 0.4)),
+                      border: Border.all(
+                          color: AppTheme.akzentTief.withValues(alpha: 0.4)),
                     ),
                     child: Center(
-                      child: Icon(Icons.favorite_border_rounded, size: 36, color: AppTheme.akzentTief),
+                      child: Icon(Icons.favorite_border_rounded,
+                          size: 36, color: AppTheme.akzentTief),
                     ),
                   ),
                   const SizedBox(height: 20),
                   Text(
                     t.yesNoMaybePairingRequired2,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppTheme.tinte),
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: AppTheme.tinte),
                   ),
                   const SizedBox(height: 8),
                   Text(
                     t.yesNoMaybeConnectWithYourPartnerIn,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 13, color: AppTheme.tinteLeise, height: 1.45),
+                    style: TextStyle(
+                        fontSize: 13, color: AppTheme.tinteLeise, height: 1.45),
                   ),
                   const SizedBox(height: 24),
                   ElevatedButton.icon(
@@ -755,7 +778,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppTheme.akzentTief,
                       foregroundColor: AppTheme.papier,
-                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 24, vertical: 12),
                     ),
                   ),
                 ],
@@ -769,7 +793,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
         final curiosityMatches = <YesNoMaybeItem>[];
 
         for (var item in ListenUebersetzung.eintraege) {
-          final myV = _myAnswers[item.id] ?? _nostr.myFantasyVotesNotifier.value[item.id];
+          final myV = _myAnswers[item.id] ??
+              _nostr.myFantasyVotesNotifier.value[item.id];
           final pV = partnerVotes[item.id];
 
           if (myV == 'yes' && pV == 'yes') {
@@ -784,57 +809,67 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
         return ListView(
           padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
           children: [
-            // Celebratory Banner for Matches
-            Container(
-              padding: const EdgeInsets.all(18),
-              decoration: BoxDecoration(
-                color: AppTheme.statusJa.withValues(alpha: 0.12),
-                borderRadius: BorderRadius.circular(VpRadius.karte),
-                border: Border.all(color: AppTheme.statusJa.withValues(alpha: 0.5)),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Icon(Icons.auto_awesome_rounded, color: AppTheme.statusJa, size: 22),
-                      const SizedBox(width: 8),
-                      Text(
-                        t.yesNoMaybePerfectMatchWithPartnername(partnerName).toUpperCase(),
-                        style: TextStyle(
-                          color: AppTheme.statusJa,
-                          fontWeight: FontWeight.w900,
-                          fontSize: 13,
-                          letterSpacing: 0.8,
+            // Banner nur bei gemeinsamen Antworten; sonst nur der leise Leer-Zustand unten
+            if (yesMatches.isNotEmpty || curiosityMatches.isNotEmpty) ...[
+              Container(
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(
+                  color: AppTheme.statusJa.withValues(alpha: 0.12),
+                  borderRadius: BorderRadius.circular(VpRadius.karte),
+                  border: Border.all(
+                      color: AppTheme.statusJa.withValues(alpha: 0.5)),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.favorite_border_rounded,
+                            color: AppTheme.statusJa, size: 22),
+                        const SizedBox(width: 8),
+                        Flexible(
+                          child: Text(
+                            t.yesNoMaybePerfectMatchWithPartnername(
+                                partnerName),
+                            style: TextStyle(
+                              color: AppTheme.statusJa,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 14,
+                            ),
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    t.yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(yesMatches.length, curiosityMatches.length),
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800,
-                      color: AppTheme.tinte,
+                      ],
                     ),
-                  ),
-                  const SizedBox(height: 6),
-                  Text(
-                    t.yesNoMaybeNoRejectionAllLimitsWere,
-                    style: TextStyle(color: AppTheme.tinteLeise, fontSize: 12.5, height: 1.4),
-                  ),
-                ],
+                    const SizedBox(height: 8),
+                    Text(
+                      t.yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(
+                          yesMatches.length, curiosityMatches.length),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w800,
+                        color: AppTheme.tinte,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      t.yesNoMaybeNoRejectionAllLimitsWere,
+                      style: TextStyle(
+                          color: AppTheme.tinteLeise,
+                          fontSize: 12.5,
+                          height: 1.4),
+                    ),
+                  ],
+                ),
               ),
-            ),
-
-            const SizedBox(height: 20),
+              const SizedBox(height: 20),
+            ],
 
             // 1. Direct YES-Matches
             if (yesMatches.isNotEmpty) ...[
               Row(
                 children: [
-                  Icon(Icons.check_circle_rounded, color: AppTheme.statusJa, size: 18),
+                  Icon(Icons.check_circle_rounded,
+                      color: AppTheme.statusJa, size: 18),
                   SizedBox(width: 8),
                   Text(
                     t.yesNoMaybePerfectMatchBothSaidYes,
@@ -847,7 +882,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 ],
               ),
               const SizedBox(height: 10),
-              ...yesMatches.map((item) => _buildMatchCard(item, isDirectYes: true)),
+              ...yesMatches
+                  .map((item) => _buildMatchCard(item, isDirectYes: true)),
               const SizedBox(height: 20),
             ],
 
@@ -855,7 +891,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
             if (curiosityMatches.isNotEmpty) ...[
               Row(
                 children: [
-                  Icon(Icons.help_outline_rounded, color: AppTheme.akzentTief, size: 18),
+                  Icon(Icons.help_outline_rounded,
+                      color: AppTheme.akzentTief, size: 18),
                   SizedBox(width: 8),
                   Text(
                     t.yesNoMaybeSharedCuriosityOpenToExploring,
@@ -868,7 +905,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 ],
               ),
               const SizedBox(height: 10),
-              ...curiosityMatches.map((item) => _buildMatchCard(item, isDirectYes: false)),
+              ...curiosityMatches
+                  .map((item) => _buildMatchCard(item, isDirectYes: false)),
               const SizedBox(height: 20),
             ],
 
@@ -882,17 +920,22 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 ),
                 child: Column(
                   children: [
-                    Icon(Icons.hourglass_empty_rounded, color: AppTheme.akzentTief, size: 36),
+                    Icon(Icons.spa_outlined,
+                        color: AppTheme.akzentTief, size: 36),
                     SizedBox(height: 12),
                     Text(
                       t.yesNoMaybeNoMatchesYet,
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                     SizedBox(height: 6),
                     Text(
                       t.yesNoMaybeBothKeepVotingInThe,
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: AppTheme.tinteLeise, fontSize: 13, height: 1.4),
+                      style: TextStyle(
+                          color: AppTheme.tinteLeise,
+                          fontSize: 13,
+                          height: 1.4),
                     ),
                   ],
                 ),
@@ -945,7 +988,9 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  isDirectYes ? t.yesNoMaybeYouBothYes : t.yesNoMaybeCuriousTogether,
+                  isDirectYes
+                      ? t.yesNoMaybeYouBothYes
+                      : t.yesNoMaybeCuriousTogether,
                   style: TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w600,
@@ -968,7 +1013,8 @@ class _YesNoMaybeScreenState extends State<YesNoMaybeScreen>
                 side: BorderSide(color: color.withValues(alpha: 0.5)),
               ),
             ),
-            child: Text(t.yesNoMaybeCourse, style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
+            child: Text(t.yesNoMaybeCourse,
+                style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
           ),
         ],
       ),

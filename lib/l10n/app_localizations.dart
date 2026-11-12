@@ -611,13 +611,13 @@ abstract class AppLocalizations {
   /// No description provided for @mainNavigationSomaticsTraining.
   ///
   /// In de, this message translates to:
-  /// **'Somatik & Training'**
+  /// **'Körper & Üben'**
   String get mainNavigationSomaticsTraining;
 
   /// No description provided for @mainNavigationCbtReframing.
   ///
   /// In de, this message translates to:
-  /// **'KVT-Reframing'**
+  /// **'Gedanken'**
   String get mainNavigationCbtReframing;
 
   /// No description provided for @mainNavigationCoupleChannel.
@@ -641,13 +641,13 @@ abstract class AppLocalizations {
   /// No description provided for @mainNavigationTraining.
   ///
   /// In de, this message translates to:
-  /// **'Training'**
+  /// **'Körper'**
   String get mainNavigationTraining;
 
   /// No description provided for @mainNavigationReframing.
   ///
   /// In de, this message translates to:
-  /// **'Reframing'**
+  /// **'Gedanken'**
   String get mainNavigationReframing;
 
   /// No description provided for @whatsNewWelcomeBack.
@@ -845,13 +845,13 @@ abstract class AppLocalizations {
   /// No description provided for @coursesSendSparksSecretlyMatchWishes.
   ///
   /// In de, this message translates to:
-  /// **'Funken senden & Wünsche heimlich abgleichen'**
+  /// **'Funken schicken & Wünsche vergleichen, sichtbar wird nur, was ihr beide wollt'**
   String get coursesSendSparksSecretlyMatchWishes;
 
   /// No description provided for @coursesYourCurriculum.
   ///
   /// In de, this message translates to:
-  /// **'DEIN CURRICULUM'**
+  /// **'DEINE KURSE'**
   String get coursesYourCurriculum;
 
   /// No description provided for @coursesHelloProfilename.
@@ -1091,7 +1091,7 @@ abstract class AppLocalizations {
   /// No description provided for @coursesUnderstandTheBiologyQuietThe.
   ///
   /// In de, this message translates to:
-  /// **'Biologie verstehen. Kopfkino stoppen. Körper spüren.'**
+  /// **'Verstehen, was in dir passiert. Zur Ruhe kommen. Den Körper spüren.'**
   String get coursesUnderstandTheBiologyQuietThe;
 
   /// No description provided for @coursesProfileSettings.
@@ -1128,7 +1128,7 @@ abstract class AppLocalizations {
   /// No description provided for @coursesPracticeCbt.
   ///
   /// In de, this message translates to:
-  /// **'Praxis: KVT'**
+  /// **'Praxis: Gedanken'**
   String get coursesPracticeCbt;
 
   /// No description provided for @lessonDetailLessonMarkedAsCompleted.
@@ -1242,13 +1242,13 @@ abstract class AppLocalizations {
   /// No description provided for @lessonDetailStartBreathPacerDownRegulation.
   ///
   /// In de, this message translates to:
-  /// **'Atem-Pacer (Down-Regulation) starten'**
+  /// **'Atem-Begleiter starten (langes Ausatmen)'**
   String get lessonDetailStartBreathPacerDownRegulation;
 
   /// No description provided for @lessonDetailCalmDownWithBreathingOr.
   ///
   /// In de, this message translates to:
-  /// **'Vagusnerv aktivieren & Adrenalin senken mit 4-7-8 oder Seufzer'**
+  /// **'Mit 4-7-8-Atmung oder dem langen Seufzer zur Ruhe kommen'**
   String get lessonDetailCalmDownWithBreathingOr;
 
   /// No description provided for @lessonDetailMyDesireProfile.
@@ -1693,7 +1693,7 @@ abstract class AppLocalizations {
   /// No description provided for @couplesChannelSecretlyMatchWishes.
   ///
   /// In de, this message translates to:
-  /// **'Wünsche heimlich abgleichen'**
+  /// **'Wünsche leise vergleichen'**
   String get couplesChannelSecretlyMatchWishes;
 
   /// No description provided for @couplesChannelYouVoteSeparatelyOnlyWhat.
@@ -1735,7 +1735,7 @@ abstract class AppLocalizations {
   /// No description provided for @couplesChannelYouCanAlsoFillIt.
   ///
   /// In de, this message translates to:
-  /// **'Kannst du auch allein ausfüllen – und später mit deinem Gegenüber abgleichen.'**
+  /// **'Kannst du auch allein ausfüllen und später mit deinem Gegenüber vergleichen.'**
   String get couplesChannelYouCanAlsoFillIt;
 
   /// No description provided for @couplesChannelSharedEvening.
@@ -1867,7 +1867,7 @@ abstract class AppLocalizations {
   /// No description provided for @couplesChannelVoteSeparatelyAWishOnly.
   ///
   /// In de, this message translates to:
-  /// **'Stimmt getrennt ab. Ein Wunsch erscheint erst als Treffer, wenn ihr beide „Ja, gern“ sagt. Ein „Vielleicht“ landet zum Besprechen, ein „Lieber nicht“ wird nie angezeigt.'**
+  /// **'Antwortet getrennt. Ein Wunsch wird erst sichtbar, wenn ihr beide „Ja, gern“ gesagt habt. Ein „Vielleicht“ kommt zu „Zum Besprechen“. Ein „Lieber nicht“ sieht dein Gegenüber nie.'**
   String get couplesChannelVoteSeparatelyAWishOnly;
 
   /// No description provided for @couplesChannelQuestionsInSeveralAreasWith.
@@ -1879,19 +1879,19 @@ abstract class AppLocalizations {
   /// No description provided for @couplesChannelYouHaveAMatch.
   ///
   /// In de, this message translates to:
-  /// **'Ihr habt ein Match'**
+  /// **'Bei einer Sache sagt ihr beide Ja'**
   String get couplesChannelYouHaveAMatch;
 
   /// No description provided for @couplesChannelYouHaveMatcheslengthMatches.
   ///
   /// In de, this message translates to:
-  /// **'Ihr habt {matchesLength} Matches'**
+  /// **'Bei {matchesLength} Dingen sagt ihr beide Ja'**
   String couplesChannelYouHaveMatcheslengthMatches(Object matchesLength);
 
   /// No description provided for @couplesChannelAMatchIsAnInvitation.
   ///
   /// In de, this message translates to:
-  /// **'Ein Match ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt.'**
+  /// **'Ein gemeinsames Ja ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt. Und ein „Heute nicht“ gilt immer.'**
   String get couplesChannelAMatchIsAnInvitation;
 
   /// No description provided for @couplesChannelYesPlease.
@@ -2824,13 +2824,13 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeMatchingAnswersEncrypted.
   ///
   /// In de, this message translates to:
-  /// **'Antworten werden verschlüsselt abgeglichen …'**
+  /// **'Antworten werden verschlüsselt verglichen …'**
   String get yesNoMaybeMatchingAnswersEncrypted;
 
   /// No description provided for @yesNoMaybeCountAnswersMatched.
   ///
   /// In de, this message translates to:
-  /// **'{count} Antworten erfolgreich abgeglichen!'**
+  /// **'Fertig: {count} Antworten verglichen.'**
   String yesNoMaybeCountAnswersMatched(Object count);
 
   /// No description provided for @yesNoMaybeReadMore.
@@ -2848,38 +2848,50 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeSyncWithPartner.
   ///
   /// In de, this message translates to:
-  /// **'Mit Partner synchronisieren'**
+  /// **'Mit deinem Gegenüber vergleichen'**
   String get yesNoMaybeSyncWithPartner;
 
   /// No description provided for @yesNoMaybePairingRequired.
   ///
   /// In de, this message translates to:
-  /// **'Koppeln erforderlich'**
+  /// **'Erst verbinden'**
   String get yesNoMaybePairingRequired;
 
   /// No description provided for @yesNoMaybeQuestionsAnsweredcountTotalitems.
   ///
   /// In de, this message translates to:
-  /// **'Fragenkatalog ({answeredCount}/{totalItems})'**
+  /// **'Fragenkatalog ({answeredCount} von {totalItems})'**
   String yesNoMaybeQuestionsAnsweredcountTotalitems(
       Object answeredCount, Object totalItems);
 
   /// No description provided for @yesNoMaybeMatchesMatchcount.
   ///
   /// In de, this message translates to:
-  /// **'Matches ({matchCount})'**
+  /// **'Gemeinsam ({matchCount})'**
   String yesNoMaybeMatchesMatchcount(Object matchCount);
+
+  /// No description provided for @yesNoMaybeMeineAntworten.
+  ///
+  /// In de, this message translates to:
+  /// **'Meine Antworten'**
+  String get yesNoMaybeMeineAntworten;
+
+  /// No description provided for @yesNoMaybeGemeinsam.
+  ///
+  /// In de, this message translates to:
+  /// **'Gemeinsam'**
+  String get yesNoMaybeGemeinsam;
 
   /// No description provided for @yesNoMaybeDigitalSafeSpace.
   ///
   /// In de, this message translates to:
-  /// **'DIGITALER SAFE SPACE'**
+  /// **'Deine Antworten, dein Tempo'**
   String get yesNoMaybeDigitalSafeSpace;
 
   /// No description provided for @yesNoMaybeFindOutWhatExcitesYou.
   ///
   /// In de, this message translates to:
-  /// **'Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar.'**
+  /// **'Hier darfst du in Ruhe spüren, was dir gefällt, was vielleicht und was lieber nicht. Du musst nichts beantworten. Unklar, was gemeint ist? Tippe auf das i. Wenn ihr verbunden seid, wird nur sichtbar, wo ihr beide mindestens „Vielleicht“ gesagt habt. Ein „Lieber nicht“ sieht dein Gegenüber nie.'**
   String get yesNoMaybeFindOutWhatExcitesYou;
 
   /// No description provided for @yesNoMaybeYes.
@@ -2933,62 +2945,62 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybePairingRequired2.
   ///
   /// In de, this message translates to:
-  /// **'Kopplung erforderlich'**
+  /// **'Erst verbinden'**
   String get yesNoMaybePairingRequired2;
 
   /// No description provided for @yesNoMaybeConnectWithYourPartnerIn.
   ///
   /// In de, this message translates to:
-  /// **'Verbinde dich im Paar-Kanal per QR-Code mit deinem Gegenüber. Eure Antworten werden dann Ende-zu-Ende-verschlüsselt abgeglichen.'**
+  /// **'Wenn ihr im Paar-Kanal verbunden seid, könnt ihr eure Antworten verschlüsselt vergleichen. Sichtbar wird nur das Gemeinsame. Allein ausfüllen geht auch.'**
   String get yesNoMaybeConnectWithYourPartnerIn;
 
   /// No description provided for @yesNoMaybePairViaQrCodeNow.
   ///
   /// In de, this message translates to:
-  /// **'Jetzt per QR-Code koppeln'**
+  /// **'Per QR-Code verbinden'**
   String get yesNoMaybePairViaQrCodeNow;
 
   /// No description provided for @yesNoMaybePerfectMatchWithPartnername.
   ///
   /// In de, this message translates to:
-  /// **'VOLLTREFFER MIT {partnerName}'**
+  /// **'Gemeinsam mit {partnerName}'**
   String yesNoMaybePerfectMatchWithPartnername(Object partnerName);
 
   /// No description provided for @yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints.
   ///
   /// In de, this message translates to:
-  /// **'{yesMatchesLength} gemeinsame Ja-Übereinstimmungen & {curiosityMatchesLength} Neugier-Punkte entdeckt!'**
+  /// **'Ja bei euch beiden: {yesMatchesLength} · Gemeinsam neugierig: {curiosityMatchesLength}'**
   String yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(
       Object yesMatchesLength, Object curiosityMatchesLength);
 
   /// No description provided for @yesNoMaybeNoRejectionAllLimitsWere.
   ///
   /// In de, this message translates to:
-  /// **'Keine Zurückweisung: Alle Grenzen wurden diskret gewahrt. Nur echte gemeinsame Lust wird enthüllt.'**
+  /// **'Hier steht nur, was ihr beide gesagt habt. Alles andere bleibt bei jedem für sich. Ein „Lieber nicht“ ist eine vollwertige Antwort.'**
   String get yesNoMaybeNoRejectionAllLimitsWere;
 
   /// No description provided for @yesNoMaybePerfectMatchBothSaidYes.
   ///
   /// In de, this message translates to:
-  /// **'Volltreffer (Beide haben JA gesagt)'**
+  /// **'Ihr beide: Ja'**
   String get yesNoMaybePerfectMatchBothSaidYes;
 
   /// No description provided for @yesNoMaybeSharedCuriosityOpenToExploring.
   ///
   /// In de, this message translates to:
-  /// **'Gemeinsame Neugier (Offen für Erkundung)'**
+  /// **'Gemeinsame Neugier, ein Vielleicht reicht'**
   String get yesNoMaybeSharedCuriosityOpenToExploring;
 
   /// No description provided for @yesNoMaybeNoMatchesYet.
   ///
   /// In de, this message translates to:
-  /// **'Noch keine Übereinstimmungen'**
+  /// **'Hier ist es noch still'**
   String get yesNoMaybeNoMatchesYet;
 
   /// No description provided for @yesNoMaybeBothKeepVotingInThe.
   ///
   /// In de, this message translates to:
-  /// **'Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Ja oder Vielleicht bewertet habt, leuchtet er hier auf.'**
+  /// **'Das heißt nicht, dass etwas fehlt. Vielleicht habt ihr noch nicht alles beantwortet, oder eure Antworten liegen einfach an verschiedenen Stellen. Beides ist normal. Ihr müsst nichts tun.'**
   String get yesNoMaybeBothKeepVotingInThe;
 
   /// No description provided for @yesNoMaybeYouBothYes.
@@ -3006,7 +3018,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesNoMaybeCourse.
   ///
   /// In de, this message translates to:
-  /// **'Kurs ▶'**
+  /// **'Mehr dazu'**
   String get yesNoMaybeCourse;
 
   /// No description provided for @cbtNewEntryPleaseChooseAtLeastOne.
@@ -4204,7 +4216,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailyCheckinCardHowDoStressPerformancePressure.
   ///
   /// In de, this message translates to:
-  /// **'Wie stehen Stress & Leistungsdruck heute zueinander?'**
+  /// **'Wie geht es dir heute?'**
   String get dailyCheckinCardHowDoStressPerformancePressure;
 
   /// No description provided for @dailyCheckinCardEverydayStressTodayJobAppointments.
@@ -4216,13 +4228,13 @@ abstract class AppLocalizations {
   /// No description provided for @dailyCheckinCardInnerPerformancePressureRacingThoughts.
   ///
   /// In de, this message translates to:
-  /// **'2. Innerer Leistungsdruck & Kopfkino'**
+  /// **'2. Wie viel Druck spürst du innerlich?'**
   String get dailyCheckinCardInnerPerformancePressureRacingThoughts;
 
   /// No description provided for @dailyCheckinCardWhatDidYouGoodToday.
   ///
   /// In de, this message translates to:
-  /// **'3. Was hat deinem Nervensystem heute gut getan?'**
+  /// **'3. Was hat dir heute gut getan?'**
   String get dailyCheckinCardWhatDidYouGoodToday;
 
   /// No description provided for @dailyCheckinCardSaveDailyCheckIn.
@@ -4240,13 +4252,13 @@ abstract class AppLocalizations {
   /// No description provided for @dailyCheckinCardCoachingInsightYourEverydayStress.
   ///
   /// In de, this message translates to:
-  /// **'Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.'**
+  /// **'Dein Alltagsstress ist heute hoch. Das ist okay: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist normal und kein Fehler von dir.'**
   String get dailyCheckinCardCoachingInsightYourEverydayStress;
 
   /// No description provided for @dailyCheckinCardCoachingInsightWhenEverydayStress.
   ///
   /// In de, this message translates to:
-  /// **'Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.'**
+  /// **'Wenn der Alltag ruhiger ist, fällt Entspannen oft leichter. Wenn du magst, spür heute einfach in deinen Körper, ganz ohne Ziel.'**
   String get dailyCheckinCardCoachingInsightWhenEverydayStress;
 
   /// No description provided for @onboardingGuest.
@@ -4366,7 +4378,7 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingYourPrivateCoachingProgrammeFor.
   ///
   /// In de, this message translates to:
-  /// **'Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intimität.'**
+  /// **'Ein privater Begleiter für Ruhe im Körper, Beckenboden und Nähe.'**
   String get onboardingYourPrivateCoachingProgrammeFor;
 
   /// No description provided for @onboardingPrivateProfileJournalProgressStay.
@@ -4468,55 +4480,55 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingWhatSYourBiggestPriority.
   ///
   /// In de, this message translates to:
-  /// **'5. Was ist aktuell deine größte Priorität?'**
+  /// **'5. Was wünschst du dir im Moment am meisten?'**
   String get onboardingWhatSYourBiggestPriority;
 
   /// No description provided for @onboardingStopPerformancePressureRacingThoughts.
   ///
   /// In de, this message translates to:
-  /// **'Leistungsdruck & Kopfkino stoppen'**
+  /// **'Weniger Druck, ein ruhigerer Kopf'**
   String get onboardingStopPerformancePressureRacingThoughts;
 
   /// No description provided for @onboardingBreakThoughtLoopsStopSpectatoring.
   ///
   /// In de, this message translates to:
-  /// **'Gedankenkreise durchbrechen, Spectatoring beenden.'**
+  /// **'Aus dem Kopf zurück ins Spüren, ohne dich selbst zu beobachten.'**
   String get onboardingBreakThoughtLoopsStopSpectatoring;
 
   /// No description provided for @onboardingPelvicFloorRelaxationBodyAwareness.
   ///
   /// In de, this message translates to:
-  /// **'Beckenboden-Entspannung & Somatik'**
+  /// **'Beckenboden entspannen & den Körper spüren'**
   String get onboardingPelvicFloorRelaxationBodyAwareness;
 
   /// No description provided for @onboardingReleaseTensionPractiseReverseKegels.
   ///
   /// In de, this message translates to:
-  /// **'Hypertonie lösen, Reverse Kegel trainieren, Vagusnerv beruhigen.'**
+  /// **'Anspannung loslassen, den Beckenboden weich werden lassen, zur Ruhe kommen.'**
   String get onboardingReleaseTensionPractiseReverseKegels;
 
   /// No description provided for @onboardingCoupleIntimacyPressureFreeSex.
   ///
   /// In de, this message translates to:
-  /// **'Paar-Intimität & Druckfreier Sex'**
+  /// **'Nähe zu zweit, ohne Druck'**
   String get onboardingCoupleIntimacyPressureFreeSex;
 
   /// No description provided for @onboardingSensateFocusTogetherCalmingEach.
   ///
   /// In de, this message translates to:
-  /// **'Sensate Focus zu zweit, Co-Regulierung & verletzliche Nähe.'**
+  /// **'Berührung ohne Ziel, gemeinsam zur Ruhe kommen, sich nahe sein dürfen.'**
   String get onboardingSensateFocusTogetherCalmingEach;
 
   /// No description provided for @onboardingDesireSelfAcceptanceBodyAwareness.
   ///
   /// In de, this message translates to:
-  /// **'Lust, Selbstannahme & Körperempfinden'**
+  /// **'Lust, dich annehmen & deinen Körper spüren'**
   String get onboardingDesireSelfAcceptanceBodyAwareness;
 
   /// No description provided for @onboardingUnderstandResponsiveDesireEaseOrgasm.
   ///
   /// In de, this message translates to:
-  /// **'Responsive Lust verstehen, Orgasmusdruck abbauen.'**
+  /// **'Verstehen, wie Lust bei dir entsteht, und den Druck herausnehmen.'**
   String get onboardingUnderstandResponsiveDesireEaseOrgasm;
 
   /// No description provided for @onboardingSaveChanges.
@@ -4528,13 +4540,13 @@ abstract class AppLocalizations {
   /// No description provided for @onboardingPersonaliseProgrammeNow.
   ///
   /// In de, this message translates to:
-  /// **'Programm jetzt personalisieren'**
+  /// **'Fertig, los geht\'s'**
   String get onboardingPersonaliseProgrammeNow;
 
   /// No description provided for @onboardingSkipGoStraightToThe.
   ///
   /// In de, this message translates to:
-  /// **'Überspringen & Direkt zur App'**
+  /// **'Später, direkt zur App'**
   String get onboardingSkipGoStraightToThe;
 
   /// No description provided for @onboardingVersionData.
@@ -4798,13 +4810,13 @@ abstract class AppLocalizations {
   /// No description provided for @checkinActionBreathed.
   ///
   /// In de, this message translates to:
-  /// **'Bewusst tief geatmet (Physiol. Seufzer)'**
+  /// **'Ein paar Mal tief durchgeatmet'**
   String get checkinActionBreathed;
 
   /// No description provided for @checkinActionPelvicFloor.
   ///
   /// In de, this message translates to:
-  /// **'Beckenboden entspannt (Reverse Kegel)'**
+  /// **'Den Beckenboden bewusst weich gelassen'**
   String get checkinActionPelvicFloor;
 
   /// No description provided for @checkinActionPhoneAway.
@@ -4822,13 +4834,13 @@ abstract class AppLocalizations {
   /// No description provided for @checkinActionSkinContact.
   ///
   /// In de, this message translates to:
-  /// **'Fokus auf Hautkontakt gelenkt'**
+  /// **'Hautkontakt bewusst gespürt'**
   String get checkinActionSkinContact;
 
   /// No description provided for @checkinActionOpenWord.
   ///
   /// In de, this message translates to:
-  /// **'Offenes Wort mit Partner/in gewagt'**
+  /// **'Ein offenes Wort mit meinem Gegenüber gesprochen'**
   String get checkinActionOpenWord;
 
   /// No description provided for @dailySimmeringCardTheSecondWallTease.
@@ -4846,7 +4858,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardTodayBrieflyPressYourPartner.
   ///
   /// In de, this message translates to:
-  /// **'Drücke deinen Partner heute kurz fordernd an die Wand oder halte ihn sanft fest. Küsse langsam den Hals, raune ein Versprechen ins Ohr – und lächle nach genau 45 Sekunden und gehe weiter: \"Den Rest heben wir uns für später auf.\"'**
+  /// **'Wenn ihr beide so etwas mögt: Zieh dein Gegenüber heute kurz an dich, küss langsam den Hals, flüstere ein Versprechen ins Ohr. Nach 45 Sekunden lächelst du und gehst weiter: \"Den Rest heben wir uns für später auf.\"'**
   String get dailySimmeringCardTodayBrieflyPressYourPartner;
 
   /// No description provided for @dailySimmeringCardJawMeltVoiceActivation.
@@ -4882,7 +4894,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardThisAfternoonSendYourPartner.
   ///
   /// In de, this message translates to:
-  /// **'Schicke deinem Gegenüber heute Nachmittag eine unangekündigte Nachricht: \"Heute Abend ab 21 Uhr gehört dein Körper mir. Du musst nichts tun, außer da zu sein.\"'**
+  /// **'Nur wenn ihr das mögt: Schick deinem Gegenüber heute Nachmittag eine Nachricht, die Vorfreude macht, ohne etwas zu erwarten.'**
   String get dailySimmeringCardThisAfternoonSendYourPartner;
 
   /// No description provided for @dailySimmeringCardSlowMotionWhilePouring.
@@ -4900,7 +4912,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardTodayTouchYourPartnerDuring.
   ///
   /// In de, this message translates to:
-  /// **'Berühre deinen Partner heute bei einer Alltagsgelegenheit (am Tisch, auf dem Sofa) im extremen 10%-Zeitlupen-Tempo. Streiche 60 Sekunden quälend langsam über Handrücken und Unterarm.'**
+  /// **'Berühre dein Gegenüber heute bei einer Alltagsgelegenheit (am Tisch, auf dem Sofa) im extremen 10%-Zeitlupen-Tempo. Streiche 60 Sekunden ganz langsam über Handrücken und Unterarm.'**
   String get dailySimmeringCardTodayTouchYourPartnerDuring;
 
   /// No description provided for @dailySimmeringCardTheMinuteSilkScarfRitual.
@@ -4924,19 +4936,19 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardTheStrictNoPenetrationRule.
   ///
   /// In de, this message translates to:
-  /// **'Das strikte Penetrations-Verbot'**
+  /// **'Heute ohne Eindringen'**
   String get dailySimmeringCardTheStrictNoPenetrationRule;
 
   /// No description provided for @dailySimmeringCardCourseSensateFocus.
   ///
   /// In de, this message translates to:
-  /// **'KURS 17 • SENSATE FOCUS'**
+  /// **'KURS 17 • BERÜHRUNG OHNE ZIEL'**
   String get dailySimmeringCardCourseSensateFocus;
 
   /// No description provided for @dailySimmeringCardAgreeTodayYouMayHug.
   ///
   /// In de, this message translates to:
-  /// **'Verabredet heute: Ihr dürft euch nackt umarmen, küssen und streicheln – aber Penetration ist strikt tabu. Alles darf sein, nichts muss.'**
+  /// **'Verabredet heute: Ihr dürft euch nackt umarmen, küssen und streicheln – Eindringen bleibt heute außen vor. Alles darf sein, nichts muss.'**
   String get dailySimmeringCardAgreeTodayYouMayHug;
 
   /// No description provided for @dailySimmeringCardSensoryNarratingWordsInThe.
@@ -4954,7 +4966,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardTonightInTheDarkWhisper.
   ///
   /// In de, this message translates to:
-  /// **'Flüstere deinem Partner heute im Dunkeln eine einzige ehrliche, sinnliche Empfindung ins Ohr: \"Es macht mich verrückt, wie warm und weich deine Haut gerade unter meiner Hand ist.\"'**
+  /// **'Flüstere deinem Gegenüber heute im Dunkeln eine einzige ehrliche, sinnliche Empfindung ins Ohr: \"Es macht mich verrückt, wie warm und weich deine Haut gerade unter meiner Hand ist.\"'**
   String get dailySimmeringCardTonightInTheDarkWhisper;
 
   /// No description provided for @dailySimmeringCardTheCharmingDreamBridge.
@@ -4984,7 +4996,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCoursesBody.
   ///
   /// In de, this message translates to:
-  /// **'KURS 7 & 9 • SOMATIK'**
+  /// **'KURS 7 & 9 • KÖRPER'**
   String get dailySimmeringCardCoursesBody;
 
   /// No description provided for @dailySimmeringCardNoticeRightNowAreYou.
@@ -5032,7 +5044,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseBodyLab.
   ///
   /// In de, this message translates to:
-  /// **'KURS 19 • SOMATISCHES LAB'**
+  /// **'KURS 19 • BERÜHRUNG NEU LERNEN'**
   String get dailySimmeringCardCourseBodyLab;
 
   /// No description provided for @dailySimmeringCardTodaySkipAnyTightGrip.
@@ -5062,7 +5074,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardPlateauSurfingAtLevel.
   ///
   /// In de, this message translates to:
-  /// **'Plateau-Surfen auf Stufe 7'**
+  /// **'Erregung ohne Ziel spüren'**
   String get dailySimmeringCardPlateauSurfingAtLevel;
 
   /// No description provided for @dailySimmeringCardCourseStayingPower.
@@ -5074,13 +5086,13 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardBringYourArousalToLevel.
   ///
   /// In de, this message translates to:
-  /// **'Bringe deine Erregung auf Stufe 7. Sobald sie auf 8 klettert: Stoppe jede Bewegung (Stillness), atme 3x tief aus und lass den Beckenboden nach unten sinken.'**
+  /// **'Spür heute, wie sich deine Erregung anfühlt, und lass sie ohne Ziel kommen und gehen. Wird es zu viel, halte inne, atme 3x tief aus und lass den Beckenboden weich werden.'**
   String get dailySimmeringCardBringYourArousalToLevel;
 
   /// No description provided for @dailySimmeringCardScreenFreeSensing.
   ///
   /// In de, this message translates to:
-  /// **'Dopamin-Reset: Bildschirmfreies Spüren'**
+  /// **'Bildschirmfreies Spüren'**
   String get dailySimmeringCardScreenFreeSensing;
 
   /// No description provided for @dailySimmeringCardCourseRecalibration.
@@ -5104,7 +5116,7 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardCourseMultipleOrgasms.
   ///
   /// In de, this message translates to:
-  /// **'KURS 19 • MULTI-ORGASMIE'**
+  /// **'KURS 19 • LOSLASSEN'**
   String get dailySimmeringCardCourseMultipleOrgasms;
 
   /// No description provided for @dailySimmeringCardObserveYourReflexesWhenArousal.
@@ -5152,13 +5164,13 @@ abstract class AppLocalizations {
   /// No description provided for @dailySimmeringCardPhysiologicalSighQuickCalming.
   ///
   /// In de, this message translates to:
-  /// **'Physiologischer Seufzer (Quick-Downregulation)'**
+  /// **'Der lange Seufzer'**
   String get dailySimmeringCardPhysiologicalSighQuickCalming;
 
   /// No description provided for @dailySimmeringCardToolCalmDown.
   ///
   /// In de, this message translates to:
-  /// **'TOOL • VAGUS-RESET'**
+  /// **'ÜBUNG • RUHE'**
   String get dailySimmeringCardToolCalmDown;
 
   /// No description provided for @dailySimmeringCardBreatheInTwiceDeeplyThrough.
@@ -5206,7 +5218,7 @@ abstract class AppLocalizations {
   /// No description provided for @userProfileNonBinaryOpen.
   ///
   /// In de, this message translates to:
-  /// **'Divers / Offen'**
+  /// **'Divers / nicht-binär'**
   String get userProfileNonBinaryOpen;
 
   /// No description provided for @userProfileInARelationshipMarried.
@@ -5236,7 +5248,7 @@ abstract class AppLocalizations {
   /// No description provided for @userProfilePelvicFloorBody.
   ///
   /// In de, this message translates to:
-  /// **'Beckenboden & Somatik'**
+  /// **'Beckenboden & Körper spüren'**
   String get userProfilePelvicFloorBody;
 
   /// No description provided for @userProfileCoupleIntimacyCloseness.
@@ -5254,7 +5266,7 @@ abstract class AppLocalizations {
   /// No description provided for @userProfileEasingPerformancePressure.
   ///
   /// In de, this message translates to:
-  /// **'Leistungsdruck abbauen'**
+  /// **'Weniger Druck'**
   String get userProfileEasingPerformancePressure;
 
   /// No description provided for @contentModelsTheArtOfTouchFor.

@@ -288,10 +288,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get mainNavigationProgrammeCourses => 'Heute';
 
   @override
-  String get mainNavigationSomaticsTraining => 'Somatik & Training';
+  String get mainNavigationSomaticsTraining => 'Körper & Üben';
 
   @override
-  String get mainNavigationCbtReframing => 'KVT-Reframing';
+  String get mainNavigationCbtReframing => 'Gedanken';
 
   @override
   String get mainNavigationCoupleChannel => 'Paar-Kanal';
@@ -303,10 +303,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get mainNavigationCourses => 'Heute';
 
   @override
-  String get mainNavigationTraining => 'Training';
+  String get mainNavigationTraining => 'Körper';
 
   @override
-  String get mainNavigationReframing => 'Reframing';
+  String get mainNavigationReframing => 'Gedanken';
 
   @override
   String get whatsNewWelcomeBack => 'Willkommen zurück';
@@ -424,10 +424,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get coursesSendSparksSecretlyMatchWishes =>
-      'Funken senden & Wünsche heimlich abgleichen';
+      'Funken schicken & Wünsche vergleichen, sichtbar wird nur, was ihr beide wollt';
 
   @override
-  String get coursesYourCurriculum => 'DEIN CURRICULUM';
+  String get coursesYourCurriculum => 'DEINE KURSE';
 
   @override
   String coursesHelloProfilename(Object profileName) {
@@ -565,7 +565,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get coursesUnderstandTheBiologyQuietThe =>
-      'Biologie verstehen. Kopfkino stoppen. Körper spüren.';
+      'Verstehen, was in dir passiert. Zur Ruhe kommen. Den Körper spüren.';
 
   @override
   String get coursesProfileSettings => 'Profil & Einstellungen';
@@ -588,7 +588,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get coursesPracticeBreath => 'Praxis: Atem';
 
   @override
-  String get coursesPracticeCbt => 'Praxis: KVT';
+  String get coursesPracticeCbt => 'Praxis: Gedanken';
 
   @override
   String get lessonDetailLessonMarkedAsCompleted =>
@@ -666,11 +666,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get lessonDetailStartBreathPacerDownRegulation =>
-      'Atem-Pacer (Down-Regulation) starten';
+      'Atem-Begleiter starten (langes Ausatmen)';
 
   @override
   String get lessonDetailCalmDownWithBreathingOr =>
-      'Vagusnerv aktivieren & Adrenalin senken mit 4-7-8 oder Seufzer';
+      'Mit 4-7-8-Atmung oder dem langen Seufzer zur Ruhe kommen';
 
   @override
   String get lessonDetailMyDesireProfile => 'Mein Lust-Profil';
@@ -939,7 +939,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Mit einem Tippen zeigen, worauf du heute Lust hast – oder eben nicht.';
 
   @override
-  String get couplesChannelSecretlyMatchWishes => 'Wünsche heimlich abgleichen';
+  String get couplesChannelSecretlyMatchWishes => 'Wünsche leise vergleichen';
 
   @override
   String get couplesChannelYouVoteSeparatelyOnlyWhat =>
@@ -963,7 +963,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get couplesChannelYouCanAlsoFillIt =>
-      'Kannst du auch allein ausfüllen – und später mit deinem Gegenüber abgleichen.';
+      'Kannst du auch allein ausfüllen und später mit deinem Gegenüber vergleichen.';
 
   @override
   String get couplesChannelSharedEvening => 'Gemeinsamer Abend';
@@ -1036,7 +1036,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get couplesChannelVoteSeparatelyAWishOnly =>
-      'Stimmt getrennt ab. Ein Wunsch erscheint erst als Treffer, wenn ihr beide „Ja, gern“ sagt. Ein „Vielleicht“ landet zum Besprechen, ein „Lieber nicht“ wird nie angezeigt.';
+      'Antwortet getrennt. Ein Wunsch wird erst sichtbar, wenn ihr beide „Ja, gern“ gesagt habt. Ein „Vielleicht“ kommt zu „Zum Besprechen“. Ein „Lieber nicht“ sieht dein Gegenüber nie.';
 
   @override
   String couplesChannelQuestionsInSeveralAreasWith(int fragen, int bereiche) {
@@ -1044,16 +1044,16 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get couplesChannelYouHaveAMatch => 'Ihr habt ein Match';
+  String get couplesChannelYouHaveAMatch => 'Bei einer Sache sagt ihr beide Ja';
 
   @override
   String couplesChannelYouHaveMatcheslengthMatches(Object matchesLength) {
-    return 'Ihr habt $matchesLength Matches';
+    return 'Bei $matchesLength Dingen sagt ihr beide Ja';
   }
 
   @override
   String get couplesChannelAMatchIsAnInvitation =>
-      'Ein Match ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt.';
+      'Ein gemeinsames Ja ist eine Einladung, kein Versprechen. Sprecht vorher kurz darüber, wie ihr es euch vorstellt. Und ein „Heute nicht“ gilt immer.';
 
   @override
   String get couplesChannelYesPlease => 'Ja, gern';
@@ -1608,11 +1608,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get yesNoMaybeMatchingAnswersEncrypted =>
-      'Antworten werden verschlüsselt abgeglichen …';
+      'Antworten werden verschlüsselt verglichen …';
 
   @override
   String yesNoMaybeCountAnswersMatched(Object count) {
-    return '$count Antworten erfolgreich abgeglichen!';
+    return 'Fertig: $count Antworten verglichen.';
   }
 
   @override
@@ -1622,28 +1622,34 @@ class AppLocalizationsDe extends AppLocalizations {
   String get yesNoMaybeYesMaybeNo => 'Ja, gern / Vielleicht / Lieber nicht';
 
   @override
-  String get yesNoMaybeSyncWithPartner => 'Mit Partner synchronisieren';
+  String get yesNoMaybeSyncWithPartner => 'Mit deinem Gegenüber vergleichen';
 
   @override
-  String get yesNoMaybePairingRequired => 'Koppeln erforderlich';
+  String get yesNoMaybePairingRequired => 'Erst verbinden';
 
   @override
   String yesNoMaybeQuestionsAnsweredcountTotalitems(
       Object answeredCount, Object totalItems) {
-    return 'Fragenkatalog ($answeredCount/$totalItems)';
+    return 'Fragenkatalog ($answeredCount von $totalItems)';
   }
 
   @override
   String yesNoMaybeMatchesMatchcount(Object matchCount) {
-    return 'Matches ($matchCount)';
+    return 'Gemeinsam ($matchCount)';
   }
 
   @override
-  String get yesNoMaybeDigitalSafeSpace => 'DIGITALER SAFE SPACE';
+  String get yesNoMaybeMeineAntworten => 'Meine Antworten';
+
+  @override
+  String get yesNoMaybeGemeinsam => 'Gemeinsam';
+
+  @override
+  String get yesNoMaybeDigitalSafeSpace => 'Deine Antworten, dein Tempo';
 
   @override
   String get yesNoMaybeFindOutWhatExcitesYou =>
-      'Finde heraus, was dich reizt und wo deine Grenzen liegen. Unklar, was gemeint ist? Tippe auf „Mehr erfahren“. Seid ihr im Paar-Kanal verbunden, seht ihr nur, was ihr beide wollt – ein Nein bleibt unsichtbar.';
+      'Hier darfst du in Ruhe spüren, was dir gefällt, was vielleicht und was lieber nicht. Du musst nichts beantworten. Unklar, was gemeint ist? Tippe auf das i. Wenn ihr verbunden seid, wird nur sichtbar, wo ihr beide mindestens „Vielleicht“ gesagt habt. Ein „Lieber nicht“ sieht dein Gegenüber nie.';
 
   @override
   String get yesNoMaybeYes => 'Ja, gern';
@@ -1678,44 +1684,43 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
-  String get yesNoMaybePairingRequired2 => 'Kopplung erforderlich';
+  String get yesNoMaybePairingRequired2 => 'Erst verbinden';
 
   @override
   String get yesNoMaybeConnectWithYourPartnerIn =>
-      'Verbinde dich im Paar-Kanal per QR-Code mit deinem Gegenüber. Eure Antworten werden dann Ende-zu-Ende-verschlüsselt abgeglichen.';
+      'Wenn ihr im Paar-Kanal verbunden seid, könnt ihr eure Antworten verschlüsselt vergleichen. Sichtbar wird nur das Gemeinsame. Allein ausfüllen geht auch.';
 
   @override
-  String get yesNoMaybePairViaQrCodeNow => 'Jetzt per QR-Code koppeln';
+  String get yesNoMaybePairViaQrCodeNow => 'Per QR-Code verbinden';
 
   @override
   String yesNoMaybePerfectMatchWithPartnername(Object partnerName) {
-    return 'VOLLTREFFER MIT $partnerName';
+    return 'Gemeinsam mit $partnerName';
   }
 
   @override
   String yesNoMaybeYesmatcheslengthSharedYesesCuriositymatcheslengthPoints(
       Object yesMatchesLength, Object curiosityMatchesLength) {
-    return '$yesMatchesLength gemeinsame Ja-Übereinstimmungen & $curiosityMatchesLength Neugier-Punkte entdeckt!';
+    return 'Ja bei euch beiden: $yesMatchesLength · Gemeinsam neugierig: $curiosityMatchesLength';
   }
 
   @override
   String get yesNoMaybeNoRejectionAllLimitsWere =>
-      'Keine Zurückweisung: Alle Grenzen wurden diskret gewahrt. Nur echte gemeinsame Lust wird enthüllt.';
+      'Hier steht nur, was ihr beide gesagt habt. Alles andere bleibt bei jedem für sich. Ein „Lieber nicht“ ist eine vollwertige Antwort.';
 
   @override
-  String get yesNoMaybePerfectMatchBothSaidYes =>
-      'Volltreffer (Beide haben JA gesagt)';
+  String get yesNoMaybePerfectMatchBothSaidYes => 'Ihr beide: Ja';
 
   @override
   String get yesNoMaybeSharedCuriosityOpenToExploring =>
-      'Gemeinsame Neugier (Offen für Erkundung)';
+      'Gemeinsame Neugier, ein Vielleicht reicht';
 
   @override
-  String get yesNoMaybeNoMatchesYet => 'Noch keine Übereinstimmungen';
+  String get yesNoMaybeNoMatchesYet => 'Hier ist es noch still';
 
   @override
   String get yesNoMaybeBothKeepVotingInThe =>
-      'Stimmt beide weiter im Fragenkatalog ab. Sobald ihr denselben Punkt mit Ja oder Vielleicht bewertet habt, leuchtet er hier auf.';
+      'Das heißt nicht, dass etwas fehlt. Vielleicht habt ihr noch nicht alles beantwortet, oder eure Antworten liegen einfach an verschiedenen Stellen. Beides ist normal. Ihr müsst nichts tun.';
 
   @override
   String get yesNoMaybeYouBothYes => 'Ihr beide: Ja';
@@ -1724,7 +1729,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get yesNoMaybeCuriousTogether => 'Gemeinsam neugierig';
 
   @override
-  String get yesNoMaybeCourse => 'Kurs ▶';
+  String get yesNoMaybeCourse => 'Mehr dazu';
 
   @override
   String get cbtNewEntryPleaseChooseAtLeastOne =>
@@ -2433,7 +2438,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailyCheckinCardHowDoStressPerformancePressure =>
-      'Wie stehen Stress & Leistungsdruck heute zueinander?';
+      'Wie geht es dir heute?';
 
   @override
   String get dailyCheckinCardEverydayStressTodayJobAppointments =>
@@ -2441,11 +2446,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailyCheckinCardInnerPerformancePressureRacingThoughts =>
-      '2. Innerer Leistungsdruck & Kopfkino';
+      '2. Wie viel Druck spürst du innerlich?';
 
   @override
   String get dailyCheckinCardWhatDidYouGoodToday =>
-      '3. Was hat deinem Nervensystem heute gut getan?';
+      '3. Was hat dir heute gut getan?';
 
   @override
   String get dailyCheckinCardSaveDailyCheckIn => 'Tages-Check-in speichern';
@@ -2455,11 +2460,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailyCheckinCardCoachingInsightYourEverydayStress =>
-      'Coaching-Insight: Dein Alltagsstress ist heute hoch. Erinnere dich: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist eine normale Reaktion und kein Defekt.';
+      'Dein Alltagsstress ist heute hoch. Das ist okay: Stress und Erschöpfung bremsen die Lust oft ganz von selbst. Das ist normal und kein Fehler von dir.';
 
   @override
   String get dailyCheckinCardCoachingInsightWhenEverydayStress =>
-      'Coaching-Insight: Wenn der Alltagsstress sinkt, fällt es oft leichter, sich zu entspannen. Nutze die heutige Ruhe, um ohne Erfolgsdruck in den Körper zu spüren.';
+      'Wenn der Alltag ruhiger ist, fällt Entspannen oft leichter. Wenn du magst, spür heute einfach in deinen Körper, ganz ohne Ziel.';
 
   @override
   String get onboardingGuest => 'Gast';
@@ -2533,7 +2538,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboardingYourPrivateCoachingProgrammeFor =>
-      'Dein privates Coaching-Programm für somatische Ruhe, Beckenboden & Intimität.';
+      'Ein privater Begleiter für Ruhe im Körper, Beckenboden und Nähe.';
 
   @override
   String get onboardingPrivateProfileJournalProgressStay =>
@@ -2592,49 +2597,48 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get onboardingWhatSYourBiggestPriority =>
-      '5. Was ist aktuell deine größte Priorität?';
+      '5. Was wünschst du dir im Moment am meisten?';
 
   @override
   String get onboardingStopPerformancePressureRacingThoughts =>
-      'Leistungsdruck & Kopfkino stoppen';
+      'Weniger Druck, ein ruhigerer Kopf';
 
   @override
   String get onboardingBreakThoughtLoopsStopSpectatoring =>
-      'Gedankenkreise durchbrechen, Spectatoring beenden.';
+      'Aus dem Kopf zurück ins Spüren, ohne dich selbst zu beobachten.';
 
   @override
   String get onboardingPelvicFloorRelaxationBodyAwareness =>
-      'Beckenboden-Entspannung & Somatik';
+      'Beckenboden entspannen & den Körper spüren';
 
   @override
   String get onboardingReleaseTensionPractiseReverseKegels =>
-      'Hypertonie lösen, Reverse Kegel trainieren, Vagusnerv beruhigen.';
+      'Anspannung loslassen, den Beckenboden weich werden lassen, zur Ruhe kommen.';
 
   @override
   String get onboardingCoupleIntimacyPressureFreeSex =>
-      'Paar-Intimität & Druckfreier Sex';
+      'Nähe zu zweit, ohne Druck';
 
   @override
   String get onboardingSensateFocusTogetherCalmingEach =>
-      'Sensate Focus zu zweit, Co-Regulierung & verletzliche Nähe.';
+      'Berührung ohne Ziel, gemeinsam zur Ruhe kommen, sich nahe sein dürfen.';
 
   @override
   String get onboardingDesireSelfAcceptanceBodyAwareness =>
-      'Lust, Selbstannahme & Körperempfinden';
+      'Lust, dich annehmen & deinen Körper spüren';
 
   @override
   String get onboardingUnderstandResponsiveDesireEaseOrgasm =>
-      'Responsive Lust verstehen, Orgasmusdruck abbauen.';
+      'Verstehen, wie Lust bei dir entsteht, und den Druck herausnehmen.';
 
   @override
   String get onboardingSaveChanges => 'Änderungen speichern';
 
   @override
-  String get onboardingPersonaliseProgrammeNow =>
-      'Programm jetzt personalisieren';
+  String get onboardingPersonaliseProgrammeNow => 'Fertig, los geht\'s';
 
   @override
-  String get onboardingSkipGoStraightToThe => 'Überspringen & Direkt zur App';
+  String get onboardingSkipGoStraightToThe => 'Später, direkt zur App';
 
   @override
   String onboardingVersionData(Object data) {
@@ -2789,11 +2793,11 @@ class AppLocalizationsDe extends AppLocalizations {
       '\n\nOhne dein Passwort lassen sich Verbindung und API-Key nicht wiederherstellen. Auch wir können es nicht zurücksetzen.';
 
   @override
-  String get checkinActionBreathed => 'Bewusst tief geatmet (Physiol. Seufzer)';
+  String get checkinActionBreathed => 'Ein paar Mal tief durchgeatmet';
 
   @override
   String get checkinActionPelvicFloor =>
-      'Beckenboden entspannt (Reverse Kegel)';
+      'Den Beckenboden bewusst weich gelassen';
 
   @override
   String get checkinActionPhoneAway => 'Das Handy abends weggelegt';
@@ -2802,10 +2806,11 @@ class AppLocalizationsDe extends AppLocalizations {
   String get checkinActionWalk => 'Spaziergang an frischer Luft gemacht';
 
   @override
-  String get checkinActionSkinContact => 'Fokus auf Hautkontakt gelenkt';
+  String get checkinActionSkinContact => 'Hautkontakt bewusst gespürt';
 
   @override
-  String get checkinActionOpenWord => 'Offenes Wort mit Partner/in gewagt';
+  String get checkinActionOpenWord =>
+      'Ein offenes Wort mit meinem Gegenüber gesprochen';
 
   @override
   String get dailySimmeringCardTheSecondWallTease =>
@@ -2816,7 +2821,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailySimmeringCardTodayBrieflyPressYourPartner =>
-      'Drücke deinen Partner heute kurz fordernd an die Wand oder halte ihn sanft fest. Küsse langsam den Hals, raune ein Versprechen ins Ohr – und lächle nach genau 45 Sekunden und gehe weiter: \"Den Rest heben wir uns für später auf.\"';
+      'Wenn ihr beide so etwas mögt: Zieh dein Gegenüber heute kurz an dich, küss langsam den Hals, flüstere ein Versprechen ins Ohr. Nach 45 Sekunden lächelst du und gehst weiter: \"Den Rest heben wir uns für später auf.\"';
 
   @override
   String get dailySimmeringCardJawMeltVoiceActivation =>
@@ -2839,7 +2844,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailySimmeringCardThisAfternoonSendYourPartner =>
-      'Schicke deinem Gegenüber heute Nachmittag eine unangekündigte Nachricht: \"Heute Abend ab 21 Uhr gehört dein Körper mir. Du musst nichts tun, außer da zu sein.\"';
+      'Nur wenn ihr das mögt: Schick deinem Gegenüber heute Nachmittag eine Nachricht, die Vorfreude macht, ohne etwas zu erwarten.';
 
   @override
   String get dailySimmeringCardSlowMotionWhilePouring =>
@@ -2850,7 +2855,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailySimmeringCardTodayTouchYourPartnerDuring =>
-      'Berühre deinen Partner heute bei einer Alltagsgelegenheit (am Tisch, auf dem Sofa) im extremen 10%-Zeitlupen-Tempo. Streiche 60 Sekunden quälend langsam über Handrücken und Unterarm.';
+      'Berühre dein Gegenüber heute bei einer Alltagsgelegenheit (am Tisch, auf dem Sofa) im extremen 10%-Zeitlupen-Tempo. Streiche 60 Sekunden ganz langsam über Handrücken und Unterarm.';
 
   @override
   String get dailySimmeringCardTheMinuteSilkScarfRitual =>
@@ -2865,14 +2870,15 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailySimmeringCardTheStrictNoPenetrationRule =>
-      'Das strikte Penetrations-Verbot';
+      'Heute ohne Eindringen';
 
   @override
-  String get dailySimmeringCardCourseSensateFocus => 'KURS 17 • SENSATE FOCUS';
+  String get dailySimmeringCardCourseSensateFocus =>
+      'KURS 17 • BERÜHRUNG OHNE ZIEL';
 
   @override
   String get dailySimmeringCardAgreeTodayYouMayHug =>
-      'Verabredet heute: Ihr dürft euch nackt umarmen, küssen und streicheln – aber Penetration ist strikt tabu. Alles darf sein, nichts muss.';
+      'Verabredet heute: Ihr dürft euch nackt umarmen, küssen und streicheln – Eindringen bleibt heute außen vor. Alles darf sein, nichts muss.';
 
   @override
   String get dailySimmeringCardSensoryNarratingWordsInThe =>
@@ -2884,7 +2890,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailySimmeringCardTonightInTheDarkWhisper =>
-      'Flüstere deinem Partner heute im Dunkeln eine einzige ehrliche, sinnliche Empfindung ins Ohr: \"Es macht mich verrückt, wie warm und weich deine Haut gerade unter meiner Hand ist.\"';
+      'Flüstere deinem Gegenüber heute im Dunkeln eine einzige ehrliche, sinnliche Empfindung ins Ohr: \"Es macht mich verrückt, wie warm und weich deine Haut gerade unter meiner Hand ist.\"';
 
   @override
   String get dailySimmeringCardTheCharmingDreamBridge =>
@@ -2902,7 +2908,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Der Beckenboden-Check im Sitzen';
 
   @override
-  String get dailySimmeringCardCoursesBody => 'KURS 7 & 9 • SOMATIK';
+  String get dailySimmeringCardCoursesBody => 'KURS 7 & 9 • KÖRPER';
 
   @override
   String get dailySimmeringCardNoticeRightNowAreYou =>
@@ -2933,7 +2939,8 @@ class AppLocalizationsDe extends AppLocalizations {
       'Broad Palm Touch mit warmem Öl';
 
   @override
-  String get dailySimmeringCardCourseBodyLab => 'KURS 19 • SOMATISCHES LAB';
+  String get dailySimmeringCardCourseBodyLab =>
+      'KURS 19 • BERÜHRUNG NEU LERNEN';
 
   @override
   String get dailySimmeringCardTodaySkipAnyTightGrip =>
@@ -2952,18 +2959,17 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailySimmeringCardPlateauSurfingAtLevel =>
-      'Plateau-Surfen auf Stufe 7';
+      'Erregung ohne Ziel spüren';
 
   @override
   String get dailySimmeringCardCourseStayingPower => 'KURS 19 • AUSDAUER';
 
   @override
   String get dailySimmeringCardBringYourArousalToLevel =>
-      'Bringe deine Erregung auf Stufe 7. Sobald sie auf 8 klettert: Stoppe jede Bewegung (Stillness), atme 3x tief aus und lass den Beckenboden nach unten sinken.';
+      'Spür heute, wie sich deine Erregung anfühlt, und lass sie ohne Ziel kommen und gehen. Wird es zu viel, halte inne, atme 3x tief aus und lass den Beckenboden weich werden.';
 
   @override
-  String get dailySimmeringCardScreenFreeSensing =>
-      'Dopamin-Reset: Bildschirmfreies Spüren';
+  String get dailySimmeringCardScreenFreeSensing => 'Bildschirmfreies Spüren';
 
   @override
   String get dailySimmeringCardCourseRecalibration =>
@@ -2978,8 +2984,7 @@ class AppLocalizationsDe extends AppLocalizations {
       'Der Schließmuskel-Entlastungstest';
 
   @override
-  String get dailySimmeringCardCourseMultipleOrgasms =>
-      'KURS 19 • MULTI-ORGASMIE';
+  String get dailySimmeringCardCourseMultipleOrgasms => 'KURS 19 • LOSLASSEN';
 
   @override
   String get dailySimmeringCardObserveYourReflexesWhenArousal =>
@@ -3010,10 +3015,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get dailySimmeringCardPhysiologicalSighQuickCalming =>
-      'Physiologischer Seufzer (Quick-Downregulation)';
+      'Der lange Seufzer';
 
   @override
-  String get dailySimmeringCardToolCalmDown => 'TOOL • VAGUS-RESET';
+  String get dailySimmeringCardToolCalmDown => 'ÜBUNG • RUHE';
 
   @override
   String get dailySimmeringCardBreatheInTwiceDeeplyThrough =>
@@ -3042,7 +3047,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get dailySimmeringCardOpen => 'ÖFFNEN';
 
   @override
-  String get userProfileNonBinaryOpen => 'Divers / Offen';
+  String get userProfileNonBinaryOpen => 'Divers / nicht-binär';
 
   @override
   String get userProfileInARelationshipMarried => 'In Beziehung / Verheiratet';
@@ -3058,7 +3063,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get userProfileComplicated => 'Kompliziert';
 
   @override
-  String get userProfilePelvicFloorBody => 'Beckenboden & Somatik';
+  String get userProfilePelvicFloorBody => 'Beckenboden & Körper spüren';
 
   @override
   String get userProfileCoupleIntimacyCloseness => 'Paar-Intimität & Nähe';
@@ -3067,7 +3072,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get userProfileDesireRelaxation => 'Lust & Entspannung';
 
   @override
-  String get userProfileEasingPerformancePressure => 'Leistungsdruck abbauen';
+  String get userProfileEasingPerformancePressure => 'Weniger Druck';
 
   @override
   String get contentModelsTheArtOfTouchFor => 'BERÜHRUNGSKUNST • FÜR SIE';
